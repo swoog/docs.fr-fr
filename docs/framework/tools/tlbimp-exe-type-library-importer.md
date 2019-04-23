@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200920"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer)
 L''importateur de bibliothèques de types convertit les définitions de types présentes dans une bibliothèque de types COM en définitions équivalentes dans un assembly de Common Language Runtime. Le résultat de Tlbimp.exe est un fichier binaire (un assembly) qui contient les métadonnées de runtime pour les types définis dans la bibliothèque de types d'origines. Vous pouvez examiner ce fichier à l’aide d’outils comme [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -126,12 +126,13 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](index.md)
 - [Tlbexp.exe (exportateur de bibliothèques de types)](tlbexp-exe-type-library-exporter.md)
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](../interop/importing-a-type-library-as-an-assembly.md)
 - [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Ildasm.exe (désassembleur IL)](ildasm-exe-il-disassembler.md)
-- [Sn.exe (outil Strong Name)](sn-exe-strong-name-tool.md)
+- [Ildasm.exe (Désassembleur IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (outil Strong Name Tool)](sn-exe-strong-name-tool.md)
 - [Assemblys avec nom fort](../app-domains/strong-named-assemblies.md)
-- [Attributs d’importation de bibliothèques de types dans les assemblys d’interopérabilité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
+- [Attributs permettant d’importer des bibliothèques de types dans des assemblys d’interopérabilité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Invites de commandes](developer-command-prompt-for-vs.md)

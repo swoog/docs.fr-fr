@@ -9,21 +9,21 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299122"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procédure : définir la stratégie de cache basée sur la durée par défaut pour une application
 Avec la stratégie de cache basée sur la durée par défaut, le comportement de cache d’une application est déterminé par les en-têtes envoyés avec la ressource en cache et par les sections 13 et 14 du document RFC 2616, disponible sur le site web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Ce comportement de cache convient à la plupart des applications.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Pour utiliser automatiquement la stratégie par défaut pour une application  
   
-1.  Créez une stratégie basée sur la durée par défaut.  
+1. Créez une stratégie basée sur la durée par défaut.  
   
-2.  Définissez cette stratégie comme stratégie par défaut pour le domaine d’application.  
+2. Définissez cette stratégie comme stratégie par défaut pour le domaine d’application.  
   
 ## <a name="example"></a>Exemple  
  Les deux exemples de cette section créent des stratégies identiques.  
@@ -63,8 +63,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Gestion du cache pour les applications réseau](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Stratégie de cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Stratégies de cache basées sur l’emplacement](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Stratégies de cache basées sur la durée](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [stratégies de cache basées sur l’emplacement](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [stratégies de cache basées sur la durée](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [\<requestCaching>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

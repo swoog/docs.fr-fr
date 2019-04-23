@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303360"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C\#
 
@@ -20,11 +20,11 @@ Cet article fournit un historique de chaque version majeure du langage C#. L’�
 Les outils de build C# considèrent la dernière version majeure du langage comme la version du langage par défaut. Il peut exister des versions intermédiaires entre les versions majeures, détaillées dans d’autres articles de cette section. Pour utiliser les fonctionnalités les plus récentes dans une version mineure, vous devez [configurer la version du langage du compilateur](../language-reference/configure-language-version.md) et sélectionner la version. Il y a eu trois versions intermédiaires depuis C# 7.0 :
 
 * [C# 7.3](csharp-7-3.md) :
-  - C# 7.3 est actuellement disponible dans [Visual Studio 2017 version 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) et dans le kit [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+  - C# 7.3 est disponible à compter de [Visual Studio 2017 version 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) et du [Kit SDK .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md) :
-  - C# 7.2 est actuellement disponible dans [Visual Studio 2017 version 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) et dans le kit [SDK .NET Core 2.0](../../core/whats-new/index.md).
+  - C# 7.2 est disponible à compter de [Visual Studio 2017 version 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) et du [Kit SDK .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Ces fonctionnalités ont été ajoutées dans [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) et dans le kit [SDK .NET Core 2.0](../../core/whats-new/index.md).
+  - C# 7.1 est disponible à compter de [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) et du [Kit SDK .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# version 1.0
 
@@ -59,7 +59,7 @@ Les choses commencent alors à devenir intéressantes. Examinons certaines fonct
 - [Types partiels](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Méthodes anonymes](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Types Nullable](../programming-guide/nullable-types/index.md)
-- [Itérateurs](../programming-guide/concepts/iterators.md)
+- [Iterators](../programming-guide/concepts/iterators.md)
 - [Covariance et contravariance](../programming-guide/concepts/covariance-contravariance/index.md)
 
 D’autres fonctionnalités de C# 2.0 ajoutaient des capacités aux fonctionnalités existantes :
@@ -85,7 +85,7 @@ C# version 3.0 est apparu fin 2007, en même temps que Visual Studio 2008, même
 - [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Expressions de requête](../linq/query-expression-basics.md)
 - [Expressions lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Arborescences d’expressions](../expression-trees.md)
+- [Arborescences de l’expression](../expression-trees.md)
 - [Méthodes d’extension](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variables locales implicitement typées](../language-reference/keywords/var.md)
 - [Méthodes partielles](../language-reference/keywords/partial-method.md)
@@ -125,7 +125,7 @@ C# version 5.0 était une version concentrée du langage. Presque tous les effo
 
 ### <a name="see-also"></a>Voir aussi
 
-* [Code Project : Attributs d’informations de l’appelant dans C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project : Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 L’attribut d’informations de l’appelant vous permet de récupérer facilement des informations sur le contexte d’exécution sans avoir recours à une multitude de code de réflexion réutilisable. Nombre de ses usages ont trait aux diagnostics et aux tâches de journalisation.
 
@@ -141,7 +141,7 @@ Avec les versions 3.0 et 5.0, C# avait ajouté d’importantes nouvelles foncti
 - [Membres expression-bodied](./csharp-6.md#expression-bodied-function-members)
 - [Propagateur Null](./csharp-6.md#null-conditional-operators)
 - [Interpolation de chaîne](./csharp-6.md#string-interpolation)
-- [Opérateur nameof](./csharp-6.md#the-nameof-expression)
+- [opérateur nameof](./csharp-6.md#the-nameof-expression)
 - [Initialiseurs d’index](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Quelques autres nouvelles fonctions :

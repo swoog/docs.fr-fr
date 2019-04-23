@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210130"
 ---
 # <a name="runtime-callable-wrapper"></a>Wrapper pouvant être appelé par le runtime
 Le common language runtime expose les objets COM via un proxy appelé wrapper RCW. Même si le wrapper RCW est un objet ordinaire pour les clients .NET, sa fonction principale est de marshaler les appels entre un client .NET et un objet COM.  
@@ -25,8 +25,7 @@ Le common language runtime expose les objets COM via un proxy appelé wrapper 
 L’image suivante montre le processus d’accès aux objets COM par le biais du wrapper RCW :
 
  ![Processus d’accès aux objets COM par le biais du wrapper RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  À l'aide de métadonnées dérivées d'une bibliothèque de types, le runtime crée l'objet COM appelé, ainsi qu'un wrapper pour celui-ci. Chaque wrapper RCW gère un cache de pointeurs d'interface sur l'objet COM qu'il encapsule et libère sa référence à l'objet COM quand le wrapper RCW n'est plus utile. Le runtime exécute le garbage collection du wrapper RCW.  
   
  Entre autres activités, le wrapper RCW marshale les données entre code managé et non managé, pour le compte de l’objet encapsulé. Plus précisément, le wrapper RCW fournit le marshaling pour les arguments de méthode et les valeurs de retour de méthode chaque fois que le client et le serveur ont des représentations différentes des données circulant entre eux.  
@@ -56,11 +55,12 @@ L’image suivante montre le processus d’accès aux objets COM par le biais d
 |Interface|Description|  
 |---------------|-----------------|  
 |**IConnectionPoint** et **IConnectionPointContainer**|Le wrapper RCW convertit les objets qui exposent le style d'événement point de connexion en événements basés sur le délégué.|  
-|**IDispatchEx**|Si la classe implémente **IDispatchEx**, le wrapper RCW implémente **IExpando**. L’interface **IDispatchEx** est une extension de l’interface **IDispatch** qui, contrairement à l’interface **IDispatch**, permet l’énumération, l’ajout, la suppression et l’appel sensible à la casse des membres.|  
+|**IDispatchEx**|Si la classe implémente **IDispatchEx**, le wrapper RCW implémente **IExpando**. L’interface **IDispatchEx** est une extension de l’interface **IDispatch** qui, contrairement à l’interface **IDispatch**, permet l’énumération, l’ajout, la suppression et l’appel de la casse des membres.|  
 |**IEnumVARIANT**|Permet aux types COM qui prennent en charge les énumérations d'être traités comme des collections.|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Wrappers COM](com-wrappers.md)
-- [Wrapper CCW (COM Callable Wrapper)](com-callable-wrapper.md)
+- [Wrapper pouvant être appelé par COM](com-callable-wrapper.md)
 - [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)

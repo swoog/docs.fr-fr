@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215038"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (outil .NET Services Installation)
 L'outil .NET Services Installation (Installation des services .NET) effectue les actions suivantes :  
@@ -60,7 +60,7 @@ L'outil .NET Services Installation (Installation des services .NET) effectue les
 |**/parname:** *name*|Spécifie le nom ou l'identificateur de l'application COM+ à rechercher ou à créer.|  
 |**/reconfig**|Reconfigure une application cible existante. Il s'agit de la valeur par défaut.|  
 |**/tlb:** *typelibraryfile*|Spécifie le fichier bibliothèque de types à installer.|  
-|**/u**|Désinstalle l'application cible.|  
+|**/U**|Désinstalle l'application cible.|  
 |**/quiet**|Spécifie le mode silencieux ; supprime le logo et l'affichage des messages de réussite.|  
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|  
   
@@ -87,6 +87,7 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
-- [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Procédure : signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

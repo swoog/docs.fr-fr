@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341385"
 ---
 # <a name="where-clause-c-reference"></a>where, clause (Référence C#)
 
@@ -27,7 +27,7 @@ Dans l’exemple suivant, la clause `where` élimine par filtrage tous les nombr
 
 ## <a name="example"></a>Exemple
 
-Dans une clause `where` unique, vous pouvez spécifier autant de prédicats que nécessaire à l’aide des opérateurs [&&](../operators/conditional-and-operator.md) et [&#124;&#124;](../operators/conditional-or-operator.md). Dans l’exemple suivant, la requête spécifie deux prédicats pour sélectionner uniquement les nombres pairs inférieurs à cinq.
+Dans une clause `where` unique, vous pouvez spécifier autant de prédicats que nécessaire à l’aide des opérateurs [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) et [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-). Dans l’exemple suivant, la requête spécifie deux prédicats pour sélectionner uniquement les nombres pairs inférieurs à cinq.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -37,7 +37,7 @@ Une clause `where` peut contenir une ou plusieurs méthodes qui retournent des v
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La clause `where` est un mécanisme de filtrage. Elle peut être placée à presque n’importe quel endroit d’une expression de requête, sauf qu’elle ne peut pas être la première ni la dernière clause. Une clause `where` peut apparaître avant ou après une clause [group](group-clause.md) selon que vous devez filtrer les éléments sources avant ou après leur regroupement.
 
@@ -52,4 +52,4 @@ Au moment de la compilation, le mot clé `where` est converti en appel à la mé
 - [select, clause](select-clause.md)
 - [Filtrage des données](../../programming-guide/concepts/linq/filtering-data.md)
 - [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Bien démarrer avec LINQ en C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Mise en route de LINQ en C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

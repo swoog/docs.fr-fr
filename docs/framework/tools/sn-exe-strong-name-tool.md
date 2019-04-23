@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191885"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (outil Strong Name Tool)
 L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms forts](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.  
@@ -125,6 +125,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)

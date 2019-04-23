@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332207"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Arguments de ligne de commande (Guide de programmation C#)
 Vous pouvez envoyer des arguments à la méthode `Main` en définissant la méthode de l’une des manières suivantes :  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Pour compiler et exécuter l’application à partir d’une invite de commandes, procédez comme suit :  
   
-1.  Collez le code suivant dans un éditeur de texte, puis enregistrez le fichier en tant que fichier texte sous le nom `Factorial.cs`.  
+1. Collez le code suivant dans un éditeur de texte, puis enregistrez le fichier en tant que fichier texte sous le nom `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Dans l’écran **Démarrer** ou le menu **Démarrer**, ouvrez une fenêtre **Invite de commandes développeur** Visual Studio, puis accédez au dossier qui contient le fichier que vous venez de créer.  
+2. Dans l’écran **Démarrer** ou le menu **Démarrer**, ouvrez une fenêtre **Invite de commandes développeur** Visual Studio, puis accédez au dossier qui contient le fichier que vous venez de créer.  
   
-3.  Entrez la commande suivante pour compiler l’application.  
+3. Entrez la commande suivante pour compiler l’application.  
   
      `csc Factorial.cs`  
   
      Si votre application ne contient pas d’erreurs de compilation, un fichier exécutable nommé `Factorial.exe` est créé.  
   
-4.  Entrez la commande suivante pour calculer la factorielle de 3 :  
+4. Entrez la commande suivante pour calculer la factorielle de 3 :  
   
      `Factorial 3`  
   
-5.  Cette commande génère la sortie suivante : `The factorial of 3 is 6.`  
+5. Cette commande produit cette sortie : `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Quand vous exécutez une application dans Visual Studio, vous pouvez spécifier des arguments de ligne de commande dans la [page Déboguer du Concepteur de projet](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -79,7 +79,7 @@ long num = Convert.ToInt64(s);
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Guide pratique pour afficher les arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Procédure : Afficher les arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Procédure : Accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Valeurs de retour Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)

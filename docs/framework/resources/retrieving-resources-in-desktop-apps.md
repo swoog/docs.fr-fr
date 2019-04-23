@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109796"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Récupération de ressources dans des applications de bureau
 Quand vous utilisez des ressources localisées dans des applications de bureau du .NET Framework, vous devez, dans l’idéal, empaqueter les ressources pour la culture neutre ou par défaut avec l’assembly principal et créer un assembly satellite séparé pour chaque langue ou culture prise en charge par votre application. Vous pouvez ensuite utiliser la classe <xref:System.Resources.ResourceManager> pour accéder aux ressources nommées, comme indiqué dans la section suivante. Si vous choisissez de ne pas incorporer les ressources dans l’assembly principal et les assemblys satellites, vous pouvez également accéder directement aux fichiers .resources binaires, comme cela est expliqué dans la section [Récupération de ressources de fichiers .resources](#from_file) , plus loin dans cet article.  Pour récupérer des ressources dans des applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consultez [Création et récupération de ressources dans les applications du Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) dans le Centre de développement Windows.  
@@ -202,8 +202,9 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Resources.ResourceManager>
 - [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)
 - [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Création et récupération de ressources dans les applications du Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+- [Créer et récupérer des ressources dans les applications du Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321443"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procédure : déboguer les applications de service Windows
 Un service doit être exécuté à partir du Gestionnaire de contrôle des services plutôt qu'à partir de Visual Studio. C'est pourquoi le débogage d'un service n'est pas aussi simple que le débogage d'autres types d'applications Visual Studio. Pour déboguer un service, vous devez le démarrer et attacher un débogueur au processus dans lequel il s'exécute. Vous pouvez alors déboguer votre application à l'aide de toutes les fonctionnalités de débogage standard de Visual Studio.  
@@ -36,23 +36,23 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
   
 ### <a name="to-debug-a-service"></a>Pour déboguer un service  
   
-1.  Générez votre service dans la configuration Debug.  
+1. Générez votre service dans la configuration Debug.  
   
-2.  Installez votre service. Pour plus d'informations, voir [Procédure : Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Installez votre service. Pour plus d'informations, voir [Procédure : Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Démarrez le service à partir du **Gestionnaire de contrôle des services**, à partir de **l’Explorateur de serveurs** ou à partir du code. Pour plus d'informations, voir [Procédure : démarrer des services](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Démarrez le service à partir du **Gestionnaire de contrôle des services**, à partir de **l’Explorateur de serveurs** ou à partir du code. Pour plus d'informations, voir [Procédure : démarrer des services](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Démarrez Visual Studio avec des informations d'identification administratives pour pouvoir effectuer un attachement à un processus système.  
+4. Démarrez Visual Studio avec des informations d'identification administratives pour pouvoir effectuer un attachement à un processus système.  
   
-5.  (Facultatif) Dans la barre de menus de Visual Studio, choisissez **Outils**, **Options**. Dans la boîte de dialogue **Options**, choisissez **Débogage**, **Symboles**, cochez la case **Serveurs de symboles Microsoft**, puis choisissez **OK**.  
+5. (Facultatif) Dans la barre de menus de Visual Studio, choisissez **Outils**, **Options**. Dans la boîte de dialogue **Options**, choisissez **Débogage**, **Symboles**, cochez la case **Serveurs de symboles Microsoft**, puis choisissez **OK**.  
   
-6.  Dans la barre de menus, choisissez **Attacher au processus** dans le menu **Débogage** ou **Outils**. (Clavier : Ctrl+Alt+P)  
+6. Dans la barre de menus, choisissez **Attacher au processus** dans le menu **Débogage** ou **Outils**. (Clavier : Ctrl+Alt+P)  
   
      La boîte de dialogue **Processus** s’affiche.  
   
-7.  Cochez la case **Afficher les processus de tous les utilisateurs**.  
+7. Cochez la case **Afficher les processus de tous les utilisateurs**.  
   
-8.  Dans la section **Processus disponibles**, choisissez le processus de votre service, puis **Attacher**.  
+8. Dans la section **Processus disponibles**, choisissez le processus de votre service, puis **Attacher**.  
   
     > [!TIP]
     >  Le processus porte le même nom que le fichier exécutable de votre service.  
@@ -77,7 +77,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procédure : exécution d’un service Windows en tant qu’application console  
   
-1.  Ajoutez une méthode à votre service qui exécute les méthodes <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A> :  
+1. Ajoutez une méthode à votre service qui exécute les méthodes <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A> :  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
     }  
     ```  
   
-2.  Réécrivez la méthode `Main` suit :  
+2. Réécrivez la méthode `Main` suit :  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,16 +105,17 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
     }
     ```  
   
-3.  Sous l’onglet **Application** des propriétés du projet, choisissez **Application console** comme **Type de sortie**.  
+3. Sous l’onglet **Application** des propriétés du projet, choisissez **Application console** comme **Type de sortie**.  
   
-4.  Choisissez **Démarrer le débogage** (F5).  
+4. Choisissez **Démarrer le débogage** (F5).  
   
-5.  Pour exécuter à nouveau le programme en tant que service Windows, installez-le et démarrez-le comme vous le faites habituellement pour un service Windows. Il n'est pas nécessaire d'annuler les modifications apportées.  
+5. Pour exécuter à nouveau le programme en tant que service Windows, installez-le et démarrez-le comme vous le faites habituellement pour un service Windows. Il n'est pas nécessaire d'annuler les modifications apportées.  
   
  Dans certains cas, notamment lorsque vous souhaitez déboguer un problème qui se produit uniquement au démarrage du système, vous devez utiliser le débogueur Windows. [Télécharger Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) et consultez [Comment déboguer les services Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Guide pratique pour Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Guide pratique pour démarrer des services](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Débogage d’un service](/windows/desktop/Services/debugging-a-service)
+- [Procédure : Installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procédure : démarrer des services](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Déboguer un service](/windows/desktop/Services/debugging-a-service)

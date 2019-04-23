@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305037"
 ---
 # <a name="traversing-xml-schemas"></a>Traversée de schémas XML
 Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'accéder aux éléments, attributs et types stockés dans le SOM. Traverser un schéma XML chargé dans le SOM est également la première étape de l'édition d'un schéma XML avec l'API SOM.  
@@ -29,33 +29,33 @@ Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'a
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> ou <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|Objet <xref:System.Xml.Schema.XmlSchemaObject> (fournit un accès à tous les éléments, attributs et types de niveau global).|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (donne accès à tous les éléments, attributs et types de niveau global).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|Objet <xref:System.Xml.XmlAttribute> (fournit un accès aux attributs qui n'appartiennent pas à l'espace de noms du schéma)|  
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (donne accès aux attributs qui n’appartiennent pas à l’espace de noms du schéma)|  
   
 > [!NOTE]
 >  Toutes les propriétés répertoriées dans le tableau ci-dessus, à l'exception de la propriété <xref:System.Xml.Schema.XmlSchema.Items%2A>, sont des propriétés PSCI (Post-Schema-Compilation-Infoset) qui ne sont pas disponibles tant que le schéma n'a pas été compilé. La propriété <xref:System.Xml.Schema.XmlSchema.Items%2A> est une propriété de pré-compilation de schéma qui peut être utilisée avant que le schéma ait été compilé afin d'accéder à et d'éditer tous les éléments, attributs et types de niveau global.  
 >   
 >  La propriété <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> permet d'accéder à tous les attributs qui n'appartiennent pas à l'espace de noms du schéma. Ces attributs ne sont pas traités par le processeur de schéma.  
   
- L'exemple de code suivant illustre la traversée du schéma utilisateur créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). Il illustre la traversée du schéma à l’aide des collections décrites ci-dessus et l’envoi à la console de tous les éléments et attributs contenus dans le schéma.  
+ L'exemple de code suivant illustre la traversée du schéma utilisateur créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). Il illustre la traversée du schéma à l'aide des collections décrites ci-dessus et l'envoi à la console de tous les éléments et attributs contenus dans le schéma.  
   
  Cet exemple de code traverse le schéma utilisateur en plusieurs étapes comme suit.  
   
-1.  Il ajoute le schéma utilisateur à un nouvel objet <xref:System.Xml.Schema.XmlSchemaSet> puis le compile. Les avertissements et erreurs de validation de schéma éventuellement rencontrés pendant la lecture ou la compilation du schéma sont traités par le délégué <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Il ajoute le schéma utilisateur à un nouvel objet <xref:System.Xml.Schema.XmlSchemaSet> puis le compile. Les avertissements et erreurs de validation de schéma éventuellement rencontrés pendant la lecture ou la compilation du schéma sont traités par le délégué <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Il extrait l'objet <xref:System.Xml.Schema.XmlSchema> compilé de l'objet <xref:System.Xml.Schema.XmlSchemaSet> en effectuant une itération sur la propriété <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Le schéma étant compilé, les propriétés PSCI (Post-Schema-Compilation-Infoset) sont accessibles.  
+2. Il extrait l'objet <xref:System.Xml.Schema.XmlSchema> compilé de l'objet <xref:System.Xml.Schema.XmlSchemaSet> en effectuant une itération sur la propriété <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Le schéma étant compilé, les propriétés PSCI (Post-Schema-Compilation-Infoset) sont accessibles.  
   
-3.  Il effectue une itération sur chaque objet <xref:System.Xml.Schema.XmlSchemaElement> figurant dans la collection <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la collection de post-compilation de schéma <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> et écrit le nom de chaque élément à la console.  
+3. Il effectue une itération sur chaque objet <xref:System.Xml.Schema.XmlSchemaElement> figurant dans la collection <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> de la collection de post-compilation de schéma <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> et écrit le nom de chaque élément à la console.  
   
-4.  Il obtient le type complexe de l'élément `Customer` en utilisant la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+4. Il obtient le type complexe de l'élément `Customer` en utilisant la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-5.  Si le type complexe possède des attributs, il obtient un objet <xref:System.Collections.IDictionaryEnumerator> à énumérer sur chaque objet <xref:System.Xml.Schema.XmlSchemaAttribute> et en écrit le nom à la console.  
+5. Si le type complexe possède des attributs, il obtient un objet <xref:System.Collections.IDictionaryEnumerator> à énumérer sur chaque objet <xref:System.Xml.Schema.XmlSchemaAttribute> et en écrit le nom à la console.  
   
-6.  Il obtient la particule de séquence du type complexe en utilisant la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+6. Il obtient la particule de séquence du type complexe en utilisant la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-7.  Il effectue une itération sur chaque objet <xref:System.Xml.Schema.XmlSchemaElement> figurant dans la collection <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> et écrit le nom de chaque élément enfant à la console.  
+7. Il effectue une itération sur chaque objet <xref:System.Xml.Schema.XmlSchemaElement> figurant dans la collection <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> et écrit le nom de chaque élément enfant à la console.  
   
  Voici l'exemple de code complet.  
   
@@ -69,10 +69,10 @@ Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'a
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Vue d'ensemble du Modèle Objet du schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Jeu d'informations de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

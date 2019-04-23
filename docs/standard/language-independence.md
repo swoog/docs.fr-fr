@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214739"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 
@@ -31,7 +31,7 @@ Dans cet article :
 
     * [Types et signatures de membres de types](#types-and-type-member-signatures)
 
-    * [Conventions d’attribution d’un nom](#naming-conventions)
+    * [Conventions d'attribution d'un nom](#naming-conventions)
 
     * [Conversion de type](#type-conversion)
 
@@ -53,7 +53,7 @@ Dans cet article :
 
     * [Événements](#events)
 
-    * [Surcharges](#overloads)
+    * [Overloads](#overloads)
 
     * [Exceptions](#exceptions)
 
@@ -184,9 +184,9 @@ Interfaces | [Interfaces](#interfaces) | Les interfaces conformes à CLS ne devr
 Membres | [Membres de types en général](#type-members-in-general) | Les méthodes et les champs static globaux ne sont pas conformes CLS. | 36
 Membres | -- | La valeur d'un champ statique littéral est spécifiée via l'utilisation de métadonnées d'initialisation de champ. Un littéral conforme à CLS doit avoir une valeur spécifiée dans les métadonnées d'initialisation de champ qui est exactement du même type que le littéral (ou du type sous-jacent, si ce littéral est une `enum`). | 13
 Membres | [Membres de types en général](#type-members-in-general) | La contrainte vararg ne fait pas partie de la spécification CLS, et la seule convention d’appel prise en charge par la spécification CLS est la convention d’appel managée standard. | 15
-Conventions d'attribution d'un nom | [Conventions d’attribution d’un nom](#naming-conventions) | Les assemblys doivent suivre l’Annexe 7 du Rapport technique 15 de la norme Unicode 3.0 régissant l’ensemble des caractères autorisés pour lancer les identificateurs et être inclus dans ces derniers. Cette annexe est disponible en ligne sous [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Formes de normalisation Unicode). Les identificateurs doivent être dans un format canonique défini par la forme C de normalisation Unicode. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un insensibles aux paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différenciés par d’autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l’infrastructure CLI nécessite l’utilisation de l’encodage exact de la déclaration d’origine. | 4
-Surcharge | [Conventions d’attribution d’un nom](#naming-conventions) | Tous les noms introduits dans une portée conforme CLS doivent être distincts, indépendamment de leur type, sauf quand les noms sont identiques et résolus par surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l’autorise pas. | 5
-Surcharge | [Conventions d’attribution d’un nom](#naming-conventions) | Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d’identificateurs) doivent différer par d’autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS | 6
+Conventions d'attribution d'un nom | [Conventions d'attribution d'un nom](#naming-conventions) | Les assemblys doivent suivre l’Annexe 7 du Rapport technique 15 de la norme Unicode 3.0 régissant l’ensemble des caractères autorisés pour lancer les identificateurs et être inclus dans ces derniers. Cette annexe est disponible en ligne sous [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Formes de normalisation Unicode). Les identificateurs doivent être dans un format canonique défini par la forme C de normalisation Unicode. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un insensibles aux paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différenciés par d’autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l’infrastructure CLI nécessite l’utilisation de l’encodage exact de la déclaration d’origine. | 4
+Surcharge | [Conventions d'attribution d'un nom](#naming-conventions) | Tous les noms introduits dans une portée conforme CLS doivent être distincts, indépendamment de leur type, sauf quand les noms sont identiques et résolus par surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l’autorise pas. | 5
+Surcharge | [Conventions d'attribution d'un nom](#naming-conventions) | Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d’identificateurs) doivent différer par d’autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS | 6
 Surcharge | [Overloads](#overloads) | Seules les propriétés et les méthodes peuvent être surchargées. | 37
 Surcharge | [Overloads](#overloads) |Les propriétés et les méthodes peuvent être surchargées en fonction du nombre et des types de leurs paramètres uniquement, à l'exception des opérateurs de conversion nommés `op_Implicit` et `op_Explicit`, qui peuvent également être surchargés selon leur type de retour. | 38
 Surcharge | -- | Si deux ou plusieurs méthodes conformes CLS déclarées dans un type ont le même nom et, pour un jeu spécifique d’instanciations de types, ont le même paramètre et les mêmes types de retour, alors toutes ces méthodes sont sémantiquement équivalentes à ces instanciations de type. | 48
@@ -323,11 +323,11 @@ Type conforme à CLS | Description
 [Int64](xref:System.Int64) | Entier 64 bits signé
 [Single](xref:System.Single) | Valeur à virgule flottante simple précision
 [Double](xref:System.Double) | Valeur à virgule flottante double précision
-[Boolean](xref:System.Boolean) | Type de valeur true ou false
+[Booléen](xref:System.Boolean) | Type de valeur true ou false
 [Char](xref:System.Char) | Unité de code encodée en UTF-16
 [Decimal](xref:System.Decimal) | Nombre décimal à virgule fixe
 [IntPtr](xref:System.IntPtr) | Pointeur ou handle d'une taille définie par la plateforme
-[String](xref:System.String) | Collection de zéro, un ou plusieurs objets Char
+[Chaîne](xref:System.String) | Collection de zéro, un ou plusieurs objets Char
 
 Les types intrinsèques répertoriés dans le tableau suivant ne sont pas conformes à CLS.
 
@@ -796,9 +796,9 @@ public class Example
 
 La spécification CLS (Common Language Specification) définit deux opérateurs de conversion :
 
-* `op_Implicit`, qui est utilisé pour les conversions étendues qui n'entraînent pas la perte de données ou de précision. Par exemple, la structure [Decimal](xref:System.Decimal) inclut un opérateur `op_Implicit` surchargé pour convertir les valeurs de types intégraux et les valeurs [Char](xref:System.Char) en valeurs `Decimal`.
+* `op_Implicit`, utilisé pour les conversions étendues qui n’entraînent pas de perte de données ou de précision. Par exemple, la structure [Decimal](xref:System.Decimal) inclut un opérateur `op_Implicit` surchargé pour convertir les valeurs de types intégraux et les valeurs [Char](xref:System.Char) en valeurs `Decimal`.
 
-* `op_Explicit`, qui est utilisé pour les conversions restrictives qui peuvent entraîner la perte d'amplitude (une valeur est convertie en une valeur qui entraîne une plus petite plage) ou de précision. Par exemple, la structure `Decimal` inclut un opérateur `op_Explicit` surchargé pour convertir les valeurs [Double](xref:System.Double) et [Single](xref:System.Single) en `Decimal`, et convertir les valeurs `Decimal` en valeurs intégrales, `Double`, `Single` et `Char`.
+* `op_Explicit`, utilisé pour les conversions restreintes susceptible d’entraîner une perte d’amplitude (une valeur est convertie en une autre possédant une plus petite plage) ou de précision. Par exemple, la structure `Decimal` inclut un opérateur `op_Explicit` surchargé pour convertir les valeurs [Double](xref:System.Double) et [Single](xref:System.Single) en `Decimal`, et convertir les valeurs `Decimal` en valeurs intégrales, `Double`, `Single` et `Char`.
 
 Toutefois, tous les langages ne prennent pas en charge la surcharge d'opérateur ou la définition d'opérateurs personnalisés. Si vous décidez d'implémenter ces opérateurs de conversion, vous devez également fournir une autre façon d'effectuer la conversion. Nous vous recommandons de fournir les méthodes `From`Xxx et `To`Xxx.
 
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1764,7 +1762,6 @@ using System;
 
 [assembly:CLSCompliant(true)]
 
-
 public class Number<T> where T : struct
 {
    // use Double as the underlying type, since its range is a superset of
@@ -1852,7 +1849,7 @@ End Class
 
 La spécification CLS (Common Language Specification) impose un modèle conservateur par instanciation pour les types imbriqués et les membres protégés. Les types génériques ouverts ne peuvent pas exposer de champs ou de membres avec des signatures qui contiennent une instanciation spécifique d'un type générique imbriqué et protégé. Les types non génériques qui étendent une instanciation spécifique d'une classe de base ou une interface générique ne peuvent pas exposer de champs ou de membres avec des signatures qui contiennent une instanciation différente d'un type générique imbriqué et protégé.
 
-L’exemple suivant définit un type générique, `C1<T>`, et une classe protégée, `C1<T>.N`. `C1<T>` a deux méthodes : `M1` et `M2`. Toutefois, la méthode `M1` n’est pas conforme CLS, car elle essaie de retourner un objet `C1<int>.N` de `C1<T>`. Une deuxième classe, `C2`, est dérivée de `C1<long>`. Elle a deux méthodes, `M3` et `M4`. `M3`’est pas conforme CLS, car elle essaie de retourner un objet `C1<int>.N` d’une sous-classe de `C1<long>`. Notez que les compilateurs de langage peuvent être encore plus restrictifs. Dans cet exemple, Visual Basic affiche une erreur lorsqu'il tente de compiler `M4`.
+L’exemple suivant définit un type générique, `C1<T>`, et une classe protégée, `C1<T>.N`. `C1<T>` a deux méthodes : `M1` et `M2`. Toutefois, la méthode `M1` n’est pas conforme CLS, car elle essaie de retourner un objet `C1<int>.N` de `C1<T>`. Une deuxième classe, `C2`, est dérivée de `C1<long>`. Elle a deux méthodes, `M3` et `M4`. `M3` n’est pas conforme CLS, car elle essaie de retourner un objet `C1<int>.N` d’une sous-classe de `C1<long>`. Notez que les compilateurs de langage peuvent être encore plus restrictifs. Dans cet exemple, Visual Basic affiche une erreur lorsqu'il tente de compiler `M4`.
 
 ```csharp
 using System;
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)
@@ -2568,7 +2564,7 @@ End Structure
 
 Le constructeur ou les propriétés d'un attribut conforme à CLS peuvent exposer uniquement les types suivants :
 
-* [Boolean](xref:System.Boolean)
+* [Booléen](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
@@ -2584,7 +2580,7 @@ Le constructeur ou les propriétés d'un attribut conforme à CLS peuvent expos
 
 * [Single](xref:System.Single)
 
-* [String](xref:System.String)
+* [Chaîne](xref:System.String)
 
 * [Type](xref:System.Type)
 

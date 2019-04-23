@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307715"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procédure : Migrer du code DCOM managé vers WCF
 Pour des raisons de sécurité, il est recommandé d'utiliser Windows Communication Foundation (WCF) plutôt que le modèle DCOM pour les appels de code managé entre serveurs et clients dans un environnement distribué. Cet article explique comment migrer du code DCOM vers WCF pour les scénarios suivants.  
@@ -139,7 +139,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>Étape 4 : Configurer le service et le client  
- Pour exécuter un service WCF, vous devez déclarer un point de terminaison qui expose cette interface de service à une URL spécifique à l’aide d’une liaison WCF spécifique. Une liaison spécifie les détails relatifs au transport, à l'encodage et au protocole pour que le serveur et les clients puissent communiquer. En général, vous ajoutez des liaisons au fichier de configuration du projet de service (web.config). Le code suivant illustre une entrée de liaison pour l'exemple de service :  
+ Pour exécuter un service WCF, vous devez déclarer un point de terminaison qui expose cette interface de service à une URL spécifique à l'aide d'une liaison WCF spécifique. Une liaison spécifie les détails relatifs au transport, à l’encodage et au protocole pour que le serveur et les clients puissent communiquer. En général, vous ajoutez des liaisons au fichier de configuration du projet de service (web.config). Le code suivant illustre une entrée de liaison pour l’exemple de service :  
   
 ```xml  
 <configuration>  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Voici l'implémentation de ce service. Cette implémentation gère une fabrique de canaux singleton pour créer des objets de session.  Quand `GetInstanceAddress` est appelé, il crée un canal et un objet <xref:System.ServiceModel.EndpointAddress10> qui pointe vers l'adresse distante associée à ce canal.   <xref:System.ServiceModel.EndpointAddress10> est un type de données qui peut être renvoyé au client par valeur.  
+ Voici l'implémentation de ce service. Cette implémentation gère une fabrique de canaux singleton pour créer des objets de session.  Quand `GetInstanceAddress` est appelé, il crée un canal et un objet <xref:System.ServiceModel.EndpointAddress10> qui pointe vers l'adresse distante associée à ce canal.   <xref:System.ServiceModel.EndpointAddress10> est un type de données qui peut être retourné au client par valeur.  
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Étape 3 : Configurer et démarrer les services WCF  
  Pour héberger ces services, vous devrez effectuer les ajouts suivants au fichier de configuration du serveur (web.config).  
   
-1.  Ajoutez une section `<client>` qui décrive le point de terminaison de l'objet de session.  Dans ce scénario, le serveur agit comme un client et doit être configuré pour rendre ceci possible.  
+1. Ajoutez une section `<client>` qui décrive le point de terminaison de l'objet de session.  Dans ce scénario, le serveur agit comme un client et doit être configuré pour rendre ceci possible.  
   
-2.  Dans la section `<services>`, déclarez les points de terminaison de service pour la fabrique et l'objet de session.  Cela permet au client de communiquer avec les points de terminaison du service, d'acquérir <xref:System.ServiceModel.EndpointAddress10> et de créer le canal de session.  
+2. Dans la section `<services>`, déclarez les points de terminaison de service pour la fabrique et l'objet de session.  Cela permet au client de communiquer avec les points de terminaison du service, d'acquérir <xref:System.ServiceModel.EndpointAddress10> et de créer le canal de session.  
   
  Voici un exemple de fichier de configuration avec ces paramètres :  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Pour appeler le service, ajoutez le code au client qui servira à effectuer ce qui suit :  
   
-1.  Créer un canal vers le service `ISessionBoundFactory`.  
+1. Créer un canal vers le service `ISessionBoundFactory`.  
   
-2.  Utiliser le canal pour appeler le service `ISessionBoundFactory` et obtenir un objet <xref:System.ServiceModel.EndpointAddress10>.  
+2. Utiliser le canal pour appeler le service `ISessionBoundFactory` et obtenir un objet <xref:System.ServiceModel.EndpointAddress10>.  
   
-3.  Utiliser <xref:System.ServiceModel.EndpointAddress10> pour créer un canal et obtenir un objet de session.  
+3. Utiliser <xref:System.ServiceModel.EndpointAddress10> pour créer un canal et obtenir un objet de session.  
   
-4.  Appeler les méthodes `SetCurrentValue` et `GetCurrentValue` pour montrer que la même instance d'objet est utilisée pour plusieurs appels.  
+4. Appeler les méthodes `SetCurrentValue` et `GetCurrentValue` pour montrer que la même instance d'objet est utilisée pour plusieurs appels.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Conception et implémentation de services](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Génération de clients](../../../docs/framework/wcf/building-clients.md)

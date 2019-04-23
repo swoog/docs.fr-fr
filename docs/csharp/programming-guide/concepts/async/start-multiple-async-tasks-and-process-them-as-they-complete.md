@@ -2,12 +2,12 @@
 title: Traiter les tâches asynchrones terminées
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304855"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Démarrer plusieurs tâches Async et les traiter une fois terminées (C#)
 
@@ -20,22 +20,22 @@ L’exemple suivant utilise une requête pour créer une collection de tâches. 
 
 ## <a name="download-an-example-solution"></a>Télécharger un exemple de solution
 
-Téléchargez l’intégralité du projet Windows Presentation Foundation (WPF) à partir de la page [Exemple Async : réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), puis procédez comme suit.
+Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.
 
 > [!TIP]
 > Si vous ne souhaitez pas télécharger le projet, vous pouvez passer en revue le fichier MainWindow.xaml.cs à la fin de cette rubrique à la place.
 
-1.  Extrayez les fichiers que vous avez téléchargés à partir du fichier .zip, puis démarrez Visual Studio.
+1. Extrayez les fichiers que vous avez téléchargés à partir du fichier .zip, puis démarrez Visual Studio.
 
-2.  Dans la barre de menus, choisissez **Fichier** > **Ouvrir** > **Projet/Solution**.
+2. Dans la barre de menus, choisissez **Fichier** > **Ouvrir** > **Projet/Solution**.
 
-3.  Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez téléchargé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningCS.
+3. Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez téléchargé, puis ouvrez le fichier de solution (.sln) pour AsyncFineTuningCS.
 
-4.  Dans l’**Explorateur de solutions**, ouvrez le menu contextuel pour le projet **ProcessTasksAsTheyFinish**, puis choisissez **Définir comme projet de démarrage**.
+4. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel pour le projet **ProcessTasksAsTheyFinish**, puis choisissez **Définir comme projet de démarrage**.
 
-5.  Choisissez la touche **F5** pour exécuter le programme (ou appuyez sur **Ctrl**+**F5** pour exécuter le programme sans le déboguer).
+5. Choisissez la touche **F5** pour exécuter le programme (ou appuyez sur **Ctrl**+**F5** pour exécuter le programme sans le déboguer).
 
-6.  Exécutez le projet plusieurs fois pour vérifier que les longueurs téléchargées n’apparaissent pas toujours dans le même ordre.
+6. Exécutez le projet plusieurs fois pour vérifier que les longueurs téléchargées n’apparaissent pas toujours dans le même ordre.
 
 ## <a name="create-the-program-yourself"></a>Créer le programme vous-même
 
@@ -87,7 +87,7 @@ Exécutez le programme plusieurs fois pour vérifier que les longueurs télécha
 
 Le code suivant est le texte complet du fichier MainWindow.xaml.cs de l’exemple. Des astérisques marquent les éléments ajoutés pour cet exemple. Notez aussi que vous devez ajouter une référence pour <xref:System.Net.Http>.
 
-Vous pouvez télécharger le projet à partir de la page [Exemple Async : réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Vous pouvez télécharger le projet à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async : Réglage précis de votre application).
 
 ```csharp
 using System;
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ajuster une application Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Réglage de votre application Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Exemple Async : ajuster une application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application (Exemple Async : Réglage précis de votre application)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

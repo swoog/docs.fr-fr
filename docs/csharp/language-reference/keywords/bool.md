@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334170"
 ---
 # <a name="bool-c-reference"></a>bool (référence C#)
 
 Le mot clé `bool` est un alias de <xref:System.Boolean?displayProperty=nameWithType>. Il sert à déclarer des variables qui stockent les valeurs booléennes : [true](true-literal.md) et [false](false-literal.md).
 
 > [!NOTE]
-> Si vous avez besoin d’une variable booléenne qui peut également avoir la valeur `null`, utilisez `bool?`. Pour plus d’informations, voir la section [Type bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) de l’article [Utiliser des types Nullable](../../programming-guide/nullable-types/using-nullable-types.md).
+> Utilisez le type `bool?` si vous voulez suivre une logique à trois valeurs, par exemple pour travailler avec des bases de données qui acceptent un type booléen à trois valeurs. Dans le cas des opérandes `bool?`, les opérateurs prédéfinis `&` et `|` prennent en charge la logique à trois valeurs. Pour plus d’informations, voir la section [Opérateurs logiques booléens Nullable](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) de l’article [Opérateurs logiques booléens](../operators/boolean-logical-operators.md).
 
 ## <a name="literals"></a>Littéraux
 
@@ -55,7 +55,7 @@ Dans cet exemple, vous tapez un caractère, et le programme vérifie si le carac
 - [Référence C#](../../../csharp/language-reference/index.md)
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
-- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)
-- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Table des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Table des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Table des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Table des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

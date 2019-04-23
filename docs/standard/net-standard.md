@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335015"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -113,7 +113,7 @@ Pour plus d’informations, consultez [Mode de compatibilité du .NET Framework]
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Bibliothèques .NET Standard et Visual Studio
 
-Pour générer des bibliothèques .NET Standard dans Visual Studio, vérifiez que [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ou ultérieur est installé sur Windows, ou que [Visual Studio pour Mac version 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) ou ultérieur est installé sur macOS.
+Pour générer des bibliothèques .NET Standard dans Visual Studio, vérifiez que [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ou ultérieur est installé sur Windows, ou que [Visual Studio pour Mac version 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ou ultérieur est installé sur macOS.
 
 Si vous devez seulement utiliser les bibliothèques .NET Standard 2.0 dans vos projets, vous pouvez également le faire dans Visual Studio 2015. Cependant, le client NuGet 3.6 ou ultérieur doit être installé. Vous pouvez télécharger le client NuGet pour Visual Studio 2015 à partir de la page [Téléchargements NuGet](https://www.nuget.org/downloads).
 
@@ -142,7 +142,7 @@ Différences :
 
 La compatibilité des bibliothèques de classes portables est fournie par le package NuGet [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility). Cette dépendance est nécessaire quand vous référencez des packages NuGet qui contiennent des bibliothèques de classes portables basées sur un profil.
 
-Les bibliothèques de classes portables basées sur un profil packagées en `netstandard` sont plus faciles à utiliser que les bibliothèques de classes portables basées sur un profil packagées de manière habituelle. Les packages `netstandard` sont compatibles avec les utilisateurs existants.
+Les bibliothèques de classes portables basées sur un profil packagées en `netstandard` sont plus faciles à utiliser que les bibliothèques de classes portables basées sur un profil packagées de manière habituelle. `netstandard` Les packages sont compatibles avec les utilisateurs existants.
 
 Voici l’ensemble des profils de bibliothèques de classes portables qui sont compatibles avec .NET Standard :
 

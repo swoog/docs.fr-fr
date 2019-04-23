@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318973"
 ---
 # <a name="if-c-reference"></a>#if (référence C#)
 
@@ -24,15 +24,15 @@ Quand le compilateur C# rencontre une directive `#if`, suivie éventuellement d�
 #endif
 ```
 
-Vous pouvez utiliser les opérateurs [==](../operators/equality-operators.md#equality-operator-) (égalité) et [!=](../operators/equality-operators.md#inequality-operator-) (inégalité) uniquement pour tester la valeur [true](../keywords/true.md) ou [false](../keywords/false.md). True signifie que le symbole est défini. L’instruction `#if DEBUG` a la même signification que `#if (DEBUG == true)`. Vous pouvez utiliser les opérateurs [&&](../operators/conditional-and-operator.md) (et), [&#124;&#124;](../operators/conditional-or-operator.md) (or) et [!](../operators/logical-negation-operator.md) (not) pour vérifier si plusieurs symboles ont été définis. Vous pouvez également regrouper des symboles et des opérateurs à l’aide de parenthèses.
+Vous pouvez utiliser les opérateurs [==](../operators/equality-operators.md#equality-operator-) (égalité) et [!=](../operators/equality-operators.md#inequality-operator-) (inégalité) uniquement pour tester la valeur [true](../keywords/true.md) ou [false](../keywords/false.md). True signifie que le symbole est défini. L’instruction `#if DEBUG` a la même signification que `#if (DEBUG == true)`. Vous pouvez utiliser les opérateurs [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (et), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (or) et [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) pour vérifier si plusieurs symboles ont été définis. Vous pouvez également regrouper des symboles et des opérateurs à l’aide de parenthèses.
 
 ## <a name="remarks"></a>Remarques
 
-`#if`, ainsi que les directives [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) et [#undef](preprocessor-undef.md), vous permettent d’inclure ou d’exclure du code en fonction de l’existence d’un ou plusieurs symboles. Cela peut être utile lors de la compilation du code pour une version Debug ou lors de la compilation d’une configuration spécifique.
+`#if`, ainsi que les directives [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) et [#undef](preprocessor-undef.md), permettent d’inclure ou d’exclure du code en fonction de l’existence d’un ou plusieurs symboles. Cela peut être utile lors de la compilation du code pour une version Debug ou lors de la compilation d’une configuration spécifique.
 
 Une directive conditionnelle commençant par une directive `#if` doit se terminer explicitement par une directive `#endif`.
 
-`#define` vous permet de définir un symbole. En utilisant ensuite ce dernier comme expression passée à la directive `#if`, l’expression correspond à `true`.
+`#define` permet de définir un symbole. En utilisant ensuite ce dernier comme expression passée à la directive `#if`, l’expression correspond à `true`.
 
 Vous pouvez aussi définir un symbole avec l’option du compilateur [-define](../compiler-options/define-compiler-option.md). Vous pouvez annuler la définition d’un symbole avec [#undef](preprocessor-undef.md).
 
@@ -92,4 +92,4 @@ public class MyClass
 - [Référence C#](../../../csharp/language-reference/index.md)
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Directives de préprocesseur C#](index.md)
-- [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Procédure : Effectuer une compilation conditionnelle avec Trace et Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

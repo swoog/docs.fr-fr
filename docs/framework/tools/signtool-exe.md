@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185573"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (outil Sign Tool)
 L'outil Signature est un outil en ligne de commande qui signe numériquement les fichiers, vérifie les signatures dans les fichiers et horodate les fichiers.  
@@ -70,7 +70,7 @@ signtool [command] [options] [file_name | ...]
 |Options de la commande Sign|Description|  
 |-------------------------|-----------------|  
 |`/a`|Sélectionne automatiquement le meilleur certificat de signature. L'outil Signature recherche tous les certificats valides qui répondent à toutes les conditions spécifiées et sélectionne celui qui est valide le plus longtemps. Si cette option n'est pas présente, l'outil Signature pense trouver un seul certificat de signature valide.|  
-|`/ac`  *file*|Ajoute un certificat supplémentaire à partir de *file* au bloc de signature.|  
+|`/ac`  *fichier*|Ajoute un certificat supplémentaire à partir de *file* au bloc de signature.|  
 |`/as`|Ajoute cette signature. Si aucune signature principale n'est présente, cette signature est effectuée à la signature principale à la place.|  
 |`/c`  *CertTemplateName*|Spécifie le nom du modèle de certificat (une extension Microsoft) pour le certificat de signature.|  
 |`/csp`  *CSPName*|Spécifie le fournisseur de services de chiffrement (CSP) qui contient le conteneur de clés privées.|  
@@ -82,8 +82,8 @@ signtool [command] [options] [file_name | ...]
 |`/kc`  *PrivKeyContainerName*|Spécifie le nom du conteneur de clés privées.|  
 |`/n`  *SubjectName*|Spécifie le nom de l'objet du certificat de signature. Cette valeur peut être une sous-chaîne du nom de l'objet entier.|  
 |`/nph`|En cas de prise en charge, supprime les hachages de pages pour les fichiers exécutables. La valeur par défaut est déterminée par la variable d'environnement SIGNTOOL_PAGE_HASHES et par la version de wintrust.dll. Cette option est ignorée pour les fichiers non PE.|  
-|`/p`  *Password*|Spécifie le mot de passe à utiliser lors de l'ouverture d'un fichier PFX. (Utilisez l'option `/f` pour spécifier un fichier PFX.)|  
-|`/p7` *Path*|Spécifie qu'un fichier PKCS (Public Key Cryptography Standards) #7 est produit pour chaque fichier de contenu spécifié. Les fichiers PKCS #7 sont nommés *path*\\*filename*.p7.|  
+|`/p`  *Mot de passe*|Spécifie le mot de passe à utiliser lors de l'ouverture d'un fichier PFX. (Utilisez l'option `/f` pour spécifier un fichier PFX.)|  
+|`/p7` *Chemin d’accès*|Spécifie qu'un fichier PKCS (Public Key Cryptography Standards) #7 est produit pour chaque fichier de contenu spécifié. Les fichiers PKCS #7 sont nommés *path*\\*filename*.p7.|  
 |`/p7ce` *Value*|Spécifie des options pour le contenu PKCS #7 signé. Remplacez *Value* par « Embedded » pour incorporer le contenu signé dans le fichier PKCS #7 ou par « DetachedSignedData » pour produire la partie signée des données d’un fichier PKCS #7 détaché. Si l'option `/p7ce` n'est pas utilisée, le contenu signé est incorporé par défaut.|  
 |`/p7co` *\<OID>*|Spécifie l'identificateur d'objet (OID) qui identifie le contenu PKCS #7 signé.|  
 |`/ph`|En cas de prise en charge, génère les hachages de pages pour les fichiers exécutables.|  
@@ -94,7 +94,7 @@ signtool [command] [options] [file_name | ...]
 |`/t`  *URL*|Spécifie l'URL du serveur d'horodatage. Si cette option (ou `/tr`) n'est pas présente, le fichier signé ne sera pas horodaté. Un avertissement est généré si l'horodatage échoue. Cette option ne peut pas être utilisée avec l'option `/tr`.|  
 |`/td`  *alg*|Utilisé avec l'option `/tr` pour demander un algorithme Digest utilisé par le serveur d'horodatage RFC 3161.|  
 |`/tr`  *URL*|Spécifie l'URL du serveur d'horodatage RFC 3161. Si cette option (ou `/t`) n'est pas présente, le fichier signé ne sera pas horodaté. Un avertissement est généré si l'horodatage échoue. Cette option ne peut pas être utilisée avec l'option `/t`.|  
-|`/u`  *Usage*|Spécifie l'utilisation améliorée de la clé (EKU) qui doit être présente dans le certificat de signature. La valeur de l'utilisation peut être spécifiée par un OID ou une chaîne. L'utilisation par défaut est « Signature du code » (1.3.6.1.5.5.7.3.3).|  
+|`/u`  *Utilisation*|Spécifie l'utilisation améliorée de la clé (EKU) qui doit être présente dans le certificat de signature. La valeur de l'utilisation peut être spécifiée par un OID ou une chaîne. L'utilisation par défaut est « Signature du code » (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Spécifie l'utilisation « Windows System Component Verification » (1.3.6.1.4.1.311.10.3.6).|  
   
  Pour obtenir des exemples, consultez [Utilisation de SignTool pour signer un fichier](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file).  
@@ -107,7 +107,7 @@ signtool [command] [options] [file_name | ...]
 |----------------------|-----------------|  
 |`/p7`|Horodate les fichiers PKCS #7.|  
 |`/t`  *URL*|Spécifie l'URL du serveur d'horodatage. Le fichier en cours d'horodatage doit avoir été signé au préalable. L'option `/t` ou `/tr` est obligatoire.|  
-|`/td`  *alg*|Demande un algorithme de condensat utilisé par le serveur d’horodatage RFC 3161. `/td` est utilisé avec l'option `/tr`.|  
+|`/td`  *alg*|Demande un algorithme de condensat utilisé par le serveur d’horodatage RFC 3161. `/td` est utilisé avec l’option `/tr`.|  
 |`/tp` *index*|Horodate la signature à l’*index*.|  
 |`/tr`  *URL*|Spécifie l'URL du serveur d'horodatage RFC 3161. Le fichier en cours d'horodatage doit avoir été signé au préalable. L'option `/tr` ou `/t` est obligatoire.|  
   
@@ -210,5 +210,6 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

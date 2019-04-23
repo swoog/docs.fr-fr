@@ -3,12 +3,12 @@ title: Utiliser les fonctionnalités de critères spéciaux pour étendre les ty
 description: Ce tutoriel avancé montre comment utiliser des techniques de critères spéciaux pour créer des fonctionnalités à l’aide de données et d’algorithmes créés séparément.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308599"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutoriel : Utiliser les fonctionnalités de critères spéciaux pour étendre les types de données
 
@@ -23,7 +23,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, y compris le compilateur C# 8.0 en préversion. Ce dernier est disponible dans la dernière version de [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou de [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, y compris le compilateur C# 8.0 en préversion. Ce dernier est disponible dans la dernière version de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou de [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Ce tutoriel suppose de connaître C# et .NET, y compris Visual Studio ou l’interface CLI .NET Core.
 

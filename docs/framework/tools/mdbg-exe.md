@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199997"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (débogueur de ligne de commande du .NET Framework)
 Le débogueur de ligne de commande du .NET Framework aide les fournisseurs d'outils et les développeurs d'applications à trouver et à corriger les bogues dans les programmes qui ont pour cible le Common Language Runtime du .NET Framework. Cet outil utilise l'API de débogage du runtime pour fournir des services de débogage. Vous pouvez utiliser MDbg.exe pour déboguer uniquement du code managé ; il n'y a pas de prise en charge du débogage du code non managé.  
@@ -85,7 +85,7 @@ MDbg [ProgramName[arguments]] [options]
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|Affiche des informations de débogage sur des frames de pile.<br /><br /> -   L’option `-v` fournit des informations détaillées sur chacun des frames de pile affichés.<br />-   La spécification d’un nombre pour `depth` limite le nombre de frames affichés. Utilisez la commande **all** pour afficher tous les frames. La valeur par défaut est 100.<br />-   Si vous spécifiez le paramètre *threadID*, vous pouvez contrôler le thread qui est associé à la pile. La valeur par défaut est le thread actuel uniquement. Utilisez la commande **all** pour obtenir tous les threads.|  
 |**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|Affiche les fonctions qui correspondent à `pattern` pour un module.<br /><br /> Si *numSymbols* est spécifié, la sortie est limitée au nombre spécifié. Si `!` (indiquant une expression régulière) n’est pas spécifié pour *pattern*, toutes les fonctions sont affichées. Si *module* n’est pas fourni, tous les modules chargés sont affichés. Les symboles (*~#*) peuvent être utilisés pour définir des points d’arrêt à l’aide de la commande **break**.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Compilez l'application à déboguer à l'aide d'indicateurs spécifiques au compilateur, ce qui oblige ce dernier à générer des symboles de débogage. Pour plus d'informations sur ces indicateurs, consultez la documentation de votre compilateur. Il est toujours possible de déboguer des applications optimisées, mais il manquera certaines informations de débogage. Par exemple, un grand nombre de variables locales ne seront pas visibles et certaines lignes sources seront incorrectes.  
   
  Après avoir compilé votre application, tapez **mdbg** à l’invite de commandes pour démarrer une session de débogage, comme le montre l’exemple suivant.  
@@ -105,5 +105,6 @@ mdbg>
  Une fois que vous êtes dans le débogueur, utilisez les commandes et les arguments décrits dans la section précédente.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

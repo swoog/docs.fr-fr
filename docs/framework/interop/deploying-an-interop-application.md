@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192080"
 ---
 # <a name="deploying-an-interop-application"></a>Déploiement d'une application d'interopérabilité
 Une application d’interopérabilité comporte généralement un assembly client .NET, un ou plusieurs assemblys d’interopérabilité représentant des bibliothèques de types COM distinctes, et un ou plusieurs composants COM inscrits. Visual Studio et le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fournissent des outils pour importer et convertir une bibliothèque de types vers un assembly d’interopérabilité, comme décrit dans [Importation d’une bibliothèque de types sous la forme d’un assembly](importing-a-type-library-as-an-assembly.md). Il existe deux façons de déployer une application d’interopérabilité :  
@@ -46,7 +46,8 @@ Une application d’interopérabilité comporte généralement un assembly clien
  Les assemblys qui sont partagés par plusieurs applications doivent être installés dans un référentiel centralisé appelé le Global Assembly Cache. Les clients .NET peuvent accéder à la même copie de l’assembly d’interopérabilité, qui est signé et installé dans le Global Assembly Cache. Pour plus d’informations sur la production et l’utilisation d’assemblys PIA, consultez [Assemblys PIA (Primary Interop Assembly)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Exposition de composants COM au .NET Framework](exposing-com-components.md)
+
+- [Exposition de composants COM au .NET Framework](exposing-com-components.md)
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)
-- [Utilisation de types COM dans du code managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Utiliser des types COM dans du code managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilation d'un projet d'interopérabilité](compiling-an-interop-project.md)

@@ -1,13 +1,13 @@
 ---
 title: Nouveautés de C# 7.1
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.1.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728652"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480961"
 ---
 # <a name="whats-new-in-c-71"></a>Nouveautés de C# 7.1
 
@@ -17,12 +17,14 @@ C# 7.1 ajoute l’élément de configuration de [sélection de la version du lan
 
 Les nouvelles fonctionnalités de langage de cette version sont :
 
-* [Méthode `async` `Main`](#async-main)
+* [`async` `Main` méthode](#async-main)
   - Le point d’entrée pour une application peut avoir le modificateur `async`.
-* [Expressions littérales `default`](#default-literal-expressions)
+* [`default` Expressions littérales](#default-literal-expressions)
   - Vous pouvez utiliser des expressions littérales default dans les expressions de valeur par défaut quand le type cible peut être inféré.
 * [Noms des éléments de tuple inférés](#inferred-tuple-element-names)
   - Les noms des éléments de tuple peuvent être inférés dans de nombreux cas à partir de l’initialisation du tuple.
+* [Critères spéciaux sur les paramètres de type générique](#pattern-matching-on-generic-type-parameters)
+  - Il est possible d’utiliser des expressions de critères spéciaux sur les variables dont le type est un paramètre de type générique.
 
 Enfin, le compilateur a deux options, `/refout` et `/refonly`, qui contrôlent la [génération d’assemblys de références](#reference-assembly-generation).
 
@@ -60,7 +62,7 @@ static async Task Main()
 }
 ```
 
-Pour plus d’informations, consultez la rubrique [async main](../programming-guide/main-and-command-args/index.md) dans le Guide de programmation.
+Pour plus d’informations, voir l’article [async main](../programming-guide/main-and-command-args/index.md) du guide de programmation.
 
 ## <a name="default-literal-expressions"></a>Expressions littérales par défaut
 
@@ -77,7 +79,7 @@ Vous pouvez désormais omettre le type du côté droit de l’initialisation :
 Func<string, bool> whereClause = default;
 ```
 
-Pour plus d’informations sur cette amélioration, consultez la rubrique [Expressions de valeur par défaut](../programming-guide/statements-expressions-operators/default-value-expressions.md) dans le Guide de programmation C# .
+Pour plus d’informations sur cette amélioration, voir l’article [Expressions de valeur par défaut](../programming-guide/statements-expressions-operators/default-value-expressions.md) du guide de programmation C#.
 
 Cette amélioration change également certaines des règles d’analyse pour le [mot clé default](../language-reference/keywords/default.md).
 
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Pour plus d’informations sur cette fonctionnalité, consultez la rubrique [Tuples](../tuples.md).
+Pour plus d’informations sur cette fonctionnalité, voir l’article [Tuples](../tuples.md).
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Critères spéciaux sur les paramètres de type générique
+
+À compter de C# 7.1, l’expression de modèle de `is` et du modèle de type `switch` peut avoir le type d’un paramètre de type générique, ce qui peut se révéler particulièrement utile pour vérifier des types potentiellement `struct` ou `class` tout en évitant le boxing.
 
 ## <a name="reference-assembly-generation"></a>Génération d’assemblys de références
 
 Il existe deux nouvelles options du compilateur qui génèrent des *assemblys de références uniquement* : [/refout](../language-reference/compiler-options/refout-compiler-option.md) et [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Les rubriques en lien expliquent ces options et les assemblys de références plus en détails.
+Les articles en lien décrivent plus en détail ces options et les assemblys de références.

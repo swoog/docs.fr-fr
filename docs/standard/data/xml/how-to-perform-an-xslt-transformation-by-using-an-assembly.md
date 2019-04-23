@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345402"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procédure : effectuer une transformation XSLT à l’aide d’un assembly
 Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère un assembly. L'assembly peut être passé directement dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -132,7 +132,7 @@ Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère u
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Pour compiler la feuille de style avec le script activé.  
   
-1.  L'exécution de la commande suivante depuis la ligne de commande crée deux assemblys nommés `Transform.dll` et `Transform_Script1.dll` (C'est le comportement par défaut. Sauf spécification contraire, le nom de la classe et de l'assembly est par défaut celui de la feuille de style principale) :  
+1. L'exécution de la commande suivante depuis la ligne de commande crée deux assemblys nommés `Transform.dll` et `Transform_Script1.dll` (C'est le comportement par défaut. Sauf spécification contraire, le nom de la classe et de l'assembly est par défaut celui de la feuille de style principale) :  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Pour inclure l'assembly compilé comme référence lorsque vous compilez votre code.  
   
-1.  Vous pouvez inclure un assembly dans Visual Studio en ajoutant une référence dans l'Explorateur de solutions ou à partir de la ligne de commande.  
+1. Vous pouvez inclure un assembly dans Visual Studio en ajoutant une référence dans l'Explorateur de solutions ou à partir de la ligne de commande.  
   
-2.  Pour la ligne de commande en C#, utilisez la syntaxe suivante :  
+2. Pour la ligne de commande en C#, utilisez la syntaxe suivante :  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  Pour la ligne de commande en Visual Basic, utilisez la syntaxe suivante :  
+3. Pour la ligne de commande en Visual Basic, utilisez la syntaxe suivante :  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Pour utiliser l'assembly compilé dans votre code.  
   
-1.  L'exemple suivant montre comment exécuter la transformation XSLT à l'aide de la feuille de style compilée.  
+1. L'exemple suivant montre comment exécuter la transformation XSLT à l'aide de la feuille de style compilée.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
@@ -179,11 +179,11 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- dans l'exemple ci-dessus. Pour plus d'informations sur la méthode Assembly.Load, voir <xref:System.Reflection.Assembly.Load%2A>.  
+ dans l'exemple ci-dessus. Pour plus d’informations sur la méthode Assembly.Load, voir <xref:System.Reflection.Assembly.Load%2A>  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Compilateur XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [XSLT Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
 - [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Génération à partir de la ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

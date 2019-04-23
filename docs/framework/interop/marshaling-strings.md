@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223028"
 ---
 # <a name="marshaling-strings"></a>Marshaling de chaînes
 L’appel de code non managé copie les paramètres de chaîne, en les convertissant si nécessaire du format .NET Framework (Unicode) au format non managé (ANSI). Étant donné que les chaînes managées sont immuables, l’appel de code non managé ne les recopie pas de la mémoire non managée vers la mémoire managée au retour de la fonction.  
@@ -29,7 +29,7 @@ L’appel de code non managé copie les paramètres de chaîne, en les convertis
 |------------|-----------------|------------|  
 |Par valeur.|Passe les structures en tant que paramètres entrants.|[MsgBox](msgbox-sample.md)|  
 |Comme résultat.|Retourne les chaînes à partir du code non managé.|[Chaînes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Par référence.|Passe des chaînes en tant que paramètres entrants/sortants avec <xref:System.Text.StringBuilder>.|[Mémoires tampons](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
+|Par référence.|Passe des chaînes en tant que paramètres entrants/sortants avec <xref:System.Text.StringBuilder>.|[Mémoires tampon](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
 |Dans une structure par valeur.|Passe des chaînes dans une structure qui est un paramètre entrant.|[Structs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
 |Dans une structure par référence **(char\*)**.|Passe des chaînes dans une structure qui est un paramètre entrant/sortant. La fonction non managée attend un pointeur vers une mémoire tampon de caractères ; la taille de la mémoire tampon est un membre de la structure.|[Chaînes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
 |Dans une structure par référence **(char[])**.|Passe des chaînes dans une structure qui est un paramètre entrant/sortant. La fonction non managée attend une mémoire tampon de caractères incorporée.|[OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  
@@ -39,7 +39,8 @@ L’appel de code non managé copie les paramètres de chaîne, en les convertis
 |Comme un tableau de structures qui contiennent des chaînes par valeur.|Crée un tableau de structures qui contiennent des chaînes ; le tableau est passé par valeur.|[Tableaux](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Marshaling de données à l’aide de l’appel de code managé](marshaling-data-with-platform-invoke.md)
-- [Marshaling de classes, de structures, et d’unions](marshaling-classes-structures-and-unions.md)
+- [Marshaling de classes, de structures, et d'unions](marshaling-classes-structures-and-unions.md)
 - [Marshaling de différents types de tableaux](marshaling-different-types-of-arrays.md)
 - [Exemples divers de marshaling](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: add7b803c413f8d9ba913d5dcc1a21bbd0c5bd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234953"
+---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>Un blocage peut se produire lors de l’utilisation de services réentrants
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6.2|
 |Type|Reciblage|
 |API affectées|<ul><li><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType></li></ul>|
-

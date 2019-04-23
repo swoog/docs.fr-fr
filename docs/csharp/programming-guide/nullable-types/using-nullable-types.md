@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306649"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Utilisation de types Nullable (Guide de programmation C#)
 
@@ -31,7 +31,7 @@ Pour examiner une instance d’un type Nullable à la recherche de la valeur nul
   
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> indique si une instance d’un type Nullable a une valeur de son type sous-jacent.
   
-- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> obtient la valeur d’un type sous-jacent si <xref:System.Nullable%601.HasValue%2A> est `true`. Si <xref:System.Nullable%601.HasValue%2A> est `false`, la propriété <xref:System.Nullable%601.Value%2A> lève une <xref:System.InvalidOperationException>.
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> récupère la valeur d’un type sous-jacent si <xref:System.Nullable%601.HasValue%2A> est `true`. Si <xref:System.Nullable%601.HasValue%2A> est `false`, la propriété <xref:System.Nullable%601.Value%2A> lève une <xref:System.InvalidOperationException>.
   
 Le code dans l’exemple suivant utilise la propriété `HasValue` pour tester si la variable contient une valeur avant de l’afficher :
   
@@ -66,6 +66,9 @@ Un type valeur non Nullable est implicitement converti en type Nullable correspo
 Les opérateurs unaire et binaire prédéfinis et tous les opérateurs définis par l’utilisateur existant pour les types valeur peuvent également être utilisés par les types Nullable. Ces opérateurs produisent une valeur null si l’un des opérandes ou les deux sont null ; sinon, l’opérateur utilise les valeurs contenues pour calculer le résultat. Par exemple :  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Pour le type `bool?`, les opérateurs `&` et `|` prédéfinis ne suivent pas les règles décrites dans cette section : le résultat d’une évaluation peut être non Null, même si l’un des opérandes est Null. Pour plus d’informations, voir la section [Opérateurs logiques booléens Nullable](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) de l’article [Opérateurs logiques booléens](../../language-reference/operators/boolean-logical-operators.md).
   
 Pour les opérateurs relationnels (`<`, `>`, `<=`, `>=`), si l’un des opérandes ou les deux sont null, le résultat est `false`. Ne partez pas du principe que parce qu’une comparaison spécifique (par exemple `<=`) retourne `false`, la comparaison opposée (`>`) retourne `true`. L’exemple suivant montre que 10 n’est
 
@@ -75,6 +78,8 @@ Pour les opérateurs relationnels (`<`, `>`, `<=`, `>=`), si l’un des opérand
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 L’exemple ci-dessus montre également qu’une comparaison d’égalité de deux types Nullable tous deux null donne la valeur `true`.
+
+Pour plus d’informations, voir la section [Opérateurs lifted](~/_csharplang/spec/expressions.md#lifted-operators) de la [spécification du langage C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Boxing et unboxing
 
@@ -87,31 +92,8 @@ Vous pouvez effectuer l’unboxing du type valeur boxed vers le type Nullable co
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Type bool?
-
-Le type Nullable `bool?` peut contenir trois valeurs différentes : [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) et [Null](../../language-reference/keywords/null.md). Le type `bool?` est comme le type de variable booléen utilisé dans SQL. Pour vérifier que les résultats produits par les opérateurs `&` et `|` sont cohérents avec le type booléen à trois valeurs dans SQL, les opérateurs prédéfinis suivants sont fournis :
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-La sémantique de ces opérateurs est définie par le tableau suivant :  
-  
-|x|o|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-Notez que ces deux opérateurs ne suivent pas les règles décrites dans la section [Opérateurs](#operators) : le résultat d’une évaluation d’opérateur peut être non null même si l’un des opérandes est null.
-  
 ## <a name="see-also"></a>Voir aussi
 
 - [Types Nullable](index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
-- [Que signifie réellement « Lifted » ?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [Que signifie réellement « lifted » ?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

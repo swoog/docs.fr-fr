@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295989"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Création d'assemblys satellites pour les applications bureautiques
 Les fichiers de ressources jouent un rôle central dans les applications localisées. Ils permettent à une application d’afficher des chaînes, des images et d’autres données dans la langue et la culture de l’utilisateur, et de fournir des données de remplacement si les ressources relatives à la langue et la culture de l’utilisateur ne sont pas disponibles. Le .NET Framework utilise un modèle Hub and Spoke pour localiser et récupérer les ressources localisées. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; elle est utilisée quand aucune ressource localisée n’est disponible. Vous utilisez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour désigner la culture de la culture par défaut de l’application. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture localisée unique, mais ne contient pas de code. Dans la mesure où les assemblys satellites ne font pas partie de l’assembly principal, vous pouvez facilement remplacer ou mettre à jour les ressources correspondant à une culture spécifique sans remplacer l’assembly principal de l’application.  
@@ -52,10 +52,11 @@ Les fichiers de ressources jouent un rôle central dans les applications localis
   
 -   Des informations sur la culture de l’assembly satellite doivent être incluses dans les métadonnées de l’assembly. Pour stocker le nom de culture dans les métadonnées de l’assembly satellite, vous spécifiez l’option `/culture` quand vous utilisez [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) pour incorporer des ressources dans l’assembly satellite.  
   
- L’illustration suivante propose un exemple de structure de répertoires et de la configuration requise pour les emplacements des applications que vous n’installez pas dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Les éléments avec les extensions .txt et .resources ne sont pas fournis avec l’application finale. Il s’agit des fichiers de ressources intermédiaires utilisés pour créer les assemblys de ressources satellites finaux. Dans cet exemple, vous pouvez remplacer les fichiers .txt par les fichiers .resx. Pour plus d’informations, consultez [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ L’illustration suivante propose un exemple de structure de répertoires et de la configuration requise pour les emplacements des applications que vous n’installez pas dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Les éléments avec les extensions .txt et .resources ne sont pas fournis avec l’application finale. Il s’agit des fichiers de ressources intermédiaires utilisés pour créer les assemblys de ressources satellites finaux. Dans cet exemple, vous pouvez remplacer les fichiers .txt par les fichiers .resx. Pour plus d’informations, consultez [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
+ 
+ L’illustration suivante montre le répertoire d’assemblys satellites :
   
- ![Assemblys satellites](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-Répertoire de l’assembly satellite  
+ ![Répertoire d’assemblys satellites avec sous-répertoires de cultures localisées.](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>compiler des assemblys satellites  
  Vous utilisez le [Générateur de fichiers de ressources (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler les fichiers texte ou XML (.resx) qui contiennent des ressources en fichiers .resources binaires. Vous utilisez ensuite [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) pour compiler les fichiers .resources en assemblys satellites. Al.exe crée un assembly à partir des fichiers .resources que vous spécifiez. Les assemblys satellites ne peuvent contenir que des ressources ; ils ne peuvent contenir aucun code exécutable.  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>Assemblys satellites : Exemple  
  Voici un exemple « Hello world » simple qui affiche une boîte de message contenant un message d’accueil localisé. L’exemple contient des ressources pour les cultures Anglais (États-Unis), Français (France) et Russe (Russie), et sa culture de secours est Anglais. Pour créer l’exemple, effectuez les étapes suivantes :  
   
-1.  Créez un fichier de ressources nommé Greeting.resx ou Greeting.txt pour contenir la ressource de la culture par défaut. Stockez une chaîne unique nommée `HelloString` dont la valeur est « Hello world! » dans ce fichier.  
+1. Créez un fichier de ressources nommé Greeting.resx ou Greeting.txt pour contenir la ressource de la culture par défaut. Stockez une chaîne unique nommée `HelloString` dont la valeur est « Hello world! » dans ce fichier.  
   
-2.  Pour indiquer que l’anglais (en) est la culture par défaut de l’application, ajoutez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> suivant au fichier AssemblyInfo de l’application ou au fichier de code source principal qui sera compilé dans l’assembly principal de l’application.  
+2. Pour indiquer que l’anglais (en) est la culture par défaut de l’application, ajoutez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> suivant au fichier AssemblyInfo de l’application ou au fichier de code source principal qui sera compilé dans l’assembly principal de l’application.  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
+3. Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
   
     -   Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Greeting.en-US.resx ou Greeting.en-US.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Hi world! ».  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Greeting.ru-RU.resx ou Greeting.ru-RU.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Всем привет! ».  
   
-4.  Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez les commandes suivantes pour compiler les fichiers .resx en fichiers .resources :  
+4. Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez les commandes suivantes pour compiler les fichiers .resx en fichiers .resources :  
   
     ```console
     resgen Greeting.resx  
@@ -113,10 +114,10 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      Si vos ressources se trouvent dans des fichiers texte au lieu de fichiers XML, remplacez l’extension .resx par .txt.  
   
-5.  Compilez le code source suivant avec les ressources de la culture par défaut dans l’assembly principal de l’application :  
+5. Compilez le code source suivant avec les ressources de la culture par défaut dans l’assembly principal de l’application :  
   
     > [!IMPORTANT]
-    >  Si vous utilisez la ligne de commande plutôt que Visual Studio pour créer l’exemple, vous devez modifier l’appel au constructeur de la classe <xref:System.Resources.ResourceManager> comme suit :`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  Si vous utilisez la ligne de commande plutôt que Visual Studio pour créer l’exemple, modifiez l’appel au constructeur de la classe <xref:System.Resources.ResourceManager> : `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  Créez un sous-répertoire dans le répertoire principal de l’application pour chaque culture localisée prise en charge par l’application. Vous devez créer des sous-répertoires en-US, fr-FR et ru-RU. Visual Studio crée automatiquement ces sous-répertoires dans le cadre du processus de compilation.  
+6. Créez un sous-répertoire dans le répertoire principal de l’application pour chaque culture localisée prise en charge par l’application. Vous devez créer des sous-répertoires en-US, fr-FR et ru-RU. Visual Studio crée automatiquement ces sous-répertoires dans le cadre du processus de compilation.  
   
-7.  Incorporez les fichiers .resources individuels spécifiques à la culture dans des assemblys satellites et enregistrez-les dans le répertoire approprié. La commande à exécuter pour chaque fichier .resources est la suivante :  
+7. Incorporez les fichiers .resources individuels spécifiques à la culture dans des assemblys satellites et enregistrez-les dans le répertoire approprié. La commande à exécuter pour chaque fichier .resources est la suivante :  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>Ressources dans le Global Assembly Cache : Exemple  
  L’exemple suivant utilise une méthode dans une bibliothèque de classes .NET Framework pour extraire et retourner un message d’accueil localisé à partir d’un fichier de ressources. La bibliothèque et ses ressources sont inscrites dans le Global Assembly Cache. L’exemple contient des ressources pour les cultures Anglais (États-Unis), Français (France) et Russe (Russie). L’anglais est la culture par défaut ; ses ressources sont stockées dans l’assembly principal. L’exemple diffère initialement la signature de la bibliothèque et ses assemblys satellites avec une clé publique, puis les signe à nouveau avec une paire de clés publique/privée. Pour créer l’exemple, effectuez les étapes suivantes :  
   
-1.  Si vous n’utilisez pas Visual Studio, utilisez la commande [Strong Name Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) suivante pour créer une paire de clés publique/privée nommée ResKey.snk :  
+1. Si vous n’utilisez pas Visual Studio, utilisez la commande [Strong Name Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) suivante pour créer une paire de clés publique/privée nommée ResKey.snk :  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      Si vous utilisez Visual Studio, utilisez l’onglet **Signature** de la boîte de dialogue **Propriétés** du projet pour générer le fichier de clé.  
   
-2.  Utilisez la commande [Strong Name Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) suivante pour créer un fichier de clé publique nommé PublicKey.snk :  
+2. Utilisez la commande [Strong Name Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) suivante pour créer un fichier de clé publique nommé PublicKey.snk :  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  Créez un fichier de ressources nommé Strings.resx pour contenir la ressource de la culture par défaut. Stockez une chaîne unique nommée `Greeting` dont la valeur est « How do you do? » dans ce fichier.  
+3. Créez un fichier de ressources nommé Strings.resx pour contenir la ressource de la culture par défaut. Stockez une chaîne unique nommée `Greeting` dont la valeur est « How do you do? » dans ce fichier.  
   
-4.  Pour indiquer que l’anglais « en » est la culture par défaut de l’application, ajoutez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> suivant au fichier AssemblyInfo de l’application ou au fichier de code source principal qui sera compilé dans l’assembly principal de l’application :  
+4. Pour indiquer que l’anglais « en » est la culture par défaut de l’application, ajoutez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> suivant au fichier AssemblyInfo de l’application ou au fichier de code source principal qui sera compilé dans l’assembly principal de l’application :  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
+5. Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
   
     -   Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Strings.en-US.resx ou Strings.en-US.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Hello! ».  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Strings.ru-RU.resx ou Strings.ru-RU.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Привет! ».  
   
-6.  Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez la commande suivante pour compiler les fichiers .resx en fichiers .resources :  
+6. Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez la commande suivante pour compiler les fichiers .resx en fichiers .resources :  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      où *filename* représente le chemin d’accès facultatif, le nom de fichier et l’extension du fichier .resx ou texte.  
   
-7.  Compilez le code source suivant pour StringLibrary.vb ou StringLibrary.cs avec les ressources de la culture par défaut dans un assembly de bibliothèque à signature différée nommé StringLibrary.dll :  
+7. Compilez le code source suivant pour StringLibrary.vb ou StringLibrary.cs avec les ressources de la culture par défaut dans un assembly de bibliothèque à signature différée nommé StringLibrary.dll :  
   
     > [!IMPORTANT]
     >  Si vous utilisez la ligne de commande plutôt que Visual Studio pour créer l’exemple, vous devez remplacer l’appel au constructeur de la classe <xref:System.Resources.ResourceManager> par `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  Créez un sous-répertoire dans le répertoire principal de l’application pour chaque culture localisée prise en charge par l’application. Vous devez créer des sous-répertoires en-US, fr-FR et ru-RU. Visual Studio crée automatiquement ces sous-répertoires dans le cadre du processus de compilation. Comme tous les assemblys satellites ont le même nom de fichier, les sous-répertoires permettent de stocker des assemblys satellites individuels spécifiques à la culture jusqu’à ce qu’ils soient signés avec une paire de clés publique/privée.  
+8. Créez un sous-répertoire dans le répertoire principal de l’application pour chaque culture localisée prise en charge par l’application. Vous devez créer des sous-répertoires en-US, fr-FR et ru-RU. Visual Studio crée automatiquement ces sous-répertoires dans le cadre du processus de compilation. Comme tous les assemblys satellites ont le même nom de fichier, les sous-répertoires permettent de stocker des assemblys satellites individuels spécifiques à la culture jusqu’à ce qu’ils soient signés avec une paire de clés publique/privée.  
   
 9. Incorporez les fichiers .resources individuels spécifiques à la culture dans des assemblys satellites à signature différée et enregistrez-les dans le répertoire approprié. La commande à exécuter pour chaque fichier .resources est la suivante :  
   
@@ -309,9 +310,10 @@ gacutil -i:StringLibrary.resources.dll
 14. Exécutez Example.exe.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Temporisation de signature d'un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Sn.exe (outil Strong Name)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Sn.exe (outil Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Gacutil.exe (outil Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
 - [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846465"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313370"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que développeur, vous pouvez développer dans l'un des nombreux langages qui ciblent le .NET Framework, tels que C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL et Windows PowerShell. Vous pouvez accéder aux types et aux membres des bibliothèques de classes développées pour le .NET Framework sans avoir à connaître le langage dans lequel ils ont été initialement écrits ni à suivre les conventions du langage d'origine. Si vous développez des composants, votre composant est accessible par toute application .NET Framework, indépendamment de son langage.  
@@ -38,7 +38,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
     -   [Types et signatures de membres de types](#Types)  
   
-    -   [Conventions d’attribution d’un nom](#naming)  
+    -   [Conventions d'attribution d'un nom](#naming)  
   
     -   [Conversion de type](#conversion)  
   
@@ -60,7 +60,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
     -   [Événements](#events)  
   
-    -   [Surcharges](#overloads)  
+    -   [Overloads](#overloads)  
   
     -   [Exceptions](#exceptions)  
   
@@ -134,13 +134,13 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |Membres|[Membres de types en général](#members)|Les méthodes et les champs static globaux ne sont pas conformes CLS.|36|  
 |Membres|--|La valeur d'un champ statique littéral est spécifiée via l'utilisation de métadonnées d'initialisation de champ. Un littéral conforme à CLS doit avoir une valeur spécifiée dans les métadonnées d'initialisation de champ qui est exactement du même type que le littéral (ou du type sous-jacent, si ce littéral est une `enum`).|13|  
 |Membres|[Membres de types en général](#members)|La contrainte vararg ne fait pas partie de la spécification CLS, et la seule convention d’appel prise en charge par la spécification CLS est la convention d’appel managée standard.|15|  
-|Conventions d'attribution d'un nom|[Conventions d’attribution d’un nom](#naming)|Les assemblys doivent suivre l’Annexe 7 du Rapport technique 15 du standard Unicode 3.0 régissant l’ensemble des caractères autorisés au début et dans les identificateurs. Cette annexe est disponible en ligne à l’adresse <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Les identificateurs doivent être dans un format canonique défini par la forme C de normalisation Unicode. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un insensibles aux paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différenciés par d’autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l’infrastructure CLI nécessite l’utilisation de l’encodage exact de la déclaration d’origine.|4|  
-|Surcharge|[Conventions d’attribution d’un nom](#naming)|Tous les noms introduits dans une portée conforme CLS doivent être distincts, indépendamment de leur type, sauf quand les noms sont identiques et résolus par surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l'autorise pas.|5|  
-|Surcharge|[Conventions d’attribution d’un nom](#naming)|Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d’identificateurs) doivent différer par d’autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS.|6|  
+|Conventions d'attribution d'un nom|[Conventions d'attribution d'un nom](#naming)|Les assemblys doivent suivre l’Annexe 7 du Rapport technique 15 du standard Unicode 3.0 régissant l’ensemble des caractères autorisés au début et dans les identificateurs. Cette annexe est disponible en ligne à l’adresse <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Les identificateurs doivent être dans un format canonique défini par la forme C de normalisation Unicode. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un insensibles aux paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différenciés par d’autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l’infrastructure CLI nécessite l’utilisation de l’encodage exact de la déclaration d’origine.|4|  
+|Surcharge|[Conventions d'attribution d'un nom](#naming)|Tous les noms introduits dans une portée conforme CLS doivent être distincts, indépendamment de leur type, sauf quand les noms sont identiques et résolus par surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l'autorise pas.|5|  
+|Surcharge|[Conventions d'attribution d'un nom](#naming)|Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d’identificateurs) doivent différer par d’autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS.|6|  
 |Surcharge|[Overloads](#overloads)|Seules les propriétés et les méthodes peuvent être surchargées.|37|  
 |Surcharge|[Overloads](#overloads)|Les propriétés et les méthodes peuvent être surchargées en fonction du nombre et des types de leurs paramètres uniquement, à l'exception des opérateurs de conversion nommés `op_Implicit` et `op_Explicit`, qui peuvent également être surchargés selon leur type de retour.|38|  
 |Surcharge|--|Si deux ou plusieurs méthodes conformes CLS déclarées dans un type ont le même nom et, pour un jeu spécifique d’instanciations de types, ont le même paramètre et les mêmes types de retour, alors toutes ces méthodes sont sémantiquement équivalentes à ces instanciations de type.|48|  
-|Types|[Types et signatures de membres de types](#Types)|<xref:System.Object?displayProperty=nameWithType> est conforme à CLS. Toute autre classe conforme à CLS héritera d'une classe conforme à CLS.|23|  
+|Types|[Types et signatures de membres de types](#Types)|<xref:System.Object?displayProperty=nameWithType> est conforme CLS. Toute autre classe conforme à CLS héritera d'une classe conforme à CLS.|23|  
 |Propriétés|[Propriétés](#properties)|Les méthodes qui implémentent les méthodes getter et setter d’une propriété doivent être marquées `SpecialName` dans les métadonnées.|24|  
 |Propriétés|[Propriétés](#properties)|Les accesseurs d’une propriété devront tous être statiques, virtuels ou être des instances.|26|  
 |Propriétés|[Propriétés](#properties)|Le type d’une propriété devra correspondre au type de retour de la méthode getter et au type du dernier argument de la méthode setter. Les types des paramètres de la propriété devront correspondre aux types des paramètres de la méthode getter et aux types de tous les paramètres de la méthode setter, sauf le dernier. Tous ces types devront être conformes à CLS et ne pas être des pointeurs managés (à savoir, ils ne doivent pas être passés par référence).|27|  
@@ -177,7 +177,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |<xref:System.Int64>|Entier 64 bits signé|  
 |<xref:System.Single>|Valeur à virgule flottante simple précision|  
 |<xref:System.Double>|Valeur à virgule flottante double précision|  
-|<xref:System.Boolean>|Type de valeur `true` ou `false`|  
+|<xref:System.Boolean>|`true` Type valeur `false` ou|  
 |<xref:System.Char>|Unité de code encodée en UTF-16|  
 |<xref:System.Decimal>|Nombre décimal à virgule fixe|  
 |<xref:System.IntPtr>|Pointeur ou handle d'une taille définie par la plateforme|  
@@ -191,7 +191,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |<xref:System.TypedReference>|Pointeur vers un objet et son type au moment de l'exécution|Aucun.|  
 |<xref:System.UInt16>|Entier 16 bits non signé|<xref:System.Int32>|  
 |<xref:System.UInt32>|Entier 32 bits non signé|<xref:System.Int64>|  
-|<xref:System.UInt64>|Entier 64 bits non signé|<xref:System.Int64> (peut dépasser la capacité), <xref:System.Numerics.BigInteger> ou <xref:System.Double>|  
+|<xref:System.UInt64>|Entier 64 bits non signé|<xref:System.Int64> (peut être l’objet d’un dépassement de capacité), <xref:System.Numerics.BigInteger> ou <xref:System.Double>|  
 |<xref:System.UIntPtr>|Pointeur ou handle non signé|<xref:System.IntPtr>|  
   
  La bibliothèque de classes du .NET Framework ou toute autre bibliothèque de classes peut inclure d'autres types non conformes à CLS. Par exemple :  
@@ -260,9 +260,9 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 ### <a name="type-conversion"></a>Conversion de type  
  La spécification CLS (Common Language Specification) définit deux opérateurs de conversion :  
   
--   `op_Implicit`, qui est utilisé pour les conversions étendues qui n'entraînent pas la perte de données ou de précision. Par exemple, la structure <xref:System.Decimal> inclut un opérateur `op_Implicit` surchargé pour convertir les valeurs de types intégraux et les valeurs <xref:System.Char> en valeurs <xref:System.Decimal>.  
+-   `op_Implicit`, utilisé pour les conversions étendues qui n’entraînent pas de perte de données ou de précision. Par exemple, la structure <xref:System.Decimal> inclut un opérateur `op_Implicit` surchargé pour convertir les valeurs de types intégraux et les valeurs <xref:System.Char> en valeurs <xref:System.Decimal>.  
   
--   `op_Explicit`, qui est utilisé pour les conversions restrictives qui peuvent entraîner la perte d'amplitude (une valeur est convertie en une valeur qui entraîne une plus petite plage) ou de précision. Par exemple, la structure <xref:System.Decimal> inclut un opérateur `op_Explicit` surchargé pour convertir les valeurs <xref:System.Double> et <xref:System.Single> en <xref:System.Decimal> et convertir les valeurs <xref:System.Decimal> en valeurs intégrales, <xref:System.Double>, <xref:System.Single> et <xref:System.Char>.  
+-   `op_Explicit`, utilisé pour les conversions restreintes susceptible d’entraîner une perte d’amplitude (une valeur est convertie en une autre possédant une plus petite plage) ou de précision. Par exemple, la structure <xref:System.Decimal> inclut un opérateur `op_Explicit` surchargé pour convertir les valeurs <xref:System.Double> et <xref:System.Single> en <xref:System.Decimal> et convertir les valeurs <xref:System.Decimal> en valeurs intégrales, <xref:System.Double>, <xref:System.Single> et <xref:System.Char>.  
   
  Toutefois, tous les langages ne prennent pas en charge la surcharge d'opérateur ou la définition d'opérateurs personnalisés. Si vous décidez d'implémenter ces opérateurs de conversion, vous devez également fournir une autre façon d'effectuer la conversion. Nous vous recommandons de fournir les méthodes `From`*Xxx* et `To`*Xxx*.  
   
@@ -381,7 +381,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  La spécification CLS (Common Language Specification) impose un modèle conservateur par instanciation pour les types imbriqués et les membres protégés. Les types génériques ouverts ne peuvent pas exposer de champs ou de membres avec des signatures qui contiennent une instanciation spécifique d'un type générique imbriqué et protégé. Les types non génériques qui étendent une instanciation spécifique d'une classe de base ou une interface générique ne peuvent pas exposer de champs ou de membres avec des signatures qui contiennent une instanciation différente d'un type générique imbriqué et protégé.  
   
- L'exemple suivant définit un type générique, `C1<T>` (ou `C1(Of T)` en Visual Basic) et une classe protégée, `C1<T>.N` (ou `C1(Of T).N` en Visual Basic). `C1<T>` a deux méthodes : `M1` et `M2`. Toutefois, `M1` n’est pas conforme CLS parce qu’elle essaie de retourner un objet `C1<int>.N` (ou `C1(Of Integer).N`) depuis C1\<T> (ou `C1(Of T)`). Une deuxième classe, `C2`, est dérivée de `C1<long>` (ou de `C1(Of Long)`). Elle a deux méthodes, `M3` et `M4`. `M3` n'est pas conforme à CLS parce qu'elle essaie de retourner un objet `C1<int>.N` (ou `C1(Of Integer).N`) d'une sous-classe de `C1<long>`. Notez que les compilateurs de langage peuvent être encore plus restrictifs. Dans cet exemple, Visual Basic affiche une erreur lorsqu'il tente de compiler `M4`.  
+ L'exemple suivant définit un type générique, `C1<T>` (ou `C1(Of T)` en Visual Basic) et une classe protégée, `C1<T>.N` (ou `C1(Of T).N` en Visual Basic). `C1<T>` a deux méthodes : `M1` et `M2`. Toutefois, `M1` n’est pas conforme CLS parce qu’elle essaie de retourner un objet `C1<int>.N` (ou `C1(Of Integer).N`) depuis C1\<T> (ou `C1(Of T)`). Une deuxième classe, `C2`, est dérivée de `C1<long>` (ou de `C1(Of Long)`). Elle a deux méthodes, `M3` et `M4`. `M3` n’est pas conforme CLS parce qu’elle essaie de retourner un objet `C1<int>.N` (ou `C1(Of Integer).N`) d’une sous-classe de `C1<long>`. Notez que les compilateurs de langage peuvent être encore plus restrictifs. Dans cet exemple, Visual Basic affiche une erreur lorsqu'il tente de compiler `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
@@ -517,13 +517,13 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  Pour créer des composants conformes à CLS :  
   
-1.  Utilisez <xref:System.CLSCompliantAttribute> pour marquer votre assembly comme étant conforme à CLS.  
+1. Utilisez <xref:System.CLSCompliantAttribute> pour marquer votre assembly comme étant conforme à CLS.  
   
-2.  Marquez les types exposés publiquement de l'assembly qui ne sont pas conformes à CLS comme non conformes.  
+2. Marquez les types exposés publiquement de l'assembly qui ne sont pas conformes à CLS comme non conformes.  
   
-3.  Marquez tous les membres exposés publiquement dans des types conformes à CLS comme non conformes.  
+3. Marquez tous les membres exposés publiquement dans des types conformes à CLS comme non conformes.  
   
-4.  Fournissez une alternative conforme à CLS pour les membres non conformes.  
+4. Fournissez une alternative conforme à CLS pour les membres non conformes.  
   
  Si vous avez correctement marqué tous vos types et membres non conformes, le compilateur ne doit émettre aucun avertissement de non-conformité. Toutefois, vous devez indiquer quels membres ne sont pas conformes à CLS et répertorier leurs alternatives conformes à CLS dans votre documentation produit.  
   

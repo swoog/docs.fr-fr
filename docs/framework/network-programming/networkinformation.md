@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230978"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 L’espace de noms <xref:System.Net.NetworkInformation> permet de recueillir des informations concernant les événements, les modifications, les statistiques et les propriétés liés au réseau. Vous pouvez également déterminer si un hôte distant est accessible à l’aide de la classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -24,7 +24,8 @@ L’espace de noms <xref:System.Net.NetworkInformation> permet de recueillir des
  Vous pouvez utiliser la classe <xref:System.Net.NetworkInformation.Ping> pour déterminer si un hôte distant est disponible, s’il se trouve dans le réseau et s’il est accessible. Pour plus d'informations, voir [Procédure : exécuter une requête ping](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Exemple de technologie d’informations réseau](https://go.microsoft.com/fwlink/?LinkID=179564)
-- [Exemple de technologie NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)
-- [Exemple de technologie de test ping à partir d’une application cliente](https://go.microsoft.com/fwlink/?LinkID=179565)
+- [Exemple de technologie d’outil NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)
+- [Exemple de technologie de client ping](https://go.microsoft.com/fwlink/?LinkID=179565)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115373"
 ---
 # <a name="blittable-and-non-blittable-types"></a>types blittable et non blittable
 La plupart des types de données ont une représentation commune à la fois dans la mémoire managée et non managée, et ne nécessitent pas de traitement particulier par le marshaleur d’interopérabilité. Ces types sont appelés *types blittables*, car ils ne nécessitent pas de conversion quand ils transitent entre le code managé et le code non managé.  
@@ -74,4 +74,5 @@ La plupart des types de données ont une représentation commune à la fois dans
  Les types d’objets et de classes sont pris en charge uniquement par COM Interop. Pour obtenir les types correspondants en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# et C++, consultez [Vue d’ensemble de la bibliothèque de classes .NET Framework](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
-- [Comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)
+
+- [comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)

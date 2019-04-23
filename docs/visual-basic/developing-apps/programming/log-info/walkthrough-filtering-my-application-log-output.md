@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298394"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procédure pas à pas : Filtrage de la sortie de My.Application.Log (Visual Basic)
 Cette procédure pas à pas montre comment modifier le filtrage de journal par défaut de l’objet `My.Application.Log` pour contrôler les informations passées de l’objet `Log` aux écouteurs et celles qui sont écrites par les écouteurs. Vous pouvez modifier le comportement de journalisation même après avoir généré l’application, car les informations de configuration sont stockées dans le fichier de configuration de l’application.  
@@ -21,17 +21,17 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
 #### <a name="to-build-the-sample-application"></a>Pour générer l’exemple d’application  
   
-1.  Ouvrez un nouveau projet d’application Windows Visual Basic.  
+1. Ouvrez un nouveau projet d’application Windows Visual Basic.  
   
-2.  Ajoutez un bouton nommé Button1 à Form1.  
+2. Ajoutez un bouton nommé Button1 à Form1.  
   
-3.  Dans le gestionnaire d’événements <xref:System.Windows.Forms.Control.Click> de Button1, ajoutez le code suivant :  
+3. Dans le gestionnaire d’événements <xref:System.Windows.Forms.Control.Click> de Button1, ajoutez le code suivant :  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Exécutez l’application dans le débogueur.  
+4. Exécutez l’application dans le débogueur.  
   
-5.  Appuyez sur **Button1**.  
+5. Appuyez sur **Button1**.  
   
      L’application écrit les informations suivantes dans le fichier journal et la sortie de débogage de l’application.  
   
@@ -39,7 +39,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Fermez l'application.  
+6. Fermez l'application.  
   
      Pour plus d’informations sur la consultation de la fenêtre de sortie de débogage de l’application, consultez [Fenêtre Sortie](/visualstudio/ide/reference/output-window). Pour plus d’informations sur l’emplacement du fichier journal de l’application, consultez [Procédure pas à pas : détermination de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,7 +71,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
 #### <a name="to-log-only-activity-tracing-events"></a>Pour enregistrer uniquement les événements de traçage d’activités  
   
-1.  Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
+1. Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
   
      - ou -  
   
@@ -83,15 +83,15 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
     3.  Cliquez sur **Ajouter**.  
   
-2.  Recherchez la section `<switches>` dans la section `<system.diagnostics>`, qui se trouve dans la section `<configuration>` de niveau supérieur.  
+2. Recherchez la section `<switches>` dans la section `<system.diagnostics>`, qui se trouve dans la section `<configuration>` de niveau supérieur.  
   
-3.  Recherchez l’élément qui ajoute `DefaultSwitch` à la collection de commutateurs. Il doit ressembler à l’élément ci-après :  
+3. Recherchez l’élément qui ajoute `DefaultSwitch` à la collection de commutateurs. Il doit ressembler à l’élément ci-après :  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Remplacez la valeur de l’attribut `value` par « ActivityTracing ».  
+4. Remplacez la valeur de l’attribut `value` par « ActivityTracing ».  
   
-5.  Le contenu du fichier app.config doit être similaire au code XML suivant :  
+5. Le contenu du fichier app.config doit être similaire au code XML suivant :  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
     </configuration>  
     ```  
   
-6.  Exécutez l’application dans le débogueur.  
+6. Exécutez l’application dans le débogueur.  
   
-7.  Appuyez sur **Button1**.  
+7. Appuyez sur **Button1**.  
   
      L’application écrit les informations suivantes dans le fichier journal et la sortie de débogage de l’application :  
   
@@ -130,7 +130,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Fermez l'application.  
+8. Fermez l'application.  
   
 9. Rétablissez la valeur « Information » de l’attribut `value`.  
   
@@ -146,7 +146,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
 #### <a name="to-log-only-activity-tracing-events"></a>Pour enregistrer uniquement les événements de traçage d’activités  
   
-1.  Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
+1. Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions** et sélectionnez **Ouvrir**.  
   
      - ou -  
   
@@ -158,11 +158,11 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
     3.  Cliquez sur **Ajouter**.  
   
-2.  Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions**. Choisissez **Ouvrir**.  
+2. Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions**. Choisissez **Ouvrir**.  
   
-3.  Recherchez la section `<listeners>`, dans la section `<source>` avec l’attribut `name` « DefaultSource » sous la section `<sources>`. La section `<sources>` est sous la section `<system.diagnostics>`, dans la section `<configuration>` de niveau supérieur.  
+3. Recherchez la section `<listeners>`, dans la section `<source>` avec l’attribut `name` « DefaultSource » sous la section `<sources>`. La section `<sources>` est sous la section `<system.diagnostics>`, dans la section `<configuration>` de niveau supérieur.  
   
-4.  Ajoutez cet élément à la section `<listeners>` :  
+4. Ajoutez cet élément à la section `<listeners>` :  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
     <add name="NewDefault"/>  
     ```  
   
-5.  Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
+5. Recherchez la section `<sharedListeners>` dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
-6.  Ajoutez cet élément à cette section `<sharedListeners>` :  
+6. Ajoutez cet élément à cette section `<sharedListeners>` :  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
      Le filtre <xref:System.Diagnostics.EventTypeFilter> considère l’une des valeurs d’énumération <xref:System.Diagnostics.SourceLevels> comme son attribut `initializeData`.  
   
-7.  Le contenu du fichier app.config doit être similaire au code XML suivant :  
+7. Le contenu du fichier app.config doit être similaire au code XML suivant :  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
     </configuration>  
     ```  
   
-8.  Exécutez l’application dans le débogueur.  
+8. Exécutez l’application dans le débogueur.  
   
 9. Appuyez sur **Button1**.  
   
@@ -249,9 +249,9 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure pas à pas : Détermination de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Procédure pas à pas : Modification de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Procédure pas à pas : Création d’écouteurs de journalisation personnalisés](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Guide pratique pour écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Commutateurs de suivi](../../../../framework/debug-trace-profile/trace-switches.md)
+- [Procédure pas à pas : détermination de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Procédure pas à pas : modification de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Procédure pas à pas : création d’écouteurs de journalisation personnalisés](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Commutateurs de traçage](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Enregistrement d’informations provenant de l’application](../../../../visual-basic/developing-apps/programming/log-info/index.md)

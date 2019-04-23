@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540622"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206419"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (outil de génération de code)
 L'outil en ligne de commande SqlMetal génère le code et le mappage du composant [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En appliquant les options qui apparaissent ultérieurement dans cette rubrique, vous pouvez ordonner à SqlMetal d'exécuter plusieurs actions différentes, dont les suivantes :  
@@ -52,7 +52,7 @@ sqlmetal [options] [<input file>]
 |**/conn:** *\<chaîne_connexion>*|Spécifie la chaîne de connexion de base de données. Ne peut pas être utilisée avec les options **/server**, **/database**, **/user**ou **/password** .<br /><br /> N'inclut pas le nom de fichier dans la chaîne de connexion. Ajoutez plutôt le nom de fichier à la ligne de commande comme fichier d'entrée. Par exemple, la ligne suivante spécifie "c:\northwnd.mdf" comme fichier d’entrée : **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
 |**/timeout:** *\<secondes>*|Spécifie la valeur du délai d'attente lorsque SqlMetal accède à la base de données. Valeur par défaut : 0 (à savoir, aucune limite de temps).|  
   
- **Options d'extraction**  
+ **Options d’extraction**  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -85,7 +85,7 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**\<fichier_entrée>**|Spécifie un fichier SQL Server Express .mdf, un fichier [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf, ou un fichier intermédiaire .dbml.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonctionnalité SqlMetal implique en fait deux étapes :  
   
 -   Extraction des métadonnées de la base de données dans un fichier .dbml.  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  Si **/server** n’est pas spécifié, **localhost/sqlexpress** est supposé.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] lève une exception si une ou plusieurs conditions parmi les suivantes est vraie :  
+ [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] lève une exception si au moins une des conditions suivantes est vraie :  
   
 -   SqlMetal essaie d'extraire une procédure stockée qui s'appelle elle-même.  
   
@@ -133,6 +133,7 @@ sqlmetal [options] [<input file>]
 >  Quand vous utilisez l’option **/pluralize** avec l’exemple de base de données Northwind, notez le comportement suivant. Lorsque SqlMetal génère des noms de types de lignes pour des tables, les noms de table sont au singulier. Lorsqu'il génère des propriétés <xref:System.Data.Linq.DataContext> pour des tables, les noms de table sont au pluriel. Par coïncidence, les tables de l'exemple de base de données Northwind sont déjà au pluriel. Par conséquent, vous ne pourrez pas voir cette partie active. Bien qu’il soit courant de nommer des tables de base de données au pluriel, il est également courant dans .NET de nommer des collections au pluriel.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Guide pratique pour générer le modèle objet en Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+
+- [Procédure : Générer le modèle objet en Visual Basic ou en C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Génération de code dans LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Mappage externe](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

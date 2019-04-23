@@ -4,12 +4,12 @@ description: Découvrez les détails du workflow de développement des applicati
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921089"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553873"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Workflow de développement des applications Docker
 
@@ -51,7 +51,7 @@ Le développement d’une application se déroule de façon similaire avec ou sa
 
 Pour commencer, assurez-vous que [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) pour Windows est installé, comme cela est expliqué dans les instructions suivantes :
 
-[Bien démarrer avec Docker CE pour Windows](https://docs.docker.com/docker-for-windows/)
+[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/)
 
 Vous avez également besoin de Visual Studio 2017 version 15.7 ou ultérieure, avec la charge de travail **Développement multiplateforme .NET Core** installée (voir la figure 5-2).
 
@@ -67,7 +67,7 @@ Vous pouvez commencer le codage de votre application en .NET brut (généralemen
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - Écrire des fichiers Dockerfile](./media/image4.png)
 
@@ -193,26 +193,26 @@ Le fichier Dockerfile initial peut ressembler à ceci :
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 Voici les détails, ligne par ligne :
 
-1.  Commencez une étape avec une « petite » image de base runtime uniquement, appelez-la **base** pour référence.
-2.  Créez le répertoire **/app** dans l’image.
-3.  Exposez le port **80**.
+1. Commencez une étape avec une « petite » image de base runtime uniquement, appelez-la **base** pour référence.
+2. Créez le répertoire **/app** dans l’image.
+3. Exposez le port **80**.
 <!-- skip -->
-5.  Commencez une nouvelle étape avec une « grande » image pour la génération/publication, appelez-la **build** pour référence.
-6.  Créez le répertoire **/src** dans l’image.
-7.  Jusqu’à la ligne 16, copiez les fichiers projet référencés **.csproj** pour pouvoir restaurer les packages par la suite.
+5. Commencez une nouvelle étape avec une « grande » image pour la génération/publication, appelez-la **build** pour référence.
+6. Créez le répertoire **/src** dans l’image.
+7. Jusqu’à la ligne 16, copiez les fichiers projet référencés **.csproj** pour pouvoir restaurer les packages par la suite.
 <!-- skip -->
 17. Restaurez les packages pour le projet **Catalog.API** et les projets référencés.
 18. Copiez **toute l’arborescence de répertoires de la solution** (sauf les fichiers/répertoires inclus dans le fichier **.dockerignore**) à partir du répertoire **/src** dans l’image.
@@ -255,7 +255,7 @@ Toutefois, `dotnet restore` s’exécute uniquement si le dossier contient un se
 
 1) Ajoutez les lignes suivantes à **.dockerignore**  :
 
-   - `*.sln`, pour ignorer tous les fichiers solution de l’arborescence de dossiers principale.
+   - `*.sln`, pour ignorer tous les fichiers solution dans l’arborescence de dossiers principale
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, pour inclure uniquement ce fichier solution.
 
@@ -303,7 +303,7 @@ Pour chaque service inclus dans votre application, vous devez créer une image a
 
 Sachez que les images Docker sont créées automatiquement dans Visual Studio. Les étapes suivantes s’appliquent uniquement dans le cadre du workflow avec un éditeur ou une CLI. Elles sont expliquées pour vous permettre de bien en comprendre tous les dessous.
 
-En tant que développeur, vous avez besoin d’écrire du code et de le tester localement avant de pousser (push) une fonctionnalité ou un changement terminé à votre système de contrôle de code source (par exemple, à GitHub). Cela signifie que vous devez créer les images Docker et déployer des conteneurs sur un hôte Docker local (machine virtuelle Windows ou Linux), et exécuter, tester et déboguer dans ces conteneurs locaux.
+En tant que développeur, vous avez besoin d’écrire du code et de le tester localement avant d’envoyer (push) une fonctionnalité ou une modification terminée dans votre système de contrôle de code source (par exemple, GitHub). Cela signifie que vous devez créer les images Docker et déployer des conteneurs sur un hôte Docker local (machine virtuelle Windows ou Linux), et exécuter, tester et déboguer dans ces conteneurs locaux.
 
 Pour créer une image personnalisée dans votre environnement local avec la CLI Docker et votre fichier Dockerfile, vous pouvez utiliser la commande docker build, comme indiqué dans la figure 5-5.
 

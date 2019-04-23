@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163421"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core et Open-Source
 Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment trouver plus d’informations. Pour connaître la liste complète des rubriques de .NET Core, consultez le [Guide .NET Core](../../core/index.md).
@@ -35,17 +35,18 @@ Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment
   
 -   [.NET Core](https://github.com/dotnet/core)  
   
--   [CoreFX – Les bibliothèques fondamentales de .NET Core](https://github.com/dotnet/corefx)  
+-   [CoreFX – Bibliothèques fondamentales .NET Core](https://github.com/dotnet/corefx)  
   
--   [CoreCLR – Le runtime .NET Core](https://github.com/dotnet/coreclr)  
+-   [CoreCLR – Runtime .NET Core](https://github.com/dotnet/coreclr)  
   
--   [CLI – Les outils en ligne de commande de .NET Core](https://github.com/dotnet/cli)  
+-   [CLI – Outils en ligne de commande .NET Core](https://github.com/dotnet/cli)  
   
 -   [Roslyn – .NET Compiler Platform](https://github.com/dotnet/roslyn)  
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Voir aussi
-- [Page d’accueil de .NET Core](https://www.microsoft.com/net/core)
+
+- [Page d’accueil .NET Core](https://www.microsoft.com/net/core)
 - [Guide .NET Core](../../core/index.md)
 - [Documentation ASP.NET Core](/aspnet/core/)

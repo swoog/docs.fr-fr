@@ -1,4 +1,12 @@
-### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue&lt;T&gt;.TryPeek peut retourner une valeur Null erronée via son paramètre de sortie
+---
+ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236695"
+---
+### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T>.TryPeek risque de retourner une valeur Null erronée dans son paramètre de sortie
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Type|Runtime|
 |API affectées|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295755"
 ---
 # <a name="automatic-proxy-detection"></a>Détection automatique de proxy
 La détection automatique de proxy est un processus par lequel un serveur proxy web est identifié par le système et utilisé pour envoyer des demandes pour le compte du client. Cette fonctionnalité est également connue sous le nom de Découverte automatique de proxy Web (WPAD, Web Proxy Auto-Discovery). Quand la détection automatique de proxy est activée, le système tente de localiser un script de configuration de proxy qui est chargé de retourner l’ensemble des proxys pouvant être utilisés pour la requête. Si le script de configuration de proxy est trouvé, il est téléchargé, compilé et exécuté sur l’ordinateur local quand les informations de proxy, le flux de requête ou la réponse sont obtenus pour une requête qui utilise une instance de <xref:System.Net.WebProxy>.  
@@ -31,13 +31,13 @@ La détection automatique de proxy est un processus par lequel un serveur proxy 
   
  Quand la détection automatique de proxy est activée, la classe <xref:System.Net.WebProxy> tente de localiser le script de configuration de proxy comme suit :  
   
-1.  La fonction `InternetQueryOption` WinINet est utilisée pour accéder au script de configuration de proxy le plus récemment détecté par Internet Explorer.  
+1. La fonction `InternetQueryOption` WinINet est utilisée pour accéder au script de configuration de proxy le plus récemment détecté par Internet Explorer.  
   
-2.  Si le script est introuvable, la classe <xref:System.Net.WebProxy> utilise le protocole DHCP (Dynamic Host Configuration Protocol) pour accéder au script. Le serveur DHCP peut répondre avec l’emplacement (nom d’hôte) du script ou avec l’URL complète du script.  
+2. Si le script est introuvable, la classe <xref:System.Net.WebProxy> utilise le protocole DHCP (Dynamic Host Configuration Protocol) pour accéder au script. Le serveur DHCP peut répondre avec l’emplacement (nom d’hôte) du script ou avec l’URL complète du script.  
   
-3.  Si le protocole DHCP n’identifie pas l’hôte WPAD, le système DNS est interrogé pour trouver un hôte avec WPAD comme nom ou alias.  
+3. Si le protocole DHCP n’identifie pas l’hôte WPAD, le système DNS est interrogé pour trouver un hôte avec WPAD comme nom ou alias.  
   
-4.  Si l’hôte n’est pas identifié et que l’emplacement d’un script de configuration de proxy est spécifié par les paramètres de réseau local d’Internet Explorer ou un fichier de configuration, cet emplacement est utilisé.  
+4. Si l’hôte n’est pas identifié et que l’emplacement d’un script de configuration de proxy est spécifié par les paramètres de réseau local d’Internet Explorer ou un fichier de configuration, cet emplacement est utilisé.  
   
 > [!NOTE]
 >  Les applications qui s’exécutent en tant que service NT ou dans le cadre d’ASP.NET utilisent les paramètres de serveur proxy d’Internet Explorer (s’ils sont disponibles) de l’utilisateur appelant. Ces paramètres peuvent ne pas être disponibles pour toutes les applications de service.  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Les requêtes qui n’ont pas de proxy utilisent le proxy par défaut de votre domaine d’application, qui est disponible dans la propriété <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net>, élément (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

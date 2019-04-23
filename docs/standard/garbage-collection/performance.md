@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310562"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection et niveau de performance
 <a name="top"></a> Cette rubrique décrit les problèmes liés au garbage collection et à l’utilisation de la mémoire. Elle apporte des solutions aux problèmes concernant les tas managés et explique comment réduire l’effet du garbage collection sur vos applications. Chaque problème contient des liens vers des procédures à suivre pour résoudre le problème.  
@@ -73,18 +73,18 @@ ms.locfileid: "47397982"
   
 -   [Le processus utilise trop de mémoire](#Issue_TooMuchMemory)  
   
--   [Le garbage collector ne récupère pas les objets suffisamment rapidement](#Issue_NotFastEnough)  
+-   [Le récupérateur de mémoire ne récupère pas les objets assez vite](#Issue_NotFastEnough)  
   
 -   [Le tas managé est trop fragmenté](#Issue_Fragmentation)  
   
--   [Les pauses du garbage collection sont trop longues](#Issue_LongPauses)  
+-   [Les pauses du nettoyage de la mémoire sont trop longues](#Issue_LongPauses)  
   
 -   [La génération 0 est trop volumineuse](#Issue_Gen0)  
   
--   [L’utilisation du processeur pendant un garbage collection est trop élevée](#Issue_HighCPU)  
+-   [L’utilisation du processeur pendant le nettoyage de la mémoire est trop élevée](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problème : une exception de mémoire insuffisante est levée  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problème : Une exception de mémoire insuffisante est levée  
  Il existe deux cas légitimes pour la levée d'une <xref:System.OutOfMemoryException> managée :  
   
 -   Une mémoire virtuelle insuffisante.  
@@ -95,7 +95,7 @@ ms.locfileid: "47397982"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)<br /><br /> [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez si la mémoire physique est suffisante.](#Physical)|  
+|[Déterminez si l’exception de mémoire insuffisante est gérée.](#OOMIsManaged)<br /><br /> [Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez si la mémoire physique est suffisante.](#Physical)|  
   
  Si vous déterminez que l'exception n'est pas légitime, contactez le support technique Microsoft et préparez-vous à fournir les informations suivantes :  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47397982"
 -   Les données qui prouvent qu'il ne s'agit pas d'une exception de mémoire insuffisante légitime, y compris les données indiquant que ni la mémoire virtuelle ni la mémoire physique ne posent un problème.  
   
 <a name="Issue_TooMuchMemory"></a>   
-### <a name="issue-the-process-uses-too-much-memory"></a>Problème : le processus utilise trop de mémoire  
+### <a name="issue-the-process-uses-too-much-memory"></a>Problème : Le processus utilise trop de mémoire  
  On suppose souvent que l’utilisation de la mémoire qui s’affiche sous l’onglet **Performances** du Gestionnaire des tâches Windows peut indiquer à l’utilisateur que trop de mémoire est utilisée. Toutefois, cet affichage concerne le jeu de travail et ne fournit pas d'informations sur l'utilisation de la mémoire virtuelle.  
   
  Si vous déterminez que le problème est provoqué par le tas managé, vous devez examiner le tas managé dans le temps pour déterminer les éventuels schémas récurrents.  
@@ -115,20 +115,20 @@ ms.locfileid: "47397982"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)<br /><br /> [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)<br /><br /> [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)<br /><br /> [Déterminez les références aux objets.](#ObjRef)|  
+|[Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Identifiez la quantité de mémoire validée par le tas managé.](#ManagedHeapCommit)<br /><br /> [Identifiez la quantité de mémoire réservée par le tas managé.](#ManagedHeapReserve)<br /><br /> [Identifiez les objets volumineux dans la génération 2.](#ExamineGen2)<br /><br /> [Identifiez les références aux objets.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problème : le garbage collector ne récupère pas les objets suffisamment rapidement  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problème : Le récupérateur de mémoire ne récupère pas les objets assez vite  
  Quand les objets semblent ne pas être récupérés comme prévu pour le garbage collection, vous devez déterminer s'il existe des références solides à ces objets.  
   
  Vous pouvez également rencontrer ce problème si aucun garbage collection n'a eu lieu pour la génération qui contient un objet mort, ce qui indique que le finaliseur de l'objet mort n'a pas été exécuté. Par exemple, ceci est possible quand vous exécutez une application à thread unique cloisonné (STA) et que le thread qui gère la file d'attente du finaliseur ne peut pas appeler depuis celle-ci.  
   
 |Contrôle des performances|  
 |------------------------|  
-|[Vérifiez les références aux objets.](#ObjRef)<br /><br /> [Déterminez si un finaliseur a été exécuté.](#Induce)<br /><br /> [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)|  
+|[Vérifiez les références aux objets.](#ObjRef)<br /><br /> [Déterminez si un finaliseur a été exécuté.](#Induce)<br /><br /> [Déterminez s’il y a des objets en attente de finalisation.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problème : le tas managé est trop fragmenté  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problème : Le tas managé est trop fragmenté  
  Le niveau de fragmentation est calculé comme le rapport entre l'espace libre et le total de la mémoire allouée pour la génération. Pour la génération 2, un niveau acceptable de fragmentation ne doit pas dépasser 20 %. Étant donné que la génération 2 peut devenir très volumineuse, le taux de fragmentation est plus important que la valeur absolue.  
   
  L'espace libre n'est pas une préoccupation pour la génération 0, car il s'agit de la génération où les nouveaux objets sont alloués.  
@@ -151,12 +151,12 @@ ms.locfileid: "47397982"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)<br /><br /> [Déterminez le nombre d'objets épinglés.](#Pinned)|  
+|[Identifiez la quantité d’espace libre dans le tas managé.](#Fragmented)<br /><br /> [Identifiez le nombre d’objets épinglés.](#Pinned)|  
   
  Si vous pensez qu'il n'existe aucune cause légitime à la fragmentation, contactez le support technique Microsoft.  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problème : les pauses du garbage collection sont trop longues  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problème : Les pauses du nettoyage de la mémoire sont trop longues  
  Le garbage collection fonctionne en temps réel souple. Les applications doivent donc être en mesure de tolérer quelques pauses. L'un des critères du temps réel souple est que 95 % des opérations doivent se terminer à temps.  
   
  Avec le garbage collection simultané, les threads managés sont autorisés à s'exécuter pendant une collection, ce qui signifie que les pauses sont très minimes.  
@@ -169,14 +169,14 @@ ms.locfileid: "47397982"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez la durée d’un garbage collection.](#TimeInGC)<br /><br /> [Déterminez ce qui a provoqué un garbage collection.](#Triggered)|  
+|[Identifiez la durée d’un nettoyage de la mémoire.](#TimeInGC)<br /><br /> [Déterminez ce qui a provoqué un nettoyage de la mémoire.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a>Problème : la génération 0 est trop volumineuse  
+### <a name="issue-generation-0-is-too-big"></a>Problème : La génération 0 est trop volumineuse  
  La génération 0 est susceptible de contenir un plus grand nombre d'objets sur un système 64 bits, notamment si vous utilisez le garbage collection pour serveur au lieu du garbage collection pour station de travail. En effet, le seuil auquel se déclenche un garbage collection de génération 0 est plus élevé dans ces environnements, et les collections de génération 0 peuvent donc être beaucoup plus volumineuses. Les performances sont améliorées quand une application alloue plus de mémoire avant qu'un garbage collection ne soit déclenché.  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problème : l'utilisation du processeur pendant un garbage collection est trop élevée  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problème : L’utilisation du processeur pendant le nettoyage de la mémoire est trop élevée  
  L'utilisation du processeur est élevée pendant les garbage collection. Si un temps de processus suffisant est consacré à un garbage collection, les collections seront trop fréquent ou la collection durera trop longtemps. Un taux d'allocation d'objets plus élevé sur le tas managé entraîne des garbage collection plus fréquents. La diminution du taux d'allocation réduit la fréquence des garbage collection.  
   
  Vous pouvez surveiller les taux d'allocation à l'aide du compteur de performances `Allocated Bytes/second`. Pour plus d'informations, voir [Compteurs de performance dans le .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
@@ -185,7 +185,7 @@ ms.locfileid: "47397982"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez si l’utilisation élevée du processeur est provoquée par le garbage collection.](#HighCPU)<br /><br /> [Définissez un point d’arrêt à la fin du garbage collection.](#GenBreak)|  
+|[Déterminez si l’utilisation élevée du processeur est provoquée par le nettoyage de la mémoire.](#HighCPU)<br /><br /> [Définissez un point d’arrêt à la fin du nettoyage de la mémoire.](#GenBreak)|  
   
  [Retour au début](#top)  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47397982"
   
 -   Dans le débogueur WinDbg, après avoir chargé l’extension SOS, tapez la commande suivante :  
   
-     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
+     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) ’kb’;’g’"**  
   
      où **GcCondemnedGeneration** est défini sur la génération de votre choix. Cette commande requiert des symboles privés.  
   
@@ -234,35 +234,35 @@ ms.locfileid: "47397982"
 ## <a name="performance-check-procedures"></a>Procédures de contrôle des performances  
  Cette section décrit les procédures suivantes permettant d'isoler la cause des problèmes de performances :  
   
--   [Déterminez si le problème est causé par le garbage collection.](#IsGC)  
+-   [Déterminez si le problème est causé par le nettoyage de la mémoire.](#IsGC)  
   
--   [Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)  
+-   [Déterminez si l’exception de mémoire insuffisante est gérée.](#OOMIsManaged)  
   
--   [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
+-   [Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
   
 -   [Déterminez si la mémoire physique est suffisante.](#Physical)  
   
--   [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)  
+-   [Identifiez la quantité de mémoire validée par le tas managé.](#ManagedHeapCommit)  
   
--   [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)  
+-   [Identifiez la quantité de mémoire réservée par le tas managé.](#ManagedHeapReserve)  
   
--   [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)  
+-   [Identifiez les objets volumineux dans la génération 2.](#ExamineGen2)  
   
--   [Déterminez les références aux objets.](#ObjRef)  
+-   [Identifiez les références aux objets.](#ObjRef)  
   
 -   [Déterminez si un finaliseur a été exécuté.](#Induce)  
   
--   [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)  
+-   [Déterminez s’il y a des objets en attente de finalisation.](#Finalize)  
   
--   [Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)  
+-   [Identifiez la quantité d’espace libre dans le tas managé.](#Fragmented)  
   
--   [Déterminez le nombre d'objets épinglés.](#Pinned)  
+-   [Identifiez le nombre d’objets épinglés.](#Pinned)  
   
--   [Déterminez la durée d’un garbage collection.](#TimeInGC)  
+-   [Identifiez la durée d’un nettoyage de la mémoire.](#TimeInGC)  
   
--   [Déterminez ce qui a déclenché le garbage collection.](#Triggered)  
+-   [Déterminez ce qui a déclenché le nettoyage de la mémoire.](#Triggered)  
   
--   [Déterminez si l’utilisation élevée du processeur est causée par le garbage collection.](#HighCPU)  
+-   [Déterminez si l’utilisation élevée du processeur est causée par le nettoyage de la mémoire.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Pour déterminer si le problème est causé par le garbage collection  
@@ -278,7 +278,7 @@ ms.locfileid: "47397982"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Pour déterminer si l'exception de mémoire insuffisante est managée  
   
-1.  Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande d’exception d’impression (**pe**) suivante :  
+1. Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande d’exception d’impression (**pe**) suivante :  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397982"
     StackTrace (generated):  
     ```  
   
-2.  Si la sortie ne spécifie pas d'exception, vous devez déterminer de quel thread provient l'exception de mémoire insuffisante. Tapez la commande suivante dans le débogueur pour afficher tous les threads avec leurs piles d'appels :  
+2. Si la sortie ne spécifie pas d'exception, vous devez déterminer de quel thread provient l'exception de mémoire insuffisante. Tapez la commande suivante dans le débogueur pour afficher tous les threads avec leurs piles d'appels :  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397982"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Vous pouvez utiliser la commande suivante pour faire un dump des exceptions imbriquées.  
+3. Vous pouvez utiliser la commande suivante pour faire un dump des exceptions imbriquées.  
   
      **!pe -nested**  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397982"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Pour déterminer si la mémoire physique est suffisante  
   
-1.  Démarrez le Gestionnaire des tâches Windows.  
+1. Démarrez le Gestionnaire des tâches Windows.  
   
-2.  Sous l’onglet **Performances**, regardez la valeur validée. (Dans Windows 7, regardez **Validation (Ko)** sous **Groupe système**.)  
+2. Sous l’onglet **Performances**, regardez la valeur validée. (Dans Windows 7, regardez **Validation (Ko)** sous **Groupe système**.)  
   
      Si le **Total** est proche de la **Limite**, la mémoire physique devient insuffisante.  
   
@@ -415,7 +415,7 @@ ms.locfileid: "47397982"
   
      Si le tas managé est volumineux, l’exécution de **dumpheap** peut prendre un certain temps.  
   
-     Vous pouvez commencer l'analyse des dernières lignes de la sortie, car elles contiennent les objets qui utilisent le plus d'espace. Exemple :  
+     Vous pouvez commencer l'analyse des dernières lignes de la sortie, car elles contiennent les objets qui utilisent le plus d'espace. Par exemple :  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -494,13 +494,13 @@ ms.locfileid: "47397982"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Pour déterminer s'il existe des objets en attente de finalisation  
   
-1.  Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
+1. Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
   
      **!finalizequeue**  
   
      Regardez le nombre d'objets qui sont prêts pour la finalisation. Si le nombre est élevé, vous devez examiner les raisons pour lesquelles ces finaliseurs ne peuvent pas progresser du tout ou pas assez rapidement.  
   
-2.  Pour obtenir une sortie des threads, tapez la commande suivante :  
+2. Pour obtenir une sortie des threads, tapez la commande suivante :  
   
      **threads -special**  
   
@@ -780,4 +780,4 @@ ms.locfileid: "47397982"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

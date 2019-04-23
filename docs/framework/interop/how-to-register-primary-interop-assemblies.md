@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314748"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procédure : enregistrer des assemblys PIA
 
@@ -36,7 +36,7 @@ Utilisez l’outil [Regasm.exe (outil d’inscription d’assemblys)](../../../d
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Pour inscrire un assembly PIA
 
-1.  À l'invite de commandes, tapez :
+1. À l'invite de commandes, tapez :
 
      **regasm** *nomassembly*
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Programmation avec des assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
-- [Recherche d’assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
-- [Redistribution d’assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))
+- [Programmer avec des assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Rechercher des assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [Redistribuer des assemblys PIA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

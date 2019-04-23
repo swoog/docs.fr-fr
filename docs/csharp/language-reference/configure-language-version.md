@@ -2,12 +2,12 @@
 title: Sélectionner la version du langage C# - Guide C#
 description: Configurer le compilateur pour effectuer la validation de la syntaxe à l’aide d’une version de compilateur spécifique
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212025"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480740"
 ---
 # <a name="select-the-c-language-version"></a>Sélectionner la version du langage C#
 
@@ -80,7 +80,7 @@ La valeur `latest` utilise la dernière version mineure du langage C#. Les vale
 
 ## <a name="configure-multiple-projects"></a>Configurer plusieurs projets
 
-Vous pouvez créer un fichier **Directory.build.props** contenant l’élément `<LangVersion>` pour configurer plusieurs répertoires. En règle générale, vous faites cela dans votre répertoire de solution. Ajoutez ce qui suit à un fichier **Directory.build.props** dans votre répertoire de solution :
+Vous pouvez créer un fichier **Directory.Build.props** contenant l’élément `<LangVersion>` pour configurer plusieurs répertoires. En règle générale, vous faites cela dans votre répertoire de solution. Ajoutez le code suivant à un fichier **Directory.build.props** dans votre répertoire de solution :
 
 ```xml
 <Project>

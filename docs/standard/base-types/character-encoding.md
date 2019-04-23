@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649399"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346104"
 ---
 # <a name="character-encoding-in-net"></a>Encodage de caractères dans .NET
 Les caractères sont des entités abstraites qui peuvent être représentées de nombreuses façons différentes. Un encodage de caractères est un système qui associe chaque caractère d'un jeu de caractères pris en charge à une valeur qui représente ce caractère. Par exemple, le code Morse est un encodage de caractères qui associe chaque caractère de l'alphabet latin à une séquence de points et de tirets qui conviennent pour la transmission sur des lignes télégraphiques. Un encodage de caractères pour les ordinateurs associe chaque caractère d'un jeu de caractères à une valeur numérique qui représente ce caractère. Un encodage de caractères a deux composants distincts :  
@@ -35,7 +35,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
  .NET utilise l’encodage UTF-16 (représenté par la classe <xref:System.Text.UnicodeEncoding>) pour représenter des caractères et des chaînes. Les applications qui ciblent le common language runtime utilisent des encodeurs pour mapper les représentations de caractères Unicode prises en charge par le common language runtime à d'autres schémas de codage. Elles utilisent des décodeurs pour mapper les caractères des encodages non-Unicode à Unicode.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Encodages dans .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
@@ -141,7 +141,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
- Quand un caractère n'a pas de correspondance exacte dans l'encodage cible, l'encodeur peut essayer de le mapper à un caractère similaire. (La stratégie de secours la mieux adaptée est principalement un codage plutôt qu'un problème de décodage. Il existe très peu de pages de codes contenant des caractères qui ne peuvent pas être mappés à Unicode.) La stratégie de secours la mieux adaptée est la stratégie par défaut pour les encodages de pages de codes et DBCS qui sont récupérés par les surcharges de <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> et de <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>.  
+ Quand un caractère n'a pas de correspondance exacte dans l'encodage cible, l'encodeur peut essayer de le mapper à un caractère similaire. (La stratégie de secours la mieux adaptée est principalement un codage plutôt qu'un problème de décodage. Il existe très peu de pages de codes contenant des caractères qui ne peuvent pas être mappés à Unicode.) La stratégie de secours la mieux adaptée est la stratégie par défaut des encodages de pages de codes et de jeux de caractères codés sur deux octets qui sont récupérés par les surcharges de <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> et de <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  En théorie, les classes d'encodage Unicode fournies dans .NET (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> et <xref:System.Text.UTF32Encoding>) prennent en charge tous les caractères de tous les jeux de caractères : elles peuvent donc être utilisées pour éliminer les problèmes de la stratégie de secours la mieux adaptée.  
@@ -215,11 +215,11 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
  En outre, vous pouvez implémenter une solution personnalisée qui utilise une stratégie de secours la mieux adaptée, une stratégie de secours pour les remplacements ou une stratégie de secours pour les exceptions, en procédant comme suit :  
   
-1.  Dérivez une classe de <xref:System.Text.EncoderFallback> pour les opérations d'encodage, et de <xref:System.Text.DecoderFallback> pour les opérations de décodage.  
+1. Dérivez une classe de <xref:System.Text.EncoderFallback> pour les opérations d'encodage, et de <xref:System.Text.DecoderFallback> pour les opérations de décodage.  
   
-2.  Dérivez une classe de <xref:System.Text.EncoderFallbackBuffer> pour les opérations d'encodage, et de <xref:System.Text.DecoderFallbackBuffer> pour les opérations de décodage.  
+2. Dérivez une classe de <xref:System.Text.EncoderFallbackBuffer> pour les opérations d'encodage, et de <xref:System.Text.DecoderFallbackBuffer> pour les opérations de décodage.  
   
-3.  Pour la stratégie de secours pour les exceptions, si les classes prédéfinies <xref:System.Text.EncoderFallbackException> et <xref:System.Text.DecoderFallbackException> ne répondent pas à vos besoins, dérivez une classe depuis un objet d'exception comme <xref:System.Exception> ou <xref:System.ArgumentException>.  
+3. Pour la stratégie de secours pour les exceptions, si les classes prédéfinies <xref:System.Text.EncoderFallbackException> et <xref:System.Text.DecoderFallbackException> ne répondent pas à vos besoins, dérivez une classe depuis un objet d'exception comme <xref:System.Exception> ou <xref:System.ArgumentException>.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>Dérivation depuis EncoderFallback ou DecoderFallback  
  Pour implémenter une solution de stratégie de secours personnalisée, vous devez créer une classe qui hérite de <xref:System.Text.EncoderFallback> pour les opérations d'encodage, et de <xref:System.Text.DecoderFallback> pour les opérations de décodage. Les instances de ces classes sont passées à la méthode <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> et elle servent d'intermédiaire entre la classe d'encodage et l'implémentation de la stratégie de secours.  
@@ -235,7 +235,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
  Quand vous créez une solution de secours personnalisée pour un encodeur ou un décodeur, vous devez implémenter les membres suivants :  
   
--   La méthode <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par l'encodeur pour fournir à la mémoire tampon de secours des informations concernant le caractère qu'elle ne peut pas encoder. Étant donné que le caractère à encoder peut être une paire de substitution, cette méthode est surchargée. Le caractère à encoder et son index dans la chaîne sont passés à une surcharge. La demi-zone haute et la demi-zone basse, ainsi que son index dans la chaîne, sont passés à la deuxième surcharge. La méthode <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par le décodeur pour fournir à la mémoire tampon de secours des informations sur les octets qu'elle ne peut pas décoder. Cette méthode reçoit un tableau d'octets qu'elle ne peut pas décoder, ainsi que l'index du premier octet. La méthode de secours doit retourner `true` si la mémoire tampon de secours peut fournir un ou plusieurs caractères les mieux adaptés ou de remplacement ; sinon, elle doit retourner `false`. Pour une stratégie de secours pour les exceptions, la méthode de secours doit lever une exception.  
+-   La méthode <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par l’encodeur pour fournir à la mémoire tampon de secours des informations concernant le caractère qu’elle ne peut pas encoder. Étant donné que le caractère à encoder peut être une paire de substitution, cette méthode est surchargée. Le caractère à encoder et son index dans la chaîne sont passés à une surcharge. La demi-zone haute et la demi-zone basse, ainsi que son index dans la chaîne, sont passés à la deuxième surcharge. La méthode <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par le décodeur pour fournir à la mémoire tampon de secours des informations sur les octets qu'elle ne peut pas décoder. Cette méthode reçoit un tableau d'octets qu'elle ne peut pas décoder, ainsi que l'index du premier octet. La méthode de secours doit retourner `true` si la mémoire tampon de secours peut fournir un ou plusieurs caractères les mieux adaptés ou de remplacement ; sinon, elle doit retourner `false`. Pour une stratégie de secours pour les exceptions, la méthode de secours doit lever une exception.  
   
 -   La méthode <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , qui est appelée de façon répétée par l'encodeur ou par le décodeur pour obtenir le caractère suivant de la mémoire tampon de secours. Quand tous les caractères de secours ont été retournés, la méthode doit retourner U+0000.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : définir et utiliser des fournisseurs de format numérique personnalisés'
+title: 'Procédure : définir et utiliser des fournisseurs de formats numériques personnalisés'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879034"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318375"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Comment : définir et utiliser des fournisseurs de format numérique personnalisés
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procédure : définir et utiliser des fournisseurs de formats numériques personnalisés
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] vous donne un contrôle étendu sur la représentation sous forme de chaîne de valeurs numériques. Il prend en charge les fonctionnalités suivantes pour personnaliser le format des valeurs numériques :  
   
 -   Chaînes de format numériques standard, qui fournissent un ensemble prédéfini de formats pour convertir des nombres dans leur représentation sous forme de chaîne. Vous pouvez les utiliser avec toute méthode de mise en forme numérique, telle que <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, qui est dotée d’un paramètre `format`. Pour plus d’informations, consultez [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "43879034"
   
 ### <a name="to-define-a-custom-format-provider"></a>Pour définir un fournisseur de format personnalisé  
   
-1.  Définir une classe qui implémente les inferfaces <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>.  
+1. Définir une classe qui implémente les inferfaces <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>.  
   
-2.  Implémentez la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> est une méthode de rappel que la méthode de mise en forme (telle que la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) appelle pour récupérer l’objet qui est réellement chargé d’effectuer la mise en forme personnalisée. Une implémentation type de <xref:System.IFormatProvider.GetFormat%2A> effectue les opérations suivantes :  
+2. Implémentez la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> est une méthode de rappel appelée par la méthode de mise en forme (par exemple, la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) pour récupérer l’objet véritablement chargé de la mise en forme personnalisée. Une implémentation type de <xref:System.IFormatProvider.GetFormat%2A> effectue les opérations suivantes :  
   
     1.  Elle détermine si l’objet <xref:System.Type> passé comme paramètre de méthode représente une interface <xref:System.ICustomFormatter>.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879034"
   
     3.  Si le paramètre ne représente pas l’interface <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> retourne `null`.  
   
-3.  Implémentez la méthode <xref:System.ICustomFormatter.Format%2A>. Cette méthode est appelée par la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et est chargée de retourner la représentation sous forme de chaîne d’un nombre. En général, l’implémentation de la méthode implique les étapes suivantes :  
+3. Implémentez la méthode <xref:System.ICustomFormatter.Format%2A>. Cette méthode est appelée par la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et est chargée de retourner la représentation sous forme de chaîne d’un nombre. En général, l’implémentation de la méthode implique les étapes suivantes :  
   
     1.  Le cas échéant, vérifiez que la méthode est légitimement destinée à fournir des services de mise en forme en examinant le paramètre `provider`. Pour les objets de mise en forme qui implémentent à la fois <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>, vous devez déterminer si le paramètre `provider` correspond à l’objet de mise en forme actuel.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879034"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Pour utiliser un objet de mise en forme numérique personnalisé  
   
-1.  Créez une instance de la classe de mise en forme personnalisée.  
+1. Créez une instance de la classe de mise en forme personnalisée.  
   
-2.  Appelez la méthode de mise en forme <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> en lui passant l’objet de mise en forme personnalisée, le spécificateur de mise en forme (ou <xref:System.String.Empty?displayProperty=nameWithType>, si aucun n’est utilisé) et la valeur numérique à mettre en forme.  
+2. Appelez la méthode de mise en forme <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> en lui passant l’objet de mise en forme personnalisée, le spécificateur de mise en forme (ou <xref:System.String.Empty?displayProperty=nameWithType>, si aucun n’est utilisé) et la valeur numérique à mettre en forme.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant définit un fournisseur de format numérique personnalisé nommé `TelephoneFormatter` qui convertit un nombre représentant un numéro de téléphone aux États-Unis au format NANP ou E.123 correspondant. La méthode gère deux spécificateurs de format, « N » (qui génère le format NANP) et « I » (qui génère le format E.123 international).  
@@ -93,4 +93,4 @@ ms.locfileid: "43879034"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)

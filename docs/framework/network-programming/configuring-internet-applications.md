@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133800"
 ---
 # <a name="configuring-internet-applications"></a>Configuration des applications Internet
 L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contient des informations de configuration réseau pour les applications. Avec l’[élément \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), vous pouvez définir des serveurs proxy, définir des paramètres de gestion de connexion, et inclure des modules de requête et d’authentification personnalisés dans votre application.  
@@ -98,6 +98,7 @@ L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../do
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<system.Net>, élément (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

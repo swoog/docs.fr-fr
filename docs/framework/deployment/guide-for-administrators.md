@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309509"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
 Cet article explique étape par étape comment un administrateur système peut déployer [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses dépendances système dans un réseau à l'aide de Microsoft System Center Configuration Manager (SCCM). Cet article suppose que tous les ordinateurs clients cibles ont la configuration minimale requise pour le .NET Framework. Pour obtenir la liste des configurations logicielle et matérielle requises pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consultez [Configuration système requise](../../../docs/framework/get-started/system-requirements.md).  
@@ -25,7 +25,7 @@ Cet article explique étape par étape comment un administrateur système peut d
  Cette rubrique contient les sections suivantes :  
   
  [Processus de déploiement](#the_deployment_process)  
- [Déploiement du .NET Framework](#deploying_in_a_test_environment)  
+ [Déployer le .NET Framework](#deploying_in_a_test_environment)  
  [Créer un regroupement](#creating_a_collection)  
  [Créer un package et un programme](#creating_a_package)  
  [Sélectionner un point de distribution](#select_dist_point)  
@@ -52,13 +52,13 @@ Cet article explique étape par étape comment un administrateur système peut d
 ## <a name="deploying-the-net-framework"></a>Déployer le .NET Framework  
  Vous pouvez utiliser System Center 2012 Configuration Manager pour déployer une installation sans assistance de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], pour laquelle les utilisateurs n'interagissent pas avec le processus d'installation. Procédez comme suit :  
   
-1.  [Créez un regroupement](#creating_a_collection).  
+1. [Créez un regroupement](#creating_a_collection).  
   
-2.  [Créez un package et un programme pour le package redistribuable .Net Framework](#creating_a_package).  
+2. [Créez un package et un programme pour le package redistribuable .Net Framework](#creating_a_package).  
   
-3.  [Sélectionnez un point de distribution](#select_dist_point).  
+3. [Sélectionnez un point de distribution](#select_dist_point).  
   
-4.  [Déployez le package](#deploying_package).  
+4. [Déployez le package](#deploying_package).  
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Créer un regroupement  
@@ -66,21 +66,21 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  Pour créer un regroupement  
   
-1.  Dans la Console Configuration Manager, choisissez **Ressources et Conformité**.  
+1. Dans la Console Configuration Manager, choisissez **Ressources et Conformité**.  
   
-2.  Dans l’espace de travail **Ressources et Conformité**, choisissez **Regroupements de périphériques**.  
+2. Dans l’espace de travail **Ressources et Conformité**, choisissez **Regroupements de périphériques**.  
   
-3.  Sous l’onglet **Accueil** dans le groupe **Créer**, choisissez **Créer un regroupement de périphériques**.  
+3. Sous l’onglet **Accueil** dans le groupe **Créer**, choisissez **Créer un regroupement de périphériques**.  
   
-4.  Dans la page **Général** de l’**Assistant Création d’un regroupement de périphériques**, entrez un nom pour le regroupement.  
+4. Dans la page **Général** de l’**Assistant Création d’un regroupement de périphériques**, entrez un nom pour le regroupement.  
   
-5.  Choisissez **Parcourir** pour spécifier un regroupement limité.  
+5. Choisissez **Parcourir** pour spécifier un regroupement limité.  
   
-6.  Dans la page **Règles d’adhésion**, choisissez **Ajouter une règle**, puis **Règle directe** pour ouvrir l’**Assistant Création d’une règle d’adhésion directe**. Sélectionnez **Suivant**.  
+6. Dans la page **Règles d’adhésion**, choisissez **Ajouter une règle**, puis **Règle directe** pour ouvrir l’**Assistant Création d’une règle d’adhésion directe**. Sélectionnez **Suivant**.  
   
-7.  Dans la page **Rechercher des ressources**, dans la liste **Classe de ressource**, choisissez **Ressource système**. Dans la liste **Nom de l’attribut**, choisissez **Nom**. Dans le champ **Valeur**, entrez `%` et choisissez **Suivant**.  
+7. Dans la page **Rechercher des ressources**, dans la liste **Classe de ressource**, choisissez **Ressource système**. Dans la liste **Nom de l’attribut**, choisissez **Nom**. Dans le champ **Valeur**, entrez `%` et choisissez **Suivant**.  
   
-8.  Dans la page **Sélectionner les ressources**, cochez la case de chaque ordinateur sur lequel vous souhaitez déployer le .Net Framework. Choisissez **Suivant**, puis terminez l’Assistant.  
+8. Dans la page **Sélectionner les ressources**, cochez la case de chaque ordinateur sur lequel vous souhaitez déployer le .Net Framework. Choisissez **Suivant**, puis terminez l’Assistant.  
   
 9. Dans la page **Règles d’adhésion** de l’**Assistant Création d’un regroupement de périphériques**, choisissez **Suivant**, puis terminez l’Assistant.  
   
@@ -90,27 +90,27 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  Pour créer un package :  
   
-1.  Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
+1. Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
   
-2.  Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
+2. Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
   
-3.  Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un package**.  
+3. Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un package**.  
   
-4.  Dans la page **Package** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
+4. Dans la page **Package** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
   
-    -   Nom : `.NET Framework 4.5`  
+    -   Nom : `.NET Framework 4.5`  
   
     -   Fabricant : `Microsoft`  
   
     -   Langue : `English (US)`  
   
-5.  Choisissez **Ce package contient des fichiers sources**, puis **Parcourir** pour sélectionner le dossier local ou réseau qui contient les fichiers d’installation du .Net Framework. Quand vous avez sélectionné le dossier, choisissez **OK**, puis **Suivant**.  
+5. Choisissez **Ce package contient des fichiers sources**, puis **Parcourir** pour sélectionner le dossier local ou réseau qui contient les fichiers d’installation du .Net Framework. Quand vous avez sélectionné le dossier, choisissez **OK**, puis **Suivant**.  
   
-6.  Dans la page **Type de programme** de l’Assistant, choisissez **Programme standard**, puis **Suivant**.  
+6. Dans la page **Type de programme** de l’Assistant, choisissez **Programme standard**, puis **Suivant**.  
   
-7.  Dans la page **Programme** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
+7. Dans la page **Programme** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
   
-    1.  **Nom :** `.NET Framework 4.5`  
+    1.  **Nom :** `.NET Framework 4.5`  
   
     2.  **Ligne de commande :** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (les options de ligne de commande sont décrites dans le tableau après ces étapes)  
   
@@ -118,7 +118,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
     4.  **Le programme peut s’exécuter :** sélectionnez l’option qui spécifie que le programme peut s’exécuter que l’utilisateur soit connecté ou non.  
   
-8.  Dans la page **Exigences**, acceptez les valeurs par défaut en choisissant **Suivant**, puis terminez l’Assistant.  
+8. Dans la page **Exigences**, acceptez les valeurs par défaut en choisissant **Suivant**, puis terminez l’Assistant.  
   
  Le tableau suivant décrit les options de ligne de commande spécifiées dans l'étape 7.  
   
@@ -136,21 +136,21 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  Utilisez les étapes suivantes pour sélectionner un point de distribution pour le package de .Net Framework 4.5 créé au cours la section précédente :  
   
-1.  Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
+1. Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
   
-2.  Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
+2. Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
   
-3.  Dans la liste de packages, sélectionnez le package **.Net Framework 4.5** créé dans la section précédente.  
+3. Dans la liste de packages, sélectionnez le package **.Net Framework 4.5** créé dans la section précédente.  
   
-4.  Sous l’onglet **Accueil**, dans le groupe **Déploiement**, choisissez **Distribuer du contenu**.  
+4. Sous l’onglet **Accueil**, dans le groupe **Déploiement**, choisissez **Distribuer du contenu**.  
   
-5.  Sous l’onglet **Général** de l’**Assistant Distribuer du contenu**, choisissez **Suivant**.  
+5. Sous l’onglet **Général** de l’**Assistant Distribuer du contenu**, choisissez **Suivant**.  
   
-6.  Dans la page **Destination du contenu** de l’Assistant, choisissez **Ajouter**, puis **Point de distribution**.  
+6. Dans la page **Destination du contenu** de l’Assistant, choisissez **Ajouter**, puis **Point de distribution**.  
   
-7.  Dans la boîte de dialogue **Ajouter des points de distribution**, sélectionnez les points de distribution qui hébergeront le package et le programme, puis choisissez **OK**.  
+7. Dans la boîte de dialogue **Ajouter des points de distribution**, sélectionnez les points de distribution qui hébergeront le package et le programme, puis choisissez **OK**.  
   
-8.  Effectuez toutes les étapes de l'Assistant.  
+8. Effectuez toutes les étapes de l'Assistant.  
   
  Le package contient désormais toutes les informations nécessaires au déploiement sans assistance de .Net Framework 4.5. Avant de déployer le package et le programme, vérifiez qu’il a été installé sur le point de distribution ; consultez la section « Surveiller le contenu » de la page [Surveiller le contenu distribué avec System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) dans la bibliothèque de la documentation Configuration Manager.  
   
@@ -158,21 +158,21 @@ Cet article explique étape par étape comment un administrateur système peut d
 ### <a name="deploy-the-package"></a>Déployer le package  
  Pour déployer le package et le programme .Net Framework 4.5 :  
   
-1.  Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
+1. Dans la Console Configuration Manager, choisissez **Bibliothèque de logiciels**.  
   
-2.  Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
+2. Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, puis choisissez **Packages**.  
   
-3.  Dans la liste des packages, sélectionnez le package que vous avez créé, appelé **.Net Framework 4.5**.  
+3. Dans la liste des packages, sélectionnez le package que vous avez créé, appelé **.Net Framework 4.5**.  
   
-4.  Sous l’onglet **Accueil**, dans le groupe **Déploiement**, choisissez **Déployer**.  
+4. Sous l’onglet **Accueil**, dans le groupe **Déploiement**, choisissez **Déployer**.  
   
-5.  Dans la page **Général** de l’**Assistant Déploiement logiciel**, choisissez **Parcourir**, puis sélectionnez le regroupement créé précédemment. Sélectionnez **Suivant**.  
+5. Dans la page **Général** de l’**Assistant Déploiement logiciel**, choisissez **Parcourir**, puis sélectionnez le regroupement créé précédemment. Sélectionnez **Suivant**.  
   
-6.  Dans la page **Contenu** de l’Assistant, vérifiez que le point à partir duquel vous souhaitez distribuer le logiciel s’affiche, puis choisissez **Suivant**.  
+6. Dans la page **Contenu** de l’Assistant, vérifiez que le point à partir duquel vous souhaitez distribuer le logiciel s’affiche, puis choisissez **Suivant**.  
   
-7.  Dans la page **Paramètres de déploiement** de l’Assistant, vérifiez que **Action** est défini sur **Installer**, et **Objectif** sur **Requis**. Cela garantit que le package logiciel est une installation obligatoire sur les ordinateurs ciblés. Sélectionnez **Suivant**.  
+7. Dans la page **Paramètres de déploiement** de l’Assistant, vérifiez que **Action** est défini sur **Installer**, et **Objectif** sur **Requis**. Cela garantit que le package logiciel est une installation obligatoire sur les ordinateurs ciblés. Sélectionnez **Suivant**.  
   
-8.  Dans la page **Planification** de l’Assistant, spécifiez à quel moment vous souhaitez que le .Net Framework soit installé. Choisissez **Nouveau** pour déterminer le moment de l’installation, ou demandez au logiciel d’effectuer l’installation quand l’utilisateur se connecte ou se déconnecte, ou dès que possible. Sélectionnez **Suivant**.  
+8. Dans la page **Planification** de l’Assistant, spécifiez à quel moment vous souhaitez que le .Net Framework soit installé. Choisissez **Nouveau** pour déterminer le moment de l’installation, ou demandez au logiciel d’effectuer l’installation quand l’utilisateur se connecte ou se déconnecte, ou dès que possible. Sélectionnez **Suivant**.  
   
 9. Dans la page **Expérience utilisateur** de l’Assistant, utilisez les valeurs par défaut et choisissez **Suivant**.  
   
@@ -199,19 +199,19 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  **SQL Server 2008 :**  
   
--   [Installation de SQL Server 2008 (Vidéo liée à SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
+-   [Installer SQL Server 2008 (vidéo SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
--   [Présentation de la sécurité SQL Server 2008 pour les administrateurs de base de données](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [Vue d’ensemble de la sécurité SQL Server 2008 pour les administrateurs de base de données](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (point de gestion, point de distribution) :**  
   
 -   [Administration de site pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Planification et déploiement d’un site Configuration Manager unique](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
+-   [Planification et déploiement d’un site unique Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
- **Client System Center 2012 Configuration Manager pour des ordinateurs Windows :**  
+ **Client System Center 2012 Configuration Manager pour ordinateurs Windows :**  
   
--   [Déploiement de clients pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
+-   [Déployer des clients pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
@@ -250,13 +250,13 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 -   [Codes d’erreur du moniker d’URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
--   [Codes d’erreur WinHttp](/windows/desktop/WinHttp/error-messages)  
+-   [Codes d’erreur de WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Autres codes d'erreur :  
   
--   [Codes d’erreur Windows Installer](/windows/desktop/msi/error-codes)
+-   [Codes d’erreur de Windows Installer](/windows/desktop/msi/error-codes)
 
--   [Codes de résultat de l’agent de mise à jour automatique Windows Update](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+-   [Codes résultat de l’agent Windows Update](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="see-also"></a>Voir aussi
 

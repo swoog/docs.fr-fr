@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221054"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333299"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procédure : définir et exécuter des méthodes dynamiques
 Les procédures suivantes montrent comment définir et exécuter une méthode dynamique simple et une méthode dynamique liée à une instance d’une classe. Pour plus d’informations sur les méthodes dynamiques, consultez la classe <xref:System.Reflection.Emit.DynamicMethod> et [Scénarios de méthodes dynamiques avec Émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Pour définir et exécuter une méthode dynamique  
   
-1.  Déclarez un type délégué pour exécuter la méthode. Vous pouvez utiliser un délégué générique pour réduire le nombre de types délégués que vous devez déclarer. Le code suivant déclare deux types délégués qui peuvent être utilisés pour la méthode `SquareIt`, et l’un d’eux est générique.  
+1. Déclarez un type délégué pour exécuter la méthode. Vous pouvez utiliser un délégué générique pour réduire le nombre de types délégués que vous devez déclarer. Le code suivant déclare deux types délégués qui peuvent être utilisés pour la méthode `SquareIt`, et l’un d’eux est générique.  
   
      [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
      [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
      [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  Créez un tableau qui spécifie les types de paramètre de la méthode dynamique. Dans cet exemple, le seul paramètre est un `int` (`Integer` en Visual Basic). Le tableau n’a donc qu’un seul élément.  
+2. Créez un tableau qui spécifie les types de paramètre de la méthode dynamique. Dans cet exemple, le seul paramètre est un `int` (`Integer` en Visual Basic). Le tableau n’a donc qu’un seul élément.  
   
      [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  Créer un <xref:System.Reflection.Emit.DynamicMethod>. Dans cet exemple, la méthode se nomme `SquareIt`.  
+3. Créer un <xref:System.Reflection.Emit.DynamicMethod>. Dans cet exemple, la méthode se nomme `SquareIt`.  
   
     > [!NOTE]
     >  Il n’est pas nécessaire de nommer les méthodes dynamiques. Elles ne peuvent pas être appelées par nom. Plusieurs méthodes dynamiques peuvent avoir le même nom. Toutefois, le nom apparaît dans les piles des appels et peut être utile pour le débogage.  
@@ -46,7 +46,7 @@ Les procédures suivantes montrent comment définir et exécuter une méthode dy
      [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
      [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-4.  Émettez le corps de méthode. Dans cet exemple, un objet <xref:System.Reflection.Emit.ILGenerator> est utilisé pour émettre le code MSIL (Microsoft Intermediate Language). Vous pourriez également utiliser un objet <xref:System.Reflection.Emit.DynamicILInfo> conjointement avec des générateurs de code non managé pour émettre le corps de méthode pour un <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Émettez le corps de méthode. Dans cet exemple, un objet <xref:System.Reflection.Emit.ILGenerator> est utilisé pour émettre le code MSIL (Microsoft Intermediate Language). Vous pourriez également utiliser un objet <xref:System.Reflection.Emit.DynamicILInfo> conjointement avec des générateurs de code non managé pour émettre le corps de méthode pour un <xref:System.Reflection.Emit.DynamicMethod>.  
   
      Le code MSIL de cet exemple charge l’argument (qui est un `int`) dans la pile, le convertit en `long`, duplique le `long` et multiplie les deux nombres. Cela laisse le résultat au carré sur la pile, et il suffit à la méthode de retourner.  
   
@@ -54,7 +54,7 @@ Les procédures suivantes montrent comment définir et exécuter une méthode dy
      [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
      [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
-5.  Créez une instance du délégué (déclaré à l’étape 1) qui représente la méthode dynamique en appelant la méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. La création du délégué achève la méthode, et toute tentative supplémentaire de changement de la méthode (par exemple l’ajout de code MSIL) est ignorée. Le code suivant crée le délégué et l’appelle, à l’aide d’un délégué générique.  
+5. Créez une instance du délégué (déclaré à l’étape 1) qui représente la méthode dynamique en appelant la méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. La création du délégué achève la méthode, et toute tentative supplémentaire de changement de la méthode (par exemple l’ajout de code MSIL) est ignorée. Le code suivant crée le délégué et l’appelle, à l’aide d’un délégué générique.  
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
      [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
@@ -62,25 +62,25 @@ Les procédures suivantes montrent comment définir et exécuter une méthode dy
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>Pour définir et exécuter une méthode dynamique liée à un objet  
   
-1.  Déclarez un type délégué pour exécuter la méthode. Vous pouvez utiliser un délégué générique pour réduire le nombre de types délégués que vous devez déclarer. Le code suivant déclare un type délégué générique qui peut être utilisé pour exécuter n’importe quelle méthode avec un paramètre et une valeur de retour, ou une méthode avec deux paramètres et une valeur de retour si le délégué est lié à un objet.  
+1. Déclarez un type délégué pour exécuter la méthode. Vous pouvez utiliser un délégué générique pour réduire le nombre de types délégués que vous devez déclarer. Le code suivant déclare un type délégué générique qui peut être utilisé pour exécuter n’importe quelle méthode avec un paramètre et une valeur de retour, ou une méthode avec deux paramètres et une valeur de retour si le délégué est lié à un objet.  
   
      [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
      [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
      [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
-2.  Créez un tableau qui spécifie les types de paramètre de la méthode dynamique. Si le délégué représentant la méthode doit être lié à un objet, le premier paramètre doit correspondre au type auquel le délégué est lié. Cet exemple contient deux paramètres, de type `Example` et `int` (`Integer` en Visual Basic).  
+2. Créez un tableau qui spécifie les types de paramètre de la méthode dynamique. Si le délégué représentant la méthode doit être lié à un objet, le premier paramètre doit correspondre au type auquel le délégué est lié. Cet exemple contient deux paramètres, de type `Example` et `int` (`Integer` en Visual Basic).  
   
      [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3.  Créer un <xref:System.Reflection.Emit.DynamicMethod>. Dans cet exemple, la méthode n’a pas de nom. Le type de la valeur de retour est spécifié comme `int` (`Integer` en Visual Basic). La méthode a accès aux membres privés et protégés de la classe `Example`.  
+3. Créer un <xref:System.Reflection.Emit.DynamicMethod>. Dans cet exemple, la méthode n’a pas de nom. Le type de la valeur de retour est spécifié comme `int` (`Integer` en Visual Basic). La méthode a accès aux membres privés et protégés de la classe `Example`.  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
      [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
-4.  Émettez le corps de méthode. Dans cet exemple, un objet <xref:System.Reflection.Emit.ILGenerator> est utilisé pour émettre le code MSIL (Microsoft Intermediate Language). Vous pourriez également utiliser un objet <xref:System.Reflection.Emit.DynamicILInfo> conjointement avec des générateurs de code non managé pour émettre le corps de méthode pour un <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Émettez le corps de méthode. Dans cet exemple, un objet <xref:System.Reflection.Emit.ILGenerator> est utilisé pour émettre le code MSIL (Microsoft Intermediate Language). Vous pourriez également utiliser un objet <xref:System.Reflection.Emit.DynamicILInfo> conjointement avec des générateurs de code non managé pour émettre le corps de méthode pour un <xref:System.Reflection.Emit.DynamicMethod>.  
   
      Le code MSIL de cet exemple charge le premier argument, qui est une instance de la classe `Example`, et l’utilise pour charger la valeur d’un champ d’instance privé de type `int`. Le deuxième argument est chargé, et les deux nombres sont multipliés. Si le résultat est supérieur à `int`, la valeur est tronquée et les bits les plus significatifs sont ignorés. La méthode retourne, avec la valeur de retour sur la pile.  
   
@@ -88,7 +88,7 @@ Les procédures suivantes montrent comment définir et exécuter une méthode dy
      [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
      [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
-5.  Créez une instance du délégué (déclaré à l’étape 1) qui représente la méthode dynamique en appelant la surcharge de méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. La création du délégué achève la méthode, et toute tentative supplémentaire de changement de la méthode (par exemple l’ajout de code MSIL) est ignorée.  
+5. Créez une instance du délégué (déclaré à l’étape 1) qui représente la méthode dynamique en appelant la surcharge de méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. La création du délégué achève la méthode, et toute tentative supplémentaire de changement de la méthode (par exemple l’ajout de code MSIL) est ignorée.  
   
     > [!NOTE]
     >  Vous pouvez appeler la méthode <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> plusieurs fois afin de créer des délégués liés à d’autres instances du type cible.  
@@ -123,6 +123,7 @@ Les procédures suivantes montrent comment définir et exécuter une méthode dy
 -   Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Reflection.Emit.DynamicMethod>
-- [Utilisation de l’émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Scénarios de méthodes dynamiques avec Émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))
+- [Utiliser l’émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Scénarios de méthodes dynamiques avec émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

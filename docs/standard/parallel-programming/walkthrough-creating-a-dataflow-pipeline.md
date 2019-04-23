@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : création d'un pipeline de flux de données"
+title: 'Procédure pas à pas : création d’un pipeline de dataflow'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421240"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299005"
 ---
-# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procédure pas à pas : création d'un pipeline de flux de données
+# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procédure pas à pas : création d’un pipeline de dataflow
 Bien que vous puissiez utiliser les méthodes <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> pour recevoir des messages des blocs sources, vous pouvez également connecter des blocs de messages pour former un *pipeline de flux de données*. Un pipeline de flux de données est une série de composants, ou de *blocs de flux de données*, qui effectuent chacun une tâche spécifique qui contribue à un plus grand objectif. Chaque bloc de flux de données d'un pipeline de flux de données effectue un travail lorsqu'il reçoit un message d'un autre bloc de flux de données. Ce processus s'apparente à une chaîne de montage en construction automobile. Comme chaque véhicule passe via la ligne de montage, un poste assemble le châssis, le suivant installe le moteur, et ainsi de suite. Étant donné qu'une ligne d'assemblage permet à plusieurs véhicules d'être assemblés en même temps, cela fournit une productivité supérieure à l'assemblage un par un des véhicules.
 
  Ce document montre un pipeline de flux de données qui télécharge le livre *L’Illiade d’Homère* à partir d’un site web et recherche dans le texte les mots dont l’inversion des caractères permet d’obtenir un autre mot. La formation du pipeline de flux de données dans ce document comprend les étapes suivantes :  
   
-1.  Créez des blocs de flux de données qui participent au pipeline.  
+1. Créez des blocs de flux de données qui participent au pipeline.  
   
-2.  Connectez chaque bloc de flux de données au bloc suivant dans le pipeline. Chaque bloc reçoit comme entrée la sortie du bloc précédent du pipeline.  
+2. Connectez chaque bloc de flux de données au bloc suivant dans le pipeline. Chaque bloc reçoit comme entrée la sortie du bloc précédent du pipeline.  
   
-3.  Pour chaque bloc de flux de données, créez une tâche de continuation qui définit le bloc suivant à l'état arrêté après que le bloc précédent ait terminé.  
+3. Pour chaque bloc de flux de données, créez une tâche de continuation qui définit le bloc suivant à l’état arrêté après que le bloc précédent ait terminé.  
   
-4.  Publiez les données au début du pipeline.  
+4. Publiez les données au début du pipeline.  
   
-5.  Marquez le début du pipeline comme terminé.  
+5. Marquez le début du pipeline comme terminé.  
   
-6.  Attendez que le pipeline termine tous les travaux.  
+6. Attendez que le pipeline termine tous les travaux.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Lisez la rubrique [Flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) avant de démarrer cette procédure pas à pas.  
@@ -108,8 +108,8 @@ Bien que vous puissiez utiliser les méthodes <xref:System.Threading.Tasks.Dataf
   
  Le parallélisme qui est effectué à l’aide de pipelines de flux de données s’appelle *le parallélisme de granularité grossière* parce qu’il comprend généralement moins de tâches, mais plus grosses. Vous pouvez également utiliser *le parallélisme de granularité fine* de plus petites tâches de courte durée dans un pipeline de flux de données. Dans cet exemple, le membre `findReversedWords` du pipeline utilise [PLINQ](parallel-linq-plinq.md) pour traiter plusieurs éléments dans la liste des travaux en parallèle. L'utilisation du parallélisme de granularité fine dans un pipeline de granularité grossière peut améliorer le débit global.  
   
- Vous pouvez également adapter un bloc de flux de données source à plusieurs blocs cibles pour créer *un réseau de flux de données*. La version surchargée de la méthode <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> accepte un objet <xref:System.Predicate%601> qui définit si le bloc cible reçoit les messages en fonction de sa valeur. La plupart des types de bloc de flux de données qui agissent comme sources envoient des messages à toutes les blocs cibles connectés, dans l'ordre dans lequel ils ont été connectés, jusqu'à ce que l'un des blocs reçoive ce message. En utilisant ce mécanisme de filtrage, vous pouvez créer des systèmes de blocs de flux de données connectés qui dirigent certaines données via un seul tracé et d’autres données via un autre tracé. Pour obtenir un exemple qui utilise le filtrage afin de créer un réseau de flux de données, consultez [Procédure pas à pas : utilisation de flux de données dans une application Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Vous pouvez également adapter un bloc de flux de données source à plusieurs blocs cibles pour créer *un réseau de flux de données*. La version surchargée de la méthode <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> accepte un objet <xref:System.Predicate%601> qui définit si le bloc cible reçoit les messages en fonction de sa valeur. La plupart des types de bloc de flux de données qui agissent comme sources envoient des messages à toutes les blocs cibles connectés, dans l'ordre dans lequel ils ont été connectés, jusqu'à ce que l'un des blocs reçoive ce message. En utilisant ce mécanisme de filtrage, vous pouvez créer des systèmes de blocs de flux de données connectés qui dirigent certaines données via un seul tracé et d’autres données via un autre tracé. Pour obtenir un exemple qui utilise le filtrage pour créer un réseau de flux de données, voir [Procédure pas à pas : Utilisation d’un flux de données dans une application Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

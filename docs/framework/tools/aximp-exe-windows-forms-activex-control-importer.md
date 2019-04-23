@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119195"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer)
 L'importateur de contrôles ActiveX convertit les définitions de types d'une bibliothèque de types COM associées à un contrôle ActiveX en un contrôle Windows Forms.  
@@ -34,7 +34,7 @@ L'importateur de contrôles ActiveX convertit les définitions de types d'une bi
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 |Argument|Description|  
 |--------------|-----------------|  
@@ -44,12 +44,12 @@ aximp [options]{file.dll | file.ocx}
 |------------|-----------------|  
 |`/delaysign`|Spécifie à Aximp.exe que le contrôle résultant doit être signé à l'aide du processus de signature différée. Vous devez spécifier cette option avec l’option `/keycontainer:`, `/keyfile:` ou `/publickey:`. Pour plus d’informations sur le processus de signature différée, consultez [Temporisation de signature d’un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Affiche la syntaxe et les options de commande de l'outil.|  
-|`/keycontainer:`*nom_conteneur*|Signe le contrôle obtenu avec un nom fort en utilisant la paire de clés publique/privée présente dans le conteneur de clé spécifié par *nom_conteneur*.|  
-|`/keyfile:` *nom_fichier*|Signe le contrôle résultant avec un nom fort en utilisant la paire de clés publique/privée officielle de l’éditeur présente dans *nom_fichier*.|  
+|`/keycontainer:` *nom_conteneur*|Signe le contrôle obtenu avec un nom fort en utilisant la paire de clés publique/privée présente dans le conteneur de clé spécifié par *nom_conteneur*.|  
+|`/keyfile:` *filename*|Signe le contrôle résultant avec un nom fort en utilisant la paire de clés publique/privée officielle de l’éditeur présente dans *nom_fichier*.|  
 |`/nologo`|Supprime l'affichage de la bannière de démarrage Microsoft.|  
-|`/out:` *nom_fichier*|Spécifie le nom de l'assembly à créer.|  
-|`/publickey:` *nom_fichier*|Signe le contrôle résultant avec un nom fort en utilisant la clé publique présente dans le fichier spécifié par *nom_fichier*.|  
-|`/rcw:` *nom_fichier*|Utilise le wrapper RCW spécifié plutôt que d'en générer un nouveau. Vous pouvez spécifier plusieurs instances. Le répertoire actif est utilisé pour les chemins d’accès relatifs. Pour plus d’informations, consultez [Wrapper pouvant être appelé par le runtime](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/out:` *filename*|Spécifie le nom de l'assembly à créer.|  
+|`/publickey:` *filename*|Signe le contrôle résultant avec un nom fort en utilisant la clé publique présente dans le fichier spécifié par *nom_fichier*.|  
+|`/rcw:` *filename*|Utilise le wrapper RCW spécifié plutôt que d'en générer un nouveau. Vous pouvez spécifier plusieurs instances. Le répertoire actif est utilisé pour les chemins d’accès relatifs. Pour plus d’informations, consultez [Wrapper pouvant être appelé par le runtime](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
 |`/silent`|Supprime l'affichage des messages indiquant la réussite des opérations.|  
 |`/source`|Génère le code source C# pour le wrapper Windows Forms.|  
 |`/verbose`|Spécifie le mode Commentaires ; affiche des informations supplémentaires sur la progression de l'opération.|  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Outils](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (Désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

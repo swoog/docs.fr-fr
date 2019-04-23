@@ -2,12 +2,12 @@
 title: 'Procédure : Étendre la procédure pas à pas async à l’aide de Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297952"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Procédure : Étendre la procédure pas à pas async à l’aide de Task.WhenAll (C#)
 Vous pouvez améliorer les performances de la solution async dans [Procédure pas à pas : Accès au web avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) en utilisant la méthode <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cette méthode attend de manière asynchrone plusieurs opérations, qui sont représentées sous la forme d’une collection de tâches.  
@@ -23,7 +23,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Pour ajouter Task.WhenAll à votre solution GetURLContentsAsync  
   
-1.  Ajoutez la méthode `ProcessURLAsync` à la première application développée dans [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Ajoutez la méthode `ProcessURLAsync` à la première application développée dans [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Si vous avez téléchargé le code à partir des [Exemples de code du développeur](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), ouvrez le projet AsyncWalkthrough, puis ajoutez `ProcessURLAsync` au fichier MainWindow.xaml.cs.  
   
@@ -40,7 +40,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     }  
     ```  
   
-2.  Commentez ou supprimez la boucle `foreach` dans `SumPageSizesAsync`, comme illustré dans le code suivant.  
+2. Commentez ou supprimez la boucle `foreach` dans `SumPageSizesAsync`, comme illustré dans le code suivant.  
   
     ```csharp  
     //var total = 0;  
@@ -61,7 +61,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     //}  
     ```  
   
-3.  Créez une collection de tâches. Le code suivant définit une [requête](../../../../csharp/programming-guide/concepts/linq/index.md) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
+3. Créez une collection de tâches. Le code suivant définit une [requête](../../../../csharp/programming-guide/concepts/linq/index.md) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
   
      Ajoutez le code suivant à la méthode `SumPageSizesAsync` après la déclaration de `urlList`.  
   
@@ -74,7 +74,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection de tâches sont terminées.  
+4. Appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection sont effectuées.  
   
      Dans l’exemple suivant, l’expression `await` attend l’achèvement de la tâche unique retournée par `WhenAll`. L’expression correspond à un tableau d’entiers, où chaque entier est la longueur d’un site web téléchargé. Ajoutez le code suivant à `SumPageSizesAsync`, juste après le code ajouté à l’étape précédente.  
   
@@ -87,7 +87,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  Enfin, utilisez la méthode <xref:System.Linq.Enumerable.Sum%2A> pour calculer la somme des longueurs de tous les sites web. Ajoutez la ligne suivante à `SumPageSizesAsync`.  
+5. Enfin, utilisez la méthode <xref:System.Linq.Enumerable.Sum%2A> pour calculer la somme des longueurs de tous les sites web. Ajoutez la ligne suivante à `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();  
@@ -95,7 +95,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Pour ajouter Task.WhenAll à la solution HttpClient.GetByteArrayAsync  
   
-1.  Ajoutez la version suivante de `ProcessURLAsync` à la deuxième application développée dans [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Ajoutez la version suivante de `ProcessURLAsync` à la deuxième application développée dans [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Si vous avez téléchargé le code à partir des [Exemples de code du développeur](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), ouvrez le projet AsyncWalkthrough_HttpClient, puis ajoutez `ProcessURLAsync` au fichier MainWindow.xaml.cs.  
   
@@ -114,7 +114,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     }  
     ```  
   
-2.  Commentez ou supprimez la boucle `For Each` ou `foreach` dans `SumPageSizesAsync`, comme illustré dans le code suivant.  
+2. Commentez ou supprimez la boucle `For Each` ou `foreach` dans `SumPageSizesAsync`, comme illustré dans le code suivant.  
   
     ```csharp  
     //var total = 0;  
@@ -136,7 +136,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     //}  
     ```  
   
-3.  Définissez une [requête](../../../../csharp/programming-guide/concepts/linq/index.md) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
+3. Définissez une [requête](../../../../csharp/programming-guide/concepts/linq/index.md) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
   
      Ajoutez le code suivant à la méthode `SumPageSizesAsync` après la déclaration de `client` et `urlList`.  
   
@@ -149,7 +149,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Ensuite, appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection de tâches sont terminées.  
+4. Ensuite, appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection sont effectuées.  
   
      Dans l’exemple suivant, l’expression `await` attend l’achèvement de la tâche unique retournée par `WhenAll`. Une fois cette tâche achevée, l’expression `await` correspond à un tableau d’entiers, où chaque entier est la longueur d’un site web téléchargé. Ajoutez le code suivant à `SumPageSizesAsync`, juste après le code ajouté à l’étape précédente.  
   
@@ -162,7 +162,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  Enfin, utilisez la méthode <xref:System.Linq.Enumerable.Sum%2A> pour obtenir la somme des longueurs de tous les sites web. Ajoutez la ligne suivante à `SumPageSizesAsync`.  
+5. Enfin, utilisez la méthode <xref:System.Linq.Enumerable.Sum%2A> pour obtenir la somme des longueurs de tous les sites web. Ajoutez la ligne suivante à `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();
@@ -437,4 +437,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procédure pas à pas : Accéder au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

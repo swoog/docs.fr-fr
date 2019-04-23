@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168166"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Création de prototypes dans du code managé
 Cette rubrique décrit comment accéder aux fonctions non managées et présente plusieurs champs d’attribut qui permettent d’annoter les définitions de méthode dans du code managé. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](marshaling-data-with-platform-invoke.md).  
@@ -111,7 +111,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Exemples d'appel de code non managé  
  Les exemples d'appel de code non managé de cette section illustrent l'utilisation de l'attribut `RegistryPermission` avec les modificateurs de parcours de pile.  
   
- Dans l’exemple de code suivant, les modificateurs <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny` et `PermitOnly` sont ignorés.  
+ Dans l’exemple de code suivant, les modificateurs <xref:System.Security.Permissions.SecurityAction>`Assert` `Deny` et `PermitOnly` sont ignorés.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -135,7 +135,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- Les modificateurs <xref:System.Security.Permissions.SecurityAction> fonctionnent correctement s'ils sont placés sur une classe qui contient (encapsule) l'appel de code non managé.  
+ <xref:System.Security.Permissions.SecurityAction> Les modificateurs fonctionnent correctement s’ils sont placés sur une classe qui contient (encapsule) l’appel de code non managé.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -156,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- Les modificateurs <xref:System.Security.Permissions.SecurityAction> fonctionnent également correctement dans un scénario d'imbrication dans lequel ils sont placés sur l'appelant de l'appel de code non managé :  
+ <xref:System.Security.Permissions.SecurityAction> Les modificateurs fonctionnent également correctement dans un scénario d’imbrication selon lequel ils sont placés sur l’appelant de l’appel de code non managé :  
   
 ```cpp  
       {  
@@ -235,11 +235,12 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Consommation de fonctions DLL non managées](consuming-unmanaged-dll-functions.md)
 - [Spécification d'un point d'entrée](specifying-an-entry-point.md)
 - [Spécification d'un jeu de caractères](specifying-a-character-set.md)
 - [Exemples d'appel de code non managé](platform-invoke-examples.md)
 - [Considérations relatives à la sécurité des appels de code non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identification des fonctions des DLL](identifying-functions-in-dlls.md)
-- [Création d’une classe pour contenir des fonctions DLL](creating-a-class-to-hold-dll-functions.md)
+- [Création d'une classe pour contenir des fonctions DLL](creating-a-class-to-hold-dll-functions.md)
 - [Appel à une fonction DLL](calling-a-dll-function.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114688"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Types obsolètes dans le .NET Framework
 <a name="introduction"></a> Les tableaux de cet article, organisés par assembly, répertorient les types qui sont obsolètes dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Utilisez les liens suivants pour consulter la liste des types obsolètes et des alternatives recommandées dans chaque assembly. Ces types étant obsolètes, tous leurs membres le sont également. Pour obtenir la liste des membres obsolètes supplémentaires dans la bibliothèque de classes .NET Framework, consultez [Membres obsolètes](obsolete-members.md).
@@ -130,9 +130,9 @@ ms.locfileid: "58412342"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> est utilisé uniquement pour la compatibilité de transparence du .NET 2.0.|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> est utilisé uniquement pour la compatibilité de transparence du .NET 2.0. Utilisez plutôt le <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Utilisez plutôt <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> sert seulement à la compatibilité de transparence de .NET 2.0.|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> sert seulement à la compatibilité de transparence de .NET 2.0. Utilisez plutôt le <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Ce type est obsolète et sera supprimé dans une prochaine version du .NET Framework.|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|La sécurité déclarative au niveau de l'assembly est obsolète et n'est plus appliquée par le CLR par défaut.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Ce type est obsolète et sera supprimé dans une prochaine version du .NET Framework.|
@@ -153,8 +153,8 @@ ms.locfileid: "58412342"
 
 |Type|Message|
 |----------|-------------|
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> a été déconseillé.|
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> a été déconseillé.|
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> a été déprécié.|
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> a été déprécié.|
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|La classe <xref:System.Data.TypedDataSetGenerator> sera supprimée dans une version ultérieure. Utilisez <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> dans System.Design.dll.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|La classe <xref:System.Xml.XmlDataDocument> sera supprimée dans une version ultérieure.|
 
@@ -165,14 +165,14 @@ ms.locfileid: "58412342"
 
 |Type|Message|
 |----------|-------------|
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> a été déconseillé.|
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> a été déconseillé.|
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> a été déconseillé.|
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> a été déconseillé.|
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> a été déconseillé.|
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> a été déconseillé.|
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> a été déconseillé.|
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> a été déconseillé.|
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> a été déprécié.|
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> a été déprécié.|
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> a été déprécié.|
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> a été déprécié.|
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> a été déprécié.|
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> a été déprécié.|
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> a été déprécié.|
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> a été déprécié.|
 
  [Retour au début](#introduction)
 
@@ -494,9 +494,9 @@ ms.locfileid: "58412342"
 
 |Type|Message|
 |----------|-------------|
-|Tous les types dans l'espace de noms <xref:System.Workflow.ComponentModel> sauf <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> et <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
-|Tous les types dans l'espace de noms <xref:System.Workflow.ComponentModel.Compiler> sauf <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> et <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
-|Tous les types dans l'espace de noms <xref:System.Workflow.ComponentModel.Design> sauf <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
+|Tous les types de l’espace de noms <xref:System.Workflow.ComponentModel>, sauf <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> et <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
+|Tous les types de l’espace de noms <xref:System.Workflow.ComponentModel.Compiler>, sauf <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> et <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
+|Tous les types de l’espace de noms <xref:System.Workflow.ComponentModel.Design>, sauf <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
@@ -516,8 +516,8 @@ ms.locfileid: "58412342"
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|D'abord déconseillé dans .NET Framework 4.5.<br /><br />Les types Workflow Foundation 3.0 sont dépréciés. Utilisez à la place les types Workflow 4.0 de <xref:System.Activities>\*.|
 |Tous les types dans l'espace de noms <xref:System.Workflow.Runtime>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 |Tous les types dans l'espace de noms <xref:System.Workflow.Runtime.Configuration>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
-|Tous les types dans l'espace de noms <xref:System.Workflow.Runtime.DebugEngine> sauf <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
-|Tous les types dans l'espace de noms <xref:System.Workflow.Runtime.Hosting> sauf <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
+|Tous les types de l’espace de noms <xref:System.Workflow.Runtime.DebugEngine>, sauf <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
+|Tous les types de l’espace de noms <xref:System.Workflow.Runtime.Hosting>, sauf <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 |Tous les types dans l'espace de noms <xref:System.Workflow.Runtime.Tracking>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Les types System.Workflow.\* sont dépréciés. Utilisez à la place les nouveaux types de <xref:System.Activities>\*.|
 
  [Retour au début](#introduction)
@@ -578,7 +578,7 @@ ms.locfileid: "58412342"
 
 |Type|Message|
 |----------|-------------|
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> a été déconseillé. Cette interface n'est plus utilisée.|
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> a été déprécié. Cette interface n'est plus utilisée.|
 
  [Retour au début](#introduction)
 
@@ -779,5 +779,6 @@ Pour plus d’informations sur la migration à partir de Visual Basic 6, consult
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll est un assembly obsolète et existe uniquement à des fins de compatibilité descendante.|
 
 ## <a name="see-also"></a>Voir aussi
+
 - [Éléments obsolètes dans la bibliothèque de classes](whats-obsolete.md)
 - [Membres obsolètes](obsolete-members.md)

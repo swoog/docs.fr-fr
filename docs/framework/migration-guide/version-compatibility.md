@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143648"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilité de versions dans le .NET Framework
 La compatibilité descendante signifie qu'une application développée pour une version particulière d'une plateforme s'exécutera sur les versions ultérieures de cette plateforme. Le .NET Framework essaie d’optimiser la compatibilité descendante : le code source écrit pour une version du .NET Framework doit se compiler sur les versions ultérieures du .NET Framework, et les fichiers binaires qui s’exécutent sur une version du .NET Framework doivent se comporter de la même manière sur les versions ultérieures du .NET Framework.  
@@ -66,8 +66,9 @@ La compatibilité descendante signifie qu'une application développée pour une 
  Si vous ne trouvez pas de solution de contournement appropriée pour votre problème, souvenez-vous que le .NET Framework 4.5, et ses versions intermédiaires, s’exécutent côte à côte avec les versions 1.1, 2.0 et 3.5, et qu’ils constituent une mise à jour intégrée qui remplace la version 4. Pour les applications ciblant les versions 1.1, 2.0 et 3.5, vous pouvez installer la version appropriée du .NET Framework sur l'ordinateur cible pour exécuter l'application dans l'environnement idéal. Pour plus d’informations sur l’exécution côte à côte, consultez [Exécution côte à côte](../../../docs/framework/deployment/side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Nouveautés](../../../docs/framework/whats-new/index.md)
 - [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Compatibilité des applications](../../../docs/framework/migration-guide/application-compatibility.md)
-- [Politique de support pour Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Politique de cycle de vie du support Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
 - [Problèmes de migration de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326279"
 ---
 # <a name="copying-and-pinning"></a>copie et épinglage
 Lors du marshaling des données, le marshaleur d’interopérabilité peut copier ou épingler les données qui sont marshalées. La copie des données déplace une copie des données d’un emplacement de mémoire vers un autre emplacement de mémoire. L’illustration suivante montre les différences entre la copie d’un type valeur et la copie d’un type passé par référence à partir de la mémoire managée vers la mémoire non managée.  
   
- ![Types valeur passés par valeur et par référence](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Types valeur passés par valeur et par référence  
+ ![Diagramme illustrant la façon dont sont copiés les types référence et valeur.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Des arguments de méthode passés par valeur sont marshalés vers le code non managé en tant que valeurs sur la pile. Le processus de copie est direct. Les arguments passés par référence sont passés comme pointeurs sur la pile. Les types référence sont également passés par valeur et par référence. Comme le montre l’illustration suivante, les types référence passés par valeur sont soit copiés, soit épinglés.  
+ Des arguments de méthode passés par valeur sont marshalés vers le code non managé en tant que valeurs sur la pile. Le processus de copie est direct. Les arguments passés par référence sont passés comme pointeurs sur la pile. Les types référence sont également passés par valeur et par référence. Comme le montre l’illustration suivante, les types référence passés en valeur sont soit copiés, soit épinglés : 
   
- ![COM Interop](./media/interopmarshalpin.gif "interopmarshalpin")  
-Types référence passés par valeur et par référence  
+ ![Diagramme illustrant des types référence passés en valeur et en référence.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  L’épinglage verrouille temporairement les données dans leur emplacement de mémoire actuel, évitant ainsi qu’elles ne soient déplacées par le garbage collector du common language runtime. Le marshaleur épingle des données pour réduire la charge mémoire imposée par la copie et pour améliorer les performances. Le type des données détermine si celles-ci sont copiées ou épinglées lors du processus de marshaling.  L’épinglage se fait automatiquement pendant le marshaling pour les objets tels que <xref:System.String>. Cependant, vous pouvez également épingler manuellement la mémoire à l’aide de la classe <xref:System.Runtime.InteropServices.GCHandle>.  
   
@@ -78,6 +76,7 @@ Types référence passés par valeur et par référence
  Quand <xref:System.Text.StringBuilder?displayProperty=nameWithType> est passé par valeur, le marshaleur passe une référence à la mémoire tampon interne de **StringBuilder** directement à l’appelant. L’appelant et l’appelé doivent s’entendre sur la taille de la mémoire tampon. L’appelant est chargé de créer un **StringBuilder** de longueur adéquate. L’appelé doit prendre les précautions nécessaires pour garantir le non-débordement de la mémoire tampon. **StringBuilder** fait exception à la règle qui veut que les types référence passés par valeur sont passés comme paramètres en entrée par défaut. Il est toujours passé comme paramètre en entrée/sortie.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Comportement de marshaling par défaut](default-marshaling-behavior.md)
+
+- [comportement de marshaling par défaut](default-marshaling-behavior.md)
 - [Attributs directionnels](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling d'interopérabilité](interop-marshaling.md)
+- [Marshaling d’interopérabilité](interop-marshaling.md)

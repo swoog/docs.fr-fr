@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216340"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (outil d'exportation de métadonnées Windows Runtime)
 L'outil Metadata Export [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforme un module .NET Framework en un fichier qui contient des métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bien que les assemblys .NET Framework et les fichiers de métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilisent le même format physique, il y a des différences dans le contenu des tables de métadonnées. Autrement dit, les assemblys .NET Framework ne sont pas utilisables automatiquement comme composants [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Le processus qui transforme un module .NET Framework en composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] s’appelle *exportation*. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], le fichier de métadonnées Windows (.winmd) résultant contient à la fois les métadonnées et l'implémentation.  
@@ -51,7 +51,8 @@ winmdexp [options] winmdmodule
  Lorsque vous écrivez une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou un composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] avec C# ou Visual Basic, .NET Framework fournit le support pour effectuer la programmation avec [!INCLUDE[wrt](../../../includes/wrt-md.md)] de manière plus naturelle. Ce sujet est abordé dans l’article [Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Dans le processus, certains types de [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilisés couramment sont mappés en types .NET Framework. Winmdexp.exe inverse ce processus et produit une surface API qui utilise les types [!INCLUDE[wrt](../../../includes/wrt-md.md)] correspondants. Par exemple, les types qui sont construits à partir de l’interface <xref:System.Collections.Generic.IList%601> sont mappés à des types qui sont construits à partir de l’interface [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Création de composants Windows Runtime en C# et Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Messages d’erreur Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [Outils de génération, de déploiement et de configuration (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [Messages d'erreur Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Outils de build, de déploiement et de configuration (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355049"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309483"
 ---
 # <a name="com-callable-wrapper"></a>Wrapper pouvant être appelé par COM
 
@@ -27,7 +27,7 @@ Quand un client COM appelle un objet .NET, le common language runtime crée l'
 
 Le runtime crée un unique wrapper CCW pour un objet managé, indépendamment du nombre de clients COM demandant ses services. Comme le montre l'illustration suivante, plusieurs clients COM peuvent contenir une référence au wrapper CCW qui expose l'interface INew. Le wrapper CCW contient quant à lui une référence à l'objet managé qui implémente l'interface et fait l'objet d'un garbage collection. Les clients COM et .NET peuvent envoyer simultanément des requêtes au même objet managé.
 
-![Wrapper CCW (COM Callable Wrapper)](./media/ccw.gif "CCW") Accès aux objets .NET via un wrapper CCW
+![Plusieurs clients COM contenant une référence au wrapper CCW qui expose INew.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 Les wrappers CCW ne sont pas visibles par les autres classes qui s'exécutent dans .NET Framework. Leur objectif principal est de marshaler les appels entre code managé et code non managé. Cependant, les wrappers CCW gèrent également l'identité et la durée de vie des objets managés qu'ils encapsulent.
 
@@ -43,9 +43,9 @@ Contrairement au client .NET qu'il encapsule, le wrapper CCW fait l'objet d'un
 
 CCW expose aux clients COM l’ensemble des interfaces, types de données et valeurs de retour publics et visibles par COM d’une manière qui est cohérente avec l’application de COM de l’interaction reposant sur l’interface. Pour un client COM, l'appel de méthodes sur un objet .NET Framework est identique à l'appel de méthodes sur un objet COM
 
-Pour adopter cette approche transparente, le wrapper CCW fabrique des interfaces COM classiques, comme **IUnknown** et **IDispatch**. Comme le montre l'illustration suivante, le wrapper CCW contient une référence unique sur l'objet .NET qu'il encapsule. Le client COM et l'objet .NET interagissent via le proxy et le stub du wrapper CCW.
+Pour adopter cette approche transparente, le wrapper CCW fabrique des interfaces COM classiques, comme **IUnknown** et **IDispatch**. Comme le montre l'illustration suivante, le wrapper CCW contient une référence unique sur l'objet .NET qu'il encapsule. Le client COM et l’objet .NET interagissent via le proxy et la construction stub du wrapper CCW.
 
-![Interfaces COM](./media/ccwwithinterfaces.gif "CCWavecinterfaces") Interfaces COM et wrapper CCW
+![Diagramme illustrant la façon dont le wrapper CCW fabrique des interfaces COM.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Outre l'exposition des interfaces qui sont implémentées explicitement par une classe dans l'environnement managé, .NET Framework fournit également des implémentations des interfaces COM répertoriées dans le tableau suivant, pour le compte de l'objet. Une classe .NET peut substituer le comportement par défaut par sa propre implémentation de ces interfaces. Toutefois, le runtime fournit toujours l’implémentation pour les interfaces **IUnknown** et **IDispatch**.
 
@@ -198,6 +198,6 @@ Si votre application exige des appels à liaison anticipée à des méthodes d�
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrappers COM](com-wrappers.md)
-- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
-- [Qualifier des types .NET pour l'interopérabilité](qualifying-net-types-for-interoperation.md)
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Qualification des types .NET en vue d'une interopérabilité](qualifying-net-types-for-interoperation.md)
 - [Wrapper pouvant être appelé par le runtime](runtime-callable-wrapper.md)

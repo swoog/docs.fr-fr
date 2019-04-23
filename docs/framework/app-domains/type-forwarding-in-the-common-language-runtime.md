@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310978"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Transfert de type dans le Common Language Runtime
 Le transfert de type vous permet de déplacer un type vers un autre assembly sans avoir à recompiler les applications utilisant l’assembly d’origine.  
@@ -30,9 +30,9 @@ Le transfert de type vous permet de déplacer un type vers un autre assembly san
 ## <a name="forwarding-types"></a>Transfert de types  
  Le transfert de type se décompose en quatre étapes :  
   
-1.  Déplacez le code source associé au type de l’assembly d’origine à l’assembly de destination.  
+1. Déplacez le code source associé au type de l’assembly d’origine à l’assembly de destination.  
   
-2.  Dans l’assembly où se trouvait le type, ajoutez un <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> pour le type qui a été déplacé. Le code suivant représente l’attribut pour un type nommé `Example` qui a été déplacé.  
+2. Dans l’assembly où se trouvait le type, ajoutez un <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> pour le type qui a été déplacé. Le code suivant représente l’attribut pour un type nommé `Example` qui a été déplacé.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,11 +42,12 @@ Le transfert de type vous permet de déplacer un type vers un autre assembly san
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  Compilez l’assembly qui contient désormais le type.  
+3. Compilez l’assembly qui contient désormais le type.  
   
-4.  Recompilez l’assembly dans lequel le type se trouvait, avec une référence à l’assembly qui contient désormais le type. Par exemple, si vous compilez un fichier C# de la ligne de commande, utilisez l’option [/reference (Options du compilateur C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) pour spécifier l’assembly contenant le type. Dans C++, utilisez la directive [#using](/cpp/preprocessor/hash-using-directive-cpp) dans le fichier source pour spécifier l’assembly contenant le type.  
+4. Recompilez l’assembly dans lequel le type se trouvait, avec une référence à l’assembly qui contient désormais le type. Par exemple, si vous compilez un fichier C# de la ligne de commande, utilisez l’option [/reference (Options du compilateur C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) pour spécifier l’assembly contenant le type. Dans C++, utilisez la directive [#using](/cpp/preprocessor/hash-using-directive-cpp) dans le fichier source pour spécifier l’assembly contenant le type.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
-- [Transfert de type (C++-CLI)](/cpp/windows/type-forwarding-cpp-cli)
-- [Directive #using](/cpp/preprocessor/hash-using-directive-cpp)
+- [Transfert de type (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
+- [#using, directive](/cpp/preprocessor/hash-using-directive-cpp)

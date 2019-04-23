@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122692"
 ---
 # <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
@@ -48,7 +48,7 @@ Avec une architecture en couches, les applications peuvent appliquer des restric
 
 Les couches (et l’encapsulation) facilitent le remplacement des fonctionnalités dans l’application. Par exemple, une application peut initialement utiliser sa propre base de données SQL Server pour la persistance, mais plus tard choisir d’utiliser une stratégie de persistance basée sur le cloud ou située derrière une API web. Si l’application a correctement encapsulé son implémentation de persistance au sein d’une couche logique, cette couche spécifique de SQL Server peut être remplacée par une nouvelle couche qui implémente la même interface publique.
 
-Outre la possibilité de permuter des implémentations en réponse à des changements ultérieurs dans les exigences, les couches d’application facilitent également la permutation des implémentations pour les besoins de test. Au lieu d’écrire des tests qui s’exécutent sur la couche des données réelles ou sur la couche de l’interface utilisateur de l’application, vous pouvez remplacer ces couches durant la phase de test par des implémentations fictives qui fournissent des réponses connues aux requêtes. Cette possibilité simplifie considérablement l’écriture des tests et rend leur exécution beaucoup plus rapide par rapport à l’exécution de tests dans l’infrastructure réelle de l’application.
+Outre la possibilité de permuter des implémentations en réponse à des changements ultérieurs dans les exigences, les couches d’application facilitent également la permutation des implémentations pour les besoins de test. Au lieu d’écrire des tests qui s’exécutent sur la couche des données réelles ou sur la couche de l’interface utilisateur de l’application, vous pouvez remplacer ces couches durant la phase de test par des implémentations fictives qui fournissent des réponses connues aux requêtes. Cette possibilité simplifie considérablement l’écriture des tests et rend leur exécution beaucoup plus rapide par rapport aux tests effectués dans l’infrastructure réelle de l’application.
 
 La mise en couches logiques est une technique courante pour améliorer l’organisation du code dans les applications d’entreprise. Le code peut être organisé en couches de plusieurs façons.
 

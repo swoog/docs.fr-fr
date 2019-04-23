@@ -3,22 +3,22 @@ title: Créer un cluster de fleurs d’iris à l’aide d’un apprenant de clus
 description: Découvrez comment utiliser ML.NET dans un scénario de clustering
 author: pkulikov
 ms.author: johalex
-ms.date: 03/18/2019
+ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634412"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481338"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutoriel : créer un cluster de fleurs d’iris à l’aide d’un apprenant de clustering avec ML.NET
 
 > [!NOTE]
 > Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.11**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 1.0 RC (Release Candidate) (version `1.0.0-preview`)**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ce tutoriel montre comment utiliser ML.NET pour générer un [modèle de clustering](../resources/tasks.md#clustering) pour le [jeu de données Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -34,7 +34,7 @@ Dans ce didacticiel, vous apprendrez à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .Net Core » installée.
+- [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .Net Core » installée.
 
 ## <a name="understand-the-problem"></a>Comprendre le problème
 
@@ -86,7 +86,7 @@ Supprimez la définition de classe existante et ajoutez le code suivant, qui dé
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` est la classe des données d’entrée et a des définitions pour chaque caractéristique du jeu de données. Utilisez l’attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
+`IrisData` est la classe des données d’entrée, qui comporte la définition de chacune des caractéristiques du jeu de données. Utilisez l’attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
 
 La classe `ClusterPrediction` représente la sortie du modèle de clustering appliqué à une instance `IrisData`. Utilisez l’attribut [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) pour lier les champs `PredictedClusterId` et `Distances` aux colonnes **PredictedLabel** et **Score** respectivement. Dans le cas de la tâche de clustering, ces colonnes ont la signification suivante :
 
@@ -100,8 +100,8 @@ La classe `ClusterPrediction` représente la sortie du modèle de clustering app
 
 Revenez au fichier *Program.cs* et ajoutez deux champs pour contenir les chemins du fichier de jeu de données et du fichier pour enregistrer le modèle :
 
-- `_dataPath` contient le chemin du fichier avec le jeu de données utilisé pour l’apprentissage du modèle.
-- `_modelPath` contient le chemin du fichier où le modèle formé est stocké.
+- `_dataPath` contient le chemin du fichier qui comporte le jeu de données servant à l’apprentissage du modèle.
+- `_modelPath` contient le chemin du fichier où est stocké le modèle entraîné.
 
 Ajoutez le code suivant juste au-dessus de la méthode `Main` pour spécifier ces chemins :
 
@@ -127,16 +127,16 @@ La classe <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> représente
 
 Ajoutez le code suivant à la méthode `Main` pour configurer la façon de charger des données :
 
-[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-Chargez les données avec le wrapper `MLContext.Data.LoadFromTextFile` générique de la [méthode LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Elle retourne un <xref:Microsoft.Data.DataView.IDataView> qui déduit le schéma du jeu de données à partir du type de modèle de données `IrisData`, utilise l’en-tête du jeu de données et est séparé par une virgule.
+La [méthode d’extension générique `MLContext.Data.LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) déduit du type `IrisData` fourni le schéma du jeu de données et retourne <xref:Microsoft.ML.IDataView>, qui peut être utilisé en entrée de transformateurs.
 
 ## <a name="create-a-learning-pipeline"></a>Créer un pipeline d’apprentissage
 
 Pour ce tutoriel, le pipeline d’apprentissage de la tâche de clustering comprend les deux étapes suivantes :
 
 - concaténer des colonnes chargées en une seule colonne **Fonctionnalités**, utilisée par un formateur en clustering ;
-- utiliser un formateur <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> pour former le modèle à l’aide de l’algorithme de clustering k-means++.
+- utiliser un formateur <xref:Microsoft.ML.Trainers.KMeansTrainer> pour former le modèle à l’aide de l’algorithme de clustering k-means++.
 
 Ajoutez le code suivant à la méthode `Main` :
 

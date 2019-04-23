@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633801"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301124"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Opérateurs arithmétiques (Informations de référence sur C#)
 
@@ -93,7 +93,7 @@ L’opérateur de multiplication `*` calcule le produit de ses opérandes :
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-L’opérateur unaire `*` est un [opérateur d’indirection de pointeur](multiplication-operator.md#pointer-indirection-operator).
+L’opérateur unaire `*` est [l’opérateur d’indirection de pointeur](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Opérateur de division /
 
@@ -239,7 +239,7 @@ Pour plus d’informations, consultez les remarques dans les pages de référenc
 
 ## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
 
-Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) les opérateurs arithmétiques unaires (`++`, `--`, `+` et `-`) et binaires (`*`, `/`, `%`, `+` et `-`). Quand un opérateur binaire est surchargé, l’opérateur d’assignation composée correspondant est aussi implicitement surchargé. Un type défini par l’utilisateur ne peut pas surcharger explicitement un opérateur d’assignation composée.
+Un type défini par l’utilisateur peut [surcharger](../keywords/operator.md) les opérateurs arithmétiques unaires (`++`, `--`, `+` et `-`) et binaires (`*`, `/`, `%`, `+` et `-`). Quand un opérateur binaire est surchargé, l’opérateur d’assignation composée correspondant est aussi implicitement surchargé. Un type défini par l’utilisateur ne peut pas surcharger explicitement un opérateur d’assignation composée.
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 

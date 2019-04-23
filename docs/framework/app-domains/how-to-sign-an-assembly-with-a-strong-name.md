@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303419"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procédure : signer un assembly avec un nom fort
 Il existe plusieurs façons de signer un assembly avec un nom fort :  
@@ -35,13 +35,13 @@ Il existe plusieurs façons de signer un assembly avec un nom fort :
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Pour créer et signer un assembly avec un nom fort à l'aide de Visual Studio  
   
-1.  Dans l’ **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**.  
+1. Dans l’ **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**.  
   
-2.  Choisissez l'onglet **Signature** .  
+2. Choisissez l'onglet **Signature** .  
   
-3.  Sélectionnez la zone **Signer l'assembly** .  
+3. Sélectionnez la zone **Signer l'assembly** .  
   
-4.  Dans la zone **Choisir un fichier de clé de nom fort**, choisissez **\<<Parcourir...>**, puis recherchez le fichier de clé. Pour créer un fichier de clé, choisissez **\<<Nouveau...>** et entrez son nom dans la boîte de dialogue **Créer une clé de nom fort**.  
+4. Dans la zone **Choisir un fichier de clé de nom fort**, choisissez **\<<Parcourir...>**, puis recherchez le fichier de clé. Pour créer un fichier de clé, choisissez **\<<Nouveau...>** et entrez son nom dans la boîte de dialogue **Créer une clé de nom fort**.  
   
 > [!NOTE]
 >  Pour [différer la signature d’un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md), choisissez un fichier de clé publique.  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Pour signer un assembly avec un nom fort à l'aide d'attributs  
   
-1.  Ajoutez l'attribut <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> ou <xref:System.Reflection.AssemblyKeyNameAttribute> à votre fichier de code source et spécifiez le nom du fichier ou du conteneur qui contient la paire de clés à utiliser lors de la signature de l'assembly avec un nom fort.  
+1. Ajoutez l'attribut <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> ou <xref:System.Reflection.AssemblyKeyNameAttribute> à votre fichier de code source et spécifiez le nom du fichier ou du conteneur qui contient la paire de clés à utiliser lors de la signature de l'assembly avec un nom fort.  
   
-2.  Compilez le fichier de code source normalement.  
+2. Compilez le fichier de code source normalement.  
   
 > [!NOTE]
 >  Les compilateurs C# et Visual Basic génèrent des avertissements (CS1699 et BC41008, respectivement) lorsqu'ils rencontrent l'attribut <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> dans le code source. Vous pouvez ignorer les avertissements.  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création et utilisation d’assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+
+- [Création et utilisation d'assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Procédure : créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Temporisation de signature d'un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Gestion d’assembly et signature de manifeste](/visualstudio/ide/managing-assembly-and-manifest-signing)
-- [Page Signature, Concepteur de projet](/visualstudio/ide/reference/signing-page-project-designer)
+- [Gestion d'assembly et signature de manifeste](/visualstudio/ide/managing-assembly-and-manifest-signing)
+- [Page Signature, Concepteur de projets](/visualstudio/ide/reference/signing-page-project-designer)

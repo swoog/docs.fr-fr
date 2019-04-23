@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323809"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procédure : Utiliser l'appel de code non managé pour lire un fichier audio (Guide de programmation C#)
 L’exemple de code C# suivant explique comment utiliser des services d’appel de code non managé pour lire un fichier audio sur le système d’exploitation Windows.  
@@ -31,15 +31,15 @@ L’exemple de code C# suivant explique comment utiliser des services d’appel 
   
 ### <a name="to-compile-the-code"></a>Pour compiler le code  
   
-1.  Créez un projet d’application Windows C# dans Visual Studio et nommez-le **WinSound**.  
+1. Créez un projet d’application Windows C# dans Visual Studio et nommez-le **WinSound**.  
   
-2.  Copiez le code ci-dessus et collez-le sur le contenu du fichier `Form1.cs`.  
+2. Copiez le code ci-dessus et collez-le sur le contenu du fichier `Form1.cs`.  
   
-3.  Copiez le code suivant et collez-le dans le fichier `Form1.Designer.cs`, dans la méthode `InitializeComponent()`, après tout le code existant.  
+3. Copiez le code suivant et collez-le dans le fichier `Form1.Designer.cs`, dans la méthode `InitializeComponent()`, après tout le code existant.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Compilez, puis exécutez le code.  
+4. Compilez, puis exécutez le code.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Pour plus d’informations, consultez [Sécurité dans .NET](../../../standard/security/index.md).  

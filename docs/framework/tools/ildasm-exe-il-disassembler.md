@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488511"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517536"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Désassembleur IL)
 
@@ -69,7 +69,7 @@ Les options suivantes sont valides pour les fichiers *.exe*, *.dll* et *.winmd* 
 |**/classlist**|Inclut une liste de classes définie dans le module.|
 |**/forward**|Utilise la déclaration de classe anticipée.|
 |**/headers**|Inclut les informations d'en-tête du fichier dans la sortie.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Désassemble les éléments suivants en fonction de l’argument fourni :<br /><br /> -   Désassemble la `class` spécifiée.<br />-   Désassemble le `member` spécifié de la `class`.<br />-   Désassemble le `member` de la `class` avec la signature spécifiée `sig`. Le format de `sig` est le suivant :<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Remarque** Dans les versions 1.0 et 1.1 du .NET Framework, `sig` doit être suivi d’une parenthèse fermante : `(sig)`. Dans la version 2.0 du .NET Framework, la parenthèse de fermeture doit être supprimée : (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|Désassemble les éléments suivants en fonction de l’argument fourni :<br /><br /> -   Désassemble la `class` spécifiée.<br />-   Désassemble le `member` spécifié de la `class`.<br />-   Désassemble le `member` de la `class` avec la signature spécifiée `sig`. Le format de `sig` est le suivant :<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Remarque** Dans les versions 1.0 et 1.1 du .NET Framework, `sig` doit être suivi d’une parenthèse fermante : `(sig)`. À compter de .NET Framework 2.0, la parenthèse fermante doit être omise : `(sig`.|
 |**/noil**|Supprime la sortie du code d'assembly IL.|
 |**/stats**|Inclut des statistiques sur l'image.|
 |**/typelist**|Produit la liste complète des types afin de conserver le classement des types dans un aller-retour.|

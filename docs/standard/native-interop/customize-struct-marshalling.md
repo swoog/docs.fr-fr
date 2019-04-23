@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101326"
 ---
 # <a name="customizing-structure-marshalling"></a>Personnalisation de marshaling de structures
 
@@ -100,7 +100,7 @@ struct VariantBool
 ```
 
 > [!NOTE]
-> `VARIANT_BOOL` est différent de la plupart des types de bools dans `VARIANT_TRUE = -1` et `VARIANT_FALSE = 0`. De plus, toutes les valeurs qui ne sont pas égales à `VARIANT_TRUE` sont considérées comme false.
+> `VARIANT_BOOL` est différent de la plupart des types booléens en ce que `VARIANT_TRUE = -1` et `VARIANT_FALSE = 0`. De plus, toutes les valeurs qui ne sont pas égales à `VARIANT_TRUE` sont considérées comme false.
 
 ## <a name="customizing-array-field-marshalling"></a>Personnalisation du marshaling des champs de tableaux
 
@@ -230,7 +230,6 @@ struct UnicodeString
 ```
 
 Si vous voulez marshaler vos chaînes à l’aide de l’encodage UTF-8, vous pouvez utiliser la valeur <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> dans votre <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
-
 
 ```csharp
 public struct UTF8String

@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652018"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336146"
 ---
 # <a name="managed-execution-process"></a>processus d'exécution managée
 <a name="introduction"></a> Le processus d'exécution managé inclut les étapes suivantes,qui sont décrites en détail plus loin dans cette rubrique :  
   
-1.  [Choix d'un compilateur](#choosing_a_compiler)  
+1. [Choix d'un compilateur](#choosing_a_compiler)  
   
      Pour bénéficier des avantages qu'apporte le Common Language Runtime, vous devez utiliser un ou plusieurs compilateurs de langage ciblant le runtime.  
   
-2.  [Compilation de votre code en MSIL](#compiling_to_msil)  
+2. [Compilation de votre code en MSIL](#compiling_to_msil)  
   
      La compilation traduit votre code source en langage MSIL (Microsoft Intermediate Language) et génère les métadonnées requises.  
   
-3.  [Compilation du MSIL en code natif](#compiling_msil_to_native_code)  
+3. [Compilation du MSIL en code natif](#compiling_msil_to_native_code)  
   
      Au moment de l'exécution, un compilateur juste-à-temps (JIT) transforme le MSIL en code natif. Au moment de la compilation, le code est soumis à un processus de vérification qui examine le MSIL et les métadonnées afin de déterminer si le code peut être considéré comme étant de type sécurisé.  
   
-4.  [Exécution de code](#running_code)  
+4. [Exécution de code](#running_code)  
   
      Le Common Language Runtime fournit l'infrastructure qui permet à l'exécution d'avoir lieu et les services pouvant être utilisés pendant l'exécution.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652018"
   
  Dans Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] et [!INCLUDE[windowsver](../../includes/windowsver-md.md)], le chargeur du système d'exploitation recherche des modules managés en examinant un bit dans l'en-tête du format COFF (Common Object File Format). Le bit défini indique un module managé. Si le chargeur détecte des modules managés, il charge mscoree.dll. `_CorValidateImage` et `_CorImageUnloading` informent le chargeur quand les images de modules managés sont chargées et déchargées. `_CorValidateImage` effectue les actions suivantes :  
   
-1.  garantit que le code est du code managé valide ;  
+1. garantit que le code est du code managé valide ;  
   
-2.  change le point d'entrée dans l'image en point d'entrée dans le runtime.  
+2. change le point d'entrée dans l'image en point d'entrée dans le runtime.  
   
  Sous Windows 64 bits, `_CorValidateImage` modifie l'image en mémoire en la transformant du format PE32 au format PE32+.  
   
@@ -109,12 +109,12 @@ ms.locfileid: "54652018"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble](../../docs/framework/get-started/overview.md)
+- [Vue d'ensemble](../../docs/framework/get-started/overview.md)
 - [Indépendance du langage et composants indépendants du langage](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Métadonnées et composants autodescriptifs](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (assembleur IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Ilasm.exe (Assembleur IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Sécurité](../../docs/standard/security/index.md)
 - [Interopération avec du code non managé](../../docs/framework/interop/index.md)
 - [Déploiement](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblys dans le Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Domaines d’application](../../docs/framework/app-domains/application-domains.md)
+- [Domaines d'application](../../docs/framework/app-domains/application-domains.md)

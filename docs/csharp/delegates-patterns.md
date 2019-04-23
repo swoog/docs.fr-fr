@@ -3,12 +3,12 @@ title: Modèles courants pour les délégués
 description: Découvrez les modèles courants pour l’utilisation de délégués dans votre code afin d’éviter un couplage important entre vos composants.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095696"
 ---
 # <a name="common-patterns-for-delegates"></a>Modèles courants pour les délégués
 
@@ -70,7 +70,7 @@ Jusqu’à présent, notre exemple est assez simple, mais il illustre quand mêm
 
 L’utilisation des types délégués définis dans le Core Framework permet aux utilisateurs de travailler facilement avec les délégués. Vous n’avez pas besoin de définir de nouveaux types, et les développeurs qui utilisent votre bibliothèque n’ont pas besoin d’apprendre de nouveaux types délégués spécialisés.
 
-Les interfaces utilisées sont le plus minimal et flexible possible : pour créer un enregistreur d’événements de sortie, vous devez créer une méthode. Il peut s’agir d’une méthode statique ou d’une méthode d’instance. Elle peut avoir n’importe quel accès.
+Les interfaces utilisées sont aussi minimales et flexibles que possible : pour créer un nouvel enregistreur d’événements de sortie, il faut créer une méthode. Il peut s’agir d’une méthode statique ou d’une méthode d’instance. Elle peut avoir n’importe quel accès.
 
 ## <a name="formatting-output"></a>Mise en forme de sortie
 
@@ -98,7 +98,6 @@ Le composant journal commence à prendre forme. Ajoutons un autre moteur de sort
 Voici cet enregistreur d’événements basé sur fichier :
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 Une fois que nous avons créé cette classe, nous pouvons l’instancier, et elle attache sa méthode LogMessage au composant enregistreur d’événements :
 
@@ -154,4 +153,4 @@ Nous venons de voir le début d’un composant de journal qui peut être étendu
 
 La classe Logger peut apporter des améliorations ou des modifications sans introduire de modifications avec rupture. Comme toute classe, vous ne pouvez pas modifier l’API publique sans risque de modifications avec rupture. Toutefois, le couplage entre l’enregistreur d’événements et les moteurs de sortie étant uniquement par l’intermédiaire du délégué, aucun autre type (tel que les interfaces ou classes de base) n’est appelé. Le couplage est aussi réduit que possible.
 
-[Next](events-overview.md)
+[Suivant](events-overview.md)

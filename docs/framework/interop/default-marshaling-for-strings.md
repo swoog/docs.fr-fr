@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078468"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling par défaut pour les chaînes
 Les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> ont un comportement de marshaling semblable.  
@@ -220,7 +220,7 @@ struct StringInfoT {
   
  La solution consiste à passer une mémoire tampon <xref:System.Text.StringBuilder> comme un argument plutôt que comme une chaîne. Un `StringBuilder` peut être déréférencé et modifié par l'appelé à condition qu'il ne dépasse pas la capacité de `StringBuilder`. Il peut également être initialisé à une longueur fixe. Par exemple, si vous initialisez une mémoire tampon `StringBuilder` avec une capacité de `N`, le marshaleur fournira une mémoire tampon de (`N`+ 1) caractères. Le +1 tient compte du fait que la chaîne non managée possède un terminateur Null, contrairement à `StringBuilder`.  
   
- Par exemple, la fonction `GetWindowText` de l’API Windows de Microsoft (définie dans Windows.h) est une mémoire tampon de caractères de longueur fixe qui doit être passée dans du code non managé pour être manipulée. `LpString` pointe vers une mémoire tampon allouée par l'appelant de taille `nMaxCount`. L'appelant est censé allouer la mémoire tampon et définir l'argument `nMaxCount` sur la taille de la mémoire tampon allouée. Le code suivant illustre la déclaration de fonction `GetWindowText` définie dans Windows.h.  
+ Par exemple, la fonction `GetWindowText` de l’API Windows de Microsoft (définie dans Windows.h) est une mémoire tampon de caractères de longueur fixe qui doit être passée dans du code non managé pour être manipulée. `LpString` pointe vers une mémoire tampon de taille `nMaxCount` allouée par l’appelant. L'appelant est censé allouer la mémoire tampon et définir l'argument `nMaxCount` sur la taille de la mémoire tampon allouée. Le code suivant illustre la déclaration de fonction `GetWindowText` définie dans Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -264,7 +264,8 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Comportement de marshaling par défaut](default-marshaling-behavior.md)
-- [Types blittable et non blittable](blittable-and-non-blittable-types.md)
+
+- [comportement de marshaling par défaut](default-marshaling-behavior.md)
+- [types blittable et non blittable](blittable-and-non-blittable-types.md)
 - [Attributs directionnels](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copie et épinglage](copying-and-pinning.md)
+- [copie et épinglage](copying-and-pinning.md)

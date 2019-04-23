@@ -1,4 +1,12 @@
-### <a name="listboxitem-isselected-binding-issue-with-observablecollectionlttgtmove"></a>Problème de liaison ListBoxItem IsSelected avec ObservableCollection&lt;T&gt;.Move
+---
+ms.openlocfilehash: b761cb699c4677f815835cdab9c6aa3039f5bb38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235323"
+---
+### <a name="listboxitem-isselected-binding-issue-with-observablecollectiontmove"></a>Problème de liaison ListBoxItem IsSelected avec ObservableCollection\<T>.Move
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Type|Runtime|
 |API affectées|<ul><li><xref:System.Collections.ObjectModel.ObservableCollection%601.Move(System.Int32,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.ObjectModel.ObservableCollection%601.MoveItem(System.Int32,System.Int32)?displayProperty=nameWithType></li></ul>|
-

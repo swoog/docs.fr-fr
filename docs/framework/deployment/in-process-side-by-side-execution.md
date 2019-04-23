@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141256"
 ---
 # <a name="in-process-side-by-side-execution"></a>Exécution côte à côte in-process
 Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser l’hébergement côte à côte in-process pour exécuter plusieurs versions du CLR (Common Language Runtime) dans un processus unique. Par défaut, les composants COM managés s’exécutent avec la version du .NET Framework avec laquelle ils ont été générés, indépendamment de la version du .NET Framework chargée pour le processus.  
@@ -73,7 +73,7 @@ Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouv
   
 -   **Scénario 3 :** application native qui utilise des composants COM créés avec des versions antérieures du .NET Framework que vous souhaitez exécuter avec [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Versions du .NET Framework installées : [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versions du .NET Framework installées : L’[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]opérateur  
   
      Que faire : dans le fichier de configuration de l’application dans le répertoire de l’application, utilisez l’élément `<startup>` avec l’attribut `useLegacyV2RuntimeActivationPolicy` défini sur `true` et l’élément `<supportedRuntime>` défini comme suit :  
   
@@ -174,5 +174,6 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<startup>, élément](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime>, élément](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

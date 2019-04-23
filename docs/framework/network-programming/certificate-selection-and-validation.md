@@ -2,12 +2,12 @@
 title: Sélection et validation de certificats
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318349"
 ---
 # <a name="certificate-selection-and-validation"></a>Sélection et validation de certificats
 Les classes <xref:System.Net> prennent en charge plusieurs manières de sélectionner et de valider <xref:System.Security.Cryptography.X509Certificates> pour les connexions SSL (Secure Socket Layer). Un client peut sélectionner un ou plusieurs certificats pour s’authentifier auprès d’un serveur. Un serveur peut exiger qu’un certificat client ait un ou plusieurs attributs spécifiques pour l’authentification.  
@@ -29,11 +29,11 @@ Les classes <xref:System.Net> prennent en charge plusieurs manières de sélecti
 ## <a name="client-certificate-selection"></a>Sélection du certificat client  
  Le .NET Framework sélectionne le certificat client à présenter au serveur de la manière suivante :  
   
-1.  Si un certificat client a été présenté précédemment au serveur, le certificat est mis en cache lors de la première présentation puis réutilisé lors des requêtes de certificats clients ultérieures.  
+1. Si un certificat client a été présenté précédemment au serveur, le certificat est mis en cache lors de la première présentation puis réutilisé lors des requêtes de certificats clients ultérieures.  
   
-2.  Si un délégué est présent, utilisez toujours le résultat du délégué comme certificat client à sélectionner. Essayez d’utiliser un certificat mis en cache dans la mesure du possible, mais n’utilisez pas d’informations d’identification anonymes mises en cache si le délégué a retourné la valeur null et que la collection de certificats n’est pas vide.  
+2. Si un délégué est présent, utilisez toujours le résultat du délégué comme certificat client à sélectionner. Essayez d’utiliser un certificat mis en cache dans la mesure du possible, mais n’utilisez pas d’informations d’identification anonymes mises en cache si le délégué a retourné la valeur null et que la collection de certificats n’est pas vide.  
   
-3.  S’il s’agit de la première demande de certificat client, le Framework énumère les certificats dans <xref:System.Security.Cryptography.X509Certificates.X509Certificate> ou les objets de classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> associés à la connexion, à la recherche d’une correspondance entre les émetteurs de certificats figurant sur la liste fournie par le serveur et le nom de l’émetteur du certificat client. Le premier certificat qui correspond est envoyé au serveur. Si aucun certificat ne correspond ou si la collection de certificats est vide, des informations d’identification anonymes sont envoyées au serveur.  
+3. S’il s’agit de la première demande de certificat client, le Framework énumère les certificats dans <xref:System.Security.Cryptography.X509Certificates.X509Certificate> ou les objets de classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> associés à la connexion, à la recherche d’une correspondance entre les émetteurs de certificats figurant sur la liste fournie par le serveur et le nom de l’émetteur du certificat client. Le premier certificat qui correspond est envoyé au serveur. Si aucun certificat ne correspond ou si la collection de certificats est vide, des informations d’identification anonymes sont envoyées au serveur.  
   
 ## <a name="tools-for-certificate-configuration"></a>Outils pour la configuration de certificat  
  Un certain nombre d’outils sont disponibles pour la configuration des certificats clients et de serveur.  
@@ -53,5 +53,6 @@ Vous pouvez utiliser *HttpCfg.exe* pour configurer des certificats de serveur po
  Outre ces outils, les classes <xref:System.Security.Cryptography.X509Certificates.X509Certificate> et <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> fournissent des méthodes pour charger un certificat à partir du système de fichiers.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Sécurité dans la programmation réseau](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)

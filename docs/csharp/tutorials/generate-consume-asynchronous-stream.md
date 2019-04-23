@@ -3,12 +3,12 @@ title: Générer et consommer des flux asynchrones
 description: Ce tutoriel avancé illustre des scénarios où la génération et la consommation de flux asynchrones permet de travailler plus naturellement avec des séquences de données pouvant être générées de façon asynchrone.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308547"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutoriel : Générer et consommer des flux asynchrones à l’aide de C# 8.0 et de .NET Core 3.0
 
@@ -23,7 +23,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Ce compilateur est disponible à partir de [Visual Studio 2019, préversion 1](https://visualstudio.microsoft.com/vs/preview/) ou du [kit de développement logiciel (SDK) .NET Core 3.0, préversion 1](https://dotnet.microsoft.com/download/dotnet-core/3.0). Les flux asynchrones sont tout d’abord disponibles dans .NET Core 3.0, préversion 1.
+Vous devez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible à compter de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou de la dernière version du [Kit SDK .NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0). Les flux asynchrones sont tout d’abord disponibles dans .NET Core 3.0, préversion 1.
 
 Vous devrez créer un [jeton d’accès GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) afin de pouvoir accéder au point de terminaison GitHub GraphQL. Sélectionnez les autorisations suivantes pour votre jeton d’accès GitHub :
 

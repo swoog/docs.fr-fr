@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216390"
 ---
 # <a name="service-application-programming-architecture"></a>Architecture de programmation d'une application de service
 Les applications de service Windows sont basées sur une classe qui hérite de la classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Substituez les méthodes de cette classe et définissez des fonctionnalités pour qu’elles déterminent le comportement de votre service.  
   
  Les principales classes impliquées dans la création du service sont les suivantes :  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> : substituez les méthodes de la classe <xref:System.ServiceProcess.ServiceBase> au moment de la création d’un service et définissez le code pour déterminer le fonctionnement de votre service dans cette classe héritée.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> : substituez les méthodes de la classe <xref:System.ServiceProcess.ServiceBase> lors de la création d’un service et définissez le code de manière à déterminer le fonctionnement de votre service dans cette classe héritée.  
   
 -   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> et <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : utilisez ces classes pour installer et désinstaller votre service.  
   
@@ -67,5 +67,6 @@ Les applications de service Windows sont basées sur une classe qui hérite de l
  Vous pouvez également utiliser un composant appelé <xref:System.ServiceProcess.ServiceController> pour communiquer avec un service existant et contrôler son comportement.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procédure : créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

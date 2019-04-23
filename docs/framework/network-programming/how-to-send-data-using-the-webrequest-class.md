@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 6d7a2e52177c05ead6300e775021572f3a64340a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322873"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Procédure : envoyer des données à l’aide de la classe WebRequest
 La procédure suivante décrit les étapes nécessaires pour envoyer des données à un serveur. Cette procédure est couramment utilisée pour publier des données sur une page web. 
   
 ## <a name="to-send-data-to-a-host-server"></a>Pour envoyer des données à un serveur hôte  
   
-1.  Créez une instance <xref:System.Net.WebRequest> en appelant <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> avec l’URI d’une ressource, comme un script ou une page ASP.NET, qui accepte des données. Par exemple : 
+1. Créez une instance <xref:System.Net.WebRequest> en appelant <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> avec l’URI d’une ressource, comme un script ou une page ASP.NET, qui accepte des données. Par exemple : 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
@@ -34,7 +34,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     > Le .NET Framework fournit des classes spécifiques du protocole dérivées des classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> pour les URI qui commencent par *http:*, *https:*, *ftp:* et *file:*.
     Si vous avez besoin de définir ou lire des propriétés spécifiques du protocole, vous devez caster votre objet <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> en type d’objet spécifique du protocole. Pour plus d’informations, consultez [Programmation de protocoles enfichables](programming-pluggable-protocols.md). 
   
-2.  Définissez les valeurs des propriétés dont vous avez besoin dans votre objet `WebRequest`. Par exemple, pour activer l’authentification, définissez la propriété <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> sur une instance de la classe <xref:System.Net.NetworkCredential> :
+2. Définissez les valeurs des propriétés dont vous avez besoin dans votre objet `WebRequest`. Par exemple, pour activer l’authentification, définissez la propriété <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> sur une instance de la classe <xref:System.Net.NetworkCredential> :
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -44,7 +44,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  Spécifiez une méthode de protocole qui autorise l’envoi de données à l’aide d’une demande, comme la méthode `POST` HTTP :  
+3. Spécifiez une méthode de protocole qui autorise l’envoi de données à l’aide d’une demande, comme la méthode `POST` HTTP :  
   
     ```csharp  
     request.Method = "POST";  
@@ -54,7 +54,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.Method = "POST"  
     ```  
   
-4.  Affectez à la propriété <xref:System.Web.HttpRequest.ContentLength> la valeur du nombre d’octets que vous insérez dans votre demande. Par exemple : 
+4. Affectez à la propriété <xref:System.Web.HttpRequest.ContentLength> la valeur du nombre d’octets que vous insérez dans votre demande. Par exemple : 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -64,7 +64,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Affectez à la propriété <xref:System.Web.HttpRequest.ContentType> une valeur appropriée. Par exemple :
+5. Affectez à la propriété <xref:System.Web.HttpRequest.ContentType> une valeur appropriée. Par exemple :
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -74,7 +74,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Obtenez le flux qui contient les données de la demande en appelant la méthode <xref:System.Net.WebRequest.GetRequestStream%2A>. Par exemple :
+6. Obtenez le flux qui contient les données de la demande en appelant la méthode <xref:System.Net.WebRequest.GetRequestStream%2A>. Par exemple :
   
     ```csharp  
     Stream dataStream = request.GetRequestStream();  
@@ -84,7 +84,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  Écrivez les données dans l’objet <xref:System.IO.Stream> retourné par la méthode `GetRequestStream`. Par exemple :
+7. Écrivez les données dans l’objet <xref:System.IO.Stream> retourné par la méthode `GetRequestStream`. Par exemple :
   
     ```csharp  
     dataStream.Write(byteArray, 0, byteArray.Length);  
@@ -94,7 +94,7 @@ La procédure suivante décrit les étapes nécessaires pour envoyer des donnée
     dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  Fermez le flux de la demande en appelant la méthode <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Par exemple :
+8. Fermez le flux de la demande en appelant la méthode <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Par exemple :
   
     ```csharp  
     dataStream.Close();  
@@ -153,10 +153,10 @@ L’exemple de code suivant montre comment envoyer des données à un serveur we
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-  
 ## <a name="see-also"></a>Voir aussi
-- [Création de requêtes Internet](creating-internet-requests.md)
-- [Utilisation de flux sur le réseau](using-streams-on-the-network.md)
-- [Accès à Internet via un proxy](accessing-the-internet-through-a-proxy.md)
-- [Demande de données](requesting-data.md)
-- [Guide pratique pour demander des données à l’aide de la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)
+
+- [Créer des requêtes Internet](creating-internet-requests.md)
+- [Utiliser des flux sur le réseau](using-streams-on-the-network.md)
+- [Accéder à Internet via un proxy](accessing-the-internet-through-a-proxy.md)
+- [Demander des données](requesting-data.md)
+- [Procédure : demander des données à l’aide de la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)

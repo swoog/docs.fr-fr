@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336575"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procédure : configurer les composants COM .NET Framework pour l’activation sans inscription
 L’activation sans inscription des composants .NET Framework n’est que légèrement plus compliquée que pour les composants COM. L’installation requiert deux manifestes :  
@@ -28,9 +28,9 @@ L’activation sans inscription des composants .NET Framework n’est que légè
   
 ### <a name="to-create-an-application-manifest"></a>Pour créer un manifeste d’application  
   
-1.  À l’aide d’un éditeur XML, créez (ou modifiez) le manifeste d’application de l’application COM qui interagit avec un ou plusieurs composants managés.  
+1. À l’aide d’un éditeur XML, créez (ou modifiez) le manifeste d’application de l’application COM qui interagit avec un ou plusieurs composants managés.  
   
-2.  Insérez l’en-tête standard suivant au début du fichier :  
+2. Insérez l’en-tête standard suivant au début du fichier :  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ L’activation sans inscription des composants .NET Framework n’est que légè
   
      Pour plus d’informations sur les éléments de manifeste et leurs attributs, consultez [Manifestes d’application](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Identifiez le propriétaire du manifeste. Dans l’exemple suivant, le fichier manifeste appartient à `myComApp` version 1.  
+3. Identifiez le propriétaire du manifeste. Dans l’exemple suivant, le fichier manifeste appartient à `myComApp` version 1.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ L’activation sans inscription des composants .NET Framework n’est que légè
       />  
     ```  
   
-4.  Identifiez les assemblys dépendants. Dans l’exemple suivant, `myComApp` dépend de `myManagedComp`.  
+4. Identifiez les assemblys dépendants. Dans l’exemple suivant, `myComApp` dépend de `myManagedComp`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ L’activation sans inscription des composants .NET Framework n’est que légè
     </assembly>  
     ```  
   
-5.  Nommez et enregistrez le fichier manifeste. Le nom d’un manifeste d’application est le nom de l’exécutable d’assembly suivi de l’extension .manifest. Par exemple, le nom du fichier manifeste d’application de myComApp.exe est myComApp.exe.manifest.  
+5. Nommez et enregistrez le fichier manifeste. Le nom d’un manifeste d’application est le nom de l’exécutable d’assembly suivi de l’extension .manifest. Par exemple, le nom du fichier manifeste d’application de myComApp.exe est myComApp.exe.manifest.  
   
  Vous pouvez installer un manifeste d’application dans le même répertoire que l’application COM. Vous pouvez également l’ajouter en tant que ressource au fichier .exe de l’application. Pour plus d’informations, consultez [À propos des assemblys côte à côte](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Pour créer un manifeste de composant  
   
-1.  À l’aide d’un éditeur XML, créez un manifeste de composant pour décrire l’assembly managé.  
+1. À l’aide d’un éditeur XML, créez un manifeste de composant pour décrire l’assembly managé.  
   
-2.  Insérez l’en-tête standard suivant au début du fichier :  
+2. Insérez l’en-tête standard suivant au début du fichier :  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Identifiez le propriétaire du fichier. L’élément `<assemblyIdentity>` de l’élément `<dependentAssembly>` dans le fichier manifeste d’application doit correspondre à celui figurant dans le manifeste de composant. Dans l’exemple suivant, le fichier manifeste appartient à `myManagedComp` version 1.2.3.4.  
+3. Identifiez le propriétaire du fichier. L’élément `<assemblyIdentity>` de l’élément `<dependentAssembly>` dans le fichier manifeste d’application doit correspondre à celui figurant dans le manifeste de composant. Dans l’exemple suivant, le fichier manifeste appartient à `myManagedComp` version 1.2.3.4.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +103,7 @@ L’activation sans inscription des composants .NET Framework n’est que légè
            />  
     ```  
   
-4.  Identifiez chaque classe dans l’assembly. Utilisez l’élément `<clrClass>` pour identifier de manière unique chaque classe dans l’assembly managé. L’élément, qui est un sous-élément de l’élément `<assembly>`, a les attributs décrits dans le tableau suivant.  
+4. Identifiez chaque classe dans l’assembly. Utilisez l’élément `<clrClass>` pour identifier de manière unique chaque classe dans l’assembly managé. L’élément, qui est un sous-élément de l’élément `<assembly>`, a les attributs décrits dans le tableau suivant.  
   
     |Attribut|Description|Obligatoire|  
     |---------------|-----------------|--------------|  
@@ -146,25 +146,25 @@ L’activation sans inscription des composants .NET Framework n’est que légè
     </assembly>  
     ```  
   
-5.  Nommez et enregistrez le fichier manifeste. Le nom d’un manifeste de composant est le nom de la bibliothèque d’assemblys suivi de l’extension .manifest. Par exemple, le nom de myManagedComp.dll est myManagedComp.manifest.  
+5. Nommez et enregistrez le fichier manifeste. Le nom d’un manifeste de composant est le nom de la bibliothèque d’assemblys suivi de l’extension .manifest. Par exemple, le nom de myManagedComp.dll est myManagedComp.manifest.  
   
  Vous devez incorporer le manifeste de composant en tant que ressource dans l’assembly.  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Pour incorporer un manifeste de composant dans un assembly managé  
   
-1.  Créez un script de ressources qui contient l’instruction suivante :  
+1. Créez un script de ressources qui contient l’instruction suivante :  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      Dans cette instruction, `myManagedComp.manifest` est le nom du manifeste de composant incorporé. Pour cet exemple, le nom du fichier de script est `myresource.rc`.  
   
-2.  Compilez le script à l’aide de l’outil Compilateur de ressources Microsoft Windows (Rc.exe). À l'invite de commandes, tapez la commande suivante :  
+2. Compilez le script à l’aide de l’outil Compilateur de ressources Microsoft Windows (Rc.exe). À l'invite de commandes, tapez la commande suivante :  
   
      `rc myresource.rc`  
   
      Rc.exe génère le fichier de ressources `myresource.res`.  
   
-3.  Compilez de nouveau le fichier source de l’assembly et spécifiez le fichier de ressources à l’aide de l’option **/win32res** :  
+3. Compilez de nouveau le fichier source de l’assembly et spécifiez le fichier de ressources à l’aide de l’option **/win32res** :  
   
     ```  
     /win32res:myresource.res  
@@ -173,7 +173,8 @@ L’activation sans inscription des composants .NET Framework n’est que légè
      `myresource.res` est de nouveau le nom du fichier de ressources contenant la ressource incorporée.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [COM Interop sans inscription](registration-free-com-interop.md)
 - [Configuration requise pour COM Interop sans inscription](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Configuration des composants COM pour l’activation sans inscription](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Activation sans inscription de composants .NET : une procédure pas à pas](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Configurer des composants COM pour l’activation sans inscription](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Activation sans inscription de composants .NET : procédure pas à pas](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

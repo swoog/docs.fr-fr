@@ -1,4 +1,12 @@
-### <a name="listlttgtforeach-can-throw-exception-when-modifying-list-item"></a>List&lt;T&gt;.ForEach peut lever une exception quand vous modifiez un élément de la liste
+---
+ms.openlocfilehash: 4e81087431091dfa4d5432d5ea5e2b665be2b130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234746"
+---
+### <a name="listtforeach-can-throw-exception-when-modifying-list-item"></a>List\<T>.ForEach risque de lever une exception en cas de modification d’un élément de liste
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Type|Reciblage|
 |API affectées|<ul><li><xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})?displayProperty=nameWithType></li></ul>|
-

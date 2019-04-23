@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184663"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -65,7 +65,6 @@ private DamageResult CalculateDamageDone()
     // the result of that calculation.
 }
 
-
 calculateButton.Clicked += async (o, e) =>
 {
     // This line will yield control to the UI while CalculateDamageDone()
@@ -91,7 +90,7 @@ D’un point de vue théorique, il s’agit d’une implémentation du [modèle 
 * Le code asynchrone utilise les objets `Task<T>` et `Task`, qui sont des constructions servant à modéliser le travail effectué en arrière-plan.
 * Le mot clé `async` définit une méthode comme asynchrone, ce qui vous permet d’utiliser le mot clé `await` dans le corps de la méthode.
 * Quand le mot clé `await` est utilisé, il suspend la méthode d’appel et cède le contrôle à son appelant jusqu’à ce que la tâche awaited soit terminée.
-* Le mot clé `await` peut uniquement être utilisé dans une méthode asynchrone.
+* `await` ne peut être utilisé que dans une méthode asynchrone.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Déterminer si un travail utilise le processeur ou les E/S de manière intensive
 
@@ -219,27 +218,27 @@ Si vous choisissez de combiner LINQ avec du code asynchrone, pour réduire la qu
 
 La programmation asynchrone est relativement simple, mais il y a quelques points à garder à l’esprit pour éviter un comportement inattendu du code.
 
-* **Les méthodes `async` doivent contenir un mot clé** `await` **dans leur corps pour pouvoir être suspendues.**
+* `async` **Les méthodes doivent contenir un mot clé** `await` **dans leur corps pour pouvoir être suspendues.**
 
 Il ne faut pas oublier ce point.  Si `await` n’est pas utilisé dans le corps d’une méthode `async`, le compilateur C# génère un avertissement, mais le code est compilé et exécuté comme s’il s’agissait d’une méthode standard.  Notez également que cela n’aurait aucune utilité, car la machine à états générée par le compilateur C# pour la méthode async n’accomplirait aucune opération dans ce cas.
 
-* **Vous devez ajouter le suffixe « Async » au nom de chaque méthode async que vous écrivez.**
+* **Il est recommandé d’ajouter le suffixe « Async » au nom de chaque méthode asynchrone.**
 
 Cette convention de .NET aide à différencier les méthodes synchrones et asynchrones. Notez que cela n’est pas obligatoire pour certaines méthodes qui ne sont pas explicitement appelées par votre code (par exemple, les gestionnaires d’événements et les méthodes de contrôleur web). L’attribution d’un nom explicite pour ces méthodes a moins d’importance.
 
-* `async void` **doit être utilisé uniquement pour les gestionnaires d’événements.**
+* `async void` **ne doit être utilisé que pour les gestionnaires d’événements.**
 
-L’utilisation de `async void` est le seul moyen de permettre le fonctionnement des gestionnaires d’événements asynchrones, car les événements n’ont pas de types de retour (et ne peuvent donc pas utiliser les objets `Task` et `Task<T>`). Toute autre utilisation de la méthode `async void` ne suit pas le modèle TAP et peut être difficile à implémenter, comme expliqué ci-après :
+`async void` est le seul moyen de faire fonctionner des gestionnaires d’événements asynchrones, car les événements n’ont pas de types de retour (et ne peuvent donc pas utiliser `Task` et `Task<T>`). Toute autre utilisation de la méthode `async void` ne suit pas le modèle TAP et peut être difficile à implémenter, comme expliqué ci-après :
 
 * Les exceptions levées dans une méthode `async void` ne peuvent pas être interceptées en dehors de cette méthode.
-* Les méthodes `async void` sont très difficiles à tester.
-* Les méthodes `async void` peuvent avoir des effets secondaires gênants si l’appelant n’attend pas de méthodes asynchrones.
+* `async void` Les méthodes sont très difficiles à tester.
+* `async void` Les méthodes peuvent avoir des effets secondaires gênants si l’appelant n’attend pas de méthodes asynchrones.
 
 * **Définissez le thread avec précaution si vous utilisez des expressions lambda asynchrones dans des expressions LINQ.**
 
 Dans LINQ, les expressions lambda utilisent l’exécution différée, ce qui signifie que l’exécution du code peut s’arrêter à un point que vous n’aviez pas prévu. L’introduction de tâches bloquantes dans ce code peut facilement provoquer un interblocage si le code n’est pas écrit correctement. De plus, l’imbrication de code asynchrone peut rendre la logique d’exécution du code plus compliquée. Combiner du code asynchrone et du code LINQ offre beaucoup de possibilités, mais nécessite d’être fait avec précaution et de manière claire.
 
-* **Écrivez le code qui attend certaines tâches de façon non bloquante.**
+* **Écrivez du code qui attend certaines tâches de façon non bloquante.**
 
 Si vous choisissez de bloquer le thread actuel pour attendre la fin d’une tâche, vous risquez de provoquer des interblocages et le blocage de threads de contexte, et de gérer moins facilement les erreurs. Le tableau suivant fournit des conseils pour attendre la fin de tâches de façon non bloquante :
 

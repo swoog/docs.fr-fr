@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341073"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Exécution côte à côte dans .NET Framework
 L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versions d'une application ou d'un composant sur le même ordinateur. Vous pouvez avoir plusieurs versions du Common Language Runtime et plusieurs versions d'applications et de composants qui utilisent une version du runtime sur le même ordinateur simultanément.  
@@ -75,11 +75,11 @@ L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versi
   
  S'il existe un fichier de configuration de l'application, le runtime détermine la version appropriée du runtime à charger à partir des résultats du processus suivant :  
   
-1.  Le runtime examine l’élément [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) dans le fichier de configuration de l’application. Si une ou plusieurs des versions du runtime prises en charge spécifiées dans l’élément **\<supportedRuntime>** sont disponibles, le runtime charge la version du runtime indiquée par le premier élément **\<supportedRuntime>**. Si cette version n’est pas disponible, le runtime examine l’élément **\<supportedRuntime>** suivant et tente de charger la version du runtime spécifiée. Si cette version du runtime n’est pas disponible non plus, tous les éléments **\<supportedRuntime>** suivants sont examinés. Si aucune des versions du runtime prises en charge n'est disponible, le runtime ne peut pas charger de version du runtime et affiche un message à l'utilisateur (voir l'étape 3).  
+1. Le runtime examine l’élément [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) dans le fichier de configuration de l’application. Si une ou plusieurs des versions du runtime prises en charge spécifiées dans l’élément **\<supportedRuntime>** sont disponibles, le runtime charge la version du runtime indiquée par le premier élément **\<supportedRuntime>**. Si cette version n’est pas disponible, le runtime examine l’élément **\<supportedRuntime>** suivant et tente de charger la version du runtime spécifiée. Si cette version du runtime n’est pas disponible non plus, tous les éléments **\<supportedRuntime>** suivants sont examinés. Si aucune des versions du runtime prises en charge n'est disponible, le runtime ne peut pas charger de version du runtime et affiche un message à l'utilisateur (voir l'étape 3).  
   
-2.  Le runtime lit l'en-tête du fichier PE du fichier exécutable de l'application. Si la version du runtime spécifiée par l'en-tête du fichier PE est disponible, le runtime la charge. Sinon, le runtime recherche une version du runtime que Microsoft a déterminé comme compatible avec la version du runtime spécifiée dans l'en-tête du fichier PE. Si cette version est introuvable, le processus continue jusqu'à l'étape 3.  
+2. Le runtime lit l'en-tête du fichier PE du fichier exécutable de l'application. Si la version du runtime spécifiée par l'en-tête du fichier PE est disponible, le runtime la charge. Sinon, le runtime recherche une version du runtime que Microsoft a déterminé comme compatible avec la version du runtime spécifiée dans l'en-tête du fichier PE. Si cette version est introuvable, le processus continue jusqu'à l'étape 3.  
   
-3.  Le runtime affiche un message indiquant que la version du runtime prise en charge par l'application n'est pas disponible. Le runtime n'est pas chargé.  
+3. Le runtime affiche un message indiquant que la version du runtime prise en charge par l'application n'est pas disponible. Le runtime n'est pas chargé.  
   
     > [!NOTE]
     >  Vous pouvez désactiver l’affichage de ce message en définissant la valeur NoGuiFromShim sous la clé de Registre HKLM\Software\Microsoft\\.NETFramework ou en utilisant la variable d’environnement COMPLUS_NoGuiFromShim. Par exemple, vous pouvez désactiver le message pour des applications qui n'interagissent généralement pas avec l'utilisateur, telles que des installations sans assistance ou des services Windows. Si l'affichage de ce message est désactivé, le runtime écrit un message dans le journal des événements.  Définissez la valeur de Registre NoGuiFromShim à 1 si vous voulez désactiver ce message pour toutes les applications d'un ordinateur. Vous pouvez aussi définir la variable d'environnement COMPLUS_NoGuiFromShim à la valeur 1 pour désactiver le message pour des applications s'exécutant dans un contexte utilisateur particulier.  
@@ -113,11 +113,11 @@ publicKeyToken=...,
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Guide pratique pour Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Explique comment lier une application à une version spécifique d'un assembly.|  
-|[Configuration de la redirection de liaison d’assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explique comment rediriger les références de liaison d’assembly vers une version spécifique des assemblys du .NET Framework.|  
+|[Procédure : Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Explique comment lier une application à une version spécifique d'un assembly.|  
+|[Configuration de la liaison d’assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explique comment rediriger les références de liaison d’assembly vers une version spécifique des assemblys du .NET Framework.|  
 |[Exécution côte à côte in-process](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Explique comment utiliser l'activation d'hôte du runtime côte à côte in-process pour exécuter plusieurs versions du CLR dans un même processus.|  
 |[Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fournit une vue d'ensemble conceptuelle des assemblys.|  
-|[Domaines d’application](../../../docs/framework/app-domains/application-domains.md)|Fournit une vue d'ensemble conceptuelle des domaines d'application.|  
+|[Domaines d'application](../../../docs/framework/app-domains/application-domains.md)|Fournit une vue d'ensemble conceptuelle des domaines d'application.|  
   
 ## <a name="reference"></a>Référence  
  [\<supportedRuntime>, élément](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

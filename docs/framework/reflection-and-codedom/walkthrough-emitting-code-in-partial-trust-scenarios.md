@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299473"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procédure pas à pas : émission de code dans des scénarios de confiance partielle
 L’émission de réflexion utilise le même ensemble d’API en confiance totale ou partielle, mais certaines fonctionnalités nécessitent des autorisations spéciales dans le code avec confiance partielle. En outre, l’émission de réflexion a une fonctionnalité, des méthodes dynamiques hébergées anonymement, qui est conçue pour être utilisée avec une confiance partielle et par les assemblys transparents de sécurité.  
@@ -59,12 +59,12 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Pour créer un domaine d’application avec une confiance partielle  
   
-1.  Créez un jeu d’autorisations à accorder aux assemblys dans le domaine d’application sandbox. Dans ce cas, le jeu d’autorisations de la zone Internet est utilisé.  
+1. Créez un jeu d’autorisations à accorder aux assemblys dans le domaine d’application sandbox. Dans ce cas, le jeu d’autorisations de la zone Internet est utilisé.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Créez un objet <xref:System.AppDomainSetup> pour initialiser le domaine d’application avec un chemin d’application.  
+2. Créez un objet <xref:System.AppDomainSetup> pour initialiser le domaine d’application avec un chemin d’application.  
   
     > [!IMPORTANT]
     >  Pour simplifier, cet exemple de code utilise le dossier actif. Pour exécuter du code qui provient d’Internet, utilisez un dossier distinct pour le code non fiable, comme décrit dans [Guide pratique pour exécuter du code d’un niveau de confiance partiel dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Créez le domaine d’application en spécifiant les informations de configuration du domaine d’application et le jeu d’autorisations accordé pour tous les assemblys qui s’exécutent dans le domaine d’application.  
+3. Créez le domaine d’application en spécifiant les informations de configuration du domaine d’application et le jeu d’autorisations accordé pour tous les assemblys qui s’exécutent dans le domaine d’application.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Pour créer un domaine d’application avec une confiance partielle plus RMA  
   
-1.  Créez un objet <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) et utilisez la méthode <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> pour ajouter l’autorisation au jeu d’autorisations.  
+1. Créez un objet <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) et utilisez la méthode <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> pour ajouter l’autorisation au jeu d’autorisations.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
     > [!NOTE]
     >  RMA est une fonctionnalité des méthodes dynamiques hébergées anonymement. Quand des méthodes dynamiques ordinaires ignorent les contrôles de visibilité JIT, le code émis nécessite une confiance totale.  
   
-2.  Créez le domaine d’application en spécifiant les informations de configuration du domaine d’application et le jeu d’autorisations.  
+2. Créez le domaine d’application en spécifiant les informations de configuration du domaine d’application et le jeu d’autorisations.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Pour définir et exécuter une méthode dans un domaine d’application  
   
-1.  Définissez une classe qui dérive de <xref:System.MarshalByRefObject>. Cette opération vous permet de créer des instances de la classe dans d’autres domaines d’application et d’effectuer des appels de méthode à travers les limites du domaine d’application. Dans cet exemple, la classe est nommée `Worker`.  
+1. Définissez une classe qui dérive de <xref:System.MarshalByRefObject>. Cette opération vous permet de créer des instances de la classe dans d’autres domaines d’application et d’effectuer des appels de méthode à travers les limites du domaine d’application. Dans cet exemple, la classe est nommée `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Définissez une méthode publique qui contient le code que vous voulez exécuter. Dans cet exemple, le code émet une méthode dynamique simple, crée un délégué pour exécuter la méthode et appelle le délégué.  
+2. Définissez une méthode publique qui contient le code que vous voulez exécuter. Dans cet exemple, le code émet une méthode dynamique simple, crée un délégué pour exécuter la méthode et appelle le délégué.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  Dans votre programme principal, obtenez le nom d’affichage de votre assembly. Ce nom est utilisé quand vous créez des instances de la classe `Worker` dans le domaine d’application sandbox.  
+3. Dans votre programme principal, obtenez le nom d’affichage de votre assembly. Ce nom est utilisé quand vous créez des instances de la classe `Worker` dans le domaine d’application sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  Dans votre programme principal, créez un domaine d’application sandbox, comme décrit dans [la première procédure](#Setting_up) de cet article. Vous ne devez pas ajouter des autorisations au jeu d’autorisations `Internet`, car la méthode `SimpleEmitDemo` utilise uniquement des méthodes publiques.  
+4. Dans votre programme principal, créez un domaine d’application sandbox, comme décrit dans [la première procédure](#Setting_up) de cet article. Vous ne devez pas ajouter des autorisations au jeu d’autorisations `Internet`, car la méthode `SimpleEmitDemo` utilise uniquement des méthodes publiques.  
   
-5.  Dans votre programme principal, créez une instance de la classe `Worker` dans le domaine d’application sandbox.  
+5. Dans votre programme principal, créez une instance de la classe `Worker` dans le domaine d’application sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
     > [!NOTE]
     >  Si vous utilisez ce code dans Visual Studio, vous devez changer le nom de la classe pour y inclure l’espace de noms. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
   
-6.  Ajoutez le code pour appeler la méthode `SimpleEmitDemo`. L’appel est marshalé à travers la limite du domaine d’application et le code est exécuté dans le domaine d’application sandbox.  
+6. Ajoutez le code pour appeler la méthode `SimpleEmitDemo`. L’appel est marshalé à travers la limite du domaine d’application et le code est exécuté dans le domaine d’application sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -169,7 +169,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La restriction est que la méthode dynamique hébergée anonymement peut accéder aux données privées seulement dans les assemblys avec des niveaux de confiance inférieurs ou égaux à celui de l’assembly émetteur. Par exemple, si la méthode dynamique s’exécute avec une confiance Internet, elle peut accéder aux données privées d’autres assemblys qui s’exécutent aussi avec la confiance Internet, mais elle ne peut pas accéder aux données privées des assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Les assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sont installés dans le Global Assembly Cache et sont toujours totalement fiables.  
+     La restriction est que la méthode dynamique hébergée anonymement peut accéder aux données privées seulement dans les assemblys avec des niveaux de confiance inférieurs ou égaux à celui de l’assembly émetteur. Par exemple, si la méthode dynamique s’exécute avec une confiance Internet, elle peut accéder aux données privées d’autres assemblys qui s’exécutent aussi avec la confiance Internet, mais elle ne peut pas accéder aux données privées des assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Les assemblys sont installés dans le Global Assembly Cache et sont toujours entièrement fiables.  
   
      Les méthodes dynamiques hébergées anonymement peuvent utiliser cette possibilité limitée d’ignorer les contrôles de visibilité JIT seulement si l’application hôte accorde <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La demande de cette autorisation est effectuée quand la méthode est appelée.  
   
@@ -212,5 +212,6 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
 -   Si vous générez cet exemple de code dans Visual Studio, vous devez changer le nom de la classe pour inclure l’espace de noms quand vous le passez à la méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
   
 ## <a name="see-also"></a>Voir aussi
-- [Problèmes de sécurité dans l’émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Guide pratique pour exécuter du code d’un niveau de confiance partiel dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+
+- [Problèmes de sécurité dans l'émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Procédure : Exécuter du code partiellement fiable dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

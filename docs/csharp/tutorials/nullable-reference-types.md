@@ -3,12 +3,12 @@ title: Concevoir avec des types référence Nullable
 description: Ce tutoriel avancé présente les types référence Nullable. Il explique comment exprimer une intention de conception lorsque les valeurs de référence peuvent être Null et comment, dans le cas contraire, indiquer au compilateur qu’elles ne peuvent pas être Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296145"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutoriel : Exprimer plus clairement une intention de conception avec les types référence Nullable et non Nullable
 
@@ -24,7 +24,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou [.NET Core 3.0 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou la dernière version de [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Ce tutoriel suppose de connaître C# et .NET, y compris Visual Studio ou l’interface CLI .NET Core.
 
@@ -45,7 +45,6 @@ Créez une application console dans Visual Studio ou en ligne de commande avec `
 
 > [!NOTE]
 > Lorsque C# 8 est publié (pas en préversion), l’élément `NullableContextOptions` est ajouté par les nouveaux modèles de projet. En attendant, vous devrez l’ajouter manuellement.
-
 
 ### <a name="design-the-types-for-the-application"></a>Concevoir les types de l’application
 
@@ -223,4 +222,4 @@ Faites des essais en modifiant les déclarations de type entre les types référ
 
 En savoir plus en migrant une application existante pour utiliser des types de référence nullable :
 > [!div class="nextstepaction"]
-> [Mettre à niveau une application pour utiliser des types de référence nullable](upgrade-to-nullable-references.md)
+> [Mettre à niveau une application de façon à utiliser des types références Nullable](upgrade-to-nullable-references.md)

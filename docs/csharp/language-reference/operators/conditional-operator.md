@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704906"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427381"
 ---
 # <a name="-operator-c-reference"></a>?: Opérateur (référence C#)
 
@@ -24,12 +24,12 @@ L’opérateur conditionnel `?:`, souvent appelé opérateur conditionnel ternai
 Voici la syntaxe de l'opérateur conditionnel :
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-L'expression `condition` doit donner `true` ou `false`. Si `condition` prend la valeur `true`, l’expression `consequence` est évaluée et son résultat devient le résultat de l’opération. Si `condition` prend la valeur `false`, l’expression `alternative` est évaluée et son résultat devient le résultat de l’opération. Soit `consequence`, soit `alternative` est évaluée.
+L'expression `condition` doit donner `true` ou `false`. Si `condition` prend la valeur `true`, l’expression `consequent` est évaluée et son résultat devient le résultat de l’opération. Si `condition` prend la valeur `false`, l’expression `alternative` est évaluée et son résultat devient le résultat de l’opération. Soit `consequent`, soit `alternative` est évaluée.
 
-Il faut que `consequence` et `alternative` soient du même type ou bien qu’une conversion implicite existe d’un type à l’autre.
+Il faut que `consequent` et `alternative` soient du même type ou bien qu’une conversion implicite existe d’un type à l’autre.
 
 L’opérateur conditionnel est associatif à droite ; autrement dit, une expression de la forme :
 
@@ -54,12 +54,12 @@ L’exemple suivant illustre l’utilisation de l’opérateur conditionnel :
 Voici la syntaxe de l'expression ref conditionnelle :
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Comme l’opérateur conditionnel d’origine, l’expression ref conditionnelle n’évalue qu’une des deux expressions : soit `consequence`, soit `alternative`.
+Comme l’opérateur conditionnel d’origine, l’expression ref conditionnelle n’évalue qu’une des deux expressions : soit `consequent`, soit `alternative`.
 
-Dans le cas de l’expression ref conditionnelle, `consequence` et `alternative` doivent être du même type.
+Dans le cas de l’expression ref conditionnelle, `consequent` et `alternative` doivent être du même type.
 
 L’exemple suivant illustre l’utilisation de l’expression ref conditionnelle :
 
@@ -86,7 +86,7 @@ Pour plus d’informations, voir la section [Opérateur conditionnel](~/_csharpl
 - [Référence C#](../index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Opérateurs C#](index.md)
-- [Instruction if-else](../keywords/if-else.md)
-- [Opérateurs ?. et ?[]](null-conditional-operators.md)
+- [if-else, instruction](../keywords/if-else.md)
+- [?. et ?[], opérateurs](null-conditional-operators.md)
 - [?? Opérateur](null-coalescing-operator.md)
 - [ref, mot clé](../keywords/ref.md)

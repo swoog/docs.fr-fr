@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186561"
 ---
 # <a name="setting-assembly-attributes"></a>Définition des attributs d'assembly
 Les attributs d’assembly sont des valeurs qui fournissent des informations sur un assembly. Les attributs sont répartis selon les ensembles d’informations suivants :  
@@ -37,7 +37,7 @@ Les attributs d’assembly sont des valeurs qui fournissent des informations sur
   
 |Attribut d’identité de l’assembly|Description|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Champ énuméré désignant la culture que l’assembly prend en charge. Un assembly peut également spécifier une indépendance de culture, indiquant qu’il contient les ressources pour la culture par défaut. **Remarque :**  Le runtime gère tout assembly qui n’a pas l’attribut de culture défini sur null comme un assembly satellite. Ces assemblys sont soumis aux règles de liaison d’assembly satellite. Pour plus d’informations, consultez [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Champ énuméré désignant la culture que l’assembly prend en charge. Un assembly peut également spécifier une indépendance de culture, indiquant qu’il contient les ressources pour la culture par défaut. **Remarque :**  le runtime gère tout assembly dont l’attribut de culture n’est pas défini sur Null comme un assembly satellite. Ces assemblys sont soumis aux règles de liaison d’assembly satellite. Pour plus d’informations, consultez [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valeur qui définit les attributs d’assembly, par exemple l’exécution côte à côte de l’assembly.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Valeur numérique au format *version principale*.*version secondaire*.*build*.*révision* (p. ex. 2.4.0.0). Le common language runtime utilise cette valeur pour effectuer les opérations de liaison dans les assemblys avec nom fort. **Remarque :**  Si l’attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute> n’est pas appliqué à un assembly, le numéro de version spécifié par l’attribut <xref:System.Reflection.AssemblyVersionAttribute> est utilisé par les propriétés <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> et <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
   
@@ -55,7 +55,7 @@ Les attributs d’assembly sont des valeurs qui fournissent des informations sur
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valeur de chaîne qui spécifie un nom de société.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valeur de chaîne qui spécifie les informations de copyright.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Valeur de chaîne qui spécifie le numéro de version du fichier Win32. Par défaut, il s’agit normalement de la version de l’assembly.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valeur de chaîne qui spécifie les informations de version qui ne sont pas utilisées par le common language runtime, comme un numéro de version du produit complet. **Remarque :**  Si cet attribut est appliqué à un assembly, la chaîne qu’il spécifie peut être obtenue au moment de l’exécution à l’aide de la propriété <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Cette chaîne est également utilisée dans le chemin d’accès et la clé de Registre fournis par les propriétés <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> et <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valeur de chaîne qui spécifie les informations de version qui ne sont pas utilisées par le common language runtime, comme un numéro de version du produit complet. **Remarque :**  si cet attribut est appliqué à un assembly, la chaîne qu’il spécifie peut être obtenue à l’exécution avec la propriété <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Cette chaîne est également utilisée dans le chemin d’accès et la clé de Registre fournis par les propriétés <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> et <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Valeur de chaîne qui spécifie les informations de produit.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Valeur de chaîne qui spécifie les informations de marque.|  
   
@@ -87,5 +87,6 @@ Les attributs d’assembly sont des valeurs qui fournissent des informations sur
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Voir aussi
-- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
-- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+
+- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337550"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  
@@ -33,26 +33,26 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
 ## <a name="exposing-com-components-to-c"></a>Exposer des composants COM au langage C\#
  Vous pouvez utiliser un composant COM d’un projet C#. Les étapes générales sont les suivantes :  
   
-1.  Recherchez le composant COM à utiliser et enregistrez-le. Utilisez regsvr32.exe pour inscrire ou désinscrire une DLL COM.  
+1. Recherchez le composant COM à utiliser et enregistrez-le. Utilisez regsvr32.exe pour inscrire ou désinscrire une DLL COM.  
   
-2.  Ajoutez au projet une référence au composant COM ou à la bibliothèque de types.  
+2. Ajoutez au projet une référence au composant COM ou à la bibliothèque de types.  
   
      Quand vous ajoutez la référence, Visual Studio utilise le fichier [Tlbimp.exe (Type Library Importer)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), qui prend comme entrée une bibliothèque de types, pour générer un assembly d’interopérabilité .NET Framework. L’assembly, également appelé wrapper RCW, contient des classes et des interfaces managées qui encapsulent les classes et les interfaces COM qui se trouvent dans la bibliothèque de types. Visual Studio ajoute au projet une référence à l’assembly généré.  
   
-3.  Créez une instance d’une classe qui est définie dans le wrapper RCW. Une instance de l’objet COM est ainsi créée.  
+3. Créez une instance d’une classe qui est définie dans le wrapper RCW. Une instance de l’objet COM est ainsi créée.  
   
-4.  Utilisez l’objet comme vous utiliseriez tout autre objet managé. Lorsque l’objet est récupéré par le garbage collection, l’instance de l’objet COM est également libérée de la mémoire.  
+4. Utilisez l’objet comme vous utiliseriez tout autre objet managé. Lorsque l’objet est récupéré par le garbage collection, l’instance de l’objet COM est également libérée de la mémoire.  
   
  Pour plus d’informations, consultez [Exposition de composants COM au .NET Framework](../../../../docs/framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>Exposition du langage C# à COM  
  Les clients COM peuvent utiliser des types C# qui ont été correctement exposés. Les étapes de base pour exposer des types C# sont les suivantes :  
   
-1.  Ajoutez des attributs d’interopérabilité dans le projet C#.  
+1. Ajoutez des attributs d’interopérabilité dans le projet C#.  
   
      Vous pouvez rendre visible un assembly COM en modifiant les propriétés de projet Visual C#. Pour plus d’informations, consultez [Informations de l’assembly, boîte de dialogue](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
-2.  Générez une bibliothèque de types COM et inscrivez-la pour l’utilisation de COM.  
+2. Générez une bibliothèque de types COM et inscrivez-la pour l’utilisation de COM.  
   
      Vous pouvez modifier les propriétés de projet Visual C# pour inscrire automatiquement l’assembly C# pour COM Interop. Visual Studio utilise le fichier [Regasm.exe (outil d’inscription de l’assembly)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) avec le commutateur de ligne de commande `/tlb`, qui prend comme entrée un assembly managé pour générer une bibliothèque de types. Cette bibliothèque de types décrit les types `public` de l’assembly et ajoute les entrées du Registre pour que les clients COM puissent créer des classes managées.  
   
@@ -60,9 +60,9 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Amélioration des performances d’interopérabilité](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Améliorer les performances d’interopérabilité](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Introduction à l’interopérabilité entre COM et .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
-- [Introduction à COM Interop dans Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Introduction à COM Interop en Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [Marshaling entre du code managé et non managé](../../../../docs/framework/interop/interop-marshaling.md)
 - [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)

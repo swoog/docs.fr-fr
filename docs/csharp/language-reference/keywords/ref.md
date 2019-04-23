@@ -1,19 +1,19 @@
 ---
 title: ref, mot clé - Référence C#
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116254"
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
 
@@ -24,10 +24,9 @@ Le mot clé `ref` indique une valeur qui est passée par référence. Il est ut
 - Dans le corps d’un membre, pour indiquer qu’une valeur de retour de référence est stockée localement sous la forme d’une référence que l’appelant a l’intention de modifier, ou une variable locale accède généralement à une valeur par référence. Pour plus d’informations, consultez [Variables locales ref](#ref-locals).
 - Dans une déclaration de `struct` pour déclarer un `ref struct` ou un `ref readonly struct`. Pour plus d’informations, consultez [Types de structures ref](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Passage d’un argument par référence
 
-Quand il est utilisé dans la liste de paramètres d’une méthode, le mot clé `ref` indique qu’un argument est passé par référence, et non par valeur. La conséquence est que toute modification apportée à l’argument dans la méthode appelée est reflétée dans la méthode d’appel. Par exemple, si l’appelant passe une expression de variable locale ou une expression d’accès à un élément de tableau et que la méthode appelée remplace l’objet auquel fait référence le paramètre ref, la variable locale de l’appelant ou l’élément de tableau fait désormais référence au nouvel objet quand la méthode retourne une valeur.
+Quand il est utilisé dans la liste de paramètres d’une méthode, le mot clé `ref` indique qu’un argument est passé par référence, et non par valeur. Le mot clé `ref` fait du paramètre formel un alias de l’argument, qui doit être une variable. En d’autres termes, toute opération portant sur le paramètre est effectuée sur l’argument. Par exemple, si l’appelant passe une expression de variable locale ou une expression d’accès à un élément de tableau et que la méthode appelée remplace l’objet auquel fait référence le paramètre ref, la variable locale de l’appelant ou l’élément de tableau fait désormais référence au nouvel objet quand la méthode retourne une valeur.
 
 > [!NOTE]
 > Ne confondez pas le concept de passage par référence avec celui de types de référence. Les deux concepts ne sont pas identiques. Un paramètre de méthode peut être modifié par `ref`, qu'il s'agisse d'un type valeur ou d'un type référence. Il n'y a aucun boxing d'un type valeur lorsqu'il est passé par référence.  
@@ -138,7 +137,7 @@ L’ajout du modificateur `ref` à une déclaration `struct` définit que les in
 La conservation d’un type `ref struct` comme variable allouée par la pile introduit plusieurs règles que le compilateur applique pour tous les types `ref struct`.
 
 - Vous ne pouvez pas effectuer d’opération box sur un `ref struct`. Vous ne pouvez pas assigner un type `ref struct` à une variable de type `object`, `dynamic` ou tout type interface.
-- Les types `ref struct` ne peuvent pas implémenter les interfaces.
+- `ref struct` Les types ne peuvent pas implémenter d’interfaces.
 - Vous ne pouvez pas déclarer `ref struct` comme membre d’une classe ou d’un struct normal.
 - Vous ne pouvez pas déclarer des variables locales qui sont des types `ref struct` dans des méthodes async. Vous pouvez les déclarer dans des méthodes synchrones qui retournent des types semblables à <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
 - Vous ne pouvez pas déclarer de variables locales `ref struct` dans des itérateurs.

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208122"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analyse des chaînes de date et d’heure dans .NET
 
@@ -32,7 +32,6 @@ Pour analyser des chaînes pour les convertir en objets <xref:System.DateTime>, 
 1. Vous pouvez spécifier la façon de définir les composants manquants d’une représentation de texte dans la date et l’heure.
 
 Les méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.TryParse%2A> convertissent de nombreuses représentations communes de date et d’heure. Les méthodes <xref:System.DateTime.ParseExact%2A> et <xref:System.DateTime.TryParseExact%2A> convertissent une représentation sous forme de chaîne conforme au modèle spécifié par une chaîne de format de date et d’heure. (Consultez les articles sur les [chaînes de format de date et d’heure standard](standard-date-and-time-format-strings.md) et les [chaînes de format de date et d’heure personnalisées](custom-date-and-time-format-strings.md) pour plus d’informations.)
-
 
 L’objet courant <xref:System.Globalization.DateTimeFormatInfo> fournit davantage de contrôle sur la façon d’interpréter le texte comme une date et une heure. Les propriétés d’un <xref:System.Globalization.DateTimeFormatInfo> décrivent les séparateurs de date et d’heure et les noms de mois, de jours et de zones ainsi que le format des désignations « AM » et « PM ». La culture du thread en cours fournit un <xref:System.Globalization.DateTimeFormatInfo> qui représente la culture actuelle. Si vous souhaitez une culture spécifique ou des paramètres personnalisés, spécifiez le paramètre <xref:System.IFormatProvider> d’une méthode d’analyse. Pour le paramètre <xref:System.IFormatProvider>, vous devez spécifier un objet <xref:System.Globalization.CultureInfo> qui représente une culture, ou un objet <xref:System.Globalization.DateTimeFormatInfo>.
 
@@ -56,10 +55,10 @@ Le fournisseur de format est également utilisé pour interpréter une date num�
 L’exemple suivant illustre l’utilisation de la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> pour convertir une `string` en <xref:System.DateTime>. Cet exemple fait appel à la culture associée au thread actuel. Si l’objet <xref:System.Globalization.CultureInfo> associé à la culture actuelle ne peut pas analyser la chaîne d’entrée, une exception <xref:System.FormatException> est levée.
 
 > [!TIP]
-> Tous les exemples C# de cet article s’exécutent dans votre navigateur. Appuyez sur le bouton **Exécuter** pour afficher la sortie. Vous pouvez également les modifier pour vous entrainer.
+> Tous les exemples c# de cet article s’exécutent dans votre navigateur. Appuyez sur le bouton **Exécuter** pour afficher la sortie. Vous pouvez également les modifier pour vous entrainer.
 
 > [!NOTE]
-> Ces exemples sont disponibles dans le référentiel de documents GitHub pour [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) et [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Vous pouvez également télécharger le projet sous la forme d’un fichier ZIP pour [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) ou [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Ces exemples sont disponibles dans le référentiel de documents GitHub pour [c#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) et [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Vous pouvez également télécharger le projet sous la forme d’un fichier ZIP pour [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) ou [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -85,12 +84,12 @@ Dans l’exemple suivant, la méthode <xref:System.DateTime.ParseExact%2A?displa
 [!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Chaque surcharge des méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.ParseExact%2A> a un paramètre <xref:System.IFormatProvider> qui fournit des informations spécifiques à la culture sur la mise en forme de la chaîne. Cet objet <xref:System.IFormatProvider> est un objet <xref:System.Globalization.CultureInfo> qui représente une culture standard ou un objet <xref:System.Globalization.DateTimeFormatInfo> qui est renvoyé par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> utilise également une chaîne supplémentaire ou un argument de tableau de chaînes qui définit un ou plusieurs formats de date et d’heure.  
+Chaque surcharge des méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.ParseExact%2A> a un paramètre <xref:System.IFormatProvider> qui fournit des informations spécifiques à la culture sur la mise en forme de la chaîne. Cet objet <xref:System.IFormatProvider> est un objet <xref:System.Globalization.CultureInfo> qui représente une culture standard ou un objet <xref:System.Globalization.DateTimeFormatInfo> qui est renvoyé par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> utilise également un argument chaîne ou tableau de chaînes supplémentaire qui définit un ou plusieurs formats de date et d’heure personnalisés.  
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Parsing Strings](parsing-strings.md)
+- [Analyse de chaînes](parsing-strings.md)
 - [Mise en forme des types](formatting-types.md)
-- [Conversion de type dans .NET](type-conversion.md)
+- [Conversion de types dans .NET](type-conversion.md)
 - [Formats de date et d’heure standard](standard-date-and-time-format-strings.md)
-- [Chaînes de format de date et d'heure personnalisées](custom-date-and-time-format-strings.md)
+- [Chaînes de format de date et d’heure personnalisées](custom-date-and-time-format-strings.md)

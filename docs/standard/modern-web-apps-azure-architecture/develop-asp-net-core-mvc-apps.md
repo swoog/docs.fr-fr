@@ -4,17 +4,17 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128386"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
 > « Réussir du premier coup n’est pas le plus important. Ce qui compte, c’est le résultat final. »  
-> _- Andrew Hunt et David Thomas_
+> _– Andrew Hunt et David Thomas_
 
 ASP.NET Core est un framework open source multiplateforme qui permet de générer des applications web modernes optimisées pour le cloud. Légères et modulaires, les applications ASP.NET Core intègrent la prise en charge de l’injection de dépendances, améliorant ainsi la testabilité et la maintenabilité. Associé à MVC, qui prend en charge la génération d’API web modernes et d’applications basées sur les vues, ASP.NET Core est un framework puissant qui permet de générer des applications web d’entreprise.
 
@@ -102,13 +102,13 @@ Les projets API web doivent envisager d’utiliser l’attribut `[ApiController]
 >
 > - **Routage vers les actions du contrôleur**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Liaison de modèle**
+> - **Liaison de modèles**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **Validation du modèle**
+> - **Validation de modèles**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtres**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **Attribut ApiController**
+> - **Attributs ApiController**
  > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>Utilisation de dépendances
@@ -315,11 +315,11 @@ Pour découvrir plus en détail les filtres d’implémentation et télécharger
 
 > ### <a name="references--structuring-applications"></a>Références – Structuration des applications
 >
-> - **Les zones (areas)**  
+> - **Zones (Areas)**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – Feature Slices for ASP.NET Core MVC**  
 >   <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **Les filtres**  
+> - **Filtres**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – Real World ASP.NET Core MVC Filters**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
@@ -426,12 +426,11 @@ Vous pouvez créer votre propre service d’authentification, l’intégrer à A
 
 Soyez particulièrement vigilant quant au « développement de votre propre » implémentation du chiffrement, de l’appartenance de l’utilisateur et du système de génération de jetons. Il existe de nombreuses alternatives commerciales et open source, qui présenteront certainement une meilleure sécurité qu’une implémentation personnalisée.
 
-
 > ### <a name="references--security"></a>Références – Sécurité
 >
 > - **Vue d’ensemble des documents de sécurité**  
 >   https://docs.microsoft.com/aspnet/core/security/
-> - **Application de SSL dans une application ASP.NET Core**  
+> - **Appliquer SSL dans une application ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Présentation d’Identity**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
@@ -502,7 +501,7 @@ Réfléchissez à la manière dont vos applications communiquent directement ave
 >
 > - **ASP.NET Core SignalR**  
 >   <https://github.com/aspnet/SignalR>
-> - **WebSocket Manager**  
+> - **WebSocketManager**  
 >   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Utiliser la conception pilotée par le domaine ou non ?
@@ -596,7 +595,7 @@ _Découvrez plus en détail les options de déploiement Azure dans le [chapitre�
 >
 > - **Vue d’ensemble de l’hébergement et du déploiement**  
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Quand utiliser Kestrel avec un proxy inverse**  
+> - **Quand utiliser Kestrel avec un proxy inverse ?**  
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Héberger des applications ASP.NET Core dans Docker**  
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>

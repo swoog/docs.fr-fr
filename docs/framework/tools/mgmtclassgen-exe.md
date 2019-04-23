@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213127"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 L'outil Management Strongly Typed Class Generator vous permet de générer rapidement une classe managée à liaison anticipée pour une classe WMI (Windows Management Instrumentation) spécifiée. La classe générée simplifie le code à écrire pour accéder à une instance de la classe WMI.  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u**  *user name*|Définit le nom d’utilisateur à utiliser quand vous vous connectez à un ordinateur spécifié par l’option **/m**.|  
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Mgmtclassgen.exe utilise la méthode <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. Vous pouvez donc utiliser n'importe quel fournisseur de code personnalisé pour générer le code dans des langages managés autres que C#, Visual Basic et JScript.  
   
  Notez que les classes générées sont liées au schéma pour lequel elles ont été créées. Si le schéma sous-jacent change, vous devez régénérer la classe pour que les modifications effectuées dans le schéma soient prises en compte.  
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**String**|  
+|CIM_BOOLEAN|**Booléen**|  
+|CIM_String|**Chaîne**|  
 |CIM_DATETIME|**DateTime** ou **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Objet**|  
+|CIM_IUNKNOWN|**Object**|  
 |CIM_ARRAY|Tableau des objets mentionnés ci-dessus|  
   
  Notez les comportements suivants lorsque vous générez une classe WMI :  
@@ -100,7 +100,7 @@ WMIClass [options]
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- L'exemple de code suivant montre comment utiliser par programme une classe générée. Tout d'abord, une instance de la classe est énumérée et le chemin est imprimé. Ensuite, une instance de la classe générée à initialiser est créée avec une instance de WMI. `Process` est la classe générée pour **Win32_Process** et `LogicalDisk` est la classe générée pour **Win32_LogicalDisk** dans l’espace de noms **Root\cimv2**.  
+ L'exemple de code suivant montre comment utiliser par programme une classe générée. Tout d'abord, une instance de la classe est énumérée et le chemin est imprimé. Ensuite, une instance de la classe générée à initialiser est créée avec une instance de WMI. `Process` est la classe générée pour **Win32_Process** et `LogicalDisk` la classe générée pour **Win32_LogicalDisk** dans l’espace de noms **Root\cimv2**.  
   
 ```vb  
 Imports System  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

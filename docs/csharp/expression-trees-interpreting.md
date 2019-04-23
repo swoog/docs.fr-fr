@@ -3,16 +3,16 @@ title: Interprétation des expressions
 description: Découvrez comment écrire du code pour analyser la structure d’une arborescence d’expressions.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211242"
 ---
 # <a name="interpreting-expressions"></a>Interprétation des expressions
 
-[Précédent -- Exécution d’expressions](expression-trees-execution.md)
+[Précédent – Exécution d’expressions](expression-trees-execution.md)
 
 Nous allons maintenant écrire du code pour analyser la structure d’une *arborescence d’expressions*. Chaque nœud d’une arborescence d’expressions est un objet d’une classe dérivée de `Expression`.
 
@@ -356,7 +356,6 @@ Expression<Func<int, int>> factorial = (n) =>
 Il représente une implémentation possible de la fonction mathématique *factorial*. La façon dont ce code est écrit met en évidence deux limitations concernant la méthode de création d’arborescences d’expressions qui consiste à assigner des expressions lambda à Expression. Tout d’abord, les lambda-instructions ne sont pas autorisées. Cela signifie que je ne peux pas utiliser de boucles, de blocs, d’instructions if / else et d’autres structures de contrôle courantes en C#. Je suis limité à l’utilisation d’expressions. Ensuite, je ne peux pas appeler la même expression de manière récursive.
 Je le pourrais s’il s’agissait déjà d’un délégué, mais je ne peux pas l’appeler sous sa forme d’arborescence d’expressions. Dans la section sur la [génération d’arborescences d’expressions](expression-trees-building.md), vous découvrirez des techniques pour surmonter ces restrictions.
 
-
 Dans cette expression, vous rencontrerez des nœuds de tous ces types :
 1. Égal (expression binaire)
 2. Multiplier (expression binaire)
@@ -520,4 +519,4 @@ Pour finir, la bibliothèque que j’ai utilisée dans cet article a été cré�
 
 Même avec ces limitations, vous devriez être sur la bonne voie pour écrire des algorithmes qui lisent et comprennent les arborescences d’expressions.
 
-[Suivant -- Génération d’expressions](expression-trees-building.md)
+[Suivant – Création d’expressions](expression-trees-building.md)

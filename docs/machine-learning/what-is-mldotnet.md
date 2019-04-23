@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200362"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Qu’est-ce que ML.NET et comment comprendre les bases du machine learning ?
 
@@ -25,14 +25,13 @@ L’apprentissage automatique est une technique de science des données qui perm
 
 Les prévisions ou prédictions basées sur l’apprentissage automatique peuvent rendre les appareils et les applications plus intelligents. Quand vous effectuez des achats en ligne, l’apprentissage automatique permet de recommander d’autres produits qui pourraient vous intéresser, en fonction de ce que vous avez acheté. Quand votre carte de crédit est introduite dans un terminal, l’apprentissage automatique compare la transaction à une base de données de transactions et contribue à détecter les fraudes. Quand votre aspirateur robot nettoie une pièce, l’apprentissage automatique l’aide à décider si le travail est terminé.
 
-
 ## <a name="short-videos-on-data-science"></a>Petites vidéos sur la science des données 
 
 Bénéficiez d’une rapide introduction aux bases du machine learning et de la science des données en regardant cinq petites vidéos intitulées *Science des données pour les débutants* créées par un scientifique des données expert. Ces vidéos sont basiques mais utiles si vous envisagez de travailler avec la science des données ou si vous collaborez avec des scientifiques des données.
 
 * Vidéo 1 : [Les cinq questions auxquelles répond la science des données](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 s)*.
 
-* Vidéo 2 : [Vos données sont-elles prêtes pour la science des données ?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 s)*
+* Vidéo 2 : [Vos données sont-elles prêtes pour la science des données ?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 s)*
 
 * Vidéo 3 : [Poser une question à laquelle les données permettent de répondre](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 s)*
 

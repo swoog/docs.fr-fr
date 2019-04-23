@@ -8,17 +8,17 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122887"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
   
-`await` peut uniquement être utilisé dans une méthode asynchrone modifiée par le mot clé [async](../../../csharp/language-reference/keywords/async.md). Une telle méthode, définie à l’aide du modificateur `async` et contenant généralement une ou plusieurs expressions `await`, est appelée *méthode async*.  
+`await` ne peut être utilisé que dans une méthode asynchrone modifiée par le mot clé [async](../../../csharp/language-reference/keywords/async.md). Une telle méthode, définie à l’aide du modificateur `async` et contenant généralement une ou plusieurs expressions `await`, est appelée *méthode async*.  
   
 > [!NOTE]
 > Les mots clés `async` et `await` ont été introduits dans C# 5. Pour obtenir une introduction à la programmation asynchrone, consultez [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md).  
@@ -68,6 +68,7 @@ L’exemple suivant retourne le nombre total de caractères dans les pages dont 
 L’exemple précédent utilise C# 7.1, qui prend en charge la [méthode `async` `Main`](../../programming-guide/main-and-command-args/index.md). Les versions antérieures de C# ne prennent pas en charge les points d’entrée d’application qui retournent <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> ; vous ne pouvez donc pas appliquer le modificateur `async` à la méthode `Main` et attendre l’appel de méthode `GetPageLengthsAsync`. Dans ce cas, vous pouvez faire en sorte que la méthode `Main` attende la fin de l’opération asynchrone en récupérant la valeur de la propriété <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Pour les tâches qui ne retournent pas de valeur, vous pouvez appeler la méthode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Pour savoir comment sélectionner la version du langage, voir [Sélectionner la version du langage C#](../configure-language-version.md).
 
 ## <a name="see-also"></a>Voir aussi
-- [Programmation asynchrone avec Async et Await](../../../csharp/programming-guide/concepts/async/index.md)
-- [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+
+- [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md)
+- [Procédure pas à pas : accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

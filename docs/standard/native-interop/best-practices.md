@@ -4,12 +4,12 @@ description: Découvrez les meilleures pratiques pour interagir avec des composa
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196656"
 ---
 # <a name="native-interoperability-best-practices"></a>Meilleures pratiques pour l’interopérabilité native
 
@@ -44,7 +44,7 @@ N’oubliez pas de marquer `[DllImport]` comme `Charset.Unicode` sauf si vous so
 
 **❌ À NE PAS FAIRE :** utiliser des paramètres `[Out] string`. Les paramètres de chaînes passés en valeur avec l’attribut `[Out]` risquent de déstabiliser le runtime s’il s’agit de chaînes centralisées. Pour plus d’informations sur la centralisation des chaînes, voir la documentation de <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ À ÉVITER :** utiliser des paramètres `StringBuilder`. Le marshaling `StringBuilder` crée *toujours* une copie de la mémoire tampon native. Il peut donc se révéler extrêmement inefficace. Prenons le scénario classique d’appel d’une API Windows qui prend une chaîne :
+**❌ À ÉVITER :** utiliser des paramètres `StringBuilder`. `StringBuilder` Le marshaling crée *toujours* une copie de la mémoire tampon native. Il peut donc se révéler extrêmement inefficace. Prenons le scénario classique d’appel d’une API Windows qui prend une chaîne :
 
 1. Crée un SB de la capacité souhaitée (alloue la capacité gérée) **{1}**
 2. Appeler
@@ -94,8 +94,8 @@ Les types blittables sont des types qui ont la même représentation au niveau d
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - Tableaux unidimensionnels non imbriqués de types blittables (par exemple, `int[]`)
 - Structs et classes à disposition fixe qui n’ont que des types valeurs blittables, par exemple les champs :
-  - La disposition fixe exige `[StructLayout(LayoutKind.Sequential)]` ou `[StructLayout(LayoutKind.Explicit)]`.
-  - Les structs sont `LayoutKind.Sequential` par défaut, les classes `LayoutKind.Auto`.
+  - La disposition fixe exige `[StructLayout(LayoutKind.Sequential)]` ou `[StructLayout(LayoutKind.Explicit)]`
+  - Les structures sont `LayoutKind.Sequential` par défaut, les classes `LayoutKind.Auto`
 
 **Types NON blittables :**
 
@@ -107,7 +107,7 @@ Les types blittables sont des types qui ont la même représentation au niveau d
 
 Lorsque des types blittables sont passés en référence, ils sont simplement épinglés par le marshaleur, et non copiés vers une mémoire tampon intermédiaire. (Les classes sont, par nature, passées en référence ; les structs sont passés en référence lorsqu’ils sont utilisés avec `ref` ou `out`.)
 
-Un `char` est blittable dans un tableau unidimensionnel **ou** s’il fait partie d’un type explicitement marqué `[StructLayout]` avec `CharSet = CharSet.Unicode`.
+`char` est blittable dans un tableau unidimensionnel **ou** s’il fait partie d’un type explicitement marqué `[StructLayout]` avec `CharSet = CharSet.Unicode`.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -117,7 +117,7 @@ public struct UnicodeCharStruct
 }
 ```
 
-Une `string` est blittable si elle n’est pas contenue dans un autre type et qu’elle est passé en argument marqué `[MarshalAs(UnmanagedType.LPWStr)]` ou que `CharSet = CharSet.Unicode` est défini pour `[DllImport]`.
+`string` est blittable si elle n’est pas contenue dans un autre type et qu’elle est passée en argument marqué `[MarshalAs(UnmanagedType.LPWStr)]` ou que `CharSet = CharSet.Unicode` est défini pour `[DllImport]`.
 
 Pour savoir si un type est blittable, essayez de créer un `GCHandle` épinglé. Si le type n’est pas une chaîne ou n’est pas considéré comme blittable, `GCHandle.Alloc` lèvera une `ArgumentException`.
 
@@ -125,12 +125,12 @@ Pour savoir si un type est blittable, essayez de créer un `GCHandle` épinglé.
 
 Pour plus d'informations, voir :
 
-- [Types blittable et non blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshaling des types](type-marshalling.md)
+- [types blittable et non blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Marshaling de types](type-marshalling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Maintenir actifs les objets gérés
 
-`GC.KeepAlive()` garantit qu'un objet reste accessible jusqu'à ce que la méthode KeepAlive soit atteinte.
+`GC.KeepAlive()` fait en sorte qu’un objet reste accessible jusqu’à ce que la méthode KeepAlive soit atteinte.
 
 [`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) permet au marshaleur de maintenir un objet actif pendant la durée de P/Invoke. Il peut être utilisé à la place de `IntPtr` dans les signatures de méthode. `SafeHandle` remplace cette classe et doit être utilisé à la place.
 
@@ -188,7 +188,6 @@ Malgré leur nom, les types suivants ont la même taille sur Windows 32 bits et 
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
-
 Comme il s’agit de pointeurs, les types suivants suivent la largeur de la plateforme. Utilisez pour eux `IntPtr`/`UIntPtr`.
 
 | Types de pointeurs signés (utilisez `IntPtr`) | Types de pointeurs non signés (utilisez `UIntPtr`) |
@@ -205,7 +204,7 @@ Un `PVOID` Windows, qui correspond à un `void*` C, peut être marshalé comme `
 
 [Types de données Windows](/windows/desktop/WinProg/windows-data-types)
 
-[Plages de types de données](/cpp/cpp/data-type-ranges)
+[plages de types de données](/cpp/cpp/data-type-ranges)
 
 ## <a name="structs"></a>Structs
 

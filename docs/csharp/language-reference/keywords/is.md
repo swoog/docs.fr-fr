@@ -1,19 +1,19 @@
 ---
 title: is - Référence C#
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977051"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480831"
 ---
 # <a name="is-c-reference"></a>is (référence C#)
 
@@ -47,11 +47,11 @@ L’exemple suivant montre que l’expression `is` a la valeur `true` pour chacu
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-Le mot clé `is` génère un avertissement au moment de la compilation si l’expression est connue pour être toujours soit `true`, soit `false`. Il tient compte uniquement des conversions de référence, des conversions boxing et des conversions unboxing. Il ne tient pas compte des conversions définies par l’utilisateur ni des conversions définies par les opérateurs [implicit](implicit.md) et [explicit](explicit.md) d’un type. L’exemple suivant génère des avertissements, car le résultat de la conversion est connu au moment de la compilation. Notez que l’expression `is` pour les conversions de `int` à `long` et `double` retourne la valeur false, puisque ces conversions sont gérées par l’opérateur [implicit](implicit.md).
+Le mot clé `is` génère un avertissement au moment de la compilation si l’expression est connue pour être toujours soit `true`, soit `false`. Il tient compte uniquement des conversions de référence, des conversions boxing et des conversions unboxing. Il ne tient pas compte des conversions définies par l’utilisateur ni des conversions définies par les opérateurs [implicit](implicit.md) et [explicit](explicit.md) d’un type. L’exemple suivant génère des avertissements, car le résultat de la conversion est connu au moment de la compilation. L’expression `is` des conversions de `int` à `long` et `double` retourne la valeur false, puisque ces conversions sont gérées par l’opérateur [implicit](implicit.md).
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` peut correspondre à toute expression qui retourne une valeur, à l’exception des méthodes anonymes et des expressions lambda. L’exemple suivant utilise `is` pour évaluer la valeur de retour d’un appel de méthode.   
+`expr` peut être n’importe quelle expression, autre qu’une expression lambda ou une méthode anonyme, qui retourne une valeur. L’exemple suivant utilise `is` pour évaluer la valeur de retour d’un appel de méthode.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 Avec C# 7.0, vous pouvez utiliser les critères spéciaux avec le [modèle de type](#type) pour écrire du code plus concis qui utilise l’instruction `is`.
@@ -66,7 +66,7 @@ Avec C# 7.0, vous pouvez utiliser les critères spéciaux avec le [modèle de ty
 
 - [Modèle de variable](#var) : correspondance qui réussit toujours et lie la valeur d’une expression à une variable locale. 
 
-### <a name="type" /> Modèle de type </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />Modèle de type
 
 Lorsque vous utilisez le modèle de type pour rechercher des critères spéciaux, `is` permet de tester si une expression peut être convertie en un type spécifié et, si tel est le cas, effectuer un cast de l’expression en une variable de ce type. Il s’agit d’une extension simple de l’instruction `is` qui permet une évaluation et une conversion de type concises. La forme générale du modèle de type `is` est la suivante :
 
@@ -76,7 +76,7 @@ Lorsque vous utilisez le modèle de type pour rechercher des critères spéciaux
 
 où *expr* est une expression qui correspond à une instance d’un type, où *type* est le nom du type dans lequel le résultat de *expr* doit être converti, et où *varname* est l’objet dans lequel le résultat de *expr* est converti si le test `is` a la valeur `true`. 
 
-L’expression `is` est `true` si *expr* n’est pas `null` et que l’un des énoncés suivants est vrai :
+L’expression `is` est `true` si *expr* n’est pas `null` et que l’une des conditions suivantes est remplie :
 
 - *expr* est une instance du même type que *type*.
 
@@ -85,6 +85,8 @@ L’expression `is` est `true` si *expr* n’est pas `null` et que l’un des é
 - *expr* a un type au moment de la compilation qui est une classe de base de *type* et *expr* a un type au moment de l’exécution égal à *type* ou dérivé de *type*. Le *type au moment de la compilation* d’une variable est le type de la variable, tel qu’il est défini dans sa déclaration. Le *type au moment de l’exécution* d’une variable est le type de l’instance qui est assignée à cette variable.
 
 - *expr* est une instance d’un type qui implémente l’interface *type*.
+
+À compter de C# 7.1, *expr* peut avoir un type à la compilation défini par un paramètre de type générique et ses contraintes. 
 
 Si *exp* est `true` et que `is` est utilisé avec une instruction `if`, *varname* est assigné et sa portée locale se limite à l’instruction `if`.
 
@@ -106,7 +108,7 @@ Le code équivalent sans critères spéciaux nécessite une attribution distinct
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Modèle de constante
 
-Lorsque vous utilisez des critères spéciaux avec le modèle de constante, `is` teste si une expression est égale à une constante spécifiée. Avec C# 6 et les versions antérieures, le modèle de constante est pris en charge par l’instruction [switch](switch.md). À compter de C# 7.0, ce modèle est également pris en charge par l’instruction `is`. Sa syntaxe est la suivante :
+Lorsque vous utilisez des critères spéciaux avec le modèle de constante, `is` teste si une expression est égale à une constante spécifiée. Avec C# 6 et les versions antérieures, le modèle de constante est pris en charge par l’instruction [switch](switch.md). À compter de C# 7.0, il est également pris en charge par l’instruction `is`. Sa syntaxe est la suivante :
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ L’exemple suivant illustre une comparaison des vérifications de `null` :
  
 ### <a name="var" /> Modèle de variable </a>
 
-Une recherche de critères spéciaux qui utilise le modèle de variable réussit toujours. Sa syntaxe est la suivante :
+La correspondance avec le modèle var réussit toujours pour les expressions non Null ; si *expr* est `null`, l’expression `is` est `false`. La valeur non Null de *expr* est toujours assignée à une variable locale du type à l’exécution de *expr*.  Sa syntaxe est la suivante :
 
 ```csharp 
    expr is var varname
 ```
 
-où la valeur de *expr* est toujours assignée à une variable locale nommée *varname*. *varname* est une variable statique du même type que *expr*. L’exemple suivant utilise le modèle de variable pour assigner une expression à une variable nommée `obj`. Il affiche ensuite la valeur et le type de `obj`.
+L’exemple suivant utilise le modèle de variable pour assigner une expression à une variable nommée `obj`. Il affiche ensuite la valeur et le type de `obj`.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-Notez que si *expr* est `null`, l’expression `is` a toujours la valeur true et attribue `null` à *varname*. 
 
 ## <a name="c-language-specification"></a>Spécification du langage C#
   

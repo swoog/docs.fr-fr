@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302975"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procédure pas à pas : Utiliser BatchBlock et BatchedJoinBlock pour améliorer l’efficacité
 La bibliothèque de flux de données TPL comporte les classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, qui permettent de recevoir et de mettre en mémoire tampon des données provenant d’une ou plusieurs sources, puis de les propager sous la forme d’une seule et même collection. Ce mécanisme de traitement par lot est utile pour collecter des données provenant d’une ou plusieurs sources, puis pour traiter par lot plusieurs éléments de données. Prenons par exemple une application qui utilise un flux de données pour insérer des enregistrements dans une base de données. Cette opération est plus efficace si plusieurs éléments sont insérés en même temps, plutôt qu’un à la fois successivement. Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> afin d’améliorer l’efficacité de ces opérations d’insertion en base de données. Il montre également comment se servir de la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> pour capturer les résultats et toutes les exceptions qui se produisent quand le programme lit des données à partir d’une base de données.
@@ -25,9 +25,9 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
 
 ## <a name="prerequisites"></a>Prérequis  
   
-1.  Lisez la section Blocs de jointure du document [Flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) avant de commencer cette procédure pas à pas.  
+1. Lisez la section Blocs de jointure du document [Flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) avant de commencer cette procédure pas à pas.  
   
-2.  Vérifiez que vous disposez d’une copie de la base de données Northwind, Northwind.sdf, sur votre ordinateur. Ce fichier se trouve généralement dans le dossier %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
+2. Vérifiez que vous disposez d’une copie de la base de données Northwind, Northwind.sdf, sur votre ordinateur. Ce fichier se trouve généralement dans le dossier %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
     >  Dans certaines versions de Windows, il n’est pas possible de se connecter à Northwind.sdf si Visual Studio est en mode non administrateur. Pour vous connecter à Northwind.sdf, démarrez Visual Studio ou une invite de commandes développeur pour Visual Studio en mode **Exécuter en tant qu’administrateur**.  
@@ -52,16 +52,16 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
 ## <a name="creating-the-console-application"></a>Créer l'application console  
   
 <a name="consoleApp"></a>   
-1.  Dans Visual Studio, créez un projet **Application console** en Visual C# ou en Visual Basic. Dans ce document, le projet est nommé `DataflowBatchDatabase`.  
+1. Dans Visual Studio, créez un projet **Application console** en Visual C# ou en Visual Basic. Dans ce document, le projet est nommé `DataflowBatchDatabase`.  
   
-2.  Dans votre projet, ajoutez une référence à System.Data.SqlServerCe.dll et une autre à System.Threading.Tasks.Dataflow.dll.  
+2. Dans votre projet, ajoutez une référence à System.Data.SqlServerCe.dll et une autre à System.Threading.Tasks.Dataflow.dll.  
   
-3.  Vérifiez que Form1.cs (Form1.vb pour Visual Basic) contient les instructions `using` suivantes (`Imports`en Visual Basic).  
+3. Vérifiez que Form1.cs (Form1.vb pour Visual Basic) contient les instructions `using` suivantes (`Imports`en Visual Basic).  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  Ajoutez les membres de données suivants à la classe `Program`.  
+4. Ajoutez les membres de données suivants à la classe `Program`.  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  
@@ -120,4 +120,4 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

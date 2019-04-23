@@ -2,12 +2,12 @@
 title: Annuler les tâches asynchrones restantes quand l’une d’elles est terminée (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: c4998733fbfe4cdc6730d2433828f5ea996ff6a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298667"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Annuler les tâches asynchrones restantes quand l’une d’elles est terminée (C#)
 Utilisez la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> avec un <xref:System.Threading.CancellationToken> pour annuler toutes les tâches restantes quand une tâche est terminée. La méthode `WhenAny` accepte un argument qui est une collection de tâches. La méthode démarre toutes les tâches et retourne une tâche unique. Cette dernière est terminée une fois que toutes les tâches de la collection sont terminées.  
@@ -20,19 +20,19 @@ Utilisez la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayPropert
 ## <a name="downloading-the-example"></a>Téléchargement de l'exemple  
  Téléchargez l’intégralité des projets Windows Presentation Foundation (WPF) à partir de la page [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Exemple Async  : Réglage précis de votre application), puis suivez ces étapes.  
   
-1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
+1. Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
-2.  Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
+2. Dans la barre de menus, choisissez **Fichier**, **Ouvrir**, **Projet/Solution**.  
   
-3.  Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier solution (.sln) pour AsyncFineTuningCS.  
+3. Dans la boîte de dialogue **Ouvrir le projet**, ouvrez le dossier contenant l’exemple de code que vous avez décompressé, puis ouvrez le fichier solution (.sln) pour AsyncFineTuningCS.  
   
-4.  Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelAfterOneTask**, puis choisissez **Définir comme projet de démarrage**.  
+4. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du projet **CancelAfterOneTask**, puis choisissez **Définir comme projet de démarrage**.  
   
-5.  Appuyez sur la touche F5 pour exécuter le projet.  
+5. Appuyez sur la touche F5 pour exécuter le projet.  
   
      Appuyez sur les touches Ctrl+F5 pour exécuter le projet sans le déboguer.  
   
-6.  Exécutez le programme plusieurs fois pour vérifier que différents téléchargements se terminent en premier.  
+6. Exécutez le programme plusieurs fois pour vérifier que différents téléchargements se terminent en premier.  
   
  Si vous ne souhaitez pas télécharger le projet, vous pouvez passer en revue le fichier MainWindow.xaml.cs à la fin de cette rubrique.  
   
@@ -61,9 +61,9 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  Dans `AccessTheWebAsync`, effectuez les changements suivants. Les astérisques signalent les changements dans le fichier de code.  
   
-1.  Commentez ou supprimez la boucle.  
+1. Commentez ou supprimez la boucle.  
   
-2.  Créer une requête qui, une fois exécutée, génère une collection de tâches génériques. Chaque appel à `ProcessURLAsync` retourne un <xref:System.Threading.Tasks.Task%601> où `TResult` est un entier.  
+2. Créer une requête qui, une fois exécutée, génère une collection de tâches génériques. Chaque appel à `ProcessURLAsync` retourne un <xref:System.Threading.Tasks.Task%601> où `TResult` est un entier.  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  
@@ -71,14 +71,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
         from url in urlList select ProcessURLAsync(url, client, ct);  
     ```  
   
-3.  Appelez `ToArray` pour exécuter la requête et démarrer les tâches. L’application de la méthode `WhenAny` à l’étape suivante exécute la requête et démarre les tâches sans utiliser `ToArray`, mais il se peut que d’autres méthodes n’y parviennent pas. L’approche la plus sûre consiste à forcer l’exécution de la requête de manière explicite.  
+3. Appelez `ToArray` pour exécuter la requête et démarrer les tâches. L’application de la méthode `WhenAny` à l’étape suivante exécute la requête et démarre les tâches sans utiliser `ToArray`, mais il se peut que d’autres méthodes n’y parviennent pas. L’approche la plus sûre consiste à forcer l’exécution de la requête de manière explicite.  
   
     ```csharp  
     // ***Use ToArray to execute the query and start the download tasks.   
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Appelez `WhenAny` sur la collection de tâches. `WhenAny` retourne `Task(Of Task(Of Integer))` ou `Task<Task<int>>`.  Autrement dit, `WhenAny` retourne une tâche qui prend la valeur d’un `Task(Of Integer)` ou `Task<int>` unique quand elle est attendue. Cette tâche unique est la première tâche de la collection à se terminer. La tâche terminée en premier est assignée à `firstFinishedTask`. Le type de `firstFinishedTask` est <xref:System.Threading.Tasks.Task%601>, où `TResult` est un entier car il s’agit du type de retour de `ProcessURLAsync`.  
+4. Appelez `WhenAny` sur la collection de tâches. `WhenAny` retourne une `Task(Of Task(Of Integer))` ou une `Task<Task<int>>`.  Autrement dit, `WhenAny` retourne une tâche qui prend la valeur d’un `Task(Of Integer)` ou `Task<int>` unique quand elle est attendue. Cette tâche unique est la première tâche de la collection à se terminer. La tâche terminée en premier est assignée à `firstFinishedTask`. Le type de `firstFinishedTask` est <xref:System.Threading.Tasks.Task%601>, où `TResult` est un entier car il s’agit du type de retour de `ProcessURLAsync`.  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -86,14 +86,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  Dans cet exemple, vous vous intéressez uniquement à la tâche qui se termine en premier. Par conséquent, utilisez <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> pour annuler les tâches restantes.  
+5. Dans cet exemple, vous vous intéressez uniquement à la tâche qui se termine en premier. Par conséquent, utilisez <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> pour annuler les tâches restantes.  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
-6.  Enfin, attendez `firstFinishedTask` pour récupérer la longueur du contenu téléchargé.  
+6. Enfin, attendez `firstFinishedTask` pour récupérer la longueur du contenu téléchargé.  
   
     ```csharp  
     var length = await firstFinishedTask;  
@@ -260,6 +260,6 @@ namespace CancelAfterOneTask
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ajuster une application Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Réglage de votre application Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Exemple Async : Réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application (Exemple Async : Réglage précis de votre application)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

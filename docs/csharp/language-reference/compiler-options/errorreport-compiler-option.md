@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345090"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Options du compilateur C#)
 Cette option fournit un moyen pratique de signaler une erreur interne du compilateur C# à Microsoft.  
@@ -34,13 +34,13 @@ Cette option fournit un moyen pratique de signaler une erreur interne du compila
  **prompt**  
  Vous invite à envoyer un rapport dès qu'une erreur interne du compilateur se produit. **prompt** est la valeur par défaut quand vous compilez une application dans l’environnement de développement.  
   
- **queue**  
+ **file d'attente**  
  Met le rapport d’erreurs en file d’attente. Quand vous ouvrez une session avec des informations d’identification administratives, vous pouvez signaler toute défaillance qui s’est produite depuis votre dernière connexion. Vous ne serez pas invité à envoyer des rapports d’échecs plus d’une fois tous les trois jours. **queue** est la valeur par défaut quand vous compilez une application à partir de la ligne de commande.  
   
  **send**  
  Envoie automatiquement des rapports d’erreurs internes du compilateur à Microsoft. Pour activer cette option, vous devez tout d’abord accepter la politique de collecte de données de Microsoft. La première fois que vous spécifiez **-errorreport:send** sur un ordinateur, un message du compilateur vous dirige vers un site web qui affiche la politique de collecte de données de Microsoft.  
     
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une erreur interne du compilateur se produit quand le compilateur ne peut pas traiter un fichier de code source. Quand une telle erreur se produit, le compilateur ne génère pas de fichier de sortie ni de diagnostic utile que vous pouvez utiliser pour corriger votre code.  
   
  Dans les versions précédentes, quand vous receviez une erreur interne du compilateur, vous étiez invité à contacter le Support technique Microsoft pour signaler le problème. En utilisant **-errorreport**, vous pouvez fournir des informations sur l’erreur interne du compilateur à l’équipe Visual C#. Vos rapports d’erreurs peuvent aider à améliorer les versions ultérieures du compilateur.  
@@ -51,13 +51,13 @@ Cette option fournit un moyen pratique de signaler une erreur interne du compila
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la page **Propriétés** du projet. Pour plus d’informations, consultez [Générer, page du Concepteur de projets (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Ouvrez la page **Propriétés** du projet. Pour plus d’informations, consultez [Générer, page du Concepteur de projets (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Cliquez sur la page de propriétés **Générer**.  
+2. Cliquez sur la page de propriétés **Générer**.  
   
-3.  Cliquez sur le bouton **Avancées** .  
+3. Cliquez sur le bouton **Avancées** .  
   
-4.  Modifiez la propriété **Rapport d’erreurs du compilateur interne**.  
+4. Modifiez la propriété **Rapport d’erreurs du compilateur interne**.  
   
  Pour plus d'informations sur la façon de définir cette option du compilateur par programme, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

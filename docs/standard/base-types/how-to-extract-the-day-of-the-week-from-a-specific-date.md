@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327761"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procédure : extraire le jour de la semaine d’une date spécifique
 Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine pour une date particulière, et d'afficher le nom du jour de la semaine localisé pour une date particulière. Le jour de la semaine correspondant à une date particulière est indiqué par une valeur énumérée contenue dans la propriété <xref:System.DateTime.DayOfWeek%2A> ou <xref:System.DateTimeOffset.DayOfWeek%2A>. Par contre, la récupération du nom du jour de la semaine est une opération de mise en forme qui peut être effectuée en appelant une méthode de mise en forme, comme la méthode `ToString` d'une valeur de date et d'heure ou la méthode <xref:System.String.Format%2A?displayProperty=nameWithType>. Cette rubrique montre comment effectuer ces opérations de mise en forme.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Pour extraire un nombre indiquant le jour de la semaine d'une date spécifique  
   
-1.  Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
+1. Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
   
-2.  Utilisez la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> pour récupérer une valeur <xref:System.DayOfWeek> qui indique le jour de la semaine.  
+2. Utilisez la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> pour récupérer une valeur <xref:System.DayOfWeek> qui indique le jour de la semaine.  
   
-3.  Au besoin, effectuez un cast (en C#) ou une conversion (en Visual Basic) de la valeur <xref:System.DayOfWeek> en un entier.  
+3. Au besoin, effectuez un cast (en C#) ou une conversion (en Visual Basic) de la valeur <xref:System.DayOfWeek> en un entier.  
   
  L'exemple suivant affiche un entier qui représente le jour de la semaine d'une date spécifique.  
   
@@ -49,9 +49,9 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Pour extraire le nom abrégé du jour de la semaine d'une date spécifique  
   
-1.  Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
+1. Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
   
-2.  Vous pouvez extraire le nom abrégé du jour de la semaine au format de la culture actuelle ou d'une culture spécifique :  
+2. Vous pouvez extraire le nom abrégé du jour de la semaine au format de la culture actuelle ou d'une culture spécifique :  
   
     1.  Pour extraire le nom abrégé du jour de la semaine au format de la culture actuelle, appelez la méthode d'instance <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> de la valeur de date et d'heure, puis indiquez la chaîne « ddd » comme paramètre `format`. L'exemple suivant illustre l'appel de la méthode <xref:System.DateTime.ToString%28System.String%29>.  
   
@@ -65,9 +65,9 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Pour extraire le nom complet du jour de la semaine d'une date spécifique  
   
-1.  Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
+1. Si la date est représentée sous forme de chaîne, convertissez-la en une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> en utilisant la méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> statique.  
   
-2.  Vous pouvez extraire le nom complet du jour de la semaine au format de la culture actuelle ou d'une culture spécifique :  
+2. Vous pouvez extraire le nom complet du jour de la semaine au format de la culture actuelle ou d'une culture spécifique :  
   
     1.  Pour extraire le nom du jour de la semaine au format de la culture actuelle, appelez la méthode d'instance <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> de la valeur de date et d'heure, puis indiquez la chaîne « dddd » comme paramètre `format`. L'exemple suivant illustre l'appel de la méthode <xref:System.DateTime.ToString%28System.String%29>.  
   
@@ -87,9 +87,9 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
  Des langages spécifiques peuvent fournir des fonctionnalités similaires aux fonctionnalités offertes par le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ou complémentaires de celles-ci. Par exemple, Visual Basic comprend deux de ces fonctions :  
   
--   `Weekday`, qui retourne un nombre qui indique le jour de la semaine d'une date particulière. Il considère que la valeur ordinale du premier jour de la semaine est un, tandis que la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considère que cette valeur est égale à zéro.  
+-   `Weekday`, qui retourne un nombre indiquant le jour de la semaine d’une certaine date. Il considère que la valeur ordinale du premier jour de la semaine est un, tandis que la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considère que cette valeur est égale à zéro.  
   
--   `WeekdayName`, qui retourne, dans la culture actuelle, le nom du jour de la semaine correspondant au nombre d'un jour de la semaine.  
+-   `WeekdayName`, qui retourne, dans la culture actuelle, le nom du jour de la semaine correspondant à un certain numéro.  
   
  L'exemple suivant illustre l'utilisation des fonctions Visual Basic `Weekday` et `WeekdayName`.  
   
@@ -102,6 +102,6 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

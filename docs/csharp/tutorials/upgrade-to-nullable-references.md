@@ -3,12 +3,12 @@ title: Concevoir avec des types référence Nullable
 description: Ce tutoriel avancé présente les types référence Nullable. Il explique comment exprimer une intention de conception lorsque les valeurs de référence peuvent être Null et comment, dans le cas contraire, indiquer au compilateur qu’elles ne peuvent pas être Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427290"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutoriel : Migrer du code existant avec des types de référence nullable
 
@@ -24,7 +24,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019 Preview 2 et versions ultérieures](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) ou [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, avec le compilateur C# 8.0 bêta. Le compilateur bêta C# 8 est disponible avec [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou la dernière version de [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Ce tutoriel suppose de connaître C# et .NET, y compris Visual Studio ou l’interface CLI .NET Core.
 
@@ -81,7 +81,7 @@ Ces deux propriétés provoquent `CS8618`, « Propriété non-nullable initiali
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Il se passe beaucoup de choses dans le bloc de code précédent. Cette application utilise le package NuGet [AutoMapper](http://automapper.org/) pour construire un élément d’article de presse à partir d’un `ISyndicationItem`. Vous avez découvert que les éléments d’articles de presse sont construits et que les propriétés sont définies dans cette seule instruction. Cela signifie que la conception de `NewsStoryViewModel` indique que ces propriétés ne doivent jamais avoir la valeur `null`. Ces propriétés doivent être des **types de référence non nullable**. C’est ce qui correspond le mieux à l’intention de conception d’origine. En fait, n’importe quel `NewsStoryViewModel` *est* correctement instancié avec des valeurs non null. Ce qui fait du code d’initialisation suivant un correctif valide :
+Il se passe beaucoup de choses dans le bloc de code précédent. Cette application utilise le package NuGet [AutoMapper](https://automapper.org/) pour construire un élément d’article de presse à partir d’un `ISyndicationItem`. Vous avez découvert que les éléments d’articles de presse sont construits et que les propriétés sont définies dans cette seule instruction. Cela signifie que la conception de `NewsStoryViewModel` indique que ces propriétés ne doivent jamais avoir la valeur `null`. Ces propriétés doivent être des **types de référence non nullable**. C’est ce qui correspond le mieux à l’intention de conception d’origine. En fait, n’importe quel `NewsStoryViewModel` *est* correctement instancié avec des valeurs non null. Ce qui fait du code d’initialisation suivant un correctif valide :
 
 ```csharp
 public class NewsStoryViewModel
@@ -148,10 +148,10 @@ Vous devrez ajouter une instruction `using System.Linq` au début du fichier ég
 
 Cet ensemble de modifications met en évidence une attention particulière lors de la mise à jour de code qui inclut des instanciations génériques. La liste et les éléments dans la liste sont de type non nullable. L’un ou les deux peuvent être de type nullable. Toutes les déclarations suivantes sont autorisées :
 
-- `List<NewsStoryViewModel>` : liste non nullable de modèles d’affichage non nullable.
-- `List<NewsStoryViewModel?>` : liste non nullable de modèles d’affichage nullable.
-- `List<NewsStoryViewModel>?` : liste nullable de modèles d’affichage non nullable.
-- `List<NewsStoryViewModel?>?` : liste nullable de modèles d’affichage nullable.
+- `List<NewsStoryViewModel>`: liste non Nullable de modèles d’affichage non Nullable.
+- `List<NewsStoryViewModel?>`: liste non Nullable de modèles d’affichage Nullable.
+- `List<NewsStoryViewModel>?`: liste Nullable de modèles d’affichage non Nullable.
+- `List<NewsStoryViewModel?>?`: liste Nullable de modèles d’affichage Nullable.
 
 ## <a name="interfaces-with-external-code"></a>Interfaces avec du code externe
 

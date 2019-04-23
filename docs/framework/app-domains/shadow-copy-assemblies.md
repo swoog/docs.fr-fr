@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204560"
 ---
 # <a name="shadow-copying-assemblies"></a>Clichés instantanés d'assemblys
 Les clichés instantanés permettent aux assemblys qui sont utilisés dans un domaine d'application d'être mis à jour sans décharger le domaine d'application. Ceci est particulièrement utile pour les applications qui doivent être disponibles en permanence, comme des sites ASP.NET.  
@@ -78,8 +78,9 @@ Les clichés instantanés permettent aux assemblys qui sont utilisés dans un do
  La classe <xref:System.AppDomain> a plusieurs méthodes, comme <xref:System.AppDomain.SetShadowCopyFiles%2A> et <xref:System.AppDomain.ClearShadowCopyPath%2A>, qui peuvent être utilisées pour contrôler les clichés instantanés sur un domaine d'application, mais celles-ci ont été marquées comme étant obsolètes dans le .NET Framework version 2.0. La méthode recommandée pour configurer un domaine d'application pour les clichés instantanés est d'utiliser les propriétés de la classe <xref:System.AppDomainSetup>.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [Élément \<shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp>, élément](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

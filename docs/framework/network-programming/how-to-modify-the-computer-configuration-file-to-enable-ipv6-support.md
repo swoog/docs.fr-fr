@@ -2,12 +2,12 @@
 title: 'Procédure : modifier le fichier config de l’ordinateur en vue d’activer la prise en charge IPv6'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 8427a1641b4d6c782f2b2585ab49d38073567f2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bab8ad63641bd62b957d1aeb71a0d0f8a30df253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106494"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Procédure : modifier le fichier config de l’ordinateur en vue d’activer la prise en charge IPv6
 L’exemple de code suivant montre comment modifier le fichier de configuration (*machine.config*) d’un ordinateur pour activer la prise en charge d’IPv6. Le fichier *machine.config* est stocké dans le dossier *%Windir%\Microsoft.NET\Framework*, situé dans le répertoire d’installation de Windows. Il y a un fichier *machine.config* distinct dans les dossiers sous *%Windir%\Microsoft.NET\Framework* pour chaque version de .NET Framework installée sur l’ordinateur (par exemple, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -36,6 +36,7 @@ L’exemple de code suivant montre comment modifier le fichier de configuration 
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Adressage IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)
 - [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [\<ipv6>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

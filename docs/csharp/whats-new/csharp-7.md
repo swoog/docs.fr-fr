@@ -3,36 +3,36 @@ title: Nouveautés de C# 7.0 | Guide C#
 description: Découvrez les nouvelles fonctionnalités disponibles dans la version 7.0 du langage C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654183"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481299"
 ---
 # <a name="whats-new-in-c-70"></a>Nouveautés de C# 7.0
 
 C# 7.0 ajoute un certain nombre de nouvelles fonctionnalités au langage C# :
-* [Variables `out`](#out-variables)
-    - Vous pouvez déclarer des valeurs `out` inline comme arguments de la méthode dans laquelle elles sont utilisées.
+* [`out` variables](#out-variables)
+  - Vous pouvez déclarer des valeurs `out` inline comme arguments de la méthode dans laquelle elles sont utilisées.
 * [Tuples](#tuples)
-    - Vous pouvez créer des types légers et sans nom qui contiennent plusieurs champs publics. Les compilateurs et les outils de l’IDE comprennent la sémantique de ces types.
+  - Vous pouvez créer des types légers et sans nom qui contiennent plusieurs champs publics. Les compilateurs et les outils de l’IDE comprennent la sémantique de ces types.
 * [Éléments ignorés](#discards)
-    - Les éléments ignorés sont les variables temporaires en écriture seule utilisées dans les attributions quand vous ne vous souciez pas de la valeur assignée. Ils s’avèrent utiles lors de la déconstruction de tuples et de types définis par l’utilisateur, ainsi que lors de l’appel de méthodes avec des paramètres `out`.
+  - Les éléments ignorés sont les variables temporaires en écriture seule utilisées dans les attributions quand vous ne vous souciez pas de la valeur assignée. Ils s’avèrent utiles lors de la déconstruction de tuples et de types définis par l’utilisateur, ainsi que lors de l’appel de méthodes avec des paramètres `out`.
 * [Critères spéciaux](#pattern-matching)
-    - Vous pouvez créer une logique de branchement basée sur des types arbitraires et les valeurs des membres de ces types.
-* [Variables locales et retours `ref`](#ref-locals-and-returns)
-    - Les valeurs de retour et les variables locales de méthode peuvent être des références à un autre stockage.
+  - Vous pouvez créer une logique de branchement basée sur des types arbitraires et les valeurs des membres de ces types.
+* [`ref` Variables locales et retours](#ref-locals-and-returns)
+  - Les valeurs de retour et les variables locales de méthode peuvent être des références à un autre stockage.
 * [Fonctions locales](#local-functions)
-    - Vous pouvez imbriquer des fonctions dans d’autres fonctions afin de limiter leur portée et leur visibilité.
+  - Vous pouvez imbriquer des fonctions dans d’autres fonctions afin de limiter leur portée et leur visibilité.
 * [Autres membres expression-bodied](#more-expression-bodied-members)
-    - La liste des membres pouvant être créés à l’aide d’expressions s’est allongée.
-* [Expressions `throw`](#throw-expressions)
-    - Vous pouvez lever des exceptions dans les constructions de code qui n’étaient pas autorisées auparavant, car `throw` était une instruction. 
+  - La liste des membres pouvant être créés à l’aide d’expressions s’est allongée.
+* [`throw` Expressions](#throw-expressions)
+  - Vous pouvez lever des exceptions dans les constructions de code qui n’étaient pas autorisées auparavant, car `throw` était une instruction.
 * [Types de retour async généralisés](#generalized-async-return-types)
-    - Les méthodes déclarées avec le modificateur `async` peuvent retourner d’autres types en plus de `Task` et de `Task<T>`.
+  - Les méthodes déclarées avec le modificateur `async` peuvent retourner d’autres types en plus de `Task` et de `Task<T>`.
 * [Améliorations de la syntaxe littérale numérique](#numeric-literal-syntax-improvements)
-    - De nouveaux jetons améliorent la lisibilité des constantes numériques.
+  - De nouveaux jetons améliorent la lisibilité des constantes numériques.
 
 Le reste de cet article présente une vue d’ensemble de chaque fonctionnalité. Vous découvrirez la logique de chacune d’elles. Vous allez apprendre leur syntaxe. Vous pouvez découvrir ces fonctionnalités dans le cadre de notre [exploration interactive](../tutorials/exploration/csharp-7.yml).
 
@@ -46,10 +46,10 @@ Par souci de clarté, vous voulez peut-être spécifier le type de la variable `
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Le code est plus facile à lire. 
-    - Vous déclarez la variable out à l’endroit où vous l’utilisez, et non pas sur une autre ligne au-dessus.
+* Le code est plus facile à lire.
+  - Vous déclarez la variable out à l’endroit où vous l’utilisez, et non pas sur une autre ligne au-dessus.
 * Il n’est pas nécessaire d’assigner une valeur initiale.
-    - En déclarant la variable `out` à l’endroit où elle est utilisée dans un appel de méthode, vous ne pouvez pas l’utiliser accidentellement avant qu’elle soit assignée.
+  - En déclarant la variable `out` à l’endroit où elle est utilisée dans un appel de méthode, vous ne pouvez pas l’utiliser accidentellement avant qu’elle soit assignée.
 
 ## <a name="tuples"></a>Tuples
 
@@ -77,7 +77,7 @@ Dans certains cas, vous pouvez souhaiter décompresser les membres d’un tuple 
 Vous pouvez également fournir une déconstruction similaire pour tout type dans le .NET. Vous écrivez une méthode `Deconstruct` en tant que membre de la classe. Cette méthode `Deconstruct` fournit un ensemble d’arguments `out` pour chacune des propriétés que vous voulez extraire. Prenons la classe `Point` suivante qui fournit une méthode de déconstructeur qui extrait les coordonnées `X` et `Y` :
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 Vous pouvez extraire les champs individuels en affectant un `Point` à un tuple :
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ Pour plus d’informations, consultez [Éléments ignorés](../discards.md).
 
 ## <a name="pattern-matching"></a>Critères spéciaux
 
-Les *critères spéciaux* constituent une fonctionnalité qui vous permet d’implémenter la distribution de méthodes sur des propriétés autres que le type d’un objet. Vous êtes probablement déjà familiarisé avec la distribution de méthodes en fonction du type d’un objet. Dans la programmation orientée objet, les méthodes virtuelles et override fournissent une syntaxe du langage permettant d’implémenter la distribution de méthodes basées sur le type d’un objet. Les classes de base et dérivées offrent des implémentations différentes. Les expressions de critères spéciaux étendent ce concept de manière à vous permettre d’implémenter facilement des modèles de distribution similaires pour les types et les éléments de données qui ne sont pas liés au moyen d’une hiérarchie d’héritage. 
+Les *critères spéciaux* constituent une fonctionnalité qui vous permet d’implémenter la distribution de méthodes sur des propriétés autres que le type d’un objet. Vous êtes probablement déjà familiarisé avec la distribution de méthodes en fonction du type d’un objet. Dans la programmation orientée objet, les méthodes virtuelles et override fournissent une syntaxe du langage permettant d’implémenter la distribution de méthodes basées sur le type d’un objet. Les classes de base et dérivées offrent des implémentations différentes.
+Les expressions de critères spéciaux étendent ce concept de manière à vous permettre d’implémenter facilement des modèles de distribution similaires pour les types et les éléments de données qui ne sont pas liés au moyen d’une hiérarchie d’héritage.
 
 Les critères spéciaux prennent en charge les expressions `is` et les expressions `switch`. L’une ou l’autre permettent d’inspecter un objet et ses propriétés afin de déterminer s’il correspond au modèle recherché. Vous utilisez le mot clé `when` pour spécifier des règles supplémentaires pour le modèle.
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,10 +155,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` est le modèle de constante classique. 
+- `case 0:` est le modèle de constante classique.
 - `case IEnumerable<int> childSequence:` est un modèle de type.
-- `case int n when n > 0:` est un modèle de type avec une autre condition `when`.
-- `case null:` est le modèle null.
+- `case int n when n > 0:` est un modèle de type comportant une condition `when` supplémentaire.
+- `case null:` est le modèle Null.
 - `default:` est le cas par défaut classique.
 
 Pour plus d’informations sur les critères spéciaux, consultez [Critères spéciaux en C#](../pattern-matching.md).
@@ -170,20 +171,20 @@ Cette fonctionnalité active les algorithmes qui utilisent et retournent des ré
 
 Vous pouvez déclarer la valeur de retour en tant que `ref` et modifier cette valeur dans la matrice, comme indiqué dans le code suivant :
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 Le langage C# a plusieurs règles qui vous protègent contre une mauvaise utilisation des variables locales et des retours `ref` :
 
 * Vous devez ajouter le mot clé `ref` à la signature de méthode et à toutes les instructions `return` dans une méthode.
-    - Cela permet de clarifier le retour par référence tout au long de la méthode.
+  - Cela permet de clarifier le retour par référence tout au long de la méthode.
 * Un `ref return` peut être assigné à une variable de la valeur ou à une variable `ref`.
-    - L’appelant contrôle si la valeur de retour est copiée ou non. L’omission du modificateur `ref` lors de l’assignation de la valeur de retour indique que l’appelant souhaite une copie de la valeur, pas une référence au stockage.
+  - L’appelant contrôle si la valeur de retour est copiée ou non. L’omission du modificateur `ref` lors de l’assignation de la valeur de retour indique que l’appelant souhaite une copie de la valeur, pas une référence au stockage.
 * Vous ne pouvez pas affecter une valeur de retour de méthode standard à une variable locale `ref`.
-    - Cela rejette les instructions telles que `ref int i = sequence.Count();`.
+  - Cela a pour effet d’interdire les instructions telles que `ref int i = sequence.Count();`
 * Vous ne pouvez pas retourner un `ref` à une variable dont la durée de vie ne s’étend pas au-delà de l’exécution de la méthode.
-    - Cela signifie que vous ne pouvez pas retourner une référence à une variable locale ni une variable avec une étendue similaire.
-* Les variables locales et les retours `ref` ne peuvent pas être utilisés avec les méthodes Async.
-    - Le compilateur ne peut pas savoir si la variable référencée a été définie à sa valeur finale quand la méthode Async est retournée.
+  - Cela signifie que vous ne pouvez pas retourner une référence à une variable locale ni une variable avec une étendue similaire.
+* `ref` Les variables locales et les retours ne sont pas utilisables avec les méthodes asynchrones.
+  - Le compilateur ne peut pas savoir si la variable référencée a été définie à sa valeur finale quand la méthode Async est retournée.
 
 L’ajout de variables locales ref et de retours ref permet d’utiliser des algorithmes qui sont plus efficaces en évitant la copie de valeurs, ou d’effectuer plusieurs fois des opérations de déréférencement.
 
@@ -221,15 +222,15 @@ La modification d’une méthode en un membre expression-bodied est une [modific
 
 ## <a name="throw-expressions"></a>Expressions throw
 
-En C#, `throw` a toujours été une instruction. Étant donné que `throw` est une instruction, et non pas une expression, certaines constructions C# ne pouvaient pas l’utiliser. Il s’agit notamment des expressions conditionnelles, des expressions de fusion null, ainsi que de certaines expressions lambda. L’ajout de membres expression-bodied ajoute des emplacements supplémentaires où les expressions `throw` seraient utiles. Pour vous permettre d’écrire n’importe laquelle de ces constructions, C# 7.0 introduit les *expressions throw*. 
+En C#, `throw` a toujours été une instruction. Étant donné que `throw` est une instruction, et non pas une expression, certaines constructions C# ne pouvaient pas l’utiliser. Il s’agit notamment des expressions conditionnelles, des expressions de fusion null, ainsi que de certaines expressions lambda. L’ajout de membres expression-bodied ajoute des emplacements supplémentaires où les expressions `throw` seraient utiles. Pour vous permettre d’écrire n’importe laquelle de ces constructions, C# 7.0 introduit les *expressions throw*.
 
 Cet ajout facilite l’écriture de code davantage basé sur des expressions. Vous n’avez pas besoin d’instructions supplémentaires pour la vérification des erreurs.
 
 ## <a name="generalized-async-return-types"></a>Types de retour async généralisés
 
-Le retour d’un objet `Task` à partir de méthodes async peut introduire des goulots d’étranglement au niveau des performances dans certains chemins. `Task` est un type référence. Si vous l’utilisez, vous allouez donc un objet. Dans les cas où une méthode déclarée avec le modificateur `async` retourne un résultat mis en cache, ou si elle s’exécute de manière synchrone, le coût en termes de temps induit par les allocations supplémentaires peut s’avérer significatif dans les sections de code critiques pour les performances. Cela peut devenir coûteux si ces allocations se produisent dans des boucles serrées.
+Le retour d’un objet `Task` à partir de méthodes async peut introduire des goulots d’étranglement au niveau des performances dans certains chemins. `Task` est un type référence. L’utiliser implique donc d’allouer un objet. Dans les cas où une méthode déclarée avec le modificateur `async` retourne un résultat mis en cache, ou si elle s’exécute de manière synchrone, le coût en termes de temps induit par les allocations supplémentaires peut s’avérer significatif dans les sections de code critiques pour les performances. Cela peut devenir coûteux si ces allocations se produisent dans des boucles serrées.
 
-La nouvelle fonctionnalité du langage signifie que les types de retour des méthodes async ne se limitent pas à `Task`, `Task<T>` et `void`. Le type retourné doit toujours correspondre au modèle async, ce qui signifie qu’une méthode `GetAwaiter` doit être accessible. Pour donner un exemple concret, le type `ValueTask` a été ajouté au .NET Framework pour utiliser cette nouvelle fonctionnalité du langage : 
+La nouvelle fonctionnalité du langage signifie que les types de retour des méthodes async ne se limitent pas à `Task`, `Task<T>` et `void`. Le type retourné doit toujours correspondre au modèle async, ce qui signifie qu’une méthode `GetAwaiter` doit être accessible. Pour donner un exemple concret, le type `ValueTask` a été ajouté au .NET Framework pour utiliser cette nouvelle fonctionnalité du langage :
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076158"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling par défaut pour les objets
 Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWithType> peuvent être exposés à un code non managé sous la forme de l’un des types suivants :  
@@ -279,13 +279,13 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
  ![Diagramme qui montre un variant passé sur la pile.](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 Variants passés par valeur et par référence  
   
- **Comportement par défaut pour le marshaling d’objets et de variants par valeur**  
+ **Comportement par défaut de marshaling d’objets et de variants par valeur**  
   
 -   Lors du passage d’objets à partir de code managé vers COM, le contenu de l’objet est copié dans un nouveau variant créé par le marshaleur à l’aide des règles définies dans [Marshaling d’un objet vers un variant](#marshaling-object-to-variant). Les changements apportés au variant côté non managé ne sont pas retournés vers l’objet d’origine au retour de l’appel.  
   
 -   Lors du passage de variants à partir de COM vers du code managé, le contenu du variant est copié dans un objet nouvellement créé à l’aide des règles définies dans [Marshaling d’un variant vers un objet](#marshaling-variant-to-object). Les changements apportés à l’objet côté managé ne sont pas retournés vers le variant d’origine au retour de l’appel.  
   
- **Comportement par défaut pour le marshaling d’objets et de variants par référence**  
+ **Comportement par défaut de marshaling d’objets et de variants par référence**  
   
  Pour retourner des changements à l’appelant, les paramètres doivent être passés par référence. Par exemple, vous pouvez utiliser le mot clé **ref** en C# (ou **ByRef** en code managé Visual Basic) pour passer des paramètres par référence. Dans COM, les paramètres de référence sont passés à l’aide d’un pointeur tel que **variant \***.  
   
@@ -293,7 +293,7 @@ Variants passés par valeur et par référence
   
 -   Lors du passage d’un variant au code managé par référence, le marshaleur crée un objet et copie le contenu du variant dans l’objet avant que l’appel ne soit effectué. Une référence à l’objet est passée à la fonction managée, où l’utilisateur est libre de changer l’objet. Au retour de l’appel, tout changement apporté à l’objet référencé est retourné vers le variant d’origine. Si le type de l’objet est différent du type de l’objet passé dans l’appel, le type du variant d’origine est changé et la valeur est retournée dans le variant. Là encore, le type du variant passé dans l’appel peut être différent du type du variant retourné à partir de l’appel.  
   
- **Comportement par défaut pour le marshaling d’un variant où l’indicateur VT_BYREF a été défini**  
+ **Comportement par défaut de marshaling d’un variant dont l’indicateur VT_BYREF est défini**  
   
 -   Un variant passé à du code managé par valeur peut avoir l’indicateur **VT_BYREF** défini pour indiquer que le variant contient une référence plutôt qu’une valeur. Dans ce cas, le variant est toujours marshalé vers un objet, car le variant est passé par valeur. Le marshaleur déréférence automatiquement le contenu du variant et le copie dans un objet nouvellement créé avant d’effectuer l’appel. L’objet est ensuite passé à la fonction managée ; cependant, au retour de l’appel, l’objet n’est pas retourné dans le variant d’origine. Les changements apportés à l’objet managé sont perdus.  
   
@@ -314,7 +314,8 @@ Variants passés par valeur et par référence
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object**  *o*|Uniquement si le type n’a pas changé.|  
   
 ## <a name="see-also"></a>Voir aussi
-- [Comportement de marshaling par défaut](default-marshaling-behavior.md)
-- [Types blittable et non blittable](blittable-and-non-blittable-types.md)
+
+- [comportement de marshaling par défaut](default-marshaling-behavior.md)
+- [types blittable et non blittable](blittable-and-non-blittable-types.md)
 - [Attributs directionnels](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copie et épinglage](copying-and-pinning.md)
+- [copie et épinglage](copying-and-pinning.md)

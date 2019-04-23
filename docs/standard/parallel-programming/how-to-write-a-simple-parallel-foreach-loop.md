@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583639"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427355"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Procédure : écrire une boucle Parallel.ForEach simple
 
@@ -51,7 +51,7 @@ Dans Visual Studio, il existe des modèles d’application de console Visual Bas
 
 À partir de la ligne de commande, vous pouvez utiliser .NET Core et ses outils de ligne de commande (par exemple, `dotnet new console` ou `dotnet new console -lang vb`), ou bien créer le fichier et utiliser le compilateur de ligne de commande d’une application .NET Framework.
 
-Pour un projet .NET Core, vous devez référencer le package NuGet **System.Drawing.Common**. Dans Visual Studio, utilisez le gestionnaire de package NuGet pour installer le package. Vous pouvez aussi ajouter une référence au package dans votre fichier *.* csproj* ou *.* vbproj* :
+Pour un projet .NET Core, vous devez référencer le package NuGet **System.Drawing.Common**. Dans Visual Studio, utilisez le gestionnaire de package NuGet pour installer le package. Vous pouvez aussi ajouter une référence au package dans votre fichier \*.csproj ou \*.vbproj :
  
 ```xml
 <ItemGroup>
@@ -65,6 +65,6 @@ Pour exécuter votre application de console depuis Visual Studio, appuyez sur **
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Parallélisme des données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

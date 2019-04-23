@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306304"
 ---
 # <a name="xslt-parameters"></a>Paramètres XSLT
 Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet de paramètre à ce stade.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Pour utiliser un paramètre XSLT  
   
-1.  Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez le paramètre à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez le paramètre à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Appelez le paramètre à partir de la feuille de style.  
+2. Appelez le paramètre à partir de la feuille de style.  
   
-3.  Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+3. Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="parameter-types"></a>Types de paramètres  
  L'objet de paramètre doit correspondre à un type W3C. Le tableau suivant illustre les types W3C correspondants, les classes Microsoft .NET Framework équivalentes (type) et précise si le type W3C est un type XPath ou XSLT.  
@@ -40,7 +40,7 @@ Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentL
   
  *Cela équivaut à une collection de nœuds contenant un seul nœud.  
   
- Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes. Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. Les types <xref:System.Xml.XPath.IXPathNavigable> sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes. Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> Les types sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Tous les autres types provoquent une erreur.  
   

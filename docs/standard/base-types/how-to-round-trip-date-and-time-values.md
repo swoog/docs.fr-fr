@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340605"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procédure : effectuer un aller-retour de valeurs de date et d’heure
 Dans de nombreuses applications, une valeur de date et d’heure est destinée à identifier clairement un point unique dans le temps. Cette rubrique montre comment enregistrer et restaurer une valeur <xref:System.DateTime>, une valeur <xref:System.DateTimeOffset> et une valeur de date et d’heure avec des informations de fuseau horaire pour que la valeur restaurée identifie la même heure que la valeur enregistrée.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Pour effectuer un aller-retour d’une valeur DateTime  
   
-1.  Convertissez la valeur <xref:System.DateTime> en sa représentation sous forme de chaîne en appelant la méthode <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> avec le spécificateur de format « o ».  
+1. Convertissez la valeur <xref:System.DateTime> en sa représentation sous forme de chaîne en appelant la méthode <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> avec le spécificateur de format « o ».  
   
-2.  Enregistrez la représentation sous forme de chaîne de la valeur <xref:System.DateTime> dans un fichier ou passez-la dans un processus, un domaine d’application ou une limite d’ordinateur.  
+2. Enregistrez la représentation sous forme de chaîne de la valeur <xref:System.DateTime> dans un fichier ou passez-la dans un processus, un domaine d’application ou une limite d’ordinateur.  
   
-3.  Récupérez la chaîne qui représente la valeur <xref:System.DateTime>.  
+3. Récupérez la chaîne qui représente la valeur <xref:System.DateTime>.  
   
-4.  Appelez la méthode <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> et passez <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> en tant que valeur du paramètre `styles`.  
+4. Appelez la méthode <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> et passez <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> en tant que valeur du paramètre `styles`.  
   
  L’exemple suivant montre comment effectuer un aller-retour d’une valeur <xref:System.DateTime>.  
   
@@ -43,13 +43,13 @@ Dans de nombreuses applications, une valeur de date et d’heure est destinée �
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Pour effectuer un aller-retour d’une valeur DateTimeOffset  
   
-1.  Convertissez la valeur <xref:System.DateTimeOffset> en sa représentation sous forme de chaîne en appelant la méthode <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> avec le spécificateur de format « o ».  
+1. Convertissez la valeur <xref:System.DateTimeOffset> en sa représentation sous forme de chaîne en appelant la méthode <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> avec le spécificateur de format « o ».  
   
-2.  Enregistrez la représentation sous forme de chaîne de la valeur <xref:System.DateTimeOffset> dans un fichier ou passez-la dans un processus, un domaine d’application ou une limite d’ordinateur.  
+2. Enregistrez la représentation sous forme de chaîne de la valeur <xref:System.DateTimeOffset> dans un fichier ou passez-la dans un processus, un domaine d’application ou une limite d’ordinateur.  
   
-3.  Récupérez la chaîne qui représente la valeur <xref:System.DateTimeOffset>.  
+3. Récupérez la chaîne qui représente la valeur <xref:System.DateTimeOffset>.  
   
-4.  Appelez la méthode <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> et passez <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> en tant que valeur du paramètre `styles`.  
+4. Appelez la méthode <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> et passez <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> en tant que valeur du paramètre `styles`.  
   
  L’exemple suivant montre comment effectuer un aller-retour d’une valeur <xref:System.DateTimeOffset>.  
   
@@ -60,18 +60,18 @@ Dans de nombreuses applications, une valeur de date et d’heure est destinée �
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>Pour effectuer un aller-retour d’une valeur de date et d’heure avec son fuseau horaire  
   
-1.  Définissez une classe ou une structure avec deux champs. Le premier champ est un objet <xref:System.DateTime> ou <xref:System.DateTimeOffset>, et le second est un objet <xref:System.TimeZoneInfo>. L’exemple suivant est une version simple de ce type.  
+1. Définissez une classe ou une structure avec deux champs. Le premier champ est un objet <xref:System.DateTime> ou <xref:System.DateTimeOffset>, et le second est un objet <xref:System.TimeZoneInfo>. L’exemple suivant est une version simple de ce type.  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Marquez la classe avec l’attribut <xref:System.SerializableAttribute>.  
+2. Marquez la classe avec l’attribut <xref:System.SerializableAttribute>.  
   
-3.  Sérialisez l’objet à l’aide de la méthode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
+3. Sérialisez l’objet à l’aide de la méthode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
   
-4.  Restaurez l’objet à l’aide de la méthode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A>.  
+4. Restaurez l’objet à l’aide de la méthode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A>.  
   
-5.  Castez (en C#) ou convertissez (en Visual Basic) l’objet désérialisé en objet du type approprié.  
+5. Castez (en C#) ou convertissez (en Visual Basic) l’objet désérialisé en objet du type approprié.  
   
  L’exemple suivant montre comment effectuer un aller-retour d’un objet qui stocke à la fois des informations de date et d’heure et de fuseau horaire.  
   
@@ -101,6 +101,6 @@ Dans de nombreuses applications, une valeur de date et d’heure est destinée �
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Choisir entre DateTime, DateTimeOffset, TimeSpan et TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

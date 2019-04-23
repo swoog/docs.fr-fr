@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315762"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d'interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu’un appelant puisse modifier les données transmises et renvoyer ces modifications à l’appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Si une interface n’est pas d’un objet connu, le marshaleur effectue ce qui suit :  
   
-1.  Le marshaleur interroge l’objet au sujet de l’interface **IProvideClassInfo2**. Si celle-ci est fournie, le marshaleur utilise le CLSID retourné à partir d’**IProvideClassInfo2.GetGUID** pour identifier la coclasse fournissant l’interface. Grâce au CLSID, le marshaleur peut localiser le wrapper à partir du Registre si l’assembly a déjà été inscrit.  
+1. Le marshaleur interroge l’objet au sujet de l’interface **IProvideClassInfo2**. Si celle-ci est fournie, le marshaleur utilise le CLSID retourné à partir d’**IProvideClassInfo2.GetGUID** pour identifier la coclasse fournissant l’interface. Grâce au CLSID, le marshaleur peut localiser le wrapper à partir du Registre si l’assembly a déjà été inscrit.  
   
-2.  Le marshaleur interroge l’interface au sujet de l’interface **IProvideClassInfo**. Si celle-ci est fournie, le marshaleur utilise l’**ITypeInfo** retourné à partir d’**IProvideClassInfo.GetClassinfo** pour déterminer le CLSID de la classe exposant l’interface. Le marshaleur peut utiliser le CLSID pour localiser les métadonnées du wrapper.  
+2. Le marshaleur interroge l’interface au sujet de l’interface **IProvideClassInfo**. Si celle-ci est fournie, le marshaleur utilise l’**ITypeInfo** retourné à partir d’**IProvideClassInfo.GetClassinfo** pour déterminer le CLSID de la classe exposant l’interface. Le marshaleur peut utiliser le CLSID pour localiser les métadonnées du wrapper.  
   
-3.  Si le marshaleur ne peut toujours pas identifier la classe, il enveloppe l’interface avec une classe wrapper générique appelée **System.__ComObject**.  
+3. Si le marshaleur ne peut toujours pas identifier la classe, il enveloppe l’interface avec une classe wrapper générique appelée **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Marshaling par défaut pour les délégués  
  Un délégué managé est marshalé comme une interface COM ou comme un pointeur fonction, en fonction du mécanisme d’appel :  
@@ -333,7 +333,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>Types valeur utilisés dans COM Interop  
  Les types mis en forme peuvent également être passés aux appels de méthode d'interopérabilité COM. En effet, quand ils sont exportés vers une bibliothèque de types, les types valeur sont convertis automatiquement en structures. Comme dans l'exemple suivant, le type valeur `Point` devient une définition de type (typedef) portant le nom `Point`. Toutes les références au type valeur `Point` situées ailleurs que dans la bibliothèque de types sont remplacées par le typedef `Point`.  
   
- **Représentation d’une bibliothèque de types**  
+ **Représentation d'une bibliothèque de types**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -440,8 +440,9 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-- [Types blittable et non blittable](blittable-and-non-blittable-types.md)
-- [Copie et épinglage](copying-and-pinning.md)
+
+- [types blittable et non blittable](blittable-and-non-blittable-types.md)
+- [copie et épinglage](copying-and-pinning.md)
 - [Marshaling par défaut pour les tableaux](default-marshaling-for-arrays.md)
 - [Marshaling par défaut pour les objets](default-marshaling-for-objects.md)
 - [Marshaling par défaut pour les chaînes](default-marshaling-for-strings.md)

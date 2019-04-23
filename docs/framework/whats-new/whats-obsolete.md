@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337277"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Éléments obsolètes dans la bibliothèque de classes .NET Framework
 Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et membres de type qui fournissent de nouvelles fonctionnalités. Les types existants et leurs membres évoluent aussi. Par exemple, certains types deviennent moins importants quand la technologie qu'ils prennent en charge est remplacée par une nouvelle, tandis que certaines méthodes sont remplacées par de nouvelles méthodes qui sont soit plus pratiques, soit plus complètes.  
@@ -42,9 +42,9 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
   
  Vous pouvez choisir de ne pas recompiler le code existant avec une version ultérieure du .NET Framework. À la place, vous pouvez spécifier la version du .NET Framework sur laquelle votre code compilé existant est exécuté. Supposons, par exemple, que vous possédiez une application nommée app1.exe qui a été compilée avec le [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], mais que vous souhaitiez que l'application s'exécute avec le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Ce processus implique les étapes suivantes :  
   
-1.  Créez un fichier de configuration pour votre fichier exécutable principal et nommez-le *Nom_app*.exe.config, où *Nom_app* est le nom du fichier exécutable de l’application. Pour l'application nommée app1.exe de notre exemple, vous devez créer un fichier de configuration intitulé app1.exe.config.  
+1. Créez un fichier de configuration pour votre fichier exécutable principal et nommez-le *Nom_app*.exe.config, où *Nom_app* est le nom du fichier exécutable de l’application. Pour l'application nommée app1.exe de notre exemple, vous devez créer un fichier de configuration intitulé app1.exe.config.  
   
-2.  Ajoutez le code suivant au fichier de configuration.  
+2. Ajoutez le code suivant au fichier de configuration.  
   
     ```xml  
     <configuration>  
@@ -56,7 +56,7 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
   
  Le tableau suivant répertorie les valeurs de chaîne que vous pouvez assigner à l'attribut `version` pour cibler une version spécifique du .NET Framework.  
   
-|Version du .NET Framework|Chaîne `version`|
+|Version du .NET Framework|`version` string|
 |-|-|  
 |4.7 (y compris 4.7.1 et 4.7.2)|v4.0|  
 |4.6 (y compris 4.6.1 et 4.6.2)|v4.0|  
@@ -73,13 +73,14 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
  [Membres obsolètes](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listes des éléments obsolètes pour les versions antérieures  
- [Types obsolètes dans le .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Types obsolètes dans .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Membres obsolètes dans le .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Membres obsolètes dans .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Liste des éléments obsolètes pour le .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Liste des éléments obsolètes dans .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Liste des éléments obsolètes pour le .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Liste des éléments obsolètes dans .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [\<supportedRuntime>, élément](../configure-apps/file-schema/startup/supportedruntime-element.md)

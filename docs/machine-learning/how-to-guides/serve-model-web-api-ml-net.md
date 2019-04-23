@@ -3,12 +3,12 @@ title: Alimenter un modèle Machine Learning dans l’API web ASP.NET Core
 description: Alimentez un modèle Machine Learning d’analyse des sentiments ML.NET sur Internet avec l’API web ASP.NET Core.
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321227"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Guide pratique : Alimenter un modèle Machine Learning par le biais de l’API web ASP.NET Core
 
@@ -21,7 +21,7 @@ Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET versio
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .Net Core » installée.
+- [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .Net Core » installée.
 - PowerShell ;
 - un modèle préentraîné :
     - Suivez le [tutoriel Analyse des sentiments ML.NET](../tutorials/sentiment-analysis.md) pour créer votre propre modèle.
