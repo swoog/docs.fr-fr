@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12a114ea65aca544d653704cdfb01ed15d19c581
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143219"
 ---
-# <a name="cordebugblockingobject-structure"></a><span data-ttu-id="b54e1-102">CorDebugBlockingObject, structure</span><span class="sxs-lookup"><span data-stu-id="b54e1-102">CorDebugBlockingObject Structure</span></span>
-<span data-ttu-id="b54e1-103">Définit un objet qui bloque un thread et la raison spécifique que le thread est bloqué.</span><span class="sxs-lookup"><span data-stu-id="b54e1-103">Defines an object that is blocking a thread and the specific reason that the thread is blocked.</span></span>  
+# <a name="cordebugblockingobject-structure"></a><span data-ttu-id="b48ac-102">CorDebugBlockingObject, structure</span><span class="sxs-lookup"><span data-stu-id="b48ac-102">CorDebugBlockingObject Structure</span></span>
+<span data-ttu-id="b48ac-103">Définit un objet qui bloque un thread et la raison spécifique que le thread est bloqué.</span><span class="sxs-lookup"><span data-stu-id="b48ac-103">Defines an object that is blocking a thread and the specific reason that the thread is blocked.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b54e1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b54e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b48ac-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b48ac-104">Syntax</span></span>  
   
 ```  
 Typedef struct CorDebugBlockingObject  
@@ -37,26 +37,26 @@ CorDebugBlockingReason blockingReason;
 }  CorDebugBlockingObject;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b54e1-105">Membres</span><span class="sxs-lookup"><span data-stu-id="b54e1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b48ac-105">Membres</span><span class="sxs-lookup"><span data-stu-id="b48ac-105">Members</span></span>  
   
-|<span data-ttu-id="b54e1-106">Membre</span><span class="sxs-lookup"><span data-stu-id="b54e1-106">Member</span></span>|<span data-ttu-id="b54e1-107">Description</span><span class="sxs-lookup"><span data-stu-id="b54e1-107">Description</span></span>|  
+|<span data-ttu-id="b48ac-106">Membre</span><span class="sxs-lookup"><span data-stu-id="b48ac-106">Member</span></span>|<span data-ttu-id="b48ac-107">Description</span><span class="sxs-lookup"><span data-stu-id="b48ac-107">Description</span></span>|  
 |------------|-----------------|  
-|`pBlockingObject`|<span data-ttu-id="b54e1-108">L’objet sur lequel le thread est bloqué.</span><span class="sxs-lookup"><span data-stu-id="b54e1-108">The object on which the thread is blocking.</span></span> <span data-ttu-id="b54e1-109">Cet objet est valid uniquement pour la durée de l’état synchronisé actuel.</span><span class="sxs-lookup"><span data-stu-id="b54e1-109">This object is valid only for the duration of the current synchronized state.</span></span> <span data-ttu-id="b54e1-110">Si deux threads se bloquent sur le même objet dans le même état synchronisé, vous pouvez attendre la [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) méthode pour retourner la même valeur.</span><span class="sxs-lookup"><span data-stu-id="b54e1-110">If two threads are blocking on the same object within the same synchronized state, you may expect the [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) method to return the same value.</span></span> <span data-ttu-id="b54e1-111">Toutefois, les interfaces peuvent ou peut ne pas être pointeur équivalente.</span><span class="sxs-lookup"><span data-stu-id="b54e1-111">However, the interfaces may or may not be pointer equivalent.</span></span>|  
-|`dwTimeout`|<span data-ttu-id="b54e1-112">Le nombre de millisecondes avant l’opération de blocage sera la valeur infinie, ce qui indique ce qu’elle soit aucun délai d’expiration ou expiration. La valeur de délai d’attente spécifie la longueur totale de temps pour l’opération de blocage, pas le temps restant.</span><span class="sxs-lookup"><span data-stu-id="b54e1-112">The number of milliseconds before the blocking operation will time out, or the value INFINITE, which indicates that it will not time out. The time-out value specifies the total length of time for the blocking operation, not the time that is still remaining.</span></span>|  
-|`blockingReason`|<span data-ttu-id="b54e1-113">La raison est que le thread est bloqué sur cet objet.</span><span class="sxs-lookup"><span data-stu-id="b54e1-113">The reason that the thread is blocked on this object.</span></span>|  
+|`pBlockingObject`|<span data-ttu-id="b48ac-108">L’objet sur lequel le thread est bloqué.</span><span class="sxs-lookup"><span data-stu-id="b48ac-108">The object on which the thread is blocking.</span></span> <span data-ttu-id="b48ac-109">Cet objet est valid uniquement pour la durée de l’état synchronisé actuel.</span><span class="sxs-lookup"><span data-stu-id="b48ac-109">This object is valid only for the duration of the current synchronized state.</span></span> <span data-ttu-id="b48ac-110">Si deux threads se bloquent sur le même objet dans le même état synchronisé, vous pouvez attendre la [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) méthode pour retourner la même valeur.</span><span class="sxs-lookup"><span data-stu-id="b48ac-110">If two threads are blocking on the same object within the same synchronized state, you may expect the [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) method to return the same value.</span></span> <span data-ttu-id="b48ac-111">Toutefois, les interfaces peuvent ou peut ne pas être pointeur équivalente.</span><span class="sxs-lookup"><span data-stu-id="b48ac-111">However, the interfaces may or may not be pointer equivalent.</span></span>|  
+|`dwTimeout`|<span data-ttu-id="b48ac-112">Le nombre de millisecondes avant l’opération de blocage sera la valeur infinie, ce qui indique ce qu’elle soit aucun délai d’expiration ou expiration. La valeur de délai d’attente spécifie la longueur totale de temps pour l’opération de blocage, pas le temps restant.</span><span class="sxs-lookup"><span data-stu-id="b48ac-112">The number of milliseconds before the blocking operation will time out, or the value INFINITE, which indicates that it will not time out. The time-out value specifies the total length of time for the blocking operation, not the time that is still remaining.</span></span>|  
+|`blockingReason`|<span data-ttu-id="b48ac-113">La raison est que le thread est bloqué sur cet objet.</span><span class="sxs-lookup"><span data-stu-id="b48ac-113">The reason that the thread is blocked on this object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b54e1-114">Notes</span><span class="sxs-lookup"><span data-stu-id="b54e1-114">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b48ac-114">Notes</span><span class="sxs-lookup"><span data-stu-id="b48ac-114">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b54e1-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b54e1-115">Requirements</span></span>  
- <span data-ttu-id="b54e1-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b54e1-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b48ac-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b48ac-115">Requirements</span></span>  
+ <span data-ttu-id="b48ac-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b48ac-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b54e1-117">**En-tête :** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="b54e1-117">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="b48ac-117">**En-tête :** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="b48ac-117">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="b54e1-118">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b54e1-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b48ac-118">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b48ac-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b54e1-119">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b54e1-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="b48ac-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b48ac-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b54e1-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b54e1-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b48ac-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b48ac-120">See also</span></span>
 
-- [<span data-ttu-id="b54e1-121">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="b54e1-121">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="b54e1-122">Débogage</span><span class="sxs-lookup"><span data-stu-id="b54e1-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="b48ac-121">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="b48ac-121">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="b48ac-122">Débogage</span><span class="sxs-lookup"><span data-stu-id="b48ac-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

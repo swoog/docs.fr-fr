@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bfec360dc7817864c57ae99c9d1648c805f524b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154465"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="b0c72-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="b0c72-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-`GetRoDataRVA` <span data-ttu-id="b0c72-103">est obsolète.</span><span class="sxs-lookup"><span data-stu-id="b0c72-103">is obsolete.</span></span> <span data-ttu-id="b0c72-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="b0c72-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="e2613-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA, méthode</span><span class="sxs-lookup"><span data-stu-id="e2613-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="e2613-103">`GetRoDataRVA` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="e2613-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="e2613-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="e2613-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0c72-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b0c72-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2613-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e2613-105">See also</span></span>
 
-- [<span data-ttu-id="b0c72-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="b0c72-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e2613-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="e2613-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

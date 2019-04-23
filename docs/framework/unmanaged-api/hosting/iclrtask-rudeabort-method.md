@@ -18,47 +18,47 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147613"
 ---
-# <a name="iclrtaskrudeabort-method"></a><span data-ttu-id="e86b4-102">ICLRTask::RudeAbort, méthode</span><span class="sxs-lookup"><span data-stu-id="e86b4-102">ICLRTask::RudeAbort Method</span></span>
-<span data-ttu-id="e86b4-103">Indique le common language runtime (CLR) d’abandonner la tâche représentée par le [ICLRTask, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) immédiatement et sans condition de l’instance.</span><span class="sxs-lookup"><span data-stu-id="e86b4-103">Instructs the common language runtime (CLR) to abort the task represented by the current [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance immediately and unconditionally.</span></span>  
+# <a name="iclrtaskrudeabort-method"></a><span data-ttu-id="84730-102">ICLRTask::RudeAbort, méthode</span><span class="sxs-lookup"><span data-stu-id="84730-102">ICLRTask::RudeAbort Method</span></span>
+<span data-ttu-id="84730-103">Indique le common language runtime (CLR) d’abandonner la tâche représentée par le [ICLRTask, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) immédiatement et sans condition de l’instance.</span><span class="sxs-lookup"><span data-stu-id="84730-103">Instructs the common language runtime (CLR) to abort the task represented by the current [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance immediately and unconditionally.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e86b4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e86b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84730-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="84730-104">Syntax</span></span>  
   
 ```  
 HRESULT RudeAbort ();   
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="e86b4-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="e86b4-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84730-105">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="84730-105">Return Value</span></span>  
   
-|<span data-ttu-id="e86b4-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e86b4-106">HRESULT</span></span>|<span data-ttu-id="e86b4-107">Description</span><span class="sxs-lookup"><span data-stu-id="e86b4-107">Description</span></span>|  
+|<span data-ttu-id="84730-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="84730-106">HRESULT</span></span>|<span data-ttu-id="84730-107">Description</span><span class="sxs-lookup"><span data-stu-id="84730-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e86b4-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="e86b4-108">S_OK</span></span>|`RudeAbort` <span data-ttu-id="e86b4-109">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="e86b4-109">returned successfully.</span></span>|  
-|<span data-ttu-id="e86b4-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e86b4-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e86b4-111">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="e86b4-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e86b4-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e86b4-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e86b4-113">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="e86b4-113">The call timed out.</span></span>|  
-|<span data-ttu-id="e86b4-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e86b4-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e86b4-115">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="e86b4-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e86b4-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e86b4-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e86b4-117">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="e86b4-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e86b4-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e86b4-118">E_FAIL</span></span>|<span data-ttu-id="e86b4-119">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="e86b4-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e86b4-120">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="e86b4-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e86b4-121">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e86b4-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="84730-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="84730-108">S_OK</span></span>|<span data-ttu-id="84730-109">`RudeAbort` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="84730-109">`RudeAbort` returned successfully.</span></span>|  
+|<span data-ttu-id="84730-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="84730-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="84730-111">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="84730-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="84730-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="84730-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="84730-113">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="84730-113">The call timed out.</span></span>|  
+|<span data-ttu-id="84730-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="84730-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="84730-115">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="84730-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="84730-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="84730-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="84730-117">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="84730-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="84730-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="84730-118">E_FAIL</span></span>|<span data-ttu-id="84730-119">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="84730-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="84730-120">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="84730-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="84730-121">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="84730-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e86b4-122">Notes</span><span class="sxs-lookup"><span data-stu-id="e86b4-122">Remarks</span></span>  
- <span data-ttu-id="e86b4-123">Un hôte appelle `RudeAbort` pour abandonner immédiatement une tâche.</span><span class="sxs-lookup"><span data-stu-id="e86b4-123">A host calls `RudeAbort` to abort a task immediately.</span></span> <span data-ttu-id="e86b4-124">Les finaliseurs et les routines de gestion des exceptions ne sont pas garantis pour être exécutée.</span><span class="sxs-lookup"><span data-stu-id="e86b4-124">Finalizers and exception handling routines are not guaranteed to be executed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84730-122">Notes</span><span class="sxs-lookup"><span data-stu-id="84730-122">Remarks</span></span>  
+ <span data-ttu-id="84730-123">Un hôte appelle `RudeAbort` pour abandonner immédiatement une tâche.</span><span class="sxs-lookup"><span data-stu-id="84730-123">A host calls `RudeAbort` to abort a task immediately.</span></span> <span data-ttu-id="84730-124">Les finaliseurs et les routines de gestion des exceptions ne sont pas garantis pour être exécutée.</span><span class="sxs-lookup"><span data-stu-id="84730-124">Finalizers and exception handling routines are not guaranteed to be executed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e86b4-125">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e86b4-125">Requirements</span></span>  
- <span data-ttu-id="e86b4-126">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e86b4-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84730-125">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="84730-125">Requirements</span></span>  
+ <span data-ttu-id="84730-126">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84730-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e86b4-127">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e86b4-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84730-127">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="84730-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e86b4-128">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e86b4-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84730-128">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="84730-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="e86b4-129">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="e86b4-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="84730-129">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84730-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e86b4-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e86b4-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84730-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="84730-130">See also</span></span>
 
-- [<span data-ttu-id="e86b4-131">ICLRTask, interface</span><span class="sxs-lookup"><span data-stu-id="e86b4-131">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="e86b4-132">ICLRTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="e86b4-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="e86b4-133">IHostTask, interface</span><span class="sxs-lookup"><span data-stu-id="e86b4-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="e86b4-134">IHostTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="e86b4-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="84730-131">ICLRTask, interface</span><span class="sxs-lookup"><span data-stu-id="84730-131">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="84730-132">ICLRTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="84730-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="84730-133">IHostTask, interface</span><span class="sxs-lookup"><span data-stu-id="84730-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="84730-134">IHostTaskManager, interface</span><span class="sxs-lookup"><span data-stu-id="84730-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

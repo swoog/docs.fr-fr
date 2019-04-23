@@ -12,18 +12,18 @@ ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146092"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a><span data-ttu-id="3b2f7-102">ICorProfilerInfo7::GetInMemorySymbolsLength (méthode)</span><span class="sxs-lookup"><span data-stu-id="3b2f7-102">ICorProfilerInfo7::GetInMemorySymbolsLength Method</span></span>
-<span data-ttu-id="3b2f7-103">[Prise en charge dans le .NET Framework 4.6.1 et versions ultérieures]</span><span class="sxs-lookup"><span data-stu-id="3b2f7-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a><span data-ttu-id="10a5d-102">ICorProfilerInfo7::GetInMemorySymbolsLength (méthode)</span><span class="sxs-lookup"><span data-stu-id="10a5d-102">ICorProfilerInfo7::GetInMemorySymbolsLength Method</span></span>
+<span data-ttu-id="10a5d-103">[Prise en charge dans le .NET Framework 4.6.1 et versions ultérieures]</span><span class="sxs-lookup"><span data-stu-id="10a5d-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="3b2f7-104">Retourne la longueur d’un flux de symbole d’en mémoire.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-104">Returns the length of an in-memory symbol stream.</span></span>  
+ <span data-ttu-id="10a5d-104">Retourne la longueur d’un flux de symbole d’en mémoire.</span><span class="sxs-lookup"><span data-stu-id="10a5d-104">Returns the length of an in-memory symbol stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b2f7-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3b2f7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10a5d-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="10a5d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetInMemorySymbolsLength(  
@@ -32,33 +32,33 @@ HRESULT GetInMemorySymbolsLength(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b2f7-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="3b2f7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10a5d-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="10a5d-106">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="3b2f7-107">[in] L’identificateur du module qui contient le flux en mémoire.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-107">[in] The identifier of the module containing the in-memory stream.</span></span>  
+ <span data-ttu-id="10a5d-107">[in] L’identificateur du module qui contient le flux en mémoire.</span><span class="sxs-lookup"><span data-stu-id="10a5d-107">[in] The identifier of the module containing the in-memory stream.</span></span>  
   
- <span data-ttu-id="3b2f7-108">pCountSymbolBytes</span><span class="sxs-lookup"><span data-stu-id="3b2f7-108">pCountSymbolBytes</span></span>  
- <span data-ttu-id="3b2f7-109">[out] Un pointeur vers un `DWORD` valeur qui, lorsque la méthode est retournée, contient la longueur du flux en octets.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-109">[out] A pointer to a `DWORD` value that, when the method returns, contains the length of the stream in bytes.</span></span>  
+ <span data-ttu-id="10a5d-108">pCountSymbolBytes</span><span class="sxs-lookup"><span data-stu-id="10a5d-108">pCountSymbolBytes</span></span>  
+ <span data-ttu-id="10a5d-109">[out] Un pointeur vers un `DWORD` valeur qui, lorsque la méthode est retournée, contient la longueur du flux en octets.</span><span class="sxs-lookup"><span data-stu-id="10a5d-109">[out] A pointer to a `DWORD` value that, when the method returns, contains the length of the stream in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3b2f7-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="3b2f7-110">Return Value</span></span>  
- <span data-ttu-id="3b2f7-111">La méthode retourne `S_OK` si la longueur du flux de mémoire peut être déterminée, même si elle est zéro (0).</span><span class="sxs-lookup"><span data-stu-id="3b2f7-111">The method returns `S_OK` if the length of the memory stream can be determined, even if it is zero (0).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="10a5d-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="10a5d-110">Return Value</span></span>  
+ <span data-ttu-id="10a5d-111">La méthode retourne `S_OK` si la longueur du flux de mémoire peut être déterminée, même si elle est zéro (0).</span><span class="sxs-lookup"><span data-stu-id="10a5d-111">The method returns `S_OK` if the length of the memory stream can be determined, even if it is zero (0).</span></span>  
   
- <span data-ttu-id="3b2f7-112">La méthode retourne `CORPROF_E_MODULE_IS_DYNAMIC` si la méthode a été créée à l’aide de <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-112">The method returns `CORPROF_E_MODULE_IS_DYNAMIC` if the method was created using <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="10a5d-112">La méthode retourne `CORPROF_E_MODULE_IS_DYNAMIC` si la méthode a été créée à l’aide de <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="10a5d-112">The method returns `CORPROF_E_MODULE_IS_DYNAMIC` if the method was created using <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3b2f7-113">Notes</span><span class="sxs-lookup"><span data-stu-id="3b2f7-113">Remarks</span></span>  
- <span data-ttu-id="3b2f7-114">Si le module a de symboles en mémoire, la longueur du flux de données est placée dans `pCountSymbolBytes`.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-114">If the module has in-memory symbols, the length of the stream is placed in `pCountSymbolBytes`.</span></span> <span data-ttu-id="3b2f7-115">Si le module n’a pas les symboles en mémoire, `*pCountSymbolBytes = 0`.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-115">If the module doesn't have in-memory     symbols, `*pCountSymbolBytes = 0`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10a5d-113">Notes</span><span class="sxs-lookup"><span data-stu-id="10a5d-113">Remarks</span></span>  
+ <span data-ttu-id="10a5d-114">Si le module a de symboles en mémoire, la longueur du flux de données est placée dans `pCountSymbolBytes`.</span><span class="sxs-lookup"><span data-stu-id="10a5d-114">If the module has in-memory symbols, the length of the stream is placed in `pCountSymbolBytes`.</span></span> <span data-ttu-id="10a5d-115">Si le module n’a pas les symboles en mémoire, `*pCountSymbolBytes = 0`.</span><span class="sxs-lookup"><span data-stu-id="10a5d-115">If the module doesn't have in-memory     symbols, `*pCountSymbolBytes = 0`.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3b2f7-116">L’implémentation actuelle ne prend pas en charge de Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-116">The current implementation does not support Reflection.Emit.</span></span> <span data-ttu-id="3b2f7-117">Si le module a été créé à l’aide de Reflection.Emit, la méthode retourne `CORPROF_E_MODULE_IS_DYNAMIC`.</span><span class="sxs-lookup"><span data-stu-id="3b2f7-117">If the module was created by using Reflection.Emit, the method returns `CORPROF_E_MODULE_IS_DYNAMIC`.</span></span>  
+>  <span data-ttu-id="10a5d-116">L’implémentation actuelle ne prend pas en charge de Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="10a5d-116">The current implementation does not support Reflection.Emit.</span></span> <span data-ttu-id="10a5d-117">Si le module a été créé à l’aide de Reflection.Emit, la méthode retourne `CORPROF_E_MODULE_IS_DYNAMIC`.</span><span class="sxs-lookup"><span data-stu-id="10a5d-117">If the module was created by using Reflection.Emit, the method returns `CORPROF_E_MODULE_IS_DYNAMIC`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b2f7-118">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="3b2f7-118">Requirements</span></span>  
- <span data-ttu-id="3b2f7-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b2f7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10a5d-118">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="10a5d-118">Requirements</span></span>  
+ <span data-ttu-id="10a5d-119">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10a5d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b2f7-120">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3b2f7-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="10a5d-120">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="10a5d-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3b2f7-121">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b2f7-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10a5d-121">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10a5d-121">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="3b2f7-122">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="3b2f7-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ <span data-ttu-id="10a5d-122">**Versions du .NET Framework :** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10a5d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b2f7-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3b2f7-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10a5d-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="10a5d-123">See also</span></span>
 
-- [<span data-ttu-id="3b2f7-124">ICorProfilerInfo7, interface</span><span class="sxs-lookup"><span data-stu-id="3b2f7-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [<span data-ttu-id="10a5d-124">ICorProfilerInfo7, interface</span><span class="sxs-lookup"><span data-stu-id="10a5d-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

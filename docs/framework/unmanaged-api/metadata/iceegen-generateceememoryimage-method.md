@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8136ccc2306894f2a2cfc0203460cb62c0bbec73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143089"
 ---
-# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="b2566-102">ICeeGen::GenerateCeeMemoryImage, méthode</span><span class="sxs-lookup"><span data-stu-id="b2566-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
-<span data-ttu-id="b2566-103">Génère une image dans la mémoire pour la base de code.</span><span class="sxs-lookup"><span data-stu-id="b2566-103">Generates an image in memory for the code base.</span></span>  
+# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="e9251-102">ICeeGen::GenerateCeeMemoryImage, méthode</span><span class="sxs-lookup"><span data-stu-id="e9251-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
+<span data-ttu-id="e9251-103">Génère une image dans la mémoire pour la base de code.</span><span class="sxs-lookup"><span data-stu-id="e9251-103">Generates an image in memory for the code base.</span></span>  
   
- <span data-ttu-id="b2566-104">Cette méthode est obsolète et ne doit pas être utilisée.</span><span class="sxs-lookup"><span data-stu-id="b2566-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="e9251-104">Cette méthode est obsolète et ne doit pas être utilisée.</span><span class="sxs-lookup"><span data-stu-id="e9251-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2566-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b2566-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9251-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e9251-105">Syntax</span></span>  
   
 ```  
 HRESULT GenerateCeeMemoryImage (  
@@ -37,19 +37,19 @@ HRESULT GenerateCeeMemoryImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b2566-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b2566-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e9251-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e9251-106">Parameters</span></span>  
  `ppImage`  
- <span data-ttu-id="b2566-107">[out] Pointeur vers l’image générée.</span><span class="sxs-lookup"><span data-stu-id="b2566-107">[out] A pointer to the generated image.</span></span>  
+ <span data-ttu-id="e9251-107">[out] Pointeur vers l’image générée.</span><span class="sxs-lookup"><span data-stu-id="e9251-107">[out] A pointer to the generated image.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2566-108">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b2566-108">Requirements</span></span>  
- <span data-ttu-id="b2566-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2566-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9251-108">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e9251-108">Requirements</span></span>  
+ <span data-ttu-id="e9251-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9251-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2566-110">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b2566-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e9251-110">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e9251-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b2566-111">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b2566-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e9251-111">**Bibliothèque :** Utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9251-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="b2566-112">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="b2566-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e9251-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9251-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2566-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b2566-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9251-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e9251-113">See also</span></span>
 
-- [<span data-ttu-id="b2566-114">ICeeGen, interface</span><span class="sxs-lookup"><span data-stu-id="b2566-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="e9251-114">ICeeGen, interface</span><span class="sxs-lookup"><span data-stu-id="e9251-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
