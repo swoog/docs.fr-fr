@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295638"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procédure : Déclarer et appeler une propriété par défaut en Visual Basic
@@ -83,13 +83,13 @@ Un *propriété par défaut* est une propriété de classe ou structure auquel v
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédures Property](./property-procedures.md)
+- [Procédures de propriété](./property-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Par défaut](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Différences entre les propriétés et les variables en Visual Basic](./differences-between-properties-and-variables.md)
-- [Procédure : créer une propriété](./how-to-create-a-property.md)
-- [Procédure : déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Procédure : appeler une procédure Property](./how-to-call-a-property-procedure.md)
-- [Procédure : placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)
-- [Procédure : obtenir une valeur à partir d’une propriété](./how-to-get-a-value-from-a-property.md)
+- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Différences entre les propriétés et les Variables en Visual Basic](./differences-between-properties-and-variables.md)
+- [Guide pratique pour Créer une propriété](./how-to-create-a-property.md)
+- [Guide pratique pour Déclarer une propriété avec des niveaux d’accès mixtes](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Guide pratique pour Appeler une procédure de propriété](./how-to-call-a-property-procedure.md)
+- [Guide pratique pour Placer une valeur dans une propriété](./how-to-put-a-value-in-a-property.md)
+- [Guide pratique pour Obtenir une valeur d’une propriété](./how-to-get-a-value-from-a-property.md)

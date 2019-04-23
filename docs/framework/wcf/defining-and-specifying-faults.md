@@ -9,10 +9,10 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299323"
 ---
 # <a name="defining-and-specifying-faults"></a>Définition et spécification des erreurs
@@ -94,7 +94,7 @@ End Class
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Envoi et réception des erreurs](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Procédure : Déclarer des erreurs dans les contrats de service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
-- [Fonctionnement des niveaux de protection](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Procédure : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Guide pratique pour Déclarer des erreurs dans les contrats de Service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Présentation du niveau de protection](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Guide pratique pour Définissez la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Spécification du transfert de données dans des contrats de service](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

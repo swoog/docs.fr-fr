@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228196"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entités de caractères XML et XAML
@@ -67,4 +67,4 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
 - [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName, grammaire](xamlname-grammar.md)
-- [Traitement des espaces blancs en XAML](whitespace-processing-in-xaml.md)
+- [Espace blanc dans XAML de traitement](whitespace-processing-in-xaml.md)

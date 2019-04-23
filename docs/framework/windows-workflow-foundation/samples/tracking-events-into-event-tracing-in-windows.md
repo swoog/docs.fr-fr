@@ -3,10 +3,10 @@ title: Événements de suivi dans Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300643"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Événements de suivi dans Event Tracing for Windows
@@ -20,7 +20,7 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
 |Composant|Description|
 |---------------|-----------------|
 |Runtime de suivi|Fournit l'infrastructure permettant d'émettre des enregistrements de suivi.|
-|Participants de suivi|Accède aux enregistrements de suivi. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est fourni avec un participant de suivi qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW).|
+|Participants de suivi|Accède aux enregistrements de suivi. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] est fourni avec un participant de suivi qui écrit les enregistrements de suivi sous la forme d'événements Suivi d'événements pour Windows (ETW, Event Tracing for Windows).|
 |Modèle de suivi|Mécanisme de filtrage qui permet à un participant de suivi de s'abonner à un sous-ensemble des enregistrements de suivi émis à partir d'une instance de workflow.|
 
  Le tableau suivant détaille les enregistrements de suivi que l'exécution de workflow émet.
@@ -151,4 +151,4 @@ Cet exemple montre comment activer le suivi des modifications sur un service de 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

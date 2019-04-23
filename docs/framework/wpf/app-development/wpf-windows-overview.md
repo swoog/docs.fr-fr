@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296119"
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
@@ -108,9 +108,9 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configuration d’une définition de fenêtre pour MSBuild  
  Façon dont vous implémentez votre fenêtre détermine la façon dont il est configuré pour [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Pour une fenêtre qui est définie en utilisant les deux [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] balisage et code-behind :  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichiers de balisage sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` éléments.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fichiers de balisage sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` éléments.  
   
--   Fichiers code-behind sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` éléments.  
+-   Fichiers code-behind sont configurés en tant que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` éléments.  
   
  Cela est illustré dans l’exemple suivant [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] fichier projet.  
   
@@ -257,7 +257,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- Le <xref:System.Windows.Window.Closing> est transmis au gestionnaire d’événements un <xref:System.ComponentModel.CancelEventArgs>, qui implémente le `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété que vous définissez à `true` pour empêcher la fermeture d’une fenêtre.  
+ Le <xref:System.Windows.Window.Closing> est transmis au gestionnaire d’événements un <xref:System.ComponentModel.CancelEventArgs>, qui implémente le `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété que vous définissez à `true` pour empêcher la fermeture d’une fenêtre.  
   
  Si <xref:System.Windows.Window.Closing> n’est pas géré, ou il est géré mais pas annulé, la fenêtre se fermera. Juste avant la fermeture d’une fenêtre en fait, <xref:System.Windows.Window.Closed> est déclenché. À ce stade, il est impossible d’empêcher une fenêtre de se fermer.  
   
@@ -272,7 +272,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 -   La fenêtre principale de l’application est fermée et <xref:System.Windows.Application.ShutdownMode%2A> est <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> est appelée.  
+-   La méthode <xref:System.Windows.Application.Shutdown%2A> est appelée.  
   
 > [!NOTE]
 >  Une fenêtre ne peut pas être rouverte après sa fermeture.  
@@ -356,7 +356,7 @@ Les utilisateurs interagissent avec les applications Windows Presentation Founda
   
 4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **Pour les propriétés de la largeur :**  
+ **Pour les propriétés de largeur :**  
   
 1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -485,5 +485,5 @@ L’apparence par défaut d’une fenêtre inclut un bouton de barre des tâches
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Vue d'ensemble des boîtes de dialogue](dialog-boxes-overview.md)
-- [Génération d'une application WPF](building-a-wpf-application-wpf.md)
+- [Vue d’ensemble des boîtes de dialogue](dialog-boxes-overview.md)
+- [Génération d’une application WPF](building-a-wpf-application-wpf.md)

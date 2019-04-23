@@ -3,10 +3,10 @@ title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
 ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224080"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
@@ -84,5 +84,5 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Audit](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Procédure : auditer des événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [Service Auditing Behavior](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+- [Guide pratique pour Auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Comportement de l’audit de service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352815"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978924"
 ---
 # <a name="data-binding"></a>Liaison de données
 
@@ -42,9 +42,9 @@ Les générations de collection sont implémentées par le <xref:System.Data.Lin
 
 - La source de données est un <xref:System.Linq.IQueryable%601>. Il existe deux scénarios :
 
-    - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recherche sous-jacent <xref:System.Data.Linq.Table%601> à partir de la <xref:System.Linq.IQueryable%601>, la source autorise l’édition et la situation est la même que dans le premier point abordé.
+  - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recherche sous-jacent <xref:System.Data.Linq.Table%601> à partir de la <xref:System.Linq.IQueryable%601>, la source autorise l’édition et la situation est la même que dans le premier point abordé.
 
-    - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne peut pas trouver sous-jacent <xref:System.Data.Linq.Table%601>, la source n’autorise pas pour l’édition (par exemple, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parcourt la requête pour remplir un générique `SortableBindingList`, qui est une simple <xref:System.ComponentModel.BindingList%601> qui implémente la fonctionnalité de tri pour les entités T pour une propriété donnée.
+  - Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne peut pas trouver sous-jacent <xref:System.Data.Linq.Table%601>, la source n’autorise pas pour l’édition (par exemple, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parcourt la requête pour remplir un générique `SortableBindingList`, qui est une simple <xref:System.ComponentModel.BindingList%601> qui implémente la fonctionnalité de tri pour les entités T pour une propriété donnée.
 
 ## <a name="specialized-collections"></a>Collections spécialisées
 
@@ -62,9 +62,9 @@ Le `SortableBindingList` générique est également la classe de base pour `Data
 
 ### <a name="generic-databindinglist"></a>DataBindingList générique
 
-Cette classe hérite du `SortableBindingLIst` générique. Le `DataBindingList` générique garde une référence au `Table` générique sous-jacent de l'`IQueryable` générique utilisé pour remplir la première fois la collection. Le `DatabindingList` générique ajoute le suivi des ajouts/suppressions d'élément à la collection en substituant `InsertItem`() et `RemoveItem`(). Il implémente également la fonctionnalité récapitulative de suivi des interruptions/reprises pour rendre le suivi conditionnel. Avec cette fonctionnalité, le `DataBindingList` générique tire parti de toute l'utilisation polymorphe de la fonctionnalité de suivi des classes parentes.
+Cette classe hérite du `SortableBindingLIst` générique. Le `DataBindingList` générique garde une référence au `Table` générique sous-jacent de l'`IQueryable` générique utilisé pour remplir la première fois la collection. Le `DatabindingList` générique ajoute le suivi des ajouts/suppressions d'élément à la collection en substituant `InsertItem`() et `RemoveItem`(). Il implémente également la fonctionnalité récapitulative de suivi des interruptions/reprises pour rendre le suivi conditionnel. Avec cette fonctionnalité, le `DataBindingList` générique tire parti de toute l’utilisation polymorphe de la fonctionnalité de suivi des classes parentes.
 
-## <a name="binding-to-entitysets"></a>Création d'une liaison à EntitySets
+## <a name="binding-to-entitysets"></a>Création d’une liaison à EntitySets
 
 La création d’une liaison avec `EntitySet` est un cas spécial parce que `EntitySet` est déjà une collection qui implémente <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ajoute le tri et l’annulation (<xref:System.ComponentModel.ICancelAddNew>) prend en charge. Une classe `EntitySet` utilise une liste interne pour stocker des entités. Cette liste est une collection de bas niveau basée sur un tableau générique, la classe `ItemList` générique.
 
@@ -98,11 +98,11 @@ Outre cette fonctionnalité, une collection peut également implémenter <xref:S
 
 - Permet l’insertion des éléments, puis leur suppression de la collection.
 
-- N'effectue pas le suivi des modifications tant que l'interface utilisateur ne valide pas l'édition.
+- N’effectue pas le suivi des modifications tant que l’interface utilisateur ne valide pas l’édition.
 
 - N'effectue pas le suivi des modifications tant que l'édition est annulée (<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>).
 
-- Autorise le suivi lorsque l'édition est validée (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>).
+- Autorise le suivi lorsque l’édition est validée (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>).
 
 - Permet à la collection de se comporter normalement si le nouvel élément ne provient pas de <xref:System.ComponentModel.IBindingList.AddNew%2A>.
 

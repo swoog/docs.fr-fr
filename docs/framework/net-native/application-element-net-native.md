@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228300"
 ---
 # <a name="application-element-net-native"></a>\<Application >, élément (.NET Native)
@@ -61,14 +61,14 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applique la stratégie à tous les types d'un assembly particulier.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie à tous les types d'un espace de noms particulier.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie à tous les types d'un espace de noms particulier.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applique la stratégie à un type particulier, tel qu'une classe ou une structure.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applique la stratégie à un type générique construit. Par exemple, vous pouvez utiliser un élément [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) afin de définir une stratégie pour un type `List<String>`.|  
-|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie à une méthode sur un type particulier.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie à une méthode sur un type particulier.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applique la stratégie à une méthode générique construite.|  
-|[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie à une propriété sur un type particulier.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie à une propriété sur un type particulier.|  
 |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applique la stratégie à un champ sur un type particulier.|  
-|[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie à un événement sur un type particulier.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie à un événement sur un type particulier.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -87,7 +87,7 @@ Sert de conteneur pour les types à l'échelle de l'application et pour les memb
   
 ## <a name="see-also"></a>Voir aussi
 
-- [\<Library>, élément](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives>, élément](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<Bibliothèque > élément](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives > élément](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

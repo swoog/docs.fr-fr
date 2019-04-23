@@ -4,10 +4,10 @@ description: Découvrez plus en détail .NET Core.
 author: richlander
 ms.date: 08/01/2018
 ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296405"
 ---
 # <a name="about-net-core"></a>À propos de .NET Core

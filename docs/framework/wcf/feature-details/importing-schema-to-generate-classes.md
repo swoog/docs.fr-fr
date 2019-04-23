@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228586"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importation du schéma pour générer des classes
@@ -29,7 +29,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
   
 1. Créez une instance de <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Optionnel. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
+2. Facultatif. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
   
 3. Optionnel. Appelez une des méthodes <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . La méthode détermine si le schéma donné est un schéma de contrat de données valide et peut être importé. La méthode `CanImport` a les mêmes surcharges que `Import` (étape suivante).  
   
@@ -52,7 +52,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
   
  Normalement, les types publics sont générés à partir d'un schéma, avec les champs privés et les propriétés de membres de données publiques correspondantes. Pour générer des types internes à la place, affectez à la propriété <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> la valeur `true`.  
   
- L’exemple suivant montre un schéma transformé en interne classe lorsque le <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> propriété est définie sur `true.`  
+ L'exemple suivant affiche un schéma transformé en une classe interne lorsque la propriété <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> a la valeur `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -175,9 +175,9 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
 #### <a name="import-options-advanced-options"></a>Options d’importation : Options avancées  
  Les éléments suivants représentent les options d'importation avancées :  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> . Spécifiez la <xref:System.CodeDom.Compiler.CodeDomProvider> à utiliser pour générer le code destiné aux classes générées. Le mécanisme d’importation cherche à éviter les fonctionnalités que la <xref:System.CodeDom.Compiler.CodeDomProvider> ne prend pas en charge. Si la <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> n'est pas définie, le jeu complet des fonctionnalités du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé sans restrictions.  
+-   Propriété <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Spécifiez la <xref:System.CodeDom.Compiler.CodeDomProvider> à utiliser pour générer le code destiné aux classes générées. Le mécanisme d’importation cherche à éviter les fonctionnalités que la <xref:System.CodeDom.Compiler.CodeDomProvider> ne prend pas en charge. Si la <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> n'est pas définie, le jeu complet des fonctionnalités du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé sans restrictions.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> . Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. Pour plus d’informations, consultez [substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
+-   Propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. Pour plus d’informations, consultez [substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
   
 ## <a name="see-also"></a>Voir aussi
 
@@ -185,8 +185,8 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
-- [Référence des schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [Substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
 - [Importation et exportation de schémas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
 - [Exportation de schémas à partir de classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
-- [Référence des schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Informations de référence sur les schémas de contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

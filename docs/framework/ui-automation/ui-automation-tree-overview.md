@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225948"
 ---
 # <a name="ui-automation-tree-overview"></a>Vue d’ensemble de l’arborescence UI Automation
@@ -32,7 +32,7 @@ ms.locfileid: "59225948"
   
  Les fournisseurs UI Automation prennent en charge le filtrage moyennant la définition de propriétés sur les éléments, notamment les propriétés <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> et <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fournit trois affichages par défaut. Ces affichages sont définis en fonction du type de filtrage effectué ; l’étendue d’un affichage est définie par l’application. Par ailleurs, l’application peut appliquer d’autres filtres sur les propriétés, par exemple, pour inclure uniquement des contrôles activés dans un affichage de contrôle.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propose trois affichages par défaut. Ces affichages sont définis en fonction du type de filtrage effectué ; l’étendue d’un affichage est définie par l’application. Par ailleurs, l’application peut appliquer d’autres filtres sur les propriétés, par exemple, pour inclure uniquement des contrôles activés dans un affichage de contrôle.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Affichage brut  
@@ -57,4 +57,4 @@ ms.locfileid: "59225948"
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

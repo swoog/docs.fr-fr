@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294806"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procédure : Créer un workflow d'ordinateur d'état
@@ -192,7 +192,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programmation Windows Workflow Foundation](programming.md)
-- [Conception des flux de travaux](designing-workflows.md)
-- [Didacticiel de mise en route](getting-started-tutorial.md)
-- [Procédure : créer une activité](how-to-create-an-activity.md)
-- [Procédure : exécuter un workflow](how-to-run-a-workflow.md)
+- [Conception des workflows](designing-workflows.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)
+- [Guide pratique pour Créer une activité](how-to-create-an-activity.md)
+- [Guide pratique pour Exécuter un Workflow](how-to-run-a-workflow.md)

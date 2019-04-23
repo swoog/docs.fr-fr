@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300955"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Compilation du balisage — Étape 2  
- Les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ne sont pas toutes compilées pendant la première étape de compilation du balisage. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] les fichiers qui ont défini localement par type (références aux types définis dans le code ailleurs dans le même projet) sont exemptés de compilation pour l’instant. En effet, ces types définis localement existent uniquement dans la source et n’ont pas encore été compilés. Pour déterminer ceci, l’analyseur utilise des heuristiques qui impliquent la recherche d’éléments tels que `x:Name` dans le fichier de balisage. Quand une telle instance est trouvée, la compilation de ce fichier de balisage est remise à plus tard jusqu’à ce que les fichiers de code aient été compilés, après quoi la deuxième étape de la compilation du balisage traite ces fichiers.  
+ Les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ne sont pas toutes compilées pendant la première étape de compilation du balisage. Les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] qui ont des références à des types définis localement (références à des types définis dans le code ailleurs dans le même projet) sont exemptés de compilation pour le moment. En effet, ces types définis localement existent uniquement dans la source et n’ont pas encore été compilés. Pour déterminer ceci, l’analyseur utilise des heuristiques qui impliquent la recherche d’éléments tels que `x:Name` dans le fichier de balisage. Quand une telle instance est trouvée, la compilation de ce fichier de balisage est remise à plus tard jusqu’à ce que les fichiers de code aient été compilés, après quoi la deuxième étape de la compilation du balisage traite ces fichiers.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Classification des fichiers  
@@ -168,6 +168,6 @@ End Sub
 ## <a name="see-also"></a>Voir aussi
 
 - [Déploiement d’une application WPF](deploying-a-wpf-application-wpf.md)
-- [Référence MSBuild - WPF](/visualstudio/msbuild/wpf-msbuild-reference)
+- [Informations de référence sur MSBuild WPF](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URI à en-tête pack dans WPF](pack-uris-in-wpf.md)
-- [Fichiers de ressources, de contenu et de données d'une application WPF](wpf-application-resource-content-and-data-files.md)
+- [Fichiers de ressources, de contenu et de données d’une application WPF](wpf-application-resource-content-and-data-files.md)

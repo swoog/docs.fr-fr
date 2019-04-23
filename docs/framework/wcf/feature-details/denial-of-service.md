@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228877"
 ---
 # <a name="denial-of-service"></a>Refus de service
@@ -28,13 +28,13 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
   
  Atténuation : Utilisez les propriétés suivantes de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> classe :  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: contrôle le nombre maximal de temps limité `SecurityContextToken`s le serveur met en cache après `SPNego` ou `SSL` négociation.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A> : contrôle le nombre maximal de `SecurityContextToken`s limités par le temps que le serveur met en cache après une négociation `SPNego` ou `SSL`.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: contrôle la durée de vie de la `SecurityContextTokens` que le serveur émet après `SPNego` ou `SSL` négociation. Le serveur met en cache les `SecurityContextToken`s pendant cette période.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A> : contrôle la durée de vie des `SecurityContextTokens` que le serveur émet après une négociation `SPNego` ou `SSL`. Le serveur met en cache les `SecurityContextToken`s pendant cette période.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: contrôle le nombre maximal de conversations sécurisées établies au niveau du serveur, mais pour laquelle aucun message d’application n’ont été traités. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, en forçant ainsi le service à conserver un état par client, sans jamais les utiliser.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A> : contrôle le nombre maximal de conversations sécurisées établies au niveau du serveur mais pour lesquelles aucun message d'application n'a été traité. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, en forçant ainsi le service à conserver un état par client, sans jamais les utiliser.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: contrôle la durée maximale que le service garde une conversation sécurisée active sans recevoir un message d’application à partir du client pour la conversation. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, en forçant ainsi le service à conserver un état par client, sans jamais les utiliser.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A> : contrôle la durée maximale pendant laquelle le service garde une conversation sécurisée active sans recevoir de message d'application du client pour la conversation. Ce quota empêche les clients d'établir des conversations sécurisées au niveau du service, en forçant ainsi le service à conserver un état par client, sans jamais les utiliser.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>Les liaisons WSDualHttpBinding ou les liaisons personnalisées doubles requièrent l'authentification du client  
  Par défaut, la sécurité est activée pour <xref:System.ServiceModel.WSDualHttpBinding>. Toutefois, si l'authentification du client est désactivée en affectant à la propriété <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> la valeur <xref:System.ServiceModel.MessageCredentialType.None>, il est possible qu'un utilisateur malveillant provoque une attaque par déni de service sur un service tiers. Ce risque existe car un client malveillant peut commander au service d'envoyer un flux de messages à un service tiers.  
@@ -82,9 +82,9 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="see-also"></a>Voir aussi
 
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224284"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimisation des performances : Autres recommandations
@@ -27,7 +27,7 @@ ms.locfileid: "59224284"
   
 -   [Navigation vers un objet](#Navigation_Objects)  
   
--   [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
+-   [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
   
 -   [Événement CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "59224284"
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d’application](optimizing-performance-application-resources.md)
-- [Texte](optimizing-performance-text.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Conseils et astuces sur les animations](../graphics-multimedia/animation-tips-and-tricks.md)

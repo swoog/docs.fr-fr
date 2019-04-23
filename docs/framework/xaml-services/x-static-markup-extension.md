@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295703"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static, extension de balisage
@@ -30,7 +30,7 @@ Fait référence à une entité de code par valeur statique qui est définie dan
   
 | | |  
 |-|-|  
-|`prefix`|Optionnel. Un préfixe qui fait référence à un espace de noms XAML mappé, non définis par défaut. `prefix` est affiché explicitement dans l’utilisation parce que vous référencez rarement des propriétés statiques qui proviennent d’un espace de noms XAML par défaut. Consultez la section Notes.|  
+|`prefix`|Facultatif. Un préfixe qui fait référence à un espace de noms XAML mappé, non définis par défaut. `prefix` est affiché explicitement dans l’utilisation parce que vous référencez rarement des propriétés statiques qui proviennent d’un espace de noms XAML par défaut. Consultez la section Notes.|  
 |`typeName`|Obligatoire. Le nom du type qui définit le membre statique souhaité.|  
 |`staticMemberName`|Obligatoire. Le nom du membre de valeur statique souhaitée (une constante, une propriété statique, un champ ou une valeur d’énumération).|  
   

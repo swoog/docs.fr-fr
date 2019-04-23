@@ -5,10 +5,10 @@ helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228631"
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
@@ -93,4 +93,4 @@ Une pour augmenter la capacité d’applications Windows Communication Foundatio
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Meilleures pratiques pour l'hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

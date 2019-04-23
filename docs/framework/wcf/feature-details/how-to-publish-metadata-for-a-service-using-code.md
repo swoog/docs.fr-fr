@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297965"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Procédure : publier des métadonnées pour un service à l’aide de code
@@ -43,7 +43,7 @@ Il s’agit d’une des deux rubriques de procédure qui traitent de publication
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4. Définir le <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriété `true.`  
+4. Affectez à la propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> la valeur `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -88,8 +88,8 @@ Il s’agit d’une des deux rubriques de procédure qui traitent de publication
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : héberger un service WCF dans une application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Self-Host](../../../../docs/framework/wcf/samples/self-host.md)
-- [Vue d'ensemble de l'architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Guide pratique pour Héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md)
+- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Procédure : publier des métadonnées pour un service à l’aide d’un fichier de configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Guide pratique pour Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

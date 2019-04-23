@@ -3,10 +3,10 @@ title: Émission de suivis dans du code utilisateur
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222755"
 ---
 # <a name="emitting-user-code-traces"></a>Émission de suivis dans du code utilisateur
@@ -151,4 +151,4 @@ La définition d'activités et la propagation de l'ID d'activité nous permetten
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Extending Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [Extension du suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md)

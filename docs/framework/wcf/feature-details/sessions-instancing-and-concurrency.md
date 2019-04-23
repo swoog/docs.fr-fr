@@ -3,10 +3,10 @@ title: Sessions, instanciation et accès concurrentiel
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229067"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessions, instanciation et accès concurrentiel
@@ -29,11 +29,11 @@ Une *session* est une corrélation de tous les messages envoyés entre deux poin
   
  Si vous êtes familiarisé avec la <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications et des fonctionnalités qu’il fournit, vous remarquerez les différences suivantes entre ce type de session et des sessions WCF :  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les sessions sont toujours lancées par le serveur.  
+-   Les sessions[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sont systématiquement initialisées par le serveur.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les sessions sont implicitement non ordonnées.  
+-   Les sessions[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sont implicitement non ordonnées.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les sessions fournissent un mécanisme de stockage des données générales entre les requêtes.  
+-   Les sessions[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fournissent un mécanisme de stockage général des données sur l'ensemble des demandes.  
   
  Les applications clientes et de service interagissent avec les sessions de manière différente. Les applications clientes initialisent des sessions, puis reçoivent et traitent les messages envoyés dans la session. Les applications de service peuvent utiliser des sessions comme point d'extensibilité pour ajouter un comportement supplémentaire. Pour ce faire, utilisez directement <xref:System.ServiceModel.InstanceContext> ou implémentez un fournisseur de contexte d'instance personnalisé.  
   
@@ -110,8 +110,8 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de sessions](../../../../docs/framework/wcf/using-sessions.md)
-- [Procédure : créer un service qui exige des sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Procédure : contrôler l’instanciation des services](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Guide pratique pour Créer un Service qui requiert des Sessions](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Guide pratique pour L’instanciation de Service de contrôle](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Concurrence](../../../../docs/framework/wcf/samples/concurrency.md)
-- [instanciation](../../../../docs/framework/wcf/samples/instancing.md)
+- [Instanciation](../../../../docs/framework/wcf/samples/instancing.md)
 - [Session](../../../../docs/framework/wcf/samples/session.md)

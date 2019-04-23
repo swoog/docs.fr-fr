@@ -3,10 +3,10 @@ title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297796"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  Toute expression valide qui retourne une valeur `Boolean`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Lorsque une des conditions est `true`; sinon, `false`.  
+ `true` si l'une des conditions a la valeur `true`; sinon, `false`.  
   
 ## <a name="remarks"></a>Notes  
  OR est un opérateur logique [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Il est utilisé pour combiner deux conditions. Lorsque vous utilisez plusieurs opérateurs logiques dans une instruction, les opérateurs OR sont évalués après les opérateurs AND. L'utilisation de parenthèses permet toutefois de modifier l'ordre de traitement.  

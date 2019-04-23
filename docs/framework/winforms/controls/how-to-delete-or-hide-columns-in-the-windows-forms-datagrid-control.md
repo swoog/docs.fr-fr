@@ -13,10 +13,10 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
 ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297510"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Procédure : supprimer ou masquer des colonnes dans le contrôle DataGrid Windows Forms
@@ -126,5 +126,5 @@ ms.locfileid: "59297510"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Procédure : ajouter des tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Guide pratique pour Modification des données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Guide pratique pour Ajouter des Tables et des colonnes au contrôle DataGrid Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

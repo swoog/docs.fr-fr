@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230653"
 ---
 # <a name="graphics-how-to-topics"></a>Rubriques "Comment" relatives aux graphiques
@@ -20,11 +20,11 @@ Les rubriques suivantes montrent comment utiliser les fonctionnalités graphique
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Animer un rectangle](how-to-animate-a-rectangle.md)  
- [Animer la position d’un objet à l’aide de PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Animer la position d'un objet à l'aide de PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformer des points et des vecteurs](how-to-transform-points-and-vectors.md)  
  [Étendre le cadre de transparence dans une application WPF](extend-glass-frame-into-a-wpf-application.md)  
- [Procédure : Améliorer les performances de rendu en mettant en cache un élément](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Procédure : utiliser un élément mis en cache comme pinceau](how-to-use-a-cached-element-as-a-brush.md)  
+ [Guide pratique pour Améliorer les performances de rendu en mettant en cache un élément](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Guide pratique pour Utiliser un élément mis en cache comme pinceau](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
@@ -36,4 +36,4 @@ Les rubriques suivantes montrent comment utiliser les fonctionnalités graphique
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [Graphiques et multimédia](index.md)
-- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)

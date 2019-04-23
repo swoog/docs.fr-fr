@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
 ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229834"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>Procédure : Mettre un contrôle TextBox en lecture seule
@@ -26,5 +26,5 @@ Cet exemple montre comment configurer un <xref:System.Windows.Controls.TextBox> 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de TextBox](textbox-overview.md)
-- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)
+- [Vue d’ensemble de TextBox](textbox-overview.md)
+- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)

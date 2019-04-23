@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
 ms.openlocfilehash: e72ec94f830f0f5001a77e7492aa1326a47b309d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297991"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Procédure : Animer une Rotation 3D à l’aide d’images clés
@@ -27,9 +27,9 @@ Dans l’exemple suivant, <xref:System.Windows.Media.Animation.Rotation3DAnimati
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des graphiques 3D](3-d-graphics-overview.md)
+- [Vue d’ensemble des graphiques 3D](3-d-graphics-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
-- [Animer une rotation 3D à l’aide de tables de montage séquentiel](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [Animer une rotation 3D à l’aide de storyboards](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Animer une rotation 3D à l’aide de Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [Animer une rotation 3D à l’aide de quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [Animer une rotation 3D à l'aide de quaternions](how-to-animate-a-3-d-rotation-using-quaternions.md)
 - [Animer une rotation 3D à l’aide d’images clés (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

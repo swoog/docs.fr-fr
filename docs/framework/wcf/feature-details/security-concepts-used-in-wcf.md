@@ -3,10 +3,10 @@ title: Concepts de sécurité utilisés dans WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
 ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295547"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Concepts de sécurité utilisés dans WCF
@@ -48,5 +48,5 @@ Sécurité de Windows Communication Foundation (WCF) est basée sur des concepts
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

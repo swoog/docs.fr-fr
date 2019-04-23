@@ -3,10 +3,10 @@ title: Publication du service WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299720"
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
@@ -76,5 +76,5 @@ Si vous choisissez de déployer votre application sur le serveur IIS local, vous
 ## <a name="see-also"></a>Voir aussi
 
 - [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Hôte de service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

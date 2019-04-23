@@ -12,10 +12,10 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299867"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Procédure : Créer une application Windows Forms à partir de la ligne de commande
@@ -65,7 +65,7 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
     -   Si vous utilisez Visual Basic, tapez : `vbc form1.vb`  
   
-3. À l'invite de commandes, tapez : `Form1.exe`  
+3. À l’invite de commandes, tapez : `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Ajout d'un contrôle et gestion d'un événement  
  Les étapes de la procédure précédente illustrent simplement comment créer un Windows Form de base qui se compile et s'exécute. La procédure suivante illustre comment créer et ajouter un contrôle au formulaire et comment gérer un événement pour le contrôle. Pour plus d’informations sur les contrôles que vous pouvez ajouter aux Windows Forms, consultez [des contrôles Windows Forms](./controls/index.md).  
@@ -119,4 +119,4 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
 - <xref:System.Windows.Forms.Control>
 - [Modification de l'apparence des Windows Forms](changing-the-appearance-of-windows-forms.md)
 - [Amélioration des applications Windows Forms](./advanced/index.md)
-- [Mise en route des Windows Forms](getting-started-with-windows-forms.md)
+- [Bien démarrer avec Windows Forms](getting-started-with-windows-forms.md)

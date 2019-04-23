@@ -3,10 +3,10 @@ title: Enregistrements de suivi
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298355"
 ---
 # <a name="tracking-records"></a>Enregistrements de suivi
@@ -50,15 +50,15 @@ L'exécution du flux de travail est instrumentée pour émettre des enregistreme
   
  Par exemple, il pourrait y avoir une activité <xref:System.Activities.Statements.Sequence> simple qui contient une opération <xref:System.Activities.Statements.WriteLine> avec les enregistrements de suivi émis dans l'ordre suivant :  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail démarre.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indique que le flux de travail démarre.  
   
-2. <xref:System.Activities.Tracking.ActivityScheduledRecord> Indique qu’une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> indique qu'une activité a été planifiée. Dans ce cas c'est une activité <xref:System.Activities.Statements.Sequence>.  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> représente le <xref:System.Activities.Statements.WriteLine> activité.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> représente l'activité <xref:System.Activities.Statements.WriteLine>.  
   
 4. Il y a deux enregistrements <xref:System.Activities.Tracking.ActivityStateRecord> qui représentent les deux activités en cours.  
   
-5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Indique que le flux de travail se termine.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indique que le flux de travail est terminé.  
   
 ## <a name="see-also"></a>Voir aussi
 

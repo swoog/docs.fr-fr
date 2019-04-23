@@ -8,10 +8,10 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294663"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Regroupement de messages mis en file d'attente dans une session
@@ -83,5 +83,5 @@ Windows Communication Foundation (WCF) fournit une session qui vous permet de re
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Sessions and Queues](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Vue d'ensemble des files d'attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)

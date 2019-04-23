@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228508"
 ---
 # <a name="requesting-data"></a>Demande de données
@@ -55,5 +55,5 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ## <a name="see-also"></a>Voir aussi
 
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Procédure : demander une page web et récupérer les résultats sous forme de flux](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Procédure : récupérer une classe WebResponse spécifique au protocole qui correspond à une classe WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Guide pratique pour demander une page web et récupérer les résultats sous forme de flux](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Guide pratique pour récupérer une classe WebResponse spécifique au protocole qui correspond à une classe WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

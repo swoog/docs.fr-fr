@@ -3,10 +3,10 @@ title: Création d'un service de workflow de longue durée
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
 ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301345"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Création d'un service de workflow de longue durée
@@ -19,7 +19,7 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
 
 2. Visual Studio 2012
 
-3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4. Vous êtes familiarisé avec WCF et Visual Studio 2012 et que vous savez comment créer des projets et des solutions.
 

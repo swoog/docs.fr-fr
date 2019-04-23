@@ -3,10 +3,10 @@ title: Événements
 description: Découvrez comment F# événements permettent d’associer des appels de fonction avec des actions utilisateur, qui sont importantes dans la programmation GUI.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227000"
 ---
 # <a name="events"></a>Événements
@@ -175,8 +175,8 @@ Application.Run(appForm)
 ## <a name="see-also"></a>Voir aussi
 
 - [Membres](index.md)
-- [Gestion et déclenchement d'événements](../../../../docs/standard/events/index.md)
-- [Expressions lambda : Le `fun` mot clé](../functions/lambda-expressions-the-fun-keyword.md)
+- [Gestion et déclenchement d’événements](../../../../docs/standard/events/index.md)
+- [Expressions lambda : le mot clé `fun` ](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event, Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;l '&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Delegate,'Args&#62; Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

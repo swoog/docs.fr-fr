@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298576"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procédure : Effectuer une compilation conditionnelle avec Trace et Debug
@@ -97,10 +97,10 @@ Commentez la directive de compilateur.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Traçage et instrumentation d'applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Procédure : Créer, initialiser et configurer les commutateurs de trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Commutateurs de traçage](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Écouteurs de la trace](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Procédure : Ajouter des instructions de trace dans le code d’une application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Procédure : Définir des variables d’environnement pour la ligne de commande Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Procédure : Appeler le compilateur de ligne de commande](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Guide pratique pour Créer, initialiser et configurer des commutateurs de Trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Commutateurs de suivi](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Guide pratique pour Ajouter des instructions de traçage au Code d’Application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Guide pratique pour définir des variables d’environnement pour la ligne de commande Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Guide pratique pour appeler le compilateur de ligne de commande](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

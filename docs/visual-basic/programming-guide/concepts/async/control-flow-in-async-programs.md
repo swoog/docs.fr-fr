@@ -3,10 +3,10 @@ title: Flux de contrôle dans les programmes Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300929"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Flux de contrôle dans les programmes Async (Visual Basic)
@@ -21,7 +21,7 @@ Vous pouvez écrire et tenir à jour des programmes asynchrones plus facilement 
   
 -   `startButton_Click`, qui appelle `AccessTheWebAsync` et affiche le résultat.  
   
--   `AccessTheWebAsync`, qui télécharge le contenu d’un site Web sous forme de chaîne et retourne la longueur de la chaîne. `AccessTheWebAsync` utilise asynchrone <xref:System.Net.Http.HttpClient> (méthode), <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, pour télécharger le contenu.  
+-   `AccessTheWebAsync`, qui télécharge le contenu d’un site web sous forme de chaîne et retourne la longueur de la chaîne. `AccessTheWebAsync` utilise une méthode asynchrone <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, pour télécharger le contenu.  
   
  Des lignes numérotées apparaissent à des points stratégiques du programme pour vous aider à comprendre comment le programme s’exécute et expliquer ce qui se produit à chaque point marqué. Les lignes sont étiquetées de "ONE" à "SIX". Les étiquettes représentent l’ordre dans lequel le programme atteint ces lignes de code.  
   
@@ -287,7 +287,7 @@ Dim urlContents As String = Await getStringTask
  L’expression await suspend `AccessTheWebAsync` jusqu’à ce que `client.GetStringAsync` retourne une sortie. Dans le même temps, le contrôle retourne à l’appelant de `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’assignation suivante pourrait remplacer le code précédent qui crée, puis attend `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
+>  En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’assignation suivante peut substituer le code précédent qui crée, puis attend `getStringTask` : `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  Dans cette rubrique, l’opérateur await est appliqué ultérieurement pour s’adapter aux lignes de sortie qui marquent le flux de contrôle dans le programme.  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![Étape FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` s’exécute jusqu'à la fin et le contrôle retourne à `startButton_Click`, qui attend l’achèvement.  
+ `AccessTheWebAsync` s’exécute jusqu’à la fin et le contrôle retourne à `startButton_Click`, qui attend que son exécution soit terminée.  
   
 ### <a name="step-six"></a>Étape SIX  
  Quand `AccessTheWebAsync` signale que son exécution est terminée, le traitement peut continuer après l’instruction await dans `startButton_Async`. En fait, le programme n’a plus rien d’autre à faire.  

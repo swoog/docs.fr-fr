@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
 ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299187"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Déclaration d’opérateur doit être une des : +,-, *,\,/, ^, &amp;, Like, Mod et, Or, Xor, pas, \< \<, >>...
@@ -35,8 +35,8 @@ Vous pouvez déclarer uniquement un opérateur qui est éligible pour la surchar
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Procédures d'opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Procédure : définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Procédure : définir un opérateur de conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Guide pratique pour Définir un opérateur](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Guide pratique pour Définir un opérateur de Conversion](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)

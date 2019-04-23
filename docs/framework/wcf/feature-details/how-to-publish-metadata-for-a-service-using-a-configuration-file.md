@@ -3,10 +3,10 @@ title: 'Procédure : publier des métadonnées pour un service à l’aide d’
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295534"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procédure : publier des métadonnées pour un service à l’aide d’un fichier de configuration
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. Ajoutez un élément `<behavior>` à l'élément `<serviceBehaviors>` et spécifiez une valeur pour l'attribut `name` de l'élément `<behavior>`.  
 
-4. Ajoutez un élément `<serviceMetadata>` à l'élément `<behavior>`. Affectez à l'attribut `httpGetEnabled` la valeur `true` et à l'attribut `policyVersion` la valeur Policy15. `httpGetEnabled` permet au service répondre aux demandes de métadonnées faites par une requête HTTP GET. `policyVersion` Indique au service à se conformer à WS-Policy 1.5 lors de la génération de métadonnées.  
+4. Ajoutez un élément `<serviceMetadata>` à l'élément `<behavior>`. Affectez à l'attribut `httpGetEnabled` la valeur `true` et à l'attribut `policyVersion` la valeur Policy15. `httpGetEnabled` permet au service de répondre aux demandes de métadonnées faites par une demande HTTP GET. `policyVersion` indique au service de se conformer à WS-Policy 1.5 lors de la génération des métadonnées.  
 
 5. Ajoutez un attribut `behaviorConfiguration` à l'élément `<service>` et spécifiez l'attribut `name` de l'élément `<behavior>` ajouté à l'étape 1, comme illustré dans l'exemple de code suivant.  
   
@@ -140,13 +140,13 @@ namespace Metadata.Samples
   
 7. Pour les points de terminaison de métadonnées ajoutés à l'étape précédente, affectez à l'attribut `binding` l'une des valeurs suivantes :  
   
-    -   `mexHttpBinding` pour la publication de HTTP.  
+    -   `mexHttpBinding` pour la publication HTTP.  
   
-    -   `mexHttpsBinding` pour la publication de HTTPS.  
+    -   `mexHttpsBinding` pour la publication HTTPS.  
   
     -   `mexNamedPipeBinding` pour la publication de canal nommé.  
   
-    -   `mexTcpBinding` pour la publication de TCP.  
+    -   `mexTcpBinding` pour la publication TCP.  
   
 8. Pour les points de terminaison de métadonnées ajoutés à l'étape précédente, attribuez à l'adresse la valeur suivante :  
   
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Procédure : héberger un service WCF dans une application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Self-Host](../../../../docs/framework/wcf/samples/self-host.md)
-- [Vue d'ensemble de l'architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Guide pratique pour Héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md)
+- [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilisation des métadonnées](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Procédure : publier des métadonnées pour un service à l’aide de code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Guide pratique pour Publier les métadonnées d’un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

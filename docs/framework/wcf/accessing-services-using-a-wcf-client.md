@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297250"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accès aux services à l'aide d'un client WCF
@@ -188,12 +188,12 @@ Lorsque ces types d'exceptions se produisent, le meilleur moyen de les résoudre
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Créer un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Procédure : accéder aux services avec un contrat duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Procédure : appeler des opérations de service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Procédure : accéder aux services avec des contrats demande-réponse unidirectionnels](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Procédure : accéder à un service WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Guide pratique pour Créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Guide pratique pour Access Services avec un contrat Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Guide pratique pour Appeler des opérations de Service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Guide pratique pour Accéder aux Services avec unidirectionnel et contrats demande-réponse](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Guide pratique pour Accéder à un service WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Fonctionnement du code client généré](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Spécification du comportement du client au moment de l'exécution](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Guide pratique pour Améliorer le temps de démarrage de WCF Client Applications à l’aide de XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Spécification du comportement du client au moment de l’exécution](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configuration des comportements clients](../../../docs/framework/wcf/configuring-client-behaviors.md)

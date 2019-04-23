@@ -3,10 +3,10 @@ title: Configuration de services WCF dans le code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225701"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configuration de services WCF dans le code
@@ -95,14 +95,14 @@ public class Service1 : IService1
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Configuration des services à l'aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Configuration des comportements clients](../../../docs/framework/wcf/configuring-client-behaviors.md)
 - [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)
 - [Configuration](../../../docs/framework/wcf/samples/configuration-sample.md)
 - [Activation basée sur la configuration dans les services IIS et WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [Prise en charge de la configuration et des métadonnées](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [Configuration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Procédure : spécifier une liaison de service dans la configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procédure : créer un point de terminaison de service dans la configuration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Procédure : publier des métadonnées pour un service à l’aide d’un fichier de configuration](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Procédure : spécifier une liaison de client dans la configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Guide pratique pour Spécifier une liaison de Service dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Guide pratique pour Créer un point de terminaison de Service dans la Configuration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Guide pratique pour Publier les métadonnées d’un Service à l’aide d’un fichier de Configuration](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Guide pratique pour Spécifier une liaison Client dans la Configuration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

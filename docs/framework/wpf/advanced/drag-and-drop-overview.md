@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301397"
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
@@ -54,7 +54,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
  La source et la cible d'une opération de glisser-déplacer sont des éléments d'interface utilisateur ; cependant, les données réellement transférées ne sont généralement pas représentées visuellement. Vous pouvez écrire du code pour fournir une représentation visuelle des données déplacées, à l'instar de ce qui se produit quand vous faites glisser des fichiers dans l'Explorateur Windows. Par défaut, l'utilisateur est tenu au courant de l'effet de son action par la modification du curseur, par la représentation de l'effet que l'opération de glisser-déplacer aura sur les données si ces dernières sont déplacées ou copiées.  
   
 ### <a name="drag-and-drop-effects"></a>Effets de glisser-déplacer  
- Les opérations de glisser-déplacer peuvent avoir différents effets sur les données transférées. Par exemple, vous pouvez copier les données ou bien les déplacer. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] définit un <xref:System.Windows.DragDropEffects> énumération que vous pouvez utiliser pour spécifier l’effet d’une opération de glisser-déplacer. Dans la source de glissement, vous pouvez spécifier les effets que la source autorisera dans la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Dans la cible de déplacement, vous pouvez spécifier l'effet attendu de la cible dans la propriété <xref:System.Windows.DragEventArgs.Effects%2A> de la classe <xref:System.Windows.DragEventArgs>. Quand la cible de déplacement spécifie son effet prévu dans l'événement <xref:System.Windows.DragDrop.DragOver>, ces informations sont passées à la source de glissement dans l'événement <xref:System.Windows.DragDrop.GiveFeedback>. La source du glissement utilise ces informations pour informer l'utilisateur de l'effet prévu de la cible du déplacement sur les données. Quand les données sont déplacées, la cible de déplacement spécifie son effet réel dans l'événement <xref:System.Windows.DragDrop.Drop>. Ces informations sont passées à la source de glissement en tant que valeur de retour de la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si la cible du déplacement retourne un effet qui n'est pas dans la liste des sources de glissement de `allowedEffects`, l'opération de glisser-déplacer est annulée sans que le transfert de données soit effectué.  
+ Les opérations de glisser-déplacer peuvent avoir différents effets sur les données transférées. Par exemple, vous pouvez copier les données ou bien les déplacer. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] définit une énumération <xref:System.Windows.DragDropEffects> que vous pouvez utiliser pour spécifier l'effet d'une opération de glisser-déplacer. Dans la source de glissement, vous pouvez spécifier les effets que la source autorisera dans la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Dans la cible de déplacement, vous pouvez spécifier l'effet attendu de la cible dans la propriété <xref:System.Windows.DragEventArgs.Effects%2A> de la classe <xref:System.Windows.DragEventArgs>. Quand la cible de déplacement spécifie son effet prévu dans l'événement <xref:System.Windows.DragDrop.DragOver>, ces informations sont passées à la source de glissement dans l'événement <xref:System.Windows.DragDrop.GiveFeedback>. La source du glissement utilise ces informations pour informer l'utilisateur de l'effet prévu de la cible du déplacement sur les données. Quand les données sont déplacées, la cible de déplacement spécifie son effet réel dans l'événement <xref:System.Windows.DragDrop.Drop>. Ces informations sont passées à la source de glissement en tant que valeur de retour de la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Si la cible du déplacement retourne un effet qui n'est pas dans la liste des sources de glissement de `allowedEffects`, l'opération de glisser-déplacer est annulée sans que le transfert de données soit effectué.  
   
  Il est important de se rappeler que dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les valeurs <xref:System.Windows.DragDropEffects> servent uniquement à établir une communication entre la source de glissement et la cible de déplacement au sujet des effets de l'opération de glisser-déplacer. L'effet réel de l'opération de glisser-déplacer dépend de la façon dont vous aurez écrit le code de votre application.  
   
@@ -146,11 +146,11 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Dans le gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove>, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> accepte trois paramètres :  
   
--   `dragSource` : Une référence à l’objet de dépendance qui est la source des données transférées ; Il s’agit généralement de la source de la <xref:System.Windows.UIElement.MouseMove> événement.  
+-   `dragSource` : référence à l'objet de dépendance correspondant à la source des données transférées ; il s'agit généralement de la source de l'événement <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data` -Un objet qui contient les données transférées, encapsulées dans un <xref:System.Windows.DataObject>.  
+-   `data` : objet qui contient les données transférées, inclus dans un wrapper dans un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` -Un de le <xref:System.Windows.DragDropEffects> des valeurs d’énumération qui spécifie les effets autorisés de l’opération de glisser-déplacer.  
+-   `allowedEffects` : une des valeurs d'énumération <xref:System.Windows.DragDropEffects> qui spécifie les effets autorisés de l'opération de glisser-déplacer.  
   
  N'importe quel objet sérialisable peut être passé dans le paramètre `data`. Si les données ne sont pas déjà incluses dans un wrapper dans un <xref:System.Windows.DataObject>, elles sont automatiquement incluses dans un wrapper dans un nouveau <xref:System.Windows.DataObject>. Pour passer plusieurs éléments de données, vous devez créer vous-même le <xref:System.Windows.DataObject> et le passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Pour plus d’informations, consultez [Données et objets de données](data-and-data-objects.md).  
   
@@ -218,6 +218,6 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Clipboard>
-- [Procédure pas à pas : activation de Glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Rubriques Comment](drag-and-drop-how-to-topics.md)
+- [Procédure pas à pas : L’activation de glisser-déplacer sur un contrôle utilisateur](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Rubriques de guide pratique](drag-and-drop-how-to-topics.md)
 - [Glisser-déposer](drag-and-drop.md)

@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298472"
 ---
 # <a name="getting-started-with-net-native"></a>Prise en main de .NET Native
@@ -106,18 +106,18 @@ Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous 
   
  Pour obtenir des exemples spécifiques de gestion des exceptions et d'autres problèmes qui se produisent quand vous testez votre application, consultez :  
   
--   [Exemple : Gestion des exceptions pendant la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Exemple : Gestion des Exceptions lors de la liaison de données](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Exemple : Résolution des problèmes de programmation dynamique](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Exemple : Résolution des problèmes de programmation dynamique](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Exceptions du runtime dans les applications natives .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Installation et configuration de .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [Compilation et .NET natif](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Configuration et installation de .NET native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native et compilation](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Réflexion et .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [API qui s'appuient sur la réflexion](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [API qui s’appuient sur la réflexion](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Sérialisation et métadonnées](../../../docs/framework/net-native/serialization-and-metadata.md)
 - [Migration de votre application du Windows Store vers .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
 ms.openlocfilehash: de36010e44c2f926b5839f4ec120f90c288f7501
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227767"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>Procédure : Animer la taille d’un ArcSegment
@@ -31,7 +31,7 @@ Cet exemple montre comment animer la <xref:System.Windows.Media.ArcSegment.Size%
 
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble de Geometry](geometry-overview.md)
-- [Rubriques "Comment" relatives aux objets Geometry](geometries-how-to-topics.md)
-- [Rubriques "Comment" relatives à l'animation et au minutage](animation-and-timing-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d’ensemble de Geometry](geometry-overview.md)
+- [Rubriques de procédures de géométries](geometries-how-to-topics.md)
+- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)

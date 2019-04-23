@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295417"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Procédure : créer une stratégie d’autorisation personnalisée
@@ -78,6 +78,6 @@ L’infrastructure de modèle d’identité dans Windows Communication Foundatio
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Procédure : comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Procédure : créer un gestionnaire d’autorisations personnalisé pour un service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Authorization Policy](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Guide pratique pour Comparer des revendications](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Guide pratique pour Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Stratégie d’autorisation](../../../../docs/framework/wcf/samples/authorization-policy.md)

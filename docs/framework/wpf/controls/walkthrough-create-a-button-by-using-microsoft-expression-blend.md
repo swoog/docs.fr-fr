@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300459"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procédure pas à pas : Créer un bouton à l’aide de Microsoft Expression Blend
@@ -250,7 +250,7 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
 ## <a name="see-also"></a>Voir aussi
 
 - [Créer un bouton avec XAML](walkthrough-create-a-button-by-using-xaml.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
-- [Vue d'ensemble de l'animation](../graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d'ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md)
+- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d’ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)

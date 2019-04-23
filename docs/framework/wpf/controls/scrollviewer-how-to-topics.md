@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
 ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229412"
 ---
 # <a name="scrollviewer-how-to-topics"></a>Rubriques "Comment utiliser le ScrollViewer"
@@ -19,7 +19,7 @@ Les rubriques de cette section montrent comment utiliser le <xref:System.Windows
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Gérer l’événement ScrollChanged](how-to-handle-the-scrollchanged-event.md)  
- [Faire défiler le contenu à l’aide de l’interface IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [Faire défiler le contenu à l'aide de l'interface IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
  [Utiliser les méthodes de défilement du contenu de ScrollViewer](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>Référence  
@@ -29,5 +29,5 @@ Les rubriques de cette section montrent comment utiliser le <xref:System.Windows
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de Panel](panels-overview.md)
-- [Mise en page](../advanced/layout.md)
+- [Vue d’ensemble de Panel](panels-overview.md)
+- [Disposition](../advanced/layout.md)

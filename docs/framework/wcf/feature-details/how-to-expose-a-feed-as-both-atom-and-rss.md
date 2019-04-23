@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295885"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procédure : exposer un flux en tant que flux Atom et RSS
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
   
 ### <a name="to-create-a-basic-syndication-service"></a>Pour créer un service de syndication de base  
   
-1. Définissez un contrat de service utilisant une interface marquée avec l'attribut <xref:System.ServiceModel.Web.WebGetAttribute>. Chaque opération exposée comme un flux de syndication retourne un objet <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Notez les paramètres de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Spécifie l’URL utilisée pour appeler cette opération de service. La chaîne pour ce paramètre contient des littéraux et une variable entre accolades ({*format*}). Cette variable correspond au paramètre `format` de l'opération de service. Pour plus d'informations, consultez <xref:System.UriTemplate>. `BodyStyle` affecte la façon dont les messages que cette opération de service envoie et reçoit sont écrits. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Spécifie que les données envoyées vers et à partir de cette opération de service ne sont pas encapsulées par les éléments XML définis dans l’infrastructure. Pour plus d'informations, consultez <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Définissez un contrat de service utilisant une interface marquée avec l'attribut <xref:System.ServiceModel.Web.WebGetAttribute>. Chaque opération exposée comme un flux de syndication retourne un objet <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Notez les paramètres de <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` spécifie l'URL utilisée pour appeler cette opération de service. La chaîne pour ce paramètre contient des littéraux et une variable entre accolades ({*format*}). Cette variable correspond au paramètre `format` de l'opération de service. Pour plus d'informations, consultez <xref:System.UriTemplate>. `BodyStyle` affecte la façon dont les messages que cette opération de service envoie et reçoit sont écrits. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> spécifie que les données envoyées vers et depuis cette opération de service ne sont pas renvoyées à la ligne par les éléments XML définis dans l'infrastructure. Pour plus d'informations, consultez <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

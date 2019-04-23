@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
 ms.openlocfilehash: 33e07bb655d81c6a802ebdce871a2fed845a5c96
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301241"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Procédure : configurer la fusion automatique des menus pour des applications MDI
@@ -35,4 +35,4 @@ La procédure suivante indique les étapes de base pour configurer la fusion aut
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

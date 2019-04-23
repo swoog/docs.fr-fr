@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
 ms.openlocfilehash: 8030a9a25c86dffcbd28af61ea4b3948d647e6fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230670"
 ---
 # <a name="printdialog"></a>PrintDialog
@@ -27,5 +27,5 @@ Le <xref:System.Windows.Controls.PrintDialog> contrôle est utilisé pour instan
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'impression](../advanced/printing-overview.md)
+- [Vue d’ensemble de l’impression](../advanced/printing-overview.md)
 - [Documents dans WPF](../advanced/documents-in-wpf.md)

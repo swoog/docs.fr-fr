@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
 ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227559"
 ---
 # <a name="image-how-to-topics"></a>Rubriques "Comment" relatives à Image
@@ -32,5 +32,5 @@ Les rubriques de cette section décrivent comment utiliser le <xref:System.Windo
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création d'images](../graphics-multimedia/imaging-overview.md)
-- [Rubriques Comment](../graphics-multimedia/imaging-how-to-topics.md)
+- [Vue d’ensemble de la création d’images](../graphics-multimedia/imaging-overview.md)
+- [Rubriques de guide pratique](../graphics-multimedia/imaging-how-to-topics.md)

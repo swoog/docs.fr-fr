@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298904"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traçage et instrumentation d'applications
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Méthode|Sortie|  
 |------------|------------|  
 |**Assert**|Le texte spécifié ou, si aucun texte n'est spécifié, la pile des appels. La sortie est écrite uniquement si la condition spécifiée en tant qu’argument dans l’instruction **Assert** a la valeur **false**.|  
-|**Fail**|Le texte spécifié ou, si aucun texte n'est spécifié, la pile des appels.|  
+|**Échec**|Le texte spécifié ou, si aucun texte n'est spécifié, la pile des appels.|  
 |**Write**|Le texte spécifié.|  
 |**WriteIf**|Le texte spécifié si la condition spécifiée en tant qu’argument dans l’instruction **WriteIf** est satisfaite.|  
 |**WriteLine**|Le texte spécifié et un retour chariot.|  
@@ -146,11 +146,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contrats de code](../../../docs/framework/debug-trace-profile/code-contracts.md)
-- [Types de projets C#, F# et Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Procédure : Ajouter des instructions de trace dans le code d’une application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Procédure : Effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [Procédure : Créer, initialiser et configurer les commutateurs de trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Procédure : Créer et initialiser des sources de trace](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Procédure : Utiliser des TraceSource et des filtres avec des écouteurs de trace](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
-- [Écouteurs de la trace](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Commutateurs de traçage](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Types de projets C#, F# et Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [Guide pratique pour Ajouter des instructions de traçage au Code d’Application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Guide pratique pour Créer, initialiser et configurer des commutateurs de Trace](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Guide pratique pour Créer et initialiser des Sources de Trace](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Guide pratique pour Utiliser des TraceSource et des filtres avec des écouteurs de Trace](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Écouteurs de suivi](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Commutateurs de suivi](../../../docs/framework/debug-trace-profile/trace-switches.md)

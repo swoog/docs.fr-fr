@@ -10,10 +10,10 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224267"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Procédure : Ajouter la gestion de classe d’un événement routé
@@ -35,6 +35,6 @@ Les événements routés peuvent être gérés par les gestionnaires de classe o
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.EventManager>
-- [Marquage des événements routés comme étant gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
 - [Gérer un événement routé](how-to-handle-a-routed-event.md)
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)

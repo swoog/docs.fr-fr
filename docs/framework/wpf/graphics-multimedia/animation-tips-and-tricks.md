@@ -15,10 +15,10 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295950"
 ---
 # <a name="animation-tips-and-tricks"></a>Conseils et astuces sur les animations
@@ -75,10 +75,10 @@ Lorsque vous travaillez avec des animations dans [!INCLUDE[TLA2#tla_wpf](../../.
   
 2. Le deuxième storyboard est appliqué et s’anime à partir de la position actuelle, qui est désormais 0, jusqu'à 500.  
   
- **Mais ce n’est pas ce qui se passe.** Au lieu de cela, le rectangle ne revient pas. Il continue à se déplacer vers la droite. Cela se produit car la deuxième animation utilise la valeur actuelle de la première animation comme valeur de départ, et anime à partir de cette valeur à 500. Lorsque la seconde animation remplace la première, car le <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> est utilisé, le <xref:System.Windows.Media.Animation.FillBehavior> de la première animation n’a pas d’importance.  
+ **Mais ce n’est pas ce qui se produit.** Au lieu de cela, le rectangle ne revient pas. Il continue à se déplacer vers la droite. Cela se produit car la deuxième animation utilise la valeur actuelle de la première animation comme valeur de départ, et anime à partir de cette valeur à 500. Lorsque la seconde animation remplace la première, car le <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> est utilisé, le <xref:System.Windows.Media.Animation.FillBehavior> de la première animation n’a pas d’importance.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior et l’événement terminé  
- Les exemples suivants montrent un autre scénario dans lequel le <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> semble n’avoir aucun effet. Là encore, l’exemple utilise un Storyboard pour animer la <xref:System.Windows.Media.TranslateTransform.X%2A> propriété de la <xref:System.Windows.Media.TranslateTransform> de 0 à 350. Toutefois, cette fois l’exemple s’inscrit pour la <xref:System.Windows.Media.Animation.Timeline.Completed> événement.  
+ Les exemples suivants montrent un autre scénario dans lequel le <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> semble n’avoir aucun effet. Là encore, l’exemple utilise un Storyboard pour animer la <xref:System.Windows.Media.TranslateTransform.X%2A> propriété de la <xref:System.Windows.Media.TranslateTransform> de 0 à 350. Toutefois, cette fois l’exemple s’inscrit pour la <xref:System.Windows.Media.Animation.Timeline.Completed> événement.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ Lorsque vous travaillez avec des animations dans [!INCLUDE[TLA2#tla_wpf](../../.
  Pour plus d’informations sur les différentes façons d’animer des propriétés, consultez [vue d’ensemble des Techniques d’Animation propriété](property-animation-techniques-overview.md).  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>L’utilisation de la composition HandoffBehavior consomme des ressources système  
- Lorsque vous appliquez un <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, ou <xref:System.Windows.Media.Animation.AnimationClock> à une propriété à l’aide de la <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>, n’importe quel <xref:System.Windows.Media.Animation.Clock> objets précédemment associés à cette propriété continuent de consommer des ressources système ; le système de minutage ne supprimera pas ces horloges automatiquement.  
+ Lorsque vous appliquez un <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, ou <xref:System.Windows.Media.Animation.AnimationClock> à une propriété à l’aide de la <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, n’importe quel <xref:System.Windows.Media.Animation.Clock> objets précédemment associés à cette propriété continuent de consommer des ressources système ; le système de minutage ne sera pas Supprimez ces horloges automatiquement.  
   
  Pour éviter les problèmes de performances lorsque vous appliquez un grand nombre d’horloges à l’aide de <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, vous devez supprimer la composition des horloges de la propriété animée lorsqu’elles ont terminé. Il existe plusieurs manières de supprimer une horloge.  
   
@@ -130,4 +130,4 @@ Lorsque vous travaillez avec des animations dans [!INCLUDE[TLA2#tla_wpf](../../.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)

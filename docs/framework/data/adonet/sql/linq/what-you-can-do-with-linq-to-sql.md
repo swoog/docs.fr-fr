@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231576"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Que faire avec LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge toutes les fonctions clés que recherchent les développeurs SQL. Vous pouvez demander des informations et insérer, mettre à jour et supprimer des informations dans des tables.  
   
 ## <a name="selecting"></a>Sélection  
- Pour effectuer une sélection (*projection*) il vous suffit d'écrire une requête [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] dans votre propre langage de programmation, puis d'exécuter cette requête pour récupérer les résultats. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] toutes les opérations nécessaires dans les opérations SQL nécessaires que vous êtes familiarisé avec traduit à lui-même. Pour plus d’informations, consultez [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Pour effectuer une sélection (*projection*) il vous suffit d'écrire une requête [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] dans votre propre langage de programmation, puis d'exécuter cette requête pour récupérer les résultats. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit lui-même toutes les opérations requises dans les opérations SQL nécessaires que vous connaissez. Pour plus d'informations, consultez [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  Dans l'exemple suivant, les noms de société des clients de Londres sont récupérés et affichés dans la fenêtre de console.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59231576"
  Pour `Delete` un élément, supprimez-le de la collection à laquelle il appartient, puis appelez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> sur le <xref:System.Data.Linq.DataContext> pour valider la modification.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne reconnaît pas les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table qui a des contraintes sur cette, consultez [Comment : Supprimer des lignes de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne reconnaît les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table qui a des contraintes sur cette, consultez [Comment : Supprimer des lignes de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Dans l'exemple suivant, le client dont le `CustomerID` est `98128` est extrait de la base de données. Ensuite, après confirmation de la récupération de la ligne client, <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> est appelé pour supprimer cet objet de la collection. Enfin, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> est appelé pour envoyer la suppression à la base de données.  
   

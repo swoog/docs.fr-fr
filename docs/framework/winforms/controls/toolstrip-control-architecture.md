@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296210"
 ---
 # <a name="toolstrip-control-architecture"></a>Architecture du contrôle ToolStrip
@@ -316,7 +316,7 @@ Le <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.ToolStrip
  <xref:System.Windows.Forms.ToolStripMenuItem> est un <xref:System.Windows.Forms.ToolStripDropDownItem> qui fonctionne avec les <xref:System.Windows.Forms.ToolStripDropDownMenu> et <xref:System.Windows.Forms.ContextMenuStrip> pour gérer la disposition de la mise en surbrillance, de mise en page et de colonne spéciale pour les menus.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> ressemble à <xref:System.Windows.Forms.ToolStripButton>, mais affiche une zone de liste déroulante lorsque l’utilisateur clique dessus. Masquer ou afficher la flèche de déroulement en définissant le <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propriété. <xref:System.Windows.Forms.ToolStripDropDownButton> Hôtes un <xref:System.Windows.Forms.ToolStripOverflowButton> qui affiche les éléments dépassant la <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> ressemble à <xref:System.Windows.Forms.ToolStripButton>, mais affiche une zone de liste déroulante lorsque l’utilisateur clique dessus. Masquer ou afficher la flèche de déroulement en définissant le <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propriété. <xref:System.Windows.Forms.ToolStripDropDownButton> hôtes un <xref:System.Windows.Forms.ToolStripOverflowButton> qui affiche les éléments dépassant la <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> combine les fonctions de bouton et bouton de liste déroulante.  
@@ -380,7 +380,7 @@ Le <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.ToolStrip
 
 - [Vue d’ensemble du contrôle ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Résumé de la technologie ToolStrip](toolstrip-technology-summary.md)
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
 - [MenuStrip, contrôle](menustrip-control-windows-forms.md)
 - [StatusStrip, contrôle](statusstrip-control.md)
 - [ContextMenuStrip, contrôle](contextmenustrip-control.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
 ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299811"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Procédure : Orner les enfants d’un panneau
@@ -21,7 +21,7 @@ Cet exemple montre comment lier par programmation un ornement aux enfants d’un
 ## <a name="example"></a>Exemple  
  Pour lier un ornement aux enfants d’un <xref:System.Windows.Controls.Panel>, procédez comme suit :  
   
-1. Déclarez un nouveau <xref:System.Windows.Documents.AdornerLayer> objet et appelez le `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> méthode pour rechercher une couche d’ornement pour l’élément dont les enfants doivent être ornés.  
+1. Déclarez un nouveau <xref:System.Windows.Documents.AdornerLayer> objet et appelez le `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> méthode pour rechercher une couche d’ornement pour l’élément dont les enfants doivent être ornés.  
   
 2. Énumérez les enfants de l’élément parent et appelez le <xref:System.Windows.Documents.AdornerLayer.Add%2A> méthode pour lier un ornement à chaque élément enfant.  
   
@@ -35,4 +35,4 @@ Cet exemple montre comment lier par programmation un ornement aux enfants d’un
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des ornements](adorners-overview.md)
+- [Vue d’ensemble des ornements](adorners-overview.md)

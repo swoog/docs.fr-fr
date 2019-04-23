@@ -12,10 +12,10 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301059"
 ---
 # <a name="how-to-implement-an-observer"></a>Procédure : implémenter un observateur
@@ -52,6 +52,6 @@ Le modèle de design observateur requiert une division entre un observateur, qui
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.IObserver%601>
-- [Modèle de design observateur](../../../docs/standard/events/observer-design-pattern.md)
-- [Procédure : implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)
+- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)

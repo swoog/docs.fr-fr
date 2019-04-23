@@ -5,10 +5,10 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223825"
 ---
 # <a name="routing-scenarios"></a>Scénarios de routage
@@ -66,13 +66,13 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
  Pour connaître les étapes permettant de configurer la gestion des erreurs, consultez [How To : Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Dans cette section  
- [Procédure : Contrôle des versions du service](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Guide pratique pour Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Procédure : Partitionnement des données du service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Guide pratique pour Partitionnement des données de service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Procédure : Mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Guide pratique pour Mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Procédure : Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Guide pratique pour Gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

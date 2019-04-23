@@ -3,10 +3,10 @@ title: Guide de référence du langage Entity SQL
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
 ms.openlocfilehash: 158240678eec7eb4699263c4febe9b6991196e11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231511"
 ---
 # <a name="entity-sql-language-reference"></a>Guide de référence du langage Entity SQL
@@ -17,12 +17,12 @@ Cette section fournit une documentation détaillée sur [!INCLUDE[linq_entities]
   
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
- [Langage d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [Langage Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
   
  [Fonctions canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Outils ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))  
+ [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,10 +3,10 @@ title: Utilisation d'actions pour implémenter le comportement côté serveur
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294936"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilisation d'actions pour implémenter le comportement côté serveur
@@ -83,6 +83,6 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
 ## <a name="see-also"></a>Voir aussi
 
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Développer et déployer WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Développement et déploiement de WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

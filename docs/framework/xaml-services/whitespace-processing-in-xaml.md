@@ -8,10 +8,10 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294923"
 ---
 # <a name="white-space-processing-in-xaml"></a>Traitement des espaces blancs en XAML
@@ -76,6 +76,6 @@ Les règles de langage pour XAML d’état que l’espace blanc significatif doi
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Vue d’ensemble du langage XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Entités de caractères XML et XAML](xml-character-entities-and-xaml.md)
 - [XML : space en XAML de gestion des](xml-space-handling-in-xaml.md)

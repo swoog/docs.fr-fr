@@ -3,10 +3,10 @@ title: Migration de .NET Remoting vers WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296197"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migration de .NET Remoting vers WCF
@@ -101,9 +101,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Vous pouvez configurer et héberger des services WCF de plusieurs façons. Cet exemple, qui illustre ce que l'on appelle l'auto-hébergement, n'est qu'un exemple parmi d'autres. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Procédure : Définir un contrat de service](how-to-define-a-wcf-service-contract.md)  
+-   [Guide pratique pour Définir un contrat de Service](how-to-define-a-wcf-service-contract.md)  
   
--   [Configuration des services à l'aide de fichiers de configuration](configuring-services-using-configuration-files.md)  
+-   [Configuration des services à l’aide de fichiers de configuration](configuring-services-using-configuration-files.md)  
   
 -   [Hébergement de services](hosting-services.md)  
   
@@ -142,9 +142,9 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
  Cet exemple montre la programmation au niveau du canal, car elle présente plus de similitudes avec l'exemple Remoting. Est également disponible le **ajouter une référence de Service** approche dans Visual Studio qui génère du code pour simplifier la programmation côté client. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Programmation au niveau du canal client](./extending/client-channel-level-programming.md)  
+-   [Programmation du client au niveau du canal](./extending/client-channel-level-programming.md)  
   
--   [Procédure : Ajouter, mettre à jour ou supprimer une référence de Service](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Guide pratique pour Ajouter, mettre à jour ou supprimer une référence de Service](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Utilisation de la sérialisation  
  Bien que .NET Remoting et WCF utilisent tous deux la sérialisation pour envoyer des objets entre le client et le serveur, il existe des différences importantes :  
@@ -284,11 +284,11 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Pourquoi effectuer la migration de Remoting vers WCF ?  
   
--   **.NET Remoting est un produit hérité.** Comme décrit dans [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), il est considéré comme un produit hérité et n’est pas recommandé pour un nouveau développement. Il est recommandé d'utiliser WCF ou l'API Web ASP.NET pour les applications nouvelles et existantes.  
+-   **.NET remoting est un produit hérité.** Comme décrit dans [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), il est considéré comme un produit hérité et n’est pas recommandé pour un nouveau développement. Il est recommandé d'utiliser WCF ou l'API Web ASP.NET pour les applications nouvelles et existantes.  
   
--   **WCF utilise des normes multiplateformes.** Conçu pour mettre en avant l'interopérabilité multiplateforme, WCF prend en charge de nombreuses normes (SOAP, WS-Security, WS-Trust, etc.). Un service WCF peut interagir avec des clients en cours d'exécution sur des systèmes d'exploitation autres que Windows. Remoting est principalement conçu pour les environnements dans lesquels le serveur et les applications clientes exécutent .NET Framework sur un système d'exploitation Windows.  
+-   **WCF utilise les normes multiplateformes.** Conçu pour mettre en avant l'interopérabilité multiplateforme, WCF prend en charge de nombreuses normes (SOAP, WS-Security, WS-Trust, etc.). Un service WCF peut interagir avec des clients en cours d'exécution sur des systèmes d'exploitation autres que Windows. Remoting est principalement conçu pour les environnements dans lesquels le serveur et les applications clientes exécutent .NET Framework sur un système d'exploitation Windows.  
   
--   **WCF intègre des mesures de sécurité.** Conçu dans un souci de sécurité, WCF offre de nombreuses options en ce qui concerne l'authentification, la sécurité au niveau du transport, la sécurité au niveau des messages, etc. S'il facilite l'interopérabilité des applications, Remoting n'est pas conçu pour assurer la sécurité dans les environnements non approuvés. De par sa conception, WCF fonctionne dans les environnements approuvés et non approuvés.  
+-   **WCF propose une sécurité intégrée.** Conçu dans un souci de sécurité, WCF offre de nombreuses options en ce qui concerne l'authentification, la sécurité au niveau du transport, la sécurité au niveau des messages, etc. S'il facilite l'interopérabilité des applications, Remoting n'est pas conçu pour assurer la sécurité dans les environnements non approuvés. De par sa conception, WCF fonctionne dans les environnements approuvés et non approuvés.  
   
 ### <a name="migration-recommendations"></a>Recommandations en matière de migration  
  Voici les étapes recommandées pour effectuer la migration de Remoting vers WCF :  
@@ -297,15 +297,15 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **Créer le contrat de données.** Définissez les types de données échangées entre le serveur et le client, puis marquez-les avec l'attribut [DataContract]. Marquez tous les champs et propriétés que le client pourra utiliser avec [DataMember].  
   
--   **Créer le contrat d'erreur (facultatif).** Créez les types échangés entre le client et le serveur en cas d'erreurs. Marquez ces types avec [DataContract] et [DataMember] pour les rendre sérialisables. Concernant les opérations de service marquées avec [OperationContract], marquez-les aussi avec [FaultContract] pour indiquer les erreurs qu'elles peuvent retourner.  
+-   **Créer le contrat d’erreur (facultatif).** Créez les types échangés entre le client et le serveur en cas d'erreurs. Marquez ces types avec [DataContract] et [DataMember] pour les rendre sérialisables. Concernant les opérations de service marquées avec [OperationContract], marquez-les aussi avec [FaultContract] pour indiquer les erreurs qu'elles peuvent retourner.  
   
 -   **Configurer et héberger le service.** Une fois le contrat de service créé, l’étape suivante consiste à configurer une liaison pour exposer le service à un point de terminaison. Pour plus d’informations, consultez [points de terminaison : Adresses, liaisons et contrats](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
  À l'issue de la migration d'une application Remoting vers WCF, il est toujours important de supprimer les dépendances à .NET Remoting. Cela permet de s'assurer que toutes les vulnérabilités de Remoting sont supprimées de l'application. Notamment :  
   
--   **Cesser d'utiliser MarshalByRefObject.** Le type MarshalByRefObject concerne uniquement Remoting et n’est pas utilisé par WCF. Les types d’applications qui définissent des sous-classes de MarshalByRefObject doivent être supprimés ou modifiés.  
+-   **Cesser d’utiliser MarshalByRefObject.** Le type MarshalByRefObject concerne uniquement Remoting et n’est pas utilisé par WCF. Les types d’applications qui définissent des sous-classes de MarshalByRefObject doivent être supprimés ou modifiés.  
   
--   **Cesser d'utiliser [Serializable] et ISerializable.** Conçus à l'origine pour sérialiser les types dans les environnements fiables, l'attribut [Serializable] et l'interface ISerializable sont utilisés par Remoting. La sérialisation WCF s'appuie sur les types marqués avec [DataContract] et [DataMember]. Les types de données utilisés par une application doivent être modifiés afin d'utiliser [DataContract] et non l'interface ISerializable ou [Serializable].  
+-   **Cesser d’utilisation de [Serializable] et ISerializable.** Conçus à l'origine pour sérialiser les types dans les environnements fiables, l'attribut [Serializable] et l'interface ISerializable sont utilisés par Remoting. La sérialisation WCF s'appuie sur les types marqués avec [DataContract] et [DataMember]. Les types de données utilisés par une application doivent être modifiés afin d'utiliser [DataContract] et non l'interface ISerializable ou [Serializable].  
   
 ### <a name="migration-scenarios"></a>Scénarios de migration  
  Nous allons à présent voir comment transposer des scénarios Remoting courants suivants dans WCF :  

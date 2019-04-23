@@ -19,10 +19,10 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300630"
 ---
 # <a name="option-compare-statement"></a>Option Compare, instruction
@@ -38,7 +38,7 @@ Option Compare { Binary | Text }
   
 |Terme|Définition|  
 |---|---|  
-|`Binary`|Facultatif. Se traduit par des comparaisons de chaînes basées sur un ordre de tri dérivé des représentations binaires internes des caractères.<br /><br /> Ce type de comparaison est utile surtout si les chaînes peuvent contenir des caractères qui ne doivent ne pas être interprétées comme du texte. Dans ce cas, il convient de ne pas fausser les comparaisons avec des équivalences alphabétiques comme, par exemple, quand la casse n'est pas respectée.|  
+|`Binary`|Optionnel. Se traduit par des comparaisons de chaînes basées sur un ordre de tri dérivé des représentations binaires internes des caractères.<br /><br /> Ce type de comparaison est utile surtout si les chaînes peuvent contenir des caractères qui ne doivent ne pas être interprétées comme du texte. Dans ce cas, il convient de ne pas fausser les comparaisons avec des équivalences alphabétiques comme, par exemple, quand la casse n'est pas respectée.|  
 |`Text`|Optionnel. Se traduit par des comparaisons de chaînes basées sur un ordre de tri de texte sans respect de la casse déterminé par les paramètres régionaux de votre système.<br /><br /> Ce type de comparaison est utile si vos chaînes contiennent toutes des caractères de texte et si vous voulez les comparer en prenant en compte les équivalences alphabétiques, c'est-à-dire des lettres très proches ou de casse différente. Par exemple, vous pouvez faire en sorte que les caractères `A` et `a` soient considérés comme identiques et que les caractères `Ä` et `ä` précèdent `B` et `b`.|  
   
 ## <a name="remarks"></a>Notes  
@@ -97,7 +97,7 @@ Option Compare { Binary | Text }
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Opérateurs de comparaison](../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Opérateurs de comparaison en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Like, opérateur](../../../visual-basic/language-reference/operators/like-operator.md)
+- [Like (opérateur)](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Fonctions de chaîne](../../../visual-basic/language-reference/functions/string-functions.md)
-- [Option Explicit, instruction](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit (instruction)](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
