@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f62707fb1e52a96cf3f131e9c11fee82ab03f4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097185"
 ---
-# <a name="cordebugiltonativemappingtypes-enumeration"></a><span data-ttu-id="933c3-102">CorDebugIlToNativeMappingTypes, énumération</span><span class="sxs-lookup"><span data-stu-id="933c3-102">CorDebugIlToNativeMappingTypes Enumeration</span></span>
-<span data-ttu-id="933c3-103">Indique si une plage particulière d’instructions natives, représentée par une instance de la structure COR_DEBUG_IL_TO_NATIVE_MAP, correspond à une région de code spéciale.</span><span class="sxs-lookup"><span data-stu-id="933c3-103">Indicates whether a particular range of native instructions, represented by an instance of the COR_DEBUG_IL_TO_NATIVE_MAP structure, corresponds to a special code region.</span></span>  
+# <a name="cordebugiltonativemappingtypes-enumeration"></a><span data-ttu-id="970ab-102">CorDebugIlToNativeMappingTypes, énumération</span><span class="sxs-lookup"><span data-stu-id="970ab-102">CorDebugIlToNativeMappingTypes Enumeration</span></span>
+<span data-ttu-id="970ab-103">Indique si une plage particulière d’instructions natives, représentée par une instance de la structure COR_DEBUG_IL_TO_NATIVE_MAP, correspond à une région de code spéciale.</span><span class="sxs-lookup"><span data-stu-id="970ab-103">Indicates whether a particular range of native instructions, represented by an instance of the COR_DEBUG_IL_TO_NATIVE_MAP structure, corresponds to a special code region.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="933c3-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="933c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="970ab-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="970ab-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugIlToNativeMappingTypes {  
@@ -36,24 +36,24 @@ typedef enum CorDebugIlToNativeMappingTypes {
 } CorDebugIlToNativeMappingTypes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="933c3-105">Membres</span><span class="sxs-lookup"><span data-stu-id="933c3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="970ab-105">Membres</span><span class="sxs-lookup"><span data-stu-id="970ab-105">Members</span></span>  
   
-|<span data-ttu-id="933c3-106">Membre</span><span class="sxs-lookup"><span data-stu-id="933c3-106">Member</span></span>|<span data-ttu-id="933c3-107">Description</span><span class="sxs-lookup"><span data-stu-id="933c3-107">Description</span></span>|  
+|<span data-ttu-id="970ab-106">Membre</span><span class="sxs-lookup"><span data-stu-id="970ab-106">Member</span></span>|<span data-ttu-id="970ab-107">Description</span><span class="sxs-lookup"><span data-stu-id="970ab-107">Description</span></span>|  
 |------------|-----------------|  
-|`NO_MAPPING`|<span data-ttu-id="933c3-108">La plage d’instructions natives ne correspond pas à n’importe quelle région de code spéciale.</span><span class="sxs-lookup"><span data-stu-id="933c3-108">The range of native instructions does not correspond to any special code region.</span></span>|  
-|`PROLOG`|<span data-ttu-id="933c3-109">La plage d’instructions natives correspond au prologue.</span><span class="sxs-lookup"><span data-stu-id="933c3-109">The range of native instructions corresponds to the prolog.</span></span>|  
-|`EPILOG`|<span data-ttu-id="933c3-110">La plage d’instructions natives correspond à l’épilogue.</span><span class="sxs-lookup"><span data-stu-id="933c3-110">The range of native instructions corresponds to the epilog.</span></span>|  
+|`NO_MAPPING`|<span data-ttu-id="970ab-108">La plage d’instructions natives ne correspond pas à n’importe quelle région de code spéciale.</span><span class="sxs-lookup"><span data-stu-id="970ab-108">The range of native instructions does not correspond to any special code region.</span></span>|  
+|`PROLOG`|<span data-ttu-id="970ab-109">La plage d’instructions natives correspond au prologue.</span><span class="sxs-lookup"><span data-stu-id="970ab-109">The range of native instructions corresponds to the prolog.</span></span>|  
+|`EPILOG`|<span data-ttu-id="970ab-110">La plage d’instructions natives correspond à l’épilogue.</span><span class="sxs-lookup"><span data-stu-id="970ab-110">The range of native instructions corresponds to the epilog.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="933c3-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="933c3-111">Requirements</span></span>  
- <span data-ttu-id="933c3-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="933c3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="970ab-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="970ab-111">Requirements</span></span>  
+ <span data-ttu-id="970ab-112">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="970ab-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="933c3-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="933c3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="970ab-113">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="970ab-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="933c3-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="933c3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="970ab-114">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="970ab-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="933c3-115">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="933c3-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="970ab-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="970ab-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="933c3-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="933c3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="970ab-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="970ab-116">See also</span></span>
 
-- [<span data-ttu-id="933c3-117">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="933c3-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="933c3-118">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="933c3-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="970ab-117">GetILToNativeMapping, méthode</span><span class="sxs-lookup"><span data-stu-id="970ab-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="970ab-118">Énumérations de débogage</span><span class="sxs-lookup"><span data-stu-id="970ab-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
