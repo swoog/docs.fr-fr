@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078782"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Activation du débogage JIT-attach
@@ -21,15 +21,15 @@ Débogage JIT-attach est l’expression utilisée pour décrire l’attachement 
   
 -   Exceptions non gérées (dans le code natif et managé)  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> méthode ou [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (fonction) (famille Windows 7).  
+-   Méthode <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou fonction [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (famille Windows 7)  
   
 -   Erreurs irrécupérables du runtime  
   
  Le débogage JIT-attach est également déclenché par des appels aux fonctions et méthodes suivantes :  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
+-   Méthode<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
+-   Méthode<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
   
 -   Fonction [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32)  
   
@@ -38,4 +38,4 @@ Débogage JIT-attach est l’expression utilisée pour décrire l’attachement 
 ## <a name="see-also"></a>Voir aussi
 
 - [Débogage, traçage et profilage](../../../docs/framework/debug-trace-profile/index.md)
-- [Simplification du débogage d'une image](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [Simplification du débogage d’une image](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

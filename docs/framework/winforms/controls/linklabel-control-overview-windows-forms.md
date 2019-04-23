@@ -9,10 +9,10 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
 ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083125"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Vue d'ensemble du contrôle LinkLabel (Windows Forms)
@@ -26,6 +26,6 @@ Les formulaires Windows <xref:System.Windows.Forms.LinkLabel> contrôle vous per
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [Vue d’ensemble du contrôle Label](label-control-overview-windows-forms.md)
-- [Procédure : établir un lien à un objet ou une page web avec le contrôle LinkLabel Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Procédure : modifier l’aspect du contrôle LinkLabel Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Vue d'ensemble du contrôle Label](label-control-overview-windows-forms.md)
+- [Guide pratique pour Lier à un objet ou la Page Web avec un contrôle LinkLabel Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Guide pratique pour Modifier l’apparence du contrôle LinkLabel Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055246"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : Ma première application de bureau WPF
@@ -39,7 +39,7 @@ Cette procédure pas à pas comprend les étapes suivantes :
 À la fin de la procédure pas à pas, vous aurez créé une application Windows qui permet aux utilisateurs d’afficher les notes de frais pour certaines personnes autonome. L’application est composée de plusieurs pages WPF sont hébergées dans une fenêtre de style navigateur.
 
 > [!TIP]
-> L’exemple de code qui est utilisé pour générer cette procédure pas à pas est disponible pour Visual Basic et C# dans [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
+> L’exemple de code qui est utilisé pour générer cette procédure pas à pas est disponible pour Visual Basic et c# dans [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -51,7 +51,7 @@ Cette procédure pas à pas comprend les étapes suivantes :
 
 La première étape consiste à créer l’infrastructure d’application, qui inclut une définition d’application, deux pages et une image.
 
-1. Créer un nouveau projet d’Application WPF en Visual Basic ou Visual C# nommé **`ExpenseIt`**:
+1. Créer un nouveau projet d’Application WPF en Visual Basic ou Visual c# nommé **`ExpenseIt`**:
 
    1. Ouvrez Visual Studio et sélectionnez **fichier** > **New** > **projet**.
 
@@ -68,7 +68,7 @@ La première étape consiste à créer l’infrastructure d’application, qui i
    > [!NOTE]
    > Cette procédure pas à pas utilise le <xref:System.Windows.Controls.DataGrid> contrôle qui est disponible dans le .NET Framework 4 et versions ultérieures. Être sûr que votre projet cible le .NET Framework 4 ou version ultérieure. Pour plus d'informations, voir [Procédure : Cibler une version du .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
-2. Ouvrez *Application.xaml* (Visual Basic) ou *App.xaml* (C#).
+2. Ouvrez *Application.xaml* (Visual Basic) ou *App.xaml* (c#).
 
     Ce fichier XAML définit une application WPF et les ressources de l’application. Vous utilisez également ce fichier pour spécifier l’interface utilisateur qui s’affiche automatiquement quand l’application démarre ; Dans ce cas, *MainWindow.xaml*.
 
@@ -118,7 +118,7 @@ La première étape consiste à créer l’infrastructure d’application, qui i
 
     Ce fichier est un fichier code-behind qui contient le code pour gérer les événements déclarés dans *MainWindow.xaml*. Ce fichier contient une classe partielle pour la fenêtre définie en XAML.
 
-7. Si vous utilisez C#, modifiez le `MainWindow` classe à dériver de <xref:System.Windows.Navigation.NavigationWindow>. (En Visual Basic, cela se produit automatiquement lorsque vous modifiez la fenêtre en XAML.)
+7. Si vous utilisez c#, modifiez le `MainWindow` classe à dériver de <xref:System.Windows.Navigation.NavigationWindow>. (En Visual Basic, cela se produit automatiquement lorsque vous modifiez la fenêtre en XAML.)
 
    Votre code doit ressembler à ceci :
 
@@ -126,7 +126,7 @@ La première étape consiste à créer l’infrastructure d’application, qui i
    [!code-vb[ExpenseIt#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
 
    > [!TIP]
-   > Vous pouvez activer/désactiver le langage de code de l’exemple de code entre C# et Visual Basic dans le **langage** déroulante sur le coin supérieur droit de cet article.
+   > Vous pouvez activer/désactiver le langage de code de l’exemple de code entre c# et Visual Basic dans le **langage** déroulante sur le coin supérieur droit de cet article.
 
 ## <a name="add-files-to-the-application"></a>Ajouter des fichiers à l’application
 
@@ -484,7 +484,7 @@ L’illustration suivante montre les deux pages de le `ExpenseIt` application av
 >
 > - [Sécurité](../security-wpf.md)
 >
-> - [Localisation et globalisation des applications WPF](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Globalisation et localisation pour WPF](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Performances WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,15 +493,15 @@ L’illustration suivante montre les deux pages de le `ExpenseIt` application av
 Dans cette procédure pas à pas, vous avez appris un certain nombre de techniques pour la création d’une interface utilisateur à l’aide de Windows Presentation Foundation (WPF). Vous devez maintenant avoir une compréhension élémentaire des blocs de construction d’une application .NET Framework de liaison de données. Pour plus d’informations sur les modèles d’architecture et de programmation WPF, consultez les rubriques suivantes :
 
 - [Architecture de WPF](../advanced/wpf-architecture.md)
-- [Vue d’ensemble XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Vue d’ensemble du langage XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Vue d’ensemble des propriétés de dépendance](../advanced/dependency-properties-overview.md)
-- [Mise en page](../advanced/layout.md)
+- [Disposition](../advanced/layout.md)
 
 Pour plus d’informations sur la création d’applications, consultez les rubriques suivantes :
 
 - [Développement d’applications](../app-development/index.md)
 - [Contrôles](../controls/index.md)
-- [Vue d’ensemble de liaison de données](../data/data-binding-overview.md)
+- [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
 - [Graphiques et multimédia](../graphics-multimedia/index.md)
 - [Documents dans WPF](../advanced/documents-in-wpf.md)
 

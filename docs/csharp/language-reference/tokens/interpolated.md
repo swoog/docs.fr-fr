@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920894"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolation de chaîne (Référence C#)
@@ -95,7 +95,7 @@ Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel i
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Mise en forme composite](../../../standard/base-types/composite-formatting.md)
-- [Table des formats des résultats numériques](../keywords/formatting-numeric-results-table.md)
+- [Tableau des formats des résultats numériques](../keywords/formatting-numeric-results-table.md)
 - [Chaînes](../../programming-guide/strings/index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Caractères spéciaux C#](index.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
 ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073960"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Types XML et ADO.NET dans les contrats de données
@@ -146,7 +146,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
  Les mêmes règles de déclaration d'élément globale s'appliquent aux types de groupes de données hérités. Notez que `XmlRootAttribute` ne peut pas substituer de déclarations d'élément globales ajoutées par l'intermédiaire du code personnalisé, ajoutées soit à `XmlSchemaSet` à l'aide de la méthode du fournisseur de schéma, soit à l'aide de `GetSchema` pour les types de groupes de données hérités.  
   
 ### <a name="ixmlserializable-element-types"></a>Types d'élément IXmlSerializable  
- `IXmlSerializable` types d’élément le `IsAny` propriété définie sur `true` ou ont leur méthode du fournisseur de schéma à retourner `null`.  
+ La propriété `IXmlSerializable` des types d'élément `IsAny` a la valeur `true` ou leur méthode du fournisseur de schéma retourne `null`.  
   
  La sérialisation et la désérialisation d'un type d'élément est très semblable à la sérialisation et la désérialisation d'un type de contenu. Toutefois, il y a des différences importantes :  
   
@@ -158,7 +158,7 @@ Le modèle de contrat de données de Windows Communication Foundation (WCF) pren
   
 -   Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut pas être null et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
   
--   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> avec le `verifyObjectName` paramètre défini sur `true` se comporte de la même façon que `IsStartObject` avant de lire l’objet. `ReadObject` puis passe le contrôle à `ReadXml` (méthode).  
+-   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>, avec le paramètre `verifyObjectName` ayant la valeur `true`, se comporte de la même façon que `IsStartObject` avant de lire l'objet. `ReadObject` passe ensuite le contrôle à la méthode `ReadXml`.  
   
  Le schéma exporté pour les types d'élément est le même que pour le type `XmlElement` décrit dans une section antérieure, sauf que la méthode du fournisseur de schéma peut ajouter tout schéma supplémentaire au <xref:System.Xml.Schema.XmlSchemaSet> comme avec les types de contenu. L'utilisation de l'attribut `XmlRootAttribute` avec les types d'élément n'est pas autorisé, et les déclarations d'élément globales ne sont jamais émises pour ces types.  
   

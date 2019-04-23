@@ -3,14 +3,14 @@ title: Vue d'ensemble d'Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073468"
 ---
 # <a name="entity-sql-overview"></a>Vue d'ensemble d'Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] est un langage de type SQL qui vous permet d’interroger des modèles conceptuels dans le [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modèles conceptuels représentent des données en tant qu’entités et relations, et [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vous permet d’interroger ces entités et relations dans un format familier pour ceux qui ont utilisé SQL.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] est un langage similaire à SQL qui vous permet d'interroger des modèles conceptuels dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modèles conceptuels représentent des données en tant qu’entités et relations, et [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vous permet d’interroger ces entités et relations dans un format familier pour ceux qui ont utilisé SQL.  
   
  [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données de stockage pour traduire le langage [!INCLUDE[esql](../../../../../../includes/esql-md.md)] générique en requêtes de stockage. Le fournisseur EntityClient fournit une méthode pour exécuter une commande [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sur un modèle d'entité et retourner des types de données enrichis, y compris des résultats scalaires, des jeux de résultats et des graphiques d'objets. Lorsque vous construisez des objets <xref:System.Data.EntityClient.EntityCommand>, vous pouvez spécifier un nom de procédure stockée ou le texte d'une requête en assignant une chaîne de requête [!INCLUDE[esql](../../../../../../includes/esql-md.md)] à sa propriété <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>. <xref:System.Data.EntityClient.EntityDataReader> expose les résultats de l'exécution d'un <xref:System.Data.EntityClient.EntityCommand> sur un modèle EDM. Pour exécuter la commande qui retourne l'objet <xref:System.Data.EntityClient.EntityDataReader>, appelez la méthode <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "59073468"
   
  [Système de type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)  
   
- [Définitions de types](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)  
+ [Définitions de type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)  
   
  [Construction de types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59073468"
   
  [Littéraux null et inférence de type](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
   
- [Jeu de caractères d’entrée](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
+ [Jeu de caractères en entrée](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   
  [Expressions de requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
   
@@ -59,10 +59,10 @@ ms.locfileid: "59073468"
   
  [Composition de requêtes Entity SQL imbriquées](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
- [Types structurés Nullable](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
+ [Types structurés autorisant la valeur null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Langage d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Langage Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [Spécifications CSDL, SSDL et MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

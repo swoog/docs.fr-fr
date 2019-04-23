@@ -10,10 +10,10 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079668"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Dépannage des applications hybrides
@@ -21,7 +21,7 @@ ms.locfileid: "59079668"
 
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Chevauchement de contrôles  
- Les contrôles peuvent ne pas se chevaucher comme escompté. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utilise un HWND distinct pour chaque contrôle. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise un HWND pour tout le contenu sur une page. Cette différence d’implémentation provoque des comportements de chevauchement inattendus.  
+ Les contrôles peuvent ne pas se chevaucher comme escompté. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utilise un HWND distinct pour chaque contrôle. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise un HWND pour tout le contenu d’une page. Cette différence d’implémentation provoque des comportements de chevauchement inattendus.  
   
  Un contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hébergé dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apparaît toujours par-dessus le contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -86,7 +86,7 @@ ms.locfileid: "59079668"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Activation des styles visuels  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] styles visuels sur un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôle ne peut pas être activé. Le <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> méthode est appelée dans le modèle pour un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application. Bien que cette méthode ne soit pas appelée par défaut, si vous utilisez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] pour créer un projet, vous obtiendrez des styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] pour les contrôles, si la version 6.0 de Comctl32.dll est disponible. Vous devez appeler la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> méthode avant que les handles soient créés sur le thread. Pour plus d'informations, voir [Procédure : Activer des Styles visuels dans une Application hybride](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Les styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] sur un contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] peuvent ne pas être activés. Le <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> méthode est appelée dans le modèle pour un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application. Bien que cette méthode ne soit pas appelée par défaut, si vous utilisez [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] pour créer un projet, vous obtiendrez des styles visuels [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] pour les contrôles, si la version 6.0 de Comctl32.dll est disponible. Vous devez appeler la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> méthode avant que les handles soient créés sur le thread. Pour plus d'informations, voir [Procédure : Activer des Styles visuels dans une Application hybride](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Contrôles sous licence  
@@ -117,9 +117,9 @@ ms.locfileid: "59079668"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interopérabilité dans le Concepteur WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Procédure : activer des styles visuels dans une application hybride](how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [Considérations sur la disposition de l'élément WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Architecture d’entrée pour l’interopérabilité entre Windows Forms et WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Guide pratique pour Activer des Styles visuels dans une Application hybride](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Considérations sur la disposition de l’élément WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Mappage de propriétés Windows Forms et WPF](windows-forms-and-wpf-property-mapping.md)
 - [Erreurs au moment du design dans le Concepteur Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [Migration et interopérabilité](migration-and-interoperability.md)

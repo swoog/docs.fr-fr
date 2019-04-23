@@ -3,10 +3,10 @@ title: Requêtes LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
 ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076183"
 ---
 # <a name="linq-to-sql-queries"></a>Requêtes LINQ to SQL
@@ -19,9 +19,9 @@ Vous définissez des requêtes [!INCLUDE[vbtecdlinq](../../../../../../includes/
   
  Le tableau suivant affiche les ressemblances et différences entre les éléments de requête [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-|Élément|Requête LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Query|  
+|Élément|Requête LINQ|Requête [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |----------|----------------|----------------------------------------------------------------------|  
-|Type de retour de la variable locale qui contient la requête (pour les requêtes qui retournent des séquences)|Générique `IEnumerable`|Générique `IQueryable`|  
+|Type de retour de la variable locale qui contient la requête (pour les requêtes qui retournent des séquences)|`IEnumerable` générique|`IQueryable` générique|  
 |Spécification de la source de données|Utilise le `From` (Visual Basic) ou `from` (C#) clause|Identique|  
 |Filtrage|Utilise le `Where` / `where` clause|Identique|  
 |Regroupement|Utilise le `Group…By` / `groupby` clause|Identique|  

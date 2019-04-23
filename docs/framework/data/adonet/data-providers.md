@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074025"
 ---
 # <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework
-Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseurs de données sont légers et création d’une couche minimale entre la source de données et le code, augmentent les performances sans nuire aux fonctionnalités.  
+Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. Les fournisseurs de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont légers et créent une couche minimale entre la source des données et le code, ce qui augmente les performances sans nuire aux fonctionnalités.  
   
  Le tableau suivant répertorie les fournisseurs de données inclus dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données|Description|  
+|Fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Description|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server|Fournit l'accès aux données pour Microsoft SQL Server. Utilise l'espace de noms <xref:System.Data.SqlClient> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour les sources de données exposées à l'aide de OLE DB. Utilise l'espace de noms <xref:System.Data.OleDb> .|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB ne fonctionne pas avec le fournisseur OLE DB pour ODBC (MSDASQL). Pour accéder à une source de données ODBC à l'aide de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], utilisez le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes OLE DB sont situées dans le <xref:System.Data.OleDb> espace de noms. L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OleDb` dans vos applications.  
+ Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB sont situées dans l'espace de noms <xref:System.Data.OleDb> . L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OleDb` dans vos applications.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC pour Oracle|  
 |Pilote Microsoft Access (*.mdb)|  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes ODBC sont situées dans le <xref:System.Data.Odbc> espace de noms.  
+ Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC sont situées dans l'espace de noms <xref:System.Data.Odbc> .  
   
  L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.Odbc` dans vos applications.  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle requiert que le logiciel client Oracle (version 8.1.7 ou ultérieure) soit installé sur le système avant que vous puissiez vous connecter à une source de données Oracle.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour les classes d’Oracle sont situées dans le <xref:System.Data.OracleClient> espace de noms et sont contenues dans le `System.Data.OracleClient.dll` assembly. Vous devez référencer `System.Data.dll` ainsi que `System.Data.OracleClient.dll` lorsque vous compilez une application qui utilise le fournisseur de données.  
+ Les classes du fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle sont situées dans l'espace de noms <xref:System.Data.OracleClient> et sont contenues dans l'assembly `System.Data.OracleClient.dll` . Vous devez référencer `System.Data.dll` ainsi que `System.Data.OracleClient.dll` lorsque vous compilez une application qui utilise le fournisseur de données.  
   
  L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.OracleClient` dans vos applications.  
   
@@ -159,6 +159,6 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

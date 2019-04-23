@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079641"
 ---
 # <a name="application-settings-attributes"></a>Attributs des paramètres d'application
@@ -42,4 +42,4 @@ L’architecture de paramètres d’Application fournit beaucoup d’attributs q
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Architecture des paramètres d'application](application-settings-architecture.md)
-- [Procédure : créer des paramètres d’application](how-to-create-application-settings.md)
+- [Guide pratique pour Créer des paramètres d’Application](how-to-create-application-settings.md)

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077730"
 ---
 # <a name="data"></a>Données
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] liaison de données fournit un moyen simple et cohérent pour les applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également un mécanisme pour le transfert de données via des opérations de glisser-déplacer.  
+La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent pour les applications de présenter les données et d’interagir avec elles. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également un mécanisme de transfert de données via des opérations de glisser-déplacer.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Liaison de données](data-binding-wpf.md)  
@@ -34,11 +34,11 @@ ms.locfileid: "59077730"
 ## <a name="related-sections"></a>Rubriques connexes  
  [Contrôles](../controls/index.md)  
   
- [Application d'un style et création de modèles](../controls/styling-and-templating.md)  
+ [Application d’un style et création de modèles](../controls/styling-and-templating.md)  
   
  [Liaison de données](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Procédure pas à pas : mise en cache des données d’application dans une application WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

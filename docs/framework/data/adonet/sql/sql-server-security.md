@@ -3,10 +3,10 @@ title: Sécurité SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
 ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080756"
 ---
 # <a name="sql-server-security"></a>Sécurité SQL Server
@@ -23,7 +23,7 @@ SQL Server possède de nombreuses fonctionnalités qui prennent en charge la cr�
  Les rubriques de cette section décrivent brièvement les fonctionnalités de sécurité de SQL Server qui concernent les développeurs et fournissent des liens vers des rubriques pertinentes dans la documentation en ligne de SQL Server et d'autres ressources qui fournissent des explications plus détaillées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  Décrit l'architecture et les fonctionnalités de sécurité de SQL Server.  
   
  [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

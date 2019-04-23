@@ -3,10 +3,10 @@ title: Présentation de C# -vous familiariser avec les outils de développement
 description: Cet article constitue une introduction aux outils que vous utiliserez pour développer des applications C# et .NET sur votre ordinateur.
 ms.date: 10/23/2018
 ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920660"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Vous familiariser avec les outils de développement .NET
@@ -26,25 +26,25 @@ Les autres commandes que vous utiliserez sont [`dotnet build`](../../../core/too
 
 Vous pouvez commencer par l’un des tutoriels suivants :
 
-## [<a name="numbers-in-c"></a>Nombres en C#](numbers-in-csharp-local.md)
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Nombres en C#](numbers-in-csharp-local.md)
 
 Dans le tutoriel [Nombres en C#](numbers-in-csharp-local.md), vous allez apprendre comment les ordinateurs stockent les nombres et comment effectuer des calculs avec différents types numériques. Vous apprendrez les bases de l’arrondi et comment effectuer des calculs mathématiques à l’aide de C#.
 
 Ce tutoriel part du principe que vous avez terminé la leçon [Hello world](hello-world.yml).
 
-## [<a name="branches-and-loops"></a>Branches et boucles](branches-and-loops-local.md)
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Branches et boucles](branches-and-loops-local.md)
 
 Le tutoriel [Branches et boucles](branches-and-loops-local.md) explique les bases de la sélection de différents chemins d’exécution de code en fonction des valeurs stockées dans des variables. Vous allez apprendre les principes fondamentaux du flux de contrôle, sur la base duquel les programmes prennent des décisions et choisissent différentes actions.
 
 Ce tutoriel part du principe que vous avez fini les leçons [Hello world](hello-world.yml) et [Nombres en C#](numbers-in-csharp-local.md).
 
-## [<a name="list-collection"></a>Collection de listes](arrays-and-collections.md)
+## <a name="list-collectionarrays-and-collectionsmd"></a>[Collection de listes](arrays-and-collections.md)
 
 La leçon [Collection de listes](arrays-and-collections.md) vous présente le type Collection de listes qui stocke les séquences de données. Vous apprendrez à ajouter et à supprimer des éléments, à rechercher des éléments et à trier des listes. Vous découvrirez différents types de listes. 
 
 Ce tutoriel part du principe que vous avez fini les leçons listées ci-dessus.
 
-## [<a name="introduction-to-classes"></a>Introduction aux classes](introduction-to-classes.md)
+## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Présentation des classes](introduction-to-classes.md)
 
 Ce dernier tutoriel de présentation de C#, qui s’exécute sur votre ordinateur, fait appel à votre propre environnement de développement local et à .NET Core.
 Vous allez créer une application console et voir les fonctionnalités orientées objet de base qui font partie du langage C#.

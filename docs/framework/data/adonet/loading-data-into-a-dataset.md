@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
 ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074051"
 ---
 # <a name="loading-data-into-a-dataset"></a>Chargement de données dans un DataSet
@@ -25,6 +25,6 @@ Un objet <xref:System.Data.DataSet> doit être rempli avant que vous puissiez l'
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [Vue d’ensemble de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Interrogation de DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Exemples de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

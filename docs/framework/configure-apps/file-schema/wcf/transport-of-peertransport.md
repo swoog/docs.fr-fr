@@ -3,10 +3,10 @@ title: <transport> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076001"
 ---
 # <a name="transport-of-peertransport"></a>\<transport > de \<peerTransport >
@@ -64,7 +64,7 @@ Indique le type de transport correspondant aux messages sécurisés envoyés par
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Sécurité de transport](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Choix d'un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)

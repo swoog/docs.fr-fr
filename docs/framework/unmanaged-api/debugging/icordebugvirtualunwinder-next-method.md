@@ -5,10 +5,10 @@ ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076885"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder::Next, méthode
@@ -24,7 +24,7 @@ HRESULT Next();
  Aucun.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` Si le déroulement s’est produite avec succès, ou `CORDBG_S_AT_END_OF_STACK` si le déroulement ne peut pas être effectué, car il n’y a aucune image plus.  
+ `S_OK` en cas de réussite du déroulement ou `CORDBG_S_AT_END_OF_STACK` si le déroulement ne peut pas être effectué étant donné qu'il ne reste plus de frames.  
   
  Si un HRESULT indiquant un échec est retourné, les API ICorDebug retournent `CORDBG_E_DATA_TARGET_ERROR`.  
   
@@ -41,7 +41,7 @@ HRESULT Next();
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

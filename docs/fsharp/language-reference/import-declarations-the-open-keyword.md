@@ -3,10 +3,10 @@ title: 'Déclarations d’importation : Le mot clé open'
 description: En savoir plus sur F# importer des déclarations et comment ils spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054999"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Déclarations d’importation : Le `open` mot clé
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Notes
 
-Faisant référence à code en utilisant le chemin qualifié complet de l’espace de noms ou module chaque fois pouvez créer le code qui est difficile à écrire, lire et mettre à jour. Au lieu de cela, vous pouvez utiliser le `open` mot clé pour utilisé fréquemment des modules et les espaces de noms afin que lorsque vous référencez un membre de ce module ou un espace de noms, vous pouvez utiliser la forme abrégée du nom au lieu du nom qualifié complet. Ce mot clé est similaire à la `using` mot clé en C#, `using namespace` dans Visual C++, et `Imports` en Visual Basic.
+Faisant référence à code en utilisant le chemin qualifié complet de l’espace de noms ou module chaque fois pouvez créer le code qui est difficile à écrire, lire et mettre à jour. Au lieu de cela, vous pouvez utiliser le `open` mot clé pour utilisé fréquemment des modules et les espaces de noms afin que lorsque vous référencez un membre de ce module ou un espace de noms, vous pouvez utiliser la forme abrégée du nom au lieu du nom qualifié complet. Ce mot clé est similaire à la `using` mot clé en c#, `using namespace` dans Visual C++, et `Imports` en Visual Basic.
 
 Le module ou un espace de noms fourni doit être dans le même projet ou dans un projet ou assembly référencé. Si elle n’est pas le cas, vous pouvez ajouter une référence au projet, ou utiliser le `-reference` commande`-`option de ligne (ou son abréviation, `-r`). Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
 
@@ -68,6 +68,6 @@ Certains modules, des enregistrements ou les types d’union peuvent spécifier 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Informations de référence sur le langage F#](index.md)
+- [Informations de référence du langage F#](index.md)
 - [Espaces de noms](namespaces.md)
 - [Modules](modules.md)

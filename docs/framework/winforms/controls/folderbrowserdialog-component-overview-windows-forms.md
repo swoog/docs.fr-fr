@@ -9,10 +9,10 @@ helpviewer_keywords:
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
 ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074129"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>Vue d’ensemble du composant FolderBrowserDialog (Windows Forms)
@@ -28,5 +28,5 @@ Les formulaires Windows <xref:System.Windows.Forms.FolderBrowserDialog> composan
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Procédure : choisir des dossiers avec le composant FolderBrowserDialog Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Guide pratique pour Choisir des dossiers avec le composant de FolderBrowserDialog Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [FolderBrowserDialog, composant](folderbrowserdialog-component-windows-forms.md)

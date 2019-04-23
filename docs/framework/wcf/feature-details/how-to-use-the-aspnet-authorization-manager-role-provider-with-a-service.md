@@ -3,10 +3,10 @@ title: 'Procédure : utiliser le fournisseur de rôle du Gestionnaire d’autor
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
 ms.openlocfilehash: ebdfa8bd7d222c4f9a33b6718b215d327d589c6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073570"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Procédure : utiliser le fournisseur de rôle du Gestionnaire d’autorisations ASP.NET avec un service
@@ -33,4 +33,4 @@ Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge un se
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : utiliser le fournisseur de rôle ASP.NET avec un service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Guide pratique pour Utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

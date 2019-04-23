@@ -7,10 +7,10 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072779"
 ---
 # <a name="federation-and-issued-tokens"></a>Fédération et jetons émis
@@ -23,25 +23,25 @@ Avec Windows Communication Foundation (WCF), vous pouvez créer des clients qui 
  [Fédération et confiance](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Répertorie les problèmes de conception dont il convient d'être informé lors de la création de services ou de clients fédérés.  
   
- [Procédure : créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Guide pratique pour Créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  Décrit les principes fondamentaux de création d’un client fédéré avec WCF.  
   
- [Procédure : configurer des informations d’identification sur un service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Décrit les étapes de création d'un service fédéré.  
   
- [Procédure : créer un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Guide pratique pour Créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  Décrit comment configurer des clients et des services qui utilisent `WSFederationHttpBinding`.  
   
- [Procédure : créer un service d’émission de jeton de sécurité](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Guide pratique pour Créer un Service de jeton de sécurité](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  Décrit les étapes de création d'un service d'émission de jeton de sécurité.  
   
  [Jetons SAML (Security Assertions Markup Language) et revendications](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Décrit les jetons SAML (Security Assertions Markup Language), qui sont extensibles et vous permettent de créer des types de revendications enrichies.  
   
- [Procédure : configurer un émetteur local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Guide pratique pour Configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Décrit comment créer un émetteur local de jetons de sécurité.  
   
- [Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Guide pratique pour Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Décrit comment désactiver des sessions sécurisées sur `WSFederationHttpBinding`. La désactivation de sessions sécurisées est nécessaire lors de la création d'une batterie de serveurs Web qui requiert une session pour chaque client.  
   
 ## <a name="reference"></a>Référence  

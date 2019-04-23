@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
 ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079316"
 ---
 # <a name="animation-and-timing-system-overview"></a>Vue d'ensemble de l'animation et du système de minutage
@@ -84,6 +84,6 @@ Une chaîne de composition
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des événements de minutage](timing-events-overview.md)
-- [Vue d'ensemble des comportements de minutage](timing-behaviors-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des événements de minuterie](timing-events-overview.md)
+- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)

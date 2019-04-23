@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072157"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Procédure : Animer la couleur ou l’opacité d’un SolidColorBrush
@@ -36,6 +36,6 @@ Cet exemple montre comment animer la <xref:System.Windows.Media.SolidColorBrush.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des storyboards](storyboards-overview.md)
-- [Exemples de pinceaux](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
+- [Pinceaux, exemple](https://go.microsoft.com/fwlink/?LinkID=159973)

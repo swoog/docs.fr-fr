@@ -8,10 +8,10 @@ ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075936"
 ---
 # <a name="security-transparent-code"></a>Code transparent de sécurité (security-transparent)
@@ -27,9 +27,9 @@ ms.locfileid: "59075936"
   
 -   [Objectif du modèle de transparence](#purpose)  
   
--   [Spécification du niveau de transparence](#level)  
+-   [En spécifiant le niveau de transparence](#level)  
   
--   [Mise en application de la transparence](#enforcement)  
+-   [Mise en œuvre de la transparence](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Objectif du modèle de transparence  
@@ -109,4 +109,4 @@ ms.locfileid: "59075936"
 ## <a name="see-also"></a>Voir aussi
 
 - [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Code transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

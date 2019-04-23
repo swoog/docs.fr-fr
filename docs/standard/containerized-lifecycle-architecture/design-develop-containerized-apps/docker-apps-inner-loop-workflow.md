@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920907"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Workflow de développement de la boucle interne pour les applications Docker
@@ -216,7 +216,7 @@ Le service redis utilise le [dernière image publique redis](https://hub.docker.
 
 Si votre application a uniquement un seul conteneur, vous devez l’exécuter en la déployant sur votre hôte Docker (machine virtuelle ou serveur physique). Toutefois, si votre application est composée de plusieurs services, vous devez *composer*, trop. Nous allons voir les différentes options.
 
-***Option A : Exécuter un conteneur unique ou un service***
+***Option a : Exécuter un conteneur unique ou un service***
 
 Vous pouvez exécuter l’image Docker à l’aide de la commande docker run, comme illustré ici :
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Pour ce déploiement, nous allons redirection des demandes envoyées vers le port 80 vers le port interne 5000. Maintenant l’application est à l’écoute sur le port externe 80 au niveau de l’hôte.
 
-***Option B : Composer et exécuter une application de plusieurs conteneurs***
+***Option b : Composer et exécuter une application de plusieurs conteneurs***
 
 Dans la plupart des scénarios d’entreprise, une application Docker est composée de plusieurs services. Dans ce cas, vous pouvez exécuter la `docker-compose up` commande (Figure 4-27), qui utilise le fichier docker-compose.yml que vous avez peut-être créé précédemment. Exécution de cette commande déploie une application composée avec toutes ses conteneurs associés.
 

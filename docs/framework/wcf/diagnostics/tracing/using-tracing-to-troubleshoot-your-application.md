@@ -3,17 +3,17 @@ title: Utilisation du suivi pour résoudre les problèmes posés par votre appli
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
 ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072751"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Utilisation du suivi pour résoudre les problèmes posés par votre application
 Cette section contient différentes rubriques qui décrivent comment vous pouvez utiliser le suivi pour dépanner votre application.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Paramètres recommandés pour le suivi et l'enregistrement des messages](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
+ [Paramètres recommandés pour le suivi et la journalisation des messages](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
  Décrit les paramètres suggérés pour les environnement de production et de débogage.  
   
  [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
@@ -33,6 +33,6 @@ Cette section contient différentes rubriques qui décrivent comment vous pouvez
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Traçage](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
 ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072504"
 ---
 # <a name="path-animation-how-to-topics"></a>Rubriques "Comment" relatives aux animations de tracés
@@ -21,7 +21,7 @@ Les rubriques de cette section montrent comment animer un objet sur un chemin d�
  [Animer un objet sur un tracé (animation double)](how-to-animate-an-object-along-a-path-double-animation.md)  
  [Animer un objet sur un tracé (animation de point)](how-to-animate-an-object-along-a-path-point-animation.md)  
  [Animer un objet sur un tracé (animation de matrice)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Animer un objet sur un tracé (animation de matrice avec accumulation d’offset)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Animer un objet sur un tracé (animation de matrice avec accumulation d'offsets)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
  [Faire pivoter un objet à l’aide d’un tracé géométrique (animation de matrice)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
  [Faire pivoter un objet à l’aide d’un tracé géométrique](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
@@ -33,5 +33,5 @@ Les rubriques de cette section montrent comment animer un objet sur un chemin d�
 ## <a name="see-also"></a>Voir aussi
 
 - [Graphiques et multimédia](index.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)

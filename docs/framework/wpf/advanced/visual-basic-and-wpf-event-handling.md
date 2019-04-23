@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078016"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Gestion des événements Visual Basic et WPF
@@ -27,7 +27,7 @@ Pour le langage Microsoft Visual Basic .NET, vous pouvez utiliser spécifique au
  Vous pouvez utiliser `Handles` pour joindre des gestionnaires pour des événements routés, pour autant que vous joignez les gestionnaires à des instances qui définissent l’événement géré dans leurs tables de membres. Pour les événements routés, les gestionnaires joints avec `Handles` suivent les mêmes règles de routage comme gestionnaires qui sont attachés en tant que [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributs, ou avec la signature commune de <xref:System.Windows.UIElement.AddHandler%2A>. Cela signifie que si l’événement est déjà marqué comme géré (la <xref:System.Windows.RoutedEventArgs.Handled%2A> propriété dans les données d’événement est `True`), les gestionnaires joints avec `Handles` ne sont pas appelés en réponse à cette instance d’événement. L’événement peut être marqué comme géré par des gestionnaires d’instance sur un autre élément sur l’itinéraire, ou par la gestion de classe sur l’élément actuel ou sur des éléments antérieurs le long de l’itinéraire. Dans le cas d’événements d’entrée prenant en charge des événements de tunneling/propagation couplés, il est possible que l’itinéraire de tunneling ait marqué la paire d’événements comme gérée. Pour plus d’informations sur les événements routés, consultez [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>Limitations de « Handles » dans le cadre de l’ajout de gestionnaires  
- `Handles` ne peut pas référencer de gestionnaires pour les événements attachés. Vous devez utiliser la méthode d’accesseur `add` pour cet événement attaché ou des attributs d’événement *nom_type.nom_événement* en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Pour plus d’informations, consultez [Vue d’ensemble des événements routés](routed-events-overview.md).  
+ `Handles` ne peut pas référencer de gestionnaires pour des événements attachés. Vous devez utiliser la méthode d’accesseur `add` pour cet événement attaché ou des attributs d’événement *nom_type.nom_événement* en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Pour plus d’informations, consultez [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
  Pour les événements routés, vous pouvez uniquement utiliser `Handles` pour assigner des gestionnaires aux instances où cet événement apparaît dans la table de membres. Dans le cas des événements routés en général, un élément parent peut toutefois jouer le rôle d’écouteur pour un événement des éléments enfants, même si ce dernier ne figure pas dans la table de membres de l’événement parent. Dans la syntaxe d’attribut, vous pouvez spécifier cela à l’aide d’une forme d’attribut *nom_type.nom_événement* qui qualifie le type qui définit réellement l’événement que vous souhaitez gérer. Par exemple, un parent `Page` (sans aucune `Click` événement défini) peut écouter des événements de clic de bouton en assignant un gestionnaire d’attribut sous la forme `Button.Click`. `Handles` ne prend cependant pas en charge le format *nom_type.nom_événement*, car il doit prendre en charge un format *instance.événement* incompatible. Pour plus d’informations, consultez [Vue d’ensemble des événements routés](routed-events-overview.md).  
   
@@ -45,6 +45,6 @@ Pour le langage Microsoft Visual Basic .NET, vous pouvez utiliser spécifique au
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
-- [Marquage des événements routés comme étant gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Marquage des événements routés comme gérés et gestion de classe](marking-routed-events-as-handled-and-class-handling.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
