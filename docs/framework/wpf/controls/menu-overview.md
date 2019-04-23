@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
 ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166372"
 ---
 # <a name="menu-overview"></a>Vue d'ensemble de Menu
@@ -39,7 +39,7 @@ Le <xref:System.Windows.Controls.Menu> classe vous permet d’organiser les él�
  [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
-### <a name="command"></a>Command  
+### <a name="command"></a>Commande  
  L’exemple suivant montre comment utiliser le <xref:System.Windows.Controls.MenuItem.Command%2A> propriété à associer le **Open** et **enregistrer** commandes avec <xref:System.Windows.Controls.MenuItem> contrôles. Non seulement la propriété de la commande associer une commande avec un <xref:System.Windows.Controls.MenuItem>, mais elle fournit également le texte de mouvement d’entrée à utiliser comme un raccourci.  
   
  [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  

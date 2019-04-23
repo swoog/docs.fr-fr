@@ -1,12 +1,12 @@
 ---
-title: <endpoint> d'élément
+title: <endpoint>, élément
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
 ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163408"
 ---
 # <a name="endpoint-element"></a>\<point de terminaison > élément
@@ -90,4 +90,4 @@ Spécifie la liaison, le contrat et les propriétés d’adresse d’un point de
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
 - [Points de terminaison : Adresses, liaisons et contrats](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Procédure : créer un point de terminaison de service dans la configuration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Guide pratique pour Créer un point de terminaison de Service dans la Configuration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

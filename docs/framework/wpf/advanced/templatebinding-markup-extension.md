@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155998"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding, extension de balisage
@@ -46,9 +46,9 @@ Cette extension lie la valeur d'une propriété dans un modèle de contrôle afi
   
  La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d’identificateur `TemplateBinding` est assigné en tant que valeur <xref:System.Windows.TemplateBindingExtension.Property%2A> de la classe d’extension <xref:System.Windows.TemplateBindingExtension> sous-jacente.  
   
- La syntaxe d'élément objet est possible, mais elle n'est pas indiquée car elle ne possède aucune application réaliste. `TemplateBinding` est utilisé pour remplir les expressions de valeurs dans des méthodes setter, à l’aide d’évaluées et à l’aide de la syntaxe d’élément objet `TemplateBinding` pour remplir `<Setter.Property>` syntaxe d’élément de propriété est inutilement détaillé.  
+ La syntaxe d'élément objet est possible, mais elle n'est pas indiquée car elle ne possède aucune application réaliste. `TemplateBinding` est utilisé pour remplir des valeurs dans des méthodes setter, à l'aide d'expressions évaluées. En outre, l'utilisation de la syntaxe d'élément objet de `TemplateBinding` pour remplir la syntaxe des éléments de propriété `<Setter.Property>` est inutilement détaillée.  
   
- `TemplateBinding` peut également être utilisé dans une utilisation d’attributs en clair qui spécifie la <xref:System.Windows.TemplateBindingExtension.Property%2A> propriété en tant que propriété = paire valeur :  
+ `TemplateBinding` peut également être utilisé dans une utilisation d'attributs en clair qui spécifie la propriété <xref:System.Windows.TemplateBindingExtension.Property%2A> en tant que paire propriété=valeur :  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -64,7 +64,7 @@ Cette extension lie la valeur d'une propriété dans un modèle de contrôle afi
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
 - [Extensions de balisage et XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [RelativeSource, extension de balisage](relativesource-markupextension.md)

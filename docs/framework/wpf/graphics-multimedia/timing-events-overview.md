@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167165"
 ---
 # <a name="timing-events-overview"></a>Vue d'ensemble des événements de minutage
@@ -56,7 +56,7 @@ Cette rubrique décrit comment utiliser les cinq événements de minutage dispon
   
 |Événement|Opération interactive déclenchante|Autres déclencheurs|  
 |-----------|--------------------------------------|--------------------|  
-|**Terminé**|Passer au remplissage|L’horloge s’arrête.|  
+|**Completed**|Passer au remplissage|L’horloge s’arrête.|  
 |**CurrentGlobalSpeedInvalidated**|Suspendre, reprendre, rechercher, définir le ratio vitesse, passer au remplissage, s’arrêter|L’horloge s’inverse, accélère, démarre ou s’arrête.|  
 |**CurrentStateInvalidated**|Démarrer, passer au remplissage, s’arrêter|L’horloge démarre, s’arrête ou remplit.|  
 |**CurrentTimeInvalidated**|Démarrer, rechercher, passer au remplissage, s’arrêter|L’horloge progresse.|  
@@ -79,5 +79,5 @@ Cette rubrique décrit comment utiliser les cinq événements de minutage dispon
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d'ensemble de l'animation et du système de minutage](animation-and-timing-system-overview.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des comportements de minutage](timing-behaviors-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md)

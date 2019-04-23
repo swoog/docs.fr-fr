@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155933"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilisation d'un service de données dans une application cliente (services de données WCF)
@@ -21,7 +21,7 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vous aide à garantir l’interopérabilité entre les services qui exposent [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux et les applications qui consomment [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Applications accéder et modifier des données dans un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-en fonction de service en envoyant des messages de demande d’une action HTTP spécifique et avec un URI qui adresse une ressource d’entité par rapport à laquelle l’action doit être effectuée. Lorsque les données d'entité doivent être fournies, elles le sont comme une charge utile spécifiquement encodée dans le corps du message.  
   
 ### <a name="http-actions"></a>Actions HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les actions HTTP suivantes pour effectuer créent, lire, mettre à jour et supprimer des opérations sur les données d’entité qui représente la ressource adressée :  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les actions HTTP suivantes pour effectuer des opérations de création, lecture, mise à jour et suppression sur les données d'entité représentées par la ressource adressée :  
   
 -   **HTTP GET** -il s’agit l’action par défaut lorsqu’une ressource est accessible à partir d’un navigateur. Aucune charge utile n'est fournie dans le message de demande, et une méthode de réponse avec une charge utile qui contient les données demandées est retournée.  
   

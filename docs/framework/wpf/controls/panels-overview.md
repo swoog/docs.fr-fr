@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157870"
 ---
 # <a name="panels-overview"></a>Vue d'ensemble de Panel
@@ -23,7 +23,7 @@ ms.locfileid: "59157870"
   
 -   [La classe Panel](#Panels_view_from_10000_feet)  
   
--   [Membres communs aux éléments de panneau](#Panels_declared_members)  
+-   [Membres communs aux éléments Panel](#Panels_declared_members)  
   
 -   [Éléments Panel dérivés](#Panels_derived_elements)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59157870"
   
  Chaque dérivée <xref:System.Windows.Controls.Panel> élément traite différemment les contraintes de dimensionnement. Comprendre comment un <xref:System.Windows.Controls.Panel> gère les contraintes dans le sens horizontal ou vertical peuvent rendre la disposition plus prévisible.  
   
-|**Nom du panneau**|**x-Dimension**|**y-Dimension**|  
+|**Nom de l’élément Panel**|**Dimension x**|**Dimension y**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Restreinte au contenu|Restreinte au contenu|  
 |<xref:System.Windows.Controls.DockPanel>|Restreinte|Restreinte|  
@@ -242,7 +242,7 @@ ms.locfileid: "59157870"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Prise en charge de la localisation/globalisation  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge un nombre de fonctionnalités qui facilitent la création de localisables [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge un certain nombre de fonctionnalités qui facilitent la création d’IU [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localisables.  
   
  Tous les éléments panel prennent nativement en charge le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété, qui peut être utilisée pour redisposer dynamiquement du contenu selon les paramètres de langue ou de paramètres régionaux d’un utilisateur. Pour plus d'informations, consultez <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -255,11 +255,11 @@ ms.locfileid: "59157870"
 ## <a name="see-also"></a>Voir aussi
 
 - [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Exemple de galerie de dispositions WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
-- [Mise en page](../advanced/layout.md)
+- [Galerie de dispositions WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Disposition](../advanced/layout.md)
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Vue d'ensemble de l'alignement, des marges et du remplissage](../advanced/alignment-margins-and-padding-overview.md)
 - [Créer un exemple de panneau d’agencement de contenu personnalisé](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Vue d'ensemble des propriétés jointes](../advanced/attached-properties-overview.md)
-- [Vue d'ensemble de l'utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md)
+- [Vue d’ensemble de l’utilisation de la disposition automatique](../advanced/use-automatic-layout-overview.md)
 - [Disposition et conception](../advanced/optimizing-performance-layout-and-design.md)

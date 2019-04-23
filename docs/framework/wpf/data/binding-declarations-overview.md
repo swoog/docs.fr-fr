@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165267"
 ---
 # <a name="binding-declarations-overview"></a>Vue d'ensemble des déclarations de liaison
@@ -79,7 +79,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Des indexeurs de propriété peuvent être spécifiés entre crochets après le nom de la propriété où l’indexeur est appliqué. Par exemple, la clause `Path=ShoppingCart[0]` définit la liaison à l’index qui correspond à la façon dont l’indexation interne de votre propriété gère la chaîne littérale « 0 ». Les indexeurs imbriqués sont également pris en charge.  
   
--   Indexeurs et des sous-propriétés peuvent être combinées en un `Path` clause ; par exemple, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Les indexeurs et les sous-propriétés peuvent être combinés en une clause `Path` ; par exemple, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   À l’intérieur des indexeurs, vous pouvez avoir plusieurs paramètres d’indexeur séparés par des virgules (,). Le type de chaque paramètre peut être spécifié avec des parenthèses. Par exemple, vous pouvez avoir `Path="[(sys:Int32)42,(sys:Int32)24]"`, où `sys` est mappé à l’espace de noms `System`.  
   
@@ -126,6 +126,6 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)
 - [Liaison de données](../advanced/optimizing-performance-data-binding.md)
-- [PropertyPath, syntaxe XAML](../advanced/propertypath-xaml-syntax.md)
+- [Syntaxe XAML PropertyPath](../advanced/propertypath-xaml-syntax.md)

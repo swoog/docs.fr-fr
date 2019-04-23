@@ -3,10 +3,10 @@ title: Définition de schéma de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163070"
 ---
 # <a name="datatable-schema-definition"></a>Définition de schéma de DataTable
@@ -23,7 +23,7 @@ Le schéma, ou structure, d'une table est représenté par des colonnes et des c
  [Ajout de colonnes à un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Décrit comment définir les colonnes d’une table à l’aide **DataColumn** objets.  
   
- [Création de colonnes d'expressions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Création de colonnes d’expressions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
  Explique comment la **Expression** propriété d’une colonne peut être utilisée pour calculer des valeurs en fonction des valeurs d’autres colonnes de la ligne.  
   
  [Création de colonnes AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  

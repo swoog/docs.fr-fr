@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
 ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162631"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considérations sur les performances de l'interopérabilité entre Direct3D9 et WPF
@@ -63,5 +63,5 @@ Vous pouvez héberger les contenu Direct3D9 à l’aide de la <xref:System.Windo
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interopérabilité WPF et Direct3D9](wpf-and-direct3d9-interoperation.md)
-- [Procédure pas à pas : création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Procédure pas à pas : hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Procédure pas à pas : Création de contenu Direct3D9 à héberger dans WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procédure pas à pas : Hébergement de contenu Direct3D9 dans WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

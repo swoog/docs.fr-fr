@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158429"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (fonction)
@@ -57,7 +57,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | L’objet actuel hérite `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | L’objet en cours n’hérite pas de `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` is `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` a la valeur `null`. |
   
 ## <a name="remarks"></a>Notes
 
@@ -68,7 +68,7 @@ Cette fonction encapsule un appel à la [IWbemClassObject::InheritsFrom](/window
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

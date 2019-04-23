@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
 ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156505"
 ---
 # <a name="configuring-wcf-services"></a>Configuration des services WCF
@@ -21,7 +21,7 @@ Une fois que vous avez conçu et implémenté votre contrat de service, vous êt
  [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)  
  En commençant par [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF est fourni avec un nouveau modèle de configuration par défaut qui simplifie les conditions requises de configuration WCF. Si vous ne fournissez pas de toute configuration de WCF pour un service particulier, le runtime configure automatiquement votre service avec les comportements, les liaisons et les points de terminaison par défaut.  
   
- [Configuration des services à l'aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  Un service Windows Communication Foundation (WCF) est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configuration de la technologie. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
   
  [Liaisons](../../../docs/framework/wcf/bindings.md)  
@@ -33,7 +33,7 @@ Une fois que vous avez conçu et implémenté votre contrat de service, vous êt
  [Sécurisation de services](../../../docs/framework/wcf/securing-services.md)  
  À l’aide de WCF et qui n’existe des mécanismes de sécurité, vous pouvez implémenter la confidentialité, intégrité, l’authentification et autorisation dans n’importe quel service. Vous pouvez aussi auditer les succès et les défaillances de la sécurité.  
   
- [Création de services pouvant interagir avec le profil Basic Profile 1.1 de WS-I](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [Création de services interopérables avec le profil WS-I Basic Profile 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Les exigences pour déployer un service interopérable avec les services et les clients sur n’importe quelle autre plateforme ou système d’exploitation sont définies dans la spécification WS-I Basic Profile 1.1.  
   
 ## <a name="reference"></a>Référence  
@@ -52,12 +52,12 @@ Une fois que vous avez conçu et implémenté votre contrat de service, vous êt
   
  [Génération de clients](../../../docs/framework/wcf/building-clients.md)  
   
- [Introduction à l'extensibilité](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ [Introduction à l’extensibilité](../../../docs/framework/wcf/introduction-to-extensibility.md)  
   
  [Administration et diagnostics](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Vue d'ensemble conceptuelle](../../../docs/framework/wcf/conceptual-overview.md)
+- [Vue d’ensemble conceptuelle](../../../docs/framework/wcf/conceptual-overview.md)
 - [Informations détaillées sur les fonctionnalités de WCF](../../../docs/framework/wcf/feature-details/index.md)

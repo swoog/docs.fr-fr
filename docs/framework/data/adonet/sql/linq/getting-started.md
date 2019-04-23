@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155231"
 ---
 # <a name="getting-started"></a>Prise en main
@@ -32,6 +32,6 @@ ms.locfileid: "59155231"
 ## <a name="see-also"></a>Voir aussi
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [Présentation de LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Introduction à LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
 - [Introduction à LINQ (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [Modèle objet LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

@@ -3,10 +3,10 @@ title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166164"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
@@ -61,7 +61,7 @@ Définit un transport TCP qui peut être utilisé par un canal pour transférer 
 |maxPendingConnections|Obtient ou définit le nombre maximal de connexions en attente de distribution sur le service.|  
 |maxReceivedMessageSize|Obtient et définit la taille de message maximale autorisée qui peut être reçue.|  
 |portSharingEnabled|Valeur booléenne qui spécifie si le partage de port TCP est activé pour cette connexion. Si la valeur affectée est `false`, chaque liaison utilisera son propre port exclusif. La valeur par défaut est `false`.<br /><br /> Ce paramètre ne concerne que les services. Les clients ne sont pas affectés.<br /><br /> L'utilisation de ce paramètre requiert l'activation du service de partage de port TCP de Windows Communication Foundation (WCF) en modifiant son type de démarrage sur Manuel ou Automatique|  
-|teredoEnabled|Valeur booléenne qui spécifie si Teredo (technologie d'adressage de clients placés derrière des pare-feu) est activé. La valeur par défaut est `false`.<br /><br /> Cette propriété active Teredo pour le socket TCP sous-jacent. Pour plus d’informations, consultez [vue d’ensemble de Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Cette propriété s'applique uniquement à [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] et [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] dispose d’une option de configuration de l’ordinateur pour Teredo, lors de l’exécution de Vista, cette propriété est donc ignorée. Pour que Teredo fonctionne, la pile Microsoft IPv6 doit être installée et configurée correctement sur les ordinateurs clients et de service. Pour plus d’informations sur la configuration de Teredo, consultez [vue d’ensemble de Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Pour plus d’informations, consultez [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Valeur booléenne qui spécifie si Teredo (technologie d'adressage de clients placés derrière des pare-feu) est activé. La valeur par défaut est `false`.<br /><br /> Cette propriété active Teredo pour le socket TCP sous-jacent. Pour plus d’informations, consultez [vue d’ensemble de Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Cette propriété s'applique uniquement à [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] et [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. Pour Teredo, [!INCLUDE[wv](../../../../../includes/wv-md.md)] dispose d'une option de configuration à l'échelle de l'ordinateur. Cette propriété est donc ignorée lors de l'exécution de Vista. Pour que Teredo fonctionne, la pile Microsoft IPv6 doit être installée et configurée correctement sur les ordinateurs clients et de service. Pour plus d’informations sur la configuration de Teredo, consultez [vue d’ensemble de Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Pour plus d’informations, consultez [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Obtient ou définit une valeur qui indique si les messages sont mis en mémoire tampon ou transmis en continu par le transport orienté connexion.|  
 |connectionPoolSettings|Spécifie des paramètres de pool de connexions supplémentaires pour une liaison de canal nommé.|  
   
@@ -86,7 +86,7 @@ Définit un transport TCP qui peut être utilisé par un canal pour transférer 
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transports](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Choix d'un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Choix d’un transport](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)

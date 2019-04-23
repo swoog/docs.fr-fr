@@ -13,10 +13,10 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162199"
 ---
 # <a name="transforms-overview"></a>Vue d'ensemble des transformations
@@ -50,7 +50,7 @@ Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../in
 |Classe|Description|Exemple|Illustration|  
 |-----------|-----------------|-------------|------------------|  
 |<xref:System.Windows.Media.RotateTransform>|Fait pivoter un élément par le <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Faire pivoter un objet](how-to-rotate-an-object.md)|![Illustration de rotation](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|Met à l’échelle d’un élément par le <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> et <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> quantités.|[Mettre à l’échelle un élément](how-to-scale-an-element.md)|![Illustration de mise à l’échelle](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.ScaleTransform>|Met à l’échelle d’un élément par le <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> et <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> quantités.|[Mettre à l'échelle un élément](how-to-scale-an-element.md)|![Illustration de mise à l’échelle](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
 |<xref:System.Windows.Media.SkewTransform>|Incline un élément spécifié <xref:System.Windows.Media.SkewTransform.AngleX%2A> et <xref:System.Windows.Media.SkewTransform.AngleY%2A> quantités.|[Incliner un élément](how-to-skew-an-element.md)|![Illustration d’inclinaison](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
 |<xref:System.Windows.Media.TranslateTransform>|Déplace (Translate) un élément par le <xref:System.Windows.Media.TranslateTransform.X%2A> et <xref:System.Windows.Media.TranslateTransform.Y%2A> quantités.|[Translater un élément](how-to-translate-an-element.md)|![Illustration de translation](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
@@ -58,8 +58,8 @@ Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../in
   
 |Classe|Description|Exemple|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|Regroupe plusieurs <xref:System.Windows.Media.TransformGroup> objets en un seul <xref:System.Windows.Media.Transform> que vous pouvez ensuite appliquer pour transformer des propriétés.|[Appliquer plusieurs transformations à un objet](how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Crée des transformations personnalisées qui ne sont pas fournies par les autres <xref:System.Windows.Media.Transform> classes. Lorsque vous utilisez un <xref:System.Windows.Media.MatrixTransform>, vous manipulez une matrice directement.|[Utiliser la classe MatrixTransform pour créer des transformations personnalisées](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|Regroupe plusieurs <xref:System.Windows.Media.TransformGroup> objets en un seul <xref:System.Windows.Media.Transform> que vous pouvez ensuite appliquer pour transformer des propriétés.|[Apply Multiple Transforms to an Object](how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)|  
+|<xref:System.Windows.Media.MatrixTransform>|Crée des transformations personnalisées qui ne sont pas fournies par les autres <xref:System.Windows.Media.Transform> classes. Lorsque vous utilisez un <xref:System.Windows.Media.MatrixTransform>, vous manipulez une matrice directement.|[Use a MatrixTransform to Create Custom Transforms](how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)|  
   
  Windows Presentation Foundation (WPF) fournit également [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] transformations. Pour plus d'informations, consultez la classe <xref:System.Windows.Media.Media3D.Transform3D>.  
   
@@ -152,5 +152,5 @@ Classe LayoutTransform utilisée pour faire pivoter le bouton
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Rubriques Comment](transformations-how-to-topics.md)
+- [Rubriques de guide pratique](transformations-how-to-topics.md)
 - [Exemple de transformations 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

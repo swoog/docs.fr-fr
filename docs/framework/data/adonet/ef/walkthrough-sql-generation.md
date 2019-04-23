@@ -3,10 +3,10 @@ title: 'Procédure pas à pas : Génération SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164578"
 ---
 # <a name="walkthrough-sql-generation"></a>Procédure pas à pas : Génération SQL
@@ -201,4 +201,4 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Génération SQL dans le Fournisseur d'exemples](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [Génération SQL dans l’exemple de fournisseur](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

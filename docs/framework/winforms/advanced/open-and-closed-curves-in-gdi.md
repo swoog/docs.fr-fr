@@ -11,10 +11,10 @@ helpviewer_keywords:
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
 ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165111"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Courbes ouvertes et fermées dans GDI+
@@ -54,5 +54,5 @@ L’illustration suivante montre deux courbes : un seul est ouvert et l’autre
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
 - [Génération et dessin de tracés](constructing-and-drawing-paths.md)

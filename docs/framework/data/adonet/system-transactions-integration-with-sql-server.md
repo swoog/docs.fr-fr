@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166950"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Intégration de System.Transactions à SQL Server
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Transactions et accès simultané](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

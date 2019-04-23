@@ -10,10 +10,10 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
 ms.openlocfilehash: 625c4987a45ed3749284e7abc7b6cde6d24821ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161471"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Procédure : activer la réorganisation des colonnes dans le contrôle DataGridView Windows Forms
@@ -40,4 +40,4 @@ Quand vous activez la réorganisation des colonnes dans le contrôle <xref:Syste
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
 - [Fonctionnalités de base liées aux colonnes, lignes et cellules dans le contrôle DataGridView Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Procédure : figer des colonnes dans le contrôle DataGridView Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Guide pratique pour Figer des colonnes dans le contrôle de DataGridView Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

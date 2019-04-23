@@ -6,20 +6,20 @@ helpviewer_keywords:
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
 ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165467"
 ---
 # <a name="authentication-in-wcf"></a>Authentification dans WCF
 Les rubriques suivantes montrent un nombre de mécanismes différents dans Windows Communication Foundation (WCF) qui fournissent l’authentification, par exemple, l’authentification Windows, les certificats X.509 et nom d’utilisateur et mots de passe.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
+ [Guide pratique pour Utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  Les fonctionnalités ASP.NET incluent une appartenance et un fournisseur de rôles, une base de données pour stocker des paires nom d’utilisateur/mot de passe pour l’authentification et des rôles d’utilisateur pour l’autorisation. Cette rubrique explique comment les services WCF peuvent utiliser la même base de données pour authentifier et autoriser les utilisateurs.  
   
- [Procédure : utiliser un validateur de nom d’utilisateur et mot de passe personnalisé](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
+ [Guide pratique pour Utiliser un validateur de mot de passe et le nom d’utilisateur personnalisé](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  Montre comment intégrer un validateur personnalisé de nom d'utilisateur/mot de passe.  
   
  [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
@@ -28,7 +28,7 @@ Les rubriques suivantes montrent un nombre de mécanismes différents dans Windo
  [Négociation et délais de sécurité](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
  Décrit comment utiliser la propriété <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> de la classe <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>.  
   
- [Débogage d'erreurs d'authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+ [Débogage d’erreurs d’authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
  Traite des problèmes courants rencontrés lors de l'utilisation de l'authentification Windows.  
   
 ## <a name="reference"></a>Référence  
@@ -39,5 +39,5 @@ Les rubriques suivantes montrent un nombre de mécanismes différents dans Windo
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

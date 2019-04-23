@@ -6,10 +6,10 @@ helpviewer_keywords:
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
 ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165079"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>Procédure : Transformer l’échelle d’un modèle 3D
@@ -26,4 +26,4 @@ Cet exemple montre comment mettre à l’échelle un objet 3D. Pour mettre à l�
 
 - [Animer des translations 3D](how-to-animate-3-d-translations.md)
 - [Créer une scène 3D](how-to-create-a-3-d-scene.md)
-- [Vue d'ensemble des graphiques 3D](3-d-graphics-overview.md)
+- [Vue d’ensemble des graphiques 3D](3-d-graphics-overview.md)

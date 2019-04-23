@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162853"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Énumération des instances de SQL Server (ADO.NET)
@@ -43,7 +43,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  La table retournée par l'appel de la méthode comprend les colonnes suivantes qui contiennent toutes des valeurs `string` :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**ServerName**|Nom du serveur.|  
 |**InstanceName**|Nom de l'instance du serveur. Vide si le serveur s'exécute comme instance par défaut.|  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
 ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163707"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Procédure : Appeler des fonctions inline définies par l’utilisateur
@@ -40,4 +40,4 @@ FROM [Customers] AS [t0]
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Fonctions définies par l'utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Fonctions définies par l’utilisateur](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

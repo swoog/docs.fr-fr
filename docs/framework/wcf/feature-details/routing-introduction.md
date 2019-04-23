@@ -3,10 +3,10 @@ title: Introduction au routage
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158676"
 ---
 # <a name="routing-introduction"></a>Introduction au routage
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Par défaut, le service de routage évalue uniquement les en-têtes du message. Pour permettre aux filtres d'accéder au corps du message, vous devez attribuer à la propriété <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> la valeur `false`.  
   
- **Multidiffusion**  
+ **Multicast**  
   
  Alors que de nombreuses configurations de service de routage utilisent une logique de filtre exclusive qui route les messages vers un seul point de terminaison spécifique, vous aurez peut-être besoin de router un message donné vers plusieurs points de terminaison de destination. Pour envoyer un message en mode multidiffusion à des destinations multiples, les conditions suivantes doivent être remplies :  
   
@@ -193,7 +193,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  Les étapes effectuées pour créer un nouveau **MessageVersion** pour le message sortant sont les suivantes :  
   
- **Traitement de la demande**  
+ **Traitement des demandes**  
   
 -   Obtenir le **MessageVersion** de la liaison/canal sortant.  
   
@@ -405,4 +405,4 @@ using (ServiceHost serviceHost =
 
 - [Filtres de message](message-filters.md)
 - [Contrats de routage](routing-contracts.md)
-- [Choix d'un filtre](choosing-a-filter.md)
+- [Choix d’un filtre](choosing-a-filter.md)

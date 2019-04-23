@@ -6,20 +6,20 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159690"
 ---
 # <a name="statusstrip-control"></a>StatusStrip, contrôle
-Le contrôle `StatusStrip` Windows Forms est utilisé dans les formulaires tels que les zones, qui s'affichent habituellement au bas d'une fenêtre, et dans lesquelles une application peut afficher différents types d'informations d'état. `StatusStrip` les contrôles ont généralement `ToolStripStatusLabel` sur ces derniers, les contrôles qui affichent du texte ou des icônes pour indiquer l’état, ou un <xref:System.Windows.Forms.ToolStripProgressBar> qui représente graphiquement l’état d’achèvement d’un processus.  
+Le contrôle `StatusStrip` Windows Forms est utilisé dans les formulaires tels que les zones, qui s'affichent habituellement au bas d'une fenêtre, et dans lesquelles une application peut afficher différents types d'informations d'état. Les contrôles `StatusStrip` possèdent généralement des contrôles `ToolStripStatusLabel` qui affichent du texte ou des icônes pour indiquer l'état, ou un <xref:System.Windows.Forms.ToolStripProgressBar> qui représente graphiquement la progression d'un processus.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble du contrôle StatusStrip](statusstrip-control-overview.md)  
+ [Vue d’ensemble du contrôle StatusStrip](statusstrip-control-overview.md)  
  Décrit un contrôle et ses principales fonctionnalités et propriétés.  
   
- [Procédure : utiliser la propriété Spring dans un StatusStrip de manière interactive](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
+ [Guide pratique pour Utiliser la propriété Spring dans un StatusStrip de manière interactive](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  Illustre l'utilisation de la propriété `Spring` pour centrer de manière interactive un `ToolStripStatusLabel` dans un `StatusStrip`.  
   
  Consultez également [éditeur de collections d’éléments StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100)) et [Tâches StatusStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100)).  

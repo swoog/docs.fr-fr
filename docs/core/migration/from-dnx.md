@@ -4,10 +4,10 @@ description: Migrez des outils DNX vers les outils de l’interface CLI .NET Cor
 ms.date: 06/20/2016
 ms.custom: seodec18
 ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160834"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migration de DNX vers l’interface CLI .NET Core (project.json)
@@ -117,8 +117,8 @@ Une fois ces opérations effectuées, vous devez choisir le type de portabilité
 
 Dès lors que vous avez déterminé le type de portabilité que vous voulez utiliser, vous devez modifier le ou les frameworks ciblés. Si vous écriviez des applications pour .NET Core, il est très probable que vous utilisiez `dnxcore50` comme framework ciblé. Avec l’interface CLI et compte tenu des changements apportés par la nouvelle bibliothèque [.NET Standard](../../standard/net-standard.md), vous devez opter pour l’un des frameworks suivants :
 
-1. `netcoreapp1.0` - si vous écrivez des applications sur .NET Core (y compris des applications ASP.NET Core)
-2. `netstandard1.6` - si vous écrivez des bibliothèques de classes pour .NET Core
+1. `netcoreapp1.0` : si vous écrivez des applications sur .NET Core (y compris des applications ASP.NET Core)
+2. `netstandard1.6` : si vous écrivez des bibliothèques de classes pour .NET Core
 
 Si vous utilisez d’autres cibles `dnx`, comme `dnx451`, vous devez aussi les modifier. `dnx451` doit être remplacé par `net451`.
 Pour plus d’informations, consultez la rubrique [.NET Standard](../../standard/net-standard.md).

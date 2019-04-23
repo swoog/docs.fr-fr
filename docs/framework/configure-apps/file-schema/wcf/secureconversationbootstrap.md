@@ -3,10 +3,10 @@ title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166989"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
@@ -47,7 +47,7 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`allowSerializedSigningTokenOnReply`|Optionnel. Valeur booléenne qui spécifie si un jeton sérialisé peut être utilisé sur la réponse. La valeur par défaut est `false`. Si vous utilisez une liaison double, le paramètre a la valeur par défaut `true` et tout paramètre défini sera ignoré.|  
+|`allowSerializedSigningTokenOnReply`|Facultatif. Valeur booléenne qui spécifie si un jeton sérialisé peut être utilisé sur la réponse. La valeur par défaut est `false`. Si vous utilisez une liaison double, le paramètre a la valeur par défaut `true` et tout paramètre défini sera ignoré.|  
 |`authenticationMode`|Spécifie le mode d'authentification SOAP utilisé entre l'initiateur et le répondeur.<br /><br /> La valeur par défaut est sspiNegotiated.<br /><br /> Cet attribut est de type <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
 |`defaultAlgorithmSuite`|La suite d'algorithmes de sécurité définit divers algorithmes, comme les algorithmes Canonicalization, Digest, KeyWrap, Signature, Encryption et KeyDerivation. Chacune de ces suites algorithmiques de sécurité définit des valeurs pour ces différents paramètres. La sécurité basée sur les messages est obtenue grâce à ces algorithmes.<br /><br /> Cet attribut est employé lors de l'utilisation d'une plate-forme différente qui opte pour un jeu d'algorithmes différent de la valeur par défaut. Vous devez connaître les forces et les faiblesses des algorithmes concernés lorsque vous modifiez ce paramètre. Cet attribut est de type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. La valeur par défaut est `Basic256`.|  
 |`includeTimestamp`|Valeur booléenne qui spécifie si les horodatages sont inclus dans chaque message. La valeur par défaut est `true`.|  
@@ -83,5 +83,5 @@ Spécifie les valeurs par défaut utilisées pour initialiser un service de conv
 - [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

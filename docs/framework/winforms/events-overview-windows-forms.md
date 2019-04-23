@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710730"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59157755"
 ---
 # <a name="events-overview-windows-forms"></a>Vue d'ensemble des événements (Windows Forms)
 Un événement est une action à laquelle vous pouvez répondre ou que vous pouvez « gérer » dans le code. Les événements peuvent être déclenchés par une action de l'utilisateur (quand il clique sur un bouton de la souris ou appuie sur une touche), par le code d'un programme ou par le système.  
@@ -44,5 +44,6 @@ Un événement est une action à laquelle vous pouvez répondre ou que vous pouv
  Le mécanisme de liaison utilisé avec les délégués est dynamique : un délégué peut être lié au moment de l'exécution à n'importe quelle méthode dont la signature correspond à celle du gestionnaire d'événements. Cette fonctionnalité vous permet de configurer ou de modifier la méthode de liaison en fonction d’une condition et d’attacher dynamiquement un gestionnaire d’événements à un contrôle.  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Création de gestionnaires d’événements dans les Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Vue d'ensemble des gestionnaires d'événements](event-handlers-overview-windows-forms.md)

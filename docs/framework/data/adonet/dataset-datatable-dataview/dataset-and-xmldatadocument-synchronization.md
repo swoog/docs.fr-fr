@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164734"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronisation DataSet et XmlDataDocument
@@ -90,13 +90,13 @@ L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation rela
  Lors de la synchronisation une **DataSet** avec un **XmlDataDocument**, résultats peuvent différer selon s’il faut ou non votre <xref:System.Data.DataRelation> sont les objets imbriqués. Pour plus d’informations, consultez [d’imbrication de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Synchronisation d'un DataSet et d'un XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Synchronisation d’un DataSet et d’un XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Montre comment synchroniser fortement typé **DataSet**, avec un schéma minimal, avec un **XmlDataDocument**.  
   
  [Exécution d’une requête XPath sur un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Présente l’exécution d’une requête XPath sur le contenu d’un **DataSet**.  
   
- [Application d'une transformation XSLT à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Application d’une transformation XSLT à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Montre comment appliquer une transformation XSLT au contenu d’un **DataSet**.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

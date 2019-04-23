@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165176"
 ---
 # <a name="datatable-constraints"></a>Contraintes de DataTable
@@ -27,7 +27,7 @@ Vous pouvez utiliser des contraintes pour appliquer des restrictions sur les don
 |**Cascade**|Supprime ou met à jour les lignes connexes.|  
 |**SetNull**|Définissez les valeurs des lignes connexes **DBNull**.|  
 |**SetDefault**|Définit les valeurs des lignes connexes sur la valeur par défaut.|  
-|**Aucun.**|N'effectue aucune action sur les lignes connexes. Il s'agit de la valeur par défaut.|  
+|**Aucun**|N'effectue aucune action sur les lignes connexes. Il s'agit de la valeur par défaut.|  
   
  Un **ForeignKeyConstraint** peuvent limiter, ainsi que les propager, modifications apportées à des colonnes connexes. En fonction des propriétés définies pour le **ForeignKeyConstraint** d’une colonne, si le **EnforceConstraints** propriété de la **DataSet** est **true**, certaines opérations réalisées dans la ligne parente entraîne une exception. Par exemple, si le **DeleteRule** propriété de la **ForeignKeyConstraint** est **aucun**, une ligne parente ne peut pas être supprimée s’il a des lignes enfants.  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Paramètre de règle|Description|  
 |------------------|-----------------|  
 |**Cascade**|Accepte ou rejette les modifications des lignes enfants.|  
-|**Aucun.**|N'effectue aucune action sur les lignes enfants. Il s'agit de la valeur par défaut.|  
+|**Aucun**|N'effectue aucune action sur les lignes enfants. Il s'agit de la valeur par défaut.|  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant crée un objet <xref:System.Data.ForeignKeyConstraint>, définit plusieurs de ses propriétés, notamment la <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, et l'ajoute à la <xref:System.Data.ConstraintCollection> d'un objet <xref:System.Data.DataTable>.  

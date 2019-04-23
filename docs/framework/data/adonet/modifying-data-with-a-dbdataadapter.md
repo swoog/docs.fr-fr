@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158871"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modification des données avec un DbDataAdapter
@@ -45,6 +45,6 @@ La méthode <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> d'u
 ## <a name="see-also"></a>Voir aussi
 
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Obtention d'un DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [Obtention d’un DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand et DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

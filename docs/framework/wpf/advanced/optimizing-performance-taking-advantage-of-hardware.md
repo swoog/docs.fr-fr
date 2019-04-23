@@ -10,10 +10,10 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163174"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimisation des performances : Tirer parti du matériel
@@ -59,9 +59,9 @@ L’architecture interne de [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d’application](optimizing-performance-application-resources.md)
-- [Texte](optimizing-performance-text.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

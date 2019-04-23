@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157668"
 ---
 # <a name="securing-services"></a>Sécurisation de services
@@ -105,15 +105,15 @@ Sécurité d’un service Windows Communication Foundation (WCF) se compose de d
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Fonctionnement des niveaux de protection](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Présentation du niveau de protection](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Délégation et emprunt d’identité](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Conception de contrats de service](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Sécurité](../../../docs/framework/wcf/feature-details/security.md)
-- [Vue d'ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Procédure : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Procédure : sécuriser un service avec des informations d’identification Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Procédure : définir le mode de sécurité](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Procédure : spécifier le type d’informations d’identification de client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [Procédure : restreindre l’accès à la classe PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Procédure : emprunter l’identité d’un client sur un service](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Procédure : examiner le contexte de sécurité](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [Vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Guide pratique pour Définissez la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Guide pratique pour Sécuriser un Service avec les informations d’identification Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Guide pratique pour Définir le Mode de sécurité](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Guide pratique pour Spécifier le Type d’informations d’identification de Client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Guide pratique pour Restreindre l’accès à la classe PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Guide pratique pour Emprunter l’identité d’un Client sur un Service](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Guide pratique pour Examinez le contexte de sécurité](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

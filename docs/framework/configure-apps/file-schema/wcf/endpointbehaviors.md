@@ -3,10 +3,10 @@ title: <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: fb851947-e8dd-4f8c-8323-26fae90b09c3
 ms.openlocfilehash: eccecb650bc820600cb0414a83e642f1a6d16956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165007"
 ---
 # <a name="endpointbehaviors"></a>\<endpointBehaviors>
@@ -16,5 +16,5 @@ Cette section de configuration représente tous les comportements définis pour 
 
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>
-- [Spécification du comportement du client au moment de l'exécution](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Spécification du comportement du client au moment de l’exécution](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configuration des comportements clients](../../../../../docs/framework/wcf/configuring-client-behaviors.md)

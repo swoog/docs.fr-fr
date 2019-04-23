@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164435"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
@@ -70,7 +70,7 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
 #### <a name="the-getpropertyname-accessor"></a>L’accesseur GetPropertyName  
  La signature pour l’accesseur `Get`*NomPropriété* doit être :  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get` *NomPropriété* `(object`  `target` `)`  
   
 -   L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Vous pouvez l’utiliser pour limiter l’utilisation de votre membre pouvant être attaché ; utilisations en dehors de votre portée prévue lève des exceptions de cast non valide qui sont ensuite signalées par une erreur d’analyse XAML. Le nom du paramètre `target` n’est pas obligatoire, mais est nommé `target` par convention dans la plupart des implémentations.  
   
@@ -81,7 +81,7 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
 #### <a name="the-setpropertyname-accessor"></a>L’accesseur SetPropertyName  
  La signature pour l’ensemble*PropertyName* accesseur doit être :  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *NomPropriété* `(object`  `target` `, object`  `value` `)`  
   
 -   Le `target` objet peut être spécifié comme un type plus spécifique dans votre implémentation, avec la même logique et les conséquences, comme décrit dans la section précédente.  
   

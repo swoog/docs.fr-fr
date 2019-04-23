@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
 ms.openlocfilehash: 347c8502bd4c5fafcde7a142327f85bfb75b9954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159625"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Procédure : Utiliser les propriétés jointes d’un canevas pour positionner des éléments enfants
@@ -35,6 +35,6 @@ Chaque <xref:System.Windows.Controls.Button> est positionné par rapport au pare
 - <xref:System.Windows.Controls.Canvas.Right%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
-- [Vue d'ensemble de Panel](panels-overview.md)
-- [Rubriques Comment](canvas-how-to-topics.md)
+- [Vue d’ensemble de Panel](panels-overview.md)
+- [Rubriques de guide pratique](canvas-how-to-topics.md)
 - [Vue d'ensemble des propriétés jointes](../advanced/attached-properties-overview.md)

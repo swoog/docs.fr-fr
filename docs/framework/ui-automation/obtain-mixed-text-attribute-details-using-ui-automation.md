@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158481"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtenir des détails d'attribut de texte mixte à l'aide d'UI Automation
@@ -28,9 +28,9 @@ ms.locfileid: "59158481"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de TextPattern d'UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Ajouter du contenu à une zone de texte à l'aide d'UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Rechercher et mettre un texte en surbrillance à l'aide d'UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Vue d’ensemble de TextPattern d’UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Ajouter du contenu à une zone de texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Rechercher et mettre en surbrillance le texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Obtenir des attributs de texte à l'aide d'UI Automation](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)
+- [Obtenir des attributs de texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

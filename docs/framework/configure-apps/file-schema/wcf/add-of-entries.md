@@ -3,10 +3,10 @@ title: <add> de <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
 ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165410"
 ---
 # <a name="add-of-entries"></a>\<Ajouter > de \<entrées >
@@ -47,7 +47,7 @@ Représente une entrée de routage qui mappe un filtre à un point de terminaiso
 |Attribut|Description|  
 |---------------|-----------------|  
 |backupList|Chaîne qui spécifie une référence à une liste de sauvegarde de points de terminaison.|  
-|point de terminaison|Chaîne qui spécifie une référence à un point de terminaison client qui reçoit les messages correspondant au filtre indiqué par l'attribut `filterName`.|  
+|Point de terminaison (endpoint)|Chaîne qui spécifie une référence à un point de terminaison client qui reçoit les messages correspondant au filtre indiqué par l'attribut `filterName`.|  
 |filterName|Chaîne qui spécifie une référence à un élément de filtre.|  
 |priority|Entier qui spécifie la priorité de cette entrée.<br /><br /> Les entrées dans la table de routage sont évaluées selon leur priorité, 0 correspondant à la priorité la plus basse. Toutes les entrées d'une priorité donnée sont évaluées simultanément, si aucune entrée correspondante n'est trouvée pour la priorité actuelle, le niveau de priorité suivant est évalué.<br /><br /> Cette valeur est facultative.|  
   

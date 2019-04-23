@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164513"
 ---
 # <a name="remote-vs-local-execution"></a>Exécution distante et exécution locale
@@ -45,7 +45,7 @@ Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le mo
  Ces deux fonctions fournissent une combinaison puissante d'options : communication à distance pour les grandes collections et exécution locale pour les petites collections ou lorsque la collection complète est nécessaire. Implémentez la communication à distance via <xref:System.Linq.IQueryable> et l'exécution locale sur une collection <xref:System.Collections.Generic.IEnumerable%601> en mémoire. Pour forcer l’exécution locale (autrement dit, <xref:System.Collections.Generic.IEnumerable%601>), consultez [convertir un Type en IEnumerable générique](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Requêtes sur des jeux non ordonnés  
- Notez la différence importante entre une collection locale qui implémente <xref:System.Collections.Generic.List%601> et une collection qui fournit des requêtes distantes exécutées sur *désordonnées jeux* dans une base de données relationnelle. <xref:System.Collections.Generic.List%601> les méthodes telles que celles qui utilisent des valeurs d’index requièrent des sémantiques de liste que l'on ne peut pas obtenir via une requête distante sur un jeu non ordonné. Pour cette raison, de telles méthodes chargent implicitement le <xref:System.Data.Linq.EntitySet%601> pour autoriser l'exécution locale.  
+ Notez la différence importante entre une collection locale qui implémente <xref:System.Collections.Generic.List%601> et une collection qui fournit des requêtes distantes exécutées sur *désordonnées jeux* dans une base de données relationnelle. Les méthodes <xref:System.Collections.Generic.List%601> telles que celles qui utilisent des valeurs d'index requièrent des sémantiques de liste que l'on ne peut généralement pas obtenir via une requête distante sur un jeu non ordonné. Pour cette raison, de telles méthodes chargent implicitement le <xref:System.Data.Linq.EntitySet%601> pour autoriser l'exécution locale.  
   
 ## <a name="see-also"></a>Voir aussi
 

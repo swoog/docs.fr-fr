@@ -3,10 +3,10 @@ title: Types sérialisables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160847"
 ---
 # <a name="serializable-types"></a>Types sérialisables
@@ -27,7 +27,7 @@ Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sériali
   
 -   Les champs en lecture seule, les propriétés sans méthode `get` ou `set` et les propriétés avec des méthodes `set` ou `get` internes ou privées ne sont pas sérialisés. Ces propriétés sont ignorées et aucune exception n'est levée, sauf dans le cas des collections get-only.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> attributs (tels que `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, et ainsi de suite) sont ignorés.  
+-   Les attributs <xref:System.Xml.Serialization.XmlSerializer> (tels que  `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, etc.) sont ignorés.  
   
 -   Si vous n'appliquez pas l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> à un type donné, le sérialiseur ignore tout membre dans ce type auquel l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué.  
   

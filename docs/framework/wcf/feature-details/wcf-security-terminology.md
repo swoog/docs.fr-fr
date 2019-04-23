@@ -7,10 +7,10 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158741"
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
@@ -33,7 +33,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Hiérarchie d'autorités de certification  
  Une hiérarchie d'autorités de certification contient plusieurs CA. Elle est organisée afin que chaque autorité de certification soit certifiée par une autre autorité de certification dans un niveau supérieur de la hiérarchie jusqu'à ce que le sommet de la hiérarchie, également connu sous le *autorité racine*, est atteinte.  
   
- certificate  
+ certificat  
  Déclaration signée numériquement qui contient des informations à propos d'une entité et la clé publique de l'entité, et lie donc ces deux renseignements ensemble. Un certificat est publié par une organisation approuvée (ou entité), appelée autorité de certification, après que l'autorité a vérifié que l'entité est qui elle prétend être.  
   
  Les certificats peuvent contenir des types différents de données. Par exemple, un certificat X.509 inclut le format du certificat, le numéro de série du certificat, l'algorithme utilisé pour signer le certificat, le nom de l'autorité de certification qui a publié le certificat, le nom et la clé publique de l'entité qui demande le certificat, et la signature de l'autorité de certification.  
@@ -47,7 +47,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  certificat de client  
  Fait référence à un certificat utilisé pour l’authentification du client, telle que l’authentification d’un navigateur Web sur un serveur web. Lorsqu'un client de navigateur Web essaie d'accéder à un serveur Web sécurisé, le client envoie son certificat au serveur pour lui permettre de vérifier son identité.  
   
- informations d'identification  
+ credentials  
  Données d'ouverture de session qu'un principal de sécurité utilise pour établir sa propre identité, telles qu'un mot de passe, ou un ticket de protocole Kerberos. Les informations d'identification sont utilisées pour contrôler l'accès aux ressources.  
   
  données condensées  
@@ -89,7 +89,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  PKCS #7  
  Norme de syntaxe de message de chiffrement. Syntaxe générale des données auxquelles le chiffrement peut être appliqué, telles que les signatures numériques et le chiffrement. Elle fournit également la syntaxe pour diffuser au message des certificats ou des listes de révocation de certificats et d'autres attributs de message, tels que les horodatages.  
   
- texte en clair  
+ texte brut  
  Message non chiffré. Messages en texte brut sont parfois appelés *en texte clair* messages.  
   
  privilège  
@@ -183,6 +183,6 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Concepts fondamentaux concernant Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
+- [Concepts fondamentaux de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

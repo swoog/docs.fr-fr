@@ -10,10 +10,10 @@ ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156076"
 ---
 # <a name="security-transparent-code-level-2"></a>Code transparent de sécurité, niveau 2
@@ -44,13 +44,13 @@ ms.locfileid: "59156076"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Exemples d'utilisation et comportements](#examples)  
+-   [Exemples d’utilisation et de comportements](#examples)  
   
 -   [Modèles de substitution](#override)  
   
--   [Règles d'héritage](#inheritance)  
+-   [Règles d’héritage](#inheritance)  
   
--   [Informations et règles supplémentaires](#additional)  
+-   [Règles et des informations supplémentaires](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Exemples d'utilisation et comportements  
@@ -194,4 +194,4 @@ ms.locfileid: "59156076"
 ## <a name="see-also"></a>Voir aussi
 
 - [Code Transparent de sécurité, niveau 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Changements relatifs à la sécurité](../../../docs/framework/security/security-changes.md)
+- [Modifications de sécurité](../../../docs/framework/security/security-changes.md)

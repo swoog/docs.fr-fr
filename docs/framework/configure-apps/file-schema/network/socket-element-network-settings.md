@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256889"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59160158"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket >, élément (paramètres réseau)
 Spécifie si les opérations de socket utilisent des ports de terminaison.  
@@ -104,6 +104,7 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
 ```  
   
 ## <a name="see-also"></a>Voir aussi
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
