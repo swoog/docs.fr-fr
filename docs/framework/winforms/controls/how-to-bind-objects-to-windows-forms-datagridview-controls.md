@@ -10,10 +10,10 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180256"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Procédure : lier des objets à des contrôles DataGridView Windows Forms
@@ -34,4 +34,4 @@ L'exemple de code suivant montre comment lier une collection d'objets à un cont
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Procédure : accéder à des objets liés à des lignes DataGridView Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Guide pratique pour Accéder aux objets liés à des Windows Forms DataGridView lignes](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

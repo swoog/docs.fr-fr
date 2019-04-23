@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
 ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222300"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Procédure : Spécifier la source de liaison
@@ -50,4 +50,4 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
 - [Héritage de la valeur de propriété](../advanced/property-value-inheritance.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
 - [Vue d'ensemble des déclarations de liaison](binding-declarations-overview.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

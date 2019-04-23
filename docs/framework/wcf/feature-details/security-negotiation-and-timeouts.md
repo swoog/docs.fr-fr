@@ -3,10 +3,10 @@ title: Négociation et délais de sécurité
 ms.date: 03/30/2017
 ms.assetid: 02a428f1-84e5-4d28-a11f-53ce31d63196
 ms.openlocfilehash: a02c9d7b42eadf9a5ce9af8022fe292d6c23249c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180640"
 ---
 # <a name="security-negotiation-and-timeouts"></a>Négociation et délais de sécurité
@@ -15,4 +15,4 @@ Lorsque les clients et les services s’authentifient, Windows Communication Fou
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Procédure : définir une inclinaison de l’horloge maximale](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)
+- [Guide pratique pour Ensemble une variation d’horloge maximale](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)

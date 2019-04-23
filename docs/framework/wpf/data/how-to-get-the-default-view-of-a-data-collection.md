@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222105"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procédure : Obtenir la vue par défaut d’une collection de données
@@ -34,5 +34,5 @@ Les vues permettent à la même collection de données de différentes façons, 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Trier et grouper des données à l’aide d’une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Trier et grouper des données à l'aide d'une vue en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

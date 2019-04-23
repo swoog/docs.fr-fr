@@ -3,11 +3,11 @@ title: Option d'encodage d'instance
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315619"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773842"
 ---
 # <a name="instance-encoding-option"></a>Option d'encodage d'instance
 Le **Option d’encodage d’Instance** propriété du Store d’Instance de Workflow SQL vous permet de spécifier si le fournisseur de persistance SQL doit compresser les informations d’état du flux de travail d’instance à l’aide de l’algorithme GZip avant d’enregistrer le informations dans la base de données de persistance. Les valeurs autorisées pour cette propriété sont : GZip et aucun. La valeur par défaut est None. La liste suivante décrit ces trois options.  

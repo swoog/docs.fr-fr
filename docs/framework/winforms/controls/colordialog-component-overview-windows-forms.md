@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
 ms.openlocfilehash: 284d42218fb4fbce873325b1e45c883d51eefab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222352"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>Vue d'ensemble du composant ColorDialog (Windows Forms)
@@ -24,4 +24,4 @@ Les formulaires Windows <xref:System.Windows.Forms.ColorDialog> composant est un
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog, composant](colordialog-component-windows-forms.md)
 - [Contrôles et composants de boîte de dialogue](dialog-box-controls-and-components-windows-forms.md)
-- [Procédure : modifier l’aspect du composant ColorDialog Windows Forms](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [Guide pratique pour Modifier l’apparence du composant ColorDialog Windows Forms](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

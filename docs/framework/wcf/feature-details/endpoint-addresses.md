@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220433"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
@@ -139,5 +139,5 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Spécification d'une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

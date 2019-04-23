@@ -3,10 +3,10 @@ title: Migration des services Web WSE 3.0 vers WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180607"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migration des services Web WSE 3.0 vers WCF
@@ -27,7 +27,7 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>Services Web WSE 3.0 sécurisés à l'aide d'un fichier de stratégie  
  Les services WCF peuvent utiliser un fichier de configuration pour sécuriser un service et ce mécanisme s’apparente à un fichier de stratégie WSE 3.0. Dans WSE 3.0, lorsque vous sécurisez un service Web à l'aide d'un fichier de stratégie, vous utilisez une assertion de sécurité clé en main ou une assertion de stratégie personnalisée. Les assertions de sécurité clé en main correspondent étroitement au mode d’authentification d’un élément de liaison de sécurité WCF. Non seulement les modes d’authentification WCF et les assertions de sécurité clé en main de WSE 3.0 portent le même ou de la même façon, qu’elles sécurisent les messages en utilisant les mêmes types d’informations d’identification. Par exemple, le `usernameForCertificate` assertion de sécurité clé en main dans WSE 3.0 mappe à la `UsernameForCertificate` mode d’authentification dans WCF. Les exemples de code suivants montrent comment une stratégie minimale qui utilise le `usernameForCertificate` assertion de sécurité clé en main dans WSE 3.0 mappe à un `UsernameForCertificate` mode d’authentification dans WCF dans une liaison personnalisée.  
   
- **WSE 3.0**  
+ **WSE 3.0**  
   
 ```xml  
 <policies>  
@@ -89,7 +89,7 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
 ### <a name="wse-30-web-services-that-use-mtom-encoded-soap-messages"></a>Services Web WSE 3.0 qui utilisent des messages SOAP encodés MTOM  
  Comme une application WSE 3, une application WCF peut spécifier l’encodage dans la configuration de message MTOM. Pour migrer ce paramètre, ajoutez le [ \<mtomMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/mtommessageencoding.md) à la liaison pour le service. L’exemple de code suivant illustre l’encodage MTOM comment est spécifié dans WSE 3.0 pour un service qui est équivalent dans WCF.  
   
- **WSE 3.0**  
+ **WSE 3.0**  
   
 ```xml  
 <messaging>  
@@ -126,5 +126,5 @@ Les avantages de la migration des services Web WSE 3.0 pour Windows Communicatio
 
 - [Cycle de vie de la programmation de base](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [Procédure : créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Procédure : créer un SecurityBindingElement pour un mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Guide pratique pour Créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

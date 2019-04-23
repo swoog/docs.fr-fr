@@ -3,10 +3,10 @@ title: Génération SQL
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
 ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180565"
 ---
 # <a name="sql-generation"></a>Génération SQL
@@ -22,10 +22,10 @@ Lorsque vous écrivez un fournisseur pour [!INCLUDE[adonet_ef](../../../../../in
 ## <a name="in-this-section"></a>Dans cette section  
  [Forme des arborescences de commandes](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
   
- [Génération SQL à partir d'arborescences de commandes - meilleures pratiques](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Génération SQL à partir d’arborescences de commandes - Bonnes pratiques](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
   
- [Génération SQL dans le Fournisseur d'exemples](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
+ [Génération SQL dans l’exemple de fournisseur](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Écriture d'un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

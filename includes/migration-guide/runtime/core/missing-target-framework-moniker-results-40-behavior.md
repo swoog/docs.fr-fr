@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 29b8feb7959c718391b963c8402b97351b93fa49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235404"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803832"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>Un moniker de framework cible manquant a pour effet de restaurer le comportement de la version 4.0
 

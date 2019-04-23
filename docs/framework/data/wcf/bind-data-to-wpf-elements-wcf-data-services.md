@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
 ms.openlocfilehash: 1deb5bcc29e43720929951764d1fcfeee8e89f8c
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517393"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773959"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Procédure : Lier des données aux éléments Windows Presentation Foundation (WCF Data Services)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez lier des éléments Windows Presentation Foundation (WPF) tels qu’un <xref:System.Windows.Controls.ListBox> ou <xref:System.Windows.Controls.ComboBox> à une instance de <xref:System.Data.Services.Client.DataServiceCollection%601>, qui gère les événements déclenchés par les contrôles pour garder le <xref:System.Data.Services.Client.DataServiceContext> synchronisé avec les modifications apportées aux données dans les contrôles. Pour plus d’informations, consultez [liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179996"
 ---
 # <a name="geometry-overview"></a>Vue d'ensemble de Geometry
@@ -221,9 +221,9 @@ PathGeometry avec plusieurs figures
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
-- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Syntaxe XAML pour les tracés](path-markup-syntax.md)
-- [Rubriques Comment](geometries-how-to-topics.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
+- [Rubriques de guide pratique](geometries-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> Élément (paramètres réseau)
+title: <webProxyScript>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218665"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript >, élément (paramètres réseau)
@@ -47,7 +47,7 @@ Configure les caractéristiques du script utilisé pour découvrir les proxys We
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Notes  
   

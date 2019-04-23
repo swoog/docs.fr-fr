@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217872"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
@@ -28,7 +28,7 @@ L'Assistant Débogage managé (MDA) `releaseHandleFailed` est activé pour avert
 ## <a name="cause"></a>Cause  
  Les utilisateurs doivent fournir l'implémentation de la méthode <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> s'ils créent des classes qui dérivent de <xref:System.Runtime.InteropServices.SafeHandle> ou de <xref:System.Runtime.InteropServices.CriticalHandle>. Les circonstances sont donc spécifiques à chaque ressource. Toutefois, il existe certaines exigences :  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> et <xref:System.Runtime.InteropServices.CriticalHandle> types représentent des wrappers autour des ressources de processus essentielles. Une fuite de mémoire finirait par rendre le processus inutilisable.  
+-   Les types <xref:System.Runtime.InteropServices.SafeHandle> et <xref:System.Runtime.InteropServices.CriticalHandle> représentent des wrappers autour de ressources de processus essentielles. Une fuite de mémoire finirait par rendre le processus inutilisable.  
   
 -   La méthode <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> ne doit pas échouer dans l'exécution de sa fonction. Une ressource acquise par le processus ne peut être libérée qu’avec la méthode <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. C'est pourquoi un échec de la méthode entraîne une fuite de ressource.  
   
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

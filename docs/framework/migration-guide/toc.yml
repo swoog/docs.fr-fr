@@ -1,35 +1,28 @@
-items:
 - name: Guide de migration
   href: index.md
   items:
-  - name: Compatibilité des applications
-    href: application-compatibility.md
-    items:
-    - name: Modifications du runtime
-      href: runtime/index.md
-    - name: Modifications de reciblage
-      href: retargeting/index.md
-  - name: Compatibilité des versions
-    href: version-compatibility.md
-  - name: Versions et dépendances
-    href: versions-and-dependencies.md
-    items:
-    - name: 'Procédure : Déterminer les versions du .NET Framework installées'
-      href: how-to-determine-which-versions-are-installed.md
+    - name: Compatibilité des applications
+      href: application-compatibility.md
       items:
-      - name: Valeurs minimales de la version DWORD pour les versions du .NET Framework
-        href: minimum-release-dword.md
-    - name: 'Procédure : Déterminer les mises à jour du .NET Framework installées'
-      href: how-to-determine-which-net-framework-updates-are-installed.md
-  - name: 'Procédure : configurer une application pour prendre en charge .NET Framework 4 ou ultérieur'
-    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
-  - name: Migration à partir du .NET Framework 1.1
-    href: migrating-from-the-net-framework-1-1.md
-  - name: Problèmes de migration du .NET Framework 4
-    href: net-framework-4-migration-issues.md
-ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054934"
+        - name: Modifications du runtime
+          href: runtime/index.md
+        - name: Modifications de reciblage
+          href: retargeting/index.md
+    - name: Compatibilité des versions
+      href: version-compatibility.md
+    - name: Versions et dépendances
+      href: versions-and-dependencies.md
+      items:
+        - name: "Procédure\_: Déterminer les versions du .NET Framework installées"
+          href: how-to-determine-which-versions-are-installed.md
+          items:
+            - name: Valeurs minimales de la version DWORD pour les versions du .NET Framework
+              href: minimum-release-dword.md
+        - name: "Procédure\_: Déterminer les mises à jour du .NET Framework installées"
+          href: how-to-determine-which-net-framework-updates-are-installed.md
+    - name: "Procédure\_: configurer une application pour prendre en charge .NET Framework\_4 ou ultérieur"
+      href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: "Migration à partir du .NET Framework\_1.1"
+      href: migrating-from-the-net-framework-1-1.md
+    - name: "Problèmes de migration du .NET Framework\_4"
+      href: net-framework-4-migration-issues.md

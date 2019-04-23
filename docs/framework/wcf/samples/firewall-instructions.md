@@ -3,11 +3,11 @@ title: Instructions sur les pare-feu
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295157"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773788"
 ---
 # <a name="firewall-instructions"></a>Instructions sur les pare-feu
 Vous devez activer plusieurs ports ou programmes dans le pare-feu pour que les exemples Windows Communication Foundation (WCF) peuvent fonctionner. Un grand nombre d'exemples communique en utilisant des ports contenus dans la plage 8000-8003, ainsi que le port 9000. Le pare-feu est activé par défaut et empêche l'accès à ces ports. Pour activer le pare-feu pour les exemples, exécutez l’une des procédures suivantes, selon vos besoins et votre environnement de sécurité :  

@@ -9,10 +9,10 @@ ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218445"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Réduction des redémarrages système lors des installations de .NET Framework 4.5
@@ -38,4 +38,4 @@ Invite pour fermer les applications .NET Framework en cours d'utilisation
 
 - [Déploiement](../../../docs/framework/deployment/index.md)
 - [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Procédure : suivre la progression du programme d’installation de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Guide pratique pour pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

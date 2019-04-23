@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
 ms.openlocfilehash: 539ce0ba72ae7a8d568cdea3a1a3aab3eec1001b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220732"
 ---
 # <a name="activitystatequery"></a>\<activityStateQuery>
@@ -90,4 +90,4 @@ Représente une requête qui permet d'effectuer le suivi des changements dans le
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
 - [Suivi et traçage de workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Profils de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

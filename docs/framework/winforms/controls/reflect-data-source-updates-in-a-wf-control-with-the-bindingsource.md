@@ -13,10 +13,10 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
 ms.openlocfilehash: 16dbe4da1efecd120d4da4d66c3d79ec907b92a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218644"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Procédure : refléter les mises à jour de la source de données dans un contrôle Windows Forms avec le composant BindingSource
@@ -41,5 +41,5 @@ Quand vous utilisez des contrôles liés aux données, vous devez parfois répon
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Composant BindingSource](bindingsource-component.md)
-- [Procédure : lier un contrôle Windows Forms à un type](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource, composant](bindingsource-component.md)
+- [Guide pratique pour Lier un contrôle de formulaires Windows à un Type](how-to-bind-a-windows-forms-control-to-a-type.md)

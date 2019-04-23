@@ -1,5 +1,5 @@
 ---
-title: <mailSettings> Élément (paramètres réseau)
+title: <mailSettings>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180621"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings >, élément (paramètres réseau)
@@ -46,7 +46,7 @@ Configure les options d’envoi du courrier.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[\<system.Net >, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.|  
+|[\<system.Net>, élément (Paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.|  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant spécifie les paramètres SMTP appropriés pour envoyer un e-mail à l’aide des informations d’identification du réseau par défaut.  

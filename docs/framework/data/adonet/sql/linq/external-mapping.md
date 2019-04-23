@@ -3,10 +3,10 @@ title: Mappage externe
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218678"
 ---
 # <a name="external-mapping"></a>Mappage externe
@@ -27,7 +27,7 @@ ms.locfileid: "59218678"
   
 -   Le mappage externe substitue le mappage basé sur les attributs. En d'autres termes, lorsque vous utilisez une source de mappage externe pour créer un <xref:System.Data.Linq.DataContext>, le <xref:System.Data.Linq.DataContext> ignore tous les attributs de mappage que vous avez créés sur les classes. Ce comportement est vrai si la classe est incluse dans le fichier de mappage externe.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge l’utilisation hybride des deux approches de mappage (basé sur attribut et externes).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge l'utilisation hybride des deux approches de mappage (basé sur les attributs et externe).  
   
 ## <a name="xml-schema-definition-file"></a>Fichier de définition de schéma XML  
  Le mappage externe dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] doit être valide par rapport à la définition de schéma XML suivante.  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Génération de code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Référence](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Procédure : Générer le modèle objet sous forme de fichier externe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Guide pratique pour Générer le modèle objet comme un fichier externe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

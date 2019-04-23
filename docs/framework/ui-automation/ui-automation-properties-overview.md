@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223002"
 ---
 # <a name="ui-automation-properties-overview"></a>Vue d'ensemble des propriétés UI Automation
@@ -28,9 +28,9 @@ ms.locfileid: "59223002"
 ## <a name="property-identifiers"></a>Identificateurs de propriété  
  Chaque propriété est identifiée par un numéro et un nom. Les noms de propriétés sont utilisés uniquement pour le débogage et le diagnostic. Les fournisseurs utilisent les [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] numériques pour identifier les demandes de propriété entrantes. Les applications clientes, toutefois, utilisent uniquement <xref:System.Windows.Automation.AutomationProperty>, qui encapsule le numéro et le nom, pour identifier les propriétés qu’elles souhaitent récupérer.  
   
- <xref:System.Windows.Automation.AutomationProperty> objets représentant des propriétés particulières sont disponibles en tant que champs dans différentes classes. Pour des raisons de sécurité, les fournisseurs UI Automation obtiennent ces objets à partir d’un ensemble distinct de classes contenues dans Uiautomationtypes.dll.  
+ Les objets<xref:System.Windows.Automation.AutomationProperty> qui représentent des propriétés particulières sont disponibles sous forme de champs dans différentes classes. Pour des raisons de sécurité, les fournisseurs UI Automation obtiennent ces objets à partir d’un ensemble distinct de classes contenues dans Uiautomationtypes.dll.  
   
- Le tableau suivant catégorise les propriétés selon les classes qui contiennent le <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ Le tableau suivant catégorise les propriétés selon les classes qui contiennent les <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
 |Types de propriétés|Les clients obtiennent les ID par le biais de|Les fournisseurs obtiennent les ID par le biais de|  
 |-------------------------|--------------------------|----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "59223002"
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>Localisation  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] les fournisseurs doivent présenter les propriétés suivantes dans la langue du système d’exploitation :  
+ Les fournisseurs[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] doivent présenter les propriétés suivantes dans la langue du système d’exploitation :  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -165,5 +165,5 @@ ms.locfileid: "59223002"
 - [Propriétés UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
 - [Implémentation de fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Retourner les propriétés d'un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Déclencher des événements à partir d'un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Retourner les propriétés d’un fournisseur UI Automation](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Déclencher des événements à partir d’un fournisseur UI Automation](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
