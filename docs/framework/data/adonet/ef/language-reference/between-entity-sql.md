@@ -3,10 +3,10 @@ title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309301"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
@@ -20,13 +20,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Toute expression valide à tester dans la plage définie par `begin_expression` et `end_expression`. `expression` doit être du même type que les deux `begin_expression` et `end_expression`.  
+ Toute expression valide à tester dans la plage définie par `begin_expression` et `end_expression`. `expression` doit être du même type qu'`begin_expression` et `end_expression`.  
   
  `begin_expression`  
- Toute expression valide. `begin_expression` doit être du même type que les deux `expression` et `end_expression`. `begin_expression` doit être inférieur à `end_expression`, sinon la valeur de retour sera niée.  
+ Toute expression valide. `begin_expression` doit être du même type qu'`expression` et `end_expression`. `begin_expression` doit être inférieur à `end_expression` ou la valeur de retour sera niée.  
   
  `end_expression`  
- Toute expression valide. `end_expression` doit être du même type que les deux `expression` et `begin_expression`.  
+ Toute expression valide. `end_expression` doit être du même type qu'`expression` et `begin_expression`.  
   
  NOT  
  Indique que le résultat de BETWEEN est inversé.  
@@ -35,7 +35,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  Espace réservé qui indique que `expression` doit se trouver dans la plage définie par `begin_expression` et `end_expression`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true` Si `expression` est comprise entre la plage indiquée par `begin_expression` et `end_expression`; sinon, `false`. `null` est retourné si `expression` est `null` ou si `begin_expression` ou `end_expression` est `null`.  
+ `true` si `expression` est entre la plage indiquée par `begin_expression` et `end_expression` ; sinon, `false`. La valeur `null` est retournée si `expression` a la valeur `null` ou si `begin_expression` ou `end_expression` a la valeur `null`.  
   
 ## <a name="remarks"></a>Notes  
  Pour spécifier un intervalle exclusif, utilisez le signe supérieur à (>) et inférieur à (<) opérateurs place de BETWEEN.  

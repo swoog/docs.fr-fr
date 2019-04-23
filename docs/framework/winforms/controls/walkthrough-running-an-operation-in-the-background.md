@@ -14,10 +14,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308443"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Procédure pas à pas : exécution d’une opération en arrière-plan
@@ -34,7 +34,7 @@ Si vous avez une opération qui prendra un certain temps et que vous ne souhaite
   
     |Bouton|Nom|Texte|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
+    |`button1`|`startBtn`|**Démarrer**|  
     |`button2`|`cancelBtn`|**Annuler**|  
   
 2. Ouvrir le **boîte à outils**, cliquez sur le **composants** onglet, puis faites glisser le <xref:System.ComponentModel.BackgroundWorker> composant vers votre formulaire.  
@@ -104,6 +104,6 @@ Si vous avez une opération qui prendra un certain temps et que vous ne souhaite
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Procédure : implémenter un formulaire qui utilise une opération en arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Procédure : exécuter une opération en arrière-plan](how-to-run-an-operation-in-the-background.md)
-- [BackgroundWorker, composant](backgroundworker-component.md)
+- [Guide pratique pour implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Guide pratique pour exécuter une opération en arrière-plan](how-to-run-an-operation-in-the-background.md)
+- [Composant BackgroundWorker](backgroundworker-component.md)

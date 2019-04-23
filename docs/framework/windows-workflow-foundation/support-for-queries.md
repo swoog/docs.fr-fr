@@ -3,10 +3,10 @@ title: Prise en charge des requêtes
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307949"
 ---
 # <a name="support-for-queries"></a>Prise en charge des requêtes
@@ -14,13 +14,13 @@ Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues
   
 -   **Nom du site.** Nom du site Web qui contient le service.  
   
--   **Chemin d'accès à l'application relatif.** Chemin d’accès à l’application relatif au site Web.  
+-   **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site Web.  
   
--   **Chemin d'accès au service relatif.** Chemin d’accès au service relatif à l’application.  
+-   **Chemin d’accès relatif de Service.** Chemin d’accès au service relatif à l’application.  
   
 -   **Nom du service.** Nom du service.  
   
--   **Espace de noms du service.** Nom de l'espace de noms que le service utilise.  
+-   **Service Namespace.** Nom de l'espace de noms que le service utilise.  
   
 -   **Ordinateur actuel.**  
   

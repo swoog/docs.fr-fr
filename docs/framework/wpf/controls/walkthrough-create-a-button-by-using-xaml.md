@@ -5,10 +5,10 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309496"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procédure pas à pas : Créer un bouton avec XAML
@@ -433,8 +433,8 @@ L’objectif de cette procédure pas à pas est d’apprendre à créer un bouto
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer un bouton à l’aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
-- [Vue d'ensemble de l'animation](../graphics-multimedia/animation-overview.md)
-- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Vue d'ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Créer un bouton à l'aide de Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md)
+- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Vue d’ensemble des effets bitmap](../graphics-multimedia/bitmap-effects-overview.md)

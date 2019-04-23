@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
 ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311875"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procédure : configurer une liaison WS-Metadata Exchange personnalisée
@@ -115,8 +115,8 @@ Cette rubrique explique comment configurer une liaison d'échange WS-Metadata pe
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Metadata Publishing Behavior](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [Retrieve Metadata](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
+- [Comportement de publication des métadonnées](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+- [Récupérer des métadonnées](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Publication de métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
 - [Publication de points de terminaison de métadonnées](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186093"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975752"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procédure : créer un dégradé de tracé
 Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de personnaliser la façon dont vous remplissez une forme avec des couleurs progressifs. Par exemple, vous pouvez spécifier une couleur pour le centre d’un chemin d’accès et un autre pour la limite d’un chemin d’accès. Vous pouvez également spécifier des couleurs distinctes pour chacun des points le long de la limite d’un chemin d’accès.  
   
 > [!NOTE]
->  Dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un chemin d’accès est une séquence de lignes et de courbes gérée par un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Pour plus d’informations sur [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] chemins d’accès, consultez [tracés graphiques dans GDI +](graphics-paths-in-gdi.md) et [génération et dessin de tracés](constructing-and-drawing-paths.md).  
-  
+>  Dans GDI +, un chemin d’accès est une séquence de lignes et de courbes gérée par un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Pour plus d’informations sur les chemins de GDI +, consultez [tracés graphiques dans GDI +](graphics-paths-in-gdi.md) et [génération et dessin de tracés](constructing-and-drawing-paths.md).  
+
+Les exemples de cet article sont des méthodes qui sont appelées à partir d’un contrôle <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Pour remplir une ellipse avec un dégradé de tracé  
   
 -   L’exemple suivant remplit une ellipse avec un pinceau de dégradé de chemin d’accès. La couleur centrale est définie sur le bleu et la couleur de la limite est définie sur « cyan ». L’illustration suivante montre l’ellipse remplie.  
@@ -30,7 +32,7 @@ Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de perso
   
      Par défaut, un pinceau de dégradé de chemin d’accès ne s’étend pas au-delà de la limite du chemin d’accès. Si vous utilisez le pinceau à dégradé pour remplir une illustration qui s’étend au-delà de la limite du chemin d’accès, il se peut que la zone de l’écran en dehors du tracé ne sera pas remplie.  
   
-     L’illustration suivante montre que se passe-t-il si vous modifiez le <xref:System.Drawing.Graphics.FillEllipse%2A> appeler dans le code suivant à `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     L’illustration suivante montre que se passe-t-il si vous modifiez le <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> appeler dans le code suivant à `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Tracé en dégradé étendu au-delà des limites du chemin d’accès.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

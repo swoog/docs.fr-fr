@@ -3,10 +3,10 @@ title: 'Procédure : Modifier des arborescences d’expressions (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
 ms.openlocfilehash: 26c00f3acc7ab44e74a81e346ab1c017d95d53b5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308638"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procédure : Modifier des arborescences d’expressions (C#)
@@ -72,5 +72,5 @@ Cette rubrique montre comment modifier une arborescence d’expressions. Les arb
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Guide pratique pour exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312096"
 ---
 # <a name="controlling-net-framework-logging"></a>Contrôle de l'enregistrement .NET Framework
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Le paramètre `-p` identifie le GUID du fournisseur.  
   
-    -   `0x1CCBD` Spécifie les catégories d’événements qui seront déclenchés.  
+    -   `0x1CCBD` spécifie les catégories d'événements qui seront déclenchés.  
   
-    -   `0x5` définit le niveau de journalisation (dans ce cas, détaillé (5)).  
+    -   `0x5` définit le niveau de la journalisation (dans ce cas, détaillé (5)).  
   
     -   Le paramètre `-ets` indique à Logman d'envoyer des commandes aux sessions de suivi d'événements.  
   

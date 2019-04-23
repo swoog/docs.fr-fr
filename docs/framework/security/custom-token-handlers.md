@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312109"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975674"
 ---
 # <a name="custom-token-handlers"></a>Gestionnaires de jetons personnalisés
 Cette rubrique traite des gestionnaires de jetons dans WIF et de la façon dont ils sont utilisés pour traiter les jetons. Elle décrit également ce qui est nécessaire pour créer des gestionnaires de jetons personnalisés pour les types de jetons qui ne sont pas pris en charge par défaut dans WIF.  

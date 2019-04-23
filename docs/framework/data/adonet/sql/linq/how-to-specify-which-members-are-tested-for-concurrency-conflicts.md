@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
 ms.openlocfilehash: 9a1b4ab2dc28c569473eddbf50b96d10298d8d3c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310432"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procédure : Spécifier les membres dont les conflits d’accès concurrentiel doivent être vérifiés
@@ -48,5 +48,5 @@ Appliquer l’une des trois enums à la [!INCLUDE[vbtecdlinq](../../../../../../
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Apport et soumission de modifications de données](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

@@ -3,10 +3,10 @@ title: Concepteurs composites personnalisés - Présentateur d'éléments de wo
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311121"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Concepteurs composites personnalisés - Présentateur d'éléments de workflow
@@ -83,4 +83,4 @@ Le <xref:System.Activities.Presentation.WorkflowItemPresenter> est un type de cl
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [Développement d'applications avec Workflow Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Développement d’applications avec le Concepteur de flux de travail](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
 ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312187"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Procédure : dimensionner un contrôle Label Windows Forms pour qu’il s’ajuste à son contenu
@@ -26,6 +26,6 @@ Les formulaires Windows <xref:System.Windows.Forms.Label> contrôle peut être u
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : créer des clés d’accès avec les contrôles Label Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
-- [Vue d’ensemble du contrôle Label](label-control-overview-windows-forms.md)
+- [Guide pratique pour Créer des clés d’accès avec les contrôles Label Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Vue d'ensemble du contrôle Label](label-control-overview-windows-forms.md)
 - [Label, contrôle](label-control-windows-forms.md)

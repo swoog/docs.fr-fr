@@ -3,10 +3,10 @@ title: 'Procédure pas à pas : Requête et modèle objet simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
 ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309457"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procédure pas à pas : Requête et modèle objet simples (C#)
@@ -87,7 +87,7 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
   
 -   Désignez la propriété `CustomerID` comme représentant une colonne de clé primaire dans la base de données.  
   
--   Désignez les champs `_CustomerID` et `_City` pour le stockage privé. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut ensuite stocker et récupérer des valeurs directement, au lieu d’utiliser des accesseurs publics qui peuvent inclure la logique métier.  
+-   Désignez les champs `_CustomerID` et `_City` pour le stockage privé. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut ensuite stocker et récupérer directement des valeurs, au lieu d'utiliser des accesseurs publics qui peuvent inclure la logique métier.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Pour représenter les caractéristiques de deux colonnes de base de données  
   

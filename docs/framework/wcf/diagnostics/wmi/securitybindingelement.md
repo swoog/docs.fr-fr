@@ -3,11 +3,11 @@ title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
 ms.openlocfilehash: 1d367d0c5d14e6e75539dd2b20cdffcf2b34963d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153853"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975557"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -58,7 +58,7 @@ class SecurityBindingElement : BindingElement
   
  Type d’accès : Propriétés en lecture seule  
   
- Propriétés de sécurité spécifiques d'une liaison pour le service local.  
+ Propriétés de sécurité spécifiques d’une liaison pour le service local.  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Type de données : chaîne  

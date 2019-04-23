@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308534"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Exposer vos données en tant que Service (WCF Data Services)
@@ -23,7 +23,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de définir 
 
      Pour des scénarios plus avancés, WCF Data Services inclut un ensemble de fournisseurs qui vous permettent de définir un modèle de données basé sur les types de données de la liaison tardive. Pour plus d’informations, consultez [fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
 
-2. **Création du service de données.** Le service de données le plus basique expose une classe qui hérite de la classe <xref:System.Data.Services.DataService%601> , avec un type `T` qui est le nom qualifié par l'espace de noms du conteneur d'entités. Pour plus d'informations, consultez [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
+2. **Créez le service de données.** Le service de données le plus basique expose une classe qui hérite de la classe <xref:System.Data.Services.DataService%601> , avec un type `T` qui est le nom qualifié par l'espace de noms du conteneur d'entités. Pour plus d'informations, consultez [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
 
 3. **Configurer le service de données.** Par défaut, WCF Data Services désactive l’accès aux ressources qui sont exposées par un conteneur d’entités. Le <xref:System.Data.Services.DataServiceConfiguration> interface vous permet de configurer l’accès aux ressources et opérations de service, spécifiez la version prise en charge d’OData et définir d’autres comportements de service à l’échelle, telles que le traitement par lot des comportements ou le nombre maximal d’entités qui peuvent être retournées dans une seule réponse. Pour plus d’informations, consultez [configuration du Service de données](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
 
@@ -32,4 +32,4 @@ Pour obtenir un exemple montrant comment créer un service de données simple qu
 ## <a name="see-also"></a>Voir aussi
 
 - [Prise en main](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [Vue d'ensemble](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+- [Vue d’ensemble](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

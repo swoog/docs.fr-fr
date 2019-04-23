@@ -3,10 +3,10 @@ title: 'Procédure : accéder à un service à partir d’une application de wo
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309314"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Procédure : accéder à un service à partir d’une application de workflow
@@ -65,5 +65,5 @@ Cette rubrique décrit comment appeler un service de workflow à partir d'une ap
 ## <a name="see-also"></a>Voir aussi
 
 - [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Procédure : créer un service de workflow avec des activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Consommer un service WCF à partir d'un workflow dans un projet Web](https://go.microsoft.com/fwlink/?LinkId=207725)
+- [Guide pratique pour Créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Utilisation d’un Service WCF à partir d’un flux de travail dans un projet Web](https://go.microsoft.com/fwlink/?LinkId=207725)

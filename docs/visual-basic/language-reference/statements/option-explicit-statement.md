@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308612"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit, instruction (Visual Basic)
@@ -29,10 +29,10 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Composants  
  `On`  
- Facultatif. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
+ Optionnel. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
   
  `Off`  
- Optionnel. Désactive `Option Explicit` la vérification.  
+ Facultatif. Désactive `Option Explicit` la vérification.  
   
 ## <a name="remarks"></a>Notes  
  Lorsque `Option Explicit On` ou `Option Explicit` apparaît dans un fichier, vous devez déclarer explicitement toutes les variables à l’aide de la `Dim` ou `ReDim` instructions. Si vous essayez d’utiliser un nom de variable non déclarée, une erreur se produit au moment de la compilation. La `Option Explicit Off` instruction permet une déclaration implicite de variables.  
@@ -68,11 +68,11 @@ Option Explicit { On | Off }
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Dim, instruction](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ReDim, instruction](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Compare, instruction](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [ReDim (instruction)](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Valeurs par défaut VB, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Valeurs par défaut Visual Basic, Projets, boîte de dialogue Options](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

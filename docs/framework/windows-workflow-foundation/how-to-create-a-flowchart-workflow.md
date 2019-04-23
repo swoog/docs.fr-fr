@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311199"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procédure : créer un workflow d’organigramme
@@ -155,7 +155,7 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programmation Windows Workflow Foundation](programming.md)
-- [Conception des flux de travaux](designing-workflows.md)
-- [Didacticiel de mise en route](getting-started-tutorial.md)
-- [Procédure : créer une activité](how-to-create-an-activity.md)
-- [Procédure : exécuter un workflow](how-to-run-a-workflow.md)
+- [Conception des workflows](designing-workflows.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)
+- [Guide pratique pour Créer une activité](how-to-create-an-activity.md)
+- [Guide pratique pour Exécuter un Workflow](how-to-run-a-workflow.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312161"
 ---
 # <a name="how-to-enable-streaming"></a>Procédure : activer le streaming
@@ -30,17 +30,17 @@ Windows Communication Foundation (WCF) peut envoyer des messages à l’aide de 
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     L'opération `GetStream` reçoit des données d'entrée mises en mémoire tampon sous la forme d'une chaîne (`string`) mise en mémoire tampon et retourne `Stream`, soit des données diffusées en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` accepte et retourne `Stream` et est un exemple d’une opération dont l’entrée et les messages de sortie sont transmis en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
+     L'opération `GetStream` reçoit des données d'entrée mises en mémoire tampon sous la forme d'une chaîne (`string`) mise en mémoire tampon et retourne `Stream`, soit des données diffusées en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` prend et retourne `Stream` et constitue un exemple d'opération dont les messages d'entrée et de sortie sont tous deux diffusés en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
   
 2. La diffusion en continu doit être activée sur la liaison. Affectez à une propriété `TransferMode` l'une des valeurs suivantes :  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`, ce qui permet la communication de diffusion en continu dans les deux sens.  
+    2.  `Streamed`, qui active la communication par diffusion en continu dans les deux directions.  
   
-    3.  `StreamedRequest`, ce qui permet la diffusion en continu de la demande uniquement.  
+    3.  `StreamedRequest`, qui active la diffusion en continu de la demande uniquement.  
   
-    4.  `StreamedResponse`, ce qui permet la diffusion en continu de la réponse uniquement.  
+    4.  `StreamedResponse`, qui active la diffusion en continu de la réponse uniquement.  
   
      La `BasicHttpBinding` expose la propriété `TransferMode` sur la liaison, tout comme `NetTcpBinding` et `NetNamedPipeBinding`. La propriété `TransferMode` peut également être définie sur l’élément de liaison de transport et utilisée dans une liaison personnalisée.  
   
@@ -69,12 +69,12 @@ Windows Communication Foundation (WCF) peut envoyer des messages à l’aide de 
   
 1. Pour effectuer un traitement spécial sur chaque bloc d'un flux alors qu'il est envoyé ou reçu, dérivez une classe de flux personnalisé de <xref:System.IO.Stream>. Pour donner un exemple d'un flux personnalisé, le code suivant contient une méthode `GetReversedStream` et une classe `ReverseStream`-.  
   
-     `GetReversedStream` Crée et retourne une nouvelle instance de `ReverseStream`. Le traitement réel se produit lorsque le système lit l'objet `ReverseStream`. La méthode `ReverseStream.Read` lit un bloc d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette méthode n'inverse pas l'ensemble du contenu du fichier, mais uniquement un bloc d'octets à la fois. Cet exemple montre comment vous pouvez traiter un flux pendant que le contenu est lu ou écrit à partir du flux.  
+     `GetReversedStream` crée et retourne une nouvelle instance de `ReverseStream`. Le traitement réel se produit lorsque le système lit l'objet `ReverseStream`. La méthode `ReverseStream.Read` lit un bloc d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette méthode n'inverse pas l'ensemble du contenu du fichier, mais uniquement un bloc d'octets à la fois. Cet exemple montre comment vous pouvez traiter un flux pendant que le contenu est lu ou écrit à partir du flux.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Données volumineuses et diffusion en continu](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+- [Données volumineuses et streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Flux](../../../../docs/framework/wcf/samples/stream.md)

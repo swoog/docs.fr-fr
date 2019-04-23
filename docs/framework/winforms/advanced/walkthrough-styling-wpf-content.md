@@ -7,10 +7,10 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312148"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Procédure pas à pas : application d’un style au contenu WPF
@@ -72,7 +72,7 @@ Cette procédure pas à pas montre comment appliquer des styles à un contrôle 
   
 3. Dans le panneau des balises actives pour `elementHost1`, cliquez sur **modifier le contenu hébergé** dans la liste déroulante.  
   
-     `UserControl1` s’ouvre dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+     `UserControl1` s'ouvre dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4. En mode XAML, insérez le code XAML suivant après la balise d'ouverture `<UserControl>`.  
   
@@ -157,4 +157,4 @@ Cette procédure pas à pas montre comment appliquer des styles à un contrôle 
 - [Utilisation de contrôles WPF](using-wpf-controls.md)
 - [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Vue d’ensemble du langage XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Application d'un style et création de modèles](../../wpf/controls/styling-and-templating.md)
+- [Application d’un style et création de modèles](../../wpf/controls/styling-and-templating.md)

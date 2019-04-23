@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: b33f49bdeb20176b711d6dc50a247e131f9de9d7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309834"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613198"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Appliquer des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
 
@@ -44,22 +44,22 @@ Il n’existe qu’une seule architecture des applications : l’architecture de
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Martin Fowler. CQRS** \
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **Greg Young. CQS vs. CQRS** \
-  [http://codebetter.com/gregyoung/2009/08/13/command-query-separation/](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
 
 - **Greg Young. CQRS Documents** \
   [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 - **Greg Young. CQRS, Task Based UIs and Event Sourcing** \
-  [http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
 
 - **Udi Dahan. Clarified CQRS** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Event-Sourcing (ES)** \
-  [http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
+  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[Précédent](apply-simplified-microservice-cqrs-ddd-patterns.md)

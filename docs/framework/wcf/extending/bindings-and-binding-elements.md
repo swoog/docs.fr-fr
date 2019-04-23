@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073843"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976766"
 ---
 # <a name="bindings-and-binding-elements"></a>Liaisons et éléments de liaison
 Les liaisons sont des collections d’éléments de configuration spéciale, appelées *éléments de liaison*, qui sont évalué par le runtime de service chaque fois qu’un client ou le point de terminaison de service est en cours de construction. Le type et l'ordre des éléments de liaison dans une liaison déterminent la sélection et l'ordre d'empilement des protocoles et des canaux de transport dans la pile de canaux d'un point de terminaison.  

@@ -3,10 +3,10 @@ title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310419"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
@@ -79,7 +79,7 @@ ms.locfileid: "59310419"
   
   Pour plus d’informations, consultez [liaison d’objets aux contrôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] contrôles de source de données.  
+- Contrôles de source de données [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
 
   Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications Web. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   

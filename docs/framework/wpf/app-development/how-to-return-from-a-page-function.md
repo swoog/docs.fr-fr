@@ -10,11 +10,11 @@ helpviewer_keywords:
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
 ms.openlocfilehash: 8539395625ead3b71e8e50b36567c098eb13da01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198008"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767862"
 ---
 # <a name="how-to-return-from-a-page-function"></a>Procédure : Revenir en arrière à partir d’une fonction de page
 Cet exemple montre comment retourner un résultat à partir d’une fonction de page.  

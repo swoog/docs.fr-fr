@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674391"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613861"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Conception d’une application orientée microservices
 
@@ -92,7 +92,7 @@ Par conséquent, les unités de déploiement pour les microservices (et même po
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 - **Code source de l’application de référence eShopOnContainers Code source de l’application de référence**\
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Avantages d’une solution basée sur des microservices
 
