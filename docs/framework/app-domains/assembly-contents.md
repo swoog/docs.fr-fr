@@ -10,10 +10,10 @@ ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149342"
 ---
 # <a name="assembly-contents"></a>Contenu d'un assembly
@@ -49,5 +49,5 @@ En général, un assembly statique peut comporter les quatre éléments suivants
 ## <a name="see-also"></a>Voir aussi
 
 - [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Manifeste d'assembly](../../../docs/framework/app-domains/assembly-manifest.md)
+- [Manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md)
 - [Aspects de la sécurité des assemblys](../../../docs/framework/app-domains/assembly-security-considerations.md)

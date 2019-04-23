@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151916"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procédure : implémenter un ToolStripRenderer personnalisé
@@ -23,11 +23,11 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
   
  La classe `GridStripRenderer` personnalise trois aspects de l'apparence du contrôle `GridStrip` :  
   
--   `GridStrip` border  
+-   la bordure `GridStrip` ;  
   
--   <xref:System.Windows.Forms.ToolStripButton> border  
+-   la bordure <xref:System.Windows.Forms.ToolStripButton> ;  
   
--   <xref:System.Windows.Forms.ToolStripButton> image  
+-   l'image <xref:System.Windows.Forms.ToolStripButton>.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -47,4 +47,4 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150538"
 ---
 # <a name="how-to-repeat-an-animation"></a>Procédure : Répéter une animation
@@ -30,8 +30,8 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Time
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Accumuler des valeurs d’animation pendant des cycles de répétition](how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [Accumuler des valeurs d'animation pendant des cycles de répétition](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Spécifier l’inversion automatique d’une chronologie](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Rubriques "Comment" relatives à l'animation et au minutage](animation-and-timing-how-to-topics.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Comportement de minutage d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Comportement de minuterie d’animation exemple](https://go.microsoft.com/fwlink/?LinkID=159970)

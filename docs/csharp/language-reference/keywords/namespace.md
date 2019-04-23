@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148757"
 ---
 # <a name="namespace-c-reference"></a>namespace (référence C#)
@@ -36,7 +36,7 @@ Dans un espace de noms, vous pouvez déclarer zéro ou plusieurs des types suiva
 
 - [enum](enum.md)
 
-- [délégué](delegate.md)
+- [delegate](delegate.md)
 
 Le compilateur ajoute un espace de noms par défaut, que vous déclariez ou non explicitement un espace de noms dans un fichier source C#. Cet espace de noms sans nom, parfois appelé espace de noms global, est présent dans chaque fichier. Tout identificateur dans l’espace de noms global peut être utilisé dans un espace de noms nommé.
 
@@ -58,9 +58,9 @@ Pour plus d’informations sur l’utilisation des espaces de noms, consultez le
 
 - [Espaces de noms](../../programming-guide/namespaces/index.md)
 
-- [Utilisation des espaces de noms](../../programming-guide/namespaces/using-namespaces.md)
+- [Utilisation d’espaces de noms](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Procédure : Utiliser l’alias d’espace de noms global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Guide pratique pour utiliser l’alias d’espace de noms global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 

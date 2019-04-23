@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148159"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Recommandations pour la conception de contrôles auxquels un style peut être appliqué
@@ -38,15 +38,15 @@ Ce document récapitule un ensemble de meilleures pratiques à envisager lors de
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Indications générales  
   
--   **N’appliquez pas strictement les contrats de modèles.** Le contrat de modèle d’un contrôle peut comporter des éléments, commandes, liaisons, déclencheurs ou même des paramètres de propriété qui sont requis ou attendus afin qu’un contrôle fonctionne correctement.  
+-   **N’appliquez pas les contrats de modèles de manière stricte.** Le contrat de modèle d’un contrôle peut comporter des éléments, commandes, liaisons, déclencheurs ou même des paramètres de propriété qui sont requis ou attendus afin qu’un contrôle fonctionne correctement.  
   
     -   Réduisez autant que possible les contrats.  
   
-    -   Concevez en gardant à l’esprit que pendant la conception (autrement dit, lorsque vous utilisez un outil de conception), il est courant pour un modèle de contrôle de se trouver dans un état incomplet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’offre pas une infrastructure d’état « composition », donc les contrôles doivent être générés dans l’attente que cet état peut être valide.  
+    -   Concevez en gardant à l’esprit que pendant la conception (autrement dit, lorsque vous utilisez un outil de conception), il est courant pour un modèle de contrôle de se trouver dans un état incomplet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] n’offre pas une infrastructure d’état de « composition », donc les contrôles doivent être générés avec l’idée que cet état peut être valide.  
   
     -   Ne levez pas d’exception lorsqu’un aspect du contrat de modèle n’est pas respecté. Dans le même état d’esprit, les panneaux ne doivent pas lever d’exceptions s’ils ont trop ou trop peu d’enfants.  
   
--   **Placez les fonctionnalités périphériques dans les éléments de modèle d’assistance.** Chaque contrôle doit être axé sur sa fonctionnalité principale et sa proposition de valeur réelle et doit être défini par l’utilisation courante du contrôle. Pour ce faire, utilisez les éléments de composition et d’assistance au sein du modèle pour activer les comportements et visualisations périphériques, autrement dit, les comportements et les visualisations qui ne contribuent pas à la fonctionnalité principale du contrôle. Les éléments d’assistance se répartissent en trois catégories :  
+-   **Prenez en compte les fonctionnalités périphériques dans les éléments de modèle d’assistance.** Chaque contrôle doit être axé sur sa fonctionnalité principale et sa proposition de valeur réelle et doit être défini par l’utilisation courante du contrôle. Pour ce faire, utilisez les éléments de composition et d’assistance au sein du modèle pour activer les comportements et visualisations périphériques, autrement dit, les comportements et les visualisations qui ne contribuent pas à la fonctionnalité principale du contrôle. Les éléments d’assistance se répartissent en trois catégories :  
   
     -   Les types d’assistance **autonomes** sont des contrôles publics et réutilisables ou des primitives utilisées de manière « anonyme » dans un modèle, ce qui signifie que ni l’élément d’assistance ni le contrôle stylé n’est conscient de l’autre. Techniquement, tout élément peut être un type anonyme, mais dans ce contexte, le terme décrit les types qui encapsulent des fonctionnalités spéciales pour activer des scénarios ciblés.  
   
@@ -99,9 +99,9 @@ Ce document récapitule un ensemble de meilleures pratiques à envisager lors de
   
 -   **Utilisez des déclencheurs de style (par opposition aux déclencheurs de modèle) avec parcimonie**. Les déclencheurs qui affectent des propriétés sur les éléments dans le modèle doivent être déclarés dans le modèle. Les déclencheurs qui affectent des propriétés sur le contrôle (aucun `TargetName`) peuvent être déclarés dans le style, sauf si vous savez que la modification du modèle détruirait également le déclencheur.  
   
--   **Être cohérente avec les modèles de styles existants.** Il existe souvent plusieurs façons de résoudre un problème. Tenez compte et soyez cohérent, lorsque possible, concernant les modèles de styles existants. Ceci est particulièrement important pour les contrôles qui dérivent du même type de base (par exemple, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, et ainsi de suite).  
+-   **Soyez cohérent avec les modèles de styles existants.** Il existe souvent plusieurs façons de résoudre un problème. Tenez compte et soyez cohérent, lorsque possible, concernant les modèles de styles existants. Ceci est particulièrement important pour les contrôles qui dérivent du même type de base (par exemple, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, et ainsi de suite).  
   
--   **Exposez des propriétés pour activer des scénarios de personnalisation courants sans recréer un modèle**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne pas prend en charge les composants enfichables/personnalisables, un utilisateur du contrôle avec seulement deux méthodes de personnalisation : définition des propriétés directement ou en définissant des propriétés à l’aide de styles. Dans cette optique, il convient d’exposer un nombre limité de propriétés destinées à des scénarios de personnalisation très courants, de priorité élevée, qui nécessiteraient sinon la recréation d’un modèle. Voici les meilleures pratiques pour savoir quand et comment activer des scénarios de personnalisation :  
+-   **Exposez des propriétés pour activer des scénarios de personnalisation courants sans recréer un modèle**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne prend pas en charge les composants enfichables/personnalisables, donc un utilisateur du contrôle dispose de seulement deux méthodes de personnalisation : définir des propriétés directement ou définir des propriétés à l’aide de styles. Dans cette optique, il convient d’exposer un nombre limité de propriétés destinées à des scénarios de personnalisation très courants, de priorité élevée, qui nécessiteraient sinon la recréation d’un modèle. Voici les meilleures pratiques pour savoir quand et comment activer des scénarios de personnalisation :  
   
     -   Les personnalisations très courantes doivent être exposées en tant que propriétés sur le contrôle et consommées par le modèle.  
   
@@ -120,5 +120,5 @@ Ce document récapitule un ensemble de meilleures pratiques à envisager lors de
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
 - [Vue d’ensemble de la création de contrôles](control-authoring-overview.md)

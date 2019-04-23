@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150161"
 ---
 # <a name="shapes-how-to-topics"></a>Rubriques "Comment" relatives aux objets Shape
 Les rubriques de cette section montrent comment utiliser <xref:System.Windows.Shapes.Shape> objets pour dessiner des formes de base à l’écran.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Dessiner une forme fermée à l’aide de l’élément Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Dessiner une forme fermée à l'aide de l'élément Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
  [Dessiner une ellipse ou un cercle](how-to-draw-an-ellipse-or-a-circle.md)  
  [Dessiner une ligne](how-to-draw-a-line.md)  
- [Dessiner une polyligne à l’aide de l’élément Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Dessiner une polyligne à l'aide de l'élément Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
  [Dessiner un rectangle](how-to-draw-a-rectangle.md)  
- [Modifier l’extrémité de fin d’une ligne ou d’un segment](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Modifier l'embout à la fin d'une ligne ou d'un segment](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

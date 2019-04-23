@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151201"
 ---
 # <a name="schema-restrictions"></a>Restrictions de schéma
@@ -161,7 +161,7 @@ class Program
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|colonne|@Column|COLUMN_NAME|4|  
+|Colonne|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
@@ -170,7 +170,7 @@ class Program
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|colonne|@Column|COLUMN_NAME|4|  
+|Colonne|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Affichages  
   
@@ -187,7 +187,7 @@ class Program
 |Catalogue|@Catalog|VIEW_CATALOG|1|  
 |Propriétaire|@Owner|VIEW_SCHEMA|2|  
 |Table|@Table|VIEW_NAME|3|  
-|colonne|@Column|COLUMN_NAME|4|  
+|Colonne|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
@@ -215,7 +215,7 @@ class Program
 |Propriétaire|@Owner|user_name()|2|  
 |Table|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|colonne|@Column|c.name|5|  
+|Colonne|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Index  
   
@@ -259,7 +259,7 @@ class Program
 |Catalogue|@Catalog|TABLE_CATALOG|1|  
 |Propriétaire|@Owner|TABLE_SCHEMA|2|  
 |Table|@Table|TABLE_NAME|3|  
-|colonne|@Column|COLUMN_NAME|4|  
+|Colonne|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,10 +3,10 @@ title: Détails relatifs à l'implémentation du protocole WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
 ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152852"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Détails relatifs à l'implémentation du protocole WCF Data Services
@@ -14,7 +14,7 @@ ms.locfileid: "59152852"
  [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] requiert qu'un service de données qui implémente le protocole fournisse un ensemble minimum spécifique de fonctionnalités. Ces fonctionnalités sont décrites dans les documents de protocole en termes de « peut » et « doit ». Autres fonctionnalités facultatives sont décrites en termes de « mai ». Cette rubrique décrit ces fonctionnalités facultatives qui ne sont pas actuellement implémentées par [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Pour plus d’informations, consultez [Documentation du protocole OData](https://go.microsoft.com/fwlink/?LinkID=184554).  
   
 ### <a name="support-for-the-format-query-option"></a>Prise en charge de l'option de requête $format  
- Le protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les flux JavaScript Notation (JSON) et Atom, et [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit l'option de requête système `$format` pour permettre à un client de demander le format du flux de réponse. Cette option de requête du système (si prise en charge par le service de données) doit substituer la valeur de l'en-tête Accept de la requête. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge le retour JSON et Atom. Toutefois, l'implémentation par défaut ne prend pas en charge l'option de requête `$format` et utilise uniquement la valeur de l'en-tête Accept pour déterminer le format de la réponse. Il y a des cas où votre service de données doit prendre en charge l'option de requête `$format`, par exemple lorsque les clients ne peuvent pas définir l'en-tête Accept. Pour prendre en charge ces scénarios, vous devez étendre votre service de données pour gérer cette option dans l'URI. Vous pouvez ajouter cette fonctionnalité à votre service de données en téléchargeant le [JSONP and URL-controlled format de prendre en charge pour ADO.NET Data Services](https://go.microsoft.com/fwlink/?LinkId=208228) exemple de projet à partir du site web MSDN Code Gallery et en l’ajoutant à votre projet de service de données. Cet exemple supprime l'option de requête `$format` et remplace l'en-tête Accept par `application/json`. Lorsque vous incluez l'exemple de projet et ajoutez `JSONPSupportBehaviorAttribute` à votre classe de service de données, le service peut gérer l'option de requête `$format``$format=json`. Une personnalisation plus poussée de cet exemple de projet est requise pour gérer également `$format=atom` ou d'autres formats personnalisés.  
+ Le protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les flux JavaScript Notation (JSON) et Atom, et [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit l'option de requête système `$format` pour permettre à un client de demander le format du flux de réponse. Cette option de requête du système (si prise en charge par le service de données) doit substituer la valeur de l'en-tête Accept de la requête. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge le retour de flux JSON et Atom. Toutefois, l'implémentation par défaut ne prend pas en charge l'option de requête `$format` et utilise uniquement la valeur de l'en-tête Accept pour déterminer le format de la réponse. Il y a des cas où votre service de données doit prendre en charge l'option de requête `$format`, par exemple lorsque les clients ne peuvent pas définir l'en-tête Accept. Pour prendre en charge ces scénarios, vous devez étendre votre service de données pour gérer cette option dans l'URI. Vous pouvez ajouter cette fonctionnalité à votre service de données en téléchargeant le [JSONP and URL-controlled format de prendre en charge pour ADO.NET Data Services](https://go.microsoft.com/fwlink/?LinkId=208228) exemple de projet à partir du site web MSDN Code Gallery et en l’ajoutant à votre projet de service de données. Cet exemple supprime l'option de requête `$format` et remplace l'en-tête Accept par `application/json`. Lorsque vous incluez l'exemple de projet et ajoutez `JSONPSupportBehaviorAttribute` à votre classe de service de données, le service peut gérer l'option de requête `$format``$format=json`. Une personnalisation plus poussée de cet exemple de projet est requise pour gérer également `$format=atom` ou d'autres formats personnalisés.  
   
 ## <a name="wcf-data-services-behaviors"></a>Comportements des services de données WCF  
  Les comportements suivants [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ne sont pas explicitement définis par le protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] :  
@@ -24,5 +24,5 @@ ms.locfileid: "59152852"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

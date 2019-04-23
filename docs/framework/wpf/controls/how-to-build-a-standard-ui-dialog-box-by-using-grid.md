@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
 ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149524"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Procédure : Générer une boîte de dialogue d’interface utilisateur standard à l’aide d’une grille
@@ -36,5 +36,5 @@ Cet exemple montre comment créer une norme [!INCLUDE[TLA#tla_ui](../../../../in
 
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [Vue d'ensemble de Panel](panels-overview.md)
-- [Rubriques Comment](grid-how-to-topics.md)
+- [Vue d’ensemble de Panel](panels-overview.md)
+- [Rubriques de guide pratique](grid-how-to-topics.md)

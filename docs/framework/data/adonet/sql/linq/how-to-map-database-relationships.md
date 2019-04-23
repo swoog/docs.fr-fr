@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152878"
 ---
 # <a name="how-to-map-database-relationships"></a>Procédure : Mapper des relations de base de données
@@ -28,7 +28,7 @@ Vous pouvez encoder comme références de propriété dans votre classe d'entit�
   
 -   Plusieurs-à-plusieurs : Dans les relations plusieurs-à-plusieurs, la clé primaire de la table de liens (également appelée le *jonction* table) est souvent formée par un composite des clés étrangères des deux autres tables.  
   
-     Par exemple, considérez un `Employee` - `Project` relation plusieurs-à-plusieurs formée à l’aide de table de liens `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige qu’une telle relation soit modélisée à l’aide de trois classes : `Employee`, `Project`, et `EmployeeProject`. Dans ce cas, la modification de la relation entre `Employee` et `Project` peut sembler nécessiter une mise à jour de la clé primaire `EmployeeProject`. Toutefois, la modélisation recommandée dans ce cas consiste à supprimer le `EmployeeProject` existant et à créer un autre `EmployeeProject`.  
+     Par exemple, considérez un `Employee` - `Project` relation plusieurs-à-plusieurs formée à l’aide de table de liens `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige qu'une telle relation soit modélisée à l'aide de trois classes : `Employee`, `Project` et `EmployeeProject`. Dans ce cas, la modification de la relation entre `Employee` et `Project` peut sembler nécessiter une mise à jour de la clé primaire `EmployeeProject`. Toutefois, la modélisation recommandée dans ce cas consiste à supprimer le `EmployeeProject` existant et à créer un autre `EmployeeProject`.  
   
     > [!NOTE]
     >  Les relations dans les bases de données relationnelles sont généralement modélisées comme des valeurs de clé étrangère qui font référence aux clés primaires d'autres tables. Pour naviguer entre elles vous l’associez explicitement les deux tables en utilisant un relationnelles *jointure* opération.  
@@ -55,5 +55,5 @@ Vous pouvez encoder comme références de propriété dans votre classe d'entit�
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Personnaliser des classes d’entité à l’aide de l’éditeur de code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Guide pratique pour Personnaliser des Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [Modèle objet LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

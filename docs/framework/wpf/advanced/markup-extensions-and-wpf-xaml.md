@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148094"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensions de balisage et XAML WPF
@@ -41,13 +41,13 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
 ## <a name="xaml-defined-markup-extensions"></a>Extensions de balisage définies en XAML  
  Il existe plusieurs extensions de balisage qui ne sont pas spécifiques à l’implémentation WPF de XAML, mais qui sont plutôt des implémentations d’intrinsèques ou de fonctionnalités du langage XAML. Ces extensions de balisage sont implémentées dans l’assembly System.Xaml en tant que partie intégrante des services généraux XAML du .NET Framework et se trouvent dans l’espace de noms XAML du langage XAML. Dans le cadre d’une utilisation de balisage courante, ces extensions de balisage sont en général identifiables par le préfixe `x:`. Le <xref:System.Windows.Markup.MarkupExtension> classe de base (également définie dans System.Xaml) fournit le modèle que toutes les extensions de balisage doivent utiliser pour être prises en charge dans les lecteurs XAML et les writers XAML, notamment dans WPF XAML.  
   
--   `x:Type` fournit le <xref:System.Type> objet pour le type nommé. Cette fonctionnalité est généralement utilisée dans les styles et les modèles. Pour plus d’informations, consultez [x:Type, extension de balisage](../../xaml-services/x-type-markup-extension.md).  
+-   `x:Type` fournit l'objet <xref:System.Type> pour le type nommé. Cette fonctionnalité est généralement utilisée dans les styles et les modèles. Pour plus d’informations, consultez [x:Type, extension de balisage](../../xaml-services/x-type-markup-extension.md).  
   
--   `x:Static` produit des valeurs statiques. Les valeurs proviennent des entités de code de type de valeur qui ne désignent pas directement le type de la valeur d’une propriété cible, mais qui peuvent être évaluées comme étant de ce type. Pour plus d’informations, consultez [x:Static, extension de balisage](../../xaml-services/x-static-markup-extension.md).  
+-   `x:Static` génère des valeurs statiques. Les valeurs proviennent des entités de code de type de valeur qui ne désignent pas directement le type de la valeur d’une propriété cible, mais qui peuvent être évaluées comme étant de ce type. Pour plus d’informations, consultez [x:Static, extension de balisage](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` Spécifie `null` en tant que valeur pour une propriété et peut être utilisé pour les attributs ou les valeurs d’élément de propriété. Pour plus d’informations, consultez [x:Null, extension de balisage](../../xaml-services/x-null-markup-extension.md).  
+-   `x:Null` spécifie `null` en tant que valeur d’une propriété et peut être utilisé pour les attributs ou les valeurs d’élément de propriété. Pour plus d’informations, consultez [x:Null, extension de balisage](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` prend en charge la création de tableaux généraux dans la syntaxe XAML, dans les cas où la prise en charge de la collection fournie par les éléments de base WPF et les modèles de contrôle n’est délibérément pas utilisée. Pour plus d’informations, consultez [x:Array, extension de balisage](../../xaml-services/x-array-markup-extension.md).  
+-   `x:Array` offre une prise en charge pour la création de tableaux généraux dans la syntaxe XAML, dans les cas où la prise en charge des collections assurée par les éléments de base et les modèles de contrôle WPF n’est délibérément pas utilisée. Pour plus d’informations, consultez [x:Array, extension de balisage](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  Le préfixe `x:` est utilisé pour le mappage d’espace de noms XAML standard des intrinsèques du langage XAML, dans l’élément racine d’un fichier ou d’une production XAML. Par exemple, les modèles Visual Studio pour les applications WPF lancer un fichier XAML à l’aide de ce `x:` mappage. Vous pouvez choisir un autre jeton de préfixe pour votre propre mappage d’espace de noms XAML. Cependant, dans cette documentation, le mappage `x:` par défaut est considéré comme un moyen d’identifier les entités qui représentent une partie définie de l’espace de noms XAML du langage XAML, par opposition à l’espace de noms XAML par défaut ou à d’autres espaces de noms XAML non liés à un framework spécifique.  
@@ -56,15 +56,15 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
 ## <a name="wpf-specific-markup-extensions"></a>Extensions de balisage spécifiques à WPF  
  Les extensions de balisage les plus courantes utilisées en programmation WPF sont celles qui prennent en charge les références de ressources (`StaticResource` et `DynamicResource`) et celles qui prennent en charge la liaison de données (`Binding`).  
   
--   `StaticResource` Fournit une valeur pour une propriété en remplaçant la valeur d’une ressource déjà définie. Une évaluation `StaticResource` est finalement effectuée au moment du chargement XAML et n’a pas accès au graphique d’objet au moment de l’exécution. Pour plus d’informations, consultez [StaticResource, extension de balisage](staticresource-markup-extension.md).  
+-   `StaticResource` fournit une valeur de propriété en remplaçant la valeur d’une ressource déjà définie. Une évaluation `StaticResource` est finalement effectuée au moment du chargement XAML et n’a pas accès au graphique d’objet au moment de l’exécution. Pour plus d’informations, consultez [StaticResource, extension de balisage](staticresource-markup-extension.md).  
   
--   `DynamicResource` Fournit une valeur pour une propriété en différant cette valeur pour être une référence de l’exécution à une ressource. Une référence de ressource dynamique force une nouvelle recherche chaque fois qu’un accès à ladite ressource a lieu et que cette dernière a accès au graphique d’objet au moment de l’exécution. Pour obtenir cet accès, le concept `DynamicResource` est pris en charge par les propriétés de dépendance dans le système de propriétés WPF et les expressions évaluées. Par conséquent, vous pouvez uniquement utiliser `DynamicResource` pour une cible de propriété de dépendance. Pour plus d’informations, consultez [DynamicResource, extension de balisage](dynamicresource-markup-extension.md).  
+-   `DynamicResource` fournit une valeur de propriété en différant le moment où cette valeur devient une référence à une ressource au moment de l’exécution. Une référence de ressource dynamique force une nouvelle recherche chaque fois qu’un accès à ladite ressource a lieu et que cette dernière a accès au graphique d’objet au moment de l’exécution. Pour obtenir cet accès, le concept `DynamicResource` est pris en charge par les propriétés de dépendance dans le système de propriétés WPF et les expressions évaluées. Par conséquent, vous pouvez uniquement utiliser `DynamicResource` pour une cible de propriété de dépendance. Pour plus d’informations, consultez [DynamicResource, extension de balisage](dynamicresource-markup-extension.md).  
   
--   `Binding` Fournit la que valeur d’une propriété, en utilisant le contexte de données qui s’applique à l’objet parent au moment de l’exécution lié aux données. Cette extension de balisage est relativement complexe, car elle active une syntaxe inline substantielle pour spécifier une liaison de données. Pour plus d’informations, consultez [Binding, extension de balisage](binding-markup-extension.md).  
+-   `Binding` fournit une valeur liée aux données pour une propriété, en utilisant le contexte de données qui s’applique à l’objet parent au moment de l’exécution. Cette extension de balisage est relativement complexe, car elle active une syntaxe inline substantielle pour spécifier une liaison de données. Pour plus d’informations, consultez [Binding, extension de balisage](binding-markup-extension.md).  
   
 -   `RelativeSource` Fournit des informations sources pour un <xref:System.Windows.Data.Binding> qui peut naviguer entre plusieurs relations possibles dans l’arborescence de l’objet d’exécution. Cela fournit une source d’approvisionnement spécialisée pour les liaisons créées dans des modèles multiusage ou dans du code sans avoir pleine connaissance de l’arborescence d’objets environnante. Pour plus d’informations, consultez [RelativeSource, extension de balisage](relativesource-markupextension.md).  
   
--   `TemplateBinding` permet à un modèle de contrôle à utiliser des valeurs pour les propriétés basées sur un modèle qui proviennent des telle que définie par le modèle objet des propriétés de la classe qui utilisera le modèle. En d’autres termes, la propriété au sein de la définition du modèle peut accéder à un contexte qui existe uniquement une fois que le modèle est appliqué. Pour plus d’informations, consultez [TemplateBinding, extension de balisage](templatebinding-markup-extension.md). Pour plus d’informations sur l’utilisation pratique de `TemplateBinding`, consultez [Style avec ControlTemplates, exemple](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+-   `TemplateBinding` permet à un modèle de contrôle d’utiliser des valeurs pour des propriétés basées sur un modèle provenant de propriétés définies par un modèle objet de la classe destinée à utiliser le modèle. En d’autres termes, la propriété au sein de la définition du modèle peut accéder à un contexte qui existe uniquement une fois que le modèle est appliqué. Pour plus d’informations, consultez [TemplateBinding, extension de balisage](templatebinding-markup-extension.md). Pour plus d’informations sur l’utilisation pratique de `TemplateBinding`, consultez [Style avec ControlTemplates, exemple](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` prend en charge un scénario d’acquisition d’images relativement avancé. Pour plus d’informations, consultez [ColorConvertedBitmap, extension de balisage](colorconvertedbitmap-markup-extension.md).  
   
@@ -119,9 +119,9 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
 ## <a name="see-also"></a>Voir aussi
 
 - [Vue d’ensemble du langage XAML (WPF)](xaml-overview-wpf.md)
-- [Espace de noms XAML (x:) Fonctionnalités de langage](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x :)) Fonctionnalités de langage](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensions XAML WPF](wpf-xaml-extensions.md)
 - [StaticResource, extension de balisage](staticresource-markup-extension.md)
 - [Binding, extension de balisage](binding-markup-extension.md)
-- [DynamicResource, extension de balisage](dynamicresource-markup-extension.md)
+- [Extension de balisage DynamicResource](dynamicresource-markup-extension.md)
 - [x:Type, extension de balisage](../../xaml-services/x-type-markup-extension.md)

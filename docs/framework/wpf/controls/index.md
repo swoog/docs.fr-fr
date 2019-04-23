@@ -8,15 +8,15 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154412"
 ---
 # <a name="controls"></a>Contrôles
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est fourni avec la plupart des composants d’interface utilisateur courants utilisés dans presque toutes les applications Windows, telles que <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, et <xref:System.Windows.Controls.ListBox>. Par le passé, ces objets étaient connus sous le nom de contrôles. Alors que le Kit SDK [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] continue à utiliser le terme « contrôle » pour désigner vaguement toute classe qui représente un objet visible dans une application, il est important de noter qu’une classe n’a pas besoin d’hériter de la classe <xref:System.Windows.Controls.Control> pour avoir une présence visible. Les classes qui héritent de la classe<xref:System.Windows.Controls.Control> contiennent un <xref:System.Windows.Controls.ControlTemplate>, qui permet au consommateur d’un contrôle de modifier radicalement l’apparence du contrôle sans devoir créer une sous-classe.  Cette rubrique explique comment les contrôles (à la fois ceux qui héritent de la classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et ceux dont ce n'est pas le cas) sont couramment utilisés dans<xref:System.Windows.Controls.Control>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est fourni avec la plupart des composants d’interface utilisateur courants utilisés dans presque chaque application Windows, comme <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, et <xref:System.Windows.Controls.ListBox>. Par le passé, ces objets étaient connus sous le nom de contrôles. Alors que le Kit SDK [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] continue à utiliser le terme « contrôle » pour désigner vaguement toute classe qui représente un objet visible dans une application, il est important de noter qu’une classe n’a pas besoin d’hériter de la classe <xref:System.Windows.Controls.Control> pour avoir une présence visible. Les classes qui héritent de la classe<xref:System.Windows.Controls.Control> contiennent un <xref:System.Windows.Controls.ControlTemplate>, qui permet au consommateur d’un contrôle de modifier radicalement l’apparence du contrôle sans devoir créer une sous-classe.  Cette rubrique explique comment les contrôles (à la fois ceux qui héritent de la classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et ceux dont ce n'est pas le cas) sont couramment utilisés dans<xref:System.Windows.Controls.Control>.  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Création d’une instance d’un contrôle  
@@ -50,7 +50,7 @@ ms.locfileid: "59154412"
  [!code-vb[ControlsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Création d’un style pour un contrôle  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous donne la possibilité de spécifier l’apparence de contrôles massifs, au lieu de définir des propriétés sur chaque instance dans l’application, en créant un <xref:System.Windows.Style>. L’exemple suivant crée un <xref:System.Windows.Style> qui est appliqué à chaque <xref:System.Windows.Controls.Button> dans l’application. <xref:System.Windows.Style> définitions sont généralement définies dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dans un <xref:System.Windows.ResourceDictionary>, telles que la <xref:System.Windows.FrameworkElement.Resources%2A> propriété de la <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]vous donne la possibilité de spécifier l’apparence des contrôles en gros, au lieu de définir des propriétés sur chaque instance dans l’application, en créant un <xref:System.Windows.Style>. L’exemple suivant crée un <xref:System.Windows.Style> qui est appliqué à chaque <xref:System.Windows.Controls.Button> dans l’application. Les définitions <xref:System.Windows.Style> sont généralement définies dans  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dans un <xref:System.Windows.ResourceDictionary>, telles que la <xref:System.Windows.FrameworkElement.Resources%2A> propriété de la <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
@@ -99,10 +99,10 @@ ms.locfileid: "59154412"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
 - [Contrôles par catégorie](controls-by-category.md)
 - [Bibliothèque de contrôles](control-library.md)
-- [Vue d'ensemble des modèles de données](../data/data-templating-overview.md)
+- [Vue d’ensemble des modèles de données](../data/data-templating-overview.md)
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
 - [Entrée](../advanced/input-wpf.md)
 - [Activer une commande](../advanced/how-to-enable-a-command.md)

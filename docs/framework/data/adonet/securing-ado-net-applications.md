@@ -3,10 +3,10 @@ title: Sécurisation des applications ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149381"
 ---
 # <a name="securing-adonet-applications"></a>Sécurisation des applications ADO.NET
@@ -17,16 +17,16 @@ L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter le
  L'écriture d'un code sécurisé ne protège pas contre les défaillances de sécurité volontaires lors de l'utilisation de ressources non managées telles que des bases de données. La plupart des bases de données de serveur, telles que SQL Server, possèdent leurs propres systèmes de sécurité qui renforcent la sécurité si ceux-ci sont correctement implémentés. Cependant, même une source de données équipée d'un système de sécurité robuste peut faire l'objet d'une attaque si elle n'est pas configurée de manière appropriée.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de la sécurité](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Vue d’ensemble de la sécurité](../../../../docs/framework/data/adonet/security-overview.md)  
  Fournit des recommandations pour la conception d'applications ADO.NET sécurisées.  
   
- [Sécuriser l'accès aux données](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Sécuriser l’accès aux données](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Décrit comment utiliser des données à partir d'une source de données sécurisée.  
   
  [Applications clientes sécurisées](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Décrit des considérations sur la sécurité pour les applications clientes.  
   
- [Sécurité d'accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Décrit comment utiliser la sécurité d'accès du code (CAS) pour protéger le code ADO.NET. Explique également comment travailler avec une confiance partielle.  
   
  [Confidentialité et sécurité des données](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  

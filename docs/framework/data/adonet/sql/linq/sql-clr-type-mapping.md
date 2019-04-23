@@ -3,10 +3,10 @@ title: Mappage de type SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152488"
 ---
 # <a name="sql-clr-type-mapping"></a>Mappage de type SQL-CLR
@@ -16,19 +16,19 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Cette rubrique aborde les points suivants :  
   
--   [Mappage de type par défaut](#DefaultTypeMapping)  
+-   [Mappage de Type par défaut](#DefaultTypeMapping)  
   
--   [Matrice de comportement au moment de l'exécution de mappages de types](#BehaviorMatrix)  
+-   [Matrice de comportement au moment de l’exécution de mappage de type](#BehaviorMatrix)  
   
--   [Différences de comportement entre l'exécution CLR et l'exécution SQL](#BehaviorDiffs)  
+-   [Différences de comportement entre le CLR et l’exécution de SQL](#BehaviorDiffs)  
   
--   [Mappage d'enum](#EnumMapping)  
+-   [Mappage d’enum](#EnumMapping)  
   
--   [Mappage de types numériques](#NumericMapping)  
+-   [Mappage de types numérique](#NumericMapping)  
   
--   [Mappage de texte et mappage XML](#TextMapping)  
+-   [Texte et mappage XML](#TextMapping)  
   
--   [Mappage de types de date et d'heure](#DateMapping)  
+-   [Date et heure de mappage](#DateMapping)  
   
 -   [Mappage de types binaires](#BinaryMapping)  
   
@@ -104,7 +104,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Le tableau suivant présente les mappages de types par défaut utilisés par la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> pour définir le type des colonnes SQL Server qui sont créées pour mapper aux types CLR définis dans votre modèle objet ou votre fichier de mappage externe.  
   
-|Type CLR|Type par défaut SQL Server utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Type CLR|Type SQL Server par défaut utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,7 +142,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Le tableau suivant présente les mappages de types par défaut utilisés par la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> pour définir le type des colonnes SQL Server qui sont créées pour mapper aux types CLR définis dans votre modèle objet ou votre fichier de mappage externe.  
   
-|Type CLR|Type par défaut SQL Server utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Type CLR|Type SQL Server par défaut utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
@@ -185,7 +185,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Le tableau suivant présente les mappages de types par défaut utilisés par la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> pour définir le type des colonnes SQL Server qui sont créées pour mapper aux types CLR définis dans votre modèle objet ou votre fichier de mappage externe.  
   
-|Type CLR|Type par défaut SQL Server utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Type CLR|Type SQL Server par défaut utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
 ### <a name="systemdatetime"></a>System.DateTime  
  La plage et la précision du type <xref:System.DateTime?displayProperty=nameWithType> CLR sont supérieures à celles du type `DATETIME` SQL Server, qui est le mappage de type par défaut pour la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Afin d'éviter les exceptions liées à des dates en dehors de la plage de `DATETIME`, utilisez `DATETIME2`, qui est disponible à partir de Microsoft SQL Server 2008. `DATETIME2` peut correspondre à la plage et la précision du CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- Les dates SQL Server n’ont aucun concept de <xref:System.TimeZone>, une fonctionnalité qui est largement prise en charge dans le CLR. <xref:System.TimeZone> les valeurs sont enregistrées telles quelles dans la base de données sans <xref:System.TimeZone> conversion, quelle que soit la version d’origine <xref:System.DateTimeKind> plus d’informations. Lorsque les valeurs <xref:System.DateTime> sont récupérées de la base de données, leur valeur est chargé telle quelle dans un <xref:System.DateTime> avec un <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Pour plus d’informations sur la prise en charge <xref:System.DateTime?displayProperty=nameWithType> méthodes, consultez [System.DateTime, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ Les dates SQL Server n’ont aucun concept de <xref:System.TimeZone>, une fonctionnalité qui est largement prise en charge dans le CLR. Les valeurs <xref:System.TimeZone> sont enregistrées telles quelles dans la base de données sans conversion <xref:System.TimeZone>, indépendamment des informations <xref:System.DateTimeKind> d'origine. Lorsque les valeurs <xref:System.DateTime> sont récupérées de la base de données, leur valeur est chargé telle quelle dans un <xref:System.DateTime> avec un <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Pour plus d’informations sur la prise en charge <xref:System.DateTime?displayProperty=nameWithType> méthodes, consultez [System.DateTime, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 et .NET Framework 3.5 SP1 vous permettent de mapper le type <xref:System.TimeSpan?displayProperty=nameWithType> CLR au type `TIME` SQL Server. Toutefois, il y a une grande différence entre la plage prise en charge par le type <xref:System.TimeSpan?displayProperty=nameWithType> CLR et celle prise en charge par le type `TIME` SQL Server. Les valeurs de mappage inférieures à 0 ou supérieures à 23:59:59.9999999 heures sur le type `TIME` SQL entraînent des exceptions de dépassement de capacité. Pour plus d’informations, consultez [System.TimeSpan, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -221,7 +221,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Le tableau suivant présente les mappages de types par défaut utilisés par la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> pour définir le type des colonnes SQL Server qui sont créées pour mapper aux types CLR définis dans votre modèle objet ou votre fichier de mappage externe.  
   
-|Type CLR|Type par défaut SQL Server utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Type CLR|Type SQL Server par défaut utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ Dans vbtecdlinq, le modèle de données d'une base de données relationnelle map
   
  Le tableau suivant présente les mappages de types par défaut utilisés par la méthode <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> pour définir le type des colonnes SQL Server qui sont créées pour mapper aux types CLR définis dans votre modèle objet ou votre fichier de mappage externe.  
   
-|Type CLR|Type par défaut SQL Server utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Type CLR|Type SQL Server par défaut utilisé par <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  

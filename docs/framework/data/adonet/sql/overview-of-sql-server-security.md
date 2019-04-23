@@ -3,10 +3,10 @@ title: Vue d'ensemble de la sécurité SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148588"
 ---
 # <a name="overview-of-sql-server-security"></a>Vue d'ensemble de la sécurité SQL Server
@@ -36,7 +36,7 @@ Une stratégie de défense en profondeur avec chevauchement des couches de sécu
  [Chiffrement des données dans SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
  Décrit les options de chiffrement de données dans SQL Server et fournit des liens vers des ressources supplémentaires.  
   
- [Sécurité de l'intégration du CLR dans SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ [Sécurité de l’intégration du CLR dans SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  Fournit des liens vers les ressources de sécurité d'intégration de CLR.  
   
 ## <a name="see-also"></a>Voir aussi

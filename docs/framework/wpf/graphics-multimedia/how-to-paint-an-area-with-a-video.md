@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151175"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Procédure : Peindre une zone avec une vidéo
@@ -40,6 +40,6 @@ Cet exemple montre comment peindre une zone avec le média. Pour peindre une zon
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.VisualBrush>
-- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
-- [Vue d'ensemble de TileBrush](tilebrush-overview.md)
-- [Vue d'ensemble du multimédia](multimedia-overview.md)
+- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
+- [Vue d’ensemble de TileBrush](tilebrush-overview.md)
+- [Vue d’ensemble multimédia](multimedia-overview.md)

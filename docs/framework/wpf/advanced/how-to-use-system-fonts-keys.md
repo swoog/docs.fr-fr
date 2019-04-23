@@ -5,10 +5,10 @@ helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
 ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148926"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>Procédure : Utiliser des clés de polices système
@@ -28,4 +28,4 @@ Les ressources système exposent plusieurs métriques système en tant que resso
 
 - [Peindre une zone avec un pinceau système](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Utiliser SystemParameters](how-to-use-systemparameters.md)
-- [Utiliser SystemFonts](how-to-use-systemfonts.md)
+- [Utiliser des SystemFonts](how-to-use-systemfonts.md)

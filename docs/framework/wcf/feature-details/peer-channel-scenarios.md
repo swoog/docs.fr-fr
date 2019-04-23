@@ -3,10 +3,10 @@ title: Scénarios de canal homologue
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
 ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147054"
 ---
 # <a name="peer-channel-scenarios"></a>Scénarios de canal homologue
@@ -26,4 +26,4 @@ Les API de canal homologue prennent en charge les scénarios de développement s
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Concepts relatifs au canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Concepts de canal homologue](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

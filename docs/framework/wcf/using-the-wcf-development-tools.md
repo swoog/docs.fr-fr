@@ -3,10 +3,10 @@ title: Utilisation des outils de développement WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144636"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilisation des outils de développement WCF
@@ -19,7 +19,7 @@ Cette section décrit les outils de développement Visual Studio qui peuvent vou
   
  Vous pouvez utiliser les modèles de projet et d’élément Visual Studio prédéfinis dans Visual Studio pour créer rapidement des services WCF et les applications s’y rapportant.  
   
- [Hôte de service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
  L’hôte de Service WCF (WcfSvcHost.exe) vous permet de lancer le débogueur de Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service en utilisant le Client de Test WCF (wcfTestClient.exe) ou votre propre client pour rechercher et corriger les erreurs potentielles.  
   
@@ -45,5 +45,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ## <a name="see-also"></a>Voir aussi
 
 - [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Hôte de service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

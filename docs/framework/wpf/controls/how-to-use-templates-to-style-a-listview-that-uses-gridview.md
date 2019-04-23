@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147093"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Procédure : Utiliser des modèles pour appliquer un style à un ListView utilisant GridView
@@ -39,6 +39,6 @@ Cet exemple montre comment utiliser le <xref:System.Windows.DataTemplate> et <xr
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Vue d'ensemble de GridView](gridview-overview.md)
-- [Rubriques Comment](listview-how-to-topics.md)
-- [Vue d'ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de GridView](gridview-overview.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)
+- [Vue d’ensemble de ListView](listview-overview.md)

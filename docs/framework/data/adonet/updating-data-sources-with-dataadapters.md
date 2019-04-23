@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153593"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Mise à jour des sources de données avec les DataAdapter
@@ -46,7 +46,7 @@ La méthode `Update` de l'objet <xref:System.Data.Common.DataAdapter> est appel�
   
  Pour gérer les exceptions qui peuvent se produire lors de l’appel le `Update` (méthode), vous pouvez utiliser la `RowUpdated` événements pour répondre aux erreurs de mise à jour de ligne qu’ils se produisent (consultez [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), ou vous pouvez définir `DataAdapter.ContinueUpdateOnError` à `true` avant d’appeler `Update`et répondre aux informations d’erreur stockées dans le `RowError` propriété d’une ligne particulière lorsque la mise à jour est terminée (voir [informations d’erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Remarque** appelant `AcceptChanges` sur le `DataSet`, `DataTable`, ou `DataRow` tous les `Original` valeurs pour un `DataRow` pour être remplacées par les `Current` valeurs pour le `DataRow`. Si les valeurs de champ qui identifient la ligne comme étant unique ont été modifiées, après l'appel de `AcceptChanges`, les valeurs `Original` ne correspondront plus aux valeurs de la source de données. `AcceptChanges` est appelé automatiquement pour chaque ligne pendant un appel à la méthode de mise à jour d’un `DataAdapter`. Vous pouvez conserver les valeurs d'origine au cours d'un appel de la méthode Update en commençant par affecter la valeur false à la propriété `AcceptChangesDuringUpdate` du `DataAdapter`, ou en créant un gestionnaire d'événements pour l'événement `RowUpdated` et en affectant la valeur <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> à <xref:System.Data.UpdateStatus.SkipCurrentRow>. Pour plus d’informations, consultez [la fusion de contenu de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) et [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Remarque** appelant `AcceptChanges` sur le `DataSet`, `DataTable`, ou `DataRow` tous les `Original` valeurs pour un `DataRow` pour être remplacées par les `Current` valeurs pour le `DataRow`. Si les valeurs de champ qui identifient la ligne comme étant unique ont été modifiées, après l'appel de `AcceptChanges`, les valeurs `Original` ne correspondront plus aux valeurs de la source de données. `AcceptChanges` est appelé automatiquement pour chaque ligne au cours de l'appel de la méthode Update d'un `DataAdapter`. Vous pouvez conserver les valeurs d'origine au cours d'un appel de la méthode Update en commençant par affecter la valeur false à la propriété `AcceptChangesDuringUpdate` du `DataAdapter`, ou en créant un gestionnaire d'événements pour l'événement `RowUpdated` et en affectant la valeur <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> à <xref:System.Data.UpdateStatus.SkipCurrentRow>. Pour plus d’informations, consultez [la fusion de contenu de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) et [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Exemple  
  Les exemples suivants montrent comment effectuer des mises à jour des lignes modifiées en définissant explicitement le `UpdateCommand` d’un `DataAdapter` et en appelant son `Update` (méthode). Notez que le paramètre spécifié dans la clause WHERE de l'instruction UPDATE est défini pour utiliser la valeur `Original` du `SourceColumn`. Cela est important car la valeur `Current` peut avoir été modifiée et ne pas correspondre à la valeur dans la source de données. La valeur `Original` est la valeur qui a été utilisée pour remplir le `DataTable` à partir de la source de données.  
@@ -374,5 +374,5 @@ class Program {
 - [États des lignes et versions des lignes](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges et RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [Fusion de contenu de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [Extraction de l'identité ou de valeurs à numérotation automatique](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Récupération de valeurs d’identité ou de numérotation automatique](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

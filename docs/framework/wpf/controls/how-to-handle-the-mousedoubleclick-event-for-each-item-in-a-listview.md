@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145078"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Procédure : Gérer l’événement MouseDoubleClick pour chaque élément d’un ListView
@@ -36,6 +36,6 @@ Pour gérer un événement pour un élément dans un <xref:System.Windows.Contro
 
 - <xref:System.Xml.XmlElement>
 - [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
 - [Effectuer une liaison à des données XML à l’aide d’un XMLDataProvider et de requêtes XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [Vue d'ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de ListView](listview-overview.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146014"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procédure : Accumuler des valeurs d’animation pendant des cycles de répétition
@@ -34,8 +34,8 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Doub
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Ajouter une valeur de sortie d’animation à une valeur de départ d’animation](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
+- [Ajouter une valeur de sortie d'animation à une valeur de départ d'animation](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Répéter une animation](how-to-repeat-an-animation.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
-- [Rubriques Comment](animation-and-timing-how-to-topics.md)
+- [Rubriques de guide pratique](animation-and-timing-how-to-topics.md)
