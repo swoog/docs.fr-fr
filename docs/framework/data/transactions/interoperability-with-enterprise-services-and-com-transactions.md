@@ -3,10 +3,10 @@ title: Interopérabilité avec Enterprise Services et les transactions COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301904"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interopérabilité avec Enterprise Services et les transactions COM+
@@ -21,11 +21,11 @@ L'espace de noms <xref:System.Transactions> prend en charge l'interopérabilité
   
  La classe <xref:System.Transactions.TransactionScope> fournit des constructeurs qui acceptent <xref:System.Transactions.EnterpriseServicesInteropOption> en tant que paramètre.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>, comme son nom l’indique, implique qu’il n’existe aucune interopérabilité entre <xref:System.EnterpriseServices> contextes et les étendues de transaction. Après création d'un objet <xref:System.Transactions.TransactionScope> avec <xref:System.Transactions.EnterpriseServicesInteropOption.None>, les modifications apportées à <xref:System.Transactions.Transaction.Current%2A> ne sont pas répercutées dans le contexte COM+. De la même façon, les modifications apportées à la transaction du contexte COM+ ne sont pas répercutées dans <xref:System.Transactions.Transaction.Current%2A>. Il s'agit du mode de fonctionnement le plus rapide pour <xref:System.Transactions>, car il n'existe aucune synchronisation supplémentaire. <xref:System.Transactions.EnterpriseServicesInteropOption.None> est la valeur par défaut utilisée par <xref:System.Transactions.TransactionScope> avec tous les constructeurs qui n’acceptent pas <xref:System.Transactions.EnterpriseServicesInteropOption> en tant que paramètre.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>, comme son nom l’indique, implique qu’il n’existe aucune interopérabilité entre <xref:System.EnterpriseServices> contextes et les étendues de transaction. Après création d'un objet <xref:System.Transactions.TransactionScope> avec <xref:System.Transactions.EnterpriseServicesInteropOption.None>, les modifications apportées à <xref:System.Transactions.Transaction.Current%2A> ne sont pas répercutées dans le contexte COM+. De la même façon, les modifications apportées à la transaction du contexte COM+ ne sont pas répercutées dans <xref:System.Transactions.Transaction.Current%2A>. Il s'agit du mode de fonctionnement le plus rapide pour <xref:System.Transactions>, car il n'existe aucune synchronisation supplémentaire. <xref:System.Transactions.EnterpriseServicesInteropOption.None> est la valeur par défaut utilisée par <xref:System.Transactions.TransactionScope> avec tous les constructeurs qui n'acceptent pas <xref:System.Transactions.EnterpriseServicesInteropOption> comme paramètre.  
   
  Pour associer des transactions <xref:System.EnterpriseServices> à votre transaction ambiante, vous devez utiliser <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ou <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>. Ces deux valeurs reposent sur une fonctionnalité appelée services sans composants, vous devez donc utiliser Windows XP Service Pack 2 ou Windows Server 2003 lors de leur exploitation.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> Spécifie que les transactions ambiantes pour <xref:System.Transactions> et <xref:System.EnterpriseServices> sont toujours les mêmes. Il en résulte la création d'un nouveau contexte transactionnel <xref:System.EnterpriseServices> et l'application de la transaction en cours pour que <xref:System.Transactions.TransactionScope> soit en cours pour ce contexte. Ainsi la transaction dans <xref:System.Transactions.Transaction.Current%2A> est entièrement synchronisée avec la transaction dans <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Cette valeur introduit une pénalité de performance car il peut s'avérer nécessaire de créer de nouveaux contextes COM+.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> précise que les transactions ambiantes pour <xref:System.Transactions> et <xref:System.EnterpriseServices> sont toujours identiques. Il en résulte la création d'un nouveau contexte transactionnel <xref:System.EnterpriseServices> et l'application de la transaction en cours pour que <xref:System.Transactions.TransactionScope> soit en cours pour ce contexte. Ainsi la transaction dans <xref:System.Transactions.Transaction.Current%2A> est entièrement synchronisée avec la transaction dans <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Cette valeur introduit une pénalité de performance car il peut s'avérer nécessaire de créer de nouveaux contextes COM+.  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Spécifie les conditions suivantes :  
   
@@ -53,7 +53,7 @@ L'espace de noms <xref:System.Transactions> prend en charge l'interopérabilité
   
 3. S'il est nécessaire de créer une nouvelle transaction, les valeurs suivantes de <xref:System.Transactions.EnterpriseServicesInteropOption> sont :  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: une transaction associée à un contexte COM + est créée.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full> : une transaction associée à un contexte COM+ est créée.  
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: un <xref:System.Transactions> transaction est créée.  
   

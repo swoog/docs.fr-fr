@@ -3,10 +3,10 @@ title: Utilisation de l'activité Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302974"
 ---
 # <a name="using-the-pick-activity"></a>Utilisation de l'activité Pick
@@ -17,7 +17,7 @@ Cet exemple montre comment utiliser l'activité <xref:System.Activities.Statemen
  Cet exemple invite un utilisateur à taper son nom sur la console dans une période de temps donné. L’activité <xref:System.Activities.Statements.Pick> dans l’exemple a deux branches qui sont exécutées selon si l’utilisateur tape son nom dans les 5 secondes ou non. Si l'utilisateur tape son nom dans les 5 secondes, la première branche, qui contient une activité `ReadLine` personnalisée est exécutée ; sinon, l'autre branche, qui contient une activité <xref:System.Activities.Statements.Delay> est exécutée. Une fois qu'un nom d'utilisateur est tapé sur la console, il est imprimé sur la console. Si rien n'est entré dans les 5 secondes, l'opération expire.
 
 ## <a name="demonstrates"></a>Démonstrations
- <xref:System.Activities.Statements.Pick> activité.
+ Activité <xref:System.Activities.Statements.Pick>
 
 ## <a name="discussion"></a>Discussion
  L'exemple inclut un workflow de concepteur et un workflow encodé.

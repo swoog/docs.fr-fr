@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303490"
 ---
 # <a name="flow-document-overview"></a>Vue d'ensemble des documents dynamiques
@@ -130,7 +130,7 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
   
  ![Capture d’écran montrant un UIElement incorporé dans le contenu dynamique.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Liste**  
+ **List**  
   
  <xref:System.Windows.Documents.List> est utilisé pour créer une liste à puces ou numérique. Définir le <xref:System.Windows.Documents.List.MarkerStyle%2A> propriété un <xref:System.Windows.TextMarkerStyle> valeur d’énumération pour déterminer le style de la liste. L’exemple ci-dessous montre comment créer une liste simple.  
   
@@ -154,7 +154,7 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
   
  **Remarque :**  À compter de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], le <xref:System.Windows.Documents.Run.Text%2A> propriété de la <xref:System.Windows.Documents.Run> objet est une propriété de dépendance. Vous pouvez lier le <xref:System.Windows.Documents.Run.Text%2A> propriété à une données source, par exemple un <xref:System.Windows.Controls.TextBlock>. Le <xref:System.Windows.Documents.Run.Text%2A> propriété prend entièrement en charge la liaison unidirectionnelle. Le <xref:System.Windows.Documents.Run.Text%2A> propriété prend également en charge la liaison bidirectionnelle, à l’exception de <xref:System.Windows.Controls.RichTextBox>. Pour obtenir un exemple, consultez <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **étendue**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> regroupe les autres éléments de contenu inline. Aucun rendu inhérent n’est appliqué au contenu dans un <xref:System.Windows.Documents.Span> élément. Toutefois, les éléments hérités de <xref:System.Windows.Documents.Span> notamment <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> et <xref:System.Windows.Documents.Underline> s’appliquent à la mise en forme au texte.  
   
@@ -348,11 +348,11 @@ Les documents dynamiques sont conçus pour optimiser l’affichage et la lisibil
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Texte](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Typographie dans WPF](typography-in-wpf.md)
-- [Rubriques Comment](flow-content-elements-how-to-topics.md)
+- [Rubriques de guide pratique](flow-content-elements-how-to-topics.md)
 - [Vue d'ensemble du modèle de contenu de TextElement](textelement-content-model-overview.md)
-- [Vue d'ensemble de RichTextBox](../controls/richtextbox-overview.md)
+- [Vue d’ensemble de RichTextBox](../controls/richtextbox-overview.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d'ensemble de Table](table-overview.md)
-- [Vue d'ensemble des annotations](annotations-overview.md)
+- [Vue d’ensemble de Table](table-overview.md)
+- [Vue d’ensemble des annotations](annotations-overview.md)

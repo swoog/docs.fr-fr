@@ -16,10 +16,10 @@ ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303997"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Procédure : générer un assembly à fichier unique
@@ -90,7 +90,7 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblys multifichiers](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Procédure : générer un assembly multifichier](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Guide pratique pour générer un assembly multifichier](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
