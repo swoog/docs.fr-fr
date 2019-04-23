@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfb1cff3e95c5ff86d22913745b7d14982766b48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175225"
 ---
-# <a name="hosttype-enumeration"></a><span data-ttu-id="2fd65-102">HOST_TYPE, énumération</span><span class="sxs-lookup"><span data-stu-id="2fd65-102">HOST_TYPE Enumeration</span></span>
-<span data-ttu-id="2fd65-103">Contient des valeurs qui spécifient le type d’hôte qui lance une application.</span><span class="sxs-lookup"><span data-stu-id="2fd65-103">Contains values that specify the type of host that is launching an application.</span></span>  
+# <a name="hosttype-enumeration"></a><span data-ttu-id="f91ea-102">HOST_TYPE, énumération</span><span class="sxs-lookup"><span data-stu-id="f91ea-102">HOST_TYPE Enumeration</span></span>
+<span data-ttu-id="f91ea-103">Contient des valeurs qui spécifient le type d’hôte qui lance une application.</span><span class="sxs-lookup"><span data-stu-id="f91ea-103">Contains values that specify the type of host that is launching an application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fd65-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2fd65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f91ea-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f91ea-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -36,23 +36,23 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2fd65-105">Membres</span><span class="sxs-lookup"><span data-stu-id="2fd65-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f91ea-105">Membres</span><span class="sxs-lookup"><span data-stu-id="f91ea-105">Members</span></span>  
   
-|<span data-ttu-id="2fd65-106">Membre</span><span class="sxs-lookup"><span data-stu-id="2fd65-106">Member</span></span>|<span data-ttu-id="2fd65-107">Description</span><span class="sxs-lookup"><span data-stu-id="2fd65-107">Description</span></span>|  
+|<span data-ttu-id="f91ea-106">Membre</span><span class="sxs-lookup"><span data-stu-id="f91ea-106">Member</span></span>|<span data-ttu-id="f91ea-107">Description</span><span class="sxs-lookup"><span data-stu-id="f91ea-107">Description</span></span>|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|<span data-ttu-id="2fd65-108">Lancez l’application à partir de AppLaunch.exe.</span><span class="sxs-lookup"><span data-stu-id="2fd65-108">Launch the application from AppLaunch.exe.</span></span><br /><br /> <span data-ttu-id="2fd65-109">Utilisez cette valeur pour les applications de confiance partielle.</span><span class="sxs-lookup"><span data-stu-id="2fd65-109">Use this value for partially-trusted applications.</span></span>|  
-|`HOST_TYPE_CORFLAG`|<span data-ttu-id="2fd65-110">Lancez l’application directement.</span><span class="sxs-lookup"><span data-stu-id="2fd65-110">Launch the application directly.</span></span> <span data-ttu-id="2fd65-111">Autrement dit, lancez l’application à partir de son propre fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="2fd65-111">That is, launch the application from its own .exe file.</span></span><br /><br /> <span data-ttu-id="2fd65-112">Utilisez cette valeur pour les applications de confiance.</span><span class="sxs-lookup"><span data-stu-id="2fd65-112">Use this value for fully-trusted applications.</span></span>|  
-|`HOST_TYPE_DEFAULT`|<span data-ttu-id="2fd65-113">Identique à HOST_TYPE_APPLAUNCH.</span><span class="sxs-lookup"><span data-stu-id="2fd65-113">Same as HOST_TYPE_APPLAUNCH.</span></span>|  
+|`HOST_TYPE_APPLAUNCH`|<span data-ttu-id="f91ea-108">Lancez l’application à partir de AppLaunch.exe.</span><span class="sxs-lookup"><span data-stu-id="f91ea-108">Launch the application from AppLaunch.exe.</span></span><br /><br /> <span data-ttu-id="f91ea-109">Utilisez cette valeur pour les applications de confiance partielle.</span><span class="sxs-lookup"><span data-stu-id="f91ea-109">Use this value for partially-trusted applications.</span></span>|  
+|`HOST_TYPE_CORFLAG`|<span data-ttu-id="f91ea-110">Lancez l’application directement.</span><span class="sxs-lookup"><span data-stu-id="f91ea-110">Launch the application directly.</span></span> <span data-ttu-id="f91ea-111">Autrement dit, lancez l’application à partir de son propre fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="f91ea-111">That is, launch the application from its own .exe file.</span></span><br /><br /> <span data-ttu-id="f91ea-112">Utilisez cette valeur pour les applications de confiance.</span><span class="sxs-lookup"><span data-stu-id="f91ea-112">Use this value for fully-trusted applications.</span></span>|  
+|`HOST_TYPE_DEFAULT`|<span data-ttu-id="f91ea-113">Identique à HOST_TYPE_APPLAUNCH.</span><span class="sxs-lookup"><span data-stu-id="f91ea-113">Same as HOST_TYPE_APPLAUNCH.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2fd65-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2fd65-114">Requirements</span></span>  
- <span data-ttu-id="2fd65-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2fd65-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f91ea-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f91ea-114">Requirements</span></span>  
+ <span data-ttu-id="f91ea-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f91ea-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2fd65-116">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2fd65-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f91ea-116">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f91ea-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2fd65-117">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2fd65-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="f91ea-117">**Bibliothèque :** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f91ea-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="2fd65-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="2fd65-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="f91ea-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f91ea-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fd65-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2fd65-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f91ea-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f91ea-119">See also</span></span>
 
-- [<span data-ttu-id="2fd65-120">Énumérations d'hébergement</span><span class="sxs-lookup"><span data-stu-id="2fd65-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="f91ea-120">Énumérations d’hébergement</span><span class="sxs-lookup"><span data-stu-id="f91ea-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
 ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174445"
 ---
-# <a name="etwtracking"></a><span data-ttu-id="53ce8-101">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="53ce8-101">\<etwTracking></span></span>
-<span data-ttu-id="53ce8-102">Comportement de service qui permet à un service à utiliser à l’aide du suivi ETW un <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span><span class="sxs-lookup"><span data-stu-id="53ce8-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
+# <a name="etwtracking"></a><span data-ttu-id="d713f-101">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="d713f-101">\<etwTracking></span></span>
+<span data-ttu-id="d713f-102">Comportement de service qui permet à un service à utiliser à l’aide du suivi ETW un <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span><span class="sxs-lookup"><span data-stu-id="d713f-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
   
-<span data-ttu-id="53ce8-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="53ce8-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="53ce8-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="53ce8-104">\<behaviors></span></span>  
-<span data-ttu-id="53ce8-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="53ce8-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="53ce8-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="53ce8-106">\<behavior></span></span>  
-<span data-ttu-id="53ce8-107">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="53ce8-107">\<etwTracking></span></span>  
+<span data-ttu-id="d713f-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="d713f-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d713f-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="d713f-104">\<behaviors></span></span>  
+<span data-ttu-id="d713f-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="d713f-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="d713f-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="d713f-106">\<behavior></span></span>  
+<span data-ttu-id="d713f-107">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="d713f-107">\<etwTracking></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53ce8-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="53ce8-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d713f-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d713f-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -31,33 +31,33 @@ ms.locfileid: "59174445"
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="53ce8-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="53ce8-109">Attributes and Elements</span></span>  
- <span data-ttu-id="53ce8-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="53ce8-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d713f-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="d713f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d713f-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="d713f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="53ce8-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="53ce8-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d713f-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="d713f-111">Attributes</span></span>  
   
-|<span data-ttu-id="53ce8-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="53ce8-112">Attribute</span></span>|<span data-ttu-id="53ce8-113">Description</span><span class="sxs-lookup"><span data-stu-id="53ce8-113">Description</span></span>|  
+|<span data-ttu-id="d713f-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="d713f-112">Attribute</span></span>|<span data-ttu-id="d713f-113">Description</span><span class="sxs-lookup"><span data-stu-id="d713f-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="53ce8-114">profileName</span><span class="sxs-lookup"><span data-stu-id="53ce8-114">profileName</span></span>|<span data-ttu-id="53ce8-115">Chaîne qui spécifie le nom du modèle de suivi a associé à ce comportement.</span><span class="sxs-lookup"><span data-stu-id="53ce8-115">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
+|<span data-ttu-id="d713f-114">profileName</span><span class="sxs-lookup"><span data-stu-id="d713f-114">profileName</span></span>|<span data-ttu-id="d713f-115">Chaîne qui spécifie le nom du modèle de suivi a associé à ce comportement.</span><span class="sxs-lookup"><span data-stu-id="d713f-115">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="53ce8-116">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="53ce8-116">Child Elements</span></span>  
- <span data-ttu-id="53ce8-117">Aucun.</span><span class="sxs-lookup"><span data-stu-id="53ce8-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d713f-116">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="d713f-116">Child Elements</span></span>  
+ <span data-ttu-id="d713f-117">Aucun.</span><span class="sxs-lookup"><span data-stu-id="d713f-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="53ce8-118">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="53ce8-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d713f-118">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="d713f-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="53ce8-119">Élément</span><span class="sxs-lookup"><span data-stu-id="53ce8-119">Element</span></span>|<span data-ttu-id="53ce8-120">Description</span><span class="sxs-lookup"><span data-stu-id="53ce8-120">Description</span></span>|  
+|<span data-ttu-id="d713f-119">Élément</span><span class="sxs-lookup"><span data-stu-id="d713f-119">Element</span></span>|<span data-ttu-id="d713f-120">Description</span><span class="sxs-lookup"><span data-stu-id="d713f-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="53ce8-121">\<comportement > de \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="53ce8-121">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="53ce8-122">Spécifie un élément de comportement.</span><span class="sxs-lookup"><span data-stu-id="53ce8-122">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="d713f-121">\<comportement > de \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="d713f-121">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="d713f-122">Spécifie un élément de comportement.</span><span class="sxs-lookup"><span data-stu-id="d713f-122">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="53ce8-123">Notes</span><span class="sxs-lookup"><span data-stu-id="53ce8-123">Remarks</span></span>  
- <span data-ttu-id="53ce8-124">Lorsqu'il est ajouté à la configuration de comportement du service, cet élément de configuration configure un participant au suivi sur un service de flux de travail.</span><span class="sxs-lookup"><span data-stu-id="53ce8-124">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d713f-123">Notes</span><span class="sxs-lookup"><span data-stu-id="d713f-123">Remarks</span></span>  
+ <span data-ttu-id="d713f-124">Lorsqu'il est ajouté à la configuration de comportement du service, cet élément de configuration configure un participant au suivi sur un service de flux de travail.</span><span class="sxs-lookup"><span data-stu-id="d713f-124">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
   
- <span data-ttu-id="53ce8-125">Les participants au suivi permettent d'obtenir les données de suivi émises du flux de travail et de les stocker dans différents médias.</span><span class="sxs-lookup"><span data-stu-id="53ce8-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="53ce8-126">De la même manière, tout post-traitement effectué sur les enregistrements de suivi peut également être réalisé dans le participant au suivi.</span><span class="sxs-lookup"><span data-stu-id="53ce8-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+ <span data-ttu-id="d713f-125">Les participants au suivi permettent d'obtenir les données de suivi émises du flux de travail et de les stocker dans différents médias.</span><span class="sxs-lookup"><span data-stu-id="d713f-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="d713f-126">De la même manière, tout post-traitement effectué sur les enregistrements de suivi peut également être réalisé dans le participant au suivi.</span><span class="sxs-lookup"><span data-stu-id="d713f-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="53ce8-127">Exemple</span><span class="sxs-lookup"><span data-stu-id="53ce8-127">Example</span></span>  
- <span data-ttu-id="53ce8-128">L'exemple suivant présente la configuration du participant au suivi ETW standard dans le fichier Web.config.</span><span class="sxs-lookup"><span data-stu-id="53ce8-128">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="d713f-127">Exemple</span><span class="sxs-lookup"><span data-stu-id="d713f-127">Example</span></span>  
+ <span data-ttu-id="d713f-128">L'exemple suivant présente la configuration du participant au suivi ETW standard dans le fichier Web.config.</span><span class="sxs-lookup"><span data-stu-id="d713f-128">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="53ce8-129">L’Id de fournisseur qui le Participant de suivi ETW utilise pour écrire les enregistrements de suivi dans ETW est défini dans le  **\<diagnostics >** section.</span><span class="sxs-lookup"><span data-stu-id="53ce8-129">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="53ce8-130">Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné.</span><span class="sxs-lookup"><span data-stu-id="53ce8-130">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="53ce8-131">Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément.</span><span class="sxs-lookup"><span data-stu-id="53ce8-131">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="53ce8-132">Une fois que ceux-ci sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service.</span><span class="sxs-lookup"><span data-stu-id="53ce8-132">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="53ce8-133">Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.</span><span class="sxs-lookup"><span data-stu-id="53ce8-133">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="d713f-129">L’Id de fournisseur qui le Participant de suivi ETW utilise pour écrire les enregistrements de suivi dans ETW est défini dans le  **\<diagnostics >** section.</span><span class="sxs-lookup"><span data-stu-id="d713f-129">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="d713f-130">Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné.</span><span class="sxs-lookup"><span data-stu-id="d713f-130">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="d713f-131">Cela est défini par le **profileName** attribut de la  **\<Ajouter >** élément.</span><span class="sxs-lookup"><span data-stu-id="d713f-131">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="d713f-132">Une fois que ceux-ci sont définis, le participant au suivi est ajouté à la  **\<etwTracking >** comportement de service.</span><span class="sxs-lookup"><span data-stu-id="d713f-132">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="d713f-133">Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.</span><span class="sxs-lookup"><span data-stu-id="d713f-133">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>   
@@ -84,9 +84,9 @@ ms.locfileid: "59174445"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="53ce8-134">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="53ce8-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d713f-134">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d713f-134">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="53ce8-135">Suivi et traçage de workflow</span><span class="sxs-lookup"><span data-stu-id="53ce8-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="53ce8-136">Participants de suivi</span><span class="sxs-lookup"><span data-stu-id="53ce8-136">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="d713f-135">Suivi et traçage de workflow</span><span class="sxs-lookup"><span data-stu-id="d713f-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="d713f-136">Participants de suivi</span><span class="sxs-lookup"><span data-stu-id="d713f-136">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
