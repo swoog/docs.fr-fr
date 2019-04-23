@@ -3,10 +3,10 @@ title: One-Way
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320990"
 ---
 # <a name="one-way"></a>One-Way
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP est, par définition, un protocole de demande/réponse ; lorsqu'une demande est effectuée, une réponse est retournée. Cela se vérifie même pour une opération de service monodirectionnelle qui est exposée sur HTTP. Lorsque l'opération est appelée, le service retourne un code d'état HTTP 202 avant que l'opération de service s'exécute. Ce code d'état signifie que la demande a été acceptée pour traitement, mais que le traitement n'est pas encore terminé. Le client qui a appelé l'opération se bloque jusqu'à ce qu'il reçoive la réponse 202 du service. Cela peut provoquer des comportements inattendus lorsque plusieurs messages unidirectionnels sont envoyés à l’aide d’une liaison configurée pour utiliser des sessions. La liaison `wsHttpBinding` utilisée dans cet exemple est configurée pour utiliser des sessions par défaut pour établir un contexte de sécurité. Par défaut, les messages d'une session sont assurés d'arriver dans l'ordre dans lequel ils sont envoyés. De ce fait, lorsque le deuxième message d'une session est envoyé, il n'est pas traité tant que le premier message ne l'a pas été. Il en résulte que le client ne reçoit pas de réponse 202 pour un message tant que le traitement du message précédent n'est pas terminé. Par conséquent, le client se bloque à chaque appel d'opération suivant. Pour éviter ce comportement, cet exemple configure l'exécution pour distribuer les messages simultanément aux différentes instances pour traitement. L'exemple définit <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> à `PerCall` afin que chaque message puisse être traité par une autre instance. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> a la valeur `Multiple` pour permettre à plusieurs threads de distribuer des messages à la fois.  
+>  HTTP est, par définition, un protocole de demande/réponse ; lorsqu'une demande est effectuée, une réponse est retournée. Cela se vérifie même pour une opération de service monodirectionnelle qui est exposée sur HTTP. Lorsque l'opération est appelée, le service retourne un code d'état HTTP 202 avant que l'opération de service s'exécute. Ce code d'état signifie que la demande a été acceptée pour traitement, mais que le traitement n'est pas encore terminé. Le client qui a appelé l'opération se bloque jusqu'à ce qu'il reçoive la réponse 202 du service. Cela peut provoquer des comportements inattendus lorsque plusieurs messages unidirectionnels sont envoyés à l’aide d’une liaison configurée pour utiliser des sessions. La liaison `wsHttpBinding` utilisée dans cet exemple est configurée pour utiliser des sessions par défaut pour établir un contexte de sécurité. Par défaut, les messages d'une session sont assurés d'arriver dans l'ordre dans lequel ils sont envoyés. De ce fait, lorsque le deuxième message d'une session est envoyé, il n'est pas traité tant que le premier message ne l'a pas été. Il en résulte que le client ne reçoit pas de réponse 202 pour un message tant que le traitement du message précédent n'est pas terminé. Par conséquent, le client se bloque à chaque appel d'opération suivant. Pour éviter ce comportement, cet exemple configure l'exécution pour distribuer les messages simultanément aux différentes instances pour traitement. L'exemple définit <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> à `PerCall` afin que chaque message puisse être traité par une autre instance. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> est défini à `Multiple` pour permettre à plusieurs threads de distribuer des messages simultanément.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   

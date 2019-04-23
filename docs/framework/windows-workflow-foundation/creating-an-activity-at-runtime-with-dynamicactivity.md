@@ -3,17 +3,17 @@ title: Création d'une activité en cours d'exécution avec DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321226"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Création d'une activité en cours d'exécution avec DynamicActivity
-<xref:System.Activities.DynamicActivity> est une classe concrète et scellée avec un constructeur public. <xref:System.Activities.DynamicActivity> peut être utilisé pour assembler les fonctionnalités d’activité lors de l’exécution à l’aide d’un DOM d’activité  
+<xref:System.Activities.DynamicActivity> est une classe concrète et scellée avec un constructeur public. <xref:System.Activities.DynamicActivity> peut servir à assembler les fonctionnalités d'activité au moment de l'exécution à l'aide d'un DOM d'activité.  
   
 ## <a name="dynamicactivity-features"></a>Fonctionnalités DynamicActivity  
- <xref:System.Activities.DynamicActivity> a accès aux propriétés d’exécution, les arguments et les variables, mais aucun accès aux services d’exécution tels que la planification d’activités enfants ou de suivi.  
+ L'objet <xref:System.Activities.DynamicActivity> a accès aux propriétés d'exécution et aux arguments et variables, mais pas aux services d'exécution comme la planification d'activités enfants ou le suivi.  
   
  Les propriétés de niveau supérieur peuvent être définies à l'aide des objets <xref:System.Activities.Argument> du flux de travail. En code impératif, ces arguments sont créés à l'aide de propriétés CLR sur un nouveau type. En XAML, ils sont déclarés à l’aide d’étiquettes `x:Class` et `x:Member`.  
   
@@ -98,4 +98,4 @@ ms.locfileid: "59321226"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Création de workflows, d'activités et d'expressions à l'aide du code impératif](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](authoring-workflows-activities-and-expressions-using-imperative-code.md)

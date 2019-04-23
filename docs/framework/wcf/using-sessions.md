@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320923"
 ---
 # <a name="using-sessions"></a>Utilisation de sessions
@@ -32,11 +32,11 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
  Si vous êtes familiarisé avec la <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications et des fonctionnalités qu’il fournit, vous remarquerez les différences suivantes entre ce type de session et des sessions WCF :  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] les sessions sont toujours lancées par le serveur.  
+-   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont systématiquement initialisées par le serveur.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] les sessions sont implicitement non ordonnées.  
+-   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont implicitement non ordonnées.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] les sessions fournissent un mécanisme de stockage des données générales entre les requêtes.  
+-   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] fournissent un mécanisme de stockage général des données sur l'ensemble des demandes.  
   
  Cette rubrique décrit :  
   
@@ -108,7 +108,7 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
 > [!NOTE]
 >  Bien que le comportement par défaut présente une ressemblance avec les constructeurs et les destructeurs locaux, il ne s'agit que d'une ressemblance. Toute opération de service WCF peut être une initialisation ou opération de fin ou les deux en même temps. De plus, par défaut, les opérations d'initialisation peuvent être appelées un nombre illimité de fois, dans tout ordre, après l'appel de la première ; aucune session supplémentaire n'est créée une fois que la session est établie et associée à une instance, à moins que vous ne contrôliez explicitement la durée de vie de l'instance de service (en manipulant l'objet <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). Enfin, l'état est associé à la session et pas l'objet de service.  
   
- Par exemple, le `ICalculatorSession` contrat utilisé dans l’exemple précédent requiert que le client WCF objet premier appel le `Clear` opération avant toute autre opération et que la session avec cet objet de client WCF doit s’arrêter lorsqu’il appelle le `Equals` opération. L'exemple de code suivant montre un contrat qui applique ces spécifications. `Clear` doit être appelé en premier pour initialiser une session, et cette session termine lorsque `Equals` est appelée.  
+ Par exemple, le `ICalculatorSession` contrat utilisé dans l’exemple précédent requiert que le client WCF objet premier appel le `Clear` opération avant toute autre opération et que la session avec cet objet de client WCF doit s’arrêter lorsqu’il appelle le `Equals` opération. L'exemple de code suivant montre un contrat qui applique ces spécifications. `Clear` doit être appelé en premier pour initialiser une session, et cette session se termine lorsque `Equals` est appelé.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  

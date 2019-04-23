@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320390"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Procédure : Créer une procédure (Visual Basic)
@@ -58,8 +58,8 @@ Vous insérez une procédure entre une instruction de déclaration initiale (`Su
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Procédures Function](./function-procedures.md)
-- [Procédures Property](./property-procedures.md)
-- [Procédures d'opérateur](./operator-procedures.md)
+- [Procédures de propriété](./property-procedures.md)
+- [Procédures d’opérateur](./operator-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
 - [Procédures récursives](./recursive-procedures.md)
 - [Surcharge de procédure](./procedure-overloading.md)

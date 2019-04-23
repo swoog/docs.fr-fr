@@ -8,10 +8,10 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320468"
 ---
 # <a name="adorners-overview"></a>Vue d'ensemble des ornements
@@ -31,7 +31,7 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
   
 -   Masquage visuel ou remplacement de tout ou partie d’un <xref:System.Windows.UIElement>.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit une infrastructure de base pour orner des éléments visuels. Le tableau suivant répertorie les principaux types utilisés pour orner des objets et leur but. Plusieurs exemples d’utilisation suivent.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit une infrastructure de base pour orner des éléments visuels. Le tableau suivant répertorie les principaux types utilisés pour orner des objets et leur but. Plusieurs exemples d’utilisation suivent.  
   
 |||  
 |-|-|  
@@ -102,7 +102,7 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [Vue d'ensemble des formes et dessins de base dans WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Peinture avec des objets d'image, de dessin et visuels](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Vue d'ensemble des objets Drawing](../graphics-multimedia/drawing-objects-overview.md)
-- [Rubriques Comment](adorners-how-to-topics.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Peinture avec des images, des dessins et des objets visuels](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Vue d’ensemble des objets de dessin](../graphics-multimedia/drawing-objects-overview.md)
+- [Rubriques de guide pratique](adorners-how-to-topics.md)

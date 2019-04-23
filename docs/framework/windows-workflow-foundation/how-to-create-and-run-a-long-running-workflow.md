@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320046"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Procédure : créer et exécuter un workflow durable
@@ -27,21 +27,21 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
   
 -   [Pour ajouter la référence aux assemblys DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Pour créer le formulaire hôte de workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [Pour créer le formulaire hôte de flux de travail](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Pour ajouter les propriétés et les méthodes d'assistance au formulaire](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Pour ajouter les propriétés et méthodes d’assistance du formulaire](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
 -   [Pour configurer le magasin d’instances, les gestionnaires de cycle de vie de workflow et les extensions](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Pour activer le démarrage et la reprise de plusieurs types de workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Pour activer le démarrage et la reprise de plusieurs types de flux de travail](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Pour démarrer un nouveau workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [Pour démarrer un nouveau flux de travail](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
 -   [Pour reprendre un workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Pour terminer un workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [Pour mettre fin à un flux de travail](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Pour générer et exécuter l'application](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [Pour générer et exécuter l’application](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Pour créer la base de données de persistance  
   
@@ -94,12 +94,12 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
   
     |Contrôle|Propriété : Value|  
     |-------------|---------------------|  
-    |**Bouton**|Nom : NewGame<br /><br /> Emplacement : 13, 13<br /><br /> Taille : 75, 23<br /><br /> Texte : Nouvelle partie|  
-    |**Etiquette**|Emplacement : 94, 18<br /><br /> Texte : Deviner un nombre compris entre 1 et|  
+    |**Button**|Nom : NewGame<br /><br /> Emplacement : 13, 13<br /><br /> Taille : 75, 23<br /><br /> Texte : Nouvelle partie|  
+    |**Label**|Emplacement : 94, 18<br /><br /> Texte : Deviner un nombre compris entre 1 et|  
     |**ComboBox**|Nom : NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Éléments : 10, 100, 1000<br /><br /> Emplacement : 228, 12<br /><br /> Taille : 143, 21|  
-    |**Etiquette**|Emplacement : 13, 43<br /><br /> Texte : Type de workflow|  
+    |**Label**|Emplacement : 13, 43<br /><br /> Texte : Type de workflow|  
     |**ComboBox**|Nom : WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Éléments : StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Emplacement : 94, 40<br /><br /> Taille : 277, 21|  
-    |**Etiquette**|Nom : WorkflowVersion<br /><br /> Emplacement : 13, 362<br /><br /> Texte : Version de workflow|  
+    |**Label**|Nom : WorkflowVersion<br /><br /> Emplacement : 13, 362<br /><br /> Texte : Version de workflow|  
     |**GroupBox**|Emplacement : 13, 67<br /><br /> Taille : 358, 287<br /><br /> Texte : Partie|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
   
     |Contrôle|Propriété : Value|  
     |-------------|---------------------|  
-    |**Etiquette**|Emplacement : 7, 20<br /><br /> Texte : ID d'instance de workflow|  
+    |**Label**|Emplacement : 7, 20<br /><br /> Texte : ID d'instance de workflow|  
     |**ComboBox**|Nom : InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Emplacement : 121, 17<br /><br /> Taille : 227, 21|  
-    |**Etiquette**|Emplacement : 7, 47<br /><br /> Texte : Estimer|  
+    |**Label**|Emplacement : 7, 47<br /><br /> Texte : Estimer|  
     |**TextBox**|Nom : Estimer<br /><br /> Emplacement : 50, 44<br /><br /> Taille : 65, 20|  
-    |**Bouton**|Nom : EnterGuess<br /><br /> Emplacement : 121, 42<br /><br /> Taille : 75, 23<br /><br /> Texte : Entrer une estimation|  
-    |**Bouton**|Nom : QuitGame<br /><br /> Emplacement : 274, 42<br /><br /> Taille : 75, 23<br /><br /> Texte : Quitter|  
+    |**Button**|Nom : EnterGuess<br /><br /> Emplacement : 121, 42<br /><br /> Taille : 75, 23<br /><br /> Texte : Entrer une estimation|  
+    |**Button**|Nom : QuitGame<br /><br /> Emplacement : 274, 42<br /><br /> Taille : 75, 23<br /><br /> Texte : Quitter|  
     |**TextBox**|Nom : WorkflowStatus<br /><br /> Emplacement : 10, 73<br /><br /> Multiline : True<br /><br /> ReadOnly: True<br /><br /> Barres de défilement : Vertical<br /><br /> Taille : 338, 208|  
   
 5. Définir le **AcceptButton** propriété du formulaire à **EnterGuess**.  
@@ -341,7 +341,7 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
     }  
     ```  
   
-     `ListPersistedWorkflows` interroge le magasin d’instances pour les instances de workflow persistantes et ajoute les ID d’instance pour le `cboInstanceId` zone de liste déroulante.  
+     `ListPersistedWorkflows` interroge le magasin d'instances pour les instances persistantes de workflow, et ajoute les ID d'instance à la zone de liste modifiable `cboInstanceId`.  
   
 10. Ajoutez la méthode `UpdateStatus` suivante et le délégué correspondant à la classe de formulaire. Cette méthode met à jour la fenêtre d'état du formulaire avec l'état du workflow en cours d'exécution.  
   
@@ -574,7 +574,7 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
     };  
     ```  
   
-     L'énumération <xref:System.Activities.PersistableIdleAction> a trois valeurs : <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> et <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> causes le flux de travail à conserver, mais elle n’entraîne pas le flux de travail à décharger. <xref:System.Activities.PersistableIdleAction.Unload> provoque le flux de travail à faire persister et être déchargé.  
+     L'énumération <xref:System.Activities.PersistableIdleAction> a trois valeurs : <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> et <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> entraîne la persistance du workflow, mais pas son déchargement. <xref:System.Activities.PersistableIdleAction.Unload> entraîne la persistance du workflow et son déchargement.  
   
      L'exemple suivant illustre la méthode `ConfigureWorkflowApplication` complète.  
   
@@ -692,7 +692,7 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> Pour activer le démarrage et la reprise de plusieurs types de flux de travail  
- Afin de reprendre une instance de workflow, l'hôte doit fournir la définition du workflow. Dans ce didacticiel il existe trois types de workflow, et les étapes suivantes présentent plusieurs versions de ces types. `WorkflowIdentity` fournit un moyen pour une application hôte à associer des informations d’identification à une instance persistante de workflow. Les étapes de cette section expliquent comment créer une classe utilitaire pour assister le mappage de l'identité de workflow d'une instance persistante de workflow à la définition correspondante de workflow. Pour plus d’informations sur `WorkflowIdentity` et le contrôle de version, consultez [à l’aide de WorkflowIdentity et du Versioning](using-workflowidentity-and-versioning.md).  
+ Afin de reprendre une instance de workflow, l'hôte doit fournir la définition du workflow. Dans ce didacticiel il existe trois types de workflow, et les étapes suivantes présentent plusieurs versions de ces types. `WorkflowIdentity` offre un moyen pour une application hôte d'associer les informations d'identification à une instance persistante de workflow. Les étapes de cette section expliquent comment créer une classe utilitaire pour assister le mappage de l'identité de workflow d'une instance persistante de workflow à la définition correspondante de workflow. Pour plus d’informations sur `WorkflowIdentity` et le contrôle de version, consultez [à l’aide de WorkflowIdentity et du Versioning](using-workflowidentity-and-versioning.md).  
   
 1. Avec le bouton droit **NumberGuessWorkflowHost** dans **l’Explorateur de solutions** et choisissez **ajouter**, **classe**. Type `WorkflowVersionMap` dans le **nom** , puis cliquez sur **ajouter**.  
   
@@ -806,7 +806,7 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
     }  
     ```  
   
-     `WorkflowVersionMap` contient trois identités de workflow correspondant aux trois définitions de workflow à partir de ce didacticiel et est utilisé dans les sections suivantes lorsque des flux de travail est démarrés et repris.  
+     `WorkflowVersionMap` contient trois identités de workflow mappées aux trois définitions de workflow de ce didacticiel et est utilisé dans les sections suivantes lorsque des workflow sont démarrés et repris.  
   
 ### <a name="BKMK_StartWorkflow"></a> Pour démarrer un nouveau flux de travail  
   

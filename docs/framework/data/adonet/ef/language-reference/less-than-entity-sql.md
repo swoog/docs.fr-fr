@@ -3,10 +3,10 @@ title: < (Inférieur à) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
 ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320442"
 ---
 # <a name="-less-than-entity-sql"></a>\< (Inférieur à) (Entity SQL)
@@ -23,7 +23,7 @@ expression < expression
  Toute expression valide. Les deux expressions doivent posséder des types de données implicitement convertibles.  
   
 ## <a name="result-types"></a>Types de résultats  
- `true` Si l’expression de gauche a une valeur inférieure à l’expression de droite ; Sinon, `false`.  
+ `true` si la valeur de l'expression de gauche est inférieure à celle de l'expression de droite ; sinon, `false`.  
   
 ## <a name="example"></a>Exemple  
  La requête Entity SQL ci-dessous utilise l'opérateur de comparaison < pour comparer deux expressions afin de déterminer si la valeur de l'expression de gauche est inférieure à celle de l'expression de droite. Cette requête est basée sur le modèle de vente AdventureWorks Sales Model. Pour compiler et exécuter cette requête, procédez comme suit :  

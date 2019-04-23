@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319922"
 ---
 # <a name="how-to-run-a-workflow"></a>Procédure : exécuter un workflow
@@ -62,7 +62,7 @@ Cette rubrique est la suite du didacticiel le Guide de mise en route de Windows 
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Ce code d'hébergement généré utilise <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> fournit un moyen simple pour appeler un flux de travail comme s’il s’agissait d’un appel de méthode et que vous peut être utilisé uniquement pour les workflows qui n’utilisent pas de persistance. <xref:System.Activities.WorkflowApplication> fournit un modèle plus riche pour l’exécution de flux de travail qui inclut la notification des événements de cycle de vie, le contrôle de l’exécution, reprise de signet et persistance. Cet exemple utilise des signets et <xref:System.Activities.WorkflowApplication> est utilisé pour l'hébergement du workflow. Ajoutez l'instruction `using` ou **Imports** suivante dans la partie supérieure de **Program.cs** ou **Module1.vb** sous les instructions **using** ou **Imports** existantes.
+     Ce code d'hébergement généré utilise <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> offre un moyen simple pour appeler un workflow comme s'il s'agissait d'un appel de méthode et ne peut être utilisé que pour les workflows qui n'utilisent pas la persistance. <xref:System.Activities.WorkflowApplication> fournit un modèle plus riche pour exécuter des workflows, qui inclut la notification des événements de cycle de vie, le contrôle d'exécution, la modification de signet et la persistance. Cet exemple utilise des signets et <xref:System.Activities.WorkflowApplication> est utilisé pour l'hébergement du workflow. Ajoutez l'instruction `using` ou **Imports** suivante dans la partie supérieure de **Program.cs** ou **Module1.vb** sous les instructions **using** ou **Imports** existantes.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -164,8 +164,8 @@ Cette rubrique est la suite du didacticiel le Guide de mise en route de Windows 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Programmation Windows Workflow Foundation](programming.md)
-- [Didacticiel de mise en route](getting-started-tutorial.md)
-- [Procédure : créer un workflow](how-to-create-a-workflow.md)
-- [Procédure : créer et exécuter un workflow durable](how-to-create-and-run-a-long-running-workflow.md)
-- [Attente d'une entrée dans un flux de travail](waiting-for-input-in-a-workflow.md)
+- [Didacticiel Bien démarrer](getting-started-tutorial.md)
+- [Guide pratique pour Créer un flux de travail](how-to-create-a-workflow.md)
+- [Guide pratique pour Créer et exécuter un Long en cours d’exécution du flux de travail](how-to-create-and-run-a-long-running-workflow.md)
+- [Attente d’une entrée dans un workflow](waiting-for-input-in-a-workflow.md)
 - [Hébergement de workflows](hosting-workflows.md)

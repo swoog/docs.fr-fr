@@ -16,10 +16,10 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320156"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procédure : afficher des informations de date et d’heure localisées pour les utilisateurs du web
@@ -113,7 +113,7 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analyse de chaînes de date et d’heure](../../../docs/standard/base-types/parsing-datetime.md)

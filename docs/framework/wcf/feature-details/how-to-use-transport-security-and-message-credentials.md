@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321474"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Procédure : utiliser la sécurité du transport et des informations d’identification de message
@@ -162,6 +162,6 @@ Sécurisation d’un service avec les informations d’identification de transpo
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : définir le mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Guide pratique pour Définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Sécurisation de services](../../../../docs/framework/wcf/securing-services.md)
 - [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
