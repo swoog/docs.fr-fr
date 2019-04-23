@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335470"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Procédure : Appeler une procédure qui ne retourne pas une valeur (Visual Basic)
@@ -35,7 +35,7 @@ Un `Sub` procédure ne retourne pas de valeur au code appelant. Vous l’appelez
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Sub, instruction](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Procédure : créer une procédure](./how-to-create-a-procedure.md)
-- [Procédure : appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)
-- [Procédure : Appeler un gestionnaire d’événements en Visual Basic](./how-to-call-an-event-handler.md)
+- [Sub (instruction)](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Guide pratique pour Créer une procédure](./how-to-create-a-procedure.md)
+- [Guide pratique pour Appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Guide pratique pour Appeler un gestionnaire d’événements en Visual Basic](./how-to-call-an-event-handler.md)

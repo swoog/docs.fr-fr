@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335483"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procédure : Appeler une procédure d’opérateur (Visual Basic)
@@ -55,13 +55,13 @@ Vous appelez une procédure d’opérateur en utilisant le symbole d’opérateu
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédures d'opérateur](./operator-procedures.md)
-- [Procédure : définir un opérateur](./how-to-define-an-operator.md)
-- [Procédure : définir un opérateur de conversion](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Procédures d’opérateur](./operator-procedures.md)
+- [Guide pratique pour Définir un opérateur](./how-to-define-an-operator.md)
+- [Guide pratique pour Définir un opérateur de Conversion](./how-to-define-a-conversion-operator.md)
+- [Operator (instruction)](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Structure, instruction](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Procédure : Déclarer une Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Guide pratique pour déclarer une structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Conversions implicites et explicites](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversions étendues et restrictives](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

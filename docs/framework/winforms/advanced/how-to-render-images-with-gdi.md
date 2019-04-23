@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342543"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procédure : afficher des images avec GDI+
@@ -84,9 +84,9 @@ Vous pouvez utiliser [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus
 ## <a name="see-also"></a>Voir aussi
 
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
-- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
 - [Stylets, lignes et rectangles dans GDI+](pens-lines-and-rectangles-in-gdi.md)
-- [Procédure : dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Dessin de ligne ou de figures fermées](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
-- [Éditeur d'images pour les icônes](/cpp/windows/image-editor-for-icons)
+- [Guide pratique pour Dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Dessin de ligne ou de Figures fermées](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [Éditeur d’images pour les icônes](/cpp/windows/image-editor-for-icons)

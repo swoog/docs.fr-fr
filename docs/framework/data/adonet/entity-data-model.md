@@ -3,10 +3,10 @@ title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197917"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
@@ -19,37 +19,37 @@ Le modèle EDM (Entity Data Model) est un jeu de concepts qui décrivent la stru
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section décrivent les concepts du modèle EDM. Tout langage DSL qui implémente le modèle EDM doit inclure les concepts décrits ici. Notez que le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise le langage CSDL pour définir des modèles conceptuels. Pour plus d'informations, consultez [CSDL Specification](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Concepts clés d'Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Concepts clés d’Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
  [Entity Data Model : Espaces de noms](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model : types de données primitifs](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model : Types de données primitifs](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [Entity Data Model : Héritage](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [terminaison d'association](../../../../docs/framework/data/adonet/association-end.md)  
+ [terminaison d’association](../../../../docs/framework/data/adonet/association-end.md)  
   
- [multiplicité de terminaison d'association](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [multiplicité de terminaison d’association](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [jeu d'associations](../../../../docs/framework/data/adonet/association-set.md)  
+ [ensemble d’associations](../../../../docs/framework/data/adonet/association-set.md)  
   
- [terminaison d'ensemble d'associations](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [terminaison d’ensemble d’associations](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [type d'association](../../../../docs/framework/data/adonet/association-type.md)  
+ [type d’association](../../../../docs/framework/data/adonet/association-type.md)  
   
  [type complexe](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [conteneur d'entités](../../../../docs/framework/data/adonet/entity-container.md)  
+ [conteneur d’entités](../../../../docs/framework/data/adonet/entity-container.md)  
   
- [clé d'entité](../../../../docs/framework/data/adonet/entity-key.md)  
+ [clé d’entité](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [jeu d'entités](../../../../docs/framework/data/adonet/entity-set.md)  
+ [jeu d’entités](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [type d'entité](../../../../docs/framework/data/adonet/entity-type.md)  
+ [type d’entité](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [facette](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](../../../../docs/framework/data/adonet/facet.md)  
   
- [Propriété de clé étrangère](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [propriété de clé étrangère](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
  [fonction déclarée par modèle](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
@@ -59,10 +59,10 @@ Le modèle EDM (Entity Data Model) est un jeu de concepts qui décrivent la stru
   
  [propriété](../../../../docs/framework/data/adonet/property.md)  
   
- [contrainte d'intégrité référentielle](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
+ [contrainte d’intégrité référentielle](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Outils ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Présentation d'un fichier .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [vue d’ensemble du fichier .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Spécification CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

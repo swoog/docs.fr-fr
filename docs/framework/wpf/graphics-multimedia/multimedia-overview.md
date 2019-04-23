@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340488"
 ---
 # <a name="multimedia-overview"></a>Vue d'ensemble du multimédia
@@ -99,7 +99,7 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ### <a name="controlling-mediaplayer"></a>Contrôler un MediaPlayer  
  Étant donné que <xref:System.Windows.Media.MediaPlayer> est sans état, il existe seulement deux façons de contrôler la lecture du média.  
   
-1. Méthodes de contrôle interactives. En place en mode indépendant (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> propriété).  
+1. Méthodes de contrôle interactives. En place en mode indépendant (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> propriété).  
   
 2. <xref:System.Windows.Media.MediaClock>. En place lorsque le média possède une <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -113,5 +113,5 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.DrawingGroup>
-- [Mise en page](../advanced/layout.md)
-- [Rubriques Comment](audio-and-video-how-to-topics.md)
+- [Disposition](../advanced/layout.md)
+- [Rubriques de guide pratique](audio-and-video-how-to-topics.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
 ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194108"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel, contrôle
 Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage dans un <xref:System.Windows.Forms.StatusStrip> du texte, images ou les deux.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble du contrôle ToolStripStatusLabel](toolstripstatuslabel-control-overview.md)  
+ [Vue d’ensemble du contrôle ToolStripStatusLabel](toolstripstatuslabel-control-overview.md)  
  Fournit des rubriques qui décrivent la fonction et les principaux concepts du contrôle Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel>.  
   
 ## <a name="reference"></a>Référence  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341398"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procédure : regrouper des contrôles avec le contrôle Panel Windows Forms à l’aide du concepteur
@@ -33,4 +33,4 @@ Windows Forms <xref:System.Windows.Forms.Panel> contrôles sont utilisés pour r
 
 - [Panel, contrôle](panel-control-windows-forms.md)
 - [Vue d’ensemble du contrôle Panel](panel-control-overview-windows-forms.md)
-- [Procédure : définir l’arrière-plan d’un panneau](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Guide pratique pour Définir l’arrière-plan d’un panneau](how-to-set-the-background-of-a-windows-forms-panel.md)

@@ -16,10 +16,10 @@ ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340033"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consommation de fonctions DLL non managées
@@ -75,4 +75,4 @@ L’appel de code non managé est un service qui permet au code managé d’appe
 
 - [Interopération avec du code non managé](../../../docs/framework/interop/index.md)
 - [Exemples d'appel de code non managé](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

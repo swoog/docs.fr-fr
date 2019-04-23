@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340748"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Procédure : créer une visionneuse de documents HTML dans une application Windows Forms
@@ -43,7 +43,7 @@ Vous pouvez utiliser la <xref:System.Windows.Forms.WebBrowser> contrôle pour af
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [Vue d'ensemble du contrôle WebBrowser](webbrowser-control-overview.md)
+- [Vue d’ensemble du contrôle WebBrowser](webbrowser-control-overview.md)
 - [Sécurité WebBrowser](webbrowser-security.md)
-- [Procédure : accéder à une URL avec le contrôle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Procédure : imprimer avec un contrôle WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Guide pratique pour Naviguer vers une URL avec le contrôle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Guide pratique pour Imprimer avec un contrôle WebBrowser](how-to-print-with-a-webbrowser-control.md)

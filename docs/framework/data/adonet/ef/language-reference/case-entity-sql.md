@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334885"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  Est un espace réservé indiquant que plusieurs clauses WHEN `Boolean_expression` THEN `result_expression` peuvent être utilisées.  
   
  THEN `result_expression`  
- Expression retournée lorsque `Boolean_expression` a la valeur `true`. `result expression` Peut être toute expression valide.  
+ Expression retournée lorsque `Boolean_expression` a la valeur `true`. `result expression` peut être une expression valide quelconque.  
   
  ELSE `else_result_expression`  
- Expression retournée si aucune opération de comparaison ne donne `true`. Si cet argument est omis et qu'aucune opération de comparaison n'a la valeur `true`, CASE retourne la valeur Null. `else_result_expression` Peut être toute expression valide. Les types de données de `else_result_expression` et celui de tout argument `result_expression` doivent être identiques ou permettre une conversion implicite.  
+ Expression retournée si aucune opération de comparaison ne donne `true`. Si cet argument est omis et qu'aucune opération de comparaison n'a la valeur `true`, CASE retourne la valeur Null. `else_result_expression` peut être une expression valide quelconque. Les types de données de `else_result_expression` et celui de tout argument `result_expression` doivent être identiques ou permettre une conversion implicite.  
   
  WHEN `Boolean_expression`  
- Expression `Boolean` évaluée lorsque le format CASE recherché est utilisé. `Boolean_expression` valide `Boolean` expression.  
+ Expression `Boolean` évaluée lorsque le format CASE recherché est utilisé. `Boolean_expression` peut être une expression `Boolean` valide quelconque.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne le type de priorité le plus élevé de l'ensemble des types dans `result_expression` ainsi que la valeur facultative `else_result_expression`.  

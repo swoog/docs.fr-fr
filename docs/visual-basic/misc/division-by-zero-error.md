@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID11
 ms.assetid: 7dc22e29-8baa-4d82-a1a6-2de64ba9b25d
 ms.openlocfilehash: a628d802614e18ed1647c63f665a701a315a70cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337134"
 ---
 # <a name="division-by-zero-visual-basic-error"></a>Division par zéro (erreur Visual Basic)
@@ -22,4 +22,4 @@ La valeur d’une expression utilisée comme diviseur est égale à zéro.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Types d'erreurs](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Types d’erreurs](../../visual-basic/programming-guide/language-features/error-types.md)

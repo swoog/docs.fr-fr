@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
 ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340397"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procédure : Gérer l’événement ContextMenuOpening
@@ -59,5 +59,5 @@ Le <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement peut ê
 
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
-- [Vue d'ensemble des éléments de base](base-elements-overview.md)
-- [Vue d'ensemble de ContextMenu](../controls/contextmenu-overview.md)
+- [Vue d’ensemble des éléments de base](base-elements-overview.md)
+- [Vue d’ensemble de ContextMenu](../controls/contextmenu-overview.md)

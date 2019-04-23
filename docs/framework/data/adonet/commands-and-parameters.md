@@ -3,10 +3,10 @@ title: Commandes et paramètres
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 ms.openlocfilehash: a769e8cbd5138e78136df018abe058ac6c568951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198125"
 ---
 # <a name="commands-and-parameters"></a>Commandes et paramètres
@@ -15,7 +15,7 @@ Après avoir établi une connexion à une source de données, vous pouvez exécu
  Chaque fournisseur de données .NET Framework inclus dans le .NET Framework possède un objet `Command`. Le fournisseur de données .NET Framework pour OLE DB inclut un objet <xref:System.Data.OleDb.OleDbCommand>, le fournisseur de données .NET Framework pour SQL Server inclut un objet <xref:System.Data.SqlClient.SqlCommand>, le fournisseur de données .NET Framework pour ODBC inclut un objet <xref:System.Data.Odbc.OdbcCommand> et le fournisseur de données .NET Framework pour Oracle inclut un objet <xref:System.Data.OracleClient.OracleCommand>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Exécution d'une commande](../../../../docs/framework/data/adonet/executing-a-command.md)  
+ [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)  
  Décrit l'objet `Command` et son utilisation pour exécuter des requêtes et des commandes sur une source de données.  
   
  [Configuration des paramètres et des types de données des paramètres](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
@@ -24,7 +24,7 @@ Après avoir établi une connexion à une source de données, vous pouvez exécu
  [Génération de commandes avec CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
  Décrit l'utilisation de générateurs de commande pour générer automatiquement les commandes INSERT, UPDATE et DELETE pour un `DataAdapter` ayant une commande SELECT d'analyse unique.  
   
- [Obtention d'une valeur unique à partir d'une base de données](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
+ [Obtention d’une valeur unique à partir d’une base de données](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
  Décrit comment utiliser la méthode `ExecuteScalar` d'un objet `Command` pour retourner une valeur unique à partir d'une requête de base de données.  
   
  [Utilisation des commandes pour modifier les données](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  

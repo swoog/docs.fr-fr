@@ -3,10 +3,10 @@ title: Files d'attente et sessions fiables
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
 ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196825"
 ---
 # <a name="queues-and-reliable-sessions"></a>Files d'attente et sessions fiables
@@ -41,6 +41,6 @@ Files d’attente et sessions fiables sont les fonctionnalités de Windows Commu
 ## <a name="see-also"></a>Voir aussi
 
 - [Files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Mise en file d'attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Vue d'ensemble des sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Vue d’ensemble des sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

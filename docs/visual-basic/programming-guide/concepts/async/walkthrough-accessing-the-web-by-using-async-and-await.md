@@ -3,10 +3,10 @@ title: 'Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visu
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335899"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)
@@ -40,7 +40,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
   
 -   [Pour tester la solution asynchrone](#testAsynch)  
   
--   [Pour remplacer GetURLContentsAsync par une méthode .NET Framework](#GetURLContentsAsync)  
+-   [Pour remplacer la méthode GetURLContentsAsync par une méthode .NET Framework](#GetURLContentsAsync)  
   
 -   [Exemple](#BKMK_CompleteCodeExamples)  
   
@@ -137,13 +137,13 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
   
 3. Le code de la solution synchrone contient les quatre méthodes suivantes :  
   
-    -   `SumPageSizes`, qui obtient une liste d’URL de page Web à partir de `SetUpURLList` , puis appelle `GetURLContents` et `DisplayResults` pour traiter chaque URL.  
+    -   `SumPageSizes`, qui obtient la liste des URL des pages web à partir de `SetUpURLList`, puis qui appelle `GetURLContents` et `DisplayResults` pour traiter chaque URL.  
   
-    -   `SetUpURLList`, qui dresse et retourne une liste des adresses web.  
+    -   `SetUpURLList`, qui dresse et retourne la liste des adresses web.  
   
-    -   `GetURLContents`, qui télécharge le contenu de chaque site Web et retourne le contenu sous la forme d’un tableau d’octets.  
+    -   `GetURLContents`, qui télécharge le contenu de chaque site web et retourne le contenu sous la forme d'un tableau d'octets.  
   
-    -   `DisplayResults`, qui affiche le nombre d’octets dans le tableau d’octets pour chaque URL.  
+    -   `DisplayResults`, qui affiche le nombre d'octets dans le tableau d'octets pour chaque URL.  
   
      Copiez les quatre méthodes suivantes et collez-les sous le `startButton_Click` Gestionnaire d’événements dans MainWindow.xaml.vb :  
   
@@ -263,7 +263,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Retourne un <xref:System.Threading.Tasks.Task%601>. Dans ce cas, la *variable de retour de tâche*, `TResult`, est de type <xref:System.Net.WebResponse>. La tâche est une promesse de produire un objet `WebResponse` réel une fois que les données demandées ont été téléchargées et que la tâche s'est exécutée entièrement.  
+2. `GetResponseAsync` retourne un <xref:System.Threading.Tasks.Task%601>. Dans ce cas, la *variable de retour de tâche*, `TResult`, est de type <xref:System.Net.WebResponse>. La tâche est une promesse de produire un objet `WebResponse` réel une fois que les données demandées ont été téléchargées et que la tâche s'est exécutée entièrement.  
   
      Pour récupérer le `WebResponse` valeur à partir de la tâche, appliquez une [Await](../../../../visual-basic/language-reference/operators/await-operator.md) opérateur à l’appel à `GetResponseAsync`, comme illustré dans le code suivant.  
   
@@ -676,10 +676,10 @@ End Class
 ## <a name="see-also"></a>Voir aussi
 
 - [Exemple Async : Accès à la procédure Web (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Await, opérateur](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Types de retour Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Programmation asynchrone basé sur des tâches (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [Procédure : Étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Procédure : Effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Programmation asynchrone basée sur les tâches](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Guide pratique pour Étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Guide pratique pour Effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

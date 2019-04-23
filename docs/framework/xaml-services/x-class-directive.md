@@ -11,10 +11,10 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199451"
 ---
 # <a name="xclass-directive"></a>x:Class, directive
@@ -32,7 +32,7 @@ Configure la compilation du balisage XAML pour joindre des classes partielles en
   
 |||  
 |-|-|  
-|`namespace`|Facultatif. Spécifie un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] espace de noms qui contient la classe partielle identifiée par `classname`. Si `namespace` est spécifié, un point (.) sépare `namespace` et `classname`. Consultez la section Notes.|  
+|`namespace`|Optionnel. Spécifie un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] espace de noms qui contient la classe partielle identifiée par `classname`. Si `namespace` est spécifié, un point (.) sépare `namespace` et `classname`. Consultez la section Notes.|  
 |`classname`|Obligatoire. Spécifie le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nom de la classe partielle qui connecte le XAML chargé et votre code-behind pour ce XAML.|  
   
 ## <a name="dependencies"></a>Dépendances  

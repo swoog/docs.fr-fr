@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342167"
 ---
 # <a name="how-keyboard-input-works"></a>Fonctionnement de l'entrée au clavier
@@ -63,9 +63,9 @@ Windows Forms traite l’entrée au clavier en déclenchant des événements de 
 |Tâche|Méthode|  
 |----------|------------|  
 |Intercepter une touche de navigation et déclencher un <xref:System.Windows.Forms.Control.KeyDown> événement. Par exemple, vous souhaitez que la touche de tabulation et la touche de retour soient gérées dans une zone de texte.|Substituez <xref:System.Windows.Forms.Control.IsInputKey%2A> **Remarque :**  Vous pouvez également gérer les <xref:System.Windows.Forms.Control.PreviewKeyDown> .PreviewKeyDown et définir <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> de la <xref:System.Windows.Forms.PreviewKeyDownEventArgs> à `true` pour l’ou les touches que vous souhaitez.|  
-|Effectuer une entrée spéciale ou une gestion de navigation sur un contrôle. Par exemple, vous souhaitez utiliser les touches de direction dans votre contrôle de liste pour modifier l’élément sélectionné.|Remplacer <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Effectuer une entrée spéciale ou une gestion de navigation sur un contrôle. Par exemple, vous souhaitez utiliser les touches de direction dans votre contrôle de liste pour modifier l’élément sélectionné.|Substituer la méthode <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Intercepter une touche de navigation et déclencher un <xref:System.Windows.Forms.Control.KeyPress> événement. Par exemple, dans un contrôle de zone de sélection, vous voulez que des activations multiples de la touche de direction accélèrent la progression au sein des éléments.|Substituez <xref:System.Windows.Forms.Control.IsInputChar%2A>|  
-|Effectuer une gestion spéciale d’entrée ou de navigation pendant un <xref:System.Windows.Forms.Control.KeyPress> événement. Par exemple, dans une liste de contrôle, le fait de maintenir la touche « r » enfoncée permet d’ignorer les éléments qui commencent par la lettre r.|Remplacer <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Effectuer une gestion spéciale d’entrée ou de navigation pendant un <xref:System.Windows.Forms.Control.KeyPress> événement. Par exemple, dans une liste de contrôle, le fait de maintenir la touche « r » enfoncée permet d’ignorer les éléments qui commencent par la lettre r.|Substituer la méthode <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Effectuer une gestion personnalisée des caractères mnémoniques ; par exemple, vous souhaitez gérer les caractères mnémoniques sur des boutons owner-drawn contenus dans une barre d’outils.|Substituez <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>|  
   
 ## <a name="see-also"></a>Voir aussi
@@ -73,6 +73,6 @@ Windows Forms traite l’entrée au clavier en déclenchant des événements de 
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
-- [My.Computer.Keyboard, objet](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+- [My.Computer.Keyboard (objet)](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Accès au clavier](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Utilisation des événements du clavier](using-keyboard-events.md)
+- [Utilisation des événements de clavier](using-keyboard-events.md)

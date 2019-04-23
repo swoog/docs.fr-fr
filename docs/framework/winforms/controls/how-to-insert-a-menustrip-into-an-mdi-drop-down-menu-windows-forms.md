@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 1b41699d8da1c99705f6796105dab6f3ab1d727d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341632"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Procédure : Insérer un MenuStrip dans un Menu du menu déroulant MDI (Windows Forms)
@@ -27,15 +27,15 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
   
 2. Ajoutez un <xref:System.Windows.Forms.MenuStrip> à `Form1` et affectez la valeur `true` à la propriété <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> du <xref:System.Windows.Forms.MenuStrip>.  
   
-3. Ajoutez un élément de menu de niveau supérieur à la `Form1`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.Control.Text%2A> propriété `&File`.  
+3. Ajoutez un élément de menu de niveau supérieur au <xref:System.Windows.Forms.MenuStrip> de `Form1` et affectez la valeur `&File` à sa propriété <xref:System.Windows.Forms.Control.Text%2A>.  
   
 4. Ajoutez trois éléments de sous-menu à la `&File` élément de menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Open`, `&Import from`, et `E&xit`.  
   
 5. Ajoutez deux éléments de sous-menu à la `&Import from` élément de sous-menu et définissez leurs <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriétés à `&Word` et `&Excel`.  
   
-6. Ajoutez un formulaire au projet, ajoutez un <xref:System.Windows.Forms.MenuStrip> au formulaire et affectez le <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriété de la `Form2`<xref:System.Windows.Forms.MenuStrip> à `true`.  
+6. Ajoutez un formulaire au projet, ajoutez un <xref:System.Windows.Forms.MenuStrip> au formulaire et affectez la valeur `true` à la propriété <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> du <xref:System.Windows.Forms.MenuStrip> de `Form2`.  
   
-7. Ajoutez un élément de menu de niveau supérieur à la `Form2`<xref:System.Windows.Forms.MenuStrip> et définissez son <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriété `&File`.  
+7. Ajoutez un élément de menu de niveau supérieur au <xref:System.Windows.Forms.MenuStrip> de `Form2` et affectez la valeur `&File` à sa propriété <xref:System.Windows.Forms.ToolStripItem.Text%2A>.  
   
 8. Ajouter des éléments de sous-menu à la `&File` menu de `Form2` dans l’ordre suivant : un <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`et un autre <xref:System.Windows.Forms.ToolStripSeparator>.  
   
@@ -49,7 +49,7 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
     |Enregistrer et fermer|Insert|4|  
     |Séparateur|Insert|5|  
   
-10. Créer un gestionnaire d’événements pour le <xref:System.Windows.Forms.Control.Click> événements de la `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Créez un gestionnaire d'événements pour l'événement <xref:System.Windows.Forms.Control.Click> du <xref:System.Windows.Forms.ToolStripMenuItem> de `&Open`.  
   
 11. Dans le gestionnaire d'événements, insérez du code semblable à l'exemple de code suivant pour créer et afficher de nouvelles instances de `Form2` en tant qu'enfants MDI de `Form1`.  
   
@@ -75,7 +75,7 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
     }  
     ```  
   
-12. Insérez du code similaire à l’exemple de code suivant dans le `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> pour inscrire le Gestionnaire d’événements.  
+12. Insérez du code similaire à l'exemple de code suivant dans le `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> pour inscrire le gestionnaire d'événements.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -97,6 +97,6 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : créer des formulaires parents MDI](../advanced/how-to-create-mdi-parent-forms.md)
-- [Procédure : créer des formulaires enfants MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Vue d’ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Guide pratique pour Créer des formulaires MDI parents](../advanced/how-to-create-mdi-parent-forms.md)
+- [Guide pratique pour Créer des formulaires MDI enfants](../advanced/how-to-create-mdi-child-forms.md)
+- [Vue d'ensemble du contrôle MenuStrip](menustrip-control-overview-windows-forms.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
 ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197488"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Procédure : définir des taquets de tabulation dans du texte dessiné
@@ -40,4 +40,4 @@ Vous pouvez définir des taquets de tabulation pour le texte en appelant le <xre
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)

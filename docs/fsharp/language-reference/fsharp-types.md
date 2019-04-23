@@ -3,10 +3,10 @@ title: Types F#
 description: En savoir plus sur les types qui sont utilisés dans F# et comment F# sont nommés et décrits.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193588"
 ---
 # <a name="f-types"></a>Types F#
@@ -54,7 +54,7 @@ Le tableau suivant présente les aspects de la syntaxe de type pour F# types.
 |Rubrique|Description|
 |-----|-----------|
 |[Types primitifs](primitive-types.md)|Décrit les types simples intégrés tels que les types intégraux, le type booléen et les types de caractères.|
-|[Unit, type](unit-type.md)|Décrit le `unit` type, un type qui a une valeur et qui est indiqué par () ; équivalent au `void` dans C# et `Nothing` en Visual Basic.|
+|[Type d’unité](unit-type.md)|Décrit le `unit` type, un type qui a une valeur et qui est indiqué par () ; équivalent au `void` dans C# et `Nothing` en Visual Basic.|
 |[Tuples](tuples.md)|Décrit le type de tuple, un type qui se compose de valeurs associées de n’importe quel type groupées en paires, triples, quadruples et ainsi de suite.|
 |[Options](options.md)|Décrit le type d’option, un type qui peut avoir une valeur ou être vide.|
 |[Listes](lists.md)|Décrit les listes, qui sont des séries immuables et ordonnée d’éléments tous du même type.|

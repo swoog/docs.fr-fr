@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336835"
 ---
 # <a name="how-to-start-services"></a>Procédure : démarrer des services
@@ -36,7 +36,7 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
     |Pour que votre service s’installe|Définissez cette valeur|  
     |----------------------------------|--------------------|  
     |Quand l’ordinateur redémarre|**Automatique**|  
-    |Quand une action explicite de l’utilisateur démarre le service|**Manuel**|  
+    |Quand une action explicite de l’utilisateur démarre le service|**Manual**|  
   
     > [!TIP]
     >  Pour que votre service ne démarre pas, définissez la propriété <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> avec la valeur **Disabled**. Procédez de la sorte si vous prévoyez de redémarrer un serveur plusieurs fois. Le fait de ne pas démarrer les services habituels vous fera gagner du temps.  
@@ -80,5 +80,5 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
 ## <a name="see-also"></a>Voir aussi
 
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procédure : créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

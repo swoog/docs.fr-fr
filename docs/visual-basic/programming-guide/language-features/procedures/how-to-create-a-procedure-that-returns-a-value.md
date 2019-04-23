@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335496"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Procédure : Créer une procédure qui retourne une valeur (Visual Basic)
@@ -40,9 +40,9 @@ Vous utilisez un `Function` procédure pour retourner une valeur au code appelan
 
 - [Procédures](./index.md)
 - [Procédures Sub](./sub-procedures.md)
-- [Procédures Property](./property-procedures.md)
-- [Procédures d'opérateur](./operator-procedures.md)
+- [Procédures de propriété](./property-procedures.md)
+- [Procédures d’opérateur](./operator-procedures.md)
 - [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)
-- [Function, instruction](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Procédure : retourner une valeur à partir d’une procédure](./how-to-return-a-value-from-a-procedure.md)
-- [Procédure : appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Guide pratique pour Retourner une valeur à partir d’une procédure](./how-to-return-a-value-from-a-procedure.md)
+- [Guide pratique pour Appeler une procédure qui retourne une valeur](./how-to-call-a-procedure-that-returns-a-value.md)

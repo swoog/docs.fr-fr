@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335028"
 ---
 # <a name="extending-dispatchers"></a>Extension des répartiteurs
@@ -84,17 +84,17 @@ Les répartiteurs sont chargés d'extraire des messages entrants des canaux sous
   
 4. Les composants relatifs à la sécurité peuvent utiliser les propriétés suivantes :  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Indique où les événements d’audit sont écrits.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indique où les événements d'audit sont écrits.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> contrôle si le service tente d’emprunter l’identité à l’aide des informations d’identification fournies par le message entrant.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> contrôle si le service essaie d'emprunter l'identité à l'aide des informations d'identification fournies par le message entrant.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> contrôle si les événements d’authentification de message réussis sont écrits dans le journal des événements spécifié par <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> contrôle si les événements d'authentification de message réussis sont écrits dans le journal des événements spécifié par <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> contrôles comment le <xref:System.Threading.Thread.CurrentPrincipal%2A> propriété est définie.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> contrôle la façon dont la propriété <xref:System.Threading.Thread.CurrentPrincipal%2A> est définie.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Spécifie la façon dont l’audit d’événements d’autorisation est effectuée.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> spécifie comment l'audit d'événements d'autorisation est effectué.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Spécifie s’il faut supprimer les exceptions non critiques qui se produisent pendant le processus d’enregistrement.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> spécifie s'il faut supprimer les exceptions non critiques qui se produisent pendant le processus d'enregistrement.  
   
  Généralement, des objets d'extension personnalisés sont affectés à une propriété <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ou insérés dans une collection par un comportement de service (un objet qui implémente <xref:System.ServiceModel.Description.IServiceBehavior>), un comportement de contrat (un objet qui implémente <xref:System.ServiceModel.Description.IContractBehavior>) ou un comportement de point de terminaison (un objet qui implémente <xref:System.ServiceModel.Description.IEndpointBehavior>). Puis, l’objet de comportement installé est ajouté à la collection appropriée de comportements soit via le programme soit en implémentant un objet <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personnalisé pour que le comportement soit inséré à l’aide d’un fichier de configuration d’application.  
   
@@ -131,6 +131,6 @@ Les répartiteurs sont chargés d'extraire des messages entrants des canaux sous
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Procédure : inspecter et modifier des messages sur le service](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Procédure : inspecter ou modifier des paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Procédure : verrouiller des points de terminaison dans l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Guide pratique pour Inspecter et modifier des Messages sur le Service](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Guide pratique pour Inspecter ou modifier les paramètres](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Guide pratique pour Verrouiller des points de terminaison dans l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

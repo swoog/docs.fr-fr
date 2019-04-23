@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195057"
 ---
 # <a name="sending-and-receiving-faults"></a>Envoi et réception des erreurs
@@ -51,15 +51,15 @@ Les erreurs SOAP acheminent des informations de condition d'erreur d'un service 
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> les objets sont levés lorsqu’une opération dépasse le délai d’expiration spécifié.  
+ Les objets <xref:System.TimeoutException> sont levés lorsqu'une opération dépasse le délai d'attente spécifié.  
   
- <xref:System.ServiceModel.CommunicationException> les objets sont levés lorsqu’il existe une condition d’erreur de communication récupérable sur le service ou le client.  
+ Les objets <xref:System.ServiceModel.CommunicationException> sont levés lorsqu'il existe une condition d'erreur de communication récupérable sur le service ou le client.  
   
  La classe <xref:System.ServiceModel.CommunicationException> a deux types dérivés importants, <xref:System.ServiceModel.FaultException> et le type <xref:System.ServiceModel.FaultException%601> générique.  
   
- <xref:System.ServiceModel.FaultException> les exceptions sont levées lorsqu’un écouteur reçoit une erreur qui n’est pas attendue ou spécifiée dans le contrat d’opération ; Cela se produit généralement lorsque l’application est en cours de débogage et le service a le <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propriété définie sur `true`.  
+ Les exceptions <xref:System.ServiceModel.FaultException> sont levées lorsqu'un écouteur reçoit une erreur inattendue ou qui n'est spécifiée dans le contrat d'opération ; habituellement, cela se produit lorsque l'application est déboguée et que le service a la propriété <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> définie à `true`.  
   
- <xref:System.ServiceModel.FaultException%601> les exceptions sont levées sur le client lorsqu’une erreur qui est spécifiée dans le contrat d’opération est reçue en réponse à une opération bidirectionnelle (autrement dit, une méthode avec un <xref:System.ServiceModel.OperationContractAttribute> attribut avec <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> défini sur `false`).  
+ Les exceptions <xref:System.ServiceModel.FaultException%601> sont levées sur le client lorsqu'une erreur spécifiée dans le contrat d'opération est reçue en réponse à une opération bidirectionnelle (autrement dit, une méthode avec un attribut <xref:System.ServiceModel.OperationContractAttribute> ayant la valeur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> affectée à la propriété `false`).  
   
 > [!NOTE]
 >  Lorsqu’un service WCF a la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propriété définie sur `true` le client rencontre ceci comme une non déclaré <xref:System.ServiceModel.FaultException%601> de type <xref:System.ServiceModel.ExceptionDetail>. Les clients peuvent intercepter cette erreur spécifique ou gérer l'erreur dans un bloc catch pour <xref:System.ServiceModel.FaultException>.  
@@ -109,5 +109,5 @@ Les erreurs SOAP acheminent des informations de condition d'erreur d'un service 
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
-- [Expected Exceptions](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Utiliser la fermeture et l’abandon pour libérer des ressources de client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Exceptions attendues](../../../docs/framework/wcf/samples/expected-exceptions.md)
+- [Utilisez fermer et abandonner pour libérer des ressources de client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

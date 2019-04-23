@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
 ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194407"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Procédure : Obtenir ou définir des propriétés de positionnement du canevas
@@ -34,4 +34,4 @@ Cet exemple montre comment utiliser les méthodes de positionnement de la <xref:
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.ListBoxItem>
 - <xref:System.Windows.LengthConverter>
-- [Vue d'ensemble de Panel](panels-overview.md)
+- [Vue d’ensemble de Panel](panels-overview.md)

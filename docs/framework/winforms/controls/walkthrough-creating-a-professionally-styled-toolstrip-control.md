@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336549"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procédure pas à pas : création d’un contrôle ToolStrip de style professionnel
@@ -88,7 +88,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
     |ImageTransparentColor|`238, 238, 238`|  
     |Marge|`0, 0, 0, 0`|  
     |Padding|`3, 3, 3, 3`|  
-    |Texte|**Courrier**|  
+    |Texte|**Messagerie**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5. Répétez l’étape 7 pour les trois autres <xref:System.Windows.Forms.ToolStripButton> contrôles.  
@@ -189,5 +189,5 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
-- [Procédure : fournir des éléments de menu standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)
+- [Guide pratique pour Fournir des éléments de Menu Standard à un formulaire](how-to-provide-standard-menu-items-to-a-form.md)

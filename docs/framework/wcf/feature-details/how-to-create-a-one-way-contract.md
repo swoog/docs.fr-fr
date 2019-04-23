@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337004"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Procédure : créer un contrat unidirectionnel
@@ -36,6 +36,6 @@ Cette rubrique décrit les étapes de base pour créer des méthodes qui utilise
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Conception et implémentation de services](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Procédure : Définir un contrat de service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Guide pratique pour Définir un contrat de Service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Session](../../../../docs/framework/wcf/samples/session.md)
-- [Procédure : créer un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

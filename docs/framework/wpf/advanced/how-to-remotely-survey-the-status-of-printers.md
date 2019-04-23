@@ -12,10 +12,10 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340787"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Procédure : Observer à distance l’état d’imprimantes
@@ -85,6 +85,6 @@ Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plu
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [&, opérateur (référence C#)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d'ensemble de l'impression](printing-overview.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)

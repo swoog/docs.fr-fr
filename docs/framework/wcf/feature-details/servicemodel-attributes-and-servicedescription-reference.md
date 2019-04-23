@@ -3,10 +3,10 @@ title: Attributs ServiceModel et référence ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195343"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributs ServiceModel et référence ServiceDescription
@@ -31,7 +31,7 @@ Le *arborescence de description* est la hiérarchie des types (en commençant pa
   
 |Propriété ServiceContractAttribute|Valeur de l’arborescence de description affectée|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> ajouté à toutes les opérations <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> ajoutés à toutes les opérations <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie de niveau de protection, consultez [niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
@@ -42,18 +42,18 @@ Le *arborescence de description* est la hiérarchie des types (en commençant pa
   
 |Valeur OperationContractAttribute|Valeur de l’arborescence de description affectée|  
 |--------------------------------------|-------------------------------------|  
-|Action|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> pour le message de sortie ou d’un message d’entrée, en fonction de contrat/contrat de rappel.|  
+|Action|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> pour le message de sortie ou d'entrée, selon le contrat/contrat de rappel.|  
 |AsyncPattern|Si la valeur est true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> et <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|Correspond à un seul <xref:System.ServiceModel.Description.MessageDescription> dans <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|IsOneWay|Mappe à un <xref:System.ServiceModel.Description.MessageDescription> unique dans <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |Nom|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> et éventuellement des niveaux de protection enfants. Pour plus d’informations sur la hiérarchie de niveau de protection, consultez [niveau de Protection de présentation](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> pour le message de sortie ou d’un message d’entrée, en fonction de contrat/contrat de rappel.|  
+|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> pour le message de sortie ou d'entrée, selon le contrat/contrat de rappel.|  
   
 |Valeur FaultContractAttribute|Valeur de l’arborescence de description affectée|  
 |----------------------------------|-------------------------------------|  
-|Action|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> en fonction de contrat/contrat de rappel.|  
+|Action|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> selon le contrat/contrat de rappel.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |Nom|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Espace de noms|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -80,12 +80,12 @@ Le *arborescence de description* est la hiérarchie des types (en commençant pa
   
 |Valeur MessageHeaderAttribute|Valeur de l’arborescence de description affectée|  
 |----------------------------------|-------------------------------------|  
-|Acteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Nom|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Espace de noms|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> pour l'en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Acteur|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Nom|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Espace de noms|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> pour l’en-tête correspondant dans <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |Valeur MessageBodyMemberAttribute|Valeur de l’arborescence de description affectée|  
 |--------------------------------------|-------------------------------------|  
@@ -115,4 +115,4 @@ Le *arborescence de description* est la hiérarchie des types (en commençant pa
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence pour ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+- [Informations de référence sur ServiceDescription et WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

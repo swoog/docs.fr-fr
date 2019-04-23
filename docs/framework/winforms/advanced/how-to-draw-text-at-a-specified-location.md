@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336406"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Procédure : dessiner du texte à un emplacement spécifié
@@ -47,7 +47,7 @@ Lorsque vous effectuez un dessin personnalisé, vous pouvez dessiner du texte da
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
+- [Guide pratique pour Dessiner du texte avec GDI](how-to-draw-text-with-gdi.md)
 - [Utilisation de polices et de texte](using-fonts-and-text.md)
-- [Procédure : construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
-- [Procédure : dessiner un habillage de texte dans un rectangle](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [Guide pratique pour Construire des familles de polices et des polices](how-to-construct-font-families-and-fonts.md)
+- [Guide pratique pour Dessiner du texte encapsulé dans un Rectangle](how-to-draw-wrapped-text-in-a-rectangle.md)

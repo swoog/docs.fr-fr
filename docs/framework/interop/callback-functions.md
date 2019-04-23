@@ -8,10 +8,10 @@ ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196994"
 ---
 # <a name="callback-functions"></a>Fonctions de rappel
@@ -29,5 +29,5 @@ Une fonction de rappel désigne du code figurant dans une application managée q
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : implémenter des fonctions de rappel](../../../docs/framework/interop/how-to-implement-callback-functions.md)
+- [Guide pratique pour implémenter des fonctions de rappel](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)

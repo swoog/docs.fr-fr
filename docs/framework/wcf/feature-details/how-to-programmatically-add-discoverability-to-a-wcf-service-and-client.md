@@ -3,10 +3,10 @@ title: 'Procédure : ajouter par programmation la détectabilité à un service
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336588"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter par programmation la détectabilité à un service et un client WCF
@@ -58,7 +58,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
 1. Ajoutez à la solution une nouvelle application console nommée `DiscoveryClientApp`.  
   
-2. Ajoutez une référence à `System.ServiceModel.dll` et `System.ServiceModel.Discovery.dll`  
+2. Ajoutez une référence à `System.ServiceModel.dll` et à `System.ServiceModel.Discovery.dll`.  
   
 3. Copiez les fichiers GeneratedClient.cs et App.config du projet client existant dans le nouveau projet DiscoveryClientApp. Pour ce faire, cliquez sur les fichiers dans le **l’Explorateur de solutions**, sélectionnez **copie**, puis sélectionnez le **DiscoveryClientApp** de projet, avec le bouton droit et sélectionnez **Coller**.  
   
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Modèle objet de découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

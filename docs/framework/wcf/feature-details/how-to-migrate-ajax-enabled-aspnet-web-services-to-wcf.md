@@ -3,10 +3,10 @@ title: 'Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337420"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procédure : migrer des services web ASP.NET compatibles AJAX vers WCF
@@ -193,7 +193,7 @@ d.Add("two", 2);
 
  Ce dictionnaire est représenté dans des objets JSON comme indiqué dans la liste suivante :
 
--   [{« Clé » : « Un », « Value » : 1}, {« Key » : « Two », « Value » : 2}] par le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   [{"Key":"one","Value":1},{"Key":"two","Value":2}] par <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {« one » : 1, « two » : 2} par ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
@@ -208,10 +208,10 @@ d.Add("two", 2);
 |Sérialisation des membres privés de types [Sérialisable].|sérialisée|n'est pas sérialisé|
 |Sérialisation des propriétés publiques de types <xref:System.Runtime.Serialization.ISerializable>.|n'est pas sérialisé|sérialisée|
 |« Extensions » de JSON|Respecte la spécification JSON, qui exige des guillemets sur les noms de membres d'objet ({"a":"hello"}).|Prend en charge les noms de membres d'objet sans guillemets ({a:"hello"}).|
-|<xref:System.DateTime> Temps universel coordonné (UTC)|Ne prend pas en charge le format «\\/Date(123456789U)\\/ » ou «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\\\/)".|Format de prend en charge «\\/Date(123456789U)\\/ » et «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\ \\/) » en tant que valeurs de date/heure.|
+|<xref:System.DateTime> temps universel (UTC, Universal Time Coordinated)|Ne prend pas en charge le format «\\/Date(123456789U)\\/ » ou «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\\\/)".|Format de prend en charge «\\/Date(123456789U)\\/ » et «\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}])) ?\\) \\ \\/) » en tant que valeurs de date/heure.|
 |Représentation de dictionnaires|Un tableau de KeyValuePair\<K, V >, gère les types de clés qui ne sont pas des chaînes.|Comme objets JSON réels - mais gère uniquement des types de clé qui sont des chaînes.|
 |Caractères d'échappement|Toujours avec une barre oblique d'échappement (/) ; n'autorise jamais de caractères JSON non valides sans séquence d'échappement, tels que "\n".|Avec une barre oblique d'échappement (/) pour les valeurs DateTime.|
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Guide pratique pour Utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

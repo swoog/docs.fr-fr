@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194979"
 ---
 # <a name="images"></a>Images
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit la prise en charge intégrée pour plusieurs formats d’image, le rendu d’image haute fidélité et d’extensibilité de codec.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] assure la prise en charge intégrée de plusieurs formats d’image, du rendu d’image haute fidélité et de l’extensibilité des codecs.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de la création d'images](imaging-overview.md)  
- [Rubriques Comment](imaging-how-to-topics.md)  
+ [Vue d’ensemble de la création d’images](imaging-overview.md)  
+ [Rubriques de guide pratique](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Image>  
@@ -32,5 +32,5 @@ ms.locfileid: "59194979"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Graphiques et multimédia](index.md)
