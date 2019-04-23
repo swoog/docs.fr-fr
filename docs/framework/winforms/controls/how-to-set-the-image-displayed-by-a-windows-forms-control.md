@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333923"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771528"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Procédure : définir l’image affichée par un contrôle Windows Forms
 Plusieurs contrôles Windows Forms peuvent afficher des images. Ces images peuvent être des icônes qui clarifient l’objectif du contrôle, par exemple une icône de disquette sur un bouton qui dénote le **enregistrer** commande. Les icônes peuvent être également des images d’arrière-plan pour donner le contrôle l’apparence et le comportement de que votre choix.  
