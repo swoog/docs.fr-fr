@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178124"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Exécution d'opérations en lot à l'aide des DataAdapter
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Accès aux lignes mises à jour  
  Lorsque le traitement par lots est désactivé, la ligne mise à jour est accessible à l'aide de la propriété <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> de la classe <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Lorsque le traitement par lots est activé, un simple événement `RowUpdated` est généré pour plusieurs lignes. C'est pourquoi la valeur de la propriété `Row` pour chaque ligne est null. `RowUpdating` les événements sont encore générés pour chaque ligne. La méthode <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la classe <xref:System.Data.Common.RowUpdatedEventArgs> permet d'accéder aux lignes traitées en copiant les références aux lignes dans un tableau. Si aucune ligne n'est traitée, `CopyToRows` lève une exception <xref:System.ArgumentNullException>. Utilisez la propriété <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> pour retourner le nombre de lignes traitées avant d'appeler la méthode <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Lorsque le traitement par lots est activé, un simple événement `RowUpdated` est généré pour plusieurs lignes. C'est pourquoi la valeur de la propriété `Row` pour chaque ligne est null. Des événements `RowUpdating` sont encore générés pour chaque ligne. La méthode <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la classe <xref:System.Data.Common.RowUpdatedEventArgs> permet d'accéder aux lignes traitées en copiant les références aux lignes dans un tableau. Si aucune ligne n'est traitée, `CopyToRows` lève une exception <xref:System.ArgumentNullException>. Utilisez la propriété <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> pour retourner le nombre de lignes traitées avant d'appeler la méthode <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Gestion des erreurs de données  
  L'exécution par lots a le même effet que l'exécution des instructions individuelles. Les instructions sont exécutées dans l'ordre où elles ont été ajoutées au lot. Les erreurs sont gérées de la même manière, que le mode de traitement par lots soit activé ou non. Chaque ligne est traitée séparément. Seules les lignes traitées avec succès dans la base de données sont mises à jour dans l'objet <xref:System.Data.DataRow> correspondant à l'objet <xref:System.Data.DataTable>.  
@@ -144,6 +144,6 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ## <a name="see-also"></a>Voir aussi
 
 - [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Mise à jour des sources de données avec les DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Gestion des événements DataAdapter ](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,10 +10,10 @@ ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179060"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Utilisation de composants de service avec le Global Assembly Cache
@@ -27,5 +27,5 @@ Les composants pris en charge (composants COM+ de code managé) doivent être pl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation d'assemblys et du Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Utilisation d’assemblys et du Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gacutil.exe (outil Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

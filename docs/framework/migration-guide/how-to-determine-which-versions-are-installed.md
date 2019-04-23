@@ -12,10 +12,10 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176304"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procédure : déterminer les versions du .NET Framework installées
@@ -40,12 +40,12 @@ Le .NET Framework comporte deux principaux composants, dont les versions sont d�
 Pour obtenir la liste des versions du .NET Framework installées sur un ordinateur, accédez au Registre. Vous pouvez utiliser l’Éditeur du Registre pour voir le Registre ou utiliser du code pour l’interroger :
  
 - Identifiez les versions les plus récentes du .NET Framework (4.5 et versions ultérieures) : 
-     - [Utiliser l’Éditeur du Registre pour identifier les versions de .NET Framework](#net_b)  
-     - [Utiliser du code pour interroger le Registre sur les versions de .NET Framework](#net_d)  
-     - [Utiliser PowerShell pour interroger le Registre sur les versions de .NET Framework](#ps_a)
+     - [Utiliser l’Éditeur du Registre pour déterminer les versions du .NET Framework](#net_b)  
+     - [Utiliser du code pour interroger le Registre sur les versions du .NET Framework](#net_d)  
+     - [Utiliser PowerShell pour interroger le Registre sur les versions du .NET Framework](#ps_a)
 - Identifiez des versions antérieures du .NET Framework (1&#8211;4) :
-     - [Utiliser l’Éditeur du Registre pour identifier les versions de .NET Framework](#net_a)
-     - [Utiliser du code pour interroger le Registre sur les versions de .NET Framework](#net_c)   
+     - [Utiliser l’Éditeur du Registre pour déterminer les versions du .NET Framework](#net_a)
+     - [Utiliser du code pour interroger le Registre sur les versions du .NET Framework](#net_c)   
 
 Pour obtenir la liste des versions du CLR installées sur un ordinateur, utilisez un outil ou du code :  
   
@@ -213,6 +213,6 @@ L’exemple suivant utilise la propriété <xref:System.Environment.Version%2A?d
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Identifier les mises à jour de .NET Framework installées](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Guide pratique pour déterminer les mises à jour .NET Framework installées](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Installer le .NET Framework pour les développeurs](../install/guide-for-developers.md)
-- [Versions et dépendances de .NET Framework](versions-and-dependencies.md)
+- [Versions et dépendances du .NET Framework](versions-and-dependencies.md)

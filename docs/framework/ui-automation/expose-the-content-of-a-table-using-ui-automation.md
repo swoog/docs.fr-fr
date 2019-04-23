@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 ms.openlocfilehash: a9867a07207f825f3f4a781f1c05607fc6b071b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174705"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Exposer le contenu d'un tableau à l'aide d'UI Automation
@@ -43,7 +43,7 @@ ms.locfileid: "59174705"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Implémentation du modèle de contrôle Table d’UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)
 - [Implémentation du modèle de contrôle TableItem d’UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)

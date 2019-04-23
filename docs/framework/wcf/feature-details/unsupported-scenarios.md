@@ -3,10 +3,10 @@ title: Scénarios non pris en charge
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178774"
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
@@ -75,7 +75,7 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
  WCF ne prend pas en charge la combinaison suivante de paramètres, car ils peuvent également empêcher l’authentification du client ne se produise :  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] L’emprunt d’identité est activée. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
+-   L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
   
@@ -111,8 +111,8 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ## <a name="see-also"></a>Voir aussi
 
 - [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Attaques par relecture](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

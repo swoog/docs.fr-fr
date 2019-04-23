@@ -25,10 +25,10 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175789"
 ---
 # <a name="object-lifetime-events"></a>Événements de la durée de vie d'un objet
@@ -40,7 +40,7 @@ Cette rubrique décrit les événements [!INCLUDE[TLA2#tla_winclient](../../../.
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>Événements de la durée de vie d'un objet  
- Tous les objets dans le code managé Microsoft .NET Framework passent par un ensemble similaire d’étapes de la vie, la création, l’utilisation et la destruction. De nombreux objets passent aussi par une étape de fin de vie qui se produit pendant la phase de destruction. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objets, plus précisément les objets visuels qui [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] identifie en tant qu’éléments, ont également un ensemble d’étapes communes de vie d’objet. Les modèles de programmation et d’application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exposent ces étapes comme une série d’événements. Il existe quatre types d’objet principaux dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en ce qui concerne les événements de durée de vie : éléments en général, éléments de fenêtre, hôtes de navigation et objets d’application. Les fenêtres et les hôtes de navigation appartiennent aussi au groupe d’objets visuels (éléments) le plus grand. Cette rubrique décrit les événements de durée de vie communs à tous les éléments et présente les événements plus spécifiques qui s’appliquent aux définitions d’application, fenêtres ou hôtes de navigation.  
+ Tous les objets dans le code managé Microsoft .NET Framework passent par un ensemble similaire d’étapes de la vie, la création, l’utilisation et la destruction. De nombreux objets passent aussi par une étape de fin de vie qui se produit pendant la phase de destruction. Les objets [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], plus précisément les objets visuels que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] identifie comme des éléments, ont aussi un ensemble d’étapes communes de vie d’objet. Les modèles de programmation et d’application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exposent ces étapes comme une série d’événements. Il existe quatre types d’objet principaux dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en ce qui concerne les événements de durée de vie : éléments en général, éléments de fenêtre, hôtes de navigation et objets d’application. Les fenêtres et les hôtes de navigation appartiennent aussi au groupe d’objets visuels (éléments) le plus grand. Cette rubrique décrit les événements de durée de vie communs à tous les éléments et présente les événements plus spécifiques qui s’appliquent aux définitions d’application, fenêtres ou hôtes de navigation.  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>Événements de durée de vie communs des éléments  
@@ -75,4 +75,4 @@ Cette rubrique décrit les événements [!INCLUDE[TLA2#tla_winclient](../../../.
 ## <a name="see-also"></a>Voir aussi
 
 - [Priorité de la valeur de propriété de dépendance](dependency-property-value-precedence.md)
-- [Vue d'ensemble des événements routés](routed-events-overview.md)
+- [Vue d’ensemble des événements routés](routed-events-overview.md)

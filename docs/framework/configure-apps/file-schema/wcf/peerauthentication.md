@@ -3,10 +3,10 @@ title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
 ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180594"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
@@ -62,6 +62,6 @@ Spécifie des paramètres d'authentification pour un certificat d'homologue util
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Authentification de Message de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Authentification personnalisée de canal homologue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

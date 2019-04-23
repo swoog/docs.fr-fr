@@ -11,10 +11,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174055"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interaction de la stratégie de cache : ancienneté maximale et actualisation minimale
@@ -32,7 +32,7 @@ Pour vous assurer que le contenu le plus récent est renvoyé à l’application
 
 - [Gestion du cache pour les applications réseau](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Stratégie de cache](../../../docs/framework/network-programming/cache-policy.md)
-- [stratégies de cache basées sur l’emplacement](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [stratégies de cache basées sur la durée](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Stratégies de cache basées sur l’emplacement](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Stratégies de cache basées sur la durée](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Configuration de la mise en cache dans les applications réseau](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
 - [Interaction de la stratégie de cache : ancienneté maximale et péremption maximale](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)

@@ -3,10 +3,10 @@ title: Mise en cache d'un plan de requête (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178176"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Mise en cache d'un plan de requête (Entity SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "59178176"
   
 -   Le texte de requête doit être un modèle constant, de préférence une chaîne ou une ressource constante.  
   
--   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisée partout où une valeur fournie par l’utilisateur doit être passée.  
+-   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisé partout où une valeur fournie par l'utilisateur doit être transmise.  
   
  Vous devez éviter les modèles de requête suivants, qui consomment inutilement des emplacements dans le cache du plan de requête :  
   
@@ -50,4 +50,4 @@ ms.locfileid: "59178176"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble d'Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

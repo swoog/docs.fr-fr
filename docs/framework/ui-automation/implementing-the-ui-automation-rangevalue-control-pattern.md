@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175787"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implémentation du modèle de contrôle RangeValue d’UI Automation
@@ -53,12 +53,12 @@ Exemple d’une barre de progression où la valeur est de type entier, et où le
   
 |Type d'exception|Condition|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> est appelé avec une valeur qui est soit supérieure à <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> ou inférieur à <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> est appelé avec une valeur supérieure à <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> , ou inférieure à <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

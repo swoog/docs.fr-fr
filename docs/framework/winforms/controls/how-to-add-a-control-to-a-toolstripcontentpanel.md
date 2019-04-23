@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177877"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Procédure : ajouter un contrôle à un ToolStripContentPanel
@@ -35,4 +35,4 @@ Vous pouvez ajouter un ou plusieurs contrôles à un <xref:System.Windows.Forms.
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer, contrôle](toolstripcontainer-control.md)
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)

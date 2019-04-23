@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178033"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Exemples de syntaxe d’expression de requête : Projection
-Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. `From … From …` équivaut à la requête en fonction du `SelectMany` (méthode). Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
+Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. `From … From …` est l'équivalent basé sur une requête de la méthode `SelectMany`. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
   

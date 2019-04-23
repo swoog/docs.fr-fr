@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
 ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180013"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hébergement dans les services IIS (Internet Information Services)
@@ -19,7 +19,7 @@ Une option pour l’hébergement des services Windows Communication Foundation (
   
 -   IIS 5.1 sur [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. Cet environnement est utile pour la conception et développement d'applications hébergées par IIS et déployées ultérieurement sur un système d'exploitation de serveur tel que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
--   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] fournit un modèle de processus avancé qui améliore l’évolutivité, fiabilité et d’isolation des applications. Cet environnement convient pour le déploiement de production de services WCF qui utilisent la communication HTTP exclusivement.  
+-   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] fournit un modèle de processus avancé qui offre une évolutivité, une fiabilité et une isolation d'application améliorées. Cet environnement convient pour le déploiement de production de services WCF qui utilisent la communication HTTP exclusivement.  
   
 -   IIS 7.0 sur [!INCLUDE[wv](../../../../includes/wv-md.md)] et [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. ISS 7.0 fournit le même modèle de processus avancé que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], mais il utilise le service d'activation de processus de Windows (WAS) pour autoriser l'activation et la communication réseau sur des protocoles autres que HTTP. Cet environnement est adapté au développement de services WCF qui communiquent via des protocoles réseau pris en charge par WCF (y compris HTTP, net.tcp, net.pipe et net.msmq). Pour plus d’informations sur WAS, consultez [hébergement dans Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
@@ -58,9 +58,9 @@ Une option pour l’hébergement des services Windows Communication Foundation (
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Extension de l'hébergement à l'aide de ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [Déploiement d'un service WCF hébergé dans Internet Information Services](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
+- [Extension de l’hébergement à l’aide de ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
+- [Déploiement d’un service WCF hébergé dans Internet Information Services](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Meilleures pratiques pour l'hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Configuration des services Internet (IIS) 7.0 pour Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Configuration des services Internet Information Services 7.0 pour Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
 - [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

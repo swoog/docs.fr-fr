@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174614"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages
@@ -71,6 +71,6 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des files d'attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Procédure : échanger des messages mis en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

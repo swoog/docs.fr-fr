@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178501"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle List
@@ -54,7 +54,7 @@ Un contrôle list ne doit pas contenir d’éléments ayant une relation hiérar
 ## <a name="required-ui-automation-properties"></a>Propriétés UI Automation requises  
  Le tableau suivant répertorie les propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dont la valeur ou la définition est particulièrement pertinente pour les contrôles de liste. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriétés, consultez [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriété|Value|Notes|  
+|Propriété[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Value|Notes|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consultez les notes.|La valeur de cette propriété doit être unique dans tous les contrôles d’une application.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consultez les notes.|Rectangle externe qui contient l’ensemble du contrôle.|  
@@ -81,31 +81,31 @@ Un contrôle list ne doit pas contenir d’éléments ayant une relation hiérar
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Selon le cas|Implémentez ce modèle de contrôle si les éléments du conteneur peuvent faire l’objet d’un défilement.|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|Selon le cas|Implémentez ce modèle quand la navigation dans la grille doit être disponible sur un élément, par élément.|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Selon le cas|Implémentez ce modèle de contrôle si le contrôle peut prendre en charge plusieurs affichages des éléments du conteneur.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` n’est jamais pris en charge pour le type de contrôle de liste. Si le contrôle doit prendre en charge ce modèle de contrôle, le contrôle doit être basé sur le type de contrôle Data Grid.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` n’est jamais pris en charge pour le type de contrôle List. Si le contrôle doit prendre en charge ce modèle de contrôle, le contrôle doit être basé sur le type de contrôle Data Grid.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Événements UI Automation obligatoires  
  Le tableau suivant répertorie les événements [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] qui doivent être pris en charge par tous les contrôles list. Pour plus d’informations sur les événements, consultez [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Événement|Prise en charge/Valeur|Notes|  
+|Événement[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Prise en charge/valeur|Notes|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Selon le cas|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> événement de modification de propriété.|Obligatoire|Aucun.|  
-|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> événement de modification de propriété.|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> |Selon le cas|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Selon le cas|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Automation.ControlType.List>
-- [Vue d'ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Vue d'ensemble d'UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Vue d’ensemble des types de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Vue d’ensemble d’UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

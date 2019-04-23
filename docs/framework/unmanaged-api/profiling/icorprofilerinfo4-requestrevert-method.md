@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92137e1a5b0923bc34745513715934c483616700
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179840"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert, méthode
@@ -58,7 +58,7 @@ HRESULT RequestRevert (
 |S_OK|Une tentative de rétablissement de toutes les demandes a été effectuée ; toutefois, le tableau d'états retourné doit être examiné pour déterminer les fonctions qui ont été correctement rétablies.|  
 |CORPROF_E_CALLBACK4_REQUIRED|Le profileur doit implémenter le [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface pour cet appel être pris en charge.|  
 |CORPROF_E_REJIT_NOT_ENABLED|La recompilation juste-à-temps n'a pas été activée. Vous devez activer la recompilation JIT pendant l’initialisation à l’aide de la [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) méthode pour définir le `COR_PRF_ENABLE_REJIT` indicateur.|  
-|E_INVALIDARG|`cFunctions` est égal à 0, ou `moduleIds` ou `methodIds` est `NULL`.|  
+|E_INVALIDARG|`cFunctions` est égal à 0, ou `moduleIds` ou `methodIds` a la valeur `NULL`.|  
 |E_OUTOFMEMORY|Le CLR n'a pas pu terminer la demande en raison d'une mémoire insuffisante.|  
   
 ## <a name="status-hresults"></a>HRESULT d'état  
@@ -82,7 +82,7 @@ HRESULT RequestRevert (
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

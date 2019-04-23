@@ -8,10 +8,10 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179788"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Procédure : Créer un GeometryDrawing
@@ -32,6 +32,6 @@ Cet exemple montre comment créer et afficher un <xref:System.Windows.Media.Geom
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.DrawingGroup>
-- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
-- [Vue d'ensemble de Geometry](geometry-overview.md)
+- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
+- [Vue d’ensemble de Geometry](geometry-overview.md)
 - [Créer un dessin composite](how-to-create-a-composite-drawing.md)

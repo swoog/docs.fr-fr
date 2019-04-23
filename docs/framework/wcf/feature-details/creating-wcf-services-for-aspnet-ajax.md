@@ -3,10 +3,10 @@ title: Création de services WCF pour ASP.NET AJAX
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
 ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174146"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Création de services WCF pour ASP.NET AJAX
@@ -59,7 +59,7 @@ Microsoft ASP.NET AJAX permet de créer rapidement des pages Web d'une grande in
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Modèle de programmation HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Procédure : ajouter un point de terminaison AJAX ASP.NET sans utiliser de configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [Procédure : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Procédure : choisir entre les requêtes HTTP POST et HTTP GET pour les points de terminaison AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [Modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Guide pratique pour Ajouter un point de terminaison AJAX ASP.NET sans utiliser de Configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [Guide pratique pour Utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Guide pratique pour Choisir entre la requête HTTP POST et HTTP GET des demandes pour les points de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

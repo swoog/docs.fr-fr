@@ -10,10 +10,10 @@ helpviewer_keywords:
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
 ms.openlocfilehash: 64b5b66f7f32ea31b51b4da990ceede4078c27cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177721"
 ---
 # <a name="statusbar-styles-and-templates"></a>Styles et modèles StatusBar
@@ -60,5 +60,5 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Styles et modèles Control](control-styles-and-templates.md)
 - [Personnalisation des contrôles](control-customization.md)
-- [Application d'un style et création de modèles](styling-and-templating.md)
-- [Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)
+- [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

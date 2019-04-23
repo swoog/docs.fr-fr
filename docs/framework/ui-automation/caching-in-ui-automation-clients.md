@@ -6,10 +6,10 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175823"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Mise en cache dans les clients UI Automation
@@ -70,7 +70,7 @@ ms.locfileid: "59175823"
   
  Une exception est levée si la propriété demandée ne figure pas dans le cache.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, tels que <xref:System.Windows.Automation.AutomationElement.Current%2A>, expose des propriétés individuelles en tant que membres d’une structure. Toutefois, vous n’avez pas besoin de récupérer cette structure. Vous pouvez accéder directement aux propriétés individuelles. Par exemple, la propriété <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> peut être obtenue à partir de `element.Cached.Name`, où `element` est un <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, comme <xref:System.Windows.Automation.AutomationElement.Current%2A>, expose des propriétés individuelles en tant que membres d’une structure. Toutefois, vous n’avez pas besoin de récupérer cette structure. Vous pouvez accéder directement aux propriétés individuelles. Par exemple, la propriété <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> peut être obtenue à partir de `element.Cached.Name`, où `element` est un <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Récupération des modèles de contrôle mis en cache  

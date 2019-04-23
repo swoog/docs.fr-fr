@@ -1,5 +1,5 @@
 ---
-title: <bypassTrustedAppStrongNames> Élément
+title: Élément <bypassTrustedAppStrongNames>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -10,10 +10,10 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179138"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Element
@@ -85,6 +85,6 @@ Spécifie s’il faut ignorer la validation des noms forts sur les assemblys de 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Procédure : désactiver la fonctionnalité consistant à ignorer les noms forts](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [Guide pratique pour désactiver la fonctionnalité consistant à ignorer les noms forts](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

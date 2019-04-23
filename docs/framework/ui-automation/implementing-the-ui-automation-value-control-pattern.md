@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174952"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implémentation du modèle de contrôle Value d’UI Automation
@@ -34,9 +34,9 @@ Exemple d’élément de liste modifiable
   
 -   Pour récupérer le contenu textuel d’un contrôle d’édition multiligne, le contrôle doit implémenter <xref:System.Windows.Automation.Provider.ITextProvider>. Toutefois, <xref:System.Windows.Automation.Provider.ITextProvider> ne prend pas en charge la définition de la valeur d’un contrôle.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> ne prend pas en charge la récupération de la mise en forme des informations ou des valeurs d’une sous-chaîne. Implémentez <xref:System.Windows.Automation.Provider.ITextProvider> dans ces scénarios.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> ne prend pas en charge la récupération des informations de mise en forme ou des valeurs d’une sous-chaîne. Implémentez <xref:System.Windows.Automation.Provider.ITextProvider> dans ces scénarios.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> doit être implémenté par les contrôles tels que le **sélecteur de couleurs** contrôle de sélection de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustré ci-dessous), qui prend en charge le mappage de chaînes entre une valeur de couleur (par exemple, « jaune ») et un interneéquivalent[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]structure.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> doit être implémenté par des contrôles tels que le contrôle de sélection **Sélecteur de couleurs** de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustré ci-dessous), qui prend en charge le mappage de chaînes entre une valeur de couleur (par exemple, « jaune ») et une structure [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] équivalente interne.  
   
  ![Sélecteur de couleurs avec jaune en surbrillance. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemple de mappage d’une chaîne d’échantillons de couleurs  
@@ -65,9 +65,9 @@ Exemple de mappage d’une chaîne d’échantillons de couleurs
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Exemple de texte ValuePattern Insert](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

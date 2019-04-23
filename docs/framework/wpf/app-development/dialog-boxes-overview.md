@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177409"
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
@@ -45,7 +45,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Pour afficher une boîte de message, vous appelez le `static`<xref:System.Windows.MessageBox.Show%2A> (méthode), comme illustré dans le code suivant.  
+ Pour afficher une boîte de message, vous appelez le `static` <xref:System.Windows.MessageBox.Show%2A> (méthode), comme illustré dans le code suivant.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Boîtes de dialogue communes  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implémente diverses boîtes de dialogue réutilisables qui sont communes à toutes les applications, notamment les boîtes de dialogue pour ouvrir, enregistrer des fichiers et l’impression. Ces boîtes de dialogue étant implémentées par le système d’exploitation, elles peuvent être partagées par toutes les applications qui s’exécutent sur le système d’exploitation, ce qui favorise la cohérence de l’expérience utilisateur. Quand les utilisateurs sont habitués à utiliser une boîte de dialogue fournie par le système d’exploitation dans une application, ils n’ont pas besoin d’apprendre à utiliser cette boîte de dialogue dans d’autres applications. Étant donné que ces boîtes de dialogue sont disponibles pour toutes les applications et, car elles permettent de fournir une expérience utilisateur cohérente, elles sont appelées *boîtes de dialogue communes*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implémente diverses boîtes de dialogue réutilisables qui sont communes à toutes les applications, notamment des boîtes de dialogue pour ouvrir, enregistrer et imprimer des fichiers. Ces boîtes de dialogue étant implémentées par le système d’exploitation, elles peuvent être partagées par toutes les applications qui s’exécutent sur le système d’exploitation, ce qui favorise la cohérence de l’expérience utilisateur. Quand les utilisateurs sont habitués à utiliser une boîte de dialogue fournie par le système d’exploitation dans une application, ils n’ont pas besoin d’apprendre à utiliser cette boîte de dialogue dans d’autres applications. Étant donné que ces boîtes de dialogue sont disponibles pour toutes les applications et, car elles permettent de fournir une expérience utilisateur cohérente, elles sont appelées *boîtes de dialogue communes*.  
   
  Windows Presentation Foundation (WPF) encapsule le fichier ouvert, enregistrez le fichier et imprimer des boîtes de dialogue communes et les expose comme des classes managées que vous pouvez utiliser dans des applications autonomes. Cette rubrique fournit une brève présentation de chacune de ces boîtes de dialogue.  
   
@@ -208,7 +208,7 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
   
  ![Une boîte de dialogue marges avec une bordure rouge autour de la valeur de la marge gauche non valide.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ne limite pas un utilisateur du contrôle non valide jusqu'à ce qu’ils ont entré des données valides. Il s’agit d’un bon comportement pour une boîte de dialogue. En effet, un utilisateur doit pouvoir naviguer librement entre les contrôles d’une boîte de dialogue, que les données soient valides ou non. Toutefois, cela signifie qu’un utilisateur peut entrer des données non valides, puis appuyez sur la **OK** bouton. Pour cette raison, votre code doit également valider tous les contrôles dans une boîte de dialogue boîte lorsque le **OK** bouton est enfoncé en gérant la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] n’empêche pas l’utilisateur de sortir du contrôle non valide s’il n’a pas entré des données valides. Il s’agit d’un bon comportement pour une boîte de dialogue. En effet, un utilisateur doit pouvoir naviguer librement entre les contrôles d’une boîte de dialogue, que les données soient valides ou non. Toutefois, cela signifie qu’un utilisateur peut entrer des données non valides, puis appuyez sur la **OK** bouton. Pour cette raison, votre code doit également valider tous les contrôles dans une boîte de dialogue boîte lorsque le **OK** bouton est enfoncé en gérant la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -344,6 +344,6 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de Popup](../controls/popup-overview.md)
+- [Vue d’ensemble de Popup](../controls/popup-overview.md)
 - [Exemple de boîte de dialogue](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [Exemple de contrôle personnalisé ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

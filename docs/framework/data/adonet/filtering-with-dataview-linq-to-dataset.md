@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176928"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrage avec DataView (LINQ to DataSet)
-La possibilité de filtrer des données en utilisant des critères spécifiques, puis de les présenter à un client à travers un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de filtrer les données et retourner des sous-ensembles de lignes de données correspondant à des critères spécifiques de filtre. En plus de basé sur la chaîne des fonctionnalités de filtrage <xref:System.Data.DataView> offre également la possibilité d’utiliser [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressions pour les critères de filtrage. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de filtrage bien plus complexes et puissantes que le filtrage basé sur chaîne.  
+La possibilité de filtrer des données en utilisant des critères spécifiques, puis de les présenter à un client à travers un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de filtrer les données et de retourner des sous-ensembles de lignes de données correspondant à des critères de filtre spécifiques. En plus de basé sur la chaîne des fonctionnalités de filtrage <xref:System.Data.DataView> offre également la possibilité d’utiliser [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressions pour les critères de filtrage. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de filtrage bien plus complexes et puissantes que le filtrage basé sur chaîne.  
   
  Il existe deux façons de filtrer des données à l'aide d'un <xref:System.Data.DataView> :  
   

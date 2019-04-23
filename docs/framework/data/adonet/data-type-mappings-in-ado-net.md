@@ -3,10 +3,10 @@ title: Mappages de types de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178696"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mappages de types de données dans ADO.NET
@@ -29,7 +29,7 @@ Le .NET Framework est basé sur le système de type commun, qui définit la mani
  [Mappages de types de données ODBC](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
  Répertorie les mappages de types de données déduits et les méthodes d'accesseur de données pour <xref:System.Data.Odbc>.  
   
- [Mappages des types de données Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
+ [Mappages de types de données Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
  Répertorie les mappages de types de données déduits et les méthodes d'accesseur de données pour <xref:System.Data.OracleClient>.  
   
  [Nombres à virgule flottante](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
@@ -39,7 +39,7 @@ Le .NET Framework est basé sur le système de type commun, qui définit la mani
 
 - [Types de données SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Configuration des paramètres et des types de données des paramètres](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Extraction des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Système de type commun](../../../../docs/standard/base-types/common-type-system.md)
 - [Conversion de Types](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
