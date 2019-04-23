@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83b029c24321946f777966daa7a486f9e8e7b7a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073146"
 ---
-# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="99b6a-102">ICLRRuntimeHost::GetCLRControl, méthode</span><span class="sxs-lookup"><span data-stu-id="99b6a-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
-<span data-ttu-id="99b6a-103">Obtient un pointeur d’interface de type [ICLRControl, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) que les hôtes peuvent utiliser pour personnaliser les aspects du common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="99b6a-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
+# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="50abe-102">ICLRRuntimeHost::GetCLRControl, méthode</span><span class="sxs-lookup"><span data-stu-id="50abe-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
+<span data-ttu-id="50abe-103">Obtient un pointeur d’interface de type [ICLRControl, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) que les hôtes peuvent utiliser pour personnaliser les aspects du common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="50abe-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99b6a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="99b6a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50abe-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="50abe-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCLRControl(  
@@ -35,35 +35,35 @@ HRESULT GetCLRControl(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99b6a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="99b6a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50abe-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="50abe-105">Parameters</span></span>  
  `pCLRControl`  
- <span data-ttu-id="99b6a-106">[out] Un pointeur d’interface de type [ICLRControl, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) qui permet aux hôtes de configurer des aspects supplémentaires du CLR.</span><span class="sxs-lookup"><span data-stu-id="99b6a-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
+ <span data-ttu-id="50abe-106">[out] Un pointeur d’interface de type [ICLRControl, Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) qui permet aux hôtes de configurer des aspects supplémentaires du CLR.</span><span class="sxs-lookup"><span data-stu-id="50abe-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="99b6a-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="99b6a-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="50abe-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="50abe-107">Return Value</span></span>  
   
-|<span data-ttu-id="99b6a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="99b6a-108">HRESULT</span></span>|<span data-ttu-id="99b6a-109">Description</span><span class="sxs-lookup"><span data-stu-id="99b6a-109">Description</span></span>|  
+|<span data-ttu-id="50abe-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="50abe-108">HRESULT</span></span>|<span data-ttu-id="50abe-109">Description</span><span class="sxs-lookup"><span data-stu-id="50abe-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="99b6a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="99b6a-110">S_OK</span></span>|`GetCLRControl` <span data-ttu-id="99b6a-111">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="99b6a-111">returned successfully.</span></span>|  
-|<span data-ttu-id="99b6a-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="99b6a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="99b6a-113">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="99b6a-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="99b6a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="99b6a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="99b6a-115">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="99b6a-115">The call timed out.</span></span>|  
-|<span data-ttu-id="99b6a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="99b6a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="99b6a-117">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="99b6a-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="99b6a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="99b6a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="99b6a-119">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="99b6a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="99b6a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="99b6a-120">E_FAIL</span></span>|<span data-ttu-id="99b6a-121">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="99b6a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="99b6a-122">Si une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="99b6a-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="99b6a-123">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="99b6a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="99b6a-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="99b6a-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="99b6a-125">Le CLR a déjà démarré.</span><span class="sxs-lookup"><span data-stu-id="99b6a-125">The CLR has already started.</span></span>|  
+|<span data-ttu-id="50abe-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="50abe-110">S_OK</span></span>|<span data-ttu-id="50abe-111">`GetCLRControl` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="50abe-111">`GetCLRControl` returned successfully.</span></span>|  
+|<span data-ttu-id="50abe-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="50abe-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="50abe-113">Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="50abe-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="50abe-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="50abe-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="50abe-115">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="50abe-115">The call timed out.</span></span>|  
+|<span data-ttu-id="50abe-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="50abe-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="50abe-117">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="50abe-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="50abe-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="50abe-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="50abe-119">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="50abe-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="50abe-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="50abe-120">E_FAIL</span></span>|<span data-ttu-id="50abe-121">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="50abe-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="50abe-122">Si une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="50abe-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="50abe-123">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="50abe-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="50abe-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="50abe-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="50abe-125">Le CLR a déjà démarré.</span><span class="sxs-lookup"><span data-stu-id="50abe-125">The CLR has already started.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99b6a-126">Notes</span><span class="sxs-lookup"><span data-stu-id="99b6a-126">Remarks</span></span>  
- `ICLRControl` <span data-ttu-id="99b6a-127">fournit le [GetCLRManager, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) (méthode), ce qui permet à l’hôte obtenir un pointeur d’interface à un des types de gestionnaire.</span><span class="sxs-lookup"><span data-stu-id="99b6a-127">provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50abe-126">Notes</span><span class="sxs-lookup"><span data-stu-id="50abe-126">Remarks</span></span>  
+ <span data-ttu-id="50abe-127">`ICLRControl` fournit le [GetCLRManager, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) (méthode), ce qui permet à l’hôte obtenir un pointeur d’interface à un des types de gestionnaire.</span><span class="sxs-lookup"><span data-stu-id="50abe-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99b6a-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="99b6a-128">Requirements</span></span>  
- <span data-ttu-id="99b6a-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99b6a-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50abe-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="50abe-128">Requirements</span></span>  
+ <span data-ttu-id="50abe-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50abe-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99b6a-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="99b6a-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="50abe-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="50abe-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="99b6a-131">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="99b6a-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="50abe-131">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="50abe-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="99b6a-132">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="99b6a-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="50abe-132">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50abe-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99b6a-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="99b6a-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50abe-133">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="50abe-133">See also</span></span>
 
-- [<span data-ttu-id="99b6a-134">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="99b6a-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="99b6a-135">ICLRRuntimeHost, interface</span><span class="sxs-lookup"><span data-stu-id="99b6a-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="50abe-134">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="50abe-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="50abe-135">ICLRRuntimeHost, interface</span><span class="sxs-lookup"><span data-stu-id="50abe-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

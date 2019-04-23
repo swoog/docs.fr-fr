@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6e851c1bd56c0e9ece02fb06c0dcd9975a5b02ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079433"
 ---
-# <a name="linkresource-method"></a><span data-ttu-id="e85ad-102">LinkResource, méthode</span><span class="sxs-lookup"><span data-stu-id="e85ad-102">LinkResource Method</span></span>
-<span data-ttu-id="e85ad-103">Liens dans une ressource.</span><span class="sxs-lookup"><span data-stu-id="e85ad-103">Links in a resource.</span></span>  
+# <a name="linkresource-method"></a><span data-ttu-id="ba481-102">LinkResource, méthode</span><span class="sxs-lookup"><span data-stu-id="ba481-102">LinkResource Method</span></span>
+<span data-ttu-id="ba481-103">Liens dans une ressource.</span><span class="sxs-lookup"><span data-stu-id="ba481-103">Links in a resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e85ad-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e85ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba481-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ba481-104">Syntax</span></span>  
   
 ```  
 HRESULT LinkResource(  
@@ -38,30 +38,30 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e85ad-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e85ad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba481-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ba481-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="e85ad-106">ID de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="e85ad-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="ba481-106">ID de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="ba481-106">ID of the assembly.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="e85ad-107">Nom du fichier.</span><span class="sxs-lookup"><span data-stu-id="e85ad-107">Name of the file.</span></span>  
+ <span data-ttu-id="ba481-107">Nom du fichier.</span><span class="sxs-lookup"><span data-stu-id="ba481-107">Name of the file.</span></span>  
   
  `pszNewLocation`  
- <span data-ttu-id="e85ad-108">Nouveau nom de fichier facultatif.</span><span class="sxs-lookup"><span data-stu-id="e85ad-108">Optional new file name.</span></span> <span data-ttu-id="e85ad-109">Si non NULL, `pszFileName` sera copié vers pszNewLocation.</span><span class="sxs-lookup"><span data-stu-id="e85ad-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
+ <span data-ttu-id="ba481-108">Nouveau nom de fichier facultatif.</span><span class="sxs-lookup"><span data-stu-id="ba481-108">Optional new file name.</span></span> <span data-ttu-id="ba481-109">Si non NULL, `pszFileName` sera copié vers pszNewLocation.</span><span class="sxs-lookup"><span data-stu-id="ba481-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="e85ad-110">Nom de la ressource.</span><span class="sxs-lookup"><span data-stu-id="e85ad-110">Name of the resource.</span></span>  
+ <span data-ttu-id="ba481-110">Nom de la ressource.</span><span class="sxs-lookup"><span data-stu-id="ba481-110">Name of the resource.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="e85ad-111">Accessibilité indicateurs tels que `mrPublic` et `mrPrivate`.</span><span class="sxs-lookup"><span data-stu-id="e85ad-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="e85ad-112">Ce paramètre peut être passé à [DefineManifestResource, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span><span class="sxs-lookup"><span data-stu-id="e85ad-112">This parameter may be passed to [DefineManifestResource Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
+ <span data-ttu-id="ba481-111">Accessibilité indicateurs tels que `mrPublic` et `mrPrivate`.</span><span class="sxs-lookup"><span data-stu-id="ba481-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="ba481-112">Ce paramètre peut être passé à [DefineManifestResource, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span><span class="sxs-lookup"><span data-stu-id="ba481-112">This parameter may be passed to [DefineManifestResource Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e85ad-113">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="e85ad-113">Return Value</span></span>  
- <span data-ttu-id="e85ad-114">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="e85ad-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ba481-113">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ba481-113">Return Value</span></span>  
+ <span data-ttu-id="ba481-114">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="ba481-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e85ad-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e85ad-115">Requirements</span></span>  
- <span data-ttu-id="e85ad-116">Nécessite alink.h.</span><span class="sxs-lookup"><span data-stu-id="e85ad-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba481-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ba481-115">Requirements</span></span>  
+ <span data-ttu-id="ba481-116">Nécessite alink.h.</span><span class="sxs-lookup"><span data-stu-id="ba481-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e85ad-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e85ad-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba481-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ba481-117">See also</span></span>
 
-- [<span data-ttu-id="e85ad-118">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="e85ad-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="e85ad-119">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="e85ad-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="e85ad-120">API ALink</span><span class="sxs-lookup"><span data-stu-id="e85ad-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="ba481-118">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="ba481-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="ba481-119">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="ba481-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="ba481-120">API ALink</span><span class="sxs-lookup"><span data-stu-id="ba481-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

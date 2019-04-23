@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f12442eb5596ff3dca49cf24e27040f3e92d3a7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072608"
 ---
-# <a name="icorprofilerinfobegininprocdebugging-method"></a><span data-ttu-id="505df-102">ICorProfilerInfo::BeginInprocDebugging, méthode</span><span class="sxs-lookup"><span data-stu-id="505df-102">ICorProfilerInfo::BeginInprocDebugging Method</span></span>
-<span data-ttu-id="505df-103">Initialise intra-processus prise en charge de débogage.</span><span class="sxs-lookup"><span data-stu-id="505df-103">Initializes in-process debugging support.</span></span> <span data-ttu-id="505df-104">Cette méthode est obsolète dans le .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="505df-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfobegininprocdebugging-method"></a><span data-ttu-id="8da18-102">ICorProfilerInfo::BeginInprocDebugging, méthode</span><span class="sxs-lookup"><span data-stu-id="8da18-102">ICorProfilerInfo::BeginInprocDebugging Method</span></span>
+<span data-ttu-id="8da18-103">Initialise intra-processus prise en charge de débogage.</span><span class="sxs-lookup"><span data-stu-id="8da18-103">Initializes in-process debugging support.</span></span> <span data-ttu-id="8da18-104">Cette méthode est obsolète dans le .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="8da18-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="505df-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="505df-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8da18-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8da18-105">Syntax</span></span>  
   
 ```  
 HRESULT BeginInprocDebugging(  
@@ -35,25 +35,25 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="505df-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="505df-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8da18-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="8da18-106">Parameters</span></span>  
  `fThisThreadOnly`  
- <span data-ttu-id="505df-107">[in] Définissez cette valeur sur `true` pour initialiser la prise en charge du débogage pour le thread actuel uniquement ; affectez-lui la valeur `false` pour initialiser la prise en charge du débogage pour tous les threads.</span><span class="sxs-lookup"><span data-stu-id="505df-107">[in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.</span></span>  
+ <span data-ttu-id="8da18-107">[in] Définissez cette valeur sur `true` pour initialiser la prise en charge du débogage pour le thread actuel uniquement ; affectez-lui la valeur `false` pour initialiser la prise en charge du débogage pour tous les threads.</span><span class="sxs-lookup"><span data-stu-id="8da18-107">[in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.</span></span>  
   
  `pdwProfilerContext`  
- <span data-ttu-id="505df-108">[out] Pointeur vers une valeur retournée qui identifie la session de débogage.</span><span class="sxs-lookup"><span data-stu-id="505df-108">[out] The pointer to a returned value that identifies the debugging session.</span></span>  
+ <span data-ttu-id="8da18-108">[out] Pointeur vers une valeur retournée qui identifie la session de débogage.</span><span class="sxs-lookup"><span data-stu-id="8da18-108">[out] The pointer to a returned value that identifies the debugging session.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="505df-109">Notes</span><span class="sxs-lookup"><span data-stu-id="505df-109">Remarks</span></span>  
- <span data-ttu-id="505df-110">Les services de débogage CLR pris en charge limitée dans le processus de débogage dans les versions 1.0 et 1.1 du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="505df-110">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="505df-111">Dans le processus de débogage activé un profileur d’utiliser les parties de l’inspection de l’API de débogage.</span><span class="sxs-lookup"><span data-stu-id="505df-111">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="505df-112">Toutefois, en raison des commentaires client, dans le processus de débogage a été supprimé depuis le .NET Framework version 2.0 et remplacé par un ensemble de fonctionnalités qui sont plus adaptées à l’API de profilage.</span><span class="sxs-lookup"><span data-stu-id="505df-112">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8da18-109">Notes</span><span class="sxs-lookup"><span data-stu-id="8da18-109">Remarks</span></span>  
+ <span data-ttu-id="8da18-110">Les services de débogage CLR pris en charge limitée dans le processus de débogage dans les versions 1.0 et 1.1 du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8da18-110">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="8da18-111">Dans le processus de débogage activé un profileur d’utiliser les parties de l’inspection de l’API de débogage.</span><span class="sxs-lookup"><span data-stu-id="8da18-111">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="8da18-112">Toutefois, en raison des commentaires client, dans le processus de débogage a été supprimé depuis le .NET Framework version 2.0 et remplacé par un ensemble de fonctionnalités qui sont plus adaptées à l’API de profilage.</span><span class="sxs-lookup"><span data-stu-id="8da18-112">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="505df-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="505df-113">Requirements</span></span>  
- <span data-ttu-id="505df-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="505df-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8da18-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="8da18-113">Requirements</span></span>  
+ <span data-ttu-id="8da18-114">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8da18-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="505df-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="505df-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8da18-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8da18-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="505df-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="505df-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8da18-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8da18-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="505df-117">**Version du .NET framework :** 1.0</span><span class="sxs-lookup"><span data-stu-id="505df-117">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="8da18-117">**Version du .NET framework :** 1.0</span><span class="sxs-lookup"><span data-stu-id="8da18-117">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="505df-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="505df-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8da18-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8da18-118">See also</span></span>
 
-- [<span data-ttu-id="505df-119">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="505df-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8da18-119">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="8da18-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
