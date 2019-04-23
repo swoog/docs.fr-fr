@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206094"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Procédure : donner à votre contrôle un arrière-plan transparent
@@ -24,11 +24,11 @@ Dans les versions antérieures de .NET Framework, les contrôles ne prenaient pa
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>Pour affecter un arrière-plan transparent à votre contrôle  
   
--   Dans la fenêtre Propriétés, choisissez le <xref:System.Windows.Forms.ButtonBase.BackColor%2A> propriété et affectez-lui la valeur <xref:System.Drawing.Color.Transparent%2A>  
+-   Dans la fenêtre Propriétés, choisissez la propriété <xref:System.Windows.Forms.ButtonBase.BackColor%2A> et affectez-lui la valeur <xref:System.Drawing.Color.Transparent%2A>.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](developing-custom-windows-forms-controls.md)
 - [Utilisation de classes graphiques managées](../advanced/using-managed-graphics-classes.md)
-- [Procédure : dessiner des lignes opaques et translucides](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Guide pratique pour Dessiner des lignes opaques et translucides](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

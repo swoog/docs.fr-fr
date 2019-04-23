@@ -3,10 +3,10 @@ title: Manipulation des données dans un DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202571"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulation des données dans un DataTable
@@ -31,7 +31,7 @@ Après avoir créé un objet <xref:System.Data.DataTable> dans un objet <xref:Sy
  [Suppression de DataRow](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
  Décrit comment supprimer une ligne d'une table.  
   
- [Informations sur l'erreur de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
+ [Informations sur l’erreur de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  Explique comment insérer des informations d'erreur par ligne et résoudre les problèmes liés aux données dans une application.  
   
  [AcceptChanges et RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  

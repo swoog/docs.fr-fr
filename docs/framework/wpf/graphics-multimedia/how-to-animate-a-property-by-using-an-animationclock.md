@@ -9,10 +9,10 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201362"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Procédure : Animer une propriété à l’aide d’un objet AnimationClock
@@ -39,5 +39,5 @@ Cet exemple montre comment utiliser <xref:System.Windows.Media.Animation.Clock> 
 ## <a name="see-also"></a>Voir aussi
 
 - [Animer une propriété à l’aide d’une table de montage séquentiel](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Animer une propriété sans utiliser de table de montage séquentiel](how-to-animate-a-property-without-using-a-storyboard.md)
-- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Animer une propriété sans utiliser de storyboard](how-to-animate-a-property-without-using-a-storyboard.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)

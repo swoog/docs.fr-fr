@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
 ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206445"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procédure : prendre en charge COM Interop en affichant un formulaire Windows avec la méthode ShowDialog
@@ -39,6 +39,6 @@ Vous pouvez résoudre les problèmes d’interopérabilité COM en affichant vot
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exposition de composants .NET Framework à COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Procédure : prendre en charge COM Interop en affichant chaque formulaire Windows sur son propre thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Applications Windows Forms et non managées](windows-forms-and-unmanaged-applications.md)
+- [Exposition de composants .NET Framework à COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Guide pratique pour Prennent en charge COM Interop en affichant chaque formulaire Windows sur son propre Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209149"
 ---
 # <a name="fromtoby-animations-overview"></a>Vue d'ensemble des animations From/To/By
@@ -144,9 +144,9 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
 
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des storyboards](storyboards-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d'ensemble des plans conceptuels](storyboards-overview.md)
 - [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md)
 - [Vue d'ensemble des animations de tracés](path-animations-overview.md)
 - [Vue d'ensemble des animations personnalisées](custom-animations-overview.md)
-- [FROM, To et par exemple les valeurs cibles d’Animation](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Exemple de valeurs cibles d’animation From, To et By](https://go.microsoft.com/fwlink/?LinkID=159988)

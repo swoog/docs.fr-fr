@@ -13,10 +13,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204196"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Peinture avec des objets d'image, de dessin et visuels
@@ -139,11 +139,11 @@ Composants d’un élément TileBrush avec plusieurs mosaïques
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Vue d'ensemble de TileBrush](tilebrush-overview.md)
-- [Vue d'ensemble des pinceaux WPF](wpf-brushes-overview.md)
-- [Vue d'ensemble de la création d'images](imaging-overview.md)
-- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)
+- [Vue d’ensemble de TileBrush](tilebrush-overview.md)
+- [Vue d’ensemble des pinceaux WPF](wpf-brushes-overview.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)
+- [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)
 - [Vue d'ensemble des masques d'opacité](opacity-masks-overview.md)
-- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
 - [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Exemple de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049) (Exemple de VisualBrush)

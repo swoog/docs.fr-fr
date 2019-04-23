@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207316"
 ---
 # <a name="datatables"></a>DataTables
@@ -21,7 +21,7 @@ Un objet <xref:System.Data.DataSet> est constitué d’une collection de tables,
  Vous pouvez créer des relations parent-enfant entre des tables à l'aide d'une ou plusieurs colonnes connexes de ces tables. Vous créez une relation entre **DataTable** objets à l’aide un <xref:System.Data.DataRelation>. **DataRelation** objets peuvent ensuite être utilisés pour retourner les lignes connexes enfants ou parentes d’une ligne particulière. Pour plus d’informations, consultez [Ajout de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d'un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Création d’un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Explique comment créer un **DataTable** et ajoutez-le à un **DataSet**.  
   
  [Définition de schéma de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
@@ -52,7 +52,7 @@ Un objet <xref:System.Data.DataSet> est constitué d’une collection de tables,
  <xref:System.Data.DataTable>  
  Fournit des informations de référence sur les **DataTable** objet.  
   
- [Vue d'ensemble de la bibliothèque de classes](../../../../../docs/standard/class-library-overview.md)  
+ [Présentation des bibliothèques de classes .NET](../../../../../docs/standard/class-library-overview.md)  
  Fournit une vue d’ensemble de la bibliothèque de classes .NET Framework, y compris le **système** espace de noms, ainsi que son espace de noms de deuxième niveau, **System.Data**.  
   
 ## <a name="see-also"></a>Voir aussi

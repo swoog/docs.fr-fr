@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201297"
 ---
 # <a name="gridview-overview"></a>Vue d'ensemble de GridView
@@ -79,14 +79,14 @@ ms.locfileid: "59201297"
   
      Si vous souhaitez modifier le style par défaut de la version flottante d’un en-tête, spécifiez un <xref:System.Windows.Controls.ControlTemplate> pour un <xref:System.Windows.Controls.GridViewColumnHeader> type qui est déclenchée lorsque le <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> propriété est définie sur <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Pour plus d’informations, consultez [Créer un style pour un en-tête de colonne GridView déplacé](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Redimensionner une colonne à son contenu.**  
+-   **Redimensionner une colonne selon son contenu.**  
   
      Les utilisateurs peuvent double-cliquer sur la barre de redimensionnement à droite d’un en-tête de colonne afin de redimensionner une colonne en fonction de son contenu.  
   
     > [!NOTE]
     >  Vous pouvez définir le <xref:System.Windows.Controls.GridViewColumn.Width%2A> propriété `Double.NaN` pour produire le même effet.  
   
--   **Sélectionnez les éléments de ligne.**  
+-   **Sélectionner des éléments de lignes.**  
   
      Les utilisateurs peuvent sélectionner un ou plusieurs éléments dans un <xref:System.Windows.Controls.GridView>.  
   
@@ -131,6 +131,6 @@ ms.locfileid: "59201297"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [Vue d'ensemble de ListView](listview-overview.md)
+- [Vue d’ensemble de ListView](listview-overview.md)
 - [Trier une colonne GridView lors d’un clic sur un en-tête](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Rubriques Comment](listview-how-to-topics.md)
+- [Rubriques de guide pratique](listview-how-to-topics.md)

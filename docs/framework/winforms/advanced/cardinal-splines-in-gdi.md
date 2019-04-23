@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705283"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200413"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Splines cardinales dans GDI+
 Une spline cardinale est une séquence de courbes reliées entre elles pour former une courbe plus grande. La fonction spline est spécifiée par un tableau de points et un paramètre de tension. Une spline cardinale traverse sans heurts de chaque point dans le tableau ; Il existe des angles aigus et aucune modification soudain dans la précision de la courbe. L’illustration suivante montre un ensemble de points et une spline cardinale qui passe par chaque point dans le jeu.  
@@ -36,5 +36,6 @@ Une spline cardinale est une séquence de courbes reliées entre elles pour form
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Voir aussi
+
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
 - [Génération et dessin de courbes](constructing-and-drawing-curves.md)

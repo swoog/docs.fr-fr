@@ -14,23 +14,23 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206406"
 ---
 # <a name="drawings"></a>Dessins
 <xref:System.Windows.Media.Drawing> les objets sont utilisés pour dessiner efficacement des formes, des images ou texte. Dessins sont utilisés pour peindre avec un <xref:System.Windows.Media.DrawingBrush> ou programmation avec <xref:System.Windows.Media.Visual> objets.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble des objets Drawing](drawing-objects-overview.md)  
-  [Rubriques Comment](drawings-how-to-topics.md)  
+ [Vue d’ensemble des objets de dessin](drawing-objects-overview.md)  
+  [Rubriques de guide pratique](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.Drawing>
-- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
-- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Graphiques et multimédia](index.md)

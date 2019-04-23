@@ -3,10 +3,10 @@ title: Collections de schémas courantes
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209669"
 ---
 # <a name="common-schema-collections"></a>Collections de schémas courantes
@@ -21,7 +21,7 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|CollectionName|chaîne|Le nom de la collection à passer à la **GetSchema** méthode pour retourner la collection.|  
+|CollectionName|string|Le nom de la collection à passer à la **GetSchema** méthode pour retourner la collection.|  
 |NumberOfRestrictions|int|Nombre de restrictions qui peuvent être spécifiées pour la collection.|  
 |NumberOfIdentifierParts|int|Nombre de parties dans le nom d'objet identificateur/base de données composite. Par exemple, dans SQL Server, ce serait 3 pour les tables et 4 pour les colonnes. Dans Oracle, ce serait 2 pour les tables et 3 pour les colonnes.|  
   
@@ -30,22 +30,22 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|chaîne|Expression régulière pour mettre en correspondance les séparateurs composites dans un identificateur composite. Par exemple, «\\. » (pour SQL Server) ou «\@&#124;\\. » (pour Oracle).<br /><br /> Un identificateur composite est généralement ce qui est utilisé pour un nom d’objet de base de données, par exemple : pubs.dbo.authors ou pubs\@dbo.authors.<br /><br /> Pour SQL Server, utilisez l’expression régulière «\\. ». Pour OracleClient, utilisez «\@&#124;\\. ».<br /><br /> Pour ODBC, utilisez Catalog_name_seperator.<br /><br /> Pour OLE DB, utilisez DBLITERAL_CATALOG_SEPARATOR ou DBLITERAL_SCHEMA_SEPARATOR.|  
-|DataSourceProductName|chaîne|Nom du produit auquel accède le fournisseur, tel que « Oracle » ou « SQLServer ».|  
-|DataSourceProductVersion|chaîne|Indique la version du produit auquel accède le fournisseur, dans le format natif des sources de données et non dans un format Microsoft.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
-|DataSourceProductVersionNormalized|chaîne|Version normalisée pour la source de données, telle qu'elle peut être comparée à `String.Compare()`. Son format est identique pour toutes les versions du fournisseur afin d'empêcher la version 10 d'opérer un tri entre les versions 1 et 2.<br /><br /> Par exemple, le fournisseur Oracle utilise un format « nn.nn.nn.nn.nn » pour sa version normalisée, ce qui entraîne une source de données Oracle 8i retourne « 08.01.07.04.01 ». SQL Server utilise le format « nn.nn.nnnn » Microsoft classique.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
+|CompositeIdentifierSeparatorPattern|string|Expression régulière pour mettre en correspondance les séparateurs composites dans un identificateur composite. Par exemple, «\\. » (pour SQL Server) ou «\@&#124;\\. » (pour Oracle).<br /><br /> Un identificateur composite est généralement ce qui est utilisé pour un nom d’objet de base de données, par exemple : pubs.dbo.authors ou pubs\@dbo.authors.<br /><br /> Pour SQL Server, utilisez l’expression régulière «\\. ». Pour OracleClient, utilisez «\@&#124;\\. ».<br /><br /> Pour ODBC, utilisez Catalog_name_seperator.<br /><br /> Pour OLE DB, utilisez DBLITERAL_CATALOG_SEPARATOR ou DBLITERAL_SCHEMA_SEPARATOR.|  
+|DataSourceProductName|string|Nom du produit auquel accède le fournisseur, tel que « Oracle » ou « SQLServer ».|  
+|DataSourceProductVersion|string|Indique la version du produit auquel accède le fournisseur, dans le format natif des sources de données et non dans un format Microsoft.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
+|DataSourceProductVersionNormalized|string|Version normalisée pour la source de données, telle qu'elle peut être comparée à `String.Compare()`. Son format est identique pour toutes les versions du fournisseur afin d'empêcher la version 10 d'opérer un tri entre les versions 1 et 2.<br /><br /> Par exemple, le fournisseur Oracle utilise un format « nn.nn.nn.nn.nn » pour sa version normalisée, ce qui entraîne une source de données Oracle 8i retourne « 08.01.07.04.01 ». SQL Server utilise le format « nn.nn.nnnn » Microsoft classique.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
 |GroupByBehavior|<xref:System.Data.Common.GroupByBehavior>|Spécifie la relation entre les colonnes dans une clause GROUP BY et les colonnes non agrégées dans la liste de sélection.|  
-|IdentifierPattern|chaîne|Expression régulière qui correspond à un identificateur et dont la valeur de correspondance est l'identificateur. Par exemple, « [A-Za-z0-9_#$] ».|  
+|IdentifierPattern|string|Expression régulière qui correspond à un identificateur et dont la valeur de correspondance est l'identificateur. Par exemple, « [A-Za-z0-9_#$] ».|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indique si des identificateurs non entourés de guillemets sont traités ou non comme respectant la casse.|  
 |OrderByColumnsInSelect|bool|Spécifie si les colonnes d'une clause ORDER BY doivent figurer dans la liste de sélection. Une valeur true indique qu'elles doivent obligatoirement figurer dans la liste de sélection ; une valeur false indique qu'elles ne doivent pas obligatoirement figurer dans la liste de sélection.|  
-|ParameterMarkerFormat|chaîne|Chaîne de format représentant la manière de formater un paramètre.<br /><br /> Si les paramètres nommés sont pris en charge par la source de données, le premier espace réservé dans cette chaîne doit être l'emplacement où le nom de paramètre doit être formaté.<br /><br /> Par exemple, si la source de données attend des paramètres nommés et précédés une » : « il s’agit de « :{0}». En cas de formatage avec un nom de paramètre « p1 », la chaîne obtenue est « :p1 ».<br /><br /> Si la source de données attend des paramètres précédés le '\@», mais les noms les incluent déjà, il s’agit de '{0}» et le résultat de la mise en forme d’un paramètre nommé «\@p1 » consiste simplement à »\@p1 ».<br /><br /> Pour les sources de données qui ne sont pas attendre des paramètres nommés et attendent l’utilisation de la « ? » caractère, la chaîne de format peut être spécifiée simplement comme « ? », qui ignore le nom du paramètre. Pour OLE DB, nous retournons « ? ».|  
-|ParameterMarkerPattern|chaîne|Expression régulière représentant un marqueur de paramètre. Elle a pour valeur de correspondance éventuelle le nom de paramètre.<br /><br /> Par exemple, si les paramètres nommés sont pris en charge avec un «\@' caractère initial qui sera inclus dans le nom du paramètre, il s’agit : » (\@[A-Za-z0-9_$ #] *) ».<br /><br /> Toutefois, si les paramètres nommés sont pris en charge avec un « : » comme caractère initial ne faisant pas partie du nom de paramètre, il s’agirait : » : ([A-Za-z0-9_$ #]\*) ».<br /><br /> Bien sûr, si la source de données ne prend pas en charge les paramètres nommés, cela donne simplement « ? ».|  
+|ParameterMarkerFormat|string|Chaîne de format représentant la manière de formater un paramètre.<br /><br /> Si les paramètres nommés sont pris en charge par la source de données, le premier espace réservé dans cette chaîne doit être l'emplacement où le nom de paramètre doit être formaté.<br /><br /> Par exemple, si la source de données attend des paramètres nommés et précédés une » : « il s’agit de « :{0}». En cas de formatage avec un nom de paramètre « p1 », la chaîne obtenue est « :p1 ».<br /><br /> Si la source de données attend des paramètres précédés le '\@», mais les noms les incluent déjà, il s’agit de '{0}» et le résultat de la mise en forme d’un paramètre nommé «\@p1 » consiste simplement à »\@p1 ».<br /><br /> Pour les sources de données qui ne sont pas attendre des paramètres nommés et attendent l’utilisation de la « ? » caractère, la chaîne de format peut être spécifiée simplement comme « ? », qui ignore le nom du paramètre. Pour OLE DB, nous retournons « ? ».|  
+|ParameterMarkerPattern|string|Expression régulière représentant un marqueur de paramètre. Elle a pour valeur de correspondance éventuelle le nom de paramètre.<br /><br /> Par exemple, si les paramètres nommés sont pris en charge avec un «\@' caractère initial qui sera inclus dans le nom du paramètre, il s’agit : » (\@[A-Za-z0-9_$ #] *) ».<br /><br /> Toutefois, si les paramètres nommés sont pris en charge avec un « : » comme caractère initial ne faisant pas partie du nom de paramètre, il s’agirait : » : ([A-Za-z0-9_$ #]\*) ».<br /><br /> Bien sûr, si la source de données ne prend pas en charge les paramètres nommés, cela donne simplement « ? ».|  
 |ParameterNameMaxLength|int|Longueur maximale d'un nom de paramètre en caractères. Si les noms de paramètres sont pris en charge, Visual Studio attend que la valeur minimale de longueur maximale soit de 30 caractères.<br /><br /> Si la source de données ne prend pas en charge les paramètres nommés, cette propriété retourne zéro.|  
-|ParameterNamePattern|chaîne|Expression régulière représentant les noms de paramètre valides. Les différentes sources de données ont des règles différentes concernant les caractères qui peuvent être utilisés pour les noms de paramètre.<br /><br /> Si les noms de paramètre sont pris en charge, Visual Studio attend que les caractères « \p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd} » correspondent à l'ensemble minimal pris en charge de caractères valides pour les noms de paramètre.|  
-|QuotedIdentifierPattern|chaîne|Expression régulière qui correspond à un identificateur entre guillemets et qui a pour valeur de correspondance l'identificateur proprement dit, sans les guillemets. Par exemple, si la source de données utilise des guillemets doubles pour identifier des identificateurs entre guillemets, cela serait : « (([^\\"]&#124;\\"\\") *) ».|  
+|ParameterNamePattern|string|Expression régulière représentant les noms de paramètre valides. Les différentes sources de données ont des règles différentes concernant les caractères qui peuvent être utilisés pour les noms de paramètre.<br /><br /> Si les noms de paramètre sont pris en charge, Visual Studio attend que les caractères « \p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd} » correspondent à l'ensemble minimal pris en charge de caractères valides pour les noms de paramètre.|  
+|QuotedIdentifierPattern|string|Expression régulière qui correspond à un identificateur entre guillemets et qui a pour valeur de correspondance l'identificateur proprement dit, sans les guillemets. Par exemple, si la source de données utilise des guillemets doubles pour identifier des identificateurs entre guillemets, cela serait : « (([^\\"]&#124;\\"\\") *) ».|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indique si des identificateurs entourés de guillemets sont traités ou non comme respectant la casse.|  
-|StatementSeparatorPattern|chaîne|Expression régulière représentant le séparateur d'instruction.|  
-|StringLiteralPattern|chaîne|Expression régulière qui correspond à un littéral de chaîne et dont la valeur de correspondance est le littéral proprement dit. Par exemple, si la source de données utilise des guillemets simples pour identifier des chaînes, cela serait : « ('([^']&#124;'') *') » »|  
+|StatementSeparatorPattern|string|Expression régulière représentant le séparateur d'instruction.|  
+|StringLiteralPattern|string|Expression régulière qui correspond à un littéral de chaîne et dont la valeur de correspondance est le littéral proprement dit. Par exemple, si la source de données utilise des guillemets simples pour identifier des chaînes, cela serait : « ('([^']&#124;'') *') » »|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Spécifie les types d'instructions SQL jointes prises en charge par la source de données.|  
   
 ## <a name="datatypes"></a>DataTypes  
@@ -53,12 +53,12 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|TypeName|chaîne|Nom de type de données spécifique au fournisseur.|  
+|TypeName|string|Nom de type de données spécifique au fournisseur.|  
 |ProviderDbType|int|Valeur de type de données spécifique au fournisseur à utiliser pour la spécification du type d'un paramètre. Par exemple, SqlDbType.Money ou OracleType.Blob.|  
 |ColumnSize|long|La longueur d'une colonne ou d'un paramètre non numérique fait référence à la longueur maximale ou à la longueur définie pour ce type par le fournisseur.<br /><br /> Pour les données de type caractère, il s'agit de la longueur maximale ou de la longueur en unités définie par la source de données. Le concept d'Oracle consiste à spécifier une longueur, puis à spécifier la taille de stockage réelle de certains types de données caractère. Cela définit uniquement la longueur en unités pour Oracle.<br /><br /> Pour les données de type date-heure, il s'agit de la longueur de la représentation de chaîne (en supposant la précision maximale autorisée de la partie fractions de secondes).<br /><br /> Si le type de données est numérique, il s'agit de la limite supérieure de la précision maximale du type de données.|  
-|CreateFormat|chaîne|Chaîne de format représentant la manière d'ajouter cette colonne à une instruction de définition de données, telle que CREATE TABLE. Chaque élément dans le tableau CreateParameter doit être représenté par un « marqueur de paramètre » dans la chaîne de format.<br /><br /> Par exemple, le type de données SQL DECIMAL nécessite une précision et une échelle. Dans ce cas, la chaîne de format serait « DECIMAL ({0},{1}) ».|  
-|CreateParameters|chaîne|Paramètres de création à spécifier lors de la création d'une colonne de ce type de données. Les paramètres de création sont répertoriés dans la chaîne, avec des virgules de séparation, dans l'ordre dans lequel ils doivent être fournis.<br /><br /> Par exemple, le type de données SQL DECIMAL nécessite une précision et une échelle. Dans ce cas, les paramètres de création doivent contenir la chaîne « precision, scale ».<br /><br /> Dans une commande de texte pour créer une colonne DECIMAL avec une précision de 10 et une échelle de 2, la valeur de la colonne CreateFormat peut être décimale ({0},{1}) » et la spécification de type complète serait Decimal (10,2).|  
-|Type de données|chaîne|Nom du type .NET Framework du type de données.|  
+|CreateFormat|string|Chaîne de format représentant la manière d'ajouter cette colonne à une instruction de définition de données, telle que CREATE TABLE. Chaque élément dans le tableau CreateParameter doit être représenté par un « marqueur de paramètre » dans la chaîne de format.<br /><br /> Par exemple, le type de données SQL DECIMAL nécessite une précision et une échelle. Dans ce cas, la chaîne de format serait « DECIMAL ({0},{1}) ».|  
+|CreateParameters|string|Paramètres de création à spécifier lors de la création d'une colonne de ce type de données. Les paramètres de création sont répertoriés dans la chaîne, avec des virgules de séparation, dans l'ordre dans lequel ils doivent être fournis.<br /><br /> Par exemple, le type de données SQL DECIMAL nécessite une précision et une échelle. Dans ce cas, les paramètres de création doivent contenir la chaîne « precision, scale ».<br /><br /> Dans une commande de texte pour créer une colonne DECIMAL avec une précision de 10 et une échelle de 2, la valeur de la colonne CreateFormat peut être décimale ({0},{1}) » et la spécification de type complète serait Decimal (10,2).|  
+|Type de données|string|Nom du type .NET Framework du type de données.|  
 |IsAutoincrementable|bool|true — Les valeurs de ce type de données peuvent être auto-incrémentées.<br /><br /> false — Les valeurs de ce type de données ne peuvent pas être auto-incrémentées.<br /><br /> Notez que cela indique simplement si une colonne de ce type de données peut être auto-incrémentée, pas que toutes les colonnes de ce type le sont.|  
 |IsBestMatch|bool|true — Le type de données est la meilleure correspondance entre tous les types de données du magasin de données et le type de données .NET Framework indiqué par la valeur de la colonne DataType.<br /><br /> false — Le type de données n'est pas la meilleure correspondance.<br /><br /> Pour chaque ensemble de lignes dans lequel la valeur de la colonne DataType est identique, la colonne IsBestMatch est définie comme true dans une seule ligne.|  
 |IsCaseSensitive|bool|true — Le type de données est un type de caractère respectant la casse.<br /><br /> false — Le type de données n'est pas un type de caractère ou ne respecte pas la casse.|  
@@ -73,8 +73,8 @@ Les collections de schémas communes sont les collections de schémas implément
 |MinimumScale|short|Si l'indicateur de type est un type numérique, il correspond au nombre minimal de chiffres autorisés à droite de la virgule décimale. Sinon, c'est DBNull.Value.|  
 |IsConcurrencyType|bool|true — Le type de données est mis à jour par la base de données à chaque modification de la ligne et la valeur de la colonne diffère de toutes les valeurs précédentes.<br /><br /> false — Le type de données n'est pas mis à jour par la base de données à chaque modification de la ligne.<br /><br /> DBNull.Value — La base de données ne prend pas en charge ce type de données.|  
 |IsLiteralSupported|bool|true — Le type de données peut être exprimé comme littéral.<br /><br /> false — Le type de données ne peut pas être exprimé comme littéral.|  
-|LiteralPrefix|chaîne|Préfixe appliqué à un littéral donné.|  
-|LiteralSuffix|chaîne|Suffixe appliqué à un littéral donné.|  
+|LiteralPrefix|string|Préfixe appliqué à un littéral donné.|  
+|LiteralSuffix|string|Suffixe appliqué à un littéral donné.|  
 |NativeDataType|Chaîne|NativeDataType est une colonne spécifique à OLE DB pour l'exposition du type OLE DB du type de données.|  
   
 ## <a name="restrictions"></a>Restrictions  
@@ -82,9 +82,9 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|CollectionName|chaîne|Nom de la collection à laquelle ces restrictions s'appliquent.|  
-|RestrictionName|chaîne|Nom de la restriction dans la collection.|  
-|RestrictionDefault|chaîne|Ignoré.|  
+|CollectionName|string|Nom de la collection à laquelle ces restrictions s'appliquent.|  
+|RestrictionName|string|Nom de la restriction dans la collection.|  
+|RestrictionDefault|string|Ignoré.|  
 |RestrictionNumber|int|Emplacement réel des restrictions de collections dans lequel figure cette restriction particulière.|  
   
 ## <a name="reservedwords"></a>ReservedWords  
@@ -92,10 +92,10 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|ReservedWord|chaîne|Mots réservés spécifiques au fournisseur.|  
+|ReservedWord|string|Mots réservés spécifiques au fournisseur.|  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Extraction des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Récupération des informations de schéma de base de données](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Collections GetSchema et Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

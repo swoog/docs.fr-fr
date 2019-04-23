@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207953"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu, composant (Windows Forms)
@@ -24,10 +24,10 @@ ms.locfileid: "59207953"
  Les formulaires Windows `ContextMenu` composant est utilisé pour fournir aux utilisateurs un menu contextuel facilement accessible des commandes fréquemment utilisées qui sont associés à l’objet sélectionné. Les éléments dans un menu contextuel constituent souvent un sous-ensemble des éléments des menus principaux qui apparaissent ailleurs dans l’application. Menus contextuels sont généralement disponibles en cliquant sur la souris. Dans les Windows Forms, elles sont associées avec d’autres contrôles.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md)  
+ [Vue d'ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Présente les concepts généraux de le `ContextMenu` composant, qui permet aux utilisateurs de créer des menus de commandes fréquemment utilisées associées à un objet sélectionné.  
   
- [Procédure : ajouter et supprimer des éléments de menu avec le composant ContextMenu de Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Guide pratique pour Ajouter et supprimer des éléments de Menu avec le composant ContextMenu Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Explique comment ajouter et supprimer des éléments de menu contextuel dans les Windows Forms.  
   
 ## <a name="reference"></a>Référence  

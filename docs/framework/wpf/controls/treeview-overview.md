@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209071"
 ---
 # <a name="treeview-overview"></a>Vue d'ensemble de TreeView
@@ -76,5 +76,5 @@ Le <xref:System.Windows.Controls.TreeView> contrôle offre un moyen pour affiche
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Rubriques Comment](treeview-how-to-topics.md)
-- [Modèle de contenu WPF](wpf-content-model.md)
+- [Rubriques de guide pratique](treeview-how-to-topics.md)
+- [Modèle de contenu WPF](wpf-content-model.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
 ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206042"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Procédure : Appeler une boîte de dialogue Imprimer
@@ -35,5 +35,5 @@ Pour fournir la possibilité d’imprimer à partir de votre application, vous p
 
 - <xref:System.Windows.Controls.PrintDialog>
 - [Documents dans WPF](documents-in-wpf.md)
-- [Vue d'ensemble de l'impression](printing-overview.md)
-- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Vue d’ensemble de l’impression](printing-overview.md)
+- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

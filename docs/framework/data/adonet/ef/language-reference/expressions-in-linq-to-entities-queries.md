@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
 ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203234"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Expressions dans les requêtes LINQ to Entities
@@ -26,13 +26,13 @@ Une expression est un fragment de code qui peut correspondre à une valeur, un o
 >  Les constructions de langage spécifiques, telles que C# `unchecked`, n'ont aucune signification dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Expressions constantes](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [Expressions de constantes](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
   
- [Comparaison des expressions](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [Expressions de comparaison](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
   
- [Comparaisons null](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [Comparaisons Null](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
   
- [Expressions d'initialisation](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [Expressions d’initialisation](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
  [Relations, les propriétés de navigation et les clés étrangères](/ef/ef6/fundamentals/relationships)  
   

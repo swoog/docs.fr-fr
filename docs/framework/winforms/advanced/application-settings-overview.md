@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203624"
 ---
 # <a name="application-settings-overview"></a>Vue d'ensemble des paramètres d'application
@@ -53,9 +53,9 @@ Cette rubrique explique comment créer et stocker des données de paramètres po
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Procédure : valider les paramètres d’application](how-to-validate-application-settings.md)
-- [Gestion des paramètres d'une application (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Procédure : lire des paramètres au moment de l’exécution avec C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Guide pratique pour Valider les paramètres d’Application](how-to-validate-application-settings.md)
+- [Gestion des paramètres d’une application (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [Guide pratique pour Lire des paramètres au moment de l’exécution avecC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Utilisation de paramètres d'application et de paramètres utilisateur](using-application-settings-and-user-settings.md)
 - [Architecture des paramètres d'application](application-settings-architecture.md)
-- [Paramètres d'application pour les contrôles personnalisés](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

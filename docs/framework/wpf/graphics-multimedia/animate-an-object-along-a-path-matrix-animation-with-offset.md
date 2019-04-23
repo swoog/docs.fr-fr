@@ -10,10 +10,10 @@ helpviewer_keywords:
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
 ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207368"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Procédure : Animer un objet sur un tracé (animation de matrice avec accumulation d’offset)
@@ -35,5 +35,5 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Matr
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
