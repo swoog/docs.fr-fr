@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132291"
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] styles et modèles font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et concepteurs pour créer des effets visuellement attrayants et une apparence cohérente pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
+L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et aux concepteurs de créer des effets visuellement attrayants et un aspect cohérent pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
   
  La séparation de la présentation et de la logique est une autre fonctionnalité du modèle d’application de style [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les concepteurs peuvent ainsi travailler sur l’apparence d’une application en utilisant uniquement [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], tout en laissant les développeurs travailler sur la logique de programmation à l’aide de C# ou de Visual Basic.  
   
@@ -199,5 +199,5 @@ ms.locfileid: "59132291"
 ## <a name="see-also"></a>Voir aussi
 
 - [URI à en-tête pack dans WPF](../app-development/pack-uris-in-wpf.md)
-- [Procédure : rechercher des éléments générés par ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Guide pratique pour Rechercher des éléments générés par ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Rechercher des éléments générés par DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

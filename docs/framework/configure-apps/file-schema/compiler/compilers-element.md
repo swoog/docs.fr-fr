@@ -1,5 +1,5 @@
 ---
-title: <compilers> Élément
+title: Élément <compilers>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130518"
 ---
 # <a name="compilers-element"></a>\<compilateurs > élément
@@ -41,13 +41,13 @@ Conteneur des éléments de configuration du compilateur ; contient zéro ou pl
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<compilateur > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Spécifie les attributs de configuration du compilateur pour un fournisseur de langage.|  
+|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Spécifie les attributs de configuration du compilateur pour un fournisseur de langage.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<configuration > élément](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
+|[\<configuration>, élément](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
 |[\<System.CodeDom > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Spécifie les paramètres de configuration du compilateur pour les fournisseurs de langages disponibles.|  
   
 ## <a name="remarks"></a>Notes  
@@ -83,4 +83,4 @@ Conteneur des éléments de configuration du compilateur ; contient zéro ou pl
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schéma des paramètres du fournisseur de langage et du compilateur](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compilateur > élément](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

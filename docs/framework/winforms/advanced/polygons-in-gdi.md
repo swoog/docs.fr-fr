@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132624"
 ---
 # <a name="polygons-in-gdi"></a>Polygones dans GDI+
@@ -36,4 +36,4 @@ Un polygone est une forme fermée avec trois ou quatre côtés. Par exemple, un 
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Lignes, courbes et formes](lines-curves-and-shapes.md)
-- [Procédure : créer un stylet](how-to-create-a-pen.md)
+- [Guide pratique pour Créer un stylet](how-to-create-a-pen.md)

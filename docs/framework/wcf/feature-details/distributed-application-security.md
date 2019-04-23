@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132054"
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
@@ -96,7 +96,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130964"
 ---
 # <a name="get-started-with-c"></a>Bien démarrer avec C\#
@@ -25,7 +25,7 @@ Les rubriques suivantes sont disponibles :
 
      Fournit une vue d’ensemble du langage C# et de .NET.
 
-* [Génération d’une application C# Hello World avec .NET Core dans Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
+* [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, la dernière version de Visual Studio, permet de coder, compiler, exécuter, déboguer, profiler et publier des applications à partir d’un environnement de développement intégré pour Windows.
 
@@ -51,10 +51,10 @@ Les rubriques suivantes sont disponibles :
 
     Fournit des informations de référence détaillées sur les mots clés C#, les opérateurs, les directives de préprocesseur, les options du compilateur, et les erreurs et avertissements du compilateur.
 
-* [Procédures pas à pas](../../csharp/walkthroughs.md)
+* [Procédures pas à pas](../../csharp/walkthroughs.md)
 
     Fournit des liens vers des procédures pas-à-pas de programmation qui utilisent C# et une brève description de chaque procédure pas-à-pas.
 
 ## <a name="see-also"></a>Voir aussi
 
-- * [Développement en C# avec Visual Studio](/visualstudio/get-started/csharp/)
+- * [Développement C# avec Visual Studio](/visualstudio/get-started/csharp/)

@@ -3,10 +3,10 @@ title: Scénarios de sécurité des applications dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130142"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scénarios de sécurité des applications dans SQL Server
@@ -38,27 +38,27 @@ Aucune méthode universelle n'existe pour créer une application cliente SQL Ser
  [Gestion des autorisations avec les procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Décrit comment utiliser des procédures stockées pour gérer les autorisations et contrôler l'accès aux données. L'utilisation des procédures stockées est un moyen efficace pour pallier de nombreuses menaces concernant la sécurité.  
   
- [Écriture de Dynamic SQL sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Décrit des techniques permettant d'écrire du code SQL dynamique sécurisé à l'aide de procédures stockées.  
   
- [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  Décrit comment signer une procédure stockée avec un certificat pour permettre aux utilisateurs de disposer des données auxquelles ils n'ont pas un accès direct. Cela permet aux procédures stockées d'effectuer des opérations que l'appelant n'est pas autorisé à effectuer directement.  
   
- [Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  Décrit la manière d'utiliser la clause EXECUTE AS pour emprunter l'identité d'un autre utilisateur. L'emprunt d'identité transfère le contexte de l'exécution de l'appelant vers l'utilisateur spécifié.  
   
- [Attribution d'autorisations de niveau ligne dans SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [Attribution d’autorisations de niveau ligne dans SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  Décrit comment implémenter des autorisations au niveau de la ligne pour limiter l'accès aux données.  
   
- [Création de rôles d'applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [Création de rôles d’application dans SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Décrit les fonctions et les fonctionnalités de rôles d'application.  
   
- [Activation de l'accès entre bases de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Activation de l’accès entre bases de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Décrit comment activer l'accès aux bases de données croisées sans risque pour la sécurité.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Vue d'ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

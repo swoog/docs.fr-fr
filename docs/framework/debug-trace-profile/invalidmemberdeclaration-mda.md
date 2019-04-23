@@ -11,10 +11,10 @@ ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131285"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>Assistant Débogage managé invalidMemberDeclaration
@@ -48,5 +48,5 @@ L’Assistant Débogage managé (MDA) `invalidMemberDeclaration` est activé pou
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostic d'erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling d’interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

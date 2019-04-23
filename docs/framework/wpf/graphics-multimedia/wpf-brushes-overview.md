@@ -8,10 +8,10 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132208"
 ---
 # <a name="wpf-brushes-overview"></a>Vue d'ensemble des pinceaux WPF
@@ -164,11 +164,11 @@ Rectangle peint avec un VisualBrush
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
-- [Peinture avec des objets d'image, de dessin et visuels](painting-with-images-drawings-and-visuals.md)
-- [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
-- [Exemples de pinceaux](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Vue d’ensemble de la peinture avec des couleurs unies ou des dégradés](painting-with-solid-colors-and-gradients-overview.md)
+- [Peinture avec des images, des dessins et des objets visuels](painting-with-images-drawings-and-visuals.md)
+- [Vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md)
+- [Pinceaux, exemple](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Exemple de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Rubriques Comment](brushes-how-to-topics.md)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049) (Exemple de VisualBrush)
+- [Rubriques de guide pratique](brushes-how-to-topics.md)
 - [Autres recommandations relatives aux performances](../advanced/optimizing-performance-other-recommendations.md)

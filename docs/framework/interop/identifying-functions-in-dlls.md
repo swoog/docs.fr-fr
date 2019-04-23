@@ -14,10 +14,10 @@ ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132029"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identification des fonctions des DLL
@@ -49,6 +49,6 @@ L’identité d’une fonction DLL est composée des éléments suivants :
 
 - [Consommation de fonctions DLL non managées](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Spécification d'un point d'entrée](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Création d'une classe pour contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [Création d’une classe pour contenir des fonctions DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
 - [Création de prototypes dans du code managé](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Appel à une fonction DLL](../../../docs/framework/interop/calling-a-dll-function.md)

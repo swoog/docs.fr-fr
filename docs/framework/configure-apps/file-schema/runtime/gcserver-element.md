@@ -1,5 +1,5 @@
 ---
-title: <gcServer> Élément
+title: Élément <gcServer>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
@@ -11,10 +11,10 @@ ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132806"
 ---
 # <a name="gcserver-element"></a>\<< gcServer > élément
@@ -81,6 +81,6 @@ Spécifie si le common language runtime exécute le garbage collection côté se
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Pour désactiver le garbage collection simultané](gcconcurrent-element.md#to-disable-background-garbage-collection)
