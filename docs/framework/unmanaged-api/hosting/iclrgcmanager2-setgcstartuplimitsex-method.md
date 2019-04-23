@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204716"
 ---
-# <a name="iclrgcmanager2setgcstartuplimitsex-method"></a><span data-ttu-id="0ff89-102">ICLRGCManager2::SetGCStartupLimitsEx, méthode</span><span class="sxs-lookup"><span data-stu-id="0ff89-102">ICLRGCManager2::SetGCStartupLimitsEx Method</span></span>
-<span data-ttu-id="0ff89-103">Définit la taille d’un segment de garbage collection et la taille maximale de la génération du système de nettoyage 0.</span><span class="sxs-lookup"><span data-stu-id="0ff89-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
+# <a name="iclrgcmanager2setgcstartuplimitsex-method"></a><span data-ttu-id="5d2a9-102">ICLRGCManager2::SetGCStartupLimitsEx, méthode</span><span class="sxs-lookup"><span data-stu-id="5d2a9-102">ICLRGCManager2::SetGCStartupLimitsEx Method</span></span>
+<span data-ttu-id="5d2a9-103">Définit la taille d’un segment de garbage collection et la taille maximale de la génération du système de nettoyage 0.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ff89-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="0ff89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d2a9-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5d2a9-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimitsEx (  
@@ -36,45 +36,45 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0ff89-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="0ff89-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d2a9-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5d2a9-105">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="0ff89-106">[in] La taille spécifiée d’un segment de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="0ff89-106">[in] The specified size of a garbage collection segment.</span></span>  
+ <span data-ttu-id="5d2a9-106">[in] La taille spécifiée d’un segment de garbage collection.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-106">[in] The specified size of a garbage collection segment.</span></span>  
   
- <span data-ttu-id="0ff89-107">La taille de segment minimale est de 4 Mo.</span><span class="sxs-lookup"><span data-stu-id="0ff89-107">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="0ff89-108">Segments peuvent être accrue en incréments de 1 Mo ou plus.</span><span class="sxs-lookup"><span data-stu-id="0ff89-108">Segments can be increased in increments of 1 MB or larger.</span></span>  
+ <span data-ttu-id="5d2a9-107">La taille de segment minimale est de 4 Mo.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-107">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="5d2a9-108">Segments peuvent être accrue en incréments de 1 Mo ou plus.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-108">Segments can be increased in increments of 1 MB or larger.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="0ff89-109">[in] La taille maximale spécifiée pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="0ff89-109">[in] The specified maximum size for generation 0.</span></span>  
+ <span data-ttu-id="5d2a9-109">[in] La taille maximale spécifiée pour la génération 0.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-109">[in] The specified maximum size for generation 0.</span></span>  
   
- <span data-ttu-id="0ff89-110">La taille minimum de la génération 0 est de 64 Ko.</span><span class="sxs-lookup"><span data-stu-id="0ff89-110">The minimum generation 0 size is 64 KB.</span></span>  
+ <span data-ttu-id="5d2a9-110">La taille minimum de la génération 0 est de 64 Ko.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-110">The minimum generation 0 size is 64 KB.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0ff89-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="0ff89-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5d2a9-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5d2a9-111">Return Value</span></span>  
   
-|<span data-ttu-id="0ff89-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0ff89-112">HRESULT</span></span>|<span data-ttu-id="0ff89-113">Description</span><span class="sxs-lookup"><span data-stu-id="0ff89-113">Description</span></span>|  
+|<span data-ttu-id="5d2a9-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5d2a9-112">HRESULT</span></span>|<span data-ttu-id="5d2a9-113">Description</span><span class="sxs-lookup"><span data-stu-id="5d2a9-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0ff89-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="0ff89-114">S_OK</span></span>|`SetGCStartupLimitsEx` <span data-ttu-id="0ff89-115">retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="0ff89-115">returned successfully.</span></span>|  
-|<span data-ttu-id="0ff89-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0ff89-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0ff89-117">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="0ff89-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="0ff89-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0ff89-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0ff89-119">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="0ff89-119">The call timed out.</span></span>|  
-|<span data-ttu-id="0ff89-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0ff89-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0ff89-121">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="0ff89-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="0ff89-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0ff89-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0ff89-123">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="0ff89-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="0ff89-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0ff89-124">E_FAIL</span></span>|<span data-ttu-id="0ff89-125">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="0ff89-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0ff89-126">Une fois une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="0ff89-126">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0ff89-127">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="0ff89-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5d2a9-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="5d2a9-114">S_OK</span></span>|<span data-ttu-id="5d2a9-115">`SetGCStartupLimitsEx` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-115">`SetGCStartupLimitsEx` returned successfully.</span></span>|  
+|<span data-ttu-id="5d2a9-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5d2a9-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5d2a9-117">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5d2a9-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5d2a9-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5d2a9-119">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-119">The call timed out.</span></span>|  
+|<span data-ttu-id="5d2a9-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5d2a9-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5d2a9-121">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5d2a9-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5d2a9-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5d2a9-123">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5d2a9-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5d2a9-124">E_FAIL</span></span>|<span data-ttu-id="5d2a9-125">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5d2a9-126">Une fois une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-126">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5d2a9-127">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0ff89-128">Notes</span><span class="sxs-lookup"><span data-stu-id="0ff89-128">Remarks</span></span>  
- <span data-ttu-id="0ff89-129">Les valeurs qui `SetGCStartupLimitsEx` jeux peuvent être spécifiés uniquement avant le démarrage de l’ordinateur hôte.</span><span class="sxs-lookup"><span data-stu-id="0ff89-129">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="0ff89-130">Appels ultérieurs à `SetGCStartupLimitsEx` sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="0ff89-130">Later calls to `SetGCStartupLimitsEx` are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d2a9-128">Notes</span><span class="sxs-lookup"><span data-stu-id="5d2a9-128">Remarks</span></span>  
+ <span data-ttu-id="5d2a9-129">Les valeurs qui `SetGCStartupLimitsEx` jeux peuvent être spécifiés uniquement avant le démarrage de l’ordinateur hôte.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-129">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="5d2a9-130">Appels ultérieurs à `SetGCStartupLimitsEx` sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-130">Later calls to `SetGCStartupLimitsEx` are ignored.</span></span>  
   
- <span data-ttu-id="0ff89-131">Pour définir un paramètre sans affecter l’autre, spécifiez 0 (zéro) pour le paramètre que vous ne souhaitez pas modifier.</span><span class="sxs-lookup"><span data-stu-id="0ff89-131">To set either parameter without affecting the other, specify 0 (zero) for the parameter you don't want to change.</span></span>  
+ <span data-ttu-id="5d2a9-131">Pour définir un paramètre sans affecter l’autre, spécifiez 0 (zéro) pour le paramètre que vous ne souhaitez pas modifier.</span><span class="sxs-lookup"><span data-stu-id="5d2a9-131">To set either parameter without affecting the other, specify 0 (zero) for the parameter you don't want to change.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ff89-132">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="0ff89-132">Requirements</span></span>  
- <span data-ttu-id="0ff89-133">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ff89-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d2a9-132">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="5d2a9-132">Requirements</span></span>  
+ <span data-ttu-id="5d2a9-133">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d2a9-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ff89-134">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0ff89-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5d2a9-134">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5d2a9-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0ff89-135">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0ff89-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5d2a9-135">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5d2a9-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="0ff89-136">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="0ff89-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="5d2a9-136">**Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d2a9-136">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ff89-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0ff89-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d2a9-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5d2a9-137">See also</span></span>
 
-- [<span data-ttu-id="0ff89-138">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="0ff89-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="0ff89-139">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="0ff89-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="0ff89-140">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="0ff89-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="0ff89-141">ICLRGCManager2, interface</span><span class="sxs-lookup"><span data-stu-id="0ff89-141">ICLRGCManager2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
+- [<span data-ttu-id="5d2a9-138">Gestion automatique de la mémoire</span><span class="sxs-lookup"><span data-stu-id="5d2a9-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="5d2a9-139">Nettoyage de la mémoire</span><span class="sxs-lookup"><span data-stu-id="5d2a9-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="5d2a9-140">ICLRControl, interface</span><span class="sxs-lookup"><span data-stu-id="5d2a9-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="5d2a9-141">ICLRGCManager2, interface</span><span class="sxs-lookup"><span data-stu-id="5d2a9-141">ICLRGCManager2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

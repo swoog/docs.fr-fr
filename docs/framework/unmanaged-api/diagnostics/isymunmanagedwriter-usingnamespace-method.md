@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201843"
 ---
-# <a name="isymunmanagedwriterusingnamespace-method"></a><span data-ttu-id="939d3-102">ISymUnmanagedWriter::UsingNamespace, méthode</span><span class="sxs-lookup"><span data-stu-id="939d3-102">ISymUnmanagedWriter::UsingNamespace Method</span></span>
-<span data-ttu-id="939d3-103">Spécifie que le nom d’espace de noms complet donné est utilisé dans la portée lexicale actuellement ouverte.</span><span class="sxs-lookup"><span data-stu-id="939d3-103">Specifies that the given fully qualified namespace name is being used within the currently open lexical scope.</span></span> <span data-ttu-id="939d3-104">L’espace de noms sera utilisé dans toutes les portées qui héritent de la portée actuellement ouverte.</span><span class="sxs-lookup"><span data-stu-id="939d3-104">The namespace will be used within all scopes that inherit from the currently open scope.</span></span> <span data-ttu-id="939d3-105">Fermeture de la portée actuelle s’arrête également l’utilisation de l’espace de noms.</span><span class="sxs-lookup"><span data-stu-id="939d3-105">Closing the current scope will also stop the use of the namespace.</span></span>  
+# <a name="isymunmanagedwriterusingnamespace-method"></a><span data-ttu-id="da3c0-102">ISymUnmanagedWriter::UsingNamespace, méthode</span><span class="sxs-lookup"><span data-stu-id="da3c0-102">ISymUnmanagedWriter::UsingNamespace Method</span></span>
+<span data-ttu-id="da3c0-103">Spécifie que le nom d’espace de noms complet donné est utilisé dans la portée lexicale actuellement ouverte.</span><span class="sxs-lookup"><span data-stu-id="da3c0-103">Specifies that the given fully qualified namespace name is being used within the currently open lexical scope.</span></span> <span data-ttu-id="da3c0-104">L’espace de noms sera utilisé dans toutes les portées qui héritent de la portée actuellement ouverte.</span><span class="sxs-lookup"><span data-stu-id="da3c0-104">The namespace will be used within all scopes that inherit from the currently open scope.</span></span> <span data-ttu-id="da3c0-105">Fermeture de la portée actuelle s’arrête également l’utilisation de l’espace de noms.</span><span class="sxs-lookup"><span data-stu-id="da3c0-105">Closing the current scope will also stop the use of the namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="939d3-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="939d3-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da3c0-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="da3c0-106">Syntax</span></span>  
   
 ```  
 HRESULT UsingNamespace(  
     [in] const WCHAR *fullName);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="939d3-107">Paramètres</span><span class="sxs-lookup"><span data-stu-id="939d3-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da3c0-107">Paramètres</span><span class="sxs-lookup"><span data-stu-id="da3c0-107">Parameters</span></span>  
  `fullName`  
- <span data-ttu-id="939d3-108">[in] Pointeur vers le nom qualifié complet de l’espace de noms.</span><span class="sxs-lookup"><span data-stu-id="939d3-108">[in] A pointer to the fully qualified name of the namespace.</span></span>  
+ <span data-ttu-id="da3c0-108">[in] Pointeur vers le nom qualifié complet de l’espace de noms.</span><span class="sxs-lookup"><span data-stu-id="da3c0-108">[in] A pointer to the fully qualified name of the namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="939d3-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="939d3-109">Return Value</span></span>  
- <span data-ttu-id="939d3-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="939d3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="da3c0-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="da3c0-109">Return Value</span></span>  
+ <span data-ttu-id="da3c0-110">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="da3c0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="939d3-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="939d3-111">Requirements</span></span>  
- <span data-ttu-id="939d3-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="939d3-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da3c0-111">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="da3c0-111">Requirements</span></span>  
+ <span data-ttu-id="da3c0-112">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="da3c0-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="939d3-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="939d3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da3c0-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="da3c0-113">See also</span></span>
 
-- [<span data-ttu-id="939d3-114">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="939d3-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="da3c0-114">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="da3c0-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

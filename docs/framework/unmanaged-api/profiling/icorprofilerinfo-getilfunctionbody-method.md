@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b2960bc0cfc39adb9b7cbca236d495baf630a173
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201414"
 ---
-# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="2711f-102">ICorProfilerInfo::GetILFunctionBody, méthode</span><span class="sxs-lookup"><span data-stu-id="2711f-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
-<span data-ttu-id="2711f-103">Obtient un pointeur vers le corps d’une méthode dans le code Microsoft intermediate language (MSIL), en commençant à son en-tête.</span><span class="sxs-lookup"><span data-stu-id="2711f-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="cbc4d-102">ICorProfilerInfo::GetILFunctionBody, méthode</span><span class="sxs-lookup"><span data-stu-id="cbc4d-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
+<span data-ttu-id="cbc4d-103">Obtient un pointeur vers le corps d’une méthode dans le code Microsoft intermediate language (MSIL), en commençant à son en-tête.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2711f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2711f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbc4d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="cbc4d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILFunctionBody(  
@@ -37,33 +37,33 @@ HRESULT GetILFunctionBody(
     [out] ULONG       *pcbMethodSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2711f-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="2711f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbc4d-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="cbc4d-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="2711f-106">[in] L’ID du module dans lequel la fonction réside.</span><span class="sxs-lookup"><span data-stu-id="2711f-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="cbc4d-106">[in] L’ID du module dans lequel la fonction réside.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodId`  
- <span data-ttu-id="2711f-107">[in] Le jeton de métadonnées pour la méthode.</span><span class="sxs-lookup"><span data-stu-id="2711f-107">[in] The metadata token for the method.</span></span>  
+ <span data-ttu-id="cbc4d-107">[in] Le jeton de métadonnées pour la méthode.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-107">[in] The metadata token for the method.</span></span>  
   
  `ppMethodHeader`  
- <span data-ttu-id="2711f-108">[out] Pointeur vers l’en-tête de la méthode.</span><span class="sxs-lookup"><span data-stu-id="2711f-108">[out] A pointer to the method's header.</span></span>  
+ <span data-ttu-id="cbc4d-108">[out] Pointeur vers l’en-tête de la méthode.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-108">[out] A pointer to the method's header.</span></span>  
   
  `pcbMethodSize`  
- <span data-ttu-id="2711f-109">[out] Entier qui spécifie la taille de la méthode.</span><span class="sxs-lookup"><span data-stu-id="2711f-109">[out] An integer that specifies the size of the method.</span></span>  
+ <span data-ttu-id="cbc4d-109">[out] Entier qui spécifie la taille de la méthode.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-109">[out] An integer that specifies the size of the method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2711f-110">Notes</span><span class="sxs-lookup"><span data-stu-id="2711f-110">Remarks</span></span>  
- <span data-ttu-id="2711f-111">Une méthode est limitée par le module dans lequel il réside.</span><span class="sxs-lookup"><span data-stu-id="2711f-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="2711f-112">Étant donné que le `GetILFunctionBody` méthode est conçue pour donner un accès au code MSIL avant qu’il a été chargé par le common language runtime (CLR), il utilise le jeton de métadonnées de la méthode pour rechercher l’instance souhaitée.</span><span class="sxs-lookup"><span data-stu-id="2711f-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbc4d-110">Notes</span><span class="sxs-lookup"><span data-stu-id="cbc4d-110">Remarks</span></span>  
+ <span data-ttu-id="cbc4d-111">Une méthode est limitée par le module dans lequel il réside.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="cbc4d-112">Étant donné que le `GetILFunctionBody` méthode est conçue pour donner un accès au code MSIL avant qu’il a été chargé par le common language runtime (CLR), il utilise le jeton de métadonnées de la méthode pour rechercher l’instance souhaitée.</span><span class="sxs-lookup"><span data-stu-id="cbc4d-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
   
- `GetILFunctionBody` <span data-ttu-id="2711f-113">peut retourner un HRESULT de CORPROF_E_FUNCTION_NOT_IL si le `methodId` pointe vers une méthode sans code MSIL (comme une méthode abstraite ou une plateforme (méthode) (PInvoke)).</span><span class="sxs-lookup"><span data-stu-id="2711f-113">can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
+ <span data-ttu-id="cbc4d-113">`GetILFunctionBody` peut retourner un HRESULT de CORPROF_E_FUNCTION_NOT_IL si le `methodId` pointe vers une méthode sans code MSIL (comme une méthode abstraite ou une plateforme (méthode) (PInvoke)).</span><span class="sxs-lookup"><span data-stu-id="cbc4d-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2711f-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2711f-114">Requirements</span></span>  
- <span data-ttu-id="2711f-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2711f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbc4d-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="cbc4d-114">Requirements</span></span>  
+ <span data-ttu-id="cbc4d-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbc4d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2711f-116">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2711f-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cbc4d-116">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cbc4d-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2711f-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2711f-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbc4d-117">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbc4d-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2711f-118">Versions de .NET Framework :</span><span class="sxs-lookup"><span data-stu-id="2711f-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="cbc4d-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbc4d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2711f-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2711f-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbc4d-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cbc4d-119">See also</span></span>
 
-- [<span data-ttu-id="2711f-120">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="2711f-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="cbc4d-120">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="cbc4d-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

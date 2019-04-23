@@ -10,23 +10,23 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207355"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="b6f7e-102">Vue d'ensemble de l'utilisation des contrôles dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6f7e-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="b6f7e-103">Cette rubrique décrit les éléments essentiels d’une application Windows Forms et fournit un exemple simple qui utilise des contrôles et gère les événements dans une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="fb9da-102">Vue d'ensemble de l'utilisation des contrôles dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb9da-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="fb9da-103">Cette rubrique décrit les éléments essentiels d’une application Windows Forms et fournit un exemple simple qui utilise des contrôles et gère les événements dans une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="fb9da-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="b6f7e-104">Applications de formulaires Windows simple</span><span class="sxs-lookup"><span data-stu-id="b6f7e-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="b6f7e-105">Au minimum, une application Windows Forms se compose des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="b6f7e-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="fb9da-104">Applications de formulaires Windows simple</span><span class="sxs-lookup"><span data-stu-id="fb9da-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="fb9da-105">Au minimum, une application Windows Forms se compose des éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="fb9da-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <span data-ttu-id="b6f7e-106">Une ou plusieurs classes qui dérivent de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="fb9da-106">Une ou plusieurs classes qui dérivent de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fb9da-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="b6f7e-107">Un `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> et transmet un <xref:System.Windows.Forms.Form> instance à ce dernier.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="b6f7e-108">Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+-   <span data-ttu-id="fb9da-107">Un `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> et transmet un <xref:System.Windows.Forms.Form> instance à ce dernier.</span><span class="sxs-lookup"><span data-stu-id="fb9da-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="fb9da-108">Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.</span><span class="sxs-lookup"><span data-stu-id="fb9da-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="b6f7e-109">L’exemple de code suivant montre les éléments essentiels d’une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="fb9da-109">L’exemple de code suivant montre les éléments essentiels d’une application Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="fb9da-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="b6f7e-110">Utilisation de contrôles dans une Application de formulaires Windows</span><span class="sxs-lookup"><span data-stu-id="b6f7e-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="b6f7e-111">L’exemple de code suivant montre une application simple qui illustre comment les applications Windows Forms utilisent des contrôles et gérer des événements.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="b6f7e-112">L’exemple se compose de trois boutons sur un formulaire ; chaque bouton modifie la couleur d’arrière-plan d’un clic.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="fb9da-110">Utilisation de contrôles dans une Application de formulaires Windows</span><span class="sxs-lookup"><span data-stu-id="fb9da-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="fb9da-111">L’exemple de code suivant montre une application simple qui illustre comment les applications Windows Forms utilisent des contrôles et gérer des événements.</span><span class="sxs-lookup"><span data-stu-id="fb9da-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="fb9da-112">L’exemple se compose de trois boutons sur un formulaire ; chaque bouton modifie la couleur d’arrière-plan d’un clic.</span><span class="sxs-lookup"><span data-stu-id="fb9da-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6f7e-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b6f7e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb9da-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fb9da-113">See also</span></span>
 
-- [<span data-ttu-id="b6f7e-114">Développement de contrôles Windows Forms personnalisés avec le .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b6f7e-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="b6f7e-115">Concepts de base du développement de contrôles Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6f7e-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
+- [<span data-ttu-id="fb9da-114">Développement de contrôles Windows Forms personnalisés avec le .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb9da-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="fb9da-115">Concepts de base du développement de contrôles Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb9da-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
