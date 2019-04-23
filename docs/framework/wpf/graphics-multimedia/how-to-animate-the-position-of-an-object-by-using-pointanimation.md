@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111304"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Procédure : Animer la position d’un objet à l’aide de PointAnimation
@@ -30,7 +30,7 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Poin
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.EllipseGeometry>
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
-- [Vue d'ensemble de l'animation](animation-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
 - [Graphiques et multimédia](index.md)
-- [Rubriques "Comment" relatives aux graphiques](graphics-how-to-topics.md)
-- [Rubriques "Comment" relatives à l'animation et au minutage](animation-and-timing-how-to-topics.md)
+- [Rubriques de procédures de graphiques](graphics-how-to-topics.md)
+- [L’animation et minutage des rubriques de procédures](animation-and-timing-how-to-topics.md)

@@ -3,10 +3,10 @@ title: Opérateurs de séquence
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113683"
 ---
 # <a name="sequence-operators"></a>Opérateurs de séquence
@@ -43,7 +43,7 @@ En général, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Différences par rapport à .NET  
- Tous les opérateurs de séquence pris en charge fonctionnent conformément aux attentes dans le Common Language Runtime (CLR) à l'exception d'`Average`. `Average` Retourne une valeur du même type que le type qui est une moyenne, alors que dans le CLR `Average` retourne toujours un <xref:System.Double> ou un <xref:System.Decimal>. Si l’argument de source est casté explicitement en valeur double/decimal ou si le sélecteur caste vers une valeur double/decimal, le SQL obtenu aura également une telle conversion et le résultat obtenu sera conforme au résultat prévu.  
+ Tous les opérateurs de séquence pris en charge fonctionnent conformément aux attentes dans le Common Language Runtime (CLR) à l'exception d'`Average`. `Average` retourne une valeur du même type que le type dont la moyenne est calculée, alors que dans le CLR, `Average` retourne toujours un <xref:System.Double> ou un <xref:System.Decimal>. Si l’argument de source est casté explicitement en valeur double/decimal ou si le sélecteur caste vers une valeur double/decimal, le SQL obtenu aura également une telle conversion et le résultat obtenu sera conforme au résultat prévu.  
   
 ## <a name="see-also"></a>Voir aussi
 

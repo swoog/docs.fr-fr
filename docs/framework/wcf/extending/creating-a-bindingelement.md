@@ -3,10 +3,10 @@ title: Création d’un élément de liaison
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115165"
 ---
 # <a name="creating-a-bindingelement"></a>Création d’un élément de liaison
@@ -22,9 +22,9 @@ Liaisons et éléments de liaison (objets qui étendent <xref:System.ServiceMode
   
  L'élément `ChunkingBindingElement` est chargé de créer la fabrication `ChunkingChannelFactory` et l'écouteur `ChunkingChannelListener`. Cet élément se substitue aux implémentations <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> et <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> et s'assure que le paramètre de type correspond à <xref:System.ServiceModel.Channels.IDuplexSessionChannel> (il s'agit de la seule forme de canal prise en charge par notre exemple de canal `ChunkingChannel`) et que les autres éléments de liaison dans la liaison prennent effectivement en charge cette forme de canal.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> vérifie d’abord que la forme de canal demandée peut être générée et qu’il obtient ensuite une liste d’actions de message à segmenter. Cette méthode crée ensuite une fabrication `ChunkingChannelFactory` en lui passant la fabrication de canal interne. Remarque : si vous créez un élément de liaison de transport, cet élément est le dernier dans la pile de liaison. Vous devez, par conséquent, créer un écouteur de canal ou une fabrication de canal.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> vérifie au préalable que la forme de canal demandée peut être construite, puis récupère une liste d'actions de message à fragmenter. Cette méthode crée ensuite une fabrication `ChunkingChannelFactory` en lui passant la fabrication de canal interne. Remarque : si vous créez un élément de liaison de transport, cet élément est le dernier dans la pile de liaison. Vous devez, par conséquent, créer un écouteur de canal ou une fabrication de canal.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> a une implémentation semblable pour la création de `ChunkingChannelListener` et en lui passant l’écouteur de canal interne.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> utilise une implémentation similaire pour créer `ChunkingChannelListener` et lui passer l'écouteur de canal interne.  
   
  Autre exemple à l’aide d’un canal de transport, le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple fournit la substitution suivante.  
   
@@ -52,9 +52,9 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="transport-binding-elements"></a>Éléments de liaison de transport  
  Pour créer un nouvel élément de liaison de transport, étendez l’interface <xref:System.ServiceModel.Channels.TransportBindingElement>. Vous devez ensuite implémenter au minimum la méthode <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> et la propriété <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType>.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> Doit retourner une nouvelle copie de cet élément de liaison.  Dans le cadre de nos meilleures pratiques, nous vous recommandons d’implémenter, en tant que créateur de cet élément de liaison, la méthode de clonage à l’aide d’un constructeur de copie qui appelle le constructeur de copie de base, puis clone tous les champs supplémentaires figurant dans cette classe.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> doit retourner une nouvelle copie de cet élément de liaison.  Dans le cadre de nos meilleures pratiques, nous vous recommandons d’implémenter, en tant que créateur de cet élément de liaison, la méthode de clonage à l’aide d’un constructeur de copie qui appelle le constructeur de copie de base, puis clone tous les champs supplémentaires figurant dans cette classe.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – Les <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> obtenir propriété retourne le schéma d’URI pour le protocole de transport représenté par l’élément de liaison. Par exemple, le <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> retournent « http » et « net.tcp » à partir de leurs détenteurs respectifs <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> propriétés.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> : la propriété <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> retourne le modèle URI correspondant au protocole de transport représenté par l'élément de liaison. Par exemple, le <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> retournent « http » et « net.tcp » à partir de leurs détenteurs respectifs <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> propriétés.  
   
 #### <a name="encoding-binding-elements"></a>Éléments de liaison d’encodage  
  Pour créer un nouvel élément de liaison d'encodage, commencez par étendre la classe <xref:System.ServiceModel.Channels.BindingElement> et implémenter la classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>. Vous devez ensuite implémenter au minimum les méthodes <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> ainsi que la propriété <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>.  

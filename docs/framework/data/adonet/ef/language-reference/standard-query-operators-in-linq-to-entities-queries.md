@@ -3,10 +3,10 @@ title: Opérateurs de requête standard dans les requêtes LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118142"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Opérateurs de requête standard dans les requêtes LINQ to Entities
@@ -69,7 +69,7 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
 ## <a name="type-methods"></a>Méthodes de type  
  Les deux méthodes LINQ qui traitent de la conversion de type et les tests sont tous deux pris en charge dans le contexte d’Entity Framework. Cela signifie que les seuls types pris en charge sont des types qui correspondent au type Entity Framework approprié. Pour obtenir la liste de ces types, consultez [Types du modèle conceptuel (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Les méthodes de type sont `Convert` et `OfType`.  
   
- `OfType` est pris en charge pour les types d’entité. `Convert` est pris en charge pour les types primitifs du modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
+ La méthode `OfType` est prise en charge pour les types d'entités. La méthode `Convert` est prise en charge pour les types primitifs de modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
   
 ## <a name="paging-methods"></a>Méthodes de pagination  
  Opérations de pagination retournent un élément unique ou plusieurs éléments d’une séquence. Les méthodes de pagination prises en charge sont `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, et `Take`.  

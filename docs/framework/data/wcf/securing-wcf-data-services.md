@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119117"
 ---
 # <a name="securing-wcf-data-services"></a>Sécurisation de WCF Data Services
@@ -112,5 +112,5 @@ OData est basée sur le protocole HTTP. Dans un message HTTP, l'en-tête peut co
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Définition des services de données WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Bibliothèque client services de données WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Définition de WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

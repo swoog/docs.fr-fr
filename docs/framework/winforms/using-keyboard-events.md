@@ -10,10 +10,10 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114268"
 ---
 # <a name="using-keyboard-events"></a>Utilisation des événements du clavier
@@ -41,5 +41,5 @@ La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant
 ## <a name="see-also"></a>Voir aussi
 
 - [Entrée au clavier dans une application Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Fonctionnement de l'entrée au clavier](how-keyboard-input-works.md)
+- [Fonctionnement de l’entrée au clavier](how-keyboard-input-works.md)
 - [Entrée de la souris dans une application Windows Forms](mouse-input-in-a-windows-forms-application.md)

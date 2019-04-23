@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116361"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Propriétés UI Automation pour les clients
@@ -25,7 +25,7 @@ ms.locfileid: "59116361"
   
  Les modèles de contrôle ont également des propriétés. Les propriétés des modèles de contrôle sont spécifiques au modèle. Par exemple, <xref:System.Windows.Automation.ScrollPattern> possède des propriétés qui permettent à une application cliente de déterminer si une fenêtre peut faire l’objet d’un défilement vertical ou horizontal, et de connaître les tailles d’affichage ainsi que les positions de défilement actuelles. Les modèles de contrôle exposent toutes leurs propriétés via une structure, par exemple <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] les propriétés sont en lecture seule. Pour définir les propriétés d’un contrôle, vous devez utiliser les méthodes du modèle de contrôle approprié. Par exemple, utilisez <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> pour changer les valeurs de position d’une fenêtre de défilement.  
+ Les propriétés[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sont en lecture seule. Pour définir les propriétés d’un contrôle, vous devez utiliser les méthodes du modèle de contrôle approprié. Par exemple, utilisez <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> pour changer les valeurs de position d’une fenêtre de défilement.  
   
  Pour améliorer les performances, vous pouvez mettre en cache les valeurs des propriétés des contrôles et des modèles de contrôle quand des objets <xref:System.Windows.Automation.AutomationElement> sont récupérés. Pour plus d’informations, consultez [mise en cache dans les Clients UI Automation](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
@@ -107,4 +107,4 @@ ms.locfileid: "59116361"
 
 - [Mise en cache dans les clients UI Automation](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Implémentation de fournisseur UI Automation côté serveur](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [S'abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [S’abonner à des événements UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

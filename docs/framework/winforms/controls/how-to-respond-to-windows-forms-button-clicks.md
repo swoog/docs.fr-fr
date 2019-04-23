@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110069"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procédure : répondre aux clics de bouton Windows Forms
@@ -57,6 +57,6 @@ L’utilisation la plus élémentaire d’un formulaire Windows <xref:System.Win
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d’ensemble du contrôle Button](button-control-overview-windows-forms.md)
+- [Vue d'ensemble du contrôle Button](button-control-overview-windows-forms.md)
 - [Méthodes de sélection du contrôle Button Windows Forms](ways-to-select-a-windows-forms-button-control.md)
 - [Button, contrôle](button-control-windows-forms.md)

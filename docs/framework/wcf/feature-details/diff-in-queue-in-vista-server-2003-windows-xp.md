@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115984"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP
@@ -19,7 +19,7 @@ Cette rubrique résume les différences dans la fonctionnalité de files d’att
   
  En général, il existe une seule file d'attente de lettres mortes à l'échelle du système pour toutes les applications mises en file d'attente qui partagent un gestionnaire de files d'attente. Une file d'attente de lettres mortes pour chaque application permet une meilleure isolation entre les applications mises en file d'attente qui partagent un gestionnaire de files d'attente en laissant à ces applications le soin de spécifier leur propre file d'attente de lettres mortes. Une application qui partage une file d'attente de lettres mortes avec d'autres applications doit parcourir la file d'attente pour rechercher les messages qui lui sont applicables. Avec une file d'attente de lettres mortes qui lui est spécifique, l'application peut être assurée que tous les messages figurant dans sa file d'attente de lettres mortes lui sont applicables.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] Fournit des files d’attente de lettres mortes spécifique à l’application. Les files d'attente de lettres mortes spécifiques aux applications ne sont pas disponibles dans [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni dans [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et les applications doivent utiliser la file d'attente de lettres mortes à l'échelle du système.  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] fournit des files d'attente de lettres mortes spécifiques aux applications. Les files d'attente de lettres mortes spécifiques aux applications ne sont pas disponibles dans [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni dans [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et les applications doivent utiliser la file d'attente de lettres mortes à l'échelle du système.  
   
 ## <a name="poison-message-handling"></a>Gestion des messages incohérents  
  Un message incohérent est un message qui a dépassé le nombre maximal de tentatives de remise à l'application réceptrice. Cette situation peut survenir lorsqu’une application qui lit un message d’une file d’attente transactionnelle ne peut pas traiter immédiatement le message en raison d’erreurs. Si l'application abandonne la transaction dans laquelle le message mis en file d'attente a été reçu, elle renvoie le message à la file d'attente. L’application essaie ensuite de récupérer le message dans une nouvelle transaction. Si le problème qui provoque l'erreur n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
@@ -37,5 +37,5 @@ Cette rubrique résume les différences dans la fonctionnalité de files d’att
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Utilisation de files d’attente de lettres mortes pour gérer des défaillances de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

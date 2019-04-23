@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113280"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitations de sérialisation de XamlWriter.Save
@@ -30,7 +30,7 @@ Le [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sys
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>La gestion des événements n’est pas conservée  
- Lorsque les gestionnaires d’événements qui sont ajoutés via [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sont sérialisés, ils ne sont pas conservés. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sans code-behind (et également sans le mécanisme x : Code associé) n’a aucun moyen de sérialiser la logique procédurale du runtime. Étant donné que la sérialisation est autonome et limitée à l’arborescence logique, il n’existe aucun mécanisme permettant de stocker les gestionnaires d’événements. Par conséquent, les attributs de gestionnaire d’événements, l’attribut lui-même et la valeur de chaîne qui nomme le gestionnaire sont supprimés de la sortie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Lorsque les gestionnaires d’événements qui sont ajoutés via [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sont sérialisés, ils ne sont pas conservés. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sans code-behind (et sans le mécanisme x:Code associé) n’a aucun moyen de sérialiser la logique procédurale du runtime. Étant donné que la sérialisation est autonome et limitée à l’arborescence logique, il n’existe aucun mécanisme permettant de stocker les gestionnaires d’événements. Par conséquent, les attributs de gestionnaire d’événements, l’attribut lui-même et la valeur de chaîne qui nomme le gestionnaire sont supprimés de la sortie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Scénarios réalistes d’utilisation de XAMLWriter.Save  

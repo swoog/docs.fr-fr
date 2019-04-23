@@ -5,10 +5,10 @@ ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110212"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter >, élément (.NET Native)
@@ -53,7 +53,7 @@ Applique la stratégie au type représenté par un argument Type passé à une m
   
 |Value|Description|  
 |-----------|-----------------|  
-|*parameter_name*|Nom du paramètre de type <xref:System.Type>. Par exemple, pour la signature de méthode `Type.GetInterfaceMap(Type interfaceType)`, la valeur de l'attribut `Name` est « interfaceType ».|  
+|*nom_paramètre*|Nom du paramètre de type <xref:System.Type>. Par exemple, pour la signature de méthode `Type.GetInterfaceMap(Type interfaceType)`, la valeur de l'attribut `Name` est « interfaceType ».|  
   
 ## <a name="all-other-attributes"></a>Tous les autres attributs  
   
@@ -68,7 +68,7 @@ Applique la stratégie au type représenté par un argument Type passé à une m
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
   
 ## <a name="remarks"></a>Notes  
  L’élément `<TypeParameter>` est similaire à l’élément [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), à ceci près qu’il peut uniquement être appliqué à des paramètres de type <xref:System.Type>. Il applique la stratégie à tout type représenté au moment de l'exécution par l'argument de type spécifié par l'attribut `Name`.  
@@ -96,7 +96,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [\<Méthode > élément](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Éléments de directive runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
 ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114648"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Procédure : Créer un Expander avec un ScrollViewer
@@ -29,5 +29,5 @@ Cet exemple montre comment créer un <xref:System.Windows.Controls.Expander> con
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Controls.Expander>
-- [Vue d'ensemble de l'expanseur](expander-overview.md)
-- [Rubriques Comment](expander-how-to-topics.md)
+- [Vue d'ensemble de l'Expandeur](expander-overview.md)
+- [Rubriques de guide pratique](expander-how-to-topics.md)

@@ -5,10 +5,10 @@ ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111655"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter >, élément (.NET Native)
@@ -68,7 +68,7 @@ Applique la stratégie au type de paramètre d'un type ou d'une méthode génér
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique une stratégie de réflexion runtime à un constructeur ou à une méthode.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applique la stratégie de réflexion runtime à un type particulier, tel qu'une classe ou une structure.|  
   
 ## <a name="remarks"></a>Notes  
@@ -88,7 +88,7 @@ Applique la stratégie au type de paramètre d'un type ou d'une méthode génér
   
 ## <a name="see-also"></a>Voir aussi
 
-- [\<Méthode > élément](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method>, élément](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Type > élément](../../../docs/framework/net-native/type-element-net-native.md)
 - [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Paramètres de stratégie de directive runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

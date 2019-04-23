@@ -7,23 +7,23 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112214"
 ---
 # <a name="security-considerations-in-wcf"></a>Considérations relatives à la sécurité dans WCF
 Les rubriques de cette section répertorient les divers éléments relatifs à la sécurité à prendre en compte lorsque vous concevez une application Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Divulgation d'informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Divulgation d’informations](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  Traite des diverses manières dont les informations peuvent être divulguées ou attaquées, et de la manière de limiter ce risque.  
   
- [Élévation de privilège](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Élévation de privilèges](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  Traite des conséquences de l'attribution à un intrus d'autorisations plus étendues celles accordées initialement, et de la manière de limiter ce risque.  
   
- [Refus de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Déni de service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  Traite de ce qui arrive lorsqu'un système ne peut pas traiter des messages convenablement, et de la manière de limiter ce risque.  
   
  [Falsification](../../../../docs/framework/wcf/feature-details/tampering.md)  
@@ -48,7 +48,7 @@ Les rubriques de cette section répertorient les divers éléments relatifs à l
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Aide sur la sécurité et meilleures pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Aide sur la sécurité et bonnes pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

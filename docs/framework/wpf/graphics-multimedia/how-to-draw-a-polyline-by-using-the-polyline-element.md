@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
 ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114844"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procédure : Dessiner une polyligne à l’aide de l’élément Polyline
@@ -40,4 +40,4 @@ Cet exemple montre comment dessiner une polyligne, c'est-à-dire une série de l
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>
 - [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)

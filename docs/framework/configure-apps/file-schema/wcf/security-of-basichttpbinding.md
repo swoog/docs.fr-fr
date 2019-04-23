@@ -3,10 +3,10 @@ title: <security> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
 ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118051"
 ---
 # <a name="security-of-basichttpbinding"></a>\<sécurité > de \<basicHttpBinding >
@@ -37,7 +37,7 @@ Définit les fonctionnalités de sécurité de la [ \<basicHttpBinding >](../../
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|mode|Optionnel. Spécifie le type de sécurité qui est utilisé. La valeur par défaut est `None`. Cet attribut est de type <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|mode|Facultatif. Spécifie le type de sécurité qui est utilisé. La valeur par défaut est `None`. Cet attribut est de type <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Attribut Mode  
   
@@ -72,7 +72,7 @@ Définit les fonctionnalités de sécurité de la [ \<basicHttpBinding >](../../
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sélection d'un type d'informations d'identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Liaisons](../../../../../docs/framework/wcf/bindings.md)
 - [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

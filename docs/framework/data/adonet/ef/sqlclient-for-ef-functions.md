@@ -3,10 +3,10 @@ title: Fonctions SqlClient pour l'Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
 ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117778"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Fonctions SqlClient pour l'Entity Framework
@@ -19,9 +19,9 @@ Le fournisseur de données .NET Framework pour SQL Server (SqlClient) pour Ent
 ## <a name="in-this-section"></a>Dans cette section  
  [Mappage du modèle conceptuel canonique aux fonctions SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
- [Fonctions d'agrégation](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Fonctions d’agrégation](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
- [Fonctions de date et d'heure](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
+ [Fonctions de date et d’heure](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
   
  [Fonctions mathématiques](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
   
@@ -32,4 +32,4 @@ Le fournisseur de données .NET Framework pour SQL Server (SqlClient) pour Ent
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Vue d'ensemble d'Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Vue d’ensemble d’Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

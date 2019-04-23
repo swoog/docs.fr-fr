@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112084"
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
@@ -78,7 +78,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  Les messages enregistrés à ce niveau sont prêts à être encodés ou décodés pour ou après transmission. Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages de niveau transport seront enregistrés. Tous les messages d'infrastructure sont enregistrés à ce niveau, notamment les messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés à ce niveau sous leur forme chiffrée, sauf si un transport sécurisé tel qu'HTTPS est utilisé.  
   
 ### <a name="malformed-level"></a>Niveau erreurs  
- Messages mal formés sont des messages qui ont été rejetés par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à consigner en tant que CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
+ Messages mal formés sont des messages qui ont été rejetés par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
   
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  
@@ -167,4 +167,4 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 
 - [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
 - [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Paramètres recommandés pour le suivi et l'enregistrement des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [Paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

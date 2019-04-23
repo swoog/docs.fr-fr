@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118194"
 ---
 # <a name="windows-communication-foundation-security"></a>Sécurité dans Windows Communication Foundation
@@ -19,7 +19,7 @@ Les rubriques de cette section décrivent les fonctionnalités de sécurité de 
  Pour plus d’informations sur la sécurité et de Windows Server AppFabric, consultez [modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Décrit les fonctionnalités de sécurité dans WCF.  
   
  [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
@@ -52,7 +52,7 @@ Les rubriques de cette section décrivent les fonctionnalités de sécurité de 
  [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Décrit comment effectuer un audit des événements de sécurité.  
   
- [Aide sur la sécurité et meilleures pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Aide sur la sécurité et bonnes pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Instructions pour la création d’applications WCF sécurisées.  
   
 ## <a name="reference"></a>Référence  
@@ -65,9 +65,9 @@ Les rubriques de cette section décrivent les fonctionnalités de sécurité de 
   
  [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Didacticiel de mise en route](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Didacticiel Bien démarrer](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Vue d'ensemble conceptuelle](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [Vue d’ensemble conceptuelle](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

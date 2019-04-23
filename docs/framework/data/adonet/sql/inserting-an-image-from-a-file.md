@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116228"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Insertion d'une image à partir d'un fichier
@@ -133,7 +133,7 @@ public static byte[] GetPhoto(string filePath)
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des commandes pour modifier les données](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Extraction de données binaires](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
-- [Données binaires et à valeurs élevées SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Récupération de données binaires](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
+- [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
