@@ -3,11 +3,11 @@ title: Vue d'ensemble du flux de messages
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312642"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772659"
 ---
 # <a name="message-flow-overview"></a>Vue d'ensemble du flux de messages
 Dans un système distribué contenant des services interconnectés, il est nécessaire de déterminer les relations de causalité entre les services. Il est important de comprendre les différents composants faisant partie d'un flux de demandes pour prendre en charge des scénarios critiques, tels que le contrôle d'état, la résolution des problèmes et l'analyse de la cause première. Pour activer la corrélation des suivis entre différents services, la prise en prendre en charge des fonctionnalités suivantes a été ajoutée dans .NET Framework 4 :

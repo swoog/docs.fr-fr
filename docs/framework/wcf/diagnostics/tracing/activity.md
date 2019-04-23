@@ -3,10 +3,10 @@ title: Activité
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170207"
 ---
 # <a name="activity"></a>Activité
@@ -38,9 +38,9 @@ Cette rubrique décrit les suivis d’activité dans le modèle de suivi de Wind
 ## <a name="defining-the-scope-of-an-activity"></a>Définition de la portée d'une activité  
  Les activités, définies pendant le design, correspondent à des unités logiques de fonctionnement. Les suivis émis ayant le même ID d'activité sont directement liés les uns aux autres : ils font partie de la même activité. Les activités pouvant franchir les limites de point de terminaison (par exemple, une demande), deux portées sont définies par activité.  
   
--   `Global` portée, par application. Dans cette portée, l'activité est identifiée par son identificateur d'activité global unique 128 bits (gAId). Le gAid correspond à ce qui est propagé sur des points de terminaison.  
+-   Portée `Global`, par application. Dans cette portée, l'activité est identifiée par son identificateur d'activité global unique 128 bits (gAId). Le gAid correspond à ce qui est propagé sur des points de terminaison.  
   
--   `Local` portée, par le point de terminaison. Dans le cadre de cette portée, les activités sont identifiées à l'aide de leur identificateur gAId, du nom de la source de suivi émettant leurs suivis et de l'ID de processus. Ce trio constitue l'ID local d'activité, appelé lAId. Le lAId est utilisé pour définir les limites (locales) d'une activité.  
+-   Portée `Local`, par point de terminaison. Dans le cadre de cette portée, les activités sont identifiées à l'aide de leur identificateur gAId, du nom de la source de suivi émettant leurs suivis et de l'ID de processus. Ce trio constitue l'ID local d'activité, appelé lAId. Le lAId est utilisé pour définir les limites (locales) d'une activité.  
   
 ## <a name="trace-schema"></a>Schéma de suivi  
  Les traces peuvent être émises à l'aide de tout schéma et sur toutes les plateformes Microsoft. « e2e » (pour « End to End ») est un schéma couramment utilisé. Ce schéma comporte l'identificateur à 128 bits (gAId), le nom de la source de suivi et l'ID de processus. Dans le code managé, l'écouteur <xref:System.Diagnostics.XmlWriterTraceListener> émet des suivis dans le schéma E2E.  
@@ -99,8 +99,8 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Configuration du traçage](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Émission de suivis dans du code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
 ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167854"
 ---
 # <a name="documentviewer"></a>DocumentViewer
@@ -26,4 +26,4 @@ Le <xref:System.Windows.Controls.DocumentViewer> contrôle sert à afficher <xre
 
 - [Documents](../advanced/documents.md)
 - [Sérialisation et stockage de documents](../advanced/document-serialization-and-storage.md)
-- [Vue d'ensemble de l'impression](../advanced/printing-overview.md)
+- [Vue d’ensemble de l’impression](../advanced/printing-overview.md)

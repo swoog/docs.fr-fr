@@ -3,11 +3,11 @@ title: Durable Instance Context
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316932"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773374"
 ---
 # <a name="durable-instance-context"></a>Durable Instance Context
 Cet exemple montre comment personnaliser le runtime Windows Communication Foundation (WCF) pour activer des contextes d’instance fiables. Il utilise SQL Server 2005 comme magasin de sauvegarde (SQL Server 2005 Express dans ce cas précis). Toutefois, il permet également d'accéder aux mécanismes de stockage personnalisés.  

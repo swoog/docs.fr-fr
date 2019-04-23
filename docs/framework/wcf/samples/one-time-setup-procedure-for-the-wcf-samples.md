@@ -3,11 +3,11 @@ title: Procédure d'installation unique pour les exemples Windows Communication 
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326708"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773049"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procédure d'installation unique pour les exemples Windows Communication Foundation
 La plupart des exemples Windows Communication Foundation (WCF) sont hébergée dans Internet Information Services (IIS) et exécutez à partir d’un répertoire virtuel commun. Cette procédure d’installation unique crée un dossier sur le disque ; Il ajoute également un répertoire virtuel dans IIS nommé **ServiceModelSamples**.

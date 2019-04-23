@@ -16,10 +16,10 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
 ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171001"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Procédure : dessiner une ellipse pleine dans un formulaire Windows
@@ -38,7 +38,7 @@ Cet exemple dessine une ellipse remplie dans un formulaire.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
 - [Fusion alpha de lignes et de remplissages](alpha-blending-lines-and-fills.md)
 - [Utilisation d'un pinceau pour remplir des formes](using-a-brush-to-fill-shapes.md)

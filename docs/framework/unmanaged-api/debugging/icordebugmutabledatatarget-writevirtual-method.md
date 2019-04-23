@@ -5,10 +5,10 @@ ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171650"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual, méthode
@@ -34,7 +34,7 @@ HRESULT WriteVirtual(
  [in] Nombre d'octets dans `pBuffer`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` sur la réussite ou tout autre `HRESULT` en cas d’échec.  
+ `S_OK` en cas de réussite ou tout autre `HRESULT` en cas d'échec.  
   
 ## <a name="remarks"></a>Notes  
  Si des octets ne peuvent pas être écrits, l'appel de méthode échoue sans aucune modification des octets dans l'espace d'adressage cible. (Sinon, la cible se retrouve dans un état incohérent qui rend toute opération de débogage supplémentaire peu fiable.)  
@@ -46,7 +46,7 @@ HRESULT WriteVirtual(
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

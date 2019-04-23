@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171028"
 ---
 # <a name="creating-internet-requests"></a>Création de requêtes Internet
@@ -29,5 +29,5 @@ Les applications créent des instances de <xref:System.Net.WebRequest> par le bi
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : demander des données à l’aide de la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+- [Guide pratique pour demander des données à l’aide de la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
 - [Demande de données](../../../docs/framework/network-programming/requesting-data.md)

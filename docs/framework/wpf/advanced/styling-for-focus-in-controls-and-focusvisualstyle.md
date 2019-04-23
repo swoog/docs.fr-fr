@@ -7,14 +7,14 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172053"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>FocusVisualStyle et application d'un style au focus dans les contrôles
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit deux mécanismes parallèles permettant de changer l’apparence visuelle d’un contrôle lorsqu’il reçoit le focus clavier. Le premier mécanisme consiste à utiliser des accesseurs Set de propriété pour les propriétés telles que <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dans le style ou le modèle est appliqué au contrôle. Le deuxième mécanisme consiste à fournir un style distinct comme valeur de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété ; le « style de focus visuel » crée une arborescence d’éléments visuels distincte pour un ornement qui est dessiné sur le contrôle, plutôt que d’en modifier l’arborescence visuelle du contrôle ou toute autre interface utilisateur élément en la remplaçant. Cette rubrique décrit les scénarios où chacun de ces mécanismes convient.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose deux mécanismes parallèles permettant de changer l’apparence visuelle d’un contrôle lorsqu’il reçoit le focus clavier. Le premier mécanisme consiste à utiliser des accesseurs Set de propriété pour les propriétés telles que <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dans le style ou le modèle est appliqué au contrôle. Le deuxième mécanisme consiste à fournir un style distinct comme valeur de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété ; le « style de focus visuel » crée une arborescence d’éléments visuels distincte pour un ornement qui est dessiné sur le contrôle, plutôt que d’en modifier l’arborescence visuelle du contrôle ou toute autre interface utilisateur élément en la remplaçant. Cette rubrique décrit les scénarios où chacun de ces mécanismes convient.  
 
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>L’objectif du style de focus visuel  
@@ -78,6 +78,6 @@ ms.locfileid: "59172053"
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Application d'un style et création de modèles](../controls/styling-and-templating.md)
-- [Vue d'ensemble du focus](focus-overview.md)
-- [Vue d'ensemble des entrées](input-overview.md)
+- [Application d’un style et création de modèles](../controls/styling-and-templating.md)
+- [Vue d’ensemble du focus](focus-overview.md)
+- [Vue d’ensemble des entrées](input-overview.md)

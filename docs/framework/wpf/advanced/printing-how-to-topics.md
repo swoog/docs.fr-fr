@@ -6,10 +6,10 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170181"
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
@@ -22,22 +22,22 @@ Les rubriques de cette section montrent comment utiliser l’impression et les f
  [Cloner une imprimante](how-to-clone-a-printer.md)  
  Instructions pour savoir comment installer une deuxième file d’attente avec exactement les mêmes propriétés comme existant file d’attente d’impression.  
   
- [Diagnostiquer un travail d’impression problématique](how-to-diagnose-problematic-print-job.md)  
+ [Diagnostiquer un travail d'impression problématique](how-to-diagnose-problematic-print-job.md)  
  Instructions d’utilisation des propriétés de files d’attente et les travaux d’impression pour diagnostiquer un travail d’impression qui n’est pas l’impression.  
   
- [Déterminer si un travail d’impression peut être imprimé à cette heure de la journée](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ [Déterminer si un travail d'impression peut être imprimé à cette heure de la journée](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
  Instructions pour l’aide des propriétés de files d’attente et les travaux d’impression à décider par programmation les heures de la journée que le travail peut être imprimé.  
   
- [Énumérer un sous-ensemble de files d’attente à l’impression](how-to-enumerate-a-subset-of-print-queues.md)  
+ [Énumérer un sous-ensemble de files d'attente à l'impression](how-to-enumerate-a-subset-of-print-queues.md)  
  Instructions pour la génération d’une liste des imprimantes présentant certaines caractéristiques.  
   
- [Obtenir les propriétés de l’objet de système d’impression sans réflexion](how-to-get-print-system-object-properties-without-reflection.md)  
+ [Obtenir les propriétés de l'objet de système d'impression sans réflexion](how-to-get-print-system-object-properties-without-reflection.md)  
  Instructions pour savoir comment découvrir lors de l’exécution d’impression leurs types et propriétés de l’objet système.  
   
  [Imprimer des fichiers XPS par programmation](how-to-programmatically-print-xps-files.md)  
  Instructions pour l’impression rapide de [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] fichiers sans avoir besoin d’un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- [Observer à distance l’état d’imprimantes](how-to-remotely-survey-the-status-of-printers.md)  
+ [Observer à distance l'état d'imprimantes](how-to-remotely-survey-the-status-of-printers.md)  
  Instructions pour créer un utilitaire qui inspectera les imprimantes pour détecter ceux rencontre un problème de bourrage papier ou autre problème.  
   
  [Valider et fusionner des PrintTicket](how-to-validate-and-merge-printtickets.md)  
@@ -48,6 +48,6 @@ Les rubriques de cette section montrent comment utiliser l’impression et les f
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
-- [Vue d'ensemble de l'impression](printing-overview.md)
+- [Vue d’ensemble de l’impression](printing-overview.md)
 - [Documents dans WPF](documents-in-wpf.md)
 - [Documents XPS](/windows/desktop/printdocs/documents)

@@ -5,10 +5,10 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167686"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting, méthode
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Paramètres  
  `enableSplitting`  
- `true` Pour activer le fractionnement de module virtuel ; `false` pour la désactiver.  
+ `true` pour activer le fractionnement de module virtuel ; `false` pour le désactiver.  
   
 ## <a name="remarks"></a>Notes  
  Les causes de fractionnement de module virtuel [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) pour reconnaître des modules qui ont été fusionnés lors de la génération, traitement et les présentent en tant que groupe de modules distincts plutôt qu’un seul module de grande taille. Cette opération modifie le comportement de divers [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) méthodes décrites ci-dessous.  
@@ -110,7 +110,7 @@ HRESULT EnableVirtualModuleSplitting(
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
 ms.openlocfilehash: 9bfffac3d6970aceea3842df95f4bcae970b42e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167906"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Procédure : créer un contrôle DataGridView Windows Forms non lié
@@ -35,6 +35,6 @@ L'exemple de code suivant montre comment remplir un contrôle <xref:System.Windo
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Procédure pas à pas : Création d’un indépendant Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
 - [Affichage des données dans le contrôle DataGridView Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Modes d'affichage des données dans le contrôle DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Modes d’affichage des données dans le contrôle DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

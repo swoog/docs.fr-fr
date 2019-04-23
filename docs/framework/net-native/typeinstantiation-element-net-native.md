@@ -5,10 +5,10 @@ ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173132"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation >, élément (.NET Native)
@@ -55,13 +55,13 @@ Applique la stratégie de réflexion runtime à un type générique construit.
   
 |Value|Description|  
 |-----------|-----------------|  
-|*nom_type*|Nom du type. Si cet élément `<TypeInstantiation>` est l’enfant d’un élément [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), d’un élément [\<<Type>](../../../docs/framework/net-native/type-element-net-native.md) ou d’un autre élément `<TypeInstantiation>`, *type_name* peut spécifier le nom du type sans son espace de noms. Dans le cas contraire, *type_name* doit inclure le nom de type complet. Le nom du type n'est pas décoré. Par exemple, pour un objet <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'élément `<TypeInstantiation>` peut apparaître comme suit :<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Nom du type. Si cet élément `<TypeInstantiation>` est l’enfant d’un élément [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), d’un élément [\<<Type>](../../../docs/framework/net-native/type-element-net-native.md) ou d’un autre élément `<TypeInstantiation>`, *type_name* peut spécifier le nom du type sans son espace de noms. Dans le cas contraire, *type_name* doit inclure le nom de type complet. Le nom du type n'est pas décoré. Par exemple, pour un objet <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'élément `<TypeInstantiation>` peut apparaître comme suit :<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Attribut Arguments  
   
 |Value|Description|  
 |-----------|-----------------|  
-|*argument_type*|Spécifie les arguments de type générique. Si plusieurs arguments sont présents, ils sont séparés par des virgules. Chaque argument doit être composé du nom de type qualifié complet.|  
+|*type_argument*|Spécifie les arguments de type générique. Si plusieurs arguments sont présents, ils sont séparés par des virgules. Chaque argument doit être composé du nom de type qualifié complet.|  
   
 ## <a name="all-other-attributes"></a>Tous les autres attributs  
   
@@ -73,12 +73,12 @@ Applique la stratégie de réflexion runtime à un type générique construit.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie de réflexion à un événement appartenant à ce type.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applique la stratégie de réflexion à un événement appartenant à ce type.|  
 |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applique la stratégie de réflexion à un champ appartenant à ce type.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Applique la stratégie à un type, si cette stratégie a été appliquée au type représenté par l'élément conteneur `<TypeInstantiation>`.|  
-|[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie de réflexion à une méthode appartenant à ce type.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applique la stratégie de réflexion à une méthode appartenant à ce type.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applique la stratégie de réflexion à une méthode générique construite appartenant à ce type.|  
-|[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie de réflexion à une propriété appartenant à ce type.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applique la stratégie de réflexion à une propriété appartenant à ce type.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applique la stratégie de réflexion à un type imbriqué.|  
 |`<TypeInstantiation>`|Applique la stratégie de réflexion à un type générique construit imbriqué.|  
   
@@ -89,7 +89,7 @@ Applique la stratégie de réflexion runtime à un type générique construit.
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Sert de conteneur pour des types à l'échelle de l'application et pour des membres de types dont les métadonnées sont disponibles pour la réflexion au moment de l'exécution.|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applique la stratégie de réflexion à tous les types d'un assembly spécifié.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Définit l'assembly qui contient des types et des membres de types dont les métadonnées sont disponibles pour la réflexion au moment de l'exécution.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie de réflexion à tous les types d'un espace de noms.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applique la stratégie de réflexion à tous les types d'un espace de noms.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applique la stratégie de réflexion à un type et à tous ses membres.|  
 |`<TypeInstantiation>`|Applique la stratégie de réflexion à un type générique construit et à tous ses membres.|  
   

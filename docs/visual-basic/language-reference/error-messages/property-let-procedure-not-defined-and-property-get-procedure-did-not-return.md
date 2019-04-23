@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
 ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334703"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773231"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>La procédure Property Let n'est pas définie et la procédure Property Get n'a pas retourné d'objet
 Certaines propriétés, méthodes et les opérations peuvent s’appliquent uniquement aux `Collection` objets. Vous avez spécifié une opération ou une propriété qui est réservée aux collections, mais l’objet n’est pas une collection.  

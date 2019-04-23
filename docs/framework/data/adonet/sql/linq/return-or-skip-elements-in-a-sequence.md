@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168309"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Comment : retourner ou ignorer des éléments d'une séquence
@@ -18,7 +18,7 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nom
  Utilisez l'opérateur <xref:System.Linq.Queryable.Skip%2A> pour ignorer un nombre donné d'éléments dans une séquence et retourner le reste.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> présentent certaines limites lorsqu’ils sont utilisés dans les requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines limites lorsqu'ils sont utilisés dans des requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit <xref:System.Linq.Queryable.Skip%2A> à l’aide d’une sous-requête avec le code SQL `NOT EXISTS` clause. Cette traduction présente les limites suivantes :  
   
@@ -44,7 +44,7 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nom
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A> et <xref:System.Linq.Queryable.Skip%2A> opérations sont bien définies uniquement sur les jeux ordonnés. La sémantique des jeux ou des multijeux non ordonnés n'est pas définie.  
+ Les opérations <xref:System.Linq.Queryable.Take%2A> et <xref:System.Linq.Queryable.Skip%2A> sont bien définies uniquement sur les jeux ordonnés. La sémantique des jeux ou des multijeux non ordonnés n'est pas définie.  
   
  Du fait des limitations de classement dans SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tente de déplacer le classement de l'argument de l'opérateur <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> vers le résultat de l'opérateur.  
   
@@ -56,7 +56,7 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nom
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Déplace le classement à la fin du code SQL, comme suit :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] déplace le classement à la fin du code SQL, comme suit :  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  

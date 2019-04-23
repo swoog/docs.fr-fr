@@ -3,10 +3,10 @@ title: Fournisseur EntityClient pour Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
 ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169674"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Fournisseur EntityClient pour Entity Framework
@@ -42,28 +42,28 @@ cmd.CommandText = @"SELECT VALUE p
  Pour mettre à jour les données qui sont exposées via un modèle conceptuel, consultez [Comment : Gérer les Transactions dans Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100)).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : Créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [Guide pratique pour Créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [Procédure : Exécuter une requête qui retourne des résultats PrimitiveType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [Guide pratique pour Exécuter une requête qui retourne les résultats PrimitiveType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [Procédure : Exécuter une requête qui retourne des résultats StructuralType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [Guide pratique pour Exécuter une requête qui retourne des résultats StructuralType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [Procédure : Exécuter une requête qui retourne des résultats RefType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [Guide pratique pour Exécuter une requête qui retourne les résultats RefType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [Procédure : Exécuter une requête qui retourne des types complexes](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [Guide pratique pour Exécuter une requête qui retourne des Types complexes](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [Procédure : Exécuter une requête qui retourne des collections imbriquées](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [Guide pratique pour Exécuter une requête qui retourne les Collections imbriquées](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Procédure : Exécuter une requête paramétrable Entity SQL avec EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Guide pratique pour Exécuter une requête paramétrée Entity SQL à l’aide d’EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Procédure : Exécuter une procédure stockée paramétrable avec EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Guide pratique pour Exécuter une procédure stockée paramétrée utilisant EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Procédure : Exécuter une requête polymorphe](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Guide pratique pour Exécuter une requête polymorphe](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [Procédure : Parcourir les relations avec l’opérateur Navigate](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [Guide pratique pour Naviguer parmi les relations avec l’opérateur Navigate](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Gestion des connexions et des transactions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [Gestion des connexions et Transactions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Informations de référence sur le langage](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

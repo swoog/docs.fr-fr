@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334612"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773413"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Procédure : accéder aux appareils de chiffrement matériel
 Vous pouvez utiliser la classe <xref:System.Security.Cryptography.CspParameters> pour accéder aux périphériques de chiffrement matériel. Par exemple, vous pouvez utiliser cette classe pour intégrer votre application à une carte à puce, à un générateur matériel de nombres aléatoires ou à une implémentation matérielle d'un algorithme de chiffrement.  

@@ -3,10 +3,10 @@ title: IPv6, configuration automatique
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170063"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6, configuration automatique
@@ -26,5 +26,5 @@ Un objectif important du protocole IPv6 est de prendre en charge le Plug-and-Pl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Protocole Internet version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [sockets](../../../docs/framework/network-programming/sockets.md)
+- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

@@ -1,5 +1,5 @@
 ---
-title: <httpWebRequest> Élément (paramètres réseau)
+title: <httpWebRequest>, élément (paramètres réseau)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
 ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169297"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest >, élément (paramètres réseau)
@@ -53,7 +53,7 @@ Personnalise les paramètres de la demande Web.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Notes  
  Par défaut, le .NET Framework applique strictement la norme RFC 2616 pour l’analyse URI. Certaines réponses du serveur peuvent inclure des caractères de contrôle dans les champs interdits, ce qui provoquent le <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> méthode lève un <xref:System.Net.WebException>. Si **useUnsafeHeaderParsing** a la valeur **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ne lèvera pas dans ce cas, toutefois, votre application sera vulnérable à plusieurs formes d’attaques d’analyse URI. La meilleure solution consiste à modifier le serveur afin que la réponse n’inclut pas les caractères de contrôle.  

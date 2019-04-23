@@ -3,10 +3,10 @@ title: Spécification de manifeste du fournisseur
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169908"
 ---
 # <a name="provider-manifest-specification"></a>Spécification de manifeste du fournisseur
@@ -266,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Booléen|Non|False|True si la fonction ne requiert pas de paramètres et est appelée sans paramètre|  
 |ParameterType<br /><br /> Sémantique|ParameterSemantics|Non|AllowImplicit<br /><br /> Conversion|Choix de la façon dont le pipeline de requête doit gérer la substitution de type de paramètre :<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Nœud de paramètres**  
+ **Nœud Paramètres**  
   
  Chaque fonction a une collection d’un ou plusieurs nœuds de paramètre.  
   
@@ -281,4 +281,4 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Écriture d'un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Écriture d’un fournisseur de données Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

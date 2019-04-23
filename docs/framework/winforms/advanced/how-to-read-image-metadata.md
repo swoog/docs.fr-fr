@@ -9,10 +9,10 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173613"
 ---
 # <a name="how-to-read-image-metadata"></a>Procédure : lire des métadonnées d’image
@@ -40,7 +40,7 @@ Certains fichiers image contiennent des métadonnées que vous pouvez lire pour 
   
 |Valeur numérique|Description|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|`Byte`|  
 |2|Un tableau de `Byte` objets codés au format ASCII|  
 |3|Un entier 16 bits|  
 |4|Un entier 32 bits|  

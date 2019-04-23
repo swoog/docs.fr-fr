@@ -5,10 +5,10 @@ helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167503"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Procédure : Afficher les certificats avec le composant logiciel enfichable MMC
@@ -80,5 +80,5 @@ Vous pouvez également afficher, exporter, importer et supprimer des certificats
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation des certificats](working-with-certificates.md)
-- [Procédure : Créer des certificats temporaires à utiliser pendant le développement](how-to-create-temporary-certificates-for-use-during-development.md)
-- [Procédure : Récupérer l’empreinte numérique d’un certificat](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Guide pratique pour Créer des certificats temporaires à utiliser pendant le développement](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Guide pratique pour Récupérer l’empreinte numérique d’un certificat](how-to-retrieve-the-thumbprint-of-a-certificate.md)
