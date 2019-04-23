@@ -13,27 +13,27 @@ helpviewer_keywords:
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
 ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309444"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="ae0e5-102">Procédure : ajouter des contrôles ou en supprimer dans une collection de contrôles au moment de l’exécution</span><span class="sxs-lookup"><span data-stu-id="ae0e5-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="ae0e5-103">Tâches courantes dans le développement d’applications sont l’ajout et la suppression de contrôles à partir de n’importe quel contrôle conteneur sur vos formulaires (comme le <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> contrôle, ou même le formulaire lui-même).</span><span class="sxs-lookup"><span data-stu-id="ae0e5-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="ae0e5-104">Au moment de la conception, vous pouvez faire glisser les contrôles directement vers un panneau ou une zone de groupe.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="ae0e5-105">Au moment de l’exécution, ces contrôles gèrent une collection `Controls`, qui assure le suivi des contrôles qui y sont placés.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="40927-102">Procédure : ajouter des contrôles ou en supprimer dans une collection de contrôles au moment de l’exécution</span><span class="sxs-lookup"><span data-stu-id="40927-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="40927-103">Tâches courantes dans le développement d’applications sont l’ajout et la suppression de contrôles à partir de n’importe quel contrôle conteneur sur vos formulaires (comme le <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> contrôle, ou même le formulaire lui-même).</span><span class="sxs-lookup"><span data-stu-id="40927-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="40927-104">Au moment de la conception, vous pouvez faire glisser les contrôles directement vers un panneau ou une zone de groupe.</span><span class="sxs-lookup"><span data-stu-id="40927-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="40927-105">Au moment de l’exécution, ces contrôles gèrent une collection `Controls`, qui assure le suivi des contrôles qui y sont placés.</span><span class="sxs-lookup"><span data-stu-id="40927-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ae0e5-106">L’exemple de code suivant s’applique à n’importe quel contrôle qui gère une collection de contrôles qu’il contient.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+>  <span data-ttu-id="40927-106">L’exemple de code suivant s’applique à n’importe quel contrôle qui gère une collection de contrôles qu’il contient.</span><span class="sxs-lookup"><span data-stu-id="40927-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="ae0e5-107">Pour ajouter un contrôle à une collection par programme</span><span class="sxs-lookup"><span data-stu-id="ae0e5-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="40927-107">Pour ajouter un contrôle à une collection par programme</span><span class="sxs-lookup"><span data-stu-id="40927-107">To add a control to a collection programmatically</span></span>  
   
-1. <span data-ttu-id="ae0e5-108">Créez une instance du contrôle à ajouter.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-108">Create an instance of the control to be added.</span></span>  
+1. <span data-ttu-id="40927-108">Créez une instance du contrôle à ajouter.</span><span class="sxs-lookup"><span data-stu-id="40927-108">Create an instance of the control to be added.</span></span>  
   
-2. <span data-ttu-id="ae0e5-109">Définissez les propriétés du nouveau contrôle.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-109">Set properties of the new control.</span></span>  
+2. <span data-ttu-id="40927-109">Définissez les propriétés du nouveau contrôle.</span><span class="sxs-lookup"><span data-stu-id="40927-109">Set properties of the new control.</span></span>  
   
-3. <span data-ttu-id="ae0e5-110">Ajoutez le contrôle à la collection `Controls` du contrôle parent.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3. <span data-ttu-id="40927-110">Ajoutez le contrôle à la collection `Controls` du contrôle parent.</span><span class="sxs-lookup"><span data-stu-id="40927-110">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="ae0e5-111">L’exemple de code suivant montre comment créer une instance de la <xref:System.Windows.Forms.Button> contrôle.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="ae0e5-112">Il nécessite un formulaire avec un <xref:System.Windows.Forms.Panel> contrôle et que la méthode de gestion d’événements pour le bouton en cours de création, `NewPanelButton_Click`, existe déjà.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="40927-111">L’exemple de code suivant montre comment créer une instance de la <xref:System.Windows.Forms.Button> contrôle.</span><span class="sxs-lookup"><span data-stu-id="40927-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="40927-112">Il nécessite un formulaire avec un <xref:System.Windows.Forms.Panel> contrôle et que la méthode de gestion d’événements pour le bouton en cours de création, `NewPanelButton_Click`, existe déjà.</span><span class="sxs-lookup"><span data-stu-id="40927-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +64,13 @@ ms.locfileid: "59309444"
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="ae0e5-113">Pour supprimer des contrôles d’une collection par programme</span><span class="sxs-lookup"><span data-stu-id="ae0e5-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="40927-113">Pour supprimer des contrôles d’une collection par programme</span><span class="sxs-lookup"><span data-stu-id="40927-113">To remove controls from a collection programmatically</span></span>  
   
-1. <span data-ttu-id="ae0e5-114">Supprimez le gestionnaire d’événements de l’événement.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-114">Remove the event handler from the event.</span></span> <span data-ttu-id="ae0e5-115">Dans Visual Basic, utilisez la [RemoveHandler, instruction](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) mot clé ; dans Visual C#, utilisez le [-= opérateur (C# référence)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="ae0e5-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
+1. <span data-ttu-id="40927-114">Supprimez le gestionnaire d’événements de l’événement.</span><span class="sxs-lookup"><span data-stu-id="40927-114">Remove the event handler from the event.</span></span> <span data-ttu-id="40927-115">Dans Visual Basic, utilisez la [RemoveHandler, instruction](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) mot clé ; dans Visual C#, utilisez le [-= opérateur (C# référence)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span><span class="sxs-lookup"><span data-stu-id="40927-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
   
-2. <span data-ttu-id="ae0e5-116">Utilisez la méthode `Remove` pour supprimer le contrôle souhaité dans la collection `Controls` du panneau.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2. <span data-ttu-id="40927-116">Utilisez la méthode `Remove` pour supprimer le contrôle souhaité dans la collection `Controls` du panneau.</span><span class="sxs-lookup"><span data-stu-id="40927-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3. <span data-ttu-id="ae0e5-117">Appelez le <xref:System.Windows.Forms.Control.Dispose%2A> méthode pour libérer toutes les ressources utilisées par le contrôle.</span><span class="sxs-lookup"><span data-stu-id="ae0e5-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3. <span data-ttu-id="40927-117">Appelez le <xref:System.Windows.Forms.Control.Dispose%2A> méthode pour libérer toutes les ressources utilisées par le contrôle.</span><span class="sxs-lookup"><span data-stu-id="40927-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,7 +100,7 @@ ms.locfileid: "59309444"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae0e5-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ae0e5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40927-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="40927-118">See also</span></span>
 
 - <xref:System.Windows.Forms.Panel>
-- [<span data-ttu-id="ae0e5-119">Panel, contrôle</span><span class="sxs-lookup"><span data-stu-id="ae0e5-119">Panel Control</span></span>](panel-control-windows-forms.md)
+- [<span data-ttu-id="40927-119">Panel, contrôle</span><span class="sxs-lookup"><span data-stu-id="40927-119">Panel Control</span></span>](panel-control-windows-forms.md)
