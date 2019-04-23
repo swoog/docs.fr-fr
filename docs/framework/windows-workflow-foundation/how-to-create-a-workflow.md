@@ -3,10 +3,10 @@ title: 'Procédure : créer un workflow'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134795"
 ---
 # <a name="how-to-create-a-workflow"></a>Procédure : créer un workflow
@@ -19,13 +19,13 @@ Les workflows peuvent être construits aussi bien à partir d'activités intégr
 >  Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Procédure : Créer un workflow séquentiel](how-to-create-a-sequential-workflow.md)  
+ [Guide pratique pour Créer un Workflow séquentiel](how-to-create-a-sequential-workflow.md)  
  Décrit comment créer un workflow séquentiel à l'aide de l'activité <xref:System.Activities.Statements.Sequence>.  
   
- [Procédure : créer un workflow d’organigramme](how-to-create-a-flowchart-workflow.md)  
+ [Guide pratique pour Créer un Workflow d’organigramme](how-to-create-a-flowchart-workflow.md)  
  Décrit comment créer un workflow d'organigramme à l'aide de l'activité <xref:System.Activities.Statements.Flowchart>.  
   
- [Procédure : Créer un workflow d'ordinateur d'état](how-to-create-a-state-machine-workflow.md)  
+ [Guide pratique pour Créer un Workflow d’ordinateur d’état](how-to-create-a-state-machine-workflow.md)  
  Décrit comment créer un workflow de machine à états à l'aide de l'activité <xref:System.Activities.Statements.StateMachine>.  
   
 ## <a name="see-also"></a>Voir aussi

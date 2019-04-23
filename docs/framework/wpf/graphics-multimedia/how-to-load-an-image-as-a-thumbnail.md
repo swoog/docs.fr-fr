@@ -10,10 +10,10 @@ helpviewer_keywords:
 - thumbnails [WPF], loading images as
 ms.assetid: 02e055a0-54df-499a-b8b6-ab6ff7535cff
 ms.openlocfilehash: f984293a395e925368b20cef6aa0cd902bd6fc15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134041"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a>Procédure : Charger une image en tant que miniature
@@ -32,4 +32,4 @@ Les exemples suivants montrent comment charger un <xref:System.Windows.Controls.
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la création d'images](imaging-overview.md)
+- [Vue d’ensemble de la création d’images](imaging-overview.md)

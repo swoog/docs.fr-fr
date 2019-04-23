@@ -5,10 +5,10 @@ ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137811"
 ---
 # <a name="runtime-directive-elements"></a>Éléments de directive runtime
@@ -26,7 +26,7 @@ Le format du fichier de directives runtime (rd.xml) prend en charge les élémen
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
  Élément racine de chaque fichier de directives runtime pour [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ses éléments enfants sont [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) et [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
- [\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)  
+ [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  Applique la stratégie runtime à un événement. Il s’agit d’un enfant des éléments [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) et [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
  [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
@@ -41,19 +41,19 @@ Le format du fichier de directives runtime (rd.xml) prend en charge les élémen
  [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
  Applique la stratégie runtime à tous les types dans un assembly. Il s’agit d’un enfant des éléments [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) et [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
- [\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)  
+ [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
  Applique la stratégie runtime à une méthode. Il s’agit d’un enfant des éléments [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) et [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
  [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
  Applique la stratégie runtime à une méthode générique construite. Il s’agit d’un enfant des éléments [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) et [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- [\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)  
+ [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
  Applique la stratégie runtime à tous les types d'un espace de noms.  
   
  [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
  Applique la stratégie runtime au type de l’argument passé à une méthode.  
   
- [\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)  
+ [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
  Applique la stratégie runtime à une propriété. Il s’agit d’un enfant des éléments [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) et [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
  [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140879"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Vue d'ensemble du contrôle TabControl (Windows Forms)
@@ -26,8 +26,8 @@ Le <xref:System.Windows.Forms.TabControl> Windows Forms affiche plusieurs onglet
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl, contrôle](tabcontrol-control-windows-forms.md)
-- [Procédure : modifier l’aspect du contrôle TabControl Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Procédure : ajouter un contrôle à un onglet](how-to-add-a-control-to-a-tab-page.md)
-- [Procédure : ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Procédure : désactiver des onglets](how-to-disable-tab-pages.md)
+- [Guide pratique pour Modifier l’apparence du contrôle TabControl Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Guide pratique pour Ajouter un contrôle à une Page d’onglets](how-to-add-a-control-to-a-tab-page.md)
+- [Guide pratique pour Ajouter et supprimer des onglets avec le contrôle TabControl de Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Guide pratique pour Désactiver les Pages d’onglets](how-to-disable-tab-pages.md)
 - [Boîtes de dialogue dans les Windows Forms](../dialog-boxes-in-windows-forms.md)

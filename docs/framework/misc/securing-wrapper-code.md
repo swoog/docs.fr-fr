@@ -10,10 +10,10 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132780"
 ---
 # <a name="securing-wrapper-code"></a>Sécurisation du code wrapper
@@ -71,7 +71,7 @@ ms.locfileid: "59132780"
   
  La sécurité déclarative propose les vérifications de sécurité suivantes :  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> Spécifie le parcours de pile de code access security. Tous les appelants sur la pile doivent avoir l'autorisation ou l'identité spécifiée pour passer. **À la demande** se produit à chaque appel, car la pile peut contenir des appelants différents. Si vous appelez une méthode de façon répétée, cette vérification de sécurité se produit à chaque fois. **À la demande** constitue une bonne protection contre les attaques malveillantes ; code non autorisé essaie de passer sera détecté.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> spécifie le parcours de pile de sécurité d'accès du code. Tous les appelants sur la pile doivent avoir l'autorisation ou l'identité spécifiée pour passer. **À la demande** se produit à chaque appel, car la pile peut contenir des appelants différents. Si vous appelez une méthode de façon répétée, cette vérification de sécurité se produit à chaque fois. **À la demande** constitue une bonne protection contre les attaques malveillantes ; code non autorisé essaie de passer sera détecté.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) se produit au moment de la compilation juste-à-temps (JIT) et vérifie uniquement l’appelant immédiat. Cette vérification de sécurité ne vérifie pas l'appelant de l'appelant. Une fois cette vérification effectuée, il n'y a pas de charge de sécurité supplémentaire, quel que soit le nombre d'appels effectués par l'appelant. Cependant, il n'y a pas non plus de protection contre les attaques malveillantes. Avec **LinkDemand**, tout code qui réussit le test et peut référencer votre code risque de perturber la sécurité en autorisant le code nuisible d’appeler à l’aide du code autorisé. Par conséquent, n’utilisez pas **LinkDemand** , sauf si toutes les failles possibles peuvent être évités de manière approfondie.  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133885"
 ---
 # <a name="performance-counters-in-adonet"></a>Compteurs de performance dans ADO.NET
@@ -397,8 +397,8 @@ class Program
 ## <a name="see-also"></a>Voir aussi
 
 - [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Regroupement de connexions OLE DB, ODBC et Oracle Connection](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Regroupement de connexions OLE DB, ODBC et Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Compteurs de performance pour ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Génération de profils d'exécution](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Profilage d’exécution](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
 - [Introduction à la surveillance des seuils de Performance](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
-- [Vue d'ensemble d'ADO.NET](ado-net-overview.md)
+- [Vue d’ensemble d’ADO.NET](ado-net-overview.md)

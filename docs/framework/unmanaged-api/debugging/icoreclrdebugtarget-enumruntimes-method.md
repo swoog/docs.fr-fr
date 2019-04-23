@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134674"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Méthode ICoreClrDebugTarget::EnumRuntimes
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  Opération réussie.  
   
  S_FALSE  
- `dwInternalProcessID` ne correspond pas à n’importe quel processus est en cours d’exécution sur l’ordinateur, probablement parce que le processus a été arrêté. `pcRuntimes` et `ppRuntimes` sera null.  
+ `dwInternalProcessID` ne correspond à aucun processus qui s'exécute sur l'ordinateur, probablement parce que le processus a été arrêté. `pcRuntimes` et `ppRuntimes` sont null.  
   
  E_OUTOFMEMORY  
  Impossible d'allouer suffisamment de mémoire pour `ppRuntimes`.  
@@ -76,4 +76,4 @@ HRESULT EnumRuntimes (
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Interface ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

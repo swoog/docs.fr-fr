@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137434"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optimisation des performances : Comportement de l’objet
@@ -25,7 +25,7 @@ Une bonne compréhension du comportement intrinsèque des objets [!INCLUDE[TLA2#
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Le fait de ne pas supprimer les gestionnaires d’événements sur les objets permet de conserver les objets actifs  
  Le délégué qu’un objet passe à son événement est une référence à cet objet. Par conséquent, les gestionnaires d’événements peuvent conserver les objets actifs plus longtemps que prévu. Quand vous nettoyez un objet inscrit pour détecter l’événement d’un objet, il est essentiel de supprimer ce délégué avant de libérer l’objet. La conservation d’objets actifs inutiles augmente l’utilisation de mémoire de l’application. Cela est particulièrement vrai quand l’objet est la racine d’une arborescence logique ou d’une arborescence de visuels.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] introduit un modèle d’événement faible écouteur pour les événements qui peut être utile dans les situations où les relations de durée de vie d’objet entre source et l’écouteur sont difficiles à suivre. Certains événements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existants utilisent ce modèle. Si vous implémentez des objets avec des événements personnalisés, ce modèle peut vous être utile. Pour plus d’informations, consultez [Modèles d’événement faible](weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] introduit un modèle de détecteur d’événements faibles qui peut être utile quand les relations de durée de vie d’objet entre la source et l’écouteur sont difficiles à suivre. Certains événements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existants utilisent ce modèle. Si vous implémentez des objets avec des événements personnalisés, ce modèle peut vous être utile. Pour plus d’informations, consultez [Modèles d’événement faible](weak-event-patterns.md).  
   
  Il existe plusieurs outils, comme le profileur CLR et la visionneuse de jeux de travail, qui peuvent fournir des informations sur l’utilisation de mémoire d’un processus spécifié. Le profileur CLR inclut un nombre de vues très utiles du profil d’allocation, notamment un histogramme des types alloués, des graphiques d’allocation et d’appels, une chronologie montrant les opérations de garbage collection de diverses générations et l’état obtenu du tas managé après ces collections, ainsi qu’une arborescence des appels présentant les allocations par méthode et les chargements d’assembly. Pour plus d’informations, consultez le [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -65,7 +65,7 @@ Une bonne compréhension du comportement intrinsèque des objets [!INCLUDE[TLA2#
   
  Figer un <xref:System.Windows.Freezable> peut améliorer ses performances, car il n’a plus besoin d’utiliser des ressources pour maintenir des notifications de modification. Le tableau ci-dessous indique la taille d’une simple <xref:System.Windows.Media.SolidColorBrush> lors de son <xref:System.Windows.Freezable.IsFrozen%2A> propriété est définie sur `true`, par rapport à quand il n’est pas. Cela suppose que l’application d’un pinceau pour le <xref:System.Windows.Shapes.Shape.Fill%2A> propriété dix <xref:System.Windows.Shapes.Rectangle> objets.  
   
-|**État**|**Size**|  
+|**État**|**Taille**|  
 |---------------|--------------|  
 |Figé <xref:System.Windows.Media.SolidColorBrush>|212 octets|  
 |Non figé <xref:System.Windows.Media.SolidColorBrush>|972 octets|  
@@ -103,7 +103,7 @@ Une bonne compréhension du comportement intrinsèque des objets [!INCLUDE[TLA2#
   
  Le tableau ci-dessous indique le temps écoulé, ajout et le rendu de 5000 <xref:System.Windows.Controls.TextBlock> éléments à un <xref:System.Windows.Controls.StackPanel> et un <xref:System.Windows.Controls.VirtualizingStackPanel>. Dans ce scénario, les mesures représentent le temps entre l’attachement d’une chaîne de texte à la <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriété d’un <xref:System.Windows.Controls.ItemsControl> objet au moment où les éléments du panneau affichent la chaîne de texte.  
   
-|**Panneau hôte**|**Durée (ms) de rendu**|  
+|**Panneau hôte**|**Durée d’affichage (ms)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
@@ -114,8 +114,8 @@ Une bonne compréhension du comportement intrinsèque des objets [!INCLUDE[TLA2#
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
 - [Disposition et conception](optimizing-performance-layout-and-design.md)
-- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
-- [Ressources d’application](optimizing-performance-application-resources.md)
-- [Texte](optimizing-performance-text.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)

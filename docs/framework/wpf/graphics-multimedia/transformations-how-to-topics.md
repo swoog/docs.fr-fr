@@ -10,10 +10,10 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140866"
 ---
 # <a name="transformations-how-to-topics"></a>Rubriques "Comment" relatives aux transformations
@@ -21,18 +21,18 @@ Les rubriques de cette section décrivent comment appliquer différentes transfo
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Appliquer une transformation à un élément lorsqu’un événement se produit](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [Appliquer plusieurs transformations à un objet](how-to-apply-multiple-transforms-to-an-object.md)  
+ [Apply Multiple Transforms to an Object](how-to-apply-multiple-transforms-to-an-object.md) (Appliquer plusieurs transformations à un objet)  
  [Mettre un élément en rotation](how-to-make-an-element-spin-in-place.md)  
  [Faire pivoter un objet](how-to-rotate-an-object.md)  
- [Mettre à l’échelle un élément](how-to-scale-an-element.md)  
+ [Mettre à l'échelle un élément](how-to-scale-an-element.md)  
  [Incliner un élément](how-to-skew-an-element.md)  
- [Spécifier l’origine d’une transformation à l’aide de valeurs relatives](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [Spécifier l'origine d'une transformation à l'aide de valeurs relatives](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
  [Translater un élément](how-to-translate-an-element.md)  
- [Utiliser la classe MatrixTransform pour créer des transformations personnalisées](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Use a MatrixTransform to Create Custom Transforms](how-to-use-a-matrixtransform-to-create-custom-transforms.md) (Utiliser la classe MatrixTransform pour créer des transformations personnalisées)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Media.Transform>
 - [Graphiques et multimédia](index.md)
-- [Vue d'ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
-- [Mise en page](../advanced/layout.md)
+- [Vue d’ensemble du rendu graphique de WPF](wpf-graphics-rendering-overview.md)
+- [Disposition](../advanced/layout.md)

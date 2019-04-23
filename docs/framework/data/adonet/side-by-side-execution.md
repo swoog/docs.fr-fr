@@ -3,10 +3,10 @@ title: Exécution côte à côte dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136758"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
@@ -15,7 +15,7 @@ L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/
  Une application compilée en utilisant une version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peut s'exécuter sur une autre version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Toutefois, nous vous conseillons de compiler une version de l'application pour chaque version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installée et de les exécuter séparément. Dans l’un ou l’autre cas de figure, vous devez tenir compte des modifications apportées dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] entre les mises en production, qui peuvent affecter la compatibilité ascendante ou descendante de votre application.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilités descendante et ascendante  
- La compatibilité ascendante signifie qu'une application peut être compilée avec une version antérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle fonctionnera correctement avec une version ultérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] le code écrit pour le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 sera compatible avec les versions ultérieures.  
+ La compatibilité ascendante signifie qu'une application peut être compilée avec une version antérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle fonctionnera correctement avec une version ultérieure du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le code [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] écrit pour le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 sera compatible avec les versions ultérieures.  
   
  La compatibilité descendante signifie qu'une application est compilée pour une version plus récente du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et qu'elle continue de s'exécuter sur des versions antérieures de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sans dégradation des fonctionnalités. Évidemment, ce ne sera pas le cas pour les fonctionnalités introduites dans une nouvelle version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -66,6 +66,6 @@ SET NOCOUNT OFF;
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

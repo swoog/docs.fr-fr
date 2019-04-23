@@ -3,14 +3,14 @@ title: Activités de collection dans le WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133780"
 ---
 # <a name="collection-activities-in-wf"></a>Activités de collection dans le WF
-Les activités de collection sont utilisées pour utiliser les objets de collection dans un workflow. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] comprend des activités fournies par le système pour l’ajout et suppression d’éléments d’une collection, testez l’existence d’un élément dans une collection et effacer une collection. `ExistsInCollection` et `RemoveFromCollection` ont un <xref:System.Activities.OutArgument%601> de type <xref:System.Boolean>, qui indique le résultat.  
+Les activités de collection sont utilisées pour utiliser les objets de collection dans un workflow. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] comprend des activités fournies par le système permettant d'ajouter des éléments à une collection et de les supprimer, de vérifier l'existence d'un élément dans une collection et d'effacer une collection. `ExistsInCollection` et `RemoveFromCollection` ont un <xref:System.Activities.OutArgument%601> de type <xref:System.Boolean>, qui indique le résultat.  
   
 > [!IMPORTANT]
 >  Si une activité de collection est exécutée avant de définir l’objet de collection sous-jacent, un objet <xref:System.InvalidOperationException> est levé et l’activité émet une erreur.  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Les exemples de code ci-dessus peuvent également être créés à l’aide de <xref:Microsoft.CSharp.Activities.CSharpValue%601> au lieu de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Les exemples de code ci-dessus peuvent également être créés à l'aide de <xref:Microsoft.CSharp.Activities.CSharpValue%601> à la place de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -427,4 +427,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Création de workflows, d'activités et d'expressions à l'aide du code impératif](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Création de workflows, d’activités et d’expressions à l’aide du code impératif](authoring-workflows-activities-and-expressions-using-imperative-code.md)

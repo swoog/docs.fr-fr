@@ -3,10 +3,10 @@ title: Sécuriser l'accès aux données
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137252"
 ---
 # <a name="secure-data-access"></a>Sécuriser l'accès aux données
@@ -25,8 +25,8 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 |--------------|-----------------|  
 |[Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Décrit les techniques et meilleures pratiques de sécurité permettant de protéger les informations de connexion, telles que l'utilisation d'une configuration protégée pour chiffrer les chaînes de connexion.|  
 |[Recommandations pour les stratégies d’accès aux données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
-|[Builders de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)|Décrit comment créer des chaînes de connexion à partir de l'entrée de l'utilisateur au moment de l'exécution.|  
-|[Vue d'ensemble de la sécurité SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Décrit l'architecture de sécurité de SQL Server.|  
+|[Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)|Décrit comment créer des chaînes de connexion à partir de l'entrée de l'utilisateur au moment de l'exécution.|  
+|[Vue d’ensemble de la sécurité SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Décrit l'architecture de sécurité de SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Commandes paramétrées et injection de code SQL  
  L'utilisation des commandes paramétrées aide à se protéger des attaques par injection de code SQL, dans lesquelles un attaquant « injecte » une commande dans une instruction SQL qui compromet la sécurité sur le serveur. Les commandes paramétrées protègent contre une attaque par injection de code SQL en garantissant que les valeurs reçues à partir d'une source externe sont passées en tant que valeurs uniquement et non pas comme partie intégrante de l'instruction Transact-SQL. Par conséquent, les commandes Transact-SQL insérées dans une valeur ne sont pas exécutées au niveau de la source de données. Au lieu de cela, les valeurs sont évaluées uniquement comme valeurs de paramètre. Outre les avantages relatifs à la sécurité, les commandes paramétrées fournissent une méthode pratique d'organisation des valeurs passées avec une instruction Transact-SQL ou à une procédure stockée.  
@@ -65,9 +65,9 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Considérations et conseils de sécurité pour Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Décrit des techniques de sécurité pour Access 2007, telles que le chiffrement des fichiers, l'administration des mots de passe, la conversion des bases de données vers les nouveaux formats ACCDB et ACCDE, ainsi que l'utilisation d'autres options de sécurité.|  
-|[Description du rôle des fichiers d'informations de groupe de travail dans la sécurité Access](https://support.microsoft.com/kb/305542)|Explique le rôle et la relation du fichier d'informations de groupe de travail dans la sécurité Access 2003.|  
-|[Forum aux Questions sur la sécurité Microsoft Access pour les versions 2.0 à 2000 de Microsoft Access](https://go.microsoft.com/fwlink/?LinkId=47698)|Version téléchargeable du Forum aux questions sur la sécurité de Microsoft Access.|  
+|[Considérations sur la sécurité et des conseils pour Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Décrit des techniques de sécurité pour Access 2007, telles que le chiffrement des fichiers, l'administration des mots de passe, la conversion des bases de données vers les nouveaux formats ACCDB et ACCDE, ainsi que l'utilisation d'autres options de sécurité.|  
+|[Présentation du rôle des fichiers d’Information de groupe de travail dans la sécurité Access](https://support.microsoft.com/kb/305542)|Explique le rôle et la relation du fichier d'informations de groupe de travail dans la sécurité Access 2003.|  
+|[Forum aux Questions sur Microsoft sécurité Access pour Microsoft Access versions 2.0 à 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Version téléchargeable du Forum aux questions sur la sécurité de Microsoft Access.|  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM + contient son propre modèle de sécurité qui s'appuie sur les comptes Windows NT et l'emprunt d'identité de processus/thread. L'espace de noms <xref:System.EnterpriseServices> fournit des wrappers qui permettent aux applications .NET d'intégrer du code managé avec des services de sécurité COM+ à l'aide de la classe <xref:System.EnterpriseServices.ServicedComponent>.  
   
@@ -85,7 +85,7 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Interopération avec du code non managé](../../../../docs/framework/interop/index.md)|Contient des rubriques qui décrivent comment exposer les composants COM au .NET Framework et comment exposer les composants .NET Framework à COM.|
-|[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contient des sujets avancés tels que les assemblys PIA (Primary Interop Assembly), les threads et le marshaling personnalisé.|
+|[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contient des sujets avancés tels que les assemblys PIA (Primary Interop Assembly), les threads et le marshaling personnalisé.|
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -93,5 +93,5 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 - [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Recommandations pour les stratégies d’accès aux données](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protection des informations de connexion](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Builders de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Générateurs de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

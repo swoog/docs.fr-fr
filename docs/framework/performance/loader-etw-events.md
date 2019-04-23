@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141529"
 ---
 # <a name="loader-etw-events"></a>Événements ETW de chargeur
@@ -38,14 +38,14 @@ ms.locfileid: "59141529"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` et `AppDomainUnLoad_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
 |Événement|ID d'événement|Description|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (journalisé pour tous les domaines d’application)|156|Déclenché chaque fois qu'un domaine d'application est créé pendant la durée de vie d'un processus.|  
+|`AppDomainLoad_V1` (journalisé pour tous les domaines d'application)|156|Déclenché chaque fois qu'un domaine d'application est créé pendant la durée de vie d'un processus.|  
 |`AppDomainUnLoad_V1`|157|Déclenché chaque fois qu'un domaine d'application est détruit pendant la durée de vie d'un processus.|  
 |`AppDomainDCStart_V1`|157|Énumère les domaines d'application pendant un arrêt de début.|  
 |`AppDomainDCEnd_V1`|158|Énumère les domaines d'application pendant un arrêt de fin.|  
@@ -69,8 +69,8 @@ ms.locfileid: "59141529"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` et `AssemblyUnload`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "59141529"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` et `ModuleUnload_V2`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Informatif (4)|  
 ||||  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
@@ -149,8 +149,8 @@ ms.locfileid: "59141529"
 |Mot clé pour déclencher l'événement|Événement|Niveau|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informatif (4)|  
-|`LoaderRundownKeyword` (0 x 8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informatif (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Informatif (4)|  
   
  Le tableau ci-dessous montre les informations liées aux événements.  
   

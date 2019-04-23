@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
 ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138669"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Procédure : gérer manuellement les graphismes mis en mémoire tampon
@@ -41,4 +41,4 @@ Pour des scénarios de double mise en mémoire tampon plus avancés, vous pouvez
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [Graphiques mis deux fois en mémoire tampon](double-buffered-graphics.md)
-- [Procédure : afficher manuellement les graphismes mis en mémoire tampon](how-to-manually-render-buffered-graphics.md)
+- [Guide pratique pour Restituer manuellement des graphiques mis en mémoire tampon](how-to-manually-render-buffered-graphics.md)

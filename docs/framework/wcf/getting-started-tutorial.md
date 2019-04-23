@@ -8,10 +8,10 @@ helpviewer_keywords:
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137921"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Tutoriel : Prise en main les applications Windows Communication Foundation
@@ -63,12 +63,12 @@ Les deux didacticiels expliquent comment créer, configurer et utiliser une appl
 - [Cycle de vie de programmation base](basic-programming-lifecycle.md)
 - [Génération de clients](building-clients.md)
 - [Programmation de WCF de base](basic-wcf-programming.md)
-- [Procédure : Créer un contrat duplex](feature-details/how-to-create-a-duplex-contract.md)
-- [Procédure : Access services avec un contrat duplex](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Guide pratique pour Créer un contrat duplex](feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Access services avec un contrat duplex](feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Procédure : Utiliser Svcutil.exe pour télécharger des documents de métadonnées](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [Procédure : Publier les métadonnées pour un service à l’aide d’un fichier de configuration](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Guide pratique pour Utiliser Svcutil.exe pour télécharger des documents de métadonnées](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Guide pratique pour Publier les métadonnées pour un service à l’aide d’un fichier de configuration](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [À l’aide de liaisons pour configurer les clients et services](using-bindings-to-configure-services-and-clients.md)
 - [Getting started, exemple](samples/getting-started-sample.md)
 - [Exemples Windows Communication Foundation](samples/index.md)
-- [Self-Host](samples/self-host.md)
+- [Auto-hébergement](samples/self-host.md)
