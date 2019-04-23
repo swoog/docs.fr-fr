@@ -7,24 +7,26 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 31fdbacb01d1f6052c86d40c0bffc903130f216c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245507"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480805"
 ---
-# <a name="stackalloc-c-reference"></a><span data-ttu-id="62f75-102">stackalloc (référence C#)</span><span class="sxs-lookup"><span data-stu-id="62f75-102">stackalloc (C# Reference)</span></span>
+# <a name="stackalloc-c-reference"></a><span data-ttu-id="d93fe-102">stackalloc (référence C#)</span><span class="sxs-lookup"><span data-stu-id="d93fe-102">stackalloc (C# Reference)</span></span>
 
-<span data-ttu-id="62f75-103">Le mot clé `stackalloc` est utilisé dans un contexte de code unsafe pour allouer un bloc de mémoire sur la pile.</span><span class="sxs-lookup"><span data-stu-id="62f75-103">The `stackalloc` keyword is used in an unsafe code context to allocate a block of memory on the stack.</span></span>
+<span data-ttu-id="d93fe-103">Le mot clé `stackalloc` sert à allouer un bloc de mémoire sur la pile.</span><span class="sxs-lookup"><span data-stu-id="d93fe-103">The `stackalloc` keyword is used to allocate a block of memory on the stack.</span></span>
 
 ```csharp
-int* block = stackalloc int[100];
+Span<int> block = stackalloc int[100];
 ```
 
-## <a name="remarks"></a><span data-ttu-id="62f75-104">Notes</span><span class="sxs-lookup"><span data-stu-id="62f75-104">Remarks</span></span>
+<span data-ttu-id="d93fe-104">Le fait d’affecter le bloc alloué à un <xref:System.Span%601?displayName=nameWithType> au lieu d’un `int*` permet d’effectuer des allocations de pile dans un bloc safe.</span><span class="sxs-lookup"><span data-stu-id="d93fe-104">Assigning the allocated block to a <xref:System.Span%601?displayName=nameWithType> instead of an `int*` allows stack allocations in a safe block.</span></span> <span data-ttu-id="d93fe-105">Le contexte `unsafe` n’est pas obligatoire.</span><span class="sxs-lookup"><span data-stu-id="d93fe-105">The `unsafe` context is not required.</span></span>
 
-<span data-ttu-id="62f75-105">Le mot clé est valide uniquement dans les initialiseurs de variable locale.</span><span class="sxs-lookup"><span data-stu-id="62f75-105">The keyword is valid only in local variable initializers.</span></span> <span data-ttu-id="62f75-106">Le code suivant génère des erreurs de compilation.</span><span class="sxs-lookup"><span data-stu-id="62f75-106">The following code causes compiler errors.</span></span>
+## <a name="remarks"></a><span data-ttu-id="d93fe-106">Remarques</span><span class="sxs-lookup"><span data-stu-id="d93fe-106">Remarks</span></span>
+
+<span data-ttu-id="d93fe-107">Le mot clé est valide uniquement dans les initialiseurs de variable locale.</span><span class="sxs-lookup"><span data-stu-id="d93fe-107">The keyword is valid only in local variable initializers.</span></span> <span data-ttu-id="d93fe-108">Le code suivant génère des erreurs de compilation.</span><span class="sxs-lookup"><span data-stu-id="d93fe-108">The following code causes compiler errors.</span></span>
 
 ```csharp
 int* block;
@@ -32,43 +34,48 @@ int* block;
 // can use stackalloc only when declaring and initializing a local
 // variable.
 block = stackalloc int[100];
+Span<int> span;
+// The following assignment statement causes compiler errors. You
+// can use stackalloc only when declaring and initializing a local
+// variable.
+span = stackalloc int[100];
 ```
 
-<span data-ttu-id="62f75-107">Dans C# 7.3 et les versions ultérieures, vous pouvez utiliser la syntaxe d’initialiseur de tableau pour les tableaux `stackalloc`.</span><span class="sxs-lookup"><span data-stu-id="62f75-107">Beginning with C# 7.3, you can use array initializer syntax for `stackalloc` arrays.</span></span> <span data-ttu-id="62f75-108">Toutes les déclarations suivantes déclarent un tableau de trois éléments ayant pour valeurs les entiers `1`, `2` et `3` :</span><span class="sxs-lookup"><span data-stu-id="62f75-108">All the following declarations declare an array with three elements whose values are the integers `1`, `2`, and `3`:</span></span>
+<span data-ttu-id="d93fe-109">Dans C# 7.3 et les versions ultérieures, vous pouvez utiliser la syntaxe d’initialiseur de tableau pour les tableaux `stackalloc`.</span><span class="sxs-lookup"><span data-stu-id="d93fe-109">Beginning with C# 7.3, you can use array initializer syntax for `stackalloc` arrays.</span></span> <span data-ttu-id="d93fe-110">Toutes les déclarations suivantes déclarent un tableau de trois éléments ayant pour valeurs les entiers `1`, `2` et `3`.</span><span class="sxs-lookup"><span data-stu-id="d93fe-110">All the following declarations declare an array with three elements whose values are the integers `1`, `2`, and `3`.</span></span> <span data-ttu-id="d93fe-111">La deuxième initialisation attribue la mémoire à un <xref:System.ReadOnlySpan%601>, indiquant que celle-ci n’est pas modifiable.</span><span class="sxs-lookup"><span data-stu-id="d93fe-111">The second initialization assigns the memory to a <xref:System.ReadOnlySpan%601>, indicating that the memory cannot be modified.</span></span>
 
 ```csharp
 // Valid starting with C# 7.3
-int* first = stackalloc int[3] { 1, 2, 3 };
-int* second = stackalloc int[] { 1, 2, 3 };
-int* third = stackalloc[] { 1, 2, 3 };
+Span<int> first = stackalloc int[3] { 1, 2, 3 };
+ReadOnlySpan<int> second = stackalloc int[] { 1, 2, 3 };
+Span<int> third = stackalloc[] { 1, 2, 3 };
 ```
 
-<span data-ttu-id="62f75-109">Des types pointeur étant impliqués, `stackalloc` requiert un contexte [unsafe](unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="62f75-109">Because pointer types are involved, `stackalloc` requires an [unsafe](unsafe.md) context.</span></span> <span data-ttu-id="62f75-110">Pour plus d’informations, consultez [Pointeurs et code unsafe](../../programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="62f75-110">For more information, see [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md).</span></span>
+<span data-ttu-id="d93fe-112">Quand des types pointeur sont impliqués, `stackalloc` exige un contexte [unsafe](unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="d93fe-112">When pointer types are involved, `stackalloc` requires an [unsafe](unsafe.md) context.</span></span> <span data-ttu-id="d93fe-113">Pour plus d’informations, consultez [Pointeurs et code unsafe](../../programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="d93fe-113">For more information, see [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md).</span></span>
 
-<span data-ttu-id="62f75-111">`stackalloc` est similaire à [_alloca](/cpp/c-runtime-library/reference/alloca) dans la bibliothèque Runtime C.</span><span class="sxs-lookup"><span data-stu-id="62f75-111">`stackalloc` is like [_alloca](/cpp/c-runtime-library/reference/alloca) in the C run-time library.</span></span>
+`stackalloc` <span data-ttu-id="d93fe-114">est similaire à [_alloca](/cpp/c-runtime-library/reference/alloca) dans la bibliothèque runtime C.</span><span class="sxs-lookup"><span data-stu-id="d93fe-114">is like [_alloca](/cpp/c-runtime-library/reference/alloca) in the C run-time library.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="62f75-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="62f75-112">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="d93fe-115">Exemples</span><span class="sxs-lookup"><span data-stu-id="d93fe-115">Examples</span></span>
 
-<span data-ttu-id="62f75-113">L’exemple suivant calcule et affiche les 20 premiers nombres de la suite de Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="62f75-113">The following example calculates and displays the first 20 numbers in the Fibonacci sequence.</span></span> <span data-ttu-id="62f75-114">Chaque nombre est la somme des deux nombres précédents.</span><span class="sxs-lookup"><span data-stu-id="62f75-114">Each number is the sum of the previous two numbers.</span></span> <span data-ttu-id="62f75-115">Dans le code, un bloc de mémoire de taille suffisante pour contenir 20 éléments de type `int` est alloué sur la pile, et non sur le tas.</span><span class="sxs-lookup"><span data-stu-id="62f75-115">In the code, a block of memory of sufficient size to contain 20 elements of type `int` is allocated on the stack, not the heap.</span></span> <span data-ttu-id="62f75-116">L’adresse du bloc est stockée dans le pointeur `fib`.</span><span class="sxs-lookup"><span data-stu-id="62f75-116">The address of the block is stored in the pointer `fib`.</span></span> <span data-ttu-id="62f75-117">Cette mémoire n’est pas soumise au garbage collection et n’est donc pas tenue d’être épinglée (en utilisant [fixed](fixed-statement.md)).</span><span class="sxs-lookup"><span data-stu-id="62f75-117">This memory is not subject to garbage collection and therefore does not have to be pinned (by using [fixed](fixed-statement.md)).</span></span> <span data-ttu-id="62f75-118">La durée de vie du bloc de mémoire est limitée à la durée de vie de la méthode qui le définit.</span><span class="sxs-lookup"><span data-stu-id="62f75-118">The lifetime of the memory block is limited to the lifetime of the method that defines it.</span></span> <span data-ttu-id="62f75-119">Vous ne pouvez pas libérer la mémoire avant le retour de la méthode.</span><span class="sxs-lookup"><span data-stu-id="62f75-119">You cannot free the memory before the method returns.</span></span>
+<span data-ttu-id="d93fe-116">L’exemple suivant calcule et affiche les 20 premiers nombres de la suite de Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="d93fe-116">The following example calculates and displays the first 20 numbers in the Fibonacci sequence.</span></span> <span data-ttu-id="d93fe-117">Chaque nombre est la somme des deux nombres précédents.</span><span class="sxs-lookup"><span data-stu-id="d93fe-117">Each number is the sum of the previous two numbers.</span></span> <span data-ttu-id="d93fe-118">Dans le code, un bloc de mémoire de taille suffisante pour contenir 20 éléments de type `int` est alloué sur la pile, et non sur le tas.</span><span class="sxs-lookup"><span data-stu-id="d93fe-118">In the code, a block of memory of sufficient size to contain 20 elements of type `int` is allocated on the stack, not the heap.</span></span> <span data-ttu-id="d93fe-119">L’adresse du bloc est stockée dans le `Span` `fib`.</span><span class="sxs-lookup"><span data-stu-id="d93fe-119">The address of the block is stored in the `Span` `fib`.</span></span> <span data-ttu-id="d93fe-120">Cette mémoire n’est pas soumise au garbage collection et n’est donc pas tenue d’être épinglée (en utilisant [fixed](fixed-statement.md)).</span><span class="sxs-lookup"><span data-stu-id="d93fe-120">This memory is not subject to garbage collection and therefore does not have to be pinned (by using [fixed](fixed-statement.md)).</span></span> <span data-ttu-id="d93fe-121">La durée de vie du bloc de mémoire est limitée à la durée de vie de la méthode qui le définit.</span><span class="sxs-lookup"><span data-stu-id="d93fe-121">The lifetime of the memory block is limited to the lifetime of the method that defines it.</span></span> <span data-ttu-id="d93fe-122">Vous ne pouvez pas libérer la mémoire avant le retour de la méthode.</span><span class="sxs-lookup"><span data-stu-id="d93fe-122">You cannot free the memory before the method returns.</span></span>
 
 [!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
-<span data-ttu-id="62f75-120">L’exemple suivant initialise un tableau `stackalloc` d’entiers sur un masque de bits où un bit est défini dans chaque élément.</span><span class="sxs-lookup"><span data-stu-id="62f75-120">The following example initializes a `stackalloc` array of integers to a bit mask with one bit set in each element.</span></span> <span data-ttu-id="62f75-121">Cela illustre la nouvelle syntaxe d’initialiseur disponible à partir de C# 7.3 :</span><span class="sxs-lookup"><span data-stu-id="62f75-121">This demonstrates the new initializer syntax available starting in C# 7.3:</span></span>
+<span data-ttu-id="d93fe-123">L’exemple suivant initialise un tableau `stackalloc` d’entiers sur un masque de bits où un bit est défini dans chaque élément.</span><span class="sxs-lookup"><span data-stu-id="d93fe-123">The following example initializes a `stackalloc` array of integers to a bit mask with one bit set in each element.</span></span> <span data-ttu-id="d93fe-124">Cela illustre la nouvelle syntaxe d’initialiseur disponible à partir de C# 7.3 :</span><span class="sxs-lookup"><span data-stu-id="d93fe-124">This demonstrates the new initializer syntax available starting in C# 7.3:</span></span>
 
 [!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
 
-## <a name="security"></a><span data-ttu-id="62f75-122">Sécurité</span><span class="sxs-lookup"><span data-stu-id="62f75-122">Security</span></span>
+## <a name="security"></a><span data-ttu-id="d93fe-125">Sécurité</span><span class="sxs-lookup"><span data-stu-id="d93fe-125">Security</span></span>
 
-<span data-ttu-id="62f75-123">Le code unsafe est moins sûr que les alternatives safe.</span><span class="sxs-lookup"><span data-stu-id="62f75-123">Unsafe code is less secure than safe alternatives.</span></span> <span data-ttu-id="62f75-124">Toutefois, l’utilisation de `stackalloc` active automatiquement les fonctionnalités de détection des dépassements de mémoire tampon dans le Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="62f75-124">However, the use of `stackalloc` automatically enables buffer overrun detection features in the common language runtime (CLR).</span></span> <span data-ttu-id="62f75-125">Si un dépassement de mémoire tampon est détecté, le processus est terminé aussi rapidement que possible pour réduire les risques d’exécution de code malveillant.</span><span class="sxs-lookup"><span data-stu-id="62f75-125">If a buffer overrun is detected, the process is terminated as quickly as possible to minimize the chance that malicious code is executed.</span></span>
+<span data-ttu-id="d93fe-126">Utilisez <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> dans la mesure du possible, car le code unsafe est moins sécurisé que son équivalent safe.</span><span class="sxs-lookup"><span data-stu-id="d93fe-126">You should use <xref:System.Span%601> or <xref:System.ReadOnlySpan%601> when possible because unsafe code is less secure than safe alternatives.</span></span> <span data-ttu-id="d93fe-127">Même avec des pointeurs, `stackalloc` active automatiquement les fonctionnalités de détection des dépassements de mémoire tampon dans le Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="d93fe-127">Even when used with pointers, the use of `stackalloc` automatically enables buffer overrun detection features in the common language runtime (CLR).</span></span> <span data-ttu-id="d93fe-128">Si un dépassement de mémoire tampon est détecté, le processus est terminé aussi rapidement que possible pour réduire les risques d’exécution de code malveillant.</span><span class="sxs-lookup"><span data-stu-id="d93fe-128">If a buffer overrun is detected, the process is terminated as quickly as possible to minimize the chance that malicious code is executed.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="62f75-126">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="62f75-126">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="d93fe-129">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="d93fe-129">C# language specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="62f75-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="62f75-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d93fe-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d93fe-130">See also</span></span>
 
-- [<span data-ttu-id="62f75-128">Référence C#</span><span class="sxs-lookup"><span data-stu-id="62f75-128">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="62f75-129">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="62f75-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="62f75-130">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="62f75-130">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="62f75-131">Mots clés des opérateurs</span><span class="sxs-lookup"><span data-stu-id="62f75-131">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
-- [<span data-ttu-id="62f75-132">Pointeurs et code unsafe</span><span class="sxs-lookup"><span data-stu-id="62f75-132">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [<span data-ttu-id="d93fe-131">Référence C#</span><span class="sxs-lookup"><span data-stu-id="d93fe-131">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="d93fe-132">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="d93fe-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="d93fe-133">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="d93fe-133">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="d93fe-134">Mots clés des opérateurs</span><span class="sxs-lookup"><span data-stu-id="d93fe-134">Operator Keywords</span></span>](operator-keywords.md)
+- [<span data-ttu-id="d93fe-135">Pointeurs et code unsafe</span><span class="sxs-lookup"><span data-stu-id="d93fe-135">Unsafe Code and Pointers</span></span>](../../programming-guide/unsafe-code-pointers/index.md)

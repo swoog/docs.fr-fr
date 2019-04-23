@@ -8,57 +8,57 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306304"
 ---
-# <a name="xslt-parameters"></a><span data-ttu-id="1eac0-102">Paramètres XSLT</span><span class="sxs-lookup"><span data-stu-id="1eac0-102">XSLT Parameters</span></span>
-<span data-ttu-id="1eac0-103">Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-103">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="1eac0-104">Un nom qualifié et un URI d'espace de noms sont associés à l'objet de paramètre à ce stade.</span><span class="sxs-lookup"><span data-stu-id="1eac0-104">A qualified name and namespace URI are associated with the parameter object at that time.</span></span>  
+# <a name="xslt-parameters"></a><span data-ttu-id="f17be-102">Paramètres XSLT</span><span class="sxs-lookup"><span data-stu-id="f17be-102">XSLT Parameters</span></span>
+<span data-ttu-id="f17be-103">Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="f17be-103">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="f17be-104">Un nom qualifié et un URI d'espace de noms sont associés à l'objet de paramètre à ce stade.</span><span class="sxs-lookup"><span data-stu-id="f17be-104">A qualified name and namespace URI are associated with the parameter object at that time.</span></span>  
   
-### <a name="to-use-an-xslt-parameter"></a><span data-ttu-id="1eac0-105">Pour utiliser un paramètre XSLT</span><span class="sxs-lookup"><span data-stu-id="1eac0-105">To use an XSLT parameter</span></span>  
+### <a name="to-use-an-xslt-parameter"></a><span data-ttu-id="f17be-105">Pour utiliser un paramètre XSLT</span><span class="sxs-lookup"><span data-stu-id="f17be-105">To use an XSLT parameter</span></span>  
   
-1.  <span data-ttu-id="1eac0-106">Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez le paramètre à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-106">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the parameter using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span>  
+1. <span data-ttu-id="f17be-106">Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez le paramètre à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span><span class="sxs-lookup"><span data-stu-id="f17be-106">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the parameter using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span>  
   
-2.  <span data-ttu-id="1eac0-107">Appelez le paramètre à partir de la feuille de style.</span><span class="sxs-lookup"><span data-stu-id="1eac0-107">Call the parameter from the style sheet.</span></span>  
+2. <span data-ttu-id="f17be-107">Appelez le paramètre à partir de la feuille de style.</span><span class="sxs-lookup"><span data-stu-id="f17be-107">Call the parameter from the style sheet.</span></span>  
   
-3.  <span data-ttu-id="1eac0-108">Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-108">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="f17be-108">Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="f17be-108">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## <a name="parameter-types"></a><span data-ttu-id="1eac0-109">Types de paramètres</span><span class="sxs-lookup"><span data-stu-id="1eac0-109">Parameter Types</span></span>  
- <span data-ttu-id="1eac0-110">L'objet de paramètre doit correspondre à un type W3C.</span><span class="sxs-lookup"><span data-stu-id="1eac0-110">The parameter object should correspond to a W3C type.</span></span> <span data-ttu-id="1eac0-111">Le tableau suivant illustre les types W3C correspondants, les classes Microsoft .NET Framework équivalentes (type) et précise si le type W3C est un type XPath ou XSLT.</span><span class="sxs-lookup"><span data-stu-id="1eac0-111">The following table shows the corresponding W3C types, the equivalent Microsoft .NET classes (type), and whether the W3C type is an XPath type or XSLT type.</span></span>  
+## <a name="parameter-types"></a><span data-ttu-id="f17be-109">Types de paramètres</span><span class="sxs-lookup"><span data-stu-id="f17be-109">Parameter Types</span></span>  
+ <span data-ttu-id="f17be-110">L'objet de paramètre doit correspondre à un type W3C.</span><span class="sxs-lookup"><span data-stu-id="f17be-110">The parameter object should correspond to a W3C type.</span></span> <span data-ttu-id="f17be-111">Le tableau suivant illustre les types W3C correspondants, les classes Microsoft .NET Framework équivalentes (type) et précise si le type W3C est un type XPath ou XSLT.</span><span class="sxs-lookup"><span data-stu-id="f17be-111">The following table shows the corresponding W3C types, the equivalent Microsoft .NET classes (type), and whether the W3C type is an XPath type or XSLT type.</span></span>  
   
-|<span data-ttu-id="1eac0-112">Type W3C</span><span class="sxs-lookup"><span data-stu-id="1eac0-112">W3C type</span></span>|<span data-ttu-id="1eac0-113">Équivalent de classe .NET (type)</span><span class="sxs-lookup"><span data-stu-id="1eac0-113">Equivalent .NET class (type)</span></span>|<span data-ttu-id="1eac0-114">Type XPath ou XSLT</span><span class="sxs-lookup"><span data-stu-id="1eac0-114">XPath or XSLT type</span></span>|  
+|<span data-ttu-id="f17be-112">Type W3C</span><span class="sxs-lookup"><span data-stu-id="f17be-112">W3C type</span></span>|<span data-ttu-id="f17be-113">Équivalent de classe .NET (type)</span><span class="sxs-lookup"><span data-stu-id="f17be-113">Equivalent .NET class (type)</span></span>|<span data-ttu-id="f17be-114">Type XPath ou XSLT</span><span class="sxs-lookup"><span data-stu-id="f17be-114">XPath or XSLT type</span></span>|  
 |--------------|------------------------------------|------------------------|  
-|`String`|<xref:System.String?displayProperty=nameWithType>|<span data-ttu-id="1eac0-115">XPath</span><span class="sxs-lookup"><span data-stu-id="1eac0-115">XPath</span></span>|  
-|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|<span data-ttu-id="1eac0-116">XPath</span><span class="sxs-lookup"><span data-stu-id="1eac0-116">XPath</span></span>|  
-|`Number`|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="1eac0-117">XPath</span><span class="sxs-lookup"><span data-stu-id="1eac0-117">XPath</span></span>|  
-|`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="1eac0-118">XSLT</span><span class="sxs-lookup"><span data-stu-id="1eac0-118">XSLT</span></span>|  
-|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="1eac0-119">XPath</span><span class="sxs-lookup"><span data-stu-id="1eac0-119">XPath</span></span>|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> <span data-ttu-id="1eac0-120">**XPathNavigator[]**</span><span class="sxs-lookup"><span data-stu-id="1eac0-120">**XPathNavigator[]**</span></span>|<span data-ttu-id="1eac0-121">XPath</span><span class="sxs-lookup"><span data-stu-id="1eac0-121">XPath</span></span>|  
+|`String`|<xref:System.String?displayProperty=nameWithType>|<span data-ttu-id="f17be-115">XPath</span><span class="sxs-lookup"><span data-stu-id="f17be-115">XPath</span></span>|  
+|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|<span data-ttu-id="f17be-116">XPath</span><span class="sxs-lookup"><span data-stu-id="f17be-116">XPath</span></span>|  
+|`Number`|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="f17be-117">XPath</span><span class="sxs-lookup"><span data-stu-id="f17be-117">XPath</span></span>|  
+|`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="f17be-118">XSLT</span><span class="sxs-lookup"><span data-stu-id="f17be-118">XSLT</span></span>|  
+|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="f17be-119">XPath</span><span class="sxs-lookup"><span data-stu-id="f17be-119">XPath</span></span>|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **<span data-ttu-id="f17be-120">XPathNavigator[]</span><span class="sxs-lookup"><span data-stu-id="f17be-120">XPathNavigator[]</span></span>**|<span data-ttu-id="f17be-121">XPath</span><span class="sxs-lookup"><span data-stu-id="f17be-121">XPath</span></span>|  
   
- <span data-ttu-id="1eac0-122">\*Cela équivaut à une collection de nœuds contenant un seul nœud.</span><span class="sxs-lookup"><span data-stu-id="1eac0-122">\*This is equivalent to a node set that contains a single node.</span></span>  
+ <span data-ttu-id="f17be-122">\*Cela équivaut à une collection de nœuds contenant un seul nœud.</span><span class="sxs-lookup"><span data-stu-id="f17be-122">\*This is equivalent to a node set that contains a single node.</span></span>  
   
- <span data-ttu-id="1eac0-123">Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes.</span><span class="sxs-lookup"><span data-stu-id="1eac0-123">If the parameter object is not one of the above classes, it is converted according to the following rules.</span></span> <span data-ttu-id="1eac0-124">Les types CLR numériques sont convertis en objet <xref:System.Double>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-124">Common language runtime (CLR) numeric types are converted to <xref:System.Double>.</span></span> <span data-ttu-id="1eac0-125">Le type <xref:System.DateTime> est converti en <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-125">The <xref:System.DateTime> type is converted to <xref:System.String>.</span></span> <span data-ttu-id="1eac0-126">Les types <xref:System.Xml.XPath.IXPathNavigable> sont convertis en <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-126"><xref:System.Xml.XPath.IXPathNavigable> types are converted to <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="1eac0-127">**XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="1eac0-127">**XPathNavigator[]** is converted to <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+ <span data-ttu-id="f17be-123">Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes.</span><span class="sxs-lookup"><span data-stu-id="f17be-123">If the parameter object is not one of the above classes, it is converted according to the following rules.</span></span> <span data-ttu-id="f17be-124">Les types CLR numériques sont convertis en objet <xref:System.Double>.</span><span class="sxs-lookup"><span data-stu-id="f17be-124">Common language runtime (CLR) numeric types are converted to <xref:System.Double>.</span></span> <span data-ttu-id="f17be-125">Le type <xref:System.DateTime> est converti en <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="f17be-125">The <xref:System.DateTime> type is converted to <xref:System.String>.</span></span> <xref:System.Xml.XPath.IXPathNavigable> <span data-ttu-id="f17be-126">Les types sont convertis en <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="f17be-126">types are converted to <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="f17be-127">**XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="f17be-127">**XPathNavigator[]** is converted to <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
- <span data-ttu-id="1eac0-128">Tous les autres types provoquent une erreur.</span><span class="sxs-lookup"><span data-stu-id="1eac0-128">All other types throw an error.</span></span>  
+ <span data-ttu-id="f17be-128">Tous les autres types provoquent une erreur.</span><span class="sxs-lookup"><span data-stu-id="f17be-128">All other types throw an error.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1eac0-129">Exemple</span><span class="sxs-lookup"><span data-stu-id="1eac0-129">Example</span></span>  
- <span data-ttu-id="1eac0-130">L'exemple suivant utilise la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> pour créer un paramètre destiné à contenir une date de remise calculée.</span><span class="sxs-lookup"><span data-stu-id="1eac0-130">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold calculated discount date.</span></span> <span data-ttu-id="1eac0-131">La date de la remise correspond à 20 jours à partir de la date de la commande.</span><span class="sxs-lookup"><span data-stu-id="1eac0-131">The discount date is calculated to be 20 days from the order date.</span></span>  
+## <a name="example"></a><span data-ttu-id="f17be-129">Exemple</span><span class="sxs-lookup"><span data-stu-id="f17be-129">Example</span></span>  
+ <span data-ttu-id="f17be-130">L'exemple suivant utilise la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> pour créer un paramètre destiné à contenir une date de remise calculée.</span><span class="sxs-lookup"><span data-stu-id="f17be-130">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold calculated discount date.</span></span> <span data-ttu-id="f17be-131">La date de la remise correspond à 20 jours à partir de la date de la commande.</span><span class="sxs-lookup"><span data-stu-id="f17be-131">The discount date is calculated to be 20 days from the order date.</span></span>  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a><span data-ttu-id="1eac0-132">Entrée</span><span class="sxs-lookup"><span data-stu-id="1eac0-132">Input</span></span>  
+### <a name="input"></a><span data-ttu-id="f17be-132">Entrée</span><span class="sxs-lookup"><span data-stu-id="f17be-132">Input</span></span>  
   
-##### <a name="orderxml"></a><span data-ttu-id="1eac0-133">order.xml</span><span class="sxs-lookup"><span data-stu-id="1eac0-133">order.xml</span></span>  
+##### <a name="orderxml"></a><span data-ttu-id="f17be-133">order.xml</span><span class="sxs-lookup"><span data-stu-id="f17be-133">order.xml</span></span>  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
-##### <a name="discountxsl"></a><span data-ttu-id="1eac0-134">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="1eac0-134">discount.xsl</span></span>  
+##### <a name="discountxsl"></a><span data-ttu-id="f17be-134">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="f17be-134">discount.xsl</span></span>  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a><span data-ttu-id="1eac0-135">Sortie</span><span class="sxs-lookup"><span data-stu-id="1eac0-135">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="f17be-135">Sortie</span><span class="sxs-lookup"><span data-stu-id="f17be-135">Output</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -68,6 +68,6 @@ ms.locfileid: "44191884"
 </order>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1eac0-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1eac0-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f17be-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f17be-136">See also</span></span>
 
-- [<span data-ttu-id="1eac0-137">Transformations XSLT</span><span class="sxs-lookup"><span data-stu-id="1eac0-137">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [<span data-ttu-id="f17be-137">Transformations XSLT</span><span class="sxs-lookup"><span data-stu-id="f17be-137">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
