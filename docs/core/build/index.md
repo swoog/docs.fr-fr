@@ -4,8 +4,13 @@ description: Découvrez comment générer .NET Core et le .NET Core CLI à parti
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650880"
 ---
-
 # <a name="build-net-core-from-source"></a>Générer .NET Core à partir de la source
 
 La capacité de générer .NET Core à partir de son code source est importante à plusieurs titres : elle facilite le portage de .NET Core vers de nouvelles plateformes, elle permet les contributions et les correctifs pour le produit, et elle permet la création de versions personnalisées de .NET.

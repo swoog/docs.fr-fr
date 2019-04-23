@@ -3,11 +3,11 @@ title: Arborescences d’expressions (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
 ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702735"
 ---
 # <a name="expression-trees-c"></a>Arborescences d’expressions (C#)
 Les arborescences d'expressions représentent du code dans une structure de données arborescente, où chaque nœud est une expression, par exemple un appel de méthode ou une opération binaire comme `x < y`.  

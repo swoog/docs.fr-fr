@@ -1,12 +1,18 @@
 ---
-title: 'Événements - Guide de programmation C#'
+title: Événements - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'classes [C#], events'
-  - 'C# language, events'
-  - 'events [C#]'
+- classes [C#], events
+- C# language, events
+- events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
+ms.openlocfilehash: df16b74d7d3ad34850ae9a0e3b7be282e4dfc003
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681336"
 ---
 # <a name="events-c-programming-guide"></a>Événements (Guide de programmation C#)
 Les événements permettent à une [classe](../../../csharp/language-reference/keywords/class.md) ou à un objet de notifier d’autres classes ou objets quand quelque chose de significatif se produit. La classe qui envoie (ou *déclenche*) l’événement est appelée *publieur* et les classes qui reçoivent (ou *gèrent*) l’événement sont appelées *abonnés*.  

@@ -1,16 +1,22 @@
 ---
-title: 'Pointeurs et code unsafe - Guide de programmation C#'
+title: Pointeurs et code unsafe - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'security [C#], type safety'
-  - 'C# language, unsafe code'
-  - 'type safety [C#]'
-  - 'unsafe keyword [C#]'
-  - 'unsafe code [C#]'
-  - 'C# language, pointers'
-  - 'pointers [C#], about pointers'
+- security [C#], type safety
+- C# language, unsafe code
+- type safety [C#]
+- unsafe keyword [C#]
+- unsafe code [C#]
+- C# language, pointers
+- pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
+ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678086"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Pointeurs et code unsafe (Guide de programmation C#)
 Pour conserver la sécurité des types, par défaut, C# ne prend pas en charge les opérations arithmétiques sur les pointeurs. Cependant, en utilisant le mot clé [unsafe](../../../csharp/language-reference/keywords/unsafe.md), vous pouvez définir un contexte non sécurisé dans lequel des pointeurs peuvent être utilisés. Pour plus d’informations sur les pointeurs, consultez la rubrique [Types pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  

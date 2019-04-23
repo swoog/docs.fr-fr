@@ -1,30 +1,23 @@
-items:
 - name: Conseils sur la bibliothèque open source
   href: index.md
   items:
-  - name: Prise en main
-    href: get-started.md
-  - name: Ciblage multiplateforme
-    href: cross-platform-targeting.md
-  - name: Affectation de noms forts
-    href: strong-naming.md
-  - name: NuGet
-    href: nuget.md
-    items:
-    - name: Dépendances
-      href: dependencies.md
-    - name: Source Link
-      href: sourcelink.md
-    - name: Publication
-      href: publish-nuget-package.md
-  - name: Gestion de version
-    href: versioning.md
-    items:
-    - name: Modifications avec rupture
-      href: breaking-changes.md
-ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468699"
+    - name: Prise en main
+      href: get-started.md
+    - name: Ciblage multiplateforme
+      href: cross-platform-targeting.md
+    - name: Affectation de noms forts
+      href: strong-naming.md
+    - name: NuGet
+      href: nuget.md
+      items:
+        - name: Dépendances
+          href: dependencies.md
+        - name: Source Link
+          href: sourcelink.md
+        - name: Publication
+          href: publish-nuget-package.md
+    - name: Gestion de version
+      href: versioning.md
+      items:
+        - name: Modifications avec rupture
+          href: breaking-changes.md

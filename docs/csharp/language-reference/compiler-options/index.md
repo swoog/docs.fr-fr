@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662827"
 ---
 # <a name="c-compiler-options"></a>Options du compilateur C#
 Le compilateur produit des fichiers exécutables (.exe), des bibliothèques de liens dynamiques (.dll) ou des modules de code (.netmodule).  
@@ -28,7 +28,7 @@ Le compilateur produit des fichiers exécutables (.exe), des bibliothèques de l
  [Génération à partir de la ligne de commande avec csc.exe](command-line-building-with-csc-exe.md)  
  Informations sur la création d’une application Visual C# à partir de la ligne de commande.  
   
- [Comment : définir des variables d’environnement pour la ligne de commande Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Guide pratique pour définir des variables d’environnement pour la ligne de commande Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Explique comment exécuter vsvars32.bat pour permettre les générations à partir de la ligne de commande.  
   
  [Options du compilateur C# par catégorie](listed-by-category.md)  

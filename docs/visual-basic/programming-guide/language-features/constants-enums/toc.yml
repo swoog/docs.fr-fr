@@ -1,36 +1,29 @@
-items:
 - name: Constantes et énumérations
   href: index.md
   items:
-  - name: Vue d’ensemble des constantes
-    href: constants-overview.md
-    items:
-    - name: 'Procédure : déclarer une constante'
-      href: how-to-declare-a-constant.md
-    - name: Constantes définies par l’utilisateur
-      href: user-defined-constants.md
-    - name: Constantes et types de données littérales
-      href: constant-and-literal-data-types.md
-    - name: 'Procédure : regrouper les valeurs de constante connexes'
-      href: how-to-group-related-constant-values-together.md
-  - name: Vue d’ensemble des énumérations
-    href: enumerations-overview.md
-    items:
-    - name: 'Procédure : déclarer des énumérations'
-      href: how-to-declare-enumerations.md
-    - name: 'Procédure : faire référence à un membre d’énumération'
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: Énumérations et qualification de noms
-      href: enumerations-and-name-qualification.md
-    - name: 'Procédure : itérer au sein d’une énumération'
-      href: how-to-iterate-through-an-enumeration.md
-    - name: 'Procédure : déterminer la chaîne associée à une valeur d’énumération'
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: Quand utiliser une énumération
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469485"
+    - name: Vue d’ensemble des constantes
+      href: constants-overview.md
+      items:
+        - name: "Procédure\_: déclarer une constante"
+          href: how-to-declare-a-constant.md
+        - name: Constantes définies par l’utilisateur
+          href: user-defined-constants.md
+        - name: Constantes et types de données littérales
+          href: constant-and-literal-data-types.md
+        - name: "Procédure\_: regrouper les valeurs de constante connexes"
+          href: how-to-group-related-constant-values-together.md
+    - name: Vue d’ensemble des énumérations
+      href: enumerations-overview.md
+      items:
+        - name: "Procédure\_: déclarer des énumérations"
+          href: how-to-declare-enumerations.md
+        - name: "Procédure\_: faire référence à un membre d’énumération"
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: Énumérations et qualification de noms
+          href: enumerations-and-name-qualification.md
+        - name: "Procédure\_: itérer au sein d’une énumération"
+          href: how-to-iterate-through-an-enumeration.md
+        - name: "Procédure\_: déterminer la chaîne associée à une valeur d’énumération"
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: Quand utiliser une énumération
+          href: when-to-use-an-enumeration.md

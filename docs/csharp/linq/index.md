@@ -4,15 +4,15 @@ description: Présente LINQ (Language-Integrated Query) dans C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688824"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
-LINQ (Language-Integrated Query) est le nom d’un ensemble de technologies basé sur l’intégration de fonctions de requête directement dans le langage C#. En règle générale, les requêtes de données sont exprimées comme de simples chaînes, sans vérification de type au moment de l’exécution, ni prise en charge d’IntelliSense. En outre, il vous faut apprendre un langage de requête différent pour chaque type de source de données : bases de données SQL, documents XML, services web, etc. Avec LINQ, une requête est une construction de langage de premier ordre, comme les classes, les méthodes et les événements.
+LINQ (Language-Integrated Query) est le nom d’un ensemble de technologies basé sur l’intégration de fonctions de requête directement dans le langage C#. En règle générale, les requêtes de données sont exprimées comme de simples chaînes, sans vérification de type au moment de l’exécution, ni prise en charge d’IntelliSense. En outre, vous devez apprendre un langage de requête différent pour chaque type de source de données : bases de données SQL, documents XML, divers services web, etc. Avec LINQ, une requête est une construction de langage de premier ordre, comme les classes, les méthodes et les événements.
 
 Pour un développeur qui écrit des requêtes, la partie « intégrée au langage » la plus visible de LINQ est l’expression de requête. Les expressions de requête sont écrites selon une *syntaxe de requête* déclarative. En utilisant la syntaxe de requête, vous pouvez effectuer des opérations de filtrage, de classement et de regroupement sur des sources de données avec un minimum de code. Vous utilisez les mêmes modèles d’expression de requête de base pour interroger et transformer des données dans les bases de données SQL, les jeux de données ADO .NET, les flux et documents XML et les collections .NET.
 
@@ -42,11 +42,11 @@ L’exemple suivant montre l’opération de requête complète. L’opération 
 
 Pour approfondir votre connaissance de LINQ, commencez par vous familiariser avec certains concepts de base expliqués sur la page [Principes de base des expressions de requête](query-expression-basics.md), puis lisez la documentation relative à la technologie LINQ qui vous intéresse :
 
-- Documents XML : [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+- Documents XML : [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
 
-- ADO.NET Entity Framework : [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- ADO.NET Entity Framework : [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
-- Collections, fichiers, chaînes, etc. .NET : [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
+- Chaînes, fichiers, collections .NET, etc. : [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 
 Pour approfondir votre compréhension de LINQ en général, consultez la page [LINQ en C#](linq-in-csharp.md).
 

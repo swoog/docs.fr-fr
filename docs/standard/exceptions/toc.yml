@@ -1,28 +1,21 @@
-items:
 - name: Exceptions
   href: index.md
   items:
-  - name: Classe et propriétés d'exception
-    href: exception-class-and-properties.md
-  - name: 'Procédure : utiliser le bloc try/catch pour intercepter des exceptions'
-    href: how-to-use-the-try-catch-block-to-catch-exceptions.md
-  - name: 'Procédure : utiliser des exceptions spécifiques dans un bloc Catch'
-    href: how-to-use-specific-exceptions-in-a-catch-block.md
-  - name: 'Procédure : lever explicitement des exceptions'
-    href: how-to-explicitly-throw-exceptions.md
-  - name: 'Procédure : créer des exceptions définies par l’utilisateur'
-    href: how-to-create-user-defined-exceptions.md
-  - name: Utilisation de gestionnaires filtrés par l'utilisateur
-    href: using-user-filtered-exception-handlers.md
-  - name: 'Procédure : utiliser des blocs Finally'
-    href: how-to-use-finally-blocks.md
-  - name: Gestion des exceptions COM Interop
-    href: handling-com-interop-exceptions.md
-  - name: Meilleures pratiques pour les exceptions
-    href: best-practices-for-exceptions.md
-ms.openlocfilehash: 30a6abc9671ff2728792e74345be12fff7cfefbc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469377"
+    - name: Classe et propriétés d'exception
+      href: exception-class-and-properties.md
+    - name: "Procédure\_: utiliser le bloc try/catch pour intercepter des exceptions"
+      href: how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - name: "Procédure\_: utiliser des exceptions spécifiques dans un bloc Catch"
+      href: how-to-use-specific-exceptions-in-a-catch-block.md
+    - name: "Procédure\_: lever explicitement des exceptions"
+      href: how-to-explicitly-throw-exceptions.md
+    - name: "Procédure\_: créer des exceptions définies par l’utilisateur"
+      href: how-to-create-user-defined-exceptions.md
+    - name: Utilisation de gestionnaires filtrés par l'utilisateur
+      href: using-user-filtered-exception-handlers.md
+    - name: "Procédure\_: utiliser des blocs Finally"
+      href: how-to-use-finally-blocks.md
+    - name: "Gestion des exceptions COM\_Interop"
+      href: handling-com-interop-exceptions.md
+    - name: Meilleures pratiques pour les exceptions
+      href: best-practices-for-exceptions.md

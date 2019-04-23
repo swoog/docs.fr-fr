@@ -10,11 +10,11 @@ ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051193"
 ---
 # <a name="working-with-base-types-in-net"></a>Utilisation des types de base dans .NET
 Cette section décrit les opérations de type de base .NET, y compris la mise en forme, la conversion et les opérations courantes.  

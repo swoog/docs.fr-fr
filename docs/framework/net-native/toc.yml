@@ -1,87 +1,80 @@
-items:
 - name: Compilation d'applications avec .NET Native
   href: index.md
   items:
-  - name: Compilation et .NET natif
-    href: net-native-and-compilation.md
-  - name: Prise en main
-    href: getting-started-with-net-native.md
-    items:
-    - name: 'Exemple : Résolution des problèmes de programmation dynamique'
-      href: example-troubleshooting-dynamic-programming.md
-    - name: 'Exemple : Gestion des exceptions pendant la liaison de données'
-      href: example-handling-exceptions-when-binding-data.md
-    - name: Exceptions du runtime dans les applications natives .NET
-      href: runtime-exceptions-in-net-native-apps.md
-  - name: Mesure de l'amélioration du démarrage avec .NET Native
-    href: measuring-startup-improvement-with-net-native.md
-  - name: Réflexion et .NET Native
-    href: reflection-and-net-native.md
-    items:
-    - name: API qui s'appuient sur la réflexion
-      href: apis-that-rely-on-reflection.md
-    - name: Informations de référence sur les API de réflexion
-      href: net-native-reflection-api-reference.md
+    - name: Compilation et .NET natif
+      href: net-native-and-compilation.md
+    - name: Prise en main
+      href: getting-started-with-net-native.md
       items:
-      - name: MissingInteropDataException, classe
-        href: missinginteropdataexception-class-net-native.md
-      - name: MissingMetadataException, classe
-        href: missingmetadataexception-class-net-native.md
-      - name: MissingRuntimeArtifactException, classe
-        href: missingruntimeartifactexception-class-net-native.md
-    - name: Guide de référence du fichier de configuration des directives runtime (rd.xml)
-      href: runtime-directives-rd-xml-configuration-file-reference.md
+        - name: 'Exemple : Résolution des problèmes de programmation dynamique'
+          href: example-troubleshooting-dynamic-programming.md
+        - name: 'Exemple : Gestion des exceptions pendant la liaison de données'
+          href: example-handling-exceptions-when-binding-data.md
+        - name: Exceptions du runtime dans les applications natives .NET
+          href: runtime-exceptions-in-net-native-apps.md
+    - name: Mesure de l'amélioration du démarrage avec .NET Native
+      href: measuring-startup-improvement-with-net-native.md
+    - name: Réflexion et .NET Native
+      href: reflection-and-net-native.md
       items:
-      - name: Éléments de directive runtime
-        href: runtime-directive-elements.md
-        items:
-        - name: Élément <Application>
-          href: application-element-net-native.md
-        - name: Élément <Assembly>
-          href: assembly-element-net-native.md
-        - name: Élément <AttributeImplies>
-          href: attributeimplies-element-net-native.md
-        - name: Élément <Directives>
-          href: directives-element-net-native.md
-        - name: Élément <Event>
-          href: event-element-net-native.md
-        - name: Élément <Field>
-          href: field-element-net-native.md
-        - name: Élément <GenericParameter>
-          href: genericparameter-element-net-native.md
-        - name: Élément <ImpliesType>
-          href: impliestype-element-net-native.md
-        - name: Élément <Library>
-          href: library-element-net-native.md
-        - name: Élément <Method>
-          href: method-element-net-native.md
-        - name: Élément <MethodInstantiation>
-          href: methodinstantiation-element-net-native.md
-        - name: Élément <Namespace>
-          href: namespace-element-net-native.md
-        - name: Élément <Parameter>
-          href: parameter-element-net-native.md
-        - name: Élément <Property>
-          href: property-element-net-native.md
-        - name: Élément <Subtypes>
-          href: subtypes-element-net-native.md
-        - name: Élément <Type>
-          href: type-element-net-native.md
-        - name: Élément <TypeInstantiation>
-          href: typeinstantiation-element-net-native.md
-        - name: Élément <TypeParameter>
-          href: typeparameter-element-net-native.md
-      - name: Paramètres de stratégie de directive runtime
-        href: runtime-directive-policy-settings.md
-  - name: Sérialisation et métadonnées
-    href: serialization-and-metadata.md
-  - name: Migration de votre application du Windows Store vers .NET Native
-    href: migrating-your-windows-store-app-to-net-native.md
-  - name: Résolution des problèmes généraux liés à .NET Native
-    href: net-native-general-troubleshooting.md
-ms.openlocfilehash: 85d8306c93d50cc595fcd3bcbf9ee404a84e7ab2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469106"
+        - name: API qui s'appuient sur la réflexion
+          href: apis-that-rely-on-reflection.md
+        - name: Informations de référence sur les API de réflexion
+          href: net-native-reflection-api-reference.md
+          items:
+            - name: 'MissingInteropDataException, classe'
+              href: missinginteropdataexception-class-net-native.md
+            - name: 'MissingMetadataException, classe'
+              href: missingmetadataexception-class-net-native.md
+            - name: 'MissingRuntimeArtifactException, classe'
+              href: missingruntimeartifactexception-class-net-native.md
+        - name: Guide de référence du fichier de configuration des directives runtime (rd.xml)
+          href: runtime-directives-rd-xml-configuration-file-reference.md
+          items:
+            - name: Éléments de directive runtime
+              href: runtime-directive-elements.md
+              items:
+                - name: Élément <Application>
+                  href: application-element-net-native.md
+                - name: Élément <Assembly>
+                  href: assembly-element-net-native.md
+                - name: Élément <AttributeImplies>
+                  href: attributeimplies-element-net-native.md
+                - name: Élément <Directives>
+                  href: directives-element-net-native.md
+                - name: Élément <Event>
+                  href: event-element-net-native.md
+                - name: Élément <Field>
+                  href: field-element-net-native.md
+                - name: Élément <GenericParameter>
+                  href: genericparameter-element-net-native.md
+                - name: Élément <ImpliesType>
+                  href: impliestype-element-net-native.md
+                - name: Élément <Library>
+                  href: library-element-net-native.md
+                - name: Élément <Method>
+                  href: method-element-net-native.md
+                - name: Élément <MethodInstantiation>
+                  href: methodinstantiation-element-net-native.md
+                - name: Élément <Namespace>
+                  href: namespace-element-net-native.md
+                - name: Élément <Parameter>
+                  href: parameter-element-net-native.md
+                - name: Élément <Property>
+                  href: property-element-net-native.md
+                - name: Élément <Subtypes>
+                  href: subtypes-element-net-native.md
+                - name: Élément <Type>
+                  href: type-element-net-native.md
+                - name: Élément <TypeInstantiation>
+                  href: typeinstantiation-element-net-native.md
+                - name: Élément <TypeParameter>
+                  href: typeparameter-element-net-native.md
+            - name: Paramètres de stratégie de directive runtime
+              href: runtime-directive-policy-settings.md
+    - name: Sérialisation et métadonnées
+      href: serialization-and-metadata.md
+    - name: Migration de votre application du Windows Store vers .NET Native
+      href: migrating-your-windows-store-app-to-net-native.md
+    - name: Résolution des problèmes généraux liés à .NET Native
+      href: net-native-general-troubleshooting.md

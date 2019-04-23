@@ -15,11 +15,11 @@ ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969791"
 ---
 # <a name="extending-metadata-using-attributes"></a>Extension des métadonnées à l'aide des attributs
 Le common language runtime vous permet d’ajouter des déclarations descriptives de type mot clé, appelées attributs, pour annoter les éléments de programmation comme des types, des champs, des méthodes et des propriétés. Quand vous compilez votre code pour le runtime, il est converti en langage MSIL (Microsoft Intermediate Language) et placé dans un fichier exécutable portable avec des métadonnées générées par le compilateur. Les attributs vous permettent de placer des informations descriptives supplémentaires dans les métadonnées, qui peuvent être extraites à l'aide des services de réflexion du runtime. Le compilateur crée des attributs quand vous déclarez des instances de classes spéciales qui dérivent de <xref:System.Attribute?displayProperty=nameWithType>.  
@@ -34,7 +34,7 @@ Le common language runtime vous permet d’ajouter des déclarations descriptive
 |[Écriture des attributs personnalisés](../../../docs/standard/attributes/writing-custom-attributes.md)|Décrit comment concevoir des classes d'attributs personnalisés.|  
 |[Récupération des informations stockées dans les attributs](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Décrit comment récupérer des attributs personnalisés pour le code qui est chargé dans le contexte d'exécution.|  
 |[Métadonnées et composants autodescriptifs](../../../docs/standard/metadata-and-self-describing-components.md)|Fournit une vue d'ensemble des métadonnées et décrit comment elles sont implémentées dans un fichier exécutable portable du .NET Framework.|  
-|[Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explique comment récupérer les informations des attributs personnalisés dans le contexte de réflexion uniquement.|  
+|[Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).|Explique comment récupérer les informations des attributs personnalisés dans le contexte de réflexion uniquement.|  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Attribute?displayProperty=nameWithType>
