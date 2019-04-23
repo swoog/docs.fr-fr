@@ -3,10 +3,10 @@ title: Déduction de la structure relationnelle des DataSet à partir de XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191536"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Déduction de la structure relationnelle des DataSet à partir de XML
@@ -19,32 +19,32 @@ La structure relationnelle, ou schéma, d'un objet <xref:System.Data.DataSet> es
  Tous les attributs présents dans un document XML ne doivent pas être inclus dans le processus d'inférence. Les attributs qualifiés par espaces de noms peuvent inclure des métadonnées revêtant une importance pour le document XML mais pas pour le schéma de l'objet <xref:System.Data.DataSet>. En utilisant la méthode <xref:System.Data.DataSet.InferXmlSchema%2A>, vous pouvez définir des espaces de noms spécifiques qui devront être ignorés au cours du processus d'inférence. Pour plus d’informations, consultez [le chargement des informations de schéma de jeu de données à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Résumé du processus d'inférence du schéma de données](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+ [Résumé du processus d’inférence du schéma d’un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  Propose un résumé succinct des règles qui permettent de déduire le schéma d'un objet <xref:System.Data.DataSet> à partir de XML.  
   
- [Déduction de tables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
+ [Inférence des tables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
  Décrit les éléments XML qui sont déduits en tant que tables dans un objet <xref:System.Data.DataSet>.  
   
- [Déduction des colonnes](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
+ [Inférence des colonnes](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
  Décrit les éléments et attributs XML qui sont déduits en tant que colonnes de table.  
   
- [Déduction des relations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
+ [Inférence de relations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
  Décrit les objets <xref:System.Data.DataRelation> et <xref:System.Data.ForeignKeyConstraint> créés pour les tables imbriquées déduites.  
   
- [Déduction du texte d'un élément](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
+ [Inférence du texte des éléments](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
  Décrit les colonnes créées pour le texte figurant dans les éléments XML et explique les cas où ce texte est ignoré.  
   
- [Limitations des inférences](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
+ [Limitations applicables à l’inférence](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
  Présente les limitations liées à l'inférence des schémas.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Explique comment l'objet <xref:System.Data.DataSet> interagit avec des données XML.  
   
- [Dérivation de la structure relationnelle des DataSet à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Dérivation de la structure relationnelle des DataSets à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Décrit la structure relationnelle, ou schéma, d'un objet <xref:System.Data.DataSet> créée à partir d'un schéma en langage XSD (XML Schema Definition).  
   
- [Vue d'ensemble d'ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Décrit l'architecture et les composants d'ADO.NET ainsi que la façon de les utiliser pour accéder à des sources de données existantes et pour gérer des données d'application.  
   
 ## <a name="see-also"></a>Voir aussi

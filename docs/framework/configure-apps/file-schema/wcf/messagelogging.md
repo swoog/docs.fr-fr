@@ -3,10 +3,10 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191567"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
@@ -53,7 +53,7 @@ Cet élément définit les paramètres pour les fonctions d'enregistrement des m
   
 |Élément|Description|  
 |-------------|-----------------|  
-|Filtres|L'élément `filters` maintient une collection de filtres XPath. Lorsque l'enregistrement des messages de transport est activé (`logMessagesAtTransportLevel` a la valeur `true`), seuls les messages correspondant aux filtres sont enregistrés.<br /><br /> Les filtres sont appliqués uniquement à la couche transport. Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.<br /><br /> Le seul attribut pour cet élément, `filter`, est un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filtres|L'élément `filters` maintient une collection de filtres XPath. Lorsque l'enregistrement des messages de transport est activé (`logMessagesAtTransportLevel` a la valeur `true`), seuls les messages correspondant aux filtres sont enregistrés.<br /><br /> Les filtres sont appliqués uniquement à la couche transport. Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.<br /><br /> Le seul attribut pour cet élément, `filter`, est un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

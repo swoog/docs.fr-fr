@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191274"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtention d'éléments UI Automation
@@ -34,9 +34,9 @@ ms.locfileid: "59191274"
 ## <a name="conditions"></a>Conditions  
  Pour la plupart des techniques que vous pouvez utiliser pour récupérer des éléments [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vous devez spécifier un <xref:System.Windows.Automation.Condition>, qui est un ensemble de critères définissant les éléments que vous souhaitez récupérer.  
   
- La condition la plus simple est <xref:System.Windows.Automation.Condition.TrueCondition>, un objet prédéfini spécifiant que tous les éléments dans la zone de recherche doivent être retournés. <xref:System.Windows.Automation.Condition.FalseCondition>, l’inverse de <xref:System.Windows.Automation.Condition.TrueCondition>, est moins utile, car elle empêche tous les éléments d’être recherchés.  
+ La condition la plus simple est <xref:System.Windows.Automation.Condition.TrueCondition>, un objet prédéfini spécifiant que tous les éléments dans la zone de recherche doivent être retournés. La condition<xref:System.Windows.Automation.Condition.FalseCondition>, inverse de <xref:System.Windows.Automation.Condition.TrueCondition>, est moins utile, car elle empêche certains éléments d’être recherchés.  
   
- Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, utilisé par lui-même, est équivalent à <xref:System.Windows.Automation.Condition.TrueCondition>, car il ne filtre pas les éléments par leurs <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> propriétés.  
+ Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. La condition<xref:System.Windows.Automation.Automation.RawViewCondition>, utilisée par elle-même, est équivalente à <xref:System.Windows.Automation.Condition.TrueCondition>, car elle ne filtre pas les éléments par leurs propriétés <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>.  
   
  D’autres conditions sont développées à partir d’un ou plusieurs objets <xref:System.Windows.Automation.PropertyCondition> , chacun spécifiant une valeur de propriété. Par exemple, une condition <xref:System.Windows.Automation.PropertyCondition> peut spécifier que l’élément est activé ou qu’il prend en charge un certain modèle de contrôle.  
   
@@ -100,4 +100,4 @@ ms.locfileid: "59191274"
 
 - [Rechercher un élément UI Automation basé sur une condition de propriété](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Naviguer entre les éléments UI Automation avec TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

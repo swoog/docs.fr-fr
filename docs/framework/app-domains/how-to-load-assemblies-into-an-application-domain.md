@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188524"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Procédure : charger des assemblys dans un domaine d’application
@@ -49,8 +49,8 @@ Il existe plusieurs façons de charger un assembly dans un domaine d’applicati
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programmation avec des domaines d'application](application-domains.md#programming-with-application-domains)
+- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)
 - [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Utilisation des domaines d'application](../../../docs/framework/app-domains/use.md)
-- [Procédure : charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)
+- [Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).
 - [Domaines d’application et assemblys](application-domains.md#application-domains-and-assemblies)

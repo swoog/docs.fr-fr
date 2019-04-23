@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188446"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Dessin, positionnement et clonage d'images dans GDI+
@@ -54,5 +54,5 @@ Vous pouvez utiliser la <xref:System.Drawing.Bitmap> classe pour charger et affi
 ## <a name="see-also"></a>Voir aussi
 
 - [Images, bitmaps et métafichiers](images-bitmaps-and-metafiles.md)
-- [Procédure : créer des objets de graphismes pour le dessin](how-to-create-graphics-objects-for-drawing.md)
+- [Guide pratique pour Créer des objets graphiques pour le dessin](how-to-create-graphics-objects-for-drawing.md)
 - [Utilisation des images, bitmaps, icônes et métafichiers](working-with-images-bitmaps-icons-and-metafiles.md)

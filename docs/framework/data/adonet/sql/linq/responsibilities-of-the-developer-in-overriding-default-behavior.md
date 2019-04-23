@@ -3,10 +3,10 @@ title: Responsabilités du développeur en matière de substitution du comportem
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
 ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184767"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilités du développeur en matière de substitution du comportement par défaut
@@ -22,10 +22,10 @@ ms.locfileid: "59184767"
   
      Par exemple, si `Order.OrderID` est mappé à une colonne d’identité (*autoincrement* clé primaire), puis le `InsertOrder()` méthode de substitution doit récupérer l’ID de base de données et définissez la `Order.OrderID` membre à cet ID. De la même façon, les membres d'horodatage doivent être mis à jour aux valeurs d'horodatage générées par une base de données afin de vérifier que les objets mis à jour sont cohérents. Si les valeurs générées par une base de données ne peuvent pas être propagées, cela peut entraîner une incohérence entre la base de données et les objets suivis par le <xref:System.Data.Linq.DataContext>.  
   
--   L'utilisateur doit appeler l'API dynamique appropriée. Par exemple, dans la méthode override de mise à jour, seule la méthode <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> peut être appelée. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne détecte ni ne vérifie si la méthode dynamique appelée correspond à l’opération applicable. Les résultats ne sont pas définis si une méthode inapplicable est appelée (par exemple, <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> pour un objet à mettre à jour).  
+-   L'utilisateur doit appeler l'API dynamique appropriée. Par exemple, dans la méthode override de mise à jour, seule la méthode <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> peut être appelée. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne détecte pas ni ne vérifie si la méthode dynamique appelée correspond à l'opération applicable. Les résultats ne sont pas définis si une méthode inapplicable est appelée (par exemple, <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> pour un objet à mettre à jour).  
   
 -   Enfin, la méthode de substitution est supposée effectuer l'opération énoncée. La sémantique des opérations [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] telles que le chargement hâtif, le chargement différé et <xref:System.Data.Linq.DataContext.SubmitChanges%2A> nécessitent que les substitutions fournissent le service indiqué. Par exemple, si une substitution de charge retourne simplement une collection vide sans vérifier le contenu dans la base de données, cela peut entraîner des incohérences au niveau des données.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Personnalisation des opérations d'insertion, de mise à jour et de suppression](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+- [Personnalisation des opérations d’insertion, de mise à jour et de suppression](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

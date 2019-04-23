@@ -9,10 +9,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182466"
 ---
 # <a name="path-animations-overview"></a>Vue d'ensemble des animations de tracés
@@ -49,7 +49,7 @@ ms.locfileid: "59182466"
   
  Où  *\<Type >* est le type de valeur que la classe anime.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit le chemin d’accès suivant de classes d’animation.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit les classes d’animation de tracés suivantes.  
   
 |Type de propriété|Classe d’animation de tracés correspondante|Exemple|  
 |-------------------|----------------------------------------|-------------|  
@@ -93,6 +93,6 @@ ms.locfileid: "59182466"
 
 - [Animation de tracés, exemple](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Syntaxe XAML pour les tracés](path-markup-syntax.md)
-- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)

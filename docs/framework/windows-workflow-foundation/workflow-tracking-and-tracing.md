@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191027"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Suivi et traçage de workflow
@@ -22,11 +22,11 @@ Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_lon
   
  Pour vous aider à comprendre le modèle de programmation, les principaux composants de l'infrastructure de suivi sont traités dans cette rubrique :  
   
--   <xref:System.Activities.Tracking.TrackingRecord> objets émis à partir de l’exécution du workflow. Pour plus d’informations, consultez [des enregistrements de suivi](tracking-records.md).  
+-   Des objets <xref:System.Activities.Tracking.TrackingRecord> sont émis par l'exécution du workflow. Pour plus d’informations, consultez [des enregistrements de suivi](tracking-records.md).  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> objets s’abonner à <xref:System.Activities.Tracking.TrackingRecord> objets. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des objets <xref:System.Activities.Tracking.TrackingRecord> (par exemple, ils peuvent choisir d'écrire dans un fichier). Pour plus d’informations, consultez [les participants au suivi](tracking-participants.md).  
+-   Les objets <xref:System.Activities.Tracking.TrackingParticipant>  s'abonnent aux objets <xref:System.Activities.Tracking.TrackingRecord>. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des objets <xref:System.Activities.Tracking.TrackingRecord> (par exemple, ils peuvent choisir d'écrire dans un fichier). Pour plus d’informations, consultez [les participants au suivi](tracking-participants.md).  
   
--   <xref:System.Activities.Tracking.TrackingProfile> objets filtrer les enregistrements de suivi émis à partir d’une instance de workflow. Pour plus d’informations, consultez [modèles de suivi](tracking-profiles.md).  
+-   Les objets <xref:System.Activities.Tracking.TrackingProfile> filtrent les enregistrements de suivi émis par une instance de workflow. Pour plus d’informations, consultez [modèles de suivi](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infrastructure du suivi des flux de travail  
  L'infrastructure de suivi de workflow fonctionne sur un modèle Publier/Abonner. L’instance de workflow est le serveur de publication des enregistrements de suivi, alors que les abonnés des enregistrements de suivi sont inscrits en tant qu’extensions du workflow. Ces extensions qui s’abonnent aux objets <xref:System.Activities.Tracking.TrackingRecord> sont appelées des participants de suivi. Les participants de suivi sont des points d'extensibilité qui accèdent aux objets <xref:System.Activities.Tracking.TrackingRecord> afin de les traiter de la manière prévue. L'infrastructure de suivi permet l'application d'un filtre sur les enregistrements de suivi sortants pour permettre à un participant de s'abonner à un sous-ensemble des enregistrements. Ce mécanisme de filtrage s'effectue à l'aide d'un fichier modèle de suivi.  
@@ -39,13 +39,13 @@ Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_lon
  [Enregistrements de suivi](tracking-records.md)  
  Décrit les enregistrements de suivi émis par l'exécution du workflow.  
   
- [Modèles de suivi](tracking-profiles.md)  
+ [Profils de suivi](tracking-profiles.md)  
  Explique l'utilisation des modèles de suivi.  
   
  [Participants de suivi](tracking-participants.md)  
  Décrit comment utiliser le participant de suivi fourni par le système ou comment créer des participants de suivi personnalisés.  
   
- [Configuration du suivi d'un workflow](configuring-tracking-for-a-workflow.md)  
+ [Configuration du suivi d’un workflow](configuring-tracking-for-a-workflow.md)  
  Décrit comment configurer le suivi pour un workflow.  
   
  [Suivi de workflow](workflow-tracing.md)  

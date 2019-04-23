@@ -3,10 +3,10 @@ title: Meilleures pratiques dans un environnement de confiance partielle
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184078"
 ---
 # <a name="partial-trust-best-practices"></a>Meilleures pratiques dans un environnement de confiance partielle
@@ -29,7 +29,7 @@ Cette rubrique décrit les meilleures pratiques lors de l’exécution de Window
   
 -   Les méthodes qui gèrent des événements de sérialisation (telles que `OnSerializing`, `OnSerialized`, `OnDeserializing`et `OnDeserialized`) doivent être déclarées comme publiques. Toutefois, les implémentations explicites et implicites de <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> sont prises en charge.  
   
--   `[DataContract]` types implémentées dans des assemblys marqués avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ne doit exécuter les actions liées à la sécurité dans le constructeur de type, comme le <xref:System.Runtime.Serialization.DataContractSerializer> n’appelle pas le constructeur de l’objet instancié récemment pendant la désérialisation. En particulier, les techniques de sécurité courantes suivantes doivent être évitées pour les types `[DataContract]` :  
+-   Les types `[DataContract]` implémentés dans les assemblys marqués avec <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ne doivent pas effectuer d'actions relatives à la sécurité dans le constructeur de type, étant donné que <xref:System.Runtime.Serialization.DataContractSerializer> n'appelle pas le constructeur de l'objet instancié récemment pendant la désérialisation. En particulier, les techniques de sécurité courantes suivantes doivent être évitées pour les types `[DataContract]` :  
   
 -   Tenter de restreindre l'accès de confiance partielle en rendant le constructeur du type interne ou privé.  
   

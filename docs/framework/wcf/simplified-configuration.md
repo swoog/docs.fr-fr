@@ -3,14 +3,14 @@ title: Configuration simplifiée
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184052"
 ---
 # <a name="simplified-configuration"></a>Configuration simplifiée
-Configuration des services Windows Communication Foundation (WCF) peut être une tâche complexe. Il existe de nombreuses options différentes et il n'est pas toujours évident de déterminer les paramètres nécessaires. Bien que les fichiers de configuration augmentent la flexibilité des services WCF, ils sont également la source de nombreux problèmes difficiles à détecter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] résout ces problèmes et fournit un moyen de réduire la taille et la complexité de configuration du service.  
+Configuration des services Windows Communication Foundation (WCF) peut être une tâche complexe. Il existe de nombreuses options différentes et il n'est pas toujours évident de déterminer les paramètres nécessaires. Bien que les fichiers de configuration augmentent la flexibilité des services WCF, ils sont également la source de nombreux problèmes difficiles à détecter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] traite ces problèmes et permet de réduire la taille et la complexité de la configuration de service.  
   
 ## <a name="simplified-configuration"></a>Configuration simplifiée  
  Dans les fichiers de configuration de service WCF, le <`system.serviceModel`> section contient un <`service`>, élément pour chaque service hébergé. Le <`service`> élément contient une collection de <`endpoint`> éléments qui spécifient les points de terminaison exposés pour chaque service et éventuellement un ensemble de comportements de service. Le <`endpoint`> éléments spécifient l’adresse, liaison et contrat exposés par le point de terminaison et éventuellement une configuration de liaison et les comportements de point de terminaison. Le <`system.serviceModel`> section contient également un <`behaviors`> élément qui vous permet de spécifier des comportements de service ou de point de terminaison. L’exemple suivant montre le <`system.serviceModel`> section d’un fichier de configuration.  
@@ -115,9 +115,9 @@ Configuration des services Windows Communication Foundation (WCF) peut être une
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Configuration des services à l'aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Configuration de liaisons pour les services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Configuration des liaisons fournies par le système](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Configuration des services](../../../docs/framework/wcf/configuring-services.md)
 - [Configuration des services WCF](configuring-services.md)
-- [Configuration de services WCF dans le code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+- [Configuration des services WCF dans le code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

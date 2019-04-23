@@ -3,10 +3,10 @@ title: Datasets ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190936"
 ---
 # <a name="adonet-datasets"></a>Datasets ADO.NET
@@ -41,13 +41,13 @@ Modèle d'objet DataSet
  Le **DataSet**, **DataTable**, et **DataColumn** ont toutes un **ExtendedProperties** propriété. **ExtendedProperties** est un **PropertyCollection** où vous pouvez placer des informations personnalisées, telles que l’instruction SELECT qui a été utilisée pour générer le jeu de résultats, ou l’heure à laquelle les données a été générées. Le **ExtendedProperties** collection est rendue persistante avec les informations de schéma pour le **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Fournit des fonctionnalités language-integrated Query pour les données déconnectées stockées dans un jeu de données. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilise le standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] syntaxe et fournit la vérification de la syntaxe de la compilation, le typage statique et la prise en charge IntelliSense lorsque vous utilisez l’IDE Visual Studio.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fournit les fonctionnalités LINQ (Language Integrated Query) pour traiter les données déconnectées stockées dans un DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilise le standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] syntaxe et fournit la vérification de la syntaxe de la compilation, le typage statique et la prise en charge IntelliSense lorsque vous utilisez l’IDE Visual Studio.  
   
  Pour plus d’informations, [consultez LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble d'ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

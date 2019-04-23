@@ -20,10 +20,10 @@ ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187796"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Procédure : générer un assembly multifichier
@@ -99,7 +99,7 @@ Cet article explique comment créer un assembly multifichier et fournit le code 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
-- [Procédure : afficher le contenu d’un assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Guide pratique pour afficher le contenu d’un assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblys multifichiers](../../../docs/framework/app-domains/multifile-assemblies.md)

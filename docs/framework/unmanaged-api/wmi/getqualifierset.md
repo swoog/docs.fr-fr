@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193094"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet (fonction)
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `ppQualSet`  
-[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe. `ppQualSet` Ne peut pas être `null`. Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié. 
+[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe. `ppQualSet` ne peut pas avoir la valeur `null`. Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié. 
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -72,7 +72,7 @@ Le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqua
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

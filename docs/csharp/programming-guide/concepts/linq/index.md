@@ -3,10 +3,10 @@ title: LINQ (Language-Integrated Query) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186626"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
@@ -35,7 +35,7 @@ L’exemple suivant montre l’opération de requête complète. L’opération 
   
 -   Certaines opérations de requête, comme <xref:System.Linq.Enumerable.Count%2A> ou <xref:System.Linq.Enumerable.Max%2A>, n’ont pas d’expression de requête équivalente et doivent par conséquent être exprimées sous la forme d’un appel de méthode. La syntaxe de méthode peut être combinée avec la syntaxe de requête de différentes manières. Pour plus d’informations, consultez la page [Syntaxe de requête et syntaxe de méthode dans LINQ](query-syntax-and-method-syntax-in-linq.md).  
   
--   Les expressions de requête peuvent être compilées dans des arborescences d’expressions ou des délégués, selon le type auquel la requête est appliquée. <xref:System.Collections.Generic.IEnumerable%601> (requêtes) sont compilées en délégués. <xref:System.Linq.IQueryable> et les requêtes <xref:System.Linq.IQueryable%601> sont compilées en arborescences d’expression. Pour plus d’informations, consultez la page [Arborescences d’expressions](../../../expression-trees.md).  
+-   Les expressions de requête peuvent être compilées dans des arborescences d’expressions ou des délégués, selon le type auquel la requête est appliquée. Les requêtes <xref:System.Collections.Generic.IEnumerable%601> sont compilées en délégués. Les requêtes <xref:System.Linq.IQueryable> et <xref:System.Linq.IQueryable%601> sont compilées en arborescences d’expression. Pour plus d’informations, consultez la page [Arborescences d’expressions](../../../expression-trees.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

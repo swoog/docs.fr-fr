@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183974"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilisation d'UI Automation pour des tests automatisés
@@ -19,9 +19,9 @@ ms.locfileid: "59183974"
   
  Cette présentation explique comment [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] peut être utile en tant qu’infrastructure pour l’accès par programmation aux scénarios de tests automatisés.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fournit un modèle objet unifié qui permet à tous les [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] des infrastructures pour exposer des fonctionnalités complexes et riches de manière accessible et facilement automatisée.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fournit un modèle objet unifié qui permet à toutes les infrastructures d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] d’exposer des fonctionnalités complexes et riches de manière accessible et facilement automatisée.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a été développé pour succéder à [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] une infrastructure existante est conçue pour fournir une solution pour rendre les contrôles et les applications accessibles. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] a été conçu pas avec l’automation de test à l’esprit même si elle a évolué vers ce rôle en raison des spécifications très similaires d’accessibilité et d’automation. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], en plus de fournir des solutions plus raffinées pour l’accessibilité, est également conçu pour fournir des fonctionnalités robustes pour les tests automatisés. Par exemple, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] s’appuie sur une seule interface pour exposer des informations sur l’interface utilisateur, et collecter les informations nécessaires aux produits AT. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sépare les deux modèles.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] a été développé pour succéder à [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] est une infrastructure existante conçue pour fournir une solution permettant de rendre les contrôles et les applications accessibles. La technologie[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] n’a pas été conçue avec l’automation des tests à l’esprit, même si elle a évolué vers ce rôle en raison d’exigences très similaires en matière d’accessibilité et d’automation. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], en plus de fournir des solutions plus raffinées pour l’accessibilité, est également conçu pour fournir des fonctionnalités robustes pour les tests automatisés. Par exemple, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] s’appuie sur une seule interface pour exposer des informations sur l’interface utilisateur, et collecter les informations nécessaires aux produits AT. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sépare les deux modèles.  
   
  Un fournisseur et un client sont nécessaires pour implémenter [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , et l’utiliser comme outil de test automatisé. Les fournisseurs UI Automation sont des applications telles que Microsoft Word, Excel et d’autres applications ou contrôles tiers basés sur le système d’exploitation [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Les clients UI Automation incluent des scripts de tests automatisés et des applications de technologie d’assistance.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59183974"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>Accès par programmation  
- L’accès par programmation permet d’imiter, avec du code, les interactions et les expériences produites par les entrées classiques au clavier et à la souris. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Permet d’accéder par programmation via cinq composants :  
+ L’accès par programmation permet d’imiter, avec du code, les interactions et les expériences produites par les entrées classiques au clavier et à la souris. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permet l’accès par programmation via cinq composants :  
   
 -   L’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] facilite la navigation dans la structure de l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. L’arborescence est créée à partir de la collection de hWnd. Pour plus d'informations, consultez [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
@@ -76,16 +76,16 @@ ms.locfileid: "59183974"
  La capacité à identifier de manière unique, puis à localiser un contrôle dans l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , est à la base du fonctionnement des applications de tests automatisés dans cette [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Il existe plusieurs propriétés [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] utilisées par les clients et les fournisseurs pour faciliter cette opération.  
   
 #### <a name="automationid"></a>AutomationID  
- Identifie de manière unique un élément Automation parmi ses frères. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> n’est pas localisée, contrairement à une propriété comme <xref:System.Windows.Automation.AutomationElement.NameProperty> qui est généralement localisé si un produit est expédié dans plusieurs langues. Consultez [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
+ Identifie de manière unique un élément Automation parmi ses frères. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> n’est pas localisé, contrairement à une propriété comme <xref:System.Windows.Automation.AutomationElement.NameProperty> , qui est généralement localisé si un produit est disponible dans plusieurs langues. Consultez [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ne garantit pas une identité unique dans toute l’arborescence automation. Par exemple, une application peut contenir un contrôle de menu avec plusieurs éléments de menu de niveau supérieur qui, à leur tour, contiennent plusieurs éléments enfants. Ces éléments de menu secondaires peuvent être identifiés par un schéma générique tel que « Item1, Item 2, Item3, etc. », qui autorise les identificateurs dupliqués pour les enfants dans l’ensemble des éléments de menu de niveau supérieur.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ne garantit pas une identité unique dans l’arborescence Automation. Par exemple, une application peut contenir un contrôle de menu avec plusieurs éléments de menu de niveau supérieur qui, à leur tour, contiennent plusieurs éléments enfants. Ces éléments de menu secondaires peuvent être identifiés par un schéma générique tel que « Item1, Item 2, Item3, etc. », qui autorise les identificateurs dupliqués pour les enfants dans l’ensemble des éléments de menu de niveau supérieur.  
   
 #### <a name="controltype"></a>ControlType  
  Identifie le type de contrôle représenté par un élément Automation. Des informations importantes peuvent être déduites à partir de la connaissance du type de contrôle. Consultez [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
 #### <a name="nameproperty"></a>NameProperty  
- Il s’agit d’une chaîne de texte qui identifie ou explique un contrôle. <xref:System.Windows.Automation.AutomationElement.NameProperty> doit être utilisée avec précaution car il peut être localisé. Consultez [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Il s’agit d’une chaîne de texte qui identifie ou explique un contrôle. <xref:System.Windows.Automation.AutomationElement.NameProperty> doit être utilisé avec précaution, car il peut être localisé. Consultez [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>Implémentation d’UI Automation dans une application de test  
@@ -113,4 +113,4 @@ ms.locfileid: "59183974"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Notions de base d'UI Automation](../../../docs/framework/ui-automation/index.md)
+- [Notions de base d’UI Automation](../../../docs/framework/ui-automation/index.md)

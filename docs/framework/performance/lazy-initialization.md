@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182297"
 ---
 # <a name="lazy-initialization"></a>Initialisation tardive
@@ -23,7 +23,7 @@ ms.locfileid: "59182297"
   
 -   Si vous avez un objet qui est coûteux à créer, et si vous souhaitez différer sa création jusqu’à ce que d’autres opérations coûteuses soient terminées. Par exemple, supposons que votre programme charge plusieurs instances d’objet lorsqu’il démarre, mais que seules certaines d’entre elles soient immédiatement nécessaires. Vous pouvez améliorer les performances de démarrage du programme en différant l’initialisation des objets qui ne sont pas nécessaires tant que les objets nécessaires n’ont pas été créés.  
   
- Même si vous pouvez écrire votre propre code pour effectuer une initialisation tardive, nous vous recommandons d’utiliser <xref:System.Lazy%601>. <xref:System.Lazy%601> et ses types apparentés également prendre en charge de la sécurité des threads et fournissent une stratégie cohérente exceptions la propagation.  
+ Même si vous pouvez écrire votre propre code pour effectuer une initialisation tardive, nous vous recommandons d’utiliser <xref:System.Lazy%601>. <xref:System.Lazy%601> et ses types associés prennent également en charge la cohérence de thread et fournissent une stratégie cohérente de propagation des exceptions.  
   
  Le tableau suivant répertorie les types fournis par le .NET Framework version 4 pour permettre l’initialisation tardive dans différents scénarios.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59182297"
   
  Certains constructeurs <xref:System.Lazy%601> ont un paramètre <xref:System.Threading.LazyThreadSafetyMode> nommé `mode`. Ces constructeurs fournissent un mode de cohérence de thread supplémentaire. Le tableau suivant montre comment la cohérence de thread d’un objet <xref:System.Lazy%601> est affectée par les paramètres du constructeur qui spécifient la cohérence de thread. Chaque constructeur comprend un tel paramètre.  
   
-|Cohérence de thread de l’objet|`LazyThreadSafetyMode` `mode` paramètre|Paramètre `isThreadSafe` booléen|Aucun paramètre de cohérence de thread|  
+|Cohérence de thread de l’objet|Paramètre `LazyThreadSafetyMode` `mode`|Paramètre `isThreadSafe` booléen|Aucun paramètre de cohérence de thread|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Entièrement thread-safe. Seul un thread à la fois tente d’initialiser la valeur.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Oui.|  
 |Non thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Non applicable.|  
@@ -126,7 +126,7 @@ ms.locfileid: "59182297"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> encapsule son objet de la même façon que <xref:System.Lazy%601>, avec ces différences essentielles :  
+ <xref:System.Threading.ThreadLocal%601> encapsule son objet de la même façon que <xref:System.Lazy%601>, avec toutefois ces différences essentielles :  
   
 -   Chaque thread initialise la variable de thread local à l’aide de ses données privées, qui ne sont pas accessibles par d’autres threads.  
   
@@ -156,5 +156,5 @@ ms.locfileid: "59182297"
 
 - [Éléments fondamentaux du threading managé](../../../docs/standard/threading/managed-threading-basics.md)
 - [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)
-- [Bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Procédure : Effectuer une initialisation tardive d’objets](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Guide pratique pour Effectuer une initialisation tardive d’objets](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

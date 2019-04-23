@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
 ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183779"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Propriétés des contrôles Windows Forms que prennent en charge les instructions relatives à l'accessibilité
@@ -32,4 +32,4 @@ Contrôles sur la boîte à outils standard pour les Windows Forms prennent en c
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure pas à pas : création d’une application Windows accessible](walkthrough-creating-an-accessible-windows-based-application.md)
+- [Procédure pas à pas : Création d’une Application Windows Accessible](walkthrough-creating-an-accessible-windows-based-application.md)

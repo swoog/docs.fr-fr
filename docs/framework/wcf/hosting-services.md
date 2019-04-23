@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185534"
 ---
 # <a name="hosting-services"></a>Hébergement de services
@@ -34,7 +34,7 @@ Pour devenir actif, un service doit être hébergé dans un environnement d'exé
  Notez que les services hébergés par IIS peuvent utiliser uniquement le transport HTTP. Son implémentation dans IIS 5.1 a introduit des limitations dans [!INCLUDE[wxp](../../../includes/wxp-md.md)]. L’activation basée sur message fournie pour un service WCF par IIS 5.1 sur [!INCLUDE[wxp](../../../includes/wxp-md.md)] bloque tout autre service WCF auto-hébergé sur le même ordinateur d’utiliser le port 80 pour communiquer. Services WCF peuvent être exécutés dans le même processus de travail/Pool AppDomain/Application en tant que d’autres applications quand ils sont hébergés par [!INCLUDE[iis601](../../../includes/iis601-md.md)] sur [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Mais étant donné que WCF et [!INCLUDE[iis601](../../../includes/iis601-md.md)] utilisent tous deux la pile HTTP en mode noyau (HTTP.sys), [!INCLUDE[iis601](../../../includes/iis601-md.md)] peuvent partager le port 80 avec d’autres services WCF auto-hébergés en cours d’exécution sur le même ordinateur, contrairement à IIS 5.1.  
   
 #### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)  
- Le service WAS (Windows Process Activation Service) est le nouveau mécanisme d'activation de processus pour [!INCLUDE[lserver](../../../includes/lserver-md.md)] , également disponible sur [!INCLUDE[wv](../../../includes/wv-md.md)]. Il conserve le modèle de processus [!INCLUDE[iis601](../../../includes/iis601-md.md)] classique (pools d'applications et activation de processus basée sur des messages) et les fonctionnalités d'hébergement (telles que la protection rapide contre les pannes, le contrôle d'état et le recyclage), mais il supprime la dépendance sur HTTP de l'architecture d'activation. [!INCLUDE[iisver](../../../includes/iisver-md.md)] utilise WAS pour accomplir l’activation basée sur le message via HTTP. Les composants WCF supplémentaires s’intègrent aussi dans le service WAS pour assurer l’activation basée sur un message sur les autres protocoles WCF prend en charge, tels que TCP, MSMQ et canaux nommés. Cela permet aux applications qui utilisent des protocoles de communication d'utiliser les fonctionnalités IIS (telles que le recyclage de processus, la protection rapide contre les pannes et le système de configuration commun) qui étaient réservées exclusivement aux applications basées sur HTTP.  
+ Le service WAS (Windows Process Activation Service) est le nouveau mécanisme d'activation de processus pour [!INCLUDE[lserver](../../../includes/lserver-md.md)] , également disponible sur [!INCLUDE[wv](../../../includes/wv-md.md)]. Il conserve le modèle de processus [!INCLUDE[iis601](../../../includes/iis601-md.md)] classique (pools d'applications et activation de processus basée sur des messages) et les fonctionnalités d'hébergement (telles que la protection rapide contre les pannes, le contrôle d'état et le recyclage), mais il supprime la dépendance sur HTTP de l'architecture d'activation. [!INCLUDE[iisver](../../../includes/iisver-md.md)] utilise le service WAS pour accomplir l'activation basée sur des messages via HTTP. Les composants WCF supplémentaires s’intègrent aussi dans le service WAS pour assurer l’activation basée sur un message sur les autres protocoles WCF prend en charge, tels que TCP, MSMQ et canaux nommés. Cela permet aux applications qui utilisent des protocoles de communication d'utiliser les fonctionnalités IIS (telles que le recyclage de processus, la protection rapide contre les pannes et le système de configuration commun) qui étaient réservées exclusivement aux applications basées sur HTTP.  
   
  Cette option d'hébergement requiert que les services WAS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. Pour plus d’informations sur la configuration de l’hébergement WAS, consultez [Comment : Héberger un Service WCF dans WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
@@ -66,7 +66,7 @@ Pour devenir actif, un service doit être hébergé dans un environnement d'exé
 - [Configuration système requise](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Cycle de vie de la programmation de base](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Procédure : héberger un service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Procédure : héberger un service WCF dans WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Procédure : héberger un service WCF dans un service Windows managé](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Procédure : héberger un service WCF dans une application managée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Guide pratique pour Héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Guide pratique pour Héberger un Service WCF dans WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Guide pratique pour Héberger un Service WCF dans un Service Windows managé](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Guide pratique pour Héberger un Service WCF dans une Application managée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

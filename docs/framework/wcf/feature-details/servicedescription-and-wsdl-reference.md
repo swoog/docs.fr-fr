@@ -3,10 +3,10 @@ title: Référence pour ServiceDescription et WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182882"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>Référence pour ServiceDescription et WSDL
@@ -50,7 +50,7 @@ Cette rubrique décrit comment Windows Communication Foundation (WCF) mappe des 
 |----------------|------------------|  
 |`Name`|Utilisé dans le nom par défaut d'un point de terminaison, qui est le nom de liaison auquel est ajouté le nom du contrat séparé par un trait de soulignement.|  
 |`Namespace`|`targetNamespace` de la définition `wsdl:binding`.<br /><br /> Lors de l’importation, si une stratégie est jointe au port WSDL, l’espace de noms de liaison importé correspond à l’`targetNamespace` de la définition `wsdl:port`.|  
-|`BindingElementCollection`, tel que retourné par la `CreateBindingElements`méthode ()|Différentes extensions propres au domaine de la définition `wsdl:binding`, généralement des assertions de stratégie.|  
+|`BindingElementCollection`, telle que retournée par la méthode `CreateBindingElements`()|Différentes extensions propres au domaine de la définition `wsdl:binding`, généralement des assertions de stratégie.|  
 |`MessageVersion`|`EnvelopeVersion` et `AddressingVersion` du point de terminaison.<br /><br /> Lorsque `MessageVersion.None` est spécifié, la liaison WSDL ne contient pas de liaison SOAP et le port WSDL n'a pas de contenu WS-Addressing. Ce paramètre est généralement utilisé pour les points de terminaison POX (Plain Old XML).|  
   
 #### <a name="bindingelements"></a>BindingElement  

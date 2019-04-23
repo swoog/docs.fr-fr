@@ -5,10 +5,10 @@ helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
 ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188973"
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configuration des transactions ServiceModel
@@ -65,4 +65,4 @@ Windows Communication Foundation (WCF) fournit trois attributs de configuration 
 ## <a name="see-also"></a>Voir aussi
 
 - [\<binding>](../../../../docs/framework/misc/binding.md)
-- [Schéma de configuration WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [Schéma de configuration de WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

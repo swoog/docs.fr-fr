@@ -20,10 +20,10 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192201"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>Procédure : dessiner une forme avec contour
@@ -47,4 +47,4 @@ Cet exemple dessine avec contour ellipses et rectangles dans un formulaire.
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [Mise en route de la programmation graphique](getting-started-with-graphics-programming.md)
 - [Utilisation d'un stylet pour dessiner des lignes et des formes](using-a-pen-to-draw-lines-and-shapes.md)
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

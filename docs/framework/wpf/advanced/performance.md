@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188485"
 ---
 # <a name="performance"></a>Performances
@@ -19,7 +19,7 @@ Atteindre des performances d’application optimales requiert de réflexion et d
 ## <a name="in-this-section"></a>Dans cette section  
  [Couches de rendu graphiques](graphics-rendering-tiers.md)  
  [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)  
- [Procédure pas à pas : mise en cache des données d’application dans une application WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [Procédure pas à pas : La mise en cache des données d’Application dans une Application WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Media.RenderCapability>  
@@ -30,5 +30,5 @@ Atteindre des performances d’application optimales requiert de réflexion et d
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Mise en page](layout.md)
+- [Disposition](layout.md)
 - [Conseils et astuces sur les animations](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191326"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problèmes connus et éléments à prendre en compte dans LINQ to Entities
 Cette section fournit des informations sur les problèmes connus au niveau des requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Requêtes LINQ qui ne peuvent pas être mises en cache](#LINQQueriesThatAreNotCached)  
+-   [Requêtes LINQ qui ne peut pas être mis en cache](#LINQQueriesThatAreNotCached)  
   
--   [Perte des informations de tri](#OrderingInfoLost)  
+-   [Perte des informations de classement](#OrderingInfoLost)  
   
--   [Entiers non signés non pris en charge](#UnsignedIntsUnsupported)  
+-   [Entiers non signés non pris en charge.](#UnsignedIntsUnsupported)  
   
--   [Erreurs de conversion de type](#TypeConversionErrors)  
+-   [Erreurs de Conversion de type](#TypeConversionErrors)  
   
--   [Référencement de variables non scalaires non pris en charge](#RefNonScalarClosures)  
+-   [Référencement des Variables Non scalaires non pris en charge.](#RefNonScalarClosures)  
   
--   [Les requêtes imbriquées peuvent échouer avec SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Requêtes imbriquées peuvent échouer avec SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Projection dans un type anonyme](#ProjectToAnonymousType)  
+-   [Projection dans un Type anonyme](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Requêtes LINQ qui ne peuvent pas être mises en cache  

@@ -3,10 +3,10 @@ title: Expressions de requête
 description: En savoir plus sur la prise en charge des expression de requête de LINQ dans le F# langage de programmation.
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191560"
 ---
 # <a name="query-expressions"></a>Expressions de requête
@@ -695,7 +695,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>
+</td></tr><tr><td>Voir 
 <code>LIKE</code> et <code>TOP</code>.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> par <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> Avec <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -2423,6 +2423,6 @@ end
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Informations de référence sur le langage F#](index.md)
+- [Informations de référence du langage F#](index.md)
 - [LINQ.QueryBuilder, classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Expressions de calcul](Computation-Expressions.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188309"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Procédure : Définir une propriété après l’avoir animée avec une table de montage séquentiel
@@ -67,5 +67,5 @@ Dans certains cas, il peut sembler que vous ne pouvez pas modifier la valeur d�
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.Animation.RemoveStoryboard>
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Vue d'ensemble des techniques d'animation de propriétés](property-animation-techniques-overview.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Vue d’ensemble des techniques d’animation de propriétés](property-animation-techniques-overview.md)
