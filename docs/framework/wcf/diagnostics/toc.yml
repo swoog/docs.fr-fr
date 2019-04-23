@@ -1,38 +1,31 @@
-items:
 - name: Administration et diagnostics
   href: index.md
 - name: Journalisation des messages
   href: message-logging.md
   items:
-  - name: Vue d'ensemble du flux de messages
-    href: message-flow-overview.md
-  - name: Configuration de la journalisation des messages
-    href: configuring-message-logging.md
-  - name: Consultation des journaux de messages
-    href: viewing-message-logs.md
-  - name: Problèmes de sécurité relatifs à la journalisation des messages
-    href: security-concerns-for-message-logging.md
-  - name: Traçage
-    href: tracing/
-  - name: Traçage analytique avec ETW
-    href: etw/
-  - name: Compteurs de performances
-    href: performance-counters/
-  - name: Journalisation des événements
-    href: event-logging/
-  - name: Utilisation de Windows Management Instrumentation pour les diagnostics
-    href: wmi/
-  - name: Informations de référence sur les exceptions
-    href: exceptions-reference/
+    - name: Vue d'ensemble du flux de messages
+      href: message-flow-overview.md
+    - name: Configuration de la journalisation des messages
+      href: configuring-message-logging.md
+    - name: Consultation des journaux de messages
+      href: viewing-message-logs.md
+    - name: Problèmes de sécurité relatifs à la journalisation des messages
+      href: security-concerns-for-message-logging.md
+    - name: Traçage
+      href: tracing/
+    - name: Traçage analytique avec ETW
+      href: etw/
+    - name: Compteurs de performances
+      href: performance-counters/
+    - name: Journalisation des événements
+      href: event-logging/
+    - name: Utilisation de Windows Management Instrumentation pour les diagnostics
+      href: wmi/
+    - name: Informations de référence sur les exceptions
+      href: exceptions-reference/
 - name: Configuration de votre application
   href: configuring-your-application.md
 - name: Outil d'inscription ServiceModel
   href: servicemodel-registration-tool.md
 - name: Déploiement de services
   href: deploying-services.md
-ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469598"

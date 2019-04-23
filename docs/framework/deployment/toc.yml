@@ -1,43 +1,36 @@
-items:
 - name: Déploiement
   href: index.md
   items:
-  - name: Déployer le .NET Framework
-    href: deploying-the-net-framework.md
-    items:
-    - name: Guide de déploiement pour les développeurs
-      href: deployment-guide-for-developers.md
-    - name: Guide de déploiement pour les administrateurs
-      href: guide-for-administrators.md
-    - name: Réduction des redémarrages système lors des installations de .NET Framework 4.5
-      href: reducing-system-restarts.md
-    - name: 'Procédure : suivre la progression du programme d’installation de .NET Framework 4.5'
-      href: how-to-get-progress-from-the-dotnet-installer.md
-    - name: 'Erreurs d’initialisation du .NET Framework : gestion de l’expérience utilisateur'
-      href: initialization-errors-managing-the-user-experience.md
-    - name: 'Procédure : Déboguer les problèmes d’activation du CLR'
-      href: how-to-debug-clr-activation-issues.md
-  - name: Déploiement d'applications .NET Framework
-    href: net-framework-applications.md
-    items:
-    - name: Méthode de localisation des assemblys par le runtime
-      href: how-the-runtime-locates-assemblies.md
-    - name: Meilleures pratiques pour le chargement d'assembly
-      href: best-practices-for-assembly-loading.md
-  - name: .NET Framework Client Profile
-    href: client-profile.md
-  - name: Exécution côte à côte
-    href: side-by-side-execution.md
-    items:
-    - name: Configuration de la liaison d’assembly
-      href: configuring-assembly-binding-redirection.md
-    - name: Indications pour la création de composants pour l'exécution côte à côte
-      href: guidelines-for-creating-components-for-side-by-side-execution.md
-    - name: Exécution côte à côte in-process
-      href: in-process-side-by-side-execution.md
-ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469142"
+    - name: Déployer le .NET Framework
+      href: deploying-the-net-framework.md
+      items:
+        - name: Guide de déploiement pour les développeurs
+          href: deployment-guide-for-developers.md
+        - name: Guide de déploiement pour les administrateurs
+          href: guide-for-administrators.md
+        - name: "Réduction des redémarrages système lors des installations de .NET Framework\_4.5"
+          href: reducing-system-restarts.md
+        - name: "Procédure\_: suivre la progression du programme d’installation de .NET Framework\_4.5"
+          href: how-to-get-progress-from-the-dotnet-installer.md
+        - name: "Erreurs d’initialisation du .NET Framework\_: gestion de l’expérience utilisateur"
+          href: initialization-errors-managing-the-user-experience.md
+        - name: "Procédure\_: Déboguer les problèmes d’activation du CLR"
+          href: how-to-debug-clr-activation-issues.md
+    - name: "Déploiement d'applications .NET\_Framework"
+      href: net-framework-applications.md
+      items:
+        - name: Méthode de localisation des assemblys par le runtime
+          href: how-the-runtime-locates-assemblies.md
+        - name: Meilleures pratiques pour le chargement d'assembly
+          href: best-practices-for-assembly-loading.md
+    - name: .NET Framework Client Profile
+      href: client-profile.md
+    - name: Exécution côte à côte
+      href: side-by-side-execution.md
+      items:
+        - name: Configuration de la liaison d’assembly
+          href: configuring-assembly-binding-redirection.md
+        - name: Indications pour la création de composants pour l'exécution côte à côte
+          href: guidelines-for-creating-components-for-side-by-side-execution.md
+        - name: Exécution côte à côte in-process
+          href: in-process-side-by-side-execution.md

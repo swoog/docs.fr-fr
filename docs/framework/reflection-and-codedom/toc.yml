@@ -1,61 +1,54 @@
-items:
 - name: Programmation dynamique
   href: index.md
   items:
-  - name: Réflexion
-    href: reflection.md
-    items:
-    - name: Affichage des informations de type
-      href: viewing-type-information.md
-    - name: Réflexion et types génériques
-      href: reflection-and-generic-types.md
-    - name: 'Procédure : examiner et instancier des types génériques avec la réflexion'
-      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
-    - name: Considérations sur la sécurité de la réflexion
-      href: security-considerations-for-reflection.md
-    - name: Chargement et utilisation dynamiques des types
-      href: dynamically-loading-and-using-types.md
-    - name: 'Procédure : charger des assemblys dans le contexte de réflexion uniquement'
-      href: how-to-load-assemblies-into-the-reflection-only-context.md
-    - name: Accès aux attributs personnalisés
-      href: accessing-custom-attributes.md
-    - name: Spécification des noms de types qualifiés complets
-      href: specifying-fully-qualified-type-names.md
-    - name: 'Procédure : raccorder un délégué à l’aide de la réflexion'
-      href: how-to-hook-up-a-delegate-using-reflection.md
-    - name: Réflexion dans le .NET Framework pour les applications Windows Store
-      href: reflection-for-windows-store-apps.md
-  - name: Émission d'assemblys et de méthodes dynamiques
-    href: emitting-dynamic-methods-and-assemblies.md
-    items:
-    - name: Problèmes de sécurité dans l'émission de réflexion
-      href: security-issues-in-reflection-emit.md
-    - name: 'Procédure pas à pas : émission de code dans des scénarios de confiance partielle'
-      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-    - name: 'Procédure : définir et exécuter des méthodes dynamiques'
-      href: how-to-define-and-execute-dynamic-methods.md
-    - name: 'Procédure : définir un type générique avec l’émission de réflexion'
-      href: how-to-define-a-generic-type-with-reflection-emit.md
-    - name: 'Procédure : définir une méthode générique avec l’émission de réflexion'
-      href: how-to-define-a-generic-method-with-reflection-emit.md
-    - name: Assemblys pouvant être collectés pour la génération de type dynamique
-      href: collectible-assemblies.md
-  - name: Vue d'ensemble du Dynamic Language Runtime
-    href: dynamic-language-runtime-overview.md
-  - name: Génération et compilation de code source dynamique
-    href: dynamic-source-code-generation-and-compilation.md
-    items:
-    - name: Utilisation du CodeDOM
-      href: using-the-codedom.md
-    - name: Génération et compilation du code source à partir d’un graphique CodeDOM
-      href: generating-and-compiling-source-code-from-a-codedom-graph.md
-    - name: 'Procédure : créer un fichier de documentation XML à l’aide de CodeDOM'
-      href: how-to-create-an-xml-documentation-file-using-codedom.md
-    - name: 'Procédure : créer une classe à l’aide de CodeDOM'
-      href: how-to-create-a-class-using-codedom.md
-ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468807"
+    - name: Réflexion
+      href: reflection.md
+      items:
+        - name: Affichage des informations de type
+          href: viewing-type-information.md
+        - name: Réflexion et types génériques
+          href: reflection-and-generic-types.md
+        - name: "Procédure\_: examiner et instancier des types génériques avec la réflexion"
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: Considérations sur la sécurité de la réflexion
+          href: security-considerations-for-reflection.md
+        - name: Chargement et utilisation dynamiques des types
+          href: dynamically-loading-and-using-types.md
+        - name: "Procédure\_: charger des assemblys dans le contexte de réflexion uniquement"
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: Accès aux attributs personnalisés
+          href: accessing-custom-attributes.md
+        - name: Spécification des noms de types qualifiés complets
+          href: specifying-fully-qualified-type-names.md
+        - name: "Procédure\_: raccorder un délégué à l’aide de la réflexion"
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: Réflexion dans le .NET Framework pour les applications Windows Store
+          href: reflection-for-windows-store-apps.md
+    - name: Émission d'assemblys et de méthodes dynamiques
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: Problèmes de sécurité dans l'émission de réflexion
+          href: security-issues-in-reflection-emit.md
+        - name: "Procédure pas à pas\_: émission de code dans des scénarios de confiance partielle"
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: "Procédure\_: définir et exécuter des méthodes dynamiques"
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: "Procédure\_: définir un type générique avec l’émission de réflexion"
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: "Procédure\_: définir une méthode générique avec l’émission de réflexion"
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: Assemblys pouvant être collectés pour la génération de type dynamique
+          href: collectible-assemblies.md
+    - name: Vue d'ensemble du Dynamic Language Runtime
+      href: dynamic-language-runtime-overview.md
+    - name: Génération et compilation de code source dynamique
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: Utilisation du CodeDOM
+          href: using-the-codedom.md
+        - name: Génération et compilation du code source à partir d’un graphique CodeDOM
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: "Procédure\_: créer un fichier de documentation XML à l’aide de CodeDOM"
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: "Procédure\_: créer une classe à l’aide de CodeDOM"
+          href: how-to-create-a-class-using-codedom.md

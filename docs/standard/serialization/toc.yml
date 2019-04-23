@@ -1,96 +1,89 @@
-items:
 - name: Sérialisation
   href: index.md
   items:
-  - name: 'Rubriques Comment : ... pour la sérialisation'
-    href: serialization-how-to-topics.md
-  - name: Sérialisation binaire
-    href: binary-serialization.md
-    items:
-    - name: Concepts de la sérialisation
-      href: serialization-concepts.md
-    - name: Sérialisation de base
-      href: basic-serialization.md
-    - name: Sérialisation sélective
-      href: selective-serialization.md
-    - name: Sérialisation personnalisée
-      href: custom-serialization.md
-    - name: Étapes du processus de sérialisation
-      href: steps-in-the-serialization-process.md
-    - name: Sérialisation avec tolérance de version
-      href: version-tolerant-serialization.md
-    - name: Indications concernant la sérialisation
-      href: serialization-guidelines.md
-    - name: 'Procédure : segmenter des données sérialisées'
-      href: how-to-chunk-serialized-data.md
-    - name: 'Procédure : déterminer si un objet .NET Standard est sérialisable'
-      href: how-to-determine-if-netstandard-object-is-serializable.md
-  - name: Sérialisation XML et SOAP
-    href: xml-and-soap-serialization.md
-    items:
-    - name: 'Procédure : contrôler la sérialisation des classes dérivées'
-      href: how-to-control-serialization-of-derived-classes.md
-    - name: Introduction à la sérialisation XML
-      href: introducing-xml-serialization.md
-    - name: 'Procédure : désérialiser un objet'
-      href: how-to-deserialize-an-object.md
-    - name: Exemples de sérialisation XML
-      href: examples-of-xml-serialization.md
-    - name: Outil XML Schema Definition et sérialisation XML
-      href: the-xml-schema-definition-tool-and-xml-serialization.md
-    - name: 'Procédure : utiliser l’outil de définition de schéma XML pour générer des classes et des documents de schéma XML'
-      href: xml-schema-def-tool-gen.md
-    - name: Contrôle de la sérialisation XML à l'aide d'attributs
-      href: controlling-xml-serialization-using-attributes.md
-    - name: Attributs qui contrôlent la sérialisation XML
-      href: attributes-that-control-xml-serialization.md
-    - name: 'Procédure : spécifier un autre nom d’élément pour un flux XML'
-      href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-    - name: 'Procédure : sérialiser un objet'
-      href: how-to-serialize-an-object.md
-    - name: 'Procédure : qualifier des noms d’éléments et d’attributs XML'
-      href: how-to-qualify-xml-element-and-xml-attribute-names.md
-    - name: Sérialisation XML avec les services Web XML
-      href: xml-serialization-with-xml-web-services.md
-    - name: 'Procédure : sérialiser un objet en tant que flux XML encodé selon le protocole SOAP'
-      href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-    - name: 'Procédure : substituer la sérialisation XML encodée selon le protocole SOAP'
-      href: how-to-override-encoded-soap-xml-serialization.md
-    - name: Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP
-      href: attributes-that-control-encoded-soap-serialization.md
-    - name: Élément <system.xml.serialization>
-      href: system-xml-serialization-element.md
-    - name: Élément <dateTimeSerialization>
-      href: datetimeserialization-element.md
-    - name: Élément <schemaImporterExtensions>
-      href: schemaimporterextensions-element.md
-    - name: Élément <add> pour <schemaImporterExtensions>
-      href: add-element-for-schemaimporterextensions.md
-    - name: Élément <xmlSerializer>
-      href: xmlserializer-element.md
-  - name: Outils de sérialisation
-    href: serialization-tools.md
-    items:
-    - name: Outil XML Serializer Generator (Sgen.exe)
-      href: xml-serializer-generator-tool-sgen-exe.md
-    - name: Outil XML Schema Definition (Xsd.exe)
-      href: xml-schema-definition-tool-xsd-exe.md
-  - name: Exemples de sérialisation
-    href: serialization-samples.md
-    items:
-    - name: Sérialisation de base, exemple de technologie
-      href: basic-serialization-technology-sample.md
-    - name: Ordre de sérialisation personnalisé avec XmlSerializer
-      href: custom-serialization-order-with-xmlserializer.md
-    - name: SchemaImporterExtension, exemple de technologie
-      href: schemaimporterextension-technology-sample.md
-    - name: Sérialisation avec tolérance de version, exemple de technologie
-      href: version-tolerant-serialization-technology-sample.md
-    - name: Sérialisation de génériques de services Web, exemple de technologie
-      href: web-services-generics-serialization-technology-sample.md
-ms.openlocfilehash: ab9134268559fadb0e5f586773d5963535d4b12a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468663"
+    - name: "Rubriques Comment\_: ... pour la sérialisation"
+      href: serialization-how-to-topics.md
+    - name: Sérialisation binaire
+      href: binary-serialization.md
+      items:
+        - name: Concepts de la sérialisation
+          href: serialization-concepts.md
+        - name: Sérialisation de base
+          href: basic-serialization.md
+        - name: Sérialisation sélective
+          href: selective-serialization.md
+        - name: Sérialisation personnalisée
+          href: custom-serialization.md
+        - name: Étapes du processus de sérialisation
+          href: steps-in-the-serialization-process.md
+        - name: Sérialisation avec tolérance de version
+          href: version-tolerant-serialization.md
+        - name: Indications concernant la sérialisation
+          href: serialization-guidelines.md
+        - name: "Procédure\_: segmenter des données sérialisées"
+          href: how-to-chunk-serialized-data.md
+        - name: "Procédure\_: déterminer si un objet .NET Standard est sérialisable"
+          href: how-to-determine-if-netstandard-object-is-serializable.md
+    - name: "Sérialisation\_XML et\_SOAP"
+      href: xml-and-soap-serialization.md
+      items:
+        - name: "Procédure\_: contrôler la sérialisation des classes dérivées"
+          href: how-to-control-serialization-of-derived-classes.md
+        - name: Introduction à la sérialisation XML
+          href: introducing-xml-serialization.md
+        - name: "Procédure\_: désérialiser un objet"
+          href: how-to-deserialize-an-object.md
+        - name: "Exemples de sérialisation\_XML"
+          href: examples-of-xml-serialization.md
+        - name: Outil XML Schema Definition et sérialisation XML
+          href: the-xml-schema-definition-tool-and-xml-serialization.md
+        - name: "Procédure\_: utiliser l’outil de définition de schéma XML pour générer des classes et des documents de schéma XML"
+          href: xml-schema-def-tool-gen.md
+        - name: "Contrôle de la sérialisation\_XML à l'aide d'attributs"
+          href: controlling-xml-serialization-using-attributes.md
+        - name: "Attributs qui contrôlent la sérialisation\_XML"
+          href: attributes-that-control-xml-serialization.md
+        - name: "Procédure\_: spécifier un autre nom d’élément pour un flux XML"
+          href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+        - name: "Procédure\_: sérialiser un objet"
+          href: how-to-serialize-an-object.md
+        - name: "Procédure\_: qualifier des noms d’éléments et d’attributs XML"
+          href: how-to-qualify-xml-element-and-xml-attribute-names.md
+        - name: "Sérialisation\_XML avec les services\_Web XML"
+          href: xml-serialization-with-xml-web-services.md
+        - name: "Procédure\_: sérialiser un objet en tant que flux XML encodé selon le protocole SOAP"
+          href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+        - name: "Procédure\_: substituer la sérialisation XML encodée selon le protocole SOAP"
+          href: how-to-override-encoded-soap-xml-serialization.md
+        - name: "Attributs qui contrôlent la sérialisation encodée selon le protocole\_SOAP"
+          href: attributes-that-control-encoded-soap-serialization.md
+        - name: Élément <system.xml.serialization>
+          href: system-xml-serialization-element.md
+        - name: Élément <dateTimeSerialization>
+          href: datetimeserialization-element.md
+        - name: Élément <schemaImporterExtensions>
+          href: schemaimporterextensions-element.md
+        - name: Élément <add> pour <schemaImporterExtensions>
+          href: add-element-for-schemaimporterextensions.md
+        - name: Élément <xmlSerializer>
+          href: xmlserializer-element.md
+    - name: Outils de sérialisation
+      href: serialization-tools.md
+      items:
+        - name: Outil XML Serializer Generator (Sgen.exe)
+          href: xml-serializer-generator-tool-sgen-exe.md
+        - name: Outil XML Schema Definition (Xsd.exe)
+          href: xml-schema-definition-tool-xsd-exe.md
+    - name: Exemples de sérialisation
+      href: serialization-samples.md
+      items:
+        - name: 'Sérialisation de base, exemple de technologie'
+          href: basic-serialization-technology-sample.md
+        - name: Ordre de sérialisation personnalisé avec XmlSerializer
+          href: custom-serialization-order-with-xmlserializer.md
+        - name: 'SchemaImporterExtension, exemple de technologie'
+          href: schemaimporterextension-technology-sample.md
+        - name: 'Sérialisation avec tolérance de version, exemple de technologie'
+          href: version-tolerant-serialization-technology-sample.md
+        - name: 'Sérialisation de génériques de services Web, exemple de technologie'
+          href: web-services-generics-serialization-technology-sample.md

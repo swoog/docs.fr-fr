@@ -1,162 +1,155 @@
-items:
-- name: DataSets, DataTables et DataViews
+- name: 'DataSets, DataTables et DataViews'
   href: index.md
   items:
-  - name: Création d'un DataSet
-    href: creating-a-dataset.md
-  - name: Ajout d'un nouveau DataTable à un DataSet
-    href: adding-a-datatable-to-a-dataset.md
-  - name: Ajout de DataRelations
-    href: adding-datarelations.md
-  - name: Parcours des DataRelations
-    href: navigating-datarelations.md
-  - name: Fusion de contenu de DataSet
-    href: merging-dataset-contents.md
-  - name: Copie de contenu de DataSet
-    href: copying-dataset-contents.md
-  - name: Gestion des événements de DataSet
-    href: handling-dataset-events.md
-  - name: Datasets typés
-    href: typed-datasets.md
-    items:
-    - name: Génération de datasets fortement typés
-      href: generating-strongly-typed-datasets.md
-    - name: Annotation de DataSet typés
-      href: annotating-typed-datasets.md
-  - name: DataTables
-    href: datatables.md
-    items:
-    - name: Création d'un DataTable
-      href: creating-a-datatable.md
-    - name: Définition de schéma de DataTable
-      href: datatable-schema-definition.md
+    - name: Création d'un DataSet
+      href: creating-a-dataset.md
+    - name: Ajout d'un nouveau DataTable à un DataSet
+      href: adding-a-datatable-to-a-dataset.md
+    - name: Ajout de DataRelations
+      href: adding-datarelations.md
+    - name: Parcours des DataRelations
+      href: navigating-datarelations.md
+    - name: Fusion de contenu de DataSet
+      href: merging-dataset-contents.md
+    - name: Copie de contenu de DataSet
+      href: copying-dataset-contents.md
+    - name: Gestion des événements de DataSet
+      href: handling-dataset-events.md
+    - name: Datasets typés
+      href: typed-datasets.md
       items:
-      - name: Ajout de colonnes à un DataTable
-        href: adding-columns-to-a-datatable.md
-      - name: Création de colonnes d'expressions
-        href: creating-expression-columns.md
-      - name: Création de colonnes AutoIncrement
-        href: creating-autoincrement-columns.md
-      - name: Définition des clés primaires
-        href: defining-primary-keys.md
-      - name: Contraintes de DataTable
-        href: datatable-constraints.md
-    - name: Manipulation des données dans un DataTable
-      href: manipulating-data-in-a-datatable.md
+        - name: Génération de datasets fortement typés
+          href: generating-strongly-typed-datasets.md
+        - name: Annotation de DataSet typés
+          href: annotating-typed-datasets.md
+    - name: DataTables
+      href: datatables.md
       items:
-      - name: Ajout de données à un DataTable
-        href: adding-data-to-a-datatable.md
-      - name: Affichage des données dans un DataTable
-        href: viewing-data-in-a-datatable.md
-      - name: Méthode Load
-        href: the-load-method.md
-      - name: Modifications de DataTable
-        href: datatable-edits.md
-      - name: États des lignes et versions des lignes
-        href: row-states-and-row-versions.md
-      - name: Suppression de DataRow
-        href: datarow-deletion.md
-      - name: Informations sur l'erreur de ligne
-        href: row-error-information.md
-      - name: AcceptChanges et RejectChanges
-        href: acceptchanges-and-rejectchanges.md
-    - name: Gestion des événements de DataTable
-      href: handling-datatable-events.md
-  - name: DataTableReaders
-    href: datatablereaders.md
-    items:
-    - name: Création d'un DataReader
-      href: creating-a-datareader.md
-    - name: Navigation sur les DataTable
-      href: navigating-datatables.md
-  - name: DataViews
-    href: dataviews.md
-    items:
-    - name: Création d'un DataView
-      href: creating-a-dataview.md
-    - name: Tri et filtre de données
-      href: sorting-and-filtering-data.md
-    - name: DataRows et DataRowViews
-      href: datarows-and-datarowviews.md
-    - name: Recherche de lignes
-      href: finding-rows.md
-    - name: ChildView et relations
-      href: childviews-and-relations.md
-    - name: Modification des DataViews
-      href: modifying-dataviews.md
-    - name: Gestion des événements de DataView
-      href: handling-dataview-events.md
-    - name: Gestion des DataViews
-      href: managing-dataviews.md
-    - name: Création d'un DataTable à partir d'un DataView
-      href: creating-a-datatable-from-a-dataview.md
-  - name: Utilisation de XML dans un DataSet
-    href: using-xml-in-a-dataset.md
-    items:
-    - name: DiffGrams
-      href: diffgrams.md
-    - name: Chargement d'un DataSet à partir de XML
-      href: loading-a-dataset-from-xml.md
-    - name: Écriture du contenu d'un DataSet comme données XML
-      href: writing-dataset-contents-as-xml-data.md
-    - name: Chargement des informations de schéma de DataSet à partir de XML
-      href: loading-dataset-schema-information-from-xml.md
-    - name: Écriture des informations de schéma de DataSet comme XSD
-      href: writing-dataset-schema-information-as-xsd.md
-    - name: Synchronisation DataSet et XmlDataDocument
-      href: dataset-and-xmldatadocument-synchronization.md
+        - name: Création d'un DataTable
+          href: creating-a-datatable.md
+        - name: Définition de schéma de DataTable
+          href: datatable-schema-definition.md
+          items:
+            - name: Ajout de colonnes à un DataTable
+              href: adding-columns-to-a-datatable.md
+            - name: Création de colonnes d'expressions
+              href: creating-expression-columns.md
+            - name: Création de colonnes AutoIncrement
+              href: creating-autoincrement-columns.md
+            - name: Définition des clés primaires
+              href: defining-primary-keys.md
+            - name: Contraintes de DataTable
+              href: datatable-constraints.md
+        - name: Manipulation des données dans un DataTable
+          href: manipulating-data-in-a-datatable.md
+          items:
+            - name: Ajout de données à un DataTable
+              href: adding-data-to-a-datatable.md
+            - name: Affichage des données dans un DataTable
+              href: viewing-data-in-a-datatable.md
+            - name: Méthode Load
+              href: the-load-method.md
+            - name: Modifications de DataTable
+              href: datatable-edits.md
+            - name: États des lignes et versions des lignes
+              href: row-states-and-row-versions.md
+            - name: Suppression de DataRow
+              href: datarow-deletion.md
+            - name: Informations sur l'erreur de ligne
+              href: row-error-information.md
+            - name: AcceptChanges et RejectChanges
+              href: acceptchanges-and-rejectchanges.md
+        - name: Gestion des événements de DataTable
+          href: handling-datatable-events.md
+    - name: DataTableReaders
+      href: datatablereaders.md
       items:
-      - name: Synchronisation d'un DataSet et d'un XmlDataDocument
-        href: synchronizing-a-dataset-with-an-xmldatadocument.md
-      - name: Exécution d’une requête XPath sur un DataSet
-        href: performing-an-xpath-query-on-a-dataset.md
-      - name: Application d'une transformation XSLT à un DataSet
-        href: applying-an-xslt-transform-to-a-dataset.md
-    - name: Imbrication de DataRelations
-      href: nesting-datarelations.md
-    - name: Dérivation de la structure relationnelle des DataSet à partir du schéma XML (XSD)
-      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+        - name: Création d'un DataReader
+          href: creating-a-datareader.md
+        - name: Navigation sur les DataTable
+          href: navigating-datatables.md
+    - name: DataViews
+      href: dataviews.md
       items:
-      - name: Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet
-        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
-        items:
-        - name: Mapper les contraintes uniques de schéma XML (XSD) aux contraintes de DataSet
-          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: Mapper les contraintes clés de schéma XML (XSD) aux contraintes de DataSet
-          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: Mapper les contraintes keyref de schéma XML (XSD) aux contraintes de DataSet
-          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
-      - name: Génération de relations de DataSet à partir du schéma XML (XSD)
-        href: generating-dataset-relations-from-xml-schema-xsd.md
-        items:
-        - name: Mapper les relations implicites entre éléments de schéma imbriqués
-          href: map-implicit-relations-between-nested-schema-elements.md
-        - name: Mapper les relations spécifiées pour les éléments imbriqués
-          href: map-relations-specified-for-nested-elements.md
-        - name: Spécifier les relations entre éléments sans imbrication
-          href: specify-relations-between-elements-with-no-nesting.md
-      - name: Contraintes et relations du schéma XML
-        href: xml-schema-constraints-and-relationships.md
-    - name: Déduction de la structure relationnelle des DataSet à partir de XML
-      href: inferring-dataset-relational-structure-from-xml.md
+        - name: Création d'un DataView
+          href: creating-a-dataview.md
+        - name: Tri et filtre de données
+          href: sorting-and-filtering-data.md
+        - name: DataRows et DataRowViews
+          href: datarows-and-datarowviews.md
+        - name: Recherche de lignes
+          href: finding-rows.md
+        - name: ChildView et relations
+          href: childviews-and-relations.md
+        - name: Modification des DataViews
+          href: modifying-dataviews.md
+        - name: Gestion des événements de DataView
+          href: handling-dataview-events.md
+        - name: Gestion des DataViews
+          href: managing-dataviews.md
+        - name: Création d'un DataTable à partir d'un DataView
+          href: creating-a-datatable-from-a-dataview.md
+    - name: Utilisation de XML dans un DataSet
+      href: using-xml-in-a-dataset.md
       items:
-      - name: Résumé du processus d'inférence du schéma de données
-        href: summary-of-the-dataset-schema-inference-process.md
-      - name: Déduction de tables
-        href: inferring-tables.md
-      - name: Déduction des colonnes
-        href: inferring-columns.md
-      - name: Déduction des relations
-        href: inferring-relationships.md
-      - name: Déduction du texte d'un élément
-        href: inferring-element-text.md
-      - name: Limitations des inférences
-        href: inference-limitations.md
-  - name: Consommation d’un DataSet à partir d’un service web XML
-    href: consuming-a-dataset-from-an-xml-web-service.md
-ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468716"
+        - name: DiffGrams
+          href: diffgrams.md
+        - name: Chargement d'un DataSet à partir de XML
+          href: loading-a-dataset-from-xml.md
+        - name: Écriture du contenu d'un DataSet comme données XML
+          href: writing-dataset-contents-as-xml-data.md
+        - name: Chargement des informations de schéma de DataSet à partir de XML
+          href: loading-dataset-schema-information-from-xml.md
+        - name: Écriture des informations de schéma de DataSet comme XSD
+          href: writing-dataset-schema-information-as-xsd.md
+        - name: Synchronisation DataSet et XmlDataDocument
+          href: dataset-and-xmldatadocument-synchronization.md
+          items:
+            - name: Synchronisation d'un DataSet et d'un XmlDataDocument
+              href: synchronizing-a-dataset-with-an-xmldatadocument.md
+            - name: Exécution d’une requête XPath sur un DataSet
+              href: performing-an-xpath-query-on-a-dataset.md
+            - name: Application d'une transformation XSLT à un DataSet
+              href: applying-an-xslt-transform-to-a-dataset.md
+        - name: Imbrication de DataRelations
+          href: nesting-datarelations.md
+        - name: Dérivation de la structure relationnelle des DataSet à partir du schéma XML (XSD)
+          href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+          items:
+            - name: Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet
+              href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+              items:
+                - name: Mapper les contraintes uniques de schéma XML (XSD) aux contraintes de DataSet
+                  href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: Mapper les contraintes clés de schéma XML (XSD) aux contraintes de DataSet
+                  href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: Mapper les contraintes keyref de schéma XML (XSD) aux contraintes de DataSet
+                  href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+            - name: Génération de relations de DataSet à partir du schéma XML (XSD)
+              href: generating-dataset-relations-from-xml-schema-xsd.md
+              items:
+                - name: Mapper les relations implicites entre éléments de schéma imbriqués
+                  href: map-implicit-relations-between-nested-schema-elements.md
+                - name: Mapper les relations spécifiées pour les éléments imbriqués
+                  href: map-relations-specified-for-nested-elements.md
+                - name: Spécifier les relations entre éléments sans imbrication
+                  href: specify-relations-between-elements-with-no-nesting.md
+            - name: Contraintes et relations du schéma XML
+              href: xml-schema-constraints-and-relationships.md
+        - name: Déduction de la structure relationnelle des DataSet à partir de XML
+          href: inferring-dataset-relational-structure-from-xml.md
+          items:
+            - name: Résumé du processus d'inférence du schéma de données
+              href: summary-of-the-dataset-schema-inference-process.md
+            - name: Déduction de tables
+              href: inferring-tables.md
+            - name: Déduction des colonnes
+              href: inferring-columns.md
+            - name: Déduction des relations
+              href: inferring-relationships.md
+            - name: Déduction du texte d'un élément
+              href: inferring-element-text.md
+            - name: Limitations des inférences
+              href: inference-limitations.md
+    - name: Consommation d’un DataSet à partir d’un service web XML
+      href: consuming-a-dataset-from-an-xml-web-service.md

@@ -1,18 +1,11 @@
-items:
 - name: Accessing Application Settings
   href: index.md
   items:
-  - name: 'Procédure : créer des grilles de propriétés pour les paramètres utilisateur'
-    href: how-to-create-property-grids-for-user-settings.md
-  - name: 'Procédure : rendre persistants les paramètres utilisateur'
-    href: how-to-persist-user-settings.md
-  - name: 'Procédure : modifier les paramètres utilisateur'
-    href: how-to-change-user-settings.md
-  - name: 'Procédure : lire des paramètres d’application'
-    href: how-to-read-application-settings.md
-ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469544"
+    - name: "Procédure\_: créer des grilles de propriétés pour les paramètres utilisateur"
+      href: how-to-create-property-grids-for-user-settings.md
+    - name: "Procédure\_: rendre persistants les paramètres utilisateur"
+      href: how-to-persist-user-settings.md
+    - name: "Procédure\_: modifier les paramètres utilisateur"
+      href: how-to-change-user-settings.md
+    - name: "Procédure\_: lire des paramètres d’application"
+      href: how-to-read-application-settings.md

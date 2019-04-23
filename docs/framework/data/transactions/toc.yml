@@ -1,45 +1,38 @@
-items:
 - name: Traitement transactionnel
   href: index.md
   items:
-  - name: Notions de base des transactions
-    href: transaction-fundamentals.md
-  - name: Fonctionnalités fournies par System.Transactions
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: Écriture d’une application transactionnelle
-      href: writing-a-transactional-application.md
+    - name: Notions de base des transactions
+      href: transaction-fundamentals.md
+    - name: Fonctionnalités fournies par System.Transactions
+      href: features-provided-by-system-transactions.md
       items:
-      - name: Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: Implémentation d'une transaction explicite à l'aide de CommittableTransaction
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: Gestion de l'accès concurrentiel avec DependentTransaction
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: Interopérabilité avec Enterprise Services et les transactions COM+
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: Remontée de la gestion des transactions
-        href: transaction-management-escalation.md
-      - name: Traces de diagnostic
-        href: diagnostic-traces.md
-      - name: Utilisation de System.Transactions dans ASP.NET
-        href: using-system-transactions-in-aspnet.md
-    - name: Implémentation d'un gestionnaire des ressources
-      href: implementing-a-resource-manager.md
-      items:
-      - name: Inscription de ressources comme participants à une transaction
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: Validation d'une transaction en une phase unique et en plusieurs phases
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: Exécution de la récupération
-        href: performing-recovery.md
-      - name: Niveaux de confiance de sécurité dans l'accès aux ressources
-        href: security-trust-levels-in-accessing-resources.md
-      - name: Optimisation à l'aide de la validation à phase unique et de la notification de phase unique pouvant être promue
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469076"
+        - name: Écriture d’une application transactionnelle
+          href: writing-a-transactional-application.md
+          items:
+            - name: Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: Implémentation d'une transaction explicite à l'aide de CommittableTransaction
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: Gestion de l'accès concurrentiel avec DependentTransaction
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: Interopérabilité avec Enterprise Services et les transactions COM+
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: Remontée de la gestion des transactions
+              href: transaction-management-escalation.md
+            - name: Traces de diagnostic
+              href: diagnostic-traces.md
+            - name: Utilisation de System.Transactions dans ASP.NET
+              href: using-system-transactions-in-aspnet.md
+        - name: Implémentation d'un gestionnaire des ressources
+          href: implementing-a-resource-manager.md
+          items:
+            - name: Inscription de ressources comme participants à une transaction
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: Validation d'une transaction en une phase unique et en plusieurs phases
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: Exécution de la récupération
+              href: performing-recovery.md
+            - name: Niveaux de confiance de sécurité dans l'accès aux ressources
+              href: security-trust-levels-in-accessing-resources.md
+            - name: Optimisation à l'aide de la validation à phase unique et de la notification de phase unique pouvant être promue
+              href: optimization-spc-and-promotable-spn.md

@@ -1,32 +1,25 @@
-items:
 - name: Configuration d’applications
   href: index.md
   items:
-  - name: 'Procédure : Localiser des assemblys à l’aide de DEVPATH'
-    href: how-to-locate-assemblies-by-using-devpath.md
-  - name: Redirection des versions d'assemblys
-    href: redirect-assembly-versions.md
-    items:
-    - name: 'Procédure : Activer et désactiver la redirection de liaison automatique'
-      href: how-to-enable-and-disable-automatic-binding-redirection.md
-    - name: Autorisation de sécurité pour la redirection de liaison d’assembly
-      href: assembly-binding-redirection-security-permission.md
-  - name: Spécification de l'emplacement d'un assembly
-    href: specify-assembly-location.md
-  - name: Configuration de classes de chiffrement
-    href: configure-cryptography-classes.md
-    items:
-    - name: Mappage de noms d'algorithmes à des classes de chiffrement
-      href: map-algorithm-names-to-cryptography-classes.md
-    - name: Mappage d'identificateurs d'objet à des algorithmes de chiffrement
-      href: map-object-identifiers-to-cryptography-algorithms.md
-  - name: 'Procédure : Créer une stratégie d’éditeur'
-    href: how-to-create-a-publisher-policy.md
-  - name: Schéma des fichiers de configuration
-    href: file-schema/index.md
-ms.openlocfilehash: 17fd8cdff154ae7e61609a6b819b14ad8fb4805b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468968"
+    - name: "Procédure\_: Localiser des assemblys à l’aide de DEVPATH"
+      href: how-to-locate-assemblies-by-using-devpath.md
+    - name: Redirection des versions d'assemblys
+      href: redirect-assembly-versions.md
+      items:
+        - name: "Procédure\_: Activer et désactiver la redirection de liaison automatique"
+          href: how-to-enable-and-disable-automatic-binding-redirection.md
+        - name: Autorisation de sécurité pour la redirection de liaison d’assembly
+          href: assembly-binding-redirection-security-permission.md
+    - name: Spécification de l'emplacement d'un assembly
+      href: specify-assembly-location.md
+    - name: Configuration de classes de chiffrement
+      href: configure-cryptography-classes.md
+      items:
+        - name: Mappage de noms d'algorithmes à des classes de chiffrement
+          href: map-algorithm-names-to-cryptography-classes.md
+        - name: Mappage d'identificateurs d'objet à des algorithmes de chiffrement
+          href: map-object-identifiers-to-cryptography-algorithms.md
+    - name: "Procédure\_: Créer une stratégie d’éditeur"
+      href: how-to-create-a-publisher-policy.md
+    - name: Schéma des fichiers de configuration
+      href: file-schema/index.md

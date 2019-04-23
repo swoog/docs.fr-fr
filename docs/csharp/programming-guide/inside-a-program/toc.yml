@@ -1,18 +1,11 @@
-items:
-- name: À l'intérieur d'un programme C#
+- name: 'À l''intérieur d''un programme C#'
   href: index.md
   items:
-  - name: Hello World -- Votre premier programme
-    href: hello-world-your-first-program.md
-  - name: Structure générale d’un programme C#
-    href: general-structure-of-a-csharp-program.md
-  - name: Noms d’identificateurs
-    href: identifier-names.md
-  - name: Conventions de codage C#
-    href: coding-conventions.md
-ms.openlocfilehash: 1772c8e85b53055cddffa4ffc2cac15f3cd32c77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469250"
+    - name: Hello World -- Votre premier programme
+      href: hello-world-your-first-program.md
+    - name: 'Structure générale d’un programme C#'
+      href: general-structure-of-a-csharp-program.md
+    - name: Noms d’identificateurs
+      href: identifier-names.md
+    - name: 'Conventions de codage C#'
+      href: coding-conventions.md

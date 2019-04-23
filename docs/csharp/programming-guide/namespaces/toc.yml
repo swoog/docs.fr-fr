@@ -1,16 +1,9 @@
-items:
 - name: Espaces de noms
   href: index.md
   items:
-  - name: Utilisation des espaces de noms
-    href: using-namespaces.md
-  - name: 'Procédure : Utiliser l’alias d’espace de noms global'
-    href: how-to-use-the-global-namespace-alias.md
-  - name: 'Procédure : Utiliser l’espace de noms My'
-    href: how-to-use-the-my-namespace.md
-ms.openlocfilehash: 289817c09457dd50111d9d7514d27802d337cb79
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469028"
+    - name: Utilisation des espaces de noms
+      href: using-namespaces.md
+    - name: "Procédure\_: Utiliser l’alias d’espace de noms global"
+      href: how-to-use-the-global-namespace-alias.md
+    - name: "Procédure\_: Utiliser l’espace de noms My"
+      href: how-to-use-the-my-namespace.md

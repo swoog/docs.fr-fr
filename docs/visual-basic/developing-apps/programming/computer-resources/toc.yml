@@ -1,58 +1,51 @@
-items:
 - name: Accès aux ressources de l’ordinateur
   href: index.md
   items:
-  - name: Lecture de sons
-    href: playing-sounds.md
-  - name: Stockage de données dans le Presse-papiers et lecture du Presse-papiers
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: Obtention d’informations sur l’ordinateur
-    href: getting-information-about-the-computer.md
-  - name: Accès au clavier
-    href: accessing-the-keyboard.md
-    items:
-    - name: 'Procédure : démarrer une application et lui envoyer des séquences de touches'
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: Accès à la souris
-    href: accessing-the-mouse.md
-  - name: Exécution d’opérations de réseau
-    href: performing-network-operations.md
-    items:
-    - name: 'Procédure : charger un fichier'
-      href: how-to-upload-a-file.md
-    - name: 'Procédure : télécharger un fichier'
-      href: how-to-download-a-file.md
-    - name: 'Procédure : vérifier l’état de la connexion'
-      href: how-to-check-connection-status.md
-  - name: Accès aux ports de l’ordinateur
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: 'Procédure : afficher les ports série disponibles'
-      href: how-to-show-available-serial-ports.md
-    - name: 'Procédure : passer des appels avec des modems attachés aux ports série'
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: 'Procédure : envoyer des chaînes aux ports série'
-      href: how-to-send-strings-to-serial-ports.md
-    - name: 'Procédure : recevoir des chaînes provenant des ports série'
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: Opérations relatives au port dans .NET Framework
-      href: port-operations-in-the-net-framework.md
-  - name: Lecture et écriture dans le Registre
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: 'Procédure : créer une clé de Registre et définir sa valeur'
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: 'Procédure : lire une valeur à partir d’une clé de Registre'
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: 'Procédure : supprimer une clé de Registre'
-      href: how-to-delete-a-registry-key.md
-    - name: Lecture et écriture dans le Registre à l'aide de l'espace de noms Microsoft.Win32
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: Sécurité et Registre
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468669"
+    - name: Lecture de sons
+      href: playing-sounds.md
+    - name: Stockage de données dans le Presse-papiers et lecture du Presse-papiers
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: Obtention d’informations sur l’ordinateur
+      href: getting-information-about-the-computer.md
+    - name: Accès au clavier
+      href: accessing-the-keyboard.md
+      items:
+        - name: "Procédure\_: démarrer une application et lui envoyer des séquences de touches"
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: Accès à la souris
+      href: accessing-the-mouse.md
+    - name: Exécution d’opérations de réseau
+      href: performing-network-operations.md
+      items:
+        - name: "Procédure\_: charger un fichier"
+          href: how-to-upload-a-file.md
+        - name: "Procédure\_: télécharger un fichier"
+          href: how-to-download-a-file.md
+        - name: "Procédure\_: vérifier l’état de la connexion"
+          href: how-to-check-connection-status.md
+    - name: Accès aux ports de l’ordinateur
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: "Procédure\_: afficher les ports série disponibles"
+          href: how-to-show-available-serial-ports.md
+        - name: "Procédure\_: passer des appels avec des modems attachés aux ports série"
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: "Procédure\_: envoyer des chaînes aux ports série"
+          href: how-to-send-strings-to-serial-ports.md
+        - name: "Procédure\_: recevoir des chaînes provenant des ports série"
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: Opérations relatives au port dans .NET Framework
+          href: port-operations-in-the-net-framework.md
+    - name: Lecture et écriture dans le Registre
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: "Procédure\_: créer une clé de Registre et définir sa valeur"
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: "Procédure\_: lire une valeur à partir d’une clé de Registre"
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: "Procédure\_: supprimer une clé de Registre"
+          href: how-to-delete-a-registry-key.md
+        - name: Lecture et écriture dans le Registre à l'aide de l'espace de noms Microsoft.Win32
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: Sécurité et Registre
+          href: security-and-the-registry.md

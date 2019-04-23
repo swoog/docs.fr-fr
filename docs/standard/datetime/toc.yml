@@ -1,48 +1,41 @@
-items:
-- name: Dates, heures et fuseaux horaires
+- name: 'Dates, heures et fuseaux horaires'
   href: index.md
   items:
-  - name: Vue d’ensemble des fuseaux horaires
-    href: time-zone-overview.md
-  - name: Choisir entre DateTime, DateTimeOffset, TimeSpan et TimeZoneInfo
-    href: choosing-between-datetime.md
-  - name: Recherche des fuseaux horaires définis sur un système local
-    href: finding-the-time-zones-on-local-system.md
-  - name: 'Procédure : énumérer les fuseaux horaires d’un ordinateur'
-    href: enumerate-time-zones.md
-  - name: 'Procédure : accéder aux objets de fuseau horaire UTC et local prédéfinis'
-    href: access-utc-and-local.md
-  - name: 'Procédure : instancier un objet TimeZoneInfo'
-    href: instantiate-time-zone-info.md
-  - name: Instanciation d'un objet DateTimeOffset
-    href: instantiating-a-datetimeoffset-object.md
-  - name: 'Procédure : créer des fuseaux horaires sans règles d’ajustement'
-    href: create-time-zones-without-adjustment-rules.md
-  - name: 'Procédure : créer des fuseaux horaires avec des règles d’ajustement'
-    href: create-time-zones-with-adjustment-rules.md
-  - name: Enregistrement et restauration de fuseaux horaires
-    href: saving-and-restoring-time-zones.md
-  - name: 'Procédure : enregistrer des fuseaux horaires dans une ressource incorporée'
-    href: save-time-zones-to-an-embedded-resource.md
-  - name: 'Procédure : restaurer des fuseaux horaires à partir d’une ressource incorporée'
-    href: restore-time-zones-from-an-embedded-resource.md
-  - name: Utilisation des calendriers
-    href: working-with-calendars.md
-  - name: Exécution d’opérations arithmétiques avec des dates et heures
-    href: performing-arithmetic-operations.md
-  - name: 'Procédure : utiliser des fuseaux horaires en arithmétique de date et heure'
-    href: use-time-zones-in-arithmetic.md
-  - name: Conversion entre DateTime et DateTimeOffset
-    href: converting-between-datetime-and-offset.md
-  - name: Conversion d’heures entre fuseaux horaires
-    href: converting-between-time-zones.md
-  - name: 'Procédure : résoudre des heures ambiguës'
-    href: resolve-ambiguous-times.md
-  - name: 'Procédure : permettre aux utilisateurs de résoudre des heures ambiguës'
-    href: let-users-resolve-ambiguous-times.md
-ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469113"
+    - name: Vue d’ensemble des fuseaux horaires
+      href: time-zone-overview.md
+    - name: 'Choisir entre DateTime, DateTimeOffset, TimeSpan et TimeZoneInfo'
+      href: choosing-between-datetime.md
+    - name: Recherche des fuseaux horaires définis sur un système local
+      href: finding-the-time-zones-on-local-system.md
+    - name: "Procédure\_: énumérer les fuseaux horaires d’un ordinateur"
+      href: enumerate-time-zones.md
+    - name: "Procédure\_: accéder aux objets de fuseau horaire UTC et local prédéfinis"
+      href: access-utc-and-local.md
+    - name: "Procédure\_: instancier un objet TimeZoneInfo"
+      href: instantiate-time-zone-info.md
+    - name: Instanciation d'un objet DateTimeOffset
+      href: instantiating-a-datetimeoffset-object.md
+    - name: "Procédure\_: créer des fuseaux horaires sans règles d’ajustement"
+      href: create-time-zones-without-adjustment-rules.md
+    - name: "Procédure\_: créer des fuseaux horaires avec des règles d’ajustement"
+      href: create-time-zones-with-adjustment-rules.md
+    - name: Enregistrement et restauration de fuseaux horaires
+      href: saving-and-restoring-time-zones.md
+    - name: "Procédure\_: enregistrer des fuseaux horaires dans une ressource incorporée"
+      href: save-time-zones-to-an-embedded-resource.md
+    - name: "Procédure\_: restaurer des fuseaux horaires à partir d’une ressource incorporée"
+      href: restore-time-zones-from-an-embedded-resource.md
+    - name: Utilisation des calendriers
+      href: working-with-calendars.md
+    - name: Exécution d’opérations arithmétiques avec des dates et heures
+      href: performing-arithmetic-operations.md
+    - name: "Procédure\_: utiliser des fuseaux horaires en arithmétique de date et heure"
+      href: use-time-zones-in-arithmetic.md
+    - name: Conversion entre DateTime et DateTimeOffset
+      href: converting-between-datetime-and-offset.md
+    - name: Conversion d’heures entre fuseaux horaires
+      href: converting-between-time-zones.md
+    - name: "Procédure\_: résoudre des heures ambiguës"
+      href: resolve-ambiguous-times.md
+    - name: "Procédure\_: permettre aux utilisateurs de résoudre des heures ambiguës"
+      href: let-users-resolve-ambiguous-times.md
