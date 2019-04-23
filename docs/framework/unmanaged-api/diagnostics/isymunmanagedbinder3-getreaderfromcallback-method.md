@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9487cf89d87b5f373302dc49a08c4fabb719e746
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160756"
 ---
-# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="3df4a-102">ISymUnmanagedBinder3::GetReaderFromCallback, méthode</span><span class="sxs-lookup"><span data-stu-id="3df4a-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
-<span data-ttu-id="3df4a-103">Permet à l’utilisateur d’implémenter ou de fournir via un rappel un `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` pour obtenir les informations de répertoire de débogage de la mémoire.</span><span class="sxs-lookup"><span data-stu-id="3df4a-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
+# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="19db6-102">ISymUnmanagedBinder3::GetReaderFromCallback, méthode</span><span class="sxs-lookup"><span data-stu-id="19db6-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
+<span data-ttu-id="19db6-103">Permet à l’utilisateur d’implémenter ou de fournir via un rappel un `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` pour obtenir les informations de répertoire de débogage de la mémoire.</span><span class="sxs-lookup"><span data-stu-id="19db6-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3df4a-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3df4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19db6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="19db6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromCallback(  
@@ -39,31 +39,31 @@ HRESULT GetReaderFromCallback(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3df4a-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="3df4a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="19db6-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="19db6-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="3df4a-106">[in] Pointeur vers l’interface d’importation de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="3df4a-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="19db6-106">[in] Pointeur vers l’interface d’importation de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="19db6-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="3df4a-107">[in] Pointeur vers le nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="3df4a-107">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="19db6-107">[in] Pointeur vers le nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="19db6-107">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="3df4a-108">[in] Pointeur vers le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="3df4a-108">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="19db6-108">[in] Pointeur vers le chemin de recherche.</span><span class="sxs-lookup"><span data-stu-id="19db6-108">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="3df4a-109">[in] Une valeur de la [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) énumération qui spécifie la stratégie à utiliser lors d’une recherche pour un lecteur de symboles.</span><span class="sxs-lookup"><span data-stu-id="3df4a-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="19db6-109">[in] Une valeur de la [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) énumération qui spécifie la stratégie à utiliser lors d’une recherche pour un lecteur de symboles.</span><span class="sxs-lookup"><span data-stu-id="19db6-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `callback`  
- <span data-ttu-id="3df4a-110">[in] Pointeur vers la fonction de rappel.</span><span class="sxs-lookup"><span data-stu-id="3df4a-110">[in] A pointer to the callback function.</span></span>  
+ <span data-ttu-id="19db6-110">[in] Pointeur vers la fonction de rappel.</span><span class="sxs-lookup"><span data-stu-id="19db6-110">[in] A pointer to the callback function.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="3df4a-111">[out] Un pointeur qui est défini à retourné [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="3df4a-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="19db6-111">[out] Un pointeur qui est défini à retourné [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="19db6-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3df4a-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="3df4a-112">Return Value</span></span>  
- <span data-ttu-id="3df4a-113">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="3df4a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="19db6-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="19db6-112">Return Value</span></span>  
+ <span data-ttu-id="19db6-113">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="19db6-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3df4a-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="3df4a-114">Requirements</span></span>  
- <span data-ttu-id="3df4a-115">**En-tête :** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="3df4a-115">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19db6-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="19db6-114">Requirements</span></span>  
+ <span data-ttu-id="19db6-115">**En-tête :** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="19db6-115">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3df4a-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3df4a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19db6-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="19db6-116">See also</span></span>
 
-- [<span data-ttu-id="3df4a-117">ISymUnmanagedBinder3, interface</span><span class="sxs-lookup"><span data-stu-id="3df4a-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [<span data-ttu-id="19db6-117">ISymUnmanagedBinder3, interface</span><span class="sxs-lookup"><span data-stu-id="19db6-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
