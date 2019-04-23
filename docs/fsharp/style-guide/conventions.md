@@ -4,7 +4,7 @@ description: Découvrez des instructions générales et des idiomes lors de l’
 ms.date: 05/14/2018
 ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186743"
