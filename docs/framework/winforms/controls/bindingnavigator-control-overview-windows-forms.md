@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
 ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109107"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Vue d'ensemble du contrôle BindingNavigator (Windows Forms)
@@ -29,14 +29,14 @@ Vous pouvez utiliser le contrôle <xref:System.Windows.Forms.BindingNavigator> p
   
 |Contrôle|Fonction|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> bouton|Insère une nouvelle ligne dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> bouton|Supprime la ligne actuelle de la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> bouton|Accède au premier élément dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> bouton|Accède au dernier élément dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> bouton|Accède à l'élément suivant dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> bouton|Accède à l'élément précédent dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Zone de texte|Retourne la position actuelle dans la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Zone de texte|Retourne le nombre total d'éléments dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Bouton|Insère une nouvelle ligne dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Bouton|Supprime la ligne actuelle de la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Bouton|Accède au premier élément dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Bouton|Accède au dernier élément dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Bouton|Accède à l'élément suivant dans la source de données sous-jacente.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Bouton|Accède à l'élément précédent dans la source de données sous-jacente.|  
+|Zone de texte <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Retourne la position actuelle dans la source de données sous-jacente.|  
+|Zone de texte <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Retourne le nombre total d'éléments dans la source de données sous-jacente.|  
   
  À chaque contrôle de cette collection correspond un membre du composant <xref:System.Windows.Forms.BindingSource> qui fournit la même fonctionnalité par programmation. Par exemple, le bouton <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> correspond à la méthode <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> du composant <xref:System.Windows.Forms.BindingSource>, le bouton <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> correspond à la méthode <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>, et ainsi de suite.  
   

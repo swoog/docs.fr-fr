@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109952"
 ---
 # <a name="listening-with-sockets"></a>écoute avec des sockets
@@ -64,5 +64,5 @@ listener.Listen(100);
 - [Utilisation d’un socket serveur synchrone](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Utilisation d’un socket serveur asynchrone](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Utilisation de sockets clients](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Procédure : créer un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [sockets](../../../docs/framework/network-programming/sockets.md)
+- [Guide pratique pour créer un Socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

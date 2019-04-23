@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
 ms.openlocfilehash: 5dc1997dffc53632ce8b36bc5fe89e768871fd0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108665"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procédure : gérer les événements d’entrée utilisateur dans des contrôles Windows Forms
@@ -33,4 +33,4 @@ Cet exemple montre comment gérer la plupart des événements de clavier, de sou
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Entrées d'utilisateur dans les Windows Forms](user-input-in-windows-forms.md)
+- [Entrées d’utilisateur dans les Windows Forms](user-input-in-windows-forms.md)

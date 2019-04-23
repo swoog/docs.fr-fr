@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106741"
 ---
 # <a name="collection-types-in-data-contracts"></a>Types de collections dans les contrats de données
@@ -273,7 +273,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |Non générique ou générique fermé (nombre de paramètres quelconque)|Non générique|`MyType : IList`<br /><br /> ou<br /><br /> `MyType<T> : IList`<br /><br /> où T= `int`|Générique fermé d' `Object` (par exemple, `IList<object>`)|  
 |Non générique ou générique fermé (nombre quelconque de paramètres qui ne correspondent pas nécessairement au type de collection)|Générique fermé|`MyType : IList<string>`<br /><br /> ou<br /><br /> `MyType<T> : IList<string>` où T=`int`|Générique fermé (par exemple, `IList<string>`)|  
-|Générique fermé avec un nombre quelconque de paramètres|Générique ouvert utilisant un des paramètres du type|`MyType<T,U,V> : IList<U>`<br /><br /> où T =`int`, U =`string`, V =`bool`|Générique fermé (par exemple, `IList<string>`)|  
+|Générique fermé avec un nombre quelconque de paramètres|Générique ouvert utilisant un des paramètres du type|`MyType<T,U,V> : IList<U>`<br /><br /> où T=`int`, U=`string`, V=`bool`|Générique fermé (par exemple, `IList<string>`)|  
 |Générique ouvert avec un paramètre|Générique ouvert utilisant le paramètre du type|`MyType<T> : IList<T>`, T est ouvert|Générique ouvert (par exemple, `IList<T>`)|  
   
  Si un type implémente plusieurs interfaces de collection liste, les restrictions suivantes s'appliquent :  
@@ -288,9 +288,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Non générique ou générique fermé (nombre de paramètres quelconque)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> ou<br /><br /> `MyType<T> : IDictionary` où T=`int`|Générique fermé `IDictionary<object,object>`|  
 |Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>, fermé|`MyType<T> : IDictionary<string, bool>` où T=`int`|Générique fermé (par exemple, `IDIctionary<string,bool>`)|  
-|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé ou la valeur est fermée, l'autre est ouverte et utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<string,V>` où T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>` où Z=`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
-|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé et la valeur sont ouvertes et chacune d'elles utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<V,U>` où T =`int`, U =`bool`, V =`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
-|Générique ouvert (deux paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, ouvert, utilise les deux paramètres génériques du type dans l'ordre où ils apparaissent|`MyType<K,V> : IDictionary<K,V>`, K et V ouverts tous les deux|Générique ouvert (par exemple, `IDictionary<K,V>`)|  
+|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé ou la valeur est fermée, l'autre est ouverte et utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<string,V>` où T=`int`, U=`float`, V=`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>` où Z=`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
+|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé et la valeur sont ouvertes et chacune d'elles utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<V,U>` où T=`int`, U=`bool`, V=`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
+|Générique ouvert (deux paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, ouvert, utilise les deux paramètres génériques du type dans l'ordre où ils apparaissent|`MyType<K,V> : IDictionary<K,V>`, K et V sont ouverts tous les deux|Générique ouvert (par exemple, `IDictionary<K,V>`)|  
   
  Si le type implémente <xref:System.Collections.IDictionary> et le <xref:System.Collections.Generic.IDictionary%602>générique, seul le <xref:System.Collections.Generic.IDictionary%602> générique est pris en compte.  
   
@@ -321,12 +321,12 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Le type de collection implémente|Méthodes appelées lors de la sérialisation|Méthodes appelées lors de la désérialisation|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Générique <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Generic Add|  
+|<xref:System.Collections.Generic.IDictionary%602> générique|`get_Keys`, `get_Values`|Generic Add|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Générique <xref:System.Collections.Generic.IList%601>|Indexeur <xref:System.Collections.Generic.IList%601> générique|Generic Add|  
-|Générique <xref:System.Collections.Generic.ICollection%601>|Enumerator|Generic Add|  
-|<xref:System.Collections.IList>|<xref:System.Collections.IList> Indexeur|`Add`|  
-|Générique <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Méthode non statique nommée `Add` qui accepte un paramètre du type approprié (le type du paramètre générique ou un de ses types de base). Une telle méthode doit exister pour que le sérialiseur traite un type de collection comme une collection lors de la sérialisation et de la désérialisation.|  
+|<xref:System.Collections.Generic.IList%601> générique|Indexeur <xref:System.Collections.Generic.IList%601> générique|Generic Add|  
+|<xref:System.Collections.Generic.ICollection%601> générique|Enumerator|Generic Add|  
+|<xref:System.Collections.IList>|Indexeur<xref:System.Collections.IList> |`Add`|  
+|<xref:System.Collections.Generic.IEnumerable%601> générique|`GetEnumerator`|Méthode non statique nommée `Add` qui accepte un paramètre du type approprié (le type du paramètre générique ou un de ses types de base). Une telle méthode doit exister pour que le sérialiseur traite un type de collection comme une collection lors de la sérialisation et de la désérialisation.|  
 |<xref:System.Collections.IEnumerable> (et donc <xref:System.Collections.ICollection>, qui en dérive)|`GetEnumerator`|Méthode non statique nommée `Add` qui accepte un paramètre de type `Object`. Une telle méthode doit exister pour que le sérialiseur traite un type de collection comme une collection lors de la sérialisation et de la désérialisation.|  
   
  Le tableau précédent répertorie les interfaces de collection dans l'ordre de priorité décroissant. Cela signifie, par exemple, que si un type implémente à la fois <xref:System.Collections.IList> et <xref:System.Collections.Generic.IEnumerable%601>générique, la collection est sérialisée et désérialisée en fonction des règles <xref:System.Collections.IList> :  

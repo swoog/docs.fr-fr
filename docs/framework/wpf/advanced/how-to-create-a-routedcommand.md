@@ -8,10 +8,10 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
 ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109042"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Procédure : Créer un RoutedCommand
@@ -50,4 +50,4 @@ Cet exemple montre comment créer un personnalisé <xref:System.Windows.Input.Ro
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Input.RoutedCommand>
-- [Vue d'ensemble des commandes](commanding-overview.md)
+- [Vue d’ensemble des commandes](commanding-overview.md)

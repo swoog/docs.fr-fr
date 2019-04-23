@@ -3,10 +3,10 @@ title: Applications multicouches LINQ to SQL avec les services Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107404"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Applications multicouches LINQ to SQL avec les services Web
@@ -30,7 +30,7 @@ ms.locfileid: "59107404"
  Lors de l'insertion de données, la couche Présentation peut générer un nouvel objet et l'envoyer à la couche intermédiaire, ou peut donner à la couche intermédiaire l'instruction de créer l'objet d'après les valeurs qu'elle fournit. En général, la récupération et l'insertion de données dans les applications multicouches ne diffèrent pas beaucoup du processus exécuté dans les applications à deux couches. Pour plus d’informations, consultez [interrogation de la base de données](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) et [fabrication et soumettre les modifications de données](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Suivi des modifications pour les mises à jour et les suppressions  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l’accès concurrentiel optimiste basé sur les horodatages (également nommés RowVersions) et sur les valeurs d’origine. Si les tables de base de données contiennent des horodatages, les mises à jour et les suppressions requièrent peu de tâches supplémentaires sur la couche intermédiaire et la couche Présentation. Toutefois, si vous devez utiliser des valeurs d'origine pour les contrôles d'accès concurrentiel optimiste, la couche Présentation est chargée du suivi de ces valeurs et de leur renvoi en cas de mises à jour. En effet, les modifications apportées aux entités sur la couche Présentation ne sont pas suivies sur la couche intermédiaire. En fait, la récupération initiale d'une entité et sa mise à jour éventuelle sont généralement effectuées par deux instances entièrement distinctes du <xref:System.Data.Linq.DataContext>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l'accès concurrentiel optimiste selon les horodatages (également nommés RowVersions) et les valeurs d'origine. Si les tables de base de données contiennent des horodatages, les mises à jour et les suppressions requièrent peu de tâches supplémentaires sur la couche intermédiaire et la couche Présentation. Toutefois, si vous devez utiliser des valeurs d'origine pour les contrôles d'accès concurrentiel optimiste, la couche Présentation est chargée du suivi de ces valeurs et de leur renvoi en cas de mises à jour. En effet, les modifications apportées aux entités sur la couche Présentation ne sont pas suivies sur la couche intermédiaire. En fait, la récupération initiale d'une entité et sa mise à jour éventuelle sont généralement effectuées par deux instances entièrement distinctes du <xref:System.Data.Linq.DataContext>.  
   
  Plus le nombre des modifications effectuées par la couche Présentation est élevé, plus le suivi de ces modifications et leur renvoi sur la couche intermédiaire sont complexes. L'implémentation d'un mécanisme permettant de communiquer les modifications est entièrement à la charge de l'application. La seule exigence est que les valeurs d’origine requises pour les contrôles d’accès concurrentiel optimiste doivent être fournies à [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   

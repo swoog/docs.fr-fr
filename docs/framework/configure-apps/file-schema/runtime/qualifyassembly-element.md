@@ -1,5 +1,5 @@
 ---
-title: <qualifyAssembly> Élément
+title: Élément <qualifyAssembly>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -12,10 +12,10 @@ ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109446"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > élément
@@ -77,6 +77,6 @@ Spécifie le nom complet de l'assembly qui doit être chargé dynamiquement quan
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Schéma des paramètres d'exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Références d'assembly partielles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Références d’Assembly partielles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

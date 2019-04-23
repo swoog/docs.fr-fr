@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107066"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : Disposition et conception
@@ -57,7 +57,7 @@ La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
 ### <a name="build-your-tree-top-down"></a>Générer votre arborescence de haut en bas  
  Quand un nœud est ajouté ou supprimé de l’arborescence logique, des invalidations de propriété sont déclenchées sur le parent du nœud et tous ses enfants. De ce fait, il convient de toujours suivre un modèle de construction de haut en bas pour éviter le coût d’invalidations inutiles sur des nœuds qui ont déjà été validés. Le tableau suivant montre la différence de vitesse d’exécution entre la génération d’une arborescence de haut en bas et bas en haut, où l’arborescence comprend 150 niveaux avec une seule <xref:System.Windows.Controls.TextBlock> et <xref:System.Windows.Controls.DockPanel> à chaque niveau.  
   
-|**Action**|**Construction d’arborescence (en ms)**|**Rendu — inclut la construction d’arborescence (en ms)**|  
+|**Action**|**Construction d’arborescence (en ms)**|**Rendu — construction d’arborescence incluse (en ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |De bas en haut|366|454|  
 |De haut en bas|11|96|  
@@ -74,10 +74,10 @@ La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
 - [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md)
 - [Planification des performances des applications](planning-for-application-performance.md)
 - [Tirer parti du matériel](optimizing-performance-taking-advantage-of-hardware.md)
-- [Graphisme 2D et acquisition d’images](optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](optimizing-performance-2d-graphics-and-imaging.md)
 - [Comportement de l’objet](optimizing-performance-object-behavior.md)
-- [Ressources d’application](optimizing-performance-application-resources.md)
-- [Texte](optimizing-performance-text.md)
+- [Ressources d'application](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
 - [Liaison de données](optimizing-performance-data-binding.md)
 - [Autres recommandations relatives aux performances](optimizing-performance-other-recommendations.md)
-- [Mise en page](layout.md)
+- [Disposition](layout.md)

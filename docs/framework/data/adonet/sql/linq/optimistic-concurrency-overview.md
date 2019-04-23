@@ -3,22 +3,22 @@ title: "Accès concurrentiel optimiste : Vue d'ensemble"
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106546"
 ---
 # <a name="optimistic-concurrency-overview"></a>Accès concurrentiel optimiste : Vue d'ensemble
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge le contrôle d’accès concurrentiel optimiste. Le tableau suivant décrit les conditions qui s’appliquent à l’accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation :  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge le contrôle d'accès concurrentiel optimiste. Le tableau suivant décrit les conditions qui s’appliquent à l’accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation :  
   
 |Termes|Description|  
 |-----------|-----------------|  
 |concurrence|Situation dans laquelle deux utilisateurs ou plus essaient simultanément de mettre à jour la même ligne de base de données.|  
-|conflit de concurrence|Situation dans laquelle deux utilisateurs ou plus essaient simultanément de soumettre des valeurs incompatibles à une ou plusieurs colonnes d'une ligne.|  
+|conflit d'accès concurrentiel|Situation dans laquelle deux utilisateurs ou plus essaient simultanément de soumettre des valeurs incompatibles à une ou plusieurs colonnes d'une ligne.|  
 |contrôle d'accès concurrentiel|Technique utilisée pour résoudre des conflits d'accès concurrentiel.|  
 |contrôle concurrentiel optimiste|Technique qui recherche d’abord si d’autres transactions ont modifié les valeurs d’une ligne avant d’autoriser la soumission des modifications.<br /><br /> Par contraste *contrôle d’accès concurrentiel pessimiste*, qui verrouille l’enregistrement afin d’éviter les conflits d’accès concurrentiel.<br /><br /> *Optimiste* contrôle est appelé ainsi car il considère que les risques d’une transaction interfère avec une autre sont faibles.|  
-|résolution de conflit|Processus d'actualisation d'un élément en conflit en interrogeant de nouveau la base de données, puis en harmonisant les différences.<br /><br /> Lorsqu'un objet est actualisé, le dispositif de suivi des modifications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contient les données suivantes :<br /><br /> -Les valeurs à l’origine à partir de la base de données et l’utiliser pour la mise à jour vérifier.<br />-Les nouvelles valeurs de base de données à partir de la requête suivante.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite si l’objet est en conflit (autrement dit, si un ou plusieurs de ses valeurs membres a changé). Si l’objet est en conflit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite lesquels de ses membres sont en conflit.<br /><br /> Tout conflit entre membres que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] découvre est ajouté à une liste de conflits.|  
+|résolution de conflit|Processus d'actualisation d'un élément en conflit en interrogeant de nouveau la base de données, puis en harmonisant les différences.<br /><br /> Lorsqu'un objet est actualisé, le dispositif de suivi des modifications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contient les données suivantes :<br /><br /> -Les valeurs à l’origine à partir de la base de données et l’utiliser pour la mise à jour vérifier.<br />-Les nouvelles valeurs de base de données à partir de la requête suivante.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite si l'objet est en conflit (c'est-à-dire, si une ou plusieurs de ses valeurs membres ont été modifiées). Si l’objet est en conflit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] détermine ensuite lesquels de ses membres sont en conflit.<br /><br /> Tout conflit entre membres que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] découvre est ajouté à une liste de conflits.|  
   
  Dans le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modèle d’objet, un *conflit d’accès concurrentiel optimiste* se produit lorsque les deux conditions suivantes sont remplies :  
   
@@ -90,4 +90,4 @@ ms.locfileid: "59106546"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Guide pratique pour Gérer les conflits de changement](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

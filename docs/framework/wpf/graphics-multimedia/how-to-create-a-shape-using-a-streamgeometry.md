@@ -9,10 +9,10 @@ helpviewer_keywords:
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
 ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108600"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Procédure : Créer une forme à l’aide d’un StreamGeometry
@@ -43,4 +43,4 @@ ms.locfileid: "59108600"
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>
 - [Créer une forme à l’aide d’un PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
-- [Vue d'ensemble de Geometry](geometry-overview.md)
+- [Vue d’ensemble de Geometry](geometry-overview.md)
