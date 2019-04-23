@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217768"
 ---
 # <a name="shapes"></a>Formes
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit la prise en charge pour dessiner des formes de base à l’aide de la <xref:System.Windows.Shapes.Shape> classe. Objets Shape dérivent <xref:System.Windows.FrameworkElement> et par conséquent, participent au système de disposition et peuvent être dessinés simplement à l’aide de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Vue d'ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
- [Rubriques Comment](shapes-how-to-topics.md)  
+ [Vue d’ensemble des formes et dessins de base dans WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Rubriques de guide pratique](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Shapes.Shape>
-- [Graphisme 2D et acquisition d’images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Graphiques 2D et acquisition d'images](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Graphiques et multimédia](index.md)

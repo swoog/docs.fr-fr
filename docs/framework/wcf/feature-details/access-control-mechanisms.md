@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213257"
 ---
 # <a name="access-control-mechanisms"></a>Mécanismes de contrôle d'accès
@@ -42,7 +42,7 @@ Vous pouvez contrôler l’accès de plusieurs façons avec Windows Communicatio
  Pour plus d’informations sur l’utilisation de la fonctionnalité de fournisseur de rôle, consultez [Comment : Utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Gestionnaire d'autorisations  
- Une autre fonctionnalité associe le Gestionnaire d'autorisations (AzMan) et le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour autoriser les clients. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge un service Web, AzMan peut être intégré dans l'application afin que l'autorisation au service s'effectue via AzMan. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Gestionnaire de rôles fournit une API qui vous permet de gérer les rôles d’application, ajouter et supprimer des utilisateurs des rôles et vérifier l’appartenance au rôle, mais il n’autorise pas vous permettent d’interroger si un utilisateur est autorisé à effectuer une tâche nommée ou une opération. AzMan vous permet de définir des opérations individuelles et de les associer dans des tâches. Grâce à AZMan, outre les contrôles de rôle, vous pouvez également vérifier si un utilisateur peut effectuer une tâche. L’affectation des rôles et l’autorisation des tâches peuvent être configurées en dehors de l’application ou effectuées par programme au sein de l’application. Le composant logiciel enfichable Microsoft Management Console (MMC) d'administration AzMan permet aux administrateurs de modifier les tâches qu'un rôle peut effectuer au moment de l'exécution et de gérer l'appartenance aux rôles de chaque utilisateur.  
+ Une autre fonctionnalité associe le Gestionnaire d'autorisations (AzMan) et le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour autoriser les clients. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge un service Web, AzMan peut être intégré dans l'application afin que l'autorisation au service s'effectue via AzMan. Le Gestionnaire de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fournit une API qui vous permet de gérer les rôles d’application, d’ajouter et de supprimer des utilisateurs dans des rôles et de vérifier l’appartenance aux rôles, mais elle ne vous permet pas d’effectuer une requête pour savoir si un utilisateur est autorisé à exécuter une tâche nommée ou une opération. AzMan vous permet de définir des opérations individuelles et de les associer dans des tâches. Grâce à AZMan, outre les contrôles de rôle, vous pouvez également vérifier si un utilisateur peut effectuer une tâche. L’affectation des rôles et l’autorisation des tâches peuvent être configurées en dehors de l’application ou effectuées par programme au sein de l’application. Le composant logiciel enfichable Microsoft Management Console (MMC) d'administration AzMan permet aux administrateurs de modifier les tâches qu'un rôle peut effectuer au moment de l'exécution et de gérer l'appartenance aux rôles de chaque utilisateur.  
   
  Vous pouvez également utiliser AzMan et le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] si vous avez déjà accès à une installation AzMan existante et souhaitez autoriser les utilisateurs de votre service à utiliser les fonctionnalités combinées d’AzMan et du fournisseur de rôle.  
   
@@ -60,8 +60,8 @@ Vous pouvez contrôler l’accès de plusieurs façons avec Windows Communicatio
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Procédure : restreindre l’accès à la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Procédure : utiliser le fournisseur de rôle ASP.NET avec un service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Procédure : utiliser le fournisseur de rôle du Gestionnaire d’autorisations ASP.NET avec un service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
-- [Gestion des revendications et autorisation avec le modèle d'identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Guide pratique pour Restreindre l’accès à la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Guide pratique pour Utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Guide pratique pour Utiliser le fournisseur de rôles du Gestionnaire d’autorisations ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

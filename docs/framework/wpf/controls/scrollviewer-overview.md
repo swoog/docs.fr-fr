@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212425"
 ---
 # <a name="scrollviewer-overview"></a>Vue d'ensemble de ScrollViewer
@@ -65,7 +65,7 @@ Le contenu d’une interface utilisateur occupe souvent un espace plus important
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Procédure : Créer une visionneuse de défilement](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [Guide pratique pour Créer une visionneuse de défilement](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Documents dans WPF](../advanced/documents-in-wpf.md)
 - [Styles et modèles ScrollBar](scrollbar-styles-and-templates.md)
 - [Contrôles](../advanced/optimizing-performance-controls.md)

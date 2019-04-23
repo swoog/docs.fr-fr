@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
 ms.openlocfilehash: da91e27b804d649f5b8010bc9d7c074425be26f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212191"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Procédure : Définir le texte d’un contrôle TextBox
@@ -29,5 +29,5 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Controls.TextBox.Tex
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de TextBox](textbox-overview.md)
-- [Vue d'ensemble de RichTextBox](richtextbox-overview.md)
+- [Vue d’ensemble de TextBox](textbox-overview.md)
+- [Vue d’ensemble de RichTextBox](richtextbox-overview.md)

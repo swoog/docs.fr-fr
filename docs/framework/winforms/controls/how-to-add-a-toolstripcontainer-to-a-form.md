@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
 ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216208"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procédure : ajouter un ToolStripContainer à un formulaire
@@ -36,4 +36,4 @@ Vous pouvez ajouter par programmation un <xref:System.Windows.Forms.ToolStripCon
 
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer, contrôle](toolstripcontainer-control.md)
-- [ToolStrip, contrôle](toolstrip-control-windows-forms.md)
+- [Contrôle ToolStrip](toolstrip-control-windows-forms.md)

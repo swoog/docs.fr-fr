@@ -3,10 +3,10 @@ title: Didacticiels C#
 description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
 ms.date: 10/25/2018
 ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214440"
 ---
 # <a name="c-tutorials"></a>Didacticiels C#
@@ -17,29 +17,29 @@ Bienvenue dans les tutoriels pour C#. Ceux-ci commencent par des leçons interac
 
 Les premières leçons expliquent les concepts de C# à l’aide de petits extraits de code. Vous apprendrez les bases de la syntaxe C# et comment utiliser des types de données tels que des chaînes, des nombres et des valeurs booléennes. Tout est interactif, vous allez écrire et exécuter du code en quelques minutes. Ces premières leçons prennent pour acquis que vous n’avez aucune connaissance préalable de la programmation ou du langage C#.
 
-## [<a name="hello-world"></a>Hello World](intro-to-csharp/hello-world.yml)
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
 
 Dans le tutoriel [Hello world](intro-to-csharp/hello-world.yml), vous allez créer le programme le plus basique en C#. Vous explorerez le type `string` et l’utilisation de texte.
 
-## [<a name="numbers-in-c"></a>Nombres en C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Nombres en C#](intro-to-csharp/numbers-in-csharp.yml)
 
 Dans le tutoriel [Nombres en C#](intro-to-csharp/numbers-in-csharp.yml), vous allez apprendre comment les ordinateurs stockent les nombres et comment effectuer des calculs avec différents types numériques. Vous apprendrez les bases de l’arrondi et comment effectuer des calculs mathématiques à l’aide de C#. Vous pouvez également [exécuter ce tutoriel localement sur votre ordinateur](intro-to-csharp/numbers-in-csharp-local.md).
 
 Ce tutoriel part du principe que vous avez terminé la leçon [Hello world](intro-to-csharp/hello-world.yml).
 
-## [<a name="branches-and-loops"></a>Branches et boucles](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Branches et boucles](intro-to-csharp/branches-and-loops.yml)
 
 Le tutoriel [Branches et boucles](intro-to-csharp/branches-and-loops.yml) explique les bases de la sélection de différents chemins d’exécution de code en fonction des valeurs stockées dans des variables. Vous allez apprendre les principes fondamentaux du flux de contrôle, sur la base duquel les programmes prennent des décisions et choisissent différentes actions. Vous pouvez également [exécuter ce tutoriel localement sur votre ordinateur](intro-to-csharp/branches-and-loops-local.md).
 
 Ce tutoriel part du principe que vous avez fini les leçons [Hello world](intro-to-csharp/hello-world.yml) et [Nombres en C#](intro-to-csharp/numbers-in-csharp.yml).
 
-## [<a name="list-collection"></a>Collection de listes](intro-to-csharp/list-collection.yml)
+## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Collection de listes](intro-to-csharp/list-collection.yml)
 
 La leçon [Collection de listes](intro-to-csharp/list-collection.yml) vous présente le type Collection de listes qui stocke les séquences de données. Vous apprendrez à ajouter et à supprimer des éléments, à rechercher des éléments et à trier des listes. Vous découvrirez différents types de listes. Vous pouvez également [exécuter ce tutoriel localement sur votre ordinateur](intro-to-csharp/arrays-and-collections.md).
 
 Ce tutoriel part du principe que vous avez fini les leçons listées ci-dessus.
 
-## [<a name="introduction-to-c----work-locally"></a>Présentation de C# -- travailler localement](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Présentation de C# -- travailler localement](intro-to-csharp/local-environment.md)
 
 Tous les tutoriels de présentation proposés après la leçon Hello World sont disponibles dans votre propre environnement de développement local. À la fin de chaque tutoriel, vous décidez si vous souhaitez effectuer la leçon suivante en ligne ou sur votre propre ordinateur. Vous trouverez également des liens pour vous aider à configurer votre environnement et passer au tutoriel suivant sur votre ordinateur.
 

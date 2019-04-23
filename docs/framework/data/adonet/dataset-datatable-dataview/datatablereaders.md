@@ -3,10 +3,10 @@ title: DataTableReaders
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
 ms.openlocfilehash: a790335a25327563e3dab6093449345b99afd048
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213999"
 ---
 # <a name="datatablereaders"></a>DataTableReaders
@@ -17,10 +17,10 @@ L'objet <xref:System.Data.DataTableReader> présente le contenu d'un objet <xref
  Un **DataTableReader** peut contenir plusieurs jeux de résultats s’il a été créé en appelant <xref:System.Data.DataSet.CreateDataReader%2A>. Les résultats sont dans le même ordre que les **DataTables** dans le **DataSet** l’objet <xref:System.Data.DataSet.Tables%2A> collection.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d'un DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
+ [Création d’un DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
  Explique comment créer un **DataTableReader** objet.  
   
- [Navigation sur les DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ [Navigation dans les DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
  Décrit l’utilisation de la **en lecture** méthode pour parcourir le contenu d’un **DataTableReader**.  
   
 ## <a name="see-also"></a>Voir aussi

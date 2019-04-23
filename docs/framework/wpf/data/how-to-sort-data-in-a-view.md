@@ -13,10 +13,10 @@ helpviewer_keywords:
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
 ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211255"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Procédure : Trier des données dans une vue
@@ -42,4 +42,4 @@ Cet exemple décrit comment trier des données dans une vue.
 - [Trier une colonne GridView lors d’un clic sur un en-tête](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [Vue d’ensemble de la liaison de données](data-binding-overview.md)
 - [Filtrer les données d’une vue](how-to-filter-data-in-a-view.md)
-- [Rubriques Comment](data-binding-how-to-topics.md)
+- [Rubriques de guide pratique](data-binding-how-to-topics.md)

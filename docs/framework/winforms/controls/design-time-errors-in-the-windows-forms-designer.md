@@ -9,10 +9,10 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213140"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erreurs au moment du design dans le Concepteur Windows Forms
@@ -45,16 +45,16 @@ Cette rubrique explique la signification et l’utilisation de la liste d’erre
 ### <a name="forum-posts-about-this-error"></a>Publications de forum sur cette erreur  
  L’aide supplémentaire inclut un lien vers des publications du forum MSDN associées à l’erreur. La recherche dans les forums est effectuée en fonction de la chaîne du message d’erreur. Vous pouvez également effectuer une recherche dans les forums suivants :  
   
--   [Forum du Concepteur Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Forum Concepteur Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Forums de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Forums Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorer et continuer  
  Vous pouvez choisir d’ignorer l’erreur et de continuer à charger le concepteur. Cette action peut entraîner un comportement inattendu. Par exemple, il est possible que les contrôles n’apparaissent pas sur l’aire de conception.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Dépannage du développement au moment du design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [Dépannage du développement au moment du Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Dépannage de la création de contrôles et de composants](troubleshooting-control-and-component-authoring.md)
 - [Développement de contrôles Windows Forms au moment du design](developing-windows-forms-controls-at-design-time.md)
-- [Messages d'erreur du Concepteur Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
+- [Messages d’erreur du Concepteur Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

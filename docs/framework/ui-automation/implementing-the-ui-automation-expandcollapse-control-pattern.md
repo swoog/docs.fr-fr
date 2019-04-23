@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211658"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implémentation du modèle de contrôle ExpandCollapse d'UI Automation
@@ -32,7 +32,7 @@ ms.locfileid: "59211658"
   
 -   Quand l' <xref:System.Windows.Automation.ExpandCollapseState> d'un contrôle est défini sur <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, toute fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est actuellement inactive pour le contrôle et la seule information qui peut être obtenue à l'aide de ce modèle de contrôle est l' <xref:System.Windows.Automation.ExpandCollapseState>. Si des objets enfants sont ajoutés par la suite, l' <xref:System.Windows.Automation.ExpandCollapseState> change et la fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est activée.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> fait référence à la visibilité des objets enfants immédiats uniquement ; Il ne fait pas référence à la visibilité de tous les objets descendants.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> fait référence uniquement à la visibilité des objets enfants immédiats ; il ne fait pas référence à celle de tous les objets descendants.  
   
 -   La fonctionnalité de développement/réduction est propre au contrôle. Voici des exemples de ce comportement.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59211658"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Vue d’ensemble des modèles de contrôle UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Modèles de contrôle UI Automation pour les clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Naviguer entre les éléments UI Automation avec TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Vue d’ensemble de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Présentation de l’arborescence UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

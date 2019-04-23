@@ -25,10 +25,10 @@ helpviewer_keywords:
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: 571af49cdf82b876cfb72a7c7636874c8d155fb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213934"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Procédure : déterminer la touche de modification activée
@@ -50,4 +50,4 @@ Lorsque vous créez une application qui accepte des séquences de touches de l�
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.ModifierKeys%2A>
 - [Entrée au clavier dans une application Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Procédure : Déterminer que si CapsLock est activée dans Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))
+- [Guide pratique pour Déterminer que si CapsLock est activée dans Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))
