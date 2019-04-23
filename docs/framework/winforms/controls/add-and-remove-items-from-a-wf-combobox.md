@@ -15,18 +15,18 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
 ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322730"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="90d9e-102">Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms</span><span class="sxs-lookup"><span data-stu-id="90d9e-102">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="90d9e-103">Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou vérifié la zone de liste de plusieurs façons, étant donné que ces contrôles peuvent être liés à une variété de sources de données.</span><span class="sxs-lookup"><span data-stu-id="90d9e-103">Items can be added to a Windows Forms combo box, list box, or checked list box in a variety of ways, because these controls can be bound to a variety of data sources.</span></span> <span data-ttu-id="90d9e-104">Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données.</span><span class="sxs-lookup"><span data-stu-id="90d9e-104">However, this topic demonstrates the simplest method and requires no data binding.</span></span> <span data-ttu-id="90d9e-105">Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé.</span><span class="sxs-lookup"><span data-stu-id="90d9e-105">The items displayed are usually strings; however, any object can be used.</span></span> <span data-ttu-id="90d9e-106">Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).</span><span class="sxs-lookup"><span data-stu-id="90d9e-106">The text that is displayed in the control is the value returned by the object's `ToString` method.</span></span>  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="ffdec-102">Procédure : ajouter et supprimer des éléments dans un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ffdec-102">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="ffdec-103">Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou vérifié la zone de liste de plusieurs façons, étant donné que ces contrôles peuvent être liés à une variété de sources de données.</span><span class="sxs-lookup"><span data-stu-id="ffdec-103">Items can be added to a Windows Forms combo box, list box, or checked list box in a variety of ways, because these controls can be bound to a variety of data sources.</span></span> <span data-ttu-id="ffdec-104">Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données.</span><span class="sxs-lookup"><span data-stu-id="ffdec-104">However, this topic demonstrates the simplest method and requires no data binding.</span></span> <span data-ttu-id="ffdec-105">Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé.</span><span class="sxs-lookup"><span data-stu-id="ffdec-105">The items displayed are usually strings; however, any object can be used.</span></span> <span data-ttu-id="ffdec-106">Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).</span><span class="sxs-lookup"><span data-stu-id="ffdec-106">The text that is displayed in the control is the value returned by the object's `ToString` method.</span></span>  
   
-### <a name="to-add-items"></a><span data-ttu-id="90d9e-107">Pour ajouter des éléments</span><span class="sxs-lookup"><span data-stu-id="90d9e-107">To add items</span></span>  
+### <a name="to-add-items"></a><span data-ttu-id="ffdec-107">Pour ajouter des éléments</span><span class="sxs-lookup"><span data-stu-id="ffdec-107">To add items</span></span>  
   
-1. <span data-ttu-id="90d9e-108">Ajouter la chaîne ou l’objet à la liste à l’aide de la `Add` méthode de la `ObjectCollection` classe.</span><span class="sxs-lookup"><span data-stu-id="90d9e-108">Add the string or object to the list by using the `Add` method of the `ObjectCollection` class.</span></span> <span data-ttu-id="90d9e-109">La collection est référencée à l’aide de la `Items` propriété :</span><span class="sxs-lookup"><span data-stu-id="90d9e-109">The collection is referenced using the `Items` property:</span></span>  
+1. <span data-ttu-id="ffdec-108">Ajouter la chaîne ou l’objet à la liste à l’aide de la `Add` méthode de la `ObjectCollection` classe.</span><span class="sxs-lookup"><span data-stu-id="ffdec-108">Add the string or object to the list by using the `Add` method of the `ObjectCollection` class.</span></span> <span data-ttu-id="ffdec-109">La collection est référencée à l’aide de la `Items` propriété :</span><span class="sxs-lookup"><span data-stu-id="ffdec-109">The collection is referenced using the `Items` property:</span></span>  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -40,9 +40,9 @@ ms.locfileid: "59322730"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - <span data-ttu-id="90d9e-110">ou</span><span class="sxs-lookup"><span data-stu-id="90d9e-110">or -</span></span>  
+     - <span data-ttu-id="ffdec-110">ou</span><span class="sxs-lookup"><span data-stu-id="ffdec-110">or -</span></span>  
   
-2. <span data-ttu-id="90d9e-111">Insérer la chaîne ou l’objet à l’endroit souhaité dans la liste avec la `Insert` méthode :</span><span class="sxs-lookup"><span data-stu-id="90d9e-111">Insert the string or object at the desired point in the list with the `Insert` method:</span></span>  
+2. <span data-ttu-id="ffdec-111">Insérer la chaîne ou l’objet à l’endroit souhaité dans la liste avec la `Insert` méthode :</span><span class="sxs-lookup"><span data-stu-id="ffdec-111">Insert the string or object at the desired point in the list with the `Insert` method:</span></span>  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -56,9 +56,9 @@ ms.locfileid: "59322730"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - <span data-ttu-id="90d9e-112">ou</span><span class="sxs-lookup"><span data-stu-id="90d9e-112">or -</span></span>  
+     - <span data-ttu-id="ffdec-112">ou</span><span class="sxs-lookup"><span data-stu-id="ffdec-112">or -</span></span>  
   
-3. <span data-ttu-id="90d9e-113">Assignez tout un tableau à la `Items` collection :</span><span class="sxs-lookup"><span data-stu-id="90d9e-113">Assign an entire array to the `Items` collection:</span></span>  
+3. <span data-ttu-id="ffdec-113">Assignez tout un tableau à la `Items` collection :</span><span class="sxs-lookup"><span data-stu-id="ffdec-113">Assign an entire array to the `Items` collection:</span></span>  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -87,11 +87,11 @@ ms.locfileid: "59322730"
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### <a name="to-remove-an-item"></a><span data-ttu-id="90d9e-114">Pour supprimer un élément</span><span class="sxs-lookup"><span data-stu-id="90d9e-114">To remove an item</span></span>  
+### <a name="to-remove-an-item"></a><span data-ttu-id="ffdec-114">Pour supprimer un élément</span><span class="sxs-lookup"><span data-stu-id="ffdec-114">To remove an item</span></span>  
   
-1. <span data-ttu-id="90d9e-115">Appelez le `Remove` ou `RemoveAt` méthode pour supprimer des éléments.</span><span class="sxs-lookup"><span data-stu-id="90d9e-115">Call the `Remove` or `RemoveAt` method to delete items.</span></span>  
+1. <span data-ttu-id="ffdec-115">Appelez le `Remove` ou `RemoveAt` méthode pour supprimer des éléments.</span><span class="sxs-lookup"><span data-stu-id="ffdec-115">Call the `Remove` or `RemoveAt` method to delete items.</span></span>  
   
-     `Remove` <span data-ttu-id="90d9e-116">possède un argument qui spécifie l’élément à supprimer.</span><span class="sxs-lookup"><span data-stu-id="90d9e-116">has one argument that specifies the item to remove.</span></span>`RemoveAt` <span data-ttu-id="90d9e-117">Supprime l’élément avec le numéro d’index spécifié.</span><span class="sxs-lookup"><span data-stu-id="90d9e-117">removes the item with the specified index number.</span></span>  
+     <span data-ttu-id="ffdec-116">`Remove` possède un argument qui spécifie l’élément à supprimer.`RemoveAt`</span><span class="sxs-lookup"><span data-stu-id="ffdec-116">`Remove` has one argument that specifies the item to remove.`RemoveAt`</span></span> <span data-ttu-id="ffdec-117">Supprime l’élément avec le numéro d’index spécifié.</span><span class="sxs-lookup"><span data-stu-id="ffdec-117">removes the item with the specified index number.</span></span>  
   
     ```vb  
     ' To remove item with index 0:  
@@ -120,9 +120,9 @@ ms.locfileid: "59322730"
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### <a name="to-remove-all-items"></a><span data-ttu-id="90d9e-118">Pour supprimer tous les éléments</span><span class="sxs-lookup"><span data-stu-id="90d9e-118">To remove all items</span></span>  
+### <a name="to-remove-all-items"></a><span data-ttu-id="ffdec-118">Pour supprimer tous les éléments</span><span class="sxs-lookup"><span data-stu-id="ffdec-118">To remove all items</span></span>  
   
-1. <span data-ttu-id="90d9e-119">Appelez le `Clear` méthode pour supprimer tous les éléments de la collection :</span><span class="sxs-lookup"><span data-stu-id="90d9e-119">Call the `Clear` method to remove all items from the collection:</span></span>  
+1. <span data-ttu-id="ffdec-119">Appelez le `Clear` méthode pour supprimer tous les éléments de la collection :</span><span class="sxs-lookup"><span data-stu-id="ffdec-119">Call the `Clear` method to remove all items from the collection:</span></span>  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -136,11 +136,11 @@ ms.locfileid: "59322730"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="90d9e-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="90d9e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffdec-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ffdec-120">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="90d9e-121">Procédure : trier le contenu d’un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms</span><span class="sxs-lookup"><span data-stu-id="90d9e-121">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [<span data-ttu-id="90d9e-122">Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox</span><span class="sxs-lookup"><span data-stu-id="90d9e-122">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [<span data-ttu-id="90d9e-123">Contrôles Windows Forms utilisés pour l'affichage de listes d'options</span><span class="sxs-lookup"><span data-stu-id="90d9e-123">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="ffdec-121">Guide pratique pour Trier le contenu d’un Windows Forms ComboBox, ListBox ou CheckedListBox, contrôle</span><span class="sxs-lookup"><span data-stu-id="ffdec-121">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [<span data-ttu-id="ffdec-122">Utilisation d'un contrôle ComboBox Windows Forms à la place d'un contrôle ListBox</span><span class="sxs-lookup"><span data-stu-id="ffdec-122">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [<span data-ttu-id="ffdec-123">Contrôles Windows Forms utilisés pour l’affichage de listes d’options</span><span class="sxs-lookup"><span data-stu-id="ffdec-123">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
