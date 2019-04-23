@@ -3,12 +3,12 @@ title: Variables et types C# - Visite guidée du langage C#
 description: En savoir plus sur la définition des types et la déclaration de variables en C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846608"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481078"
 ---
 # <a name="types-and-variables"></a>Types et variables
 
@@ -19,30 +19,30 @@ Les types de valeur de C# sont divisés entre *types simples*, *types enum*, *ty
 Ce qui suit offre une vue d'ensemble du système de types de C#.
 
 * Types de valeur
-    - Types simples
-        * Entier signé : `sbyte`, `short`, `int`, `long`
-        * Entier non signé : `byte`, `ushort`, `uint`, `ulong`
-        * Caractères Unicode : `char`
-        * Virgule flottante IEEE : `float`, `double`
-        * Décimale haute précision :`decimal`
-        * Booléen : `bool`
-    - Types d'enum
-        * Types définis par l'utilisateur de la forme `enum E {...}`
-    - Types struct
-        * Types définis par l'utilisateur de la forme `struct S {...}`
-    - Types valeur Nullable
-        * Extensions de tous les autres types de valeurs avec une valeur `null`
+  - Types simples
+    * Intégral signé : `sbyte`, `short`, `int`, `long`
+    * Intégral non signé : `byte`, `ushort`, `uint`, `ulong`
+    * Caractères Unicode : `char`
+    * Virgule flottante IEEE : `float`, `double`
+    * Décimale haute précision : `decimal`
+    * Booléen : `bool`
+  - Types d'enum
+    * Types définis par l’utilisateur de la forme `enum E {...}`
+  - Types struct
+    * Types définis par l’utilisateur de la forme `struct S {...}`
+  - Types valeur Nullable
+    * Extensions de tous les autres types de valeurs avec une valeur `null`
 * Types référence
-    - Types de classes
-        * Classe de base fondamentale de tous les autres types : `object`
-        * Chaînes Unicode : `string`
-        * Types définis par l'utilisateur de la forme `class C {...}`
-    - Types interface
-        * Types définis par l'utilisateur de la forme `interface I {...}`
-    - Types de tableaux
-        * Uni et multidimensionnels, par exemple `int[]` et `int[,]`
-    - Types délégués
-        * Types définis par l'utilisateur de la forme `delegate int D(...)`
+  - Types de classes
+    * Classe de base fondamentale de tous les autres types : `object`
+    * Chaînes Unicode : `string`
+    * Types définis par l’utilisateur de la forme `class C {...}`
+  - Types interface
+    * Types définis par l’utilisateur de la forme `interface I {...}`
+  - Types de tableaux
+    * Unidimensionnels et multidimensionnels, par exemple `int[]` et `int[,]`
+  - Types délégués
+    * Types définis par l’utilisateur de la forme `delegate int D(...)`
 
 Les types intégraux huit prennent en charge les valeurs 8 bits, 16 bits, 32 bits et 64 bits sous forme signée ou non signée.
 
@@ -57,20 +57,20 @@ Le traitement des caractères et chaînes dans le langage C# utilise l’encodag
 Ce qui suit résume les types numériques de C#.
 
 * Entier signé
-    - `sbyte`:  8 bits, entre -128 et 127
-    - `short`: 16 bits, entre -32 768 et 32 767
-    - `int`  : 32 bits, entre -2 147 483 648 et 2 147 483 647
-    - `long` : 64 bits, entre -9 223 372 036 854 775 808 et 9 223 372 036 854 775 807
+  - `sbyte`:  8 bits, entre -128 et 127
+  - `short`: 16 bits, entre -32 768 et 32 767
+  - `int`  : 32 bits, entre -2 147 483 648 et 2 147 483 647
+  - `long` : 64 bits, entre -9 223 372 036 854 775 808 et 9 223 372 036 854 775 807
 * Entier non signé
-    - `byte`   :  8 bits, entre 0 et 255
-    - `ushort` : 16 bits, entre 0 et 65 535
-    - `uint`   : 32 bits, entre 0 et 4 294 967 295
-    - `ulong`  : 64 bits, entre 0 et 18 446 744 073 709 551 615
+  - `byte`   :  8 bits, entre 0 et 255
+  - `ushort` : 16 bits, entre 0 et 65 535
+  - `uint`   : 32 bits, entre 0 et 4 294 967 295
+  - `ulong`  : 64 bits, entre 0 et 18 446 744 073 709 551 615
 * Virgule flottante
-    - `float`  : 32 bits, entre 1,5 × 10<sup>-45</sup> et 3,4 × 10<sup>38</sup>,    précision de 7 chiffres
-    - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
+  - `float`  : 32 bits, entre 1,5 × 10<sup>-45</sup> et 3,4 × 10<sup>38</sup>,    précision de 7 chiffres
+  - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
 * Decimal
-    - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
+  - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
 
 Les programmes C# utilisent les *déclarations de type* pour créer de nouveaux types. Une déclaration de type spécifie le nom et les membres du nouveau type. Cinq catégories de types C# sont définies par l’utilisateur : les types de classes, les types struct, les types d’interfaces, les types enum et les types délégués.
 
@@ -101,19 +101,19 @@ Le système des types unifié de C# signifie que les types valeur peuvent deveni
 Il existe plusieurs types de *variables* en C#, y compris les champs, les éléments de tableau, les variables locales et les paramètres. Les variables représentent des emplacements de stockage, et chaque variable possède un type qui détermine les valeurs pouvant être stockées dans la variable, comme indiqué ci-dessous.
 
 * Type de valeur n’acceptant pas Null
-    - Une valeur de ce type exact
+  - Une valeur de ce type exact
 * Types valeur Nullable
-    - Une valeur `null` ou une valeur de ce type exact
+  - Une valeur `null` ou une valeur de ce type exact
 * object
-    - Une référence `null`, une référence à un objet de tout type référence ou une référence à une valeur boxed de n’importe quel type valeur
+  - Une référence `null`, une référence à un objet de tout type référence ou une référence à une valeur boxed de n’importe quel type valeur
 * Type de classe
-    - Une référence `null`, une référence à une instance de ce type de classe ou une référence à une instance d’une classe dérivée de ce type de classe
+  - Une référence `null`, une référence à une instance de ce type de classe ou une référence à une instance d’une classe dérivée de ce type de classe
 * Type d'interface
-    - Une référence `null`, une référence à une instance d’un type de classe qui implémente ce type d’interface ou une référence à une valeur boxed d’un type valeur qui implémente ce type d’interface
+  - Une référence `null`, une référence à une instance d’un type de classe qui implémente ce type d’interface ou une référence à une valeur boxed d’un type valeur qui implémente ce type d’interface
 * Type tableau
-    - Une référence `null`, une référence à une instance de ce type de tableau ou une instance d’un type de tableau compatible
+  - Une référence `null`, une référence à une instance de ce type de tableau ou une instance d’un type de tableau compatible
 * Type délégué
-    - Une référence `null` ou une référence à une instance d’un type délégué compatible
+  - Une référence `null` ou une référence à une instance d’un type délégué compatible
 
 > [!div class="step-by-step"]
 > [Précédent](program-structure.md)

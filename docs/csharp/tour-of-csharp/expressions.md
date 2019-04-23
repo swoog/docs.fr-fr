@@ -3,12 +3,12 @@ title: Expressions C# - Visite guidée du langage C#
 description: Les expressions, opérandes et opérateurs sont des blocs de construction du langage C#
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846595"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480753"
 ---
 # <a name="expressions"></a>Expressions
 
@@ -28,68 +28,68 @@ La plupart des opérateurs peuvent être *surchargés*. La surcharge d’opérat
 Voici un résumé des opérateurs de C# répertoriant les catégories d’opérateurs dans l’ordre de priorité, de la plus élevée à la plus basse. Les opérateurs de la même catégorie ont la même priorité. Sous chaque catégorie se trouve une liste d’expressions dans cette catégorie, ainsi que la description de ce type d’expression.
 
 * Principale
-    - `x.m`: Accès au membre
-    - `x(...)`: Méthode et appel de délégué
-    - `x[...]`: Tableau et accès d'indexeur
-    - `x++`: Post-incrémentation
-    - `x--`: Post-décrémentation
-    - `new T(...)`: Création d'objet et de délégué
-    - `new T(...){...}`: Création d’objet avec initialiseur
-    - `new {...}`:  Initialiseur d’objet anonyme
-    - `new T[...]`: Création de tableau
-    - `typeof(T)`: Obtenir l’objet <xref:System.Type> de `T`
-    - `checked(x)`: Évaluer l'expression dans le contexte vérifié (checked)
-    - `unchecked(x)`: Évaluer l'expression dans le contexte non vérifié (unchecked)
-    - `default(T)`: Obtenir la valeur par défaut du type `T`
-    - `delegate {...}`: Fonction anonyme (méthode anonyme)
+  - `x.m`: Accès au membre
+  - `x(...)`: Méthode et appel de délégué
+  - `x[...]`: Tableau et accès d'indexeur
+  - `x++`: Post-incrémentation
+  - `x--`: Post-décrémentation
+  - `new T(...)`: Création d'objet et de délégué
+  - `new T(...){...}`: Création d’objet avec initialiseur
+  - `new {...}`:  Initialiseur d’objet anonyme
+  - `new T[...]`: Création de tableau
+  - `typeof(T)`: Récupérer l’objet <xref:System.Type> de `T`
+  - `checked(x)`: Évaluer l'expression dans le contexte vérifié (checked)
+  - `unchecked(x)`: Évaluer l'expression dans le contexte non vérifié (unchecked)
+  - `default(T)`: Récupérer la valeur par défaut du type `T`
+  - `delegate {...}`: Fonction anonyme (méthode anonyme)
 * Unaire
-    - `+x`: Identité
-    - `-x`: Négation
-    - `!x`: Négation logique
-    - `~x`: Négation d'opération de bits
-    - `++x`: Pré-incrémentation
-    - `--x`: Pré-décrémentation
-    - `(T)x`: Convertir explicitement `x` en type `T`
-    - `await x`: Attendre de façon asynchrone la fin de `x`
+  - `+x`: Identité
+  - `-x`: Négation
+  - `!x`: Négation logique
+  - `~x`: Négation d'opération de bits
+  - `++x`: Pré-incrémentation
+  - `--x`: Pré-décrémentation
+  - `(T)x`: Convertir explicitement `x` en type `T`
+  - `await x`: Attendre de façon asynchrone la fin de `x`
 * Multiplication
-    - `x * y`: Multiplication
-    - `x / y`: Division
-    - `x % y`: Reste
+  - `x * y`: Multiplication
+  - `x / y`: Division
+  - `x % y`: Reste
 * Addition
-    - `x + y`: Addition, concaténation de chaînes, combinaison de délégués
-    - `x – y`: Soustraction, suppression de délégué
+  - `x + y`: Addition, concaténation de chaînes, combinaison de délégués
+  - `x – y`: Soustraction, suppression de délégué
 * Shift
-    - `x << y`: Décalage à gauche
-    - `x >> y`: Décalage à droite
+  - `x << y`: Décalage à gauche
+  - `x >> y`: Décalage à droite
 * Relations et test de type
-    - `x < y`: Inférieur à
-    - `x > y`: Supérieur à
-    - `x <= y`: Inférieur ou égal à
-    - `x >= y`: Supérieur ou égal à
-    - `x is T`: Retourne `true` si `x` est un `T`, `false` sinon
-    - `x as T`: Retourne `x` de type `T`, ou `null` si `x` n’est pas un `T`
+  - `x < y`: Inférieur à
+  - `x > y`: Supérieur à
+  - `x <= y`: Inférieur ou égal à
+  - `x >= y`: Supérieur ou égal à
+  - `x is T`: Retourne `true` si `x` est un `T`, `false` sinon
+  - `x as T`: Retourne `x` de type `T`, ou `null` si `x` n’est pas un `T`
 * Égalité
-    - `x == y`: Égal à
-    - `x != y`: Non égal à
+  - `x == y`: Égal à
+  - `x != y`: Non égal à
 * AND logique
-    - `x & y`: AND d’entiers au niveau du bit, AND logique booléen
+  - `x & y`: AND d’entiers au niveau du bit, AND logique booléen
 * XOR logique
-    - `x ^ y`: Opération de bits entière XOR, Boolean logique XOR
+  - `x ^ y`: Opération de bits entière XOR, Boolean logique XOR
 * OR logique
-    - `x | y`: Opération de bits entière OR, Boolean logique OR
+  - `x | y`: Opération de bits entière OR, Boolean logique OR
 * AND conditionnel
-    - `x && y`: Prend la valeur `y` uniquement si `x` n’est pas `false`
+  - `x && y`: Prend la valeur `y` uniquement si `x` n’est pas `false`
 * OR conditionnel
-    - `x || y`: Prend la valeur `y` uniquement si `x` n’est pas `true`
+  - `x || y`: Prend la valeur `y` uniquement si `x` n’est pas `true`
 * Fusion de Null
-    - `x ?? y`: Prend la valeur `y` si `x` est Null, `x` sinon
+  - `x ?? y`: Prend la valeur `y` si `x` est Null, `x` sinon
 * Conditionnel
-    - `x ? y : z`: Prend la valeur `y` si `x` est `true`, `z` si `x` est `false`
+  - `x ? y : z`: Prend la valeur `y` si `x` est `true`, `z` si `x` est `false`
 * Attribution ou fonction anonyme
-    - `x = y`: Attribution
-    - `x op= y`: Assignation composée ; opérateurs pris en charge :
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Fonction anonyme (expression lambda)
+  - `x = y`: Attribution
+  - `x op= y`: Assignation composée ; opérateurs pris en charge :
+    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
+  - `(T x) => y`: Fonction anonyme (expression lambda)
 
 > [!div class="step-by-step"]
 > [Précédent](types-and-variables.md)
