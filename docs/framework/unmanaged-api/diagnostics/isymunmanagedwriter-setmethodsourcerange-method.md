@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086167"
 ---
-# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="4f09b-102">ISymUnmanagedWriter::SetMethodSourceRange, méthode</span><span class="sxs-lookup"><span data-stu-id="4f09b-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
-<span data-ttu-id="4f09b-103">Spécifie les véritables début et la fin d’une méthode dans un fichier source.</span><span class="sxs-lookup"><span data-stu-id="4f09b-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="4f09b-104">Utilisez cette méthode pour spécifier l’étendue d’une méthode indépendamment les points de séquence qui existent au sein de la méthode.</span><span class="sxs-lookup"><span data-stu-id="4f09b-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
+# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="23c47-102">ISymUnmanagedWriter::SetMethodSourceRange, méthode</span><span class="sxs-lookup"><span data-stu-id="23c47-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
+<span data-ttu-id="23c47-103">Spécifie les véritables début et la fin d’une méthode dans un fichier source.</span><span class="sxs-lookup"><span data-stu-id="23c47-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="23c47-104">Utilisez cette méthode pour spécifier l’étendue d’une méthode indépendamment les points de séquence qui existent au sein de la méthode.</span><span class="sxs-lookup"><span data-stu-id="23c47-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f09b-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4f09b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23c47-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="23c47-105">Syntax</span></span>  
   
 ```  
 HRESULT SetMethodSourceRange(  
@@ -39,31 +39,31 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4f09b-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4f09b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23c47-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="23c47-106">Parameters</span></span>  
  `startDoc`  
- <span data-ttu-id="4f09b-107">[in] Pointeur vers le document contenant la position de départ.</span><span class="sxs-lookup"><span data-stu-id="4f09b-107">[in] A pointer to the document containing the starting position.</span></span>  
+ <span data-ttu-id="23c47-107">[in] Pointeur vers le document contenant la position de départ.</span><span class="sxs-lookup"><span data-stu-id="23c47-107">[in] A pointer to the document containing the starting position.</span></span>  
   
  `startLine`  
- <span data-ttu-id="4f09b-108">[in] Le numéro de ligne de départ.</span><span class="sxs-lookup"><span data-stu-id="4f09b-108">[in] The starting line number.</span></span>  
+ <span data-ttu-id="23c47-108">[in] Le numéro de ligne de départ.</span><span class="sxs-lookup"><span data-stu-id="23c47-108">[in] The starting line number.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="4f09b-109">[in] La colonne de départ.</span><span class="sxs-lookup"><span data-stu-id="4f09b-109">[in] The starting column.</span></span>  
+ <span data-ttu-id="23c47-109">[in] La colonne de départ.</span><span class="sxs-lookup"><span data-stu-id="23c47-109">[in] The starting column.</span></span>  
   
  `endDoc`  
- <span data-ttu-id="4f09b-110">[in] Pointeur vers le document contenant la position de fin.</span><span class="sxs-lookup"><span data-stu-id="4f09b-110">[in] A pointer to the document containing the ending position.</span></span>  
+ <span data-ttu-id="23c47-110">[in] Pointeur vers le document contenant la position de fin.</span><span class="sxs-lookup"><span data-stu-id="23c47-110">[in] A pointer to the document containing the ending position.</span></span>  
   
  `endLine`  
- <span data-ttu-id="4f09b-111">[in] Numéro de ligne de fin.</span><span class="sxs-lookup"><span data-stu-id="4f09b-111">[in] The ending line number.</span></span>  
+ <span data-ttu-id="23c47-111">[in] Numéro de ligne de fin.</span><span class="sxs-lookup"><span data-stu-id="23c47-111">[in] The ending line number.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="4f09b-112">[in] Numéro de colonne de fin.</span><span class="sxs-lookup"><span data-stu-id="4f09b-112">[in] The ending column number.</span></span>  
+ <span data-ttu-id="23c47-112">[in] Numéro de colonne de fin.</span><span class="sxs-lookup"><span data-stu-id="23c47-112">[in] The ending column number.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4f09b-113">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="4f09b-113">Return Value</span></span>  
- <span data-ttu-id="4f09b-114">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="4f09b-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23c47-113">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="23c47-113">Return Value</span></span>  
+ <span data-ttu-id="23c47-114">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="23c47-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f09b-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="4f09b-115">Requirements</span></span>  
- <span data-ttu-id="4f09b-116">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4f09b-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23c47-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="23c47-115">Requirements</span></span>  
+ <span data-ttu-id="23c47-116">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="23c47-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f09b-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4f09b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23c47-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="23c47-117">See also</span></span>
 
-- [<span data-ttu-id="4f09b-118">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="4f09b-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="23c47-118">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="23c47-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

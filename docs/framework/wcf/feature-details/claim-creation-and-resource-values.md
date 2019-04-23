@@ -5,30 +5,30 @@ helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
 ms.openlocfilehash: bd9a8b7faf3cd7a648ff6b2a50ac68f21561497c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093694"
 ---
-# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="3553b-102">Création de revendications et valeurs de ressource</span><span class="sxs-lookup"><span data-stu-id="3553b-102">Claim Creation and Resource Values</span></span>
-<span data-ttu-id="3553b-103">La classe <xref:System.IdentityModel.Claims.Claim> fournit plusieurs méthodes de création d'instances de types de revendications intégrés.</span><span class="sxs-lookup"><span data-stu-id="3553b-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="3553b-104">Parmi ces méthodes, les suivantes n'effectuent pas de vérification de format ou de sémantique sur la ressource fournie :</span><span class="sxs-lookup"><span data-stu-id="3553b-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
+# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="7dae8-102">Création de revendications et valeurs de ressource</span><span class="sxs-lookup"><span data-stu-id="7dae8-102">Claim Creation and Resource Values</span></span>
+<span data-ttu-id="7dae8-103">La classe <xref:System.IdentityModel.Claims.Claim> fournit plusieurs méthodes de création d'instances de types de revendications intégrés.</span><span class="sxs-lookup"><span data-stu-id="7dae8-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="7dae8-104">Parmi ces méthodes, les suivantes n'effectuent pas de vérification de format ou de sémantique sur la ressource fournie :</span><span class="sxs-lookup"><span data-stu-id="7dae8-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> <span data-ttu-id="3553b-105">(ne vérifie pas la longueur ou le contenu du tableau d’octets)</span><span class="sxs-lookup"><span data-stu-id="3553b-105">(does not check the length or content of the byte array)</span></span>  
+-   <span data-ttu-id="7dae8-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (ne vérifie pas la longueur ou contenu du tableau d'octets)</span><span class="sxs-lookup"><span data-stu-id="7dae8-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> <span data-ttu-id="3553b-106">(ne vérifie pas la longueur ou le contenu du tableau d’octets)</span><span class="sxs-lookup"><span data-stu-id="3553b-106">(does not check the length or content of the byte array)</span></span>  
+-   <span data-ttu-id="7dae8-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (ne vérifie pas la longueur ou contenu du tableau d'octets)</span><span class="sxs-lookup"><span data-stu-id="7dae8-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
- <span data-ttu-id="3553b-107">Lorsque vous appelez les méthodes ci-dessus, vous devez vous assurer que les valeurs de ressource passées sont au format approprié ou qu'elles contiennent le type d'informations correct (ou les deux).</span><span class="sxs-lookup"><span data-stu-id="3553b-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
+ <span data-ttu-id="7dae8-107">Lorsque vous appelez les méthodes ci-dessus, vous devez vous assurer que les valeurs de ressource passées sont au format approprié ou qu'elles contiennent le type d'informations correct (ou les deux).</span><span class="sxs-lookup"><span data-stu-id="7dae8-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
   
- <span data-ttu-id="3553b-108">Les méthodes suivantes prennent des types spécifiques :</span><span class="sxs-lookup"><span data-stu-id="3553b-108">The following methods take specific types:</span></span>  
+ <span data-ttu-id="7dae8-108">Les méthodes suivantes prennent des types spécifiques :</span><span class="sxs-lookup"><span data-stu-id="7dae8-108">The following methods take specific types:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
   
@@ -42,8 +42,8 @@ ms.locfileid: "59093694"
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a><span data-ttu-id="3553b-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3553b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7dae8-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7dae8-109">See also</span></span>
 
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [<span data-ttu-id="3553b-110">Gestion des revendications et autorisation avec le modèle d'identité</span><span class="sxs-lookup"><span data-stu-id="3553b-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [<span data-ttu-id="7dae8-110">Gestion des revendications et autorisation avec le modèle d’identité</span><span class="sxs-lookup"><span data-stu-id="7dae8-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
