@@ -6,14 +6,14 @@ helpviewer_keywords:
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
 ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097237"
 ---
 # <a name="merged-resource-dictionaries"></a>Dictionnaires de ressources fusionnés
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ressources prennent en charge une fonctionnalité de dictionnaire de ressources fusionné. Cette fonctionnalité offre un moyen de définir la partie ressources d’une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en dehors de l’application [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilée. Les ressources peuvent ensuite être partagées entre les applications et sont aussi isolées plus facilement pour la localisation.  
+Les ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prennent en charge une fonctionnalité de dictionnaire de ressources fusionné. Cette fonctionnalité offre un moyen de définir la partie ressources d’une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en dehors de l’application [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilée. Les ressources peuvent ensuite être partagées entre les applications et sont aussi isolées plus facilement pour la localisation.  
   
 ## <a name="introducing-a-merged-resource-dictionary"></a>Introduction d’un dictionnaire de ressources fusionné  
  Dans le balisage, la syntaxe suivante permet d’introduire un dictionnaire de ressources fusionné dans une page :  
@@ -56,4 +56,4 @@ ms.locfileid: "59097237"
 - <xref:System.Windows.ResourceDictionary>
 - [Ressources XAML](xaml-resources.md)
 - [Ressources et code](resources-and-code.md)
-- [Fichiers de ressources, de contenu et de données d'une application WPF](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Fichiers de ressources, de contenu et de données d’une application WPF](../app-development/wpf-application-resource-content-and-data-files.md)

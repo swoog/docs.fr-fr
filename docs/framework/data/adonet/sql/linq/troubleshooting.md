@@ -3,10 +3,10 @@ title: Résolution des problèmes
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105480"
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
@@ -15,7 +15,7 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
  Autres problèmes sont traités dans [Forum aux Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Opérateurs de requête standard non pris en charge  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge toutes les méthodes d’opérateur de requête standard (par exemple, <xref:System.Linq.Enumerable.ElementAt%2A>). En conséquence, les projets qui sont compilés peuvent produire des erreurs d'exécution. Pour plus d’informations, consultez [traduction des opérateurs de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge toutes les méthodes d'opérateur de requête standard (par exemple, <xref:System.Linq.Enumerable.ElementAt%2A>). En conséquence, les projets qui sont compilés peuvent produire des erreurs d'exécution. Pour plus d’informations, consultez [traduction des opérateurs de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problèmes de mémoire  
  Si une requête implique une collection en mémoire et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, la requête peut être exécutée en mémoire, en fonction de l’ordre dans lequel les deux collections sont spécifiées. Si la requête doit être exécutée dans la mémoire, les données de la table de base de données devront être extraites.  
@@ -29,7 +29,7 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crée une chaîne de connexion dans le fichier `app.config` du projet. Dans les projets de bibliothèque de classes, le fichier `app.config` n'est pas utilisé. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilise la chaîne de connexion fournie dans les fichiers au moment du design. La modification de la valeur dans `app.config` ne modifie pas la base de données à laquelle votre application se connecte.  
   
 ## <a name="cascade-delete"></a>Suppression en cascade  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend en charge ni ne reconnaît les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table comportant des contraintes sur cette suppression, vous devez effectuer l'une des actions suivantes :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge ni ne reconnaît les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table comportant des contraintes sur cette suppression, vous devez effectuer l'une des actions suivantes :  
   
 -   Définissez la règle `ON DELETE CASCADE` dans la contrainte de clé étrangère dans la base de données.  
   
@@ -72,4 +72,4 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 ## <a name="see-also"></a>Voir aussi
 
 - [Prise en charge du débogage](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Questions fréquemment posées](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Forum Aux Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

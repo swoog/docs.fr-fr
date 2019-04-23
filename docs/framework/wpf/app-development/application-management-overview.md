@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100078"
 ---
 # <a name="application-management-overview"></a>Vue d'ensemble de la gestion d'applications
@@ -105,7 +105,7 @@ Toutes les applications tendent à partager un jeu de fonctionnalités commun qu
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtention de l’application actuelle  
- Étant donné que les fonctionnalités de la <xref:System.Windows.Application> classe sont partagés dans une application, il peut y avoir qu’une seule instance de la <xref:System.Windows.Application> classe par <xref:System.AppDomain>. Pour cela, appliquer la <xref:System.Windows.Application> classe est implémentée comme une classe singleton (consultez [implémentation de Singleton en C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), qui crée une seule instance d’elle-même et fournit un accès partagé à avec le `static`<xref:System.Windows.Application.Current%2A> propriété.  
+ Étant donné que les fonctionnalités de la <xref:System.Windows.Application> classe sont partagés dans une application, il peut y avoir qu’une seule instance de la <xref:System.Windows.Application> classe par <xref:System.AppDomain>. Pour cela, appliquer la <xref:System.Windows.Application> classe est implémentée comme une classe singleton (consultez [implémentation de Singleton en c#](https://go.microsoft.com/fwlink/?LinkId=100567)), qui crée une seule instance d’elle-même et fournit un accès partagé à avec le `static` <xref:System.Windows.Application.Current%2A> propriété.  
   
  Le code suivant montre comment acquérir une référence à la <xref:System.Windows.Application> objet actif <xref:System.AppDomain>.  
   
@@ -358,8 +358,8 @@ Toutes les applications tendent à partager un jeu de fonctionnalités commun qu
 
 - <xref:System.Windows.Application>
 - [Vue d'ensemble des fenêtres WPF](wpf-windows-overview.md)
-- [Vue d'ensemble de la navigation](navigation-overview.md)
-- [Fichiers de ressources, de contenu et de données d'une application WPF](wpf-application-resource-content-and-data-files.md)
+- [Vue d’ensemble de la navigation](navigation-overview.md)
+- [Fichiers de ressources, de contenu et de données d’une application WPF](wpf-application-resource-content-and-data-files.md)
 - [URI à en-tête pack dans WPF](pack-uris-in-wpf.md)
-- [Modèle d’application : Rubriques Comment](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [Développement de l'application](index.md)
+- [Modèle d’application : Rubriques de procédures](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Développement de l’application](index.md)

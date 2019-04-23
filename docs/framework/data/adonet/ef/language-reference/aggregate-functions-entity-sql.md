@@ -3,14 +3,14 @@ title: Fonctions d'agrégation (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104921"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Fonctions d'agrégation (Entity SQL)
-Un agrégat est une construction de langage qui condense une collection en un scalaire dans le cadre d'une opération de groupe. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] agrégats se présentent sous deux formes :  
+Un agrégat est une construction de langage qui condense une collection en un scalaire dans le cadre d'une opération de groupe. Les agrégats [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se présentent sous deux formes :  
   
 -   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctions de collection qui peuvent être utilisées n’importe où dans une expression. Cela inclut l'utilisation de fonctions d'agrégation dans les projections et les prédicats qui agissent sur les collections. Dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la spécification des agrégats s’effectue de préférence par fonctions de collection.  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097575"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notification de modifications dans la liaison de données Windows Forms
@@ -37,6 +37,6 @@ Un des concepts plus importants de la liaison de données Windows Forms est *not
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Liaison de données Windows Forms](windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](windows-forms-data-binding.md)
 - [Sources de données prises en charge par les Windows Forms](data-sources-supported-by-windows-forms.md)
 - [Liaison de données et Windows Forms](data-binding-and-windows-forms.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097250"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implémentation de la logique métier (LINQ to SQL)
@@ -177,9 +177,9 @@ partial class Customer
   
  Pour plus d'informations sur l'ajout de la logique métier à votre application à l'aide des méthodes partielles, consultez les rubriques suivantes :  
   
- [Procédure : Ajouter une validation à des classes d’entité](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Guide pratique pour ajouter une validation à des classes d’entité](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Procédure pas à pas : personnalisation du comportement d’insertion, de mise à jour et de suppression de classes d’entité](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Procédure pas à pas : Personnaliser l’insertion, mettre à jour et supprimer le comportement de classes d’entités](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
  [Procédure pas à pas : Ajout d’une Validation aux Classes d’entité](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   

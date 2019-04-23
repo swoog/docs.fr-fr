@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103439"
 ---
 # <a name="double-buffered-graphics"></a>Graphiques mis deux fois en mémoire tampon
@@ -37,7 +37,7 @@ Le scintillement est un problème courant lors de la programmation de graphiques
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Procédure : afficher manuellement les graphismes mis en mémoire tampon](how-to-manually-render-buffered-graphics.md)
-- [Procédure : réduire le scintillement des graphismes avec double mise en mémoire tampon pour les formulaires et contrôles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Procédure : gérer manuellement les graphismes mis en mémoire tampon](how-to-manually-manage-buffered-graphics.md)
-- [Graphiques et dessins dans les Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Guide pratique pour Restituer manuellement des graphiques mis en mémoire tampon](how-to-manually-render-buffered-graphics.md)
+- [Guide pratique pour Réduire le scintillement des graphiques avec Double mise en tampon pour les formulaires et contrôles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Guide pratique pour Gérer manuellement des graphiques mis en mémoire tampon](how-to-manually-manage-buffered-graphics.md)
+- [Graphiques et dessins dans Windows Forms](graphics-and-drawing-in-windows-forms.md)

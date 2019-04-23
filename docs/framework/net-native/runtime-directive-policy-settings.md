@@ -5,10 +5,10 @@ ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098232"
 ---
 # <a name="runtime-directive-policy-settings"></a>Paramètres de stratégie de directive runtime
@@ -24,11 +24,11 @@ ms.locfileid: "59098232"
   
 -   Les types de stratégie de réflexion déterminent les métadonnées mises à disposition au moment de l'exécution pour la réflexion :  
   
-    -   `Activate` contrôle l’accès runtime aux constructeurs, pour permettre l’activation d’instances.  
+    -   `Activate` contrôle l'accès aux constructeurs, pour permettre l'activation d'instances au moment de l'exécution.  
   
-    -   `Browse` demande d’informations sur les contrôles des éléments de programme.  
+    -   `Browse` contrôle la demande d'informations sur les éléments de programme.  
   
-    -   `Dynamic` contrôle l’accès à tous les types et membres pour activer dynamic runtime de programmation.  
+    -   `Dynamic` contrôle l'accès à tous les types et membres au moment de l'exécution pour autoriser la programmation dynamique.  
   
      Le tableau suivant répertorie les types de stratégie de réflexion et les éléments de programme avec lesquels ils peuvent être utilisés.  
   
@@ -37,15 +37,15 @@ ms.locfileid: "59098232"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
     |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -53,13 +53,13 @@ ms.locfileid: "59098232"
   
 -   Les types de stratégie de sérialisation déterminent les métadonnées mises à disposition au moment de l’exécution pour la sérialisation et la désérialisation :  
   
-    -   `Serialize` contrôle l’accès runtime aux constructeurs, champs et propriétés, pour permettre aux instances de type d’être sérialisées par des bibliothèques tierces comme le sérialiseur JSON Newtonsoft.  
+    -   `Serialize` contrôle l'accès au moment de l'exécution aux constructeurs, champs et propriétés, pour permettre la sérialisation des instances de types par des bibliothèques tierces comme le sérialiseur JSON Newtonsoft.  
   
-    -   `DataContractSerializer` contrôle d’accès d’exécution aux constructeurs, champs et propriétés, pour permettre aux instances de type doit être sérialisé par la <xref:System.Runtime.Serialization.DataContractSerializer> classe.  
+    -   `DataContractSerializer` contrôle l'accès aux constructeurs, aux champs et aux propriétés au moment de l'exécution, pour permettre aux instances de type d'être sérialisées par la classe <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
-    -   `DataContractJsonSerializer` contrôle d’accès d’exécution aux constructeurs, champs et propriétés, pour permettre aux instances de type doit être sérialisé par la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe.  
+    -   `DataContractJsonSerializer` contrôle l'accès aux constructeurs, aux champs et aux propriétés au moment de l'exécution, pour permettre aux instances de type d'être sérialisées par la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
-    -   `XmlSerializer` contrôle d’accès d’exécution aux constructeurs, champs et propriétés, pour permettre aux instances de type doit être sérialisé par la <xref:System.Xml.Serialization.XmlSerializer> classe.  
+    -   `XmlSerializer` contrôle l'accès aux constructeurs, aux champs et aux propriétés au moment de l'exécution, pour permettre aux instances de type d'être sérialisées par la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
      Le tableau suivant répertorie les types de stratégie de sérialisation et les éléments de programme avec lesquels ils peuvent être utilisés.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "59098232"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
     |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
@@ -84,11 +84,11 @@ ms.locfileid: "59098232"
   
 -   Les types de stratégie d'interopérabilité déterminent les métadonnées mises à disposition au moment de l'exécution pour passer des types de référence, des types de valeur et des pointeurs de fonction à COM et Windows Runtime :  
   
-    -   `MarshalObject` contrôle le marshaling natif vers COM et Windows Runtime pour les types référence.  
+    -   `MarshalObject` contrôle le marshaling natif vers COM et Windows Runtime pour les types de référence.  
   
-    -   `MarshalDelegate` contrôle le marshaling natif de types de délégués comme pointeurs de fonction.  
+    -   `MarshalDelegate` contrôle le marshaling natif de types de délégué en tant que pointeurs de fonction.  
   
-    -   `MarshalStructure` contrôle le marshaling natif vers COM et Windows Runtime pour les types valeur.  
+    -   `MarshalStructure` contrôle le marshaling natif vers COM et Windows Runtime pour les types de valeur.  
   
      Le tableau suivant répertorie les types de stratégie d'interopérabilité et les éléments de programme avec lesquels ils peuvent être utilisés.  
   
@@ -97,15 +97,15 @@ ms.locfileid: "59098232"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Événement >](../../../docs/framework/net-native/event-element-net-native.md)||||  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
     |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Méthode >](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Propriété >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -114,10 +114,10 @@ ms.locfileid: "59098232"
 ## <a name="policy-settings"></a>Paramètres de stratégie  
  Chaque type de stratégie peut être défini sur l'une des valeurs répertoriées dans le tableau suivant. Notez que les éléments qui représentent les membres de type ne prennent pas en charge le même jeu de paramètres de stratégie que les autres éléments.  
   
-|Paramètre de stratégie|Description|`Assembly`, `Namespace`, `Type`, et `TypeInstantiation` éléments|`Event`, `Field`, `Method`, `MethodInstantiation`, et `Property` éléments|  
+|Paramètre de stratégie|Description|Éléments `Assembly`, `Namespace`, `Type` et `TypeInstantiation`|Éléments `Event`, `Field`, `Method`, `MethodInstantiation` et `Property`|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Active la stratégie pour tous les types et membres non supprimés par la chaîne d'outils .NET Native.|✓||  
-|`Auto`|Spécifie que la stratégie par défaut doit être utilisée pour le type de stratégie pour cet élément de programme. Cela revient à omettre une stratégie pour ce type de stratégie. `Auto` est généralement utilisé pour indiquer que la stratégie est héritée d’un élément parent.|✓|✓|  
+|`Auto`|Spécifie que la stratégie par défaut doit être utilisée pour le type de stratégie pour cet élément de programme. Cela revient à omettre une stratégie pour ce type de stratégie. `Auto` sert généralement à indiquer que la stratégie est héritée d'un élément parent.|✓|✓|  
 |`Excluded`|Spécifie que la stratégie est désactivée pour un élément de programme particulier. Par exemple, la directive runtime :<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> indique que les métadonnées pour la classe `BusinessClasses.Person` ne sont pas disponibles soit pour parcourir des objets `Person`, soit pour les instancier et modifier dynamiquement.|✓|✓|  
 |`Included`|Active une stratégie si les métadonnées pour le type parent sont disponibles.||✓|  
 |`Public`|Active la stratégie pour les types ou membres publics, sauf si la chaîne d'outils détermine que le type ou membre n'est pas nécessaire et donc le supprime. Ce paramètre est différent de `Required Public`, qui garantit que les métadonnées pour les membres et types publics sont toujours disponibles, même si la chaîne d'outils détermine qu'elles sont superflues.|✓||  

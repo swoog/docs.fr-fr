@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
 ms.openlocfilehash: 3bd7934cef03df391c1871b8499f911a023d7d3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097588"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Exemples de syntaxe d’expression de requête : Projection (LINQ to DataSet)
@@ -63,6 +63,6 @@ Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:Sys
 ## <a name="see-also"></a>Voir aussi
 
 - [Chargement de données dans un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemples de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Présentation des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Exemples LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Vue d’ensemble des opérateurs de requête standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Vue d’ensemble des opérateurs de requête standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

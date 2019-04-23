@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
 ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105324"
 ---
 # <a name="toolbar-overview"></a>Vue d'ensemble de ToolBar
@@ -43,5 +43,5 @@ ms.locfileid: "59105324"
 
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
-- [Donner un style aux contrôles d’une barre d’outils](how-to-style-controls-on-a-toolbar.md)
+- [Donner un style aux contrôles d'une barre d'outils](how-to-style-controls-on-a-toolbar.md)
 - [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

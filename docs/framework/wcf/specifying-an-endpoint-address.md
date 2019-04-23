@@ -8,10 +8,10 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097524"
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
@@ -84,5 +84,5 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Vue d'ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Hébergement](../../../docs/framework/wcf/feature-details/hosting.md)

@@ -12,10 +12,10 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097975"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualification des types .NET en vue d'une interopérabilité
@@ -50,7 +50,7 @@ Si vous envisagez d’exposer les types d’un assembly à des applications COM
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Exposition de composants .NET Framework à COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Présentation de l'interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
-- [Application d'attributs d'interopérabilité](../../../docs/framework/interop/applying-interop-attributes.md)
+- [Exposition de composants .NET Framework à COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Application d’attributs d’interopérabilité](../../../docs/framework/interop/applying-interop-attributes.md)
 - [Empaquetage d'un assembly pour COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

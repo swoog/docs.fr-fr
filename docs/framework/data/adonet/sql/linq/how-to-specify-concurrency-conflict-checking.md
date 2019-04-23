@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098973"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>Procédure : Spécifier la vérification de conflits d’accès concurrentiel
@@ -24,4 +24,4 @@ Vous pouvez spécifier les colonnes de la base de données qui feront l'objet d'
 ## <a name="see-also"></a>Voir aussi
 
 - [Modèle objet LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Procédure : Personnaliser des classes d’entité à l’aide de l’éditeur de code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Guide pratique pour Personnaliser des Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

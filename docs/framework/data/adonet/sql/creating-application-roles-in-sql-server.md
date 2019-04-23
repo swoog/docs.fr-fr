@@ -3,10 +3,10 @@ title: Création de rôles d'applications dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100369"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Création de rôles d'applications dans SQL Server
@@ -56,11 +56,11 @@ Les rôles d'application constituent un moyen d'affecter des autorisations à un
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Rôles d'application](/sql/relational-databases/security/authentication-access/application-roles)|Décrit comment créer et utiliser des rôles d'application dans SQL Server 2008.|  
+|[Rôles d’application](/sql/relational-databases/security/authentication-access/application-roles)|Décrit comment créer et utiliser des rôles d'application dans SQL Server 2008.|  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Vue d'ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Vue d’ensemble de la sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

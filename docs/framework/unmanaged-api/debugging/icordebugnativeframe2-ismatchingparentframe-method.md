@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a553f2cbac6110e82803e6d0dd872cfaa15d773
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099922"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame, méthode
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|L’état parent a été retourné avec succès.|  
 |E_FAIL|L’état de parent n’a pas pu être retourné.|  
-|E_INVALIDARG|`pPotentialParentFrame` ou `pIsParent` a la valeur null.|  
+|E_INVALIDARG|`pPotentialParentFrame` ou `pIsParent` est null.|  
   
 ## <a name="exceptions"></a>Exceptions  
   
@@ -63,7 +63,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions de .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 

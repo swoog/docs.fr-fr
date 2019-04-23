@@ -3,10 +3,10 @@ title: Datasets typés
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098649"
 ---
 # <a name="typed-datasets"></a>Datasets typés
@@ -17,10 +17,10 @@ En plus d'un accès par liaison tardive aux valeurs via des variables faiblement
  En outre, fortement typée **DataSet** donne accès aux valeurs avec le type approprié au moment de la compilation. Avec fortement typé **DataSet**, interception des erreurs d’incompatibilité de type lorsque le code est compilé et non au moment de l’exécution.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Génération de datasets fortement typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [Génération de DataSets fortement typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Décrit comment créer et utiliser fortement typé **DataSet**.  
   
- [Annotation de DataSet typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [Annotation de DataSets typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Explique comment annoter le schéma XML Schema definition language (XSD) permet de générer un fortement typée **DataSet**afin de donner aux **DataSet** noms conviviaux d’éléments sans modifier le schéma sous-jacent.  
   
 ## <a name="see-also"></a>Voir aussi

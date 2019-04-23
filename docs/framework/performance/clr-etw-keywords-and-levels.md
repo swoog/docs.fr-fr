@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105740"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Niveaux et mots clés ETW du CLR
@@ -95,12 +95,12 @@ ms.locfileid: "59105740"
   
 |Mots clés et indicateurs|Domaine d'application, assembly, événements DCStart/DCEnd de module|Événements DCStart/DCEnd de méthode (y compris les événements de méthode dynamique)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` événements.|Aucun.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` événements.|Aucun.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|`DCStart` événements.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|`DCEnd` événements.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|`DCStart` événements.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|`DCEnd` événements.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Événements`DCStart` .|Aucun.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Événements`DCEnd` .|Aucun.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|Événements`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|Événements`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Aucun.|Événements`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Aucun.|Événements`DCEnd` .|  
   
  [Retour au début](#top)  
   

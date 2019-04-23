@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105849"
 ---
 # <a name="reflection-and-net-native"></a>Réflexion et .NET Native
@@ -27,7 +27,7 @@ Dans le .NET Framework, le développement managé prend en charge la métaprogra
   
  Les rubriques suivantes fournissent la documentation conceptuelle et de référence qui vous permet de prendre en charge la réflexion et la sérialisation dans vos applications :  
   
--   [API qui s'appuient sur la réflexion](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [API qui s’appuient sur la réflexion](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
 -   [Informations de référence sur les API de réflexion](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
@@ -36,4 +36,4 @@ Dans le .NET Framework, le développement managé prend en charge la métaprogra
 ## <a name="see-also"></a>Voir aussi
 
 - [Compilation d'applications avec .NET Native](../../../docs/framework/net-native/index.md)
-- [Compilation et .NET natif](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native et compilation](../../../docs/framework/net-native/net-native-and-compilation.md)

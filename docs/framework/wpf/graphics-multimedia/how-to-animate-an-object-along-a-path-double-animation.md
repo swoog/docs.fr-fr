@@ -9,10 +9,10 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101443"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Procédure : Animer un objet sur un tracé (animation double)
@@ -36,5 +36,5 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Media.Animation.Doub
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de l'animation](animation-overview.md)
-- [Rubriques "Comment" relatives aux animations de tracés](path-animation-how-to-topics.md)
+- [Vue d’ensemble de l’animation](animation-overview.md)
+- [Guides pratiques relatifs aux animations de tracés](path-animation-how-to-topics.md)

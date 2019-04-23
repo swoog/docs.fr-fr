@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101291"
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
@@ -32,7 +32,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
   
  L'écriture dans le journal Security requiert le privilège `SeAuditPrivilege`. Par défaut, seuls les comptes Système local et Service réseau possèdent ce privilège. La gestion des fonctions du journal Security `read` et `delete` requièrent le privilège `SeSecurityPrivilege`. Par défaut, seuls les administrateurs possèdent ce privilège.  
   
- En revanche, les utilisateurs authentifiés peuvent lire et écrire dans le journal des applications. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] écrit les événements dans le journal des applications d’audit par défaut. Le journal peut également contenir des informations personnelles accessibles à tous les utilisateurs authentifiés.  
+ En revanche, les utilisateurs authentifiés peuvent lire et écrire dans le journal des applications. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] écrit par défaut les événements d'audit dans le journal des applications. Le journal peut également contenir des informations personnelles accessibles à tous les utilisateurs authentifiés.  
   
 ## <a name="suppressing-audit-failures"></a>Suppression des échecs d'audit  
  Une autre option pendant l'audit permet de déterminer s'il faut supprimer les échecs d'audit. Par défaut, un échec d'audit n'affecte pas une application. Toutefois, si cela s'avère nécessaire, vous pouvez affecter `false` à l'option, ce qui provoque la levée d'une exception.  
@@ -88,7 +88,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
 |Système|Journal Application|Journal Security|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ou version ultérieure|Prise en charge|Non pris en charge|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)]|Prise en charge|Contexte de thread doit posséder `SeAuditPrivilege`|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)]|Prise en charge|Le contexte de thread doit posséder `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Autres facteurs  
  Outre le système d'exploitation, le tableau suivant décrit les autres paramètres qui contrôlent l'activation de l'enregistrement.  
@@ -102,9 +102,9 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Procédure : auditer des événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Guide pratique pour Auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

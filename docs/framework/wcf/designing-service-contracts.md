@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102737"
 ---
 # <a name="designing-service-contracts"></a>Conception de contrats de service
@@ -271,9 +271,9 @@ End Interface
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure : créer un contrat de demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Procédure : créer un contrat unidirectionnel](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Procédure : créer un contrat duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Guide pratique pour Créer un contrat demande-réponse](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Guide pratique pour Créer un contrat unidirectionnel](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Guide pratique pour Créer un contrat Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Spécification du transfert de données dans des contrats de service](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Spécification et gestion des erreurs dans les contrats et les services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Utilisation de sessions](../../../docs/framework/wcf/using-sessions.md)

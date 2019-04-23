@@ -3,10 +3,10 @@ title: DataSets, DataTables et DataViews
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105727"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables et DataViews
@@ -23,10 +23,10 @@ L'objet <xref:System.Data.DataSet> ADO.NET est une représentation de données r
  Un objet <xref:System.Data.DataSet> fortement typé peut aussi être transporté au moyen d’un service web XML. Le design de l’objet <xref:System.Data.DataSet> le rend idéal pour le transport de données à l’aide des services web XML. Pour une vue d’ensemble des services web XML, consultez [Vue d’ensemble des services web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Pour obtenir un exemple d’utilisation d’un <xref:System.Data.DataSet> à partir d’un service web XML, consultez [Consommation d’un DataSet à partir d’un service web XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d'un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
+ [Création d’un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
  Décrit la syntaxe permettant de créer une instance d'un objet <xref:System.Data.DataSet>.  
   
- [Ajout d'un nouveau DataTable à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-a-datatable-to-a-dataset.md)  
+ [Ajout d’un DataTable à un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-a-datatable-to-a-dataset.md)  
  Explique comment créer et ajouter des tables et des colonnes à un objet <xref:System.Data.DataSet>.  
   
  [Ajout de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
@@ -63,16 +63,16 @@ L'objet <xref:System.Data.DataSet> ADO.NET est une représentation de données r
  Explique comment créer un service web XML qui utilise un <xref:System.Data.DataSet> pour le transport des données.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Nouveautés dans ADO.NET](../../../../../docs/framework/data/adonet/whats-new.md)  
+ [Nouveautés d’ADO.NET](../../../../../docs/framework/data/adonet/whats-new.md)  
  Introduit des fonctionnalités nouvelles dans ADO.NET.  
   
- [Vue d'ensemble d'ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Propose une introduction à la conception et aux composants de la technologie ADO.NET.  
   
- [Remplissage d'un DataSet à partir d'un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [Remplissage d’un DataSet à partir d’un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Explique comment charger un **DataSet** avec des données provenant d’une source de données.  
   
- [Mise à jour des sources de données avec les DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Mise à jour de sources de données avec des DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Explique comment répercuter à la source de données les modifications apportées aux données d’un **DataSet**.  
   
  [Ajout de contraintes existantes à un DataSet](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  

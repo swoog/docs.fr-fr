@@ -5,10 +5,10 @@ helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 ms.openlocfilehash: 95dacf3ef975be1ddd56db747936cca35db50625
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099636"
 ---
 # <a name="extending-security"></a>Extension de la sécurité
@@ -25,16 +25,16 @@ Pour prendre en charge de nouveaux types de revendications et jetons personnalis
  [Autorisation personnalisée](../../../../docs/framework/wcf/extending/custom-authorization.md)  
  Explique comment implémenter une autorisation personnalisée.  
   
- [Substitution de l'identité d'un service pour l'authentification](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ [Substitution de l’identité d’un service pour l’authentification](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  Décrit comment remplacer l'identité d'un service pour l'authentification.  
   
- [Procédure : créer un vérificateur d’identité du client personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Guide pratique pour Créer un vérificateur d’identité Client personnalisés](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  Montre comment valider une identité de point de terminaison personnalisée.  
   
- [Procédure : utiliser des certificats X.509 distincts pour les signatures et le chiffrement](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ [Guide pratique pour Utiliser des certificats X.509 distincts pour la signature et chiffrement](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  Les messages sont généralement signés et chiffrés à l'aide d'un certificat unique. Cette rubrique explique comment deux certificats peuvent être utilisés, s'ils sont requis.  
   
- [Procédure : remplacer le fournisseur de services de chiffrement par la clé privée d’un certificat X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [Guide pratique pour Remplacer le fournisseur de services de chiffrement par clé privée d’un certificat X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  Explique comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur dans l’infrastructure Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Référence  
@@ -57,4 +57,4 @@ Pour prendre en charge de nouveaux types de revendications et jetons personnalis
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)

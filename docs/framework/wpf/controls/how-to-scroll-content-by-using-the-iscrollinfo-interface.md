@@ -10,10 +10,10 @@ helpviewer_keywords:
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
 ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098544"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Procédure : Faire défiler le contenu à l’aide de l’interface IScrollInfo
@@ -34,6 +34,6 @@ Cet exemple montre comment faire défiler le contenu à l’aide de la <xref:Sys
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - <xref:System.Windows.Controls.StackPanel>
-- [Vue d'ensemble de ScrollViewer](scrollviewer-overview.md)
-- [Rubriques Comment](scrollviewer-how-to-topics.md)
-- [Vue d'ensemble de Panel](panels-overview.md)
+- [Vue d’ensemble de ScrollViewer](scrollviewer-overview.md)
+- [Rubriques de guide pratique](scrollviewer-how-to-topics.md)
+- [Vue d’ensemble de Panel](panels-overview.md)

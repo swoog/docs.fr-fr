@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104103"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress Structure
@@ -47,7 +47,7 @@ struct DacpGetModuleAddress
 
 | Méthode                                                                                               | Description                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [Demande](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Exécute une requête pour remplir la structure à partir de la structure de runtime donné. |
+| [Requête](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Exécute une requête pour remplir la structure à partir de la structure de runtime donné. |
 
 ## <a name="remarks"></a>Notes
 
@@ -57,7 +57,7 @@ Cette structure se trouve au sein du runtime et n’est pas exposée par le biai
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  
 **Bibliothèque :** Aucun.  
-**Versions de .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Voir aussi
 

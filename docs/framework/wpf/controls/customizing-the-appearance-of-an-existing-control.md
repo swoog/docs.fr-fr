@@ -13,10 +13,10 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098960"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personnalisation de l'apparence d'un contrôle existant en créant un ControlTemplate
@@ -256,10 +256,10 @@ Bouton qui utilise un modèle de contrôle personnalisé dans l’état enfoncé
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Exemple complet  
- L’exemple suivant montre l’ensemble <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> qui est décrite dans cette rubrique.  
+ L’exemple suivant montre l’ensemble <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> qui est décrite dans cette rubrique.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Application d'un style et création de modèles](styling-and-templating.md)
+- [Application d’un style et création de modèles](styling-and-templating.md)

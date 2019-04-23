@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
 ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098635"
 ---
 # <a name="bindingsource-component-overview"></a>Vue d'ensemble du composant BindingSource
@@ -40,29 +40,29 @@ Le composant <xref:System.Windows.Forms.BindingSource> est conçu pour simplifie
   
 |Membre|Description|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> propriété|Obtient l'élément actuel de la source de données.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> propriété|Obtient ou définit la position actuelle dans la liste sous-jacente.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> propriété|Obtient la liste qui est l'évaluation de <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> n'est pas défini, retourne la liste spécifiée par <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> méthode|Insère un élément dans la liste à l'index spécifié.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> méthode|Supprime l'élément sélectionné de la liste.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> méthode|Applique des modifications en attente à la source de données sous-jacente.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> méthode|Annule l'opération de modification actuelle.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> méthode|Ajoute un nouvel élément à la liste sous-jacente. Si la source de données implémente <xref:System.ComponentModel.IBindingList> et retourne un élément à partir de l'événement <xref:System.Windows.Forms.BindingSource.AddingNew>, ajoute cet élément. Dans le cas contraire, la demande est passée à la méthode <xref:System.ComponentModel.IBindingList.AddNew%2A> de la liste. Si la liste sous-jacente n'est pas un <xref:System.ComponentModel.IBindingList>, l'élément est créé automatiquement via son constructeur public par défaut.|  
+|Propriété <xref:System.Windows.Forms.BindingSource.Current%2A>|Obtient l'élément actuel de la source de données.|  
+|Propriété <xref:System.Windows.Forms.BindingSource.Position%2A>|Obtient ou définit la position actuelle dans la liste sous-jacente.|  
+|Propriété <xref:System.Windows.Forms.BindingSource.List%2A>|Obtient la liste qui est l'évaluation de <xref:System.Windows.Forms.BindingSource.DataSource%2A> et <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Si <xref:System.Windows.Forms.BindingSource.DataMember%2A> n'est pas défini, retourne la liste spécifiée par <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|Méthode <xref:System.Windows.Forms.BindingSource.Insert%2A>|Insère un élément dans la liste à l'index spécifié.|  
+|Méthode <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Supprime l'élément sélectionné de la liste.|  
+|Méthode <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Applique des modifications en attente à la source de données sous-jacente.|  
+|Méthode <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Annule l'opération de modification actuelle.|  
+|Méthode <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Ajoute un nouvel élément à la liste sous-jacente. Si la source de données implémente <xref:System.ComponentModel.IBindingList> et retourne un élément à partir de l'événement <xref:System.Windows.Forms.BindingSource.AddingNew>, ajoute cet élément. Dans le cas contraire, la demande est passée à la méthode <xref:System.ComponentModel.IBindingList.AddNew%2A> de la liste. Si la liste sous-jacente n'est pas un <xref:System.ComponentModel.IBindingList>, l'élément est créé automatiquement via son constructeur public par défaut.|  
   
 ## <a name="sorting-and-filtering"></a>Tri et filtrage  
  En règle générale, vous devez travailler avec un affichage ordonné ou filtré de la source de données. Le tableau suivant montre les membres fournis par la source de données du composant <xref:System.Windows.Forms.BindingSource>.  
   
 |Membre|Description|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> propriété|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri. Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge le tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et les informations d'ordre de tri.|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> propriété|Si la source de données est un <xref:System.ComponentModel.IBindingListView>, obtient ou définit l'expression utilisée pour filtrer les lignes affichées.|  
+|Propriété <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri. Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge le tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et les informations d'ordre de tri.|  
+|Propriété <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingListView>, obtient ou définit l'expression utilisée pour filtrer les lignes affichées.|  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Architecture du composant BindingSource](bindingsource-component-architecture.md)
-- [Composant BindingSource](bindingsource-component.md)
+- [BindingSource, composant](bindingsource-component.md)
 - [BindingNavigator, contrôle](bindingnavigator-control-windows-forms.md)
-- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
+- [Liaison de données Windows Forms](../windows-forms-data-binding.md)
 - [Contrôles à utiliser dans les Windows Forms](controls-to-use-on-windows-forms.md)

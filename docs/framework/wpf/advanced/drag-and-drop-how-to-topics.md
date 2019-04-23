@@ -7,10 +7,10 @@ helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
 ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100169"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Rubriques "Comment" relatives au glisser-déplacer
@@ -20,7 +20,7 @@ Les exemples suivants montrent comment accomplir des tâches courantes à l’ai
  [Ouvrir un fichier qui est déplacé dans un contrôle RichTextBox](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
  [Créer un objet de données](how-to-create-a-data-object.md)  
  [Déterminer si un format de données est présent dans un objet de données](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [Lister les formats de données dans un objet de données](how-to-list-the-data-formats-in-a-data-object.md)  
+ [Répertorier les formats de données dans un objet de données](how-to-list-the-data-formats-in-a-data-object.md)  
  [Récupérer des données dans un format de données particulier](how-to-retrieve-data-in-a-particular-data-format.md)  
  [Stocker plusieurs formats de données dans un objet de données](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
