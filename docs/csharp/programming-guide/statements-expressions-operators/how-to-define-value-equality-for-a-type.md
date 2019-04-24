@@ -10,16 +10,16 @@ helpviewer_keywords:
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
 ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311472"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procédure : Définir une égalité de valeurs pour un type (Guide de programmation C#)
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  
   
-1. `x.Equals(x)` Retourne `true`. Il s’agit de la propriété réflexive.  
+1. `x.Equals(x)` retourne `true`. Il s’agit de la propriété réflexive.  
   
 2. `x.Equals(y)` retourne la même valeur que `y.Equals(x)`. Il s’agit de la propriété symétrique.  
   
@@ -27,7 +27,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
   
 4. Les appels successifs de `x.Equals(y)` retournent la même valeur tant que les objets référencés par x et y ne sont pas modifiés.  
   
-5. `x.Equals(null)` Retourne `false`. Toutefois, `null.Equals(null)` lève une exception. Il ne respecte pas la règle numéro deux ci-dessus.  
+5. `x.Equals(null)` retourne `false`. Toutefois, `null.Equals(null)` lève une exception. Il ne respecte pas la règle numéro deux ci-dessus.  
   
  Tout struct que vous définissez a déjà une implémentation par défaut de l’égalité des valeurs dont il hérite de la substitution <xref:System.ValueType?displayProperty=nameWithType> de la méthode <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Cette implémentation utilise la réflexion pour examiner tous les champs et propriétés du type. Bien que cette implémentation produise des résultats corrects, elle est relativement lente par rapport à une implémentation personnalisée que vous écrivez spécifiquement pour le type.  
   

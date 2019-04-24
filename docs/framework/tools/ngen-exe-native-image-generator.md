@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481260"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
@@ -163,7 +163,7 @@ Utilisez toujours un code indépendant du domaine lors du chargement du même as
 
 Dans cette section Notes :
 
-- [Génération d’images dans différents scénarios](#Scenarios)
+- [Génération d'images dans différents scénarios](#Scenarios)
 
 - [Détermination des cas d'utilisation des images natives](#WhenToUse)
 
@@ -189,7 +189,7 @@ Dans cette section Notes :
 
 - [Résolution des problèmes](#Troubleshooting)
 
-  - [visionneuse du journal de liaison d’assembly](#Fusion)
+  - [Visionneuse du journal de liaison d’assembly](#Fusion)
 
   - [Assistant Débogage managé JITCompilationStart](#MDA)
 
@@ -302,7 +302,7 @@ Les attributs <xref:System.Runtime.CompilerServices.DependencyAttribute> et <xre
 
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Spécification d’une indication sur la liaison d’une dépendance
 
-Appliquez <xref:System.Runtime.CompilerServices.DependencyAttribute> à un assembly pour indiquer la probabilité de chargement d'une dépendance spécifiée. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> indique que la liaison matérielle est adaptée, <xref:System.Runtime.CompilerServices.LoadHint.Default> qu’il faut utiliser la valeur par défaut de la dépendance et <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> que la liaison matérielle n’est pas adaptée.
+Appliquez <xref:System.Runtime.CompilerServices.DependencyAttribute> à un assembly pour indiquer la probabilité de chargement d'une dépendance spécifiée. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> indique que la liaison matérielle est appropriée, <xref:System.Runtime.CompilerServices.LoadHint.Default> indique que la valeur par défaut de la dépendance doit être utilisée et <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> indique que la liaison matérielle n'est pas appropriée.
 
 Le code suivant affiche les attributs d'un assembly qui possède deux dépendances. La première dépendance (Assembly1) est un candidat approprié pour la liaison matérielle et la deuxième (Assembly2) ne l'est pas.
 
@@ -536,7 +536,7 @@ ngen uninstall ClientApp /debug
 ```
 
 > [!NOTE]
-> Le fait de désinstaller les scénarios `/debug` n’a pas pour effet de désinstaller un scénario comportant à la fois `/profile` et `/debug.`
+> La désinstallation de scénarios `/debug` ne désinstalle pas un scénario qui inclut `/profile` et `/debug.`
 
 La commande suivante désinstalle tous les scénarios d'une version spécifique de `ClientApp.exe` :
 
@@ -610,7 +610,7 @@ ngen update /queue
 
 L'action `update` régénère toutes les images natives qui ont été invalidées, pas uniquement celles qui utilisent `MyComponent`.
 
-Si votre application se compose de nombreuses racines, vous pouvez contrôler la priorité des actions différées. Les commandes suivantes mettent en file d'attente l'installation de trois racines. `Assembly1` est installé en premier, sans durée d’inactivité. `Assembly2` est également installé sans durée d’inactivité, mais après toutes les actions de priorité 1. `Assembly3` est installé quand le service détecte que l’ordinateur est inactif.
+Si votre application se compose de nombreuses racines, vous pouvez contrôler la priorité des actions différées. Les commandes suivantes mettent en file d'attente l'installation de trois racines. `Assembly1` est installé en premier, sans attendre l'inactivité. `Assembly2` est également installé sans attendre l'inactivité, mais une fois que toutes les actions de priorité 1 sont terminées. `Assembly3` est installé quand le service détecte que l'ordinateur est inactif.
 
 ```
 ngen install Assembly1 /queue:1
@@ -637,6 +637,6 @@ Dans le .NET Framework version 2.0, la seule interaction avec le service d'imag
 ## <a name="see-also"></a>Voir aussi
 
 - [Outils](../../../docs/framework/tools/index.md)
-- [processus d'exécution managée](../../../docs/standard/managed-execution-process.md)
+- [Processus d'exécution managée](../../../docs/standard/managed-execution-process.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

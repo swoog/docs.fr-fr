@@ -17,10 +17,10 @@ ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299473"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procédure pas à pas : émission de code dans des scénarios de confiance partielle
@@ -169,7 +169,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La restriction est que la méthode dynamique hébergée anonymement peut accéder aux données privées seulement dans les assemblys avec des niveaux de confiance inférieurs ou égaux à celui de l’assembly émetteur. Par exemple, si la méthode dynamique s’exécute avec une confiance Internet, elle peut accéder aux données privées d’autres assemblys qui s’exécutent aussi avec la confiance Internet, mais elle ne peut pas accéder aux données privées des assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Les assemblys sont installés dans le Global Assembly Cache et sont toujours entièrement fiables.  
+     La restriction est que la méthode dynamique hébergée anonymement peut accéder aux données privées seulement dans les assemblys avec des niveaux de confiance inférieurs ou égaux à celui de l’assembly émetteur. Par exemple, si la méthode dynamique s’exécute avec une confiance Internet, elle peut accéder aux données privées d’autres assemblys qui s’exécutent aussi avec la confiance Internet, mais elle ne peut pas accéder aux données privées des assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Les assemblys [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sont installés dans le Global Assembly Cache et sont toujours totalement fiables.  
   
      Les méthodes dynamiques hébergées anonymement peuvent utiliser cette possibilité limitée d’ignorer les contrôles de visibilité JIT seulement si l’application hôte accorde <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La demande de cette autorisation est effectuée quand la méthode est appelée.  
   
@@ -213,5 +213,5 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Problèmes de sécurité dans l'émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Procédure : Exécuter du code partiellement fiable dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Problèmes de sécurité dans l’émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Guide pratique pour exécuter du code d’un niveau de confiance partiel dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

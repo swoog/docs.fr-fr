@@ -5,10 +5,10 @@ author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481229"
 ---
 # <a name="using-attributes-in-c"></a>Utiliser des attributs en C\#
@@ -74,7 +74,7 @@ Toutefois, vous ne pourrez pas utiliser ce constructeur avec une syntaxe d’att
 
 [!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-Le code ci-dessus provoque une erreur du compilateur du type : `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+L’exemple ci-dessus entraîne une erreur du compilateur, comme `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
 ## <a name="how-to-restrict-attribute-usage"></a>Comment limiter l’utilisation d’attributs
 
@@ -100,7 +100,7 @@ Lorsque vous créez une classe d’attributs, par défaut, C# vous permettra d�
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-Si vous tentez de placer l’attribut ci-dessus sur quelque chose qui n’est ni une classe ni un struct, vous obtiendrez une erreur du compilateur du type : `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+Si vous tentez de placer l’attribut ci-dessus sur quelque chose qui n’est pas une classe ou un struct, vous obtiendrez une erreur du compilateur, comme `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
@@ -114,7 +114,7 @@ Par exemple, vous pouvez utiliser la réflexion pour obtenir des informations su
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-Voici la sortie obtenue : `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+Cela imprimera quelque chose comme : `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
 Une fois que vous avez un objet `TypeInfo` (ou `MemberInfo`, `FieldInfo`, etc.), vous pouvez utiliser la méthode `GetCustomAttributes`. Cette opération renvoie une collection d’objets `Attribute`.
 Vous pouvez également utiliser `GetCustomAttribute` et spécifier un type d’attribut.

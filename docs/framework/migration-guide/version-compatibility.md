@@ -10,10 +10,10 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143648"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilité de versions dans le .NET Framework
@@ -70,5 +70,5 @@ La compatibilité descendante signifie qu'une application développée pour une 
 - [Nouveautés](../../../docs/framework/whats-new/index.md)
 - [Éléments obsolètes dans la bibliothèque de classes](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Compatibilité des applications](../../../docs/framework/migration-guide/application-compatibility.md)
-- [Politique de cycle de vie du support Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Politique de support pour Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
 - [Problèmes de migration de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

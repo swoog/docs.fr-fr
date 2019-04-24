@@ -13,10 +13,10 @@ ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186561"
 ---
 # <a name="setting-assembly-attributes"></a>Définition des attributs d'assembly
@@ -88,5 +88,5 @@ Les attributs d’assembly sont des valeurs qui fournissent des informations sur
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
-- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

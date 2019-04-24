@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345090"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Options du compilateur C#)
@@ -34,7 +34,7 @@ Cette option fournit un moyen pratique de signaler une erreur interne du compila
  **prompt**  
  Vous invite à envoyer un rapport dès qu'une erreur interne du compilateur se produit. **prompt** est la valeur par défaut quand vous compilez une application dans l’environnement de développement.  
   
- **file d'attente**  
+ **queue**  
  Met le rapport d’erreurs en file d’attente. Quand vous ouvrez une session avec des informations d’identification administratives, vous pouvez signaler toute défaillance qui s’est produite depuis votre dernière connexion. Vous ne serez pas invité à envoyer des rapports d’échecs plus d’une fois tous les trois jours. **queue** est la valeur par défaut quand vous compilez une application à partir de la ligne de commande.  
   
  **send**  

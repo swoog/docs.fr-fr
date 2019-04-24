@@ -25,10 +25,10 @@ ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327761"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procédure : extraire le jour de la semaine d’une date spécifique
@@ -87,9 +87,9 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
  Des langages spécifiques peuvent fournir des fonctionnalités similaires aux fonctionnalités offertes par le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ou complémentaires de celles-ci. Par exemple, Visual Basic comprend deux de ces fonctions :  
   
--   `Weekday`, qui retourne un nombre indiquant le jour de la semaine d’une certaine date. Il considère que la valeur ordinale du premier jour de la semaine est un, tandis que la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considère que cette valeur est égale à zéro.  
+-   `Weekday`, qui retourne un nombre qui indique le jour de la semaine d'une date particulière. Il considère que la valeur ordinale du premier jour de la semaine est un, tandis que la propriété <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considère que cette valeur est égale à zéro.  
   
--   `WeekdayName`, qui retourne, dans la culture actuelle, le nom du jour de la semaine correspondant à un certain numéro.  
+-   `WeekdayName`, qui retourne, dans la culture actuelle, le nom du jour de la semaine correspondant au nombre d'un jour de la semaine.  
   
  L'exemple suivant illustre l'utilisation des fonctions Visual Basic `Weekday` et `WeekdayName`.  
   
@@ -102,6 +102,6 @@ Le .NET Framework permet de déterminer facilement le jour ordinal de la semaine
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
