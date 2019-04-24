@@ -15,10 +15,10 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334053"
 ---
 # <a name="delay-signing-an-assembly"></a>Temporisation de signature d'un assembly
@@ -32,9 +32,9 @@ Une entreprise peut avoir une paire de clés protégées auxquelles les dévelop
   
 2. Annotez le code source de l’assembly avec deux attributs personnalisés de <xref:System.Reflection> :  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, qui passe le nom du fichier contenant la clé publique en paramètre à son constructeur.  
+    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, qui passe le nom du fichier contenant la clé publique en tant que paramètre à son constructeur.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, qui indique qu’un délai avant signature est utilisé en passant **true** en paramètre à son constructeur. Par exemple :  
+    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, qui indique l’utilisation de la temporisation de signature en passant **true** comme paramètre à son constructeur. Par exemple :  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
@@ -74,7 +74,7 @@ Une entreprise peut avoir une paire de clés protégées auxquelles les dévelop
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)
-- [Procédure : créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [Sn.exe (outil Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Sn.exe (outil Strong Name)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

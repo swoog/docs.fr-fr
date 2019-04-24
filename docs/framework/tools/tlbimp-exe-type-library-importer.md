@@ -13,10 +13,10 @@ ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200920"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer)
@@ -131,8 +131,8 @@ void SomeMethod(out bool x);
 - [Tlbexp.exe (exportateur de bibliothèques de types)](tlbexp-exe-type-library-exporter.md)
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](../interop/importing-a-type-library-as-an-assembly.md)
 - [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Ildasm.exe (Désassembleur IL)](ildasm-exe-il-disassembler.md)
-- [Sn.exe (outil Strong Name Tool)](sn-exe-strong-name-tool.md)
+- [Ildasm.exe (désassembleur IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (outil Strong Name)](sn-exe-strong-name-tool.md)
 - [Assemblys avec nom fort](../app-domains/strong-named-assemblies.md)
-- [Attributs permettant d’importer des bibliothèques de types dans des assemblys d’interopérabilité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
+- [Attributs d’importation de bibliothèques de types dans les assemblys d’interopérabilité](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Invites de commandes](developer-command-prompt-for-vs.md)

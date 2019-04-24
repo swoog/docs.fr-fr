@@ -3,14 +3,14 @@ title: Présentation des problèmes et exceptions de WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215012"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Présentation des problèmes et exceptions de WebRequest
-<xref:System.Net.WebRequest> et ses classes dérivées (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> et <xref:System.Net.FileWebRequest>) lèvent des exceptions pour signaler un état anormal. La résolution de ces problèmes n’est pas toujours facile.  
+<xref:System.Net.WebRequest> et ses classes dérivées (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> et <xref:System.Net.FileWebRequest>) lèvent des exceptions pour signaler une condition anormale. La résolution de ces problèmes n’est pas toujours facile.  
   
 ## <a name="solutions"></a>Solutions  
  La propriété <xref:System.Net.WebException.Status%2A> de <xref:System.Net.WebException> vous aide à déterminer le problème. Le tableau suivant répertorie différentes valeurs d’état et résolutions possibles.  

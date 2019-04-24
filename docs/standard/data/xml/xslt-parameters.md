@@ -9,10 +9,10 @@ ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306304"
 ---
 # <a name="xslt-parameters"></a>Paramètres XSLT
@@ -40,7 +40,7 @@ Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentL
   
  *Cela équivaut à une collection de nœuds contenant un seul nœud.  
   
- Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes. Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> Les types sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Si l'objet de paramètre n'est pas l'une des classes ci-dessus, il est converti selon les règles suivantes. Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. Les types <xref:System.Xml.XPath.IXPathNavigable> sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Tous les autres types provoquent une erreur.  
   

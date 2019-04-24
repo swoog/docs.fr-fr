@@ -17,10 +17,10 @@ ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330075"
 ---
 # <a name="how-to-view-assembly-contents"></a>Procédure : afficher le contenu d’un assembly
@@ -91,5 +91,5 @@ Vous pouvez utiliser [Ildasm.exe (IL Disassembler)](../../../docs/framework/tool
 ## <a name="see-also"></a>Voir aussi
 
 - [Domaines d’application et assemblys](application-domains.md#application-domains-and-assemblies)
-- [Rubriques Comment relatives aux domaines d'application et aux assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
-- [Ildasm.exe (Désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Rubriques Guide pratique relatives aux domaines d'application et aux assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Ildasm.exe (désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

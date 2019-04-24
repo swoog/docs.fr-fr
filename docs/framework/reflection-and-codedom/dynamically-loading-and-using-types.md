@@ -15,14 +15,14 @@ ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145117"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Chargement et utilisation dynamiques des types
-La réflexion fournit l’infrastructure utilisée par les compilateurs de langages tels que [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] et JScript pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permet d’utiliser la liaison tardive implicite dans le code ; le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour récupérer le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  
+La réflexion fournit l’infrastructure utilisée par les compilateurs de langages tels que [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] et JScript pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] vous permet d’utiliser la liaison tardive implicite dans votre code. Le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour obtenir le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  
   
  Dans l’exemple suivant, le compilateur Visual Basic utilise implicitement la réflexion pour appeler une méthode sur un objet dont le type n’est pas connu au moment de la compilation. Une classe **HelloWorld** a une méthode **PrintHello** qui imprime « Hello World » concaténé à du texte passé à la méthode **PrintHello**. La méthode **PrintHello** appelée dans cet exemple équivaut en fait à un <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>. Le code Visual Basic permet à la méthode **PrintHello** d’être appelée comme si le type de l’objet (helloObj) était connu au moment de la compilation (liaison anticipée) plutôt qu’au moment de l’exécution (liaison tardive).  
   
@@ -75,7 +75,7 @@ End Module
   
  S’il existe plusieurs membres dans l’ensemble disponible, toutes ces méthodes sont passées à **BindToMethod**, qui sélectionne la méthode appropriée et la retourne. Dans le cas n°2 de l’exemple de code, il existe deux méthodes nommées **PrintValue**. La méthode appropriée est sélectionnée par l’appel à **BindToMethod**.  
   
- <xref:System.Reflection.Binder.ChangeType%2A> effectue un forçage de type d’argument (conversion de type) qui convertit les arguments réels au type des arguments formels de la méthode sélectionnée. **ChangeType** est appelé pour chaque argument même si les types correspondent exactement.  
+ <xref:System.Reflection.Binder.ChangeType%2A> effectue une contrainte d’argument (conversion de type) qui convertit les arguments réels au type des arguments formels de la méthode sélectionnée. **ChangeType** est appelé pour chaque argument même si les types correspondent exactement.  
   
  Dans le cas n°3 de l’exemple de code, un argument réel de type **String** avec la valeur « 5,5 » est passé à une méthode avec un argument formel de type **Double**. Pour que l’appel réussisse, la valeur de chaîne « 5,5 » doit être convertie en valeur double. **ChangeType** effectue cette conversion.  
   
@@ -97,7 +97,7 @@ End Module
 |Single|Double|  
 |Type non référence|Type référence|  
   
- La classe <xref:System.Type> a des méthodes **Get** qui utilisent des paramètres de type **Binder** pour résoudre les références à un membre particulier. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> et <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> recherchent un certain membre du type actuel en fournissant ses informations de signature. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> et <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> sont rappelés pour sélectionner les informations de signature données des méthodes appropriées.  
+ La classe <xref:System.Type> a des méthodes **Get** qui utilisent des paramètres de type **Binder** pour résoudre les références à un membre particulier. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> et <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> recherchent un membre particulier du type actuel en fournissant les informations de signature pour ce membre. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> et <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> sont rappelés pour sélectionner les informations de signature données des méthodes appropriées.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,10 +3,10 @@ title: Débogage d’arborescences d’expression dans Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
 ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330404"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Débogage d’arborescences d’expression dans Visual Studio (C#)
@@ -25,13 +25,13 @@ Vous pouvez analyser la structure et le contenu d’arborescences d’expression
  Chaque type d’expression s’affiche dans le visualiseur, comme décrit dans les sections suivantes.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression> Les noms de variables s’affichent avec le symbole « $ » en préfixe.  
+ Les noms de variables <xref:System.Linq.Expressions.ParameterExpression> s’affichent avec le symbole "$" en préfixe.  
   
  Si un paramètre n’a pas de nom, un nom généré automatiquement lui est assigné, tel que `$var1` ou `$var2`.  
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
@@ -52,7 +52,7 @@ Vous pouvez analyser la structure et le contenu d’arborescences d’expression
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
@@ -62,19 +62,19 @@ Vous pouvez analyser la structure et le contenu d’arborescences d’expression
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression> Les objets s’affichent avec leurs types délégués.  
+ Les objets <xref:System.Linq.Expressions.LambdaExpression> sont affichés avec leurs types délégués.  
   
  Si une expression lambda n’a pas de nom, un nom généré automatiquement lui est assigné, tel que `#Lambda1` ou `#Lambda2`.  
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
@@ -88,7 +88,7 @@ Vous pouvez analyser la structure et le contenu d’arborescences d’expression
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
@@ -98,7 +98,7 @@ Vous pouvez analyser la structure et le contenu d’arborescences d’expression
   
 ### <a name="examples"></a>Exemples  
   
-|Expression|`DebugView` propriété|  
+|Expression|Propriété`DebugView` |  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  

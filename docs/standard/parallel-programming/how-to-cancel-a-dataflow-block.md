@@ -13,10 +13,10 @@ ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345194"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Procédure : annuler un bloc de dataflow
@@ -98,4 +98,4 @@ Ce document montre comment activer l’annulation dans votre application. Cet ex
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

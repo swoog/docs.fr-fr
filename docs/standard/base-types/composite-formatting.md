@@ -16,10 +16,10 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314007"
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
@@ -38,7 +38,7 @@ La fonctionnalité de mise en forme composite est prise en charge par les métho
   
 - Certaines surcharges de la méthode <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, qui écrivent la chaîne de résultat mise en forme dans un flux ou un fichier. Les classes dérivées de <xref:System.IO.TextWriter>, telles que <xref:System.IO.StreamWriter> et <xref:System.Web.UI.HtmlTextWriter>, partagent également ces fonctionnalités.  
   
-- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui génère un message mis en forme pour les écouteurs de trace.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui génère un message mis en forme pour les écouteurs Trace.  
   
 - Les méthodes <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> qui génèrent des messages mis en forme pour les écouteurs Trace.  
   
@@ -89,11 +89,11 @@ La fonctionnalité de mise en forme composite est prise en charge par les métho
   
 |Type ou catégorie de type|Voir|  
 |---------------------------|---------|  
-|Types de date et d'heure (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Types d'énumération (tous les types dérivés de <xref:System.Enum?displayProperty=nameWithType>)|[Chaînes de format d'énumération](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Types numériques (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Types de date et d'heure (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Types d'énumération (tous les types dérivés de <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Types numériques (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[Chaînes de format TimeSpan standard.](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[Chaînes de format TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Accolades d'échappement  
  Les accolades ouvrantes et fermantes sont interprétées comme le début et la fin d'un élément de format. Par conséquent, vous devez utiliser une séquence d'échappement pour afficher une accolade ouvrante ou fermante littérale. Spécifiez deux accolades ouvrantes (« {{ ») dans le texte fixe pour afficher une accolade ouvrante (« { ») ou deux accolades fermantes (« }} ») pour afficher une accolade fermante (« } »). Les accolades d'un élément de format sont interprétées séquentiellement dans l'ordre dans lequel elles sont rencontrées. L'interprétation des accolades imbriquées n'est pas prise en charge.  
@@ -169,7 +169,7 @@ La fonctionnalité de mise en forme composite est prise en charge par les métho
 - [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [Chaînes de format de date et d'heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Chaînes de format de date et d'heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Chaînes de format TimeSpan standard.](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Chaînes de format TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Chaînes de format d'énumération](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

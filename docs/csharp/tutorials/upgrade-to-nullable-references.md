@@ -4,10 +4,10 @@ description: Ce tutoriel avancé présente les types référence Nullable. Il ex
 ms.date: 02/19/2019
 ms.custom: mvc
 ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427290"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutoriel : Migrer du code existant avec des types de référence nullable
@@ -148,10 +148,10 @@ Vous devrez ajouter une instruction `using System.Linq` au début du fichier ég
 
 Cet ensemble de modifications met en évidence une attention particulière lors de la mise à jour de code qui inclut des instanciations génériques. La liste et les éléments dans la liste sont de type non nullable. L’un ou les deux peuvent être de type nullable. Toutes les déclarations suivantes sont autorisées :
 
-- `List<NewsStoryViewModel>`: liste non Nullable de modèles d’affichage non Nullable.
-- `List<NewsStoryViewModel?>`: liste non Nullable de modèles d’affichage Nullable.
-- `List<NewsStoryViewModel>?`: liste Nullable de modèles d’affichage non Nullable.
-- `List<NewsStoryViewModel?>?`: liste Nullable de modèles d’affichage Nullable.
+- `List<NewsStoryViewModel>` : liste non nullable de modèles d’affichage non nullable.
+- `List<NewsStoryViewModel?>` : liste non nullable de modèles d’affichage nullable.
+- `List<NewsStoryViewModel>?` : liste nullable de modèles d’affichage non nullable.
+- `List<NewsStoryViewModel?>?` : liste nullable de modèles d’affichage nullable.
 
 ## <a name="interfaces-with-external-code"></a>Interfaces avec du code externe
 
