@@ -3,10 +3,10 @@ title: PII Security Lockdown
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326643"
 ---
 # <a name="pii-security-lockdown"></a>PII Security Lockdown
@@ -126,7 +126,7 @@ Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la s�
   
 -   [Création d’Applications ASP.NET sécurisées : L’authentification, autorisation et Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Procédure : Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Guide pratique pour Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -144,4 +144,4 @@ Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la s�
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exemples d'analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
