@@ -3,10 +3,10 @@ title: 'Procédure : Étendre la procédure pas à pas async à l’aide de Tas
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
 ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297952"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Procédure : Étendre la procédure pas à pas async à l’aide de Task.WhenAll (C#)
@@ -74,7 +74,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4. Appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection sont effectuées.  
+4. Appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection de tâches sont terminées.  
   
      Dans l’exemple suivant, l’expression `await` attend l’achèvement de la tâche unique retournée par `WhenAll`. L’expression correspond à un tableau d’entiers, où chaque entier est la longueur d’un site web téléchargé. Ajoutez le code suivant à `SumPageSizesAsync`, juste après le code ajouté à l’étape précédente.  
   
@@ -149,7 +149,7 @@ Vous pouvez améliorer les performances de la solution async dans [Procédure pa
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4. Ensuite, appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection sont effectuées.  
+4. Ensuite, appliquez `Task.WhenAll` à la collection de tâches, `downloadTasks`. `Task.WhenAll` retourne une tâche unique qui se termine quand toutes les tâches de la collection de tâches sont terminées.  
   
      Dans l’exemple suivant, l’expression `await` attend l’achèvement de la tâche unique retournée par `WhenAll`. Une fois cette tâche achevée, l’expression `await` correspond à un tableau d’entiers, où chaque entier est la longueur d’un site web téléchargé. Ajoutez le code suivant à `SumPageSizesAsync`, juste après le code ajouté à l’étape précédente.  
   
@@ -437,4 +437,4 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
-- [Procédure pas à pas : Accéder au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

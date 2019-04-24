@@ -9,10 +9,10 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310562"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection et niveau de performance
@@ -73,15 +73,15 @@ ms.locfileid: "59310562"
   
 -   [Le processus utilise trop de mémoire](#Issue_TooMuchMemory)  
   
--   [Le récupérateur de mémoire ne récupère pas les objets assez vite](#Issue_NotFastEnough)  
+-   [Le garbage collector ne récupère pas les objets suffisamment rapidement](#Issue_NotFastEnough)  
   
 -   [Le tas managé est trop fragmenté](#Issue_Fragmentation)  
   
--   [Les pauses du nettoyage de la mémoire sont trop longues](#Issue_LongPauses)  
+-   [Les pauses du garbage collection sont trop longues](#Issue_LongPauses)  
   
 -   [La génération 0 est trop volumineuse](#Issue_Gen0)  
   
--   [L’utilisation du processeur pendant le nettoyage de la mémoire est trop élevée](#Issue_HighCPU)  
+-   [L’utilisation du processeur pendant un garbage collection est trop élevée](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problème : Une exception de mémoire insuffisante est levée  
@@ -95,7 +95,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez si l’exception de mémoire insuffisante est gérée.](#OOMIsManaged)<br /><br /> [Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez si la mémoire physique est suffisante.](#Physical)|  
+|[Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)<br /><br /> [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez si la mémoire physique est suffisante.](#Physical)|  
   
  Si vous déterminez que l'exception n'est pas légitime, contactez le support technique Microsoft et préparez-vous à fournir les informations suivantes :  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Identifiez la quantité de mémoire validée par le tas managé.](#ManagedHeapCommit)<br /><br /> [Identifiez la quantité de mémoire réservée par le tas managé.](#ManagedHeapReserve)<br /><br /> [Identifiez les objets volumineux dans la génération 2.](#ExamineGen2)<br /><br /> [Identifiez les références aux objets.](#ObjRef)|  
+|[Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)<br /><br /> [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)<br /><br /> [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)<br /><br /> [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)<br /><br /> [Déterminez les références aux objets.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
 ### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problème : Le récupérateur de mémoire ne récupère pas les objets assez vite  
@@ -125,7 +125,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Vérifiez les références aux objets.](#ObjRef)<br /><br /> [Déterminez si un finaliseur a été exécuté.](#Induce)<br /><br /> [Déterminez s’il y a des objets en attente de finalisation.](#Finalize)|  
+|[Vérifiez les références aux objets.](#ObjRef)<br /><br /> [Déterminez si un finaliseur a été exécuté.](#Induce)<br /><br /> [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
 ### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problème : Le tas managé est trop fragmenté  
@@ -151,7 +151,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Identifiez la quantité d’espace libre dans le tas managé.](#Fragmented)<br /><br /> [Identifiez le nombre d’objets épinglés.](#Pinned)|  
+|[Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)<br /><br /> [Déterminez le nombre d'objets épinglés.](#Pinned)|  
   
  Si vous pensez qu'il n'existe aucune cause légitime à la fragmentation, contactez le support technique Microsoft.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Identifiez la durée d’un nettoyage de la mémoire.](#TimeInGC)<br /><br /> [Déterminez ce qui a provoqué un nettoyage de la mémoire.](#Triggered)|  
+|[Déterminez la durée d’un garbage collection.](#TimeInGC)<br /><br /> [Déterminez ce qui a provoqué un garbage collection.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
 ### <a name="issue-generation-0-is-too-big"></a>Problème : La génération 0 est trop volumineuse  
@@ -185,7 +185,7 @@ ms.locfileid: "59310562"
   
 |Contrôle des performances|  
 |------------------------|  
-|[Déterminez si l’utilisation élevée du processeur est provoquée par le nettoyage de la mémoire.](#HighCPU)<br /><br /> [Définissez un point d’arrêt à la fin du nettoyage de la mémoire.](#GenBreak)|  
+|[Déterminez si l’utilisation élevée du processeur est provoquée par le garbage collection.](#HighCPU)<br /><br /> [Définissez un point d’arrêt à la fin du garbage collection.](#GenBreak)|  
   
  [Retour au début](#top)  
   
@@ -220,7 +220,7 @@ ms.locfileid: "59310562"
   
 -   Dans le débogueur WinDbg, après avoir chargé l’extension SOS, tapez la commande suivante :  
   
-     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) ’kb’;’g’"**  
+     **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
      où **GcCondemnedGeneration** est défini sur la génération de votre choix. Cette commande requiert des symboles privés.  
   
@@ -234,35 +234,35 @@ ms.locfileid: "59310562"
 ## <a name="performance-check-procedures"></a>Procédures de contrôle des performances  
  Cette section décrit les procédures suivantes permettant d'isoler la cause des problèmes de performances :  
   
--   [Déterminez si le problème est causé par le nettoyage de la mémoire.](#IsGC)  
+-   [Déterminez si le problème est causé par le garbage collection.](#IsGC)  
   
--   [Déterminez si l’exception de mémoire insuffisante est gérée.](#OOMIsManaged)  
+-   [Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)  
   
--   [Identifiez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
+-   [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
   
 -   [Déterminez si la mémoire physique est suffisante.](#Physical)  
   
--   [Identifiez la quantité de mémoire validée par le tas managé.](#ManagedHeapCommit)  
+-   [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)  
   
--   [Identifiez la quantité de mémoire réservée par le tas managé.](#ManagedHeapReserve)  
+-   [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)  
   
--   [Identifiez les objets volumineux dans la génération 2.](#ExamineGen2)  
+-   [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)  
   
--   [Identifiez les références aux objets.](#ObjRef)  
+-   [Déterminez les références aux objets.](#ObjRef)  
   
 -   [Déterminez si un finaliseur a été exécuté.](#Induce)  
   
--   [Déterminez s’il y a des objets en attente de finalisation.](#Finalize)  
+-   [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)  
   
--   [Identifiez la quantité d’espace libre dans le tas managé.](#Fragmented)  
+-   [Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)  
   
--   [Identifiez le nombre d’objets épinglés.](#Pinned)  
+-   [Déterminez le nombre d'objets épinglés.](#Pinned)  
   
--   [Identifiez la durée d’un nettoyage de la mémoire.](#TimeInGC)  
+-   [Déterminez la durée d’un garbage collection.](#TimeInGC)  
   
--   [Déterminez ce qui a déclenché le nettoyage de la mémoire.](#Triggered)  
+-   [Déterminez ce qui a déclenché le garbage collection.](#Triggered)  
   
--   [Déterminez si l’utilisation élevée du processeur est causée par le nettoyage de la mémoire.](#HighCPU)  
+-   [Déterminez si l’utilisation élevée du processeur est causée par le garbage collection.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Pour déterminer si le problème est causé par le garbage collection  
@@ -780,4 +780,4 @@ ms.locfileid: "59310562"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)

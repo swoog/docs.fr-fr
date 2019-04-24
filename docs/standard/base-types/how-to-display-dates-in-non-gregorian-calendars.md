@@ -14,10 +14,10 @@ ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313305"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procédure : afficher des dates dans des calendriers non grégoriens
@@ -51,19 +51,19 @@ Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le ca
   
 3. Pour chaque élément de date et d’heure que vous souhaitez afficher, appelez la méthode `Get`... de l’objet de calendrier. . Les méthodes suivantes sont disponibles :  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>, pour afficher l’année dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetYear%2A>, pour afficher l’année dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>, pour afficher le mois dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetMonth%2A>, pour afficher le mois dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, pour afficher le jour du mois dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, pour afficher le numéro du jour du mois dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>, pour afficher l’heure du jour dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetHour%2A>, pour afficher l’heure du jour dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>, pour afficher les minutes de l’heure dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetMinute%2A>, pour afficher les minutes de l’heure dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>, pour afficher les secondes de la minute dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetSecond%2A>, pour afficher les secondes de la minute dans le calendrier approprié.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , pour afficher les millisecondes de la seconde dans le calendrier concerné.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, pour afficher les millisecondes de la seconde dans le calendrier approprié.  
   
 ## <a name="example"></a>Exemple  
  L’exemple affiche une date à l’aide de deux calendriers différents. Il affiche la date après avoir défini le calendrier hégirien comme calendrier par défaut pour la culture ar-JO et affiche la date à l’aide du calendrier persan, qui n’est pas pris en charge comme calendrier facultatif par la culture fa-IR.  
@@ -77,11 +77,11 @@ Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le ca
   
 -   Un constructeur paramétré dont le paramètre unique est un objet <xref:System.Globalization.Calendar> dans lequel la date doit être représentée. Il est assigné à un champ privé de la classe.  
   
--   `CalendarExists`, méthode privée qui retourne une valeur booléenne indiquant si le calendrier représenté par l’objet `CalendarUtility` est pris en charge par l’objet <xref:System.Globalization.CultureInfo> passé en paramètre à la méthode. La méthode encapsule un appel à la méthode <xref:System.Array.Exists%2A?displayProperty=nameWithType>, à laquelle est passé le tableau <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>.  
+-   `CalendarExists`, méthode privée qui retourne une valeur booléenne indiquant si le calendrier représenté par l’objet `CalendarUtility` est pris en charge par l’objet <xref:System.Globalization.CultureInfo> qui est passé à la méthode comme paramètre. La méthode encapsule un appel à la méthode <xref:System.Array.Exists%2A?displayProperty=nameWithType>, à laquelle est passé le tableau <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>.  
   
--   `HasSameName`, méthode privée assignée au délégué <xref:System.Predicate%601> passé en paramètre à la méthode <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Chaque membre du tableau est passé à la méthode jusqu’à ce qu’elle retourne `true`. La méthode détermine si le nom d’un calendrier facultatif est identique à celui du calendrier représenté par l’objet `CalendarUtility`.  
+-   `HasSameName`, méthode privée assignée au délégué <xref:System.Predicate%601> qui est passé comme paramètre à la méthode <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Chaque membre du tableau est passé à la méthode jusqu’à ce qu’elle retourne `true`. La méthode détermine si le nom d’un calendrier facultatif est identique à celui du calendrier représenté par l’objet `CalendarUtility`.  
   
--   `DisplayDate`, méthode publique surchargée qui reçoit deux paramètres : une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> à exprimer dans le calendrier représenté par l’objet `CalendarUtility` et la culture dont les règles de mise en forme seront utilisées. La façon dont elle retourne la représentation sous forme de chaîne d’une date varie selon que le calendrier cible est pris en charge ou non par la culture dont les règles de mise en forme doivent être utilisées.  
+-   `DisplayDate`, méthode publique surchargée qui reçoit deux paramètres : une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> à exprimer dans le calendrier représenté par l’objet `CalendarUtility` et la culture dont les règles de mise en forme doivent être utilisées. La façon dont elle retourne la représentation sous forme de chaîne d’une date varie selon que le calendrier cible est pris en charge ou non par la culture dont les règles de mise en forme doivent être utilisées.  
   
  Quel que soit le calendrier utilisé pour créer une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> dans cet exemple, la valeur est généralement exprimée sous la forme d’une date du calendrier grégorien. En effet, les types <xref:System.DateTime> et <xref:System.DateTimeOffset> ne conservent pas les informations de calendrier. En interne, elles sont représentées comme nombre de graduations qui se sont écoulées depuis le 1er janvier 0001 à minuit. L’interprétation de ce nombre dépend du calendrier. Pour la plupart des cultures, le calendrier par défaut est le calendrier grégorien.  
   
@@ -92,4 +92,4 @@ Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le ca
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)

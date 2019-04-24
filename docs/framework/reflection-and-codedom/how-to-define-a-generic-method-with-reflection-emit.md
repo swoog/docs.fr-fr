@@ -12,10 +12,10 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344232"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procédure : définir une méthode générique avec l’émission de réflexion
@@ -78,7 +78,7 @@ La première procédure montre comment créer une méthode générique simple av
 10. Émettez le corps de méthode à l’aide de <xref:System.Reflection.Emit.ILGenerator>. Pour plus d’informations, consultez la procédure d’émission du corps de méthode.  
   
     > [!IMPORTANT]
-    >  Si vous émettez des appels à des méthodes de types génériques et que les arguments de ces types sont des paramètres de type de la méthode générique, vous devez utiliser les surcharges des méthodes `static`<xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> et <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> de la classe <xref:System.Reflection.Emit.TypeBuilder> pour obtenir des formes construites des méthodes. Ceci est illustré dans la procédure d’émission du corps de méthode.  
+    >  Quand vous émettez des appels à des méthodes de types génériques et que les arguments de type de ces types sont des paramètres de type de la méthode générique, vous devez utiliser les surcharges de méthode `static` <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> et <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> de la classe <xref:System.Reflection.Emit.TypeBuilder> pour obtenir des formes construites des méthodes. Ceci est illustré dans la procédure d’émission du corps de méthode.  
   
 11. Terminez le type qui contient la méthode et enregistrez l’assembly. La procédure d’appel de la méthode générique montre deux façons d’appeler la méthode achevée.  
   
@@ -95,7 +95,7 @@ La première procédure montre comment créer une méthode générique simple av
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2. Émettez le code pour créer une instance de `TOutput`, à l’aide de la surcharge de méthode générique de la méthode <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. L’utilisation de cette surcharge impose que le type spécifié ait un constructeur sans paramètre, ce qui explique pourquoi cette contrainte a été ajoutée à `TOutput`. Créez la méthode générique construite en passant `TOutput` à <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Après avoir émis du code permettant d’appeler la méthode, émettez-en pour la stocker dans la variable locale `retVal` avec <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2. Émettez le code pour créer une instance de `TOutput`, à l’aide de la surcharge de méthode générique de la méthode <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. L’utilisation de cette surcharge impose que le type spécifié ait un constructeur sans paramètre, ce qui explique pourquoi cette contrainte a été ajoutée à `TOutput`. Créez la méthode générique construite en passant `TOutput` à <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Après avoir émis le code pour appeler la méthode, émettez du code pour la stocker dans la variable locale `retVal` à l’aide de <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
@@ -105,7 +105,7 @@ La première procédure montre comment créer une méthode générique simple av
      [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]
      [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
   
-4. Obtenez un <xref:System.Reflection.MethodInfo> représentant la méthode <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>. Dans la mesure où la méthode agit sur `ICollection(Of TInput)` (`ICollection<TInput>` en C#), il est nécessaire d’obtenir la méthode `Add` propre à ce type construit. Vous ne pouvez pas utiliser la méthode <xref:System.Type.GetMethod%2A> pour obtenir ce <xref:System.Reflection.MethodInfo> directement à partir de `icollOfTInput`, car <xref:System.Type.GetMethod%2A> n’est pas pris en charge sur un type construit avec un <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Au lieu de cela, appelez <xref:System.Type.GetMethod%2A> sur `icoll`, qui contient la définition de type générique pour l’interface générique <xref:System.Collections.Generic.ICollection%601>. Utilisez ensuite la méthode <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` pour produire le <xref:System.Reflection.MethodInfo> du type construit. Le code suivant illustre cette méthode.  
+4. Obtenez un <xref:System.Reflection.MethodInfo> représentant la méthode <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>. Dans la mesure où la méthode agit sur `ICollection(Of TInput)` (`ICollection<TInput>` en C#), il est nécessaire d’obtenir la méthode `Add` propre à ce type construit. Vous ne pouvez pas utiliser la méthode <xref:System.Type.GetMethod%2A> pour obtenir ce <xref:System.Reflection.MethodInfo> directement à partir de `icollOfTInput`, car <xref:System.Type.GetMethod%2A> n’est pas pris en charge sur un type construit avec un <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Au lieu de cela, appelez <xref:System.Type.GetMethod%2A> sur `icoll`, qui contient la définition de type générique pour l’interface générique <xref:System.Collections.Generic.ICollection%601>. Utilisez ensuite la méthode <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` pour produire le <xref:System.Reflection.MethodInfo> pour le type construit. Le code suivant illustre cette méthode.  
   
      [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]
      [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
@@ -117,7 +117,7 @@ La première procédure montre comment créer une méthode générique simple av
   
 6. Émettez le code de la boucle. La première étape consiste à marquer le début de la boucle, en appelant <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> avec l’étiquette `loopAgain`. Les instructions de branche qui utilisent l’étiquette créent désormais une branche vers ce point du code. L’étape suivante consiste à effectuer un push de l’objet `TOutput`, casté en `ICollection(Of TInput)`, dans la pile. Il n’est pas nécessaire immédiatement, mais doit être en position d’appeler la méthode `Add`. Ensuite, le tableau d’entrée fait l’objet d’un push dans la pile, puis c’est au tour de la variable `index` qui contient l’index actuel dans le tableau. L’opcode <xref:System.Reflection.Emit.OpCodes.Ldelem> dépile l’index et le tableau et effectue un push de l’élément de tableau indexé dans la pile. La pile est maintenant prête pour l’appel à la méthode <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>, qui dépile la collection et le nouvel élément et ajoute l’élément à la collection.  
   
-     Le reste du code dans la boucle incrémente l’index et vérifie si la boucle est finie : l’index et un entier 1 32 bits font l’objet d’un push dans la pile et sont additionnés, en laissant la somme dans la pile. La somme est stockée dans `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> est appelé pour définir ce point comme point d’entrée de la boucle. L’index est de nouveau chargé. Le tableau d’entrée fait l’objet d’un push dans la pile et <xref:System.Reflection.Emit.OpCodes.Ldlen> est émis pour obtenir sa longueur. L’index et la longueur sont à présent dans la pile, et <xref:System.Reflection.Emit.OpCodes.Clt> est émis pour les comparer. Si l’index est inférieur à la longueur, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> crée une nouvelle branche vers le début de la boucle.  
+     Le reste du code dans la boucle incrémente l’index et vérifie si la boucle est finie : l’index et un entier 1 32 bits font l’objet d’un push dans la pile et sont additionnés, en laissant la somme dans la pile. La somme est stockée dans `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> est appelé pour définir ce point comme point d’entrée pour la boucle. L’index est de nouveau chargé. Le tableau d’entrée fait l’objet d’un push dans la pile et <xref:System.Reflection.Emit.OpCodes.Ldlen> est émis pour obtenir sa longueur. L’index et la longueur sont à présent dans la pile, et <xref:System.Reflection.Emit.OpCodes.Clt> est émis pour les comparer. Si l’index est inférieur à la longueur, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> crée une nouvelle branche vers le début de la boucle.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -173,4 +173,4 @@ La première procédure montre comment créer une méthode générique simple av
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Procédure : définir un type générique avec l’émission de réflexion](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Guide pratique pour définir un type générique avec l’émission de réflexion](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

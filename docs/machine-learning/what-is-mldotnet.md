@@ -6,10 +6,10 @@ ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
 ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200362"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Qu’est-ce que ML.NET et comment comprendre les bases du machine learning ?
@@ -31,7 +31,7 @@ Bénéficiez d’une rapide introduction aux bases du machine learning et de la 
 
 * Vidéo 1 : [Les cinq questions auxquelles répond la science des données](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 s)*.
 
-* Vidéo 2 : [Vos données sont-elles prêtes pour la science des données ?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 s)*
+* Vidéo 2 : [Vos données sont-elles prêtes pour la science des données ?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 s)*
 
 * Vidéo 3 : [Poser une question à laquelle les données permettent de répondre](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 s)*
 

@@ -1,81 +1,59 @@
-items:
-- name: Opérateurs C#
+- name: 'Opérateurs C#'
   href: index.md
   items:
-  - name: Opérateurs arithmétiques
-    displayName: ++, --, +, -, *, /, %, +=, -=, *=, /=, %=
-    href: arithmetic-operators.md
-  - name: Opérateurs logiques booléens
-    displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
-    href: boolean-logical-operators.md
-  - name: Opérateurs d'égalité
-    displayName: ==, !=
-    href: equality-operators.md
-  - name: '[], opérateur'
-    href: index-operator.md
-  - name: (), opérateur
-    href: invocation-operator.md
-  - name: . Opérateur
-    href: member-access-operator.md
-  - name: ?. et ?[], opérateurs
-    href: null-conditional-operators.md
-  - name: ':: Opérateur'
-    href: namespace-alias-qualifer.md
-  - name: + Opérateur
-    href: addition-operator.md
-  - name: '- Opérateur'
-    href: subtraction-operator.md
-  - name: '* Opérateur'
-    href: multiplication-operator.md
-  - name: '&, opérateur'
-    href: and-operator.md
-  - name: '|, opérateur'
-    href: or-operator.md
-  - name: ^, opérateur
-    href: xor-operator.md
-  - name: ~, opérateur
-    href: bitwise-complement-operator.md
-  - name: =, opérateur
-    href: assignment-operator.md
-  - name: <, opérateur
-    href: less-than-operator.md
-  - name: '> Opérateur'
-    href: greater-than-operator.md
-  - name: '?: Opérateur'
-    href: conditional-operator.md
-  - name: <<, opérateur
-    href: left-shift-operator.md
-  - name: '>> Opérateur'
-    href: right-shift-operator.md
-  - name: <=, opérateur
-    href: less-than-equal-operator.md
-  - name: '>=, opérateur'
-    href: greater-than-equal-operator.md
-  - name: +=, opérateur
-    href: addition-assignment-operator.md
-  - name: -=, opérateur
-    href: subtraction-assignment-operator.md
-  - name: '*=, opérateur'
-    href: multiplication-assignment-operator.md
-  - name: '&=, opérateur'
-    href: and-assignment-operator.md
-  - name: '|=, opérateur'
-    href: or-assignment-operator.md
-  - name: ^=, opérateur
-    href: xor-assignment-operator.md
-  - name: <<=, opérateur
-    href: left-shift-assignment-operator.md
-  - name: '>>=, opérateur'
-    href: right-shift-assignment-operator.md
-  - name: ->, opérateur
-    href: dereference-operator.md
-  - name: ?? Opérateur
-    href: null-coalescing-operator.md
-  - name: =>, opérateur
-    href: lambda-operator.md
-ms.openlocfilehash: f2554167da2c1e51227d8f745496839c5c60fac2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307526"
+    - name: Opérateurs arithmétiques
+      href: arithmetic-operators.md
+      displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+    - name: Opérateurs logiques booléens
+      href: boolean-logical-operators.md
+      displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    - name: Opérateurs de bits et de décalage
+      href: bitwise-and-shift-operators.md
+      displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+    - name: Opérateurs d'égalité
+      href: equality-operators.md
+      displayName: '==, !='
+    - name: '[], opérateur'
+      href: index-operator.md
+    - name: '(), opérateur'
+      href: invocation-operator.md
+    - name: . Opérateur
+      href: member-access-operator.md
+    - name: '?. et ?[], opérateurs'
+      href: null-conditional-operators.md
+    - name: ':: Opérateur'
+      href: namespace-alias-qualifer.md
+    - name: + Opérateur
+      href: addition-operator.md
+    - name: '- Opérateur'
+      href: subtraction-operator.md
+    - name: '* Opérateur'
+      href: multiplication-operator.md
+    - name: '&, opérateur'
+      href: and-operator.md
+    - name: '=, opérateur'
+      href: assignment-operator.md
+    - name: '<, opérateur'
+      href: less-than-operator.md
+    - name: '> Opérateur'
+      href: greater-than-operator.md
+    - name: '?: Opérateur'
+      href: conditional-operator.md
+    - name: '<=, opérateur'
+      href: less-than-equal-operator.md
+    - name: '>=, opérateur'
+      href: greater-than-equal-operator.md
+    - name: '+=, opérateur'
+      href: addition-assignment-operator.md
+    - name: '-=, opérateur'
+      href: subtraction-assignment-operator.md
+    - name: '*=, opérateur'
+      href: multiplication-assignment-operator.md
+    - name: '&=, opérateur'
+      href: and-assignment-operator.md
+    - name: '->, opérateur'
+      href: dereference-operator.md
+    - name: '?? Opérateur'
+      href: null-coalescing-operator.md
+    - name: '=>, opérateur'
+      href: lambda-operator.md

@@ -7,10 +7,10 @@ ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
 ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481338"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutoriel : créer un cluster de fleurs d’iris à l’aide d’un apprenant de clustering avec ML.NET
@@ -86,7 +86,7 @@ Supprimez la définition de classe existante et ajoutez le code suivant, qui dé
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` est la classe des données d’entrée, qui comporte la définition de chacune des caractéristiques du jeu de données. Utilisez l’attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
+`IrisData` est la classe des données d’entrée et a des définitions pour chaque caractéristique du jeu de données. Utilisez l’attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) pour spécifier les index des colonnes sources dans le fichier de jeu de données.
 
 La classe `ClusterPrediction` représente la sortie du modèle de clustering appliqué à une instance `IrisData`. Utilisez l’attribut [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) pour lier les champs `PredictedClusterId` et `Distances` aux colonnes **PredictedLabel** et **Score** respectivement. Dans le cas de la tâche de clustering, ces colonnes ont la signification suivante :
 
@@ -100,8 +100,8 @@ La classe `ClusterPrediction` représente la sortie du modèle de clustering app
 
 Revenez au fichier *Program.cs* et ajoutez deux champs pour contenir les chemins du fichier de jeu de données et du fichier pour enregistrer le modèle :
 
-- `_dataPath` contient le chemin du fichier qui comporte le jeu de données servant à l’apprentissage du modèle.
-- `_modelPath` contient le chemin du fichier où est stocké le modèle entraîné.
+- `_dataPath` contient le chemin du fichier avec le jeu de données utilisé pour l’apprentissage du modèle.
+- `_modelPath` contient le chemin du fichier où le modèle formé est stocké.
 
 Ajoutez le code suivant juste au-dessus de la méthode `Main` pour spécifier ces chemins :
 

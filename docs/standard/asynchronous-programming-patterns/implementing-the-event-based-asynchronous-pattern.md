@@ -18,10 +18,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
 ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333362"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implémentation du modèle asynchrone basé sur des événements
@@ -160,7 +160,7 @@ Si vous écrivez une classe avec certaines opérations pouvant entraîner d’im
   
 -   Nommez cet événement de la façon suivante :  
   
-    -   `ProgressChanged` si la classe comporte plusieurs opérations asynchrones (ou devrait le faire dans les versions ultérieures) ;  
+    -   `ProgressChanged` si la classe comporte plusieurs opérations asynchrones (ou est censée se développer pour inclure plusieurs opérations asynchrones dans les versions ultérieures) ;  
   
     -   _MethodName_**ProgressChanged** si la classe comporte une seule opération asynchrone.  
   
@@ -205,9 +205,9 @@ Si vous écrivez une classe avec certaines opérations pouvant entraîner d’im
   
  Soit une méthode synchrone *MethodName* :  
   
--   `out` Les paramètres passés à *MethodName* ne doivent pas faire partie de _MethodName_**Async**. Ils doivent plutôt faire partie de _MethodName_**CompletedEventArgs** avec le même nom que son paramètre équivalent dans*MethodName* (à moins qu’il n’en existe un plus adéquat).  
+-   Les paramètres `out` passés à *MethodName* ne doivent pas faire partie de _MethodName_**Async**. Ils doivent plutôt faire partie de _MethodName_**CompletedEventArgs** avec le même nom que son paramètre équivalent dans*MethodName* (à moins qu’il n’en existe un plus adéquat).  
   
--   `ref` Les paramètres passés à *MethodName* doivent faire partie de _MethodName_**Async**, et de _MethodName_**CompletedEventArgs** avec le même nom que son paramètre équivalent dans *MethodName* (à moins qu’il n’en existe un plus adéquat).  
+-   Les paramètres `ref` passés à *MethodName* doivent faire partie de _MethodName_**Async**, et faire partie de _MethodName_**CompletedEventArgs** avec le même nom que son paramètre équivalent dans *MethodName* (à moins qu’il n’en existe un plus adéquat).  
   
  Par exemple, soit :  
   
@@ -250,9 +250,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Procédure : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Procédure : exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Procédure : implémenter un formulaire qui utilise une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Guide pratique pour exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Guide pratique pour implémenter un formulaire qui utilise une opération d’arrière-plan](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Choix du moment auquel implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Meilleures pratiques pour implémenter le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Meilleures pratiques pour implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

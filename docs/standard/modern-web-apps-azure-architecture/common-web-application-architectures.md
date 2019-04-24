@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122692"
 ---
 # <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
 > « Si vous pensez qu’une bonne architecture est coûteuse, faites l’expérience d’une mauvaise architecture. »  
-> _– Brian Foote and Joseph Yoder_
+> _- Brian Foote et Joseph Yoder_
 
 La plupart des applications .NET conventionnelles sont déployées sous forme d’unités individuelles qui correspondent à un exécutable ou à une application web unique s’exécutant dans un seul domaine d’application IIS. C’est le modèle de déploiement le plus simple, qui convient parfaitement à beaucoup d’applications internes et applications publiques de petite taille. Toutefois, même avec ce déploiement en unités individuelles, la majorité des applications métier non triviales tirent avantage à avoir leur logique séparée en plusieurs couches.
 
@@ -122,7 +122,7 @@ La figure 5-9 est une représentation plus détaillée de l’architecture d’u
 
 ![Architecture ASPNET Core](./media/image5-9.png)
 
-**Figure 5-9.** Diagramme d’une architecture ASP.NET Core propre.
+**Figure 5-9**. Diagramme d’une architecture ASP.NET Core propre.
 
 Comme la couche Noyau de l’application ne dépend pas de la couche Infrastructure, il est très facile d’écrire des tests unitaires automatisés pour cette couche. Les figures 5-10 et 5-11 montrent comment les tests s’intègrent à cette architecture.
 
@@ -292,13 +292,13 @@ Notez que les conteneurs Docker en cours d’exécution peuvent être liés à d
 Si vous voulez ajouter la prise en charge de Docker à votre application à l’aide de Visual Studio, veillez à ce que Docker Desktop s’exécute pendant l’opération. L’Assistant ne fonctionnera pas correctement si Docker Desktop n’est pas en cours d’exécution lorsque vous démarrez l’Assistant. Par ailleurs, l’Assistant examine votre choix de conteneur actuel pour ajouter la prise en charge appropriée de Docker. Si vous voulez ajouter la prise en charge des conteneurs Windows, vous devez exécuter l’Assistant pendant que Docker Desktop s’exécute avec les conteneurs Windows configurés. Si vous voulez ajouter la prise en charge des conteneurs Linux, exécutez l’Assistant pendant que Docker s’exécute avec les conteneurs Linux configurés.
 
 ### <a name="references--common-web-architectures"></a>Informations de référence sur les architectures web courantes
-> - **The Clean Architecture**  
+> - **L’architecture propre**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **The Onion Architecture**  
+> - **L’architecture en oignon**  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **The Repository Pattern**  
+> - **Le modèle référentiel**  
 >   <https://deviq.com/repository-pattern/>
-> - **Clean Architecture (exemple de solution)**  
+> - **Exemple d’une solution d’architecture propre**  
 >   <https://github.com/ardalis/cleanarchitecture>
 > - **Architecting Microservices (livre électronique)**  
 >   <https://aka.ms/MicroservicesEbook>

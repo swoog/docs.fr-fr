@@ -4,10 +4,10 @@ description: Alimentez un modèle Machine Learning d’analyse des sentiments ML
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321227"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Guide pratique : Alimenter un modèle Machine Learning par le biais de l’API web ASP.NET Core

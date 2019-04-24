@@ -4,10 +4,10 @@ description: En savoir plus sur les arborescences d’expressions dans .NET Core
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
 ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096613"
 ---
 # <a name="expression-trees"></a>Arborescences de l’expression
@@ -24,11 +24,11 @@ Cela permet à [Entity Framework](/ef/) de traduire la requête que vous avez é
 
 Les sections suivantes de ce didacticiel expliquent en détail ce que sont les arborescences d’expressions, examinent les classes de framework qui prennent en charge les arborescences d’expressions et montrent comment utiliser des arborescences d’expressions. Vous découvrirez comment lire des arborescences d’expressions, créer des arborescences d’expressions, créer des arborescences d’expressions modifiées et exécuter le code représenté par des arborescences d’expressions. Une fois ce didacticiel terminé, vous serez prêt à utiliser ces structures pour créer des algorithmes adaptatifs enrichis.
 
-1. [Explication des arborescences d’expressions](expression-trees-explained.md)
+1. [Explication des arborescences de l’expression](expression-trees-explained.md)
 
     Comprenez la structure et les concepts derrière les *arborescences d’expressions*.
     
-2. [Types de frameworks prenant en charge les arborescences d’expressions](expression-classes.md)
+2. [Types de frameworks prenant en charge les arborescences de l’expression](expression-classes.md)
     
     Découvrez les structures et les classes qui définissent et manipulent des arborescences d’expressions.
     
@@ -36,7 +36,7 @@ Les sections suivantes de ce didacticiel expliquent en détail ce que sont les a
 
     Découvrez comment convertir une arborescence d’expressions représentée sous forme d’expression lambda en un délégué, et comment exécuter le délégué résultant.
 
-4. [Interprétation des expressions](expression-trees-interpreting.md)
+4. [Interprétation d’expressions](expression-trees-interpreting.md)
 
     Découvrez comment parcourir et examiner des *arborescences d’expressions* pour comprendre quel est le code représenté par l’arborescence d’expressions.
 
@@ -48,6 +48,6 @@ Les sections suivantes de ce didacticiel expliquent en détail ce que sont les a
 
     Découvrez comment générer une copie modifiée d’une arborescence d’expressions ou comment traduire une arborescence d’expressions dans un format différent.
 
-7. [Récapitulatif](expression-trees-summary.md)
+7. [Conclusion](expression-trees-summary.md)
 
     Passez en revue les informations sur les arborescences d’expressions.

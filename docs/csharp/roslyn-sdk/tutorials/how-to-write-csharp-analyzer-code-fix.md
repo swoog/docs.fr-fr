@@ -4,10 +4,10 @@ description: Ce tutoriel fournit des instructions détaillées pour générer un
 ms.date: 08/01/2018
 ms.custom: mvc
 ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427498"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutoriel : Créer son premier analyseur et correctif de code
@@ -67,7 +67,7 @@ Le modèle crée un analyseur qui émet un avertissement sur chaque déclaration
 
 Le modèle fournit également un correctif de code qui modifie n’importe quel nom de type contenant des caractères minuscules en majuscules. Vous pouvez cliquer sur l’ampoule affichée avec l’avertissement pour voir les modifications suggérées. Le fait d’accepter les modifications suggérées met à jour le nom de type et toutes les références à ce type dans la solution. Maintenant que vous avez vu l’analyseur initial en action, fermez la deuxième instance de Visual Studio et revenez à votre projet d’analyseur.
 
-Vous n’êtes pas obligé de démarrer une deuxième copie de Visual Studio et de créer un nouveau code pour tester chaque modification de votre analyseur. Le modèle crée également un projet de test unitaire pour vous. Ce projet contient deux tests. `TestMethod1` montre le format classique d’un test qui analyse le code sans déclencher de diagnostic. `TestMethod2` montre le format d’un test qui déclenche un diagnostic, puis applique un correctif de code proposé. À mesure que vous générez votre analyseur et votre correctif de code, vous écrirez des tests pour des structures de codes différentes afin de vérifier votre travail. Les tests unitaires pour les analyseurs sont beaucoup plus rapides que de les tester de manière interactive avec Visual Studio.
+Vous n’êtes pas obligé de démarrer une deuxième copie de Visual Studio et de créer un nouveau code pour tester chaque modification de votre analyseur. Le modèle crée également un projet de test unitaire pour vous. Ce projet contient deux tests. `TestMethod1` montre le format classique d’un test qui analyse le code sans déclencher un diagnostic. `TestMethod2` montre le format d’un test qui déclenche un diagnostic, puis applique un correctif de code proposé. À mesure que vous générez votre analyseur et votre correctif de code, vous écrirez des tests pour des structures de codes différentes afin de vérifier votre travail. Les tests unitaires pour les analyseurs sont beaucoup plus rapides que de les tester de manière interactive avec Visual Studio.
 
 > [!TIP]
 > Les tests unitaires d’analyseur sont un excellent outil lorsque vous savez quelles constructions de code doivent et ne doivent pas déclencher votre analyseur. Le chargement de votre analyseur dans une autre copie de Visual Studio est un excellent outil pour explorer et rechercher des constructions auxquelles vous n’avez peut-être pas encore pensé.
@@ -260,7 +260,7 @@ Vous avez bien progressé. Des traits de soulignement ondulés s’affichent sou
 
 Votre analyseur et votre correctif de code travaillent sur un cas simple d’une déclaration unique qui peut être devenir constante. Il existe de nombreuses instructions de déclaration possibles où cette implémentation commet des erreurs. Vous allez traiter ces cas en travaillant avec la bibliothèque de tests unitaires écrite par le modèle. C’est beaucoup plus rapide que d’ouvrir plusieurs fois une deuxième copie de Visual Studio.
 
-Ouvrez le fichier **MakeConstUnitTests.cs** dans le projet de test unitaire. Le modèle a créé deux tests qui suivent les deux modèles courants pour un test unitaire d’analyseur et de correctif de code. `TestMethod1` montre le modèle d’un test qui vérifie que l’analyseur ne signale pas de diagnostic à tort. `TestMethod2` montre le modèle permettant de créer un rapport de diagnostic et d’exécuter le correctif de code.
+Ouvrez le fichier **MakeConstUnitTests.cs** dans le projet de test unitaire. Le modèle a créé deux tests qui suivent les deux modèles courants pour un test unitaire d’analyseur et de correctif de code. `TestMethod1` montre le modèle pour un test qui garantit que l’analyseur ne signale pas un diagnostic lorsqu’il ne le devrait pas. `TestMethod2` montre le modèle pour créer un rapport de diagnostic et exécuter le correctif de code.
 
 Le code de presque chaque test pour votre analyseur suit un de ces deux modèles. Pour la première étape, vous pouvez revoir ces tests en tant que tests pilotés par les données. Ensuite, il sera facile de créer de nouveaux tests en ajoutant de nouvelles constantes de chaîne pour représenter les différentes entrées de test.
 

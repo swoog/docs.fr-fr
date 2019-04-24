@@ -17,10 +17,10 @@ ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192080"
 ---
 # <a name="deploying-an-interop-application"></a>Déploiement d'une application d'interopérabilité
@@ -47,7 +47,7 @@ Une application d’interopérabilité comporte généralement un assembly clien
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exposition de composants COM au .NET Framework](exposing-com-components.md)
+- [Exposition de composants COM au .NET Framework](exposing-com-components.md)
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)
-- [Utiliser des types COM dans du code managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Utilisation de types COM dans du code managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilation d'un projet d'interopérabilité](compiling-an-interop-project.md)

@@ -5,10 +5,10 @@ ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d54751ae0492e25f824eee6362e0f3bca446d75e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147626"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Atténuation : rendu de la fenêtre WPF
@@ -32,9 +32,9 @@ Dans le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] s'exécutant sur Wi
   
      Le paramètre de configuration `<EnableMultiMonitorDisplayClipping>` peut avoir l'une des deux valeurs suivantes :  
   
-    -   `true`, pour activer le découpage des fenêtres selon les limites de l’écran pendant le rendu.  
+    -   `true`, pour activer le découpage des fenêtres selon les limites de l'écran pendant le rendu.  
   
-    -   `false`, pour désactiver le découpage des fenêtres selon les limites de l’écran pendant le rendu.  
+    -   `false`, pour désactiver le découpage des fenêtres selon les limites de l'écran pendant le rendu.  
   
 -   En définissant la propriété <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> avec la valeur `true` au démarrage de l'application.  
   

@@ -3,10 +3,10 @@ title: Activation et désactivation d’IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083684"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Activation et désactivation d’IPv6
@@ -46,7 +46,7 @@ Pour utiliser le protocole IPv6, vérifiez que vous exécutez une version du sys
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Protocole Internet version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [sockets](../../../docs/framework/network-programming/sockets.md)
+- [Protocole IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)
 - [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [\<ipv6>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

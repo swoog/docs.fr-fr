@@ -10,10 +10,10 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337277"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Éléments obsolètes dans la bibliothèque de classes .NET Framework
@@ -56,7 +56,7 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
   
  Le tableau suivant répertorie les valeurs de chaîne que vous pouvez assigner à l'attribut `version` pour cibler une version spécifique du .NET Framework.  
   
-|Version du .NET Framework|`version` string|
+|Version du .NET Framework|Chaîne `version`|
 |-|-|  
 |4.7 (y compris 4.7.1 et 4.7.2)|v4.0|  
 |4.6 (y compris 4.6.1 et 4.6.2)|v4.0|  
@@ -73,13 +73,13 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
  [Membres obsolètes](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listes des éléments obsolètes pour les versions antérieures  
- [Types obsolètes dans .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Types obsolètes dans le .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Membres obsolètes dans .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Membres obsolètes dans le .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Liste des éléments obsolètes dans .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Liste des éléments obsolètes pour le .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Liste des éléments obsolètes dans .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Liste des éléments obsolètes pour le .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Voir aussi
 

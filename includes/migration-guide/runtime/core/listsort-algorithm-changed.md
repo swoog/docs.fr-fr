@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: d4859629fe3922b71cc90664e1e3304cdb312bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59235296"
 ---
 ### <a name="listsort-algorithm-changed"></a>Algorithme List.Sort modifié
 
 |   |   |
 |---|---|
-|Détails|À compter de .NET Framework 4.5, l’algorithme de tri de <xref:System.Collections.Generic.List%601?displayProperty=name> a changé (pour correspondre à un tri approfondi au lieu d’un tri rapide). <xref:System.Collections.Generic.List%601?displayProperty=name>Le tri n’a jamais été stable, mais cette modification peut aboutir à des tris instables dans différents scénarios. Cela signifie simplement que des éléments équivalents peuvent être triés dans des ordres différents lors des appels suivants de l’API.|
+|Détails|À compter de .NET Framework 4.5, l’algorithme de tri de <xref:System.Collections.Generic.List%601?displayProperty=name> a changé (pour correspondre à un tri approfondi au lieu d’un tri rapide). Le tri de <xref:System.Collections.Generic.List%601?displayProperty=name> n’a jamais été stable, mais cette modification peut aboutir à des tris instables dans le cadre de différents scénarios. Cela signifie simplement que des éléments équivalents peuvent être triés dans des ordres différents lors des appels suivants de l’API.|
 |Suggestion|Comme l’ancien algorithme de tri était également instable (de manière légèrement différente, toutefois), aucun code ne doit dépendre du tri dans un ordre particulier des éléments équivalents. Si des instances de code présentent cette dépendance et réussissent avec l’ancien comportement, ce code doit être mis à jour pour utiliser un comparateur qui va trier de façon déterministe les éléments dans l’ordre souhaité.|
 |Portée|Transparent|
 |Version|4.5|

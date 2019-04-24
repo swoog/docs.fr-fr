@@ -22,10 +22,10 @@ helpviewer_keywords:
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133800"
 ---
 # <a name="configuring-internet-applications"></a>Configuration des applications Internet
@@ -101,4 +101,4 @@ L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../do
 
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Schéma des paramètres réseau](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<system.Net>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net>, élément (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -9,10 +9,10 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306532"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guide de déploiement du .NET Framework pour les développeurs
@@ -36,7 +36,7 @@ Pour obtenir des liens de téléchargement, consultez la section [Packages redis
 
 - .NET Framework 4.5.1 pour tous les systèmes d’exploitation ([programme d’installation web](https://go.microsoft.com/fwlink/p/?LinkId=310158) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
  Remarques importantes :
 
@@ -66,8 +66,8 @@ Pour obtenir des liens de téléchargement, consultez la section [Packages redis
 
 |Stratégie de déploiement de votre application|Méthodes de déploiement disponibles|Redistribuable du .NET Framework à utiliser|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installation à partir du web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Ensemble d'outils WiX](#wix)<br />- [Installation manuelle](#installing_manually)|[programme d’installation web](#redistributable-packages)|
-|Installation à partir d'un disque|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Ensemble d'outils WiX](#wix)<br />- [Installation manuelle](#installing_manually)|[programme d’installation hors connexion](#redistributable-packages)|
+|Installation à partir du web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Ensemble d'outils WiX](#wix)<br />- [Installation manuelle](#installing_manually)|[Web installer](#redistributable-packages)|
+|Installation à partir d'un disque|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Ensemble d'outils WiX](#wix)<br />- [Installation manuelle](#installing_manually)|[Offline installer](#redistributable-packages)|
 |Installation à partir d'un réseau local (pour applications d'entreprise)|- [ClickOnce](#clickonce-deployment)|[Programme d'installation web](#redistributable-packages) (voir [ClickOnce](#clickonce-deployment) pour connaître les restrictions) ou [programme d'installation hors connexion](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Packages redistribuables
@@ -253,12 +253,12 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |.NET Framework 4.7.1 installé sur toutes les versions de système d’exploitation autres que Windows 10 Fall Creators Update et Windows Server, version 1709|461310|
 |.NET Framework 4.7 est installé sur Windows 10 Creators Update|460798|
 |.NET framework 4.7 installé sur toutes les versions de système d’exploitation autres que Windows 10 Creators Update|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installé sur la Mise à jour anniversaire Windows 10 et sur Windows Server 2016|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installé sur toutes les versions de système d’exploitation autres que la Mise à jour anniversaire Windows 10 et Windows Server 2016|394806|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installé sur Windows 10 Édition anniversaire et sur Windows Server 2016|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installé sur toutes les versions de système d’exploitation autres que Windows 10 Édition anniversaire et Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installé sur la mise à jour de novembre de Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installé sur toutes les versions de système d’exploitation autres que la mise à jour de novembre de Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur Windows 10|393295|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur toutes les versions du système d'exploitation autres que Windows 10|393297|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur toutes les versions du système d'exploitation autre que Windows 10|393297|
 |.NET Framework 4.5.2|379893|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installé avec [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installé sur [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
@@ -281,23 +281,23 @@ Type: DWORD
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Chaînage des modules linguistiques au programme d’installation de votre application
  Le .NET Framework fournit un ensemble de fichiers exécutables de modules linguistiques autonomes qui contiennent des ressources localisées pour des cultures spécifiques. Les modules linguistiques sont disponibles dans le Centre de téléchargement Microsoft :
 
-- [Modules linguistiques de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863258)
+- [Modules linguistiques .NET Framework 4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863258)
 
-- [Modules linguistiques de .NET Framework 4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)
+- [Modules linguistiques .NET Framework 4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)
 
-- [Modules linguistiques de .NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
+- [Modules linguistiques .NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [Modules linguistiques de .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [Modules linguistiques .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
-- [Modules linguistiques de .NET Framework 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671747)
+- [Modules linguistiques .NET Framework 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
-- [Modules linguistiques de .NET Framework 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528314)
+- [Modules linguistiques .NET Framework 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528314)
 
-- [Modules linguistiques de .NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397701)
+- [Modules linguistiques .NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397701)
 
-- [Modules linguistiques de .NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=322101)
+- [Modules linguistiques .NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=322101)
 
-- [Modules linguistiques de .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [Modules linguistiques .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 > [!IMPORTANT]
 > Les modules linguistiques ne contiennent pas les composants .NET Framework requis pour exécuter une application. Vous devez installer le .NET Framework à l'aide du programme d'installation web ou hors connexion avant d'installer un module linguistique.
@@ -335,14 +335,14 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 
 - [Codes d’erreur du moniker d’URL](https://go.microsoft.com/fwlink/?LinkId=180947)
 
-- [Codes d’erreur de WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [Codes d’erreur WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>Autres codes d'erreur
  Consultez les rubriques suivantes :
 
-- [Codes d’erreur de Windows Installer](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Codes d’erreur Windows Installer](https://go.microsoft.com/fwlink/?LinkId=180949)
 
-- [Codes résultat de l’agent Windows Update](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Codes de résultat de l’agent de mise à jour automatique Windows Update](https://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>Désinstallation du .NET Framework
  Depuis [!INCLUDE[win8](../../../includes/win8-md.md)], vous pouvez désinstaller le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou l’une de ses versions intermédiaires en utilisant l’option **Activer ou désactiver des fonctionnalités Windows** du Panneau de configuration. Dans les versions antérieures de Windows, vous pouvez désinstaller le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou l’une de ses versions intermédiaires en utilisant l'option **Ajouter ou supprimer des programmes** du Panneau de configuration.
@@ -407,6 +407,6 @@ Le tableau ci-dessous répertorie les modules linguistiques du .NET Framework di
 - [Guide de déploiement pour les administrateurs](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Configuration système requise](../../../docs/framework/get-started/system-requirements.md)
 - [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md)
-- [Résoudre les problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [Réduction des redémarrages système lors des installations de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [Procédure : suivre la progression du programme d’installation de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Réduction des redémarrages système lors des installations du .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
+- [Guide pratique pour pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

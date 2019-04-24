@@ -12,10 +12,10 @@ ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182934"
 ---
 # <a name="com-wrappers"></a>Wrappers COM
@@ -37,6 +37,6 @@ COM diffère du modèle objet .NET Framework sur plusieurs points importants :
 
 - [Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Wrapper pouvant être appelé par le runtime](runtime-callable-wrapper.md)
-- [Wrapper pouvant être appelé par COM](com-callable-wrapper.md)
-- [Personnaliser des wrappers standard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Procédure : Personnaliser des wrappers RCW](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [Wrapper CCW (COM Callable Wrapper)](com-callable-wrapper.md)
+- [Personnalisation de wrappers standard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Guide pratique pour personnaliser les wrappers RCW (Runtime Callable Wrapper)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

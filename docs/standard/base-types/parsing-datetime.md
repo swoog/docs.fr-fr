@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208122"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analyse des chaînes de date et d’heure dans .NET
@@ -84,12 +84,12 @@ Dans l’exemple suivant, la méthode <xref:System.DateTime.ParseExact%2A?displa
 [!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Chaque surcharge des méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.ParseExact%2A> a un paramètre <xref:System.IFormatProvider> qui fournit des informations spécifiques à la culture sur la mise en forme de la chaîne. Cet objet <xref:System.IFormatProvider> est un objet <xref:System.Globalization.CultureInfo> qui représente une culture standard ou un objet <xref:System.Globalization.DateTimeFormatInfo> qui est renvoyé par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> utilise également un argument chaîne ou tableau de chaînes supplémentaire qui définit un ou plusieurs formats de date et d’heure personnalisés.  
+Chaque surcharge des méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.ParseExact%2A> a un paramètre <xref:System.IFormatProvider> qui fournit des informations spécifiques à la culture sur la mise en forme de la chaîne. Cet objet <xref:System.IFormatProvider> est un objet <xref:System.Globalization.CultureInfo> qui représente une culture standard ou un objet <xref:System.Globalization.DateTimeFormatInfo> qui est renvoyé par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> utilise également une chaîne supplémentaire ou un argument de tableau de chaînes qui définit un ou plusieurs formats de date et d’heure.  
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Analyse de chaînes](parsing-strings.md)
+- [Parsing Strings](parsing-strings.md)
 - [Mise en forme des types](formatting-types.md)
-- [Conversion de types dans .NET](type-conversion.md)
+- [Conversion de type dans .NET](type-conversion.md)
 - [Formats de date et d’heure standard](standard-date-and-time-format-strings.md)
-- [Chaînes de format de date et d’heure personnalisées](custom-date-and-time-format-strings.md)
+- [Chaînes de format de date et d'heure personnalisées](custom-date-and-time-format-strings.md)

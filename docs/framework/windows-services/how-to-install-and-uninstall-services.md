@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308469"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Procédure : installer et désinstaller des services Windows
@@ -69,6 +69,6 @@ Si vous développez un service Windows à l’aide du .NET Framework, vous pouv
 ## <a name="see-also"></a>Voir aussi
 
 - [Introduction aux applications de service Windows](../windows-services/introduction-to-windows-service-applications.md)
-- [Procédure : Créer des services Windows](../windows-services/how-to-create-windows-services.md)
-- [Procédure : Ajouter des programmes d’installation à une application de service](../windows-services/how-to-add-installers-to-your-service-application.md)
-- [Installutil.exe (outil d’installation)](../tools/installutil-exe-installer-tool.md)
+- [Guide pratique pour créer des services Windows](../windows-services/how-to-create-windows-services.md)
+- [Guide pratique pour ajouter des programmes d’installation à votre application de service](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Installutil.exe (outil Installer)](../tools/installutil-exe-installer-tool.md)

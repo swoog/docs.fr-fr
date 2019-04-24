@@ -4,15 +4,15 @@ description: Découvrez comment écrire du code pour analyser la structure d’u
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
 ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211242"
 ---
 # <a name="interpreting-expressions"></a>Interprétation des expressions
 
-[Précédent – Exécution d’expressions](expression-trees-execution.md)
+[Précédent -- Exécution d’expressions](expression-trees-execution.md)
 
 Nous allons maintenant écrire du code pour analyser la structure d’une *arborescence d’expressions*. Chaque nœud d’une arborescence d’expressions est un objet d’une classe dérivée de `Expression`.
 
@@ -519,4 +519,4 @@ Pour finir, la bibliothèque que j’ai utilisée dans cet article a été cré�
 
 Même avec ces limitations, vous devriez être sur la bonne voie pour écrire des algorithmes qui lisent et comprennent les arborescences d’expressions.
 
-[Suivant – Création d’expressions](expression-trees-building.md)
+[Suivant -- Génération d’expressions](expression-trees-building.md)

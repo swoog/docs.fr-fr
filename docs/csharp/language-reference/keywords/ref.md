@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116254"
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
@@ -137,7 +137,7 @@ L’ajout du modificateur `ref` à une déclaration `struct` définit que les in
 La conservation d’un type `ref struct` comme variable allouée par la pile introduit plusieurs règles que le compilateur applique pour tous les types `ref struct`.
 
 - Vous ne pouvez pas effectuer d’opération box sur un `ref struct`. Vous ne pouvez pas assigner un type `ref struct` à une variable de type `object`, `dynamic` ou tout type interface.
-- `ref struct` Les types ne peuvent pas implémenter d’interfaces.
+- Les types `ref struct` ne peuvent pas implémenter les interfaces.
 - Vous ne pouvez pas déclarer `ref struct` comme membre d’une classe ou d’un struct normal.
 - Vous ne pouvez pas déclarer des variables locales qui sont des types `ref struct` dans des méthodes async. Vous pouvez les déclarer dans des méthodes synchrones qui retournent des types semblables à <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
 - Vous ne pouvez pas déclarer de variables locales `ref struct` dans des itérateurs.

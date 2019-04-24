@@ -28,10 +28,10 @@ helpviewer_keywords:
 - subtraction operator [C#]
 - '- operator [C#]'
 ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301124"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Opérateurs arithmétiques (Informations de référence sur C#)

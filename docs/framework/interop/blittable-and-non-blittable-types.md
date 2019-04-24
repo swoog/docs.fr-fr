@@ -8,10 +8,10 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115373"
 ---
 # <a name="blittable-and-non-blittable-types"></a>types blittable et non blittable
@@ -75,4 +75,4 @@ La plupart des types de données ont une représentation commune à la fois dans
   
 ## <a name="see-also"></a>Voir aussi
 
-- [comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)
+- [Comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)

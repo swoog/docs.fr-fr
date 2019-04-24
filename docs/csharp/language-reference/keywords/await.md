@@ -9,16 +9,16 @@ helpviewer_keywords:
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122887"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
   
-`await` ne peut être utilisé que dans une méthode asynchrone modifiée par le mot clé [async](../../../csharp/language-reference/keywords/async.md). Une telle méthode, définie à l’aide du modificateur `async` et contenant généralement une ou plusieurs expressions `await`, est appelée *méthode async*.  
+`await` peut uniquement être utilisé dans une méthode asynchrone modifiée par le mot clé [async](../../../csharp/language-reference/keywords/async.md). Une telle méthode, définie à l’aide du modificateur `async` et contenant généralement une ou plusieurs expressions `await`, est appelée *méthode async*.  
   
 > [!NOTE]
 > Les mots clés `async` et `await` ont été introduits dans C# 5. Pour obtenir une introduction à la programmation asynchrone, consultez [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md).  
@@ -69,6 +69,6 @@ L’exemple précédent utilise C# 7.1, qui prend en charge la [méthode `async`
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md)
-- [Procédure pas à pas : accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programmation asynchrone avec Async et Await](../../../csharp/programming-guide/concepts/async/index.md)
+- [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

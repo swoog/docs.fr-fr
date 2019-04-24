@@ -23,10 +23,10 @@ helpviewer_keywords:
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146144"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduction aux protocoles enfichables
@@ -68,7 +68,7 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
   
 ## <a name="see-also"></a>Voir aussi
 
-- [programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

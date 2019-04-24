@@ -4,16 +4,16 @@ description: Découvrez les nouvelles fonctionnalités disponibles dans la versi
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481299"
 ---
 # <a name="whats-new-in-c-70"></a>Nouveautés de C# 7.0
 
 C# 7.0 ajoute un certain nombre de nouvelles fonctionnalités au langage C# :
-* [`out` variables](#out-variables)
+* [Variables `out`](#out-variables)
   - Vous pouvez déclarer des valeurs `out` inline comme arguments de la méthode dans laquelle elles sont utilisées.
 * [Tuples](#tuples)
   - Vous pouvez créer des types légers et sans nom qui contiennent plusieurs champs publics. Les compilateurs et les outils de l’IDE comprennent la sémantique de ces types.
@@ -21,13 +21,13 @@ C# 7.0 ajoute un certain nombre de nouvelles fonctionnalités au langage C# :
   - Les éléments ignorés sont les variables temporaires en écriture seule utilisées dans les attributions quand vous ne vous souciez pas de la valeur assignée. Ils s’avèrent utiles lors de la déconstruction de tuples et de types définis par l’utilisateur, ainsi que lors de l’appel de méthodes avec des paramètres `out`.
 * [Critères spéciaux](#pattern-matching)
   - Vous pouvez créer une logique de branchement basée sur des types arbitraires et les valeurs des membres de ces types.
-* [`ref` Variables locales et retours](#ref-locals-and-returns)
+* [Variables locales et retours `ref`](#ref-locals-and-returns)
   - Les valeurs de retour et les variables locales de méthode peuvent être des références à un autre stockage.
 * [Fonctions locales](#local-functions)
   - Vous pouvez imbriquer des fonctions dans d’autres fonctions afin de limiter leur portée et leur visibilité.
 * [Autres membres expression-bodied](#more-expression-bodied-members)
   - La liste des membres pouvant être créés à l’aide d’expressions s’est allongée.
-* [`throw` Expressions](#throw-expressions)
+* [Expressions `throw`](#throw-expressions)
   - Vous pouvez lever des exceptions dans les constructions de code qui n’étaient pas autorisées auparavant, car `throw` était une instruction.
 * [Types de retour async généralisés](#generalized-async-return-types)
   - Les méthodes déclarées avec le modificateur `async` peuvent retourner d’autres types en plus de `Task` et de `Task<T>`.
@@ -157,8 +157,8 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 - `case 0:` est le modèle de constante classique.
 - `case IEnumerable<int> childSequence:` est un modèle de type.
-- `case int n when n > 0:` est un modèle de type comportant une condition `when` supplémentaire.
-- `case null:` est le modèle Null.
+- `case int n when n > 0:` est un modèle de type avec une autre condition `when`.
+- `case null:` est le modèle null.
 - `default:` est le cas par défaut classique.
 
 Pour plus d’informations sur les critères spéciaux, consultez [Critères spéciaux en C#](../pattern-matching.md).
@@ -180,10 +180,10 @@ Le langage C# a plusieurs règles qui vous protègent contre une mauvaise utili
 * Un `ref return` peut être assigné à une variable de la valeur ou à une variable `ref`.
   - L’appelant contrôle si la valeur de retour est copiée ou non. L’omission du modificateur `ref` lors de l’assignation de la valeur de retour indique que l’appelant souhaite une copie de la valeur, pas une référence au stockage.
 * Vous ne pouvez pas affecter une valeur de retour de méthode standard à une variable locale `ref`.
-  - Cela a pour effet d’interdire les instructions telles que `ref int i = sequence.Count();`
+  - Cela rejette les instructions telles que `ref int i = sequence.Count();`.
 * Vous ne pouvez pas retourner un `ref` à une variable dont la durée de vie ne s’étend pas au-delà de l’exécution de la méthode.
   - Cela signifie que vous ne pouvez pas retourner une référence à une variable locale ni une variable avec une étendue similaire.
-* `ref` Les variables locales et les retours ne sont pas utilisables avec les méthodes asynchrones.
+* Les variables locales et les retours `ref` ne peuvent pas être utilisés avec les méthodes Async.
   - Le compilateur ne peut pas savoir si la variable référencée a été définie à sa valeur finale quand la méthode Async est retournée.
 
 L’ajout de variables locales ref et de retours ref permet d’utiliser des algorithmes qui sont plus efficaces en évitant la copie de valeurs, ou d’effectuer plusieurs fois des opérations de déréférencement.
@@ -228,7 +228,7 @@ Cet ajout facilite l’écriture de code davantage basé sur des expressions. Vo
 
 ## <a name="generalized-async-return-types"></a>Types de retour async généralisés
 
-Le retour d’un objet `Task` à partir de méthodes async peut introduire des goulots d’étranglement au niveau des performances dans certains chemins. `Task` est un type référence. L’utiliser implique donc d’allouer un objet. Dans les cas où une méthode déclarée avec le modificateur `async` retourne un résultat mis en cache, ou si elle s’exécute de manière synchrone, le coût en termes de temps induit par les allocations supplémentaires peut s’avérer significatif dans les sections de code critiques pour les performances. Cela peut devenir coûteux si ces allocations se produisent dans des boucles serrées.
+Le retour d’un objet `Task` à partir de méthodes async peut introduire des goulots d’étranglement au niveau des performances dans certains chemins. `Task` est un type référence. Si vous l’utilisez, vous allouez donc un objet. Dans les cas où une méthode déclarée avec le modificateur `async` retourne un résultat mis en cache, ou si elle s’exécute de manière synchrone, le coût en termes de temps induit par les allocations supplémentaires peut s’avérer significatif dans les sections de code critiques pour les performances. Cela peut devenir coûteux si ces allocations se produisent dans des boucles serrées.
 
 La nouvelle fonctionnalité du langage signifie que les types de retour des méthodes async ne se limitent pas à `Task`, `Task<T>` et `void`. Le type retourné doit toujours correspondre au modèle async, ce qui signifie qu’une méthode `GetAwaiter` doit être accessible. Pour donner un exemple concret, le type `ValueTask` a été ajouté au .NET Framework pour utiliser cette nouvelle fonctionnalité du langage :
 

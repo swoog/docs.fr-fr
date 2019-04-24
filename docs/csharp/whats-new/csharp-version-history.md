@@ -4,10 +4,10 @@ description: À quoi ressemblait le langage dans ses versions antérieures et co
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303360"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C\#
@@ -59,7 +59,7 @@ Les choses commencent alors à devenir intéressantes. Examinons certaines fonct
 - [Types partiels](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Méthodes anonymes](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Types Nullable](../programming-guide/nullable-types/index.md)
-- [Iterators](../programming-guide/concepts/iterators.md)
+- [Itérateurs](../programming-guide/concepts/iterators.md)
 - [Covariance et contravariance](../programming-guide/concepts/covariance-contravariance/index.md)
 
 D’autres fonctionnalités de C# 2.0 ajoutaient des capacités aux fonctionnalités existantes :
@@ -85,7 +85,7 @@ C# version 3.0 est apparu fin 2007, en même temps que Visual Studio 2008, même
 - [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Expressions de requête](../linq/query-expression-basics.md)
 - [Expressions lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Arborescences de l’expression](../expression-trees.md)
+- [Arborescences d’expressions](../expression-trees.md)
 - [Méthodes d’extension](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variables locales implicitement typées](../language-reference/keywords/var.md)
 - [Méthodes partielles](../language-reference/keywords/partial-method.md)
@@ -125,7 +125,7 @@ C# version 5.0 était une version concentrée du langage. Presque tous les effo
 
 ### <a name="see-also"></a>Voir aussi
 
-* [Code Project : Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project : Attributs d’informations de l’appelant dans C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 L’attribut d’informations de l’appelant vous permet de récupérer facilement des informations sur le contexte d’exécution sans avoir recours à une multitude de code de réflexion réutilisable. Nombre de ses usages ont trait aux diagnostics et aux tâches de journalisation.
 
@@ -141,7 +141,7 @@ Avec les versions 3.0 et 5.0, C# avait ajouté d’importantes nouvelles foncti
 - [Membres expression-bodied](./csharp-6.md#expression-bodied-function-members)
 - [Propagateur Null](./csharp-6.md#null-conditional-operators)
 - [Interpolation de chaîne](./csharp-6.md#string-interpolation)
-- [opérateur nameof](./csharp-6.md#the-nameof-expression)
+- [Opérateur nameof](./csharp-6.md#the-nameof-expression)
 - [Initialiseurs d’index](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Quelques autres nouvelles fonctions :

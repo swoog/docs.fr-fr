@@ -4,15 +4,15 @@ description: En savoir plus sur les types de frameworks prenant en charge les ar
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198463"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Types de frameworks prenant en charge les arborescences d’expressions
 
-[Précédent – Explication des arborescences d’expressions](expression-trees-explained.md)
+[Précédent -- Explication des arborescences d’expressions](expression-trees-explained.md)
 
 Il existe une longue liste de classes dans le framework .NET Core qui fonctionnent avec des arborescences d’expressions.
 Vous pouvez voir la liste complète dans <xref:System.Linq.Expressions>.
@@ -64,4 +64,4 @@ Il existe des types de nœuds Expression qui mappent à presque tous les éléme
 
 Vous trouverez davantage de choses à mesure que vous examinez chacune de ces trois zones. Vous trouverez invariablement ce dont vous avez besoin si vous commencez avec l’une de ces trois étapes.
  
- [Suivant – Exécution d’arborescences d’expressions](expression-trees-execution.md)
+ [Suivant -- Exécution d’arborescences d’expressions](expression-trees-execution.md)

@@ -8,10 +8,10 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309509"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
@@ -25,7 +25,7 @@ Cet article explique étape par étape comment un administrateur système peut d
  Cette rubrique contient les sections suivantes :  
   
  [Processus de déploiement](#the_deployment_process)  
- [Déployer le .NET Framework](#deploying_in_a_test_environment)  
+ [Déploiement du .NET Framework](#deploying_in_a_test_environment)  
  [Créer un regroupement](#creating_a_collection)  
  [Créer un package et un programme](#creating_a_package)  
  [Sélectionner un point de distribution](#select_dist_point)  
@@ -98,7 +98,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 4. Dans la page **Package** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
   
-    -   Nom : `.NET Framework 4.5`  
+    -   Nom : `.NET Framework 4.5`  
   
     -   Fabricant : `Microsoft`  
   
@@ -110,7 +110,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 7. Dans la page **Programme** de l’**Assistant Création d’un package et d’un programme**, entrez les informations suivantes :  
   
-    1.  **Nom :** `.NET Framework 4.5`  
+    1.  **Nom :** `.NET Framework 4.5`  
   
     2.  **Ligne de commande :** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (les options de ligne de commande sont décrites dans le tableau après ces étapes)  
   
@@ -199,19 +199,19 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  **SQL Server 2008 :**  
   
--   [Installer SQL Server 2008 (vidéo SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
+-   [Installation de SQL Server 2008 (Vidéo liée à SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
--   [Vue d’ensemble de la sécurité SQL Server 2008 pour les administrateurs de base de données](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [Présentation de la sécurité SQL Server 2008 pour les administrateurs de base de données](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (point de gestion, point de distribution) :**  
   
 -   [Administration de site pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Planification et déploiement d’un site unique Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
+-   [Planification et déploiement d’un site Configuration Manager unique](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
- **Client System Center 2012 Configuration Manager pour ordinateurs Windows :**  
+ **Client System Center 2012 Configuration Manager pour des ordinateurs Windows :**  
   
--   [Déployer des clients pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
+-   [Déploiement de clients pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
@@ -250,13 +250,13 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 -   [Codes d’erreur du moniker d’URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
--   [Codes d’erreur de WinHttp](/windows/desktop/WinHttp/error-messages)  
+-   [Codes d’erreur WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Autres codes d'erreur :  
   
--   [Codes d’erreur de Windows Installer](/windows/desktop/msi/error-codes)
+-   [Codes d’erreur Windows Installer](/windows/desktop/msi/error-codes)
 
--   [Codes résultat de l’agent Windows Update](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+-   [Codes de résultat de l’agent de mise à jour automatique Windows Update](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="see-also"></a>Voir aussi
 

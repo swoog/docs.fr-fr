@@ -4,10 +4,10 @@ description: Ce tutoriel avancé présente les types référence Nullable. Il ex
 ms.date: 02/19/2019
 ms.custom: mvc
 ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296145"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutoriel : Exprimer plus clairement une intention de conception avec les types référence Nullable et non Nullable
@@ -222,4 +222,4 @@ Faites des essais en modifiant les déclarations de type entre les types référ
 
 En savoir plus en migrant une application existante pour utiliser des types de référence nullable :
 > [!div class="nextstepaction"]
-> [Mettre à niveau une application de façon à utiliser des types références Nullable](upgrade-to-nullable-references.md)
+> [Mettre à niveau une application pour utiliser des types de référence nullable](upgrade-to-nullable-references.md)

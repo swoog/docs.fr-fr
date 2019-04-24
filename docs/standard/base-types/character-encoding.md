@@ -15,10 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346104"
 ---
 # <a name="character-encoding-in-net"></a>Encodage de caractères dans .NET
@@ -35,7 +35,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
  .NET utilise l’encodage UTF-16 (représenté par la classe <xref:System.Text.UnicodeEncoding>) pour représenter des caractères et des chaînes. Les applications qui ciblent le common language runtime utilisent des encodeurs pour mapper les représentations de caractères Unicode prises en charge par le common language runtime à d'autres schémas de codage. Elles utilisent des décodeurs pour mapper les caractères des encodages non-Unicode à Unicode.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Encodages dans .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
@@ -235,7 +235,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
   
  Quand vous créez une solution de secours personnalisée pour un encodeur ou un décodeur, vous devez implémenter les membres suivants :  
   
--   La méthode <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par l’encodeur pour fournir à la mémoire tampon de secours des informations concernant le caractère qu’elle ne peut pas encoder. Étant donné que le caractère à encoder peut être une paire de substitution, cette méthode est surchargée. Le caractère à encoder et son index dans la chaîne sont passés à une surcharge. La demi-zone haute et la demi-zone basse, ainsi que son index dans la chaîne, sont passés à la deuxième surcharge. La méthode <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par le décodeur pour fournir à la mémoire tampon de secours des informations sur les octets qu'elle ne peut pas décoder. Cette méthode reçoit un tableau d'octets qu'elle ne peut pas décoder, ainsi que l'index du premier octet. La méthode de secours doit retourner `true` si la mémoire tampon de secours peut fournir un ou plusieurs caractères les mieux adaptés ou de remplacement ; sinon, elle doit retourner `false`. Pour une stratégie de secours pour les exceptions, la méthode de secours doit lever une exception.  
+-   La méthode <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par l'encodeur pour fournir à la mémoire tampon de secours des informations concernant le caractère qu'elle ne peut pas encoder. Étant donné que le caractère à encoder peut être une paire de substitution, cette méthode est surchargée. Le caractère à encoder et son index dans la chaîne sont passés à une surcharge. La demi-zone haute et la demi-zone basse, ainsi que son index dans la chaîne, sont passés à la deuxième surcharge. La méthode <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> est appelée par le décodeur pour fournir à la mémoire tampon de secours des informations sur les octets qu'elle ne peut pas décoder. Cette méthode reçoit un tableau d'octets qu'elle ne peut pas décoder, ainsi que l'index du premier octet. La méthode de secours doit retourner `true` si la mémoire tampon de secours peut fournir un ou plusieurs caractères les mieux adaptés ou de remplacement ; sinon, elle doit retourner `false`. Pour une stratégie de secours pour les exceptions, la méthode de secours doit lever une exception.  
   
 -   La méthode <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> ou <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , qui est appelée de façon répétée par l'encodeur ou par le décodeur pour obtenir le caractère suivant de la mémoire tampon de secours. Quand tous les caractères de secours ont été retournés, la méthode doit retourner U+0000.  
   

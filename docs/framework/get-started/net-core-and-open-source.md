@@ -5,10 +5,10 @@ ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163421"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core et Open-Source
@@ -35,11 +35,11 @@ Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment
   
 -   [.NET Core](https://github.com/dotnet/core)  
   
--   [CoreFX – Bibliothèques fondamentales .NET Core](https://github.com/dotnet/corefx)  
+-   [CoreFX – Les bibliothèques fondamentales de .NET Core](https://github.com/dotnet/corefx)  
   
--   [CoreCLR – Runtime .NET Core](https://github.com/dotnet/coreclr)  
+-   [CoreCLR – Le runtime .NET Core](https://github.com/dotnet/coreclr)  
   
--   [CLI – Outils en ligne de commande .NET Core](https://github.com/dotnet/cli)  
+-   [CLI – Les outils en ligne de commande de .NET Core](https://github.com/dotnet/cli)  
   
 -   [Roslyn – .NET Compiler Platform](https://github.com/dotnet/roslyn)  
   
@@ -47,6 +47,6 @@ Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Page d’accueil .NET Core](https://www.microsoft.com/net/core)
+- [Page d’accueil de .NET Core](https://www.microsoft.com/net/core)
 - [Guide .NET Core](../../core/index.md)
 - [Documentation ASP.NET Core](/aspnet/core/)

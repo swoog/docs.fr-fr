@@ -14,10 +14,10 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213127"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Booléen**|  
-|CIM_String|**Chaîne**|  
+|CIM_BOOLEAN|**Boolean**|  
+|CIM_String|**String**|  
 |CIM_DATETIME|**DateTime** ou **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Object**|  
+|CIM_IUNKNOWN|**Objet**|  
 |CIM_ARRAY|Tableau des objets mentionnés ci-dessus|  
   
  Notez les comportements suivants lorsque vous générez une classe WMI :  
@@ -100,7 +100,7 @@ WMIClass [options]
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- L'exemple de code suivant montre comment utiliser par programme une classe générée. Tout d'abord, une instance de la classe est énumérée et le chemin est imprimé. Ensuite, une instance de la classe générée à initialiser est créée avec une instance de WMI. `Process` est la classe générée pour **Win32_Process** et `LogicalDisk` la classe générée pour **Win32_LogicalDisk** dans l’espace de noms **Root\cimv2**.  
+ L'exemple de code suivant montre comment utiliser par programme une classe générée. Tout d'abord, une instance de la classe est énumérée et le chemin est imprimé. Ensuite, une instance de la classe générée à initialiser est créée avec une instance de WMI. `Process` est la classe générée pour **Win32_Process** et `LogicalDisk` est la classe générée pour **Win32_LogicalDisk** dans l’espace de noms **Root\cimv2**.  
   
 ```vb  
 Imports System  

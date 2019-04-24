@@ -11,10 +11,10 @@ ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103010"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Réflexion dans le .NET Framework pour les applications Windows Store
@@ -25,7 +25,7 @@ Depuis [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework four
 ## <a name="typeinfo-and-assembly-loading"></a>TypeInfo et chargement des assemblys  
  Dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], la classe <xref:System.Reflection.TypeInfo> contient certaines fonctionnalités de la classe <xref:System.Type> de .NET Framework 4. Un objet <xref:System.Type> représente une référence à la définition d'un type, tandis qu'un objet <xref:System.Reflection.TypeInfo> représente la définition de ce type. Cela vous permet de manipuler des objets <xref:System.Type> sans obliger le runtime à charger l'assembly qu'ils référencent. L'obtention de l'objet <xref:System.Reflection.TypeInfo> associé force le chargement de l'assembly.  
   
- <xref:System.Reflection.TypeInfo> contient la plupart des membres disponibles sur <xref:System.Type>, et de nombreuses propriétés de réflexion de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] retournent des collections d’objets <xref:System.Reflection.TypeInfo>. Pour obtenir un objet <xref:System.Reflection.TypeInfo> à partir d'un objet <xref:System.Type>, utilisez la méthode <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
+ <xref:System.Reflection.TypeInfo> contient bon nombre des membres disponibles sur <xref:System.Type>, et de nombreuses propriétés de réflexion de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] retournent des collections d'objets <xref:System.Reflection.TypeInfo>. Pour obtenir un objet <xref:System.Reflection.TypeInfo> à partir d'un objet <xref:System.Type>, utilisez la méthode <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
   
 ## <a name="query-methods"></a>Méthodes de requête  
  Dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], utilisez les propriétés de réflexion qui retournent des collections <xref:System.Collections.Generic.IEnumerable%601> au lieu de méthodes qui retournent des tableaux. Les contextes de réflexion peuvent implémenter le parcours différé de ces collections pour de grands assemblys ou types.  

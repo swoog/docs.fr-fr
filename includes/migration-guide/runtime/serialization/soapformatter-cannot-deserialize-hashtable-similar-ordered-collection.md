@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6ed7438a7f6e7710fcce03c8260a1360143f8d93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59235260"
 ---
 ### <a name="soapformatter-cannot-deserialize-hashtable-and-similar-ordered-collection-objects"></a>SoapFormatter ne peut pas désérialiser Hashtable et les objets de collection ordonnée similaires
@@ -11,7 +11,7 @@ ms.locfileid: "59235260"
 |   |   |
 |---|---|
 |Détails|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> ne garantit pas que les objets sérialisés dans une version du .NET Framework pourront être désérialisés correctement dans une autre version. En effet, certaines collections ordonnées (comme <xref:System.Collections.Hashtable?displayProperty=name>) ont gagné de nouveaux membres entre les versions 4.0 et 4.5. De fait, les objets de ces types ne peuvent pas être désérialisés avec .NET Framework 4.0 s’ils ont été sérialisés avec .NET Framework 4.5. Notez que si les données sérialisées sont sérialisées et désérialisées avec la même version du .NET Framework, aucun problème ne se produit.|
-|Suggestion|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> La sérialisation doit être remplacée par la sérialisation <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> ou par <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> pour ne pas être affectée par les changements de .NET Framework.|
+|Suggestion|La sérialisation <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> doit être remplacée par la sérialisation <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> ou <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> pour ne pas être affectée par les changements du .NET Framework.|
 |Portée|Mineur|
 |Version|4.5|
 |Type|Runtime|

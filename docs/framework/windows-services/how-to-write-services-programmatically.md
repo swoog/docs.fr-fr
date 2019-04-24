@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328424"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procédure : écrire les services par programmation
@@ -73,7 +73,7 @@ Si vous choisissez de ne pas utiliser le modèle de projet Service Windows, vous
 ## <a name="see-also"></a>Voir aussi
 
 - [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procédure : créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Procédure : enregistrer des informations relatives aux services](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
-- [Procédure pas à pas : Créer une application de service Windows dans le Concepteur de composants](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Guide pratique pour enregistrer des informations relatives aux services](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Procédure pas à pas : Création d’une application de service Windows dans le Concepteur de composants](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

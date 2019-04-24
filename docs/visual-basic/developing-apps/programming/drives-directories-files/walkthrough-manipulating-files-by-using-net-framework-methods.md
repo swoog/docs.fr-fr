@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345272"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procédure pas à pas : Manipulation de fichiers à l’aide de méthodes du .NET Framework (Visual Basic)
@@ -42,14 +42,14 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
   
 4. Ajoutez au formulaire les contrôles répertoriés dans le tableau ci-après et définissez les valeurs de propriété correspondantes.  
   
-|**Object**|**Propriétés**|**Value**|  
+|**Objet**|**Propriétés**|**Valeur**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**|`Submit`<br /><br /> **Envoyer l’entrée**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**|`Clear`<br /><br /> **Effacer l’entrée**|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Texte**<br /><br /> **Multiline**|`Entry`<br /><br /> **Saisissez quelque chose.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **Envoyer une entrée**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **Effacer l’entrée**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Entrez quelque chose.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Écriture dans le fichier  
- Pour permettre l’écriture dans un fichier via l’application, utilisez la classe <xref:System.IO.StreamWriter>. <xref:System.IO.StreamWriter> est conçue pour la sortie de caractères dans un encodage particulier, tandis que la classe <xref:System.IO.Stream> est conçue pour l’entrée et la sortie d’octets. Utilisez <xref:System.IO.StreamWriter> pour écrire des lignes d’informations dans un fichier texte standard. Pour plus d’informations sur la classe <xref:System.IO.StreamWriter>, consultez <xref:System.IO.StreamWriter>.  
+ Pour permettre l’écriture dans un fichier via l’application, utilisez la classe <xref:System.IO.StreamWriter>. La classe <xref:System.IO.StreamWriter> est conçue pour la sortie de caractères dans un encodage particulier, tandis que la classe <xref:System.IO.Stream> est conçue pour l’entrée et la sortie d’octets. Utilisez <xref:System.IO.StreamWriter> pour écrire des lignes d’informations dans un fichier texte standard. Pour plus d’informations sur la classe <xref:System.IO.StreamWriter>, consultez <xref:System.IO.StreamWriter>.  
   
 #### <a name="to-add-writing-functionality"></a>Pour ajouter une fonctionnalité d’écriture  
   
@@ -85,20 +85,20 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]  
   
 ## <a name="adding-display-features-to-the-diary"></a>Ajout de fonctionnalités d’affichage à l’agenda  
- Dans cette section, vous allez ajouter une fonctionnalité qui affiche la dernière entrée de `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Vous pouvez également ajouter une <xref:System.Windows.Forms.ComboBox> qui affiche différentes entrées et permet à l’utilisateur d’en sélectionner une à afficher dans `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Une instance de la classe <xref:System.IO.StreamReader> lit à partir de `MyDiary.txt`. Comme la classe <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader> est destiné à être utilisé avec des fichiers texte.  
+ Dans cette section, vous ajoutez une fonctionnalité qui affiche la dernière entrée dans le contrôle `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Vous pouvez également ajouter un <xref:System.Windows.Forms.ComboBox> qui affiche différentes entrées et à partir duquel un utilisateur peut sélectionner une entrée à afficher dans le `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Une instance de la classe <xref:System.IO.StreamReader> lit à partir de `MyDiary.txt`. Comme la classe <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader> est destiné à être utilisé avec des fichiers texte.  
   
  Pour cette section de la procédure pas à pas, ajoutez au formulaire les contrôles répertoriés dans le tableau ci-après et définissez les valeurs de propriété correspondantes.  
   
 |Contrôle|Propriétés|Valeurs|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**|`Display`<br /><br /> **Afficher**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Taille**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Afficher**|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**|`GetEntries`<br /><br /> **Obtenir des entrées**|  
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Texte**<br /><br /> **Activé**|`PickEntries`<br /><br /> **Sélectionner une entrée**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Activé**|`PickEntries`<br /><br /> **Sélectionner une entrée**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Pour remplir la zone de liste déroulante  
   
-1. `PickEntries`<xref:System.Windows.Forms.ComboBox> permet d’afficher les dates auxquelles un utilisateur soumet chacune des entrées. Ainsi, celui-ci peut sélectionner l’entrée associée à une certaine date. Créez un gestionnaire d’événements <xref:System.Windows.Forms.Control.Click> au bouton `GetEntries` et ajoutez le code suivant.  
+1. Le contrôle `PickEntries`<xref:System.Windows.Forms.ComboBox> permet d’afficher les dates auxquelles un utilisateur soumet une entrée. Ainsi, celui-ci peut sélectionner une entrée associée à une date déterminée. Créez un gestionnaire d’événements <xref:System.Windows.Forms.Control.Click> au bouton `GetEntries` et ajoutez le code suivant.  
   
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
@@ -110,7 +110,7 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
   
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
-2. Pour tester votre code, appuyez sur F5 pour compiler l’application, puis soumettez une entrée. Cliquez sur **Obtenir des entrées**, sélectionnez une entrée dans le <xref:System.Windows.Forms.ComboBox>, puis cliquez sur **Afficher**. Le contenu de l’entrée sélectionnée s’affiche dans `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
+2. Pour tester votre code, appuyez sur F5 pour compiler l’application, puis soumettez une entrée. Cliquez sur **Obtenir des entrées**, sélectionnez une entrée dans le <xref:System.Windows.Forms.ComboBox>, puis cliquez sur **Afficher**. Le contenu de l’entrée sélectionnée s’affiche dans le `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>Autorisation aux utilisateurs de supprimer ou de modifier des entrées  
  Enfin, vous pouvez inclure des fonctionnalités supplémentaires qui permettent aux utilisateurs de supprimer ou de modifier une entrée à l’aide des boutons `DeleteEntry` et `EditEntry`. Ces deux boutons restent désactivés si aucune entrée n’est affichée.  
@@ -119,9 +119,9 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
   
 |Contrôle|Propriétés|Valeurs|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**<br /><br /> **Activé**|`DeleteEntry`<br /><br /> **Supprimer l’entrée**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**<br /><br /> **Activé**|`EditEntry`<br /><br /> **Modifier l’entrée**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texte**<br /><br /> **Activé**|`SubmitEdit`<br /><br /> **Envoyer la modification**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Activé**|`DeleteEntry`<br /><br /> **Supprimer l’entrée**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Activé**|`EditEntry`<br /><br /> **Modifier l’entrée**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Activé**|`SubmitEdit`<br /><br /> **Envoyer la modification**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Pour activer la suppression et la modification d’entrées  
   
@@ -145,10 +145,10 @@ Cette procédure pas à pas illustre comment ouvrir et lire un fichier à l’ai
   
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   
- Pour tester votre code, appuyez sur F5 pour compiler l’application. Cliquez sur **Obtenir des entrées**, sélectionnez une entrée, puis cliquez sur **Afficher**. L’entrée apparaît dans `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Cliquez sur **Modifier l’entrée**. L’entrée apparaît dans `Entry`<xref:System.Windows.Forms.TextBox>. Modifiez l’entrée dans `Entry`<xref:System.Windows.Forms.TextBox> et cliquez sur **Envoyer la modification**. Ouvrez le fichier `MyDiary.txt` pour confirmer vos corrections. À présent, sélectionnez une entrée et cliquez sur **Supprimer l’entrée**. Quand le <xref:System.Windows.Forms.MessageBox> demande confirmation, cliquez sur **OK**. Fermez l’application et ouvrez `MyDiary.txt` pour confirmer la suppression.  
+ Pour tester votre code, appuyez sur F5 pour compiler l’application. Cliquez sur **Obtenir des entrées**, sélectionnez une entrée, puis cliquez sur **Afficher**. L’entrée s’affiche dans le `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Cliquez sur **Modifier l’entrée**. L’entrée s’affiche dans le `Entry`<xref:System.Windows.Forms.TextBox>. Modifiez l’entrée dans le `Entry`<xref:System.Windows.Forms.TextBox> et cliquez sur **Envoyer la modification**. Ouvrez le fichier `MyDiary.txt` pour confirmer vos corrections. À présent, sélectionnez une entrée et cliquez sur **Supprimer l’entrée**. Quand le <xref:System.Windows.Forms.MessageBox> demande confirmation, cliquez sur **OK**. Fermez l’application et ouvrez `MyDiary.txt` pour confirmer la suppression.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [Procédures pas à pas](../../../../visual-basic/walkthroughs.md)
+- [Procédures pas à pas](../../../../visual-basic/walkthroughs.md)

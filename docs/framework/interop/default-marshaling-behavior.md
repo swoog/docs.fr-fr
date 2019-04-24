@@ -12,10 +12,10 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315762"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
@@ -333,7 +333,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>Types valeur utilisés dans COM Interop  
  Les types mis en forme peuvent également être passés aux appels de méthode d'interopérabilité COM. En effet, quand ils sont exportés vers une bibliothèque de types, les types valeur sont convertis automatiquement en structures. Comme dans l'exemple suivant, le type valeur `Point` devient une définition de type (typedef) portant le nom `Point`. Toutes les références au type valeur `Point` situées ailleurs que dans la bibliothèque de types sont remplacées par le typedef `Point`.  
   
- **Représentation d'une bibliothèque de types**  
+ **Représentation d’une bibliothèque de types**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -441,8 +441,8 @@ interface IValueTypes : IDispatch {
   
 ## <a name="see-also"></a>Voir aussi
 
-- [types blittable et non blittable](blittable-and-non-blittable-types.md)
-- [copie et épinglage](copying-and-pinning.md)
+- [Types blittable et non blittable](blittable-and-non-blittable-types.md)
+- [Copie et épinglage](copying-and-pinning.md)
 - [Marshaling par défaut pour les tableaux](default-marshaling-for-arrays.md)
 - [Marshaling par défaut pour les objets](default-marshaling-for-objects.md)
 - [Marshaling par défaut pour les chaînes](default-marshaling-for-strings.md)

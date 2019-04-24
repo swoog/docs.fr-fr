@@ -3,10 +3,10 @@ title: Collections (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481104"
 ---
 # <a name="collections-c"></a>Collections (C#)
@@ -36,7 +36,7 @@ Si votre collection contient des éléments d’un seul type de données, vous p
 
   - [Classes System.Collections](#BKMK_Collections)
 
-- [Implémentation d’une collection de paires clé/valeur](#BKMK_KeyValuePairs)
+- [Implémentation d’une collection de paires clé-valeur](#BKMK_KeyValuePairs)
 
 - [Utilisation de LINQ pour accéder à une collection](#BKMK_LINQ)
 
@@ -44,7 +44,7 @@ Si votre collection contient des éléments d’un seul type de données, vous p
 
 - [Définition d’une collection personnalisée](#BKMK_CustomCollection)
 
-- [Iterators](#BKMK_Iterators)
+- [Itérateurs](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -186,11 +186,11 @@ Plusieurs collections courantes sont fournies par le .NET Framework. Chaque type
 
 Certaines des classes de collection courantes sont décrites dans cette section :
 
-- <xref:System.Collections.Generic> Classes
+- Classes <xref:System.Collections.Generic>
 
-- <xref:System.Collections.Concurrent> Classes
+- Classes <xref:System.Collections.Concurrent>
 
-- <xref:System.Collections> Classes
+- Classes <xref:System.Collections>
 
 <a name="BKMK_Generic"></a>
 
@@ -486,7 +486,7 @@ Même si vous pouvez définir une collection personnalisée, il est généraleme
 
 L’exemple suivant définit une classe de collection personnalisée nommée `AllColors`. Cette classe implémente l’interface <xref:System.Collections.IEnumerable>, ce qui implique l’implémentation de la méthode <xref:System.Collections.IEnumerable.GetEnumerator%2A>.
 
-La méthode `GetEnumerator` retourne une instance de la classe `ColorEnumerator`. `ColorEnumerator` implémente l’interface <xref:System.Collections.IEnumerator>, ce qui oblige à implémenter la propriété <xref:System.Collections.IEnumerator.Current%2A>, la méthode <xref:System.Collections.IEnumerator.MoveNext%2A> et la méthode <xref:System.Collections.IEnumerator.Reset%2A>.
+La méthode `GetEnumerator` retourne une instance de la classe `ColorEnumerator`. `ColorEnumerator` implémente l’interface <xref:System.Collections.IEnumerator>, ce qui implique l’implémentation de la propriété <xref:System.Collections.IEnumerator.Current%2A>, la méthode <xref:System.Collections.IEnumerator.MoveNext%2A> et la méthode <xref:System.Collections.IEnumerator.Reset%2A>.
 
 ```csharp
 private static void ListColors()
@@ -600,7 +600,7 @@ private static IEnumerable<int> EvenSequence(
 
 - [Initialiseurs d’objets et de collections](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 - [Concepts de programmation (C#)](../../../csharp/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Collections et structures de données](../../../standard/collections/index.md)

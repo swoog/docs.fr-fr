@@ -19,10 +19,10 @@ ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097263"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empaquetage d'un assembly pour COM
@@ -54,7 +54,7 @@ Les développeurs COM peuvent tirer parti des informations suivantes sur les typ
   
     -   [Classe TypeLibConverter](#cpconpackagingassemblyforcomanchor2)  
   
-    -   [Outil Assembly Registration Tool](#cpconpackagingassemblyforcomanchor3)  
+    -   [Outil Assembly Registration](#cpconpackagingassemblyforcomanchor3)  
   
     -   [Outil .NET Services Installation](#cpconpackagingassemblyforcomanchor4)  
   
@@ -84,10 +84,10 @@ Les développeurs COM peuvent tirer parti des informations suivantes sur les typ
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
-- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
-- [Qualification des types .NET en vue d'une interopérabilité](qualifying-net-types-for-interoperation.md)
-- [Présentation de l'interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Qualifier des types .NET pour l'interopérabilité](qualifying-net-types-for-interoperation.md)
+- [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
 - [Aspects de la sécurité des assemblys](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (exportateur de bibliothèques de types)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Inscription d'assemblys dans COM](registering-assemblies-with-com.md)
-- [Procédure : Incorporer des bibliothèques de types sous forme de ressources Win32 dans des applications](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Inscription d’assemblys dans COM](registering-assemblies-with-com.md)
+- [Guide pratique pour incorporer des bibliothèques de types comme des ressources Win32 dans les applications](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -3,11 +3,11 @@ title: Sélectionner la version du langage C# - Guide C#
 description: Configurer le compilateur pour effectuer la validation de la syntaxe à l’aide d’une version de compilateur spécifique
 ms.date: 02/28/2019
 ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480740"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770878"
 ---
 # <a name="select-the-c-language-version"></a>Sélectionner la version du langage C#
 

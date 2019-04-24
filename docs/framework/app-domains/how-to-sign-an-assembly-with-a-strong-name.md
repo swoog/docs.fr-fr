@@ -14,10 +14,10 @@ ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303419"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procédure : signer un assembly avec un nom fort
@@ -102,9 +102,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Création et utilisation d'assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Procédure : créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Création et utilisation d’assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Temporisation de signature d'un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Gestion d'assembly et signature de manifeste](/visualstudio/ide/managing-assembly-and-manifest-signing)
-- [Page Signature, Concepteur de projets](/visualstudio/ide/reference/signing-page-project-designer)
+- [Gestion d’assembly et signature de manifeste](/visualstudio/ide/managing-assembly-and-manifest-signing)
+- [Page Signature, Concepteur de projet](/visualstudio/ide/reference/signing-page-project-designer)

@@ -3,10 +3,10 @@ title: Gestion de la réentrance dans Async Apps (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480870"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestion de la réentrance dans Async Apps (C#)
@@ -15,9 +15,9 @@ Quand vous incluez du code asynchrone dans votre application, vous devez prendre
 
 **Dans cette rubrique**
 
-- [Reconnaître la réentrance](#BKMK_RecognizingReentrancy)
+- [Identification de la réentrance](#BKMK_RecognizingReentrancy)
 
-- [Gérer la réentrance](#BKMK_HandlingReentrancy)
+- [Gestion de la réentrance](#BKMK_HandlingReentrancy)
 
   - [Désactiver le bouton Démarrer](#BKMK_DisableTheStartButton)
 
@@ -25,10 +25,10 @@ Quand vous incluez du code asynchrone dans votre application, vous devez prendre
 
   - [Exécuter plusieurs opérations et mettre la sortie en file d’attente](#BKMK_RunMultipleOperations)
 
-- [Vérifier et exécuter l’exemple d’application](#BKMD_SettingUpTheExample)
+- [Examen et exécution de l’exemple d’application](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> Pour exécuter l’exemple, Visual Studio version 2012 ou ultérieure et .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.
+> Pour exécuter l’exemple, Visual Studio version 2012, ou une version ultérieure, et .NET Framework version 4.5, ou une version ultérieure, doivent être installés sur votre ordinateur.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Identification de la réentrance
 
@@ -724,5 +724,5 @@ La section suivante fournit le code pour générer l’exemple comme une applica
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Procédure pas à pas : Accéder au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

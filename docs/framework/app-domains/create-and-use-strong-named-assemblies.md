@@ -15,10 +15,10 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300695"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Créer et utiliser des assemblys avec nom fort
@@ -69,12 +69,12 @@ Cette fonctionnalité peut être désactivée pour des applications individuelle
 
 |Titre|Description|
 |-----------|-----------------|
-|[Procédure : créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Décrit comment créer une paire de clés de chiffrement pour signer un assembly.|
-|[Procédure : signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Décrit comment créer un assembly avec nom fort.|
-|[Amélioration de l'utilisation de noms forts](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Décrit les améliorations apportées aux noms forts dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
-|[Procédure : référencer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Décrit comment référencer des types ou des ressources dans un assembly avec nom fort au moment de la compilation ou de l'exécution.|
-|[Procédure : désactiver la fonctionnalité consistant à ignorer les noms forts](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Décrit comment désactiver la fonctionnalité qui ignore la validation des signatures avec nom fort. Cette fonctionnalité peut être désactivée pour toutes les applications ou pour des applications spécifiques.|
-|[Création d'assemblys](../../../docs/framework/app-domains/create-assemblies.md)|Fournit une vue d'ensemble des assemblys multifichiers et à fichier unique.|
-|[Guide pratique pour repousser la signature d’un assembly dans Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explique comment signer un assembly avec un nom fort après la création de l'assembly.|
-|[Sn.exe (outil Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Décrit l'outil inclus dans le .NET Framework qui facilite la création d'assemblys avec des noms forts. Cet outil fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.|
+|[Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Décrit comment créer une paire de clés de chiffrement pour signer un assembly.|
+|[Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Décrit comment créer un assembly avec nom fort.|
+|[Utilisation de noms forts améliorés](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Décrit les améliorations apportées aux noms forts dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Guide pratique pour référencer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Décrit comment référencer des types ou des ressources dans un assembly avec nom fort au moment de la compilation ou de l'exécution.|
+|[Guide pratique pour désactiver la fonctionnalité consistant à ignorer les noms forts](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Décrit comment désactiver la fonctionnalité qui ignore la validation des signatures avec nom fort. Cette fonctionnalité peut être désactivée pour toutes les applications ou pour des applications spécifiques.|
+|[Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)|Fournit une vue d'ensemble des assemblys multifichiers et à fichier unique.|
+|[Comment : temporiser la signature d’un assembly (Visual Studio)](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explique comment signer un assembly avec un nom fort après la création de l'assembly.|
+|[Sn.exe (outil Strong Name)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Décrit l'outil inclus dans le .NET Framework qui facilite la création d'assemblys avec des noms forts. Cet outil fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.|
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Décrit l'outil inclus dans le .NET Framework qui génère un fichier possédant un manifeste d'assembly à partir de modules ou de fichiers de ressources.|

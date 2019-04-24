@@ -10,10 +10,10 @@ ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169024"
 ---
 # <a name="registering-assemblies-with-com"></a>Inscription d'assemblys dans COM
@@ -45,7 +45,7 @@ Vous pouvez exécuter l’outil en ligne de commande [Assembly Registration Tool
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
-- [Procédure : référencer des types .NET à partir de COM](how-to-reference-net-types-from-com.md)
-- [Appeler un objet .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Déployer une application pour accéder à COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Guide pratique pour référencer des types .NET à partir de COM](how-to-reference-net-types-from-com.md)
+- [Appel d’un objet .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [Déploiement d’une application pour accéder à COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

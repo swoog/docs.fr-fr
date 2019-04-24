@@ -13,10 +13,10 @@ ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315541"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procédure : définir un type générique avec l’émission de réflexion
@@ -65,7 +65,7 @@ Cette rubrique montre comment créer un type générique simple avec deux param�
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7. Définissez un champ. Dans cet exemple, le type du champ est spécifié par le paramètre de type `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> dérive de <xref:System.Type>. Il est donc possible d’utiliser des paramètres de type générique partout où un type peut être utilisé.  
+7. Définissez un champ. Dans cet exemple, le type du champ est spécifié par le paramètre de type `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> dérive de <xref:System.Type>. Vous pouvez donc utiliser des paramètres de type générique partout où un type peut être utilisé.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
@@ -98,7 +98,7 @@ Cette rubrique montre comment créer un type générique simple avec deux param�
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Appelez la méthode. `ExampleMethod` n’est pas générique, mais le type auquel elle appartient est générique. Ainsi, pour récupérer un <xref:System.Reflection.MethodInfo> qui peut être appelé, il est nécessaire de créer un type construit à partir de la définition de type de `Sample`. Le type construit utilise la classe `Example`, ce qui satisfait aux contraintes sur `TFirst` car il s’agit d’un type référence avec un constructeur sans paramètre par défaut, et la classe `ExampleDerived` qui satisfait aux contraintes sur `TSecond`. (Le code de `ExampleDerived` se trouve dans la section Exemple de code.) Ces deux types sont passés à <xref:System.Type.MakeGenericType%2A> pour créer le type construit. <xref:System.Reflection.MethodInfo> est ensuite obtenu à l’aide de la méthode <xref:System.Type.GetMethod%2A>.  
+11. Appelez la méthode. `ExampleMethod` n’est pas générique, mais le type auquel elle appartient est générique. Ainsi, pour obtenir un <xref:System.Reflection.MethodInfo> qui peut être appelé, vous devez créer un type construit à partir de la définition de type pour `Sample`. Le type construit utilise la classe `Example`, ce qui satisfait aux contraintes sur `TFirst` car il s’agit d’un type référence avec un constructeur sans paramètre par défaut, et la classe `ExampleDerived` qui satisfait aux contraintes sur `TSecond`. (Le code de `ExampleDerived` se trouve dans la section Exemple de code.) Ces deux types sont passés à <xref:System.Type.MakeGenericType%2A> pour créer le type construit. <xref:System.Reflection.MethodInfo> est ensuite obtenu à l’aide de la méthode <xref:System.Type.GetMethod%2A>.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]
@@ -138,5 +138,5 @@ Cette rubrique montre comment créer un type générique simple avec deux param�
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Utiliser l’émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Utilisation de l’émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Scénarios d’assemblys dynamiques avec émission de réflexion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

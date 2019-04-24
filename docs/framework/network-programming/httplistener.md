@@ -5,10 +5,10 @@ helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
 ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075416"
 ---
 # <a name="httplistener"></a>HttpListener
@@ -23,7 +23,7 @@ La classe <xref:System.Net.HttpListener> fournit un écouteur de protocole HTTP 
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - [Serveur HTTP](https://go.microsoft.com/fwlink/?LinkID=178285)
-- [Améliorations apportées à la sécurité des informations Internet](https://go.microsoft.com/fwlink/?LinkID=178286)
+- [Améliorations de la sécurité des informations Internet](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [Exemple d’application hôte ASPX HttpListener](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [Exemple de technologie HttpListener](https://go.microsoft.com/fwlink/?LinkID=179558)
 - [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)

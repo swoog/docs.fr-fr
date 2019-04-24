@@ -3,10 +3,10 @@ title: Exemples de programmation réseau
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204547"
 ---
 # <a name="network-programming-samples"></a>Exemples de programmation réseau
@@ -19,7 +19,7 @@ Cette section contient des descriptions et des liens vers des exemples de progra
  [Exemple de technologie d’indicateur de progression de téléchargement](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/t8w6294a(v=vs.85))  
  Montre comment afficher la progression du téléchargement d’un fichier.  
   
- [Exemple de technologie de client FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/b7810t5c(v=vs.85))  
+ [Exemple de technologie cliente FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/b7810t5c(v=vs.85))  
  Montre comment charger et télécharger des fichiers vers et à partir d’un serveur FTP.  
   
  [Exemple de technologie HttpListener](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
@@ -31,13 +31,13 @@ Cette section contient des descriptions et des liens vers des exemples de progra
  [Exemple de technologie de messagerie](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Montre comment envoyer des e-mails à partir d’une application cliente.  
   
- [Exemple de technologie d’outil NetStat](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
+ [Exemple de technologie NetStat](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
  Explique l’utilisation de l’outil d’informations réseau NCLNetStat.  
   
  [Exemple de technologie d’informations réseau](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85))  
  Montre comment surveiller et afficher des informations réseau.  
   
- [Exemple de technologie de client ping](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
+ [Exemple de technologie de test ping à partir d’une application cliente](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
  Montre une application cliente qui peut effectuer un test ping sur un hôte distant.  
   
  [Exemple de technologie WebClient](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/fxk992zc(v=vs.85))  
@@ -49,7 +49,7 @@ Cette section contient des descriptions et des liens vers des exemples de progra
  [Exemple de sockets IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981(v=vs.85))  
  Montre comment utiliser des sockets lorsqu’IPv6 est activé.  
   
- [Exemple de technologie d’explorateur FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
+ [Exemple de technologie de l’explorateur FTP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  Montre comment répertorier le contenu d’un serveur FTP.  
 
 ## <a name="reference"></a>Référence  
@@ -60,4 +60,4 @@ Cette section contient des descriptions et des liens vers des exemples de progra
 ## <a name="see-also"></a>Voir aussi
 
 - [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Rubriques "Comment" relatives à la programmation réseau](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Rubriques de guide pratique sur la programmation réseau](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

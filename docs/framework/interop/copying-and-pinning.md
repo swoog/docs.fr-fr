@@ -10,10 +10,10 @@ ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326279"
 ---
 # <a name="copying-and-pinning"></a>copie et épinglage
@@ -77,6 +77,6 @@ Lors du marshaling des données, le marshaleur d’interopérabilité peut copie
   
 ## <a name="see-also"></a>Voir aussi
 
-- [comportement de marshaling par défaut](default-marshaling-behavior.md)
+- [Comportement de marshaling par défaut](default-marshaling-behavior.md)
 - [Attributs directionnels](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling d’interopérabilité](interop-marshaling.md)
+- [Marshaling d'interopérabilité](interop-marshaling.md)

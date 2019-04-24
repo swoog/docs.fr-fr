@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322873"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Procédure : envoyer des données à l’aide de la classe WebRequest
@@ -155,8 +155,8 @@ L’exemple de code suivant montre comment envoyer des données à un serveur we
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer des requêtes Internet](creating-internet-requests.md)
-- [Utiliser des flux sur le réseau](using-streams-on-the-network.md)
-- [Accéder à Internet via un proxy](accessing-the-internet-through-a-proxy.md)
-- [Demander des données](requesting-data.md)
-- [Procédure : demander des données à l’aide de la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Création de requêtes Internet](creating-internet-requests.md)
+- [Utilisation de flux sur le réseau](using-streams-on-the-network.md)
+- [Accès à Internet via un proxy](accessing-the-internet-through-a-proxy.md)
+- [Demande de données](requesting-data.md)
+- [Guide pratique pour demander des données à l’aide de la classe WebRequest](how-to-request-data-using-the-webrequest-class.md)

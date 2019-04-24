@@ -8,10 +8,10 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101326"
 ---
 # <a name="customizing-structure-marshalling"></a>Personnalisation de marshaling de structures
@@ -100,7 +100,7 @@ struct VariantBool
 ```
 
 > [!NOTE]
-> `VARIANT_BOOL` est différent de la plupart des types booléens en ce que `VARIANT_TRUE = -1` et `VARIANT_FALSE = 0`. De plus, toutes les valeurs qui ne sont pas égales à `VARIANT_TRUE` sont considérées comme false.
+> `VARIANT_BOOL` est différent de la plupart des types de bools dans `VARIANT_TRUE = -1` et `VARIANT_FALSE = 0`. De plus, toutes les valeurs qui ne sont pas égales à `VARIANT_TRUE` sont considérées comme false.
 
 ## <a name="customizing-array-field-marshalling"></a>Personnalisation du marshaling des champs de tableaux
 

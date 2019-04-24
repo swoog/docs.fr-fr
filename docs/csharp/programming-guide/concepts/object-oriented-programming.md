@@ -3,10 +3,10 @@ title: Programmation orientée objet (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481169"
 ---
 # <a name="object-oriented-programming-c"></a>Programmation orientée objet (C#)
@@ -47,7 +47,7 @@ Cette section décrit les concepts suivants :
 
 - [Héritage](#Inheritance)
 
-  - [Remplacement de membres](#Overriding)
+  - [Substitution de membres](#Overriding)
 
 - [Interfaces](#Interfaces)
 
@@ -135,7 +135,7 @@ Pour plus d'informations, voir :
 
 - [get](../../../csharp/language-reference/keywords/get.md)
 
-- [définir](../../../csharp/language-reference/keywords/set.md)
+- [set](../../../csharp/language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> Méthodes
 
@@ -239,7 +239,7 @@ Les modificateurs d’accès suivants sont disponibles :
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Seul le code de la même classe ou d'une classe dérivée peut accéder au type ou au membre.|
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Tout code du même assembly, mais pas d'un autre assembly, peut accéder au type ou au membre.|
 |[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Tout code du même assembly ou toute classe dérivée dans un autre assembly peut accéder au type ou au membre.|
-|[protégé privé](../../../csharp/language-reference/keywords/private-protected.md)|Le code de la même classe ou d'une classe dérivée peut accéder au type ou au membre dans l’assembly de la classe de base.|
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Le code de la même classe ou d'une classe dérivée peut accéder au type ou au membre dans l’assembly de la classe de base.|
 
 Pour plus d’informations, consultez la page [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -450,7 +450,7 @@ Pour plus d'informations, voir :
 
 - [Délégués](../../../csharp/programming-guide/delegates/index.md)
 
-- [délégué](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../../csharp/language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>Voir aussi
 

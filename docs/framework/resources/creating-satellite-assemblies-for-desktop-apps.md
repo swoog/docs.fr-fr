@@ -26,10 +26,10 @@ ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295989"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Création d'assemblys satellites pour les applications bureautiques
@@ -117,7 +117,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. Compilez le code source suivant avec les ressources de la culture par défaut dans l’assembly principal de l’application :  
   
     > [!IMPORTANT]
-    >  Si vous utilisez la ligne de commande plutôt que Visual Studio pour créer l’exemple, modifiez l’appel au constructeur de la classe <xref:System.Resources.ResourceManager> : `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  Si vous utilisez la ligne de commande plutôt que Visual Studio pour créer l’exemple, vous devez modifier l’appel au constructeur de la classe <xref:System.Resources.ResourceManager> comme suit :`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
@@ -314,6 +314,6 @@ gacutil -i:StringLibrary.resources.dll
 - [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Temporisation de signature d'un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Sn.exe (outil Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Sn.exe (outil Strong Name)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Gacutil.exe (outil Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
 - [Ressources dans des applications de bureau](../../../docs/framework/resources/index.md)

@@ -1,0 +1,76 @@
+- name: Guide ML.NET
+  href: index.yml
+- name: Vue d'ensemble
+  expanded: true
+  items:
+    - name: Présentation de ML.NET
+      href: what-is-mldotnet.md
+    - name: Concepts de l’entraînement de modèles
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: Didacticiels
+  href: null
+  items:
+    - name: Vue d'ensemble
+      href: tutorials/index.md
+    - name: Analyse des sentiments (classification binaire)
+      href: tutorials/sentiment-analysis.md
+    - name: Classification des problèmes (classification multiclasse)
+      href: tutorials/github-issue-classification.md
+    - name: Prédiction des prix (régression)
+      href: tutorials/taxi-fare.md
+    - name: Iris (clustering)
+      href: tutorials/iris-clustering.md
+    - name: Recommandation de films (recommandation)
+      href: tutorials/movie-recommmendation.md
+    - name: Classification d’images (apprentissage par transfert)
+      href: tutorials/image-classification.md
+- name: Guides pratiques
+  items:
+    - name: Charger les données
+      href: how-to-guides/load-data-ml-net.md
+    - name: Préparer les données
+      href: how-to-guides/index.md
+      items:
+        - name: Appliquer une ingénierie de fonctionnalité catégorielle
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: Appliquer une ingénierie de fonctionnalité textuelle
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: Prétraiter des données avec des normaliseurs
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: 'Entraîner, évaluer et expliquer le modèle'
+      items:
+        - name: Entraîner un modèle avec une validation croisée
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: Inspecter les valeurs de données intermédiaires du pipeline
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: Entraîner un modèle de régression
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: Déterminer l’importance de la fonctionnalité d’un modèle avec PFI
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: Utiliser le modèle entraîné
+      items:
+        - name: Une prédiction à la fois avec PredictionEngine
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: Utiliser un modèle entraîné
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: Servir un modèle Azure Functions
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: Servir un modèle dans l’API Web
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: Programmation probabiliste avec Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
+- name: Référence
+  items:
+    - name: Informations de référence sur les API
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: Ressources
+  href: resources/index.md
+  items:
+    - name: Glossaire de l’apprentissage automatique
+      href: resources/glossary.md
+    - name: Tâches d’apprentissage automatique
+      href: resources/tasks.md
+    - name: Transformations de données
+      href: resources/transforms.md

@@ -13,10 +13,10 @@ ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336146"
 ---
 # <a name="managed-execution-process"></a>processus d'exécution managée
@@ -109,12 +109,12 @@ ms.locfileid: "59336146"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Vue d'ensemble](../../docs/framework/get-started/overview.md)
+- [Vue d’ensemble](../../docs/framework/get-started/overview.md)
 - [Indépendance du langage et composants indépendants du langage](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Métadonnées et composants autodescriptifs](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (Assembleur IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Ilasm.exe (assembleur IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Sécurité](../../docs/standard/security/index.md)
 - [Interopération avec du code non managé](../../docs/framework/interop/index.md)
 - [Déploiement](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblys dans le Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Domaines d'application](../../docs/framework/app-domains/application-domains.md)
+- [Domaines d’application](../../docs/framework/app-domains/application-domains.md)

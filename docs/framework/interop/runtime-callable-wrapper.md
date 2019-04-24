@@ -11,10 +11,10 @@ ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210130"
 ---
 # <a name="runtime-callable-wrapper"></a>Wrapper pouvant être appelé par le runtime
@@ -55,12 +55,12 @@ L’image suivante montre le processus d’accès aux objets COM par le biais d
 |Interface|Description|  
 |---------------|-----------------|  
 |**IConnectionPoint** et **IConnectionPointContainer**|Le wrapper RCW convertit les objets qui exposent le style d'événement point de connexion en événements basés sur le délégué.|  
-|**IDispatchEx**|Si la classe implémente **IDispatchEx**, le wrapper RCW implémente **IExpando**. L’interface **IDispatchEx** est une extension de l’interface **IDispatch** qui, contrairement à l’interface **IDispatch**, permet l’énumération, l’ajout, la suppression et l’appel de la casse des membres.|  
+|**IDispatchEx**|Si la classe implémente **IDispatchEx**, le wrapper RCW implémente **IExpando**. L’interface **IDispatchEx** est une extension de l’interface **IDispatch** qui, contrairement à l’interface **IDispatch**, permet l’énumération, l’ajout, la suppression et l’appel sensible à la casse des membres.|  
 |**IEnumVARIANT**|Permet aux types COM qui prennent en charge les énumérations d'être traités comme des collections.|  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Wrappers COM](com-wrappers.md)
-- [Wrapper pouvant être appelé par COM](com-callable-wrapper.md)
+- [Wrapper CCW (COM Callable Wrapper)](com-callable-wrapper.md)
 - [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)
