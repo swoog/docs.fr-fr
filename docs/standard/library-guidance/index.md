@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
 ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910128"
 ---
 # <a name="open-source-library-guidance"></a>Conseils sur la bibliothèque open source
 
@@ -29,7 +29,7 @@ Aspects des bibliothèques .NET open source de qualité :
 
 ## <a name="types-of-recommendations"></a>Types de suggestions
 
-Chaque article présente quatre types de suggestions : **À faire**, **Envisager**, **Éviter** et **À ne pas faire**. Le type de suggestion indique si celle-ci doit être suivie ou pas.
+Chaque article présente quatre types de recommandations : **À faire**, **À envisager**, **À éviter** et **À ne pas faire**. Le type de suggestion indique si celle-ci doit être suivie ou pas.
 
 Vous devez presque toujours suivre une suggestion **À faire**. Par exemple :
 
