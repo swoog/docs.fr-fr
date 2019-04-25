@@ -18,10 +18,10 @@ ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318375"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procédure : définir et utiliser des fournisseurs de formats numériques personnalisés
@@ -39,7 +39,7 @@ ms.locfileid: "59318375"
   
 1. Définir une classe qui implémente les inferfaces <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>.  
   
-2. Implémentez la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> est une méthode de rappel appelée par la méthode de mise en forme (par exemple, la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) pour récupérer l’objet véritablement chargé de la mise en forme personnalisée. Une implémentation type de <xref:System.IFormatProvider.GetFormat%2A> effectue les opérations suivantes :  
+2. Implémentez la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> est une méthode de rappel que la méthode de mise en forme (telle que la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) appelle pour récupérer l’objet qui est réellement chargé d’effectuer la mise en forme personnalisée. Une implémentation type de <xref:System.IFormatProvider.GetFormat%2A> effectue les opérations suivantes :  
   
     1.  Elle détermine si l’objet <xref:System.Type> passé comme paramètre de méthode représente une interface <xref:System.ICustomFormatter>.  
   
@@ -93,4 +93,4 @@ ms.locfileid: "59318375"
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Exécution d'opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
