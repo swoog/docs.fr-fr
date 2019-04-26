@@ -1,19 +1,19 @@
 ---
 title: Bien démarrer avec le .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644047"
 ---
 # <a name="get-started-with-the-net-framework"></a>Bien démarrer avec le .NET Framework
 
@@ -22,8 +22,7 @@ Le .NET Framework est un environnement d'exécution qui gère les applications c
 > [!NOTE] 
 > Le .NET Framework est uniquement disponible sur les systèmes Windows. Vous pouvez utiliser [.NET Core](../../core/index.md) pour exécuter des applications sur Windows, MacOS et Linux. 
 
-<a name="Introducing"></a>
-## <a name="what-is-the-net-framework"></a>Qu'est-ce que le .NET Framework ?
+## <a name="Introducing"></a> Présentation de .NET Framework
 
 Le .NET Framework est un environnement d’exécution managé pour Windows qui fournit divers services à ses applications actives. Il comporte deux composants principaux : le Common Langage Runtime (CLR) qui est le moteur d’exécution gérant les applications actives, et la bibliothèque de classes .NET Framework qui fournit une bibliothèque de code testé réutilisable que les développeurs peuvent appeler à partir de leurs propres applications. Le .NET Framework fournit notamment les services suivants aux applications en cours d’exécution :
 
@@ -39,7 +38,7 @@ Le .NET Framework est un environnement d’exécution managé pour Windows qui f
 
 - Compatibilité des versions. À de rares exceptions près, les applications qui sont développées avec une version particulière du .NET Framework s’exécutent sans modification sur une version ultérieure.
 
-- Exécution côte à côte. Le .NET Framework aide à résoudre les conflits de versions en permettant à plusieurs versions du Common Langage Runtime de cohabiter sur le même ordinateur. Cela signifie que plusieurs versions d'applications peuvent coexister et qu’une application peut s’exécuter sur la version du .NET Framework avec laquelle elle a été générée. L’exécution côte-à-côte s’applique aux groupes de versions .NET Framework 1.0/1.1, 2.0/3.0/3.5 et 4/4.5.x/4.6.x/4.7.x.
+- Exécution côte à côte. Le .NET Framework aide à résoudre les conflits de versions en permettant à plusieurs versions du Common Langage Runtime de cohabiter sur le même ordinateur. Cela signifie que plusieurs versions d'applications peuvent coexister et qu’une application peut s’exécuter sur la version du .NET Framework avec laquelle elle a été générée. L’exécution côte-à-côte s’applique aux groupes de versions .NET Framework 1.0/1.1, 2.0/3.0/3.5 et 4/4.5.x/4.6.x/4.7.x/4.8.
 
 - Multiciblage. En ciblant [.NET Standard](../../standard/net-standard.md), les développeurs créent des bibliothèques de classes qui fonctionnent sur plusieurs plateformes .NET Framework prises en charge par cette version de la norme. Par exemple, les bibliothèques qui ciblent .NET Standard 2.0 peuvent être utilisées par des applications qui ciblent .NET Framework 4.6.1, .NET Core 2.0 et UWP 10.0.16299. 
 
@@ -54,20 +53,19 @@ En règle générale, vous ne devez pas désinstaller les versions du .NET Frame
 
 - Si une application que vous utilisez dépend d’une version spécifique du .NET Framework, elle peut cesser de fonctionner si cette version est supprimée.
 
-- Certaines versions du .NET Framework sont des mises à jour sur place de versions antérieures. Par exemple, le [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] est une mise à jour sur place de la version 2.0, et le .NET Framework 4.7.2 est une mise à jour sur place des versions 4 à 4.7.1. Pour plus d’informations, consultez [Versions et dépendances du .NET Framework](../migration-guide/versions-and-dependencies.md).
+- Certaines versions du .NET Framework sont des mises à jour sur place de versions antérieures. Par exemple, le [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] est une mise à jour sur place de la version 2.0, et le .NET Framework 4.8 est une mise à jour sur place des versions 4 à 4.7.2. Pour plus d’informations, consultez [Versions et dépendances du .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Sur les versions Windows antérieures à Windows 8, si vous choisissez de supprimer le .NET Framework, désinstallez-le toujours à l’aide de l’option **Programmes et fonctionnalités** du Panneau de configuration. Ne supprimez jamais manuellement une version du .NET Framework. Sur Windows 8 et versions ultérieures, le .NET Framework est un composant du système d’exploitation qui ne peut pas être désinstallé séparément.
 
 Notez que plusieurs versions du .NET Framework peuvent coexister simultanément sur un même ordinateur. Cela signifie que vous n’avez pas besoin de désinstaller les versions antérieures afin d’installer une version ultérieure.
 
-<a name="ForDevelopers"></a> 
-## <a name="the-net-framework-for-developers"></a>Le .NET Framework pour les développeurs
+## <a name="ForDevelopers"></a> Le .NET Framework pour les développeurs
 
 Si vous êtes développeur, choisissez n’importe quel langage de programmation prenant en charge le .NET Framework pour créer vos applications. Comme le .NET Framework fournit l’indépendance et l’interopérabilité des langages, vous interagissez avec d’autres applications et composants .NET Framework, quel que soit le langage utilisé pour leur développement.
 
 Pour développer des applications ou des composants .NET Framework, procédez comme suit :
 
-1. Si elle n’est pas préinstallée sur votre système d’exploitation, installez la version du .NET Framework ciblée par votre application. La version de production la plus récente est le .NET Framework 4.7.2. Elle est préinstallée sur la Mise à jour d’avril 2018 de Windows 10 et la Mise à jour d’octobre 2018 de Windows 10, et elle est disponible en téléchargement sur les versions précédentes du système d’exploitation Windows. Pour la configuration système requise du .NET Framework, consultez [Configuration requise](system-requirements.md). Pour plus d’informations sur l’installation d’autres versions du .NET Framework, consultez [Guide d’installation](../install/guide-for-developers.md). Les autres packages .NET Framework sont fournis hors bande, ce qui signifie qu’ils sont publiés en continu, en dehors d’un cycle de publications classique ou planifié. Pour plus d’informations sur ces packages, consultez [Versions finales hors plage du .NET Framework](the-net-framework-and-out-of-band-releases.md).
+1. Si elle n’est pas préinstallée sur votre système d’exploitation, installez la version du .NET Framework ciblée par votre application. La version de production la plus récente est le .NET Framework 4.8. Elle est préinstallée sur la Mise à jour de mai 2019 de Windows 10 et elle est disponible en téléchargement sur les versions précédentes du système d’exploitation Windows. Pour la configuration système requise du .NET Framework, consultez [Configuration requise](system-requirements.md). Pour plus d’informations sur l’installation d’autres versions du .NET Framework, consultez [Guide d’installation](../install/guide-for-developers.md). Les autres packages .NET Framework sont fournis hors bande, ce qui signifie qu’ils sont publiés en continu, en dehors d’un cycle de publications classique ou planifié. Pour plus d’informations sur ces packages, consultez [Versions finales hors plage du .NET Framework](the-net-framework-and-out-of-band-releases.md).
 
 2. Sélectionnez le ou les langages pris en charge par le .NET Framework que vous prévoyez d’utiliser pour développer vos applications. Microsoft propose plusieurs langages, notamment [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp). (Un langage de programmation qui vous permet de développer des applications pour le .NET Framework respecte la [spécification CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
@@ -75,7 +73,7 @@ Pour développer des applications ou des composants .NET Framework, procédez co
 
 Pour plus d’informations sur le développement d’applications qui ciblent le .NET Framework, consultez le [Guide de développement](../development-guide.md).
 
-## <a name="related-topics"></a>Rubriques connexes
+## <a name="related-articles"></a>Articles connexes
 
 | Titre | Description |
 | ----- |------------ |
