@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309483"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613250"
 ---
 # <a name="com-callable-wrapper"></a>Wrapper pouvant être appelé par COM
 
@@ -182,7 +182,7 @@ Pour obtenir le DISPID d’un membre d’interface au moment de l’exécution, 
 
 Les interfaces doubles permettent une liaison anticipée et tardive aux membres d’interface par les clients COM. Au moment du design et au cours des tests, il peut s'avérer utile de faire de l'interface de classe une interface double. Pour une classe managée (et ses classes de base) qui ne sera jamais modifiée, cette option est également acceptable. Dans tous les autres cas, évitez d'utiliser l'interface double.
 
-Une interface double générée automatiquement peut être appropriée dans de rares cas. Toutefois, cela rend souvent le contrôle de version plus complexe. Par exemple, les clients COM qui utilisent l'interface de classe d'une classe dérivée peuvent facilement s'arrêter en raison des modifications apportées à la classe de base. Quand une tierce partie fournit la classe de base, la disposition de l'interface de classe est hors de votre contrôle. De plus, contrairement à une interface Dispatch uniquement, une interface Dual (**ClassInterfaceType.AutoDual**) offre une description de l’interface de classe dans la bibliothèque de types exportée. Une telle description encourage les clients à liaison tardive à mettre en cache les DISPID au moment de l'exécution.
+Une interface double générée automatiquement peut être appropriée dans de rares cas. Toutefois, cela rend souvent le contrôle de version plus complexe. Par exemple, les clients COM qui utilisent l'interface de classe d'une classe dérivée peuvent facilement s'arrêter en raison des modifications apportées à la classe de base. Quand une tierce partie fournit la classe de base, la disposition de l'interface de classe est hors de votre contrôle. De plus, contrairement à une interface Dispatch uniquement, une interface Dual (**ClassInterfaceType.AutoDual**) offre une description de l’interface de classe dans la bibliothèque de types exportée. Une telle description encourage les clients à liaison tardive à mettre en cache les DISPID au moment de la compilation.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Vérifiez que toutes les notifications d’événements COM sont à liaison tardive.
 
@@ -198,6 +198,6 @@ Si votre application exige des appels à liaison anticipée à des méthodes d�
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Wrappers COM](com-wrappers.md)
-- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
-- [Qualification des types .NET en vue d'une interopérabilité](qualifying-net-types-for-interoperation.md)
+- [Exposition de composants .NET Framework à COM](exposing-dotnet-components-to-com.md)
+- [Qualifier des types .NET pour l'interopérabilité](qualifying-net-types-for-interoperation.md)
 - [Wrapper pouvant être appelé par le runtime](runtime-callable-wrapper.md)
