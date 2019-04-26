@@ -3,10 +3,10 @@ title: Nouveautés de C# 7.1
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480961"
 ---
 # <a name="whats-new-in-c-71"></a>Nouveautés de C# 7.1
@@ -17,9 +17,9 @@ C# 7.1 ajoute l’élément de configuration de [sélection de la version du lan
 
 Les nouvelles fonctionnalités de langage de cette version sont :
 
-* [`async` `Main` méthode](#async-main)
+* [Méthode `async` `Main`](#async-main)
   - Le point d’entrée pour une application peut avoir le modificateur `async`.
-* [`default` Expressions littérales](#default-literal-expressions)
+* [Expressions littérales `default`](#default-literal-expressions)
   - Vous pouvez utiliser des expressions littérales default dans les expressions de valeur par défaut quand le type cible peut être inféré.
 * [Noms des éléments de tuple inférés](#inferred-tuple-element-names)
   - Les noms des éléments de tuple peuvent être inférés dans de nombreux cas à partir de l’initialisation du tuple.

@@ -3,10 +3,10 @@ title: 'Procédure pas à pas : Accéder au web avec async et await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306727"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procédure pas à pas : Accéder au web avec async et await (C#)
@@ -108,13 +108,13 @@ Si vous ne souhaitez pas créer les applications vous-même, vous pouvez téléc
 
 3. Le code de la solution synchrone contient les quatre méthodes suivantes :
 
-    -   `SumPageSizes`, qui récupère la liste des URL de pages web à partir de `SetUpURLList`, puis appelle `GetURLContents` et `DisplayResults` pour traiter chacune d’entre elles.
+    -   `SumPageSizes`, qui obtient la liste des URL des pages web à partir de `SetUpURLList`, puis qui appelle `GetURLContents` et `DisplayResults` pour traiter chaque URL.
 
     -   `SetUpURLList`, qui dresse et retourne la liste des adresses web.
 
-    -   `GetURLContents`, qui télécharge le contenu de chaque site web et le retourne sous la forme d’un tableau d’octets.
+    -   `GetURLContents`, qui télécharge le contenu de chaque site web et retourne le contenu sous la forme d'un tableau d'octets.
 
-    -   `DisplayResults`, qui affiche le nombre d’octets dans le tableau d’octets pour chaque URL.
+    -   `DisplayResults`, qui affiche le nombre d'octets dans le tableau d'octets pour chaque URL.
 
     Copiez les quatre méthodes suivantes, puis collez-les sous le gestionnaire d’événements `startButton_Click` dans MainWindow.xaml.cs :
 
@@ -235,7 +235,7 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` retourne une <xref:System.Threading.Tasks.Task%601>. Dans ce cas, la *variable de retour de tâche*, `TResult`, est de type <xref:System.Net.WebResponse>. La tâche est une promesse de produire un objet `WebResponse` réel une fois que les données demandées ont été téléchargées et que la tâche s'est exécutée entièrement.
+2. `GetResponseAsync` retourne un <xref:System.Threading.Tasks.Task%601>. Dans ce cas, la *variable de retour de tâche*, `TResult`, est de type <xref:System.Net.WebResponse>. La tâche est une promesse de produire un objet `WebResponse` réel une fois que les données demandées ont été téléchargées et que la tâche s'est exécutée entièrement.
 
      Pour récupérer la valeur `WebResponse` de la tâche, appliquez un opérateur [await](../../../../csharp/language-reference/keywords/await.md) à l’appel à `GetResponseAsync`, comme le montre le code suivant.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic) (Exemple Async : Procédure pas à pas pour accéder au web (C# et Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Exemple Async : Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Types de retour async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Programmation asynchrone basée sur les tâches (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
-- [Procédure : Étendre la procédure pas à pas async à l’aide de Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Procédure : Effectuer plusieurs requêtes web en parallèle en utilisant async et await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Programmation asynchrone basée sur les tâches](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
+- [Guide pratique pour étendre la procédure pas à pas async à l’aide de Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Guide pratique pour effectuer plusieurs requêtes web en parallèle en utilisant async et await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
