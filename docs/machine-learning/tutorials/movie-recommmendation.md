@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311095"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612275"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutoriel : Créer un système de suggestion de films avec ML.NET
 
@@ -39,7 +39,7 @@ Vous effectuerez les étapes suivantes pour accomplir votre tâche, ainsi que to
 1. [Charger vos données](#load-your-data)
 2. [Créer et entraîner votre modèle](#build-and-train-your-model)
 3. [Évaluer votre modèle](#evaluate-your-model)
-4. [Utiliser le modèle](#use-your-model)
+4. [Utiliser votre modèle](#use-your-model)
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -161,11 +161,11 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > Cette méthode donne une erreur tant que vous n’avez pas ajouté d’instruction de retour aux étapes suivantes.
 
-Initialisez vos variables de chemin de données, chargez les données à partir des fichiers *.csv, et retournez les données `Train` et `Test` en tant qu’objets `IDataView` en ajoutant la ligne de code suivante dans `LoadData()` :
+Initialisez vos variables de chemin de données, chargez les données à partir des fichiers \*.csv, et retournez les données `Train` et `Test` en tant qu’objets `IDataView` en ajoutant la ligne de code suivante dans `LoadData()` :
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-Les données dans ML.NET sont représentées en tant que [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` est un moyen flexible et efficace de décrire des données tabulaires (numériques et textuelles). Les données peuvent être chargées à partir d’un fichier texte ou en temps réel (par exemple, fichiers journaux ou de base de données SQL) dans un objet `IDataView`.
+Les données dans ML.NET sont représentées en tant que [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` est un moyen flexible et efficace de décrire des données tabulaires (numériques et texte). Les données peuvent être chargées à partir d’un fichier texte ou en temps réel (par exemple, fichiers journaux ou de base de données SQL) dans un objet `IDataView`.
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) définit le schéma de données et lit le fichier. Elle prend les variables de chemin de données et retourne un `IDataView`. Dans ce cas, fournissez le chemin pour vos fichiers `Test` et `Train`, et indiquez l’en-tête du fichier texte (pour qu’elle puisse utiliser les noms de colonnes correctement) et la virgule de séparation des données caractère (le séparateur par défaut est un onglet).
 
@@ -177,11 +177,11 @@ Ajoutez les deux lignes de code suivantes dans la méthode `Main()` pour appeler
 
 Il existe trois principaux concepts dans ML.NET : les [données](../basic-concepts-model-training-in-mldotnet.md#data), les [transformateurs](../basic-concepts-model-training-in-mldotnet.md#transformer) et les [estimateurs](../basic-concepts-model-training-in-mldotnet.md#estimator).
 
-Les algorithmes d’entraînement de machine Learning nécessitent des données dans un certain format. `Transformers` servent à transformer les données tabulaires dans un format compatible.
+Les algorithmes d’entraînement de machine Learning nécessitent des données dans un certain format. Les `Transformers` servent à transformer les données tabulaires dans un format compatible.
 
 ![image de transformateur](./media/movie-recommendation/transformer.png)
 
-Vous créez des `Transformers` dans ML.NET en créant des `Estimators`. `Estimators` prennent des données et retournent des `Transformers`.
+Vous créez des `Transformers` dans ML.NET en créant des `Estimators`. Les `Estimators` prennent des données et retournent des `Transformers`.
 
 ![image d’estimateur](./media/movie-recommendation/estimator.png)
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > Cette méthode donne une erreur tant que vous n’avez pas ajouté d’instruction de retour aux étapes suivantes.
 
 Définissez les transformations de données en ajoutant le code suivant à `BuildAndTrainModel()` :
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 Étant donné que `userId` et `movieId` représentent des utilisateurs et des titres de films, et non des valeurs réelles, vous utilisez la méthode [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) pour transformer chaque `userId` et chaque `movieId` en colonne `Feature` de type de clé numérique (un format accepté par les algorithmes de suggestion) et vous les ajoutez en tant que nouvelles colonnes de jeu de données :
@@ -217,7 +217,7 @@ Choisissez l’algorithme de machine learning et ajoutez-le aux définitions de 
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) est votre algorithme d’entraînement de suggestion.  La [factorisation de matrice](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) est une approche courante pour la suggestion quand vous avez des données concernant la façon dont les utilisateurs ont évalué des produits dans le passé, ce qui est le cas pour les jeux de données dans ce tutoriel. Il existe d’autres algorithmes de suggestion adaptés quand vous avez des données différentes (voir la section [Autres algorithmes de suggestion](#other-recommendation-algorithms) ci-dessous pour en savoir plus). 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) est votre algorithme d’entraînement de suggestion.  La [factorisation de matrice](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) est une approche courante pour la suggestion quand vous avez des données concernant la façon dont les utilisateurs ont évalué des produits dans le passé, ce qui est le cas pour les jeux de données dans ce tutoriel. Il existe d’autres algorithmes de suggestion adaptés quand vous avez des données différentes (voir la section [Autres algorithmes de suggestion](#other-recommendation-algorithms) ci-dessous pour en savoir plus).
 
 Dans ce cas, l’algorithme `Matrix Factorization` utilise une méthode appelée « filtrage collaboratif », qui part du principe que si l’utilisateur 1 a le même avis que l’utilisateur 2 sur une certaine question, alors l’utilisateur 1 est davantage susceptible d’avoir le même avis que l’utilisateur 2 sur une autre question.
 
@@ -242,7 +242,7 @@ Ajoutez la ligne de code suivante dans la méthode `Main()` pour appeler votre m
 
 ## <a name="evaluate-your-model"></a>Évaluer votre modèle
 
-Une fois que vous avez entraîné votre modèle, utilisez vos données de test pour évaluer ses performances. 
+Une fois que vous avez entraîné votre modèle, utilisez vos données de test pour évaluer ses performances.
 
 Créez la méthode `EvaluateModel()` juste après la méthode `BuildAndTrainModel()`, en utilisant le code suivant :
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Transformez les données `Test` en ajoutant le code suivant à `EvaluateModel()` :
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Transformez les données `Test` en ajoutant le code suivant à `EvaluateModel()` : [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 La méthode [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) établit des prédictions pour plusieurs lignes d’entrée fournies d’un jeu de données de test.
 
@@ -315,6 +314,7 @@ La création de modèles efficaces est un processus itératif. Celui-ci présent
 Vous pouvez maintenant utiliser votre modèle entraîné pour établir des prédictions sur de nouvelles données.
 
 Créez la méthode `UseModelForSinglePrediction()` juste après la méthode `EvaluateModel()`, en utilisant le code suivant :
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ La [validation croisée](../how-to-guides/train-cross-validation-ml-net.md) est 
 
 ### <a name="features"></a>Fonctionnalités
 
-Dans ce tutoriel, vous utilisez uniquement les trois `Features` (`user id`, `movie id` et `rating`) qui sont fournies par le jeu de données. 
+Dans ce tutoriel, vous utilisez uniquement les trois `Features` (`user id`, `movie id` et `rating`) qui sont fournies par le jeu de données.
 
-Même si c’est un bon point de départ, en réalité vous souhaiterez sans doute ajouter d’autres attributs ou `Features` (par exemple l’âge, le sexe, l’emplacement géographique et ainsi de suite) s’ils sont inclus dans le jeu de données. L’ajout de `Features` plus pertinentes peut aider à améliorer les performances de votre modèle de suggestion. 
+Même si c’est un bon point de départ, en réalité vous souhaiterez sans doute ajouter d’autres attributs ou `Features` (par exemple l’âge, le sexe, l’emplacement géographique et ainsi de suite) s’ils sont inclus dans le jeu de données. L’ajout de `Features` plus pertinentes peut aider à améliorer les performances de votre modèle de suggestion.
 
 Si vous ne savez pas trop quelles `Features` peuvent être les plus appropriées pour votre tâche machine learning, vous pouvez également utiliser le calcul de contribution de caractéristique et l’[importance de la permutation de caractéristiques](../how-to-guides/determine-global-feature-importance-in-model.md), qui sont des fonctionnalités proposées par ML.NET pour découvrir les `Features` les plus influentes.
 
@@ -445,7 +445,7 @@ Par exemple, dans ce tutoriel, les options d’algorithme sont :
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100
@@ -458,8 +458,8 @@ L’algorithme de factorisation de matrice avec filtrage collaboratif n’est qu
 
 | Algorithme       | Scénario           | Exemple  |
 | ------------- |:-------------:| -----:|
-| Factorisation de matrice à une classe | Utilisez-la quand vous avez uniquement userId et movieId. Ce style de suggestion est basé sur le scénario de coachat (ou produits fréquemment achetés ensemble), ce qui signifie qu’il suggérera aux clients un ensemble de produits en fonction de leur propre historique de commandes. | [> Essayer](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| Machines de factorisation prenant en charge les champs | Elles permettent d’effectuer des suggestions quand vous disposez d’autres caractéristiques en plus de userId, productId et rating (par exemple la description du produit ou le prix du produit). Cette méthode adopte également une approche avec filtrage collaboratif. | [> Essayer](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| Factorisation de matrice à une classe | Utilisez-la quand vous avez uniquement userId et movieId. Ce style de suggestion est basé sur le scénario de coachat (ou produits fréquemment achetés ensemble), ce qui signifie qu’il suggérera aux clients un ensemble de produits en fonction de leur propre historique de commandes. | [>Faites un essai](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| Machines de factorisation prenant en charge les champs | Elles permettent d’effectuer des suggestions quand vous disposez d’autres caractéristiques en plus de userId, productId et rating (par exemple la description du produit ou le prix du produit). Cette méthode adopte également une approche avec filtrage collaboratif. | [>Faites un essai](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>Scénario avec nouvel utilisateur
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480831"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672457"
 ---
 # <a name="is-c-reference"></a>is (référence C#)
 
@@ -51,7 +51,7 @@ Le mot clé `is` génère un avertissement au moment de la compilation si l’ex
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` peut être n’importe quelle expression, autre qu’une expression lambda ou une méthode anonyme, qui retourne une valeur. L’exemple suivant utilise `is` pour évaluer la valeur de retour d’un appel de méthode.   
+`expr` ne peut pas être une méthode anonyme ou une expression lambda. qui retourne une valeur. L’exemple suivant utilise `is` pour évaluer la valeur de retour d’un appel de méthode.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 Avec C# 7.0, vous pouvez utiliser les critères spéciaux avec le [modèle de type](#type) pour écrire du code plus concis qui utilise l’instruction `is`.
@@ -144,7 +144,7 @@ L’exemple suivant illustre une comparaison des vérifications de `null` :
  
 ### <a name="var" /> Modèle de variable </a>
 
-La correspondance avec le modèle var réussit toujours pour les expressions non Null ; si *expr* est `null`, l’expression `is` est `false`. La valeur non Null de *expr* est toujours assignée à une variable locale du type à l’exécution de *expr*.  Sa syntaxe est la suivante :
+Le modèle `var` est de type « catch-all », c’est-à-dire qu’il peut prendre tous les types et valeurs. La valeur de *expr* est toujours affectée à une variable locale de même type que le type de *expr* au moment de la compilation. Le résultat de l’expression `is` est toujours `true`. Sa syntaxe est la suivante :
 
 ```csharp 
    expr is var varname

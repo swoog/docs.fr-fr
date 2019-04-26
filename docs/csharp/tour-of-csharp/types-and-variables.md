@@ -3,12 +3,12 @@ title: Variables et types C# - Visite guidée du langage C#
 description: En savoir plus sur la définition des types et la déclaration de variables en C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481078"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672366"
 ---
 # <a name="types-and-variables"></a>Types et variables
 
@@ -18,31 +18,42 @@ Les types de valeur de C# sont divisés entre *types simples*, *types enum*, *ty
 
 Ce qui suit offre une vue d'ensemble du système de types de C#.
 
-* Types de valeur
-  - Types simples
-    * Intégral signé : `sbyte`, `short`, `int`, `long`
-    * Intégral non signé : `byte`, `ushort`, `uint`, `ulong`
+* [Types valeur][ValueTypes]
+  - [Types simples][SimpleTypes]
+    * Entier signé : `sbyte`, `short`, `int`, `long`
+    * Entier non signé : `byte`, `ushort`, `uint`, `ulong`
     * Caractères Unicode : `char`
     * Virgule flottante IEEE : `float`, `double`
-    * Décimale haute précision : `decimal`
+    * Décimale haute précision :`decimal`
     * Booléen : `bool`
-  - Types d'enum
-    * Types définis par l’utilisateur de la forme `enum E {...}`
-  - Types struct
-    * Types définis par l’utilisateur de la forme `struct S {...}`
-  - Types valeur Nullable
+  - [Types enum][EnumTypes]
+    * Types définis par l'utilisateur de la forme `enum E {...}`
+  - [Types struct][StructTypes]
+    * Types définis par l'utilisateur de la forme `struct S {...}`
+  - [Types valeur Nullable][NullableTypes]
     * Extensions de tous les autres types de valeurs avec une valeur `null`
-* Types référence
-  - Types de classes
+* [Types référence][ReferenceTypes]
+  - [Types classe][ClassTypes]
     * Classe de base fondamentale de tous les autres types : `object`
     * Chaînes Unicode : `string`
-    * Types définis par l’utilisateur de la forme `class C {...}`
-  - Types interface
-    * Types définis par l’utilisateur de la forme `interface I {...}`
-  - Types de tableaux
-    * Unidimensionnels et multidimensionnels, par exemple `int[]` et `int[,]`
-  - Types délégués
-    * Types définis par l’utilisateur de la forme `delegate int D(...)`
+    * Types définis par l'utilisateur de la forme `class C {...}`
+  - [Types interface][InterfaceTypes]
+    * Types définis par l'utilisateur de la forme `interface I {...}`
+  - [Types tableau][ArrayTypes]
+    * Uni et multidimensionnels, par exemple `int[]` et `int[,]`
+  - [Types délégués][DelegateTypes]
+    * Types définis par l'utilisateur de la forme `delegate int D(...)`
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 Les types intégraux huit prennent en charge les valeurs 8 bits, 16 bits, 32 bits et 64 bits sous forme signée ou non signée.
 
@@ -60,17 +71,17 @@ Ce qui suit résume les types numériques de C#.
   - `sbyte`:  8 bits, entre -128 et 127
   - `short`: 16 bits, entre -32 768 et 32 767
   - `int`  : 32 bits, entre -2 147 483 648 et 2 147 483 647
-  - `long` : 64 bits, entre -9 223 372 036 854 775 808 et 9 223 372 036 854 775 807
+  - `long` : 64 bits, entre -9 223 372 036 854 775 808 et 9 223 372 036 854 775 807
 * Entier non signé
   - `byte`   :  8 bits, entre 0 et 255
-  - `ushort` : 16 bits, entre 0 et 65 535
+  - `ushort` : 16 bits, entre 0 et 65 535
   - `uint`   : 32 bits, entre 0 et 4 294 967 295
   - `ulong`  : 64 bits, entre 0 et 18 446 744 073 709 551 615
 * Virgule flottante
   - `float`  : 32 bits, entre 1,5 × 10<sup>-45</sup> et 3,4 × 10<sup>38</sup>,    précision de 7 chiffres
-  - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
+  - `double` : 64 bits, entre 5,0 × 10<sup>-324</sup> et 1,7 × 10<sup>308</sup>, précision à 15 chiffres
 * Decimal
-  - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
+  - `decimal` : 128 bits, entre au moins -7,9 × 10<sup>-28</sup> et 7,9 × 10<sup>28</sup>, avec au moins une précision à 28 chiffres
 
 Les programmes C# utilisent les *déclarations de type* pour créer de nouveaux types. Une déclaration de type spécifie le nom et les membres du nouveau type. Cinq catégories de types C# sont définies par l’utilisateur : les types de classes, les types struct, les types d’interfaces, les types enum et les types délégués.
 

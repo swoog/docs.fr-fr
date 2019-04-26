@@ -3,10 +3,10 @@ title: Flux de contrôle dans les programmes Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326201"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flux de contrôle dans les programmes asynchrones (C#)
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  L’expression await suspend `AccessTheWebAsync` jusqu’à ce que `client.GetStringAsync` retourne une sortie. Dans le même temps, le contrôle retourne à l’appelant de `AccessTheWebAsync`, `startButton_Click`.
 
 > [!NOTE]
-> En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’affectation suivante pourrait remplacer le code précédent qui crée, puis attend `getStringTask` : `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’assignation suivante peut substituer le code précédent qui crée, puis attend `getStringTask` : `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > Dans cette rubrique, l’opérateur await est appliqué ultérieurement pour s’adapter aux lignes de sortie qui marquent le flux de contrôle dans le programme.
 
@@ -360,7 +360,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  ![Étape FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
 
- `AccessTheWebAsync` s’exécute jusqu’à la fin et le contrôle retourne une valeur à `startButton_Click`, qui attend que son exécution soit terminée.
+ `AccessTheWebAsync` s’exécute jusqu’à la fin et le contrôle retourne à `startButton_Click`, qui attend que son exécution soit terminée.
 
 ### <a name="step-six"></a>Étape SIX
 
@@ -389,5 +389,5 @@ int contentLength = await getLengthTask;
 
 - [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Types de retour async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Procédure pas à pas : Accéder au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic) (Flux de contrôle dans les programmes Async (C# et Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Procédure pas à pas : Accès au web avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemple Async : Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

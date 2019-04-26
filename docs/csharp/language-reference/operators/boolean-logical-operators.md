@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427316"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Opérateurs logiques booléens (référence C#)
@@ -162,9 +162,9 @@ Les opérateurs logiques conditionnels `&&` et `||` ne prennent pas en charge l�
 La liste suivante présente les opérateurs logiques par ordre de précédence, de la plus élevée à la plus basse :
 
 - Opérateur de négation logique `!`
-- Opérateur AND logique `&`
+- L’opérateur AND logique `&`
 - Opérateur OR exclusif logique `^`
-- Opérateur OU logique `|`
+- Opérateur OR logique `|`
 - Opérateur AND logique conditionnel `&&`
 - Opérateur OR logique conditionnel `||`
 
