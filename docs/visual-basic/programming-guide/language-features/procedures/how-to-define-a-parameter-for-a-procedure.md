@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863699"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procédure : Définir un paramètre pour une procédure (Visual Basic)
 Un *paramètre* permet au code appelant de passer une valeur à la procédure lorsqu’il l’appelle. Vous déclarez chaque paramètre pour une procédure de la même façon que vous déclarez une variable, en spécifiant son nom et type de données. Vous spécifiez également le mécanisme de passage et indique si le paramètre est facultatif.  

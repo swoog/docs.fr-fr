@@ -10,11 +10,11 @@ helpviewer_keywords:
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
 ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799305"
 ---
 # <a name="xml-document-literal-visual-basic"></a>Littéral de document XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XDocument> objet.  
@@ -33,7 +33,7 @@ rootElement
 |Terme|Définition|  
 |---|---|  
 |`encoding`|Optionnel. Utilise du texte littéral qui déclare l’encodage du document.|  
-|`standalone`|Optionnel. Texte littéral. Doit être « yes » ou « non ».|  
+|`standalone`|Facultatif. Texte littéral. Doit être « yes » ou « non ».|  
 |`piCommentList`|Optionnel. Liste des instructions de traitement XML et les commentaires XML. Prend le format suivant :<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Chaque `piComment` peut prendre l’une des opérations suivantes :<br /><br /> -   [Littéral d’Instruction de traitement XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [Littéral de commentaire XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
 |`rootElement`|Obligatoire. Élément racine du document. Le format est une des opérations suivantes :<br /><br /> <ul><li>[Littéral d’élément XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Expression sous la forme incorporée `<%=` `elementExp` `%>`. Le `elementExp` retourne une des opérations suivantes :<br /><br /> <ul><li>Objet <xref:System.Xml.Linq.XElement>.</li><li>Une collection qui contient un <xref:System.Xml.Linq.XElement> objet et un nombre quelconque de <xref:System.Xml.Linq.XProcessingInstruction> et <xref:System.Xml.Linq.XComment> objets.</li></ul></li></ul><br /> Pour plus d’informations, consultez [Expressions incorporées en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   

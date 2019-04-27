@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799188"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' requiert des opérandes qui ont des types référence, mais cet opérande a le type valeur '\<nom_type >'
 Le `Is` opérateur de comparaison détermine si deux variables d’objet font référence à la même instance. Cette comparaison n’est pas définie pour les types valeur.  
