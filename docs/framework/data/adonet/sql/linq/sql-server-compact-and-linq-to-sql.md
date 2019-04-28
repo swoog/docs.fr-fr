@@ -3,11 +3,11 @@ title: SQL Server Compact et LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
 ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917850"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact et LINQ to SQL
 SQL Server Compact est la base de données par défaut installée avec Visual Studio. Pour plus d’informations, consultez [à l’aide de SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
@@ -19,28 +19,28 @@ SQL Server Compact est la base de données par défaut installée avec Visual St
   
  Notez les caractéristiques suivantes :  
   
--   SQL Server Compact est fourni comme une DLL qui peut être utilisée directement sur les fichiers de base de données (extension .sdf).  
+- SQL Server Compact est fourni comme une DLL qui peut être utilisée directement sur les fichiers de base de données (extension .sdf).  
   
--   SQL Server Compact s’exécute dans le même processus que l’application cliente. L’efficacité de la communication avec SQL Server Compact peut être considérablement plus importante que la communication avec SQL Server. En revanche, SQL Server Compact requiert l’interopérabilité entre le code managé et avec ses coûts connexes.  
+- SQL Server Compact s’exécute dans le même processus que l’application cliente. L’efficacité de la communication avec SQL Server Compact peut être considérablement plus importante que la communication avec SQL Server. En revanche, SQL Server Compact requiert l’interopérabilité entre le code managé et avec ses coûts connexes.  
   
--   La taille de la DLL SQL Server Compact est petite. Cette fonctionnalité réduit la taille globale de l'application.  
+- La taille de la DLL SQL Server Compact est petite. Cette fonctionnalité réduit la taille globale de l'application.  
   
--   Le runtime de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et l'outil en ligne de commande SQLMetal prennent en charge SQL Server Compact.  
+- Le runtime de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et l'outil en ligne de commande SQLMetal prennent en charge SQL Server Compact.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ne prend pas en charge SQL Server Compact.  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ne prend pas en charge SQL Server Compact.  
   
 ## <a name="feature-set"></a>Jeu de fonctionnalités  
  L’ensemble des fonctionnalités SQL Server Compact est beaucoup plus simple que l’ensemble des fonctionnalités de SQL Server dans les domaines suivants peuvent affecter [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications :  
   
--   SQL Server Compact ne prend pas en charge de procédures stockées ou de vues.  
+- SQL Server Compact ne prend pas en charge de procédures stockées ou de vues.  
   
--   SQL Server Compact prend en charge uniquement un sous-ensemble de types de données et de fonctions SQL.  
+- SQL Server Compact prend en charge uniquement un sous-ensemble de types de données et de fonctions SQL.  
   
--   SQL Server Compact prend en charge uniquement un sous-ensemble de constructions SQL.  
+- SQL Server Compact prend en charge uniquement un sous-ensemble de constructions SQL.  
   
--   SQL Server Compact fournit uniquement un optimiseur minimal. Il est possible que certaines requêtes peuvent expirer.  
+- SQL Server Compact fournit uniquement un optimiseur minimal. Il est possible que certaines requêtes peuvent expirer.  
   
--   SQL Server Compact ne prend pas en charge la confiance partielle.  
+- SQL Server Compact ne prend pas en charge la confiance partielle.  
   
 ## <a name="see-also"></a>Voir aussi
 

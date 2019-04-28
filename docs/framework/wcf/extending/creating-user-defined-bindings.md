@@ -5,20 +5,20 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923238"
 ---
 # <a name="creating-user-defined-bindings"></a>Création de liaisons définies par l’utilisateur
 Il existe plusieurs méthodes pour créer des liaisons non fournies par le système :  
   
--   Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d’application. Pour utiliser un élément de liaison d’un fichier de configuration d’application, l’élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d’application. Pour utiliser un élément de liaison d’un fichier de configuration d’application, l’élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   Vous pouvez créer une classe qui dérive d’une liaison standard. Par exemple, vous pouvez dériver une classe de <xref:System.ServiceModel.WSHttpBinding> et remplacer la méthode <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> pour obtenir les éléments de liaison et insérer un élément de liaison personnalisé ou établir une valeur particulière pour la sécurité.  
+- Vous pouvez créer une classe qui dérive d’une liaison standard. Par exemple, vous pouvez dériver une classe de <xref:System.ServiceModel.WSHttpBinding> et remplacer la méthode <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> pour obtenir les éléments de liaison et insérer un élément de liaison personnalisé ou établir une valeur particulière pour la sécurité.  
   
--   Vous pouvez créer un nouveau type <xref:System.ServiceModel.Channels.Binding> pour contrôler complètement l’ensemble de l’implémentation de la liaison.  
+- Vous pouvez créer un nouveau type <xref:System.ServiceModel.Channels.Binding> pour contrôler complètement l’ensemble de l’implémentation de la liaison.  
   
 ## <a name="the-order-of-binding-elements"></a>Ordre des éléments de liaison  
  Chaque élément de liaison représente une étape de traitement lors de l’envoi ou de la réception des messages. Pendant l’exécution, les éléments de liaison créent les canaux et les écouteurs nécessaires pour générer des piles de canaux entrants et sortants.  

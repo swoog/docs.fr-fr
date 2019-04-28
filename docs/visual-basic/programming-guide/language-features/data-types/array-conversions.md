@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908022"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversion des tableaux (Visual Basic)
 Vous pouvez convertir un type tableau vers un autre type fournie par les conditions suivantes :  
   
--   **Rang égal.** Les rangs des deux tableaux doivent être identiques, autrement dit, ils doivent avoir le même nombre de dimensions. Toutefois, les longueurs des dimensions respectives n’avez pas besoin être identiques.  
+- **Rang égal.** Les rangs des deux tableaux doivent être identiques, autrement dit, ils doivent avoir le même nombre de dimensions. Toutefois, les longueurs des dimensions respectives n’avez pas besoin être identiques.  
   
--   **Type de données d’élément.** Les types de données des éléments des deux tableaux doivent être des types de référence. Vous ne pouvez pas convertir un `Integer` de tableau à un `Long` ou même à un `Object` de tableau, car au moins un type valeur est impliqué. Pour plus d'informations, consultez [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Type de données d’élément.** Les types de données des éléments des deux tableaux doivent être des types de référence. Vous ne pouvez pas convertir un `Integer` de tableau à un `Long` ou même à un `Object` de tableau, car au moins un type valeur est impliqué. Pour plus d'informations, consultez [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Convertibilité de variance.** Une conversion restrictive ou étendue doit être possible entre les types d’éléments des deux tableaux. Un exemple qui ne satisfait pas cette condition est une tentative de conversion entre un `String` tableau et un tableau d’une classe dérivée de <xref:System.Attribute?displayProperty=nameWithType>. Ces deux types n’ont rien en commun, et aucune conversion n’existe entre eux.  
+- **Convertibilité de variance.** Une conversion restrictive ou étendue doit être possible entre les types d’éléments des deux tableaux. Un exemple qui ne satisfait pas cette condition est une tentative de conversion entre un `String` tableau et un tableau d’une classe dérivée de <xref:System.Attribute?displayProperty=nameWithType>. Ces deux types n’ont rien en commun, et aucune conversion n’existe entre eux.  
   
  Conversion du type d’un tableau à un autre est restrictive ou étendue selon si la conversion des éléments respectifs est restrictive ou étendue. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

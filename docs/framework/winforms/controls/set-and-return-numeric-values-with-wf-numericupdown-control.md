@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902224"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procédure : définir et retourner des valeurs numériques avec le contrôle NumericUpDown Windows Forms
 La valeur numérique des formulaires Windows <xref:System.Windows.Forms.NumericUpDown> contrôle est déterminé par son <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété. Vous pouvez écrire des tests conditionnels pour la valeur du contrôle comme avec toute autre propriété. Une fois le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété est définie, vous pouvez l’ajuster directement en écrivant du code pour effectuer des opérations sur celui-ci, ou vous pouvez appeler la <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> et <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> méthodes.  
@@ -55,7 +55,7 @@ La valeur numérique des formulaires Windows <xref:System.Windows.Forms.NumericU
   
 ### <a name="to-return-the-numeric-value"></a>Pour retourner la valeur numérique  
   
--   Accès le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété dans le code.  
+- Accès le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété dans le code.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

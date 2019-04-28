@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876146"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traçage et instrumentation d'applications
 Le traçage vous permet de surveiller le fonctionnement de votre application pendant son exécution. Vous pouvez ajouter l'instrumentation de traçage et de débogage à votre application .NET Framework au moment du développement, et utiliser cette instrumentation pendant le développement de l'application et après son déploiement. Utilisez les classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> pour enregistrer les informations relatives aux erreurs et à l'exécution de l'application dans des journaux, des fichiers texte ou d'autres appareils en vue d'une analyse ultérieure.  
   
  Le terme *instrumentation* fait référence à la capacité de surveiller ou de mesurer le niveau de performance d’un produit et de diagnostiquer les erreurs éventuelles. En programmation, c'est la capacité d'une application à incorporer les éléments suivants :  
   
--   **Suivi de code** : réception de messages d’information sur l’exécution d’une application au moment de l’exécution.  
+- **Suivi de code** : réception de messages d’information sur l’exécution d’une application au moment de l’exécution.  
   
--   **Débogage** : repérage et résolution des erreurs de programmation dans une application en cours de développement. Pour plus d’informations, consultez [Débogage](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Débogage** : repérage et résolution des erreurs de programmation dans une application en cours de développement. Pour plus d’informations, consultez [Débogage](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Compteurs de performance** : composants qui vous permettent de suivre les performances de votre application. Pour plus d’informations, consultez [Compteurs de performance](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Compteurs de performance** : composants qui vous permettent de suivre les performances de votre application. Pour plus d’informations, consultez [Compteurs de performance](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Journaux des événements** : composants qui vous permettent de recevoir et de suivre les principaux événements liés à l’exécution de votre application. Pour plus d'informations, consultez la classe <xref:System.Diagnostics.EventLog>.  
+- **Journaux des événements** : composants qui vous permettent de recevoir et de suivre les principaux événements liés à l’exécution de votre application. Pour plus d'informations, consultez la classe <xref:System.Diagnostics.EventLog>.  
   
  L'instrumentation de votre application, en plaçant des instructions de trace à des endroits stratégiques de votre code, est particulièrement utile pour les applications distribuées. Avec les instructions de trace, vous pouvez instrumenter une application pour afficher des informations en cas de problème, mais aussi pour surveiller les performances d'exécution de l'application.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Compilez l'application en code exécutable, en suivant l'une des procédures ci-dessous :  
   
-    -   Utilisez le menu **Générer** et la page **Déboguer** de la boîte de dialogue **Pages de propriétés** dans l’**Explorateur de solutions**. Procédez ainsi pour compiler votre application dans Visual Studio.  
+    - Utilisez le menu **Générer** et la page **Déboguer** de la boîte de dialogue **Pages de propriétés** dans l’**Explorateur de solutions**. Procédez ainsi pour compiler votre application dans Visual Studio.  
   
          \- ou -  
   
-    -   Utilisez les directives du compilateur **Trace** et **Debug** pour la méthode de ligne de commande de compilation. Pour plus d’informations, consultez [Compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Procédez ainsi pour compiler votre application à partir d'une ligne de commande.  
+    - Utilisez les directives du compilateur **Trace** et **Debug** pour la méthode de ligne de commande de compilation. Pour plus d’informations, consultez [Compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Procédez ainsi pour compiler votre application à partir d'une ligne de commande.  
   
 7. Si un problème survient au moment de l'exécution, activez le commutateur de trace approprié. Pour plus d’informations, consultez [Configuration des commutateurs de suivi](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

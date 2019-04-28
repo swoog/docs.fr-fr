@@ -5,21 +5,21 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861229"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#. 
   
- Le .NET Framework est hautement productif pour la création d'applications. Des langages puissants et sécurisés, ainsi qu'une riche collection de bibliothèques, favorisent une création d'applications très fructueuse. Toutefois, une grande productivité implique des responsabilités. Vous devez utiliser toute la puissance du .NET Framework, mais vous devez être prêt à régler les performances de votre code lorsque cela est nécessaire. 
+ Le .NET Framework est hautement productif pour la création d'applications. Des langages puissants et sécurisés, ainsi qu’une riche collection de bibliothèques, favorisent une création d’applications très fructueuse. Toutefois, une grande productivité implique des responsabilités. Vous devez utiliser toute la puissance du .NET Framework, mais vous devez être prêt à régler les performances de votre code lorsque cela est nécessaire. 
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Raisons pour lesquelles les performances des nouveaux compilateurs s'appliquent à votre application  
  L'équipe chargée de la plateforme des compilateurs .NET (« Roslyn ») a réécrit les compilateurs C# et Visual Basic en code managé pour fournir de nouvelles API afin de modéliser et analyser le code, de créer des outils et de favoriser des expériences de programmation nettement plus riches dans Visual Studio. La réécriture des compilateurs et la création d'expériences Visual Studio sur les nouveaux compilateurs ont été source de riches enseignements en matière de performances, qui sont transposables à toute application .NET Framework volumineuse et à toute application qui traite une grande quantité de données. Vous n'avez pas besoin de connaître les compilateurs pour tirer profit des enseignements et des exemples issus du compilateur C#. 
   
- Visual Studio utilise les API de compilateur pour générer toutes les fonctionnalités IntelliSense tant appréciées des utilisateurs, telles que la colorisation des identificateurs et des mots clés, les listes de saisie semi-automatique de syntaxe, les tildes d'erreur, les paramètres conseillés, les problèmes de code et les actions de code. Visual Studio fournit cette aide pendant que les développeurs saisissent et modifient leur code, et Visual Studio doit rester réactif pendant que le compilateur modélise de façon continue le code que les développeurs modifient. 
+ Visual Studio utilise les API de compilateur pour générer toutes les fonctionnalités IntelliSense tant appréciées des utilisateurs, telles que la colorisation des identificateurs et des mots clés, les listes de saisie semi-automatique de syntaxe, les tildes d’erreur, les paramètres conseillés, les problèmes de code et les actions de code. Visual Studio fournit cette aide pendant que les développeurs saisissent et modifient leur code, et Visual Studio doit rester réactif pendant que le compilateur modélise de façon continue le code que les développeurs modifient. 
   
  Quand vos utilisateurs finaux interagissent avec votre application, ils attendent d'elle qu'elle soit réactive. La saisie ou la gestion des commandes ne doivent jamais être bloquées. De l'aide doit s'afficher rapidement ou disparaître si l'utilisateur poursuit la saisie. Votre application doit éviter de bloquer le thread d'interface utilisateur avec de longs calculs qui donnent l'impression que l'application ne réagit pas. 
   
@@ -34,7 +34,7 @@ Cet article fournit des conseils pour améliorer les performances d'applications
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fait n° 2 : Si vous n’êtes pas mesurer, vous ne faites que supposer  
  Les profils et les mesures ne trompent pas. Les profils vous montrent si l'UC est pleinement chargée ou si vous êtes bloqué au niveau des E/S de disque. Les profils indiquent le type et la quantité de mémoire que vous allouez et si le processus [garbage collection](../../../docs/standard/garbage-collection/index.md) (GC) utilise beaucoup de ressources de votre UC. 
   
- Vous devez définir des objectifs de performances pour des scénarios ou des expériences clients clés dans votre application, et écrire des tests pour mesurer les performances. Étudiez les échecs des tests en appliquant un raisonnement scientifique : utilisez des profils pour vous guider, avancez des hypothèses concernant la nature du problème et testez vos hypothèses en faisant des expériences ou en apportant des modifications au code. Établissez des mesures de performances de référence au fil du temps en effectuant des tests réguliers, afin de pouvoir isoler les changements qui provoquent des régressions des performances. Grâce à une approche rigoureuse du traitement des performances, vous éviterez de perdre du temps avec des mises à jour de code inutiles. 
+ Vous devez définir des objectifs de performances pour des scénarios ou des expériences clients clés dans votre application, et écrire des tests pour mesurer les performances. Étudiez les échecs des tests en appliquant un raisonnement scientifique : utilisez des profils pour vous guider, avancez des hypothèses concernant la nature du problème et testez vos hypothèses en faisant des expériences ou en apportant des modifications au code. Établissez des mesures de performances de planning de référence au fil du temps en effectuant des tests réguliers, afin de pouvoir isoler les changements qui provoquent des régressions des performances. Grâce à une approche rigoureuse du traitement des performances, vous éviterez de perdre du temps avec des mises à jour de code inutiles. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fait n° 3 : Des outils efficaces font toute la différence  
  Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement. Microsoft fournit un éventail d’outils de performances, tels que [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) et [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
@@ -44,7 +44,7 @@ Cet article fournit des conseils pour améliorer les performances d'applications
 ### <a name="fact-4-its-all-about-allocations"></a>Fait n° 4 : Il se résume aux allocations  
  Vous pouvez penser que la création d'une application .NET Framework réactive n'est qu'une question d'algorithmes, comme l'utilisation d'un tri rapide à la place d'un tri par propagation, mais ce n'est pas le cas. Le facteur principal qui intervient dans la création d'une application réactive et l'allocation de la mémoire, notamment quand votre application est très volumineuse ou traite de grandes quantités de données. 
   
- Quasiment tout le travail nécessaire pour créer des expériences IDE réactives avec les API des nouveaux compilateurs a impliqué d'éviter les allocations et de gérer les stratégies de mise en cache. Les traces PerfView indiquent que les performances des nouveaux compilateurs C# et Visual Basic sont rarement liées à l'UC. Les compilateurs peuvent être liés aux E/S lors de la lecture de centaines de milliers ou de millions de lignes de code, lors de la lecture des métadonnées ou lors de l'émission du code généré. Les retards de threads d'interface utilisateur sont quasiment tous dus au garbage collection. Le GC du .NET Framework fait l'objet d'un réglage précis pour les performances et effectue une grande part de son travail pendant que le code de l'application s'exécute. Toutefois, une seule allocation peut déclencher une collection [gen2](../../../docs/standard/garbage-collection/fundamentals.md) coûteuse, susceptible d’arrêter tous les threads. 
+ Quasiment tout le travail nécessaire pour créer des expériences IDE réactives avec les API des nouveaux compilateurs a impliqué d’éviter les allocations et de gérer les stratégies de mise en cache. Les traces PerfView indiquent que les performances des nouveaux compilateurs C# et Visual Basic sont rarement liées à l'UC. Les compilateurs peuvent être liés aux E/S lors de la lecture de centaines de milliers ou de millions de lignes de code, lors de la lecture des métadonnées ou lors de l'émission du code généré. Les retards de threads d’interface utilisateur sont quasiment tous dus au garbage collection. Le GC du .NET Framework fait l'objet d'un réglage précis pour les performances et effectue une grande part de son travail pendant que le code de l'application s'exécute. Toutefois, une seule allocation peut déclencher une collection [gen2](../../../docs/standard/garbage-collection/fundamentals.md) coûteuse, susceptible d’arrêter tous les threads. 
   
 ## <a name="common-allocations-and-examples"></a>Allocations courantes et exemples courants  
  Les exemples d'expressions fournis dans cette section possèdent des allocations masquées qui apparaissent réduites. Toutefois, si une application volumineuse exécute ces expressions suffisamment de fois, elles peuvent entraîner l'allocation de centaines de méga-octets, voire même de plusieurs giga-octets, de mémoire. Par exemple, des tests d'une minute simulant une phase de saisie par un développeur dans l'éditeur ont alloué plusieurs giga-octets de mémoire et conduit l'équipe de performances à se concentrer sur des scénarios de saisie. 
@@ -125,7 +125,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- Une autre source courante de boxing sur des types énumération est la méthode <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>. L'argument passé à <xref:System.Enum.HasFlag%28System.Enum%29> doit faire l'objet du boxing. Dans la plupart des cas, le remplacement des appels à <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> par un test au niveau du bit est plus simple et n'entraîne pas d'allocation. 
+ Une autre source courante de boxing sur des types énumération est la méthode <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>. L’argument passé à <xref:System.Enum.HasFlag%28System.Enum%29> doit faire l’objet du boxing. Dans la plupart des cas, le remplacement des appels à <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> par un test au niveau du bit est plus simple et n'entraîne pas d'allocation. 
   
  Gardez à l'esprit le premier fait énoncé sur les performances (ne pas optimiser prématurément) et ne commencez pas à réécrire tout votre code de cette manière. Soyez conscient des coûts du boxing, mais modifiez votre code une fois seulement que vous aurez profilé votre application et trouvé les points sensibles. 
   
@@ -161,9 +161,9 @@ public void WriteFormattedDocComment(string text)
     else { /* ... */ }  
 ```  
   
- Vous pouvez constater que ce code effectue beaucoup de manipulations de chaînes. Le code utilise des méthodes de bibliothèque pour séparer les lignes en chaînes distinctes, pour découper l'espace blanc, pour vérifier si l'argument `text` est un commentaire de documentation XML et pour extraire des sous-chaînes des lignes. 
+ Vous pouvez constater que ce code effectue beaucoup de manipulations de chaînes. Le code utilise des méthodes de bibliothèque pour séparer les lignes en chaînes distinctes, pour découper l’espace blanc, pour vérifier si l’argument `text` est un commentaire de documentation XML et pour extraire des sous-chaînes des lignes. 
   
- À la première ligne dans `WriteFormattedDocComment`, l'appel `text.Split` alloue un nouveau tableau à trois éléments comme argument chaque fois qu'il est appelé. Le compilateur doit émettre du code pour allouer ce tableau chaque fois. En effet, le compilateur ne sait pas si <xref:System.String.Split%2A> stocke le tableau quelque part où il pourrait être modifié par un autre code, ce qui affecterait ultérieurement les appels à `WriteFormattedDocComment`. L'appel à <xref:System.String.Split%2A> alloue également une chaîne pour chaque ligne dans `text` et alloue encore de la mémoire pour effectuer l'opération. 
+ À la première ligne dans `WriteFormattedDocComment`, l’appel `text.Split` alloue un nouveau tableau à trois éléments comme argument chaque fois qu’il est appelé. Le compilateur doit émettre du code pour allouer ce tableau chaque fois. En effet, le compilateur ne sait pas si <xref:System.String.Split%2A> stocke le tableau quelque part où il pourrait être modifié par un autre code, ce qui affecterait ultérieurement les appels à `WriteFormattedDocComment`. L'appel à <xref:System.String.Split%2A> alloue également une chaîne pour chaque ligne dans `text` et alloue encore de la mémoire pour effectuer l'opération. 
   
  `WriteFormattedDocComment` possède trois appels à la méthode <xref:System.String.TrimStart%2A>. Deux se trouvent dans des boucles internes qui dupliquent le travail et les allocations. Pour aggraver encore la situation, appeler la méthode <xref:System.String.TrimStart%2A> sans argument alloue un tableau vide (pour le paramètre `params`) en plus de la chaîne résultante. 
   
@@ -173,7 +173,7 @@ public void WriteFormattedDocComment(string text)
   
  À la différence des exemples précédents, de petites modifications ne peuvent pas corriger ces allocations. Vous devez prendre du recul, examiner le problème et tenter une approche différente. Par exemple, vous pouvez noter que l'argument pour `WriteFormattedDocComment()` est une chaîne qui possède toutes les informations dont la méthode a besoin, de sorte que le code pourrait effectuer une indexation supplémentaire au lieu d'allouer de nombreuses chaînes partielles. 
   
- L'équipe de performances du compilateur s'est attaquée à toutes ces allocations avec du code similaire à :  
+ L’équipe de performances du compilateur s’est attaquée à toutes ces allocations avec du code similaire à :  
   
 ```csharp  
 private int IndexOfFirstNonWhiteSpaceChar(string text, int start) {  
@@ -358,7 +358,7 @@ public Symbol FindMatchingSymbol(string name)
     }  
 ```  
   
- Ce code n'utilise pas d'énumérateurs, d'expressions lambda ni de méthodes d'extension LINQ, et il n'induit pas d'allocations. L'absence d'allocation vient du fait que le compilateur peut voir que la collection `symbols` est une classe <xref:System.Collections.Generic.List%601> et qu'elle peut lier l'énumérateur résultant (une structure) à une variable locale avec le type correct pour éviter le boxing. La version originale de cette fonction était un exemple parfait de la puissance expressive de C# et de la productivité du .NET Framework. Cette nouvelle version, plus efficace, conserve ces qualités sans ajouter de code complexe à tenir à jour. 
+ Ce code n'utilise pas d'énumérateurs, d'expressions lambda ni de méthodes d'extension LINQ, et il n'induit pas d'allocations. L’absence d’allocation vient du fait que le compilateur peut voir que la collection `symbols` est une classe <xref:System.Collections.Generic.List%601> et qu’elle peut lier l’énumérateur résultant (une structure) à une variable locale avec le type correct pour éviter le boxing. La version originale de cette fonction était un exemple parfait de la puissance expressive de C# et de la productivité du .NET Framework. Cette nouvelle version, plus efficace, conserve ces qualités sans ajouter de code complexe à tenir à jour. 
   
 ### <a name="async-method-caching"></a>Mise en cache dans les méthodes async  
 
@@ -388,7 +388,7 @@ class Compilation { /*...*/
   
  Vous pouvez voir que l'appel à `GetSyntaxTreeAsync()` instancie un `Parser`, analyse le code, puis retourne un objet <xref:System.Threading.Tasks.Task>, `Task<SyntaxTree>`. La partie coûteuse correspond à l'allocation de l'instance `Parser` et à l'analyse du code. La fonction retourne une classe <xref:System.Threading.Tasks.Task> afin que les appelants puissent attendre le travail d'analyse et libérer le thread d'interface utilisateur pour être réactifs à l'entrée d'utilisateur. 
   
- Plusieurs fonctionnalités Visual Studio peuvent essayer d'obtenir la même arborescence de syntaxe. Vous pouvez donc écrire le code suivant pour mettre en cache le résultat d'analyse pour économiser du temps et des allocations. Toutefois, ce code induit une allocation :  
+ Plusieurs fonctionnalités Visual Studio peuvent essayer d’obtenir la même arborescence de syntaxe. Vous pouvez donc écrire le code suivant pour mettre en cache le résultat d’analyse pour économiser du temps et des allocations. Toutefois, ce code induit une allocation :  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Vous constatez que le nouveau code avec la mise en cache possède un champ `SyntaxTree` nommé `cachedResult`. Quand ce champ à la valeur null, `GetSyntaxTreeAsync()` effectue le travail et enregistre le résultat dans le cache. `GetSyntaxTreeAsync()` retourne l'objet `SyntaxTree`. Le problème tient au fait que lorsque vous avez une fonction `async` de type `Task<SyntaxTree>` et que vous retournez une valeur de type `SyntaxTree`, le compilateur émet du code pour allouer un objet Task pour contenir le résultat (en utilisant `Task<SyntaxTree>.FromResult()`). L'objet Task est marqué comme terminé et le résultat est disponible immédiatement. Dans le code pour les nouveaux compilateurs, des objets <xref:System.Threading.Tasks.Task> déjà terminés se manifestaient si souvent que la correction de ces allocations a amélioré notablement la réactivité. 
+ Vous constatez que le nouveau code avec la mise en cache possède un champ `SyntaxTree` nommé `cachedResult`. Quand ce champ à la valeur null, `GetSyntaxTreeAsync()` effectue le travail et enregistre le résultat dans le cache. `GetSyntaxTreeAsync()` Retourne le `SyntaxTree` objet. Le problème tient au fait que lorsque vous avez une fonction `async` de type `Task<SyntaxTree>` et que vous retournez une valeur de type `SyntaxTree`, le compilateur émet du code pour allouer un objet Task pour contenir le résultat (en utilisant `Task<SyntaxTree>.FromResult()`). L’objet Task est marqué comme terminé et le résultat est disponible immédiatement. Dans le code pour les nouveaux compilateurs, des objets <xref:System.Threading.Tasks.Task> déjà terminés se manifestaient si souvent que la correction de ces allocations a amélioré notablement la réactivité. 
   
  **Correctif pour l’exemple 6**  
   
@@ -436,7 +436,7 @@ class Compilation { /*...*/
   
  Ce code change le type de `cachedResult` en `Task<SyntaxTree>` et emploie une fonction d'assistance `async` qui contient le code original issu de `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()` utilise maintenant l’[opérateur de fusion Null](../../csharp/language-reference/operators/null-coalescing-operator.md) pour retourner `cachedResult` s’il n’a pas la valeur Null. Si `cachedResult` a la valeur Null, alors `GetSyntaxTreeAsync()` appelle `GetSyntaxTreeUncachedAsync()` et met en cache le résultat. Notez que `GetSyntaxTreeAsync()` n'attend pas l'appel à `GetSyntaxTreeUncachedAsync()` comme le ferait normalement le code. Ne pas utiliser d'attente signifie que quand `GetSyntaxTreeUncachedAsync()` retourne son objet <xref:System.Threading.Tasks.Task>, `GetSyntaxTreeAsync()` retourne immédiatement l'objet <xref:System.Threading.Tasks.Task>. À présent, le résultat mis en cache est un objet <xref:System.Threading.Tasks.Task>, d'où l'absence d'allocation pour retourner le résultat mis en cache. 
   
-### <a name="additional-considerations"></a>Autres points à prendre en compte  
+### <a name="additional-considerations"></a>Considérations supplémentaires  
  Vous trouverez ci-dessous quelques points supplémentaires concernant des problèmes susceptibles de survenir dans des applications volumineuses ou qui traitent de grandes quantités de données. 
   
  **Dictionnaires**  
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  Dans cet article, nous avons vu que vous devez être conscient des symptômes de goulot d'étranglement de performances qui peuvent affecter la réactivité de votre application, notamment pour les grands systèmes et les systèmes qui traitent de grandes quantités de données. Les facteurs courants incluent le boxing, les manipulations de chaînes, les expressions LINQ et lambda, la mise en cache dans les méthodes async, la mise en cache sans taille limite ou stratégie de suppression, l'utilisation inappropriée des dictionnaires et le fait de passer des structures. Gardez à l'esprit les quatre faits liés au réglage de vos applications :  
   
--   N'optimisez pas prématurément : soyez productif et réglez votre application quand vous détectez des problèmes. 
+- N'optimisez pas prématurément : soyez productif et réglez votre application quand vous détectez des problèmes. 
   
--   Les profils ne trompent pas : sans mesures, vous ne faites que supposer. 
+- Les profils ne trompent pas : sans mesures, vous ne faites que supposer. 
   
--   Des outils efficaces font toute la différence : téléchargez PerfView et essayez-le. 
+- Des outils efficaces font toute la différence : téléchargez PerfView et essayez-le. 
   
--   Tout se résume aux allocations : c'est dans ce domaine que l'équipe chargée de la plateforme des compilateurs a passé le plus de temps à améliorer les performances des nouveaux compilateurs. 
+- Tout se résume aux allocations : c'est dans ce domaine que l'équipe chargée de la plateforme des compilateurs a passé le plus de temps à améliorer les performances des nouveaux compilateurs. 
   
 ## <a name="see-also"></a>Voir aussi
 

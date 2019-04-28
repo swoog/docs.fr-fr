@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
 ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918583"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procédure : utiliser le moniker de service Windows Communication Foundation sans inscription
 Pour se connecter à communiquer avec un service Windows Communication Foundation (WCF), une application cliente WCF doit avoir les détails de l’adresse du service, la configuration de liaison et le contrat de service.  

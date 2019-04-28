@@ -6,8 +6,8 @@ ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004924"
 ---
 # <a name="linq-message-query-correlation"></a>Corrélation de requête de message LINQ
 Cet exemple montre comment effectuer une corrélation basée sur le contenu à l’aide d’une implémentation <xref:System.ServiceModel.Dispatcher.MessageQuery> personnalisée par opposition au <xref:System.ServiceModel.XPathMessageQuery> fourni par le système.  
@@ -28,11 +28,11 @@ Cet exemple montre comment effectuer une corrélation basée sur le contenu à l
   
 2. Une fois les listes de contrôle d'accès (ACL) d'URL ajoutées, effectuez les étapes suivantes.  
   
-    1.  Générez la solution.  
+    1. Générez la solution.  
   
-    2.  Définir plusieurs projets de démarrage en double-cliquant sur la solution et en sélectionnant **définir les projets de démarrage**. Ajouter **Service** et **Client** (dans cet ordre) en tant que plusieurs projets de démarrage.  
+    2. Définir plusieurs projets de démarrage en double-cliquant sur la solution et en sélectionnant **définir les projets de démarrage**. Ajouter **Service** et **Client** (dans cet ordre) en tant que plusieurs projets de démarrage.  
   
-    3.  Exécutez l'application. La console cliente affiche un workflow qui envoie une commande et reçoit l'ID de bon de commande, puis confirme par la suite la commande. La fenêtre Service affichera les demandes en cours de traitement.  
+    3. Exécutez l'application. La console cliente affiche un workflow qui envoie une commande et reçoit l'ID de bon de commande, puis confirme par la suite la commande. La fenêtre Service affichera les demandes en cours de traitement.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

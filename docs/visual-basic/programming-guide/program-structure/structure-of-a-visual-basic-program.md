@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839397"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Structure d'un programme Visual Basic
 Un programme Visual Basic est développé à partir de blocs de construction standard. Un *solution* comprend un ou plusieurs projets. Un *projet* à son tour peut contenir un ou plusieurs assemblys. Chaque *assembly* est compilé à partir d’un ou plusieurs fichiers source. Un *fichier source* fournit la définition et l’implémentation de classes, structures, modules et interfaces qui contiennent l’ensemble de votre code.  
@@ -47,30 +47,30 @@ Un programme Visual Basic est développé à partir de blocs de construction sta
 ## <a name="namespace-level-programming-elements"></a>Éléments de programmation au niveau du Namespace  
  Classes, structures et les modules contiennent tout le code dans votre fichier source. Ils sont *au niveau de l’espace de noms* éléments, qui peuvent apparaître dans un espace de noms ou au niveau des fichiers source. Ils contiennent les déclarations de tous les autres éléments de programmation. Les interfaces, qui définissent les signatures d’élément mais ne fournissent aucune implémentation, apparaissent également au niveau du module. Pour plus d’informations sur les éléments au niveau du module, consultez les rubriques suivantes :  
   
--   [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class (instruction)](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure (instruction)](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module (instruction)](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module (instruction)](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface (instruction)](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  Éléments de données au niveau de l’espace de noms sont les énumérations et les délégués.  
   
 ## <a name="module-level-programming-elements"></a>Éléments de programmation au niveau du module  
  Les procédures, les opérateurs, les propriétés et les événements sont les seuls éléments de programmation qui peuvent contenir du code exécutable (instructions qui effectuent des actions en cours d’exécution). Ils sont le *au niveau du module* éléments de votre programme. Pour plus d’informations sur les éléments de niveau de la procédure, consultez les rubriques suivantes :  
   
--   [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator (instruction)](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event (instruction)](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  Éléments de données au niveau du module sont des variables, constantes, énumérations et les délégués.  
   
@@ -82,13 +82,13 @@ Un programme Visual Basic est développé à partir de blocs de construction sta
 ## <a name="the-main-procedure"></a>La procédure principale  
  Le `Main` procédure est le premier code à exécuter lorsque votre application a été chargée. `Main` sert de point de départ et de contrôle global pour votre application. Il existe quatre types de `Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  Le plus courant de cette procédure est `Sub Main()`. Pour plus d’informations, consultez [procédure Main dans Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   

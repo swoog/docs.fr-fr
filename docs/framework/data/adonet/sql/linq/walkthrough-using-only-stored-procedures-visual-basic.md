@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876731"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procédure pas à pas : Utilisation de procédures stockées uniquement (Visual Basic)
 Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base complet pour accéder aux données à l'aide de procédures stockées uniquement. Cette approche est souvent utilisée par les administrateurs de base de données pour limiter les moyens d'accès au magasin de données.  
@@ -28,13 +28,13 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 ## <a name="prerequisites"></a>Prérequis  
  Elle requiert les éléments suivants :  
   
--   Les fichiers sont stockés dans un dossier dédié, c:\linqtest3. Vous devez créer ce dossier avant de commencer la procédure pas à pas.  
+- Les fichiers sont stockés dans un dossier dédié, c:\linqtest3. Vous devez créer ce dossier avant de commencer la procédure pas à pas.  
   
--   Exemple de base de données Northwind.  
+- Exemple de base de données Northwind.  
   
      Si cette base de données n'est pas disponible sur votre ordinateur de développement, vous pouvez la télécharger à partir du site de téléchargement Microsoft. Pour obtenir des instructions, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Après avoir téléchargé la base de données, copiez le fichier northwnd.mdf dans le dossier c:\linqtest3.  
   
--   Fichier de code Visual Basic généré à partir de la base de données Northwind.  
+- Fichier de code Visual Basic généré à partir de la base de données Northwind.  
   
      Cette procédure pas à pas a été écrite à l'aide de l'outil SQLMetal, avec la ligne de commande suivante :  
   
@@ -45,17 +45,17 @@ Cette procédure pas à pas fournit un scénario [!INCLUDE[vbtecdlinq](../../../
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure pas à pas se compose de six tâches principales :  
   
--   Configurer le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution dans Visual Studio.  
+- Configurer le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution dans Visual Studio.  
   
--   Ajout de l'assembly System.Data.Linq au projet.  
+- Ajout de l'assembly System.Data.Linq au projet.  
   
--   Ajout du fichier de code de base de données au projet.  
+- Ajout du fichier de code de base de données au projet.  
   
--   Création d'une connexion à la base de données.  
+- Création d'une connexion à la base de données.  
   
--   Configuration de l'interface utilisateur.  
+- Configuration de l'interface utilisateur.  
   
--   Exécution et test de l'application.  
+- Exécution et test de l'application.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Création d'une solution LINQ to SQL  
  Dans cette première tâche, vous créez une solution Visual Studio qui contient les références nécessaires pour générer et exécuter un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projet.  

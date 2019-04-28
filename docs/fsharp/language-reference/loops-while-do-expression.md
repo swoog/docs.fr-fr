@@ -3,11 +3,11 @@ title: 'Boucles : expression while...do'
 description: Voir comment l’instruction while... faire expression est utilisée pour effectuer une exécution itérative (boucle) pendant une condition de test spécifiée a la valeur true.
 ms.date: 05/16/2016
 ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904018"
 ---
 # <a name="loops-whiledo-expression"></a>Boucles : expression while...do
 

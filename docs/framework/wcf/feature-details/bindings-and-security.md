@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857790"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
@@ -35,21 +35,21 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Cette liaison est conçue pour être utilisées avec une vaste gamme de technologies existantes, dont les suivantes :  
   
--   Services Web ASP.NET (ASMX), version 1.  
+- Services Web ASP.NET (ASMX), version 1.  
   
--   Applications WSE (Web Service Enhancements).  
+- Applications WSE (Web Service Enhancements).  
   
--   Basic Profile tel que défini dans l’interopérabilité de Services Web (WS-I) spécification (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- Basic Profile tel que défini dans l’interopérabilité de Services Web (WS-I) spécification (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   Profil de sécurité de base tel que défini dans WS-I.  
+- Profil de sécurité de base tel que défini dans WS-I.  
   
  Par défaut, cette liaison n’est pas sécurisée. Elle est conçue pour interagir avec les services ASMX. Lorsque la sécurité est activée, la liaison fournit une interopérabilité transparente avec les mécanismes de sécurité IIS (Internet Information Services), tels que l'authentification de base, Digest et la sécurité Windows intégrée. Pour plus d’informations, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Cette liaison prend en charge les fonctionnalités suivantes :  
   
--   Sécurité du transport HTTPS.  
+- Sécurité du transport HTTPS.  
   
--   Authentification de base HTTP.  
+- Authentification de base HTTP.  
   
--   WS-Security.  
+- WS-Security.  
   
  Pour plus d'informations, voir <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> et <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Par défaut, cette liaison implémente la spécification WS-Security et fournit l’interopérabilité avec les services qui implémentent les spécifications WS-*. Elle prend en charge les fonctionnalités suivantes :  
   
--   Sécurité du transport HTTPS.  
+- Sécurité du transport HTTPS.  
   
--   WS-Security.  
+- WS-Security.  
   
--   Protection du transport HTTPS avec sécurité des informations d'identification de message SOAP permettant d'authentifier l'appelant.  
+- Protection du transport HTTPS avec sécurité des informations d'identification de message SOAP permettant d'authentifier l'appelant.  
   
  Pour plus d’informations, consultez <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, et <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
@@ -71,23 +71,23 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Cette liaison est conçue pour activer des applications de service duplex. Elle implémente la spécification WS-Security pour la sécurité de transfert basée sur les messages. La sécurité de transport n'est pas disponible. Par défaut, elle fournit les fonctionnalités suivantes :  
   
--   Implémente WS-Reliable Messaging pour la fiabilité.  
+- Implémente WS-Reliable Messaging pour la fiabilité.  
   
--   Implémente WS-Security pour l'authentification et la sécurité de transfert.  
+- Implémente WS-Security pour l'authentification et la sécurité de transfert.  
   
--   Utilise HTTP pour la remise de messages.  
+- Utilise HTTP pour la remise de messages.  
   
--   Utilise l'encodage de message Text/XML.  
+- Utilise l'encodage de message Text/XML.  
   
  À l'aide de WS-Security (sécurité au niveau de la couche de message), la liaison vous permet de configurer les paramètres suivants :  
   
--   La suite algorithmique de sécurité afin de déterminer l'algorithme de chiffrement.  
+- La suite algorithmique de sécurité afin de déterminer l'algorithme de chiffrement.  
   
--   Options de liaison pour les éléments suivants :  
+- Options de liaison pour les éléments suivants :  
   
-    -   Fourniture des informations d'identification de service disponibles hors bande au niveau du client.  
+    - Fourniture des informations d'identification de service disponibles hors bande au niveau du client.  
   
-    -   Fourniture des informations d'identification de service négociées à partir du service dans le cadre de l'installation des canaux.  
+    - Fourniture des informations d'identification de service négociées à partir du service dans le cadre de l'installation des canaux.  
   
  Pour plus d’informations, consultez <xref:System.ServiceModel.WSDualHttpSecurity> et <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
@@ -96,21 +96,21 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Cette liaison est optimisée pour la communication d’un ordinateur à l’autre. Par défaut, elle présente les caractéristiques suivantes :  
   
--   Elle implémente la sécurité au niveau de la couche de transport.  
+- Elle implémente la sécurité au niveau de la couche de transport.  
   
--   Elle tire parti de la sécurité Windows pour l'authentification et la sécurité de transfert.  
+- Elle tire parti de la sécurité Windows pour l'authentification et la sécurité de transfert.  
   
--   Elle utilise TCP pour le transport.  
+- Elle utilise TCP pour le transport.  
   
--   Elle implémente l'encodage de message binaire.  
+- Elle implémente l'encodage de message binaire.  
   
--   Elle implémente WS-Reliable Messaging.  
+- Elle implémente WS-Reliable Messaging.  
   
  Les options disponibles sont les suivantes :  
   
--   Sécurité au niveau de la couche de message (à l'aide de WS-Security).  
+- Sécurité au niveau de la couche de message (à l'aide de WS-Security).  
   
--   Sécurité de transport à l'aide des informations d'identification du message : confidentialité et intégrité fournies par TLS (Transport Layer Security), informations d'identification pour l'autorisation fournies par WS-Security.  
+- Sécurité de transport à l'aide des informations d'identification du message : confidentialité et intégrité fournies par TLS (Transport Layer Security), informations d'identification pour l'autorisation fournies par WS-Security.  
   
  Pour plus d’informations, consultez <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, et <xref:System.ServiceModel.MessageCredentialType>.  
   
@@ -119,17 +119,17 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Cette liaison est optimisée pour la communication interprocessus (généralement sur le même ordinateur). Par défaut, elle présente les caractéristiques suivantes :  
   
--   Elle utilise la sécurité de transport pour l'authentification et le transfert de messages.  
+- Elle utilise la sécurité de transport pour l'authentification et le transfert de messages.  
   
--   Elle utilise des canaux nommés pour la remise de messages.  
+- Elle utilise des canaux nommés pour la remise de messages.  
   
--   Elle implémente l'encodage de message binaire.  
+- Elle implémente l'encodage de message binaire.  
   
--   Chiffrement et signature des messages  
+- Chiffrement et signature des messages  
   
  Les options disponibles sont les suivantes :  
   
--   Authentification à l'aide de la sécurité Windows.  
+- Authentification à l'aide de la sécurité Windows.  
   
  Pour plus d'informations, consultez <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> et <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
@@ -140,9 +140,9 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Par défaut, elle utilise la sécurité de transport et fournit les caractéristiques de sécurité suivantes :  
   
--   La sécurité peut être désactivée (None).  
+- La sécurité peut être désactivée (None).  
   
--   Sécurité de transport MSMQ (Transport).  
+- Sécurité de transport MSMQ (Transport).  
   
  Pour plus d’informations, consultez <xref:System.ServiceModel.NetMsmqSecurity> et <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
@@ -153,15 +153,15 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
  Par défaut, elle utilise la sécurité de transport et fournit les caractéristiques de sécurité suivantes :  
   
--   La sécurité peut être désactivée (None).  
+- La sécurité peut être désactivée (None).  
   
--   Sécurité de transport MSMQ (Transport).  
+- Sécurité de transport MSMQ (Transport).  
   
--   Sécurité des messages SOAP (Message).  
+- Sécurité des messages SOAP (Message).  
   
--   Transport simultané et sécurité des messages (Both).  
+- Transport simultané et sécurité des messages (Both).  
   
--   Types d’informations d’identification de client pris en charge : None, Windows, nom d’utilisateur, certificat, IssuedToken.  
+- Types d’informations d’identification de client pris en charge : None, Windows, nom d’utilisateur, certificat, IssuedToken.  
   
  L'information d'identification <xref:System.ServiceModel.MessageCredentialType.Certificate> est uniquement prise en charge lorsque le mode de sécurité a la valeur <xref:System.ServiceModel.NetMsmqSecurityMode.Both> ou <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908126"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dépannage des tableaux (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des tableaux.  
@@ -22,7 +22,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Déclaration et initialisation d’un tableau d’erreurs de compilation  
  Erreurs de compilation peuvent se produire à partir de la méconnaissance des relations entre les règles de déclaration, la création et initialisation des tableaux. Les causes les plus courantes d’erreurs sont les suivantes :  
   
--   En fournissant un [nouvel opérateur](../../../../visual-basic/language-reference/operators/new-operator.md) clause après avoir spécifié les longueurs de dimensions dans la déclaration de variable de tableau. Les lignes de code suivantes illustrent des déclarations non valides de ce type.  
+- En fournissant un [nouvel opérateur](../../../../visual-basic/language-reference/operators/new-operator.md) clause après avoir spécifié les longueurs de dimensions dans la déclaration de variable de tableau. Les lignes de code suivantes illustrent des déclarations non valides de ce type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Spécification de longueurs de dimensions plus longtemps que le tableau de niveau supérieur d’un tableau en escalier. La ligne de code suivant montre une déclaration non valide de ce type.  
+- Spécification de longueurs de dimensions plus longtemps que le tableau de niveau supérieur d’un tableau en escalier. La ligne de code suivant montre une déclaration non valide de ce type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   En omettant le `New` mot clé lorsque vous spécifiez les valeurs d’élément. La ligne de code suivant montre une déclaration non valide de ce type.  
+- En omettant le `New` mot clé lorsque vous spécifiez les valeurs d’élément. La ligne de code suivant montre une déclaration non valide de ce type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   En fournissant un `New` clause sans accolades (`{}`). Les lignes de code suivantes illustrent des déclarations non valides de ce type.  
+- En fournissant un `New` clause sans accolades (`{}`). Les lignes de code suivantes illustrent des déclarations non valides de ce type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

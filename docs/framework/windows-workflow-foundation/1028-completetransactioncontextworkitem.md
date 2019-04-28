@@ -3,17 +3,18 @@ title: 1028 - CompleteTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 95423f9d-d29a-460e-bcd8-096e80af5bd0
 ms.openlocfilehash: 806a437822cef8802a2bef6a54f924f84c88ef60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008809"
 ---
 # <a name="1028---completetransactioncontextworkitem"></a>1028 - CompleteTransactionContextWorkItem
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|1028|  
+|Id|1028|  
 |Mots clés|WFRuntime|  
 |Niveau|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Débogage|  
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/04/2018
  Indique qu'un TransactionContextWorkItem est terminé.  
   
 ## <a name="message"></a>Message  
- TransactionContextWorkItem est terminé pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».  
+ TransactionContextWorkItem est terminé pour l’activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».  
   
 ## <a name="details"></a>Détails  
   

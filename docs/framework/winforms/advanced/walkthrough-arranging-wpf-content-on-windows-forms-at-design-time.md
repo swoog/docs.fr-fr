@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748250"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : organiser le contenu WPF dans Windows Forms au moment du design
 Cette procédure pas à pas montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l'ancrage et les lignes d'alignement, pour disposer les contrôles WPF (Windows Presentation Foundation).
 
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
 
--   créer le projet ;
+- créer le projet ;
 
--   créer le contrôle WPF ;
+- créer le contrôle WPF ;
 
--   héberger des contrôles WPF dans un panneau de disposition ;
+- héberger des contrôles WPF dans un panneau de disposition ;
 
--   utiliser des lignes d'alignement pour aligner des contrôles WPF ;
+- utiliser des lignes d'alignement pour aligner des contrôles WPF ;
 
--   ancrer des contrôles WPF.
+- ancrer des contrôles WPF.
 
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Création du projet  
  La première étape consiste à créer le projet Windows Forms.  
@@ -47,7 +47,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
--   Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `ArrangeElementHost`.  
+- Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Création du contrôle WPF  
  Après avoir ajouté un contrôle WPF au projet, vous pouvez le disposer sur le formulaire.  

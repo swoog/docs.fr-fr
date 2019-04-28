@@ -5,20 +5,20 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751616"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Une erreur inattendue s'est produite parce qu'une ressource de système d'exploitation requise pour le démarrage de l'instance unique ne peut pas être acquise
 L'application n'a pas pu obtenir une ressource nécessaire du système d'exploitation. Ce problème peut avoir certaines des causes suivantes :  
   
--   L'application n'est pas autorisée à créer des objets de système d'exploitation nommés.  
+- L'application n'est pas autorisée à créer des objets de système d'exploitation nommés.  
   
--   Le Common Language Runtime n'est pas autorisé à créer des fichiers mappés sur la mémoire.  
+- Le Common Language Runtime n'est pas autorisé à créer des fichiers mappés sur la mémoire.  
   
--   L'application doit accéder à un objet de système d'exploitation, mais un autre processus l'utilise.  
+- L'application doit accéder à un objet de système d'exploitation, mais un autre processus l'utilise.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   

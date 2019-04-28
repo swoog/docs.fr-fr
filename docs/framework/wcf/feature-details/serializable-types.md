@@ -3,11 +3,11 @@ title: Types sérialisables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748211"
 ---
 # <a name="serializable-types"></a>Types sérialisables
 Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sérialise tous les types accessibles publiquement. Toutes les propriétés et tous les champs publics en lecture/écriture du type sont sérialisés.  
@@ -17,23 +17,23 @@ Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sériali
 ## <a name="serialization-defaults"></a>Valeurs par défaut de sérialisation  
  Vous pouvez appliquer les attributs <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute> pour contrôler explicitement ou personnaliser la sérialisation de types et membres. De plus, vous pouvez appliquer ces attributs aux champs privés. Toutefois, même les types qui ne sont pas marqués avec ces attributs sont sérialisés et désérialisés. Les règles et les exceptions suivantes s'appliquent :  
   
--   Le <xref:System.Runtime.Serialization.DataContractSerializer> déduit un contrat de données à partir des types sans attributs à l'aide des propriétés par défaut des types créés récemment.  
+- Le <xref:System.Runtime.Serialization.DataContractSerializer> déduit un contrat de données à partir des types sans attributs à l'aide des propriétés par défaut des types créés récemment.  
   
--   Tous les champs publics et les propriétés avec les méthodes `get` et `set` publiques sont sérialisées, à moins que vous n'appliquiez l'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> à ce membre.  
+- Tous les champs publics et les propriétés avec les méthodes `get` et `set` publiques sont sérialisées, à moins que vous n'appliquiez l'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> à ce membre.  
   
--   La sémantique de sérialisation est similaire à celle du <xref:System.Xml.Serialization.XmlSerializer>.  
+- La sémantique de sérialisation est similaire à celle du <xref:System.Xml.Serialization.XmlSerializer>.  
   
--   Dans les types non marqués, seuls les types publics avec les constructeurs qui n'ont pas de paramètres sont sérialisés. L'exception à cette règle est l'<xref:System.Runtime.Serialization.ExtensionDataObject> utilisé avec l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject>.  
+- Dans les types non marqués, seuls les types publics avec les constructeurs qui n'ont pas de paramètres sont sérialisés. L'exception à cette règle est l'<xref:System.Runtime.Serialization.ExtensionDataObject> utilisé avec l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject>.  
   
--   Les champs en lecture seule, les propriétés sans méthode `get` ou `set` et les propriétés avec des méthodes `set` ou `get` internes ou privées ne sont pas sérialisés. Ces propriétés sont ignorées et aucune exception n'est levée, sauf dans le cas des collections get-only.  
+- Les champs en lecture seule, les propriétés sans méthode `get` ou `set` et les propriétés avec des méthodes `set` ou `get` internes ou privées ne sont pas sérialisés. Ces propriétés sont ignorées et aucune exception n'est levée, sauf dans le cas des collections get-only.  
   
--   Les attributs <xref:System.Xml.Serialization.XmlSerializer> (tels que  `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, etc.) sont ignorés.  
+- Les attributs <xref:System.Xml.Serialization.XmlSerializer> (tels que  `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, etc.) sont ignorés.  
   
--   Si vous n'appliquez pas l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> à un type donné, le sérialiseur ignore tout membre dans ce type auquel l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué.  
+- Si vous n'appliquez pas l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> à un type donné, le sérialiseur ignore tout membre dans ce type auquel l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué.  
   
--   La propriété <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> est prise en charge dans les types non marqués avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute>. Cela inclut la prise en charge de l'attribut <xref:System.Runtime.Serialization.KnownTypeAttribute> sur les types non marqués.  
+- La propriété <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> est prise en charge dans les types non marqués avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute>. Cela inclut la prise en charge de l'attribut <xref:System.Runtime.Serialization.KnownTypeAttribute> sur les types non marqués.  
   
--   Pour annuler le processus de sérialisation des membres publics, des propriétés ou des champs, appliquez l'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> à ce membre.  
+- Pour annuler le processus de sérialisation des membres publics, des propriétés ou des champs, appliquez l'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> à ce membre.  
   
 ## <a name="inheritance"></a>Héritage  
  Les types non marqués (type sans attribut <xref:System.Runtime.Serialization.DataContractAttribute>) peuvent hériter des types qui ont cet attribut. Toutefois, l'inverse n'est pas permis : les types avec l'attribut ne peuvent pas hériter de types non marqués. Cette règle est appliquée principalement pour garantir la compatibilité descendante avec le code écrit dans les versions antérieures de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  

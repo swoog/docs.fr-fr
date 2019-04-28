@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907320"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversion entre des chaînes et d'autres types (Visual Basic)
 Vous pouvez convertir la valeur numérique, `Boolean`, ou date/heure de valeur à un `String`. Vous pouvez également convertir dans le sens inverse, à partir d’une valeur de chaîne en type numérique, `Boolean`, ou `Date` , fournie par le contenu de la chaîne peut être interprété comme une valeur valide du type de données de destination. Si cela est impossible, une erreur d’exécution se produit.  

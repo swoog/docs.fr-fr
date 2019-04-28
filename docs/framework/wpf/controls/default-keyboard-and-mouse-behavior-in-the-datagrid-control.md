@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911844"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportement par défaut du clavier et de la souris dans le contrôle DataGrid
 Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:System.Windows.Controls.DataGrid> contrôle à l’aide du clavier et la souris.  
@@ -55,21 +55,21 @@ Cette rubrique décrit comment les utilisateurs peuvent interagir avec le <xref:
   
  Les clés suivantes de la sélection modifient la sélection de plusieurs lignes.  
   
--   MAJ+BAS  
+- MAJ+BAS  
   
--   MAJ+HAUT  
+- MAJ+HAUT  
   
--   MAJ+PG.SUIV  
+- MAJ+PG.SUIV  
   
--   MAJ+PG.PRÉC  
+- MAJ+PG.PRÉC  
   
--   CTRL+MAJ+BAS  
+- CTRL+MAJ+BAS  
   
--   CTRL+MAJ+HAUT  
+- CTRL+MAJ+HAUT  
   
--   CTRL + MAJ + ORIGINE  
+- CTRL + MAJ + ORIGINE  
   
--   CTRL + MAJ + FIN  
+- CTRL + MAJ + FIN  
   
 ## <a name="default-mouse-behavior"></a>Comportement de la souris par défaut  
  Le tableau suivant répertorie le comportement de la souris par défaut pour le <xref:System.Windows.Controls.DataGrid>.  

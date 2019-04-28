@@ -3,11 +3,11 @@ title: Résolution des problèmes
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917631"
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 Les informations suivantes exposent quelques problèmes que vous pouvez rencontrer dans vos applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et fournissent des suggestions pour les éviter, ou du moins en réduire l'effet.  
@@ -31,9 +31,9 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 ## <a name="cascade-delete"></a>Suppression en cascade  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge ni ne reconnaît les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table comportant des contraintes sur cette suppression, vous devez effectuer l'une des actions suivantes :  
   
--   Définissez la règle `ON DELETE CASCADE` dans la contrainte de clé étrangère dans la base de données.  
+- Définissez la règle `ON DELETE CASCADE` dans la contrainte de clé étrangère dans la base de données.  
   
--   Utilisez votre propre code pour supprimer en premier les objets enfants qui empêchent la suppression de l'objet parent.  
+- Utilisez votre propre code pour supprimer en premier les objets enfants qui empêchent la suppression de l'objet parent.  
   
  Sinon, une exception <xref:System.Data.SqlClient.SqlException> est levée.  
   
@@ -42,11 +42,11 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 ## <a name="expression-not-queryable"></a>Expression non requêtable  
  Si vous obtenez l'erreur "L'expression de type [expression] ne peut pas être interrogée. Vérifiez que vous n'omettez pas une référence d'assembly et/ou une importation d'espace de noms pour le fournisseur LINQ." , vérifiez que :  
   
--   Votre application cible [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Votre application cible [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Il y a une référence à `System.Core.dll` et `System.Data.Linq.dll`.  
+- Il y a une référence à `System.Core.dll` et `System.Data.Linq.dll`.  
   
--   Vous avez un `Imports` (Visual Basic) ou `using` directive (c#) pour <xref:System.Linq> et <xref:System.Data.Linq>.  
+- Vous avez un `Imports` (Visual Basic) ou `using` directive (c#) pour <xref:System.Linq> et <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Au cours de débogage un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projet, vous pouvez parcourir les relations d’une entité. Cela apporte ces éléments dans le cache, et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est informé de leur présence. Si vous tentez ensuite d'exécuter <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou une méthode similaire qui produit plusieurs lignes ayant la même clé, une <xref:System.Data.Linq.DuplicateKeyException> est levée.  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915315"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER, énumération
 Identifie des rappels pour les fonctions de débogueur. Pour plus d’informations, consultez le [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) (méthode).  

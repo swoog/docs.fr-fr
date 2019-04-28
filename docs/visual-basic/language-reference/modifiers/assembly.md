@@ -11,11 +11,11 @@ helpviewer_keywords:
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
 ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801984"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Spécifie qu’un attribut situé au début d’un fichier source s’applique à la totalité de l’assembly.  

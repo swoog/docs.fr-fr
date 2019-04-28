@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011877"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notification de modifications dans la liaison de données Windows Forms
 Un des concepts plus importants de la liaison de données Windows Forms est *notification de modification*. Pour vous assurer que votre source de données et les contrôles liés ont toujours des données les plus récentes, vous devez ajouter la notification de modification pour la liaison de données. Plus précisément, vous souhaitez vous assurer que les contrôles dépendants sont avertis des modifications qui ont été apportées à leur source de données, et la source de données est avertie des modifications qui ont été apportées aux propriétés d’un contrôle liées.  
   
  Il existe différents types de notification de modifications, en fonction du type de liaison de données :  
   
--   Liaison simple dans lequel une seule propriété de contrôle est liée à une seule instance d’un objet.  
+- Liaison simple dans lequel une seule propriété de contrôle est liée à une seule instance d’un objet.  
   
--   Liaison de liste, qui peut inclure une propriété de contrôle unique liée à la propriété d’un élément dans une liste ou une propriété du contrôle lié à une liste d’objets.  
+- Liaison de liste, qui peut inclure une propriété de contrôle unique liée à la propriété d’un élément dans une liste ou une propriété du contrôle lié à une liste d’objets.  
   
  En outre, si vous créez des contrôles Windows Forms que vous souhaitez utiliser pour la liaison de données, vous devez appliquer le *PropertyName*modifié le modèle pour les contrôles, afin que les modifications apportées à la propriété liée d’un contrôle sont propagées à la source de données.  
   

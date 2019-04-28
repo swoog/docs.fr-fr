@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877680"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Activation de MARS (Multiple Active Result Sets)
 MARS est une fonctionnalité qui opère avec SQL Server pour permettre l’exécution de plusieurs lots sur une seule connexion. Lorsque MARS est activé pour une utilisation avec SQL Server, chaque objet de commande utilisé ajoute une session à la connexion.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  L'environnement d'exécution par lots inclut les composants suivants :  
   
--   Options définies (par exemple, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Options définies (par exemple, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Contexte de sécurité (rôle d'utilisateur/d'application)  
+- Contexte de sécurité (rôle d'utilisateur/d'application)  
   
--   Contexte de base de données (base de données actuelle)  
+- Contexte de base de données (base de données actuelle)  
   
--   Variables de l’état d’exécution (par exemple, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Variables de l’état d’exécution (par exemple, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Tables temporaires de niveau supérieur  
+- Tables temporaires de niveau supérieur  
   
  Avec MARS, un environnement d'exécution par défaut est associé à une connexion. Chaque nouveau lot qui commence à s'exécuter dans le cadre d'une connexion donnée reçoit une copie de l'environnement par défaut. Chaque fois qu'un code est exécuté dans le cadre d'un lot donné, toutes les modifications apportées à l'environnement sont étendues au lot spécifique. Quand une exécution se termine, les paramètres d'exécution sont copiés dans l'environnement par défaut. Si un seul lot émet plusieurs commandes à exécuter de façon séquentielle dans le cadre de la même transaction, la sémantique est la même que celle exposée par les connexions impliquant des clients ou serveurs antérieurs.  
   

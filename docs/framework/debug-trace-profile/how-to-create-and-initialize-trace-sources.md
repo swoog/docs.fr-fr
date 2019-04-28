@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754516"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procédure : Créer et initialiser des sources de trace
 La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applications pour produire des traces qui peuvent être associées à l'application. <xref:System.Diagnostics.TraceSource> fournit des méthodes de traçage qui vous permettent de tracer facilement des événements et des données, ainsi que de fournir des traces d'information. Il est possible de créer et d'initialiser une sortie de trace <xref:System.Diagnostics.TraceSource> en utilisant ou non les fichiers de configuration. Cette rubrique fournit des instructions pour les deux options. Toutefois, nous vous recommandons d'utiliser des fichiers de configuration pour simplifier la reconfiguration des traces produites par les sources de trace au moment de l'exécution.  
@@ -73,7 +73,7 @@ La classe <xref:System.Diagnostics.TraceSource> est utilisée par les applicatio
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Pour initialiser des sources de trace, des écouteurs et des filtres sans fichier de configuration  
   
--   Utilisez le code d'exemple suivant pour activer le traçage par une source de trace sans utiliser un fichier de configuration. Il ne s'agit pas d'une pratique recommandée, mais il peut arriver que vous ne souhaitiez pas dépendre des fichiers de configuration pour assurer le traçage.  
+- Utilisez le code d'exemple suivant pour activer le traçage par une source de trace sans utiliser un fichier de configuration. Il ne s'agit pas d'une pratique recommandée, mais il peut arriver que vous ne souhaitiez pas dépendre des fichiers de configuration pour assurer le traçage.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

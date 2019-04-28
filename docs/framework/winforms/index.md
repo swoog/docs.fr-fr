@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
 ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801177"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Les formulaires étant l'unité de base de votre application, il est essentiel de réfléchir à leur fonction et à leur conception. Si l'on y réfléchit bien, un formulaire est une feuille blanche que vous, en tant que développeur, améliorez avec des contrôles pour créer une interface utilisateur et avec du code pour manipuler des données. À cette fin, Visual Studio vous offre un environnement de développement intégré (IDE) pour vous aider à écrire du code, ainsi que d’un contrôle rich définie écrit avec le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En associant les fonctionnalités de ces contrôles à votre code, vous pouvez facilement et rapidement développer les solutions dont vous avez besoin.  

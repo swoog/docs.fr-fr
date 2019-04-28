@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> n'est pas conforme au CLS, car il surcharge <proceduresignature2> dont il diffère uniquement par un tableau de types de paramètres tableau ou par la dimension des types de paramètres tableau.
+title: <proceduresignature1> n’est pas conforme CLS, car il surcharge <proceduresignature2> dont il diffère uniquement par un tableau de types de paramètres tableau ou par la dimension des types de paramètres tableau
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920911"
 ---
 # <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > n’est pas conforme CLS, car il surcharge \<proceduresignature2 > dont il diffère uniquement par un tableau de types de paramètres tableau ou par la dimension des types de paramètres tableau
 Une procédure ou la propriété est marquée comme `<CLSCompliant(True)>` quand il substitue à une autre procédure ou propriété et la seule différence entre leurs listes de paramètres est le niveau d’imbrication d’un tableau en escalier ou le rang d’un tableau.  
@@ -37,9 +37,9 @@ Une procédure ou la propriété est marquée comme `<CLSCompliant(True)>` quand
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si vous avez besoin de la conformité CLS, définissez vos surcharges pour diffèrent entre eux dans plus de manières que seules les modifications mentionnées dans cette page d’aide.  
+- Si vous avez besoin de la conformité CLS, définissez vos surcharges pour diffèrent entre eux dans plus de manières que seules les modifications mentionnées dans cette page d’aide.  
   
--   Si vous avez besoin que les surcharges diffèrent uniquement par les modifications mentionnées dans cette aide page, supprimez le <xref:System.CLSCompliantAttribute> à partir de leurs définitions ou marquez-les comme `<CLSCompliant(False)>`.  
+- Si vous avez besoin que les surcharges diffèrent uniquement par les modifications mentionnées dans cette aide page, supprimez le <xref:System.CLSCompliantAttribute> à partir de leurs définitions ou marquez-les comme `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Voir aussi
 

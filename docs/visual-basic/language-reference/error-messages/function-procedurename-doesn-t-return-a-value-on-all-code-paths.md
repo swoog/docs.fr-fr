@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802373"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code
 Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code. Une instruction 'Return' est-elle manquante ?  
@@ -21,11 +21,11 @@ Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins d
   
  Vous pouvez retourner une valeur à partir d’un `Function` procédure dans une des manières suivantes :  
   
--   Inclure la valeur dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Inclure la valeur dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
--   Affectez la valeur pour le `Function` procédure nommez, puis effectuez une `Exit Function` instruction.  
+- Affectez la valeur pour le `Function` procédure nommez, puis effectuez une `Exit Function` instruction.  
   
--   Affectez la valeur pour le `Function` procédure nommez, puis effectuez la `End Function` instruction.  
+- Affectez la valeur pour le `Function` procédure nommez, puis effectuez la `End Function` instruction.  
   
  Si le contrôle passe à `Exit Function` ou `End Function` et vous n’avez pas affectés n’importe quelle valeur pour le nom de la procédure, la procédure retourne la valeur par défaut du type de retour de données. Pour plus d’informations, consultez « Comportement » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
   
@@ -35,7 +35,7 @@ Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins d
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Vérifiez votre logique de flux de contrôle et assurez-vous que vous assignez une valeur avant chaque instruction qui provoque un retour.  
+- Vérifiez votre logique de flux de contrôle et assurez-vous que vous assignez une valeur avant chaque instruction qui provoque un retour.  
   
      Il est plus facile de garantir que chaque retour de la procédure retourne une valeur si vous utilisez toujours la `Return` instruction. Si vous le faites, la dernière instruction avant `End Function` doit être un `Return` instruction.  
   

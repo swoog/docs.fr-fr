@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913729"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procédure : Modifier la taille ou l’emplacement d’une image au moment de l’exécution (Windows Forms)
 Si vous utilisez les formulaires Windows <xref:System.Windows.Forms.PictureBox> contrôle sur un formulaire, vous pouvez définir le <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propriété dessus pour :  
   
--   Aligner le coin supérieur gauche de l’image sur l’angle supérieur gauche du contrôle  
+- Aligner le coin supérieur gauche de l’image sur l’angle supérieur gauche du contrôle  
   
--   Centrer l’image dans le contrôle  
+- Centrer l’image dans le contrôle  
   
--   Ajuster la taille du contrôle en fonction de l’image que s’affiche  
+- Ajuster la taille du contrôle en fonction de l’image que s’affiche  
   
--   Étirer une image, il s’affiche pour ajuster le contrôle  
+- Étirer une image, il s’affiche pour ajuster le contrôle  
   
  Étirement d’une image (en particulier un au format bitmap) peut entraîner une dégradation de qualité d’image. Métafichiers, qui sont des listes d’instructions graphiques pour le dessin d’images au moment de l’exécution, sont mieux adaptées aux étirement que les bitmaps.  
   

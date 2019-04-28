@@ -3,11 +3,11 @@ title: Recherche de découverte et FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856516"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
 Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -20,21 +20,21 @@ Une opération de recherche de découverte est lancée par un client pour décou
   
  Les critères de recherche incluent :  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> : facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans WCF un point de terminaison peut uniquement prendre en charge un seul contrat.  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> : facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans WCF un point de terminaison peut uniquement prendre en charge un seul contrat.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> : facultatif. Les étendues sont des URI absolus utilisés pour définir les catégories de points de terminaison de service individuels. Vous pouvez les utiliser dans des scénarios où plusieurs points de terminaison exposent le même contrat, lorsque vous souhaitez rechercher un sous-ensemble des points de terminaison. Si plusieurs étendues sont spécifiées, seuls les points de terminaison de service correspondant à TOUTES les étendues répondent.  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> : facultatif. Les étendues sont des URI absolus utilisés pour définir les catégories de points de terminaison de service individuels. Vous pouvez les utiliser dans des scénarios où plusieurs points de terminaison exposent le même contrat, lorsque vous souhaitez rechercher un sous-ensemble des points de terminaison. Si plusieurs étendues sont spécifiées, seuls les points de terminaison de service correspondant à TOUTES les étendues répondent.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> : spécifie l'algorithme de correspondance à utiliser, lors de la comparaison des étendues dans le message Probe avec celles du point de terminaison. Il existe cinq règles de correspondance d'étendues prises en charge :  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> : spécifie l'algorithme de correspondance à utiliser, lors de la comparaison des étendues dans le message Probe avec celles du point de terminaison. Il existe cinq règles de correspondance d'étendues prises en charge :  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> fait une comparaison de chaînes de base sensible à la casse.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> fait une comparaison de chaînes de base sensible à la casse.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> correspond par segments séparés par « / ». Une recherche de `http://contoso/building1` correspond à un service avec une étendue `http://contoso/building/floor1`. Notez qu’il ne correspond pas à `http://contoso/building100` car les deux derniers segments ne correspondent pas.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> correspond par segments séparés par « / ». Une recherche de `http://contoso/building1` correspond à un service avec une étendue `http://contoso/building/floor1`. Notez qu’il ne correspond pas à `http://contoso/building100` car les deux derniers segments ne correspondent pas.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> établit une correspondance des étendues par segments à l'aide d'une URL LDAP.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> établit une correspondance des étendues par segments à l'aide d'une URL LDAP.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> établit une correspondance exacte des étendues, à l'aide d'une chaîne UUID.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> établit une correspondance exacte des étendues, à l'aide d'une chaîne UUID.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> correspond uniquement aux services qui ne spécifient pas d'étendue.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> correspond uniquement aux services qui ne spécifient pas d'étendue.  
   
      Si une règle de correspondance d'étendue n'est pas spécifiée, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> est utilisée.  
   

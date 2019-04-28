@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750746"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
 Spécifie le jeu d’URI qui sont des identificateurs acceptables de la partie de confiance (RP). Jetons ne seront pas acceptés, sauf si elles sont limitées pour un des URI d’audience autorisés.  
@@ -44,7 +44,7 @@ Spécifie le jeu d’URI qui sont des identificateurs acceptables de la partie d
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|mode|Un <xref:System.IdentityModel.Selectors.AudienceUriMode> valeur qui spécifie si la restriction d’audience doit être appliquée à un jeton entrant. Les valeurs possibles sont « », « Jamais » et toujours « BearerKeyOnly ». La valeur par défaut est « Toujours ». Facultatif.|  
+|mode|Un <xref:System.IdentityModel.Selectors.AudienceUriMode> valeur qui spécifie si la restriction d’audience doit être appliquée à un jeton entrant. Les valeurs possibles sont « », « Jamais » et toujours « BearerKeyOnly ». La valeur par défaut est « Toujours ». Optionnel.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   

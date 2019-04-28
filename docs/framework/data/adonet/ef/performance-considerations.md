@@ -3,11 +3,11 @@ title: Remarques sur les performances (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879396"
 ---
 # <a name="performance-considerations-entity-framework"></a>Remarques sur les performances (Entity Framework)
 Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Framework et fournit des points à prendre en considération pour vous aider à améliorer les performances des applications Entity Framework.  
@@ -55,12 +55,12 @@ Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Fra
 #### <a name="query-complexity"></a>Complexité des requêtes  
  Les requêtes qui requièrent un grand nombre de jointures dans les commandes exécutées sur la source de données ou qui retournent une grande quantité de données peuvent affecter les performances des façons suivantes :  
   
--   Des requêtes sur un modèle conceptuel qui paraissent simples peuvent provoquer l'exécution de requêtes plus complexes sur la source de données. Cela peut se produire parce qu’Entity Framework traduit une requête sur un modèle conceptuel en une requête équivalente sur la source de données. Lorsqu'un jeu d'entités individuel dans le modèle conceptuel est mappé à plusieurs tables dans la source de données ou lorsqu'une relation entre des entités est mappée à une table de jointures, la commande de requête exécutée sur la requête de source de données peut requérir une ou plusieurs jointures.  
+- Des requêtes sur un modèle conceptuel qui paraissent simples peuvent provoquer l'exécution de requêtes plus complexes sur la source de données. Cela peut se produire parce qu’Entity Framework traduit une requête sur un modèle conceptuel en une requête équivalente sur la source de données. Lorsqu'un jeu d'entités individuel dans le modèle conceptuel est mappé à plusieurs tables dans la source de données ou lorsqu'une relation entre des entités est mappée à une table de jointures, la commande de requête exécutée sur la requête de source de données peut requérir une ou plusieurs jointures.  
   
     > [!NOTE]
     >  Utilisez la méthode <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> des classes <xref:System.Data.Objects.ObjectQuery%601> ou <xref:System.Data.EntityClient.EntityCommand> pour consulter les commandes exécutées sur la source de données pour une requête donnée. Pour plus d'informations, voir [Procédure : Afficher les commandes Store](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   Les requêtes Entity SQL imbriquées peuvent créer des jointures sur le serveur et peuvent retourner un grand nombre de lignes.  
+- Les requêtes Entity SQL imbriquées peuvent créer des jointures sur le serveur et peuvent retourner un grand nombre de lignes.  
   
      Vous trouverez ci-dessous un exemple de requête imbriquée dans une clause de projection :  
   
@@ -72,7 +72,7 @@ Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Fra
   
      En outre, de telles requêtes provoquent la création par le pipeline de requête d'une requête individuelle avec la duplication d'objets sur l'ensemble des requêtes imbriquées. En raison de cela, une colonne individuelle peut être dupliquée plusieurs fois. Sur certaines bases de données, notamment SQL Server, cela peut provoquer une augmentation très importante de la taille de la table TempDB, ce qui peut réduire les performances du serveur. Vous devez faire très attention lorsque vous exécutez des requêtes imbriquées.  
   
--   Toutes les requêtes qui retournent une grande quantité de données peuvent provoquer une diminution des performances si le client effectue des opérations qui consomment des ressources d'une façon proportionnelle à la taille du jeu de résultats. Dans de tels cas, vous devez envisager de limiter la quantité de données retournées par la requête. Pour plus d'informations, voir [Procédure : Résultats de la page via la requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- Toutes les requêtes qui retournent une grande quantité de données peuvent provoquer une diminution des performances si le client effectue des opérations qui consomment des ressources d'une façon proportionnelle à la taille du jeu de résultats. Dans de tels cas, vous devez envisager de limiter la quantité de données retournées par la requête. Pour plus d'informations, voir [Procédure : Résultats de la page via la requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Toutes les commandes générées automatiquement par Entity Framework peuvent être plus complexes que des commandes semblables écrites explicitement par un développeur de base de données. Si vous avez besoin d'un contrôle explicite sur les commandes exécutées sur votre source de données, envisagez de définir un mappage à une fonction table ou à une procédure stockée.  
   
@@ -114,9 +114,9 @@ Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Fra
 ### <a name="distributed-transactions"></a>Transactions distribuées  
  Des opérations dans une transaction explicite qui requièrent des ressources gérées par DTC (Distributed Transaction Coordinator) seront beaucoup plus coûteuses qu’une opération semblable qui ne requiert pas DTC. La promotion DTC se produira dans les situations suivantes :  
   
--   Transaction explicite avec une opération sur une base de données SQL Server 2000 ou une autre source de données qui effectue toujours une promotion DTC des transactions explicites.  
+- Transaction explicite avec une opération sur une base de données SQL Server 2000 ou une autre source de données qui effectue toujours une promotion DTC des transactions explicites.  
   
--   Transaction explicite avec une opération sur SQL Server 2005 lorsque la connexion est gérée par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Cela se produit parce que SQL Server 2005 effectue une promotion DTC chaque fois qu’une connexion est fermée et rouverte dans une même transaction, ce qui est le comportement par défaut d’[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Cette promotion DTC n'a pas lieu lors de l'utilisation de SQL Server 2008. Pour éviter cette promotion lors de l'utilisation de SQL Server 2005, vous devez ouvrir et fermer explicitement la connexion dans la transaction. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Transaction explicite avec une opération sur SQL Server 2005 lorsque la connexion est gérée par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Cela se produit parce que SQL Server 2005 effectue une promotion DTC chaque fois qu’une connexion est fermée et rouverte dans une même transaction, ce qui est le comportement par défaut d’[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Cette promotion DTC n'a pas lieu lors de l'utilisation de SQL Server 2008. Pour éviter cette promotion lors de l'utilisation de SQL Server 2005, vous devez ouvrir et fermer explicitement la connexion dans la transaction. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Une transaction explicite est utilisée lorsqu'une ou plusieurs opérations sont exécutées au sein d'une transaction <xref:System.Transactions>. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ Cette rubrique décrit les caractéristiques de performance d'ADO.NET Entity Fra
 ## <a name="performance-data"></a>Données de performance  
  Certaines données de performances pour Entity Framework sont publiées dans les publications suivantes sur le [blog de l’équipe ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Exploration des performances d’ADO.NET Entity Framework - partie 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Exploration des performances d’ADO.NET Entity Framework - partie 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Exploration des performances d’ADO.NET Entity Framework – partie 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Exploration des performances d’ADO.NET Entity Framework – partie 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Comparaison des performances ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [Comparaison des performances ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Voir aussi
 

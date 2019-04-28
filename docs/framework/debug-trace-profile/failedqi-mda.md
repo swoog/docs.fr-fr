@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754724"
 ---
 # <a name="failedqi-mda"></a>Assistant Débogage managé failedQI
 L'Assistant Débogage managé (MDA) `failedQI` est activé quand le runtime appelle `QueryInterface` sur un pointeur d'interface COM au nom d'un wrapper RCW et que l'appel à `QueryInterface` échoue.  
@@ -25,11 +25,11 @@ L'Assistant Débogage managé (MDA) `failedQI` est activé quand le runtime appe
   
 ## <a name="cause"></a>Cause  
   
--   L'appel est effectué à partir du contexte incorrect.  
+- L'appel est effectué à partir du contexte incorrect.  
   
--   Le proxy inscrit fait échouer l'appel à `QueryInterface`, car la tentative d'appel a été effectuée dans le contexte incorrect.  
+- Le proxy inscrit fait échouer l'appel à `QueryInterface`, car la tentative d'appel a été effectuée dans le contexte incorrect.  
   
--   Un proxy détenu par OLE a retourné une erreur HRESULT.  
+- Un proxy détenu par OLE a retourné une erreur HRESULT.  
   
 ## <a name="resolution"></a>Résolution  
  Consultez la documentation MSDN sur les règles COM.  

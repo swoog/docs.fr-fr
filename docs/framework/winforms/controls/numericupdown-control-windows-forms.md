@@ -10,11 +10,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
 ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61806559"
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown, contrôle (Windows Forms)
 Le contrôle Windows Forms `NumericUpDown` se présente comme la combinaison d’une zone de texte et d’une paire de flèches sur lesquelles l’utilisateur peut cliquer pour ajuster une valeur. Le contrôle affiche et définit une seule valeur numérique à partir d’une liste de choix. L’utilisateur peut augmenter et diminuer le nombre en cliquant sur des boutons Haut et Bas, en appuyant sur les touches Flèche Haut et Bas, ou en tapant un nombre. La touche Flèche vers le haut change la valeur vers le maximum ; la touche Flèche vers le bas change la valeur vers le minimum. Ce type de contrôle peut être utile par exemple dans un contrôle de volume d’un lecteur de musique. Les contrôles Haut-Bas sont utilisés dans certaines applications du Panneau de configuration Windows.  

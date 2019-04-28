@@ -3,11 +3,11 @@ title: Hébergement de services de workflow
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855866"
 ---
 # <a name="hosting-workflow-services"></a>Hébergement de services de workflow
 Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie WCF et sont donc hébergés de manière similaire. Comme les services WCF, les services de flux de travail peuvent être hébergés dans toute application managée, sous Internet Information Services (IIS), ou sous les services Internet (WAS, Windows Process Activation Services). En outre, les services de workflow peuvent être hébergés sous Windows Server AppFabric. Pour plus d’informations sur Windows Server AppFabric, consultez [documentation de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement d’AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Pour plus d’informations sur les différentes façons d’héberger WCF services, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).
@@ -18,9 +18,9 @@ Un service de workflow doit être hébergé pour pouvoir répondre aux messages 
 ## <a name="hosting-under-iis-or-was"></a>Hébergement dans les services IIS ou WAS
  Héberger un service de workflow dans les services IIS ou WAS implique de créer un répertoire virtuel et d'y placer les fichiers qui définissent le service et son comportement. Lors de l'hébergement d'un service de workflow dans les services IIS ou WAS, il existe plusieurs possibilités :
 
--   Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS, ainsi qu'un fichier Web.config qui spécifie les comportements, les points de terminaison et d'autres éléments de configuration du service.
+- Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS, ainsi qu'un fichier Web.config qui spécifie les comportements, les points de terminaison et d'autres éléments de configuration du service.
 
--   Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS. Le fichier .xamlx spécifie les points de terminaison à exposer. Les points de terminaison sont spécifiés dans un élément `WorkflowService.Endpoints`, comme le montre l'exemple suivant.
+- Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS. Le fichier .xamlx spécifie les points de terminaison à exposer. Les points de terminaison sont spécifiés dans un élément `WorkflowService.Endpoints`, comme le montre l'exemple suivant.
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ Un service de workflow doit être hébergé pour pouvoir répondre aux messages 
     > [!NOTE]
     > Les comportements ne peuvent pas être spécifiés dans un fichier .xamlx ; vous devez donc utiliser un fichier Web.config si vous devez spécifier des paramètres de comportement.
 
--   Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS. Placez également un fichier .svc dans le répertoire virtuel. Ce fichier .svc vous permet de spécifier une fabrique hôte de service Web personnalisée, d'appliquer le comportement personnalisé ou de charger la configuration à partir d'un emplacement personnalisé.
+- Placez un fichier .xamlx définissant le service de workflow dans un répertoire virtuel IIS/WAS. Placez également un fichier .svc dans le répertoire virtuel. Ce fichier .svc vous permet de spécifier une fabrique hôte de service Web personnalisée, d'appliquer le comportement personnalisé ou de charger la configuration à partir d'un emplacement personnalisé.
 
--   Placez un assembly dans le répertoire virtuel IIS/WAS qui contient une activité utilisant les activités de messagerie WCF.
+- Placez un assembly dans le répertoire virtuel IIS/WAS qui contient une activité utilisant les activités de messagerie WCF.
 
  Un fichier .xamlx qui définit un service de workflow doit contenir un <`Service`> élément racine ou un élément racine qui contient tous les types dérivés de <xref:System.Workflow.ComponentModel.Activity>. Lorsque vous utilisez le modèle d’activité de Visual Studio, un fichier .xamlx est créé. Lorsque vous utilisez le modèle de Service de Workflow WCF, un fichier .xamlx est créé.
 

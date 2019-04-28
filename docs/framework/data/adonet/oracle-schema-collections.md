@@ -3,17 +3,17 @@ title: Collections de schémas Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878473"
 ---
 # <a name="oracle-schema-collections"></a>Collections de schémas Oracle
 
 Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes.
 
-- Columns
+- Colonnes
 
 - Index
 
@@ -29,7 +29,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 
 - Utilisateurs
 
-- Vues
+- Affichages
 
 - Fonctions
 
@@ -49,14 +49,14 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 
 - ProcedureParameters
 
-## <a name="columns"></a>Columns
+## <a name="columns"></a>Colonnes
 
 |Nom de colonne|Type de données|Description|
 |----------------|--------------|-----------------|
 |OWNER|Chaîne|Propriétaire de la table, de la vue ou du cluster.|
 |TABLE_NAME|Chaîne|Nom de table, de vue ou de cluster.|
 |COLUMN_NAME|Chaîne|Nom de la colonne.|
-|ID|Decimal|Numéro de séquence de la colonne lors de sa création.|
+|Id|Decimal|Numéro de séquence de la colonne lors de sa création.|
 |DATATYPE|Chaîne|Type de données de la colonne.|
 |LENGTH|Decimal|Longueur de la colonne en octets.|
 |PRECISION|Decimal|Précision décimale du type de données NUMBER ; précision binaire du type de données FLOAT, null pour tous les autres types de données.|
@@ -187,10 +187,10 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |Nom de colonne|Type de données|Description|
 |----------------|--------------|-----------------|
 |NAME|Chaîne|Nom de l'utilisateur.|
-|ID|Decimal|Numéro d'ID de l'utilisateur.|
+|Id|Decimal|Numéro d'ID de l'utilisateur.|
 |CREATEDATE|DateTime|Date de création de l'utilisateur.|
 
-## <a name="views"></a>Vues
+## <a name="views"></a>Affichages
 
 |Nom de colonne|Type de données|Description|
 |----------------|--------------|-----------------|
@@ -265,12 +265,12 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |OWNER|Chaîne|Nom du propriétaire de l'objet.|
 |PACKAGE_NAME|Chaîne|Nom du package.|
 |OBJECT_NAME|Chaîne|Nom de la procédure ou de la fonction.|
-|ARGUMENT_NAME|Chaîne|Nom de l'argument.|
-|POSITION|Decimal|Position dans la liste d'arguments ou NULL pour une valeur de retour de fonction.|
+|ARGUMENT_NAME|Chaîne|Nom de l’argument.|
+|POSITION|Decimal|Position dans la liste d’arguments ou NULL pour une valeur de retour de fonction.|
 |SEQUENCE|Decimal|Séquence d'arguments, y compris tous les niveaux d'imbrication.|
 |DEFAULT_VALUE|Chaîne|Valeur par défaut de l'argument.|
-|DEFAULT_LENGTH|Decimal|Longueur de la valeur par défaut de l'argument.|
-|IN_OUT|Chaîne|Direction de l'argument (IN, OUT ou IN/OUT).|
+|DEFAULT_LENGTH|Decimal|Longueur de la valeur par défaut de l’argument.|
+|IN_OUT|Chaîne|Direction de l’argument (IN, OUT ou IN/OUT).|
 |DATA_LENGTH|Decimal|Longueur de la colonne en octets.|
 |DATA_PRECISION|Decimal|Longueur en chiffres décimaux (NUMBER) ou en chiffres binaires (FLOAT).|
 |DATA_SCALE|Decimal|Chiffres à droite de la virgule décimale dans un nombre.|
@@ -359,24 +359,24 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |PACKAGE_NAME|Chaîne|Nom de la procédure ou de la fonction.|
 |OBJECT_ID|Decimal|Numéro de l'objet.|
 |OVERLOAD|Chaîne|Identificateur unique de surcharge.|
-|ARGUMENT_NAME|Chaîne|Nom de l'argument.|
-|POSITION|Decimal|Position dans la liste d'arguments ou NULL pour une valeur de retour de fonction.|
+|ARGUMENT_NAME|Chaîne|Nom de l’argument.|
+|POSITION|Decimal|Position dans la liste d’arguments ou NULL pour une valeur de retour de fonction.|
 |SEQUENCE|Decimal|Séquence d'arguments, y compris tous les niveaux d'imbrication.|
-|DATA_LEVEL|Decimal|Profondeur d'imbrication de l'argument pour les types composites.|
+|DATA_LEVEL|Decimal|Profondeur d’imbrication de l’argument pour les types composites.|
 |DATA_TYPE|Chaîne|Type de données de l'argument.|
 |DEFAULT_VALUE|Chaîne|Valeur par défaut de l'argument.|
 |DEFAULT_LENGTH|Decimal|Longueur de la valeur par défaut de l'argument.|
-|IN_OUT|Chaîne|Direction de l'argument (IN, OUT ou IN/OUT).|
+|IN_OUT|Chaîne|Direction de l’argument (IN, OUT ou IN/OUT).|
 |DATA_LENGTH|Decimal|Longueur de la colonne (en octets).|
 |DATA_PRECISION|Decimal|Longueur en chiffres décimaux (NUMBER) ou en chiffres binaires (FLOAT).|
 |DATA_SCALE|Decimal|Chiffres à droite de la virgule décimale dans un nombre.|
-|RADIX|Decimal|Radical d'argument pour un nombre.|
-|CHARACTER_SET_NAME|Chaîne|Nom de l'ensemble de caractères pour l'argument.|
-|TYPE_OWNER|Chaîne|Propriétaire du type de l'argument.|
+|RADIX|Decimal|Radical d’argument pour un nombre.|
+|CHARACTER_SET_NAME|Chaîne|Nom de l’ensemble de caractères pour l’argument.|
+|TYPE_OWNER|Chaîne|Propriétaire du type de l’argument.|
 |TYPE_NAME|Chaîne|Nom du type de l'argument. Si le type est un type de package local (c'est-à-dire qu'il est déclaré dans une spécification de package), cette colonne affiche le nom du package.|
 |TYPE_SUBNAME|Chaîne|Pertinent uniquement pour les types de package locaux. Affiche le nom du type déclaré dans le package identifié dans la colonne TYPE_NAME.|
 |TYPE_LINK|Chaîne|Pertinent uniquement pour les types de package locaux lorsque le package identifié dans la colonne TYPE_NAME est un package distant. Cette colonne affiche le lien de base de données utilisé pour faire référence au package distant.|
-|PLS_TYPE|Chaîne|Pour les arguments numériques, nom du type PL/SQL de l'argument. Sinon, Null.|
+|PLS_TYPE|Chaîne|Pour les arguments numériques, nom du type PL/SQL de l’argument. Sinon, Null.|
 |CHAR_LENGTH|Decimal|Limite de caractères pour les données de type string.|
 |CHAR_USED|Chaîne|Indique si la limite d'octets (B) ou la limite de caractères (C) est officielle pour la chaîne.|
 

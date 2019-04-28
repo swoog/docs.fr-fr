@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827942"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Différences entre l'occultation et la substitution (Visual Basic)
 Lorsque vous définissez une classe qui hérite d’une classe de base, il est parfois utile de redéfinir une ou plusieurs des éléments de classe de base dans la classe dérivée. Occultation et substitution sont disponibles à cet effet.  
@@ -41,15 +41,15 @@ Lorsque vous définissez une classe qui hérite d’une classe de base, il est p
 ## <a name="guidelines"></a>Recommandations  
  Vous utilisez normalement la substitution dans les cas suivants :  
   
--   Vous définissez des classes dérivées polymorphes.  
+- Vous définissez des classes dérivées polymorphes.  
   
--   Vous souhaitez que la sécurité du fait que le compilateur d’appliquer le type d’élément identique et de la séquence d’appel.  
+- Vous souhaitez que la sécurité du fait que le compilateur d’appliquer le type d’élément identique et de la séquence d’appel.  
   
  Vous utilisez normalement l’occultation dans les cas suivants :  
   
--   Vous pensez que votre classe de base peut être modifiée et définir un élément à l’aide du même nom que le vôtre.  
+- Vous pensez que votre classe de base peut être modifiée et définir un élément à l’aide du même nom que le vôtre.  
   
--   Vous souhaitez que la liberté de modifier le type d’élément ou la séquence d’appel.  
+- Vous souhaitez que la liberté de modifier le type d’élément ou la séquence d’appel.  
   
 ## <a name="see-also"></a>Voir aussi
 

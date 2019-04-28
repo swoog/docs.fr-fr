@@ -9,11 +9,11 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
 ms.openlocfilehash: 42e6ee682220913f872da337eb41f6c290082988
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856423"
 ---
 # <a name="finding-claims-in-a-claimset"></a>Recherche de revendications dans une classe ClaimSet
 L’examen du contenu d’une classe <xref:System.IdentityModel.Claims.ClaimSet> dans le but de rechercher des types particuliers de revendications est une tâche courante dans le cadre de l’utilisation de l’autorisation basée sur revendication. Pour examiner une classe <xref:System.IdentityModel.Claims.ClaimSet> afin de rechercher des revendications particulières, utilisez la méthode <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A>. Cette méthode est plus performante que l'itération directe au sein de <xref:System.IdentityModel.Claims.ClaimSet>. L'exemple suivant illustre cette utilisation. Notez que les paramètres `claimType` et `claimRight` peuvent avoir la valeur `null`. Dans ce cas, les paramètres rechercheront tous les types de revendications et tous les droits de revendication.  

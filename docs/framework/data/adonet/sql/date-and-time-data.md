@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877745"
 ---
 # <a name="date-and-time-data"></a>Données de date et d'heure
 SQL Server 2008 introduit de nouveaux types de manipulation de données de date et d'heure. Ces nouveaux types de données incluent des types distincts pour la date et l’heure, ainsi que des types de données développés prenant en charge une plage plus vaste de valeurs, la précision et les fuseaux horaires. À partir du .NET Framework version 3.5 Service Pack (SP) 1, le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>) assure la prise en charge complète de l’ensemble des nouvelles fonctionnalités du moteur de base de données SQL Server 2008. Vous devez installer le .NET Framework 3.5 SP1 (ou version ultérieure) pour utiliser ces nouvelles fonctionnalités avec SqlClient.  
@@ -51,13 +51,13 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
 ## <a name="datetime-data-types-and-parameters"></a>Types de données et paramètres de date/heure  
  Les énumérations suivantes ont été ajoutées à l'objet <xref:System.Data.SqlDbType> pour prendre en charge les nouveaux types de données de date et d'heure.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 Vous pouvez spécifier le type de données d’un <xref:System.Data.SqlClient.SqlParameter> en utilisant l’une des précédentes <xref:System.Data.SqlDbType> énumérations. 
 
@@ -66,9 +66,9 @@ Vous pouvez spécifier le type de données d’un <xref:System.Data.SqlClient.Sq
 
  Vous pouvez également spécifier le type d'un objet <xref:System.Data.SqlClient.SqlParameter> de manière générique en attribuant à la propriété <xref:System.Data.SqlClient.SqlParameter.DbType%2A> d'un objet `SqlParameter` une valeur d'énumération <xref:System.Data.DbType> particulière. Les valeurs d'énumération suivantes ont été ajoutées à l'objet <xref:System.Data.DbType> pour prendre en charge les types de données `datetime2` et `datetimeoffset` :  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  Ces nouvelles énumérations complètent les énumérations `Date`, `Time` et `DateTime` qui existaient dans les versions antérieures du .NET Framework.  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>Spécification des valeurs de date et d'heure en tant que littéraux  
  Vous pouvez spécifier des types de données de date et d'heure en utilisant de nombreux formats littéraux de chaîne différents que SQL Server évalue ensuite lors de l'exécution, en les convertissant en structures de date/heure internes. SQL Server  reconnaît les données de date et d'heure entre des guillemets simples ('). Les exemples suivants présentent certains formats :  
   
--   Formats de date alphabétique, tels que `'October 15, 2006'`.  
+- Formats de date alphabétique, tels que `'October 15, 2006'`.  
   
--   Formats de date numérique, tels que `'10/15/2006'`.  
+- Formats de date numérique, tels que `'10/15/2006'`.  
   
--   Formats de chaîne non séparée, tels que `'20061015'` qui serait interprété sous la forme « 15 octobre 2006 » si vous utilisez le format de date ISO standard.  
+- Formats de chaîne non séparée, tels que `'20061015'` qui serait interprété sous la forme « 15 octobre 2006 » si vous utilisez le format de date ISO standard.  
   
 > [!NOTE]
 >  La documentation complète relative à l'ensemble des formats littéraux de chaîne et autres fonctionnalités des types de données de date et d'heure est disponible dans la documentation en ligne de SQL Server.  

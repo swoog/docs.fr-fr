@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756973"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Génération et déploiement d'applications WPF
 Le modèle de génération et de déploiement fournit la capacité à créer et déployer des applications localement et à distance, y compris les éléments suivants :  
   
--   MSBuild : .NET build système situé dans l’espace de noms Microsoft.Build.Tasks.Windows.  
+- MSBuild : .NET build système situé dans l’espace de noms Microsoft.Build.Tasks.Windows.  
   
--   Ressources : utilisation des ressources de l’interface utilisateur.  
+- Ressources : utilisation des ressources de l’interface utilisateur.  
   
--   Déploiement ClickOnce : la publication et déploiement système .NET.  
+- Déploiement ClickOnce : la publication et déploiement système .NET.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Génération d’une application WPF](building-a-wpf-application-wpf.md)  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803728"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Accès à la propriété par défaut est ambigu entre les membres de l’interface héritée\<defaultpropertyname >' de l’interface '\<nom_interface1 >' et '\<defaultpropertyname >' de l’interface '\< nom_interface2 >'
 Une interface hérite de deux interfaces, chacun d’eux déclare une propriété par défaut avec le même nom. Le compilateur ne peut pas résoudre un accès à cette propriété par défaut sans qualification. L'exemple suivant illustre ce comportement.  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Évitez d’hériter de tous les membres portant le même nom. Dans l’exemple précédent, si `testObj` n’a pas besoin des membres de, disons, `Iface2`, puis de le déclarer comme suit :  
+- Évitez d’hériter de tous les membres portant le même nom. Dans l’exemple précédent, si `testObj` n’a pas besoin des membres de, disons, `Iface2`, puis de le déclarer comme suit :  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      - ou -  
   
--   Implémentez l’interface qui hérite dans une classe. Vous pouvez implémenter chacune des propriétés héritées avec des noms différents. Toutefois, seule une d'entre elles peut être la propriété par défaut de la classe d’implémentation. L'exemple suivant illustre ce comportement.  
+- Implémentez l’interface qui hérite dans une classe. Vous pouvez implémenter chacune des propriétés héritées avec des noms différents. Toutefois, seule une d'entre elles peut être la propriété par défaut de la classe d’implémentation. L'exemple suivant illustre ce comportement.  
   
     ```  
     Public Class useIface3  

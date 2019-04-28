@@ -10,11 +10,11 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868933"
 ---
 # <a name="securing-wrapper-code"></a>Sécurisation du code wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -29,20 +29,20 @@ ms.locfileid: "59132780"
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>Dans les versions 1.0 et 1.1 du .NET Framework  
  Les versions 1.0 et 1.1 du .NET Framework exécutent les actions de sécurité suivantes sur un créateur de délégués et un appelant de délégués.  
   
--   Quand un délégué est créé, des demandes de liaison de sécurité sur la méthode cible du délégué sont exécutées sur le jeu d'autorisations du créateur de délégués.  Si la satisfaction de l'action de sécurité échoue, une <xref:System.Security.SecurityException> est levée.  
+- Quand un délégué est créé, des demandes de liaison de sécurité sur la méthode cible du délégué sont exécutées sur le jeu d'autorisations du créateur de délégués.  Si la satisfaction de l'action de sécurité échoue, une <xref:System.Security.SecurityException> est levée.  
   
--   Quand le délégué est appelé, toutes les demandes de sécurité existantes sur l'appelant de délégués sont exécutées.  
+- Quand le délégué est appelé, toutes les demandes de sécurité existantes sur l'appelant de délégués sont exécutées.  
   
  Chaque fois que votre code prend un <xref:System.Delegate> à partir de code d'un niveau de confiance moindre et susceptible de l'appeler, veillez à ne pas permettre au code d'un niveau de confiance moindre d'élargir ses autorisations. Si vous prenez un délégué et que vous l'utilisez ultérieurement, le code qui a créé le délégué ne se trouve pas dans la pile des appels et ses autorisations ne seront pas testées si le code dans ou sous le délégué tente une opération protégée. Si votre code et le code de l’appelant disposent de privilèges supérieurs à ceux du créateur, ce dernier peut gérer le chemin d’appel sans faire partie de la pile des appels.  
   
 ### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>Dans les versions 2.0 et versions ultérieures du .NET Framework  
  Contrairement aux versions précédentes, les versions 2.0 et ultérieures du .NET Framework effectue action de sécurité sur le créateur de délégués lorsque le délégué est créé et appelé.  
   
--   Quand un délégué est créé, des demandes de liaison de sécurité sur la méthode cible du délégué sont exécutées sur le jeu d'autorisations du créateur de délégués.  Si la satisfaction de l'action de sécurité échoue, une <xref:System.Security.SecurityException> est levée.  
+- Quand un délégué est créé, des demandes de liaison de sécurité sur la méthode cible du délégué sont exécutées sur le jeu d'autorisations du créateur de délégués.  Si la satisfaction de l'action de sécurité échoue, une <xref:System.Security.SecurityException> est levée.  
   
--   Le jeu d'autorisations du créateur de délégués est également capturé au cours de la création du délégué et stocké avec celui-ci.  
+- Le jeu d'autorisations du créateur de délégués est également capturé au cours de la création du délégué et stocké avec celui-ci.  
   
--   Quand le délégué est appelé, le jeu d'autorisations capturé du créateur de délégués est d'abord évalué par rapport à toutes les demandes dans le contexte actuel, si le créateur et l'appelant de délégués appartiennent à des assemblys différents.  Ensuite, toutes les demandes de sécurité existantes sur l'appelant de délégués sont exécutées.  
+- Quand le délégué est appelé, le jeu d'autorisations capturé du créateur de délégués est d'abord évalué par rapport à toutes les demandes dans le contexte actuel, si le créateur et l'appelant de délégués appartiennent à des assemblys différents.  Ensuite, toutes les demandes de sécurité existantes sur l'appelant de délégués sont exécutées.  
   
 ## <a name="link-demands-and-wrappers"></a>Demandes de liaison et wrappers  
  Un cas de protection particulier avec des demandes de liaison a fait l'objet d'une consolidation dans l'infrastructure de sécurité, mais il représente toujours une source de failles possibles dans votre code.  
@@ -58,48 +58,48 @@ ms.locfileid: "59132780"
   
  Ce problème s'applique aux éléments d'API suivants :  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand et LinkDemand  
  La sécurité déclarative propose deux types de vérification de sécurité similaires, mais qui effectuent des vérifications très différentes. Vous devez connaître les deux formes, car un mauvais choix pourrait nuire aux performances et à la sécurité.  
   
  La sécurité déclarative propose les vérifications de sécurité suivantes :  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> spécifie le parcours de pile de sécurité d'accès du code. Tous les appelants sur la pile doivent avoir l'autorisation ou l'identité spécifiée pour passer. **À la demande** se produit à chaque appel, car la pile peut contenir des appelants différents. Si vous appelez une méthode de façon répétée, cette vérification de sécurité se produit à chaque fois. **À la demande** constitue une bonne protection contre les attaques malveillantes ; code non autorisé essaie de passer sera détecté.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> spécifie le parcours de pile de sécurité d'accès du code. Tous les appelants sur la pile doivent avoir l'autorisation ou l'identité spécifiée pour passer. **À la demande** se produit à chaque appel, car la pile peut contenir des appelants différents. Si vous appelez une méthode de façon répétée, cette vérification de sécurité se produit à chaque fois. **À la demande** constitue une bonne protection contre les attaques malveillantes ; code non autorisé essaie de passer sera détecté.  
   
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) se produit au moment de la compilation juste-à-temps (JIT) et vérifie uniquement l’appelant immédiat. Cette vérification de sécurité ne vérifie pas l'appelant de l'appelant. Une fois cette vérification effectuée, il n'y a pas de charge de sécurité supplémentaire, quel que soit le nombre d'appels effectués par l'appelant. Cependant, il n'y a pas non plus de protection contre les attaques malveillantes. Avec **LinkDemand**, tout code qui réussit le test et peut référencer votre code risque de perturber la sécurité en autorisant le code nuisible d’appeler à l’aide du code autorisé. Par conséquent, n’utilisez pas **LinkDemand** , sauf si toutes les failles possibles peuvent être évités de manière approfondie.  
+- [LinkDemand](../../../docs/framework/misc/link-demands.md) se produit au moment de la compilation juste-à-temps (JIT) et vérifie uniquement l’appelant immédiat. Cette vérification de sécurité ne vérifie pas l'appelant de l'appelant. Une fois cette vérification effectuée, il n'y a pas de charge de sécurité supplémentaire, quel que soit le nombre d'appels effectués par l'appelant. Cependant, il n'y a pas non plus de protection contre les attaques malveillantes. Avec **LinkDemand**, tout code qui réussit le test et peut référencer votre code risque de perturber la sécurité en autorisant le code nuisible d’appeler à l’aide du code autorisé. Par conséquent, n’utilisez pas **LinkDemand** , sauf si toutes les failles possibles peuvent être évités de manière approfondie.  
   
     > [!NOTE]
     >  Dans le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], demandes de liaison ont été remplacées par le <xref:System.Security.SecurityCriticalAttribute> attribut <xref:System.Security.SecurityRuleSet.Level2> assemblys. Le <xref:System.Security.SecurityCriticalAttribute> est équivalente à une demande de liaison pour la confiance totale ; Toutefois, elle affecte également les règles d’héritage. Pour plus d’informations sur cette modification, consultez [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Les précautions supplémentaires requises lors de l’utilisation **LinkDemand** doivent être programmées individuellement ; le système de sécurité peut aider à leur application. La moindre erreur fait apparaître une défaillance en matière de sécurité. Tout le code autorisé qui utilise votre code doit prendre en charge l'implémentation de la sécurité supplémentaire en effectuant les opérations suivantes :  
   
--   Limiter l'accès du code appelant à la classe ou à l'assembly.  
+- Limiter l'accès du code appelant à la classe ou à l'assembly.  
   
--   Placer les mêmes vérifications de sécurité sur le code appelant que celles figurant dans le code appelé et forcer ses appelants à effectuer les vérifications. Par exemple, si vous écrivez du code qui appelle une méthode qui est protégée par un **LinkDemand** pour le <xref:System.Security.Permissions.SecurityPermission> avec la <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> indicateur spécifié, votre méthode doit également effectuer un **LinkDemand** (ou **à la demande**, qui est plus fort) pour cette autorisation. L’exception est si votre code utilise le **LinkDemand**-méthode protégée d’une façon limitée que vous décidez est sûr, étant donné les autres mécanismes de protection de sécurité (par exemple, les demandes) dans votre code. Dans ce cas exceptionnel, l'appelant prend la responsabilité d'affaiblir la protection de la sécurité sur le code sous-jacent.  
+- Placer les mêmes vérifications de sécurité sur le code appelant que celles figurant dans le code appelé et forcer ses appelants à effectuer les vérifications. Par exemple, si vous écrivez du code qui appelle une méthode qui est protégée par un **LinkDemand** pour le <xref:System.Security.Permissions.SecurityPermission> avec la <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> indicateur spécifié, votre méthode doit également effectuer un **LinkDemand** (ou **à la demande**, qui est plus fort) pour cette autorisation. L’exception est si votre code utilise le **LinkDemand**-méthode protégée d’une façon limitée que vous décidez est sûr, étant donné les autres mécanismes de protection de sécurité (par exemple, les demandes) dans votre code. Dans ce cas exceptionnel, l'appelant prend la responsabilité d'affaiblir la protection de la sécurité sur le code sous-jacent.  
   
--   Veiller à ce que les appelants de votre code ne puissent pas tromper celui-ci et lui faire appeler le code protégé de leur part. En d'autres termes, les appelants ne peuvent pas forcer le code autorisé à passer des paramètres spécifiques au code protégé ou pour obtenir de ce dernier des résultats.  
+- Veiller à ce que les appelants de votre code ne puissent pas tromper celui-ci et lui faire appeler le code protégé de leur part. En d'autres termes, les appelants ne peuvent pas forcer le code autorisé à passer des paramètres spécifiques au code protégé ou pour obtenir de ce dernier des résultats.  
   
 ### <a name="interfaces-and-link-demands"></a>Interfaces et demandes de liaison  
  Si une méthode virtuelle, une propriété ou un événement avec **LinkDemand** substitue une méthode de classe de base, la méthode de classe de base doit avoir également le même **LinkDemand** pour la méthode substituée soit efficace. Il est possible pour le code nuisible d'effectuer un cast en type de base en retour et d'appeler la méthode de la classe de base. Notez également que les demandes de liaison peuvent être ajoutées implicitement aux assemblys qui n'ont pas l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de niveau assembly.  
   
  Il est recommandé de protéger les implémentations des méthodes avec des demandes de liaison quand des méthodes d'interface possèdent également des demandes de liaison. Notez les informations suivantes concernant l'utilisation de demandes de liaison avec des interfaces :  
   
--   Si vous placez un **LinkDemand** sur une méthode publique d’une classe qui implémente une méthode d’interface, le **LinkDemand** ne sont pas appliquées si vous effectuez un cast à l’interface, puis appelez la méthode. Dans ce cas, étant donné que vous avez relié à l’interface, seul le **LinkDemand** sur l’interface est honoré.  
+- Si vous placez un **LinkDemand** sur une méthode publique d’une classe qui implémente une méthode d’interface, le **LinkDemand** ne sont pas appliquées si vous effectuez un cast à l’interface, puis appelez la méthode. Dans ce cas, étant donné que vous avez relié à l’interface, seul le **LinkDemand** sur l’interface est honoré.  
   
  Passez en revue les éléments suivants en examinant les questions de sécurité :  
   
--   Explicitez les demandes de liaison sur des méthodes d'interface. Veillez à ce que ces demandes de liaison offrent la protection attendue. Déterminez si du code nuisible peut utiliser un cast pour contourner les demandes de liaison comme décrit précédemment.  
+- Explicitez les demandes de liaison sur des méthodes d'interface. Veillez à ce que ces demandes de liaison offrent la protection attendue. Déterminez si du code nuisible peut utiliser un cast pour contourner les demandes de liaison comme décrit précédemment.  
   
--   Méthodes virtuelles avec demandes de liaison appliquées.  
+- Méthodes virtuelles avec demandes de liaison appliquées.  
   
--   Types et interfaces qu'ils implémentent. Ceux-ci doivent utiliser les demandes de liaison de manière cohérente.  
+- Types et interfaces qu'ils implémentent. Ceux-ci doivent utiliser les demandes de liaison de manière cohérente.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748263"
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
 D’un service *identité de point de terminaison* est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre *anti-hameçonnage* en empêchant un client soit redirigé à un point de terminaison hébergé par un service malveillant.  
@@ -26,9 +26,9 @@ D’un service *identité de point de terminaison* est une valeur générée à 
   
  Le traitement de l'identité inclut les étapes suivantes :  
   
--   Au moment du design, le développeur d'applications détermine l'identité du service à partir des métadonnées du point de terminaison (exposé à travers WSDL).  
+- Au moment du design, le développeur d'applications détermine l'identité du service à partir des métadonnées du point de terminaison (exposé à travers WSDL).  
   
--   Pendant l'exécution, l'application cliente vérifie les revendications des informations d'identification de sécurité du service avant d'envoyer des messages au service.  
+- Pendant l'exécution, l'application cliente vérifie les revendications des informations d'identification de sécurité du service avant d'envoyer des messages au service.  
   
  Le traitement de l'identité sur le client est analogue à l'authentification du client sur le service. Un service sécurisé n'exécute pas de code jusqu'à ce que les informations d'identification du client aient été authentifiées. De la même façon, le client n'envoie pas de messages au service jusqu'à ce que les informations d'identification du service aient été authentifiées sur la base de ce qui est déjà connu via métadonnées du service.  
   
@@ -78,21 +78,21 @@ D’un service *identité de point de terminaison* est une valeur générée à 
   
  Si le canal est configuré pour authentifier à l'aide du message ou d'un SSL (Secure Sockets Layer) au niveau du transport avec des certificats X.509 pour l'authentification, les valeurs d'identité suivantes sont valides :  
   
--   DNS. WCF garantit que le certificat fourni pendant la négociation SSL contient un nom DNS ou `CommonName` attribute (CN) est égal à la valeur spécifiée dans l’identité DNS sur le client. Notez que ces contrôles sont complémentaires à la détermination de la validé du certificat du serveur. Par défaut, WCF vérifie que le certificat de serveur est émis par une autorité racine approuvée.  
+- DNS. WCF garantit que le certificat fourni pendant la négociation SSL contient un nom DNS ou `CommonName` attribute (CN) est égal à la valeur spécifiée dans l’identité DNS sur le client. Notez que ces contrôles sont complémentaires à la détermination de la validé du certificat du serveur. Par défaut, WCF vérifie que le certificat de serveur est émis par une autorité racine approuvée.  
   
--   certificat ;  Pendant la négociation SSL, WCF permet de s’assurer que le point de terminaison distant fournit la valeur de certificat exacte spécifiée dans l’identité.  
+- certificat ;  Pendant la négociation SSL, WCF permet de s’assurer que le point de terminaison distant fournit la valeur de certificat exacte spécifiée dans l’identité.  
   
--   Référence de certificat. Identique au certificat.  
+- Référence de certificat. Identique au certificat.  
   
--   RSA. Pendant la négociation SSL, WCF permet de s’assurer que le point de terminaison distant fournit la clé RSA exacte spécifiée dans l’identité.  
+- RSA. Pendant la négociation SSL, WCF permet de s’assurer que le point de terminaison distant fournit la clé RSA exacte spécifiée dans l’identité.  
   
  Si le service authentifie en utilisant le message - ou un SSL au niveau du transport avec des informations d'identification Windows pour l'authentification, et négocie l'information d'identification, les valeurs d'identité suivantes sont valides :  
   
--   DNS. La négociation passe le SPN du service afin que le nom DNS puisse être vérifié. Le SPN se présente sous la forme `host/<dns name>`.  
+- DNS. La négociation passe le SPN du service afin que le nom DNS puisse être vérifié. Le SPN se présente sous la forme `host/<dns name>`.  
   
--   SPN. Un service SPN explicite est retourné, par exemple, `host/myservice`.  
+- SPN. Un service SPN explicite est retourné, par exemple, `host/myservice`.  
   
--   UPN. L'UPN du compte de service. L’UPN est au format `username` @ `domain`. Par exemple, lorsque le service s'exécute dans un compte d'utilisateur, cela peut être `username@contoso.com`.  
+- UPN. L'UPN du compte de service. L’UPN est au format `username` @ `domain`. Par exemple, lorsque le service s'exécute dans un compte d'utilisateur, cela peut être `username@contoso.com`.  
   
  La spécification de l'identité par programmation (à l'aide de la propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> ) est facultative. Si aucune identité n'est spécifiée et si le type d'information d'identification du client est Windows, la valeur par défaut est SPN et la valeur définie dans la partie correspondant au nom d'hôte de l'adresse du point de terminaison du service est préfixée avec la valeur littérale "host/". Si aucune identité n'est spécifiée et si le type d'information d'identification du client est un certificat, la valeur par défaut est `Certificate`. Cela s'applique à la fois à la sécurité au niveau du message et au niveau du transport.  
   

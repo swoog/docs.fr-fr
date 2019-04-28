@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858076"
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
 Cette rubrique fournit des pratiques recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
@@ -48,11 +48,11 @@ Cette rubrique fournit des pratiques recommandées pour la communication en file
 ## <a name="achieving-high-throughput"></a>Obtention d'un haut débit  
  Pour obtenir un débit supérieur sur un point de terminaison unique, utilisez les fonctionnalités suivantes :  
   
--   Traitement transactionnel par lots. Le traitement transactionnel par lots permet de lire de nombreux messages dans une transaction unique. Il optimise les validations de transactions et augmente la performance globale. L'inconvénient du traitement par lots est que si une défaillance se produit dans un message unique dans un lot, le lot entier est restauré et les messages doivent être traités un par un jusqu'à ce que le traitement par lots soit revenu sûr. Dans la plupart des cas, les messages incohérents sont rares, donc le traitement par lots est le meilleur moyen d’augmenter les performances du système, en particulier lorsque d’autres gestionnaires de ressources participent à la transaction. Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Traitement transactionnel par lots. Le traitement transactionnel par lots permet de lire de nombreux messages dans une transaction unique. Il optimise les validations de transactions et augmente la performance globale. L'inconvénient du traitement par lots est que si une défaillance se produit dans un message unique dans un lot, le lot entier est restauré et les messages doivent être traités un par un jusqu'à ce que le traitement par lots soit revenu sûr. Dans la plupart des cas, les messages incohérents sont rares, donc le traitement par lots est le meilleur moyen d’augmenter les performances du système, en particulier lorsque d’autres gestionnaires de ressources participent à la transaction. Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Accès concurrentiel. L'accès concurrentiel augmente le débit, mais il peut également créer des conflits de ressources partagées. Pour plus d’informations, consultez [concurrence](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Accès concurrentiel. L'accès concurrentiel augmente le débit, mais il peut également créer des conflits de ressources partagées. Pour plus d’informations, consultez [concurrence](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Limitation. Pour des performances optimales, limitez le nombre de messages dans le pipeline de répartiteur. Pour obtenir un exemple de procédure à suivre, consultez [limitation](../../../../docs/framework/wcf/samples/throttling.md).  
+- Limitation. Pour des performances optimales, limitez le nombre de messages dans le pipeline de répartiteur. Pour obtenir un exemple de procédure à suivre, consultez [limitation](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Lorsque vous utilisez le traitement par lots, sachez que l'accès concurrentiel et la limitation se traduisent par des lots simultanés.  
   
@@ -75,11 +75,11 @@ Cette rubrique fournit des pratiques recommandées pour la communication en file
   
  Lorsque vous utilisez `MsmqIntegrationBinding`, sachez ce qui suit :  
   
--   Un corps de message WCF n’est pas un corps de message MSMQ. Lorsque vous envoyez un message WCF à l’aide d’une liaison en file d’attente, le corps du message WCF est placé à l’intérieur d’un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
+- Un corps de message WCF n’est pas un corps de message MSMQ. Lorsque vous envoyez un message WCF à l’aide d’une liaison en file d’attente, le corps du message WCF est placé à l’intérieur d’un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
   
--   `MsmqIntegrationBinding` prend en charge les types de sérialisation les plus courants. Selon le type de sérialisation, le type de corps du message générique, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prend des paramètres de type différents. Par exemple, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiert `MsmqMessage\<byte[]>` et <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requiert `MsmqMessage<Stream>`.  
+- `MsmqIntegrationBinding` prend en charge les types de sérialisation les plus courants. Selon le type de sérialisation, le type de corps du message générique, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prend des paramètres de type différents. Par exemple, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiert `MsmqMessage\<byte[]>` et <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requiert `MsmqMessage<Stream>`.  
   
--   Avec la sérialisation XML, vous pouvez spécifier le type connu à l’aide de la `KnownTypes` d’attribut sur le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément qui est ensuite utilisé pour déterminer comment désérialiser le message XML.  
+- Avec la sérialisation XML, vous pouvez spécifier le type connu à l’aide de la `KnownTypes` d’attribut sur le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) élément qui est ensuite utilisé pour déterminer comment désérialiser le message XML.  
   
 ## <a name="see-also"></a>Voir aussi
 

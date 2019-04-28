@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818714"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Procédure : Appeler des API Windows (Visual Basic)
 Cet exemple définit et appelle le `MessageBox` fonction dans user32.dll et lui passe une chaîne.  
@@ -23,16 +23,16 @@ Cet exemple définit et appelle le `MessageBox` fonction dans user32.dll et lui 
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   une référence à l'espace de noms <xref:System>.  
+- une référence à l'espace de noms <xref:System>.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   La méthode n’est pas statique, est abstraite ou a été définie précédemment. Le type parent est une interface, ou la longueur de *nom* ou *dllName* est égal à zéro. (<xref:System.ArgumentException>)  
+- La méthode n’est pas statique, est abstraite ou a été définie précédemment. Le type parent est une interface, ou la longueur de *nom* ou *dllName* est égal à zéro. (<xref:System.ArgumentException>)  
   
--   Le *nom* ou *dllName* est `Nothing`. (<xref:System.ArgumentNullException>)  
+- Le *nom* ou *dllName* est `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Le type conteneur a déjà été créé à l’aide de `CreateType`. (<xref:System.InvalidOperationException>)  
+- Le type conteneur a déjà été créé à l’aide de `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Voir aussi
 

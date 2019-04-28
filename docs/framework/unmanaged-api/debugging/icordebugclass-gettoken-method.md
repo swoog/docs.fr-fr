@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4f33bb15a351be5fe8318dcc3339d429dec039e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750760"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken, méthode
 Obtient le `TypeDef` jeton de métadonnées qui fait référence à la définition de cette classe.  

@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754533"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procédure : Ajouter des instructions de trace dans le code d’une application
 Les méthodes utilisées le plus souvent pour le suivi sont les méthodes pour écrire la sortie dans des écouteurs : **Écrire**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, et **échouer**. Ces méthodes peuvent être réparties en deux catégories : **Écrire**, **WriteLine**, et **échouer** émettent toutes la sortie de manière inconditionnelle, tandis que **WriteIf**, **WriteLineIf**et  **Assert** testent une condition booléenne et écrivent ou n’écrivent pas en fonction de la valeur de la condition. **WriteIf** et **WriteLineIf** émettent une sortie si la condition est `true` et **Assert** émet une sortie si la condition est `false`.  

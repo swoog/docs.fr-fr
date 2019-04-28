@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864700"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procédure : Faire correspondre une chaîne à un modèle (Visual Basic)
 Si vous souhaitez savoir si une expression de la [Type de données String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfait à un modèle, vous pouvez ensuite utiliser le [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Pour mettre en correspondance un caractère de l’expression de chaîne avec un caractère spécifique  
   
--   Placez le caractère spécifique directement dans la chaîne de modèle. Certains caractères spéciaux doivent être entourés de crochets (`[ ]`). Pour plus d’informations, consultez [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Placez le caractère spécifique directement dans la chaîne de modèle. Certains caractères spéciaux doivent être entourés de crochets (`[ ]`). Pour plus d’informations, consultez [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      L’exemple suivant teste si `myString` se compose exactement du caractère `H`.  
   
@@ -37,7 +37,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Pour mettre en correspondance un caractère de l’expression de chaîne avec un caractère générique  
   
--   Placez un point d’interrogation (`?`) dans la chaîne de modèle. N’importe quel caractère valide dans cette position rend une correspondance.  
+- Placez un point d’interrogation (`?`) dans la chaîne de modèle. N’importe quel caractère valide dans cette position rend une correspondance.  
   
      L’exemple suivant teste si `myString` se compose du caractère `W` suivi exactement deux caractères de toutes les valeurs.  
   
@@ -45,7 +45,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Pour mettre en correspondance un caractère dans l’expression de chaîne par rapport à une liste de caractères  
   
--   Placez les crochets (`[ ]`) dans la chaîne de modèle et à l’intérieur de crochets, mettez la liste de caractères. Ne séparez pas les caractères par des virgules ou tout autre séparateur. N’importe quel caractère unique dans la liste est en correspondance réussite.  
+- Placez les crochets (`[ ]`) dans la chaîne de modèle et à l’intérieur de crochets, mettez la liste de caractères. Ne séparez pas les caractères par des virgules ou tout autre séparateur. N’importe quel caractère unique dans la liste est en correspondance réussite.  
   
      L’exemple suivant teste si `myString` se compose de n’importe quel caractère valid, suivi par une seule des caractères `A`, `C`, ou `E`.  
   
@@ -55,7 +55,7 @@ Si vous souhaitez savoir si une expression de la [Type de données String](../..
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Pour mettre en correspondance un caractère de l’expression de chaîne avec une plage de caractères  
   
--   Placez les crochets (`[ ]`) dans la chaîne de modèle et à l’intérieur de crochets, mettez les caractères les plus élevés dans la plage, séparés par un trait d’union (`–`). N’importe quel caractère unique dans la plage effectue une correspondance.  
+- Placez les crochets (`[ ]`) dans la chaîne de modèle et à l’intérieur de crochets, mettez les caractères les plus élevés dans la plage, séparés par un trait d’union (`–`). N’importe quel caractère unique dans la plage effectue une correspondance.  
   
      L’exemple suivant teste si `myString` se compose des caractères `num` suivie exactement un des caractères `i`, `j`, `k`, `l`, `m`, ou `n`.  
   

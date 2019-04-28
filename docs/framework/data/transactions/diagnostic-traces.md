@@ -3,11 +3,11 @@ title: Traces de diagnostic
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934795"
 ---
 # <a name="diagnostic-traces"></a>Traces de diagnostic
 Les suivis correspondent à la publication de messages spécifiques générés au cours de l'exécution de l'application. Pour utiliser le suivi, vous devez disposer d'un mécanisme de collecte et d'enregistrement des messages envoyés. Les messages de suivi sont reçus par des écouteurs. Le but d'un écouteur est de collecter, de stocker et de router les messages de suivi. Les écouteurs dirigent la sortie de suivi vers une cible appropriée, telle qu'un journal, une fenêtre ou un fichier de texte.  
@@ -39,40 +39,40 @@ Les suivis correspondent à la publication de messages spécifiques générés a
   
 |Niveau de suivi|Description|  
 |-----------------|-----------------|  
-|Critical|Des défaillances sérieuses, telles que les défaillances suivantes, se sont produites :<br /><br /> -Une erreur qui peut entraîner une perte immédiate dans les fonctionnalités de l’utilisateur.<br />-Événement qui oblige l’administrateur à prendre des mesures pour éviter la perte de fonctionnalité.<br />-Code se bloque.<br />: Ce niveau de suivi peut également fournir un contexte suffisant pour interpréter les autres suivis critiques. Cela peut aider à l'identification de la séquence d'opérations causant une défaillance sérieuse.|  
-|Erreur|Une erreur (par exemple, une configuration invalide ou un comportement du réseau) susceptible d'entraîner une perte des fonctionnalités utilisateur s'est produite.|  
-|Avertissement|Il existe une condition susceptible d'entraîner une erreur ou une défaillance critique (par exemple, un échec d'allocation ou l'approche d'une limite). Le traitement normal d'erreurs dans le code utilisateur (par exemple, l'abandon d'une transaction, l'expiration d'un délai d'attente, un échec d'authentification) peut également entraîner la génération d'un avertissement.|  
+|Critique|Des défaillances sérieuses, telles que les défaillances suivantes, se sont produites :<br /><br /> -Une erreur qui peut entraîner une perte immédiate des fonctionnalités de l’utilisateur.<br />-Un événement qui requiert un administrateur de prendre des mesures pour éviter la perte de fonctionnalité.<br />-Code se bloque.<br />-Ce niveau de suivi peut également fournir un contexte suffisant pour interpréter les autres suivis critiques. Cela peut aider à l'identification de la séquence d'opérations causant une défaillance sérieuse.|  
+|Error|Une erreur (par exemple, une configuration invalide ou un comportement du réseau) susceptible d'entraîner une perte des fonctionnalités utilisateur s'est produite.|  
+|Warning|Il existe une condition susceptible d'entraîner une erreur ou une défaillance critique (par exemple, un échec d'allocation ou l'approche d'une limite). Le traitement normal d'erreurs dans le code utilisateur (par exemple, l'abandon d'une transaction, l'expiration d'un délai d'attente, un échec d'authentification) peut également entraîner la génération d'un avertissement.|  
 |Information|Des messages d'aide au contrôle et au diagnostic de l'état système, à la mesure des performances ou au profilage sont générés. Ils peuvent inclure des événements de durée de vie de transaction et d'inscription, tels qu'une transaction en cours de création ou de validation, le dépassement d'une limite importante ou l'allocation de ressources significatives. Un développeur peut ensuite utiliser ces informations pour la planification de capacité et la gestion des performances.|  
   
 ## <a name="trace-codes"></a>Codes de suivi  
- Le tableau suivant répertorie les codes de suivi générés par l'infrastructure <xref:System.Transactions>. Inclus dans la table sont l’identificateur de code de trace, la <xref:System.Diagnostics.EventTypeFilter.EventType%2A> niveau de l’énumération pour la trace et les données supplémentaires contenues dans le **TraceRecord** pour la trace. En outre, le niveau de trace correspondante de la trace est également stocké dans le **TraceRecord**.  
+ Le tableau suivant répertorie les codes de suivi générés par l'infrastructure <xref:System.Transactions>. Inclus dans la table sont l’identificateur de code de trace, la <xref:System.Diagnostics.EventTypeFilter.EventType%2A> niveau d’énumération pour la trace et les données supplémentaires contenues dans le **TraceRecord** pour la trace. En outre, le niveau de trace correspondante de la trace est également stocké dans le **TraceRecord**.  
   
 |TraceCode|EventType|Données supplémentaires contenues dans TraceRecord|  
 |---------------|---------------|-------------------------------|  
 |TransactionCreated|Info|TransactionTraceId|  
 |TransactionPromoted|Info|TransactionTraceId local, TransactionTraceId distribué|  
 |EnlistmentCreated|Info|TransactionTraceId, EnlistmentTraceId, EnlistmentType (durable/volatile), EnlistmentOptions|  
-|EnlistmentCallbackNegative|Avertissement|TransactionTraceId, EnlistmentTraceId,<br /><br /> Callback (forcerollback/aborted/indoubt)|  
-|TransactionRollbackCalled|Avertissement|TransactionTraceId|  
-|TransactionAborted|Avertissement|TransactionTraceId|  
-|TransactionInDoubt|Avertissement|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult, qui peut correspondre à l'un des éléments suivants :<br /><br /> -Nouvelle transaction.<br />-La transaction passée.<br />-Transaction dépendante passé.<br />-À l’aide de la transaction actuelle.<br />-Aucune transaction.<br /><br /> nouveau TransactionTraceId en cours|  
-|TransactionScopeDisposed|Info|TransactionTraceId de l’étendue transaction en cours » attendu ».|  
-|TransactionScopeIncomplete|Warning|TransactionTraceId de l’étendue transaction en cours » attendu ».|  
-|TransactionScopeNestedIncorrectly|Warning|TransactionTraceId de l’étendue transaction en cours » attendu ».|  
-|TransactionScopeCurrentTransactionChanged|Avertissement|Ancien TransactionTraceId en cours, autre TransactionTraceId|  
-|TransactionScopeTimeout|Warning|TransactionTraceId de l’étendue transaction en cours » attendu ».|  
+|EnlistmentCallbackNegative|Warning|TransactionTraceId, EnlistmentTraceId,<br /><br /> Callback (forcerollback/aborted/indoubt)|  
+|TransactionRollbackCalled|Warning|TransactionTraceId|  
+|TransactionAborted|Warning|TransactionTraceId|  
+|TransactionInDoubt|Warning|TransactionTraceId|  
+|TransactionScopeCreated|Info|TransactionScopeResult, qui peut correspondre à l'un des éléments suivants :<br /><br /> -Nouvelle transaction.<br />-La transaction passée.<br />-Transaction dépendante passée.<br />-À l’aide de la transaction en cours.<br />-Aucune transaction.<br /><br /> nouveau TransactionTraceId en cours|  
+|TransactionScopeDisposed|Info|TransactionTraceId de la portée « attendu « transaction en cours.|  
+|TransactionScopeIncomplete|Warning|TransactionTraceId de la portée « attendu « transaction en cours.|  
+|TransactionScopeNestedIncorrectly|Warning|TransactionTraceId de la portée « attendu « transaction en cours.|  
+|TransactionScopeCurrentTransactionChanged|Warning|Ancien TransactionTraceId en cours, autre TransactionTraceId|  
+|TransactionScopeTimeout|Warning|TransactionTraceId de la portée « attendu « transaction en cours.|  
 |DependentCloneCreated|Info|TransactionTraceId, type de transaction dépendante créée (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
 |RecoveryComplete|Info|GUID de gestionnaire de ressources (de base)|  
 |Reenlist|Info|GUID de gestionnaire de ressources (de base)|  
 |TransactionSerialized|Info|TransactionTraceId.|  
-|TransactionException|Erreur|Message d'exception|  
-|InvalidOperationException|Erreur|Message d'exception|  
-|InternalError|Critical|Message d'exception|  
+|TransactionException|Error|Message d'exception|  
+|InvalidOperationException|Error|Message d'exception|  
+|InternalError|Critique|Message d'exception|  
 |TransferEvent||Lorsqu'une transaction est désérialisée ou promue de transaction <xref:System.Transactions> à transaction distribuée, l'actuel ActivityID issu d'ExecutionContext et l'ID de la transaction distribuée sont écrits.<br /><br /> Lorsque le DTC rappelle le code managé, l'ID de la transaction distribuée est défini en tant qu'ActivityID dans ExecutionContext pour la durée du rappel.|  
-|ConfiguredDefaultTimeoutAdjusted|Avertissement|Aucune donnée supplémentaire|  
-|TransactionTimeout|Avertissement|Le TransactionTraceId de la transaction est sur le point d'expirer.|  
+|ConfiguredDefaultTimeoutAdjusted|Warning|Aucune donnée supplémentaire|  
+|TransactionTimeout|Warning|Le TransactionTraceId de la transaction est sur le point d'expirer.|  
   
  Le schéma XML des éléments de données supplémentaires précédents se présente au format suivant.  
   
@@ -134,4 +134,4 @@ Les suivis correspondent à la publication de messages spécifiques générés a
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>Problèmes de sécurité liés au suivi  
- Lorsque vous en tant qu’administrateur activer le suivi, les informations sensibles peuvent être écrits dans un journal des traces qui sont accessible publiquement par défaut. Pour atténuer les menaces de sécurité possibles, vous devez envisager de stocker le journal de suivi dans un emplacement sécurisé, contrôlé par les autorisations d’accès du partage et du fichier système.
+ Lorsque vous en tant qu’administrateur activer le suivi, les informations sensibles peuvent être écrits dans un journal des traces qui est visible publiquement par défaut. Pour atténuer toute menace de sécurité, vous devez envisager de stocker le journal des traces dans un emplacement sécurisé contrôlé par des autorisations d’accès système du partage et du fichier.

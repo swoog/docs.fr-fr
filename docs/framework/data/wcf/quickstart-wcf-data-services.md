@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876198"
 ---
 # <a name="quickstart-wcf-data-services"></a>Démarrage rapide (services de données WCF)
 
@@ -28,7 +28,7 @@ Pour effectuer ce démarrage rapide, vous devez installer les composants suivant
 
 - Une instance de SQL Server. Cela comprend SQL Server Express, qui est inclus dans une installation par défaut de Visual Studio 2015, ou dans le cadre de la **stockage de données et de traitement** charge de travail dans Visual Studio 2017.
 
-- Exemple de base de données Northwind. Pour télécharger cette base de données exemple, consultez la page de téléchargement [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Exemple de base de données Northwind. Pour télécharger cet exemple de base de données, consultez la page de téléchargement, [Exemples de bases de données pour SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>Tâches de démarrage rapide de WCF data services
 
@@ -45,7 +45,7 @@ Pour effectuer ce démarrage rapide, vous devez installer les composants suivant
  Créer une application WPF pour consommer le flux OData, lier des données aux contrôles de Windows, modifier des données dans les contrôles dépendants, puis renvoyer les modifications apportées au service de données.
 
 > [!NOTE]
-> Fichiers de projet à partir d’une version terminée du démarrage rapide peuvent être téléchargés à partir de la [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) page.
+> Les fichiers projet d’une version terminée du démarrage rapide peuvent être téléchargés à partir de la page [WCF Data Services Quickstart (OData Service and WPF Client)](https://go.microsoft.com/fwlink/?LinkId=179994) .
 
 ## <a name="next-steps"></a>Étapes suivantes
 
