@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Expander control [WPF], how-to topics
 ms.assetid: c31e85e3-963f-4693-b463-a29adc433fcd
 ms.openlocfilehash: 6ab53f0164c5623c93132d29045498ccffaf9712
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911781"
 ---
-# <a name="expander-how-to-topics"></a><span data-ttu-id="dac12-102">Rubriques "Comment utiliser l'Expander"</span><span class="sxs-lookup"><span data-stu-id="dac12-102">Expander How-to Topics</span></span>
-<span data-ttu-id="dac12-103">Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.Expander> contrôle.</span><span class="sxs-lookup"><span data-stu-id="dac12-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
+# <a name="expander-how-to-topics"></a><span data-ttu-id="f65fe-102">Rubriques "Comment utiliser l'Expander"</span><span class="sxs-lookup"><span data-stu-id="f65fe-102">Expander How-to Topics</span></span>
+<span data-ttu-id="f65fe-103">Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.Expander> contrôle.</span><span class="sxs-lookup"><span data-stu-id="f65fe-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dac12-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="dac12-104">In This Section</span></span>  
- [<span data-ttu-id="dac12-105">Créer un Expander avec un ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="dac12-105">Create an Expander with a ScrollViewer</span></span>](how-to-create-an-expander-with-a-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f65fe-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f65fe-104">In This Section</span></span>  
+ [<span data-ttu-id="f65fe-105">Créer un Expander avec un ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f65fe-105">Create an Expander with a ScrollViewer</span></span>](how-to-create-an-expander-with-a-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="dac12-106">Référence</span><span class="sxs-lookup"><span data-stu-id="dac12-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f65fe-106">Référence</span><span class="sxs-lookup"><span data-stu-id="f65fe-106">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="dac12-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="dac12-107">Related Sections</span></span>  
- [<span data-ttu-id="dac12-108">Vue d'ensemble de l'Expandeur</span><span class="sxs-lookup"><span data-stu-id="dac12-108">Expander Overview</span></span>](expander-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="f65fe-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="f65fe-107">Related Sections</span></span>  
+ [<span data-ttu-id="f65fe-108">Vue d'ensemble de l'Expandeur</span><span class="sxs-lookup"><span data-stu-id="f65fe-108">Expander Overview</span></span>](expander-overview.md)
