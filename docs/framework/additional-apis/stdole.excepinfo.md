@@ -10,20 +10,20 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 258ce5e63c9095e5a451d807d588f31512f5e5fd
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675284"
 ---
-# <a name="excepinfo-structure"></a><span data-ttu-id="a63d0-102">Structure EXCEPINFO</span><span class="sxs-lookup"><span data-stu-id="a63d0-102">EXCEPINFO Structure</span></span>
+# <a name="excepinfo-structure"></a><span data-ttu-id="c17af-102">EXCEPINFO, structure</span><span class="sxs-lookup"><span data-stu-id="c17af-102">EXCEPINFO Structure</span></span>
 
 ```csharp
 public struct EXCEPINFO
 ```
 
-## <a name="requirements"></a><span data-ttu-id="a63d0-103">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="a63d0-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="c17af-103">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="c17af-103">Requirements</span></span>
 
-<span data-ttu-id="a63d0-104">**Espace de noms :** `stdole`</span><span class="sxs-lookup"><span data-stu-id="a63d0-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="c17af-104">**Espace de noms :** `stdole`</span><span class="sxs-lookup"><span data-stu-id="c17af-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="a63d0-105">**Assembly :** stdole (dans stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="a63d0-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="c17af-105">**Assembly :** stdole (dans stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="c17af-105">**Assembly:** stdole (in stdole.dll)</span></span>

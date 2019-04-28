@@ -10,40 +10,40 @@ helpviewer_keywords:
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
 ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012670"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="f6a07-102">Procédure : exécuter une action personnalisée en fonction des modifications apportées à une cellule d’un contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f6a07-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="f6a07-103">Le <xref:System.Windows.Forms.DataGridView> contrôle a un nombre d’événements que vous pouvez utiliser pour détecter des modifications dans l’état de <xref:System.Windows.Forms.DataGridView> cellules.</span><span class="sxs-lookup"><span data-stu-id="f6a07-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="f6a07-104">Les deux les plus couramment utilisés sont les <xref:System.Windows.Forms.DataGridView.CellValueChanged> et <xref:System.Windows.Forms.DataGridView.CellStateChanged> événements.</span><span class="sxs-lookup"><span data-stu-id="f6a07-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="079ba-102">Procédure : exécuter une action personnalisée en fonction des modifications apportées à une cellule d’un contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="079ba-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="079ba-103">Le <xref:System.Windows.Forms.DataGridView> contrôle a un nombre d’événements que vous pouvez utiliser pour détecter des modifications dans l’état de <xref:System.Windows.Forms.DataGridView> cellules.</span><span class="sxs-lookup"><span data-stu-id="079ba-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="079ba-104">Les deux les plus couramment utilisés sont les <xref:System.Windows.Forms.DataGridView.CellValueChanged> et <xref:System.Windows.Forms.DataGridView.CellStateChanged> événements.</span><span class="sxs-lookup"><span data-stu-id="079ba-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="f6a07-105">Pour détecter des modifications dans les valeurs des cellules DataGridView</span><span class="sxs-lookup"><span data-stu-id="f6a07-105">To detect changes in the values of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="079ba-105">Pour détecter des modifications dans les valeurs des cellules DataGridView</span><span class="sxs-lookup"><span data-stu-id="079ba-105">To detect changes in the values of DataGridView cells</span></span>  
   
--   <span data-ttu-id="f6a07-106">Écrire un gestionnaire pour le <xref:System.Windows.Forms.DataGridView.CellValueChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="f6a07-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
+- <span data-ttu-id="079ba-106">Écrire un gestionnaire pour le <xref:System.Windows.Forms.DataGridView.CellValueChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="079ba-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="f6a07-107">Pour détecter des modifications dans les États des cellules DataGridView</span><span class="sxs-lookup"><span data-stu-id="f6a07-107">To detect changes in the states of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="079ba-107">Pour détecter des modifications dans les États des cellules DataGridView</span><span class="sxs-lookup"><span data-stu-id="079ba-107">To detect changes in the states of DataGridView cells</span></span>  
   
--   <span data-ttu-id="f6a07-108">Écrire un gestionnaire pour le <xref:System.Windows.Forms.DataGridView.CellStateChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="f6a07-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
+- <span data-ttu-id="079ba-108">Écrire un gestionnaire pour le <xref:System.Windows.Forms.DataGridView.CellStateChanged> événement.</span><span class="sxs-lookup"><span data-stu-id="079ba-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f6a07-109">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="f6a07-109">Compiling the Code</span></span>  
- <span data-ttu-id="f6a07-110">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="f6a07-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="079ba-109">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="079ba-109">Compiling the Code</span></span>  
+ <span data-ttu-id="079ba-110">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="079ba-110">This example requires:</span></span>  
   
--   <span data-ttu-id="f6a07-111">un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` ;</span><span class="sxs-lookup"><span data-stu-id="f6a07-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="f6a07-112">Pour C#, les gestionnaires d’événements doivent être connectés pour les événements correspondants.</span><span class="sxs-lookup"><span data-stu-id="f6a07-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
+- <span data-ttu-id="079ba-111">un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` ;</span><span class="sxs-lookup"><span data-stu-id="079ba-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="079ba-112">Pour C#, les gestionnaires d’événements doivent être connectés pour les événements correspondants.</span><span class="sxs-lookup"><span data-stu-id="079ba-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
   
--   <span data-ttu-id="f6a07-113">des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f6a07-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="079ba-113">des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="079ba-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6a07-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f6a07-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="079ba-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="079ba-114">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
-- [<span data-ttu-id="f6a07-115">Programmation avec les cellules, lignes et colonnes dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f6a07-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [<span data-ttu-id="f6a07-116">Procédure pas à pas : Validation des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f6a07-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="079ba-115">Programmation avec les cellules, lignes et colonnes dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="079ba-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="079ba-116">Procédure pas à pas : Validation des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="079ba-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
