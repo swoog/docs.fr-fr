@@ -5,32 +5,32 @@ helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
 ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751462"
 ---
-# <a name="myapplication-object"></a><span data-ttu-id="51d71-102">My.Application, objet</span><span class="sxs-lookup"><span data-stu-id="51d71-102">My.Application Object</span></span>
-<span data-ttu-id="51d71-103">Fournit des propriétés, méthodes et événements liés à l’application actuelle.</span><span class="sxs-lookup"><span data-stu-id="51d71-103">Provides properties, methods, and events related to the current application.</span></span>  
+# <a name="myapplication-object"></a><span data-ttu-id="f46a4-102">My.Application, objet</span><span class="sxs-lookup"><span data-stu-id="f46a4-102">My.Application Object</span></span>
+<span data-ttu-id="f46a4-103">Fournit des propriétés, méthodes et événements liés à l’application actuelle.</span><span class="sxs-lookup"><span data-stu-id="f46a4-103">Provides properties, methods, and events related to the current application.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="51d71-104">Notes</span><span class="sxs-lookup"><span data-stu-id="51d71-104">Remarks</span></span>  
- <span data-ttu-id="51d71-105">Pour plus d’informations sur les méthodes et propriétés de la `My.Application` d’objets, consultez les ressources suivantes :</span><span class="sxs-lookup"><span data-stu-id="51d71-105">For information about the methods and properties of the `My.Application` object, see the following resources:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f46a4-104">Notes</span><span class="sxs-lookup"><span data-stu-id="f46a4-104">Remarks</span></span>  
+ <span data-ttu-id="f46a4-105">Pour plus d’informations sur les méthodes et propriétés de la `My.Application` d’objets, consultez les ressources suivantes :</span><span class="sxs-lookup"><span data-stu-id="f46a4-105">For information about the methods and properties of the `My.Application` object, see the following resources:</span></span>  
   
--   <span data-ttu-id="51d71-106"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> pour les membres qui sont disponibles dans tous les projets.</span><span class="sxs-lookup"><span data-stu-id="51d71-106"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.</span></span>  
+- <span data-ttu-id="f46a4-106"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> pour les membres qui sont disponibles dans tous les projets.</span><span class="sxs-lookup"><span data-stu-id="f46a4-106"><xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.</span></span>  
   
--   <span data-ttu-id="51d71-107"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> pour les membres qui sont disponibles dans les applications Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="51d71-107"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.</span></span>  
+- <span data-ttu-id="f46a4-107"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> pour les membres qui sont disponibles dans les applications Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="f46a4-107"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.</span></span>  
   
--   <span data-ttu-id="51d71-108"><xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> pour les membres qui sont disponibles dans les applications console.</span><span class="sxs-lookup"><span data-stu-id="51d71-108"><xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.</span></span>  
+- <span data-ttu-id="f46a4-108"><xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> pour les membres qui sont disponibles dans les applications console.</span><span class="sxs-lookup"><span data-stu-id="f46a4-108"><xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51d71-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="51d71-109">Requirements</span></span>  
- <span data-ttu-id="51d71-110">**Espace de noms :** <xref:Microsoft.VisualBasic.ApplicationServices></span><span class="sxs-lookup"><span data-stu-id="51d71-110">**Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="f46a4-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f46a4-109">Requirements</span></span>  
+ <span data-ttu-id="f46a4-110">**Espace de noms :** <xref:Microsoft.VisualBasic.ApplicationServices></span><span class="sxs-lookup"><span data-stu-id="f46a4-110">**Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices></span></span>  
   
- <span data-ttu-id="51d71-111">**Classe :** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (la classe de base <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fournit des membres disponibles dans les applications de console et sa classe de base <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fournit les membres qui sont disponibles dans tous les projets)</span><span class="sxs-lookup"><span data-stu-id="51d71-111">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)</span></span>  
+ <span data-ttu-id="f46a4-111">**Classe :** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (la classe de base <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fournit des membres disponibles dans les applications de console et sa classe de base <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fournit les membres qui sont disponibles dans tous les projets)</span><span class="sxs-lookup"><span data-stu-id="f46a4-111">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)</span></span>  
   
- <span data-ttu-id="51d71-112">**Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="51d71-112">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="f46a4-112">**Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="f46a4-112">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51d71-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="51d71-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f46a4-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f46a4-113">See also</span></span>
 
-- [<span data-ttu-id="51d71-114">My.Application.Info (objet)</span><span class="sxs-lookup"><span data-stu-id="51d71-114">My.Application.Info Object</span></span>](../../../visual-basic/language-reference/objects/my-application-info-object.md)
-- [<span data-ttu-id="51d71-115">My.Application.Log (objet)</span><span class="sxs-lookup"><span data-stu-id="51d71-115">My.Application.Log Object</span></span>](../../../visual-basic/language-reference/objects/my-application-log-object.md)
+- [<span data-ttu-id="f46a4-114">My.Application.Info (objet)</span><span class="sxs-lookup"><span data-stu-id="f46a4-114">My.Application.Info Object</span></span>](../../../visual-basic/language-reference/objects/my-application-info-object.md)
+- [<span data-ttu-id="f46a4-115">My.Application.Log (objet)</span><span class="sxs-lookup"><span data-stu-id="f46a4-115">My.Application.Log Object</span></span>](../../../visual-basic/language-reference/objects/my-application-log-object.md)
