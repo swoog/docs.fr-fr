@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
 ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800827"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Spécifie qu’un argument est passé de sorte que la procédure appelée peut modifier la valeur d’une variable sous-jacente à l’argument dans le code appelant.  

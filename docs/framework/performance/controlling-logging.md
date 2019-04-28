@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723665"
 ---
 # <a name="controlling-net-framework-logging"></a>Contrôle de l'enregistrement .NET Framework
 Vous pouvez utiliser le suivi d'événements pour Windows (ETW) pour enregistrer les événements du Common Language Runtime (CLR). Vous pouvez créer et afficher des traces à l'aide des outils suivants :  
   
--   Outils en ligne de commande [Logman](/windows-server/administration/windows-commands/logman) et [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) qui sont inclus dans le système d’exploitation Windows.  
+- Outils en ligne de commande [Logman](/windows-server/administration/windows-commands/logman) et [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) qui sont inclus dans le système d’exploitation Windows.  
   
--   Outils en ligne de commande [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) du [Windows Performance Toolkit](/windows-hardware/test/wpt/). Pour plus d’informations sur Xperf, consultez le [blog des performances de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- Outils en ligne de commande [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) du [Windows Performance Toolkit](/windows-hardware/test/wpt/). Pour plus d’informations sur Xperf, consultez le [blog des performances de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Pour capturer des informations sur les événements du CLR, le fournisseur du CLR doit être installé sur votre ordinateur. Pour confirmer que le fournisseur est bien installé, tapez `logman query providers` à l'invite de commandes. La liste des fournisseurs est affichée. Cette liste doit contenir une entrée pour le fournisseur du CLR, comme suit.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Pour activer la journalisation, un utilisateur doit spécifier trois éléments :  
   
--   Le fournisseur vers lequel communiquer.  
+- Le fournisseur vers lequel communiquer.  
   
--   Un nombre 64 bits qui représente un jeu de mots clés. Chaque mot clé représente un jeu d'événements que le fournisseur peut activer. Le nombre représente un jeu combiné de mots clés à activer.  
+- Un nombre 64 bits qui représente un jeu de mots clés. Chaque mot clé représente un jeu d'événements que le fournisseur peut activer. Le nombre représente un jeu combiné de mots clés à activer.  
   
--   Un petit nombre représentant le niveau (commentaires) à journaliser. Le niveau 1 est le moins détaillé, et le niveau 5 est le plus détaillé. Le niveau 0 est une valeur par défaut dont la signification est spécifique au fournisseur.  
+- Un petit nombre représentant le niveau (commentaires) à journaliser. Le niveau 1 est le moins détaillé, et le niveau 5 est le plus détaillé. Le niveau 0 est une valeur par défaut dont la signification est spécifique au fournisseur.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Pour capturer les événements ETW du CLR à l'aide de Logman  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      où :  
   
-    -   Le paramètre `-p` identifie le GUID du fournisseur.  
+    - Le paramètre `-p` identifie le GUID du fournisseur.  
   
-    -   `0x1CCBD` spécifie les catégories d'événements qui seront déclenchés.  
+    - `0x1CCBD` spécifie les catégories d'événements qui seront déclenchés.  
   
-    -   `0x5` définit le niveau de la journalisation (dans ce cas, détaillé (5)).  
+    - `0x5` définit le niveau de la journalisation (dans ce cas, détaillé (5)).  
   
-    -   Le paramètre `-ets` indique à Logman d'envoyer des commandes aux sessions de suivi d'événements.  
+    - Le paramètre `-ets` indique à Logman d'envoyer des commandes aux sessions de suivi d'événements.  
   
-    -   Le paramètre `-ct perf` indique que la fonction `QueryPerformanceCounter` sera utilisée pour enregistrer l'horodatage de chaque événement.  
+    - Le paramètre `-ct perf` indique que la fonction `QueryPerformanceCounter` sera utilisée pour enregistrer l'horodatage de chaque événement.  
   
 2. Pour arrêter de journaliser les événements, tapez :  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Pour afficher les événements ETW du CLR à l'aide de Tracerpt  
   
--   À l'invite de commandes, tapez :  
+- À l'invite de commandes, tapez :  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Pour afficher les événements ETW du CLR à l’aide de Xperf  
   
--   À l'invite de commandes, tapez :  
+- À l'invite de commandes, tapez :  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Pour convertir le fichier .etl en fichier .csv  
   
--   À l'invite de commandes, tapez :  
+- À l'invite de commandes, tapez :  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

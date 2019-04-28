@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874470"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Compteurs de performance dans le .NET Framework
 Cette rubrique fournit une liste des compteurs de performance que vous pouvez trouver dans le [Analyseur de performances Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Compteurs de performance pour les exceptions](#exception)  
+- [Compteurs de performance pour les exceptions](#exception)  
   
--   [Compteurs de performance pour l’interopérabilité](#interop)  
+- [Compteurs de performance pour l’interopérabilité](#interop)  
   
--   [Compteurs de performance JIT](#jit)  
+- [Compteurs de performance JIT](#jit)  
   
--   [Compteurs de performance pour le chargement](#loading)  
+- [Compteurs de performance pour le chargement](#loading)  
   
--   [Compteurs de performance pour les verrous et les threads](#lockthread)  
+- [Compteurs de performance pour les verrous et les threads](#lockthread)  
   
--   [Compteurs de performance pour la mémoire](#memory)  
+- [Compteurs de performance pour la mémoire](#memory)  
   
--   [Compteurs de performance pour le réseau](#networking)  
+- [Compteurs de performance pour le réseau](#networking)  
   
--   [Compteurs de performance pour la sécurité](#security)  
+- [Compteurs de performance pour la sécurité](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Compteurs de performance pour les exceptions  
@@ -161,21 +161,21 @@ Cette rubrique fournit une liste des compteurs de performance que vous pouvez tr
   
  Plusieurs classes de compteurs de performance pour le réseau sont prises en charge :  
   
--   Compteurs d'événements qui comptabilisent le nombre d'occurrences d'un événement donné.  
+- Compteurs d'événements qui comptabilisent le nombre d'occurrences d'un événement donné.  
   
--   Compteurs de données qui mesurent la quantité de données envoyées ou reçues.  
+- Compteurs de données qui mesurent la quantité de données envoyées ou reçues.  
   
--   Compteurs de durée qui mesurent le temps nécessaire à l'exécution de différents processus. Les durées sont mesurées sur les objets à chaque intervalle (généralement en secondes) après leur sortie de différents états.  
+- Compteurs de durée qui mesurent le temps nécessaire à l'exécution de différents processus. Les durées sont mesurées sur les objets à chaque intervalle (généralement en secondes) après leur sortie de différents états.  
   
--   Compteurs par intervalle qui comptabilisent le nombre d'objets faisant une transition particulière par intervalle (généralement par seconde).  
+- Compteurs par intervalle qui comptabilisent le nombre d'objets faisant une transition particulière par intervalle (généralement par seconde).  
   
  Les compteurs de performance réseau pour les événements sont les suivants :  
   
--   **Connexions établies**  
+- **Connexions établies**  
   
--   **Datagrammes reçus**  
+- **Datagrammes reçus**  
   
--   **Datagrammes envoyés**  
+- **Datagrammes envoyés**  
   
  Ces compteurs de performance fournissent les nombres cumulés depuis le démarrage du processus. Le nombre de connexions <xref:System.Net.Sockets.Socket> établies inclut les appels de méthode <xref:System.Net.Sockets.Socket> explicites effectués par une application pour une connexion de socket de flux établie ainsi que les appels internes faits par d'autres classes (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> et <xref:System.Net.Sockets.TcpClient>, par exemple) à la classe <xref:System.Net.Sockets.Socket>.  
   
@@ -183,33 +183,33 @@ Cette rubrique fournit une liste des compteurs de performance que vous pouvez tr
   
  Les compteurs de performance réseau pour les données sont les suivants :  
   
--   **Octets reçus**  
+- **Octets reçus**  
   
--   **Octets envoyés**  
+- **Octets envoyés**  
   
  Les compteurs ci-dessus indiquent le nombre d'octets qui ont été reçus et envoyés depuis le démarrage du processus.  
   
  Les deux compteurs de durée suivants mesurent le temps nécessaire aux objets <xref:System.Net.HttpWebRequest> pour achever la totalité ou une partie de leur cycle de vie :  
   
--   **Durée de vie moyenne des requêtes HttpWebRequest**  
+- **Durée de vie moyenne des requêtes HttpWebRequest**  
   
--   **Durée d’attente moyenne des requêtes HttpWebRequest**  
+- **Durée d’attente moyenne des requêtes HttpWebRequest**  
   
  Le compteur **Durée de vie moyenne des requêtes HttpWebRequest** considère que la durée de vie de la plupart des objets <xref:System.Net.HttpWebRequest> s’étend toujours de la création de l’objet à la fermeture du flux de réponse par l’application. Il existe deux cas rares :  
   
--   Si l'application n'appelle jamais la méthode <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la durée de vie de l'objet <xref:System.Net.HttpWebRequest> est ignorée.  
+- Si l'application n'appelle jamais la méthode <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la durée de vie de l'objet <xref:System.Net.HttpWebRequest> est ignorée.  
   
--   Si l'objet <xref:System.Net.HttpWebRequest> lève une exception <xref:System.Net.WebException> quand la méthode <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.EndGetResponse%2A> est appelée, la durée de vie se termine au moment où l'exception est levée. D'un point de vue technique, le flux de réponse sous-jacent est également fermé à ce stade (le flux de réponse retourné à l'utilisateur est réellement un flux de mémoire qui contient une copie du flux de réponse).  
+- Si l'objet <xref:System.Net.HttpWebRequest> lève une exception <xref:System.Net.WebException> quand la méthode <xref:System.Net.HttpWebRequest.GetResponse%2A> ou <xref:System.Net.HttpWebRequest.EndGetResponse%2A> est appelée, la durée de vie se termine au moment où l'exception est levée. D'un point de vue technique, le flux de réponse sous-jacent est également fermé à ce stade (le flux de réponse retourné à l'utilisateur est réellement un flux de mémoire qui contient une copie du flux de réponse).  
   
  Quatre compteurs permettent de surveiller par intervalle certains problèmes liés à l'objet <xref:System.Net.HttpWebRequest>. Ces compteurs de performance seront utiles aux développeurs d'applications, aux administrateurs et aux équipes de support technique pour mieux comprendre le fonctionnement des objets <xref:System.Net.HttpWebRequest>. Les compteurs sont les suivants :  
   
--   **Nombre de requêtes HttpWebRequest créées/s**  
+- **Nombre de requêtes HttpWebRequest créées/s**  
   
--   **Nombre de requêtes HttpWebRequest mises en file d’attente/s**  
+- **Nombre de requêtes HttpWebRequest mises en file d’attente/s**  
   
--   **Nombre de requêtes HttpWebRequest abandonnées/s**  
+- **Nombre de requêtes HttpWebRequest abandonnées/s**  
   
--   **Nombre de requêtes HttpWebRequest ayant échoué/s**  
+- **Nombre de requêtes HttpWebRequest ayant échoué/s**  
   
  Le compteur **Nombre de requêtes HttpWebRequest abandonnées/s** comptabilise aussi les appels internes à <xref:System.Net.HttpWebRequest.Abort%2A>. Ces appels internes sont généralement provoqués par les délais d'attente qu'une application veut mesurer.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Les compteurs de performance réseau se classent dans deux catégories :  
   
--   « Réseau CLR .NET » : regroupe les compteurs de performance initialement proposés dans .NET Framework 2 et pris en charge par cette version et les versions ultérieures.  
+- « Réseau CLR .NET » : regroupe les compteurs de performance initialement proposés dans .NET Framework 2 et pris en charge par cette version et les versions ultérieures.  
   
--   « Réseau CLR .NET 4.0.0.0 » : regroupe tous les compteurs de socket ci-dessus ainsi que les nouveaux compteurs de performance pris en charge par .NET Framework 4 et les versions ultérieures. Ces nouveaux compteurs fournissent des informations sur les performances des objets <xref:System.Net.HttpWebRequest>.  
+- « Réseau CLR .NET 4.0.0.0 » : regroupe tous les compteurs de socket ci-dessus ainsi que les nouveaux compteurs de performance pris en charge par .NET Framework 4 et les versions ultérieures. Ces nouveaux compteurs fournissent des informations sur les performances des objets <xref:System.Net.HttpWebRequest>.  
   
  Pour plus d’informations sur l’accès aux compteurs de performance et la gestion de ces derniers dans une application, consultez [Compteurs de performance](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

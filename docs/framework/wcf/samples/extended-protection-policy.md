@@ -3,11 +3,11 @@ title: Stratégie de protection étendue
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990169"
 ---
 # <a name="extended-protection-policy"></a>Stratégie de protection étendue
 La protection étendue est une initiative de sécurité visant à se protéger des attaques de l'intercepteur (MITM, Man In The Middle). Une attaque de l'intercepteur est une atteinte à la sécurité dans laquelle un intercepteur prend les informations d'identification d'un client et les envoie à un serveur.  
@@ -34,9 +34,9 @@ La protection étendue est une initiative de sécurité visant à se protéger d
   
 4. Cet exemple requiert l'établissement par le client d'un canal sécurisé avec le serveur et nécessite donc la présence d'un certificat de serveur qui peut être installé à partir du Gestionnaire des services Internet (IIS).  
   
-    1.  Ouvrez le gestionnaire des services Internet (IIS). Ouvrez **certificats de serveur**, qui s’affiche dans le **affichage des composants** onglet lorsque le nœud racine (nom de l’ordinateur) est sélectionné.  
+    1. Ouvrez le gestionnaire des services Internet (IIS). Ouvrez **certificats de serveur**, qui s’affiche dans le **affichage des composants** onglet lorsque le nœud racine (nom de l’ordinateur) est sélectionné.  
   
-    2.  À des fins de test de cet exemple, créez un certificat auto-signé. Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, installez le certificat dans le magasin d'autorités racine approuvées de certificats.  
+    2. À des fins de test de cet exemple, créez un certificat auto-signé. Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, installez le certificat dans le magasin d'autorités racine approuvées de certificats.  
   
 5. Ouvrez le **Actions** volet pour le site Web par défaut. Cliquez sur **modifier le Site**, **liaisons**. S'il n'est pas déjà présent, ajoutez le type HTTPS avec le numéro de port 443. Assignez le certificat SSL créé au cours de l’étape précédente.  
   

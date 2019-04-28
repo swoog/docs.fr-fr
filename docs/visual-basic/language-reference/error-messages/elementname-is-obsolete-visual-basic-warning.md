@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803439"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<nom_élément >' est obsolète (avertissement Visual Basic)
 Une instruction tente d’accéder à un élément de programmation qui a été marqué avec l’attribut <xref:System.ObsoleteAttribute> et la directive pour le traiter comme un avertissement.  
@@ -25,7 +25,7 @@ Une instruction tente d’accéder à un élément de programmation qui a été 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Vérifiez que le nom de l’élément est orthographié correctement dans la référence du code source.  
+- Vérifiez que le nom de l’élément est orthographié correctement dans la référence du code source.  
   
 ## <a name="see-also"></a>Voir aussi
 

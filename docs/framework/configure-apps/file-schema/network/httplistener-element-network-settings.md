@@ -3,11 +3,11 @@ title: <httpListener>, élément (paramètres réseau)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705075"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener >, élément (paramètres réseau)
 Personnalise les paramètres utilisés par la <xref:System.Net.HttpListener> classe.  
@@ -52,9 +52,9 @@ Personnalise les paramètres utilisés par la <xref:System.Net.HttpListener> cla
   
  Le `http.sys` service expose deux chaînes d’URI de demande :  
   
--   URI brut  
+- URI brut  
   
--   URI converti  
+- URI converti  
   
  L’URI brut est le <xref:System.Uri?displayProperty=nameWithType> fourni dans la ligne de demande d’une demande HTTP :  
   
@@ -72,11 +72,11 @@ Personnalise les paramètres utilisés par la <xref:System.Net.HttpListener> cla
   
  Le `http.sys` service combine le <xref:System.Uri.Host%2A?displayProperty=nameWithType> valeur de propriété et la chaîne dans la ligne de demande de création d’un URI converti. En outre, `http.sys` et <xref:System.Uri?displayProperty=nameWithType> classe effectue également les opérations suivantes :  
   
--   N’échappe pas pourcentage de toutes les valeurs encodées.  
+- N’échappe pas pourcentage de toutes les valeurs encodées.  
   
--   Convertit encodés en pourcentage des caractères non ASCII en une représentation de caractères UTF-16. Notez que les caractères UTF-8 et ANSI ou DBCS sont pris en charge, ainsi que des caractères Unicode (encodage Unicode en utilisant le format d’uXXXX %).  
+- Convertit encodés en pourcentage des caractères non ASCII en une représentation de caractères UTF-16. Notez que les caractères UTF-8 et ANSI ou DBCS sont pris en charge, ainsi que des caractères Unicode (encodage Unicode en utilisant le format d’uXXXX %).  
   
--   Exécute les autres étapes de normalisation, comme la compression de chemin d’accès.  
+- Exécute les autres étapes de normalisation, comme la compression de chemin d’accès.  
   
  Étant donné que la demande ne contient pas toutes les informations concernant l’encodage utilisé pour les valeurs encodées en pourcentage, il n’est peut-être pas possible de déterminer l’encodage correct seulement en analysant les valeurs encodées en pourcentage.  
   

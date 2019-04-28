@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799370"
 ---
 # <a name="windows-forms-security"></a>Sécurité des Windows Forms
 Windows Forms propose un modèle de sécurité est basée sur le code (niveaux de sécurité sont définis pour le code, quel que soit l’utilisateur qui exécute le code). Cela s’ajoute tous les schémas de sécurité qui peuvent être déjà en place sur votre système informatique. Celles-ci peuvent inclure celles figurant dans le navigateur (par exemple, la sécurité par zone disponible dans Internet Explorer) ou le système d’exploitation (par exemple, la sécurité basée sur les informations d’identification de Windows NT).  

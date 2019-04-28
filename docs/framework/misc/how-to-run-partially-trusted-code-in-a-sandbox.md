@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Exécuter le Code de confiance partiel dans un bac à sable'
+title: 'Procédure : Exécuter du code partiellement fiable dans un bac à sable (sandbox)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752969"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procédure : Exécuter le Code de confiance partiel dans un bac à sable
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procédure : Exécuter du code partiellement fiable dans un bac à sable (sandbox)
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  L'utilisation de bac à sable (sandbox) consiste à exécuter du code dans un environnement de sécurité restreint qui limite les autorisations d'accès accordées au code. Par exemple, si une bibliothèque managée provient d'une source qui n'est pas totalement fiable, vous ne devez pas l'exécuter comme ayant un niveau de confiance totale. Au lieu de cela, placez le code dans un bac à sable (sandbox) qui limite ses autorisations à ceux qui en ont besoin (par exemple, l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Informations complémentaires :  
   
-    -   Il s'agit de la seule surcharge de la méthode <xref:System.AppDomain.CreateDomain%2A> prenant un <xref:System.Security.PermissionSet> comme paramètre, et donc la seule surcharge qui vous permet de charger une application dans un paramètre de confiance partielle.  
+    - Il s'agit de la seule surcharge de la méthode <xref:System.AppDomain.CreateDomain%2A> prenant un <xref:System.Security.PermissionSet> comme paramètre, et donc la seule surcharge qui vous permet de charger une application dans un paramètre de confiance partielle.  
   
-    -   Le paramètre `evidence` n'est pas utilisé pour calculer un jeu d'autorisations, mais pour être identifié par les autres fonctionnalités du .NET Framework.  
+    - Le paramètre `evidence` n'est pas utilisé pour calculer un jeu d'autorisations, mais pour être identifié par les autres fonctionnalités du .NET Framework.  
   
-    -   La définition de la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> du paramètre `info` est obligatoire pour cette surcharge.  
+    - La définition de la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> du paramètre `info` est obligatoire pour cette surcharge.  
   
-    -   Le paramètre `fullTrustAssemblies` possède le mot clé `params`, ce qui signifie qu'il n'est pas nécessaire de créer un tableau <xref:System.Security.Policy.StrongName>. Passer 0, 1 ou plusieurs noms forts comme paramètres est autorisé.  
+    - Le paramètre `fullTrustAssemblies` possède le mot clé `params`, ce qui signifie qu'il n'est pas nécessaire de créer un tableau <xref:System.Security.Policy.StrongName>. Passer 0, 1 ou plusieurs noms forts comme paramètres est autorisé.  
   
-    -   Le code servant à créer le domaine d'application est le suivant :  
+    - Le code servant à créer le domaine d'application est le suivant :  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Chargez le code dans le <xref:System.AppDomain> bac à sable (sandbox) que vous avez créé. Vous pouvez le faire de deux façons :  
   
-    -   Appelez la méthode <xref:System.AppDomain.ExecuteAssembly%2A> pour l'assembly.  
+    - Appelez la méthode <xref:System.AppDomain.ExecuteAssembly%2A> pour l'assembly.  
   
-    -   Utilisez la méthode <xref:System.Activator.CreateInstanceFrom%2A> pour créer une instance d'une classe dérivée de <xref:System.MarshalByRefObject> dans le nouveau <xref:System.AppDomain>.  
+    - Utilisez la méthode <xref:System.Activator.CreateInstanceFrom%2A> pour créer une instance d'une classe dérivée de <xref:System.MarshalByRefObject> dans le nouveau <xref:System.AppDomain>.  
   
      La seconde méthode est préférable, car elle simplifie le passage des paramètres à la nouvelle instance <xref:System.AppDomain>. La méthode <xref:System.Activator.CreateInstanceFrom%2A> fournit deux fonctionnalités importantes :  
   
-    -   Vous pouvez utiliser une base de code qui pointe vers un emplacement qui ne contient pas votre assembly.  
+    - Vous pouvez utiliser une base de code qui pointe vers un emplacement qui ne contient pas votre assembly.  
   
-    -   Vous pouvez effectuer la création sous un <xref:System.Security.CodeAccessPermission.Assert%2A> pour la confiance totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), ce qui vous permet de créer une instance d'une classe critique. (Cela se produit chaque fois que votre assembly n'a pas de marquages de transparence et est chargé avec un niveau de confiance totale.) Vous devez donc vous assurer de ne créer que du code fiable avec cette fonction. Nous vous recommandons de créer uniquement des instances de classes d'un niveau de confiance totale dans le nouveau domaine d'application.  
+    - Vous pouvez effectuer la création sous un <xref:System.Security.CodeAccessPermission.Assert%2A> pour la confiance totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), ce qui vous permet de créer une instance d'une classe critique. (Cela se produit chaque fois que votre assembly n'a pas de marquages de transparence et est chargé avec un niveau de confiance totale.) Vous devez donc vous assurer de ne créer que du code fiable avec cette fonction. Nous vous recommandons de créer uniquement des instances de classes d'un niveau de confiance totale dans le nouveau domaine d'application.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

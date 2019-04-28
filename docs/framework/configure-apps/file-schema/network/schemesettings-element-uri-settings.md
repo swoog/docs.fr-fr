@@ -3,11 +3,11 @@ title: <schemeSettings>, élément (paramètres d’URI)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705010"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings >, élément (paramètres d’Uri)
 Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.  

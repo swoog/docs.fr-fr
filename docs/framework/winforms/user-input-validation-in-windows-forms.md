@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800124"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validation des entrées d’utilisateur dans les Windows Forms
 Quand les utilisateurs entrent des données dans votre application, il pourrez que vous souhaitez vérifier que les données sont valides avant que votre application utilise. Vous pouvez avoir besoin que certains champs de texte ne pas être de longueur nulle, qu’un champ soit au format d’un numéro de téléphone ou un autre type de données bien formées ou qu’une chaîne contienne des caractères non sécurisés qui peut servir à compromettre la sécurité d’une base de données. Windows Forms fournit plusieurs méthodes pour valider l’entrée dans votre application.  
@@ -27,11 +27,11 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
 ## <a name="event-driven-validation"></a>Validation pilotée par événements  
  Si vous souhaitez contrôler par programmation complet de validation, ou que vous avez besoin effectuer des vérifications de validation complexe, vous devez utiliser les événements de validation intégrées à la plupart des contrôles Windows Forms. Chaque contrôle qui accepte les entrées d’utilisateur au format libre a un <xref:System.Windows.Forms.Control.Validating> événement qui se produit chaque fois que le contrôle nécessite une validation de données. Dans la <xref:System.Windows.Forms.Control.Validating> méthode de gestion des événements, vous pouvez valider les entrées de plusieurs façons de l’utilisateur. Par exemple, si vous avez une zone de texte qui doit contenir un code postal, vous pouvez effectuer la validation de plusieurs manières :  
   
--   Si le code postal doit appartenir à un groupe spécifique de codes postaux, vous pouvez effectuer une comparaison de chaînes sur l’entrée pour valider les données entrées par l’utilisateur. Par exemple, si le code postal doit être dans le jeu {10001, 10002, 10003}, vous pouvez utiliser une comparaison de chaînes pour valider les données.  
+- Si le code postal doit appartenir à un groupe spécifique de codes postaux, vous pouvez effectuer une comparaison de chaînes sur l’entrée pour valider les données entrées par l’utilisateur. Par exemple, si le code postal doit être dans le jeu {10001, 10002, 10003}, vous pouvez utiliser une comparaison de chaînes pour valider les données.  
   
--   Si le code postal doit être un format spécifique, vous pouvez utiliser des expressions régulières pour valider les données entrées par l’utilisateur. Par exemple, pour valider le formulaire `#####` ou `#####-####`, vous pouvez utiliser l’expression régulière `^(\d{5})(-\d{4})?$`. Pour valider le formulaire `A#A #A#`, vous pouvez utiliser l’expression régulière `[A-Z]\d[A-Z] \d[A-Z]\d`. Pour plus d’informations sur les expressions régulières, consultez [Expressions régulières .NET Framework](../../standard/base-types/regular-expressions.md) et [exemples d’expressions régulières](../../standard/base-types/regular-expression-examples.md).  
+- Si le code postal doit être un format spécifique, vous pouvez utiliser des expressions régulières pour valider les données entrées par l’utilisateur. Par exemple, pour valider le formulaire `#####` ou `#####-####`, vous pouvez utiliser l’expression régulière `^(\d{5})(-\d{4})?$`. Pour valider le formulaire `A#A #A#`, vous pouvez utiliser l’expression régulière `[A-Z]\d[A-Z] \d[A-Z]\d`. Pour plus d’informations sur les expressions régulières, consultez [Expressions régulières .NET Framework](../../standard/base-types/regular-expressions.md) et [exemples d’expressions régulières](../../standard/base-types/regular-expression-examples.md).  
   
--   Si le code postal doit être un code postal valide, vous pouvez appeler un service Web de code postal pour valider les données entrées par l’utilisateur.  
+- Si le code postal doit être un code postal valide, vous pouvez appeler un service Web de code postal pour valider les données entrées par l’utilisateur.  
   
  Le <xref:System.Windows.Forms.Control.Validating> événement est fourni un objet de type <xref:System.ComponentModel.CancelEventArgs>. Si vous déterminez que les données du contrôle ne sont pas valides, vous pouvez annuler la <xref:System.Windows.Forms.Control.Validating> événement en définissant de cet objet <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété `true`. Si vous ne définissez pas la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété, Windows Forms seront supposent que la validation a réussi pour ce contrôle et déclencher la <xref:System.Windows.Forms.Control.Validated> événement.  
   
@@ -58,11 +58,11 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
 #### <a name="explicit-validation"></a>Validation explicite  
  L’approche de la validation explicite valide les données en même temps. Vous pouvez valider les données en réponse à une action de l’utilisateur, comme un clic sur un bouton Enregistrer ou le lien suivant. Lorsque l’action de l’utilisateur se produit, vous pouvez déclencher la validation explicite dans une des manières suivantes :  
   
--   Appelez <xref:System.Windows.Forms.ContainerControl.Validate%2A> pour valider le dernier contrôle qui a perdu le focus.  
+- Appelez <xref:System.Windows.Forms.ContainerControl.Validate%2A> pour valider le dernier contrôle qui a perdu le focus.  
   
--   Appelez <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> pour valider tous les contrôles enfants dans un contrôle de formulaire ou un conteneur.  
+- Appelez <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> pour valider tous les contrôles enfants dans un contrôle de formulaire ou un conteneur.  
   
--   Appeler une méthode personnalisée pour valider les données dans les contrôles manuellement.  
+- Appeler une méthode personnalisée pour valider les données dans les contrôles manuellement.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Contrôles de Validation implicite par défaut pour Windows Forms  
  Différents contrôles Windows Forms ont différentes valeurs par défaut pour leurs <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> propriété. Le tableau suivant présente les contrôles les plus courants et leurs valeurs par défaut.  
@@ -79,11 +79,11 @@ Quand les utilisateurs entrent des données dans votre application, il pourrez q
 ## <a name="closing-the-form-and-overriding-validation"></a>Ferme le formulaire et la substitution de la Validation  
  Lorsqu’un contrôle gère le focus, car les données qu’il contient ne sont pas valides, il est impossible de fermer le formulaire parent de la façon habituelle :  
   
--   En cliquant sur le **fermer** bouton.  
+- En cliquant sur le **fermer** bouton.  
   
--   En sélectionnant **fermer** dans le **système** menu.  
+- En sélectionnant **fermer** dans le **système** menu.  
   
--   En appelant le <xref:System.Windows.Forms.Form.Close%2A> méthode par programmation.  
+- En appelant le <xref:System.Windows.Forms.Form.Close%2A> méthode par programmation.  
   
  Toutefois, dans certains cas, vous souhaiterez permettent à l’utilisateur de fermer le formulaire, même si les valeurs dans les contrôles sont valides. Vous pouvez remplacer la validation et fermer un formulaire contenant des données non valides en créant un gestionnaire pour le formulaire <xref:System.Windows.Forms.Form.Closing> événement. Dans l’événement, définissez la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriété `false`. Cela force la fermeture du formulaire. Pour plus d'informations et pour obtenir un exemple, consultez <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

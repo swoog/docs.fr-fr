@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856819"
 ---
 # <a name="federation"></a>Fédération
 Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour le déploiement d’architectures de sécurité fédérée. Pour un exemple d’application présentant la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -44,17 +44,17 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
   
  En général, l'organisation B requiert qu'un utilisateur de l'organisation A fournisse des formulaires d'authentification valides avant d'accéder au service. De plus, l'organisation peut également requérir que l'utilisateur soit autorisé à accéder à la ressource spécifique en question. L'une des méthodes pour résoudre ce problème et permettre aux utilisateurs de l'organisation A d'accéder à la ressource de l'organisation B est la suivante :  
   
--   Les utilisateurs de l'organisation A enregistrent leurs informations d'identification (nom d'utilisateur et mot de passe) auprès de l'organisation B.  
+- Les utilisateurs de l'organisation A enregistrent leurs informations d'identification (nom d'utilisateur et mot de passe) auprès de l'organisation B.  
   
--   Pendant l'accès aux ressources, les utilisateurs de l'organisation A présentent leurs informations d'identification à l'organisation B et sont authentifiés avant d'accéder à la ressource.  
+- Pendant l'accès aux ressources, les utilisateurs de l'organisation A présentent leurs informations d'identification à l'organisation B et sont authentifiés avant d'accéder à la ressource.  
   
  Cette approche a trois inconvénients significatifs :  
   
--   L'organisation B doit gérer les informations d'identification des utilisateurs de l'organisation A, outre la gestion de ses utilisateurs internes.  
+- L'organisation B doit gérer les informations d'identification des utilisateurs de l'organisation A, outre la gestion de ses utilisateurs internes.  
   
--   Les utilisateurs de l'organisation A doivent gérer un ensemble d'informations d'identification supplémentaire (autrement dit, se souvenir d'un nom d'utilisateur et d'un mot de passe supplémentaires) outre les informations d'identification qu'ils utilisent habituellement pour accéder aux ressources dans l'organisation A. Cela favorise la pratique qui consiste à utiliser des noms d'utilisateur et mots de passe identiques au niveau de plusieurs sites de service, ce qui est une mesure de sécurité faible.  
+- Les utilisateurs de l'organisation A doivent gérer un ensemble d'informations d'identification supplémentaire (autrement dit, se souvenir d'un nom d'utilisateur et d'un mot de passe supplémentaires) outre les informations d'identification qu'ils utilisent habituellement pour accéder aux ressources dans l'organisation A. Cela favorise la pratique qui consiste à utiliser des noms d'utilisateur et mots de passe identiques au niveau de plusieurs sites de service, ce qui est une mesure de sécurité faible.  
   
--   L'architecture n'évolue pas car plusieurs organisations perçoivent la ressource de l'organisation B comme étant utile.  
+- L'architecture n'évolue pas car plusieurs organisations perçoivent la ressource de l'organisation B comme étant utile.  
   
  L'autre approche, qui résout les inconvénients précédemment mentionnés, consiste à utiliser la sécurité fédérée. Dans cette approche, les organisations A et B établissent une relation de confiance et utilisent le STS pour permettre l'échange de la confiance établie.  
   
@@ -76,13 +76,13 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 ### <a name="phase-1-design-phase"></a>Phase 1 : Phase de conception  
  Pendant la phase de conception, le client utilise le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour lire la déclaration expose le point de terminaison de service et pour collecter les exigences du service d’authentification et d’autorisation. Les proxys appropriés sont construits pour créer le modèle de communication de sécurité fédérée suivant au niveau du client :  
   
--   Procurez-vous un jeton de sécurité auprès du STS du domaine de confiance du client.  
+- Procurez-vous un jeton de sécurité auprès du STS du domaine de confiance du client.  
   
--   Présentez le jeton au STS du domaine de confiance du service.  
+- Présentez le jeton au STS du domaine de confiance du service.  
   
--   Procurez-vous un jeton de sécurité auprès du STS du domaine de confiance du service.  
+- Procurez-vous un jeton de sécurité auprès du STS du domaine de confiance du service.  
   
--   Présentez le jeton au service pour accéder au service.  
+- Présentez le jeton au service pour accéder au service.  
   
 ### <a name="phase-2-run-time-phase"></a>Phase 2 : Phase d’exécution  
  Pendant la phase d’exécution, le client instancie un objet de la classe de client WCF et effectue un appel à l’aide du client WCF. L’infrastructure sous-jacente de WCF gère les étapes mentionnées précédemment dans le modèle de communication de sécurité fédérée et permet au client en toute transparence consommer le service.  

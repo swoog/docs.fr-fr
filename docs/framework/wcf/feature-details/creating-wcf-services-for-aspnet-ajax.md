@@ -3,11 +3,11 @@ title: Création de services WCF pour ASP.NET AJAX
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
 ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857127"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Création de services WCF pour ASP.NET AJAX
 Microsoft ASP.NET AJAX permet de créer rapidement des pages Web d'une grande interaction pour l'utilisateur avec des éléments d'interface utilisateur réactifs et familiers. Les fonctionnalités ASP.NET AJAX fournissent des bibliothèques de client de script qui incorporent des scripts ECMAScript (JavaScript) et des technologies Dynamic HTML (DHTML) compatibles entre navigateurs ainsi qu'une intégration avec la plate-forme de développement serveur ASP.NET 2.0. Grâce à ASP.NET AJAX, vous pouvez améliorer l'expérience utilisateur et l'efficacité de vos applications Web.  
@@ -20,15 +20,15 @@ Microsoft ASP.NET AJAX permet de créer rapidement des pages Web d'une grande in
   
  Si vous n'utilisez pas les modèles Visual Studio, vous pouvez créer un point de terminaison ASP.NET AJAX de deux manières :  
   
--   Créez le point de terminaison à l'aide de l'activation d'hôte dynamique sans utiliser de configuration. Il s'agit de l'approche la plus simple si vous n'êtes pas familier avec le système de configuration WCF. Pour plus d'informations, voir [Procédure : Ajouter un point de terminaison AJAX ASP.NET sans utiliser de Configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+- Créez le point de terminaison à l'aide de l'activation d'hôte dynamique sans utiliser de configuration. Il s'agit de l'approche la plus simple si vous n'êtes pas familier avec le système de configuration WCF. Pour plus d'informations, voir [Procédure : Ajouter un point de terminaison AJAX ASP.NET sans utiliser de Configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
--   Ajouter un point de terminaison compatible AJAX à un service WCF à l’aide de la configuration. Pour plus d'informations, voir [Procédure : Configuration permet d’ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+- Ajouter un point de terminaison compatible AJAX à un service WCF à l’aide de la configuration. Pour plus d'informations, voir [Procédure : Configuration permet d’ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
  Le modèle de programmation Web décrit dans le [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) peuvent être utilisées avec les services ASP.NET AJAX. Plus précisément :  
   
--   Vous pouvez utiliser les attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute> pour choisir entre les verbes HTTP GET et HTTP POST. Correctement utilisés, ils permettent d'améliorer considérablement la performance de votre application. Pour plus d'informations, voir [Procédure : Choisir entre la requête HTTP POST et HTTP GET des demandes pour les points de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
+- Vous pouvez utiliser les attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute> pour choisir entre les verbes HTTP GET et HTTP POST. Correctement utilisés, ils permettent d'améliorer considérablement la performance de votre application. Pour plus d'informations, voir [Procédure : Choisir entre la requête HTTP POST et HTTP GET des demandes pour les points de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
   
--   Vous pouvez utiliser les propriétés <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> pour que votre service retourne des données XML au lieu du format JSON (JavaScript Object Notation) par défaut. Effectuée dans le cadre de l'infrastructure ASP.NET AJAX, cette opération permet au client JavaScript de recevoir un objet XML DOM.  
+- Vous pouvez utiliser les propriétés <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> pour que votre service retourne des données XML au lieu du format JSON (JavaScript Object Notation) par défaut. Effectuée dans le cadre de l'infrastructure ASP.NET AJAX, cette opération permet au client JavaScript de recevoir un objet XML DOM.  
   
     > [!WARNING]
     >  Votre opération doit affecter au type de contenu la valeur texte/xml pour y parvenir. Sinon, le client JavaScript recevra une chaîne contenant le XML au lieu d'un objet XML DOM.  
@@ -47,13 +47,13 @@ Microsoft ASP.NET AJAX permet de créer rapidement des pages Web d'une grande in
     }  
     ```  
   
--   Aucune autre propriété sur les attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute> ne peut être modifiée si la compatibilité avec ASP.NET AJAX est requise. Il est possible de faire appel à d'autres aspects du modèle de programmation Web tant que les conventions d'appel ASP.NET AJAX sont respectées.  
+- Aucune autre propriété sur les attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute> ne peut être modifiée si la compatibilité avec ASP.NET AJAX est requise. Il est possible de faire appel à d'autres aspects du modèle de programmation Web tant que les conventions d'appel ASP.NET AJAX sont respectées.  
   
  Des scénarios plus avancés nécessitent certains détails supplémentaires de prise en charge d’AJAX dans WCF comprendre :  
   
--   Pour comprendre comment les données sont transférées entre un client de page AJAX et un service WCF à l’aide de JavaScript et pour plus d’informations sur la correspondance entre les types .NET Framework et les types de JavaScript, consultez [prise en charge de JSON et autres données de transfert met en forme](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
+- Pour comprendre comment les données sont transférées entre un client de page AJAX et un service WCF à l’aide de JavaScript et pour plus d’informations sur la correspondance entre les types .NET Framework et les types de JavaScript, consultez [prise en charge de JSON et autres données de transfert met en forme](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
   
--   Pour tirer parti des fonctionnalités ASP.NET, par exemple, l’authentification basée sur URL et l’accès aux informations de session ASP.NET, vous pouvez activer le mode de compatibilité ASP.NET par la configuration.  
+- Pour tirer parti des fonctionnalités ASP.NET, par exemple, l’authentification basée sur URL et l’accès aux informations de session ASP.NET, vous pouvez activer le mode de compatibilité ASP.NET par la configuration.  
   
  Points de terminaison AJAX dans WCF peuvent être consommés même sans l’infrastructure ASP.NET AJAX. Cela implique de comprendre l’architecture de prise en charge de la prise en charge d’AJAX dans WCF. Pour une discussion sur cette architecture, consultez [modèle d’objet de programmation WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Pour voir un exemple de code illustrant cette approche, le [Service AJAX avec JSON et XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   

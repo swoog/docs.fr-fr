@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704789"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > élément
 Spécifie s’il faut désactiver la mise en cache des échecs se produisent, car l’assembly est introuvable par la détection de liaison.  
@@ -63,11 +63,11 @@ Spécifie s’il faut désactiver la mise en cache des échecs se produisent, ca
   
  Une liaison et les échecs de chargement ne sont pas affectées par cet élément et sont toujours mis en cache. Ces échecs se produisent, car l’assembly a été trouvé, mais ne peut pas être chargé. Elles lèvent <xref:System.BadImageFormatException> ou <xref:System.IO.FileLoadException>. La liste suivante comprend quelques exemples de ces défaillances.  
   
--   Si vous tentez de charger un fichier n’est pas un assembly valide, les tentatives suivantes pour charger l’assembly échoue même si le fichier incorrect est remplacé par l’assembly approprié.  
+- Si vous tentez de charger un fichier n’est pas un assembly valide, les tentatives suivantes pour charger l’assembly échoue même si le fichier incorrect est remplacé par l’assembly approprié.  
   
--   Si vous essayez de charger un assembly qui est verrouillé par le système de fichiers, les tentatives suivantes pour charger l’assembly échoue même après que l’assembly est libéré par le système de fichiers.  
+- Si vous essayez de charger un assembly qui est verrouillé par le système de fichiers, les tentatives suivantes pour charger l’assembly échoue même après que l’assembly est libéré par le système de fichiers.  
   
--   Si une ou plusieurs versions de l’assembly que vous tentez de charger est dans le chemin de recherche, mais la version spécifique que vous demandez n’est pas entre eux, les tentatives suivantes pour charger cette version échoue même si la version correcte est déplacée dans le chemin de recherche.  
+- Si une ou plusieurs versions de l’assembly que vous tentez de charger est dans le chemin de recherche, mais la version spécifique que vous demandez n’est pas entre eux, les tentatives suivantes pour charger cette version échoue même si la version correcte est déplacée dans le chemin de recherche.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment désactiver la mise en cache des échecs de liaison d’assembly qui se produisent, car l’assembly est introuvable par la détection.  

@@ -3,11 +3,11 @@ title: Filtrage
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856698"
 ---
 # <a name="filtering"></a>Filtrage
 Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des filtres déclaratifs pour faire correspondre des messages et de prendre des décisions opérationnelles. Vous pouvez utiliser des filtres pour déterminer ce qu'il faut faire d'un message en examinant une partie du message. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath 1.0 pour vérifier l’élément prioritaire d’un en-tête connu afin de déterminer s’il faut déplacer un message au début de la file d’attente.  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
 ### <a name="endpoint-address-filters"></a>Filtres de l'adresse du point de terminaison  
  Le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtre les messages et les tampons de messages en fonction d'une adresse de point de terminaison, telle que représentée dans leur collection d'en-têtes. Pour qu'un message passe un tel filtre, les conditions suivantes doivent être remplies :  
   
--   L'URI de l'adresse du filtre doit être le même que celui de l'en-tête To du message.  
+- L'URI de l'adresse du filtre doit être le même que celui de l'en-tête To du message.  
   
--   Chaque paramètre de point de terminaison dans l'adresse du filtre (collection `address.Headers` ) doit trouver un en-tête dans le message à mapper. Des en-tête supplémentaires dans le message ou le tampon de messages sont acceptables pour que la correspondance reste `true`.  
+- Chaque paramètre de point de terminaison dans l'adresse du filtre (collection `address.Headers` ) doit trouver un en-tête dans le message à mapper. Des en-tête supplémentaires dans le message ou le tampon de messages sont acceptables pour que la correspondance reste `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtres du préfixe de l'adresse du point de terminaison  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
 ### <a name="de-multiplexing"></a>Démultiplexage  
  Lorsque plusieurs points de terminaison se déploient du même `ServiceListener` provenant du câble, la seule manière de démultiplexer les messages et de savoir s'ils appartiennent à une certaine adresse de point de terminaison est d'utiliser des <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, qui sélectionnent les messages vers les points de terminaison enregistrés en exécutant une recherche sur les informations stockées dans les en-têtes. Dans ces filtres, les seuls messages qui passent sont ceux qui ont tous les en-têtes correspondants à la fois à :  
   
--   L'URI de l'`EndpointAddress`.  
+- L'URI de l'`EndpointAddress`.  
   
--   Le reste des paramètres de point de terminaison dans l'`EndpointAddress` comme spécifié dans le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
+- Le reste des paramètres de point de terminaison dans l'`EndpointAddress` comme spécifié dans le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Voir aussi
 

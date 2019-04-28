@@ -32,11 +32,11 @@ ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874617"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnostiquer des erreurs avec les Assistants Débogage managé
 
@@ -148,7 +148,7 @@ L’exemple suivant montre comment activer et configurer le [marshaling](../../.
 </mdaConfig>
 ```
 
-L'Assistant Débogage managé `Marshaling` émet des informations sur le type managé qui est marshalé en un type non managé pour chaque transition de code managé vers un code non managé dans l'application. Le `Marshaling` peut également filtrer les noms de la méthode et les champs de structure fournis dans le **methodFilter** et **fieldFilter** éléments enfants, respectivement.
+L’Assistant Débogage managé `Marshaling` émet des informations sur le type managé qui est marshalé en un type non managé pour chaque transition de code managé vers un code non managé dans l’application. Le `Marshaling` peut également filtrer les noms de la méthode et les champs de structure fournis dans le **methodFilter** et **fieldFilter** éléments enfants, respectivement.
 
 L’exemple suivant montre comment activer plusieurs Assistants Débogage managé à l’aide de leurs paramètres par défaut :
 

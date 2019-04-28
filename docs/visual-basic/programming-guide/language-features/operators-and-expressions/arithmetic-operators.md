@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830360"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Opérateurs arithmétiques en Visual Basic
 Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérations arithmétiques familières qui impliquent le calcul de valeurs numériques représentées par des littéraux, des variables, autres expressions, fonction et les appels de propriété et constantes. Également classés avec des opérateurs arithmétiques sont les opérateurs de décalage de bits, qui agissent au niveau des bits individuels des opérandes- and -shift de leurs modèles binaires vers la gauche ou droite.  
@@ -70,13 +70,13 @@ Opérateurs arithmétiques sont utilisés pour effectuer la plupart des opérati
   
  Les décalages arithmétiques ne sont pas circulaires, ce qui signifie que les bits décalés à une extrémité du résultat ne sont pas réintroduits à l’autre extrémité. Les positions binaires libérées par un décalage sont définies comme suit :  
   
--   0 pour un décalage arithmétique vers la gauche  
+- 0 pour un décalage arithmétique vers la gauche  
   
--   0 pour un décalage arithmétique vers la droite d’un nombre positif  
+- 0 pour un décalage arithmétique vers la droite d’un nombre positif  
   
--   0 pour un décalage arithmétique vers la droite d’un type de données non signé (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 pour un décalage arithmétique vers la droite d’un type de données non signé (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 pour un décalage arithmétique vers la droite d’un nombre négatif (`SByte`, `Short`, `Integer`, ou `Long`)  
+- 1 pour un décalage arithmétique vers la droite d’un nombre négatif (`SByte`, `Short`, `Integer`, ou `Long`)  
   
  L’exemple suivant Décale une `Integer` valeur gauche et droite.  
   

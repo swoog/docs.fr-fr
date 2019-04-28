@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696838"
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
 <a name="introduction"></a> Lors du développement de Windows Presentation Foundation (WPF) applications autonomes et hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](./app-development/wpf-add-ins-overview.md).  
@@ -31,17 +31,17 @@ ms.locfileid: "59313565"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Sécurité de la navigation](#SafeTopLevelNavigation)  
+- [Sécurité de la navigation](#SafeTopLevelNavigation)  
   
--   [Paramètres de sécurité des logiciels de navigation web](#InternetExplorerSecuritySettings)  
+- [Paramètres de sécurité des logiciels de navigation web](#InternetExplorerSecuritySettings)  
   
--   [Contrôle WebBrowser et contrôles de fonctionnalités](#webbrowser_control_and_feature_controls)  
+- [Contrôle WebBrowser et contrôles de fonctionnalités](#webbrowser_control_and_feature_controls)  
   
--   [Désactivation des assemblys APTCA pour les applications clientes partiellement fiables](#APTCA)  
+- [Désactivation des assemblys APTCA pour les applications clientes partiellement fiables](#APTCA)  
   
--   [Comportement de bac à sable pour les fichiers en XAML libre](#LooseContentSandboxing)  
+- [Comportement de bac à sable pour les fichiers en XAML libre](#LooseContentSandboxing)  
   
--   [Ressources pour le développement d’applications WPF promouvant la sécurité](#BestPractices)  
+- [Ressources pour le développement d’applications WPF promouvant la sécurité](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Sécurité de la navigation  
@@ -69,19 +69,19 @@ ms.locfileid: "59313565"
   
  Les fichiers ayant ces types de contenu sont accessibles par l’utilisateur et par programme :  
   
--   **Navigation utilisateur**. L’utilisateur navigue en cliquant sur un <xref:System.Windows.Documents.Hyperlink> élément.  
+- **Navigation utilisateur**. L’utilisateur navigue en cliquant sur un <xref:System.Windows.Documents.Hyperlink> élément.  
   
--   **Navigation par programme**. L’application navigue sans solliciter l’utilisateur, par exemple, en définissant le <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> propriété.  
+- **Navigation par programme**. L’application navigue sans solliciter l’utilisateur, par exemple, en définissant le <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> propriété.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>Sécurité de la navigation dans un navigateur  
  La navigation dans un navigateur est considérée comme sûre uniquement si les conditions suivantes sont respectées :  
   
--   **Navigation utilisateur**. L’utilisateur navigue en cliquant sur un <xref:System.Windows.Documents.Hyperlink> élément qui se trouve dans la main <xref:System.Windows.Navigation.NavigationWindow>, pas dans une liste imbriquée <xref:System.Windows.Controls.Frame>.  
+- **Navigation utilisateur**. L’utilisateur navigue en cliquant sur un <xref:System.Windows.Documents.Hyperlink> élément qui se trouve dans la main <xref:System.Windows.Navigation.NavigationWindow>, pas dans une liste imbriquée <xref:System.Windows.Controls.Frame>.  
   
--   **Zone**. Le contenu cible de la navigation se trouve sur Internet ou sur l’intranet local.  
+- **Zone**. Le contenu cible de la navigation se trouve sur Internet ou sur l’intranet local.  
   
--   **Protocole**. Le protocole utilisé est soit **http**, **https**, **fichier**, ou **mailto**.  
+- **Protocole**. Le protocole utilisé est soit **http**, **https**, **fichier**, ou **mailto**.  
   
  Si un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] tente d’accéder au contenu d’une manière qui ne respecte pas ces conditions, un <xref:System.Security.SecurityException> est levée.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313565"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] fournit un mécanisme par lequel vous pouvez configurer la fonctionnalité qui est autorisée à être exécutée par ou à partir de [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], y compris les éléments suivants :  
   
--   Composants dépendants du framework .NET  
+- Composants dépendants du framework .NET  
   
--   Plug-ins et contrôles ActiveX  
+- Plug-ins et contrôles ActiveX  
   
--   Téléchargements  
+- Téléchargements  
   
--   Scripts  
+- Scripts  
   
--   Authentification utilisateur  
+- Authentification utilisateur  
   
  L’ensemble de fonctionnalités qui peuvent être sécurisées de cette façon est configuré sur une base par zone pour le **Internet**, **Intranet**, **Sites de confiance**, et  **Sites sensibles** zones. Les étapes suivantes décrivent comment configurer vos paramètres de sécurité :  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313565"
   
  En commençant par [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], les paramètres de sécurité suivants spécifiquement pour .NET Framework sont inclus :  
   
--   **XAML libre**. Contrôles si [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] peut naviguer vers et libre [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] fichiers. (Options Activer, Désactiver et Demander).  
+- **XAML libre**. Contrôles si [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] peut naviguer vers et libre [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] fichiers. (Options Activer, Désactiver et Demander).  
   
--   **Applications du navigateur XAML**. Contrôles si [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] peuvent accéder à et exécuter [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Options Activer, Désactiver et Demander).  
+- **Applications du navigateur XAML**. Contrôles si [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] peuvent accéder à et exécuter [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Options Activer, Désactiver et Demander).  
   
  Par défaut, ces paramètres sont tous activés pour le **Internet**, **intranet Local**, et **sites de confiance** zones, mais désactivé pour le **sites sensibles**  zone.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313565"
   
  Cette clé établit une entrée pour l’assembly APTCA. Vous devez également créer une valeur dans cette clé, qui active ou désactive l’assembly. Voici les détails de la valeur :  
   
--   Nom de la valeur : **APTCA_FLAG**.  
+- Nom de la valeur : **APTCA_FLAG**.  
   
--   Type de valeur : **REG_DWORD**.  
+- Type de valeur : **REG_DWORD**.  
   
--   Données de valeur : **1** pour désactiver ; **0** à activer.  
+- Données de valeur : **1** pour désactiver ; **0** à activer.  
   
  Si un assembly doit être désactivé pour des applications clientes partiellement fiables, vous pouvez écrire une mise à jour qui crée la clé de Registre et la valeur.  
   

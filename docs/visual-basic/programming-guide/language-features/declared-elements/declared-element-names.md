@@ -24,11 +24,11 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828618"
 ---
 # <a name="declared-element-names-visual-basic"></a>Noms d'éléments déclarés (Visual Basic)
 Chaque élément déclaré a un nom, également appelé un *identificateur*, qui est utilisé par le code pour faire référence à ce dernier.  
@@ -36,13 +36,13 @@ Chaque élément déclaré a un nom, également appelé un *identificateur*, qui
 ## <a name="rules"></a>Règles  
  Un nom d’élément dans Visual Basic doit respecter les règles suivantes :  
   
--   Il doit commencer par un caractère alphabétique ou un trait de soulignement (`_`).  
+- Il doit commencer par un caractère alphabétique ou un trait de soulignement (`_`).  
   
--   Il doit uniquement contenir des caractères alphabétiques, des chiffres décimaux et des traits de soulignement.  
+- Il doit uniquement contenir des caractères alphabétiques, des chiffres décimaux et des traits de soulignement.  
   
--   Il doit contenir au moins un caractère alphabétique ou un chiffre décimal s’il commence par un trait de soulignement.  
+- Il doit contenir au moins un caractère alphabétique ou un chiffre décimal s’il commence par un trait de soulignement.  
   
--   Il ne doit pas être plus de 1023 caractères.  
+- Il ne doit pas être plus de 1023 caractères.  
   
  La longueur maximale de 1023 caractères s’applique également à la chaîne entière d’un nom qualifié complet, tel que `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Chaque élément déclaré a un nom, également appelé un *identificateur*, qui
   
  En règle générale, vous devez utiliser des noms échappés uniquement lorsque :  
   
--   Votre code a migré à partir d’une version antérieure de Visual Basic qui n’a pas réservé le mot clé utilisé en tant que nom ; ou  
+- Votre code a migré à partir d’une version antérieure de Visual Basic qui n’a pas réservé le mot clé utilisé en tant que nom ; ou  
   
--   Vous travaillez avec le code écrit dans un autre langage dans lequel le mot clé donné n’est pas réservé.  
+- Vous travaillez avec le code écrit dans un autre langage dans lequel le mot clé donné n’est pas réservé.  
   
  Sinon, vous devez envisager de renommer l’élément si son nom est en conflit avec un mot clé. L’environnement de développement intégré (IDE) fournit un moyen simple de le faire. Pour plus d’informations, consultez [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   

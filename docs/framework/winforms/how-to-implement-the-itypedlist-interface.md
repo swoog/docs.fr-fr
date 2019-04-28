@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800853"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Procédure : implémenter l’interface ITypedList
 Implémentez le <xref:System.ComponentModel.ITypedList> interface pour activer la découverte du schéma pour une liste pouvant être liée.  
@@ -35,7 +35,7 @@ Implémentez le <xref:System.ComponentModel.ITypedList> interface pour activer l
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System.Drawing et System.Windows.Forms.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
 ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012189"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Procédure : définir les modes de tri des colonnes dans le contrôle DataGridView Windows Forms
 Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone de texte contrôle, le tri automatique par défaut, tandis que les autres types de colonnes ne sont pas triées automatiquement. Parfois, vous devez remplacer ces valeurs par défaut. Par exemple, vous pouvez afficher des images au lieu de texte, des nombres ou des valeurs de cellule d’énumération. Tandis que les images ne peut pas être triées, les valeurs sous-jacentes qu’ils représentent peuvent être triées.  
@@ -25,7 +25,7 @@ Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone 
   
 ### <a name="to-set-the-sort-mode-for-a-column"></a>Pour définir le mode de tri pour une colonne  
   
--   définir la propriété <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> ;  
+- définir la propriété <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> ;  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
@@ -33,9 +33,9 @@ Dans la <xref:System.Windows.Forms.DataGridView> utilisent des colonnes de zone 
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` qui contient une colonne nommée `Priority` ;  
+- un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` qui contient une colonne nommée `Priority` ;  
   
--   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

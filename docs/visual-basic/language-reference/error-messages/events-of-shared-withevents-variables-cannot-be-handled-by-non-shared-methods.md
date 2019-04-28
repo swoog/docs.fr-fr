@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
 ms.openlocfilehash: 2b32043898986b3e3e68fab18c5f907843d7691c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803252"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Les événements des variables WithEvents partagées ne peuvent pas être gérés par des méthodes non partagées
 Une variable déclarée avec le `Shared` modificateur est une variable partagée. Une variable partagée identifie exactement un emplacement de stockage. Une variable déclarée avec le `WithEvents` modificateur garantit que le type auquel appartient la variable gère l’ensemble de la variable déclenche des événements. Lorsqu’une valeur est attribuée à la variable, la propriété créée par le `WithEvents` déclaration déconnecte tout gestionnaire d’événements existant et raccorde le nouveau gestionnaire d’événements via le `Add` (méthode).  
@@ -21,7 +21,7 @@ Une variable déclarée avec le `Shared` modificateur est une variable partagée
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Déclarez votre gestionnaire d’événements `Shared`.  
+- Déclarez votre gestionnaire d’événements `Shared`.  
   
 ## <a name="see-also"></a>Voir aussi
 

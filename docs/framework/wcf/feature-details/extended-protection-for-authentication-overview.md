@@ -3,11 +3,11 @@ title: Vue d'ensemble de la protection étendue de l'authentification
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856724"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Vue d'ensemble de la protection étendue de l'authentification
 La protection étendue de l'authentification contribue à la protection contre les attaques de l'intercepteur (« man-in-the-middle ») au cours desquelles un intrus intercepte les informations d'identification d'un client et les transmet à un serveur.  
@@ -24,11 +24,11 @@ La protection étendue de l'authentification contribue à la protection contre l
   
  Le serveur peut présenter les niveaux de protection suivants :  
   
--   Aucun. Aucune validation de liaison de canal n’est exécutée. Il s'agit du comportement de tous les serveurs qui n'ont pas été mis à jour.  
+- Aucun. Aucune validation de liaison de canal n’est exécutée. Il s'agit du comportement de tous les serveurs qui n'ont pas été mis à jour.  
   
--   Partiel. Tous les clients qui ont été mis à jour doivent fournir les informations de liaison de canal au serveur. Les clients qui n'ont pas été mis à jour n'ont pas à le faire. Il s'agit d'une option intermédiaire qui permet la compatibilité des applications.  
+- Partiel. Tous les clients qui ont été mis à jour doivent fournir les informations de liaison de canal au serveur. Les clients qui n'ont pas été mis à jour n'ont pas à le faire. Il s'agit d'une option intermédiaire qui permet la compatibilité des applications.  
   
--   Complet. Tous les clients doivent fournir des informations de liaison de canal. Le serveur rejette les demandes d'authentification émanant des clients qui ne se soumettent pas à cette obligation.  
+- Complet. Tous les clients doivent fournir des informations de liaison de canal. Le serveur rejette les demandes d'authentification émanant des clients qui ne se soumettent pas à cette obligation.  
   
  Pour plus d'informations, consultez l'exemple Win7 CBT/Protection étendue.  
   

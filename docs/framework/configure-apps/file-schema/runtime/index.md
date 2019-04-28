@@ -9,11 +9,11 @@ ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21c24040f7d093aa72738957316a4219539510c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704815"
 ---
 # <a name="runtime-settings-schema"></a>Schéma des paramètres d'exécution
 Les paramètres d’exécution sont utilisés par le common language runtime pour configurer les applications qui ciblent le .NET Framework.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802607"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Cette expression est une valeur et ne peut donc pas être la cible d'une assignation
 Une instruction tente d’assigner une valeur à une expression. Vous pouvez affecter une valeur uniquement à une variable accessible en écriture, une propriété ou un élément de tableau en cours d’exécution. L’exemple suivant illustre comment cette erreur peut se produire.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si l’instruction assigne une valeur à une expression, remplacez l’expression par une variable accessible en écriture seule, une propriété ou un élément de tableau.  
+- Si l’instruction assigne une valeur à une expression, remplacez l’expression par une variable accessible en écriture seule, une propriété ou un élément de tableau.  
   
--   Si l’instruction effectue un accès indirect via un type valeur (généralement une structure), créez une variable pour contenir le type de valeur.  
+- Si l’instruction effectue un accès indirect via un type valeur (généralement une structure), créez une variable pour contenir le type de valeur.  
   
--   Affectez la structure appropriée (ou autre type de valeur) à la variable.  
+- Affectez la structure appropriée (ou autre type de valeur) à la variable.  
   
--   Utilisez la variable pour accéder à la propriété pour lui attribuer une valeur.  
+- Utilisez la variable pour accéder à la propriété pour lui attribuer une valeur.  
   
 ## <a name="see-also"></a>Voir aussi
 

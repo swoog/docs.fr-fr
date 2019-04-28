@@ -3,11 +3,11 @@ title: Annonces de découverte et client d'annonce
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856583"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Annonces de découverte et client d'annonce
 La fonctionnalité de découverte WCF permet aux composants d’annoncer leur disponibilité. S'il est configuré pour, un service envoie des annonces de type Hello et Bye. Les clients ou d'autres composants peuvent écouter les messages d'annonce de ce type et agir dessus. Cela offre une autre méthode aux clients pour être informés des services. Les fonctionnalités d'annonce ont plusieurs utilisations, par exemple, si les services entrent dans un réseau et le quittent fréquemment, les annonces peuvent constituer une meilleure solution que de rechercher des services. Avec cette approche, le trafic réseau est réduit et le client peut être informé de la présence ou du départ du service dès la réception des annonces.  

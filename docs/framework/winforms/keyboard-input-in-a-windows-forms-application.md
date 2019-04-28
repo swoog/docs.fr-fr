@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
 ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800833"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Entrée au clavier dans une application Windows Forms
 Windows Forms inclut les événements de clavier standard qui vous permettent de répondre à des activations de touches spécifiques et fournit également des méthodes intercepter, de modifier et de consommer des activations de touches à l’application, le formulaire et de contrôler le niveau.  

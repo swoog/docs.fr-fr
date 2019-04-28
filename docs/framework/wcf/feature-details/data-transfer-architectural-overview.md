@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856592"
 ---
 # <a name="data-transfer-architectural-overview"></a>Vue d'ensemble de l'architecture de transfert de données
 Windows Communication Foundation (WCF) peut être considéré comme une infrastructure de messagerie. Il peut recevoir des messages, les traiter et les distribuer au code utilisateur pour action ultérieure, ou il peut construire des messages à partir des données fournies par le code utilisateur et les transmettre vers une destination. Cette rubrique, conçue à l'attention des développeurs avancés, décrit l'architecture de gestion des messages et des données qu'ils contiennent. Pour une approche plus simple des tâches d’envoi et de réception des données, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) peut être considéré comme une infrastr
 ### <a name="getting-data-from-a-message-body"></a>Extraction des données du corps d'un message  
  Vous pouvez extraire les données stockées dans le corps d'un message de deux principales manières :  
   
--   Vous pouvez extraire l'ensemble du corps du message en une seule opération en appelant la méthode <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> et en le passant dans un enregistreur XML. L'ensemble du corps du message est écrit dans cet enregistreur. L'extraction de l'ensemble du corps du message en une seule opération est également appelée *écriture de message*. L'écriture est principalement effectuée par la pile de canaux lors de l'envoi des messages : certaines parties de la pile de canaux accèdent généralement à l'ensemble du corps du message, l'encodent et l'envoient.  
+- Vous pouvez extraire l'ensemble du corps du message en une seule opération en appelant la méthode <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> et en le passant dans un enregistreur XML. L'ensemble du corps du message est écrit dans cet enregistreur. L'extraction de l'ensemble du corps du message en une seule opération est également appelée *écriture de message*. L'écriture est principalement effectuée par la pile de canaux lors de l'envoi des messages : certaines parties de la pile de canaux accèdent généralement à l'ensemble du corps du message, l'encodent et l'envoient.  
   
--   Une autre méthode consiste à appeler <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> et à placer un lecteur XML. Le corps du message peut être accédé séquentiellement si nécessaire en appelant des méthodes sur le lecteur. L'extraction du corps du message élément par élément est également appelée *lecture de message*. La lecture du message est principalement utilisée par l'infrastructure de service lors de la réception des messages. Par exemple, lorsque <xref:System.Runtime.Serialization.DataContractSerializer> est en cours d'utilisation, l'infrastructure de service place un lecteur XML sur le corps et le passe au moteur de désérialisation, qui commence ensuite à lire le message élément par élément et à construire le graphique d'objets correspondant.  
+- Une autre méthode consiste à appeler <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> et à placer un lecteur XML. Le corps du message peut être accédé séquentiellement si nécessaire en appelant des méthodes sur le lecteur. L'extraction du corps du message élément par élément est également appelée *lecture de message*. La lecture du message est principalement utilisée par l'infrastructure de service lors de la réception des messages. Par exemple, lorsque <xref:System.Runtime.Serialization.DataContractSerializer> est en cours d'utilisation, l'infrastructure de service place un lecteur XML sur le corps et le passe au moteur de désérialisation, qui commence ensuite à lire le message élément par élément et à construire le graphique d'objets correspondant.  
   
  Le corps d'un message ne peut être récupéré qu'une seule fois. Cela permet d'utiliser des flux avant uniquement. Par exemple, vous pouvez écrire une substitution <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> que lit à partir de <xref:System.IO.FileStream> et retourne les résultats sous forme d'un ensemble d'informations XML. Vous devrez jamais « rembobiner » au début du fichier.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) peut être considéré comme une infrastr
 ### <a name="the-istreamprovider-interface"></a>Interface IStreamProvider  
  Lors de l'écriture d'un message sortant contenant un corps avec diffusion en continu vers un enregistreur XML, <xref:System.ServiceModel.Channels.Message> utilise une séquence d'appels similaire à la suivante dans son implémentation <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> :  
   
--   Écrivez toutes les informations nécessaires précédant le flux (par exemple, la balise XML d'ouverture).  
+- Écrivez toutes les informations nécessaires précédant le flux (par exemple, la balise XML d'ouverture).  
   
--   Écrire le flux.  
+- Écrire le flux.  
   
--   Écrivez toutes les informations suivant le flux (par exemple, la balise XML de fermeture).  
+- Écrivez toutes les informations suivant le flux (par exemple, la balise XML de fermeture).  
   
  Cela fonctionne correctement avec des encodages similaires à l'encodage XML textuel. Toutefois, certains encodages ne placent pas l'ensemble d'informations XML (par exemple, les balises permettant de démarrer et de terminer les éléments XML) avec les données contenues dans des éléments. Avec l'encodage MTOM par exemple, le message est fractionné en plusieurs parties. Une partie contient l'ensemble d'informations XML, qui peut contenir des références à d'autres parties du contenu d'éléments réels. La taille de l'ensemble d'informations XML étant normalement réduite par rapport à celle du contenu avec diffusion en continu, il est donc logique de mettre cet ensemble en mémoire tampon, de l'écrire, puis d'écrire le contenu avec diffusion en continu. Cela signifie que lorsque la balise d'élément de fermeture est écrite, le flux ne doit pas encore avoir été écrit.  
   

@@ -3,11 +3,11 @@ title: Vue d'ensemble de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878590"
 ---
 # <a name="linq-to-dataset-overview"></a>Vue d'ensemble de LINQ to DataSet
 Le <xref:System.Data.DataSet> est l'un des composants de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] les plus largement utilisés. C'est un élément clé du modèle de programmation déconnecté sur lequel [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] est basé. Il vous permet de mettre en cache explicitement les données de sources différentes.  Pour la couche Présentation, le <xref:System.Data.DataSet> est étroitement intégré aux contrôles d’interface utilisateur graphique pour la liaison de données. Pour la couche intermédiaire, il fournit un cache qui préserve la forme relationnelle de données et inclut des services simples et rapides de requête et de navigation dans la hiérarchie. Une technique courante utilisée pour réduire le nombre de demandes sur une base de données consiste à utiliser le <xref:System.Data.DataSet> pour la mise en cache dans la couche intermédiaire. Par exemple, considérez un piloté [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application Web. En général, une partie significative des données d'application ne change pas fréquemment et est commune à plusieurs sessions ou utilisateurs. Ces données peuvent être conservées en mémoire sur le serveur web, ce qui réduit le nombre de demandes adressées à la base de données et accélère les interactions de l’utilisateur. Un autre aspect utile du <xref:System.Data.DataSet> est qu’il permet à une application à placer des sous-ensembles de données à partir d’une ou plusieurs sources de données dans l’espace de l’application. L'application peut alors manipuler les données en mémoire, tout en conservant sa forme relationnelle.  

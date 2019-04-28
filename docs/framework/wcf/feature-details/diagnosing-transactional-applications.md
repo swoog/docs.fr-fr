@@ -3,11 +3,11 @@ title: Diagnostic d’applications transactionnelles
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856737"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostic d’applications transactionnelles
 Cette rubrique décrit comment utiliser la gestion de Windows Communication Foundation (WCF) et de la fonctionnalité de diagnostic pour résoudre les problèmes d’une application transactionnelle.  
@@ -87,15 +87,15 @@ Cette rubrique décrit comment utiliser la gestion de Windows Communication Foun
 ## <a name="tracing"></a>Traçage  
  Les suivis vous permettent de surveiller et d'analyser les erreurs dans vos applications transactionnelles. Pour activer le suivi, procédez comme suit :  
   
--   Suivi de WCF standard  
+- Suivi de WCF standard  
   
      Ce type de suivi est identique à celui n’importe quelle application WCF. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Suivi WS-AtomicTransaction  
+- Suivi WS-AtomicTransaction  
   
      Suivi de WS-AtomicTransaction peut être activé à l’aide de la [(wsatConfig.exe) de l’utilitaire de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Un suivi de ce type permet de connaître l’état des transactions et des participants d’un système. Pour activer également le suivi du modèle de service interne, affectez une valeur valide de l'énumération `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` à la clé de registre <xref:System.Diagnostics.SourceLevels>. Vous pouvez activer l’enregistrement des messages dans la même façon que d’autres applications WCF.  
   
--   Suivi `System.Transactions`  
+- Suivi `System.Transactions`  
   
      Lorsque vous utilisez le protocole OleTransactions, les messages de protocole ne peuvent pas être suivis. La prise en charge du suivi fournie par l’infrastructure <xref:System.Transactions> (laquelle utilise OleTransactions) permet aux utilisateurs de consulter les événements qui se sont produits au niveau des transactions. Pour activer le suivi d'une application <xref:System.Transactions>, incluez le code suivant dans le fichier de configuration `App.config`.  
   
