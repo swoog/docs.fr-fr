@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867135"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie des objets : Comment les objets sont créés et détruits (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d’initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  
@@ -84,13 +84,13 @@ Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâc
 ### <a name="implementing-idisposable"></a>Implémentation de IDisposable  
  Une classe qui implémente l'interface <xref:System.IDisposable> doit inclure les sections de code suivantes :  
   
--   Un champ de suivi permettant de déterminer si l'objet a été supprimé :  
+- Un champ de suivi permettant de déterminer si l'objet a été supprimé :  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Une surcharge de la méthode <xref:System.IDisposable.Dispose%2A> qui libère les ressources de la classe. Cette méthode doit être appelée par les méthodes <xref:System.IDisposable.Dispose%2A> et `Finalize` de la classe de base :  
+- Une surcharge de la méthode <xref:System.IDisposable.Dispose%2A> qui libère les ressources de la classe. Cette méthode doit être appelée par les méthodes <xref:System.IDisposable.Dispose%2A> et `Finalize` de la classe de base :  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâc
     End Sub  
     ```  
   
--   Une implémentation de <xref:System.IDisposable.Dispose%2A> qui contient uniquement le code suivant :  
+- Une implémentation de <xref:System.IDisposable.Dispose%2A> qui contient uniquement le code suivant :  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâc
     End Sub  
     ```  
   
--   Une substitution de la méthode `Finalize` qui contient uniquement le code suivant :  
+- Une substitution de la méthode `Finalize` qui contient uniquement le code suivant :  
   
     ```  
     Protected Overrides Sub Finalize()  

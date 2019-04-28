@@ -3,11 +3,11 @@ title: Référence des mots clés
 description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
 ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904096"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -38,7 +38,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`exception`|[Gestion des exceptions](exception-handling/index.md)<br /><br />[Types d'exceptions](exception-handling/exception-types.md)|Utilisé pour déclarer un type d’exception.|
 |`extern`|[Fonctions externes](functions/external-functions.md)|Indique qu’un élément de programme déclaré est défini dans un autre fichier binaire ou un assembly.|
 |`false`|[Types primitifs](primitive-types.md)|Utilisé comme un littéral booléen.|
-|`finally`|[Exceptions : Le `try...finally` Expression](exception-handling/the-try-finally-expression.md)|Utilisé conjointement avec `try` pour introduire un bloc de code qui s’exécute indépendamment de si une exception se produit.|
+|`finally`|[Exceptions : Le `try...finally` Expression](exception-handling/the-try-finally-expression.md)|Utilisé conjointement avec `try` pour introduire un bloc de code qui s’exécute indépendamment de si une exception se produit.|
 |`fixed`|[fixe](fixed.md)|Utilisé pour « épingler » un pointeur sur la pile pour éviter qu’il le garbage collecté.|
 |`for`|[Boucles : `for...to` Expression](loops-for-to-expression.md)<br /><br />[Boucles : expression for...in](loops-for-in-expression.md)|Utilisé dans les constructions de boucle.|
 |`fun`|[Expressions lambda : le mot clé `fun` ](functions/lambda-expressions-the-fun-keyword.md)|Utilisé dans les expressions lambda, également appelées fonctions anonymes.|
@@ -77,7 +77,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`then`|[Expressions conditionnelles : `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Constructeurs](members/constructors.md)|Utilisé dans des expressions conditionnelles.<br /><br />Également utilisé pour effectuer des effets secondaires après la construction de l’objet.|
 |`to`|[Boucles : `for...to` Expression](loops-for-to-expression.md)|Utilisé dans `for` boucles pour indiquer une plage.|
 |`true`|[Types primitifs](primitive-types.md)|Utilisé comme un littéral booléen.|
-|`try`|[Exceptions : L’Expression try... with](exception-handling/the-try-with-expression.md)<br /><br />[Exceptions : Try... finally Expression](exception-handling/the-try-finally-expression.md)|Utilisé pour introduire un bloc de code qui peut générer une exception. Utilisé conjointement avec `with` ou `finally`.|
+|`try`|[Exceptions : L’Expression try... with](exception-handling/the-try-with-expression.md)<br /><br />[Exceptions : Try... finally Expression](exception-handling/the-try-finally-expression.md)|Utilisé pour introduire un bloc de code qui peut générer une exception. Utilisé conjointement avec `with` ou `finally`.|
 |`type`|[Types F#](fsharp-types.md)<br /><br />[Classes](classes.md)<br /><br />[Enregistrements](records.md)<br /><br />[Structures](structures.md)<br /><br />[Énumérations](enumerations.md)<br /><br />[Unions discriminées](discriminated-unions.md)<br /><br />[Abréviations de types](type-abbreviations.md)<br /><br />[Unités de mesure](units-of-measure.md)|Utilisé pour déclarer une classe enregistrement, structure, union discriminée, type d’énumération, unité de mesure ou l’abréviation de type.|
 |`upcast`|[Casts et conversions](casting-and-conversions.md)|Permet de convertir en un type qui est plus haut dans la chaîne d’héritage.|
 |`use`|[Gestion des ressources : le mot clé `use` ](resource-management-the-use-keyword.md)|Utilisé au lieu de `let` pour les valeurs qui nécessitent `Dispose` à appeler pour libérer des ressources.|
@@ -86,7 +86,7 @@ Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique,
 |`void`|[Types primitifs](primitive-types.md)|Indique le .NET `void` type. Utilisé lors de l’interaction avec d’autres langages .NET.|
 |`when`|[Contraintes](generics/constraints.md)|Utilisé pour les conditions booléennes (*lorsque gardes*) sur les correspondances de modèles et introduire une clause de contrainte pour un paramètre de type générique.|
 |`while`|[Boucles : `while...do` Expression](loops-while-do-expression.md)|Introduit une construction en boucle.|
-|`with`|[Expressions match](match-expressions.md)<br /><br />[Expressions d'objet](object-expressions.md)<br /><br />[Copie et mise à jour des expressions d’enregistrement](copy-and-update-record-expressions.md)<br /><br />[Extensions de type](type-extensions.md)<br /><br />[Exceptions : Le `try...with` Expression](exception-handling/the-try-with-expression.md)|Utilisé conjointement avec le `match` mot clé dans les expressions de critères spéciaux. Également utilisé dans les expressions d’objet, les expressions de copie enregistrements et les extensions de type pour introduire des définitions de membre et d’introduire des gestionnaires d’exceptions.|
+|`with`|[Expressions match](match-expressions.md)<br /><br />[Expressions d'objet](object-expressions.md)<br /><br />[Copie et mise à jour des expressions d’enregistrement](copy-and-update-record-expressions.md)<br /><br />[Extensions de type](type-extensions.md)<br /><br />[Exceptions : Le `try...with` Expression](exception-handling/the-try-with-expression.md)|Utilisé conjointement avec le `match` mot clé dans les expressions de critères spéciaux. Également utilisé dans les expressions d’objet, les expressions de copie enregistrements et les extensions de type pour introduire des définitions de membre et d’introduire des gestionnaires d’exceptions.|
 |`yield`|[Séquences](sequences.md)|Utilisé dans une expression de séquence pour produire une valeur pour une séquence.|
 |`yield!`|[Expressions de calcul](computation-expressions.md)<br /><br />[Flux de travail asynchrones](asynchronous-workflows.md)|Utilisé dans une expression de calcul pour ajouter le résultat d’une expression de calcul donné à une collection de résultats pour l’expression de calcul qui la contient.|
 

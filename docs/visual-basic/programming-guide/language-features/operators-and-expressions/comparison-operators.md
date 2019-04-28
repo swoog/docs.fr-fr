@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827955"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Opérateurs de comparaison en Visual Basic
 Opérateurs de comparaison comparent deux expressions et retournent un `Boolean` valeur qui représente la relation de leurs valeurs. Il existe des opérateurs pour comparer des valeurs numériques, des opérateurs de comparaison de chaînes et des opérateurs pour comparer des objets. Les trois types d’opérateurs sont abordées dans cet article.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757379"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procédure : ajouter, charger, enregistrer et annuler des boutons dans le contrôle BindingNavigator de Windows Forms
 Le <xref:System.Windows.Forms.BindingNavigator> contrôle est à usage spécial <xref:System.Windows.Forms.ToolStrip> contrôle qui est destiné à la navigation et la manipulation des contrôles liés aux données sur votre formulaire.  
@@ -40,15 +40,15 @@ Le <xref:System.Windows.Forms.BindingNavigator> contrôle est à usage spécial 
   
 7. Dans le **éditeur de collections Items**, procédez comme suit :  
   
-    1.  Ajouter un <xref:System.Windows.Forms.ToolStripSeparator> et trois <xref:System.Windows.Forms.ToolStripButton> éléments en sélectionnant le type approprié de <xref:System.Windows.Forms.ToolStripItem> et en cliquant sur le **ajouter** bouton.  
+    1. Ajouter un <xref:System.Windows.Forms.ToolStripSeparator> et trois <xref:System.Windows.Forms.ToolStripButton> éléments en sélectionnant le type approprié de <xref:System.Windows.Forms.ToolStripItem> et en cliquant sur le **ajouter** bouton.  
   
-    2.  Définir le <xref:System.Windows.Forms.ToolStripItem.Name%2A> propriété des boutons pour **LoadButton**, **SaveButton**, et **CancelButton**, respectivement.  
+    2. Définir le <xref:System.Windows.Forms.ToolStripItem.Name%2A> propriété des boutons pour **LoadButton**, **SaveButton**, et **CancelButton**, respectivement.  
   
-    3.  Définir le <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriété des boutons pour **charge**, **enregistrer**, et **Annuler**.  
+    3. Définir le <xref:System.Windows.Forms.ToolStripItem.Text%2A> propriété des boutons pour **charge**, **enregistrer**, et **Annuler**.  
   
-    4.  Définir le <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propriété pour chacun des boutons pour **texte**. Vous pouvez également définir cette propriété **Image** ou **ImageAndText**et définir l’image à afficher dans le <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriété.  
+    4. Définir le <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propriété pour chacun des boutons pour **texte**. Vous pouvez également définir cette propriété **Image** ou **ImageAndText**et définir l’image à afficher dans le <xref:System.Windows.Forms.ToolStripItem.Image%2A> propriété.  
   
-    5.  Cliquez sur **OK** pour fermer la boîte de dialogue. Les boutons sont ajoutés à la <xref:System.Windows.Forms.ToolStrip>.  
+    5. Cliquez sur **OK** pour fermer la boîte de dialogue. Les boutons sont ajoutés à la <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Avec le bouton droit de la forme et choisissez **afficher le Code**.  
   

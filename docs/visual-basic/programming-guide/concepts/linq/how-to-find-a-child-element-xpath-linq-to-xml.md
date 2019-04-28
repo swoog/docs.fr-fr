@@ -3,11 +3,11 @@ title: 'Procédure : Rechercher un élément enfant (XPath-LINQ to XML) (Visual
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855242"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Procédure : Rechercher un élément enfant (XPath-LINQ to XML) (Visual Basic)
 Cette rubrique compare l’axe des éléments enfants XPath à la méthode <xref:System.Xml.Linq.XContainer.Element%2A> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

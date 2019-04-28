@@ -1,17 +1,17 @@
 ---
-title: Générer des services résilients prêts pour le cloud. Gérer les défaillances transitoires dans le cloud
-description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Générer des services résilients prêts pour le cloud. Gérer les défaillances transitoires dans le cloud
+title: Générer des services résilients prêts pour le cloud. gérer les échecs passagers dans le cloud
+description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Générer des services résilients prêts pour le cloud. gérer les échecs passagers dans le cloud
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811840"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Build services résilients prêts pour le cloud : Gérer les défaillances transitoires dans le cloud
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Créer des services résilients compatibles avec le cloud : gérer les échecs passagers dans le cloud
 
 La résilience est la capacité à surmonter les défaillances et à continuer de fonctionner. La résilience n’est pas sur éviter les défaillances, mais accepter le fait que les échecs seront produit et d’y répondre de façon à éviter la perte de données ni temps d’arrêt. La résilience vise à remettre l’application dans un état entièrement fonctionnel après une défaillance.
 
@@ -43,19 +43,19 @@ Pour savoir comment implémenter des stratégies pour la gestion des défaillanc
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Implémentation de la communication résiliente pour gérer une défaillance partielle**
+- **Implémentation de la communication résiliente pour gérer une défaillance partielle**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework la résilience et nouvelle tentative logique de connexion (version 6 et versions ultérieure)**
+- **Entity Framework la résilience et nouvelle tentative logique de connexion (version 6 et versions ultérieure)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Le bloc d’Application de gestion des erreurs temporaires**
+- **Le bloc d’Application de gestion des erreurs temporaires**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Bibliothèque Polly pour les communications HTTP résilientes**
+- **Bibliothèque Polly pour les communications HTTP résilientes**
 
     https://github.com/App-vNext/Polly
 

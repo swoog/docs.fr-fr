@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875964"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Validation d'une transaction en une phase unique et en plusieurs phases
 Les ressources utilisées dans une transaction sont managées par un gestionnaire de ressources, dont les actions sont coordonnées par un gestionnaire de transactions. Le [l’inscription de ressources comme Participants à une Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) rubrique explique comment une ressource (ou plusieurs ressources) peuvent être inscrit dans une transaction. Elle traite de la coordination de la validation d'une transaction entre les ressources inscrites.  

@@ -3,11 +3,11 @@ title: Opérateurs arithmétiques
 description: En savoir plus sur les opérateurs arithmétiques qui sont disponibles dans le F# langage de programmation.
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925851"
 ---
 # <a name="arithmetic-operators"></a>Opérateurs arithmétiques
 
@@ -19,7 +19,7 @@ Le tableau suivant récapitule les opérateurs arithmétiques sont disponibles p
 
 |Opérateur binaire|Notes|
 |---------------|-----|
-|`+` (addition, ainsi que)|Elle est désactivée. Condition de dépassement possible lorsque les nombres sont ajoutés et la somme dépasse la valeur absolue maximale prise en charge par le type.|
+|`+` (addition, plus)|Elle est désactivée. Condition de dépassement possible lorsque les nombres sont ajoutés et la somme dépasse la valeur absolue maximale prise en charge par le type.|
 |`-` (soustraction, moins)|Elle est désactivée. Condition de dépassement de capacité négatif possible lors de la soustrayant des types non signés, ou lorsque les valeurs à virgule flottante sont trop petits pour être représentée par le type.|
 |`*` (multiplication, fois)|Elle est désactivée. Condition de dépassement de capacité possible lorsque les nombres sont multipliés et le produit dépasse la valeur absolue maximale prise en charge par le type.|
 |`/` (division, divisé par)|Division par zéro provoque un <xref:System.DivideByZeroException> pour les types intégraux. Pour les types à virgule flottante, division par zéro vous donne les valeurs à virgule flottante spéciales `+Infinity` ou `-Infinity`. Il existe également une condition de dépassement de capacité négatif possible lorsqu’un nombre à virgule flottante est trop petit pour être représenté par le type.|

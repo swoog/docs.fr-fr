@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868964"
 ---
 # <a name="securing-method-access"></a>Sécurisation de l'accès à la méthode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166177"
   
  Le code managé propose plusieurs façons de limiter l'accès à la méthode :  
   
--   Limitez l'étendue de l'accessibilité à la classe, à l'assembly ou aux classes dérivées, s'ils sont de confiance. C'est la façon la plus simple de limiter l'accès à la méthode. Notez que, en général, les classes dérivées peuvent être moins fiables que la classe dont elles dérivent, même si dans certains cas elles partagent l'identité de la classe parente. En particulier, ne déduisez pas un niveau de confiance du mot clé **protégé**, qui n’est pas nécessairement utilisé dans le contexte de sécurité.  
+- Limitez l'étendue de l'accessibilité à la classe, à l'assembly ou aux classes dérivées, s'ils sont de confiance. C'est la façon la plus simple de limiter l'accès à la méthode. Notez que, en général, les classes dérivées peuvent être moins fiables que la classe dont elles dérivent, même si dans certains cas elles partagent l'identité de la classe parente. En particulier, ne déduisez pas un niveau de confiance du mot clé **protégé**, qui n’est pas nécessairement utilisé dans le contexte de sécurité.  
   
--   Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (nom fort, éditeur, zone, etc.) que vous choisissez.  
+- Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (nom fort, éditeur, zone, etc.) que vous choisissez.  
   
--   Limitez l'accès à la méthode aux appelants dont les autorisations correspondent à celles que vous choisissez.  
+- Limitez l'accès à la méthode aux appelants dont les autorisations correspondent à celles que vous choisissez.  
   
  De même, la sécurité déclarative vous permet de contrôler l'héritage de classes. Vous pouvez utiliser **InheritanceDemand** effectuer les opérations suivantes :  
   
--   Obliger des classes dérivées à posséder une identité ou une autorisation spécifiée.  
+- Obliger des classes dérivées à posséder une identité ou une autorisation spécifiée.  
   
--   Obliger des classes dérivées qui substituent des méthodes spécifiques à posséder une identité ou une autorisation spécifiée.  
+- Obliger des classes dérivées qui substituent des méthodes spécifiques à posséder une identité ou une autorisation spécifiée.  
   
  L'exemple suivant montre comment sécuriser une classe public pour un accès limité en imposant que les appelants soient signés avec un nom fort particulier. Cet exemple utilise le <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> avec un **à la demande** pour le nom fort. Pour plus d’informations sur les tâches sur la façon de signer un assembly avec un nom fort, consultez [création et assemblys avec nom fort](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

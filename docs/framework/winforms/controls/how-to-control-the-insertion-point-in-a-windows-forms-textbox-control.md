@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746626"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procédure : contrôler le point d’insertion dans un contrôle TextBox Windows Forms
 Lorsqu’un formulaire Windows <xref:System.Windows.Forms.TextBox> contrôle reçoit tout d’abord le focus, l’insertion de la valeur par défaut dans la zone de texte est à gauche du texte existant. L’utilisateur peut déplacer le point d’insertion avec le clavier ou la souris. Si la zone de texte perd, puis reprend le focus, le point d’insertion sera, là où l’utilisateur a placé en dernier.  
@@ -59,7 +59,7 @@ Lorsqu’un formulaire Windows <xref:System.Windows.Forms.TextBox> contrôle re�
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Pour que l’insertion de zone de texte pointent visible par défaut sur un nouveau formulaire  
   
--   Définir le <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.Control.TabIndex%2A> propriété `0`.  
+- Définir le <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.Control.TabIndex%2A> propriété `0`.  
   
 ## <a name="see-also"></a>Voir aussi
 

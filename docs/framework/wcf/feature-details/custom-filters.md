@@ -3,11 +3,11 @@ title: Filtres personnalisés
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
 ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857218"
 ---
 # <a name="custom-filters"></a>Filtres personnalisés
 Les filtres personnalisés vous permettent de définir une logique de correspondance qui ne peut pas être réalisée à l'aide des filtres de messages fournis par le système. Par exemple, vous pouvez créer un filtre personnalisé qui hache un élément de message particulier, puis examine la valeur pour déterminer si le filtre doit retourner la valeur true ou false.  
@@ -46,11 +46,11 @@ public class MyMessageFilter: MessageFilter
   
  En règle générale, lors de l'implémentation d'un filtre personnalisé, il convient d'éviter :  
   
--   les E/S, comme l'enregistrement de données sur un disque ou dans une base de données ;  
+- les E/S, comme l'enregistrement de données sur un disque ou dans une base de données ;  
   
--   un traitement inutile, comme une boucle sur plusieurs enregistrements d'un document ;  
+- un traitement inutile, comme une boucle sur plusieurs enregistrements d'un document ;  
   
--   les opérations bloquantes, comme des appels qui impliquent l'obtention d'un verrou sur des ressources partagées ou la réalisation de recherches dans une base de données.  
+- les opérations bloquantes, comme des appels qui impliquent l'obtention d'un verrou sur des ressources partagées ou la réalisation de recherches dans une base de données.  
   
  Avant d'utiliser un filtre personnalisé dans un environnement de production, vous devez exécuter des tests de performance pour déterminer la durée moyenne nécessaire au filtre pour évaluer un message. En combinaison avec le temps de traitement moyen des autres filtres utilisés dans la table de filtres, cela vous permettra de déterminer correctement la valeur maximale de délai d'attente qui doit être spécifiée par l'application cliente.  
   

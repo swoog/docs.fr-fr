@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011812"
 ---
 # <a name="backgroundworker-component-overview"></a>Vue d'ensemble du composant BackgroundWorker
-De nombreuses opérations couramment exécutées peuvent être longues à s'éxécuter. Par exemple :  
+De nombreuses opérations couramment exécutées peuvent être longues à s'éxécuter. Exemple :  
   
--   Téléchargements d'images  
+- Téléchargements d'images  
   
--   Appels de service web  
+- Appels de service web  
   
--   Téléchargements et chargements de fichiers (y compris pour les applications d'égal à égal)  
+- Téléchargements et chargements de fichiers (y compris pour les applications d'égal à égal)  
   
--   Calculs locaux complexes  
+- Calculs locaux complexes  
   
--   Transactions de base de données  
+- Transactions de base de données  
   
--   Accès au disque local, compte tenu de sa vitesse lente par rapport à l'accès mémoire  
+- Accès au disque local, compte tenu de sa vitesse lente par rapport à l'accès mémoire  
   
  Les opérations comme celles-ci peuvent entraîner le blocage de votre interface utilisateur pendant leur exécution. Quand vous souhaitez une interface utilisateur réactive et que vous êtes confronté à de longs délais associés à ce type d'opérations, le composant <xref:System.ComponentModel.BackgroundWorker> fournit une solution commode.  
   

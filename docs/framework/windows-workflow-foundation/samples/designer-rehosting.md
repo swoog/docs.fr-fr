@@ -3,24 +3,24 @@ title: Réhébergement du concepteur
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005226"
 ---
 # <a name="designer-rehosting"></a>Réhébergement du concepteur
 Le réhébergement du concepteur est un scénario courant qui fait référence à l'hébergement de la zone de dessin de conception du workflow dans une application personnalisée. L'application d'hébergement avec laquelle la plupart des personnes sont familières est Visual Studio, mais il existe plusieurs scénarios où l'affichage du concepteur de workflow dans une application peut être utile :  
   
--   Applications d'analyse (permettant à un utilisateur final de visualiser le processus ainsi que les données d'exécution sur le processus, telles que l'état actuellement actif, les données de durée d'exécution agrégées ou d'autres informations relatives à une instance du workflow).  
+- Applications d'analyse (permettant à un utilisateur final de visualiser le processus ainsi que les données d'exécution sur le processus, telles que l'état actuellement actif, les données de durée d'exécution agrégées ou d'autres informations relatives à une instance du workflow).  
   
--   Applications qui permettent à un utilisateur de personnaliser le processus avec un ensemble limité d'activités.  
+- Applications qui permettent à un utilisateur de personnaliser le processus avec un ensemble limité d'activités.  
   
  Pour prendre en charge ces types d'applications, le concepteur de workflow accompagne le .NET Framework et peut être hébergé à l'intérieur d'une application WPF, ou dans une application WinForms avec le code d'hébergement WPF approprié. Cet exemple illustre les opérations suivantes :  
   
--   Réhébergement du concepteur WF.  
+- Réhébergement du concepteur WF.  
   
--   Utilisation de la boîte à outils réhébergée ainsi que de la grille des propriétés.  
+- Utilisation de la boîte à outils réhébergée ainsi que de la grille des propriétés.  
   
 ## <a name="rehosting-the-designer"></a>Réhébergement du concepteur  
  Cet exemple montre comment créer la disposition WPF pour contenir le concepteur, comme dans la disposition de grille suivante (code de boîte à outils omis pour des raisons d'espace). Notez la désignation des bordures qui contiennent le concepteur et la grille des propriétés.  

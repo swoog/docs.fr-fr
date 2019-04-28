@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921106"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Résolution de surcharge à liaison tardive ne peut pas être appliquée à '\<nom_procédure >', car l’instance d’accès est un type interface
 Le compilateur tente de résoudre une référence à une propriété surchargée ou une procédure, mais la référence échoue, car un argument est de type `Object` et l’objet de référence a le type de données d’une interface. Le `Object` argument force le compilateur à résoudre la référence en tant qu’à liaison tardive.  
@@ -24,7 +24,7 @@ Le compilateur tente de résoudre une référence à une propriété surchargée
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Utilisez `CType` pour effectuer un cast de l’argument de `Object` au type spécifié par la signature de la surcharge que vous souhaitez appeler.  
+- Utilisez `CType` pour effectuer un cast de l’argument de `Object` au type spécifié par la signature de la surcharge que vous souhaitez appeler.  
   
      Notez que cela ne permet pas d’effectuer un cast de l’objet de référence à l’interface sous-jacente. Vous devez effectuer un cast de l’argument pour éviter cette erreur.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756752"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Dépannage des variables en Visual Basic
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des variables en Visual Basic.  
@@ -18,9 +18,9 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
 ## <a name="unable-to-access-members-of-an-object"></a>Impossible d’accéder aux membres d’un objet  
  Si votre code tente d’accéder à une propriété ou à une méthode sur un objet, il existe deux résultats possibles en cas d’erreur :  
   
--   Le compilateur peut générer un message d’erreur si vous déclarez la variable objet comme étant d’un type spécifique et que vous faites ensuite référence à un membre non défini par ce type.  
+- Le compilateur peut générer un message d’erreur si vous déclarez la variable objet comme étant d’un type spécifique et que vous faites ensuite référence à un membre non défini par ce type.  
   
--   Une exception <xref:System.MemberAccessException> runtime se produit quand l’objet assigné à une variable objet n’expose pas le membre auquel votre code essaie d’accéder. Dans le cas d’une variable de [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), vous pouvez également recevoir cette exception si le membre n’est pas `Public`. Cela est dû au fait que la liaison tardive autorise l’accès uniquement aux membres `Public` .  
+- Une exception <xref:System.MemberAccessException> runtime se produit quand l’objet assigné à une variable objet n’expose pas le membre auquel votre code essaie d’accéder. Dans le cas d’une variable de [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), vous pouvez également recevoir cette exception si le membre n’est pas `Public`. Cela est dû au fait que la liaison tardive autorise l’accès uniquement aux membres `Public` .  
   
  Quand l’ [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) affecte la valeur `On`à la vérification de type, une variable objet peut accéder uniquement aux méthodes et aux propriétés de la classe avec laquelle vous la déclarez. L'exemple suivant illustre ce comportement.  
 

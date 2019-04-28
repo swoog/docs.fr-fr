@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863504"
 ---
 # <a name="procedures-in-visual-basic"></a>Procédures dans Visual Basic
 Un *procédure* est un bloc d’instructions de Visual Basic délimitées par une instruction de déclaration (`Function`, `Sub`, `Operator`, `Get`, `Set`) et une mise en correspondance `End` déclaration. Toutes les instructions exécutables dans Visual Basic doivent figurer dans une procédure.  
@@ -24,11 +24,11 @@ Un *procédure* est un bloc d’instructions de Visual Basic délimitées par un
 ## <a name="returning-from-a-procedure"></a>Retour d’une procédure  
  Une procédure retourne le contrôle au code appelant lorsqu’elle est terminée. Pour cela, elle peut utiliser une [instruction de retour](../../../../visual-basic/language-reference/statements/return-statement.md), l’instruction [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) correspondant à la procédure, ou l’instruction [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md). Le contrôle passe ensuite au code appelant après le point de l’appel de procédure.  
   
--   Avec une instruction `Return`, le contrôle retourne immédiatement au code appelant. Les instructions qui suivent l’instruction `Return` ne s’exécutent pas. Vous pouvez utiliser plusieurs instructions `Return` dans la même procédure.  
+- Avec une instruction `Return`, le contrôle retourne immédiatement au code appelant. Les instructions qui suivent l’instruction `Return` ne s’exécutent pas. Vous pouvez utiliser plusieurs instructions `Return` dans la même procédure.  
   
--   Avec une instruction `Exit Sub` ou `Exit Function`, le contrôle retourne immédiatement au code appelant. Les instructions qui suivent l’instruction `Exit` ne s’exécutent pas. Vous pouvez utiliser plusieurs instructions `Exit` dans la même procédure et combiner des instructions `Return` et `Exit` dans la même procédure.  
+- Avec une instruction `Exit Sub` ou `Exit Function`, le contrôle retourne immédiatement au code appelant. Les instructions qui suivent l’instruction `Exit` ne s’exécutent pas. Vous pouvez utiliser plusieurs instructions `Exit` dans la même procédure et combiner des instructions `Return` et `Exit` dans la même procédure.  
   
--   Si une procédure ne comporte pas d’instructions `Return` ou `Exit`, elle se termine par une instruction `End Sub` ou `End Function`, `End Get`, ou l’instruction `End Set` qui suit la dernière instruction du corps de la procédure. L’instruction `End` retourne immédiatement le contrôle au code appelant. Une procédure ne peut contenir qu’une seule instruction `End`.  
+- Si une procédure ne comporte pas d’instructions `Return` ou `Exit`, elle se termine par une instruction `End Sub` ou `End Function`, `End Get`, ou l’instruction `End Set` qui suit la dernière instruction du corps de la procédure. L’instruction `End` retourne immédiatement le contrôle au code appelant. Une procédure ne peut contenir qu’une seule instruction `End`.  
   
 ## <a name="parameters-and-arguments"></a>Paramètres et arguments  
  Dans la plupart des cas, une procédure doit s’exécuter sur des données différentes chaque fois que vous l’appelez. Vous pouvez transmettre ces informations à la procédure dans le cadre de l’appel de procédure. La procédure définit zéro ou plusieurs *paramètres*, chacun d’eux représentant une valeur qu’elle s’attend à recevoir de votre part. Dans l’appel de procédure, un *argument* est associé à chaque paramètre dans la définition de la procédure. Un argument représente la valeur que vous passez au paramètre correspondant dans un appel de procédure donné.  
@@ -36,19 +36,19 @@ Un *procédure* est un bloc d’instructions de Visual Basic délimitées par un
 ## <a name="types-of-procedures"></a>Types de procédures  
  Visual Basic utilise plusieurs types de procédures :  
   
--   Les [procédures Sub](./sub-procedures.md) exécutent des actions mais ne retournent aucune valeur au code appelant.  
+- Les [procédures Sub](./sub-procedures.md) exécutent des actions mais ne retournent aucune valeur au code appelant.  
   
--   Les procédures de gestion d’événements sont des procédures `Sub` qui s’exécutent en réponse à un événement déclenché par une action de l’utilisateur ou une occurrence dans un programme.  
+- Les procédures de gestion d’événements sont des procédures `Sub` qui s’exécutent en réponse à un événement déclenché par une action de l’utilisateur ou une occurrence dans un programme.  
   
--   Les [procédures Function](./function-procedures.md) retournent une valeur au code appelant. Elles peuvent effectuer d’autres actions avant de retourner une valeur.
+- Les [procédures Function](./function-procedures.md) retournent une valeur au code appelant. Elles peuvent effectuer d’autres actions avant de retourner une valeur.
 
     Certaines fonctions écrites en langage C# retournent une *valeur de retour de référence*. Les appelants de fonction peuvent modifier la valeur de retour, et cette modification est répercutée dans l’état de l’objet appelé. À partir de Visual Basic 2017, le code Visual Basic peut consommer des valeurs de retour de référence, même s’il ne peut pas retourner une valeur par référence. Pour plus d’informations, consultez [Valeurs de retour de référence](ref-return-values.md).
   
--   Les [procédures Property](./property-procedures.md) renvoient et attribuent des valeurs de propriétés à des objets ou modules.  
+- Les [procédures Property](./property-procedures.md) renvoient et attribuent des valeurs de propriétés à des objets ou modules.  
   
--   Les [procédures Operator](./operator-procedures.md) définissent le comportement d’un opérateur standard lorsqu’un ou les deux opérandes représentent une structure ou classe qui vient d’être définie.  
+- Les [procédures Operator](./operator-procedures.md) définissent le comportement d’un opérateur standard lorsqu’un ou les deux opérandes représentent une structure ou classe qui vient d’être définie.  
   
--   Les [procédures génériques dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) définissent un ou plusieurs *paramètres de type* en plus de leurs paramètres normaux, et le code appelant peut donc passer des types de données spécifiques chaque fois qu’il effectue un appel.  
+- Les [procédures génériques dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) définissent un ou plusieurs *paramètres de type* en plus de leurs paramètres normaux, et le code appelant peut donc passer des types de données spécifiques chaque fois qu’il effectue un appel.  
   
 ## <a name="procedures-and-structured-code"></a>Procédures et code structuré  
  Chaque ligne de code exécutable dans votre application doit figurer à l’intérieur d’une procédure, par exemple `Main`, `calculate`, ou `Button1_Click`. Si vous décomposez des procédures complexes en procédures plus simples, votre application devient plus lisible.  
@@ -57,9 +57,9 @@ Un *procédure* est un bloc d’instructions de Visual Basic délimitées par un
   
  Structurer votre code avec des procédures vous offre les avantages suivants :  
   
--   Les procédures vous permettent de décomposer vos programmes en unités logiques discrètes. Vous pouvez déboguer des unités distinctes plus facilement qu’en déboguant un programme entier sans procédure.  
+- Les procédures vous permettent de décomposer vos programmes en unités logiques discrètes. Vous pouvez déboguer des unités distinctes plus facilement qu’en déboguant un programme entier sans procédure.  
   
--   Après avoir développé des procédures pour les utiliser dans un programme, vous pouvez les utiliser dans d’autres programmes, avec peu ou pas de modifications. Cela vous évite une duplication de code.  
+- Après avoir développé des procédures pour les utiliser dans un programme, vous pouvez les utiliser dans d’autres programmes, avec peu ou pas de modifications. Cela vous évite une duplication de code.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752306"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3, interface
 Fournit une méthode qui étend les « ICorDebugCode » et « ICorDebugCode2 » pour fournir des informations sur une valeur de retour managée.  

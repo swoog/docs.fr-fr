@@ -3,11 +3,11 @@ title: Message Queuing to Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 ms.openlocfilehash: c0674d23f1b4e611e8f3b51a6480a65e9b52d038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756453"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing to Windows Communication Foundation
 Cet exemple montre comment une application Message Queuing (MSMQ) peut envoyer un message MSMQ à un service Windows Communication Foundation (WCF). Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -118,15 +118,15 @@ Console.ReadLine();
 
 2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
 
-    1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
+    1. Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
 
-    2.  Développez le **fonctionnalités** onglet.
+    2. Développez le **fonctionnalités** onglet.
 
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
+    3. Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
 
-    4.  Vérifier le **transactionnel** boîte.
+    4. Vérifier le **transactionnel** boîte.
 
-    5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
+    5. Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
 
 3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

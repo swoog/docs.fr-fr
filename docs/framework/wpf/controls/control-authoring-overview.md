@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017681"
 ---
 # <a name="control-authoring-overview"></a>Vue d’ensemble de la création de contrôles
 L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] réduit grandement la nécessité de créer un contrôle. Vous pouvez toutefois être amené, dans certains cas, à créer un contrôle personnalisé. Cette rubrique aborde les fonctionnalités qui limitent la nécessité de créer un contrôle personnalisé et les différents modèles de création de contrôles dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique montre également comment créer un contrôle.  
@@ -22,18 +22,18 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternatives à l’écriture d’un nouveau contrôle  
  Par le passé, quand vous souhaitiez obtenir une expérience personnalisée à partir d’un contrôle existant, vous étiez limité à la modification des propriétés standard du contrôle (couleur d’arrière-plan, largeur de bordure, la taille de police, etc.). Si vous souhaitiez étendre l’apparence ou le comportement d’un contrôle au-delà de ces paramètres prédéfinis, vous deviez créer un contrôle, en procédant généralement par héritage d’un contrôle existant et par substitution de la méthode responsable du dessin du contrôle.  Bien que ce soit toujours possible, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de personnaliser des contrôles existants en utilisant son modèle de contenu riche, ses styles, ses modèles et ses déclencheurs. La liste suivante donne des exemples d’utilisation de ces fonctionnalités pour créer des expériences personnalisées et cohérentes sans devoir créer un contrôle.  
   
--   **Contenu riche.** De nombreux contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] standard prennent en charge le contenu riche. Par exemple, la propriété de contenu d’un <xref:System.Windows.Controls.Button> est de type <xref:System.Object>, théoriquement possible de tout afficher sur un <xref:System.Windows.Controls.Button>.  Pour qu’un bouton Afficher une image et le texte, vous pouvez ajouter une image et un <xref:System.Windows.Controls.TextBlock> à un <xref:System.Windows.Controls.StackPanel> et affecter le <xref:System.Windows.Controls.StackPanel> à la <xref:System.Windows.Controls.ContentControl.Content%2A> propriété. Étant donné que les contrôles peuvent afficher des éléments visuels [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et des données arbitraires, il est moins souvent nécessaire de créer un contrôle ou de modifier un contrôle existant pour prendre en charge une visualisation complexe. Pour plus d’informations sur le modèle de contenu pour <xref:System.Windows.Controls.Button> et autres modèles de contenu dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consultez [modèle de contenu WPF](wpf-content-model.md).  
+- **Contenu riche.** De nombreux contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] standard prennent en charge le contenu riche. Par exemple, la propriété de contenu d’un <xref:System.Windows.Controls.Button> est de type <xref:System.Object>, théoriquement possible de tout afficher sur un <xref:System.Windows.Controls.Button>.  Pour qu’un bouton Afficher une image et le texte, vous pouvez ajouter une image et un <xref:System.Windows.Controls.TextBlock> à un <xref:System.Windows.Controls.StackPanel> et affecter le <xref:System.Windows.Controls.StackPanel> à la <xref:System.Windows.Controls.ContentControl.Content%2A> propriété. Étant donné que les contrôles peuvent afficher des éléments visuels [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et des données arbitraires, il est moins souvent nécessaire de créer un contrôle ou de modifier un contrôle existant pour prendre en charge une visualisation complexe. Pour plus d’informations sur le modèle de contenu pour <xref:System.Windows.Controls.Button> et autres modèles de contenu dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consultez [modèle de contenu WPF](wpf-content-model.md).  
   
--   **Styles.** Un <xref:System.Windows.Style> est une collection de valeurs qui représentent les propriétés d’un contrôle. Grâce aux styles, vous pouvez créer une représentation réutilisable de l’apparence et du comportement souhaités d’un contrôle sans écrire un nouveau contrôle. Par exemple, supposons que vous voulez que tous vos <xref:System.Windows.Controls.TextBlock> contrôles aient une police rouge, Arial, avec une taille de police de 14. Vous pouvez créer un style comme ressource et définir les propriétés appropriées en conséquence. Chaque <xref:System.Windows.Controls.TextBlock> que vous ajoutez à votre application aura la même apparence.  
+- **Styles.** Un <xref:System.Windows.Style> est une collection de valeurs qui représentent les propriétés d’un contrôle. Grâce aux styles, vous pouvez créer une représentation réutilisable de l’apparence et du comportement souhaités d’un contrôle sans écrire un nouveau contrôle. Par exemple, supposons que vous voulez que tous vos <xref:System.Windows.Controls.TextBlock> contrôles aient une police rouge, Arial, avec une taille de police de 14. Vous pouvez créer un style comme ressource et définir les propriétés appropriées en conséquence. Chaque <xref:System.Windows.Controls.TextBlock> que vous ajoutez à votre application aura la même apparence.  
   
--   **Modèles de données.** Un <xref:System.Windows.DataTemplate> vous permet de personnaliser l’affichage des données sur un contrôle. Par exemple, un <xref:System.Windows.DataTemplate> peut être utilisé pour spécifier comment les données sont affichées dans un <xref:System.Windows.Controls.ListBox>.  Pour obtenir un exemple, consultez [Vue d’ensemble des modèles de données](../data/data-templating-overview.md).  En plus de la personnalisation de l’apparence des données, un <xref:System.Windows.DataTemplate> peut inclure des éléments d’interface utilisateur, ce qui permet une grande flexibilité dans les interfaces utilisateur personnalisées.  Par exemple, en utilisant un <xref:System.Windows.DataTemplate>, vous pouvez créer un <xref:System.Windows.Controls.ComboBox> dans lequel chaque élément contient une case à cocher.  
+- **Modèles de données.** Un <xref:System.Windows.DataTemplate> vous permet de personnaliser l’affichage des données sur un contrôle. Par exemple, un <xref:System.Windows.DataTemplate> peut être utilisé pour spécifier comment les données sont affichées dans un <xref:System.Windows.Controls.ListBox>.  Pour obtenir un exemple, consultez [Vue d’ensemble des modèles de données](../data/data-templating-overview.md).  En plus de la personnalisation de l’apparence des données, un <xref:System.Windows.DataTemplate> peut inclure des éléments d’interface utilisateur, ce qui permet une grande flexibilité dans les interfaces utilisateur personnalisées.  Par exemple, en utilisant un <xref:System.Windows.DataTemplate>, vous pouvez créer un <xref:System.Windows.Controls.ComboBox> dans lequel chaque élément contient une case à cocher.  
   
--   **Modèles de contrôle.** De nombreux contrôles dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliser un <xref:System.Windows.Controls.ControlTemplate> pour définir la structure et l’apparence, qui sépare l’apparence d’un contrôle à partir de la fonctionnalité du contrôle du contrôle. Vous pouvez considérablement modifier l’apparence d’un contrôle en redéfinissant son <xref:System.Windows.Controls.ControlTemplate>.  Imaginons par exemple que vous souhaitiez créer un contrôle ressemblant à un feu rouge. Ce contrôle a une interface utilisateur et des fonctionnalités simples.  Il se compose de trois cercles, dont un seul peut être allumé à la fois. Après réflexion, vous réalisez qu’un <xref:System.Windows.Controls.RadioButton> offre les fonctionnalités d’une sélection à une heure, mais l’apparence par défaut de la <xref:System.Windows.Controls.RadioButton> ressemble rien à l’éclairage d’un feu rouge.  Étant donné que le <xref:System.Windows.Controls.RadioButton> utilise un modèle de contrôle pour définir son apparence, il est facile de redéfinir le <xref:System.Windows.Controls.ControlTemplate> pour répondre aux exigences du contrôle et utiliser des cases d’option pour créer votre feu rouge.  
+- **Modèles de contrôle.** De nombreux contrôles dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliser un <xref:System.Windows.Controls.ControlTemplate> pour définir la structure et l’apparence, qui sépare l’apparence d’un contrôle à partir de la fonctionnalité du contrôle du contrôle. Vous pouvez considérablement modifier l’apparence d’un contrôle en redéfinissant son <xref:System.Windows.Controls.ControlTemplate>.  Imaginons par exemple que vous souhaitiez créer un contrôle ressemblant à un feu rouge. Ce contrôle a une interface utilisateur et des fonctionnalités simples.  Il se compose de trois cercles, dont un seul peut être allumé à la fois. Après réflexion, vous réalisez qu’un <xref:System.Windows.Controls.RadioButton> offre les fonctionnalités d’une sélection à une heure, mais l’apparence par défaut de la <xref:System.Windows.Controls.RadioButton> ressemble rien à l’éclairage d’un feu rouge.  Étant donné que le <xref:System.Windows.Controls.RadioButton> utilise un modèle de contrôle pour définir son apparence, il est facile de redéfinir le <xref:System.Windows.Controls.ControlTemplate> pour répondre aux exigences du contrôle et utiliser des cases d’option pour créer votre feu rouge.  
   
     > [!NOTE]
     >  Bien qu’un <xref:System.Windows.Controls.RadioButton> peut utiliser un <xref:System.Windows.DataTemplate>, un <xref:System.Windows.DataTemplate> n’est pas suffisant dans cet exemple.  Le <xref:System.Windows.DataTemplate> définit l’apparence du contenu d’un contrôle. Dans le cas d’un <xref:System.Windows.Controls.RadioButton>, le contenu est tout ce qui apparaît à droite du cercle qui indique si la <xref:System.Windows.Controls.RadioButton> est sélectionnée.  Dans l’exemple du feu rouge, la case d’option doit simplement être un cercle capable de « s’allumer ». Étant donné que l’apparence du feu rouge est très différente de l’apparence par défaut de la <xref:System.Windows.Controls.RadioButton>, il est nécessaire de redéfinir le <xref:System.Windows.Controls.ControlTemplate>.  En général un <xref:System.Windows.DataTemplate> est utilisé pour définir le contenu (ou données) d’un contrôle, ainsi qu’un <xref:System.Windows.Controls.ControlTemplate> est utilisé pour définir comment un contrôle est structuré.  
   
--   **Déclencheurs.** Un <xref:System.Windows.Trigger> vous permet de modifier dynamiquement l’apparence et le comportement d’un contrôle sans créer un nouveau contrôle. Par exemple, supposons que vous disposez de plusieurs <xref:System.Windows.Controls.ListBox> contrôles dans votre application et souhaitez que les éléments de chaque <xref:System.Windows.Controls.ListBox> pour être en gras et rouges lorsqu’ils sont sélectionnés. Votre premier réflexe peut consister à créer une classe qui hérite de <xref:System.Windows.Controls.ListBox> et remplacer le <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> méthode pour modifier l’apparence de l’élément sélectionné, mais une meilleure approche consiste à ajouter un déclencheur à un style d’un <xref:System.Windows.Controls.ListBoxItem> qui change l’apparence de l’élément sélectionné. Un déclencheur vous permet de changer les valeurs des propriétés ou de prendre des mesures sur la base de la valeur d’une propriété. Un <xref:System.Windows.EventTrigger> vous permet de prendre des mesures quand un événement se produit.  
+- **Déclencheurs.** Un <xref:System.Windows.Trigger> vous permet de modifier dynamiquement l’apparence et le comportement d’un contrôle sans créer un nouveau contrôle. Par exemple, supposons que vous disposez de plusieurs <xref:System.Windows.Controls.ListBox> contrôles dans votre application et souhaitez que les éléments de chaque <xref:System.Windows.Controls.ListBox> pour être en gras et rouges lorsqu’ils sont sélectionnés. Votre premier réflexe peut consister à créer une classe qui hérite de <xref:System.Windows.Controls.ListBox> et remplacer le <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> méthode pour modifier l’apparence de l’élément sélectionné, mais une meilleure approche consiste à ajouter un déclencheur à un style d’un <xref:System.Windows.Controls.ListBoxItem> qui change l’apparence de l’élément sélectionné. Un déclencheur vous permet de changer les valeurs des propriétés ou de prendre des mesures sur la base de la valeur d’une propriété. Un <xref:System.Windows.EventTrigger> vous permet de prendre des mesures quand un événement se produit.  
   
  Pour plus d’informations sur les styles, modèles et déclencheurs, consultez [Application d’un style et création de modèles](styling-and-templating.md).  
   
@@ -51,11 +51,11 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 #### <a name="benefits-of-deriving-from-usercontrol"></a>Avantages de la dérivation de UserControl  
  Envisager de dériver de <xref:System.Windows.Controls.UserControl> si toutes les conditions suivantes s’appliquent :  
   
--   Vous souhaitez générer votre contrôle de la même façon que vous créez une application.  
+- Vous souhaitez générer votre contrôle de la même façon que vous créez une application.  
   
--   Votre contrôle contient uniquement des composants existants.  
+- Votre contrôle contient uniquement des composants existants.  
   
--   Vous n’avez pas besoin de prendre en charge une personnalisation complexe.  
+- Vous n’avez pas besoin de prendre en charge une personnalisation complexe.  
   
 ### <a name="deriving-from-control"></a>Dérivation de Control  
  Dérivation à partir de la <xref:System.Windows.Controls.Control> classe est le modèle utilisé par la plupart des existant [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles. Lorsque vous créez un contrôle qui hérite de la <xref:System.Windows.Controls.Control> (classe), vous définissez son apparence à l’aide de modèles. En procédant ainsi, vous séparez la logique opérationnelle de la représentation visuelle. Vous pouvez également garantir le découplage de l’interface utilisateur et la logique à l’aide des commandes et des liaisons au lieu des événements et en évitant de référencer les éléments dans le <xref:System.Windows.Controls.ControlTemplate> autant que possible.  Si l’interface utilisateur et la logique de votre contrôle sont correctement découplées, un utilisateur de votre contrôle peut redéfinir son <xref:System.Windows.Controls.ControlTemplate> pour personnaliser son apparence. Bien que la génération personnalisée <xref:System.Windows.Controls.Control> n’est pas aussi simple que la création un <xref:System.Windows.Controls.UserControl>, personnalisé <xref:System.Windows.Controls.Control> fournit plus de flexibilité.  
@@ -63,9 +63,9 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 #### <a name="benefits-of-deriving-from-control"></a>Avantages de la dérivation de Control  
  Envisager de dériver de <xref:System.Windows.Controls.Control> au lieu d’utiliser la <xref:System.Windows.Controls.UserControl> classe si une des situations suivantes se présente :  
   
--   Vous souhaitez que l’apparence de votre contrôle pour être personnalisé via le <xref:System.Windows.Controls.ControlTemplate>.  
+- Vous souhaitez que l’apparence de votre contrôle pour être personnalisé via le <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Vous souhaitez que votre contrôle prenne en charge des thèmes différents.  
+- Vous souhaitez que votre contrôle prenne en charge des thèmes différents.  
   
 ### <a name="deriving-from-frameworkelement"></a>Dérivation de FrameworkElement  
  Les contrôles qui dérivent de <xref:System.Windows.Controls.UserControl> ou <xref:System.Windows.Controls.Control> reposent sur la composition d’éléments existants. Pour de nombreux scénarios, il s’agit une solution acceptable, car tout objet qui hérite de <xref:System.Windows.FrameworkElement> peut se trouver dans un <xref:System.Windows.Controls.ControlTemplate>. Dans certains cas, l’apparence d’un contrôle nécessite toutefois des fonctionnalités autres que celles de la composition d’éléments simples. Pour ces scénarios, baser un composant sur <xref:System.Windows.FrameworkElement> est le bon choix.  
@@ -75,11 +75,11 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Avantages de la dérivation de FrameworkElement  
  Envisager de dériver de <xref:System.Windows.FrameworkElement> si une des situations suivantes se présente :  
   
--   Vous souhaitez avoir un contrôle précis sur l’apparence de votre contrôle au-delà des fonctionnalités proposées par la composition d’éléments simples.  
+- Vous souhaitez avoir un contrôle précis sur l’apparence de votre contrôle au-delà des fonctionnalités proposées par la composition d’éléments simples.  
   
--   Vous souhaitez définir l’apparence de votre contrôle en définissant votre propre logique de rendu.  
+- Vous souhaitez définir l’apparence de votre contrôle en définissant votre propre logique de rendu.  
   
--   Vous souhaitez composer des éléments existants de manière innovante qui vont au-delà de ce qui est possible avec <xref:System.Windows.Controls.UserControl> et <xref:System.Windows.Controls.Control>.  
+- Vous souhaitez composer des éléments existants de manière innovante qui vont au-delà de ce qui est possible avec <xref:System.Windows.Controls.UserControl> et <xref:System.Windows.Controls.Control>.  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>Notions de base de la création de contrôles  
@@ -88,33 +88,33 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 ### <a name="use-dependency-properties"></a>Utiliser des propriétés de dépendance  
  Dans le cas d’une propriété de dépendance, il est possible d’effectuer les opérations suivantes :  
   
--   Définir la propriété dans un style  
+- Définir la propriété dans un style  
   
--   Lier la propriété à une source de données  
+- Lier la propriété à une source de données  
   
--   Utiliser une ressource dynamique comme valeur de la propriété  
+- Utiliser une ressource dynamique comme valeur de la propriété  
   
--   Animer la propriété  
+- Animer la propriété  
   
  Si vous souhaitez qu’une propriété de votre contrôle prenne en charge l’une de ces fonctionnalités, vous devez l’implémenter comme propriété de dépendance. L’exemple suivant montre comment définir une propriété de dépendance appelée `Value` :  
   
--   Définir un <xref:System.Windows.DependencyProperty> identificateur nommé `ValueProperty` comme un `public` `static` `readonly` champ.  
+- Définir un <xref:System.Windows.DependencyProperty> identificateur nommé `ValueProperty` comme un `public` `static` `readonly` champ.  
   
--   Enregistrez le nom de propriété avec le système de propriétés, en appelant <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, pour spécifier les éléments suivants :  
+- Enregistrez le nom de propriété avec le système de propriétés, en appelant <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, pour spécifier les éléments suivants :  
   
-    -   Nom de la propriété.  
+    - Nom de la propriété.  
   
-    -   Type de la propriété.  
+    - Type de la propriété.  
   
-    -   Type qui possède la propriété.  
+    - Type qui possède la propriété.  
   
-    -   Métadonnées de la propriété. Les métadonnées contiennent la valeur de propriété par défaut, un <xref:System.Windows.CoerceValueCallback> et un <xref:System.Windows.PropertyChangedCallback>.  
+    - Métadonnées de la propriété. Les métadonnées contiennent la valeur de propriété par défaut, un <xref:System.Windows.CoerceValueCallback> et un <xref:System.Windows.PropertyChangedCallback>.  
   
--   Définissez une propriété de wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nommée `Value`, qui est le nom utilisé pour inscrire la propriété de dépendance, en implémentant les accesseurs `get` et `set` de la propriété. Notez que le `get` et `set` accesseurs uniquement appellent <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> respectivement. Il est recommandé que les accesseurs de propriétés de dépendance pas contenant une logique supplémentaire, car les clients et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peut contourner les accesseurs et appeler <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> directement. Par exemple, quand une propriété est liée à une source de données, l’accesseur `set` de la propriété n’est pas appelé.  Au lieu d’ajouter une logique supplémentaire pour obtenir et définir des accesseurs, utilisez le <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, et <xref:System.Windows.PropertyChangedCallback> délégués pour répondre ou vérifier la valeur lorsqu’il est modifié.  Pour plus d’informations sur ces rappels, consultez [Validation et rappels de propriétés de dépendance](../advanced/dependency-property-callbacks-and-validation.md).  
+- Définissez une propriété de wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nommée `Value`, qui est le nom utilisé pour inscrire la propriété de dépendance, en implémentant les accesseurs `get` et `set` de la propriété. Notez que le `get` et `set` accesseurs uniquement appellent <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> respectivement. Il est recommandé que les accesseurs de propriétés de dépendance pas contenant une logique supplémentaire, car les clients et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peut contourner les accesseurs et appeler <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> directement. Par exemple, quand une propriété est liée à une source de données, l’accesseur `set` de la propriété n’est pas appelé.  Au lieu d’ajouter une logique supplémentaire pour obtenir et définir des accesseurs, utilisez le <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, et <xref:System.Windows.PropertyChangedCallback> délégués pour répondre ou vérifier la valeur lorsqu’il est modifié.  Pour plus d’informations sur ces rappels, consultez [Validation et rappels de propriétés de dépendance](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Définissez une méthode pour le <xref:System.Windows.CoerceValueCallback> nommé `CoerceValue`. `CoerceValue` garantit que `Value` est supérieur ou égal à `MinValue` et inférieur ou égal à `MaxValue`.  
+- Définissez une méthode pour le <xref:System.Windows.CoerceValueCallback> nommé `CoerceValue`. `CoerceValue` garantit que `Value` est supérieur ou égal à `MinValue` et inférieur ou égal à `MaxValue`.  
   
--   Définissez une méthode pour le <xref:System.Windows.PropertyChangedCallback>, nommé `OnValueChanged`. `OnValueChanged` Crée un <xref:System.Windows.RoutedPropertyChangedEventArgs%601> de l’objet et se prépare à déclencher le `ValueChanged` événement routé. Les événements routés sont traités dans la section suivante.  
+- Définissez une méthode pour le <xref:System.Windows.PropertyChangedCallback>, nommé `OnValueChanged`. `OnValueChanged` Crée un <xref:System.Windows.RoutedPropertyChangedEventArgs%601> de l’objet et se prépare à déclencher le `ValueChanged` événement routé. Les événements routés sont traités dans la section suivante.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 ### <a name="use-routed-events"></a>Utiliser des événements routés  
  De même que les propriétés de dépendance étendent la notion des propriétés [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] avec des fonctionnalités supplémentaires, les événements routés étendent la notion d’événements [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Quand vous créez un contrôle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est également conseillé d’implémenter votre événement en tant qu’événement routé, car un tel événement prend en charge le comportement suivant :  
   
--   Vous pouvez gérer les événements sur le parent de plusieurs contrôles. Si un événement est un événement de propagation, un parent unique de l’arborescence d’éléments peut s’abonner à l’événement. Les auteurs d’applications peuvent ensuite utiliser un gestionnaire unique pour répondre à l’événement de plusieurs contrôles. Par exemple, si votre contrôle fait partie de chaque élément dans un <xref:System.Windows.Controls.ListBox> (car il est inclus dans un <xref:System.Windows.DataTemplate>), le développeur d’applications peut définir le Gestionnaire d’événements pour les événements de votre contrôle sur le <xref:System.Windows.Controls.ListBox>. Chaque fois que l’événement se produit sur un des contrôles, le gestionnaire d’événements est appelé.  
+- Vous pouvez gérer les événements sur le parent de plusieurs contrôles. Si un événement est un événement de propagation, un parent unique de l’arborescence d’éléments peut s’abonner à l’événement. Les auteurs d’applications peuvent ensuite utiliser un gestionnaire unique pour répondre à l’événement de plusieurs contrôles. Par exemple, si votre contrôle fait partie de chaque élément dans un <xref:System.Windows.Controls.ListBox> (car il est inclus dans un <xref:System.Windows.DataTemplate>), le développeur d’applications peut définir le Gestionnaire d’événements pour les événements de votre contrôle sur le <xref:System.Windows.Controls.ListBox>. Chaque fois que l’événement se produit sur un des contrôles, le gestionnaire d’événements est appelé.  
   
--   Les événements routés peuvent être utilisés dans un <xref:System.Windows.EventSetter>, ce qui permet aux développeurs d’applications spécifier le Gestionnaire d’un événement dans un style.  
+- Les événements routés peuvent être utilisés dans un <xref:System.Windows.EventSetter>, ce qui permet aux développeurs d’applications spécifier le Gestionnaire d’un événement dans un style.  
   
--   Les événements routés peuvent être utilisés dans un <xref:System.Windows.EventTrigger>, ce qui est utile pour animer des propriétés à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
+- Les événements routés peuvent être utilisés dans un <xref:System.Windows.EventTrigger>, ce qui est utile pour animer des propriétés à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
   
  L’exemple suivant montre comment définir un événement routé :  
   
--   Définir un <xref:System.Windows.RoutedEvent> identificateur nommé `ValueChangedEvent` comme un `public` `static` `readonly` champ.  
+- Définir un <xref:System.Windows.RoutedEvent> identificateur nommé `ValueChangedEvent` comme un `public` `static` `readonly` champ.  
   
--   Inscrire l’événement routé en appelant le <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> (méthode). L’exemple spécifie les informations suivantes lorsqu’il appelle <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- Inscrire l’événement routé en appelant le <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> (méthode). L’exemple spécifie les informations suivantes lorsqu’il appelle <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   Le nom de l’événement est `ValueChanged`.  
+    - Le nom de l’événement est `ValueChanged`.  
   
-    -   La stratégie de routage est <xref:System.Windows.RoutingStrategy.Bubble>, ce qui signifie qu’un gestionnaire d’événements sur la source (l’objet qui déclenche l’événement) est appelé en premier, puis les gestionnaires d’événements sur les éléments parents de la source sont appelés dans l’ordre, en commençant par le Gestionnaire d’événements sur la plus proche élément parent.  
+    - La stratégie de routage est <xref:System.Windows.RoutingStrategy.Bubble>, ce qui signifie qu’un gestionnaire d’événements sur la source (l’objet qui déclenche l’événement) est appelé en premier, puis les gestionnaires d’événements sur les éléments parents de la source sont appelés dans l’ordre, en commençant par le Gestionnaire d’événements sur la plus proche élément parent.  
   
-    -   Le type du Gestionnaire d’événements est <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, construit avec un <xref:System.Decimal> type.  
+    - Le type du Gestionnaire d’événements est <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, construit avec un <xref:System.Decimal> type.  
   
-    -   Le type propriétaire de l’événement est `NumericUpDown`.  
+    - Le type propriétaire de l’événement est `NumericUpDown`.  
   
--   Déclarez un événement public nommé `ValueChanged` et incluez des déclarations d’accesseurs d’événement. L’exemple appelle <xref:System.Windows.UIElement.AddHandler%2A> dans le `add` déclaration d’accesseur et <xref:System.Windows.UIElement.RemoveHandler%2A> dans le `remove` déclaration d’accesseur à utiliser le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] services de l’événement.  
+- Déclarez un événement public nommé `ValueChanged` et incluez des déclarations d’accesseurs d’événement. L’exemple appelle <xref:System.Windows.UIElement.AddHandler%2A> dans le `add` déclaration d’accesseur et <xref:System.Windows.UIElement.RemoveHandler%2A> dans le `remove` déclaration d’accesseur à utiliser le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] services de l’événement.  
   
--   Créez une méthode virtuelle protégée nommée `OnValueChanged`, qui déclenche l’événement `ValueChanged`.  
+- Créez une méthode virtuelle protégée nommée `OnValueChanged`, qui déclenche l’événement `ValueChanged`.  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ L’extensibilité du modèle de contrôle [!INCLUDE[TLA#tla_winclient](../../..
 #### <a name="attached-properties"></a>Propriétés jointes  
  Pour implémenter des propriétés jointes sur des contrôles personnalisés, tenez compte des indications suivantes :  
   
--   Avoir un `public` `static` `readonly` <xref:System.Windows.DependencyProperty> du formulaire *PropertyName* `Property` créé à l’aide de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (méthode). Le nom de propriété qui est passé à <xref:System.Windows.DependencyProperty.RegisterAttached%2A> doit correspondre à *PropertyName*.  
+- Avoir un `public` `static` `readonly` <xref:System.Windows.DependencyProperty> du formulaire *PropertyName* `Property` créé à l’aide de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (méthode). Le nom de propriété qui est passé à <xref:System.Windows.DependencyProperty.RegisterAttached%2A> doit correspondre à *PropertyName*.  
   
--   Implémentez une paire de méthodes CLR `public` `static` nommées `Set`*NomPropriété* et `Get`*NomPropriété*. Les deux méthodes doivent accepter une classe dérivée de <xref:System.Windows.DependencyProperty> leur premier argument. La méthode `Set`*NomPropriété* accepte également un argument dont le type correspond au type de données inscrit pour la propriété. La méthode `Get`*NomPropriété* doit retourner une valeur du même type. Si la méthode `Set`*NomPropriété* est manquante, la propriété est marquée en lecture seule.  
+- Implémentez une paire de méthodes CLR `public` `static` nommées `Set`*NomPropriété* et `Get`*NomPropriété*. Les deux méthodes doivent accepter une classe dérivée de <xref:System.Windows.DependencyProperty> leur premier argument. La méthode `Set`*NomPropriété* accepte également un argument dont le type correspond au type de données inscrit pour la propriété. La méthode `Get`*NomPropriété* doit retourner une valeur du même type. Si la méthode `Set`*NomPropriété* est manquante, la propriété est marquée en lecture seule.  
   
--   `Set` *PropertyName* et `Get` *PropertyName* doivent router directement à la <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> méthodes sur la dépendance de la cible de l’objet, respectivement. Les concepteurs peuvent accéder à la propriété jointe en l’appelant par le biais du wrapper de méthode ou en effectuant un appel direct à l’objet de dépendance cible.  
+- `Set` *PropertyName* et `Get` *PropertyName* doivent router directement à la <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> méthodes sur la dépendance de la cible de l’objet, respectivement. Les concepteurs peuvent accéder à la propriété jointe en l’appelant par le biais du wrapper de méthode ou en effectuant un appel direct à l’objet de dépendance cible.  
   
  Pour plus d’informations sur les propriétés jointes, consultez [Vue d’ensemble des propriétés jointes](../advanced/attached-properties-overview.md).  
   

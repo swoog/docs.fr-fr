@@ -3,11 +3,11 @@ title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855047"
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l’en-tête de message WS-Security. Il est signé et chiffré à l’aide de l’élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -17,13 +17,13 @@ Cet exemple montre comment ajouter une implémentation de jeton personnalisé da
 
  En résumé, cet exemple montre :
 
--   Comment un client peut transmettre un jeton de sécurité personnalisé à un service.
+- Comment un client peut transmettre un jeton de sécurité personnalisé à un service.
 
--   Comment le service peut consommer et valider un jeton de sécurité personnalisé.
+- Comment le service peut consommer et valider un jeton de sécurité personnalisé.
 
--   Comment le code de service WCF peut obtenir les informations sur les jetons de sécurité reçu, y compris le jeton de sécurité personnalisé.
+- Comment le code de service WCF peut obtenir les informations sur les jetons de sécurité reçu, y compris le jeton de sécurité personnalisé.
 
--   Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.
+- Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Authentification du client à l'aide d'un jeton de sécurité personnalisé
  Le service expose un point de terminaison unique qui est créé par programme à l'aide des classes `BindingHelper` et `EchoServiceHost`. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une liaison personnalisé à l'aide de `SymmetricSecurityBindingElement` et `HttpTransportBindingElement`. Dans cet exemple, l'élément `SymmetricSecurityBindingElement` est configuré pour utiliser un certificat X.509 de service afin de protéger la clé symétrique pendant la transmission et de transmettre le `CreditCardToken` personnalisé dans un en-tête de message WS-Security sous forme de jeton de sécurité signé et chiffré. Le comportement spécifie les informations d'identification du service qui doivent être utilisées pour l'authentification du client ainsi que les informations sur le certificat X.509 du service.
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée.
 
--   Création du certificat de serveur :
+- Création du certificat de serveur :
 
      Les lignes suivantes du fichier de commandes `Setup.bat` créent le certificat de serveur à utiliser. La variable `%SERVER_NAME%` spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut dans ce fichier de commandes est localhost. Si vous modifiez la variable `%SERVER_NAME%`, vous devez parcourir tous les fichiers Client.cs et Service.cs afin de remplacer toutes les occurrences de localhost par le nom du serveur utilisé dans le script Setup.bat.
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client :
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Pour activer l'accès à la clé privée du certificat à partir du service hébergé par IIS, le compte d'utilisateur sous lequel le processus hébergé par IIS s'exécute doit disposer des autorisations permettant d'y accéder. Cette opération est effectuée par les dernières étapes du script Setup.bat.
+- Pour activer l'accès à la clé privée du certificat à partir du service hébergé par IIS, le compte d'utilisateur sous lequel le processus hébergé par IIS s'exécute doit disposer des autorisations permettant d'y accéder. Cette opération est effectuée par les dernières étapes du script Setup.bat.
 
     ```
     echo ************

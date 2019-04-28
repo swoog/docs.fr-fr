@@ -3,11 +3,11 @@ title: <state> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757961"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<state> of WCF, \<workflowInstanceQuery>
 Représente une collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.  
@@ -62,7 +62,7 @@ Aucun.
 
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<states>](states-of-wcf-workflowinstancequery.md)|Collection d’états faisant l’objet d’un abonnement dans l’instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Collection d'états faisant l'objet d'un abonnement dans l'instance de flux de travail suivie lors de la création des enregistrements de suivi.|  
   
 ## <a name="remarks"></a>Notes  
 
@@ -80,9 +80,9 @@ Valeurs d’état possibles sont décrits dans le tableau suivant :
 |Repris|L'instance de flux de travail est reprise.|  
 |Démarré|L'instance de flux de travail est démarrée.|  
 |UnhandledException|L'instance de flux de travail a rencontré une exception non gérée.|  
-|Unloaded|L'instance de flux de travail est déchargée.|  
+|Non chargé|L'instance de flux de travail est déchargée.|  
 |Canceled|L'instance de flux de travail est annulée.|  
-|Interrompu|L'instance de workflow est interrompue.|  
+|Suspendu|L'instance de workflow est interrompue.|  
 |Arrêté|L'instance de flux de travail est arrêtée.|  
 |Unsuspended|L'instance de flux de travail est non interrompue.|  
   

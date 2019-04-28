@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800770"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ordre des événements dans les Windows Forms
 L'ordre dans lequel les événements sont déclenchés dans les applications Windows Forms est particulièrement intéressant pour les développeurs soucieux de gérer chacun de ces événements tour à tour. Quand une situation nécessite une gestion méticuleuse des événements, par exemple quand vous redessinez certaines parties du formulaire, une connaissance de l'ordre exact dans lequel les événements sont déclenchés au moment de l'exécution est nécessaire. Cette rubrique fournit des détails sur l'ordre des événements durant plusieurs phases importantes de la durée de vie des applications et des contrôles. Pour obtenir des détails spécifiques sur l’ordre des événements d’entrée de souris, consultez [des événements de souris dans les Windows Forms](mouse-events-in-windows-forms.md). Pour une vue d’ensemble des événements dans Windows Forms, consultez [Events Overview](events-overview-windows-forms.md). Pour plus d’informations sur la création de gestionnaires d’événements, consultez [vue d’ensemble des gestionnaires d’événements](event-handlers-overview-windows-forms.md).  
@@ -22,29 +22,29 @@ L'ordre dans lequel les événements sont déclenchés dans les applications Win
 ## <a name="application-startup-and-shutdown-events"></a>Événements de démarrage et d'arrêt des applications  
  Les classes <xref:System.Windows.Forms.Form> et <xref:System.Windows.Forms.Control> exposent un ensemble d'événements liés au démarrage et à l'arrêt de l'application. Lors du démarrage d'une application Windows Forms, les événements de démarrage du formulaire principal sont déclenchés dans l'ordre suivant :  
   
--   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
  Lors de la fermeture d'une application, les événements d'arrêt du formulaire principal sont déclenchés dans l'ordre suivant :  
   
--   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
  L'événement <xref:System.Windows.Forms.Application.ApplicationExit> de la classe <xref:System.Windows.Forms.Application> est déclenché après les événements d'arrêt du formulaire principal.  
   
@@ -54,31 +54,31 @@ L'ordre dans lequel les événements sont déclenchés dans les applications Win
 ## <a name="focus-and-validation-events"></a>Événements de focus et de validation  
  Quand vous modifiez le focus à l'aide du clavier (Tab, Maj+Tab, etc.) en appelant la méthode <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A> ou en affectant le formulaire actuel comme valeur de la propriété <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>, les événements de focus de la classe <xref:System.Windows.Forms.Control> se produisent dans l'ordre suivant :  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
  Quand vous modifiez le focus à l'aide de la souris ou en appelant la méthode <xref:System.Windows.Forms.Control.Focus%2A>, les événements de focus de la classe <xref:System.Windows.Forms.Control> se produisent dans l'ordre suivant :  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Voir aussi
 

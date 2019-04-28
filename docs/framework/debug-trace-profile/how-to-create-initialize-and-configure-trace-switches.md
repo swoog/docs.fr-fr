@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754347"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procédure : Créer, initialiser et configurer les commutateurs de trace
 Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie de traçage, et de la filtrer.  
@@ -75,11 +75,11 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
 2. Si votre projet ne contient pas de fichier de configuration (app.config ou Web.config), dans le menu **Projet**, sélectionnez **Ajouter un nouvel élément**.  
   
-    -   **Visual Basic :** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier de Configuration d’Application**.  
+    - **Visual Basic :** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier de Configuration d’Application**.  
   
          Le fichier de configuration de l'application est créé, puis ouvert. Il s'agit d'un document XML dont l'élément racine est `<configuration>.`  
   
-    -   **Visual C#:** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier XML**. Nommez ce fichier **app.config**. Dans l'éditeur XML, après la déclaration XML, ajoutez les balises suivantes :  
+    - **Visual C#:** Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **fichier XML**. Nommez ce fichier **app.config**. Dans l'éditeur XML, après la déclaration XML, ajoutez les balises suivantes :  
   
         ```xml  
         <configuration>  

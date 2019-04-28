@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747525"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : démonstration de l’héritage visuel
 L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de base et d'ajouter de nouveaux contrôles. Dans cette procédure pas à pas, vous allez créer un formulaire de base et le compiler dans une bibliothèque de classes. Vous importerez cette bibliothèque de classes dans un autre projet et créerez un formulaire qui hérite du formulaire de base. Pendant cette procédure pas à pas, vous allez apprendre à :  
   
--   créer un projet de bibliothèque de classes contenant un formulaire de base ;  
+- créer un projet de bibliothèque de classes contenant un formulaire de base ;  
   
--   ajouter un bouton avec des propriétés modifiables par les classes dérivées du formulaire de base ;  
+- ajouter un bouton avec des propriétés modifiables par les classes dérivées du formulaire de base ;  
   
--   ajouter un bouton qui ne peut pas être modifié par les héritiers du formulaire de base ;  
+- ajouter un bouton qui ne peut pas être modifié par les héritiers du formulaire de base ;  
   
--   créer un projet contenant un formulaire qui hérite de `BaseForm`.  
+- créer un projet contenant un formulaire qui hérite de `BaseForm`.  
   
  Pour finir, cette procédure pas à pas vous montrera la différence entre les contrôles privés et protégés dans un formulaire hérité.  
   
@@ -76,11 +76,11 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 3. Dans la fenêtre Propriétés, définissez les propriétés suivantes du bouton :  
   
-    -   Définir le **texte** propriété **Say Hello**.  
+    - Définir le **texte** propriété **Say Hello**.  
   
-    -   Définir le **(nom)** propriété **btnProtected**.  
+    - Définir le **(nom)** propriété **btnProtected**.  
   
-    -   Définir le **modificateurs** propriété **protégé**. Cela rend possible pour les formulaires qui héritent de **Form1** pour modifier les propriétés de **btnProtected**.  
+    - Définir le **modificateurs** propriété **protégé**. Cela rend possible pour les formulaires qui héritent de **Form1** pour modifier les propriétés de **btnProtected**.  
   
 4. Double-cliquez sur le **Say Hello** pour ajouter un gestionnaire d’événements pour le **cliquez sur** événement.  
   
@@ -100,11 +100,11 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 2. Ajoutez un deuxième bouton et définissez ses propriétés comme suit :  
   
-    -   Définir le **texte** propriété **Say Goodbye**.  
+    - Définir le **texte** propriété **Say Goodbye**.  
   
-    -   Définir le **(nom)** propriété **btnPrivate**.  
+    - Définir le **(nom)** propriété **btnPrivate**.  
   
-    -   Définir le **modificateurs** propriété **privé**. Cela empêche les formulaires qui héritent **Form1** pour modifier les propriétés de **btnPrivate**.  
+    - Définir le **modificateurs** propriété **privé**. Cela empêche les formulaires qui héritent **Form1** pour modifier les propriétés de **btnPrivate**.  
   
 3. Double-cliquez sur le **Say Goodbye** pour ajouter un gestionnaire d’événements pour le **cliquez sur** événement. Placez la ligne de code suivante dans la procédure d'événement :  
   
@@ -148,9 +148,9 @@ L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de
   
 8. Si vous utilisez Visual c# :  
   
-    1.  Dans **l’Explorateur de solutions**, avec le bouton droit **Form1** dans le **InheritanceTest** de projet, puis choisissez **supprimer**. Dans la boîte de message qui s’affiche, cliquez sur **OK** pour confirmer la suppression.  
+    1. Dans **l’Explorateur de solutions**, avec le bouton droit **Form1** dans le **InheritanceTest** de projet, puis choisissez **supprimer**. Dans la boîte de message qui s’affiche, cliquez sur **OK** pour confirmer la suppression.  
   
-    2.  Ouvrez le fichier Program.cs et remplacez la ligne `Application.Run(new Form1());` par `Application.Run(new Form2());`.  
+    2. Ouvrez le fichier Program.cs et remplacez la ligne `Application.Run(new Form1());` par `Application.Run(new Form2());`.  
   
 9. Dans **l’Explorateur de solutions**, avec le bouton droit le **InheritanceTest** de projet et sélectionnez **définir comme projet de démarrage**.  
   

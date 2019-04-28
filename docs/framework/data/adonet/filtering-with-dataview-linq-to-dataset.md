@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878824"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrage avec DataView (LINQ to DataSet)
 La possibilité de filtrer des données en utilisant des critères spécifiques, puis de les présenter à un client à travers un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de filtrer les données et de retourner des sous-ensembles de lignes de données correspondant à des critères de filtre spécifiques. En plus de basé sur la chaîne des fonctionnalités de filtrage <xref:System.Data.DataView> offre également la possibilité d’utiliser [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressions pour les critères de filtrage. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de filtrage bien plus complexes et puissantes que le filtrage basé sur chaîne.  
   
  Il existe deux façons de filtrer des données à l'aide d'un <xref:System.Data.DataView> :  
   
--   Créer un <xref:System.Data.DataView> à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] comprenant une clause Where.  
+- Créer un <xref:System.Data.DataView> à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] comprenant une clause Where.  
   
--   Utiliser les fonctionnalités de filtrage basé sur chaîne existantes de <xref:System.Data.DataView>.  
+- Utiliser les fonctionnalités de filtrage basé sur chaîne existantes de <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Création d'un DataView à partir d'une requête avec informations de filtrage  
  Un objet <xref:System.Data.DataView> peut être créé à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Si cette requête contient une clause `Where`, le <xref:System.Data.DataView> est créé avec les informations de filtrage de la requête. L'expression dans la clause `Where` sert à déterminer quelles lignes de données seront incluses dans le <xref:System.Data.DataView>, et est la base du filtre.  
@@ -76,9 +76,9 @@ La possibilité de filtrer des données en utilisant des critères spécifiques,
 ## <a name="clearing-the-filter"></a>Suppression du filtre  
  Le filtre d'un <xref:System.Data.DataView> peut être supprimé une fois le filtrage défini à l'aide de la propriété <xref:System.Data.DataView.RowFilter%2A>. Le filtre sur un <xref:System.Data.DataView> peut être supprimé de deux manières différentes :  
   
--   Affectez à la propriété <xref:System.Data.DataView.RowFilter%2A> la valeur `null`.  
+- Affectez à la propriété <xref:System.Data.DataView.RowFilter%2A> la valeur `null`.  
   
--   Définissez la propriété <xref:System.Data.DataView.RowFilter%2A> en tant que chaîne vide.  
+- Définissez la propriété <xref:System.Data.DataView.RowFilter%2A> en tant que chaîne vide.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant crée un <xref:System.Data.DataView> à partir d'une requête, puis supprime le filtre en définissant la propriété <xref:System.Data.DataView.RowFilter%2A> sur `null` :  

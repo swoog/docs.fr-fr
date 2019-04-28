@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
 ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857621"
 ---
 # <a name="contracts"></a>Contrats
 Cette section vous montre comment définir et implémenter des contrats de Windows Communication Foundation (WCF). Un contrat de service spécifie ce qu'un point de terminaison communique au monde extérieur. À un niveau plus concret, il s'agit d'une instruction à propos d'un ensemble de messages spécifiques organisé en modèles d'échange de messages de base, tels que les messages demande/réponse, unidirectionnels et duplex. Si un contrat de service est un ensemble d'échanges de messages liés de manière logique, une opération de service est un échange de messages unique. Par exemple, une opération `Hello` doit évidemment accepter un message (de sorte que l'appelant puisse annoncer la salutation) et peut ou non retourner un message (en fonction du niveau de courtoisie de l'opération).  
@@ -21,32 +21,32 @@ Cette section vous montre comment définir et implémenter des contrats de Windo
 ## <a name="overview"></a>Vue d'ensemble  
  Cette rubrique fournit une orientation conceptuelle de haut niveau à la conception et implémentation des services WCF. Les sous-rubriques fournissent des informations plus détaillées sur les aspects spécifiques à la conception et à l'implémentation. Avant de concevoir et implémenter votre application WCF, il est recommandé que vous avez :  
   
--   comprendre ce qu'est un contrat de service, comment il fonctionne et comment en créer un ;  
+- comprendre ce qu'est un contrat de service, comment il fonctionne et comment en créer un ;  
   
--   comprendre que les contrats définissent des exigences minimales que la configuration à l’exécution ou l’environnement d’hébergement peuvent ne pas prendre en charge.  
+- comprendre que les contrats définissent des exigences minimales que la configuration à l’exécution ou l’environnement d’hébergement peuvent ne pas prendre en charge.  
   
 ## <a name="service-contracts"></a>Contrats de service  
  Un contrat de service est une instruction qui fournit des informations sur :  
   
--   le groupement d'opérations dans un service ;  
+- le groupement d'opérations dans un service ;  
   
--   la signature des opérations en termes de messages échangés ;  
+- la signature des opérations en termes de messages échangés ;  
   
--   les types de données de ces messages ;  
+- les types de données de ces messages ;  
   
--   l'emplacement des opérations ;  
+- l'emplacement des opérations ;  
   
--   les protocoles et formats de sérialisation spécifiques utilisés pour prendre en charge la communication avec le service.  
+- les protocoles et formats de sérialisation spécifiques utilisés pour prendre en charge la communication avec le service.  
   
  Par exemple, un contrat de commande fournisseur peut avoir une opération `CreateOrder` qui accepte une entrée de types d'informations de commande et retourne des information de succès ou d'échec, y compris un identificateur de commande. Il peut également avoir une opération `GetOrderStatus` qui accepte un identificateur de commande et retourne des informations d'état de commande. Un tel contrat de service spécifie alors :  
   
--   que le contrat de commande fournisseur serait composé d'opérations `CreateOrder` et `GetOrderStatus` ;  
+- que le contrat de commande fournisseur serait composé d'opérations `CreateOrder` et `GetOrderStatus` ;  
   
--   que les opérations auraient des messages d'entrée et des messages de sortie spécifiés ;  
+- que les opérations auraient des messages d'entrée et des messages de sortie spécifiés ;  
   
--   les données que ces messages pourraient transporter ;  
+- les données que ces messages pourraient transporter ;  
   
--   des instructions catégoriques à propos de l'infrastructure de communication nécessaire pour traiter les messages avec succès. Par exemple, ces détails incluent les éventuelles formes de sécurité requises pour établir la communication.  
+- des instructions catégoriques à propos de l'infrastructure de communication nécessaire pour traiter les messages avec succès. Par exemple, ces détails incluent les éventuelles formes de sécurité requises pour établir la communication.  
   
  Pour communiquer ce type d’informations à des applications sur d’autres plateformes (y compris les plateformes non-Microsoft), les contrats de service XML sont exprimés publiquement dans des formats XML standards, tels que [Web Services Description Language (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004) et [XSD (XML Schema)](https://go.microsoft.com/fwlink/?LinkId=87005), entre autres. Les développeurs qui travaillent avec un grand nombre de plateformes différentes peuvent utiliser ces informations de contrat publiques pour créer des applications capables de communiquer avec le service, ces applications comprenant le langage des spécifications, d'une part, et ce langage assurant l'interopérabilité grâce à sa description de formes, formats et protocoles publics pris en charge par ce service, d'autre part. Pour plus d’informations sur la façon dont WCF gère ce type d’informations, consultez [métadonnées](../../../../docs/framework/wcf/feature-details/metadata.md).  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839382"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Génération à partir de la ligne de commande (Visual Basic)
 Un projet Visual Basic se compose d’un ou plusieurs fichiers sources séparés. Pendant le processus appelé compilation, ces fichiers sont regroupés en un seul package, un seul fichier exécutable qui peut être exécuté en tant qu’application.  

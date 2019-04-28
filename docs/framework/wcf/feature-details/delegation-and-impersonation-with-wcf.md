@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856711"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Délégation et emprunt d'identité avec WCF
 L'*emprunt d'identité* est une technique courante utilisée par les services pour restreindre l'accès du client aux ressources d'un domaine de service. Les ressources de domaine de service peuvent être des ressources d'ordinateur, telles que des fichiers locaux (emprunt d'identité), ou une ressource sur un autre ordinateur, tel qu'un partage de fichiers (délégation). Pour obtenir un exemple d'application, consultez [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour obtenir un exemple montrant comment utiliser l’emprunt d’identité, consultez [Comment : Emprunter l’identité d’un Client sur un Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 ### <a name="cached-token-impersonation"></a>Emprunt d'identité avec jeton mis en cache  
  Vous pouvez effectuer l'emprunt d'identité avec jeton mis en cache à l'aide des éléments suivants :  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client Windows.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> avec <xref:System.ServiceModel.BasicHttpSecurityMode> défini à l'information d'identification <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , ou toute autre liaison standard dans laquelle le client présente une information d'identification de nom d'utilisateur que le service peut mapper à un compte Windows valide.  
+- <xref:System.ServiceModel.BasicHttpBinding> avec <xref:System.ServiceModel.BasicHttpSecurityMode> défini à l'information d'identification <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , ou toute autre liaison standard dans laquelle le client présente une information d'identification de nom d'utilisateur que le service peut mapper à un compte Windows valide.  
   
--   Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec `requireCancellation` défini à `true`. (La propriété est disponible sur les classes suivantes : <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> et <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si une conversation sécurisée est utilisée sur la liaison, sa propriété `requireCancellation` doit également avoir la valeur `true`.  
+- Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec `requireCancellation` défini à `true`. (La propriété est disponible sur les classes suivantes : <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> et <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si une conversation sécurisée est utilisée sur la liaison, sa propriété `requireCancellation` doit également avoir la valeur `true`.  
   
--   Tout <xref:System.ServiceModel.Channels.CustomBinding> où le client présente une information d'identification de nom d'utilisateur. Si une conversation sécurisée est utilisée sur la liaison, sa propriété `requireCancellation` doit également avoir la valeur `true`.  
+- Tout <xref:System.ServiceModel.Channels.CustomBinding> où le client présente une information d'identification de nom d'utilisateur. Si une conversation sécurisée est utilisée sur la liaison, sa propriété `requireCancellation` doit également avoir la valeur `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Emprunt d'identité basé sur S4U  
  Vous pouvez effectuer l'emprunt d'identité basé sur S4U à l'aide des éléments suivants :  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client de certificat que le service peut mapper à un compte Windows valide.  
+- <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> avec une information d'identification de client de certificat que le service peut mapper à un compte Windows valide.  
   
--   Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec la propriété `requireCancellation` définie à `false`.  
+- Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise une information d'identification de client Windows avec la propriété `requireCancellation` définie à `false`.  
   
--   Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise un nom d'utilisateur ou une information d'identification de client Windows et une conversation sécurisée avec la propriété `requireCancellation` définie à `false`.  
+- Tout <xref:System.ServiceModel.Channels.CustomBinding> qui utilise un nom d'utilisateur ou une information d'identification de client Windows et une conversation sécurisée avec la propriété `requireCancellation` définie à `false`.  
   
  L'étendue à laquelle le service peut emprunter l'identité du client dépend des privilèges dont le compte de service dispose lorsqu'il tente l'emprunt d'identité, du type d'emprunt d'identité utilisé, et éventuellement de l'étendue d'emprunt d'identité autorisée par le client.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Pour des instructions plus détaillées sur la configuration de la délégation contrainte, consultez les rubriques suivantes sur MSDN :  
   
--   [L’authentification Kerberos et la résolution des problèmes de délégation](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [L’authentification Kerberos et la résolution des problèmes de délégation](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos Protocol Transition and Constrained Delegation (Transition du protocole Kerberos et délégation contrainte)](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos Protocol Transition and Constrained Delegation (Transition du protocole Kerberos et délégation contrainte)](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Voir aussi
 

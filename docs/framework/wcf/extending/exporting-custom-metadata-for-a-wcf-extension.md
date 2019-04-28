@@ -3,11 +3,11 @@ title: Exportation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857959"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), exportation de métadonnées est le processus de décrire des points de terminaison de service et les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour comprendre comment utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
@@ -28,9 +28,9 @@ Dans Windows Communication Foundation (WCF), exportation de métadonnées est le
 ## <a name="exporting-custom-wsdl-elements"></a>Exportation d'éléments WSDL personnalisés  
  Implémentez <xref:System.ServiceModel.Description.IWsdlExportExtension> sur un comportement d'opération, comportement de contrat, comportement de point de terminaison ou élément de liaison (<xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior> ou <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> respectivement) et insérez les comportements ou éléments de liaison dans la description du service que vous tentez d'exporter. (Pour plus d’informations sur l’insertion de comportements, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)). <xref:System.ServiceModel.Description.IWsdlExportExtension> est appelé pour chaque point de terminaison et chaque point de terminaison exporte en premier le contrat si cela n'a pas été déjà fait. Selon vos besoins, vous pouvez participer à l'un ou à l'autre processus d'exportation :  
   
--   <xref:System.ServiceModel.Description.WsdlContractConversionContext> permet de modifier les métadonnées exportées dans la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
+- <xref:System.ServiceModel.Description.WsdlContractConversionContext> permet de modifier les métadonnées exportées dans la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
   
--   <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> permet de modifier les métadonnées exportées pour le point de terminaison dans la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A>.  
+- <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> permet de modifier les métadonnées exportées pour le point de terminaison dans la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A>.  
   
  La méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> est appelée sur toutes les implémentations <xref:System.ServiceModel.Description.IWsdlExportExtension> dans l'instance <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> exportée.  La méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> est appelée sur toutes les implémentations <xref:System.ServiceModel.Description.IWsdlExportExtension> avec l'instance <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> exportée.  
   

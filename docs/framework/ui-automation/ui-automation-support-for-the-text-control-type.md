@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996552"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Text
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103777"
   
  Un contrôle de texte peut être utilisé seul comme étiquette ou texte statique dans un formulaire. Il peut également être contenu dans la structure d’un des éléments suivants :  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  Les contrôles de texte peuvent ne pas figurer dans l’affichage de contrôle de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , car le texte est souvent affiché par la propriété `NameProperty` d’un autre contrôle. Par exemple, le texte utilisé pour étiqueter un contrôle de zone de liste modifiable est exposé par la valeur `NameProperty` du contrôle. Étant donné que le contrôle de zone de liste modifiable figure dans l’affichage de contenu de l’arborescence UI Automation, la présence du contrôle de texte est inutile. Les contrôles de texte n’ont jamais d’enfant dans l’affichage de contenu  
   

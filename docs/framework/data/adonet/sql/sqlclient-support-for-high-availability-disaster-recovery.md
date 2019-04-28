@@ -3,11 +3,11 @@ title: Prise en charge de SqlClient pour la haute disponibilité et la récupér
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876085"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
@@ -21,9 +21,9 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Les propriétés de connexion suivantes ont été ajoutées à SqlClient dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] :  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Vous pouvez modifier par programmation ces mots clés de chaîne de connexion avec :  
   
@@ -45,17 +45,17 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
  Utilisez les instructions suivantes pour vous connecter à un serveur dans un groupe de disponibilité ou Instance de Cluster de basculement SQL Server 2012 :  
   
--   Utilisez la propriété de connexion `MultiSubnetFailover` lors de la connexion à un sous-réseau unique ou à un multi-sous-réseau ; elle permet d'améliorer les performances pour les deux.  
+- Utilisez la propriété de connexion `MultiSubnetFailover` lors de la connexion à un sous-réseau unique ou à un multi-sous-réseau ; elle permet d'améliorer les performances pour les deux.  
   
--   Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
+- Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
   
--   Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraînera un échec de connexion.  
+- Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraînera un échec de connexion.  
   
--   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : L’authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
+- Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : L’authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
   
--   Augmentez la valeur de `Connect Timeout` pour permettre la prise en charge pour le temps de basculement et réduire les tentatives de nouvelle connexion d'application.  
+- Augmentez la valeur de `Connect Timeout` pour permettre la prise en charge pour le temps de basculement et réduire les tentatives de nouvelle connexion d'application.  
   
--   Les transactions distribuées ne sont pas prises en charge.  
+- Les transactions distribuées ne sont pas prises en charge.  
   
  Si le routage en lecture seule n'est pas appliqué, la connexion à un emplacement de réplica secondaire échoue dans les situations suivantes :  
   

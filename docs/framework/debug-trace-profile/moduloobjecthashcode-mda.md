@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753800"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode (MDA)
 L’Assistant Débogage managé `moduloObjectHashcode` modifie le comportement de la classe <xref:System.Object> pour effectuer une opération modulo sur le code de hachage retourné par la méthode <xref:System.Object.GetHashCode%2A>. Le modulo par défaut pour cet Assistant Débogage managé est 1, ce qui fait que <xref:System.Object.GetHashCode%2A> retourne 0 pour tous les objets.  
@@ -25,13 +25,13 @@ L’Assistant Débogage managé `moduloObjectHashcode` modifie le comportement d
 ## <a name="symptoms"></a>Symptômes  
  Après le passage à une nouvelle version du common language runtime, un programme ne s’exécute plus correctement :  
   
--   Le programme reçoit un objet incorrect d’un <xref:System.Collections.Hashtable>.  
+- Le programme reçoit un objet incorrect d’un <xref:System.Collections.Hashtable>.  
   
--   L’ordre d’énumération d’un <xref:System.Collections.Hashtable> a changé et le programme ne fonctionne plus correctement.  
+- L’ordre d’énumération d’un <xref:System.Collections.Hashtable> a changé et le programme ne fonctionne plus correctement.  
   
--   Deux objets qui étaient habituellement égaux ne le sont plus.  
+- Deux objets qui étaient habituellement égaux ne le sont plus.  
   
--   Deux objets qui étaient habituellement inégaux sont maintenant égaux.  
+- Deux objets qui étaient habituellement inégaux sont maintenant égaux.  
   
 ## <a name="cause"></a>Cause  
  Votre programme reçoit peut-être un objet incorrect d’un <xref:System.Collections.Hashtable> en raison du fait que l’implémentation de la méthode <xref:System.Object.Equals%2A> sur la classe pour la clé dans le <xref:System.Collections.Hashtable> teste l’égalité des objets en comparant les résultats de l’appel à la méthode <xref:System.Object.GetHashCode%2A>. Les codes de hachage ne doivent pas être utilisés pour tester l’égalité entre des objets, car deux objets peuvent avoir le même code de hachage même si leurs champs respectifs ont des valeurs différentes. Ces collisions de codes de hachage, bien que rares dans la pratique, se produisent. L’effet de ceci sur une recherche dans <xref:System.Collections.Hashtable> est que deux clés qui ne sont pas égales apparaissent comme étant égales et que l’objet incorrect est retourné depuis le <xref:System.Collections.Hashtable>. Pour des raisons de performances, l’implémentation de <xref:System.Object.GetHashCode%2A> peut changer entre les versions du runtime : ainsi, des collisions qui ne se produisent pas sur une version peuvent se produire sur les versions ultérieures. Activez cet Assistant Débogage managé pour tester si votre code comporte des bogues en cas de collision de codes de hachage. Quand il est activé, cet Assistant Débogage managé fait que la méthode <xref:System.Object.GetHashCode%2A> retourne 0, ce qui entraîne une collision de tous les codes de hachage. Le seul effet que l’activation de cet Assistant Débogage managé doit avoir sur votre programme est que celui-ci s’exécute plus lentement.  

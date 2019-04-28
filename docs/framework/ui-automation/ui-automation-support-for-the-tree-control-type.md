@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996514"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Prise en charge d’UI Automation pour le type de contrôle Tree
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "59157259"
   
  L’affichage de contrôle de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] comprend :  
   
--   zéro ou plusieurs éléments dans le conteneur (les éléments peuvent être basés sur les types de contrôle TreeItem, DataItem ou autres) ;  
+- zéro ou plusieurs éléments dans le conteneur (les éléments peuvent être basés sur les types de contrôle TreeItem, DataItem ou autres) ;  
   
--   zéro, une ou deux barres de défilement.  
+- zéro, une ou deux barres de défilement.  
   
  L’affichage du contenu de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] comprend zéro ou plusieurs éléments dans le conteneur (les éléments peuvent être basés sur les types de contrôle TreeItem, DataItem ou autres).  
   

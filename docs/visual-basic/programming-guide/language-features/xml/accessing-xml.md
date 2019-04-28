@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756960"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Accès au code XML dans Visual Basic
 Visual Basic fournit des propriétés d’axe XML pour accéder à et naviguer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. Ces propriétés utilisent une syntaxe spéciale pour pouvoir accéder aux éléments et attributs en spécifiant les noms XML.  
@@ -28,19 +28,19 @@ Visual Basic fournit des propriétés d’axe XML pour accéder à et naviguer [
 |*axe d’attribut*|`phone.@type`|Obtient tous les `type` les attributs de la `phone` élément.|  
 |*axe descendant*|`contacts...<name>`|Obtient tous les `name` les éléments de la `contacts` élément, quelle que soit la profondeur de la hiérarchie qu’elles se produisent.|  
 |*indexeur d’extension*|`contacts...<name>(0)`|Obtient le premier `name` élément à partir de la séquence.|  
-|*valeur*|`contacts...<name>.Value`|Obtient la représentation sous forme de chaîne du premier objet dans la séquence, ou `Nothing` si la séquence est vide.|  
+|*value*|`contacts...<name>.Value`|Obtient la représentation sous forme de chaîne du premier objet dans la séquence, ou `Nothing` si la séquence est vide.|  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique : accéder à des éléments descendants XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ [Guide pratique pour Accès les éléments descendants XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  Montre comment utiliser une propriété d’axe descendant pour accéder à tous les éléments XML qui ont un nom spécifié et qui sont contenus sous un élément XML spécifié.  
   
- [Guide pratique : accéder à des éléments enfants XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
+ [Guide pratique pour Éléments enfants XML accès](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
  Montre comment utiliser un enfant de propriété d’axe pour accéder à tous les éléments enfants XML qui ont un nom spécifié dans un élément XML.  
   
- [Guide pratique : accéder à des attributs XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
+ [Guide pratique pour Attributs XML d’accès](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
  Montre comment utiliser la propriété d’axe d’attribut pour accéder à tous les attributs XML qui ont un nom spécifié dans un élément XML.  
   
- [Guide pratique : déclarer et utiliser des préfixes d’espaces de noms XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
+ [Guide pratique pour Déclarer et utiliser des préfixes XML Namespace](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
  Montre comment déclarer un préfixe d’espace de noms XML et l’utiliser pour créer et accéder aux éléments XML.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

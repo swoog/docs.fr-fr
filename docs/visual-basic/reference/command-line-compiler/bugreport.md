@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839564"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crée un fichier que vous pouvez utiliser quand vous archivez un rapport de bogue.  
@@ -31,17 +31,17 @@ Crée un fichier que vous pouvez utiliser quand vous archivez un rapport de bogu
 ## <a name="remarks"></a>Notes  
  Les informations suivantes sont ajoutées à `file`:  
   
--   Une copie de tous les fichiers de code source dans la compilation.  
+- Une copie de tous les fichiers de code source dans la compilation.  
   
--   Une liste des options du compilateur utilisé dans la compilation.  
+- Une liste des options du compilateur utilisé dans la compilation.  
   
--   Informations de version concernant votre compilateur, le common language runtime et le système d’exploitation.  
+- Informations de version concernant votre compilateur, le common language runtime et le système d’exploitation.  
   
--   Les résultats de la compilation, le cas échéant.  
+- Les résultats de la compilation, le cas échéant.  
   
--   Une description du problème pour lequel vous êtes invité.  
+- Une description du problème pour lequel vous êtes invité.  
   
--   Une description de la façon dont vous pensez que le problème doit être corrigée, pour lequel vous êtes invité.  
+- Une description de la façon dont vous pensez que le problème doit être corrigée, pour lequel vous êtes invité.  
   
  Car une copie de tous les fichiers de code source est incluse dans `file`, vous pouvez souhaiter reproduire l’erreur de code (supposée) dans le programme le plus court possible.  
   

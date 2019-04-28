@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013034"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Procédure : définir le renderer ToolStrip pour une application
 Vous pouvez personnaliser l'apparence de vos contrôles <xref:System.Windows.Forms.ToolStrip> individuellement ou pour tous les contrôles <xref:System.Windows.Forms.ToolStrip> de votre application.  
@@ -40,7 +40,7 @@ Vous pouvez personnaliser l'apparence de vos contrôles <xref:System.Windows.For
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
+- des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

@@ -3,17 +3,17 @@ title: ParallelForEach non générique
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
 ms.openlocfilehash: 77583351f331adbb290ce52b4464a4bec682eda7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004898"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach non générique
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit, dans sa boîte à outils, un ensemble d'activités de flux de contrôle, notamment <xref:System.Activities.Statements.ParallelForEach%601>, qui permet l'itération au sein des collections <xref:System.Collections.Generic.IEnumerable%601>.
 
-<xref:System.Activities.Statements.ParallelForEach%601> nécessite son <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propriété puisse être de type <xref:System.Collections.Generic.IEnumerable%601>. Cela empêche les utilisateurs d'itérer au sein des structures de données qui implémentent l'interface <xref:System.Collections.Generic.IEnumerable%601> (par exemple, <xref:System.Collections.ArrayList>). La version non générique de <xref:System.Activities.Statements.ParallelForEach%601> passe outre cette spécification, aux dépens d'un runtime plus complexe afin de garantir la compatibilité des types des valeurs dans la collection.
+<xref:System.Activities.Statements.ParallelForEach%601> nécessite son <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propriété puisse être de type <xref:System.Collections.Generic.IEnumerable%601>. Cela empêche les utilisateurs d'itérer au sein des structures de données qui implémentent l'interface <xref:System.Collections.Generic.IEnumerable%601> (par exemple, <xref:System.Collections.ArrayList>). La version non générique de <xref:System.Activities.Statements.ParallelForEach%601> passe outre cette exigence, aux dépens d’un runtime plus complexe afin de garantir la compatibilité des types des valeurs dans la collection.
 
 Cet exemple montre comment implémenter une activité <xref:System.Activities.Statements.ParallelForEach%601> non générique et son concepteur. Cette activité peut être utilisée pour itérer au sein de <xref:System.Collections.ArrayList>.
 
@@ -50,7 +50,7 @@ Body (facultatif) \
 <xref:System.Activities.ActivityAction> de type <xref:System.Object>, qui est exécuté pour chaque élément de la collection. Chaque élément individuel est passé dans le corps (Body) via sa propriété Argument.
 
 Valeurs (facultatifs) \
-Collection des éléments sur lesquels est effectuée l’itération. La vérification que tous les éléments de la collection sont de types compatibles est effectuée au moment de l’exécution.
+Collection des éléments sur lesquels est effectuée l’itération. La vérification que tous les éléments de la collection sont de types compatibles est effectuée au moment de l'exécution.
 
 CompletionCondition (facultative) \
 La propriété <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> est évaluée à l'issue de toute itération. Si sa valeur est `true`, les itérations en attente planifiées sont annulées. Si cette propriété n’est pas définie, toutes les activités de la collection Branches s’exécutent jusqu’à la fin.

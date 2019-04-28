@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 ms.openlocfilehash: fe248c6fcb9db80b0ab8f62cc78a480e70803633
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756037"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
 L’exemple Message Security Anonymous montre comment implémenter une application Windows Communication Foundation (WCF) qui utilise la sécurité d’au niveau du message sans authentifier le client, mais qui nécessite une authentification de serveur à l’aide X.509 du serveur certificat. Tous les messages d'application échangés entre le client et le serveur sont signés et chiffrés. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) exemple. Cet exemple se compose d'un programme de console client (.exe) et d'une bibliothèque de service (.dll) hébergés par les services IIS (Internet Information Services). Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -148,7 +148,7 @@ Press <ENTER> to terminate client.
 
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes :
 
--   Création du certificat de serveur
+- Création du certificat de serveur
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser.
 
@@ -164,7 +164,7 @@ Press <ENTER> to terminate client.
 
      La variable %SERVER_NAME% spécifie le nom du serveur. Le certificat est stocké dans le magasin LocalMachine. Si le fichier de commandes d’installation est exécuté à l’aide d’un argument de service (tel que `setup.bat service`), la variable %SERVER_NAME% contient le nom de domaine complet de l’ordinateur. Dans le cas contraire, elle contient la valeur par défaut localhost.
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client.
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client.
 
      La ligne suivante copie le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple d'un certificat émis par Microsoft, il n'est pas nécessaire d'ajouter le certificat du serveur au magasin de certificats du client.
 
@@ -172,7 +172,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Octroi d'autorisations sur la clé privée du certificat.
+- Octroi d'autorisations sur la clé privée du certificat.
 
      Les lignes suivantes du fichier de commandes Setup.bat permettent au processus de traitement [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] d'accéder au certificat du serveur stocké dans le magasin LocalMachine.
 
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
--   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
+- Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
   
 > [!NOTE]
 >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

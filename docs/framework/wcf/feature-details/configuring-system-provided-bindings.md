@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857413"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuration des liaisons fournies par le système
 Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Liaisons se composent des éléments qui définissent comment les canaux Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requis. Une liaison contient trois types d'éléments :  
   
--   Éléments de liaison de canal de protocole qui déterminent la sécurité, la fiabilité, des paramètres de flux de contexte ou des protocoles définis par l'utilisateur à utiliser avec les messages envoyés au point de terminaison.  
+- Éléments de liaison de canal de protocole qui déterminent la sécurité, la fiabilité, des paramètres de flux de contexte ou des protocoles définis par l'utilisateur à utiliser avec les messages envoyés au point de terminaison.  
   
--   Éléments de liaison de canal de transport qui déterminent le protocole de transport sous-jacent à utiliser lors de l’envoi des messages au point de terminaison, par exemple, le protocole TCP ou HTTP.  
+- Éléments de liaison de canal de transport qui déterminent le protocole de transport sous-jacent à utiliser lors de l’envoi des messages au point de terminaison, par exemple, le protocole TCP ou HTTP.  
   
--   Éléments de liaison d’encodage de message qui déterminent le code de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
+- Éléments de liaison d’encodage de message qui déterminent le code de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
   
  Cette rubrique présente toutes les liaisons Windows Communication Foundation (WCF) fournie par le système. Si aucun de ces éléments ne répond aux exigences exactes de votre application, vous pouvez créer une liaison à l’aide de la classe <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

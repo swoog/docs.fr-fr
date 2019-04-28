@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868756"
 ---
 # <a name="security-transparent-code-level-1"></a>Code Transparent de sécurité, niveau 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161068"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Le modèle de transparence de niveau 1](#the_level_1_transparency_model)  
+- [Le modèle de transparence de niveau 1](#the_level_1_transparency_model)  
   
--   [Attributs de transparence](#transparency_attributes)  
+- [Attributs de transparence](#transparency_attributes)  
   
--   [Exemples de transparence de sécurité](#security_transparency_examples)  
+- [Exemples de transparence de sécurité](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Modèle de transparence de niveau 1  
@@ -40,11 +40,11 @@ ms.locfileid: "59161068"
   
  Vous pouvez marquer un assembly entier, certaines classes d'un assembly ou certaines méthodes d'une classe comme étant transparents de sécurité. Le code transparent de sécurité ne peut pas élever les privilèges. Cette restriction a trois conséquences :  
   
--   Le code transparent de sécurité ne peut pas effectuer d'actions <xref:System.Security.Permissions.SecurityAction.Assert>.  
+- Le code transparent de sécurité ne peut pas effectuer d'actions <xref:System.Security.Permissions.SecurityAction.Assert>.  
   
--   Toute demande de liaison qui serait satisfaite par le code transparent de sécurité devient une demande complète.  
+- Toute demande de liaison qui serait satisfaite par le code transparent de sécurité devient une demande complète.  
   
--   Tout code non sécurisé (non vérifiable) qui doit s'exécuter dans du code transparent de sécurité provoque une demande complète pour l'autorisation de sécurité <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
+- Tout code non sécurisé (non vérifiable) qui doit s'exécuter dans du code transparent de sécurité provoque une demande complète pour l'autorisation de sécurité <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Ces règles sont mises en application par le common language runtime (CLR) pendant l'exécution. Le code transparent de sécurité transmet toutes les exigences de sécurité du code qu’il rappelle à ses appelants. Les demandes qui transitent par le code transparent de sécurité ne peuvent pas élever les privilèges. Si une application de confiance basse appelle du code transparent de sécurité et génère une demande de privilège élevé, celle-ci est renvoyée au code de confiance basse et échoue. Le code transparent de sécurité ne peut pas arrêter la demande, car il ne peut pas effectuer d'actions d'assertion. Le même code transparent de sécurité appelé à partir de code de niveau de confiance totale débouche sur une demande qui aboutit.  
   

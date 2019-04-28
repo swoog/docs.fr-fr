@@ -10,11 +10,11 @@ ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868769"
 ---
 # <a name="code-access-security-basics"></a>Notions fondamentales de la sécurité d'accès du code
 
@@ -152,7 +152,7 @@ public class MyClass {
 
 ## <a name="using-managed-wrapper-classes"></a>Utilisation des classes wrapper managées
 
-La plupart des applications et des composants (excepté les bibliothèques sécurisées) ne doivent pas directement appeler du code non managé, et ce, pour plusieurs raisons. Si du code appelle directement du code non managé, il ne sera pas autorisé à s'exécuter dans de nombreux cas, car du code doit avoir reçu un niveau de confiance élevé pour appeler du code natif. Si la stratégie est modifiée de manière à autoriser l'exécution de cette application, cela peut considérablement affaiblir la sécurité du système, laissant l'application libre d'effectuer quasiment n'importe quelle opération.
+La plupart des applications et des composants (excepté les bibliothèques sécurisées) ne doivent pas directement appeler du code non managé, et ce, pour plusieurs raisons. Si du code appelle directement du code non managé, il ne sera pas autorisé à s'exécuter dans de nombreux cas, car du code doit avoir reçu un niveau de confiance élevé pour appeler du code natif. Si la stratégie est modifiée de manière à autoriser l’exécution de cette application, cela peut considérablement affaiblir la sécurité du système, laissant l’application libre d’effectuer quasiment n’importe quelle opération.
 
 De plus, du code qui a l'autorisation d'accéder à du code non managé peut dans l'absolu effectuer pratiquement n'importe quelle opération en appelant dans une interface API non managée. Par exemple, le code qui a l’autorisation d’appeler du code non managé n’a pas besoin <xref:System.Security.Permissions.FileIOPermission> pour accéder à un fichier ; il peut simplement appeler une API directement, en ignorant le fichier managée API nécessitant une de fichier (Win32) non managée **FileIOPermission**. Si du code managé a l'autorisation d'appeler dans du code non managé et n'appelle pas directement dans du code non managé, le système de sécurité ne pourra pas appliquer les restrictions de sécurité de manière fiable puisque le runtime ne peut pas appliquer ces restrictions sur du code non managé.
 

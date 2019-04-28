@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013086"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procédure : définir le texte affiché par un contrôle Windows Forms
 Généralement, les contrôles Windows Forms affichent du texte en rapport avec la fonction principale du contrôle. Par exemple, un contrôle <xref:System.Windows.Forms.Button> affiche habituellement une légende indiquant l'action à exécuter quand le bouton est activé. Pour tous les contrôles, vous pouvez définir ou retourner le texte à l'aide de la propriété <xref:System.Windows.Forms.Control.Text%2A>. Vous pouvez modifier la police en utilisant la propriété <xref:System.Windows.Forms.Control.Font%2A>. Vous pouvez également définir le texte à l'aide du concepteur.  Voir également [Guide pratique pour Créer des touches d’accès rapide pour Windows Forms à l’aide du Concepteur de contrôles](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Comment : Définir le texte affiché par un Windows Forms à l’aide du Concepteur de contrôle](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Comment : Définir l’Image affichée par un Windows Forms à l’aide du Concepteur de contrôle](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  

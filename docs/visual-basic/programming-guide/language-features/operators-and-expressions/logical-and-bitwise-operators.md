@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864492"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Opérateurs de bits et opérateurs logiques en Visual Basic
 Comparent des opérateurs logiques `Boolean` expressions et retournent un `Boolean` résultat. Le `And`, `Or`, `AndAlso`, `OrElse`, et `Xor` opérateurs sont *binaire* parce qu’ils prennent deux opérandes, tandis que le `Not` opérateur est *unaire* , car il accepte un opérande unique. Certains de ces opérateurs peuvent également effectuer des opérations logiques au niveau du bit sur des valeurs intégrales.  
@@ -72,13 +72,13 @@ Comparent des opérateurs logiques `Boolean` expressions et retournent un `Boole
   
  L’exemple précédent définit la valeur de `x` sur 1. Cela se produit pour les raisons suivantes :  
   
--   Les valeurs sont traitées en tant que fichier binaire :  
+- Les valeurs sont traitées en tant que fichier binaire :  
   
      3 sous forme binaire = 011  
   
      5 sous forme binaire = 101  
   
--   Le `And` opérateur compare les représentations binaires par position binaire (bit). Si les deux bits à une position donnée sont 1, 1 est placé à cette position dans le résultat. Si un bit est 0, 0 est placé à cette position dans le résultat. Dans l’exemple précédent cela fonctionne comme suit :  
+- Le `And` opérateur compare les représentations binaires par position binaire (bit). Si les deux bits à une position donnée sont 1, 1 est placé à cette position dans le résultat. Si un bit est 0, 0 est placé à cette position dans le résultat. Dans l’exemple précédent cela fonctionne comme suit :  
   
      011 (3 sous forme binaire)  
   
@@ -86,7 +86,7 @@ Comparent des opérateurs logiques `Boolean` expressions et retournent un `Boole
   
      001 (le résultat sous forme binaire)  
   
--   Le résultat est traité comme séparateur décimal. La valeur 001 est la représentation binaire de 1, donc `x` = 1.  
+- Le résultat est traité comme séparateur décimal. La valeur 001 est la représentation binaire de 1, donc `x` = 1.  
   
  L’opérateur de bits `Or` opération est similaire, à ceci près que 1 est assigné au bit de résultat si une des deux bits comparés est 1. `Xor` assigne un 1 au bit de résultat si un seul des bits comparés (mais pas les deux) est 1. `Not` accepte un opérande unique et inverse tous les bits, y compris le bit de signe et assigne la valeur au résultat. Cela signifie que pour les nombres positifs signés, `Not` retourne toujours une valeur négative et pour les nombres négatifs, `Not` retourne toujours une valeur positive ou nulle.  
   

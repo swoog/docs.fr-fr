@@ -5,11 +5,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
 ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800956"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Capture de la souris dans les Windows Forms
 *Capture de souris* signifie qu’un contrôle prend de toutes les entrées de souris. Lorsqu’un contrôle a capturé la souris, il reçoit l’entrée de la souris soit ou non le pointeur dans ses bordures.  

@@ -9,11 +9,11 @@ ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757571"
 ---
 # <a name="profiling-enumerations"></a>Énumérations de profilage
 Cette section décrit les énumérations non managées utilisées par l'API de profilage.  
@@ -38,10 +38,10 @@ Cette section décrit les énumérations non managées utilisées par l'API de p
  Indique les propriétés d'une racine de récupérateur de mémoire.  
   
  [COR_PRF_GC_ROOT_KIND, énumération](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Indique le type de racine de garbage collector qui est exposé par le [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) rappel.  
+ Indique le type de racine de RÉCUPÉRATEUR de mémoire qui est exposé par le [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) rappel.  
   
  [COR_PRF_MODULE_FLAGS, énumération](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Fournit des indicateurs en plus de celles disponibles dans le [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) énumération que le profileur peut spécifier à la [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) méthode lors de son chargement.  
+ Fournit des indicateurs en plus de celles disponibles dans le [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) énumération le profileur peut spécifier à la [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) méthode lors de son chargement.  
   
  [COR_PRF_JIT_CACHE, énumération](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  Indique le résultat de la recherche d'une fonction mise en cache.  

@@ -3,11 +3,11 @@ title: Gestion des exceptions
 description: Découvrez les principes fondamentaux de la gestion des exceptions dans F# et découvrez des liens vers les expressions et fonctions de gestion des exceptions.
 ms.date: 05/16/2016
 ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025091"
 ---
 # <a name="exception-handling"></a>Gestion des exceptions
 
@@ -23,8 +23,8 @@ De plus, à mesure que la pile est déroulée, le runtime exécute le code prés
 |Titre|Description|
 |-----|-----------|
 |[Types d'exceptions](exception-types.md)|Décrit comment déclarer un type d’exception.|
-|[Exceptions : Le `try...with` Expression](the-try-with-expression.md)|Décrit la construction de langage qui prend en charge la gestion des exceptions.|
-|[Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)|Décrit la construction de langage qui vous permet d’exécuter du code de nettoyage à mesure que la pile se déroule quand une exception est levée.|
+|[Exceptions : Le `try...with` Expression](the-try-with-expression.md)|Décrit la construction de langage qui prend en charge la gestion des exceptions.|
+|[Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)|Décrit la construction de langage qui vous permet d’exécuter du code de nettoyage à mesure que la pile se déroule quand une exception est levée.|
 |[Exceptions : fonction `raise`](the-raise-Function.md)|Décrit comment lever un objet exception.|
-|[Exceptions : Le `failwith` (fonction)](the-failwith-function.md)|Décrit comment générer une exception F# générale.|
-|[Exceptions : Le `invalidArg` (fonction)](the-invalidArg-function.md)|Décrit comment générer une exception d’argument non valide.|
+|[Exceptions : Le `failwith` (fonction)](the-failwith-function.md)|Décrit comment générer une exception F# générale.|
+|[Exceptions : Le `invalidArg` (fonction)](the-invalidArg-function.md)|Décrit comment générer une exception d’argument non valide.|

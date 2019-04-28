@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922380"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Ligne \<numéro > ne peut pas être analysée à l’aide du FieldWidths actuel
 La ligne spécifiée ne peut pas être analysée, car ses champs ont des largeurs différentes de celles spécifiées.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Modifiez `FieldWidths` de sorte que la ligne puisse être analysée correctement, ou insérez le code de gestion des exceptions pour gérer la ligne.  
+- Modifiez `FieldWidths` de sorte que la ligne puisse être analysée correctement, ou insérez le code de gestion des exceptions pour gérer la ligne.  
   
 ## <a name="see-also"></a>Voir aussi
 

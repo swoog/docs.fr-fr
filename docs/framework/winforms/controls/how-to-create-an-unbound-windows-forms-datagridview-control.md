@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
 ms.openlocfilehash: 9bfffac3d6970aceea3842df95f4bcae970b42e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747485"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Procédure : créer un contrôle DataGridView Windows Forms non lié
 L'exemple de code suivant montre comment remplir un contrôle <xref:System.Windows.Forms.DataGridView> par programmation sans le lier à une source de données. Cela est utile quand vous souhaitez afficher une petite quantité de données sous forme de tableau.  
@@ -28,7 +28,7 @@ L'exemple de code suivant montre comment remplir un contrôle <xref:System.Windo
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
 

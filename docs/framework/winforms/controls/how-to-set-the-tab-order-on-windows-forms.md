@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013125"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procédure : définir l’ordre de tabulation dans des Windows Forms
 L’ordre de tabulation est l’ordre dans lequel un utilisateur déplace le focus d’un contrôle à un autre en appuyant sur la touche TAB. Chaque écran a son propre ordre de tabulation. Par défaut, l’ordre de tabulation est identique à l’ordre dans lequel vous avez créé les contrôles. Ordre de tabulation la numérotation commence à zéro.  

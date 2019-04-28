@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753459"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly, méthode
 Ferme le fichier d’assembly. Appelez cette méthode après la fermeture de tous les autres fichiers, mais avant de fermer le fichier d’assembly. N’appelez pas cette méthode pour les modules indépendants.  

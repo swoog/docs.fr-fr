@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855918"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Regroupement de messages mis en file d'attente dans une session
 Windows Communication Foundation (WCF) fournit une session qui vous permet de regrouper un ensemble de messages connexes à traiter par une application réceptrice unique. Les messages qui font partie d’une session doivent faire partie de la même transaction. Étant donné que tous les messages font partie de la même transaction, si un message n’est pas traité, la session entière est restaurée. Les sessions ont des comportements semblables en ce qui concerne les files d'attente de lettres mortes et les files d'attente de messages incohérents. La propriété Durée de vie (Time to Live ou TTL) définie sur une liaison mise en file d'attente configurée pour les sessions est appliquée à la session dans son ensemble. Si seulement quelques-uns des messages de la session sont envoyés avant l'expiration de la durée de vie, la session entière est placée dans la file d'attente de lettres mortes. De même, lorsque les messages d'une session ne parviennent pas à être envoyés à une application depuis la file d'attente de l'application, la session entière est placée dans la file d'attente de messages incohérents (si disponible).  

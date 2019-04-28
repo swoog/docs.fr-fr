@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923108"
 ---
 # <a name="manipulating-data"></a>Manipulation de données
 Avant l'introduction des ensembles de résultats actifs multiples (Multiple Active Result Sets, MARS), les développeurs devaient utiliser soit des connexions multiples, soit des curseurs côté serveur pour résoudre certains scénarios. En outre, lorsque plusieurs connexions étaient utilisées dans une situation transactionnelle, lié connexions (avec **sp_getbindtoken** et **sp_bindsession**) étaient requises. Les scénarios suivants montrent comment utiliser une connexion de type MARS au lieu de connexions multiples.  

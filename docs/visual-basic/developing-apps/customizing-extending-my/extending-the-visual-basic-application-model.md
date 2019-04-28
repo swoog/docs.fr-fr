@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014260"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Extension du modèle d'application Visual Basic
 Vous pouvez ajouter des fonctionnalités pour le modèle d’application en substituant le `Overridable` membres de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Cette technique vous permet de personnaliser le comportement du modèle d’application et ajouter des appels à vos propres méthodes lorsque l’application démarre et s’arrête.  
@@ -38,11 +38,11 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
      Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> méthode appelle les méthodes suivantes :  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Détermine si l’application a un écran de démarrage défini et le cas échéant, affiche l’écran de démarrage sur un thread distinct.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Détermine si l’application a un écran de démarrage défini et le cas échéant, affiche l’écran de démarrage sur un thread distinct.  
   
          Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> méthode contient le code qui affiche l’écran d’accueil de l’écran au moins le nombre de millisecondes spécifié par le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> propriété. Pour utiliser cette fonctionnalité, vous devez ajouter l’écran de démarrage à votre application à l’aide la **Concepteur de projets** (qui affecte le `My.Application.MinimumSplashScreenDisplayTime` propriété à deux secondes), ou définir le `My.Application.MinimumSplashScreenDisplayTime` propriété dans une méthode qui substitue la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> ou <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> (méthode). Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permet à un concepteur d’émettre du code qui initialise l’écran de démarrage.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permet à un concepteur d’émettre du code qui initialise l’écran de démarrage.  
   
          Par défaut, cette méthode ne fait rien. Si vous sélectionnez un écran de démarrage pour votre application dans Visual Basic **Concepteur de projets**, le concepteur substitue le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriété à une nouvelle instance de la forme d’écran de démarrage .  
   
@@ -54,11 +54,11 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
      Par défaut, avant d’entrer dans la boucle de message Windows Forms, cette méthode appelle la `OnCreateMainForm` (pour créer le formulaire principal de l’application) et `HideSplashScreen` (pour fermer l’écran de démarrage) méthodes :  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fournit un moyen pour un concepteur d’émettre du code qui initialise le formulaire principal.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fournit un moyen pour un concepteur d’émettre du code qui initialise le formulaire principal.  
   
          Par défaut, cette méthode ne fait rien. Toutefois, lorsque vous sélectionnez un formulaire principal pour votre application dans Visual Basic **Concepteur de projets**, le concepteur substitue le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> méthode avec une méthode qui définit la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriété vers une nouvelle instance du formulaire principal.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si l’application a un écran de démarrage défini, et il est ouvert, cette méthode ferme l’écran de démarrage.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si l’application a un écran de démarrage défini, et il est ouvert, cette méthode ferme l’écran de démarrage.  
   
          Par défaut, cette méthode ferme l’écran de démarrage.  
   
@@ -97,7 +97,6 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Vue d’ensemble du modèle d’application Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

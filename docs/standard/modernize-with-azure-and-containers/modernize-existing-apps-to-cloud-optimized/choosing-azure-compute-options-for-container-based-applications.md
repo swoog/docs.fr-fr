@@ -1,17 +1,17 @@
 ---
-title: Choisir des plates-formes de calcul Azure pour les applications en conteneur
+title: Choix des plateformes de calcul Azure pour les applications basées sur des conteneurs
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Choisir des plates-formes de calcul Azure pour les applications en conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811763"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Choisir des plates-formes de calcul Azure pour les applications en conteneur
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Choix des plateformes de calcul Azure pour les applications basées sur des conteneurs
 
 Comme vous l’avez remarqué après avoir lu les sections précédentes, Azure est un cloud ouverte qui offre plusieurs choix. Vous pouvez utiliser la mieux adaptée à vos besoins, toutefois, il met également en évidence questions sur les produits et technologies que vous devez utiliser pour vos applications en conteneur.
 

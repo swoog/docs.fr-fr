@@ -3,11 +3,11 @@ title: 'Boucles : expression for...in'
 description: Voir comment la F# for.. dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024441"
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 
@@ -28,11 +28,11 @@ L’expression énumérable peut être spécifiée en tant que collection énum�
 
 Lorsque vous exprimer une plage en utilisant le `..` opérateur, vous pouvez utiliser la syntaxe suivante.
 
-*Démarrer* ... *Terminer*
+*Démarrer* ... *finish*
 
 Vous pouvez également utiliser une version qui inclut un incrément appelé le *ignorer*, comme dans le code suivant.
 
-*Démarrer* ... *Ignorer* ... *Terminer*
+*Démarrer* ... *skip* .. *finish*
 
 Lorsque vous utilisez des plages intégrales et une variable de compteur simple comme modèle, le comportement standard consiste à incrémenter la variable de compteur de 1 à chaque itération, mais si la plage inclut une valeur de l’ignorer, le compteur est incrémenté par la valeur Ignorer à la place.
 

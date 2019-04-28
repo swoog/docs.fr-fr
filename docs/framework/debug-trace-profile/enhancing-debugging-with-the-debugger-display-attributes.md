@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754698"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Amélioration du débogage avec les attributs d'affichage de débogueur
 
@@ -45,11 +45,11 @@ Par exemple, si un objet C# a un `ToString()` substitué, le débogueur appelle 
 ## <a name="using-the-debuggerbrowsableattribute"></a>Utilisation de DebuggerBrowsableAttribute
  Appliquez l’attribut <xref:System.Diagnostics.DebuggerBrowsableAttribute> à un champ ou une propriété pour spécifier comment il ou elle doit être affiché(e) dans la fenêtre du débogueur. Le constructeur pour cet attribut prend l’une des valeurs d’énumération <xref:System.Diagnostics.DebuggerBrowsableState>, qui spécifie l’un des états suivants :
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> indique que le membre n’est pas affiché dans la fenêtre de données.  Par exemple, l’utilisation de cette valeur pour <xref:System.Diagnostics.DebuggerBrowsableAttribute> sur un champ supprime le champ de la hiérarchie ; le champ n’est pas affiché quand vous développez le type englobant en cliquant sur le signe plus (+) pour l’instance de type.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> indique que le membre n’est pas affiché dans la fenêtre de données.  Par exemple, l’utilisation de cette valeur pour <xref:System.Diagnostics.DebuggerBrowsableAttribute> sur un champ supprime le champ de la hiérarchie ; le champ n’est pas affiché quand vous développez le type englobant en cliquant sur le signe plus (+) pour l’instance de type.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indique que le membre est affiché mais n’est pas développé par défaut.  Il s'agit du comportement par défaut.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> indique que le membre est affiché mais n’est pas développé par défaut.  Il s'agit du comportement par défaut.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indique que le membre proprement dit n’est pas affiché, mais ses objets constituants sont affichés s’il s’agit d’un tableau ou d’une collection.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indique que le membre proprement dit n’est pas affiché, mais ses objets constituants sont affichés s’il s’agit d’un tableau ou d’une collection.
 
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> n’est pas pris en charge par Visual Basic dans la version 2.0 du .NET Framework.

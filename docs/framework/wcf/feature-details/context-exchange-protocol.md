@@ -3,11 +3,11 @@ title: Protocole d'échange de contexte
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857348"
 ---
 # <a name="context-exchange-protocol"></a>Protocole d'échange de contexte
 Cette section décrit le protocole d’échange de contexte introduit dans Windows Communication Foundation (WCF) version .NET Framework version 3.5. Ce protocole permet au canal client d'accepter un contexte fourni par un service et de l'appliquer à toutes les demandes ultérieures à ce service envoyées sur la même instance de canal client. L’implémentation de protocole d’échange de contexte peut utiliser une des deux mécanismes suivants pour propager le contexte entre le serveur et le client : Les cookies HTTP ou un en-tête SOAP.  
@@ -21,16 +21,16 @@ Cette section décrit le protocole d’échange de contexte introduit dans Windo
   
  Les éléments suivants sont une liste d'invariants dans ce mode :  
   
--   Toute tentative de réinitialisation du contexte à l'aide de `SetContext` après l'ouverture du canal lève une <xref:System.InvalidOperationException>.  
+- Toute tentative de réinitialisation du contexte à l'aide de `SetContext` après l'ouverture du canal lève une <xref:System.InvalidOperationException>.  
   
--   Toute tentative d'envoi du contexte à l'aide du <xref:System.ServiceModel.Channels.ContextMessageProperty> dans un message sortant lève une <xref:System.InvalidOperationException>.  
+- Toute tentative d'envoi du contexte à l'aide du <xref:System.ServiceModel.Channels.ContextMessageProperty> dans un message sortant lève une <xref:System.InvalidOperationException>.  
   
--   Si un message est reçu du serveur avec un contexte spécifique, lorsque le canal a déjà été initialisé avec un contexte spécifique, cela lève une <xref:System.ServiceModel.ProtocolException>.  
+- Si un message est reçu du serveur avec un contexte spécifique, lorsque le canal a déjà été initialisé avec un contexte spécifique, cela lève une <xref:System.ServiceModel.ProtocolException>.  
   
     > [!NOTE]
     >  Il est recommandé de recevoir du serveur un contexte initial uniquement si le canal est ouvert sans qu'un contexte soit défini explicitement.  
   
--   Le <xref:System.ServiceModel.Channels.ContextMessageProperty> sur le message entrant est toujours null.  
+- Le <xref:System.ServiceModel.Channels.ContextMessageProperty> sur le message entrant est toujours null.  
   
 ## <a name="mode-2-application-context-management"></a>Mode 2 : Gestion de contexte d’application  
  Il s'agit du mode dans lequel <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> a la valeur `false`. Dans ce mode, le canal de contexte ne gère pas de contexte. C'est la responsabilité de l'application de récupérer, de gérer et d'appliquer le contexte à l'aide de <xref:System.ServiceModel.Channels.ContextMessageProperty>. Toute tentative d'appel de `GetContext` ou de `SetContext` lève une <xref:System.InvalidOperationException>.  
@@ -53,7 +53,7 @@ Cette section décrit le protocole d’échange de contexte introduit dans Windo
   
  Les points de terminaison de service qui requièrent la prise en charge du protocole de l'échange de contexte peuvent l'indiquer explicitement dans la stratégie publiée. Deux nouvelles assertions de stratégie ont été introduites pour représenter la spécification de la prise en charge du protocole d'échange de contexte par le client au niveau de SOAP ou pour activer la prise en charge des cookies HTTP. La génération de ces assertions dans la stratégie sur le service est contrôlée par la valeur de la propriété <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> de la façon suivante :  
   
--   Pour <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, l'assertion suivante est générée :  
+- Pour <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, l'assertion suivante est générée :  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ Cette section décrit le protocole d’échange de contexte introduit dans Windo
     protectionLevel="Sign" />  
     ```  
   
--   Pour <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, l'assertion suivante est générée :  
+- Pour <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, l'assertion suivante est générée :  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
