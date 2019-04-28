@@ -3,11 +3,11 @@ title: <claimTypeRequirements>, élément
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
 ms.openlocfilehash: 236ae880fff24f7ccbf5d6c9c03c0208d446688f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704399"
 ---
 # <a name="claimtyperequirements-element"></a>\<claimTypeRequirements> element
 Spécifie une collection de types de revendications requis.  

@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673327"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Spécifie les paramètres du pool du canal pour une liaison personnalisée.  
@@ -52,11 +52,11 @@ Spécifie les paramètres du pool du canal pour une liaison personnalisée.
   
  `ChannelPoolSettings` spécifie trois quotas :  
   
--   Le quota `idleTimeout` est utilisé pour atténuer des attaques par déni de service (DOS) sur le serveur qui monopolise des ressources sur une longue période. Sur le client, la définition de la valeur correcte peut augmenter la fiabilité de la connexion avec le service. La valeur par défaut est basée sur une allocation habituellement modeste de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
+- Le quota `idleTimeout` est utilisé pour atténuer des attaques par déni de service (DOS) sur le serveur qui monopolise des ressources sur une longue période. Sur le client, la définition de la valeur correcte peut augmenter la fiabilité de la connexion avec le service. La valeur par défaut est basée sur une allocation habituellement modeste de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
--   Le quota `leaseTimeout` est utilisé pour l’intégration avec les programmes d’équilibrage de charge et pour l’amélioration de la fiabilité. La valeur par défaut est basée sur une allocation classique de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
+- Le quota `leaseTimeout` est utilisé pour l’intégration avec les programmes d’équilibrage de charge et pour l’amélioration de la fiabilité. La valeur par défaut est basée sur une allocation classique de ressources. Cette valeur convient pour un environnement de développement et pour de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
--   Le quota `maxOutboundChannelsPerEndpoint` définit des limites de cache sur le serveur et le client et est utilisé pour améliorer la fiabilité. La valeur par défaut est basée $$sur une allocation habituellement modeste des ressources qui sont appropriées pour un environnement de développement et de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
+- Le quota `maxOutboundChannelsPerEndpoint` définit des limites de cache sur le serveur et le client et est utilisé pour améliorer la fiabilité. La valeur par défaut est basée $$sur une allocation habituellement modeste des ressources qui sont appropriées pour un environnement de développement et de petits scénarios d'installation. Les administrateurs de service doivent examiner la valeur si une installation manque de ressources ou si les connexions sont limitées malgré la présence de ressources supplémentaires.  
   
 ## <a name="see-also"></a>Voir aussi
 

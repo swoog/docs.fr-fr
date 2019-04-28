@@ -11,13 +11,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 6758bcac7f24e2d042ca61a0853574080d16fa69
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705985"
 ---
-# <a name="ipicturehandle-property"></a>Propriété de IPicture.Handle
+# <a name="ipicturehandle-property"></a>IPicture.Handle, propriété
 
 Obtient le handle de l’image géré au sein de cet objet de l’image vers un emplacement spécifié.
 
@@ -29,7 +29,7 @@ int Handle { get; }
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** `stdole`
 

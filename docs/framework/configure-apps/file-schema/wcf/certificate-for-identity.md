@@ -3,11 +3,11 @@ title: <certificate> pour <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
 ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673346"
 ---
 # <a name="certificate-for-identity"></a>\<certificat > pour \<identité >
 Spécifie un certificat X.509 utilisé pour valider un serveur auprès d'un client.  

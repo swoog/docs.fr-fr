@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723002"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip, contrôle (Windows Forms)
 Ce contrôle regroupe des commandes d'application et les rend facilement accessibles.  
@@ -55,19 +55,19 @@ Ce contrôle regroupe des commandes d'application et les rend facilement accessi
  [Guide pratique pour Configurer la fusion de menus automatique pour les Applications MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Décrit comment fusionner automatiquement des éléments de menu au moment de l’exécution.  
   
--   [Éditeur de collections d’éléments MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [Éditeur de collections d’éléments MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Guide pratique pour Copier des ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
+- [Guide pratique pour Copier des ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Guide pratique pour Masquer des ToolStripMenuItems à l’aide du Concepteur](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [Guide pratique pour Masquer des ToolStripMenuItems à l’aide du Concepteur](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Guide pratique pour Désactiver des ToolStripMenuItems à l’aide du Concepteur](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [Guide pratique pour Désactiver des ToolStripMenuItems à l’aide du Concepteur](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Guide pratique pour Déplacer des ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
+- [Guide pratique pour Déplacer des ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Tâches MenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [Tâches MenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.MenuStrip>  

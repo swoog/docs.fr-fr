@@ -14,8 +14,8 @@ ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674296"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > élément
 Définit un ou plusieurs commutateurs utilisés par la classe <xref:System.AppContext> pour fournir un mécanisme d’annulation d’abonnement aux nouvelles fonctionnalités.  

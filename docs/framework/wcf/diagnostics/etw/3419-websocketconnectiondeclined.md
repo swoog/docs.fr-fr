@@ -3,20 +3,20 @@ title: 3419 - WebSocketConnectionDeclined
 ms.date: 03/30/2017
 ms.assetid: d1d27f33-7d59-40c7-b464-6cd1f13b7c72
 ms.openlocfilehash: f5061184ff8cff9d8924ca54ef0737a22b5059f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33463949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748802"
 ---
 # <a name="3419---websocketconnectiondeclined"></a>3419 - WebSocketConnectionDeclined
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|3419|  
+|Id|3419|  
 |Mots clés|HTTP|  
-|Niveau|Erreur|  
+|Niveau|Error|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analyse|  
   
 ## <a name="description"></a>Description  

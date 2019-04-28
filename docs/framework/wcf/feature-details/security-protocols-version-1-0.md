@@ -3,26 +3,26 @@ title: Protocoles de sécurité version 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748575"
 ---
 # <a name="security-protocols-version-10"></a>Protocoles de sécurité version 1.0
 Les protocoles Web Services Security fournissent des mécanismes de sécurité des services Web qui couvrent l’ensemble des exigences de sécurité de la messagerie de l’entreprise. Cette section décrit les détails de la version 1.0 de Windows Communication Foundation (WCF) (implémenté dans le <xref:System.ServiceModel.Channels.SecurityBindingElement>) pour les services Web suivants protocoles de sécurité.  
   
-|Spécification/Document|Link|  
+|Spécification/Document|Lien|  
 |-|-|  
-|WSS : SOAP Message Security 1,0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|WSS : Username Token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS : X509 Token Profile 1,0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|WSS: SAML 1.1 Token Profile 1,0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|WSS : SOAP Message Security 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS : SOAP Message Security 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS : UserName Token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS : X509 token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS : SAML 1.1 Token Profile 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS : Sécurité des messages SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
 |WSS Username Token Profile 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS : X.509 Token Profile 1,1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|WSS: Kerberos Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|WSS: SAML 1.1 Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WSS : X.509 Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS : Kerberos Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS : SAML 1.1 Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |Note d'application :<br /><br /> Utilisation de WS-Trust pour la négociation TLS|À publier|  
@@ -32,11 +32,11 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  WCF, version 1, fournit 17 modes d’authentification qui peuvent servir comme base pour la configuration de sécurité des services Web. Chaque mode est optimisé pour un jeu commun d’exigences de déploiement, tel que :  
   
--   Informations d'identification utilisées pour authentifier le client et le service.  
+- Informations d'identification utilisées pour authentifier le client et le service.  
   
--   Mécanismes de protection de la sécurité des messages et du transport.  
+- Mécanismes de protection de la sécurité des messages et du transport.  
   
--   Modèles d'échange de messages.  
+- Modèles d'échange de messages.  
   
 |Mode d'authentification|Authentification de client|Authentification de serveur|Mode|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -45,7 +45,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|Fédérée|X509|Transport|  
 |SspiNegotiatedOverTransport|Windows Sspi Negotiated|Windows Sspi Negotiated|Transport|  
-|AnonymousForCertificate|None|X509|Message|  
+|AnonymousForCertificate|Aucun.|X509|Message|  
 |UserNameForCertificate|Nom d'utilisateur/mot de passe|X509|Message|  
 |MutualCertificate|X509|X509|Message|  
 |MutualCertificateDuplex|X509|X509|Message|  
@@ -53,12 +53,12 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |Kerberos|Windows|Windows|Message|  
 |IssuedToken|Fédérée|Fédérée|Message|  
 |SspiNegotiated|Windows Sspi Negotiated|Windows Sspi Negotiated|Message|  
-|AnonymousForSslNegotiated|None|X509, TLS-Nego|Message|  
+|AnonymousForSslNegotiated|Aucun.|X509, TLS-Nego|Message|  
 |UserNameForSslNegotiated|Nom d'utilisateur/mot de passe|X509, TLS-Nego|Message|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|Message|  
 |IssuedTokenForSslNegotiated|Fédérée|X509, TLS-Nego|Message|  
   
- Les points de terminaison qui utilisent des modes d'authentification de ce type peuvent exprimer leurs conditions de sécurité à l'aide de WS-SP (WS-SecurityPolicy). Ce document décrit la structure des messages d'infrastructure et d'en-tête de sécurité pour chaque mode d'authentification et fournit des exemples de stratégies et de messages.  
+ Les points de terminaison qui utilisent des modes d’authentification de ce type peuvent exprimer leurs exigences de sécurité à l’aide de WS-SP (WS-SecurityPolicy). Ce document décrit la structure des messages d'infrastructure et d'en-tête de sécurité pour chaque mode d'authentification et fournit des exemples de stratégies et de messages.  
   
  WCF s’appuie sur WS-SecureConversation pour assurer la prise en charge des sessions sécurisées pour protéger les échanges de messages multiples entre les applications.  Consultez la section « Sessions sécurisées » ci-après pour plus d'informations sur l'implémentation.  
   
@@ -116,7 +116,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  R1204 - Si X509TokenProfile1.1 est utilisé, une référence externe au jeton de sécurité X509 DOIT utiliser l'empreinte numérique introduite par WS-Security 1.1.  
   
- WCF prend en charge X509IssuerSerial. Cependant, il existe des problèmes d’interopérabilité avec X509IssuerSerial : WCF utilise une chaîne pour comparer deux valeurs de X509IssuerSerial. Par conséquent, si une réorganise des composants du nom du sujet et envoie à un service WCF, une référence à un certificat, il peut être introuvable.  
+ WCF prend en charge X509IssuerSerial. Toutefois il existe des problèmes d’interopérabilité avec X509IssuerSerial : WCF utilise une chaîne pour comparer deux valeurs de X509IssuerSerial. Par conséquent, si une réorganise des composants du nom du sujet et envoie à un service WCF, une référence à un certificat, il peut être introuvable.  
   
 ### <a name="13-kerberos-token"></a>1.3 Jeton Kerberos  
  WCF prend en charge kerberostokenprofile1.1 à pour les besoins de l’authentification Windows avec les contraintes suivantes :  
@@ -157,7 +157,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |||  
 |-|-|  
 |Strict|Les éléments sont ajoutés à l'en-tête de sécurité selon les règles de disposition numérotée décrites dans Stratégie de sécurité à la section 7.7.1 conformément à un principe général de « déclaration avant utilisation ».|  
-|Lax|Les éléments sont ajoutés à l'en-tête de sécurité dans n'importe quel ordre conforme à WSS: SOAP Message Security.|  
+|Lax|Les éléments sont ajoutés à l’en-tête de sécurité dans n’importe quel ordre conforme à WSS : Sécurité des messages SOAP.|  
 |LaxTimestampFirst|Identique à Lax, excepté que le premier élément dans l'en-tête de sécurité doit être un wsse:Timestamp|  
 |LaxTimestampLast|Identique à Lax, excepté que le dernier élément dans l'en-tête de sécurité doit être un wsse:Timestamp|  
   
@@ -177,9 +177,9 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  Horodateur : true  
   
- Disposition de l'en-tête de sécurité : Strict  
+ Disposition d’en-tête de sécurité : Strict  
   
- Suite algorithmique : Basic256  
+ Suite d’algorithmes : Basic256  
   
 #### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
  Avec ce mode d'authentification, le client s'authentifie à l'aide d'un jeton de nom d'utilisateur qui apparaît au niveau de la couche SOAP sous forme d'un jeton de prise en charge signé qui est systématiquement envoyé de l'initiateur au destinataire. Le service est authentifié à l'aide d'un certificat X.509 au niveau de la couche de transport. La liaison utilisée est une liaison de transport.  
@@ -243,7 +243,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Disposition de l'en-tête de sécurité  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -333,7 +333,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Disposition de l'en-tête de sécurité  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -430,7 +430,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Disposition de l'en-tête de sécurité  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -522,7 +522,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Disposition de l'en-tête de sécurité  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -613,7 +613,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ### <a name="security-header-examples"></a>Exemples d'en-tête de sécurité  
  Une fois que le jeton de contexte de sécurité est établi via la négociation SPNEGO à l'aide de WS-Trust Binary Negotiation, les messages d'application ont des en-têtes de sécurité présentant la structure suivante.  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -640,7 +640,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 Utilisation des certificats X.509 pour l'authentification de service  
- Cette section décrit les modes d'authentification suivants : MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate et IssuedTokenForCertificate.  
+ Cette section décrit les modes d’authentification suivants : MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate et IssuedTokenForCertificate.  
   
 #### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
  Avec ce mode d'authentification, le client s'authentifie à l'aide d'un certificat X.509 qui apparaît au niveau de la couche SOAP sous forme de jeton d'initiateur. Le service est également authentifié à l'aide d'un certificat X.509.  
@@ -649,15 +649,15 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Jeton d'initiateur : certificat X.509 du client, avec mode d'inclusion défini à …/IncludeToken/AlwaysToRecipient  
   
- Jeton de destinataire : certificat X.509 du serveur, avec mode d'inclusion défini à …/IncludeToken/Never  
+ Jeton de destinataire : Certificat X.509 du serveur, avec mode d’inclusion a la valeur .../IncludeToken/Never  
   
- Jeton de protection : False  
+ Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Stratégie  
   
@@ -721,8 +721,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -763,9 +763,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- Exemples d'en-tête de sécurité : EncryptBeforeSign  
+ Exemples d’en-tête de sécurité : EncryptBeforeSign  
   
- Requête  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -811,17 +811,17 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  La liaison utilisée est une liaison asymétrique avec les valeurs de propriété suivantes :  
   
- Jeton d'initiateur : certificat X509 du client, avec mode d'inclusion défini à …/IncludeToken/AlwaysToRecipient  
+ Jeton d’initiateur : X509 du client certificat, mode d’inclusion défini à .../IncludeToken/AlwaysToRecipient  
   
- Jeton de destinataire : certificat X509 du serveur, avec mode d'inclusion défini à …/IncludeToken/AlwaysToInitiator  
+ Jeton de destinataire : X509 du serveur certificat, mode d’inclusion défini à .../IncludeToken/AlwaysToInitiator  
   
- Jeton de protection : False  
+ Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Stratégie  
   
@@ -885,7 +885,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
  Demande et réponse  
   
 ```xml  
@@ -908,7 +908,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
  Demande et réponse  
   
 ```xml  
@@ -938,14 +938,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Les modes d'authentification AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 et IssuedTokenForCertificate utilisent tous une instance similaire de sp:SymmetricBinding avec les valeurs de propriété suivantes :  
   
- Jeton de protection : certificat X509 du serveur, avec mode d'inclusion défini à .../IncludeToken/Never  
-Jeton de protection : False  
+ Jeton de protection : X509 du serveur certificat, mode d’inclusion défini à .../IncludeToken/Never  
+Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Les modes d'authentification précédemment cités diffèrent uniquement par les jetons de prise en charge qu'ils utilisent. AnonymousForCertificate n'a pas de jeton de prise en charge, MutualCertificate WSS 1.1 a le certificat X509 du client comme jeton de prise en charge d'endossement, UserNameForCertificate a un jeton de nom d'utilisateur comme jeton de prise en charge signé, et IssuedTokenForCertificate a le jeton émis sous forme d'un jeton de prise en charge d'endossement.  
   
@@ -1015,10 +1015,10 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Stratégie  
   
- Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d'informations sur la liaison.  
+ Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d’informations sur la liaison.  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1068,8 +1068,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1122,7 +1122,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Stratégie  
   
- Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d'informations sur la liaison.  
+ Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d’informations sur la liaison.  
   
  Jeton de prise en charge signé  
   
@@ -1138,8 +1138,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1189,8 +1189,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1262,8 +1262,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1325,8 +1325,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1389,7 +1389,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Stratégie  
   
- Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d'informations sur la liaison.  
+ Consultez « Stratégie » à la section 6.2.3 ci-dessus pour plus d’informations sur la liaison.  
   
  Jeton de prise en charge d'endossement  
   
@@ -1411,8 +1411,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1474,8 +1474,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1536,14 +1536,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ## <a name="63-kerberos"></a>6.3 Kerberos  
  Avec ce mode d'authentification, le client s'authentifie auprès du service à l'aide d'un ticket Kerberos. Ce même ticket fournit également l'authentification de serveur. La liaison utilisée est une liaison symétrique avec les propriétés suivantes :  
   
- Jeton de protection : Ticket Kerberos, avec mode d'inclusion défini à …/IncludeToken/Once  
-Jeton de protection : False  
+ Jeton de protection : Kerberos Ticket, avec mode d’inclusion a la valeur .../IncludeToken/Once  
+Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Stratégie  
   
@@ -1599,8 +1599,8 @@ Jeton de protection : False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1647,8 +1647,8 @@ Jeton de protection : False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1667,14 +1667,14 @@ TBD
 #### <a name="64-issuedtoken"></a>6.4 IssuedToken  
  Avec ce mode d'authentification, le client ne s'authentifie pas auprès du service, en tant que tel, mais présente à la place un jeton émis par un STS et prouve qu'il connaît une clé partagée. Le service n'est pas authentifié auprès du client, en tant que tel, mais le STS chiffre la clé partagée dans le cadre du jeton émis afin que seul le service puisse déchiffrer la clé. La liaison utilisée est une liaison symétrique avec les propriétés suivantes :  
   
- Jeton de protection : Jeton émis, avec mode d'inclusion défini à .../IncludeToken/AlwaysToRecipient  
-Jeton de protection : False  
+ Jeton de protection : Jeton émis, mode d’inclusion défini à .../IncludeToken/AlwaysToRecipient  
+Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Stratégie  
   
@@ -1735,8 +1735,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1783,8 +1783,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -1832,18 +1832,18 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="65-using-sslnegotiated-for-service-authentication"></a>6.5 Utilisation de SslNegotiated pour l'authentification de service  
- Cette section décrit un groupe de modes d'authentification qui utilisent une liaison symétrique, le jeton de protection étant un jeton de contexte de sécurité tel que défini dans WS-SC (WS-SecureConversation) dont la valeur de clé est négociée en exécutant le protocole TLS sur les messages WS-T (WS-Trust) RST/RSTR. Les détails de l'implémentation de la négociation TLS à l'aide de WS-Trust sont décrits dans TLSNEGO. Dans les exemples de message présentés, nous supposerons que le SCT avec un contexte de sécurité associé est déjà établi via une négociation.  
+ Cette section décrit un groupe de modes d’authentification qui utilisent une liaison symétrique, le jeton de protection étant un jeton de contexte de sécurité tel que défini dans WS-SC (WS-SecureConversation) dont la valeur de clé est négociée en exécutant le protocole TLS sur les messages WS-T (WS-Trust) RST/RSTR. Les détails de l'implémentation de la négociation TLS à l'aide de WS-Trust sont décrits dans TLSNEGO. Dans les exemples de message présentés, nous supposerons que le SCT avec un contexte de sécurité associé est déjà établi via une négociation.  
   
  La liaison utilisée est une liaison symétrique avec les propriétés suivantes :  
   
- Jeton de protection : SslContextToken, avec mode d'inclusion défini à .../IncludeToken/Never  
-Jeton de protection : False  
+ Jeton de protection : SslContextToken, avec mode d’inclusion défini à .../IncludeToken/Never  
+Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
 #### <a name="651-policy-for-sslnegotiated-service-authentication"></a>6.5.1 Stratégie d'authentification de service SslNegotiated  
  La stratégie utilisée pour tous les modes d'authentification présentés dans cette section est similaire et diffère uniquement par les jetons d'endossement ou de prise en charge signés spécifiques utilisés.  
@@ -1908,8 +1908,8 @@ Jeton de protection : False
   
  Consultez « Stratégie » à la section 6.5.1 ci-dessus pour plus d'informations sur la liaison.  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1956,8 +1956,8 @@ Jeton de protection : False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -2025,8 +2025,8 @@ Jeton de protection : False
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2076,8 +2076,8 @@ Jeton de protection : False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -2154,8 +2154,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2217,8 +2217,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -2298,8 +2298,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2346,8 +2346,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -2397,14 +2397,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
  Avec ce mode d'authentification, un protocole de négociation est utilisé pour effectuer l'authentification du client et du serveur. Le protocole Kerberos est dans la mesure du possible utilisé, sinon c'est NTLM. La liaison utilisée est une liaison symétrique avec les propriétés suivantes :  
   
- Jeton de protection : SpnegoContextToken, avec mode d'inclusion défini à .../IncludeToken/AlwaysToRecipient  
-Jeton de protection : False  
+ Jeton de protection : SpnegoContextToken, avec mode d’inclusion défini à .../IncludeToken/AlwaysToRecipient  
+Protection de jeton : False  
   
- Signatures du corps et de l'intégralité de l'en-tête : True  
+ Intégralité de l’en-tête et corps Signatures : True  
   
  Ordre de protection : SignBeforeEncrypt  
   
- Chiffrement de la signature : True  
+ Chiffrement de la Signature : True  
   
  Stratégie  
   
@@ -2459,8 +2459,8 @@ Jeton de protection : False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2507,8 +2507,8 @@ Jeton de protection : False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  
@@ -2556,7 +2556,7 @@ Jeton de protection : False
 ```  
   
 ### <a name="67-secureconversation"></a>6.7 SecureConversation  
- La liaison utilisée est une liaison symétrique, le jeton de protection étant un SCT tel que défini dans WS-SC (WS-SecureConversation). Le SCT est négocié à l'aide de WS-T (WS-Trust) ou WS-SC (WS-SecureConversation) d'après une liaison imbriquée, qui est elle-même une liaison symétrique utilisant un protocole de négociation. Le protocole de négociation utilisera Kerberos pour effectuer l'authentification du client et du serveur, si possible. Si Kerberos ne peut pas être utilisé, ce sera NTLM.  
+ La liaison utilisée est une liaison symétrique, le jeton de protection étant un SCT tel que défini dans WS-SC (WS-SecureConversation). Le SCT est négocié à l’aide de WS-T (WS-Trust) ou WS-SC (WS-SecureConversation) d’après une liaison imbriquée, qui est elle-même une liaison symétrique utilisant un protocole de négociation. Le protocole de négociation utilisera Kerberos pour effectuer l'authentification du client et du serveur, si possible. Si Kerberos ne peut pas être utilisé, ce sera NTLM.  
   
  Stratégie  
   
@@ -2669,8 +2669,8 @@ Jeton de protection : False
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d'en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
- Requête  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemples d’en-tête de sécurité : SignBeforeEncrypt, EncryptSignature  
+ Demande  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2717,8 +2717,8 @@ Jeton de protection : False
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a>Exemples d'en-tête de sécurité : EncryptBeforeSign  
- Requête  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemples d’en-tête de sécurité : EncryptBeforeSign  
+ Demande  
   
 ```xml  
 <wsse:Security>  

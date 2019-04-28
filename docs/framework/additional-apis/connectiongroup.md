@@ -1,5 +1,5 @@
 ---
-title: Connectiongroup, classe
+title: ConnectionGroup, classe
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -13,13 +13,13 @@ ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 8fddc2cd537963ad2aa1e0858476e7b9b9c6c032
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706141"
 ---
-# <a name="connectiongroup-class"></a>Connectiongroup, classe
+# <a name="connectiongroup-class"></a>ConnectionGroup, classe
 
 Le `ConnectionGroup` classe regroupe une liste de connexions dans le <xref:System.Net.ServicePoint> contexte et est utilisé pour conserver le contexte pour les ressources réseau (par exemple, les proxys et les clients distincts).
 
@@ -34,7 +34,7 @@ internal class ConnectionGroup
 > 
 > Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toute circonstance.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** <xref:System.Net>
 

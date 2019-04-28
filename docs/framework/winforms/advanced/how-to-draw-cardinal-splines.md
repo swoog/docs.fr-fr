@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
 ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703729"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Procédure : dessiner des splines cardinales
 Une spline cardinale est une courbe qui traverse facilement un ensemble donné de points. Pour dessiner une spline cardinale, créez un <xref:System.Drawing.Graphics> de l’objet et passez l’adresse d’un tableau de points à la <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode).  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dessin d’une Spline cardinale en forme de cloche  
   
--   L’exemple suivant dessine une spline cardinale en forme de cloche qui passe par cinq points définis. L’illustration suivante montre la courbe et cinq points.  
+- L’exemple suivant dessine une spline cardinale en forme de cloche qui passe par cinq points définis. L’illustration suivante montre la courbe et cinq points.  
   
      ![Diagramme illustrant une spline cardinale en forme de cloche.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
@@ -30,7 +30,7 @@ Une spline cardinale est une courbe qui traverse facilement un ensemble donné d
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Dessiner une Spline cardinale fermée  
   
--   Utilisez le <xref:System.Drawing.Graphics.DrawClosedCurve%2A> méthode de la <xref:System.Drawing.Graphics> classe pour dessiner une spline cardinale fermée. Dans une spline cardinale fermée, la courbe se poursuit jusqu’au dernier point dans le tableau et se connecte avec le premier point dans le tableau. L’exemple suivant dessine une spline cardinale fermée qui passe par six points définis. L’illustration suivante montre la spline fermée avec les six points :  
+- Utilisez le <xref:System.Drawing.Graphics.DrawClosedCurve%2A> méthode de la <xref:System.Drawing.Graphics> classe pour dessiner une spline cardinale fermée. Dans une spline cardinale fermée, la courbe se poursuit jusqu’au dernier point dans le tableau et se connecte avec le premier point dans le tableau. L’exemple suivant dessine une spline cardinale fermée qui passe par six points définis. L’illustration suivante montre la spline fermée avec les six points :  
   
  ![Diagramme illustrant une spline cardinale fermée.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
@@ -39,7 +39,7 @@ Une spline cardinale est une courbe qui traverse facilement un ensemble donné d
   
 ### <a name="changing-the-bend-of-a-cardinal-spline"></a>Modification de la courbure d’une Spline cardinale  
   
--   Modifier la courbure d’une spline cardinale en passant un argument de tension à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode). L’exemple suivant dessine trois splines cardinales qui passent par le même ensemble de points. L’illustration suivante montre les trois splines, ainsi que leurs valeurs de tension. Notez que lorsque la tension est 0, les points sont reliés par des lignes droites.  
+- Modifier la courbure d’une spline cardinale en passant un argument de tension à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode). L’exemple suivant dessine trois splines cardinales qui passent par le même ensemble de points. L’illustration suivante montre les trois splines, ainsi que leurs valeurs de tension. Notez que lorsque la tension est 0, les points sont reliés par des lignes droites.  
   
  ![Diagramme qui montre les trois splines cardinales.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   

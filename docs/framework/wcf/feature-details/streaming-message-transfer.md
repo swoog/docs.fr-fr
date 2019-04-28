@@ -3,20 +3,20 @@ title: Transfert des messages par diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747574"
 ---
 # <a name="streaming-message-transfer"></a>Transfert des messages par diffusion en continu
 Les transports de Windows Communication Foundation (WCF) prennent en charge deux modes de transfert de messages :  
   
--   Les transferts mis en mémoire tampon conservent la totalité des messages en mémoire tampon tant que leur transfert n'est pas terminé. Un message mis en mémoire tampon doit être entièrement remis pour que son destinataire puisse le lire.  
+- Les transferts mis en mémoire tampon conservent la totalité des messages en mémoire tampon tant que leur transfert n'est pas terminé. Un message mis en mémoire tampon doit être entièrement remis pour que son destinataire puisse le lire.  
   
--   Les transferts en flux continu exposent les messages sous forme de flux. Le destinataire commence à traiter les messages avant que ceux-ci ne soient complètement remis.  
+- Les transferts en flux continu exposent les messages sous forme de flux. Le destinataire commence à traiter les messages avant que ceux-ci ne soient complètement remis.  
   
--   Les transferts en flux continu permettent d'améliorer l'évolutivité d'un service car ils évitent d'avoir à recourir à de grandes mémoires tampon. Utilisez ce mode de transfert pour améliorer l'évolutivité en fonction de la taille des messages à transférer. Préférez le transfert en flux continu pour les messages de grande taille.  
+- Les transferts en flux continu permettent d'améliorer l'évolutivité d'un service car ils évitent d'avoir à recourir à de grandes mémoires tampon. Utilisez ce mode de transfert pour améliorer l'évolutivité en fonction de la taille des messages à transférer. Préférez le transfert en flux continu pour les messages de grande taille.  
   
  Par défaut, les transports HTTP, TCP/IP et les transports de canal nommé utilisent les transferts mis en mémoire tampon. Cette rubrique contient des instructions permettant de faire basculer ces transports d'un mode de transfert mis en mémoire tampon à un mode de transfert en flux continu et présente les conséquences d'une telle modification.  
   

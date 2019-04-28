@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746724"
 ---
 # <a name="user-defined-data-type"></a>Type de données défini par l'utilisateur
 Contient des données dans un format que vous définissez. La `Structure` instruction définit le format.  
@@ -50,15 +50,15 @@ Contient des données dans un format que vous définissez. La `Structure` instru
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
--   **Consommation de mémoire.** Comme avec tous les types de données composites, vous ne peut pas calculer en toute sécurité la consommation totale de la mémoire d’une structure en additionnant les allocations de stockage nominal de ses membres. En outre, vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Si vous avez besoin contrôler la disposition de stockage d’une structure, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribut le `Structure` instruction.  
+- **Consommation de mémoire.** Comme avec tous les types de données composites, vous ne peut pas calculer en toute sécurité la consommation totale de la mémoire d’une structure en additionnant les allocations de stockage nominal de ses membres. En outre, vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Si vous avez besoin contrôler la disposition de stockage d’une structure, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribut le `Structure` instruction.  
   
--   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types définis par l’utilisateur dans d’autres environnements ne sont pas compatibles avec Visual Basic les types de structure.  
+- **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types définis par l’utilisateur dans d’autres environnements ne sont pas compatibles avec Visual Basic les types de structure.  
   
--   **Étendues.** Il n’existe aucune conversion automatique vers ou à partir de n’importe quel type de données de structure. Vous pouvez définir des opérateurs de conversion sur votre structure à l’aide de la [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), et vous pouvez déclarer chaque opérateur de conversion pour être `Widening` ou `Narrowing`.  
+- **Étendues.** Il n’existe aucune conversion automatique vers ou à partir de n’importe quel type de données de structure. Vous pouvez définir des opérateurs de conversion sur votre structure à l’aide de la [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), et vous pouvez déclarer chaque opérateur de conversion pour être `Widening` ou `Narrowing`.  
   
--   **Caractères de type.** Types de données de structure n’ont aucun caractère de type littéral ou un caractère de type identificateur.  
+- **Caractères de type.** Types de données de structure n’ont aucun caractère de type littéral ou un caractère de type identificateur.  
   
--   **Type de Framework.** Il n’existe pas de type correspondant dans le .NET Framework. Toutes les structures héritent de la classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, mais aucune structure individuelle ne correspond à <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Type de Framework.** Il n’existe pas de type correspondant dans le .NET Framework. Toutes les structures héritent de la classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, mais aucune structure individuelle ne correspond à <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemple  
  Le paradigme suivant montre le contour de la déclaration d’une structure.  

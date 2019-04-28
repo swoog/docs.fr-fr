@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703684"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -32,13 +32,13 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
  Les informations contenues dans une liaison peuvent être complexes et certains paramètres peuvent ne pas être compatibles avec d’autres. Pour cette raison, WCF inclut un ensemble de liaisons fournies par le système. Ces liaisons sont conçues pour couvrir la plupart des exigences d’applications. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Un liaison de protocole HTTP adaptée à la connexion aux services Web qui est conforme à la norme WS-I spécification Basic Profile (par exemple, services Web ASP.NET basée sur les services).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Un liaison de protocole HTTP adaptée à la connexion aux services Web qui est conforme à la norme WS-I spécification Basic Profile (par exemple, services Web ASP.NET basée sur les services).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Une liaison interopérable adaptée à la connexion aux points de terminaison qui se conforment à WS-* protocoles.  
+- <xref:System.ServiceModel.WSHttpBinding>: Une liaison interopérable adaptée à la connexion aux points de terminaison qui se conforment à WS-* protocoles.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer des connexions de message en file d’attente avec d’autres points de terminaison WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer des connexions de message en file d’attente avec d’autres points de terminaison WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Cette liaison offre de meilleures performances que les liaisons HTTP et est idéale pour une utilisation dans un réseau local.
   

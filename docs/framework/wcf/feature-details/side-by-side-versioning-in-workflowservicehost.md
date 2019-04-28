@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747926"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Versioning côte à côte dans WorkflowServiceHost
 Le contrôle de version côte à côte <xref:System.ServiceModel.Activities.WorkflowServiceHost> introduit dans le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] permet d'héberger plusieurs versions d'un service de workflow sur un seul point de terminaison. Une fonctionnalité côte à côte fournie permet de configurer un service de workflow de façon à ce que les nouvelles instances du service de workflow soient créées à l'aide de la nouvelle définition de workflow, alors que les instances en cours de exécution s'achèvent à l'aide de définition existante. Cette rubrique fournit une vue d'ensemble de l'exécution de service de workflow côte à côte à l'aide de <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -27,21 +27,21 @@ Le contrôle de version côte à côte <xref:System.ServiceModel.Activities.Work
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>Règles pour héberger plusieurs versions d'un service de workflow  
  Lorsqu'un utilisateur ajoute une version supplémentaire à <xref:System.ServiceModel.Activities.WorkflowServiceHost>, il existe plusieurs conditions à respecter pour qu'un service de workflow soit hébergé avec le même ensemble de points de terminaison et de description. Si l'une des versions supplémentaires ne satisfait pas ces conditions, <xref:System.ServiceModel.Activities.WorkflowServiceHost> lève une exception lorsque `Open` est appelée. Chaque définition de flux de travail fournie à l’hôte comme une version supplémentaire doit satisfaire les exigences suivantes (où la version principale est la définition de service de workflow qui est fournie au constructeur hôte). La version supplémentaire du flux de travail doit :  
   
--   Avoir le même <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> que la version principale du service de workflow.  
+- Avoir le même <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> que la version principale du service de workflow.  
   
--   Ne doit pas avoir d'activité <xref:System.ServiceModel.Activities.Receive> ou <xref:System.ServiceModel.Activities.SendReply> dans son <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> qui ne sont pas dans la version principale, et doit correspondre au contrat d'opération.  
+- Ne doit pas avoir d'activité <xref:System.ServiceModel.Activities.Receive> ou <xref:System.ServiceModel.Activities.SendReply> dans son <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> qui ne sont pas dans la version principale, et doit correspondre au contrat d'opération.  
   
--   Avoir un <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> unique. Une seule définition de workflow peut avoir une propriété `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+- Avoir un <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> unique. Une seule définition de workflow peut avoir une propriété `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Certaines modifications sont autorisées. Les éléments suivants peuvent être différents selon les versions :  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> peut avoir un nom et un package différents de ceux de la version principale.  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> peut avoir un nom et un package différents de ceux de la version principale.  
   
--   La valeur <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> peut être différente de celle de la version principale.  
+- La valeur <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> peut être différente de celle de la version principale.  
   
--   La valeur <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> peut être différente de celle de la version principale.  
+- La valeur <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> peut être différente de celle de la version principale.  
   
--   La valeur <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> peut être différente de celle de la version principale.  
+- La valeur <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> peut être différente de celle de la version principale.  
   
 ### <a name="configuring-the-definitionidentity"></a>Configurer le DefinitionIdentity  
  Lorsqu’un service de flux de travail est créé à l’aide du Concepteur de flux de travail, le <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> est définie à l’aide de la **propriétés** fenêtre. Cliquez en dehors de l’activité de racine du service dans le concepteur pour sélectionner le service de workflow, puis choisissez **fenêtre Propriétés** à partir de la **vue** menu. Sélectionnez **WorkflowIdentity** dans la liste déroulante qui s’affiche en regard du **DefinitionIdentity** propriété, puis développez et spécifiez le texte souhaité <xref:System.Activities.WorkflowIdentity> propriétés. Dans l’exemple suivant le <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> est configuré avec le <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` et un <xref:System.Activities.WorkflowIdentity.Version%2A> de `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> est facultatif et dans cet exemple est `null`.  

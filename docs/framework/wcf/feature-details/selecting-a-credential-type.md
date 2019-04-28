@@ -3,11 +3,11 @@ title: Sélection d'un type d'informations d'identification
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748801"
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données de Windows Communication Foundation (WCF) utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans WCF, les informations d’identification peuvent prendre différentes formes, telles que les jetons de nom d’utilisateur et les certificats X.509. Cette rubrique traite des informations d’identification, comment ils sont utilisés dans WCF et comment sélectionner les informations d’identification appropriées pour votre application.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167841"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Comment sont utilisées les informations d'identification du client pour authentifier un client auprès du service  
  Les informations d'identification du client requises pour communiquer avec un service sont fournies à l'aide de la propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> ou de la propriété <xref:System.ServiceModel.ChannelFactory.Credentials%2A>. Le canal de sécurité utilise ces informations pour authentifier le client auprès du service. L'authentification est accomplie par l'intermédiaire d'un des deux modes :  
   
--   Les informations d’identification du client sont utilisées qu’une seule fois avant le premier message est envoyé, à l’aide de l’instance du client WCF pour établir un contexte de sécurité. Tous les messages d'application sont ensuite sécurisés par l'intermédiaire du contexte de sécurité.  
+- Les informations d’identification du client sont utilisées qu’une seule fois avant le premier message est envoyé, à l’aide de l’instance du client WCF pour établir un contexte de sécurité. Tous les messages d'application sont ensuite sécurisés par l'intermédiaire du contexte de sécurité.  
   
--   Les informations d'identification du client sont utilisées pour authentifier chaque message d'application envoyé au service. Dans ce cas, aucun contexte n'est établi entre le client et le service.  
+- Les informations d'identification du client sont utilisées pour authentifier chaque message d'application envoyé au service. Dans ce cas, aucun contexte n'est établi entre le client et le service.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Les identités établies ne peuvent pas être modifiées  
  Lorsque la première méthode est utilisée, le contexte établi est associé définitivement à l'identité du client. Autrement dit, une fois le contexte de sécurité établi, l'identité associée au client ne peut pas être modifiée.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167841"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)
