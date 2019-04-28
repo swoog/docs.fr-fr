@@ -2,20 +2,14 @@
 title: Schéma des paramètres de chiffrement
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration schema [.NET Framework], cryptography
-- elements [.NET Framework], cryptography
-- schema configuration settings
-- cryptography, settings schema
-- cryptography, mapping algorithm names
-- configuration sections [.NET Framework]
-- configuration settings [.NET Framework], cryptography
+  - 'configuration schema [.NET Framework], cryptography'
+  - 'elements [.NET Framework], cryptography'
+  - schema configuration settings
+  - 'cryptography, settings schema'
+  - 'cryptography, mapping algorithm names'
+  - 'configuration sections [.NET Framework]'
+  - 'configuration settings [.NET Framework], cryptography'
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705205"
 ---
 # <a name="cryptography-settings-schema"></a>Schéma des paramètres de chiffrement
 Le schéma des paramètres de chiffrement contient des éléments qui spécifient comment mapper des noms d’algorithmes conviviaux à des classes qui implémentent des algorithmes de chiffrement.  
