@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869665"
 ---
 # <a name="value-types-and-reference-types"></a>Types valeur et types référence
 En Visual Basic, les types de données sont implémentés en fonction de leur classification. Les types de données Visual Basic peuvent être classées selon qu’une variable d’un type particulier stocke ses propres données ou un pointeur vers les données. Il stocke ses propres données de cas d’un *type valeur*; si elle contient un pointeur vers les données ailleurs dans la mémoire, il est un *type référence*.  
@@ -23,13 +23,13 @@ En Visual Basic, les types de données sont implémentés en fonction de leur cl
 ## <a name="value-types"></a>Types valeur  
  Un type de données est un *type valeur* s’il conserve des données au sein de sa propre allocation de mémoire. Les types valeur sont les suivantes :  
   
--   Tous les types de données numériques  
+- Tous les types de données numériques  
   
--   `Boolean`, `Char`et `Date`  
+- `Boolean`, `Char`et `Date`  
   
--   Toutes les structures, même si leurs membres sont des types référence  
+- Toutes les structures, même si leurs membres sont des types référence  
   
--   Énumérations, dans la mesure où leur type sous-jacent est toujours `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou `ULong`  
+- Énumérations, dans la mesure où leur type sous-jacent est toujours `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou `ULong`  
   
  Chaque structure est un type valeur, même s’il contient des membres de type référence. Pour cette raison, types valeur tels que `Char` et `Integer` sont implémentés par les structures de .NET Framework.  
   
@@ -38,13 +38,13 @@ En Visual Basic, les types de données sont implémentés en fonction de leur cl
 ## <a name="reference-types"></a>Types référence  
  Un *type référence* contient un pointeur vers un autre emplacement de mémoire qui contient les données. Types de référence sont les suivants :  
   
--   `String`  
+- `String`  
   
--   Tous les tableaux, même si leurs éléments sont des types valeur  
+- Tous les tableaux, même si leurs éléments sont des types valeur  
   
--   Types de classe, tels que <xref:System.Windows.Forms.Form>  
+- Types de classe, tels que <xref:System.Windows.Forms.Form>  
   
--   Délégués  
+- Délégués  
   
  Une classe est un *type référence*. Pour cette raison, les types référence comme `Object` et `String` sont pris en charge par [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes. Notez que chaque tableau est un type référence, même si ses membres sont des types valeur.  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>Éléments qui ne sont pas des Types  
  Les éléments de programmation suivants ne sont pas éligibles en tant que types, car vous ne pouvez pas spécifier une d'entre elles comme type de données pour un élément déclaré :  
   
--   Espaces de noms  
+- Espaces de noms  
   
--   Modules  
+- Modules  
   
--   Événements  
+- Événements  
   
--   Propriétés et procédures  
+- Propriétés et procédures  
   
--   Variables, constantes et champs  
+- Variables, constantes et champs  
   
 ## <a name="working-with-the-object-data-type"></a>Utilisation du Type de données d’objet  
  Vous pouvez affecter un type référence ou un type valeur à une variable de la `Object` type de données. Un `Object` variable contienne toujours un pointeur vers les données, jamais les données elles-mêmes. Toutefois, si vous affectez un type valeur à une `Object` variable, il se comporte comme si elle contient ses propres données. Pour plus d’informations, consultez [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).  

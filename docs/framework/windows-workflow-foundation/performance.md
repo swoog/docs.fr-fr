@@ -3,11 +3,11 @@ title: Performances de Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006837"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Performances de Windows Workflow Foundation 4
 
@@ -34,7 +34,7 @@ ms.locfileid: "57845733"
  Par rapport à WF3, le runtime WF4 est doté d'un planificateur plus efficace. Il s’appuie sur le même pool de threads d’e/s qui est utilisé pour WCF, qui est très efficace pour l’exécution des éléments de travail par lot. La file d’attente interne du planificateur d’éléments de travail est optimisée pour les modèles d’utilisation les plus courants. Le runtime WF4 gère également les états d'exécution de façon très simplifiée avec une synchronisation et une logique de gestion des événements minimales, tandis que WF3 dépend d'une inscription aux événements et de l'appel de fonctions lourdes pour effectuer une synchronisation complexe pour les transitions d'état.
 
 ### <a name="data-storage-and-flow"></a>Stockage et flux de données
- Dans WF3, les données associées à une activité sont modélisées à l'aide des propriétés de dépendance implémentées par le type <xref:System.Windows.DependencyProperty>. Le modèle de propriété de dépendance a été introduit dans Windows Presentation Foundation (WPF). En général, ce modèle est très flexible afin de faciliter la liaison de données et de prendre en charge d’autres fonctionnalités. Toutefois, ce modèle nécessite de définir les propriétés en tant que champs statiques dans la définition du workflow. Lorsque le runtime [!INCLUDE[wf1](../../../includes/wf1-md.md)] définit ou obtient les valeurs de propriétés, cela implique une logique de recherche lourde.
+ Dans WF3, les données associées à une activité sont modélisées à l'aide des propriétés de dépendance implémentées par le type <xref:System.Windows.DependencyProperty>. Le modèle de propriété de dépendance a été introduit dans Windows Presentation Foundation (WPF). En général, ce modèle est très flexible afin de faciliter la liaison de données et de prendre en charge d’autres fonctionnalités. Toutefois, ce modèle nécessite de définir les propriétés en tant que champs static dans la définition du workflow. Lorsque le runtime [!INCLUDE[wf1](../../../includes/wf1-md.md)] définit ou obtient les valeurs de propriétés, cela implique une logique de recherche lourde.
 
  WF4 utilise une logique claire de portée des données afin d'améliorer considérablement le traitement des données dans un workflow. Il sépare les données stockées dans une activité de celles transférées hors des limites de l’activité à l’aide de deux concepts différents : variables et arguments. En utilisant un périmètre hiérarchique clair pour les variables et arguments de « Dans/Out/InOut », la complexité de l’utilisation de données pour les activités est considérablement réduite et la durée de vie des données est automatiquement étendue. Les activités ont une signature bien définie décrite par ses arguments. Il vous suffit d'inspecter une activité pour déterminer les données qu'elle s'attend à recevoir et celles qu'elle générera suite à son exécution.
 
@@ -114,7 +114,7 @@ ms.locfileid: "57845733"
  Ces tests visent à montrer le résultat de l'exécution de plusieurs activités en séquences.  La séquence inclut cinq activités.
 
 ### <a name="transaction-scope"></a>Étendue de transaction
- Le test d'étendue de transaction est légèrement différent des autres tests en ceci qu'une nouvelle instance de workflow n'est pas créée pour chaque itération.  Au lieu de cela, le workflow est structuré avec une boucle while comprenant une activité <xref:System.Activities.Statements.TransactionScope> qui contient une activité unique qui n'effectue aucun travail.  Chaque exécution d'un lot de 50 itérations dans la boucle while est comptée comme une opération unique.
+ Le test d’étendue de transaction est légèrement différent des autres tests en ceci qu’une nouvelle instance de workflow n’est pas créée pour chaque itération.  Au lieu de cela, le workflow est structuré avec une boucle while comprenant une activité <xref:System.Activities.Statements.TransactionScope> qui contient une activité unique qui n'effectue aucun travail.  Chaque exécution d'un lot de 50 itérations dans la boucle while est comptée comme une opération unique.
 
 ### <a name="compensation"></a>Compensation
  Le workflow WF3 contient une activité compensable unique appelée `WorkScope`.  L'activité implémente simplement l'interface <xref:System.Workflow.ComponentModel.ICompensatableActivity> :
@@ -191,10 +191,10 @@ Le diagramme suivant illustre le flux de travail de base de compensation. Le wor
 
  En se connectant aux services TCP backend sans regroupement de canaux, le service [!INCLUDE[wf1](../../../includes/wf1-md.md)] a un impact de 17,2 % sur le débit.  Avec le regroupement de canaux, la pénalité est d'environ 23,8 %.  Pour HTTP, l’impact est moindre : 4,3 % sans regroupement et 8,1 % avec le regroupement.  Il est important de noter que le regroupement de canaux présente très peu d'avantages lors de l'utilisation de HTTP.
 
- Bien qu’une surcharge de l’exécution de WF4 par rapport à un service WCF codé manuellement dans ce test, on peut considérer le pire scénario.  Les deux services backend dans ce test exécutent très peu de travail.  Dans un scénario de bout en bout réel, ces services effectueraient des opérations plus coûteuses telles que des appels de base de données, ce qui réduirait l'impact de la couche de transport sur les performances.  Tout cela ajouté aux avantages des fonctionnalités disponibles dans WF4 fait de Workflow Foundation un choix viable pour la création de services d'orchestration.
+ Bien qu’une surcharge de l’exécution de WF4 par rapport à un service WCF codé manuellement dans ce test, on peut considérer le pire scénario.  Les deux services backend dans ce test exécutent très peu de travail.  Dans un scénario de bout en bout réel, ces services effectueraient des opérations plus coûteuses telles que des appels de base de données, ce qui réduirait l'impact de la couche de transport sur les performances.  Tout cela ajouté aux avantages des fonctionnalités disponibles dans WF4 fait de Workflow Foundation un choix viable pour la création de services d’orchestration.
 
 ## <a name="key-performance-considerations"></a>Considérations sur les performances clés
- Les fonctionnalités abordées dans cette section, à l'exception de l'interopérabilité, ont radicalement changé entre WF3 et WF4.  Cela affecte la conception des applications de workflow ainsi que les performances.
+ Les fonctionnalités abordées dans cette section, à l’exception de l’interopérabilité, ont radicalement changé entre WF3 et WF4.  Cela affecte la conception des applications de workflow ainsi que les performances.
 
 #### <a name="workflow-activation-latency"></a>Latence de l'activation de workflow
  Dans une application de service de workflow WCF, la latence pour démarrer un nouveau workflow ou le chargement d’un workflow existant est importante car elle peut provoquer des blocages.  Ce cas de test compare un hôte XOML WF3 à un hôte XAMLX WF4 dans un scénario classique.
@@ -316,8 +316,8 @@ L’illustration suivante montre un workflow WF3 avec ReceiveActivity et un work
 
 |Options d'hébergement|Delta de jeu de travail WF3|Delta de jeu de travail WF4|
 |---------------------|---------------------------|---------------------------|
-|Workflows hébergés d'application console|18 MB|9 MB|
-|Services de workflow hébergés par IIS|446 MB|364 MB|
+|Workflows hébergés d'application console|18 MB|9 Mo|
+|Services de workflow hébergés par IIS|446 Mo|364 MB|
 
  Hébergement des définitions de workflow dans IIS consomme beaucoup plus de mémoire en raison du <xref:System.ServiceModel.WorkflowServiceHost>, détaillées artefacts de service WCF et la logique associée à l’hôte de traitement des messages.
 
@@ -355,13 +355,13 @@ public class Workflow1 : Activity
 ### <a name="persistence"></a>Persistance
  WF3 et WF4 sont fournis avec un fournisseur de persistance SQL.  Le fournisseur de persistance SQL de WF3 est une implémentation simple qui sérialise l'instance de workflow et la stocke dans un blob.  Pour cette raison, les performances de ce fournisseur dépendent fortement de la taille de l'instance de workflow.  Dans WF3, la taille de l'instance pouvait augmenter pour de nombreuses raisons, comme indiqué précédemment dans cet article.  De nombreux clients choisissent de ne pas utiliser le fournisseur de persistance SQL par défaut, car le stockage d'une instance sérialisée dans une base de données ne donne aucune visibilité sur l'état du workflow.  Pour trouver un workflow particulier sans connaître son ID, il faudrait désérialiser chaque instance persistante et examiner son contenu.  Beaucoup de développeurs préfèrent écrire leurs propres fournisseurs de persistance afin de surmonter cet obstacle.
 
- Le fournisseur de persistance SQL de WF4 SQL a tenté de régler ces problèmes.  Les tables de persistance exposent des informations telles que les signets actifs et les propriétés pouvant être promues.  La nouvelle fonctionnalité de corrélation basée sur le contenu de WF4 ne fonctionnerait pas correctement avec l'approche de persistance SQL de WF3, qui a entraîné des modifications dans l'organisation de l'instance de workflow persistante.  Cela rend le travail du fournisseur de persistance plus complexe et augmente le stress sur la base de données.
+ Le fournisseur de persistance SQL de WF4 SQL a tenté de régler ces problèmes.  Les tables de persistance exposent des informations telles que les signets actifs et les propriétés pouvant être promues.  La nouvelle fonctionnalité de corrélation basée sur le contenu de WF4 ne fonctionnerait pas correctement avec l’approche de persistance SQL de WF3, qui a entraîné des modifications dans l’organisation de l’instance de workflow persistante.  Cela rend le travail du fournisseur de persistance plus complexe et augmente le stress sur la base de données.
 
 ### <a name="environment-setup"></a>Configuration de l'environnement
 ![Configuration de l’environnement de test de performances de flux de travail](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-setup"></a>Configuration du test
- Même avec un jeu de fonctionnalités amélioré et une meilleure gestion d'accès concurrentiel, le fournisseur de persistance SQL de WF4 est plus rapide que celui de WF3.  Pour illustrer cela, deux workflows qui exécutent des opérations identiques pour l'essentiel dans WF3 et WF4 sont comparés ci-dessous.
+ Même avec un jeu de fonctionnalités amélioré et une meilleure gestion d’accès concurrentiel, le fournisseur de persistance SQL de WF4 est plus rapide que celui de WF3.  Pour illustrer cela, deux workflows qui exécutent des opérations identiques pour l'essentiel dans WF3 et WF4 sont comparés ci-dessous.
 
  ![Workflow de persistance de WF3 à gauche et de WF4 à droite](./media/performance/persist-workflow-wf3-wf4.gif)
 
@@ -372,29 +372,29 @@ public class Workflow1 : Activity
 
  Lorsque le transport entre le client et le niveau intermédiaire est HTTP, la persistance dans WF4 présente une amélioration de 2,6 fois.  Avec le transport TCP, ce facteur est de 3 fois.  Dans tous le cas, l'utilisation de l'UC sur le niveau intermédiaire est de 98 % ou supérieure.  Le débit est plus élevé dans WF4 à cause du runtime de workflow plus rapide.  La taille de l'instance sérialisée est petite dans les deux cas et n'est pas un élément contributif majeur dans cette situation.
 
- Les workflows WF3 et WF4 de ce test utilisent une activité pour indiquer explicitement quand la persistance doit avoir lieu.  Cela a pour avantage de faire persister le workflow sans le décharger.  Dans WF3, il est également possible de le faire persister à l'aide de la fonctionnalité <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>, mais cela décharge l'instance de workflow de la mémoire.  Si un développeur utilisant WF3 veut s'assurer qu'un workflow persiste à certains points, il doit modifier la définition du workflow ou payer le coût du déchargement et du rechargement de l'instance de workflow.  Une nouvelle fonctionnalité de WF4 permet la persistance sans déchargement : <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>.  Cette fonctionnalité permet de faire persister l'instance de workflow en cas de période d'inactivité, mais de la conserver dans la mémoire jusqu'à ce que le seuil de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> soit atteint ou que l'exécution reprenne.
+ Les workflows WF3 et WF4 de ce test utilisent une activité pour indiquer explicitement quand la persistance doit avoir lieu.  Cela a pour avantage de faire persister le workflow sans le décharger.  Dans WF3, il est également possible de le faire persister à l'aide de la fonctionnalité <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>, mais cela décharge l'instance de workflow de la mémoire.  Si un développeur utilisant WF3 veut s'assurer qu'un workflow persiste à certains points, il doit modifier la définition du workflow ou payer le coût du déchargement et du rechargement de l'instance de workflow.  Une nouvelle fonctionnalité de WF4 permet la persistance sans déchargement : <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>.  Cette fonctionnalité permet de faire persister l’instance de workflow en cas de période d’inactivité, mais de la conserver dans la mémoire jusqu’à ce que le seuil de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> soit atteint ou que l’exécution reprenne.
 
  Notez que le fournisseur de persistance SQL de WF4 effectue davantage de travail dans la couche de base de données.  La base de données SQL peut se transformer en goulot d'étranglement, il est donc important de surveiller l'utilisation du processeur et du disque à cet endroit.  Assurez-vous d’inclure les compteurs de performance suivants de la base de données SQL lors d’un test de performance des applications de workflow :
 
--   Disque physique\\temps de lecture du disque
+- Disque physique\\temps de lecture du disque
 
--   Disque physique\\% temps du disque
+- Disque physique\\% temps du disque
 
--   Disque physique\\temps d’écriture sur disque de %
+- Disque physique\\temps d’écriture sur disque de %
 
--   Disque physique\\% moy. Longueur de file d'attente disque
+- Disque physique\\% moy. Longueur de file d'attente disque
 
--   PhysicalDisk\Long. moy. de file d'attente lecture disque
+- PhysicalDisk\Long. moy. de file d'attente lecture disque
 
--   PhysicalDisk\Long. moy. de file d'attente écriture disque
+- PhysicalDisk\Long. moy. de file d'attente écriture disque
 
--   PhysicalDisk\Longueur actuelle de la file d'attente du disque
+- PhysicalDisk\Longueur actuelle de la file d'attente du disque
 
--   Informations sur le processeur\\% temps processeur
+- Informations sur le processeur\\% temps processeur
 
--   SQLServer : Verrous internes\Durée d'attente moyenne d'un verrou interne (ms)
+- SQLServer : Verrous internes\Durée d'attente moyenne d'un verrou interne (ms)
 
--   SQLServer : Verrous internes\Attentes de verrous NP internes/s
+- SQLServer : Verrous internes\Attentes de verrous NP internes/s
 
 ### <a name="tracking"></a>Suivi
  Le suivi de workflow permet de suivre la progression d'un workflow.  Les informations incluses dans les événements de suivi sont déterminées par un modèle de suivi.  Plus le modèle de suivi est complexe, plus cette opération est coûteuse.
@@ -407,19 +407,19 @@ public class Workflow1 : Activity
 
  Les avantages de l'utilisation d'ETW pour le suivi au lieu de SQL sont les suivants :
 
--   Le regroupement d'événements de suivi peut être séparé dans un processus distinct.  Cela augmente la flexibilité de l'enregistrement des événements.
+- La collection d’événements de suivi peut être séparée dans un processus distinct.  Cela augmente la flexibilité de l'enregistrement des événements.
 
--   Événements de suivi ETW sont combinés facilement avec les événements ETW de WCF ou d’autres fournisseurs ETW tel qu’un fournisseur de noyau ou de SQL Server.
+- Événements de suivi ETW sont combinés facilement avec les événements ETW de WCF ou d’autres fournisseurs ETW tel qu’un fournisseur de noyau ou de SQL Server.
 
--   Les auteurs de workflow n'ont pas besoin de modifier un workflow pour qu'il fonctionne mieux avec une implémentation de suivi particulière, telle que le mode batch du service de suivi SQL de WF3.
+- Les auteurs de workflow n'ont pas besoin de modifier un workflow pour qu'il fonctionne mieux avec une implémentation de suivi particulière, telle que le mode batch du service de suivi SQL de WF3.
 
--   Un administrateur peut activer ou désactiver le suivi sans recycler le processus hôte.
+- Un administrateur peut activer ou désactiver le suivi sans recycler le processus hôte.
 
  Les avantages en matière de performances pour le suivi ETW s'accompagnent d'un inconvénient.  Les événements ETW peuvent être perdus si le système subit une pression intense sur les ressources.  Le traitement des événements n'est pas destiné à bloquer l'exécution normale du programme et il n'est donc pas garanti que tous les événements ETW seront diffusés à leurs abonnés.  Le suivi ETW est donc idéal pour le contrôle d'état, mais il n'est pas approprié pour l'audit.
 
  Contrairement à WF4, AppFabric est doté d'un fournisseur de suivi SQL.  L'approche de suivi d'AppFabric consiste à s'abonner aux événements ETW à l'aide d'un service Windows qui traite les événements par lots et les écrit dans une table SQL conçue pour des insertions rapides.  Un travail séparé extrait les données de cette table et les restitue dans des tables de rapports pouvant être affichées sur le tableau de bord AppFabric.  Cela signifie qu'un lot d'événements de suivi est traité indépendamment du workflow dont il provient et qu'il ne doit pas attendre un point de persistance pour être enregistré.
 
- Les événements ETW peuvent être enregistrés à l'aide d'outils tels que logman ou xperf.  Le fichier ETL compact peut être affiché avec un outil tel que xperfview ou converti dans un format plus lisible, tel que XML, à l'aide de tracerpt.  Dans WF3, la seule option permettant d'obtenir des événements de suivi sans base de données SQL consiste à créer un service de suivi personnalisé. Pour plus d’informations sur ETW, consultez [Services WCF et le suivi d’événements pour Windows](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) et [suivi d’événements - les applications Windows](/windows/desktop/etw/event-tracing-portal).
+ Les événements ETW peuvent être enregistrés à l’aide d’outils tels que logman ou xperf.  Le fichier ETL compact peut être affiché avec un outil tel que xperfview ou converti dans un format plus lisible, tel que XML, à l’aide de tracerpt.  Dans WF3, la seule option permettant d'obtenir des événements de suivi sans base de données SQL consiste à créer un service de suivi personnalisé. Pour plus d’informations sur ETW, consultez [Services WCF et le suivi d’événements pour Windows](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) et [suivi d’événements - les applications Windows](/windows/desktop/etw/event-tracing-portal).
 
  L'activation du suivi de workflow affecte les performances à des degrés divers.  Le test d'évaluation ci-dessous emploie l'outil logman pour consommer les événements de suivi ETW et les enregistrer dans un fichier ETL.  Le coût du suivi SQL dans AppFabric n'est pas couvert dans cet article.  Le modèle de suivi de base, également utilisé dans AppFabric, est décrit dans ce test d'évaluation.  Ce test inclut également le coût du suivi des événements de contrôle d'état uniquement.  Ces événements sont utiles pour résoudre les problèmes et déterminer le débit moyen du système.
 
@@ -450,5 +450,5 @@ Le tableau suivant montre les résultats de l’exécution d’un workflow conte
 
  On constate une amélioration notable lors de l'utilisation d'Interop par rapport à WF3 simple.  Toutefois, par rapport aux activités WF4, l'augmentation est négligeable.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
  Les lourds efforts consacrés aux performances pour WF4 ont payé dans de nombreux domaines cruciaux.  Dans certains cas, les performances des composants de workflow individuels sont des centaines de fois plus rapides dans WF4 que dans WF3 grâce à un runtime [!INCLUDE[wf1](../../../includes/wf1-md.md)] plus léger.  Les chiffres de latence sont également considérablement meilleurs.  Cela signifie que la baisse des performances pour l’utilisation de [!INCLUDE[wf1](../../../includes/wf1-md.md)] par opposition à codage manuel d’orchestration de WCF services est très faible, envisagez les avantages supplémentaires liés à l’aide de [!INCLUDE[wf1](../../../includes/wf1-md.md)].  Les performances de la persistance ont augmenté d'un facteur de 2,5 à 3.  Le contrôle d'état au moyen du suivi de workflow nécessite désormais très peu de charge mémoire.  Un ensemble complet de guides de migration est disponible pour les utilisateurs qui envisagent de passer de WF3 à WF4.  Pour toutes ces raisons, WF4 constitue une option avantageuse pour l'écriture d'applications complexes.

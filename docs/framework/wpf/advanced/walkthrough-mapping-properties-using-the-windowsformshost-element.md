@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007116"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procédure pas à pas : mappage de propriétés à l’aide de l’élément WindowsFormsHost
 
@@ -21,17 +21,17 @@ Cette procédure pas à pas vous montre comment utiliser le <xref:System.Windows
 
 Cette procédure pas à pas décrit notamment les tâches suivantes :
 
--   Création du projet.
+- Création du projet.
 
--   Définition de la disposition de l’application.
+- Définition de la disposition de l’application.
 
--   Définition d’un nouveau mappage de propriété.
+- Définition d’un nouveau mappage de propriété.
 
--   Suppression d’un mappage de propriété par défaut.
+- Suppression d’un mappage de propriété par défaut.
 
--   Remplacement d’un mappage de propriété par défaut.
+- Remplacement d’un mappage de propriété par défaut.
 
--   Extension d’un mappage de propriété par défaut.
+- Extension d’un mappage de propriété par défaut.
 
 Pour l’intégralité du code des tâches illustrées dans cette procédure pas à pas, consultez [propriétés de mappage à l’aide de l’exemple d’élément WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ Lorsque vous avez terminé, vous serez en mesure de mapper [!INCLUDE[TLA2#tla_wi
 
 Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Créer et configurer le projet
 
@@ -76,7 +76,7 @@ Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément fournit pa
 
 ### <a name="to-define-a-new-property-mapping"></a>Pour définir un nouveau mappage de propriété
 
--   Copiez le code suivant dans la définition de la `Window1` classe.
+- Copiez le code suivant dans la définition de la `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ Supprimer un mappage de propriété par défaut en appelant le <xref:System.Wind
 
 ### <a name="to-remove-a-default-property-mapping"></a>Pour supprimer un mappage de propriété par défaut
 
--   Copiez le code suivant dans la définition de la `Window1` classe.
+- Copiez le code suivant dans la définition de la `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ Remplacez un mappage de propriété par défaut en supprimant le mappage par dé
 
 ### <a name="to-replace-a-default-property-mapping"></a>Pour remplacer un mappage de propriété par défaut
 
--   Copiez le code suivant dans la définition de la `Window1` classe.
+- Copiez le code suivant dans la définition de la `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ Vous pouvez utiliser un mappage de propriété par défaut et l’étendre avec 
 
 ### <a name="to-extend-a-default-property-mapping"></a>Pour étendre un mappage de propriété par défaut
 
--   Copiez le code suivant dans la définition de la `Window1` classe.
+- Copiez le code suivant dans la définition de la `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ Définissez vos mappages de propriété en appelant les méthodes décrites pré
 
      Le `WindowLoaded` méthode gère le <xref:System.Windows.FrameworkElement.Loaded> événement et effectue l’initialisation suivante.
 
-    -   Crée un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> contrôle.
+    - Crée un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> contrôle.
 
-    -   Appelle les méthodes que vous avez définies précédemment dans la procédure pas à pas pour configurer les mappages de propriétés.
+    - Appelle les méthodes que vous avez définies précédemment dans la procédure pas à pas pour configurer les mappages de propriétés.
 
-    -   Assigne les valeurs initiales aux propriétés mappées.
+    - Assigne les valeurs initiales aux propriétés mappées.
 
 2. Appuyez sur **F5** pour générer et exécuter l’application. Cliquez sur la case à cocher pour voir l’effet de la <xref:System.Windows.FrameworkElement.FlowDirection%2A> mappage. Quand vous cliquez sur la case à cocher, la disposition inverse son orientation de gauche à droite.
 

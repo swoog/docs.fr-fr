@@ -3,24 +3,24 @@ title: 1131 - InvokeMethodUseAsyncPattern
 ms.date: 03/30/2017
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
 ms.openlocfilehash: 150973935d12455aa671043a619fbd6fd7e77425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009953"
 ---
 # <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|1131|  
+|Id|1131|  
 |Mots clés|WFRuntime|  
 |Niveau|Information|  
 |Canal|Microsoft-Windows-Application Server-Applications/Débogage|  
   
 ## <a name="description"></a>Description  
- Pendant l'étape CacheMetadata, l'activité InvokeMethod indique qu'elle utilise le modèle asynchrone lors de l'appel de la méthode.  
+ Pendant l’étape CacheMetadata, l’activité InvokeMethod indique qu’elle utilise le modèle asynchrone lors de l’appel de la méthode.  
   
 ## <a name="message"></a>Message  
  InvokeMethod « %1 » - la méthode utilise un modèle asynchrone de « %2 » et « %3 ».  

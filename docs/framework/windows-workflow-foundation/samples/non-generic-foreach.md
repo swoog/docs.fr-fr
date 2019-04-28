@@ -3,11 +3,11 @@ title: ForEach non générique
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004911"
 ---
 # <a name="non-generic-foreach"></a>ForEach non générique
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit, dans sa boîte à outils, un ensemble d'activités de flux de contrôle, notamment <xref:System.Activities.Statements.ForEach%601>, qui permet l'itération au sein des collections <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Définissez le projet de votre choix comme projet de démarrage de la solution :  
   
-    1.  **CodeTestClient** montre comment utiliser l’activité à l’aide de code.  
+    1. **CodeTestClient** montre comment utiliser l’activité à l’aide de code.  
   
-    2.  **DesignerTestClient** montre comment utiliser l’activité dans le concepteur.  
+    2. **DesignerTestClient** montre comment utiliser l’activité dans le concepteur.  
   
 2. Générez et exécutez le projet.  
   

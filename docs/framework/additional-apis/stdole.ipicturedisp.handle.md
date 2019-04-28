@@ -11,13 +11,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 6b56403809bf70ec3902f1061f3d125471e9cb55
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675199"
 ---
-# <a name="ipicturedisphandle-property"></a>Propriété de IPictureDisp.Handle
+# <a name="ipicturedisphandle-property"></a>IPictureDisp.Handle, propriété
 
 ```csharp
 int Handle { get; }
@@ -27,7 +27,7 @@ int Handle { get; }
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** `stdole`
 

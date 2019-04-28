@@ -3,11 +3,11 @@ title: Loosely-Typed Extensions, exemple
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006575"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Loosely-Typed Extensions, exemple
 Le modèle objet de syndication fournit une prise en charge complète pour l’utilisation des données d’extension : informations présentes dans la représentation XML d’un flux de syndication, mais qui ne sont pas exposées explicitement par les classes telles que <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem>. Cet exemple présente les techniques de base d’utilisation des données d’extension.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Ce document contient les données d’extension suivantes :  
   
--   Attribut `myAttribute` de l'élément `<feed>`.  
+- Attribut `myAttribute` de l'élément `<feed>`.  
   
--   `<simpleString>` élément.  
+- `<simpleString>` élément.  
   
--   `<DataContractExtension>` élément.  
+- `<DataContractExtension>` élément.  
   
--   `<XmlSerializerExtension>` élément.  
+- `<XmlSerializerExtension>` élément.  
   
--   `<xElementExtension>` élément.  
+- `<xElementExtension>` élément.  
   
 ## <a name="writing-extension-data"></a>Écriture des données d’extension  
  Les extensions d’attribut sont créées en ajoutant des entrées à la collection <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>, comme l’illustre l’exemple de code suivant.  

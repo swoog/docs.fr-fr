@@ -3,20 +3,20 @@ title: Séquences Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878448"
 ---
 # <a name="oracle-sequences"></a>Séquences Oracle
 Le fournisseur de données .NET Framework pour Oracle offre une prise en charge pour l'extraction des valeurs de séquence Oracle clés générées par le serveur, une fois les insertions réalisées par <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  SQL Server et Oracle prennent en charge la création des colonnes à incrémentation automatique pouvant être désignées comme des clés primaires. Ces valeurs sont générées par le serveur lorsque des lignes sont ajoutées à une table. Dans SQL Server, vous définissez la propriété Identity d'une colonne ; dans Oracle, vous créez une séquence. La différence entre les colonnes à incrémentation automatique dans SQL Server et les séquences dans Oracle est la suivante :  
   
--   Dans SQL Server, vous marquez une colonne en tant que colonne à incrémentation automatique et SQL Server génère automatiquement de nouvelles valeurs pour la colonne lorsque vous insérez une nouvelle ligne.  
+- Dans SQL Server, vous marquez une colonne en tant que colonne à incrémentation automatique et SQL Server génère automatiquement de nouvelles valeurs pour la colonne lorsque vous insérez une nouvelle ligne.  
   
--   Dans Oracle, vous créez une séquence afin de générer de nouvelles valeurs pour une colonne de votre table, mais il n'existe aucun lien direct entre la séquence et la table ou la colonne. Une séquence Oracle est un objet, comme une table ou une procédure stockée.  
+- Dans Oracle, vous créez une séquence afin de générer de nouvelles valeurs pour une colonne de votre table, mais il n'existe aucun lien direct entre la séquence et la table ou la colonne. Une séquence Oracle est un objet, comme une table ou une procédure stockée.  
   
  Lorsque vous créez une séquence dans une base de données Oracle, vous pouvez définir sa valeur initiale et l'incrémentation entre ses valeurs. Vous pouvez également interroger la séquence à propos de nouvelles valeurs avant de soumettre de nouvelles lignes. Cela signifie que votre code peut reconnaître les valeurs clés des nouvelles lignes avant que vous ne les insériez dans la base de données.  
   

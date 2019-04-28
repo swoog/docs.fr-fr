@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa9576f568ef1f6da3eef812abb9674aa0d81dfb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996162"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached, méthode
 Obtient une valeur qui indique si le débogueur est attaché au domaine d’application.  
@@ -42,7 +42,7 @@ HRESULT IsAttached (
 ## <a name="remarks"></a>Notes  
  Les méthodes ICorDebugController ne peut pas être utilisés jusqu'à ce que le débogueur est attaché au domaine d’application.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
