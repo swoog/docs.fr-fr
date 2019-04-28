@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705374"
 ---
 # <a name="compiler-element"></a>\<compilateur > élément
 
@@ -45,7 +45,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 |---------------|-----------------|
 |`compilerOptions`|Attribut facultatif.<br /><br /> Spécifie des arguments supplémentaires spécifiques au compilateur pour la compilation. Les valeurs pour le `compilerOptions` attribut sont généralement répertoriées dans une rubrique d’options du compilateur pour le compilateur.|
 |`extension`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules des extensions de nom de fichier utilisé par les fichiers de code source pour le fournisseur de langages. Par exemple, « .cs ».|
-|`language`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules de noms de langages pris en charge par le fournisseur de langages. Par exemple, « C# ; cs ; csharp ».|
+|`language`|Attribut requis.<br /><br /> Fournit une liste délimitée par des points-virgules de noms de langages pris en charge par le fournisseur de langages. Par exemple, « c# ; cs ; csharp ».|
 |`type`|Attribut requis.<br /><br /> Spécifie le nom de type fournisseur de langages, y compris le nom de l’assembly contenant l’implémentation du fournisseur. Le nom de type doit respecter les exigences définies dans [spécifiant des noms de types qualifiés complets](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Attribut facultatif.<br /><br /> Spécifie le niveau d’avertissement du compilateur par défaut ; Détermine le niveau auquel le fournisseur de langages traite les avertissements de compilation comme des erreurs.|
 

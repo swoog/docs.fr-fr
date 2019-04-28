@@ -11,13 +11,13 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675401"
 ---
-# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode champ
+# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_champ StatusCode
 
 `CoreResponseData.m_StatusCode` est un <xref:System.Net.HttpStatusCode> contenant l’état de la réponse.
 
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Cette API n’est pas destinée à être utilisé directement dans votre code. Au lieu de cela, vous devez utiliser un <xref:System.Diagnostics.DiagnosticSource> raccordement du code de mise en réseau. Consultez [le Guide d’utilisation de DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Cette API n’est pas destinée à être utilisé directement dans votre code. Au lieu de cela, vous devez utiliser un <xref:System.Diagnostics.DiagnosticSource> raccordement du code de mise en réseau. Consultez [Guide de l’utilisateur de DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toutes circonstances.
+> Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toute circonstance.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**Namespace :** <xref:System.Net>
+**Espace de noms :** <xref:System.Net>
 
-**Assembly :** système (dans System.dll)
+**Assembly :** Système (dans System.dll)
 
-**Versions du .NET framework :** disponible depuis la version 2.0.
+**Versions du .NET framework :** Disponible à partir de 2.0.

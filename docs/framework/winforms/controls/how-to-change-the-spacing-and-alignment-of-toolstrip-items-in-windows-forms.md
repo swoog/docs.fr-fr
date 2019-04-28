@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746826"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Procédure : modifier l’espacement et l’alignement d’éléments ToolStrip dans Windows Forms
 Le <xref:System.Windows.Forms.ToolStrip> contrôle prend entièrement en charge les fonctionnalités de mise en page telles que le dimensionnement, l’espacement des <xref:System.Windows.Forms.ToolStripItem> contrôle par rapport aux autres, la disposition des contrôles sur le <xref:System.Windows.Forms.ToolStrip>et l’espacement des contrôles relatif à la <xref:System.Windows.Forms.ToolStrip>.  
@@ -67,7 +67,7 @@ Le <xref:System.Windows.Forms.ToolStrip> contrôle prend entièrement en charge 
   
 ### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>Pour réorganiser des éléments ToolStrip sur ToolStrip  
   
--   Définir le <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> à la valeur de propriété <xref:System.Windows.Forms.ToolStripLayoutStyle> que vous souhaitez.  
+- Définir le <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> à la valeur de propriété <xref:System.Windows.Forms.ToolStripLayoutStyle> que vous souhaitez.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  

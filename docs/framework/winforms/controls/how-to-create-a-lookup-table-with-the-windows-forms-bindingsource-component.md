@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747055"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procédure : créer une table de choix avec le composant BindingSource de Windows Forms
 Une table de choix est une table de données ayant une colonne qui affiche les données des enregistrements situés dans une table liée. Dans les procédures suivantes, un contrôle <xref:System.Windows.Forms.ComboBox> permet d'afficher le champ avec la relation de clé étrangère entre la table parent et la table enfant.  
@@ -37,13 +37,13 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
  Quatre propriétés importantes sont définies sur le contrôle [ComboBox](combobox-control-windows-forms.md) pour créer la table de choix.  
   
--   La propriété <xref:System.Windows.Forms.ComboBox.DataSource%2A> contient le nom de la table.  
+- La propriété <xref:System.Windows.Forms.ComboBox.DataSource%2A> contient le nom de la table.  
   
--   La propriété <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contient la colonne de données de la table que vous souhaitez afficher pour le texte du contrôle (nom du client).  
+- La propriété <xref:System.Windows.Forms.ListControl.DisplayMember%2A> contient la colonne de données de la table que vous souhaitez afficher pour le texte du contrôle (nom du client).  
   
--   La propriété <xref:System.Windows.Forms.ListControl.ValueMember%2A> contient la colonne de données de la table ayant les informations stockées (numéro d'identification dans la table parent).  
+- La propriété <xref:System.Windows.Forms.ListControl.ValueMember%2A> contient la colonne de données de la table ayant les informations stockées (numéro d'identification dans la table parent).  
   
--   La propriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fournit la valeur de recherche pour la table enfant, en fonction de <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- La propriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fournit la valeur de recherche pour la table enfant, en fonction de <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Les procédures ci-dessous vous montrent comment présenter votre formulaire sous forme de table de choix et lier les données aux contrôles qui s'y trouvent. Pour mener à bien les procédures, vous devez disposer d'une source de données avec des tables parents et des tables enfants qui ont une relation de clé étrangère, comme indiqué précédemment.  
   
@@ -65,21 +65,21 @@ Une table de choix est une table de données ayant une colonne qui affiche les d
   
 3. Cliquez sur la flèche à côté de la zone de liste déroulante **Source de données**. Si une source de données a déjà été configurée pour le projet ou le formulaire, elle s'affiche. Sinon, procédez comme suit (cet exemple utilise les tables Customers et Orders de l'exemple de base de données Northwind et fait référence à celles-ci entre parenthèses).  
   
-    1.  Cliquez sur **Ajouter la source de données du projet** pour vous connecter aux données et créer une source de données.  
+    1. Cliquez sur **Ajouter la source de données du projet** pour vous connecter aux données et créer une source de données.  
   
-    2.  Sur la page d’accueil de l’**Assistant Configuration de source de données**, cliquez sur **Suivant**.  
+    2. Sur la page d’accueil de l’**Assistant Configuration de source de données**, cliquez sur **Suivant**.  
   
-    3.  Sélectionnez **Base de données** sur la page **Choisir un type de source de données**.  
+    3. Sélectionnez **Base de données** sur la page **Choisir un type de source de données**.  
   
-    4.  Sélectionnez une connexion de données dans la liste des connexions disponibles sur la page **Choisir votre connexion de données**. Si la connexion de données souhaitée n’est pas disponible, sélectionnez **Nouvelle connexion** pour créer une connexion de données.  
+    4. Sélectionnez une connexion de données dans la liste des connexions disponibles sur la page **Choisir votre connexion de données**. Si la connexion de données souhaitée n’est pas disponible, sélectionnez **Nouvelle connexion** pour créer une connexion de données.  
   
-    5.  Cliquez sur **Oui, enregistrer la connexion en tant que** pour enregistrer la chaîne de connexion dans le fichier de configuration de l’application.  
+    5. Cliquez sur **Oui, enregistrer la connexion en tant que** pour enregistrer la chaîne de connexion dans le fichier de configuration de l’application.  
   
-    6.  Sélectionnez les objets de base de données à mettre dans votre application. Dans le cas présent, sélectionnez une table parent et une table enfant (par exemple Customers et Orders) avec une relation de clé étrangère.  
+    6. Sélectionnez les objets de base de données à mettre dans votre application. Dans le cas présent, sélectionnez une table parent et une table enfant (par exemple Customers et Orders) avec une relation de clé étrangère.  
   
-    7.  Remplacez le nom du jeu de données par défaut, si vous le souhaitez.  
+    7. Remplacez le nom du jeu de données par défaut, si vous le souhaitez.  
   
-    8.  Cliquez sur **Terminer**.  
+    8. Cliquez sur **Terminer**.  
   
 4. Dans la zone de liste déroulante **Afficher le membre**, sélectionnez le nom de la colonne (par exemple ContactName) à afficher dans la zone de liste modifiable.  
   

@@ -3,11 +3,11 @@ title: <clear>, élément de schemeSettings (paramètres d’URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674686"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<Désactivez >, élément de schemeSettings (paramètres d’Uri)
 Efface tous les paramètres existants de schéma.  

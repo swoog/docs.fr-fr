@@ -3,11 +3,11 @@ title: 'Procédure : améliorer le délai de démarrage des applications client
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747626"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procédure : améliorer le délai de démarrage des applications clientes WCF à l’aide de XmlSerializer
 Les applications clientes et de services qui utilisent des types de données sérialisables à l'aide de <xref:System.Xml.Serialization.XmlSerializer> génèrent et compilent le code de sérialisation de ces types de données lors de l'exécution, ce qui peut provoquer des performances de démarrage lentes.  
@@ -37,11 +37,11 @@ Les applications clientes et de services qui utilisent des types de données sé
   
 4. Rendez le code de sérialisation généré disponible pour votre application en utilisant l'une des options suivantes :  
   
-    1.  Compilez le code de sérialisation généré dans un assembly séparé portant le nom [*assembly d’origine*]. XmlSerializers.dll (par exemple, MyApp.XmlSerializers.dll). Votre application doit être en mesure de charger l'assembly, qui doit être signé avec la même clé que l'assembly d'origine. Si vous recompilez l'assembly d'origine, vous devez régénérer l'assembly de sérialisation.  
+    1. Compilez le code de sérialisation généré dans un assembly séparé portant le nom [*assembly d’origine*]. XmlSerializers.dll (par exemple, MyApp.XmlSerializers.dll). Votre application doit être en mesure de charger l'assembly, qui doit être signé avec la même clé que l'assembly d'origine. Si vous recompilez l'assembly d'origine, vous devez régénérer l'assembly de sérialisation.  
   
-    2.  Compilez le code de sérialisation généré dans un assembly distinct et utilisez <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> sur le contrat de service qui utilise <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Définissez les propriétés <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> pour pointer vers l'assembly de sérialisation compilé.  
+    2. Compilez le code de sérialisation généré dans un assembly distinct et utilisez <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> sur le contrat de service qui utilise <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Définissez les propriétés <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> pour pointer vers l'assembly de sérialisation compilé.  
   
-    3.  Compilez le code de sérialisation généré dans votre assembly d'application et ajoutez <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> au contrat de service qui utilise <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ne définissez pas les propriétés <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A>. L'assembly de sérialisation par défaut est supposé être l'assembly actuel.  
+    3. Compilez le code de sérialisation généré dans votre assembly d'application et ajoutez <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> au contrat de service qui utilise <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ne définissez pas les propriétés <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> ou <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A>. L'assembly de sérialisation par défaut est supposé être l'assembly actuel.  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Pour générer le code de sérialisation XmlSerializer dans Visual Studio  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703528"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Bonnes pratiques : Contrôle de version des contrats de données
 Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. Pour plus d’informations sur les contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -39,9 +39,9 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
  Parfois, il est nécessaire de garantir la conformité stricte de schéma pour les messages envoyés par votre application, sans pouvoir compter sur la conformité stricte des messages entrants. Dans ce cas, il est possible qu'un message entrant contienne des données étrangères. Les valeurs superflues sont stockées et retournées par WCF et entraînent donc l’envoi de messages de schéma non valide. Pour éviter ce problème, la fonctionnalité d’aller-retour doit être désactivée. Il existe deux manières de procéder.  
   
--   N'implémentez l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> sur aucun de vos types.  
+- N'implémentez l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> sur aucun de vos types.  
   
--   Appliquez un attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> à votre contrat de service en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true`.  
+- Appliquez un attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> à votre contrat de service en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true`.  
   
  Pour plus d’informations sur l’aller-retour, consultez [les contrats de données de compatibilité ascendante](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
@@ -66,11 +66,11 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
 8. Dans les versions ultérieures, il est possible d'ajouter des membres de données. Ceux-ci doivent toujours observer les règles suivantes :  
   
-    1.  La propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> doit toujours conserver sa valeur par défaut de `false`.  
+    1. La propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> doit toujours conserver sa valeur par défaut de `false`.  
   
-    2.  Si le membre ne peut pas avoir de valeur par défaut `null` ou zéro, une méthode de rappel doit être fournie à l'aide de <xref:System.Runtime.Serialization.OnDeserializingAttribute> pour fournir une valeur par défaut acceptable au cas où le membre ne serait pas présent dans le flux de données entrant. Pour plus d’informations sur le rappel, consultez [des rappels de sérialisation avec tolérance de Version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2. Si le membre ne peut pas avoir de valeur par défaut `null` ou zéro, une méthode de rappel doit être fournie à l'aide de <xref:System.Runtime.Serialization.OnDeserializingAttribute> pour fournir une valeur par défaut acceptable au cas où le membre ne serait pas présent dans le flux de données entrant. Pour plus d’informations sur le rappel, consultez [des rappels de sérialisation avec tolérance de Version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  Le <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> propriété doit être utilisée pour vous assurer que tous les membres de données nouvellement ajoutées s’affichent après les membres de données existant. La méthode recommandée de cette opération est la suivante : Aucun des membres de données dans la première version du contrat de données doivent avoir leurs `Order` jeu de propriétés. La propriété `Order` de tous les membres de données ajoutés à la version 2 du contrat de données doit avoir la valeur 2. La propriété `Order` de tous les membres de données ajoutés à la version 3 du contrat de données doit avoir la valeur 3, etc. Il est possible que plusieurs membres de données aient le même numéro d'`Order`.  
+    3. Le <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> propriété doit être utilisée pour vous assurer que tous les membres de données nouvellement ajoutées s’affichent après les membres de données existant. La méthode recommandée de cette opération est la suivante : Aucun des membres de données dans la première version du contrat de données doivent avoir leurs `Order` jeu de propriétés. La propriété `Order` de tous les membres de données ajoutés à la version 2 du contrat de données doit avoir la valeur 2. La propriété `Order` de tous les membres de données ajoutés à la version 3 du contrat de données doit avoir la valeur 3, etc. Il est possible que plusieurs membres de données aient le même numéro d'`Order`.  
   
 9. Ne supprimez pas de membres de données dans les versions ultérieures, même si la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> conserve sa propriété `false` par défaut dans les versions antérieures.  
   

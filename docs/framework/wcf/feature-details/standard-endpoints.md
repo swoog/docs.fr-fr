@@ -3,11 +3,11 @@ title: Points de terminaison standard
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747769"
 ---
 # <a name="standard-endpoints"></a>Points de terminaison standard
 Les points de terminaison sont définis en spécifiant une adresse, une liaison et un contrat. Les autres paramètres qui peuvent être définis sur un point de terminaison incluent la configuration du comportement, les en-têtes, et les URI d'écoute.  Pour certains types de points de terminaison, ces valeurs ne changent pas. Par exemple, les points de terminaison d'échange de métadonnées utilisent toujours le contrat <xref:System.ServiceModel.Description.IMetadataExchange>. D'autres points de terminaison, tels que <xref:System.ServiceModel.Description.WebHttpEndpoint>, requièrent toujours un comportement de point de terminaison spécifié. L'utilisation d'un point de terminaison peut être simplifiée par l'emploi de points de terminaison possédant des valeurs par défaut pour des propriétés de point de terminaison courantes. Les points de terminaison standard permettent à un développeur de définir un point de terminaison avec des valeurs par défaut ou dont une ou plusieurs propriétés de point de terminaison restent inchangées.  Les points de terminaison de ce type vous permettent d'utiliser un point de terminaison sans avoir à spécifier les informations qui sont de nature statique. Les points de terminaison standard peuvent être utilisés comme points de terminaison d'infrastructure et d'application.  
@@ -16,7 +16,7 @@ Les points de terminaison sont définis en spécifiant une adresse, une liaison 
  Un service peut exposer des points de terminaison dont certaines des propriétés n'ont pas été implémentées de manière explicite par l'auteur du service. Par exemple, le point de terminaison d'échange de métadonnées expose le contrat <xref:System.ServiceModel.Description.IMetadataExchange>, mais vous n'implémentez pas cette interface en tant qu'auteur du service, elle est implémentée par WCF. Ces points de terminaison d'infrastructure ont des valeurs par défaut pour une ou plusieurs propriétés de point de terminaison, dont certaines peuvent être immuables. La propriété <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> du point de terminaison d'échange de métadonnées doit être <xref:System.ServiceModel.Description.IMetadataExchange>, tandis que d'autres propriétés comme la liaison peuvent être fournies par le développeur. Les points de terminaison d'infrastructure sont identifiés en attribuant à la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> la valeur `true`.  
   
 ## <a name="application-endpoints"></a>Points de terminaison d'application  
- Les développeurs d'applications peuvent définir leurs propres points de terminaison standard qui spécifient des valeurs par défaut pour l'adresse, la liaison ou le contrat. Vous définissez un point de terminaison standard en dérivant une classe de <xref:System.ServiceModel.Description.ServiceEndpoint> et en définissant les propriétés de point de terminaison appropriées. Vous pouvez fournir des valeurs par défaut pour les propriétés qui peuvent être modifiées. D'autres propriétés ont des valeurs statiques qui ne peuvent pas être modifiées. L'exemple suivant indique comment implémenter un point de terminaison standard.  
+ Les développeurs d’applications peuvent définir leurs propres points de terminaison standard qui spécifient des valeurs par défaut pour l’adresse, la liaison ou le contrat. Vous définissez un point de terminaison standard en dérivant une classe de <xref:System.ServiceModel.Description.ServiceEndpoint> et en définissant les propriétés de point de terminaison appropriées. Vous pouvez fournir des valeurs par défaut pour les propriétés qui peuvent être modifiées. D'autres propriétés ont des valeurs statiques qui ne peuvent pas être modifiées. L'exemple suivant indique comment implémenter un point de terminaison standard.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -42,7 +42,7 @@ public class CustomEndpoint : ServiceEndpoint
 }
 ```
   
- Pour utiliser un point de terminaison personnalisé défini par l'utilisateur dans un fichier de configuration, vous devez dériver une classe de <xref:System.ServiceModel.Configuration.StandardEndpointElement>, dériver une classe de <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> et enregistrer le nouveau point de terminaison standard dans la section des extensions, dans app.config ou machine.config.  L'élément <xref:System.ServiceModel.Configuration.StandardEndpointElement> fournit une prise en charge de la configuration pour le point de terminaison standard, comme indiqué dans l'exemple suivant.  
+ Pour utiliser un point de terminaison personnalisé défini par l’utilisateur dans un fichier de configuration, vous devez dériver une classe de <xref:System.ServiceModel.Configuration.StandardEndpointElement>, dériver une classe de <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> et enregistrer le nouveau point de terminaison standard dans la section des extensions, dans app.config ou machine.config.  L'élément <xref:System.ServiceModel.Configuration.StandardEndpointElement> fournit une prise en charge de la configuration pour le point de terminaison standard, comme indiqué dans l'exemple suivant.  
   
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -112,7 +112,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 }
 ```
 
-L'exemple suivant montre comment enregistrer un point de terminaison standard dans la section des extensions.
+L’exemple suivant montre comment enregistrer un point de terminaison standard dans la section des extensions.
 
 ```xml  
 <extensions>  
@@ -130,7 +130,7 @@ L'exemple suivant montre comment enregistrer un point de terminaison standard da
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Pour ajouter un point de terminaison standard dans la configuration, ajoutez une <`endpoint`> élément à la <`service`> élément et tout autre si nécessaire les paramètres de configuration dans le <`standardEndpoints`> élément. L'exemple suivant montre comment ajouter un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, l'un des points de terminaison standard fournis avec [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Pour ajouter un point de terminaison standard dans la configuration, ajoutez un <`endpoint`> élément à la <`service`> élément et tout autre nécessaire les paramètres de configuration dans le <`standardEndpoints`> élément. L'exemple suivant montre comment ajouter un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, l'un des points de terminaison standard fournis avec [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- Le type de point de terminaison standard est spécifié à l’aide de l’attribut kind dans le <`endpoint`> élément. Le point de terminaison est configuré dans le <`standardEndpoints`> élément. Dans l'exemple ci-dessus, un point de terminaison <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> est ajouté et configuré. Le <`udpDiscoveryEndpoint`> élément contient un <`standardEndpoint`> qui définit les <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> propriété de la <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ Le type de point de terminaison standard est spécifié à l’aide de l’attribut kind dans le <`endpoint`> élément. Le point de terminaison est configuré dans le <`standardEndpoints`> élément. Dans l'exemple ci-dessus, un point de terminaison <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> est ajouté et configuré. Le <`udpDiscoveryEndpoint`> élément contient un <`standardEndpoint`> qui définit le <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> propriété de la <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Points de terminaison standard fournis avec le .NET Framework  
  Le tableau suivant répertorie les points de terminaison standard fournis avec le [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  

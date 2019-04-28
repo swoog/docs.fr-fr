@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746972"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Procédure : créer une visionneuse de documents HTML dans une application Windows Forms
 Vous pouvez utiliser la <xref:System.Windows.Forms.WebBrowser> contrôle pour afficher et imprimer des documents HTML sans fournir toutes les fonctionnalités d’un navigateur Internet. Cela est utile lorsque vous souhaitez tirer parti des fonctionnalités de mise en forme du code HTML, mais ne souhaitez pas que vos utilisateurs pour charger des pages Web arbitraires qui peuvent contenir des contrôles Web non approuvés ou un script potentiellement malveillant. Vous souhaiterez peut-être limiter la capacité de la <xref:System.Windows.Forms.WebBrowser> contrôle de cette manière, par exemple, pour l’utiliser comme une visionneuse de courrier électronique HTML ou fournir une aide au format HTML dans votre application.  
@@ -34,9 +34,9 @@ Vous pouvez utiliser la <xref:System.Windows.Forms.WebBrowser> contrôle pour af
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   un contrôle <xref:System.Windows.Forms.WebBrowser> nommé `webBrowser1` ;  
+- un contrôle <xref:System.Windows.Forms.WebBrowser> nommé `webBrowser1` ;  
   
--   des références aux assemblys `System` et `System.Windows.Forms`.  
+- des références aux assemblys `System` et `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Voir aussi
 
