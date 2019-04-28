@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
 ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755400"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton, contrôle (Windows Forms)
 Windows Forms `RadioButton` contrôle présente un ensemble de deux ou plusieurs choix qui s’excluent mutuellement à l’utilisateur. Tandis que les cases à cocher et des boutons radio peuvent sembler fonctionner de la même façon, il existe une différence importante : lorsqu’un utilisateur sélectionne un bouton radio, les autres cases d’option dans le même groupe ne peut pas être également sélectionnée.  

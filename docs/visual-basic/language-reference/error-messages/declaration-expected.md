@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
 ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803829"
 ---
 # <a name="declaration-expected"></a>Déclaration attendue
 Une instruction non déclarative, comme une assignation ou une instruction de boucle, se trouve en dehors de toute procédure. Seules les déclarations sont autorisées en dehors des procédures.  
@@ -23,11 +23,11 @@ Une instruction non déclarative, comme une assignation ou une instruction de bo
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Déplacez l’instruction non déclarative vers le corps d’une procédure.  
+- Déplacez l’instruction non déclarative vers le corps d’une procédure.  
   
--   Commencez la déclaration avec un mot clé de déclaration approprié.  
+- Commencez la déclaration avec un mot clé de déclaration approprié.  
   
--   Assurez-vous qu’un mot clé de déclaration n’est pas mal orthographié.  
+- Assurez-vous qu’un mot clé de déclaration n’est pas mal orthographié.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,11 +3,11 @@ title: Prise en charge de la configuration et des métadonnées
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858362"
 ---
 # <a name="configuration-and-metadata-support"></a>Prise en charge de la configuration et des métadonnées
 Cette rubrique décrit comment activer la prise en charge de la configuration et des métadonnées pour les liaisons et éléments de liaison.  
@@ -15,13 +15,13 @@ Cette rubrique décrit comment activer la prise en charge de la configuration et
 ## <a name="overview-of-configuration-and-metadata"></a>Vue d'ensemble de la configuration et des métadonnées  
  Cette rubrique décrit les tâches suivantes, qui sont des éléments facultatifs 1, 2 et 4 dans le [canaux de développement](../../../../docs/framework/wcf/extending/developing-channels.md) liste des tâches.  
   
--   Activation de la prise en charge du fichier de configuration pour un élément de liaison.  
+- Activation de la prise en charge du fichier de configuration pour un élément de liaison.  
   
--   Activation de la prise en charge du fichier de configuration pour une liaison.  
+- Activation de la prise en charge du fichier de configuration pour une liaison.  
   
--   Exportation des assertions WSDL et de stratégie pour un élément de liaison.  
+- Exportation des assertions WSDL et de stratégie pour un élément de liaison.  
   
--   Identification des assertions WSDL et de stratégie afin d’insérer et de configurer votre liaison ou élément de liaison.  
+- Identification des assertions WSDL et de stratégie afin d’insérer et de configurer votre liaison ou élément de liaison.  
   
  Pour plus d’informations sur la création d’éléments de liaison et les liaisons définies par l’utilisateur, consultez [Creating liaisons](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) et [création d’un élément BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), respectivement.  
   

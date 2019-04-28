@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876107"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Mise à jour du service de données (services de données WCF)
 Lorsque vous utilisez le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cliente pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux, la bibliothèque traduit les entrées dans le flux en instances des classes de service de données client. Ces classes de service de données sont suivies à l'aide de l'objet <xref:System.Data.Services.Client.DataServiceContext> auquel <xref:System.Data.Services.Client.DataServiceQuery%601> appartient. Le client suit les modifications apportées aux entités que vous signalez à l'aide des méthodes sur <xref:System.Data.Services.Client.DataServiceContext>. Ces méthodes permettent au client de suivre les entités ajoutées et supprimées, ainsi que les modifications que vous apportez aux valeurs de propriété ou aux relations entre les instances d'entités. Ces modifications suivies sont renvoyées au service de données sous forme d'opérations REST lorsque vous appelez la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -54,13 +54,13 @@ Lorsque vous utilisez le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
   
  Vous devez tenir compte des points suivants lors de l'attachement d'objets :  
   
--   Un objet est joint dans l'état <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+- Un objet est joint dans l'état <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
   
--   Lorsqu'un objet est joint, les objets associés à l'objet joint ne sont pas non plus joints.  
+- Lorsqu'un objet est joint, les objets associés à l'objet joint ne sont pas non plus joints.  
   
--   Un objet ne peut pas être joint si l'entité fait déjà l'objet d'un suivi par le contexte.  
+- Un objet ne peut pas être joint si l'entité fait déjà l'objet d'un suivi par le contexte.  
   
--   La surcharge de méthode <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> qui utilise un paramètre `etag` est utilisée lorsque vous attachez un objet entité ayant été reçu avec une valeur eTag. Cette valeur eTag est ensuite utilisée pour vérifier l'accès concurrentiel lorsque les modifications apportées à l'objet attaché sont enregistrées.  
+- La surcharge de méthode <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> qui utilise un paramètre `etag` est utilisée lorsque vous attachez un objet entité ayant été reçu avec une valeur eTag. Cette valeur eTag est ensuite utilisée pour vérifier l'accès concurrentiel lorsque les modifications apportées à l'objet attaché sont enregistrées.  
   
  Pour plus d'informations, voir [Procédure : Attacher une entité existante au DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

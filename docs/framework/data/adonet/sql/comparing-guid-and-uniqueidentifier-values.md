@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878109"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Comparaison du GUID et des valeurs uniqueidentifier
 Le type de données GUID (Identificateur Global Unique) dans SQL Server est représenté par le type de données `uniqueidentifier`, qui stocke une valeur binaire de 16 octets. Un GUID est un nombre binaire et son usage principal est celui d'identificateur qui doit être unique dans un réseau comportant de nombreux ordinateurs implantés dans de nombreux sites. Il est possible de générer des GUID en appelant la fonction Transact-SQL NEWID et il est garanti qu'ils sont uniques dans le monde entier. Pour plus d’informations, consultez [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  

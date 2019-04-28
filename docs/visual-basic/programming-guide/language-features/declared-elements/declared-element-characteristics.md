@@ -14,22 +14,22 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830165"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caractéristiques d'éléments déclarés (Visual Basic)
 Un *caractéristique* d’un élément déclaré est un aspect de l’élément qui affecte la façon dont le code peut interagir avec elle. Chaque élément déclaré a un ou plusieurs des caractéristiques suivantes, il est associés :  
   
--   *Type de données* — les valeurs de l’élément peut contenir, et comment il stocke ces valeurs. Pour plus d’informations, consultez [Types de données](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Type de données* — les valeurs de l’élément peut contenir, et comment il stocke ces valeurs. Pour plus d’informations, consultez [Types de données](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Durée de vie* — la période d’exécution au cours de laquelle l’élément est disponible pour utilisation. Pour plus d’informations, consultez [durée de vie dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Durée de vie* — la période d’exécution au cours de laquelle l’élément est disponible pour utilisation. Pour plus d’informations, consultez [durée de vie dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Étendue* — l’ensemble du code qui peut faire référence à l’élément sans qualifier son nom. Pour plus d'informations, voir [Procédure : Contrôler la portée d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Étendue* — l’ensemble du code qui peut faire référence à l’élément sans qualifier son nom. Pour plus d'informations, voir [Procédure : Contrôler la portée d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Niveau d’accès* — l’autorisation pour le code d’utiliser l’élément. Pour plus d'informations, voir [Procédure : Contrôler la disponibilité d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Niveau d’accès* — l’autorisation pour le code d’utiliser l’élément. Pour plus d'informations, voir [Procédure : Contrôler la disponibilité d’une Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Caractéristiques des éléments  
  Le tableau suivant présente les éléments déclarés et les caractéristiques qui s’appliquent à chacun d’eux.  

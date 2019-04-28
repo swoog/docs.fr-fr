@@ -3,11 +3,11 @@ title: Personnalisation des autorisations avec l'emprunt d'identité dans SQL Se
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877902"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personnalisation des autorisations avec l'emprunt d'identité dans SQL Server
 De nombreuses applications utilisent des procédures stockées pour accéder aux données, en se basant sur le chaînage des propriétés de manière à limiter l'accès aux tables de base. Vous pouvez accorder des autorisations EXECUTE sur les procédures stockées, en révoquant ou refusant des autorisations sur les tables de base. SQL Server ne vérifie pas les autorisations de l'appelant si la procédure stockée et les tables ont le même propriétaire. Toutefois, le chaînage des propriétés ne fonctionne pas si les objets ont des propriétaires différents ou dans le cas d'instructions SQL dynamiques.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Spécification du contexte d'exécution  
  Parallèlement à la spécification d'un utilisateur, vous pouvez utiliser la clause EXECUTE AS avec chacun des mots clés suivants.  
   
--   CALLER. L'exécution en tant que CALLER est la valeur par défaut. Si aucune autre option n'est spécifiée, la procédure s'exécute dans le contexte de sécurité de l'appelant.  
+- CALLER. L'exécution en tant que CALLER est la valeur par défaut. Si aucune autre option n'est spécifiée, la procédure s'exécute dans le contexte de sécurité de l'appelant.  
   
--   OWNER. L'exécution en tant que OWNER exécute la procédure dans le contexte de sécurité du propriétaire de la procédure. Si la procédure est créée dans un schéma détenu par `dbo` ou le propriétaire de la base de données, la procédure s'exécutera avec des autorisations illimitées.  
+- OWNER. L'exécution en tant que OWNER exécute la procédure dans le contexte de sécurité du propriétaire de la procédure. Si la procédure est créée dans un schéma détenu par `dbo` ou le propriétaire de la base de données, la procédure s'exécutera avec des autorisations illimitées.  
   
--   SELF. L'exécution en tant que SELF exécute la procédure dans le contexte de sécurité du créateur de la procédure stockée. Cela revient à exécuter la procédure en tant qu'un utilisateur spécifié, ce dernier étant la personne qui crée ou modifie la procédure.  
+- SELF. L'exécution en tant que SELF exécute la procédure dans le contexte de sécurité du créateur de la procédure stockée. Cela revient à exécuter la procédure en tant qu'un utilisateur spécifié, ce dernier étant la personne qui crée ou modifie la procédure.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864678"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Procédure : Calculer des valeurs numériques (Visual Basic)
 Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions numériques. Un *expression numérique* est une expression qui contient des littéraux, des constantes et des variables représentant des valeurs numériques et les opérateurs qui agissent sur ces valeurs.  
@@ -25,7 +25,7 @@ Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions
   
 #### <a name="to-calculate-a-numeric-value"></a>Pour calculer une valeur numérique  
   
--   Combiner un ou plusieurs des littéraux numériques, constantes et variables dans une expression numérique. L’exemple suivant illustre certaines expressions numériques valides.  
+- Combiner un ou plusieurs des littéraux numériques, constantes et variables dans une expression numérique. L’exemple suivant illustre certaines expressions numériques valides.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions
   
 #### <a name="to-store-a-numeric-value"></a>Pour stocker une valeur numérique  
   
--   Vous pouvez utiliser une instruction d’assignation pour assigner la valeur représentée par une expression numérique à une variable, comme le montre l’exemple suivant.  
+- Vous pouvez utiliser une instruction d’assignation pour assigner la valeur représentée par une expression numérique à une variable, comme le montre l’exemple suivant.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ Vous pouvez calculer des valeurs numériques via l’utilisation d’expressions
   
 #### <a name="to-override-normal-operator-precedence"></a>Pour substituer la priorité des opérateurs normale  
   
--   Utilisez des parenthèses pour encadrer les opérations que vous souhaitez être exécutées en premier. L’exemple suivant montre deux résultats différents avec les mêmes opérandes et opérateurs.  
+- Utilisez des parenthèses pour encadrer les opérations que vous souhaitez être exécutées en premier. L’exemple suivant montre deux résultats différents avec les mêmes opérandes et opérateurs.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

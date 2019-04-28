@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876276"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances utilisateur SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l’instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Notez les éléments suivants sur l'exemple de chaîne de connexion ci-dessous :  
   
--   Le mot clé `Data Source` fait référence à l'instance parente de SQL Server Express qui génère l'instance utilisateur. L'instance par défaut est .\sqlexpress.  
+- Le mot clé `Data Source` fait référence à l'instance parente de SQL Server Express qui génère l'instance utilisateur. L'instance par défaut est .\sqlexpress.  
   
--   `Integrated Security` a la valeur `true`. Pour vous connecter à une instance utilisateur, l'authentification Windows est nécessaire ; les connexions SQL Server ne sont pas prises en charge.  
+- `Integrated Security` a la valeur `true`. Pour vous connecter à une instance utilisateur, l'authentification Windows est nécessaire ; les connexions SQL Server ne sont pas prises en charge.  
   
--   `User Instance` a la valeur `true` qui appelle une instance utilisateur. (La valeur par défaut est `false`).  
+- `User Instance` a la valeur `true` qui appelle une instance utilisateur. (La valeur par défaut est `false`).  
   
--   Le mot clé de la chaîne de connexion `AttachDbFileName` est utilisé pour joindre le fichier (.mdf) de base de données primaire, qui doit inclure le chemin d’accès complet. `AttachDbFileName` correspond aussi aux clés « extended properties » et « initial file name » dans une chaîne de connexion <xref:System.Data.SqlClient.SqlConnection>.  
+- Le mot clé de la chaîne de connexion `AttachDbFileName` est utilisé pour joindre le fichier (.mdf) de base de données primaire, qui doit inclure le chemin d’accès complet. `AttachDbFileName` correspond aussi aux clés « extended properties » et « initial file name » dans une chaîne de connexion <xref:System.Data.SqlClient.SqlConnection>.  
   
--   La chaîne de substitution `|DataDirectory|` placée entre deux barres verticales fait référence au répertoire des données de l'application qui ouvre la connexion et fournit un chemin d'accès relatif à l'emplacement des fichiers journaux et de base de données .mdf et .ldf. Si vous souhaitez placer ces fichiers ailleurs, vous devez indiquer le chemin d’accès complet des fichiers.  
+- La chaîne de substitution `|DataDirectory|` placée entre deux barres verticales fait référence au répertoire des données de l'application qui ouvre la connexion et fournit un chemin d'accès relatif à l'emplacement des fichiers journaux et de base de données .mdf et .ldf. Si vous souhaitez placer ces fichiers ailleurs, vous devez indiquer le chemin d’accès complet des fichiers.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Les scénarios d'instance utilisateur sont les suivants :  
   
--   Toute application mono-utilisateur où le partage des données n'est pas requis.  
+- Toute application mono-utilisateur où le partage des données n'est pas requis.  
   
--   Déploiement ClickOnce Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement de ClickOnce pour les Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Déploiement ClickOnce Si le .NET Framework 2.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l'ordinateur cible, le package d'installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu'un administrateur doit installer SQL Server Express si cette édition fait partie de l'installation. Pour plus d’informations, consultez [déploiement de ClickOnce pour les Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   Hébergement ASP.NET dédié à l'aide de l'authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L'application se connecte à l'aide du compte Windows ASPNET, et non à l'aide de l'emprunt d'identité. Les instances utilisateur ne doivent pas être utilisées dans les scénarios d'hébergement partagés ou tiers dans lesquels toutes les applications doivent partager la même instance utilisateur et ne plus être indépendantes les unes des autres.  
+- Hébergement ASP.NET dédié à l'aide de l'authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L'application se connecte à l'aide du compte Windows ASPNET, et non à l'aide de l'emprunt d'identité. Les instances utilisateur ne doivent pas être utilisées dans les scénarios d'hébergement partagés ou tiers dans lesquels toutes les applications doivent partager la même instance utilisateur et ne plus être indépendantes les unes des autres.  
   
 ## <a name="see-also"></a>Voir aussi
 

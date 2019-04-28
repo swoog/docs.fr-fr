@@ -3,11 +3,11 @@ title: Sécurité SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876783"
 ---
 # <a name="sql-server-express-security"></a>Sécurité SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) repose sur Microsoft SQL Server et prend en charge la plupart des fonctionnalités du moteur de base de données. Il est conçu de telle manière que les fonctionnalités non essentielles et la connectivité réseau sont désactivées par défaut afin de réduire la surface d'exposition susceptible d'être attaquée par un utilisateur malveillant.  

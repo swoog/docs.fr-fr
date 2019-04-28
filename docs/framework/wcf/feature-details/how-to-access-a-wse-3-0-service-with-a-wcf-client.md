@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855125"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Procédure : Accéder à un service WSE 3.0 Service avec un Client WCF
 Les clients Windows Communication Foundation (WCF) sont compatible au niveau câble avec Web Services Enhancements (WSE) 3.0 pour les services Microsoft .NET lorsque les clients WCF sont configurés pour utiliser la version d’août 2004 de la spécification WS-Addressing. Toutefois, les services WSE 3.0 ne pas prennent en charge le protocole d’échange (MEX) de métadonnées, par conséquent, lorsque vous utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer une classe de client WCF, les paramètres de sécurité ne sont pas appliquées pour le texte généré Client WCF. Par conséquent, vous devez spécifier les paramètres de sécurité que le service WSE 3.0 requiert une fois le client WCF est généré.  
@@ -29,21 +29,21 @@ Les clients Windows Communication Foundation (WCF) sont compatible au niveau câ
   
      La classe suivante fait partie de la [interopérabilité avec WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) exemple :  
   
-    1.  Créez une classe qui dérive de la classe <xref:System.ServiceModel.Channels.Binding>.  
+    1. Créez une classe qui dérive de la classe <xref:System.ServiceModel.Channels.Binding>.  
   
          L'exemple de code suivant crée une classe nommée `WseHttpBinding` qui dérive de la classe <xref:System.ServiceModel.Channels.Binding>.  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Ajoutez à la classe des propriétés spécifiant l'assertion clé en main WSE utilisée par le service WSE, si des clés dérivées sont requises, si des sessions sécurisées sont utilisées, si des confirmations de signature sont requises, ainsi que les paramètres de protection des messages. Dans WSE 3.0, une assertion clé en main spécifie les exigences de sécurité pour un client ou un service Web, similaire au mode d’authentification d’une liaison dans WCF.  
+    2. Ajoutez à la classe des propriétés spécifiant l'assertion clé en main WSE utilisée par le service WSE, si des clés dérivées sont requises, si des sessions sécurisées sont utilisées, si des confirmations de signature sont requises, ainsi que les paramètres de protection des messages. Dans WSE 3.0, une assertion clé en main spécifie les exigences de sécurité pour un client ou un service Web, similaire au mode d’authentification d’une liaison dans WCF.  
   
          L'exemple de code suivant définit les propriétés `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext` et `MessageProtectionOrder` qui spécifient l'assertion clé en main WSE, si des clés dérivées sont requises, si des sessions sécurisées sont utilisées, si des confirmations de signature sont requises, ainsi que les paramètres de protection des messages, respectivement.  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  Substituez la méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> pour définir les propriétés de la liaison.  
+    3. Substituez la méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> pour définir les propriétés de la liaison.  
   
          L'exemple de code suivant spécifie le transport, l'encodage de message et les paramètres de protection des messages en obtenant les valeurs des propriétés `SecurityAssertion` et `MessageProtectionOrder`.  
   

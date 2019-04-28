@@ -3,11 +3,11 @@ title: Création de rôles d'applications dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878018"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Création de rôles d'applications dans SQL Server
 Les rôles d'application constituent un moyen d'affecter des autorisations à une application plutôt qu'à un rôle ou à un utilisateur de base de données. Les utilisateurs peuvent se connecter à la base de données, activer le rôle d'application et assumer les autorisations accordées à l'application. Les autorisations accordées au rôle d'application sont en vigueur pour la durée de la connexion.  
@@ -18,23 +18,23 @@ Les rôles d'application constituent un moyen d'affecter des autorisations à un
 ## <a name="application-role-features"></a>Fonctionnalités de rôle d'application  
  Les rôles d’application possèdent les fonctionnalités suivantes :  
   
--   Contrairement aux rôles de base de données, les rôles d'application ne contiennent aucun membre.  
+- Contrairement aux rôles de base de données, les rôles d'application ne contiennent aucun membre.  
   
--   Les rôles d'application sont activés lorsqu'une application fournit le nom de rôle d'application et un mot de passe à la procédure stockée système `sp_setapprole`.  
+- Les rôles d'application sont activés lorsqu'une application fournit le nom de rôle d'application et un mot de passe à la procédure stockée système `sp_setapprole`.  
   
--   Le mot de passe doit être stocké sur l'ordinateur client et fourni au moment de l'exécution ; un rôle d'application ne peut pas être activé depuis SQL Server.  
+- Le mot de passe doit être stocké sur l'ordinateur client et fourni au moment de l'exécution ; un rôle d'application ne peut pas être activé depuis SQL Server.  
   
--   Le mot de passe n'est pas chiffré. Le mot de passe de paramètre est stocké comme un hachage unidirectionnel.  
+- Le mot de passe n'est pas chiffré. Le mot de passe de paramètre est stocké comme un hachage unidirectionnel.  
   
--   Une fois activées, les autorisations acquises via le rôle d'application restent en vigueur tout au long de la durée de la connexion.  
+- Une fois activées, les autorisations acquises via le rôle d'application restent en vigueur tout au long de la durée de la connexion.  
   
--   Le rôle d'application hérite des autorisations accordées au rôle `public`.  
+- Le rôle d'application hérite des autorisations accordées au rôle `public`.  
   
--   Si un membre du rôle de serveur fixe `sysadmin` active un rôle d'application, le contexte de sécurité bascule vers celui du rôle d'application pour la durée de la connexion.  
+- Si un membre du rôle de serveur fixe `sysadmin` active un rôle d'application, le contexte de sécurité bascule vers celui du rôle d'application pour la durée de la connexion.  
   
--   Si vous créez un compte `guest` dans une base de données qui possède un rôle d'application, vous n'avez pas besoin de créer un compte d'utilisateur de base de données pour le rôle d'application ni pour la connexion qui l'invoque, quelle qu'elle soit. Les rôles d'application peuvent accéder directement à une autre base de données uniquement s'il existe un compte `guest` dans la deuxième base de données  
+- Si vous créez un compte `guest` dans une base de données qui possède un rôle d'application, vous n'avez pas besoin de créer un compte d'utilisateur de base de données pour le rôle d'application ni pour la connexion qui l'invoque, quelle qu'elle soit. Les rôles d'application peuvent accéder directement à une autre base de données uniquement s'il existe un compte `guest` dans la deuxième base de données  
   
--   Des fonctions intégrées qui renvoient des noms de connexion, comme SYSTEM_USER, renvoie le nom de la connexion qui a invoqué le rôle d'application. Des fonctions intégrées qui renvoient des noms d'utilisateur de base de données renvoient le nom du rôle d'application.  
+- Des fonctions intégrées qui renvoient des noms de connexion, comme SYSTEM_USER, renvoie le nom de la connexion qui a invoqué le rôle d'application. Des fonctions intégrées qui renvoient des noms d'utilisateur de base de données renvoient le nom du rôle d'application.  
   
 ### <a name="the-principle-of-least-privilege"></a>Principe des privilèges minimum  
  Les rôles d'application doivent recevoir uniquement les autorisations requises au cas où le mot de passe serait compromis. Des autorisations pour le rôle `public` doivent être révoquées dans n'importe quelle base de données utilisant un rôle d'application. Désactivez le compte `guest` dans n'importe quelle base de données à laquelle vous ne voulez pas que des appelants du rôle d'application puissent accéder.  
@@ -47,9 +47,9 @@ Les rôles d'application constituent un moyen d'affecter des autorisations à un
   
  Vous pouvez prendre en compte les alternatives suivantes.  
   
--   Utilisez le changement de contexte avec l'instruction AS EXECUTE et ses clauses NO REVERT et WITH COOKIE. Vous pouvez créer un compte d'utilisateur dans une base de données qui n'est pas mappée à une connexion. Vous pouvez ensuite affecter des autorisations à ce compte. L'utilisation d'EXECUTE AS avec un utilisateur sans connexion est plus sûre, car elle est basée sur les autorisations, pas sur le mot de passe. Pour plus d’informations, consultez [personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Utilisez le changement de contexte avec l'instruction AS EXECUTE et ses clauses NO REVERT et WITH COOKIE. Vous pouvez créer un compte d'utilisateur dans une base de données qui n'est pas mappée à une connexion. Vous pouvez ensuite affecter des autorisations à ce compte. L'utilisation d'EXECUTE AS avec un utilisateur sans connexion est plus sûre, car elle est basée sur les autorisations, pas sur le mot de passe. Pour plus d’informations, consultez [personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Signez des procédures stockées à l'aide de certificats, en accordant uniquement l'autorisation d'exécuter les procédures. Pour plus d’informations, consultez [signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Signez des procédures stockées à l'aide de certificats, en accordant uniquement l'autorisation d'exécuter les procédures. Pour plus d’informations, consultez [signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Ressources externes  
  Pour plus d'informations, voir les ressources ci-dessous.  

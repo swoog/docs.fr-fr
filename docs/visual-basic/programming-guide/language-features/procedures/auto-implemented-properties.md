@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864310"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriétés implémentées automatiquement (Visual Basic)
 *Propriétés implémentées automatiquement* vous permettent de spécifier rapidement une propriété d’une classe sans avoir à écrire du code pour `Get` et `Set` la propriété. Quand vous écrivez du code pour une propriété implémentée automatiquement, le compilateur Visual Basic crée automatiquement un champ privé pour stocker la variable de propriété en plus de créer les procédures `Get` et `Set` associées.  
@@ -52,13 +52,13 @@ End Class
   
  Le champ de stockage possède également les caractéristiques suivantes :  
   
--   Le modificateur d'accès pour le champ de stockage est toujours `Private`, même quand la propriété a elle-même un niveau d'accès différent, tel que `Public`.  
+- Le modificateur d'accès pour le champ de stockage est toujours `Private`, même quand la propriété a elle-même un niveau d'accès différent, tel que `Public`.  
   
--   Si la propriété est marquée comme `Shared`, le champ de stockage est également partagé.  
+- Si la propriété est marquée comme `Shared`, le champ de stockage est également partagé.  
   
--   Les attributs spécifiés pour la propriété ne s'appliquent pas au champ de stockage.  
+- Les attributs spécifiés pour la propriété ne s'appliquent pas au champ de stockage.  
   
--   Le champ de stockage est accessible à partir du code dans la classe et des outils de débogage tels que la fenêtre Espion. Toutefois, le champ de stockage ne s'affiche pas dans une liste de saisie semi-automatique IntelliSense.  
+- Le champ de stockage est accessible à partir du code dans la classe et des outils de débogage tels que la fenêtre Espion. Toutefois, le champ de stockage ne s'affiche pas dans une liste de saisie semi-automatique IntelliSense.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Initialisation d'une propriété implémentée automatiquement  
  Toute expression pouvant être utilisée pour initialiser un champ est valide pour l'initialisation d'une propriété implémentée automatiquement. Quand vous initialisez une propriété implémentée automatiquement, l'expression est évaluée et passée à la procédure `Set` pour la propriété. Les exemples de code suivants montrent certaines propriétés implémentées automatiquement qui incluent des valeurs initiales.  
@@ -78,17 +78,17 @@ End Class
   
  Vous devez utiliser la syntaxe de définition de propriété développée pour effectuer les opérations suivantes :  
   
--   Ajouter du code à la procédure `Get` ou `Set` d'une propriété, tel que du code permettant de valider des valeurs entrantes dans la procédure `Set`. Par exemple, vous pouvez vérifier qu'une chaîne représentant un numéro de téléphone contient le nombre de chiffres requis avant de définir la valeur de la propriété.  
+- Ajouter du code à la procédure `Get` ou `Set` d'une propriété, tel que du code permettant de valider des valeurs entrantes dans la procédure `Set`. Par exemple, vous pouvez vérifier qu'une chaîne représentant un numéro de téléphone contient le nombre de chiffres requis avant de définir la valeur de la propriété.  
   
--   Spécifier une accessibilité différente pour les procédures `Get` et `Set`. Par exemple, vous souhaiterez peut-être définir la procédure `Set` comme `Private` et la procédure `Get` comme `Public`.  
+- Spécifier une accessibilité différente pour les procédures `Get` et `Set`. Par exemple, vous souhaiterez peut-être définir la procédure `Set` comme `Private` et la procédure `Get` comme `Public`.  
   
--   Créer des propriétés `WriteOnly`.  
+- Créer des propriétés `WriteOnly`.  
   
--   Utiliser des propriétés paramétrables (notamment les propriétés `Default`). Vous devez déclarer une propriété développée pour pouvoir spécifier un paramètre pour la propriété, ou pour spécifier des paramètres supplémentaires pour la procédure `Set`.  
+- Utiliser des propriétés paramétrables (notamment les propriétés `Default`). Vous devez déclarer une propriété développée pour pouvoir spécifier un paramètre pour la propriété, ou pour spécifier des paramètres supplémentaires pour la procédure `Set`.  
   
--   Placer un attribut sur le champ de stockage ou modifier le niveau d'accès du champ de stockage.  
+- Placer un attribut sur le champ de stockage ou modifier le niveau d'accès du champ de stockage.  
   
--   Fournir des commentaires XML pour le champ de stockage.  
+- Fournir des commentaires XML pour le champ de stockage.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Développement d’une propriété implémentée automatiquement  
  Si vous devez convertir une propriété implémentée automatiquement en une propriété développée qui contient une procédure `Get` ou `Set`, l’éditeur de code de Visual Basic peut générer automatiquement les procédures `Get` et `Set`, et l’instruction `End Property` pour la propriété. Le code est généré si vous placez le curseur sur une ligne vierge suivant le `Property` instruction, tapez un `G` (pour `Get`) ou un `S` (pour `Set`) et appuyez sur ENTRÉE. L'éditeur de code de Visual Basic génère automatiquement la procédure `Get` ou `Set` pour les propriétés en lecture seule et en écriture seule quand vous appuyez sur Entrée à la fin d'une instruction `Property`.  

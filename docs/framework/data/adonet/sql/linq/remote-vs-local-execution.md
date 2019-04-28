@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877121"
 ---
 # <a name="remote-vs-local-execution"></a>Exécution distante et exécution locale
 Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le moteur de base de données exécute la requête sur la base de données) ou localement ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exécute la requête sur un cache local).  
@@ -23,18 +23,18 @@ Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le mo
   
  Si votre base de données contient des milliers de lignes de commandes, vous ne souhaitez pas toutes les récupérer pour traiter un petit sous-ensemble. Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la classe <xref:System.Data.Linq.EntitySet%601> implémente l'interface <xref:System.Linq.IQueryable>. Cette approche permet de s'assurer que de telles requêtes peuvent être exécutées à distance. Deux avantages majeurs découlent de cette technique :  
   
--   Les données inutiles ne sont pas récupérées.  
+- Les données inutiles ne sont pas récupérées.  
   
--   Une requête exécutée par le moteur de base de données est souvent plus efficace en raison des index de la base de données.  
+- Une requête exécutée par le moteur de base de données est souvent plus efficace en raison des index de la base de données.  
   
 ## <a name="local-execution"></a>et exécution locale  
  Dans d'autres situations, vous pouvez souhaiter disposer du jeu complet d'entités connexes dans le cache local. Pour cela, <xref:System.Data.Linq.EntitySet%601> fournit la méthode <xref:System.Data.Linq.EntitySet%601.Load%2A> pour charger explicitement tous les membres de <xref:System.Data.Linq.EntitySet%601>.  
   
  Si un <xref:System.Data.Linq.EntitySet%601> est déjà chargé, les requêtes suivantes sont exécutées localement. Cette approche est utile pour les raisons suivantes :  
   
--   Si le jeu complet doit être utilisé localement ou plusieurs fois, vous pouvez éviter des requêtes distantes et des latences associées.  
+- Si le jeu complet doit être utilisé localement ou plusieurs fois, vous pouvez éviter des requêtes distantes et des latences associées.  
   
--   L'entité peut être sérialisée comme une entité complète.  
+- L'entité peut être sérialisée comme une entité complète.  
   
  Le fragment de code suivant illustre comment obtenir l'exécution locale :  
   

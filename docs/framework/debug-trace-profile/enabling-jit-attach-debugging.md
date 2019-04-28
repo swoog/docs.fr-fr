@@ -8,30 +8,30 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874274"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Activation du débogage JIT-attach
 Débogage JIT-attach est l’expression utilisée pour décrire l’attachement d’un débogueur à un processus quand vous rencontrez des erreurs. Le débogage JIT-attach peut aussi être déclenché par des méthodes ou des fonctions spécifiques.  
   
  Le débogage JIT-attach est utilisé dans les conditions d’erreur suivantes :  
   
--   Exceptions non gérées (dans le code natif et managé)  
+- Exceptions non gérées (dans le code natif et managé)  
   
--   Méthode <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou fonction [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (famille Windows 7)  
+- Méthode <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou fonction [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (famille Windows 7)  
   
--   Erreurs irrécupérables du runtime  
+- Erreurs irrécupérables du runtime  
   
  Le débogage JIT-attach est également déclenché par des appels aux fonctions et méthodes suivantes :  
   
--   Méthode<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
+- Méthode<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
   
--   Méthode<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
+- Méthode<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
   
--   Fonction [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32)  
+- Fonction [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32)  
   
  Avant le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le .NET Framework fournissait des clés de Registre distinctes pour contrôler le comportement des débogueurs natifs et managés. En commençant par le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], contrôle est consolidé sous une clé de Registre unique : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Les valeurs que vous pouvez définir pour cette clé déterminent si un débogueur est appelé et, dans l’affirmative, s’il est appelé avec une boîte de dialogue qui nécessite une interaction utilisateur. Pour plus d’informations sur la définition de cette clé de Registre, consultez [configuration du débogage automatique](https://go.microsoft.com/fwlink/?LinkId=181767).  
   

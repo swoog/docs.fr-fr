@@ -3,11 +3,11 @@ title: Procédure standard d'utilisation de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876970"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Procédure standard d'utilisation de LINQ to SQL
 Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], suivez les étapes décrites ultérieurement dans cette rubrique. Notez que de nombreuses étapes sont facultatives. Il est tout à fait possible que votre modèle objet soit utilisable dans son état par défaut.  
@@ -20,32 +20,32 @@ Pour implémenter une application [!INCLUDE[vbtecdlinq](../../../../../../includ
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Sélectionnez un outil pour créer le modèle.  
  Trois outils sont disponibles pour la création du modèle.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
   
      Ce concepteur fournit une interface utilisateur élaborée pour créer un modèle objet à partir d'une base de données existante. Cet outil fait partie de l’IDE Visual Studio et convient mieux aux bases de données de taille réduites ou moyennes.  
   
--   Outil de génération de code SQLMetal  
+- Outil de génération de code SQLMetal  
   
      Cet utilitaire en ligne de commande propose un ensemble d'options légèrement différent d'[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]. Il est mieux adapté à la modélisation de grandes bases de données. Pour plus d’informations, consultez [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
--   Éditeur de code  
+- Éditeur de code  
   
      Vous pouvez écrire votre propre code à l’aide de l’éditeur de code Visual Studio ou un autre éditeur. Cette approche, qui peut générer des erreurs, n'est pas conseillée lorsque vous disposez d'une base de données existante et que vous pouvez utiliser [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou SQLMetal. Toutefois, l'éditeur de code peut s'avérer particulièrement utile pour affiner ou modifier du code déjà généré à l'aide d'autres outils. Pour plus d'informations, voir [Procédure : Personnaliser des Classes d’entité à l’aide de l’éditeur de Code](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Sélectionnez le type de code à générer.  
   
--   Un C# ou fichier de code source Visual Basic pour le mappage basé sur l’attribut.  
+- Un C# ou fichier de code source Visual Basic pour le mappage basé sur l’attribut.  
   
      Vous incluez ensuite ce fichier de code dans votre projet Visual Studio. Pour plus d’informations, consultez [mappage basé sur l’attribut](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
--   Fichier XML pour le mappage externe.  
+- Fichier XML pour le mappage externe.  
   
      Cette approche vous permet de maintenir les métadonnées de mappage en dehors de votre code d'application. Pour plus d’informations, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ne prend pas en charge la génération de fichiers de mappage externes. Vous devez utiliser l'outil SQLMetal pour implémenter cette fonctionnalité.  
   
--   Un fichier DBML, que vous pouvez modifier avant de générer un fichier de code final.  
+- Un fichier DBML, que vous pouvez modifier avant de générer un fichier de code final.  
   
      Il s'agit d'une fonctionnalité avancée.  
   

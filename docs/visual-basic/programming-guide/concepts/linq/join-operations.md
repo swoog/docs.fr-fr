@@ -3,11 +3,11 @@ title: Assembler les opérations (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834380"
 ---
 # <a name="join-operations-visual-basic"></a>Assembler les opérations (Visual Basic)
 Une *jointure* de deux sources de données est l’association des objets d’une source de données aux objets qui partagent un attribut commun dans une autre source de données.  
@@ -18,7 +18,7 @@ Une *jointure* de deux sources de données est l’association des objets d’un
   
  L'illustration suivante présente une vue conceptuelle de deux ensembles, ainsi que leurs éléments inclus dans une jointure interne ou une jointure externe gauche.  
   
- ![Deux cercles se chevauchant montrant interne&#47;externe.](./media/join-operations/join-method-overlapping-circles.png)  
+ ![Deux cercles se chevauchant montrant l’interne&#47;externe.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Méthodes  
   

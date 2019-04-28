@@ -12,14 +12,14 @@ ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860553"
 ---
 # <a name="security-in-net"></a>Sécurité dans .NET
-Le common language runtime et le .NET fournissent de nombreuses classes utiles et les services qui permettent aux développeurs d’écrire du code sécurisé et permettent aux administrateurs système de personnaliser les autorisations accordées au code afin qu’il puisse accéder facilement des ressources protégées. En outre, le runtime et le .NET fournissent des classes et des services qui facilitent l’utilisation du chiffrement et de sécurité des rôles.  
+Le common language runtime et le .NET fournissent de nombreux services qui permettent aux développeurs d’écrire du code sécurisé et activer le système aux administrateurs de personnaliser les autorisations accordées au code afin qu’il puisse accéder facilement et les classes de ressources protégées. En outre, le runtime et le .NET fournissent des classes et des services qui facilitent l’utilisation du chiffrement et de sécurité en fonction du rôle.  
   
 ## <a name="in-this-section"></a>Dans cette section  
 
@@ -41,7 +41,7 @@ Le common language runtime et le .NET fournissent de nombreuses classes utiles e
  [Windows Identity Foundation](../../../docs/framework/security/index.md)  
  Explique comment vous pouvez implémenter l'identité basée sur des demandes dans vos applications.  
 
-[Modifications de sécurité](../../../docs/framework/security/security-changes.md) décrit des modifications importantes apportées au système de sécurité du .NET Framework.
+[Modifications de sécurité](../../../docs/framework/security/security-changes.md) décrit les modifications importantes apportées au système de sécurité .NET Framework.
 
 ## <a name="related-sections"></a>Rubriques connexes  
  [Guide de développement](../../../docs/framework/development-guide.md)  

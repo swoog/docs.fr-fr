@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748888"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : Attribution de contenu WPF dans Windows Forms au moment du design
 Cette procédure pas à pas montre comment sélectionner les types de contrôle WPF (Windows Presentation Foundation) que vous souhaitez afficher sur votre formulaire. Vous pouvez sélectionner tout type de contrôle WPF inclus dans votre projet.
 
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
 
--   créer le projet ;
+- créer le projet ;
 
--   créer les types de contrôles WPF ;
+- créer les types de contrôles WPF ;
 
--   sélectionner les contrôles WPF.
+- sélectionner les contrôles WPF.
 
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -32,7 +32,7 @@ Cette procédure pas à pas montre comment sélectionner les types de contrôle 
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Création du projet  
  La première étape consiste à créer le projet Windows Forms.  
@@ -42,7 +42,7 @@ Cette procédure pas à pas montre comment sélectionner les types de contrôle 
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
--   Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `SelectingWpfContent`.  
+- Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `SelectingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Création des types de contrôles WPF  
  Après avoir ajouté des types de contrôles WPF au projet, vous pouvez les héberger dans différents contrôles <xref:System.Windows.Forms.Integration.ElementHost>.  

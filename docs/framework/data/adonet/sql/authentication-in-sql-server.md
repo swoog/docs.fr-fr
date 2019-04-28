@@ -3,18 +3,18 @@ title: Authentification dans SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879010"
 ---
 # <a name="authentication-in-sql-server"></a>Authentification dans SQL Server
 SQL Server prend en charge deux modes d'authentification, le mode d'authentification Windows et le mode mixte.  
   
--   L'authentification Windows correspond au mode par défaut et il est souvent qualifié de sécurité intégrée car ce modèle de sécurité SQL Server est étroitement intégré à Windows. Des comptes d'utilisateurs et de groupes Windows spécifiques sont approuvés pour se connecter à SQL Server. Les utilisateurs Windows qui ont déjà été authentifiés n'ont pas besoin de présenter d'informations d'identification supplémentaires.  
+- L'authentification Windows correspond au mode par défaut et il est souvent qualifié de sécurité intégrée car ce modèle de sécurité SQL Server est étroitement intégré à Windows. Des comptes d'utilisateurs et de groupes Windows spécifiques sont approuvés pour se connecter à SQL Server. Les utilisateurs Windows qui ont déjà été authentifiés n'ont pas besoin de présenter d'informations d'identification supplémentaires.  
   
--   Le mode mixte prend en charge l'authentification par Windows et par SQL Server. Les paires nom d'utilisateur–mot de passe sont conservées dans SQL Server.  
+- Le mode mixte prend en charge l'authentification par Windows et par SQL Server. Les paires nom d'utilisateur–mot de passe sont conservées dans SQL Server.  
   
 > [!IMPORTANT]
 >  Il est recommandé d'utiliser l'authentification Windows chaque fois que possible. L'authentification Windows utilise une série de messages chiffrés pour authentifier les utilisateurs dans SQL Server. Lorsque les connexions SQL Server sont utilisées, les noms de connexion SQL Server et les mots de passe chiffrés sont passées via le réseau, ce qui les rend moins sûrs.  
@@ -31,19 +31,19 @@ SQL Server prend en charge deux modes d'authentification, le mode d'authentifica
 ## <a name="authentication-scenarios"></a>Scénarios d'authentification  
  L'authentification Windows représente généralement le meilleur choix dans les situations suivantes :  
   
--   Il existe un contrôleur de domaine.  
+- Il existe un contrôleur de domaine.  
   
--   L'application et la base de données se trouvent sur le même ordinateur.  
+- L'application et la base de données se trouvent sur le même ordinateur.  
   
--   Vous utilisez une instance de SQL Server Express ou LocalDB.  
+- Vous utilisez une instance de SQL Server Express ou LocalDB.  
   
  Les connexions SQL Server sont souvent utilisées dans les situations suivantes :  
   
--   si vous avez un groupe de travail ;  
+- si vous avez un groupe de travail ;  
   
--   les utilisateurs se connectent à partir de domaines différents, non approuvés ;  
+- les utilisateurs se connectent à partir de domaines différents, non approuvés ;  
   
--   les applications Internet, comme [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- les applications Internet, comme [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  La spécification de l'authentification Windows ne désactive pas les connexions SQL Server. Utilisez l’instruction ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instruction pour désactiver les connexions de SQL Server disposant de privilèges élevés.  
@@ -51,11 +51,11 @@ SQL Server prend en charge deux modes d'authentification, le mode d'authentifica
 ## <a name="login-types"></a>Types de connexions  
  SQL Server prend en charge trois types de connexions :  
   
--   Compte d'utilisateur Windows local ou compte de domaine approuvé. SQL Server s'appuie sur Windows pour authentifier les comptes d'utilisateurs Windows.  
+- Compte d'utilisateur Windows local ou compte de domaine approuvé. SQL Server s'appuie sur Windows pour authentifier les comptes d'utilisateurs Windows.  
   
--   Groupe Windows. Accorder l'accès à un groupe Windows permet d'accorder l'accès à toutes les connexions utilisateur Windows membres du groupe.  
+- Groupe Windows. Accorder l'accès à un groupe Windows permet d'accorder l'accès à toutes les connexions utilisateur Windows membres du groupe.  
   
--   Connexion SQL Server. SQL Server stocke le nom d'utilisateur et un hachage du mot de passe dans la base de données MASTER, en utilisant des méthodes d'authentification internes pour vérifier les tentatives de connexion.  
+- Connexion SQL Server. SQL Server stocke le nom d'utilisateur et un hachage du mot de passe dans la base de données MASTER, en utilisant des méthodes d'authentification internes pour vérifier les tentatives de connexion.  
   
 > [!NOTE]
 >  SQL Server fournit les connexions créées à partir de certificats ou clés asymétriques qui sont utilisés uniquement pour la signature de code. Elles ne peuvent pas être utilisées pour se connecter à SQL Server.  

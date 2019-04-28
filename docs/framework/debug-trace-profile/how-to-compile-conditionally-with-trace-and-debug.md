@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754555"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procédure : Effectuer une compilation conditionnelle avec Trace et Debug
 Quand vous déboguez une application pendant le développement, les sorties de débogage et de traçage sont dirigées vers la fenêtre de sortie dans Visual Studio. Toutefois, pour inclure les fonctionnalités de suivi dans une application déployée, vous devez compiler vos applications instrumentées en activant la directive de compilateur **TRACE**. De cette façon, le code de traçage peut être compilé dans la version commerciale de votre application. Si vous n’activez pas la directive **TRACE**, tout le code de suivi est ignoré pendant la compilation et n’est pas inclus dans le code exécutable que vous déployez.  
@@ -28,11 +28,11 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
  Vous pouvez spécifier les paramètres du compilateur pour votre application de plusieurs façons :  
   
--   Pages de propriétés  
+- Pages de propriétés  
   
--   Ligne de commande  
+- Ligne de commande  
   
--   **#CONST** (pour Visual Basic) et **#define** (pour C#)  
+- **#CONST** (pour Visual Basic) et **#define** (pour C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Pour modifier les paramètres de compilation dans la boîte de dialogue des pages de propriétés  
   
@@ -40,9 +40,9 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
 2. Choisissez **Propriétés** dans le menu contextuel.  
   
-    -   En Visual Basic, cliquez sur l’onglet **Compiler** dans le volet gauche de la page de propriétés, puis sur le bouton **Options avancées de compilation** pour afficher la boîte de dialogue **Paramètres avancés du compilateur**. Cochez les cases des paramètres du compilateur que vous voulez activer. Décochez les cases des paramètres que vous voulez désactiver.  
+    - En Visual Basic, cliquez sur l’onglet **Compiler** dans le volet gauche de la page de propriétés, puis sur le bouton **Options avancées de compilation** pour afficher la boîte de dialogue **Paramètres avancés du compilateur**. Cochez les cases des paramètres du compilateur que vous voulez activer. Décochez les cases des paramètres que vous voulez désactiver.  
   
-    -   En C#, cliquez sur l’onglet **Générer** dans le volet gauche de la page de propriétés, puis cochez les cases des paramètres du compilateur que vous voulez activer. Décochez les cases des paramètres que vous voulez désactiver.  
+    - En C#, cliquez sur l’onglet **Générer** dans le volet gauche de la page de propriétés, puis cochez les cases des paramètres du compilateur que vous voulez activer. Décochez les cases des paramètres que vous voulez désactiver.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Pour compiler du code instrumenté à l'aide de la ligne de commande  
   

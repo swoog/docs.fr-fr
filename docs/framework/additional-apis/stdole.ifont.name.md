@@ -12,13 +12,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: f7bf63cbba4b637281314f6a545d78cf99b25c1a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705894"
 ---
-# <a name="ifontname-property"></a>Propriété de IFont.Name
+# <a name="ifontname-property"></a>IFont.Name, propriété
 
 ```csharp
 string Name { get; set; }
@@ -28,7 +28,7 @@ string Name { get; set; }
 
 <xref:System.String>\
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Espace de noms :** `stdole`
 

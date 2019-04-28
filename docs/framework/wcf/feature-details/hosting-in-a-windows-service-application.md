@@ -3,11 +3,11 @@ title: Hébergement dans une application de service Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855951"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hébergement dans une application de service Windows
 Les services Windows (autrefois connus comme services Windows NT) fournissent un modèle de processus particulièrement adapté aux applications qui doivent exister dans un exécutable à durée d’exécution longue et n’affichent aucune forme d’interface utilisateur. La durée de vie de processus d'une application de service Windows est gérée par le gestionnaire de contrôle des services (SCM) qui vous autorise à démarrer, arrêter et suspendre les applications de service Windows. Vous pouvez configurer un processus de service Windows pour démarrer automatiquement lorsque l’ordinateur démarre, en rendant un environnement d’hébergement approprié pour les applications « always on ». Pour plus d’informations sur les applications de service Windows, consultez [Windows Service Applications](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -16,11 +16,11 @@ Les services Windows (autrefois connus comme services Windows NT) fournissent u
   
  Souvent, les développeurs WCF doivent décider s’il faut héberger leur application WCF à l’intérieur d’une application de service Windows ou à l’intérieur de l’environnement d’hébergement Internet Information Services (IIS) ou le Service d’Activation des processus Windows (WAS). Vous pouvez envisager d'utiliser des applications de service Windows dans les conditions suivantes :  
   
--   Votre application requiert l'activation explicite. Par exemple, vous devez utiliser des services Windows lorsque votre application doit démarrer automatiquement quand le serveur démarre au lieu d'être démarrée dynamiquement en réponse au premier message entrant.  
+- Votre application requiert l'activation explicite. Par exemple, vous devez utiliser des services Windows lorsque votre application doit démarrer automatiquement quand le serveur démarre au lieu d'être démarrée dynamiquement en réponse au premier message entrant.  
   
--   Le processus qui héberge votre application doit rester actif une fois démarré. Une fois démarré, un processus de service Windows reste actif à moins qu'il ne soit explicitement interrompu par l'administrateur du serveur via le gestionnaire de contrôle des services. Les applications hébergées dans IIS ou WAS peuvent être démarrées et arrêtées dynamiquement pour une utilisation optimale des ressources système. Les applications qui requièrent un contrôle explicite sur la durée de vie de leur processus d'hébergement doivent utiliser des services Windows au lieu d'IIS ou WAS.  
+- Le processus qui héberge votre application doit rester actif une fois démarré. Une fois démarré, un processus de service Windows reste actif à moins qu'il ne soit explicitement interrompu par l'administrateur du serveur via le gestionnaire de contrôle des services. Les applications hébergées dans IIS ou WAS peuvent être démarrées et arrêtées dynamiquement pour une utilisation optimale des ressources système. Les applications qui requièrent un contrôle explicite sur la durée de vie de leur processus d'hébergement doivent utiliser des services Windows au lieu d'IIS ou WAS.  
   
--   Votre service WCF doit s’exécuter sur Windows Server 2003 et utiliser des transports autres que HTTP. Sous Windows Server 2003, l'environnement d'hébergement [!INCLUDE[iis601](../../../../includes/iis601-md.md)] est restreint uniquement à la communication HTTP. Applications de service Windows ne sont pas soumises à cette restriction et peuvent utiliser n’importe quel transport WCF prend en charge, y compris net.tcp, net.pipe et net.msmq.  
+- Votre service WCF doit s’exécuter sur Windows Server 2003 et utiliser des transports autres que HTTP. Sous Windows Server 2003, l'environnement d'hébergement [!INCLUDE[iis601](../../../../includes/iis601-md.md)] est restreint uniquement à la communication HTTP. Applications de service Windows ne sont pas soumises à cette restriction et peuvent utiliser n’importe quel transport WCF prend en charge, y compris net.tcp, net.pipe et net.msmq.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Pour héberger WCF dans une application de service Windows  
   
@@ -28,11 +28,11 @@ Les services Windows (autrefois connus comme services Windows NT) fournissent u
   
 2. Lier la durée de vie des services WCF à la durée de vie de l’application de service Windows. En règle générale, vous souhaitez que services WCF hébergés dans une application de service Windows deviennent actifs lorsque le service d’hébergement démarre, arrêter l’écoute des messages lorsque vous arrêtez le service d’hébergement et s’arrête le processus d’hébergement lorsque le service WCF rencontre une erreur. Cela peut être accompli de la façon suivante :  
   
-    -   Remplacez <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> pour ouvrir une ou plusieurs instances de <xref:System.ServiceModel.ServiceHost>. Une application de service Windows unique peut héberger plusieurs services WCF qui démarrent et arrêtent en tant que groupe.  
+    - Remplacez <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> pour ouvrir une ou plusieurs instances de <xref:System.ServiceModel.ServiceHost>. Une application de service Windows unique peut héberger plusieurs services WCF qui démarrent et arrêtent en tant que groupe.  
   
-    -   Substituer <xref:System.ServiceProcess.ServiceBase.OnStop%2A> pour appeler <xref:System.ServiceModel.Channels.CommunicationObject.Closed> sur le <xref:System.ServiceModel.ServiceHost> tous les services WCF en cours d’exécution qui ont été démarrés pendant <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
+    - Substituer <xref:System.ServiceProcess.ServiceBase.OnStop%2A> pour appeler <xref:System.ServiceModel.Channels.CommunicationObject.Closed> sur le <xref:System.ServiceModel.ServiceHost> tous les services WCF en cours d’exécution qui ont été démarrés pendant <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.  
   
-    -   Abonnez-vous à l'événement <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> de <xref:System.ServiceModel.ServiceHost> et utilisez la classe <xref:System.ServiceProcess.ServiceController> pour interrompre l'application de service Windows en cas d'erreur.  
+    - Abonnez-vous à l'événement <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> de <xref:System.ServiceModel.ServiceHost> et utilisez la classe <xref:System.ServiceProcess.ServiceController> pour interrompre l'application de service Windows en cas d'erreur.  
   
      Les applications de service Windows qui hébergent des services WCF déployées et gérées de la même façon que les applications de service Windows qui n’effectuent pas utilisent de WCF.  
   

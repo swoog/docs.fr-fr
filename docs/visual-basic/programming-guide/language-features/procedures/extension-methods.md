@@ -8,11 +8,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864337"
 ---
 # <a name="extension-methods-visual-basic"></a>Méthodes d'extension (Visual Basic)
 Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnalités personnalisées aux types de données qui sont déjà définis sans créer un nouveau type dérivé. Méthodes d’extension permettent d’écrire une méthode qui peut être appelée comme s’il s’agissait d’une méthode d’instance du type existant.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Types qui peuvent être étendus  
  Vous pouvez définir une méthode d’extension sur la plupart des types qui peuvent être représentés dans une liste de paramètres Visual Basic, notamment les suivantes :  
   
--   Classes (types référence)  
+- Classes (types référence)  
   
--   Structures (types valeur)  
+- Structures (types valeur)  
   
--   Interfaces  
+- Interfaces  
   
--   Délégués  
+- Délégués  
   
--   Arguments ByRef et ByVal  
+- Arguments ByRef et ByVal  
   
--   Paramètres de méthode générique  
+- Paramètres de méthode générique  
   
--   Tableaux  
+- Tableaux  
   
  Étant donné que le premier paramètre spécifie le type de données qui s’étend de la méthode d’extension, il est obligatoire et ne peut pas être facultatif. Pour cette raison, `Optional` paramètres et `ParamArray` ne peuvent pas être le premier paramètre dans la liste de paramètres.  
   
@@ -118,15 +118,15 @@ End Module
   
  La plupart du temps, les méthodes d’extension que vous ajoutez aux types que vous ne possédez pas sont plus vulnérables que les méthodes d’extension ajoutées aux types que vous contrôlez. Un certain nombre de choses peut se produire dans les classes que vous n’êtes pas propriétaire et qui peuvent interférer avec vos méthodes d’extension.  
   
--   Si n’importe quel membre d’instance accessible existe avec une signature qui est compatible avec les arguments dans l’instruction d’appel, sans conversions restrictives requises d’un argument au paramètre, la méthode d’instance servira préférence à toute méthode d’extension. Par conséquent, si une méthode d’instance appropriée est ajoutée à une classe à un moment donné, un membre d’extension existant que vous dépendez peut devenir inaccessible.  
+- Si n’importe quel membre d’instance accessible existe avec une signature qui est compatible avec les arguments dans l’instruction d’appel, sans conversions restrictives requises d’un argument au paramètre, la méthode d’instance servira préférence à toute méthode d’extension. Par conséquent, si une méthode d’instance appropriée est ajoutée à une classe à un moment donné, un membre d’extension existant que vous dépendez peut devenir inaccessible.  
   
--   L’auteur d’une méthode d’extension ne peut pas empêcher d’autres programmeurs d’écrire des méthodes d’extension en conflit qui peuvent être prioritaires sur l’extension d’origine.  
+- L’auteur d’une méthode d’extension ne peut pas empêcher d’autres programmeurs d’écrire des méthodes d’extension en conflit qui peuvent être prioritaires sur l’extension d’origine.  
   
--   Vous pouvez améliorer la robustesse en plaçant les méthodes d’extension dans leur propre espace de noms. Consommateurs de votre bibliothèque peuvent ensuite inclure un espace de noms exclure ou sélection parmi les espaces de noms, séparément du reste de la bibliothèque.  
+- Vous pouvez améliorer la robustesse en plaçant les méthodes d’extension dans leur propre espace de noms. Consommateurs de votre bibliothèque peuvent ensuite inclure un espace de noms exclure ou sélection parmi les espaces de noms, séparément du reste de la bibliothèque.  
   
--   Il peut être plus sûr d’étendre les interfaces plutôt que d’étendre les classes, surtout si vous ne possédez pas l’interface ou la classe. Une modification dans une interface affecte chaque classe qui l’implémente. Par conséquent, l’auteur peut être moins tenté d’ajouter ou modifier les méthodes dans une interface. Toutefois, si une classe implémente deux interfaces qui ont des méthodes d’extension avec la même signature, aucune méthode d’extension est visible.  
+- Il peut être plus sûr d’étendre les interfaces plutôt que d’étendre les classes, surtout si vous ne possédez pas l’interface ou la classe. Une modification dans une interface affecte chaque classe qui l’implémente. Par conséquent, l’auteur peut être moins tenté d’ajouter ou modifier les méthodes dans une interface. Toutefois, si une classe implémente deux interfaces qui ont des méthodes d’extension avec la même signature, aucune méthode d’extension est visible.  
   
--   Étendre le type plus spécifique, que vous pouvez. Dans une hiérarchie de types, si vous sélectionnez un type à partir de laquelle d’autres types sont dérivés, il existe des couches de l’introduction de méthodes d’instance ou d’autres méthodes d’extension peuvent interférer avec les vôtres.  
+- Étendre le type plus spécifique, que vous pouvez. Dans une hiérarchie de types, si vous sélectionnez un type à partir de laquelle d’autres types sont dérivés, il existe des couches de l’introduction de méthodes d’instance ou d’autres méthodes d’extension peuvent interférer avec les vôtres.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>Méthodes d’extension, les propriétés et les méthodes d’Instance  
  Lorsqu’une méthode d’instance dans la portée a une signature qui est compatible avec les arguments d’une instruction appelante, la méthode d’instance est choisie dans la préférence n’importe quelle méthode d’extension. La méthode d’instance est prioritaire même si la méthode d’extension est une meilleure correspondance. Dans l’exemple suivant, `ExampleClass` contient une méthode d’instance nommée `ExampleMethod` qui a un paramètre de type `Integer`. Méthode d’extension `ExampleMethod` étend `ExampleClass`, et a un paramètre de type `Long`.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751603"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Accès d'un membre partagé via une instance ; l'expression qualifiante ne sera pas évaluée
 Une variable d’instance d’une classe ou une structure est utilisée pour accéder à un `Shared` variable, la propriété, la procédure ou événement défini dans cette classe ou structure. Cet avertissement peut également se produire si une variable d’instance est utilisée pour accéder à un membre implicitement partagé d’une classe ou une structure, comme une constante ou énumération, ou une classe imbriquée ou une structure.  
@@ -29,7 +29,7 @@ Une variable d’instance d’une classe ou une structure est utilisée pour acc
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Utilisez le nom de la classe ou structure qui définit le `Shared` membre à y accéder, comme illustré dans l’exemple suivant.  
+- Utilisez le nom de la classe ou structure qui définit le `Shared` membre à y accéder, comme illustré dans l’exemple suivant.  
   
 ```vb  
 Public Class testClass  

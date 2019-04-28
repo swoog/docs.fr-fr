@@ -10,24 +10,24 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857166"
 ---
 # <a name="data-contract-known-types"></a>Types connus de contrats de données
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de spécifier, en avance, les types qui doivent être inclus pour être pris en compte pendant la désérialisation. Pour obtenir un exemple fonctionnel, consultez l’exemple [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  Normalement, lors du passage des paramètres et des valeurs de retour entre un client et un service, les deux points de terminaison partagent tous les contrats de données des données à transmettre. Toutefois, ce n'est pas le cas dans les circonstances suivantes :  
   
--   Le contrat de données envoyé est dérivé du contrat de données attendu. Pour plus d’informations, consultez la section sur l’héritage dans [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Dans ce cas, les données transmises n'ont pas le même contrat de données que celui attendu par le point de terminaison de réception.  
+- Le contrat de données envoyé est dérivé du contrat de données attendu. Pour plus d’informations, consultez la section sur l’héritage dans [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Dans ce cas, les données transmises n'ont pas le même contrat de données que celui attendu par le point de terminaison de réception.  
   
--   Le type déclaré pour les informations à transmettre est une interface, par opposition à une classe, une structure ou une énumération. Par conséquent, il n'est pas possible de connaître à l'avance quel type implémentant l'interface est envoyé réellement et, par conséquent, le point de terminaison de réception ne peut pas déterminer, à l'avance, le contrat de données pour les données transmises.  
+- Le type déclaré pour les informations à transmettre est une interface, par opposition à une classe, une structure ou une énumération. Par conséquent, il n'est pas possible de connaître à l'avance quel type implémentant l'interface est envoyé réellement et, par conséquent, le point de terminaison de réception ne peut pas déterminer, à l'avance, le contrat de données pour les données transmises.  
   
--   Le type déclaré pour les informations à transmettre est <xref:System.Object>. Comme chaque type hérite de <xref:System.Object>, et il n'est pas possible de connaître à l'avance quel type est envoyé réellement, le point de terminaison de réception ne peut pas déterminer à l'avance le contrat de données pour les données transmises. Il s’agit d’un cas spécial du premier élément : Chaque contrat de données dérive de la valeur par défaut, un contrat de données vide qui est généré pour <xref:System.Object>.  
+- Le type déclaré pour les informations à transmettre est <xref:System.Object>. Comme chaque type hérite de <xref:System.Object>, et il n'est pas possible de connaître à l'avance quel type est envoyé réellement, le point de terminaison de réception ne peut pas déterminer à l'avance le contrat de données pour les données transmises. Il s’agit d’un cas spécial du premier élément : Chaque contrat de données dérive de la valeur par défaut, un contrat de données vide qui est généré pour <xref:System.Object>.  
   
--   Certains types, y compris les types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , ont des membres qui appartiennent à une des trois catégories précédentes. Par exemple, <xref:System.Collections.Hashtable> utilise <xref:System.Object> pour stocker les objets réels dans la table de hachage. Lors de la sérialisation de ces types, le côté réception ne peut pas déterminer à l'avance le contrat de données pour ces membres.  
+- Certains types, y compris les types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , ont des membres qui appartiennent à une des trois catégories précédentes. Par exemple, <xref:System.Collections.Hashtable> utilise <xref:System.Object> pour stocker les objets réels dans la table de hachage. Lors de la sérialisation de ces types, le côté réception ne peut pas déterminer à l'avance le contrat de données pour ces membres.  
   
 ## <a name="the-knowntypeattribute-class"></a>Classe KnownTypeAttribute  
  Lorsque les données arrivent à un point de terminaison de réception, le runtime WCF tente de désérialiser les données dans une instance d’un type de common language runtime (CLR). Le type instancié pour la désérialisation est choisi en inspectant d'abord le message entrant pour déterminer le contrat de données auquel le contenu du message se conforme. Le moteur de désérialisation essaie ensuite de rechercher un type CLR qui implémente un contrat de données compatible avec le contenu de message. Le jeu des types de candidat que le moteur de désérialisation autorise pendant ce processus porte le nom du jeu du désérialiseur des « types connus ».  

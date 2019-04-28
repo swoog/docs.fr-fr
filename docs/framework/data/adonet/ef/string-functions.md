@@ -3,11 +3,11 @@ title: Fonctions de chaîne
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879115"
 ---
 # <a name="string-functions"></a>Fonctions de chaîne
 Le fournisseur de données .NET Framework pour SQL Server (SqlClient) propose des fonctions `String` qui effectuent des opérations sur une valeur d'entrée `String` et retournent une valeur de résultat `String` ou numérique. Ces fonctions se trouvent dans l'espace de noms SqlServer, lequel est disponible lorsque vous utilisez SqlClient. La propriété d’espace de noms d’un fournisseur permet à Entity Framework de découvrir le préfixe attribué par ce fournisseur à des constructions spécifiques, telles que des types et des fonctions.  

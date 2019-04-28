@@ -5,11 +5,11 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868977"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API qui s'appuient sur la réflexion
 Dans certains cas, l'utilisation de la réflexion dans du code n'est pas évidente, et la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne conserve donc pas les métadonnées nécessaires au moment de l'exécution. Cette rubrique décrit certaines API courantes ou des modèles de programmation courants qui ne sont pas considérés comme faisant partie de l'API de réflexion, mais dont l'exécution s'appuie sur la réflexion. Si vous les utilisez dans votre code source, vous pouvez ajouter des informations les concernant au fichier de directives runtime (.rd.xml) pour que les appels de ces API ne lèvent pas d’exceptions, telles que [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), au moment de l’exécution.  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  Pour s'exécuter correctement, ce code nécessite plusieurs éléments de métadonnées :  
   
--   Les métadonnées `Browse` pour le type dont vous souhaitez appeler la méthode.  
+- Les métadonnées `Browse` pour le type dont vous souhaitez appeler la méthode.  
   
--   Les métadonnées `Browse` pour la méthode que vous souhaitez appeler.  S'il s'agit d'une méthode publique, l'ajout de métadonnées `Browse` publiques pour le type conteneur comprend également la méthode.  
+- Les métadonnées `Browse` pour la méthode que vous souhaitez appeler.  S'il s'agit d'une méthode publique, l'ajout de métadonnées `Browse` publiques pour le type conteneur comprend également la méthode.  
   
--   Les métadonnées dynamiques pour la méthode que vous souhaitez appeler, afin que le délégué d'appel de réflexion ne soit pas supprimé par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si des métadonnées dynamiques sont manquantes pour la méthode, l'exception suivante est levée quand la méthode <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> est appelée :  
+- Les métadonnées dynamiques pour la méthode que vous souhaitez appeler, afin que le délégué d'appel de réflexion ne soit pas supprimé par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si des métadonnées dynamiques sont manquantes pour la méthode, l'exception suivante est levée quand la méthode <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> est appelée :  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

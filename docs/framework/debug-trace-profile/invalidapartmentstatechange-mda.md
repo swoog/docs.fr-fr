@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754503"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>Assistant Débogage managé invalidApartmentStateChange
 L’Assistant Débogage managé `invalidApartmentStateChange` est activé par l’un des deux problèmes suivants :  
   
--   Une tentative est effectuée pour modifier l’état de cloisonnement COM d’un thread qui a déjà été initialisé par COM à un état de cloisonnement différent.  
+- Une tentative est effectuée pour modifier l’état de cloisonnement COM d’un thread qui a déjà été initialisé par COM à un état de cloisonnement différent.  
   
--   L’état de cloisonnement COM d’un thread change de manière inopinée.  
+- L’état de cloisonnement COM d’un thread change de manière inopinée.  
   
 ## <a name="symptoms"></a>Symptômes  
   
--   L’état de cloisonnement COM d’un thread ne correspond pas à ce qui a été demandé. Cela peut entraîner l’utilisation de proxies pour des composants COM qui ont un modèle de thread différent du modèle courant. Cela peut également provoquer la levée d’une <xref:System.InvalidCastException> lors de l’appel de l’objet COM via des interfaces qui ne sont pas définies pour le marshaling entre cloisonnements.  
+- L’état de cloisonnement COM d’un thread ne correspond pas à ce qui a été demandé. Cela peut entraîner l’utilisation de proxies pour des composants COM qui ont un modèle de thread différent du modèle courant. Cela peut également provoquer la levée d’une <xref:System.InvalidCastException> lors de l’appel de l’objet COM via des interfaces qui ne sont pas définies pour le marshaling entre cloisonnements.  
   
--   L’état de cloisonnement COM du thread est différent de celui qui est attendu. Cela peut provoquer une <xref:System.Runtime.InteropServices.COMException> avec la valeur HRESULT RPC_E_WRONG_THREAD ainsi qu’une <xref:System.InvalidCastException> quand des appels sont effectués sur un [wrapper RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md). Cela peut également conduire plusieurs threads à accéder en même temps à certains composants COM à thread unique, ce qui risque d’entraîner une altération ou une perte de données.  
+- L’état de cloisonnement COM du thread est différent de celui qui est attendu. Cela peut provoquer une <xref:System.Runtime.InteropServices.COMException> avec la valeur HRESULT RPC_E_WRONG_THREAD ainsi qu’une <xref:System.InvalidCastException> quand des appels sont effectués sur un [wrapper RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md). Cela peut également conduire plusieurs threads à accéder en même temps à certains composants COM à thread unique, ce qui risque d’entraîner une altération ou une perte de données.  
   
 ## <a name="cause"></a>Cause  
   
--   Le thread a été précédemment initialisé à un état de cloisonnement COM différent. Notez que l’état de cloisonnement d’un thread peut être défini explicitement ou implicitement. Les opérations explicites incluent la propriété <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> et les méthodes <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A>. <xref:System.Threading.ApartmentState.MTA> est implicitement affecté à un thread créé à l’aide de la méthode <xref:System.Threading.Thread.Start%2A>, à moins que <xref:System.Threading.Thread.SetApartmentState%2A> ne soit appelé avant le démarrage du thread. De même, la valeur <xref:System.Threading.ApartmentState.MTA> est implicitement affectée au thread principal de l’application, à moins que l’attribut <xref:System.STAThreadAttribute> ne soit spécifié sur la méthode principale.  
+- Le thread a été précédemment initialisé à un état de cloisonnement COM différent. Notez que l’état de cloisonnement d’un thread peut être défini explicitement ou implicitement. Les opérations explicites incluent la propriété <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> et les méthodes <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A>. <xref:System.Threading.ApartmentState.MTA> est implicitement affecté à un thread créé à l’aide de la méthode <xref:System.Threading.Thread.Start%2A>, à moins que <xref:System.Threading.Thread.SetApartmentState%2A> ne soit appelé avant le démarrage du thread. De même, la valeur <xref:System.Threading.ApartmentState.MTA> est implicitement affectée au thread principal de l’application, à moins que l’attribut <xref:System.STAThreadAttribute> ne soit spécifié sur la méthode principale.  
   
--   La méthode `CoUninitialize` (ou la méthode `CoInitializeEx`) avec un modèle de concurrence différent est appelée sur le thread.  
+- La méthode `CoUninitialize` (ou la méthode `CoInitializeEx`) avec un modèle de concurrence différent est appelée sur le thread.  
   
 ## <a name="resolution"></a>Résolution  
  Définissez l’état de cloisonnement du thread avant que son exécution ne commence ou appliquez l’attribut <xref:System.STAThreadAttribute> ou l’attribut <xref:System.MTAThreadAttribute> à la méthode principale de l’application.  

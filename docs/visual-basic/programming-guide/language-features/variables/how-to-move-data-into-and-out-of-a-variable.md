@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756596"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procédure : Déplacer des données dans et hors d’une Variable (Visual Basic)
 Vous stockez une valeur dans une variable en plaçant le nom de variable sur le côté gauche d’une instruction d’assignation.  
@@ -19,7 +19,7 @@ Vous stockez une valeur dans une variable en plaçant le nom de variable sur le 
   
 #### <a name="to-store-a-value-in-a-variable"></a>Pour stocker une valeur dans une variable  
   
--   Utilisez le nom de variable sur le côté gauche d’une instruction d’assignation.  
+- Utilisez le nom de variable sur le côté gauche d’une instruction d’assignation.  
   
      L’exemple suivant définit la valeur de la variable `alpha`.  
   
@@ -34,11 +34,11 @@ Vous stockez une valeur dans une variable en plaçant le nom de variable sur le 
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Pour récupérer une valeur dans une variable  
   
--   Utilisez le nom de variable dans une expression. Vous pouvez utiliser une variable de n’importe où vous pouvez utiliser une constante ou un littéral, sauf dans une expression qui définit la valeur d’une constante.  
+- Utilisez le nom de variable dans une expression. Vous pouvez utiliser une variable de n’importe où vous pouvez utiliser une constante ou un littéral, sauf dans une expression qui définit la valeur d’une constante.  
   
      - ou -  
   
--   Utiliser le nom de variable suivant égaux (`=`) connectez-vous à une instruction d’assignation.  
+- Utiliser le nom de variable suivant égaux (`=`) connectez-vous à une instruction d’assignation.  
   
      L’exemple suivant lit la valeur de la variable `startValue` , puis utilise la valeur de la variable `counter` dans une expression.  
   

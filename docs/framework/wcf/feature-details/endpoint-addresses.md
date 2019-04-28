@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856628"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
@@ -19,13 +19,13 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
 ## <a name="uri-structure-of-an-address"></a>Structure URI d'une adresse  
  L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l’URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` peuvent être décomposées comme suit :  
   
--   Schéma : `http:`
+- Schéma : `http:`
   
--   Ordinateur : `www.fabrikam.com`  
+- Ordinateur : `www.fabrikam.com`  
   
--   (facultatif) Port : 322  
+- (facultatif) Port : 322  
   
--   Chemin d’accès : /mathservice.svc/secureEndpoint  
+- Chemin d’accès : /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Définition de l'adresse d'un service  
  L'adresse du point de terminaison pour un service peut être spécifiée de manière impérative en utilisant le code ou de façon déclarative par la configuration. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. En général, il est plus pratique de définir des points de terminaison de service à l'aide de la configuration plutôt que du code. Le fait de conserver les informations de liaison et d’adressage hors du code leur permet de changer sans nécessiter de recompilation et de redéploiement de l’application.  
@@ -46,9 +46,9 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  L’exemple suivant affiche les composants qui peuvent être présents dans une liaison IIS :  
   
--   Le protocole de liaison : HTTP  
+- Le protocole de liaison : HTTP  
   
--   Informations de liaison : L’adresse IP, Port, en-tête de l’hôte  
+- Informations de liaison : L’adresse IP, Port, en-tête de l’hôte  
   
  IIS peut spécifier plusieurs liaisons pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Antérieures à [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF ne prenait pas en charge plusieurs adresses pour un schéma et, s’ils ont été spécifiés, a levé une <xref:System.ArgumentException> pendant l’activation.  
   
@@ -100,15 +100,15 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
 ## <a name="extending-addressing-in-wcf-services"></a>Extension de l'adressage dans les services WCF  
  La valeur par défaut, le modèle de services WCF d’adressage utilise l’URI d’adresse de point de terminaison aux fins suivantes :  
   
--   Pour spécifier l'adresse d'écoute du service, l'emplacement où le point de terminaison écoute les messages.  
+- Pour spécifier l'adresse d'écoute du service, l'emplacement où le point de terminaison écoute les messages.  
   
--   Pour spécifier le filtre d'adresse SOAP, l'adresse à laquelle s'attend un point de terminaison sous la forme d'un en-tête SOAP.  
+- Pour spécifier le filtre d'adresse SOAP, l'adresse à laquelle s'attend un point de terminaison sous la forme d'un en-tête SOAP.  
   
  Les valeurs pour chacun de ces objectifs peuvent être spécifiées séparément, en permettant plusieurs extensions d’adressage qui représentent des scénarios utiles :  
   
--   Intermédiaires SOAP : un message envoyé par un client traverse un ou plusieurs services supplémentaires qui traitent le message avant qu'il atteigne sa dernière destination. Les intermédiaires SOAP peuvent effectuer différentes tâches, telles que la mise en cache, le routage, l’équilibrage des charges, ou la validation de schéma sur les messages. Ce scénario s'accomplit en envoyant des messages à une adresse physique distincte (`via`) qui cible l'intermédiaire plutôt qu'une adresse logique (`wsa:To`) ciblant la destination finale.  
+- Intermédiaires SOAP : un message envoyé par un client traverse un ou plusieurs services supplémentaires qui traitent le message avant qu'il atteigne sa dernière destination. Les intermédiaires SOAP peuvent effectuer différentes tâches, telles que la mise en cache, le routage, l’équilibrage des charges, ou la validation de schéma sur les messages. Ce scénario s'accomplit en envoyant des messages à une adresse physique distincte (`via`) qui cible l'intermédiaire plutôt qu'une adresse logique (`wsa:To`) ciblant la destination finale.  
   
--   L'adresse d'écoute du point de terminaison est un URI privé dont la valeur est différente de sa propriété `listenURI`.  
+- L'adresse d'écoute du point de terminaison est un URI privé dont la valeur est différente de sa propriété `listenURI`.  
   
  L'adresse de transport spécifiée par `via` est l'emplacement auquel un message doit être initialement envoyé pour atteindre une autre adresse distante spécifiée par le paramètre `to` où est localisé le service. Dans la plupart des scénarios Internet, l'URI `via` est identique à la propriété <xref:System.ServiceModel.EndpointAddress.Uri%2A> de l'adresse `to` finale du service. Vous ne pouvez différencier ces deux adresses que lorsque vous devez effectuer un routage manuel.  
   
@@ -117,9 +117,9 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Vous pouvez définir des en-têtes d'adresse personnalisés de deux manières, à l'aide du code ou de la configuration :  
   
--   Dans le code, vous créez des en-têtes d'adresse personnalisés à l'aide de la classe <xref:System.ServiceModel.Channels.AddressHeader>, que vous utilisez ensuite dans la construction d'un <xref:System.ServiceModel.EndpointAddress>.  
+- Dans le code, vous créez des en-têtes d'adresse personnalisés à l'aide de la classe <xref:System.ServiceModel.Channels.AddressHeader>, que vous utilisez ensuite dans la construction d'un <xref:System.ServiceModel.EndpointAddress>.  
   
--   Dans la configuration, personnalisée [ \<en-têtes >](../../configure-apps/file-schema/wcf/headers.md) sont spécifiés en tant qu’enfants de le [ \<point de terminaison >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) élément.  
+- Dans la configuration, personnalisée [ \<en-têtes >](../../configure-apps/file-schema/wcf/headers.md) sont spécifiés en tant qu’enfants de le [ \<point de terminaison >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) élément.  
   
  La configuration est généralement préférable au code, car elle vous permet de modifier les en-têtes après le déploiement.  
   
@@ -128,9 +128,9 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Vous pouvez spécifier une adresse d'écoute personnalisée à l'aide du code ou de la configuration :  
   
--   Dans le code, spécifiez une adresse d'écoute personnalisée en ajoutant une classe <xref:System.ServiceModel.Description.ClientViaBehavior> à la collection de comportements du point de terminaison.  
+- Dans le code, spécifiez une adresse d'écoute personnalisée en ajoutant une classe <xref:System.ServiceModel.Description.ClientViaBehavior> à la collection de comportements du point de terminaison.  
   
--   Dans la configuration, spécifiez une adresse d’écoute personnalisée avec le `ListenUri` attribut du service [ \<point de terminaison >](../../configure-apps/file-schema/wcf/endpoint-element.md) élément.  
+- Dans la configuration, spécifiez une adresse d’écoute personnalisée avec le `ListenUri` attribut du service [ \<point de terminaison >](../../configure-apps/file-schema/wcf/endpoint-element.md) élément.  
   
 ### <a name="custom-soap-address-filter"></a>Filtre d'adresse SOAP personnalisé  
  L'<xref:System.ServiceModel.EndpointAddress.Uri%2A> est utilisé conjointement avec toute propriété <xref:System.ServiceModel.EndpointAddress.Headers%2A> pour définir le filtre d'adresse SOAP d'un point de terminaison (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Par défaut, ce filtre vérifie qu'un message entrant a un en-tête de message `To` qui correspond à l'URI du point de terminaison et que tous les en-têtes de point de terminaison requis sont présents dans le message.  

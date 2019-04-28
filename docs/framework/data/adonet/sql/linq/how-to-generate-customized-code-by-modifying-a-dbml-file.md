@@ -3,11 +3,11 @@ title: 'Procédure : Générer du code personnalisé en modifiant un fichier DB
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877342"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Procédure : Générer du code personnalisé en modifiant un fichier DBML
 Vous pouvez générer Visual Basic ou C# code source à partir d’un fichier de métadonnées de base de données markup language (.dbml). Cette approche permet de personnaliser le fichier .dbml par défaut avant de générer le code de mappage de l’application. Il s'agit d'une fonctionnalité avancée.  

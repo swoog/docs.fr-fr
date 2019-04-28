@@ -3,22 +3,22 @@ title: Génération d'un client WCF à partir de métadonnées de service
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855996"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Génération d'un client WCF à partir de métadonnées de service
 Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe pour générer des clients à partir de documents de métadonnées.  
   
  Les documents de métadonnées peuvent se trouver sur un stockage durable ou être récupérés en ligne. La récupération en ligne suit le protocole WS-MetadataExchange ou le protocole Microsoft Discovery (DISCO). Svcutil.exe publie les demandes de métadonnées suivantes simultanément pour récupérer des métadonnées :  
   
--   Demande WS-MetadataExchange (MEX) à l'adresse fournie.  
+- Demande WS-MetadataExchange (MEX) à l'adresse fournie.  
   
--   Demande MEX à l'adresse fournie avec `/mex` ajouté.  
+- Demande MEX à l'adresse fournie avec `/mex` ajouté.  
   
--   Demande DISCO (à l’aide de la [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) de services Web ASP.NET) à l’adresse fournie.  
+- Demande DISCO (à l’aide de la [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) de services Web ASP.NET) à l’adresse fournie.  
   
  Svcutil.exe génère le client basé sur WSDL (Web Services Description Language) ou le fichier de stratégie reçu du service. Le nom d’utilisateur principal (UPN) est généré en concaténant le nom d’utilisateur avec «\@», puis en ajoutant un nom de domaine complet (FQDN). Toutefois, pour les utilisateurs qui sont enregistrés sur Active Directory, ce format n’est pas valide et l’UPN de l’outil génère provoque un échec de l’authentification Kerberos avec le message d’erreur suivant : **Échec de la tentative d’ouverture de session.** Pour résoudre ce problème, résolvez manuellement le fichier client que l'outil a généré.  
   

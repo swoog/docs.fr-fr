@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864401"
 ---
 # <a name="function-procedures-visual-basic"></a>Procédures Function (Visual Basic)
 Un `Function` procédure est une série d’instructions Visual Basic délimitée par le `Function` et `End Function` instructions. Le `Function` procédure effectue une tâche, puis retourne le contrôle au code appelant. Lorsqu’elle retourne le contrôle, elle retourne également une valeur au code appelant.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>Retourner des valeurs  
  La valeur un `Function` procédure envoie arrière au code appelant est appelé sa valeur de retour. La procédure retourne cette valeur de deux manières :  
   
--   Il utilise le `Return` contrôler l’instruction pour spécifier la valeur de retour et retourne immédiatement au programme appelant. L'exemple suivant illustre ce comportement.  
+- Il utilise le `Return` contrôler l’instruction pour spécifier la valeur de retour et retourne immédiatement au programme appelant. L'exemple suivant illustre ce comportement.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   Il attribue une valeur à son propre nom de fonction dans une ou plusieurs instructions de la procédure. Contrôle ne retourne pas au programme appelant jusqu'à un `Exit Function` ou `End Function` instruction est exécutée. L'exemple suivant illustre ce comportement.  
+- Il attribue une valeur à son propre nom de fonction dans une ou plusieurs instructions de la procédure. Contrôle ne retourne pas au programme appelant jusqu'à un `Exit Function` ou `End Function` instruction est exécutée. L'exemple suivant illustre ce comportement.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

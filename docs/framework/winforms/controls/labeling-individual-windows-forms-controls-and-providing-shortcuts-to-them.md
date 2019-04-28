@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013008"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Création d'étiquettes et de raccourcis pour les contrôles Windows Forms
 Les contrôles ajoutés aux Windows Forms ont des propriétés et des méthodes qui permettent de spécialiser davantage l'expérience utilisateur. La personnalisation de l'interface utilisateur en fonction des besoins de l'utilisateur est extrêmement importante pour les applications Windows bien conçues.  

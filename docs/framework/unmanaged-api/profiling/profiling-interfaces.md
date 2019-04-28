@@ -9,18 +9,18 @@ ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758195"
 ---
 # <a name="profiling-interfaces"></a>Interfaces de profilage
 Cette section décrit les interfaces non managées qui vous permettent de profiler un programme exécuté par le CLR (Common Language Runtime).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ICLRProfiling, interface](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
- Fournit la [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) (méthode), ce qui permet à un profileur de s’attacher à un processus en cours d’exécution.  
+ Fournit le [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) (méthode), ce qui permet à un profileur à attacher à un processus en cours d’exécution.  
   
  [ICorProfilerAssemblyReferenceProvider, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
  Permet au profileur d’informer le CLR de références d’assembly que le profileur ajoutera dans le [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) rappel.  
@@ -46,11 +46,11 @@ Cette section décrit les interfaces non managées qui vous permettent de profil
  [ICorProfilerCallback7, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  Fournit une méthode de rappel que le common language runtime utilise pour informer le profileur que le flux de symbole associé à un module en mémoire est mis à jour.  
 
-[Interface de ICorProfilerCallback8](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
-Fournit des méthodes de rappel que le common language runtime utilise pour informer le profileur de la compilation JIT d’une méthode dynamique a démarré et s’est terminé.
+[ICorProfilerCallback8, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+Fournit des méthodes de rappel que le common language runtime utilise pour informer le profileur que la compilation JIT d’une méthode dynamique a démarré et s’est terminé.
 
-[Interface de ICorProfilerCallback9](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
-Fournit une méthode de rappel que le common language runtime utilise pour informer le profileur une méthode dynamique est garbage collector et déchargé par la suite.
+[ICorProfilerCallback9, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+Fournit une méthode de rappel que le common language runtime utilise pour informer le profileur qu’une méthode dynamique est garbage collectées et déchargé par la suite.
 
  [ICorProfilerFunctionControl, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Fournit des méthodes qui permettent à un profileur de code de communiquer avec le CLR (Common Language Runtime) pour contrôler comment le compilateur juste-à-temps doit générer du code lors de la recompilation d'une méthode spécifique.  
@@ -77,7 +77,7 @@ Fournit une méthode de rappel que le common language runtime utilise pour infor
  Fournit un énumérateur pour toutes les méthodes qui appartiennent à un module NGen donné et qui sont incorporées dans le corps d’une méthode donnée.  
   
  [ICorProfilerInfo7, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
- Fournit une méthode à appliquer qui vient d’être défini des métadonnées à un module et qui fournit l’accès à un flux de symbole de mémoire.  
+ Fournit une méthode pour appliquer qui vient d’être défini des métadonnées à un module et qui fournit l’accès à un flux de symbole d’en mémoire.  
   
  [ICorProfilerModuleEnum, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
  Fournit des méthodes pour boucler séquentiellement dans une collection de modules chargés par l’application ou par le profileur.  
@@ -89,7 +89,7 @@ Fournit une méthode de rappel que le common language runtime utilise pour infor
  Fournit des méthodes pour boucler séquentiellement dans une collection de threads dans le CLR.  
   
  [IMethodMalloc, interface](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
- Fournit la [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) méthode pour allouer de la mémoire pour un nouveau corps de fonction MSIL (intermediate language).  
+ Fournit le [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) méthode d’allocation de mémoire pour un nouveau corps de fonction Microsoft intermediate language (MSIL).  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Vue d’ensemble du profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

@@ -3,11 +3,11 @@ title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756115"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 L'exemple Membership and Role Provider montre comment un service peut utiliser les fournisseurs d'appartenances et de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour authentifier et autoriser des clients.  
@@ -19,15 +19,15 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
   
  L'exemple montre comment :  
   
--   Un client peut authentifier des utilisateurs à l'aide de la combinaison nom d'utilisateur et mot de passe.  
+- Un client peut authentifier des utilisateurs à l'aide de la combinaison nom d'utilisateur et mot de passe.  
   
--   Le serveur peut valider les informations d'identification du client à partir du fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Le serveur peut valider les informations d'identification du client à partir du fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   Le serveur peut être authentifié à l'aide du certificat X.509 du serveur.  
+- Le serveur peut être authentifié à l'aide du certificat X.509 du serveur.  
   
--   Le serveur peut mapper le client authentifié à un rôle à l'aide du fournisseur de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Le serveur peut mapper le client authentifié à un rôle à l'aide du fournisseur de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   Le serveur peut utiliser l'`PrincipalPermissionAttribute` pour contrôler l'accès à certaines méthodes exposées par le service.  
+- Le serveur peut utiliser l'`PrincipalPermissionAttribute` pour contrôler l'accès à certaines méthodes exposées par le service.  
   
  Les fournisseurs d'appartenances et de rôles sont configurés pour utiliser un magasin soutenu par SQL Server. Une chaîne de connexion et différentes options sont spécifiées dans le fichier de configuration du service. Le fournisseur d'appartenances reçoit le nom `SqlMembershipProvider` tandis que le fournisseur de rôles reçoit le nom `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
--   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
+- Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.  
   
 > [!NOTE]
 >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
   
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée.  
   
--   Création du certificat de serveur  
+- Création du certificat de serveur  
   
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable %SERVER_NAME% spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. Ce fichier de commandes a comme valeur par défaut « localhost ».  
   
@@ -190,7 +190,7 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client.  
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client.  
   
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple d'un certificat émis par Microsoft, il n'est pas nécessaire d'ajouter le certificat du serveur au magasin de certificats du client.  
   
