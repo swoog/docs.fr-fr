@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
 ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903901"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procédure : Supprimer des lignes de la base de données
 Vous pouvez supprimer des lignes dans une base de données en supprimant le correspondantes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objets à partir de leur collection liée à des tables. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit vos modifications à la requête SQL appropriée `DELETE` commandes.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge ni ne reconnaît les opérations de suppression en cascade. Si vous souhaitez supprimer une ligne dans une table comportant des contraintes sur cette suppression, vous devez terminer l'une des tâches suivantes :  
   
--   Définissez la règle `ON DELETE CASCADE` dans la contrainte de clé étrangère dans la base de données.  
+- Définissez la règle `ON DELETE CASCADE` dans la contrainte de clé étrangère dans la base de données.  
   
--   Utilisez votre propre code pour supprimer en premier les objets enfants qui empêchent la suppression de l'objet parent.  
+- Utilisez votre propre code pour supprimer en premier les objets enfants qui empêchent la suppression de l'objet parent.  
   
  Sinon, une exception est levée. Consultez le second exemple de code décrit plus loin dans cette rubrique.  
   

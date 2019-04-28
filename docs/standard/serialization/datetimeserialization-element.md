@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: af0d8eeb36e023b4d38f9ad5831de3d392a487fd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922549"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization > élément
 Détermine le mode de sérialisation des objets <xref:System.DateTime>.  
@@ -34,7 +34,7 @@ Détermine le mode de sérialisation des objets <xref:System.DateTime>.
   
 |Attributs|Description|  
 |----------------|-----------------|  
-|`mode`|Facultatif. Spécifie le mode de sérialisation. Affectez-le à l'une des valeurs <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. La valeur par défaut est **RoundTrip**.|  
+|`mode`|Optionnel. Spécifie le mode de sérialisation. Affectez-le à l'une des valeurs <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. La valeur par défaut est **RoundTrip**.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  

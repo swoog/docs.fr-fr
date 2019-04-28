@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920664"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Spécifie qu’un argument de procédure peut être omis lorsque la procédure est appelée.  
@@ -25,13 +25,13 @@ Spécifie qu’un argument de procédure peut être omis lorsque la procédure e
   
  Le modificateur `Optional` peut être utilisé dans les contextes suivants :  
   
--   [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Lorsque vous appelez une procédure avec ou sans paramètres facultatifs, vous pouvez passer des arguments par position ou par nom. Pour plus d’informations, consultez [en passant les Arguments par Position et par nom](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

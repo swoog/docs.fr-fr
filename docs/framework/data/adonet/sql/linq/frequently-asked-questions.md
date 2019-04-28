@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903355"
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 Les sections suivantes fournissent des réponses à quelques problèmes courants que vous êtes susceptible de rencontrer lors de l'implémentation de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -34,18 +34,18 @@ Les sections suivantes fournissent des réponses à quelques problèmes courants
   
  Les détails exacts d'utilisation de la connexion dépendent des éléments suivants :  
   
--   l'état de la connexion si le <xref:System.Data.Linq.DataContext> est généré avec un objet de connexion ;  
+- l'état de la connexion si le <xref:System.Data.Linq.DataContext> est généré avec un objet de connexion ;  
   
--   les paramètres de chaîne de connexion (par exemple, activation de MARS (Multiple Active Result Sets)). Pour plus d’informations, consultez [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- les paramètres de chaîne de connexion (par exemple, activation de MARS (Multiple Active Result Sets)). Pour plus d’informations, consultez [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Mise à jour sans interrogation  
  Q. Est-ce que je peux mettre à jour des données de table sans interroger d'abord la base de données ?  
   
  Un fichier . Bien que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne comporte pas de commandes de mise à jour reposant sur un jeu, vous pouvez utiliser l'une des techniques suivantes pour effectuer une mise à jour sans exécuter de requête préalable :  
   
--   Utilisez <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> pour envoyer le code SQL.  
+- Utilisez <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> pour envoyer le code SQL.  
   
--   Créez une nouvelle instance de l'objet et initialisez toutes les valeurs actuelles (champs) qui affectent la mise à jour. Puis attachez l'objet au <xref:System.Data.Linq.DataContext> à l'aide de <xref:System.Data.Linq.Table%601.Attach%2A> et modifiez le champ que vous souhaitez changer.  
+- Créez une nouvelle instance de l'objet et initialisez toutes les valeurs actuelles (champs) qui affectent la mise à jour. Puis attachez l'objet au <xref:System.Data.Linq.DataContext> à l'aide de <xref:System.Data.Linq.Table%601.Attach%2A> et modifiez le champ que vous souhaitez changer.  
   
 ## <a name="unexpected-query-results"></a>Résultats de requête inattendus  
  Q. Ma requête retourne des résultats inattendus. Comment vérifier ce qui se produit ?  
@@ -57,9 +57,9 @@ Les sections suivantes fournissent des réponses à quelques problèmes courants
   
  Un fichier . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit deux manières de retourner des valeurs générées par la base de données au moyen de procédures stockées :  
   
--   en nommant le résultat de sortie ;  
+- en nommant le résultat de sortie ;  
   
--   en spécifiant explicitement un paramètre de sortie.  
+- en spécifiant explicitement un paramètre de sortie.  
   
  Un exemple de sortie incorrecte est fourni ci-dessous. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne pouvant pas mapper les résultats, il retourne toujours 0 :  
   

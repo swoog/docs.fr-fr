@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907385"
 ---
 # <a name="composite-data-types-visual-basic"></a>Types de données composites (Visual Basic)
 Outre les blocs de Visual Basic de types de données élémentaires, vous pouvez assembler des éléments de différents types pour créer *types de données composites* tels que des structures, des tableaux et des classes. Vous pouvez créer des types de données composites à partir des types élémentaires et d’autres types composites. Par exemple, vous pouvez définir un tableau d’éléments de structure ou une structure avec des membres de tableau.  
@@ -36,11 +36,11 @@ Un tuple est une structure léger qui contient deux ou plusieurs champs dont les
 ## <a name="array-types"></a>Types de tableau  
  Il n’existe aucun type de données unique comprenant tous les tableaux. Le type de données d’une instance particulière d’un tableau est déterminé par les éléments suivants :  
   
--   Le fait d’être un tableau  
+- Le fait d’être un tableau  
   
--   Le rang (nombre de dimensions) du tableau  
+- Le rang (nombre de dimensions) du tableau  
   
--   Le type d’élément du tableau  
+- Le type d’élément du tableau  
   
  En particulier, la longueur d’une dimension donnée n’est pas partie de l’instance type de données. L'exemple suivant illustre ce comportement.  
   

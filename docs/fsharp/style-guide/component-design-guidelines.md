@@ -3,11 +3,11 @@ title: F#instructions de conception de composant
 description: Découvrez les instructions pour l’écriture F# composants destinée à la consommation par les autres appelants.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902159"
 ---
 # <a name="f-component-design-guidelines"></a>F#instructions de conception de composant
 
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Examinons comment faire cela F# type s’affiche pour un programmeur à l’aide d’un autre langage .NET. Par exemple, approximatif C# « signature » est la suivante :
+Examinons comment faire cela F# type s’affiche pour un programmeur à l’aide d’un autre langage .NET. Par exemple, approximatif c# « signature » est la suivante :
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -822,7 +822,7 @@ type RadialPoint =
     member Radius : double
 ```
 
-La signature C# est désormais comme suit :
+La signature c# est désormais comme suit :
 
 ```csharp
 public class RadialPoint
@@ -851,4 +851,4 @@ Les corrections apportées à préparer ce type à utiliser dans le cadre d’un
 
 * Utilisé le type de délégué .NET `System.Func` au lieu d’un F# type de fonction.
 
-Cela facilite beaucoup mieux à consommer en code C#.
+Cela facilite beaucoup mieux à consommer en code c#.

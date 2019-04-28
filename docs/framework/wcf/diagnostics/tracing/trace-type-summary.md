@@ -3,14 +3,14 @@ title: Liste des types de suivis
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925149"
 ---
 # <a name="trace-type-summary"></a>Liste des types de suivis
-[Niveaux de source](https://go.microsoft.com/fwlink/?LinkID=94943) définit différents niveaux de suivi : critique, erreur, avertissement, Information et Verbose, et fournit une description de la `ActivityTracing` indicateur qui active ou désactive la sortie de traçage des événements de transfert de limite et d’activité.  
+[Niveaux de source](https://go.microsoft.com/fwlink/?LinkID=94943) définit différents niveaux de suivi : Critique, erreur, avertissement, Information et Verbose, et fournit une description de la `ActivityTracing` indicateur qui active ou désactive la sortie de traçage des événements de transfert de limite et d’activité.  
   
  Vous pouvez également consulter [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) pour les types de suivis qui peuvent être émis à partir de <xref:System.Diagnostics>.  
   
@@ -18,8 +18,8 @@ ms.locfileid: "43512536"
   
 |Type de suivi|Description|  
 |----------------|-----------------|  
-|Critical|Erreur irrécupérable ou panne d'application.|  
-|Erreur|Erreur récupérable.|  
+|Critique|Erreur irrécupérable ou panne d'application.|  
+|Error|Erreur récupérable.|  
 |Warning|Message d'informations.|  
 |Information|Problème non critique.|  
 |Verbose|Suivi de débogage.|  
@@ -37,13 +37,13 @@ ms.locfileid: "43512536"
   
  Cela signifie qu'une activité doit remplir les conditions suivantes.  
   
--   Elle doit respectivement démarrer et s'arrêter avec les suivis Démarrer et Arrêter.  
+- Elle doit respectivement démarrer et s'arrêter avec les suivis Démarrer et Arrêter.  
   
--   Elle doit contenir un suivi Transfert immédiatement avant un suivi Interrompre ou Reprendre.  
+- Elle doit contenir un suivi Transfert immédiatement avant un suivi Interrompre ou Reprendre.  
   
--   Elle ne doit pas contenir de suivi entre les suivis Interrompre et Reprendre, s'ils existent.  
+- Elle ne doit pas contenir de suivi entre les suivis Interrompre et Reprendre, s'ils existent.  
   
--   Elle peut contenir n'importe quel type de suivi Critique/Avertissement/Informations/Commentaires/Transfert, en nombre illimité, tant que les conditions précédentes sont observées.  
+- Elle peut contenir n'importe quel type de suivi Critique/Avertissement/Informations/Commentaires/Transfert, en nombre illimité, tant que les conditions précédentes sont observées.  
   
  Le code suivant est une expression régulière qui définit une activité idéale dans la portée globale,  
   

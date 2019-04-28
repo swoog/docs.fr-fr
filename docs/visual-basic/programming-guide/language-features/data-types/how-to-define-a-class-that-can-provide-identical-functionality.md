@@ -27,11 +27,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906631"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procédure : Définissez une classe qui fournisse des fonctionnalités identiques pour différents Types de données (Visual Basic)
 Vous pouvez définir une classe à partir de laquelle vous créez des objets qui fournissent les mêmes fonctions pour des types de données différents. Pour cela, vous spécifiez un ou plusieurs *paramètres de type* dans la définition. La classe peut ensuite servir de modèle pour les objets qui utilisent différents types de données. Une classe définie de cette façon est appelée *classe générique*.  
@@ -50,11 +50,11 @@ Vous pouvez définir une classe à partir de laquelle vous créez des objets qui
   
 4. Si votre code effectue des opérations sur un paramètre de type autre qu’une simple assignation, faites suivre ce paramètre de type d’une clause `As` pour ajouter une ou plusieurs *contraintes*. Une contrainte garantit que le type fourni pour ce paramètre de type remplit une exigence similaire aux exigences suivantes :  
   
-    -   Prend en charge une opération, par exemple `>`, que votre code exécute.  
+    - Prend en charge une opération, par exemple `>`, que votre code exécute.  
   
-    -   Prend en charge un membre, tel qu’une méthode, auquel votre code accède.  
+    - Prend en charge un membre, tel qu’une méthode, auquel votre code accède.  
   
-    -   Expose un constructeur sans paramètre.  
+    - Expose un constructeur sans paramètre.  
   
      Si vous ne spécifiez pas de contraintes, votre code peut utiliser uniquement les opérations et membres qui sont pris en charge par [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Pour plus d'informations, consultez [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   

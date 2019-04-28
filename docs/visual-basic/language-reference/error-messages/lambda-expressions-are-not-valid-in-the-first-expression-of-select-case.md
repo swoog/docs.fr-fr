@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921275"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Les expressions lambda ne sont pas valides dans la première expression d’une instruction ’Select Case’
 Vous ne pouvez pas utiliser une expression lambda pour l’expression de test dans un `Select Case` instruction. Définitions d’expression lambda retournent des fonctions et l’expression de test d’un `Select Case` instruction doit être un type de données élémentaire.  
@@ -29,9 +29,9 @@ Vous ne pouvez pas utiliser une expression lambda pour l’expression de test da
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Examinez votre code pour déterminer si une construction conditionnelle différente, comme une instruction `If...Then...Else` , répond à vos besoins.  
+- Examinez votre code pour déterminer si une construction conditionnelle différente, comme une instruction `If...Then...Else` , répond à vos besoins.  
   
--   Vous aviez prévu appeler la fonction, comme indiqué dans le code suivant :  
+- Vous aviez prévu appeler la fonction, comme indiqué dans le code suivant :  
   
 ```vb  
 Dim num? As Integer  

@@ -3,11 +3,11 @@ title: <remove>, élément de schemeSettings (paramètres d’URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674439"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Supprimer >, élément de schemeSettings (paramètres d’Uri)
 Supprime un paramètre de schéma pour un nom de schéma.  

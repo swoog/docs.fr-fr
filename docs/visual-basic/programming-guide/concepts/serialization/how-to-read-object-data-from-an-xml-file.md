@@ -3,11 +3,11 @@ title: 'Procédure : Lire les données d’objet à partir d’un fichier XML (
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907346"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procédure : Lire les données d’objet à partir d’un fichier XML (Visual Basic)
 Cet exemple lit des données d’objet écrites précédemment dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   La classe qui est sérialisée n’a pas de constructeur public sans paramètres.  
+- La classe qui est sérialisée n’a pas de constructeur public sans paramètres.  
   
--   Les données du fichier ne représentent pas les données de la classe à désérialiser.  
+- Les données du fichier ne représentent pas les données de la classe à désérialiser.  
   
--   Le fichier n'existe pas (<xref:System.IO.IOException>).  
+- Le fichier n'existe pas (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Vérifiez toujours les entrées et ne désérialisez jamais les données provenant d’une source non fiable. L’objet recréé s’exécute sur un ordinateur local avec les autorisations du code qui l’a désérialisé. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  

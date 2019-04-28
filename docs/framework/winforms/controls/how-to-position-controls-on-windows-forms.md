@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913261"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Procédure : positionner des contrôles dans des Windows Forms
 Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows ou spécifiez le <xref:System.Windows.Forms.Control.Location%2A> propriété.  
@@ -30,7 +30,7 @@ Pour positionner des contrôles, utiliser le Concepteur de formulaires Windows o
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Pour positionner un contrôle sur l’aire de conception du Concepteur Windows Forms  
   
--   Faites glisser le contrôle vers l’emplacement approprié avec la souris.  
+- Faites glisser le contrôle vers l’emplacement approprié avec la souris.  
   
     > [!NOTE]
     >  Sélectionnez le contrôle et les déplacer avec la flèche touches pour positionner plus précisément. En outre, *les lignes d’alignement* vous aident à placer les contrôles avec précision sur votre formulaire. Pour plus d’informations, consultez [Procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917837"
 ---
 # <a name="scope-in-visual-basic"></a>Portée dans Visual Basic
 Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire référence à ce dernier sans qualifier son nom ou le rendre disponible via un [instruction Imports (.NET Namespace et Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un élément peut avoir la portée à un des niveaux suivants :  
@@ -37,11 +37,11 @@ Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire
 ## <a name="specifying-scope-and-defining-variables"></a>Spécifier la portée et la définition de Variables  
  Vous spécifiez l’étendue d’un élément lors de sa déclaration. L’étendue peut dépendre des facteurs suivants :  
   
--   La région dans laquelle vous déclarez l’élément (bloc, procédure, module, classe ou structure)  
+- La région dans laquelle vous déclarez l’élément (bloc, procédure, module, classe ou structure)  
   
--   L’espace de noms contenant la déclaration de l’élément  
+- L’espace de noms contenant la déclaration de l’élément  
   
--   Le niveau d’accès que vous déclarez pour l’élément  
+- Le niveau d’accès que vous déclarez pour l’élément  
   
  Soyez prudent lorsque vous définissez des variables avec le même nom mais une portée différente, car cela peut provoquer des résultats inattendus. Pour plus d'informations, consultez [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire
 ### <a name="block-scope"></a>Portée de bloc  
  Un bloc est un ensemble d’instructions placées entre le début et de fin des instructions de déclaration, telles que les éléments suivants :  
   
--   `Do` et `Loop`  
+- `Do` et `Loop`  
   
--   `For` [`Each`] et `Next`  
+- `For` [`Each`] et `Next`  
   
--   `If` et `End If`  
+- `If` et `End If`  
   
--   `Select` et `End Select`  
+- `Select` et `End Select`  
   
--   `SyncLock` et `End SyncLock`  
+- `SyncLock` et `End SyncLock`  
   
--   `Try` et `End Try`  
+- `Try` et `End Try`  
   
--   `While` et `End While`  
+- `While` et `End While`  
   
--   `With` et `End With`  
+- `With` et `End With`  
   
  Si vous déclarez une variable dans un bloc, vous pouvez l’utiliser uniquement dans ce bloc. Dans l’exemple suivant, la portée de la variable entière `cube` est le bloc entre `If` et `End If`, et vous pouvez ne font plus référence à `cube` lorsque l’exécution sort du bloc.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Avantages des Variables locales  
  Variables locales sont un bon choix pour tout type de calcul temporaire, pour les raisons suivantes :  
   
--   **Prévention du conflit de nom.** Noms de variables locales ne sont pas susceptibles d’être en conflit. Par exemple, vous pouvez créer plusieurs procédures différentes qui contiennent une variable appelée `intTemp`. Tant que chaque `intTemp` est déclarée comme une variable locale, chaque procédure ne reconnaît que sa propre version de `intTemp`. Toute procédure peut modifier la valeur dans sa local `intTemp` sans affecter `intTemp` variables dans d’autres procédures.  
+- **Prévention du conflit de nom.** Noms de variables locales ne sont pas susceptibles d’être en conflit. Par exemple, vous pouvez créer plusieurs procédures différentes qui contiennent une variable appelée `intTemp`. Tant que chaque `intTemp` est déclarée comme une variable locale, chaque procédure ne reconnaît que sa propre version de `intTemp`. Toute procédure peut modifier la valeur dans sa local `intTemp` sans affecter `intTemp` variables dans d’autres procédures.  
   
--   **Consommation de mémoire.** Variables locales solliciter la mémoire uniquement pendant l’exécution de la procédure. Leur mémoire est libérée lorsque la procédure retourne au code appelant. En revanche, [partagé](../../../../visual-basic/language-reference/modifiers/shared.md) et [statique](../../../../visual-basic/language-reference/modifiers/static.md) variables consomment des ressources mémoire jusqu'à ce que votre application cesse de s’exécuter, par conséquent, utilisez-les uniquement lorsque cela est nécessaire. *Variables d’instances* consomment de la mémoire alors que leur instance continue d’exister, ce qui les rend moins efficaces que les variables locales, mais potentiellement plus efficaces que `Shared` ou `Static` variables.  
+- **Consommation de mémoire.** Variables locales solliciter la mémoire uniquement pendant l’exécution de la procédure. Leur mémoire est libérée lorsque la procédure retourne au code appelant. En revanche, [partagé](../../../../visual-basic/language-reference/modifiers/shared.md) et [statique](../../../../visual-basic/language-reference/modifiers/static.md) variables consomment des ressources mémoire jusqu'à ce que votre application cesse de s’exécuter, par conséquent, utilisez-les uniquement lorsque cela est nécessaire. *Variables d’instances* consomment de la mémoire alors que leur instance continue d’exister, ce qui les rend moins efficaces que les variables locales, mais potentiellement plus efficaces que `Shared` ou `Static` variables.  
   
 ### <a name="minimizing-scope"></a>Réduire la portée  
  En général, lorsque vous déclarez une variable ou une constante, il est conseillé de définir une portée aussi courtes que possible (la portée de bloc est la plus restreinte). Cela permet d’économiser la mémoire et réduit les risques de votre code fasse référence à la variable incorrecte. De même, vous devez déclarer une variable comme étant [statique](../../../../visual-basic/language-reference/modifiers/static.md) uniquement lorsqu’il est nécessaire de conserver sa valeur entre les appels de procédure.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913408"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Procédure : émettre un signal sonore à partir d’un formulaire Windows
 Cet exemple émet un son à un chemin donné au moment de l’exécution.  
@@ -40,26 +40,26 @@ private void playSimpleSound()
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   que vous remplaciez le nom de fichier `"c:\Windows\Media\chimes.wav"` par un nom de fichier valide.  
+- que vous remplaciez le nom de fichier `"c:\Windows\Media\chimes.wav"` par un nom de fichier valide.  
   
--   (C#) Une référence à la <xref:System.Media?displayProperty=nameWithType> espace de noms.  
+- (C#) Une référence à la <xref:System.Media?displayProperty=nameWithType> espace de noms.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les opérations de fichiers doivent être placées dans des blocs de gestion des exceptions structurés appropriés.  
   
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>).  
+- Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>).  
   
--   Le chemin d'accès est en lecture seule (classe <xref:System.IO.IOException>).  
+- Le chemin d'accès est en lecture seule (classe <xref:System.IO.IOException>).  
   
--   Le nom du chemin d'accès est `null` (classe <xref:System.ArgumentNullException>).  
+- Le nom du chemin d'accès est `null` (classe <xref:System.ArgumentNullException>).  
   
--   Le nom du chemin d'accès est trop long (classe <xref:System.IO.PathTooLongException>).  
+- Le nom du chemin d'accès est trop long (classe <xref:System.IO.PathTooLongException>).  
   
--   Le chemin d'accès n'est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
+- Le chemin d'accès n'est pas valide (classe <xref:System.IO.DirectoryNotFoundException>).  
   
--   Le chemin d’accès est uniquement un signe deux-points, « : » (<xref:System.NotSupportedException> classe).  
+- Le chemin d’accès est uniquement un signe deux-points, « : » (<xref:System.NotSupportedException> classe).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne vous basez pas sur le nom d'un fichier pour en déterminer le contenu. Par exemple, le fichier `Form1.vb` peut ne pas être un fichier source Visual Basic. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  

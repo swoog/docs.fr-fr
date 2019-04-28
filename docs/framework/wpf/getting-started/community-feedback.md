@@ -9,11 +9,11 @@ ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921782"
 ---
 # <a name="wpf-community-feedback"></a>Commentaires de la Communauté WPF
 
@@ -51,7 +51,7 @@ Titres concis et explicites améliorent la détectabilité de vos publications. 
 
 Décrivez le problème et la façon dont vous avez essayé de résoudre par son intermédiaire. Si possible, ajoutez des extraits de code ou un exemple très simple qui illustre le problème. Tous ces détails augmenter vos chances d’obtenir une réponse rapide à votre question.
 
-## <a name="visual-studio-developer-community"></a>Communauté de développeurs Visual Studio
+## <a name="visual-studio-developer-community"></a>Communauté des développeurs Visual Studio
 
 Certains problèmes peuvent parfois être difficiles, voire impossibles à résoudre. De telles situations sont liées à des bogues au niveau de la technologie, à la difficulté à appliquer la technologie à des scénarios particuliers, ou encore à un manque de prise en charge de certains scénarios particuliers. Ces informations est importantes de Microsoft et peut être fournies la [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) site.
 

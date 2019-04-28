@@ -3,11 +3,11 @@ title: Valeurs Null
 description: Découvrez comment la valeur null est utilisée dans le F# langage de programmation.
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902276"
 ---
 # <a name="null-values"></a>Valeurs Null
 
@@ -31,7 +31,7 @@ Pour interpréter une valeur null est obtenue à partir d’une méthode .NET, u
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-Valeurs null F# types peuvent également être générés dans d’autres méthodes, comme lorsque vous utilisez `Array.zeroCreate`, qui appelle `Unchecked.defaultof`. Vous devez être prudent avec ce code pour conserver les valeurs null encapsulées. Dans une bibliothèque destinée uniquement au F#, vous n’êtes pas obligé de vérifier les valeurs null dans chaque fonction. Si vous écrivez une bibliothèque pour l’interopérabilité avec d’autres langages .NET, vous devrez peut-être ajouter des paramètres d’entrée de vérifications pour la valeur null et levant une `ArgumentNullException`, tout comme vous le feriez dans le code C# ou Visual Basic.
+Valeurs null F# types peuvent également être générés dans d’autres méthodes, comme lorsque vous utilisez `Array.zeroCreate`, qui appelle `Unchecked.defaultof`. Vous devez être prudent avec ce code pour conserver les valeurs null encapsulées. Dans une bibliothèque destinée uniquement au F#, vous n’êtes pas obligé de vérifier les valeurs null dans chaque fonction. Si vous écrivez une bibliothèque pour l’interopérabilité avec d’autres langages .NET, vous devrez peut-être ajouter des paramètres d’entrée de vérifications pour la valeur null et levant une `ArgumentNullException`, tout comme vous le feriez dans le code c# ou Visual Basic.
 
 Vous pouvez utiliser le code suivant pour vérifier si une valeur arbitraire est null.
 

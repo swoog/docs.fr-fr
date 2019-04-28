@@ -3,11 +3,11 @@ title: Gestion des autorisations avec les procédures stockées dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923121"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestion des autorisations avec les procédures stockées dans SQL Server
 Une méthode pour créer plusieurs lignes de défense autour de votre base de données consiste à implémenter tous les accès aux données à l'aide de procédures stockées ou de fonctions définies par l'utilisateur. Vous révoquez ou refusez toutes les autorisations sur les objets sous-jacents, tels que les tables, et accordez les autorisations EXECUTE sur les procédures stockées De cette manière, vous créez un périmètre de sécurité autour vos objets de données et de base de données.  
@@ -15,19 +15,19 @@ Une méthode pour créer plusieurs lignes de défense autour de votre base de do
 ## <a name="stored-procedure-benefits"></a>Avantages des procédures stockées  
  Les procédures stockées ont les avantages suivants :  
   
--   Les règles d'entreprise et la logique des données peuvent être encapsulées de telle sorte que les utilisateurs ont accès aux données et aux objets uniquement selon les méthodes définies par les développeurs et les administrateurs de bases de données.   
+- Les règles d'entreprise et la logique des données peuvent être encapsulées de telle sorte que les utilisateurs ont accès aux données et aux objets uniquement selon les méthodes définies par les développeurs et les administrateurs de bases de données.   
   
--   Des procédures stockées paramétrées et chargées de valider toutes les entrées d'utilisateur peuvent servir à contrer les attaques par injection SQL. Si vous utilisez du code SQL dynamique, veillez à paramétrer vos commandes et n'incluez jamais de valeurs de paramètre directement dans une chaîne de requête.  
+- Des procédures stockées paramétrées et chargées de valider toutes les entrées d'utilisateur peuvent servir à contrer les attaques par injection SQL. Si vous utilisez du code SQL dynamique, veillez à paramétrer vos commandes et n'incluez jamais de valeurs de paramètre directement dans une chaîne de requête.  
   
--   Les modifications des requêtes et des données ad hoc peuvent être interdites. Ainsi, les utilisateurs ne peuvent pas, par inadvertance ou par malveillance, détruire des données ou exécuter des requêtes qui nuisent aux performances sur le serveur ou le réseau.  
+- Les modifications des requêtes et des données ad hoc peuvent être interdites. Ainsi, les utilisateurs ne peuvent pas, par inadvertance ou par malveillance, détruire des données ou exécuter des requêtes qui nuisent aux performances sur le serveur ou le réseau.  
   
--   Les erreurs peuvent être traitées dans le code de procédure sans passer directement dans les applications clientes. Cela empêche le retour de messages d'erreur, ce qui peut contribuer à une attaque de détection. Enregistrez les erreurs et traitez-les sur le serveur.  
+- Les erreurs peuvent être traitées dans le code de procédure sans passer directement dans les applications clientes. Cela empêche le retour de messages d'erreur, ce qui peut contribuer à une attaque de détection. Enregistrez les erreurs et traitez-les sur le serveur.  
   
--   Les procédures stockées peuvent être écrites une seule fois et sont accessibles par de nombreuses applications.  
+- Les procédures stockées peuvent être écrites une seule fois et sont accessibles par de nombreuses applications.  
   
--   Les applications clientes n'ont pas besoin de recevoir des informations sur les structures de données sous-jacentes. Le code des procédures stockées peut être modifié sans nécessiter des changements dans les applications clientes à condition que ces changements ne concernent pas les listes de paramètres ou les types de données retournés.  
+- Les applications clientes n'ont pas besoin de recevoir des informations sur les structures de données sous-jacentes. Le code des procédures stockées peut être modifié sans nécessiter des changements dans les applications clientes à condition que ces changements ne concernent pas les listes de paramètres ou les types de données retournés.  
   
--   Les procédures stockées peuvent réduire le trafic réseau en associant plusieurs opérations dans un appel de procédure.  
+- Les procédures stockées peuvent réduire le trafic réseau en associant plusieurs opérations dans un appel de procédure.  
   
 ## <a name="stored-procedure-execution"></a>Exécution des procédures stockées  
  Les procédures stockées tirent parti du chaînage des propriétés permettant de fournir l'accès aux données pour ne pas que les utilisateurs aient l'autorisation explicite d'accéder aux objets de base de données. Une chaîne de propriétés existe lorsque les objets qui sont accessibles les uns aux autres de manière séquentielle sont détenus par le même utilisateur. Par exemple, une procédure stockée peut appeler d'autres procédures stockées, ou une procédure stockée peut accéder à plusieurs tables. Si tous les objets dans la chaîne d'exécution ont le même propriétaire, SQL Server se contente de vérifier l'autorisation EXECUTE pour l'appelant, et non les autorisations de l'appelant sur d'autres objets. Par conséquent, il vous suffit d'accorder les autorisations EXECUTE sur les procédures stockées ; vous pouvez révoquer ou refuser toutes les autorisations sur les tables sous-jacentes.   
@@ -35,19 +35,19 @@ Une méthode pour créer plusieurs lignes de défense autour de votre base de do
 ## <a name="best-practices"></a>Meilleures pratiques  
  La simple écriture de procédures stockées ne suffit pas à sécuriser votre application de façon adéquate. Vous devez également envisager les défaillances de sécurité potentielles suivantes.  
   
--   Accordez les autorisations EXECUTE sur les procédures stockées pour les rôles de base de données que vous souhaitez faire accéder aux données.  
+- Accordez les autorisations EXECUTE sur les procédures stockées pour les rôles de base de données que vous souhaitez faire accéder aux données.  
   
--   Révoquez ou refusez toutes les autorisations sur les tables sous-jacentes pour tous les rôles et les utilisateurs de la base de données, y compris le rôle `public`. Tous les utilisateurs héritent des autorisations de public. Par conséquent, le refus des autorisations à `public` signifient que seuls les membres et les propriétaires `sysadmin` ont un accès ; tous les autres utilisateurs ne pourront pas hériter des autorisations issues des appartenances d'autres rôles.  
+- Révoquez ou refusez toutes les autorisations sur les tables sous-jacentes pour tous les rôles et les utilisateurs de la base de données, y compris le rôle `public`. Tous les utilisateurs héritent des autorisations de public. Par conséquent, le refus des autorisations à `public` signifient que seuls les membres et les propriétaires `sysadmin` ont un accès ; tous les autres utilisateurs ne pourront pas hériter des autorisations issues des appartenances d'autres rôles.  
   
--   N'ajoutez pas d'utilisateurs ou de rôles aux rôles `sysadmin` ou `db_owner`. Les administrateurs système et les propriétaires de bases de données peuvent accéder à tous les objets de base de données.  
+- N'ajoutez pas d'utilisateurs ou de rôles aux rôles `sysadmin` ou `db_owner`. Les administrateurs système et les propriétaires de bases de données peuvent accéder à tous les objets de base de données.  
   
--   Désactivez le compte `guest`. Cela empêche les utilisateurs anonymes de se connecter à la base de données. Le compte invité est désactivé par défaut dans les nouvelles bases de données.  
+- Désactivez le compte `guest`. Cela empêche les utilisateurs anonymes de se connecter à la base de données. Le compte invité est désactivé par défaut dans les nouvelles bases de données.  
   
--   Implémentez la gestion des erreurs et enregistrez les erreurs.  
+- Implémentez la gestion des erreurs et enregistrez les erreurs.  
   
--   Créez des procédures stockées paramétrées qui valident toutes les entrées d'utilisateur. Traitez toutes les entrées d'utilisateur comme non approuvées.  
+- Créez des procédures stockées paramétrées qui valident toutes les entrées d'utilisateur. Traitez toutes les entrées d'utilisateur comme non approuvées.  
   
--   Évitez d'utiliser le code SQL dynamique, sauf si cela est absolument nécessaire. Utilisez la fonction Transact-SQL QUOTENAME() pour délimiter une valeur de chaîne et échapper à toute occurrence du délimiteur dans la chaîne d'entrée.  
+- Évitez d'utiliser le code SQL dynamique, sauf si cela est absolument nécessaire. Utilisez la fonction Transact-SQL QUOTENAME() pour délimiter une valeur de chaîne et échapper à toute occurrence du délimiteur dans la chaîne d'entrée.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Pour plus d'informations, voir les ressources ci-dessous.  

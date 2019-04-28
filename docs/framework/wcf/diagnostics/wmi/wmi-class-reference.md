@@ -3,17 +3,17 @@ title: Référence des classes WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915654"
 ---
 # <a name="wmi-class-reference"></a>Référence des classes WMI
 Cette section répertorie toutes les classes WMI exposées par le fournisseur WMI de Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Accès aux instances WMI  
- Toutes les classes répertoriées dans la référence d'objet WMI ne peuvent pas être directement instanciées, à l'exception de Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation et Endpoint. Pour accéder à d'autres instances, vous pouvez accéder aux propriétés des classes de niveau supérieur mentionnées précédemment. Par exemple, vous pouvez accéder à l'instance TransportBindingElement depuis l'instance Endpoint -> Binding -> BindingElements.  
+ Toutes les classes répertoriées dans la référence d'objet WMI ne peuvent pas être directement instanciées, à l'exception de Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation et Endpoint. Pour accéder à d'autres instances, vous pouvez accéder aux propriétés des classes de niveau supérieur mentionnées précédemment. Par exemple, vous pouvez accéder à l’instance TransportBindingElement à partir de l’instance Endpoint -> Binding -> BindingElements.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ Cette section répertorie toutes les classes WMI exposées par le fournisseur WM
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- Classe de comportement « »  
+ « Classe de comportement »  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -80,7 +80,7 @@ Cette section répertorie toutes les classes WMI exposées par le fournisseur WM
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- « Classe opération »  
+ « Classe de l’opération »  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

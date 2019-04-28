@@ -3,11 +3,11 @@ title: Processus d'embauche
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005054"
 ---
 # <a name="hiring-process"></a>Processus d'embauche
 Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'activités de messagerie et de deux workflows hébergés en tant que services de workflow. Ces workflows font partie de l'infrastructure informatique d'une société fictive nommée Contoso, Inc.  
@@ -18,35 +18,35 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
  Cet exemple illustre les fonctionnalités suivantes de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] :  
   
--   Workflows <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Sequence> pour la modélisation des processus d'entreprise.  
+- Workflows <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Sequence> pour la modélisation des processus d'entreprise.  
   
--   Services de workflow.  
+- Services de workflow.  
   
--   Activités de messagerie  
+- Activités de messagerie  
   
--   Corrélation basée sur le contenu  
+- Corrélation basée sur le contenu  
   
--   Activités personnalisées (déclaratives et basées sur le code)  
+- Activités personnalisées (déclaratives et basées sur le code)  
   
--   Persistance SQL Server fournie par le système  
+- Persistance SQL Server fournie par le système  
   
--   <xref:System.Activities.Persistence.PersistenceParticipant> personnalisé  
+- <xref:System.Activities.Persistence.PersistenceParticipant> personnalisé  
   
--   Suivi personnalisé  
+- Suivi personnalisé  
   
--   Suivi d'événements pour le suivi ETW Windows  
+- Suivi d'événements pour le suivi ETW Windows  
   
--   Composition des activités  
+- Composition des activités  
   
--   Activités <xref:System.Activities.Statements.Parallel>  
+- Activités <xref:System.Activities.Statements.Parallel>  
   
--   Activité <xref:System.Activities.Statements.CancellationScope>  
+- Activité <xref:System.Activities.Statements.CancellationScope>  
   
--   Minuteurs durables (activité <xref:System.Activities.Statements.Delay>)  
+- Minuteurs durables (activité <xref:System.Activities.Statements.Delay>)  
   
--   Transactions  
+- Transactions  
   
--   Plusieurs workflows dans la même solution  
+- Plusieurs workflows dans la même solution  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
@@ -64,25 +64,25 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
 2. Le responsable du demandeur doit approuver la demande :  
   
-    1.  Le responsable peut refuser la demande.  
+    1. Le responsable peut refuser la demande.  
   
-    2.  Le responsable peut retourner la demande au demandeur pour obtenir des informations supplémentaires :  
+    2. Le responsable peut retourner la demande au demandeur pour obtenir des informations supplémentaires :  
   
-        1.  Le demandeur examine et renvoie la demande au responsable.  
+        1. Le demandeur examine et renvoie la demande au responsable.  
   
-    3.  Le responsable peut approuver la demande.  
+    3. Le responsable peut approuver la demande.  
   
 3. Une fois que le responsable du demandeur a approuvé la demande, le propriétaire du service doit approuver la demande.  
   
-    1.  Le propriétaire du service peut la refuser.  
+    1. Le propriétaire du service peut la refuser.  
   
-    2.  Le propriétaire du service peut l'approuver.  
+    2. Le propriétaire du service peut l'approuver.  
   
 4. Une fois que le propriétaire du service a approuvé la demande, le processus nécessite l'approbation de deux responsables des Ressources Humaines ou du CEO :  
   
-    1.  Le processus peut passer à l'état Accepté ou Refusé.  
+    1. Le processus peut passer à l'état Accepté ou Refusé.  
   
-    2.  Si le processus est Accepté, une nouvelle instance du workflow `ResumeRequest` démarre (`ResumeRequest` est lié à HiringRequest.csproj par le biais d'une référence de service).  
+    2. Si le processus est Accepté, une nouvelle instance du workflow `ResumeRequest` démarre (`ResumeRequest` est lié à HiringRequest.csproj par le biais d'une référence de service).  
   
  Une fois que les responsables ont approuvé l'embauche d'un nouvel employé, les Ressources Humaines doivent rechercher le candidat approprié. Ce processus est effectué par le deuxième workflow (`ResumeRequest`, défini dans ResumeRequestService.csproj). Ce workflow définit le processus d'envoi d'une offre d'emploi avec opportunité de carrière au site Web externe Careers de Contoso, reçoit les CV des candidats et contrôle l'état de l'offre d'emploi. Les postes sont disponibles pour une durée fixe (jusqu'à l'expiration du délai) ou jusqu'à ce qu'un employé de Contoso décide de les supprimer. Le workflow `ResumeRequest` est composé des étapes suivantes :  
   
@@ -215,19 +215,19 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
 2. En cas d'échec de la génération de la solution, vérifiez les points suivants :  
   
-    -   La référence à `ContosoHR` est présent dans le `InternalClient` ou `CareersWebSite` projets.  
+    - La référence à `ContosoHR` est présent dans le `InternalClient` ou `CareersWebSite` projets.  
   
 3. En cas d'échec de l'exécution de la solution, vérifiez les points suivants :  
   
-    1.  Tous les services s'exécutent.  
+    1. Tous les services s'exécutent.  
   
-    2.  Les références de service sont mises à jour.  
+    2. Les références de service sont mises à jour.  
   
-        1.  Ouvrez le dossier App_WebReferences.  
+        1. Ouvrez le dossier App_WebReferences.  
   
-        2.  Avec le bouton droit **Contoso** et sélectionnez **références Web/Service de mise à jour**.  
+        2. Avec le bouton droit **Contoso** et sélectionnez **références Web/Service de mise à jour**.  
   
-        3.  Régénérez la solution en appuyant sur CTRL + MAJ + B dans Visual Studio.  
+        3. Régénérez la solution en appuyant sur CTRL + MAJ + B dans Visual Studio.  
   
 ## <a name="uninstalling"></a>Désinstallation  
   

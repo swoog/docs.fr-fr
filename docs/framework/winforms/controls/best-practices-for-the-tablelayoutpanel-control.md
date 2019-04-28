@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011729"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Meilleures pratiques pour le contrôle TableLayoutPanel
 Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit des fonctionnalités de disposition puissants, vous devez bien réfléchir avant d’utiliser sur vos formulaires Windows.  
@@ -30,17 +30,17 @@ Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle fournit des fonctionna
 ### <a name="targeted-use"></a>Utilisation cibles  
  Utilisez le <xref:System.Windows.Forms.TableLayoutPanel> contrôler avec parcimonie. Vous ne devez pas l’utiliser dans toutes les situations qui nécessitent une disposition redimensionnable. La liste suivante décrit les dispositions qui bénéficient le plus de l’utilisation de la <xref:System.Windows.Forms.TableLayoutPanel> contrôle :  
   
--   Mises en page dans laquelle il existe plusieurs parties du formulaire de redimensionnement proportionnellement entre eux.  
+- Mises en page dans laquelle il existe plusieurs parties du formulaire de redimensionnement proportionnellement entre eux.  
   
--   Dispositions qui seront modifiées ou générées dynamiquement au moment de l’exécution, telles que les formulaires de saisie de données qui ont des champs personnalisables par l’utilisateur ajoutées ou soustraites en fonction des préférences.  
+- Dispositions qui seront modifiées ou générées dynamiquement au moment de l’exécution, telles que les formulaires de saisie de données qui ont des champs personnalisables par l’utilisateur ajoutées ou soustraites en fonction des préférences.  
   
--   Dispositions qui doivent rester à une taille fixe totale. Par exemple, avoir une boîte de dialogue qui doit rester inférieure à 800 x 600, mais vous devez prendre en charge des chaînes localisées.  
+- Dispositions qui doivent rester à une taille fixe totale. Par exemple, avoir une boîte de dialogue qui doit rester inférieure à 800 x 600, mais vous devez prendre en charge des chaînes localisées.  
   
  La liste suivante décrit les dispositions qui ne bénéficient pas beaucoup de l’utilisation de la <xref:System.Windows.Forms.TableLayoutPanel> contrôle :  
   
--   Formulaires de saisie des données simple avec une seule colonne d’étiquettes et une seule colonne de zones de saisie de texte.  
+- Formulaires de saisie des données simple avec une seule colonne d’étiquettes et une seule colonne de zones de saisie de texte.  
   
--   Formulaires avec une seule grande zone d’affichage qui doit remplir tout l’espace disponible lorsqu’un redimensionnement se produit. Un exemple de ceci est un formulaire qui affiche un seul <xref:System.Windows.Forms.PropertyGrid> contrôle. Dans ce cas, utilisez l’ancrage, étant donné que rien d’autre ne doit se développer lorsque le formulaire est redimensionné.  
+- Formulaires avec une seule grande zone d’affichage qui doit remplir tout l’espace disponible lorsqu’un redimensionnement se produit. Un exemple de ceci est un formulaire qui affiche un seul <xref:System.Windows.Forms.PropertyGrid> contrôle. Dans ce cas, utilisez l’ancrage, étant donné que rien d’autre ne doit se développer lorsque le formulaire est redimensionné.  
   
  Choisissez soigneusement les contrôles qui doivent se trouver dans un <xref:System.Windows.Forms.TableLayoutPanel> contrôle. Si vous disposez d’espace pour votre texte augmente de 30 % à l’aide d’ancrage, envisagez d’utiliser le <xref:System.Windows.Forms.Control.Anchor%2A> propriété uniquement. Si vous pouvez estimer l’espace requis par votre disposition, l’utilisation du <xref:System.Windows.Forms.Control.Dock%2A> et <xref:System.Windows.Forms.Control.Anchor%2A> est plus facile que d’estimer les détails de l’espace restant et <xref:System.Windows.Forms.Control.AutoSize%2A> comportement.  
   

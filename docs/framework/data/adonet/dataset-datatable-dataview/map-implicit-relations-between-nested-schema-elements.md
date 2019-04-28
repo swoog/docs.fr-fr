@@ -3,24 +3,24 @@ title: Mapper les relations implicites entre éléments de schéma imbriqués
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879591"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapper les relations implicites entre éléments de schéma imbriqués
 Un schéma en langage XSD (XML Schema Definition) peut présenter des types complexes imbriqués les uns dans les autres. Dans ce cas, le processus de mappage applique le mappage par défaut et crée les différents éléments suivants dans l'objet <xref:System.Data.DataSet> :  
   
--   Une table pour chacun des types complexes (parent et enfant).  
+- Une table pour chacun des types complexes (parent et enfant).  
   
--   Si aucune contrainte unique n’existe sur le parent, une colonne de clé primaire supplémentaire par la définition de la table nommée *TableName*_Id où *TableName* est le nom de la table parente.  
+- Si aucune contrainte unique n’existe sur le parent, une colonne de clé primaire supplémentaire par la définition de la table nommée *TableName*_Id où *TableName* est le nom de la table parente.  
   
--   Une contrainte de clé primaire sur la table parente, identifiant la colonne supplémentaire en tant que la clé primaire (en définissant le **IsPrimaryKey** propriété **True**). La contrainte est nommée selon le modèle Constraint\#, où \# est 1, 2, 3, etc. Par exemple, le nom par défaut de la première contrainte est Constraint1.  
+- Une contrainte de clé primaire sur la table parente, identifiant la colonne supplémentaire en tant que la clé primaire (en définissant le **IsPrimaryKey** propriété **True**). La contrainte est nommée selon le modèle Constraint\#, où \# est 1, 2, 3, etc. Par exemple, le nom par défaut de la première contrainte est Constraint1.  
   
--   Une contrainte de clé étrangère sur la table enfant, qui identifie la colonne supplémentaire en tant que clé étrangère faisant référence à la clé primaire de la table parente. La contrainte est nommée *ParentTable_ChildTable* où *ParentTable* est le nom de la table parente et *ChildTable* est le nom de la table enfant.  
+- Une contrainte de clé étrangère sur la table enfant, qui identifie la colonne supplémentaire en tant que clé étrangère faisant référence à la clé primaire de la table parente. La contrainte est nommée *ParentTable_ChildTable* où *ParentTable* est le nom de la table parente et *ChildTable* est le nom de la table enfant.  
   
--   Une relation de données entre les tables parente et enfant.  
+- Une relation de données entre les tables parente et enfant.  
   
  L’exemple suivant montre un schéma où **OrderDetail** est un élément enfant de **ordre**.  
   
@@ -56,14 +56,14 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
   
  Le processus de mappage de schéma XML crée les éléments suivants dans le **DataSet**:  
   
--   Un **ordre** et un **OrderDetail** table.  
+- Un **ordre** et un **OrderDetail** table.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Une contrainte unique sur la **ordre** table. Notez que le **IsPrimaryKey** propriété est définie sur **True**.  
+- Une contrainte unique sur la **ordre** table. Notez que le **IsPrimaryKey** propriété est définie sur **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
     IsPrimaryKey: True  
     ```  
   
--   Une contrainte de clé étrangère sur la **OrderDetail** table.  
+- Une contrainte de clé étrangère sur la **OrderDetail** table.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
     RelatedColumns: Order_Id   
     ```  
   
--   Une relation entre la **ordre** et **OrderDetail** tables. Le **Nested** propriété pour cette relation est définie sur **True** , car le **ordre** et **OrderDetail** éléments sont imbriqués dans le schéma .  
+- Une relation entre la **ordre** et **OrderDetail** tables. Le **Nested** propriété pour cette relation est définie sur **True** , car le **ordre** et **OrderDetail** éléments sont imbriqués dans le schéma .  
   
     ```  
     ParentTable: Order  

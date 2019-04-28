@@ -3,11 +3,11 @@ title: 'Champs explicites : Val mot clé'
 description: En savoir plus sur les F# mot clé « val », ce qui est utilisée pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans initialiser le type.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904915"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Champs explicites : Val mot clé
 

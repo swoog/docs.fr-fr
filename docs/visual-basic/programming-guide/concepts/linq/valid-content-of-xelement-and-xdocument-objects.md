@@ -3,11 +3,11 @@ title: Contenu valide des XElement et objets du Répertoire2 XDocument
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907580"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenu valide des objets XElement et XDocument
 Cette rubrique décrit les arguments valides qui peuvent être passés aux constructeurs et méthodes utilisés pour ajouter du contenu aux éléments et aux documents.  
@@ -17,35 +17,35 @@ Cette rubrique décrit les arguments valides qui peuvent être passés aux const
   
  Lors de l'ajout de contenu simple, divers types peuvent être passés à cette méthode. Les types valides sont les suivants :  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Tout type qui implémente `Object.ToString`.  
+- Tout type qui implémente `Object.ToString`.  
   
--   Tout type qui implémente <xref:System.Collections.Generic.IEnumerable%601>.  
+- Tout type qui implémente <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Lors de l'ajout de contenu complexe, divers types peuvent être passés à cette méthode :  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   Tout type qui implémente <xref:System.Collections.Generic.IEnumerable%601>  
+- Tout type qui implémente <xref:System.Collections.Generic.IEnumerable%601>  
   
  Si un objet implémente <xref:System.Collections.Generic.IEnumerable%601>, la collection dans l'objet est énumérée et tous les éléments de la collection sont ajoutés. Si la collection contient des objets <xref:System.Xml.Linq.XNode> ou <xref:System.Xml.Linq.XAttribute>, chaque élément de la collection est ajouté séparément. Si la collection contient du texte (ou des objets convertis en texte), le texte dans la collection est concaténé et ajouté en tant que nœud de texte simple.  
   
@@ -62,15 +62,15 @@ Cette rubrique décrit les arguments valides qui peuvent être passés aux const
   
  Le contenu valide pour un document inclut les éléments suivants :  
   
--   Zéro ou un objet <xref:System.Xml.Linq.XDocumentType>. Les types de documents doivent figurer avant l'élément.  
+- Zéro ou un objet <xref:System.Xml.Linq.XDocumentType>. Les types de documents doivent figurer avant l'élément.  
   
--   Zéro ou un élément.  
+- Zéro ou un élément.  
   
--   Zéro ou plusieurs commentaires.  
+- Zéro ou plusieurs commentaires.  
   
--   Zéro ou plusieurs instructions de traitement.  
+- Zéro ou plusieurs instructions de traitement.  
   
--   Zéro ou plusieurs nœuds de texte qui contiennent uniquement des espaces blancs.  
+- Zéro ou plusieurs nœuds de texte qui contiennent uniquement des espaces blancs.  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Constructeurs et fonctions qui autorisent l'ajout de contenu  
  Les méthodes suivantes vous permettent d'ajouter du contenu enfant à un objet <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> :  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918162"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Le nombre d'indices est supérieur au nombre de dimensions du tableau indexé
 Le nombre d’index utilisés pour accéder à un élément de tableau doit être rigoureusement identique au rang du tableau, c’est-à-dire au nombre de dimensions déclarées pour celui-ci.  
@@ -21,7 +21,7 @@ Le nombre d’index utilisés pour accéder à un élément de tableau doit êtr
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Supprimez des indices de la référence de tableau jusqu'à ce que le nombre total d’indices soit égal au rang du tableau. Exemple :  
+- Supprimez des indices de la référence de tableau jusqu'à ce que le nombre total d’indices soit égal au rang du tableau. Exemple :  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

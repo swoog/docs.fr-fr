@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Énumérer les fuseaux horaires d’un ordinateur'
+title: 'Procédure : énumérer les fuseaux horaires d’un ordinateur'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +12,18 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908672"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procédure : Énumérer les fuseaux horaires d’un ordinateur
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procédure : énumérer les fuseaux horaires d’un ordinateur
 
 Pour utiliser correctement un fuseau horaire désigné, le système doit pouvoir accéder aux informations le concernant. Les systèmes d’exploitation Windows XP et Windows Vista stocker ces informations dans le Registre. Il existe de nombreux fuseaux horaires dans le monde, mais le Registre contient des informations sur un sous-ensemble de ces fuseaux horaires uniquement. De plus, le Registre est une structure dynamique dont le contenu peut être modifié délibérément ou accidentellement. Par conséquent, une application ne peut pas toujours supposer qu’un fuseau horaire particulier est défini et disponible sur un système. Pour de nombreuses applications qui utilisent des informations de fuseau horaire, il convient en premier lieu de déterminer si les fuseaux horaires requis sont disponibles sur le système local ou de fournir à l’utilisateur la liste des fuseaux horaires qu’il peut sélectionner. Il faut donc qu’une application énumère les fuseaux horaires définis sur un système local.
 
 > [!NOTE]
-> Si une application s’appuie sur la présence d’un fuseau horaire particulier qui ne peut pas être définie sur un système local, l’application peut garantir sa présence à sérialiser et désérialiser des informations sur le fuseau horaire. Le fuseau horaire peuvent ensuite être ajouté à un contrôle de liste afin que l’utilisateur de l’application permettre le sélectionner. Pour plus d’informations, consultez [Comment : Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : Restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Si une application s’appuie sur la présence d’un fuseau horaire particulier qui ne peut pas être définie sur un système local, l’application peut garantir sa présence à sérialiser et désérialiser des informations sur le fuseau horaire. Le fuseau horaire peuvent ensuite être ajouté à un contrôle de liste afin que l’utilisateur de l’application permettre le sélectionner. Pour plus d’informations, consultez [Guide pratique pour Enregistrer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) et [Comment : Restaurer des fuseaux horaires dans une ressource incorporée](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Pour énumérer les fuseaux horaires présents sur le système local
 

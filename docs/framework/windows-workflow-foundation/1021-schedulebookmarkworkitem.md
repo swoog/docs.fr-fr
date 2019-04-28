@@ -3,17 +3,18 @@ title: 1021 - ScheduleBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: 2e0da311-b219-4637-9460-90cdafcc4ecd
 ms.openlocfilehash: abc026165568d05faef619da28c94f27f37eea27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924421"
 ---
 # <a name="1021---schedulebookmarkworkitem"></a>1021 - ScheduleBookmarkWorkItem
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|1021|  
+|Id|1021|  
 |Mots clés|WFRuntime|  
 |Niveau|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Débogage|  
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/04/2018
  Indique qu'un BookmarkWorkItem a été planifié.  
   
 ## <a name="message"></a>Message  
- Un BookmarkWorkItem a été planifié pour l’activité '%1', DisplayName : '%2', InstanceId : '%3'.  BookmarkName : %4, BookmarkScope : %5.  
+ Qu’un BookmarkWorkItem a été planifié pour l’activité « %1 », DisplayName : « %2 », InstanceId : '%3'.  BookmarkName : %4, BookmarkScope : %5.  
   
 ## <a name="details"></a>Détails  
   

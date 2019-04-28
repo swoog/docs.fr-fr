@@ -1,17 +1,17 @@
 ---
-title: Route pour les applications modernes basées sur les conteneurs
+title: Route des applications modernes basées sur des conteneurs
 description: Comprendre que Docker, conteneurs et une architecture de Microservices ne sont pas considérés comme une solution. Vous trouverez ici des références qui vous aideront à décider.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922614"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>Route pour les applications modernes basées sur les conteneurs
+# <a name="road-to-modern-applications-based-on-containers"></a>Route des applications modernes basées sur des conteneurs
 
 Vous lisez probablement ce livre, car vous avez l’intention du développement de nouvelles applications ou que vous évaluez l’impact de l’utilisation de Docker, les conteneurs et les nouvelles approches, telles que les Microservices dans votre entreprise.
 

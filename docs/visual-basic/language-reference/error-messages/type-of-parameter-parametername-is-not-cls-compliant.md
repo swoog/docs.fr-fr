@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924018"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Type de paramètre '\<nom_paramètre >' n’est pas conforme CLS
 Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un paramètre avec un type qui est marqué comme `<CLSCompliant(False)>`, n’est pas marqué ou non qualifié, car il est un type non conforme.  
@@ -21,13 +21,13 @@ Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un param�
   
  Les types de données Visual Basic suivants ne sont pas conformes CLS :  
   
--   [SByte (type de données)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte (type de données)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger (type de données)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger (type de données)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong (type de données)](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong (type de données)](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort (type de données)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort (type de données)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Quand vous appliquez l’attribut <xref:System.CLSCompliantAttribute> à un élément de programmation, vous affectez au paramètre `isCompliant` de l’attribut la valeur `True` ou `False` pour indiquer la conformité ou la non-conformité. Il n’existe pas de valeur par défaut pour ce paramètre et vous devez fournir une valeur.  
   
@@ -39,8 +39,8 @@ Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un param�
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si la procédure doit prendre un paramètre de ce type particulier, supprimez le <xref:System.CLSCompliantAttribute>. La procédure ne peut pas être conforme à CLS.  
+- Si la procédure doit prendre un paramètre de ce type particulier, supprimez le <xref:System.CLSCompliantAttribute>. La procédure ne peut pas être conforme à CLS.  
   
--   Si la procédure doit être conforme CLS, modifier le type de ce paramètre pour le type conforme CLS le plus proche. Par exemple, vous pouvez utiliser `UInteger` au lieu de `Integer` si vous n’avez pas besoin de la plage de valeurs située au-dessus de 2 147 483 647. Si vous avez besoin de la plage étendue, vous pouvez remplacer `UInteger` par `Long`.  
+- Si la procédure doit être conforme CLS, modifier le type de ce paramètre pour le type conforme CLS le plus proche. Par exemple, vous pouvez utiliser `UInteger` au lieu de `Integer` si vous n’avez pas besoin de la plage de valeurs située au-dessus de 2 147 483 647. Si vous avez besoin de la plage étendue, vous pouvez remplacer `UInteger` par `Long`.  
   
--   Si vous interfacez avec des objets Automation ou COM, n’oubliez pas que certains types ont des largeurs de données différentes de celles du [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Par exemple, `int` correspond souvent à 16 bits dans d’autres environnements. Si vous passez un entier 16 bits à partir d’un tel composant, déclarez-le en tant que `Short` au lieu de `Integer` dans votre code managé de Visual Basic.
+- Si vous interfacez avec des objets Automation ou COM, n’oubliez pas que certains types ont des largeurs de données différentes de celles du [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Par exemple, `int` correspond souvent à 16 bits dans d’autres environnements. Si vous passez un entier 16 bits à partir d’un tel composant, déclarez-le en tant que `Short` au lieu de `Integer` dans votre code managé de Visual Basic.

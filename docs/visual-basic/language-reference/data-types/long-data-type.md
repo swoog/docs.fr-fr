@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918448"
 ---
 # <a name="long-data-type-visual-basic"></a>Type de données long (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Conseils de programmation
 
--   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que `Long` a une largeur de données différente (32 bits) dans d’autres environnements. Si vous passez un argument de 32 bits à un tel composant, déclarez-le en tant que `Integer` au lieu de `Long` dans votre nouveau code Visual Basic.  
+- **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que `Long` a une largeur de données différente (32 bits) dans d’autres environnements. Si vous passez un argument de 32 bits à un tel composant, déclarez-le en tant que `Integer` au lieu de `Long` dans votre nouveau code Visual Basic.  
   
--   **Étendues.** Le `Long` type de données s’étend à `Decimal`, `Single`, ou `Double`. Cela signifie que vous pouvez convertir `Long` en l'un de ces types sans rencontrer d'erreur <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Étendues.** Le `Long` type de données s’étend à `Decimal`, `Single`, ou `Double`. Cela signifie que vous pouvez convertir `Long` en l'un de ces types sans rencontrer d'erreur <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Caractères de type.** L'ajout du caractère de type littéral `L` à un littéral force ce dernier en type de données `Long`. L'ajout du caractère de type identificateur `&` à un identificateur force ce dernier en type `Long`.  
+- **Caractères de type.** L'ajout du caractère de type littéral `L` à un littéral force ce dernier en type de données `Long`. L'ajout du caractère de type identificateur `&` à un identificateur force ce dernier en type `Long`.  
   
--   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int64?displayProperty=nameWithType>.  
+- **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int64?displayProperty=nameWithType>.  
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,11 +3,11 @@ title: 'Boucles : expression for...to'
 description: Voir comment la F# for.. à l’expression est utilisé pour effectuer une itération dans une boucle sur une plage de valeurs d’une variable de boucle.
 ms.date: 05/16/2016
 ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904031"
 ---
 # <a name="loops-forto-expression"></a>Boucles : expression for...to
 

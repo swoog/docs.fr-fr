@@ -3,11 +3,11 @@ title: Fonctionnement de l'authentification HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918903"
 ---
 # <a name="understanding-http-authentication"></a>Fonctionnement de l'authentification HTTP
 L'authentification est le processus visant à identifier si un client est susceptible d'accéder à une ressource. Le protocole HTTP prend en charge des authentifications dans le but de négocier l'accès à une ressource sécurisée.  
@@ -29,11 +29,11 @@ L'authentification est le processus visant à identifier si un client est suscep
 ## <a name="choosing-an-authentication-scheme"></a>Choix d'un schéma d'authentification  
  Lors de la sélection des schémas d'authentification possibles pour un serveur HTTP, voici quelques éléments à prendre en compte :  
   
--   Considérez si la ressource doit être protégée. L'utilisation de l'authentification HTTP requiert la transmission de plus de données et peut limiter l'interopérabilité avec les clients. Autorisez un accès anonyme aux ressources qu'il n'est pas nécessaire de protéger.  
+- Considérez si la ressource doit être protégée. L'utilisation de l'authentification HTTP requiert la transmission de plus de données et peut limiter l'interopérabilité avec les clients. Autorisez un accès anonyme aux ressources qu'il n'est pas nécessaire de protéger.  
   
--   Si la ressource doit être protégée, déterminez quels schémas d'authentification assurent le niveau de sécurité requis. Le schéma d'authentification standard le plus faible présenté ici correspond à l'authentification de base. L'authentification de base ne protège pas les informations d'identification de l'utilisateur. Le schéma d'authentification standard le plus fort est l'authentification par négociation, qui utilise le protocole Kerberos.  
+- Si la ressource doit être protégée, déterminez quels schémas d'authentification assurent le niveau de sécurité requis. Le schéma d'authentification standard le plus faible présenté ici correspond à l'authentification de base. L'authentification de base ne protège pas les informations d'identification de l'utilisateur. Le schéma d'authentification standard le plus fort est l'authentification par négociation, qui utilise le protocole Kerberos.  
   
--   Un serveur ne doit présenter (dans les en-têtes WWW-Authenticate) aucun schéma qu'il n'est pas préparé à accepter ou qui ne sécurise pas de manière appropriée la ressource protégée. Les clients sont libres de choisir tout schéma d'authentification que le serveur présente. Certains clients utilisent par défaut un schéma d'authentification faible ou le premier schéma d'authentification qui figure dans la liste du serveur.  
+- Un serveur ne doit présenter (dans les en-têtes WWW-Authenticate) aucun schéma qu'il n'est pas préparé à accepter ou qui ne sécurise pas de manière appropriée la ressource protégée. Les clients sont libres de choisir tout schéma d'authentification que le serveur présente. Certains clients utilisent par défaut un schéma d'authentification faible ou le premier schéma d'authentification qui figure dans la liste du serveur.  
   
 ## <a name="see-also"></a>Voir aussi
 

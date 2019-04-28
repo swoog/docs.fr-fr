@@ -3,11 +3,11 @@ title: Listes
 description: En savoir plus sur F# répertorie, une série chronologique, immuable d’éléments du même type.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904122"
 ---
 # <a name="lists"></a>Listes
 
@@ -83,17 +83,17 @@ La programmation à l'aide de listes vous permet d'effectuer des opérations com
 
 Les listes sont particulièrement adaptées aux techniques de programmation récursive. Prenons en compte une opération à effectuer sur chaque élément d'une liste. Vous pouvez procéder de manière récursive en effectuant l'opération sur le début de la liste, puis en passant à la fin de la liste, qui est une liste plus petite comprenant la liste d'origine sans le premier élément, et en revenant au niveau suivant de récursivité.
 
-Pour écrire ce type de fonction récursive, utilisez l'opérateur cons (`::`) dans les critères spéciaux, qui vous permet de séparer le début d'une liste de sa fin.
+Pour écrire ce type de fonction récursive, utilisez l’opérateur cons (`::`) dans les critères spéciaux, qui vous permet de séparer le début d’une liste de sa fin.
 
-L'exemple de code suivant indique comment utiliser les critères spéciaux pour implémenter une fonction récursive qui exécute des opérations sur une liste.
+L’exemple de code suivant indique comment utiliser les critères spéciaux pour implémenter une fonction récursive qui exécute des opérations sur une liste.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
 
-Le code précédent fonctionne bien dans le cas de petites listes, mais dans le cas de listes plus longues, il peut entraîner un dépassement de capacité de la pile. Le code suivant améliore le précédent à l'aide d'un argument d'accumulation, technique standard utilisée avec les fonctions récursives. L'argument d'accumulation rend la fin de la fonction récursive, ce qui permet de contenir l'espace de pile.
+Le code précédent fonctionne bien dans le cas de petites listes, mais dans le cas de listes plus longues, il peut entraîner un dépassement de capacité de la pile. Le code suivant améliore le précédent à l’aide d’un argument d’accumulation, technique standard utilisée avec les fonctions récursives. L'argument d'accumulation rend la fin de la fonction récursive, ce qui permet de contenir l'espace de pile.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
 
-La fonction `RemoveAllMultiples` est récursive et accepte deux listes. La première liste contient les nombres dont les multiples seront supprimés ; la seconde liste contient les nombres à supprimer. Le code de l'exemple suivant utilise cette fonction récursive pour éliminer tous les nombres non premiers d'une liste, générant ainsi une liste de nombres premiers.
+La fonction `RemoveAllMultiples` est récursive et accepte deux listes. La première liste contient les nombres dont les multiples seront supprimés ; la seconde liste contient les nombres à supprimer. Le code de l’exemple suivant utilise cette fonction récursive pour éliminer tous les nombres non premiers d’une liste, générant ainsi une liste de nombres premiers.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
 
@@ -396,7 +396,7 @@ Les listes peuvent être jointes. Pour joindre deux listes, utilisez [List.appen
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet26.fs)]
 
-### <a name="fold-and-scan-operations"></a>Opérations de pliage et d’analyse
+### <a name="fold-and-scan-operations"></a>Opérations de repli et d'analyse
 
 Certaines opérations de liste impliquent l'interdépendance entre tous les éléments de la liste. Les opérations de pliage et d’analyse sont comme `List.iter` et `List.map` dans la mesure où vous appelez une fonction sur chaque élément, mais ces opérations fournissent un paramètre supplémentaire, appelé le *accumulation* qui achemine des informations le calcul.
 
@@ -404,7 +404,7 @@ Utilisez `List.fold` pour effectuer un calcul sur une liste.
 
 L’exemple de code suivant illustre l’utilisation de [List.fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) pour effectuer diverses opérations.
 
-La liste est parcourue ; l'accumulateur `acc` est une valeur passée au cours du calcul. Le premier argument prend l'accumulateur et l'élément de liste, puis retourne le résultat intermédiaire du calcul pour cet élément de liste. Le deuxième argument est la valeur initiale de l'accumulateur.
+La liste est parcourue ; l'accumulateur `acc` est une valeur passée au cours du calcul. Le premier argument prend l'accumulateur et l'élément de liste, puis retourne le résultat intermédiaire du calcul pour cet élément de liste. Le deuxième argument est la valeur initiale de l’accumulateur.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet27.fs)]
 
@@ -416,7 +416,7 @@ L'exemple suivant montre l'utilisation de `List.fold2`.
 
 `List.fold` et [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) diffèrent en ce que `List.fold` retourne la valeur finale du paramètre supplémentaire, mais `List.scan` retourne la liste des valeurs intermédiaires (avec la valeur finale) du paramètre supplémentaire.
 
-Chacune de ces fonctions inclut une variation inverse, par exemple, [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), ce qui diffère dans l’ordre dans lequel la liste est parcourue et l’ordre des arguments. En outre, `List.fold` et `List.foldBack` présentent des variations, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) et [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), qui acceptent deux listes de longueur égale. La fonction qui s'exécute sur chaque élément peut utiliser des éléments correspondants aux deux listes pour effectuer une action. Les types d'éléments des deux listes peuvent être différents, comme dans l'exemple suivant, où une liste contient des montants de transactions sur un compte bancaire et l'autre contient le type de transaction : dépôt ou retrait.
+Chacune de ces fonctions inclut une variation inverse, par exemple, [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), ce qui diffère dans l’ordre dans lequel la liste est parcourue et l’ordre des arguments. En outre, `List.fold` et `List.foldBack` présentent des variations, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) et [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), qui acceptent deux listes de longueur égale. La fonction qui s'exécute sur chaque élément peut utiliser des éléments correspondants aux deux listes pour effectuer une action. Les types d’éléments des deux listes peuvent être différents, comme dans l’exemple suivant, où une liste contient des montants de transactions sur un compte bancaire et l’autre contient le type de transaction : dépôt ou retrait.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet29.fs)]
 
@@ -424,13 +424,13 @@ Pour un calcul tel qu'une addition, `List.fold` et `List.foldBack` ont le même 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet30.fs)]
 
-Voici à nouveau l'exemple du compte bancaire. Cette fois, un nouveau type de transaction est ajouté : le calcul d'intérêts. Le solde de fin dépend désormais de l’ordre des transactions.
+Voici à nouveau l'exemple du compte bancaire. Cette fois, un nouveau type de transaction est ajouté : le calcul d'intérêts. Le solde de fin dépend désormais de l'ordre des transactions.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 
 La fonction [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) est un peu comme `List.fold` et `List.scan`, sauf qu’au lieu de passer un accumulateur séparé, `List.reduce` prend une fonction qui accepte deux arguments du type d’élément à la place de une seule instance et l’autre de ces arguments joue le rôle d’accumulateur, ce qui signifie qu’il stocke le résultat intermédiaire du calcul. `List.reduce` commence par fonctionner sur les deux premiers éléments de liste, puis utilise le résultat de l'opération avec l'élément suivant. Comme aucun accumulateur distinct ne possède son propre type, `List.reduce` ne peut être utilisé à la place de `List.fold` si l'accumulateur et le type d'élément ont le même type. Le code suivant montre l'utilisation de `List.reduce`. `List.reduce` lève une exception si la liste fournie ne comporte aucun élément.
 
-Dans le code suivant, le premier appel à l'expression lambda reçoit les arguments 2 et 4, et retourne 6. L'appel suivant reçoit les arguments 6 et 10, le résultat est donc 16.
+Dans le code suivant, le premier appel à l’expression lambda reçoit les arguments 2 et 4, et retourne 6. L’appel suivant reçoit les arguments 6 et 10, le résultat est donc 16.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet33.fs)]
 

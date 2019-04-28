@@ -19,11 +19,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
 ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917899"
 ---
 # <a name="shadowing-in-visual-basic"></a>Occultation dans Visual Basic
 Lorsque deux éléments de programmation partagent le même nom, un d’eux peut masquer, ou *ombre*, autre. Dans ce cas, l’élément occulté n’est pas disponible pour référence ; au lieu de cela, lorsque votre code utilise le nom d’élément, le compilateur Visual Basic les résout à l’élément d’occultation.  

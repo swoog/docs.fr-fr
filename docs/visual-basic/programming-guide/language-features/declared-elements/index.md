@@ -3,44 +3,44 @@ title: Éléments déclarés en Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
 ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918006"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Éléments déclarés en Visual Basic
 Un *élément déclaré* est un élément de programmation qui est défini dans une instruction de déclaration. Les éléments déclarés sont les suivants : variables, constantes, énumérations, classes, structures, modules, interfaces, procédures, paramètres de procédure, retours de fonction, références de procédure externe, opérateurs, propriétés, événements et délégués.  
   
  Les instructions de déclaration sont les suivantes :  
   
--   [Dim (instruction)](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [Dim (instruction)](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Const (instruction)](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [Const (instruction)](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Enum (instruction)](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [Enum (instruction)](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Class (instruction)](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class (instruction)](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module (instruction)](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module (instruction)](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface (instruction)](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface (instruction)](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function (instruction)](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub (instruction)](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub (instruction)](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare (instruction)](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare (instruction)](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator (instruction)](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator (instruction)](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property (instruction)](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event (instruction)](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event (instruction)](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

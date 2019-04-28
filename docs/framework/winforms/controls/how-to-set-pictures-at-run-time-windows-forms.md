@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013229"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procédure : Définir des images au moment de l’exécution (Windows Forms)
 Vous pouvez définir par programmation l’image affichée par un formulaire Windows <xref:System.Windows.Forms.PictureBox> contrôle.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Pour définir une image par programmation  
   
--   Définir le <xref:System.Windows.Forms.PictureBox.Image%2A> à l’aide de la propriété le <xref:System.Drawing.Image.FromFile%2A> méthode de la <xref:System.Drawing.Image> classe.  
+- Définir le <xref:System.Windows.Forms.PictureBox.Image%2A> à l’aide de la propriété le <xref:System.Drawing.Image.FromFile%2A> méthode de la <xref:System.Drawing.Image> classe.  
   
      Dans l’exemple ci-dessous, le chemin d’accès défini pour l’emplacement de l’image est le dossier Mes Documents. Pour cela, étant donné que vous pouvez supposer que la plupart des ordinateurs exécutant le système d’exploitation Windows incluent ce répertoire. Cela permet également aux utilisateurs avec des niveaux d’accès minimum au système d’exécuter l’application en toute sécurité. L’exemple suivant suppose un formulaire avec un <xref:System.Windows.Forms.PictureBox> contrôle déjà ajouté.  
   
@@ -67,7 +67,7 @@ Vous pouvez définir par programmation l’image affichée par un formulaire Win
   
 ### <a name="to-clear-a-graphic"></a>Pour effacer un graphique  
   
--   Tout d’abord, libérer la mémoire utilisée par l’image et désactivez le graphique. Le garbage collection libère la mémoire ultérieurement si la gestion de la mémoire devient un problème.  
+- Tout d’abord, libérer la mémoire utilisée par l’image et désactivez le graphique. Le garbage collection libère la mémoire ultérieurement si la gestion de la mémoire devient un problème.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

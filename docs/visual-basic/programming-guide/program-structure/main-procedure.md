@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920112"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procédure Main dans Visual Basic
 Toutes les applications Visual Basic doivent contenir une procédure appelée `Main`. Cette procédure sert de point de départ et contrôle général de votre application. Le .NET Framework appelle votre `Main` procédure lorsqu’il a chargé votre application et est prêt à passer le contrôle. Sauf si vous créez une application Windows Forms, vous devez écrire le `Main` procédure pour les applications qui s’exécutent sur leurs propres.  
@@ -23,11 +23,11 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
 ## <a name="requirements-for-the-main-procedure"></a>Configuration requise pour la procédure principale  
  Un fichier qui s’exécute sur sa propre (généralement avec l’extension .exe) doit contenir un `Main` procédure. Une bibliothèque (par exemple avec l’extension .dll) ne s’exécute pas son propre et ne nécessite pas un `Main` procédure. La configuration requise pour les différents types de projets que vous pouvez créer est les suivantes :  
   
--   Applications console s’exécutent leurs propres, et vous devez fournir au moins un `Main` procédure. .  
+- Applications console s’exécutent leurs propres, et vous devez fournir au moins un `Main` procédure. .  
   
--   Applications Windows Forms s’exécutent sur leurs propres. Toutefois, le compilateur Visual Basic génère automatiquement un `Main` procédure telle une application et vous n’avez pas besoin d’écrire un.  
+- Applications Windows Forms s’exécutent sur leurs propres. Toutefois, le compilateur Visual Basic génère automatiquement un `Main` procédure telle une application et vous n’avez pas besoin d’écrire un.  
   
--   Bibliothèques de classes ne nécessitent pas une `Main` procédure. Ceux-ci incluent des bibliothèques de contrôles Windows et les bibliothèques de contrôles Web. Applications Web sont déployées en tant que bibliothèques de classes.  
+- Bibliothèques de classes ne nécessitent pas une `Main` procédure. Ceux-ci incluent des bibliothèques de contrôles Windows et les bibliothèques de contrôles Web. Applications Web sont déployées en tant que bibliothèques de classes.  
   
 ## <a name="declaring-the-main-procedure"></a>Déclaration de la procédure principale  
  Il existe quatre façons de déclarer la `Main` procédure. Il peut accepter des arguments ou non, et elle peut retourner une valeur ou non.  
@@ -35,7 +35,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
 > [!NOTE]
 >  Si vous déclarez `Main` dans une classe, vous devez utiliser le `Shared` mot clé. Dans un module, `Main` pas nécessairement être `Shared`.  
   
--   La façon la plus simple consiste à déclarer un `Sub` procédure qui ne pas accepter des arguments ou retourner une valeur.  
+- La façon la plus simple consiste à déclarer un `Sub` procédure qui ne pas accepter des arguments ou retourner une valeur.  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
     End Module  
     ```  
   
--   `Main` peut également retourner un `Integer` valeur, que le système d’exploitation utilise comme le code de sortie de votre programme. Autres programmes peuvent tester ce code en examinant la valeur ERRORLEVEL de Windows. Pour retourner un code de sortie, vous devez déclarer `Main` comme un `Function` procédure au lieu d’un `Sub` procédure.  
+- `Main` peut également retourner un `Integer` valeur, que le système d’exploitation utilise comme le code de sortie de votre programme. Autres programmes peuvent tester ce code en examinant la valeur ERRORLEVEL de Windows. Pour retourner un code de sortie, vous devez déclarer `Main` comme un `Function` procédure au lieu d’un `Sub` procédure.  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
     End Module  
     ```  
   
--   `Main` peut également prendre un `String` tableau comme argument. Chaque chaîne dans le tableau contient un des arguments de ligne de commande utilisées pour appeler votre programme. Vous pouvez effectuer des actions différentes en fonction de leurs valeurs.  
+- `Main` peut également prendre un `String` tableau comme argument. Chaque chaîne dans le tableau contient un des arguments de ligne de commande utilisées pour appeler votre programme. Vous pouvez effectuer des actions différentes en fonction de leurs valeurs.  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
     End Module  
     ```  
   
--   Vous pouvez déclarer `Main` à examiner les arguments de ligne de commande, mais pas retourner un code de sortie, comme suit.  
+- Vous pouvez déclarer `Main` à examiner les arguments de ligne de commande, mais pas retourner un code de sortie, comme suit.  
   
     ```  
     Module mainModule  

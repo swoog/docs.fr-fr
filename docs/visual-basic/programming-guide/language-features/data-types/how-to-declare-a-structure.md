@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906709"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Procédure : Déclarer une Structure (Visual Basic)
 Vous commencez une déclaration de structure par le [Structure (instruction)](../../../../visual-basic/language-reference/statements/structure-statement.md), vous vous retrouvez avec la `End Structure` instruction. Entre ces deux instructions, vous devez déclarer au moins un *élément*. Les éléments peuvent être de n’importe quel type de données, mais au moins un doit être une variable non partagée ou un événement non partagé.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909166"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DateTimePicker (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.DateTimePicker> contrôle permet à l’utilisateur de sélectionner un élément unique dans une liste de dates ou heures. Lorsqu’il est utilisé pour représenter une date, il apparaît dans les deux parties : une liste déroulante, avec une date sous forme de texte et une grille qui s’affiche lorsque vous cliquez sur la flèche vers le bas en regard de la liste. La grille se présente comme la <xref:System.Windows.Forms.MonthCalendar> contrôle, qui peut être utilisé pour sélectionner plusieurs dates. Pour plus d’informations sur la <xref:System.Windows.Forms.MonthCalendar> du contrôle, consultez [vue d’ensemble du contrôle MonthCalendar](monthcalendar-control-overview-windows-forms.md).  

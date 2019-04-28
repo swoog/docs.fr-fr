@@ -3,23 +3,23 @@ title: Suivi d'activité dans la sécurité de message
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912650"
 ---
 # <a name="activity-tracing-in-message-security"></a>Suivi d'activité dans la sécurité de message
 Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qui se produit dans les trois phases suivantes.  
   
--   Échange de négociation/SCT. Cela peut se produire au niveau de la couche de transport (via l'échange de données binaires) ou de la couche de message (via les échanges de messages SOAP).  
+- Échange de négociation/SCT. Cela peut se produire au niveau de la couche de transport (via l'échange de données binaires) ou de la couche de message (via les échanges de messages SOAP).  
   
--   Chiffrement/déchiffrement des messages, avec vérification et authentification de la signature. Les suivis apparaissent dans l'activité ambiante, en général l'activité « Action de processus ».  
+- Chiffrement/déchiffrement des messages, avec vérification et authentification de la signature. Les suivis apparaissent dans l'activité ambiante, en général l'activité « Action de processus ».  
   
--   Autorisation et vérification. Cela peut se produire localement ou lors de la communication entre des points de terminaison.  
+- Autorisation et vérification. Cela peut se produire localement ou lors de la communication entre des points de terminaison.  
   
 ## <a name="negotiationsct-exchange"></a>Échange de négociation/SCT  
- Dans la phase d'échange de négociation/SCT, deux types d'activité sont créés sur le client : « Configurer une session sécurisée » et « Fermer une session sécurisée ». Le type « Configurer une session sécurisée » comprend des suivis pour les échanges de messages RST/RSTR/SCT, tandis que le type « Fermer une session sécurisée » inclut des suivis pour le message Cancel.  
+ Dans la phase d’échange de négociation/SCT, deux types d’activité sont créés sur le client : « Configurer une Session sécurisée » et « Fermer une Session sécurisée. » Le type « Configurer une session sécurisée » comprend des suivis pour les échanges de messages RST/RSTR/SCT, tandis que le type « Fermer une session sécurisée » inclut des suivis pour le message Cancel.  
   
  Sur le serveur, chaque demande/réponse pour les échanges RST/RSTR/SCT apparaît dans sa propre activité. Si `propagateActivity` = `true` sur le serveur et client, les activités sur le serveur ont le même ID et apparaissent ensemble dans le « le programme d’installation une Session sécurisée » lorsqu’ils sont affichés avec Service Trace Viewer.  
   
@@ -42,7 +42,7 @@ Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qu
 |-|---------------------------------------------------------------------------------|  
 |Heure à laquelle surviennent le chiffrement/déchiffrement des message et l'authentification de la signature.|À réception du message|  
 |Activités|Les suivis sont émis dans l'activité ProcessAction sur le client et le serveur.|  
-|Suivis|-sendSecurityHeader (expéditeur) :<br />-Signer le message<br />-Chiffrer les données de la demande<br />-receiveSecurityHeader (récepteur) :<br />-Vérifier la signature<br />-Déchiffrer les données de réponse<br />-Authentification|  
+|Suivis|-   sendSecurityHeader (sender):<br />-Signer le message<br />-Chiffrer les données de la demande<br />-   receiveSecurityHeader (receiver):<br />-Vérifier la signature<br />-Déchiffrer les données de réponse<br />-   Authentication|  
   
 > [!NOTE]
 >  En mode de transport pur, le chiffrement/déchiffrement des messages se produit uniquement dans le transport sans activités supplémentaires.  

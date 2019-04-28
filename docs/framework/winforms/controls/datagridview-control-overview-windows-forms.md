@@ -20,11 +20,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902315"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGridView (Windows Forms)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112877"
   
  Le <xref:System.Windows.Forms.DataGridView> contrôle prend en charge le modèle de liaison de données Windows Forms standard, il crée une liaison à des instances des classes décrites dans la liste suivante :  
   
--   Toute classe qui implémente le <xref:System.Collections.IList> interface, y compris les tableaux unidimensionnels.  
+- Toute classe qui implémente le <xref:System.Collections.IList> interface, y compris les tableaux unidimensionnels.  
   
--   Toute classe qui implémente le <xref:System.ComponentModel.IListSource> d’interface, tel que le <xref:System.Data.DataTable> et <xref:System.Data.DataSet> classes.  
+- Toute classe qui implémente le <xref:System.ComponentModel.IListSource> d’interface, tel que le <xref:System.Data.DataTable> et <xref:System.Data.DataSet> classes.  
   
--   Toute classe qui implémente le <xref:System.ComponentModel.IBindingList> d’interface, tel que le <xref:System.ComponentModel.BindingList%601> classe.  
+- Toute classe qui implémente le <xref:System.ComponentModel.IBindingList> d’interface, tel que le <xref:System.ComponentModel.BindingList%601> classe.  
   
--   Toute classe qui implémente le <xref:System.ComponentModel.IBindingListView> d’interface, tel que le <xref:System.Windows.Forms.BindingSource> classe.  
+- Toute classe qui implémente le <xref:System.ComponentModel.IBindingListView> d’interface, tel que le <xref:System.Windows.Forms.BindingSource> classe.  
   
  Le <xref:System.Windows.Forms.DataGridView> contrôle prend en charge la liaison de données pour les propriétés publiques des objets retournés par ces interfaces ou à la collection de propriétés retourné par un <xref:System.ComponentModel.ICustomTypeDescriptor> interface, si implémentée sur les objets retournés.  
   

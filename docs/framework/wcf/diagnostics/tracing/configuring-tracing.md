@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912572"
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -22,9 +22,9 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 ## <a name="enabling-tracing"></a>Activation du suivi  
  Windows Communication Foundation (WCF) génère les données suivantes pour le suivi de diagnostic :  
   
--   Suivis des jalons de processus dans l'ensemble des composants des applications, tels que les appels d'opération, les exceptions de code, les avertissements et d'autres événements de traitement significatifs.  
+- Suivis des jalons de processus dans l'ensemble des composants des applications, tels que les appels d'opération, les exceptions de code, les avertissements et d'autres événements de traitement significatifs.  
   
--   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi. Consultez [journalisation des événements](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi. Consultez [journalisation des événements](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Le suivi WCF repose sur <xref:System.Diagnostics>. Pour utiliser le traçage, vous devez définir des sources de trace dans le fichier de configuration ou dans le code. WCF définit une source de suivi pour chaque assembly WCF. Le `System.ServiceModel` source de suivi est la source de suivi WCF plus générale et enregistre des jalons de traitement dans la pile de communication WCF, à partir de l’entrée/sortie de transport pour l’entrée/sortie de code utilisateur. La source de suivi `System.ServiceModel.MessageLogging` enregistre tous les messages qui circulent dans le système.  
   
@@ -58,19 +58,19 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configuration de sources de suivi de façon à émettre des suivis  
  WCF définit une source de suivi pour chaque assembly. Les écouteurs définis pour cette source accèdent aux suivis générés dans un assembly. Les sources de suivi suivantes sont définies :  
   
--   System.ServiceModel : Enregistre toutes les phases de traitement de WCF, chaque fois que la configuration est lue, un message est traité dans le transport, traitement de sécurité, un message est distribuée dans le code utilisateur et ainsi de suite.  
+- System.ServiceModel : Enregistre toutes les phases de traitement de WCF, chaque fois que la configuration est lue, un message est traité dans le transport, traitement de sécurité, un message est distribuée dans le code utilisateur et ainsi de suite.  
   
--   System.ServiceModel.MessageLogging: Enregistre tous les messages qui transitent par le système.  
+- System.ServiceModel.MessageLogging: Enregistre tous les messages qui transitent par le système.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log : Journalisation de l’interface .NET Framework pour le fichier système CLFS (Common Log).  
+- System.IO.Log : Journalisation de l’interface .NET Framework pour le fichier système CLFS (Common Log).  
   
--   System.Runtime.Serialization: Enregistre les objets sont lues ou écrites.  
+- System.Runtime.Serialization: Enregistre les objets sont lues ou écrites.  
   
--   CardSpace.  
+- CardSpace.  
   
  Vous pouvez configurer chaque source de suivi de façon à utiliser le même écouteur (partagé), comme indiqué dans l'exemple de configuration suivant :  
   

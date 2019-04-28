@@ -1,5 +1,5 @@
 ---
-title: Interface de ISOSDacInterface
+title: ISOSDacInterface, interface
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922146"
 ---
-# <a name="isosdacinterface-interface"></a>Interface de ISOSDacInterface
+# <a name="isosdacinterface-interface"></a>ISOSDacInterface, interface
 
 Fournit des méthodes d’assistance pour accéder aux données à partir de `SOS`.
 
@@ -40,7 +40,7 @@ Fournit des méthodes d’assistance pour accéder aux données à partir de `SO
 
 Cette interface réside dans le runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque. Toutefois, il est une interface COM qui dérive de `IUnknown` avec le GUID `436f00f2-b42a-4b9f-870c-e73db66ae930` qui peuvent être obtenues via les mécanismes COM habituels.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994490"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle, méthode
 Obtient un handle vers le processus.  
@@ -40,7 +40,7 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
 ## <a name="remarks"></a>Notes  
  Le handle récupéré est détenu par l’interface de débogage. Le débogueur doit dupliquer le handle avant de l’utiliser.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

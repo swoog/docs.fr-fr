@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907606"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procédure pas à pas : Écriture de requêtes dans Visual Basic
 Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnalités du langage Visual Basic pour écrire [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions de requête. La procédure pas à pas montre comment créer des requêtes sur une liste d’objets Student, comment exécuter des requêtes et comment les modifier. Les requêtes incorporent plusieurs fonctionnalités, y compris les initialiseurs d’objets, l’inférence de type local et les types anonymes.  
@@ -40,14 +40,14 @@ Cette procédure pas à pas montre comment vous pouvez utiliser des fonctionnali
   
 #### <a name="to-add-the-data-source"></a>Pour ajouter la source de données  
   
--   Définir un `Student` classe et créer une liste d’instances de la classe.  
+- Définir un `Student` classe et créer une liste d’instances de la classe.  
   
     > [!IMPORTANT]
     >  Le code nécessaire pour définir le `Student` classe et créer la liste utilisée dans la procédure pas à pas les exemples est fourni dans [Comment : Créer une liste d’éléments](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Vous pouvez copier et coller dans votre projet. Le nouveau code remplace le code qui s’affiche lorsque vous avez créé le projet.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Pour ajouter un nouvel étudiant à la liste des étudiants  
   
--   Suivez le modèle dans le `getStudents` méthode pour ajouter une autre instance de la `Student` classe à la liste. Ajout de l’étudiant, vous présentera initialiseurs d’objets. Pour plus d’informations, consultez [initialiseurs d’objets : Types nommés et anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Suivez le modèle dans le `getStudents` méthode pour ajouter une autre instance de la `Student` classe à la liste. Ajout de l’étudiant, vous présentera initialiseurs d’objets. Pour plus d’informations, consultez [initialiseurs d’objets : Types nommés et anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Créer une requête  
  Lors de l’exécution, la requête ajoutée dans cette section génère une liste des étudiants dont le rang universitaire les place dans les dix. Étant donné que la requête sélectionne l’ensemble `Student` objet chaque fois, le type du résultat de requête est `IEnumerable(Of Student)`. Toutefois, le type de la requête en général n'est pas spécifié dans les définitions de requête. Au lieu de cela, le compilateur utilise l’inférence de type local pour déterminer le type. Pour plus d’informations, consultez [l’inférence de Type Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variable de portée de la requête, `currentStudent`, sert de référence à chaque `Student` instance dans la source, `students`, fournissant un accès aux propriétés de chaque objet dans `students`.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
 ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921145"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Résolution à liaison tardive ; des erreurs d’exécution peuvent se produire
 Un objet est assigné à une variable déclarée comme étant de la [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md).  
@@ -27,7 +27,7 @@ Un objet est assigné à une variable déclarée comme étant de la [Object Data
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si possible, déclarez la variable comme étant d’un type spécifique.  
+- Si possible, déclarez la variable comme étant d’un type spécifique.  
   
 ## <a name="see-also"></a>Voir aussi
 

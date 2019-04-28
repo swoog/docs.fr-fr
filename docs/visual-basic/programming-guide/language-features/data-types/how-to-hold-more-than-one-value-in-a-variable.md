@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906488"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procédure : Stocker plusieurs valeurs dans une Variable (Visual Basic)
 Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *type de données composite*.  
@@ -29,11 +29,11 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
   
 2. Si le type de données composite n’est pas déjà défini, définissez-le afin que votre variable puisse l’utiliser.  
   
-    -   Définir une structure avec un [instruction Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    - Définir une structure avec un [instruction Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Définir un tableau avec un [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    - Définir un tableau avec un [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Définir une classe avec un [Class, instruction](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    - Définir une classe avec un [Class, instruction](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
 3. Déclarez votre variable avec un `Dim` instruction.  
   

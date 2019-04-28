@@ -3,11 +3,11 @@ title: Types de données de base
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
 ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903368"
 ---
 # <a name="basic-data-types"></a>Types de données de base
 Les requêtes LINQ to SQL sont traduites en données Transact-SQL avant d'être exécutées sur Microsoft SQL Server. LINQ to SQL prend en charge une grande partie des fonctionnalités intégrées que SQL Server prend en charge pour les types de données de base.  
@@ -18,9 +18,9 @@ Les requêtes LINQ to SQL sont traduites en données Transact-SQL avant d'êtr
 ## <a name="equality-operators"></a>Opérateurs d'égalité  
  LINQ to SQL prend en charge les opérateurs d'égalité suivants sur les types de données de base à l'intérieur des requêtes LINQ to SQL :  
   
--   Égale et opérateur d’inégalité : Opérateurs d’égalité et d’inégalité sont pris en charge pour numérique, <xref:System.Boolean>, <xref:System.DateTime>, et <xref:System.TimeSpan> types. Pour plus d’informations sur les opérateurs de Visual Basic `=` et `<>`, consultez [opérateurs de comparaison](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Pour plus d’informations sur C# opérateurs de comparaison `==` et `!=`, consultez [opérateurs d’égalité](~/docs/csharp/language-reference/operators/equality-operators.md).
+- Égale et opérateur d’inégalité : Opérateurs d’égalité et d’inégalité sont pris en charge pour numérique, <xref:System.Boolean>, <xref:System.DateTime>, et <xref:System.TimeSpan> types. Pour plus d’informations sur les opérateurs de Visual Basic `=` et `<>`, consultez [opérateurs de comparaison](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Pour plus d’informations sur C# opérateurs de comparaison `==` et `!=`, consultez [opérateurs d’égalité](~/docs/csharp/language-reference/operators/equality-operators.md).
   
--   Est un opérateur : Le `IS` opérateur a une traduction prise en charge lorsque le mappage d’héritage est utilisé. Il peut être utilisé à la place du test direct de la colonne de discriminateur afin de déterminer si un objet correspond à un type d'entité spécifique et se traduit en un contrôle sur la colonne de discriminateur. Pour plus d’informations sur Visual Basic et C# est opérateurs, consultez [opérateur Is](~/docs/visual-basic/language-reference/operators/is-operator.md) et [est](~/docs/csharp/language-reference/keywords/is.md).  
+- Est un opérateur : Le `IS` opérateur a une traduction prise en charge lorsque le mappage d’héritage est utilisé. Il peut être utilisé à la place du test direct de la colonne de discriminateur afin de déterminer si un objet correspond à un type d'entité spécifique et se traduit en un contrôle sur la colonne de discriminateur. Pour plus d’informations sur Visual Basic et C# est opérateurs, consultez [opérateur Is](~/docs/visual-basic/language-reference/operators/is-operator.md) et [est](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

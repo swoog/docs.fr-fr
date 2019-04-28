@@ -3,11 +3,11 @@ title: Utilisation de contrats dans le workflow
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918539"
 ---
 # <a name="using-contracts-in-workflow"></a>Utilisation de contrats dans le workflow
 Lorsque vous implémentez un service, vous définissez plusieurs contrats qui décrivent le service et les données qu'il envoie et reçoit. Les données sont représentées en tant que contrats de données et les contrats de message ; services WCF et de flux de travail utilisent des définitions de contrat de message et de contrat de données dans le cadre des descriptions de service. Le service lui-même expose des métadonnées (au format WSDL) pour décrire les opérations du service. Dans WCF, les contrats de service et les contrats d'opération définissent le service et les opérations qu'il prend en charge. Toutefois, dans un service de workflow, ces contrats font partie du processus d'entreprise lui-même ; ils sont exposés dans les métadonnées par un processus nommé inférence de contrat.  
@@ -17,15 +17,15 @@ Lorsque vous implémentez un service, vous définissez plusieurs contrats qui d�
   
  Activité <xref:System.ServiceModel.Activities.Receive>  
   
--   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
+- <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
+- <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
   
--   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
+- <xref:System.ServiceModel.Activities.Receive.Action%2A>   
  
  Activité <xref:System.ServiceModel.Activities.SendReply>  
   
--   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
+- <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
  Activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>  
   

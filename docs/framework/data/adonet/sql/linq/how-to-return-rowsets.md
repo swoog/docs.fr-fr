@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
 ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903979"
 ---
 # <a name="how-to-return-rowsets"></a>Procédure : Retourner des ensembles de lignes
 Cet exemple retourne un jeu de lignes de la base de données et inclut un paramètre d'entrée pour filtrer le résultat.  

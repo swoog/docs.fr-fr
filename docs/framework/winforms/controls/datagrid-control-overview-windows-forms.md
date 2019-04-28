@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904423"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGrid (Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304730"
   
  Les sources de données valides pour <xref:System.Windows.Forms.DataGrid> sont les suivantes :  
   
--   Classe <xref:System.Data.DataTable>  
+- Classe <xref:System.Data.DataTable>  
   
--   Classe <xref:System.Data.DataView>  
+- Classe <xref:System.Data.DataView>  
   
--   Classe <xref:System.Data.DataSet>  
+- Classe <xref:System.Data.DataSet>  
   
--   Classe <xref:System.Data.DataViewManager>  
+- Classe <xref:System.Data.DataViewManager>  
   
  Si votre source est un dataset, celui-ci peut être un objet dans le formulaire ou un objet passé au formulaire par un service web XML. Vous pouvez lier à des datasets typés ou non typés.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304730"
   
  Vous pouvez lier aux structures suivantes si leurs éléments exposent des propriétés publiques :  
   
--   Tout composant qui implémente l'interface <xref:System.Collections.IList>. Cela comprend les tableaux unidimensionnels.  
+- Tout composant qui implémente l'interface <xref:System.Collections.IList>. Cela comprend les tableaux unidimensionnels.  
   
--   Tout composant qui implémente l'interface <xref:System.ComponentModel.IListSource>.  
+- Tout composant qui implémente l'interface <xref:System.ComponentModel.IListSource>.  
   
--   Tout composant qui implémente l'interface <xref:System.ComponentModel.IBindingList>.  
+- Tout composant qui implémente l'interface <xref:System.ComponentModel.IBindingList>.  
   
  Pour plus d’informations sur les sources de données possibles, consultez [Sources de données prises en charge par les Windows Forms](../data-sources-supported-by-windows-forms.md).  
   

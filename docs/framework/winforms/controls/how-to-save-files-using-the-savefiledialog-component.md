@@ -12,18 +12,18 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
 ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912923"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Procédure : enregistrer des fichiers à l’aide du composant SaveFileDialog
 Le <xref:System.Windows.Forms.SaveFileDialog> composant permet aux utilisateurs de parcourir le système de fichiers et de sélectionner les fichiers à enregistrer. La boîte de dialogue retourne le chemin et le nom du fichier que l’utilisateur a sélectionné dans la boîte de dialogue. Cependant, vous devez écrire le code pour écrire réellement les fichiers sur le disque.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Pour enregistrer un fichier à l’aide du composant SaveFileDialog  
   
--   Affichez la boîte de dialogue **Enregistrer le fichier** et appelez une méthode pour enregistrer le fichier sélectionné par l’utilisateur.  
+- Affichez la boîte de dialogue **Enregistrer le fichier** et appelez une méthode pour enregistrer le fichier sélectionné par l’utilisateur.  
   
      Utilisez le <xref:System.Windows.Forms.SaveFileDialog> du composant <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> méthode pour enregistrer le fichier. Cette méthode vous donne un <xref:System.IO.Stream> objet vous pouvez écrire.  
   

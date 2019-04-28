@@ -3,11 +3,11 @@ title: Vue d’ensemble de la classe XDocument (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
 ms.openlocfilehash: f9a531b9e90a8d6511dd0a2c6fc3131c9bfe1e89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907814"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>Vue d’ensemble de la classe XDocument (Visual Basic)
 Cette rubrique présente la classe <xref:System.Xml.Linq.XDocument>.  
@@ -22,15 +22,15 @@ Cette rubrique présente la classe <xref:System.Xml.Linq.XDocument>.
 ## <a name="components-of-xdocument"></a>Composants de XDocument  
  Un objet <xref:System.Xml.Linq.XDocument> peut contenir les éléments suivants :  
   
--   Un objet <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> vous permet de spécifier les parties pertinentes d'une déclaration XML : la version XML, l'encodage du document et si le document XML est autonome.  
+- Un objet <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> vous permet de spécifier les parties pertinentes d'une déclaration XML : la version XML, l'encodage du document et si le document XML est autonome.  
   
--   Un objet <xref:System.Xml.Linq.XElement>. Il s'agit du nœud racine du document XML.  
+- Un objet <xref:System.Xml.Linq.XElement>. Il s'agit du nœud racine du document XML.  
   
--   Une quantité quelconque d'objets <xref:System.Xml.Linq.XProcessingInstruction>. Une instruction de traitement communique des informations à une application qui traite le code XML.  
+- Une quantité quelconque d'objets <xref:System.Xml.Linq.XProcessingInstruction>. Une instruction de traitement communique des informations à une application qui traite le code XML.  
   
--   Une quantité quelconque d'objets <xref:System.Xml.Linq.XComment>. Les commentaires seront des frères de l'élément racine. L'objet <xref:System.Xml.Linq.XComment> ne peut pas être le premier argument de la liste, car un document XML valide ne peut pas commencer par un commentaire.  
+- Une quantité quelconque d'objets <xref:System.Xml.Linq.XComment>. Les commentaires seront des frères de l'élément racine. L'objet <xref:System.Xml.Linq.XComment> ne peut pas être le premier argument de la liste, car un document XML valide ne peut pas commencer par un commentaire.  
   
--   Un objet <xref:System.Xml.Linq.XDocumentType> pour le DTD.  
+- Un objet <xref:System.Xml.Linq.XDocumentType> pour le DTD.  
   
  Lorsque vous sérialisez un objet <xref:System.Xml.Linq.XDocument>, même si `XDocument.Declaration` a la valeur `null`, la sortie aura une déclaration XML à condition que la propriété `Writer.Settings.OmitXmlDeclaration` du writer ait la valeur `false` (valeur par défaut).  
   

@@ -3,18 +3,18 @@ title: 1011 - ScheduleExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: e503ae46-ad6b-4fcb-8c0e-146d59a8eff1
 ms.openlocfilehash: 299d09b7c4db94a2e27378ba0cc3dfeb03734ab4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982252"
 ---
 # <a name="1011---scheduleexecuteactivityworkitem"></a>1011 - ScheduleExecuteActivityWorkItem
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|1011|  
+|Id|1011|  
 |Mots clés|WFRuntime|  
 |Niveau|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Débogage|  

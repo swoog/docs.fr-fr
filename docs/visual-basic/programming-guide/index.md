@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907697"
 ---
 # <a name="visual-basic-programming-guide"></a>Guide de programmation Visual Basic
-Comme avec n’importe quel langage de programmation modernes, Visual Basic prend en charge de nombreuses constructions de programmation courantes et les éléments de langage. Ce guide décrit tous les éléments majeurs de la programmation avec Visual Basic.  
+Comme avec n’importe quel langage de programmation modern, Visual Basic prend en charge de nombreuses constructions de programmation courants et les éléments de langage. Ce guide décrit les principaux éléments de la programmation avec Visual Basic.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Structure de programme et conventions de codage](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contient la documentation sur la base des conventions de structure et le code de Visual Basic, telles que les conventions d’affectation de noms, les commentaires dans le code et les limites de Visual Basic.  
+ Contient la documentation sur les conventions de code et de la structure de base de Visual Basic, tels que les conventions d’affectation de noms, les commentaires dans le code et les limites de Visual Basic.  
   
  [Fonctionnalités du langage Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
  Fournit des liens vers les rubriques qui présentent et abordent les fonctionnalités importantes de Visual Basic, notamment les littéraux LINQ et XML.  
@@ -28,7 +28,7 @@ Comme avec n’importe quel langage de programmation modernes, Visual Basic pren
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Informations de référence sur le langage Visual Basic](../../visual-basic/language-reference/index.md)  
- Fournit des informations de référence sur différents aspects de programmation Visual Basic.  
+ Fournit des informations de référence sur différents aspects de programmation en Visual Basic.  
   
  [Compilateur de ligne de commande de Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Propose des informations sur l’utilisation de l’outil de mise à niveau de mot clé, le compilateur de ligne de commande Visual Basic et les options du compilateur.
+ Propose des informations sur l’utilisation du compilateur de ligne de commande Visual Basic, les options du compilateur et l’outil de mise à niveau de mot clé.

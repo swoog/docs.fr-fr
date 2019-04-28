@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007095"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF
 Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nécessite que les deux technologies disposent du traitement d’entrée au clavier approprié. Cette rubrique décrit comment ces technologies implémentent le clavier et traitement pour permettre l’interopérabilité régulière dans des applications hybrides du message.  
   
  Cette rubrique contient les sous-sections suivantes :  
   
--   Formulaires sans mode et les boîtes de dialogue  
+- Formulaires sans mode et les boîtes de dialogue  
   
--   Clavier WindowsFormsHost et traitement des messages  
+- Clavier WindowsFormsHost et traitement des messages  
   
--   Clavier ElementHost et traitement des messages  
+- Clavier ElementHost et traitement des messages  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>Formulaires sans mode et les boîtes de dialogue  
  Appeler le <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> méthode sur le <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément pour ouvrir une zone de formulaire ou de la boîte de dialogue non modale à partir d’un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur.  
@@ -39,13 +39,13 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>Clavier WindowsFormsHost et traitement des messages  
  Quand ils sont hébergés par un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application, basée sur [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] clavier et le message de traitement se compose des éléments suivants :  
   
--   Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe acquiert des messages à partir de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] boucle de message, qui est implémentée par le <xref:System.Windows.Interop.ComponentDispatcher> classe.  
+- Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe acquiert des messages à partir de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] boucle de message, qui est implémentée par le <xref:System.Windows.Interop.ComponentDispatcher> classe.  
   
--   Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe crée un substitut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] boucle de message afin de garantir qu’ordinaire [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] clavier traitement se produit.  
+- Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe crée un substitut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] boucle de message afin de garantir qu’ordinaire [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] clavier traitement se produit.  
   
--   Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> la classe implémente le <xref:System.Windows.Interop.IKeyboardInputSink> interface pour coordonner la gestion du focus avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> la classe implémente le <xref:System.Windows.Interop.IKeyboardInputSink> interface pour coordonner la gestion du focus avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôles s’inscrivent et démarrent leurs boucles de messages.  
+- Le <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôles s’inscrivent et démarrent leurs boucles de messages.  
   
  Les sections suivantes décrivent ces parties du processus plus en détail.  
   
@@ -88,13 +88,13 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ## <a name="elementhost-keyboard-and-message-processing"></a>Clavier ElementHost et traitement des messages  
  Quand ils sont hébergés par un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clavier et le message de traitement se compose des éléments suivants :  
   
--   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, et <xref:System.Windows.Interop.IKeyboardInputSite> implémentations d’interface.  
+- <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, et <xref:System.Windows.Interop.IKeyboardInputSite> implémentations d’interface.  
   
--   Touches de direction et de tabulation.  
+- Touches de direction et de tabulation.  
   
--   Touches de commande et les clés de boîte de dialogue.  
+- Touches de commande et les clés de boîte de dialogue.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] traitement de l’accélérateur.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] traitement de l’accélérateur.  
   
  Les sections suivantes décrivent ces parties plus en détail.  
   
@@ -118,11 +118,11 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Étant donné que la valeur par défaut <xref:System.Windows.Interop.HwndSource> implémentation de la <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> méthode retourne `false`, les messages WM_CHAR sont traités à l’aide de la logique suivante :  
   
--   Le <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> méthode est substituée pour garantir que tous les messages WM_CHAR sont envoyés aux éléments hébergés.  
+- Le <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> méthode est substituée pour garantir que tous les messages WM_CHAR sont envoyés aux éléments hébergés.  
   
--   Si la touche ALT est enfoncée, le message est WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] n’effectue aucun prétraitement ce message via le <xref:System.Windows.Forms.Control.IsInputChar%2A> (méthode). Par conséquent, le <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> méthode est substituée pour interroger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> pour un accélérateur enregistré. Si un accélérateur enregistré est trouvé, <xref:System.Windows.Input.AccessKeyManager> traite.  
+- Si la touche ALT est enfoncée, le message est WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] n’effectue aucun prétraitement ce message via le <xref:System.Windows.Forms.Control.IsInputChar%2A> (méthode). Par conséquent, le <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> méthode est substituée pour interroger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> pour un accélérateur enregistré. Si un accélérateur enregistré est trouvé, <xref:System.Windows.Input.AccessKeyManager> traite.  
   
--   Si la touche ALT n’est pas activée, le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> classe traite l’entrée non prise en charge. Si l’entrée est un accélérateur, le <xref:System.Windows.Input.AccessKeyManager> traite. Le <xref:System.Windows.Input.InputManager.PostProcessInput> événement est géré pour les messages WM_CHAR qui n’ont pas été traités.  
+- Si la touche ALT n’est pas activée, le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> classe traite l’entrée non prise en charge. Si l’entrée est un accélérateur, le <xref:System.Windows.Input.AccessKeyManager> traite. Le <xref:System.Windows.Input.InputManager.PostProcessInput> événement est géré pour les messages WM_CHAR qui n’ont pas été traités.  
   
  Lorsque l’utilisateur appuie sur la touche ALT, les signaux visuels accélérateur sont affichent sur la totalité du formulaire. Pour prendre en charge ce comportement, tous les <xref:System.Windows.Forms.Integration.ElementHost> contrôles sur le formulaire actif reçoivent des messages WM_SYSKEYDOWN, quel que soit le contrôle a le focus.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912871"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procédure : définir le masque d’entrée
 Le contrôle de zone de texte masquée est un contrôle de zone de texte amélioré qui prend en charge une syntaxe déclarative pour accepter ou rejeter l’entrée d’utilisateur. En définissant la propriété Mask, vous pouvez spécifier l’entrée d’utilisateur autorisée sans écrire la logique de validation personnalisée dans votre application. Pour plus d’informations, consultez la section Notes de la <xref:System.Windows.Forms.MaskedTextBox> classe.  
@@ -34,15 +34,15 @@ Le contrôle de zone de texte masquée est un contrôle de zone de texte amélio
   
 1. Dans **conception** afficher, sélectionnez un <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Cliquez sur la balise active pour ouvrir le **tâches MaskedTextBox** Panneau de configuration.  
+    1. Cliquez sur la balise active pour ouvrir le **tâches MaskedTextBox** Panneau de configuration.  
   
-    2.  Cliquez sur **définir le masque**.  
+    2. Cliquez sur **définir le masque**.  
   
      \- ou -  
   
-    1.  Dans le **propriétés** fenêtre, sélectionnez le <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriété.  
+    1. Dans le **propriétés** fenêtre, sélectionnez le <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriété.  
   
-    2.  Cliquez sur le bouton de sélection dans la colonne de valeur de propriété.  
+    2. Cliquez sur le bouton de sélection dans la colonne de valeur de propriété.  
   
      Le **masque d’entrée** boîte de dialogue s’affiche.  
   

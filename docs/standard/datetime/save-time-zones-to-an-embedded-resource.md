@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Enregistrer des fuseaux horaires dans une ressource incorporée'
+title: 'Procédure : enregistrer des fuseaux horaires dans une ressource incorporée'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912702"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procédure : Enregistrer des fuseaux horaires dans une ressource incorporée
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procédure : enregistrer des fuseaux horaires dans une ressource incorporée
 
 Une application prenant en charge de fuseau horaire souvent nécessite la présence d’un fuseau horaire particulier. Toutefois, étant donné que la disponibilité de l’individu <xref:System.TimeZoneInfo> objets dépend des informations stockées dans le Registre du système local, les fuseaux horaires même habituellement disponibles peuvent être absents. En outre, les informations sur les fuseaux horaires personnalisés instancié à l’aide du <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (méthode) n’est pas stockée avec d’autres informations de fuseau horaire dans le Registre. Pour vous assurer que ces fuseaux horaires sont disponibles lorsqu’ils sont nécessaires, vous pouvez les enregistrer en les sérialisant et les restaurer ultérieurement en désérialisant les.
 

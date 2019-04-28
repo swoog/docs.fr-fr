@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913092"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procédure : répondre aux clics dans le contrôle DataGrid Windows Forms
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191898"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Pour détecter lorsque l’utilisateur du contrôle DataGrid sélectionne une cellule différente  
   
--   Dans le <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Gestionnaire d’événements, écrire du code pour réagir de façon appropriée.  
+- Dans le <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Gestionnaire d’événements, écrire du code pour réagir de façon appropriée.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191898"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Pour déterminer quelle partie de la grille de données que l’utilisateur a cliqué  
   
--   Appelez le <xref:System.Windows.Forms.DataGrid.HitTest%2A> méthode dans un gestionnaire d’événements approprié, tel que celui de la <xref:System.Windows.Forms.Control.MouseDown> ou <xref:System.Windows.Forms.Control.Click> événement.  
+- Appelez le <xref:System.Windows.Forms.DataGrid.HitTest%2A> méthode dans un gestionnaire d’événements approprié, tel que celui de la <xref:System.Windows.Forms.Control.MouseDown> ou <xref:System.Windows.Forms.Control.Click> événement.  
   
      Le <xref:System.Windows.Forms.DataGrid.HitTest%2A> méthode retourne un <xref:System.Windows.Forms.DataGrid.HitTestInfo> objet qui contient la ligne et colonne de la zone sélectionnée.  
   

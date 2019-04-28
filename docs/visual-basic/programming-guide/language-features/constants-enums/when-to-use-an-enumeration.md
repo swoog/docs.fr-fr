@@ -5,11 +5,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907307"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Quand utiliser une énumération (Visual Basic)
 Les énumérations offrent un moyen simple de travailler avec des ensembles de constantes connexes. Une énumération, ou `Enum`, est un nom symbolique pour un ensemble de valeurs. Énumérations sont traitées comme des types de données, et vous pouvez les utiliser pour créer des ensembles de constantes pour une utilisation avec des variables et propriétés.  
@@ -19,13 +19,13 @@ Les énumérations offrent un moyen simple de travailler avec des ensembles de c
   
  Avantages de l’utilisation des énumérations :  
   
--   Réduit les erreurs provoquées par transposant ou entrée incorrecte de nombres.  
+- Réduit les erreurs provoquées par transposant ou entrée incorrecte de nombres.  
   
--   Rend plus facile de modifier les valeurs à l’avenir.  
+- Rend plus facile de modifier les valeurs à l’avenir.  
   
--   Rend le code plus facile à lire, ce qui signifie qu’il est moins probable que les erreurs lisibilité dedans.  
+- Rend le code plus facile à lire, ce qui signifie qu’il est moins probable que les erreurs lisibilité dedans.  
   
--   Garantit la compatibilité ascendante. Avec des énumérations, votre code est moins susceptible d’échouer si à l’avenir quelqu'un modifie les valeurs correspondant aux noms de membre.  
+- Garantit la compatibilité ascendante. Avec des énumérations, votre code est moins susceptible d’échouer si à l’avenir quelqu'un modifie les valeurs correspondant aux noms de membre.  
   
 ## <a name="naming-enumerations"></a>Énumérations d’affectation de noms  
  Utiliser une convention d’affectation de noms pour les membres de l’énumération. Lorsque Visual Basic rencontre un nom de membre d’énumération, une exception peut être levée si d’autres bibliothèques de types référencées contiennent le même nom. Utilisez un préfixe unique qui identifie les valeurs à partir de votre application ou composant.  

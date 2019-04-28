@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907216"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilisation efficace des types de données (Visual Basic)
 Variables non déclarées et les variables déclarées sans type de données sont voient attribuer le `Object` type de données. Cela rend plus facile d’écrire rapidement des programmes, mais il peut les rendre s’exécute plus lentement.  
@@ -26,11 +26,11 @@ Variables non déclarées et les variables déclarées sans type de données son
 ## <a name="strong-typing"></a>Typage fort  
  Spécifier les types de données pour toutes les variables est appelé *un typage fort*. À l’aide d’un typage fort présente plusieurs avantages :  
   
--   Il permet la prise en charge IntelliSense pour vos variables. Cela vous permet de vous permet de voir leurs propriétés et autres membres en cours de frappe dans le code.  
+- Il permet la prise en charge IntelliSense pour vos variables. Cela vous permet de vous permet de voir leurs propriétés et autres membres en cours de frappe dans le code.  
   
--   Il tire parti de la vérification du type du compilateur. Il intercepte les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
+- Il tire parti de la vérification du type du compilateur. Il intercepte les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
   
--   Il en résulte dans une exécution plus rapide de votre code.  
+- Il en résulte dans une exécution plus rapide de votre code.  
   
 ## <a name="most-efficient-data-types"></a>Types de données plus efficaces  
  Pour les variables qui ne contiennent jamais de fractions, les types de données intégraux sont plus efficaces que les types non intégraux. En Visual Basic, `Integer` et `UInteger` sont les types numériques plus efficaces.  

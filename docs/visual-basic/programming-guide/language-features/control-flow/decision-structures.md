@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907000"
 ---
 # <a name="decision-structures-visual-basic"></a>Structures de décision (Visual Basic)
 Visual Basic vous permet de tester des conditions et d’effectuer des opérations différentes en fonction des résultats de ce test. Vous pouvez tester une condition vraie ou fausse, pour différentes valeurs d’une expression ou plusieurs exceptions générées lorsque vous exécutez une série d’instructions.  
@@ -26,13 +26,13 @@ Visual Basic vous permet de tester des conditions et d’effectuer des opératio
 ## <a name="ifthenelse-construction"></a>If... Then... Construction Else  
  `If...Then...Else` constructions vous permettent de tester pour une ou plusieurs conditions et d’exécuter une ou plusieurs instructions selon chaque condition. Vous pouvez tester des conditions et prendre des mesures de plusieurs manières :  
   
--   Exécuter une ou plusieurs instructions si une condition est `True`  
+- Exécuter une ou plusieurs instructions si une condition est `True`  
   
--   Exécuter une ou plusieurs instructions si une condition est `False`  
+- Exécuter une ou plusieurs instructions si une condition est `False`  
   
--   Exécutez des instructions si une condition est `True` et d’autres s’il s’agit `False`  
+- Exécutez des instructions si une condition est `True` et d’autres s’il s’agit `False`  
   
--   Tester une condition supplémentaire si une condition préalable est `False`  
+- Tester une condition supplémentaire si une condition préalable est `False`  
   
  La structure de contrôle qui offre toutes ces possibilités est le [si... Then... Else, instruction](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Vous pouvez utiliser une version de ligne si vous avez qu’un test et une instruction à exécuter. Si vous avez un ensemble de conditions et actions plus complexe, vous pouvez utiliser la version de plusieurs lignes.  
   
