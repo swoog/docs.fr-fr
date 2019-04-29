@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
 ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790689"
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="79e57-102">Rubriques "Comment" relatives aux info-bulles</span><span class="sxs-lookup"><span data-stu-id="79e57-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="79e57-103">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="79e57-103">In This Section</span></span>  
- [<span data-ttu-id="79e57-104">Positionner une info-bulle</span><span class="sxs-lookup"><span data-stu-id="79e57-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="79e57-105">Utiliser la propriété BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="79e57-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="6707a-102">Rubriques "Comment" relatives aux info-bulles</span><span class="sxs-lookup"><span data-stu-id="6707a-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="6707a-103">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6707a-103">In This Section</span></span>  
+ [<span data-ttu-id="6707a-104">Positionner une info-bulle</span><span class="sxs-lookup"><span data-stu-id="6707a-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="6707a-105">Utiliser la propriété BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="6707a-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="79e57-106">Référence</span><span class="sxs-lookup"><span data-stu-id="79e57-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6707a-106">Référence</span><span class="sxs-lookup"><span data-stu-id="6707a-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="79e57-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="79e57-107">Related Sections</span></span>  
- [<span data-ttu-id="79e57-108">Vue d’ensemble de Popup</span><span class="sxs-lookup"><span data-stu-id="79e57-108">Popup Overview</span></span>](popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="6707a-107">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="6707a-107">Related Sections</span></span>  
+ [<span data-ttu-id="6707a-108">Vue d’ensemble de Popup</span><span class="sxs-lookup"><span data-stu-id="6707a-108">Popup Overview</span></span>](popup-overview.md)  
   
- [<span data-ttu-id="79e57-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="79e57-109">How-to Topics</span></span>](popup-how-to-topics.md)
+ [<span data-ttu-id="6707a-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="6707a-109">How-to Topics</span></span>](popup-how-to-topics.md)

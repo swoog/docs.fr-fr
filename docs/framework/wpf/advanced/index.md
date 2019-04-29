@@ -10,26 +10,26 @@ helpviewer_keywords:
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
 ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942803"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="055ce-102">Aspects avancés (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="055ce-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="055ce-103">Cette section décrit certains domaines avancés dans WPF.</span><span class="sxs-lookup"><span data-stu-id="055ce-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="1f8a5-102">Aspects avancés (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="1f8a5-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="1f8a5-103">Cette section décrit certains domaines avancés dans WPF.</span><span class="sxs-lookup"><span data-stu-id="1f8a5-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="055ce-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="055ce-104">In This Section</span></span>  
- [<span data-ttu-id="055ce-105">Architecture de WPF</span><span class="sxs-lookup"><span data-stu-id="055ce-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="055ce-106">Éléments de base</span><span class="sxs-lookup"><span data-stu-id="055ce-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="055ce-107">Sérialisation et arborescence d’éléments</span><span class="sxs-lookup"><span data-stu-id="055ce-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="055ce-108">Glisser-déposer</span><span class="sxs-lookup"><span data-stu-id="055ce-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="055ce-109">Documents</span><span class="sxs-lookup"><span data-stu-id="055ce-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="055ce-110">Globalisation et localisation</span><span class="sxs-lookup"><span data-stu-id="055ce-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="055ce-111">Migration et interopérabilité</span><span class="sxs-lookup"><span data-stu-id="055ce-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="055ce-112">Performances</span><span class="sxs-lookup"><span data-stu-id="055ce-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="055ce-113">Modèle de thread</span><span class="sxs-lookup"><span data-stu-id="055ce-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="055ce-114">Vue d’ensemble des compléments WPF</span><span class="sxs-lookup"><span data-stu-id="055ce-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="055ce-115">Informations de référence sur les API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="055ce-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1f8a5-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="1f8a5-104">In This Section</span></span>  
+ [<span data-ttu-id="1f8a5-105">Architecture de WPF</span><span class="sxs-lookup"><span data-stu-id="1f8a5-105">WPF Architecture</span></span>](wpf-architecture.md)  
+ [<span data-ttu-id="1f8a5-106">Éléments de base</span><span class="sxs-lookup"><span data-stu-id="1f8a5-106">Base Elements</span></span>](base-elements.md)  
+ [<span data-ttu-id="1f8a5-107">Sérialisation et arborescence d’éléments</span><span class="sxs-lookup"><span data-stu-id="1f8a5-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+ [<span data-ttu-id="1f8a5-108">Glisser-déposer</span><span class="sxs-lookup"><span data-stu-id="1f8a5-108">Drag and Drop</span></span>](drag-and-drop.md)  
+ [<span data-ttu-id="1f8a5-109">Documents</span><span class="sxs-lookup"><span data-stu-id="1f8a5-109">Documents</span></span>](documents.md)  
+ [<span data-ttu-id="1f8a5-110">Globalisation et localisation</span><span class="sxs-lookup"><span data-stu-id="1f8a5-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
+ [<span data-ttu-id="1f8a5-111">Migration et interopérabilité</span><span class="sxs-lookup"><span data-stu-id="1f8a5-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+ [<span data-ttu-id="1f8a5-112">Performances</span><span class="sxs-lookup"><span data-stu-id="1f8a5-112">Performance</span></span>](performance.md)  
+ [<span data-ttu-id="1f8a5-113">Modèle de thread</span><span class="sxs-lookup"><span data-stu-id="1f8a5-113">Threading Model</span></span>](threading-model.md)  
+ [<span data-ttu-id="1f8a5-114">Vue d’ensemble des compléments WPF</span><span class="sxs-lookup"><span data-stu-id="1f8a5-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
+ [<span data-ttu-id="1f8a5-115">Informations de référence sur les API non managées WPF</span><span class="sxs-lookup"><span data-stu-id="1f8a5-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="055ce-116">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="055ce-116">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="1f8a5-116">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="1f8a5-116">Related Sections</span></span>
