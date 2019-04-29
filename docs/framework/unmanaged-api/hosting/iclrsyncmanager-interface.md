@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763579"
 ---
-# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="ccdfa-102">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="ccdfa-102">ICLRSyncManager Interface</span></span>
-<span data-ttu-id="ccdfa-103">Définit des méthodes qui permettent à l’hôte pour obtenir des informations sur les tâches demandées et pour détecter les blocages dans son implémentation de synchronisation.</span><span class="sxs-lookup"><span data-stu-id="ccdfa-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
+# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="c0f32-102">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="c0f32-102">ICLRSyncManager Interface</span></span>
+<span data-ttu-id="c0f32-103">Définit des méthodes qui permettent à l’hôte pour obtenir des informations sur les tâches demandées et pour détecter les blocages dans son implémentation de synchronisation.</span><span class="sxs-lookup"><span data-stu-id="c0f32-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ccdfa-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="ccdfa-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c0f32-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="c0f32-104">Methods</span></span>  
   
-|<span data-ttu-id="ccdfa-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="ccdfa-105">Method</span></span>|<span data-ttu-id="ccdfa-106">Description</span><span class="sxs-lookup"><span data-stu-id="ccdfa-106">Description</span></span>|  
+|<span data-ttu-id="c0f32-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="c0f32-105">Method</span></span>|<span data-ttu-id="c0f32-106">Description</span><span class="sxs-lookup"><span data-stu-id="c0f32-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ccdfa-107">CreateRWLockOwnerIterator, méthode</span><span class="sxs-lookup"><span data-stu-id="ccdfa-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="ccdfa-108">Demande que le common language runtime (CLR) crée un itérateur pour l’hôte à utiliser pour déterminer l’ensemble de tâches en attente sur un verrou de lecteur-writer.</span><span class="sxs-lookup"><span data-stu-id="ccdfa-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
-|[<span data-ttu-id="ccdfa-109">DeleteRWLockOwnerIterator, méthode</span><span class="sxs-lookup"><span data-stu-id="ccdfa-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="ccdfa-110">Demande que le CLR détruise un itérateur qui a été créé par un appel à `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="ccdfa-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
-|[<span data-ttu-id="ccdfa-111">GetMonitorOwner, méthode</span><span class="sxs-lookup"><span data-stu-id="ccdfa-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="ccdfa-112">Obtient la tâche qui possède le moniteur spécifié.</span><span class="sxs-lookup"><span data-stu-id="ccdfa-112">Gets the task that owns the specified monitor.</span></span>|  
-|[<span data-ttu-id="ccdfa-113">GetRWLockOwnerNext, méthode</span><span class="sxs-lookup"><span data-stu-id="ccdfa-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="ccdfa-114">Obtient la tâche suivante qui attend le verrou de lecteur-writer actuel.</span><span class="sxs-lookup"><span data-stu-id="ccdfa-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
+|[<span data-ttu-id="c0f32-107">CreateRWLockOwnerIterator, méthode</span><span class="sxs-lookup"><span data-stu-id="c0f32-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="c0f32-108">Demande que le common language runtime (CLR) crée un itérateur pour l’hôte à utiliser pour déterminer l’ensemble de tâches en attente sur un verrou de lecteur-writer.</span><span class="sxs-lookup"><span data-stu-id="c0f32-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
+|[<span data-ttu-id="c0f32-109">DeleteRWLockOwnerIterator, méthode</span><span class="sxs-lookup"><span data-stu-id="c0f32-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="c0f32-110">Demande que le CLR détruise un itérateur qui a été créé par un appel à `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="c0f32-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
+|[<span data-ttu-id="c0f32-111">GetMonitorOwner, méthode</span><span class="sxs-lookup"><span data-stu-id="c0f32-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="c0f32-112">Obtient la tâche qui possède le moniteur spécifié.</span><span class="sxs-lookup"><span data-stu-id="c0f32-112">Gets the task that owns the specified monitor.</span></span>|  
+|[<span data-ttu-id="c0f32-113">GetRWLockOwnerNext, méthode</span><span class="sxs-lookup"><span data-stu-id="c0f32-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="c0f32-114">Obtient la tâche suivante qui attend le verrou de lecteur-writer actuel.</span><span class="sxs-lookup"><span data-stu-id="c0f32-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ccdfa-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ccdfa-115">Requirements</span></span>  
- <span data-ttu-id="ccdfa-116">**Plateformes :** Consultez [Configuration requise](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ccdfa-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0f32-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="c0f32-115">Requirements</span></span>  
+ <span data-ttu-id="c0f32-116">**Plateformes :** Consultez [Configuration requise](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0f32-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ccdfa-117">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ccdfa-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c0f32-117">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c0f32-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ccdfa-118">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ccdfa-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c0f32-118">**Bibliothèque :** Inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c0f32-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ccdfa-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccdfa-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c0f32-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0f32-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccdfa-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ccdfa-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0f32-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c0f32-120">See also</span></span>
 
 - <xref:System.Threading.Thread>
-- [<span data-ttu-id="ccdfa-121">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="ccdfa-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
-- <span data-ttu-id="ccdfa-122">[Threading managé et non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="ccdfa-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
-- [<span data-ttu-id="ccdfa-123">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="ccdfa-123">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="c0f32-121">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="c0f32-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
+- <span data-ttu-id="c0f32-122">[Threading managé et non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="c0f32-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
+- [<span data-ttu-id="c0f32-123">Interfaces d’hébergement</span><span class="sxs-lookup"><span data-stu-id="c0f32-123">Hosting Interfaces</span></span>](hosting-interfaces.md)

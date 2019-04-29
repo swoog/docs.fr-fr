@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697379"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="81235-102">IAssemblyName::GetProperty, méthode</span><span class="sxs-lookup"><span data-stu-id="81235-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="81235-103">Obtient un pointeur vers la propriété référencée par l’identificateur de propriété spécifié.</span><span class="sxs-lookup"><span data-stu-id="81235-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="b1201-102">IAssemblyName::GetProperty, méthode</span><span class="sxs-lookup"><span data-stu-id="b1201-102">IAssemblyName::GetProperty Method</span></span>
+<span data-ttu-id="b1201-103">Obtient un pointeur vers la propriété référencée par l’identificateur de propriété spécifié.</span><span class="sxs-lookup"><span data-stu-id="b1201-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81235-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="81235-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1201-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b1201-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProperty (  
@@ -37,23 +37,23 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81235-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="81235-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b1201-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b1201-105">Parameters</span></span>  
  `PropertyId`  
- <span data-ttu-id="81235-106">[in] Identificateur unique pour la propriété demandée.</span><span class="sxs-lookup"><span data-stu-id="81235-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="b1201-106">[in] Identificateur unique pour la propriété demandée.</span><span class="sxs-lookup"><span data-stu-id="b1201-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="81235-107">[out] Les données de la propriété retournée.</span><span class="sxs-lookup"><span data-stu-id="81235-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="b1201-107">[out] Les données de la propriété retournée.</span><span class="sxs-lookup"><span data-stu-id="b1201-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="81235-108">[in, out] La taille, en octets, de `pvProperty`.</span><span class="sxs-lookup"><span data-stu-id="81235-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="b1201-108">[in, out] La taille, en octets, de `pvProperty`.</span><span class="sxs-lookup"><span data-stu-id="b1201-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81235-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="81235-109">Requirements</span></span>  
- <span data-ttu-id="81235-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81235-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1201-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b1201-109">Requirements</span></span>  
+ <span data-ttu-id="b1201-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1201-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81235-111">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="81235-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b1201-111">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b1201-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="81235-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81235-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b1201-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1201-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81235-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="81235-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1201-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b1201-113">See also</span></span>
 
-- [<span data-ttu-id="81235-114">IAssemblyName, interface</span><span class="sxs-lookup"><span data-stu-id="81235-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="b1201-114">IAssemblyName, interface</span><span class="sxs-lookup"><span data-stu-id="b1201-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

@@ -1,42 +1,32 @@
 ---
-title: "Comment : désérialiser des propriétés de données d'instance"
-ms.custom: 
+title: 'Procédure : désérialiser des propriétés de données d’instance'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3863812bc3c83b346f2340bcfbc609a1024c3c6b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761440"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="49431-102">Comment : désérialiser des propriétés de données d'instance</span><span class="sxs-lookup"><span data-stu-id="49431-102">How to: Deserialize Instance Data Properties</span></span>
-<span data-ttu-id="49431-103">Il peut y avoir des situations où un utilisateur ou un administrateur de workflow peut souhaiter examiner manuellement l'état d'une instance persistante de workflow.</span><span class="sxs-lookup"><span data-stu-id="49431-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="49431-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fournit une vue de la table Instances qui expose les quatre colonnes suivantes :</span><span class="sxs-lookup"><span data-stu-id="49431-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
+# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="19c4d-102">Procédure : désérialiser des propriétés de données d’instance</span><span class="sxs-lookup"><span data-stu-id="19c4d-102">How to: Deserialize Instance Data Properties</span></span>
+<span data-ttu-id="19c4d-103">Il peut y avoir des situations où un utilisateur ou un administrateur de workflow peut souhaiter examiner manuellement l'état d'une instance persistante de workflow.</span><span class="sxs-lookup"><span data-stu-id="19c4d-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="19c4d-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fournit une vue de la table Instances qui expose les quatre colonnes suivantes :</span><span class="sxs-lookup"><span data-stu-id="19c4d-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
   
--   <span data-ttu-id="49431-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="49431-105">ReadWritePrimitiveDataProperties</span></span>  
+- <span data-ttu-id="19c4d-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="19c4d-105">ReadWritePrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="49431-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="49431-106">WriteOnlyPrimitiveDataProperties</span></span>  
+- <span data-ttu-id="19c4d-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="19c4d-106">WriteOnlyPrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="49431-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="49431-107">ReadWriteComplexDataProperties</span></span>  
+- <span data-ttu-id="19c4d-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="19c4d-107">ReadWriteComplexDataProperties</span></span>  
   
--   <span data-ttu-id="49431-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="49431-108">WriteOnlyComplexDataProperties</span></span>  
+- <span data-ttu-id="19c4d-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="19c4d-108">WriteOnlyComplexDataProperties</span></span>  
   
- <span data-ttu-id="49431-109">Propriétés des données primitives font référence aux propriétés dont les types .NET Framework sont considérés comme « communs » (par exemple, Int32 et String), alors que les propriétés de données complexes font référence à tous les autres types.</span><span class="sxs-lookup"><span data-stu-id="49431-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="49431-110">Une énumération exacte des types primitifs figure plus loin dans cet exemple de code.</span><span class="sxs-lookup"><span data-stu-id="49431-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
+ <span data-ttu-id="19c4d-109">Propriétés des données primitives font référence aux propriétés dont les types .NET Framework sont considérés comme « commun » (par exemple, Int32 et String), tandis que les propriétés de données complexes font référence à tous les autres types.</span><span class="sxs-lookup"><span data-stu-id="19c4d-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="19c4d-110">Une énumération exacte des types primitifs figure plus loin dans cet exemple de code.</span><span class="sxs-lookup"><span data-stu-id="19c4d-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
   
- <span data-ttu-id="49431-111">Les propriétés de lecture/écriture font référence aux propriétés retournées à l'exécution du workflow lorsqu'une instance est chargée.</span><span class="sxs-lookup"><span data-stu-id="49431-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="49431-112">Les propriétés WriteOnly sont écrites dans la base de données et ne sont jamais relues.</span><span class="sxs-lookup"><span data-stu-id="49431-112">WriteOnly properties are written to the database and then never read again.</span></span>  
+ <span data-ttu-id="19c4d-111">Les propriétés de lecture/écriture font référence aux propriétés retournées à l'exécution du workflow lorsqu'une instance est chargée.</span><span class="sxs-lookup"><span data-stu-id="19c4d-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="19c4d-112">Les propriétés WriteOnly sont écrites dans la base de données et ne sont jamais relues.</span><span class="sxs-lookup"><span data-stu-id="19c4d-112">WriteOnly properties are written to the database and then never read again.</span></span>  
   
- <span data-ttu-id="49431-113">Cet exemple fournit un code qui permet à un utilisateur de désérialiser des propriétés des données primitives.</span><span class="sxs-lookup"><span data-stu-id="49431-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="49431-114">Un tableau d’octets lu à partir de la colonne soit l’ou WriteOnlyPrimitiveDataProperties, ce code convertira l’objet binaire volumineux (BLOB) dans un <xref:System.Collections.Generic.Dictionary%602> de type \<XName, objet > où chaque valeur de clé paire représente un nom de propriété et sa valeur correspondante.</span><span class="sxs-lookup"><span data-stu-id="49431-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
+ <span data-ttu-id="19c4d-113">Cet exemple fournit un code qui permet à un utilisateur de désérialiser des propriétés des données primitives.</span><span class="sxs-lookup"><span data-stu-id="19c4d-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="19c4d-114">Étant donné un tableau d’octets lu à partir de la colonne ReadWritePrimitiveDataProperties ou WriteOnlyPrimitiveDataProperties, ce code convertira l’objet binaire volumineux (BLOB) dans un <xref:System.Collections.Generic.Dictionary%602> de type \<XName, objet > où chaque valeur de clé paire représente un nom de propriété et sa valeur correspondante.</span><span class="sxs-lookup"><span data-stu-id="19c4d-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
   
- <span data-ttu-id="49431-115">Cet exemple ne montre pas comment désérialiser les propriétés des données complexes, car cette opération n'est actuellement pas prise en charge.</span><span class="sxs-lookup"><span data-stu-id="49431-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
+ <span data-ttu-id="19c4d-115">Cet exemple ne montre pas comment désérialiser les propriétés des données complexes, car cette opération n'est actuellement pas prise en charge.</span><span class="sxs-lookup"><span data-stu-id="19c4d-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
   
 ```  
 using System;  

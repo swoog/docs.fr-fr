@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7d7fe8f36c7a5dbe6e715402fd7253092b64e68e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650750"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="f52dc-102">ISymUnmanagedWriter::SetScopeRange, méthode</span><span class="sxs-lookup"><span data-stu-id="f52dc-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="f52dc-103">Définit la plage d'offsets pour la portée lexicale spécifiée.</span><span class="sxs-lookup"><span data-stu-id="f52dc-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="f52dc-104">La portée devient la nouvelle portée actuelle et est envoyée à une pile d’étendues.</span><span class="sxs-lookup"><span data-stu-id="f52dc-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="f52dc-105">Les portées doivent former une hiérarchie.</span><span class="sxs-lookup"><span data-stu-id="f52dc-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="f52dc-106">Frères ne sont pas autorisées à chevaucher.</span><span class="sxs-lookup"><span data-stu-id="f52dc-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="31db0-102">ISymUnmanagedWriter::SetScopeRange, méthode</span><span class="sxs-lookup"><span data-stu-id="31db0-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="31db0-103">Définit la plage d'offsets pour la portée lexicale spécifiée.</span><span class="sxs-lookup"><span data-stu-id="31db0-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="31db0-104">La portée devient la nouvelle portée actuelle et est envoyée à une pile d’étendues.</span><span class="sxs-lookup"><span data-stu-id="31db0-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="31db0-105">Les portées doivent former une hiérarchie.</span><span class="sxs-lookup"><span data-stu-id="31db0-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="31db0-106">Frères ne sont pas autorisées à chevaucher.</span><span class="sxs-lookup"><span data-stu-id="31db0-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f52dc-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f52dc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31db0-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="31db0-107">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope(  
@@ -36,25 +36,25 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f52dc-108">Paramètres</span><span class="sxs-lookup"><span data-stu-id="f52dc-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="31db0-108">Paramètres</span><span class="sxs-lookup"><span data-stu-id="31db0-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="f52dc-109">[in] L’identificateur de portée pour la portée.</span><span class="sxs-lookup"><span data-stu-id="f52dc-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="31db0-109">[in] L’identificateur de portée pour la portée.</span><span class="sxs-lookup"><span data-stu-id="31db0-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="f52dc-110">[in] Offset, en octets, de la première instruction dans la portée lexicale à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="f52dc-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="31db0-110">[in] Offset, en octets, de la première instruction dans la portée lexicale à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="31db0-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="f52dc-111">[in] Offset, en octets, de la dernière instruction dans la portée lexicale à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="f52dc-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="31db0-111">[in] Offset, en octets, de la dernière instruction dans la portée lexicale à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="31db0-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f52dc-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="f52dc-112">Return Value</span></span>  
- <span data-ttu-id="f52dc-113">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="f52dc-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="31db0-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="31db0-112">Return Value</span></span>  
+ <span data-ttu-id="31db0-113">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="31db0-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f52dc-114">Notes</span><span class="sxs-lookup"><span data-stu-id="f52dc-114">Remarks</span></span>  
- <span data-ttu-id="f52dc-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retourne un identificateur de portée opaque qui peut être utilisé avec `ISymUnmanagedWriter::SetScopeRange` pour définir une étendue de démarrage et de fin de décalage à partir d’une date ultérieure.</span><span class="sxs-lookup"><span data-stu-id="f52dc-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="f52dc-116">Dans ce cas, les offsets passés à `ISymUnmanagedWriter::OpenScope` et [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="f52dc-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="f52dc-117">Identificateurs d’étendue sont uniquement valides dans la méthode actuelle.</span><span class="sxs-lookup"><span data-stu-id="f52dc-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="31db0-114">Notes</span><span class="sxs-lookup"><span data-stu-id="31db0-114">Remarks</span></span>  
+ <span data-ttu-id="31db0-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retourne un identificateur de portée opaque qui peut être utilisé avec `ISymUnmanagedWriter::SetScopeRange` pour définir une étendue de démarrage et de fin de décalage à partir d’une date ultérieure.</span><span class="sxs-lookup"><span data-stu-id="31db0-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="31db0-116">Dans ce cas, les offsets passés à `ISymUnmanagedWriter::OpenScope` et [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="31db0-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="31db0-117">Identificateurs d’étendue sont uniquement valides dans la méthode actuelle.</span><span class="sxs-lookup"><span data-stu-id="31db0-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f52dc-118">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="f52dc-118">Requirements</span></span>  
- <span data-ttu-id="f52dc-119">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f52dc-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="31db0-118">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="31db0-118">Requirements</span></span>  
+ <span data-ttu-id="31db0-119">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="31db0-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f52dc-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f52dc-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31db0-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="31db0-120">See also</span></span>
 
-- [<span data-ttu-id="f52dc-121">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="f52dc-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="31db0-121">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="31db0-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

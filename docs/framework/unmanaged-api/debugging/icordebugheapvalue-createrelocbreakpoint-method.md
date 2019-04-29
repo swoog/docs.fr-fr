@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700413"
 ---
-# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="9e836-102">ICorDebugHeapValue::CreateRelocBreakpoint, méthode</span><span class="sxs-lookup"><span data-stu-id="9e836-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
-<span data-ttu-id="9e836-103">Cette méthode n’est pas implémentée dans la version actuelle du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e836-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="5ab85-102">ICorDebugHeapValue::CreateRelocBreakpoint, méthode</span><span class="sxs-lookup"><span data-stu-id="5ab85-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
+<span data-ttu-id="5ab85-103">Cette méthode n’est pas implémentée dans la version actuelle du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5ab85-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e836-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="9e836-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ab85-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5ab85-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateRelocBreakpoint (  
@@ -35,9 +35,9 @@ HRESULT CreateRelocBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9e836-105">Spécifications</span><span class="sxs-lookup"><span data-stu-id="9e836-105">Requirements</span></span>  
- <span data-ttu-id="9e836-106">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e836-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ab85-105">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="5ab85-105">Requirements</span></span>  
+ <span data-ttu-id="5ab85-106">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ab85-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e836-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e836-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5ab85-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5ab85-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9e836-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e836-108">**Library:** CorGuids.lib</span></span>
+ <span data-ttu-id="5ab85-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5ab85-108">**Library:** CorGuids.lib</span></span>
