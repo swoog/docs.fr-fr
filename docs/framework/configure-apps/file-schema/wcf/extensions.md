@@ -3,14 +3,14 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700772"
 ---
-# <a name="extensions"></a><span data-ttu-id="bde04-101">\<extensions></span><span class="sxs-lookup"><span data-stu-id="bde04-101">\<extensions></span></span>
-<span data-ttu-id="bde04-102">Cet élément de configuration contient une collection d'éléments XML contenant des métadonnées personnalisées à publier avec les métadonnées détectables standard (EPR, ContractTypeName, BindingName, Scope et ListenURI).</span><span class="sxs-lookup"><span data-stu-id="bde04-102">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="bde04-103">Voici un exemple d'utilisation de cet élément de configuration.</span><span class="sxs-lookup"><span data-stu-id="bde04-103">The following is an example of using this configuration element.</span></span>  
+# <a name="extensions"></a><span data-ttu-id="68361-101">\<extensions></span><span class="sxs-lookup"><span data-stu-id="68361-101">\<extensions></span></span>
+<span data-ttu-id="68361-102">Cet élément de configuration contient une collection d'éléments XML contenant des métadonnées personnalisées à publier avec les métadonnées détectables standard (EPR, ContractTypeName, BindingName, Scope et ListenURI).</span><span class="sxs-lookup"><span data-stu-id="68361-102">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="68361-103">Voici un exemple d'utilisation de cet élément de configuration.</span><span class="sxs-lookup"><span data-stu-id="68361-103">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>
@@ -45,6 +45,6 @@ ms.locfileid: "59767569"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bde04-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bde04-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68361-104">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="68361-104">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
