@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759867"
 ---
 # <a name="windows-forms-control-development-basics"></a>Concepts de base du développement de contrôles Windows Forms
 Un contrôle Windows Forms est une classe qui dérive directement ou indirectement de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. La liste suivante décrit des scénarios courants pour le développement de contrôles Windows Forms :  
   
--   Combinaison de contrôles existants pour créer un contrôle composite.  
+- Combinaison de contrôles existants pour créer un contrôle composite.  
   
      Les contrôles composites encapsulent une interface utilisateur qui peut être réutilisée en tant que contrôle. Un exemple d’un contrôle composite est un contrôle qui se compose d’une zone de texte et un bouton de réinitialisation. Concepteurs visuels offrent une prise en charge riche pour la création de contrôles composites. Pour créer un contrôle composite, dérivez de <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. La classe de base <xref:System.Windows.Forms.UserControl> fournit le routage clavier pour les contrôles enfants et permet aux contrôles enfants fonctionner en tant que groupe. Pour plus d’informations, consultez l’article [Développement d’un contrôle Windows Forms composite](developing-a-composite-windows-forms-control.md).  
   
--   Extension d’un contrôle existant pour le personnaliser ou à ajouter à ses fonctionnalités.  
+- Extension d’un contrôle existant pour le personnaliser ou à ajouter à ses fonctionnalités.  
   
      Un bouton dont la couleur ne peut pas être modifiée et un bouton qui a une propriété supplémentaire qui assure le suivi du nombre de fois où il a été cliqué sont des exemples de contrôles étendus. Vous pouvez personnaliser n’importe quel contrôle Windows Forms en dérivant à partir de celui-ci et en substituant ou en ajoutant des propriétés, méthodes et événements.  
   
--   Création d’un contrôle qui n’a pas été combiner ou étendre des contrôles existants.  
+- Création d’un contrôle qui n’a pas été combiner ou étendre des contrôles existants.  
   
      Dans ce scénario, dérivez votre contrôle de la classe de base <xref:System.Windows.Forms.Control>. Vous pouvez ajouter mais aussi remplacer les propriétés, méthodes et événements de la classe de base. Pour commencer, consultez [Comment : Développer un contrôle de formulaires Windows Simple](how-to-develop-a-simple-windows-forms-control.md).  
   

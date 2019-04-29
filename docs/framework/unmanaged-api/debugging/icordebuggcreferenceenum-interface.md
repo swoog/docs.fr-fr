@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651621"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum, interface
 Fournit un énumérateur pour les objets qui sont récupérés par le récupérateur de mémoire.  
@@ -39,11 +39,11 @@ Fournit un énumérateur pour les objets qui sont récupérés par le récupéra
   
  Le [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) trois types d’objets représentent des objets dans la collection remplie par cette méthode :  
   
--   Objets à partir de toutes les piles gérées. Cela inclut des références en direct dans le code managé, ainsi que les objets créés par le common language runtime.  
+- Objets à partir de toutes les piles gérées. Cela inclut des références en direct dans le code managé, ainsi que les objets créés par le common language runtime.  
   
--   Objets à partir de la table de handles. Cela inclut des références fortes (`HNDTYPE_STRONG` et `HNDTYPE_REFCOUNT`) et les variables statiques dans un module.  
+- Objets à partir de la table de handles. Cela inclut des références fortes (`HNDTYPE_STRONG` et `HNDTYPE_REFCOUNT`) et les variables statiques dans un module.  
   
--   Objets à partir de la file d’attente du finaliseur. La file d’attente du finaliseur racines des objets jusqu'à ce que le finaliseur s’est exécutée.  
+- Objets à partir de la file d’attente du finaliseur. La file d’attente du finaliseur racines des objets jusqu'à ce que le finaliseur s’est exécutée.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

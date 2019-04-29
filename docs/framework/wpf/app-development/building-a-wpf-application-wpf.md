@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757598"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
 Applications Windows Presentation Foundation (WPF) peuvent être construites comme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exécutables (.exe), des bibliothèques (.dll), ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  
@@ -21,11 +21,11 @@ Applications Windows Presentation Foundation (WPF) peuvent être construites com
 ## <a name="building-a-wpf-application"></a>Génération d'une application WPF  
  Une application WPF peut être compilée des façons suivantes :  
   
--   Ligne de commande. L’application doit contenir uniquement du code (aucun XAML) et un fichier de définition d’application. Pour plus d’informations, consultez [Génération à partir de la ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [Génération à partir de la ligne de commande (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+- Ligne de commande. L’application doit contenir uniquement du code (aucun XAML) et un fichier de définition d’application. Pour plus d’informations, consultez [Génération à partir de la ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) ou [Génération à partir de la ligne de commande (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
--   Microsoft Build Engine (MSBuild). Outre le code et les fichiers XAML, l’application doit contenir un fichier projet MSBuild. Pour plus d’informations, consultez « MSBuild ».  
+- Microsoft Build Engine (MSBuild). Outre le code et les fichiers XAML, l’application doit contenir un fichier projet MSBuild. Pour plus d’informations, consultez « MSBuild ».  
   
--   Visual Studio. Visual Studio est un environnement de développement intégré qui compile les applications WPF à l’aide de MSBuild et comprend un concepteur visuel pour créer l’interface utilisateur. Pour plus d’informations, consultez [écrire et gérer le code à l’aide de Visual Studio](/visualstudio/ide/index-writing-code) et [XAML de conception dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
+- Visual Studio. Visual Studio est un environnement de développement intégré qui compile les applications WPF à l’aide de MSBuild et comprend un concepteur visuel pour créer l’interface utilisateur. Pour plus d’informations, consultez [écrire et gérer le code à l’aide de Visual Studio](/visualstudio/ide/index-writing-code) et [XAML de conception dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>Pipeline de génération WPF  
@@ -37,13 +37,13 @@ Applications Windows Presentation Foundation (WPF) peuvent être construites com
 ### <a name="pre-build-initializations"></a>Initialisations avant génération  
  Avant la génération, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] détermine l’emplacement des bibliothèques et des outils importants, dont les éléments suivants :  
   
--   Le .NET Framework.  
+- Le .NET Framework.  
   
--   Répertoires [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  
+- Répertoires [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  
   
--   Emplacement des assemblys de référence [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- Emplacement des assemblys de référence [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
--   Propriété pour les chemins de recherche des assemblys.  
+- Propriété pour les chemins de recherche des assemblys.  
   
  Le premier emplacement où [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] recherche les assemblys est le répertoire de l’assembly de référence (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). Pendant cette étape, le processus de génération initialise également les diverses propriétés et groupes d’éléments, et exécute tout travail de nettoyage nécessaire.  
   
@@ -129,41 +129,41 @@ End Sub
 ## <a name="incremental-build-support"></a>Prise en charge de la build incrémentielle  
  Le système de génération [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assure la prise en charge des builds incrémentielles. Il est assez intelligent pour détecter les modifications apportées au balisage ou au code, et il compile uniquement les artefacts affectés par la modification. Le mécanisme de build incrémentielle utilise les fichiers suivants :  
   
--   Un fichier $(*AssemblyName*)_MarkupCompiler.Cache pour gérer l’état du compilateur actuel.  
+- Un fichier $(*AssemblyName*)_MarkupCompiler.Cache pour gérer l’état du compilateur actuel.  
   
--   Un fichier $(*AssemblyName*)_MarkupCompiler.lref pour mettre en cache les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec les références aux types définis localement.  
+- Un fichier $(*AssemblyName*)_MarkupCompiler.lref pour mettre en cache les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec les références aux types définis localement.  
   
  Voici un ensemble de règles qui régissent la build incrémentielle :  
   
--   Le fichier est la plus petite unité au niveau de laquelle le système de génération détecte une modification. Par conséquent, pour un fichier de code, le système de génération ne peut pas déterminer si un type a été modifié ou si du code a été ajouté. Il en va de même pour les fichiers projet.  
+- Le fichier est la plus petite unité au niveau de laquelle le système de génération détecte une modification. Par conséquent, pour un fichier de code, le système de génération ne peut pas déterminer si un type a été modifié ou si du code a été ajouté. Il en va de même pour les fichiers projet.  
   
--   Le mécanisme de build incrémentielle doit être informé qu’une page [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] définit une classe ou utilise d’autres classes.  
+- Le mécanisme de build incrémentielle doit être informé qu’une page [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] définit une classe ou utilise d’autres classes.  
   
--   Si des entrées `Reference` sont modifiées, vous devez recompiler toutes les pages.  
+- Si des entrées `Reference` sont modifiées, vous devez recompiler toutes les pages.  
   
--   Si un fichier de code est modifié, recompilez toutes les pages avec des références à des types définis localement.  
+- Si un fichier de code est modifié, recompilez toutes les pages avec des références à des types définis localement.  
   
--   Si un fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est modifié :  
+- Si un fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est modifié :  
   
-    -   Si [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est déclaré comme `Page` dans le projet : si le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ne contient pas de références à des types définis localement, recompilez ce fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plus toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec des références locales ; si le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contient des références locales, recompilez toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec les références locales.  
+    - Si [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est déclaré comme `Page` dans le projet : si le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ne contient pas de références à des types définis localement, recompilez ce fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plus toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec des références locales ; si le fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contient des références locales, recompilez toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec les références locales.  
   
-    -   Si [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est déclaré comme `ApplicationDefinition` dans le projet : recompilez toutes les [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages (raison : chaque [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fait référence à un <xref:System.Windows.Application> type peut avoir été modifiée).  
+    - Si [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est déclaré comme `ApplicationDefinition` dans le projet : recompilez toutes les [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages (raison : chaque [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fait référence à un <xref:System.Windows.Application> type peut avoir été modifiée).  
   
--   Si le fichier projet déclare un fichier de code en tant que définition d’application au lieu d’un fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] :  
+- Si le fichier projet déclare un fichier de code en tant que définition d’application au lieu d’un fichier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] :  
   
-    -   Vérifiez si la valeur `ApplicationClassName` dans le fichier projet a changé (existe-t-il un nouveau type d’application ?). Dans ce cas, recompilez toute l’application.  
+    - Vérifiez si la valeur `ApplicationClassName` dans le fichier projet a changé (existe-t-il un nouveau type d’application ?). Dans ce cas, recompilez toute l’application.  
   
-    -   Sinon, recompilez toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec des références locales.  
+    - Sinon, recompilez toutes les pages [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] avec des références locales.  
   
--   Si un fichier projet change : appliquez toutes les règles précédentes et déterminez ce qui doit être recompilé. Les modifications apportées aux propriétés suivantes entraînent une recompilation complète : `AssemblyName`, `IntermediateOutputPath`, `RootNamespace` et `HostInBrowser`.  
+- Si un fichier projet change : appliquez toutes les règles précédentes et déterminez ce qui doit être recompilé. Les modifications apportées aux propriétés suivantes entraînent une recompilation complète : `AssemblyName`, `IntermediateOutputPath`, `RootNamespace` et `HostInBrowser`.  
   
  Les scénarios de recompilation suivants sont possibles :  
   
--   Toute l’application est recompilée.  
+- Toute l’application est recompilée.  
   
--   Seuls les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] qui contiennent des références à des types définis localement sont recompilés.  
+- Seuls les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] qui contiennent des références à des types définis localement sont recompilés.  
   
--   Rien n’est recompilé (si rien dans le projet n’a changé).  
+- Rien n’est recompilé (si rien dans le projet n’a changé).  
   
 ## <a name="see-also"></a>Voir aussi
 

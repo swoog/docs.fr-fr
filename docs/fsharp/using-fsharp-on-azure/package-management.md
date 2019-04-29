@@ -4,11 +4,11 @@ description: Permet de gérer Paket ou Nuget F# dépendances Azure
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33566967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756531"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Gestion des packages pour les dépendances F# Azure
 

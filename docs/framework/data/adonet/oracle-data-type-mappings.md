@@ -3,11 +3,11 @@ title: Mappages des types de données Oracle
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
 ms.openlocfilehash: c1fb3a6838e6a1b242255d4035c10ab0ec07d536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771980"
 ---
 # <a name="oracle-data-type-mappings"></a>Mappages des types de données Oracle
 La table suivante répertorie les types de données Oracle et leurs mappages sur le <xref:System.Data.OracleClient.OracleDataReader>.  

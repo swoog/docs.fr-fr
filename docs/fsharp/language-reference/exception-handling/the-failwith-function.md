@@ -3,11 +3,11 @@ title: 'Exceptions : failwith (fonction)'
 description: Découvrez comment la fonction « failwith » génère une F# exception.
 ms.date: 05/16/2016
 ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772682"
 ---
 # <a name="exceptions-the-failwith-function"></a>Exceptions : failwith (fonction)
 
@@ -31,6 +31,6 @@ L’exception qui est générée par `failwith` est un `System.Exception` except
 
 - [Gestion des exceptions](index.md)
 - [Types d'exceptions](exception-types.md)
-- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)
-- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
+- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)
+- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
 - [Exceptions : fonction `raise`](the-raise-function.md)

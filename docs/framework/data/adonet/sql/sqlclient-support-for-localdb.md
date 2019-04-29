@@ -3,11 +3,11 @@ title: Prise en charge de SqlClient pour LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670051"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Prise en charge de SqlClient pour LocalDB
 À compter de SQL Server, nom de code Denali, une version légère de SQL Server, appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données LocalDB.  
@@ -17,13 +17,13 @@ ms.locfileid: "59204755"
   
  Pour résumer les opérations possibles avec LocalDB :  
   
--   Créez et démarrez les instances de LocalDB avec sqllocaldb.exe ou votre fichier app.config.  
+- Créez et démarrez les instances de LocalDB avec sqllocaldb.exe ou votre fichier app.config.  
   
--   Utilisez sqlcmd.exe pour ajouter et modifier des bases de données dans une instance de LocalDB. Par exemple, `sqlcmd -S (localdb)\myinst`.  
+- Utilisez sqlcmd.exe pour ajouter et modifier des bases de données dans une instance de LocalDB. Par exemple, `sqlcmd -S (localdb)\myinst`.  
   
--   Utilisez le mot clé de chaîne de connexion `AttachDBFilename` pour ajouter une base de données à votre instance de LocalDB. Lorsque vous utilisez `AttachDBFilename`, si vous ne spécifiez pas le nom de la base de données avec le mot clé de chaîne de connexion `Database` , la base de données sera supprimée de l'instance de LocalDB lorsque l'application se ferme.  
+- Utilisez le mot clé de chaîne de connexion `AttachDBFilename` pour ajouter une base de données à votre instance de LocalDB. Lorsque vous utilisez `AttachDBFilename`, si vous ne spécifiez pas le nom de la base de données avec le mot clé de chaîne de connexion `Database` , la base de données sera supprimée de l'instance de LocalDB lorsque l'application se ferme.  
   
--   Spécifiez une instance de LocalDB dans votre chaîne de connexion. Par exemple, si le nom de l'instance est `myInstance`, la chaîne de connexion est la suivante :  
+- Spécifiez une instance de LocalDB dans votre chaîne de connexion. Par exemple, si le nom de l'instance est `myInstance`, la chaîne de connexion est la suivante :  
   
     ```  
     server=(localdb)\\myInstance  
@@ -36,7 +36,7 @@ ms.locfileid: "59204755"
 ## <a name="programmatically-create-a-named-instance"></a>Créer par programme une instance nommée  
  Une application peut créer une instance nommée et spécifier une base de données comme suit :  
   
--   Spécifiez les instances de LocalDB à créer dans le fichier app.config, comme suit.  Le numéro de version de l'instance doit être le même que le numéro de version de votre installation de LocalDB.  
+- Spécifiez les instances de LocalDB à créer dans le fichier app.config, comme suit.  Le numéro de version de l'instance doit être le même que le numéro de version de votre installation de LocalDB.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,9 +54,9 @@ ms.locfileid: "59204755"
     </configuration>  
     ```  
   
--   Spécifiez le nom de l'instance à l'aide du mot clé de chaîne de connexion `server` .  Le nom d’instance spécifié dans le mot clé de chaîne de connexion `server` doit correspondre au nom spécifié dans le fichier app.config.  
+- Spécifiez le nom de l'instance à l'aide du mot clé de chaîne de connexion `server` .  Le nom d’instance spécifié dans le mot clé de chaîne de connexion `server` doit correspondre au nom spécifié dans le fichier app.config.  
   
--   Utilisez le mot clé de chaîne de connexion `AttachDBFilename` pour spécifier le fichier .MDF.  
+- Utilisez le mot clé de chaîne de connexion `AttachDBFilename` pour spécifier le fichier .MDF.  
   
 ## <a name="see-also"></a>Voir aussi
 

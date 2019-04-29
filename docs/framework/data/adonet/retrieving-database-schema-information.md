@@ -3,11 +3,11 @@ title: Extraction des informations de schéma de base de données
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664244"
 ---
 # <a name="retrieving-database-schema-information"></a>Extraction des informations de schéma de base de données
 L'obtention des informations de schéma à partir d'une base de données est effectuée avec le processus de découverte de schéma. Découverte de schéma permet aux applications de demander que les fournisseurs managés trouvent et retournent des informations sur le schéma de base de données, également appelé *métadonnées*, d’une base de données. Différents éléments de schéma de base de données tels que des tables, des colonnes et des procédures stockées, sont exposés à l’aide de collections de schémas. Chaque collection de schémas contient une série d'informations de schéma spécifiques au fournisseur utilisé.  

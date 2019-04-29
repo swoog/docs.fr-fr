@@ -3,11 +3,11 @@ title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664153"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 La sécurisation d'une application est un processus permanent. Un développeur ne peut à aucun moment garantir qu'une application est à l'abri de toute attaque car il est impossible de prédire les types d'attaques futures que les nouvelles technologies permettront de faire apparaître. Inversement, le fait que personne n'a encore découvert (ou révélé) les défaillances de la sécurité d'un système ne signifie pas qu'il n'en existe pas ou qu'il ne peut pas en exister. Vous devez planifier la sécurité au cours de la phase de conception du projet, ainsi que la manière dont la sécurité sera maintenue tout au long de la durée de vie de l'application.  
@@ -46,19 +46,19 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 ## <a name="code-access-security-cas"></a>sécurité d'accès du code (CAS, Code Access Security)  
  La sécurité d'accès au code est un mécanisme qui aide à limiter l'accès dont dispose le code aux ressources et opérations protégées. Dans le .NET Framework, la sécurité d'accès du code remplit les fonctions suivantes :  
   
--   Définit les autorisations et les jeux d'autorisations qui représentent le droit d'accéder à diverses ressources système.  
+- Définit les autorisations et les jeux d'autorisations qui représentent le droit d'accéder à diverses ressources système.  
   
--   Permet aux administrateurs de configurer la stratégie de sécurité en associant les ensembles d'autorisations à des groupes de code.  
+- Permet aux administrateurs de configurer la stratégie de sécurité en associant les ensembles d'autorisations à des groupes de code.  
   
--   Autorise le code à demander les autorisations nécessaires à son exécution, ainsi que les autorisations éventuellement utiles, puis spécifie les autorisations que le code ne doit jamais avoir.  
+- Autorise le code à demander les autorisations nécessaires à son exécution, ainsi que les autorisations éventuellement utiles, puis spécifie les autorisations que le code ne doit jamais avoir.  
   
--   Octroie des autorisations à chaque assembly chargé, en fonction des autorisations demandées par le code et des opérations autorisées par la stratégie de sécurité.  
+- Octroie des autorisations à chaque assembly chargé, en fonction des autorisations demandées par le code et des opérations autorisées par la stratégie de sécurité.  
   
--   Permet au code de demander que ses appelants possèdent des autorisations spécifiques.  
+- Permet au code de demander que ses appelants possèdent des autorisations spécifiques.  
   
--   Permet au code de demander que ses appelants possèdent une signature numérique, ce qui permet ainsi que l'appel du code protégé soit uniquement effectué par des appelants d'une organisation ou d'un site spécifique.  
+- Permet au code de demander que ses appelants possèdent une signature numérique, ce qui permet ainsi que l'appel du code protégé soit uniquement effectué par des appelants d'une organisation ou d'un site spécifique.  
   
--   Applique des restrictions sur le code au moment de l'exécution en comparant les autorisations accordées de chaque appelant sur la pile d'appels avec les autorisations que les appelants doivent posséder.  
+- Applique des restrictions sur le code au moment de l'exécution en comparant les autorisations accordées de chaque appelant sur la pile d'appels avec les autorisations que les appelants doivent posséder.  
   
  Pour réduire l'étendue des dommages pouvant se produire en cas d'attaque réussie, choisissez un contexte de sécurité pour votre code, qui accorde un accès uniquement aux ressources dont il a besoin pour effectuer son travail et à aucune autre.  
   
@@ -72,17 +72,17 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 ## <a name="database-security"></a>Sécurité de base de données  
  Le principe des privilèges minimum s'applique également à votre source de données. Ci-dessous figurent quelques-unes des instructions générales concernant la sécurité de la base de données :  
   
--   Créez des comptes avec les privilèges les moins élevés possible.  
+- Créez des comptes avec les privilèges les moins élevés possible.  
   
--   N'autorisez pas les utilisateurs à accéder aux comptes d'administration uniquement pour faire fonctionner le code.  
+- N'autorisez pas les utilisateurs à accéder aux comptes d'administration uniquement pour faire fonctionner le code.  
   
--   Ne retournez pas de messages d'erreur côté serveur pour les applications clientes.  
+- Ne retournez pas de messages d'erreur côté serveur pour les applications clientes.  
   
--   Validez toutes les entrées sur le client et le serveur.  
+- Validez toutes les entrées sur le client et le serveur.  
   
--   Utilisez des commandes paramétrées et évitez les instructions SQL dynamiques.  
+- Utilisez des commandes paramétrées et évitez les instructions SQL dynamiques.  
   
--   Activez l'audit de sécurité et la journalisation pour la base de données que vous utilisez, afin d'être alerté en cas de brèches de sécurité.  
+- Activez l'audit de sécurité et la journalisation pour la base de données que vous utilisez, afin d'être alerté en cas de brèches de sécurité.  
   
  Pour plus d'informations, voir les ressources ci-dessous.  
   

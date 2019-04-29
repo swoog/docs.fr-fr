@@ -3,11 +3,11 @@ title: Fichiers de signature
 description: Découvrez comment utiliser F# pour conserver les informations sur les signatures publiques d’un ensemble de fichiers de signature F# éléments, tels que des types, des espaces de noms et des modules de programme.
 ms.date: 06/15/2018
 ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770446"
 ---
 # <a name="signatures"></a>Signatures
 

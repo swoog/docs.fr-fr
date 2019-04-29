@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762057"
 ---
 # <a name="sealing"></a>Sceller
 L’une des fonctionnalités d’infrastructures et orienté objet est que les développeurs peuvent étendre et personnaliser les manières imprévus par les concepteurs de framework. Il s’agit la puissance et le risque de conception extensible. Lorsque vous concevez votre infrastructure, il est donc très important de concevoir soigneusement pour l’extensibilité lorsqu’il est nécessaire et pour limiter l’extensibilité lorsqu’il est dangereux.  
@@ -27,13 +27,13 @@ L’une des fonctionnalités d’infrastructures et orienté objet est que les d
   
  Bonnes raisons pour sceller une classe sont les suivantes :  
   
--   La classe est une classe statique. Consultez [conception de classes statiques](../../../docs/standard/design-guidelines/static-class.md).  
+- La classe est une classe statique. Consultez [conception de classes statiques](../../../docs/standard/design-guidelines/static-class.md).  
   
--   La classe stocke les clés secrètes sensibles à la sécurité dans les membres protégés hérités.  
+- La classe stocke les clés secrètes sensibles à la sécurité dans les membres protégés hérités.  
   
--   La classe hérite de nombreux membres virtuels et le coût de leur scellement individuellement serait dépassent les avantages de la classe non scellés.  
+- La classe hérite de nombreux membres virtuels et le coût de leur scellement individuellement serait dépassent les avantages de la classe non scellés.  
   
--   La classe est un attribut qui nécessite la recherche d’exécution très rapide. Attributs sealed ont des niveaux de performances légèrement plus élevés que ceux non scellé. consultez [attributs](../../../docs/standard/design-guidelines/attributes.md).  
+- La classe est un attribut qui nécessite la recherche d’exécution très rapide. Attributs sealed ont des niveaux de performances légèrement plus élevés que ceux non scellé. consultez [attributs](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** déclarer les membres virtuels ou protégés sur les types sealed.  
   

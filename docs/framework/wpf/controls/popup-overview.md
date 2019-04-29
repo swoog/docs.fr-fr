@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770563"
 ---
 # <a name="popup-overview"></a>Vue d'ensemble de Popup
 Le <xref:System.Windows.Controls.Primitives.Popup> contrôle offre un moyen pour afficher le contenu dans une fenêtre distincte qui flotte au-dessus de la fenêtre d’application actuelle par rapport à une coordonnée d’écran ou élément désignée. Cette rubrique présente la <xref:System.Windows.Controls.Primitives.Popup> contrôler et fournit des informations sur son utilisation.  
@@ -34,13 +34,13 @@ Le <xref:System.Windows.Controls.Primitives.Popup> contrôle offre un moyen pour
 ## <a name="controls-that-implement-a-popup"></a>Contrôles qui implémentent un contrôle Popup  
  Vous pouvez générer <xref:System.Windows.Controls.Primitives.Popup> contrôles dans d’autres contrôles. Les contrôles suivants implémentent le <xref:System.Windows.Controls.Primitives.Popup> contrôle pour des utilisations spécifiques :  
   
--   <xref:System.Windows.Controls.ToolTip>. Si vous souhaitez créer une info-bulle pour un élément, utilisez la <xref:System.Windows.Controls.ToolTip> et <xref:System.Windows.Controls.ToolTipService> classes. Pour plus d’informations, consultez [Vue d’ensemble de l’info-bulle](tooltip-overview.md).  
+- <xref:System.Windows.Controls.ToolTip>. Si vous souhaitez créer une info-bulle pour un élément, utilisez la <xref:System.Windows.Controls.ToolTip> et <xref:System.Windows.Controls.ToolTipService> classes. Pour plus d’informations, consultez [Vue d’ensemble de l’info-bulle](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Si vous souhaitez créer un menu contextuel pour un élément, utilisez la <xref:System.Windows.Controls.ContextMenu> contrôle. Pour plus d’informations, consultez [Vue d’ensemble de ContextMenu](contextmenu-overview.md).  
+- <xref:System.Windows.Controls.ContextMenu>. Si vous souhaitez créer un menu contextuel pour un élément, utilisez la <xref:System.Windows.Controls.ContextMenu> contrôle. Pour plus d’informations, consultez [Vue d’ensemble de ContextMenu](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Si vous souhaitez créer un contrôle de sélection qui possède une zone de liste déroulante qui peut être affichée ou masquée, utilisez le <xref:System.Windows.Controls.ComboBox> contrôle.  
+- <xref:System.Windows.Controls.ComboBox>. Si vous souhaitez créer un contrôle de sélection qui possède une zone de liste déroulante qui peut être affichée ou masquée, utilisez le <xref:System.Windows.Controls.ComboBox> contrôle.  
   
--   <xref:System.Windows.Controls.Expander>. Si vous souhaitez créer un contrôle qui affiche un en-tête avec une zone réductible qui affiche du contenu, utilisez le <xref:System.Windows.Controls.Expander> contrôle. Pour plus d’informations, consultez [Vue d’ensemble d’Expander](expander-overview.md).  
+- <xref:System.Windows.Controls.Expander>. Si vous souhaitez créer un contrôle qui affiche un en-tête avec une zone réductible qui affiche du contenu, utilisez le <xref:System.Windows.Controls.Expander> contrôle. Pour plus d’informations, consultez [Vue d’ensemble d’Expander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Comportement et apparence d’un contrôle Popup  

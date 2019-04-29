@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760712"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities assure une prise en charge de la technologie LINQ (Language Integrated Query), ce qui permet aux développeurs d'écrire des requêtes par rapport au modèle conceptuel Entity Framework à l'aide du langage Visual Basic ou Visual C#. Les requêtes exécutées avec Entity Framework sont représentées par des requêtes d'arborescence de commandes, lesquelles s'exécutent par rapport au contexte de l'objet. LINQ to Entities convertit les requêtes LINQ (Language-Integrated Query) en requêtes d'arborescence de commandes, exécute les requêtes avec Entity Framework, puis retourne les objets qui peuvent être utilisés aussi bien par Entity Framework que par LINQ. Voici le processus de création et d'exécution d'une requête LINQ to Entities :  
@@ -57,13 +57,13 @@ LINQ to Entities assure une prise en charge de la technologie LINQ (Language Int
   
  Les résultats de la requête sont généralement retournés sous l'une des formes suivantes :  
   
--   une collection de zéro, un ou plusieurs objets entité typés ou une projection de types complexes définis dans le modèle conceptuel ;  
+- une collection de zéro, un ou plusieurs objets entité typés ou une projection de types complexes définis dans le modèle conceptuel ;  
   
--   des types CLR pris en charge par [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ;  
+- des types CLR pris en charge par [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ;  
   
--   Collections inline.  
+- Collections inline.  
   
--   Types anonymes.  
+- Types anonymes.  
   
  Pour plus d’informations, consultez [résultats de la requête](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

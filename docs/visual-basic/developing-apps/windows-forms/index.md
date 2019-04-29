@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768538"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Concepts de base de l'application Windows Forms (Visual Basic)
 Une partie importante de Visual Basic est la possibilité de créer des applications Windows Forms qui s’exécutent localement sur les ordinateurs des utilisateurs. Vous pouvez utiliser Visual Studio pour créer l’interface utilisateur et d’applications à l’aide de Windows Forms. Une application Windows Forms repose sur les classes de le <xref:System.Windows.Forms> espace de noms.  
@@ -18,11 +18,11 @@ Une partie importante de Visual Basic est la possibilité de créer des applicat
 ## <a name="designing-windows-forms-applications"></a>Conception de Windows Forms Applications  
  Vous pouvez créer des Windows Forms et applications de service Windows avec Visual Studio. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [Bien démarrer avec Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Fournit des informations sur la façon de créer et programmer des Windows Forms.  
+- [Bien démarrer avec Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Fournit des informations sur la façon de créer et programmer des Windows Forms.  
    
--   [Les contrôles Windows Forms](../../../framework/winforms/controls/index.md). Collection de rubriques détaillant l’utilisation de contrôles Windows Forms.  
+- [Les contrôles Windows Forms](../../../framework/winforms/controls/index.md). Collection de rubriques détaillant l’utilisation de contrôles Windows Forms.  
   
--   [Applications de Service Windows](../../../framework/windows-services/index.md). Répertorie les rubriques qui expliquent comment créer des services Windows.  
+- [Applications de Service Windows](../../../framework/windows-services/index.md). Répertorie les rubriques qui expliquent comment créer des services Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Création d'interfaces utilisateur interactives et enrichies  
  Windows Forms est le composant client intelligent de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un ensemble de bibliothèques gérées qui activent des tâches d’application courantes telles que lire et écrire dans le système de fichiers. À l’aide d’un environnement de développement tels que Visual Studio, vous pouvez créer des applications Windows Forms qui affichent des informations, demandent des entrées d’utilisateurs et communiquent avec des ordinateurs distants sur un réseau.  
@@ -46,7 +46,7 @@ Une partie importante de Visual Basic est la possibilité de créer des applicat
   
 |À|Voir|  
 |--------|---------|  
-|Créer une application Windows Forms avec Visual Studio|[Didacticiel 1 : Créer une visionneuse d’images](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
+|Créer une application Windows Forms avec Visual Studio|[Tutoriel 1 : Créer une visionneuse d’images](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Utiliser des contrôles sur des formulaires|[Guide pratique pour Ajouter des contrôles aux Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Créer des graphismes avec <xref:System.Drawing>|[Mise en route de la programmation graphique](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Créer des contrôles personnalisés|[Guide pratique pour Hériter de la classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

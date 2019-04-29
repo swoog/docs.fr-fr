@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698653"
 ---
 # <a name="using-statement-visual-basic"></a>Using, instruction (Visual Basic)
 Déclare le début d’un `Using` bloquer et acquiert éventuellement les ressources système qui contrôle le bloc.  
@@ -61,11 +61,11 @@ End Using
   
  Un `Using` bloc comprend trois parties : acquisition, de l’utilisation et de suppression.  
   
--   *Acquisition* signifie que la création d’une variable et l’initialiser pour faire référence à la ressource du système. Le `Using` instruction peut acquérir une ou plusieurs ressources, ou vous pouvez acquérir exactement une ressource avant d’entrer dans le bloc et lui fournir à la `Using` instruction. Si vous fournissez `resourceexpression`, vous devez acquérir la ressource avant de passer le contrôle à la `Using` instruction.  
+- *Acquisition* signifie que la création d’une variable et l’initialiser pour faire référence à la ressource du système. Le `Using` instruction peut acquérir une ou plusieurs ressources, ou vous pouvez acquérir exactement une ressource avant d’entrer dans le bloc et lui fournir à la `Using` instruction. Si vous fournissez `resourceexpression`, vous devez acquérir la ressource avant de passer le contrôle à la `Using` instruction.  
   
--   *Utilisation* signifie que l’accès des ressources et d’exécuter des opérations. Les instructions entre `Using` et `End Using` représentent l’utilisation des ressources.  
+- *Utilisation* signifie que l’accès des ressources et d’exécuter des opérations. Les instructions entre `Using` et `End Using` représentent l’utilisation des ressources.  
   
--   *Élimination* signifie appeler le <xref:System.IDisposable.Dispose%2A> méthode sur l’objet dans `resourcename`. Cela permet à l’objet arrêter correctement ses ressources. Le `End Using` instruction supprime les ressources sous le `Using` contrôle du bloc.  
+- *Élimination* signifie appeler le <xref:System.IDisposable.Dispose%2A> méthode sur l’objet dans `resourcename`. Cela permet à l’objet arrêter correctement ses ressources. Le `End Using` instruction supprime les ressources sous le `Using` contrôle du bloc.  
   
 ## <a name="behavior"></a>Comportement  
  Un `Using` bloc se comporte comme un `Try`... `Finally` dans laquelle le `Try` bloc utilise les ressources et le `Finally` bloc supprime d'entre eux. Pour cette raison, le `Using` bloc garantit l’élimination des ressources, quel que soit la manière dont vous quittez le bloc. Cela est vrai même en cas d’une exception non gérée, sauf pour un <xref:System.StackOverflowException>.  

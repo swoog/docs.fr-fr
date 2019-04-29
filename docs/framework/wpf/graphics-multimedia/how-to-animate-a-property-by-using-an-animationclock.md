@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761011"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Procédure : Animer une propriété à l’aide d’un objet AnimationClock
 Cet exemple montre comment utiliser <xref:System.Windows.Media.Animation.Clock> objets à animer une propriété.  
   
  Il existe trois façons d’animer une propriété de dépendance :  
   
--   Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> et l’associer à cette propriété à l’aide un <xref:System.Windows.Media.Animation.Storyboard>.  
+- Créer un <xref:System.Windows.Media.Animation.AnimationTimeline> et l’associer à cette propriété à l’aide un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Utilisez l’objet <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode pour appliquer un seul <xref:System.Windows.Media.Animation.AnimationTimeline> à une propriété cible.  
+- Utilisez l’objet <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode pour appliquer un seul <xref:System.Windows.Media.Animation.AnimationTimeline> à une propriété cible.  
   
--   Créer un <xref:System.Windows.Media.Animation.AnimationClock> à partir d’un <xref:System.Windows.Media.Animation.AnimationTimeline> et appliquez-le à une propriété.  
+- Créer un <xref:System.Windows.Media.Animation.AnimationClock> à partir d’un <xref:System.Windows.Media.Animation.AnimationTimeline> et appliquez-le à une propriété.  
   
  <xref:System.Windows.Media.Animation.Storyboard> objets et le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> activer la méthode vous permet d’animer des propriétés sans créer et distribuer des horloges directement (pour obtenir des exemples, consultez [animer une propriété à l’aide d’un Storyboard](how-to-animate-a-property-by-using-a-storyboard.md) et [animer une propriété sans À l’aide d’un Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)) ; horloges sont créées et distribuées automatiquement pour vous.  
   

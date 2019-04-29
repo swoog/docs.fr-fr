@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775932"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Les *interfaces* définissent les propriétés, méthodes et événements qui peuvent être implémentés par les classes. Les interfaces vous permettent de définir des fonctionnalités sous forme de petits groupes de propriétés, méthodes et événements étroitement liés. Les risques d’incompatibilité sont ainsi limités, car vous pouvez développer des implémentations avancées pour vos interfaces sans mettre en danger le code existant. Vous pouvez ajouter de nouvelles fonctionnalités à tout moment en développant des interfaces et implémentations supplémentaires.  
   
  Il existe plusieurs autres raisons qui peuvent vous amener à préférer les interfaces à l'héritage de classes :  
   
--   Les interfaces sont mieux adaptées aux situations dans lesquelles vos applications exigent que de nombreux types d'objet éventuellement sans relation fournissent certaines fonctionnalités.  
+- Les interfaces sont mieux adaptées aux situations dans lesquelles vos applications exigent que de nombreux types d'objet éventuellement sans relation fournissent certaines fonctionnalités.  
   
--   Les interfaces sont plus flexibles que les classes de base, car vous pouvez définir une implémentation unique susceptible d'implémenter plusieurs interfaces.  
+- Les interfaces sont plus flexibles que les classes de base, car vous pouvez définir une implémentation unique susceptible d'implémenter plusieurs interfaces.  
   
--   Les interfaces sont plus indiquées dans les cas où vous n'avez pas besoin d'hériter d'une implémentation à partir d'une classe de base.  
+- Les interfaces sont plus indiquées dans les cas où vous n'avez pas besoin d'hériter d'une implémentation à partir d'une classe de base.  
   
--   Les interfaces sont utiles quand vous ne pouvez pas utiliser l'héritage de classes. Par exemple, les structures ne peuvent pas hériter des classes, mais elles peuvent implémenter des interfaces.  
+- Les interfaces sont utiles quand vous ne pouvez pas utiliser l'héritage de classes. Par exemple, les structures ne peuvent pas hériter des classes, mais elles peuvent implémenter des interfaces.  
   
 ## <a name="declaring-interfaces"></a>Déclaration des interfaces  
  Les définitions d'interfaces figurent entre les instructions `Interface` et `End Interface`. À la suite de l'instruction `Interface`, vous pouvez ajouter une instruction `Inherits` facultative qui répertorie une ou plusieurs interfaces héritées. Les instructions `Inherits` doivent précéder toutes les autres instructions dans la déclaration, à l'exception des commentaires. Les autres instructions figurant dans la définition de l'interface doivent être `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` et `Enum`. Les interfaces ne peuvent pas contenir de code d'implémentation ni d'instructions associées au code d'implémentation, telles que `End Sub` ou `End Property`.  

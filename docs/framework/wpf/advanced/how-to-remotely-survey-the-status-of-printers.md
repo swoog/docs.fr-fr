@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768499"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Procédure : Observer à distance l’état d’imprimantes
 Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plusieurs imprimantes ne fonctionnent pas en raison d’un bourrage papier, d’un manque de papier ou d’un autre problème. L’ensemble des propriétés de l’imprimante exposé dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen de mener une enquête rapide de l’état des imprimantes.  
@@ -39,9 +39,9 @@ Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plu
   
  L’exemple utilise ensuite <xref:System.Printing.PrintServer.GetPrintQueues%2A> pour créer une collection de tous les du serveur de file d’attente et commence aux Parcourir en boucle. La boucle interne contient une structure en branches correspondant aux deux méthodes de vérification de l’état de l’imprimante :  
   
--   Vous pouvez lire les indicateurs de la <xref:System.Printing.PrintQueue.QueueStatus%2A> propriété qui est de type <xref:System.Printing.PrintQueueStatus>.  
+- Vous pouvez lire les indicateurs de la <xref:System.Printing.PrintQueue.QueueStatus%2A> propriété qui est de type <xref:System.Printing.PrintQueueStatus>.  
   
--   Vous pouvez lire chaque propriété pertinente comme <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, et <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Vous pouvez lire chaque propriété pertinente comme <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, et <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
  Cet exemple illustre les deux méthodes, l’utilisateur a été auparavant invité à choisir la méthode à utiliser et a répondu par « y » qu’il souhaitait utiliser les indicateurs de le <xref:System.Printing.PrintQueue.QueueStatus%2A> propriété. Voir ci-dessous pour obtenir des informations détaillées sur les deux méthodes.  
   

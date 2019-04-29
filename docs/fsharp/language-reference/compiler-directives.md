@@ -3,11 +3,11 @@ title: Directives de compilateur
 description: En savoir plus sur F# directives de préprocesseur de langage, les directives de compilation conditionnelle, directives de ligne et directives de compilateur.
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766101"
 ---
 # <a name="compiler-directives"></a>Directives de compilateur
 
@@ -21,10 +21,10 @@ Le tableau suivant répertorie les directives de préprocesseur disponibles en F
 
 |Directive|Description|
 |---------|-----------|
-|`#if` *Symbole*|Prend en charge la compilation conditionnelle. Code dans la section après le `#if` est inclus si le *symbole* est défini. Le symbole peut également être inversé avec `!`.|
+|`#if` *symbol*|Prend en charge la compilation conditionnelle. Code dans la section après le `#if` est inclus si le *symbole* est défini. Le symbole peut également être inversé avec `!`.|
 |`#else`|Prend en charge la compilation conditionnelle. Marque une section de code à inclure si le symbole utilisé avec le `#if` précédent n'est pas défini.|
 |`#endif`|Prend en charge la compilation conditionnelle. Marque la fin d'une section conditionnelle de code.|
-|`#`[ligne] *int*,<br/>`#`[ligne] *int* *chaîne*,<br/>`#`[ligne] *int* *chaîne textuelle*|Indique la ligne et le nom de fichier du code source d'origine, à des fins de débogage. Cette fonctionnalité est fournie pour les outils qui génèrent du code source F#.|
+|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|Indique la ligne et le nom de fichier du code source d'origine, à des fins de débogage. Cette fonctionnalité est fournie pour les outils qui génèrent du code source F#.|
 |`#nowarn` *warningcode*|Désactive un ou plusieurs avertissements du compilateur. Pour désactiver un avertissement, trouvez son numéro dans la sortie du compilateur et incluez-le entre guillemets. Omettez le préfixe « FS ». Pour désactiver plusieurs numéros d'avertissement sur la même ligne, incluez chaque nombre entre guillemets, puis séparez chaque chaîne par un espace. Exemple :
 
 `#nowarn "9" "40"`
@@ -60,7 +60,7 @@ let str = "Debugging!"
 
 Lors de la génération, le compilateur signale les erreurs dans le code F# en référençant les numéros de ligne où chaque erreur se produit. Ces numéros de ligne commencent à 1 pour la première ligne dans un fichier. Toutefois, si vous générez du code source F# à partir d'un autre outil, les numéros de ligne du code généré n'ont en général aucun intérêt, car les erreurs dans le code F# généré proviennent très probablement d'une autre source. La directive `#line` offre un moyen aux auteurs d'outils qui génèrent du code source F# de transmettre des informations sur les numéros de ligne et fichiers sources d'origine au code F# généré.
 
-Quand vous utilisez la directive `#line`, vous devez placer les noms de fichiers entre guillemets. À moins que le jeton textuel (`@`) ne s'affiche devant la chaîne, vous devez utiliser deux barres obliques inverses en tant que caractères d'espacement au lieu d'une pour les utiliser dans le chemin d'accès. Les jetons de ligne valides sont les suivants : Dans ces exemples, supposons que le fichier d'origine `Script1` produit un fichier de code F# généré automatiquement quand il est exécuté par l'intermédiaire d'un outil et que le code situé à l'emplacement de ces directives est généré à partir de jetons à la ligne 25 du fichier `Script1`.
+Quand vous utilisez la directive `#line`, vous devez placer les noms de fichiers entre guillemets. À moins que le jeton textuel (`@`) ne s’affiche devant la chaîne, vous devez utiliser deux barres obliques inverses en tant que caractères d’espacement au lieu d’une pour les utiliser dans le chemin d’accès. Les jetons de ligne valides sont les suivants : Dans ces exemples, supposons que le fichier d'origine `Script1` produit un fichier de code F# généré automatiquement quand il est exécuté par l'intermédiaire d'un outil et que le code situé à l'emplacement de ces directives est généré à partir de jetons à la ligne 25 du fichier `Script1`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 

@@ -3,11 +3,11 @@ title: 'Procédure : publier des métadonnées pour un service à l’aide d’
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761453"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procédure : publier des métadonnées pour un service à l’aide d’un fichier de configuration
 Il s’agit d’une des deux rubriques de procédures qui illustrent la publication des métadonnées pour un service Windows Communication Foundation (WCF). Il y a deux façons de spécifier comment un service doit publier des métadonnées : à l'aide d'un fichier de configuration et à l'aide du code. Cette rubrique montre comment publier des métadonnées pour un service à l'aide d'un fichier de configuration.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Pour les points de terminaison de métadonnées ajoutés à l'étape précédente, affectez à l'attribut `binding` l'une des valeurs suivantes :  
   
-    -   `mexHttpBinding` pour la publication HTTP.  
+    - `mexHttpBinding` pour la publication HTTP.  
   
-    -   `mexHttpsBinding` pour la publication HTTPS.  
+    - `mexHttpsBinding` pour la publication HTTPS.  
   
-    -   `mexNamedPipeBinding` pour la publication de canal nommé.  
+    - `mexNamedPipeBinding` pour la publication de canal nommé.  
   
-    -   `mexTcpBinding` pour la publication TCP.  
+    - `mexTcpBinding` pour la publication TCP.  
   
 8. Pour les points de terminaison de métadonnées ajoutés à l'étape précédente, attribuez à l'adresse la valeur suivante :  
   
-    -   Une chaîne vide pour utiliser l’adresse de base de l’application hôte comme point de publication si l’adresse de base est la même que la liaison de métadonnées.  
+    - Une chaîne vide pour utiliser l’adresse de base de l’application hôte comme point de publication si l’adresse de base est la même que la liaison de métadonnées.  
   
-    -   Une adresse relative si l'application hôte a une adresse de base.  
+    - Une adresse relative si l'application hôte a une adresse de base.  
   
-    -   Une adresse absolue.  
+    - Une adresse absolue.  
   
 9. Créez et exécutez l'application console.  
   

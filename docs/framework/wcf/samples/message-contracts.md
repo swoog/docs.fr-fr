@@ -3,10 +3,11 @@ title: Contrats de message
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
 ms.openlocfilehash: 5483c75bfe7f72b2c6155d978c006fc2050c1e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756362"
 ---
 # <a name="message-contracts"></a>Contrats de message
 Cette section contient des exemples qui illustrent des contrats de message dans Windows Communication Foundation (WCF).  
@@ -15,7 +16,7 @@ Cette section contient des exemples qui illustrent des contrats de message dans 
  [Contrat de message par défaut](../../../../docs/framework/wcf/samples/default-message-contract.md)  
  Présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service.  
   
- Demande-réponse non typé  
+ Demande-réponse non typée  
  Montre comment définir des contrats d'opération qui utilisent la classe Message.  
   
  [Messages non encapsulés](../../../../docs/framework/wcf/samples/unwrapped-messages.md)  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778779"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
 Une des décisions de conception de base auxquelles est confronté chaque concepteur de framework est de concevoir un type sous forme de classe (type référence) ou sous forme de struct (type valeur). Il est nécessaire de bien comprendre les différences de comportement entre les types référence et les types valeur pour faire ce choix.  
@@ -39,13 +39,13 @@ Une des décisions de conception de base auxquelles est confronté chaque concep
   
  **X AVOID** la définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
   
--   Il représente logiquement une seule valeur, similaire aux types primitifs (`int`, `double`, etc..).  
+- Il représente logiquement une seule valeur, similaire aux types primitifs (`int`, `double`, etc..).  
   
--   Il a une taille d’instance inférieure à 16 octets.  
+- Il a une taille d’instance inférieure à 16 octets.  
   
--   Il est immuable.  
+- Il est immuable.  
   
--   Il n’aura pas à subir fréquemment des opérations de boxing.  
+- Il n’aura pas à subir fréquemment des opérations de boxing.  
   
  Dans tous les autres cas, vous devez définir vos types comme classes.  
   

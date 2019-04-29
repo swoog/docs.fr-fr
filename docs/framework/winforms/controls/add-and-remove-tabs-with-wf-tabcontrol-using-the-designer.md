@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640367"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procédure : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l’aide du concepteur
 Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votre formulaire, il contient deux onglets par défaut. Vous pouvez ajouter ou supprimer des onglets à l’aide du concepteur.  
@@ -25,7 +25,7 @@ Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votr
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>Pour ajouter ou supprimer un onglet à l’aide du Concepteur  
   
--   Dans la balise active du contrôle, cliquez sur **ajouter un onglet** ou **onglet supprimer**  
+- Dans la balise active du contrôle, cliquez sur **ajouter un onglet** ou **onglet supprimer**  
   
      - ou -  
   

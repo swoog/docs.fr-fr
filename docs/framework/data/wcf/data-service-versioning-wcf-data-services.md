@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765733"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Contrôle de version d'un service de données (WCF Data Services)
 Le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] vous permet de créer des services de données afin que les clients peuvent accéder aux données en tant que ressources à l’aide d’URI qui sont basés sur un modèle de données. OData prend également en charge la définition des opérations de service. Après leur déploiement initial, et potentiellement plusieurs fois pendant leur durée de vie, il peut s’avérer nécessaire de modifier ces services de données pour diverses raisons, telles que l’évolution des besoins de l’entreprise, des exigences informatiques, ou pour résoudre d’autres problèmes. Lorsque vous apportez des modifications à un service de données existant, vous devez choisir de définir une nouvelle version de votre service de données et comment mieux réduire l'impact sur les applications clientes existantes. Cette rubrique fournit des conseils sur le moment et la façon de créer une nouvelle version d'un service de données. Elle décrit également comment WCF Data Services gère l’échange entre les clients et les services de données qui prennent en charge différentes versions du protocole OData.
@@ -22,9 +22,9 @@ Le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] vous permet d
 ### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Modifications du modèle de données qui recommandent une nouvelle version de service de données
  Au moment de choisir de publier ou non une nouvelle version d'un service de données, il est important de comprendre comment les différents types de modifications peuvent affecter les applications clientes. Les modifications apportées à un service de données pouvant nécessiter la création d'une nouvelle version de service de données, appartiennent aux deux catégories suivantes :
 
--   Modifications apportées au contrat de service, incluant les mises à jour des opérations de service, les modifications de l'accessibilité des jeux d'entités (flux), les modifications de version et d'autres modifications apportées aux comportements de service.
+- Modifications apportées au contrat de service, incluant les mises à jour des opérations de service, les modifications de l'accessibilité des jeux d'entités (flux), les modifications de version et d'autres modifications apportées aux comportements de service.
 
--   Modifications apportées au contrat de données, incluant les modifications apportées au modèle de données, aux formats de flux ou aux personnalisations de flux.
+- Modifications apportées au contrat de données, incluant les modifications apportées au modèle de données, aux formats de flux ou aux personnalisations de flux.
 
  Le tableau suivant contient les types de modifications pour lesquelles vous devez envisager de publier une nouvelle version du service de données :
 
@@ -42,11 +42,11 @@ Le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] vous permet d
  <sup>2</sup> vous pouvez définir le <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> propriété `true` pour que le client ignore les nouvelles propriétés envoyées par le service de données qui ne sont pas définies sur le client. Toutefois, lorsque des insertions sont réalisées, les propriétés non incluses par le client dans la demande POST sont définies sur leurs valeurs par défaut. Pour les mises à jour, toutes les données existantes dans une propriété inconnue du client peuvent être remplacées par les valeurs par défaut. Dans ce cas, vous devez envoyer la mise à jour sous la forme d’une demande MERGE, qui est la valeur par défaut. Pour plus d’informations, consultez [gérer le contexte de Service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
 
 ### <a name="how-to-version-a-data-service"></a>Procédure de versionnage d'un service de données
- Si nécessaire, une nouvelle version de service de données est définie en créant une nouvelle instance du service avec un contrat de service ou un modèle de données mis à jour. Ce nouveau service est alors exposé à l'aide d'un nouveau point de terminaison d'URI, qui le distingue de la version antérieure. Par exemple :
+ Si nécessaire, une nouvelle version de service de données est définie en créant une nouvelle instance du service avec un contrat de service ou un modèle de données mis à jour. Ce nouveau service est alors exposé à l'aide d'un nouveau point de terminaison d'URI, qui le distingue de la version antérieure. Exemple :
 
--   Ancienne version : `http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Ancienne version : `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
--   Nouvelle version : `http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Nouvelle version : `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  Lors de la mise à niveau d'un service de données, les clients doivent également être mis à jour en fonction des nouvelles métadonnées de service de données et utiliser le nouveau URI racine. Si possible, vous devez maintenir la version antérieure du service de données pour prendre en charge les clients qui n'ont pas encore été mis à niveau pour utiliser la nouvelle version. Les versions antérieures d'un service de données peuvent être supprimées lorsqu'elles sont devenues inutiles. Vous devez envisager de conserver l'URI de point de terminaison de service de données dans un fichier de configuration externe.
 

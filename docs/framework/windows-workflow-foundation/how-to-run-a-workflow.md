@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779156"
 ---
 # <a name="how-to-run-a-workflow"></a>Procédure : exécuter un workflow
 Cette rubrique est la suite du didacticiel le Guide de mise en route de Windows Workflow Foundation et explique comment créer un hôte de workflow et exécuter le workflow défini dans le précédent [Comment : Créer un flux de travail](how-to-create-a-workflow.md) rubrique.

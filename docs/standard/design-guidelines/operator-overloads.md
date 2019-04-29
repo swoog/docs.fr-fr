@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
 ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756856"
 ---
 # <a name="operator-overloads"></a>Surcharges d'opérateurs
 Surcharges d’opérateur autorisent les types de framework apparaisse comme si elles étaient des primitives de langage intégrées.  
@@ -45,7 +45,7 @@ Surcharges d’opérateur autorisent les types de framework apparaisse comme si 
   
  Le tableau suivant contient une liste d’opérateurs et les noms de méthode convivial correspondants.  
   
-|Symbole d’opérateur C#|Nom des métadonnées|Nom convivial|  
+|Symbole d’opérateur c#|Nom des métadonnées|Nom convivial|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  

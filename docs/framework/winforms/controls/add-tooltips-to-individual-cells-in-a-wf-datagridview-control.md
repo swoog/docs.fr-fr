@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
 ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640294"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Procédure : ajouter des info-bulles à des cellules individuelles dans un contrôle DataGridView Windows Forms
 Par défaut, les info-bulles sont utilisés pour afficher les valeurs de <xref:System.Windows.Forms.DataGridView> cellules qui sont trop petits pour afficher leur contenu entier. Vous pouvez remplacer ce comportement, toutefois, pour définir les valeurs de texte d’info-bulle pour les cellules individuelles. Cela est utile à afficher aux utilisateurs plus d’informations sur une cellule ou pour fournir aux utilisateurs une autre description du contenu de cellule. Par exemple, si vous avez une ligne qui affiche des icônes d’état, vous souhaiterez fournir des explications de texte à l’aide des info-bulles.  
@@ -24,7 +24,7 @@ Par défaut, les info-bulles sont utilisés pour afficher les valeurs de <xref:S
   
 ### <a name="to-add-a-tooltip-to-a-cell"></a>Pour ajouter une info-bulle à une cellule  
   
--   définir la propriété <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> ;  
+- définir la propriété <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> ;  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
@@ -32,11 +32,11 @@ Par défaut, les info-bulles sont utilisés pour afficher les valeurs de <xref:S
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Cet exemple nécessite :  
+- Cet exemple nécessite :  
   
--   Un <xref:System.Windows.Forms.DataGridView> contrôle nommé `dataGridView1` qui contient une colonne nommée `Rating` pour afficher des valeurs de chaîne d’un à quatre astérisque (« * ») symboles. Le <xref:System.Windows.Forms.DataGridView.CellFormatting> événement du contrôle doit être associé à la méthode de gestionnaire d’événements dans l’exemple.  
+- Un <xref:System.Windows.Forms.DataGridView> contrôle nommé `dataGridView1` qui contient une colonne nommée `Rating` pour afficher des valeurs de chaîne d’un à quatre astérisque (« * ») symboles. Le <xref:System.Windows.Forms.DataGridView.CellFormatting> événement du contrôle doit être associé à la méthode de gestionnaire d’événements dans l’exemple.  
   
--   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Lorsque vous liez le <xref:System.Windows.Forms.DataGridView> le contrôle à une source de données externe ou fournir votre propre source de données en implémentant le mode virtuel, vous pouvez rencontrer des problèmes de performances. Pour éviter une altération des performances lorsque vous travaillez avec grandes quantités de données, gérer les <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> événements au lieu de définir le <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> propriété de plusieurs cellules. Lorsque vous gérez cet événement, l’obtention de la valeur d’une cellule <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> propriété déclenche l’événement et retourne la valeur de la <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> de la propriété spécifiée de l’événement gestionnaire.  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
 ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649983"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>Impossible de créer le fichier temporaire nécessaire
 Le lecteur est complet qui contient le répertoire spécifié par la variable d’environnement TEMP, ou la variable d’environnement TEMP spécifie un lecteur non valide ou en lecture seule ou un répertoire.  

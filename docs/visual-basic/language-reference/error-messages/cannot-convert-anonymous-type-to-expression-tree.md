@@ -1,5 +1,5 @@
 ---
-title: Impossible de convertir le type anonyme en arborescence de l’expression, car elle contient un champ qui sert à initialiser un autre champ
+title: Impossible de convertir le type anonyme en arborescence de l'expression, car elle contient un champ qui sert à initialiser un autre champ
 ms.date: 07/20/2015
 f1_keywords:
 - bc36548
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
 ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649957"
 ---
-# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Impossible de convertir le type anonyme en arborescence de l’expression, car elle contient un champ qui sert à initialiser un autre champ
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Impossible de convertir le type anonyme en arborescence de l'expression, car elle contient un champ qui sert à initialiser un autre champ
 Le compilateur n’accepte pas de conversion d’un anonyme en une arborescence d’expression lorsqu’une propriété du type anonyme est utilisée pour initialiser une autre propriété du type anonyme. Par exemple, dans le code suivant, `Prop1` est déclarée dans la liste d’initialisation et ensuite utilisée comme valeur initiale pour `Prop2`.  
   
 ```vb  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Affectez la valeur initiale pour `Prop1` à une variable locale. Assignez cette variable à la fois aux `Prop1` et `Prop2`, comme illustré dans le code suivant.  
+- Affectez la valeur initiale pour `Prop1` à une variable locale. Assignez cette variable à la fois aux `Prop1` et `Prop2`, comme illustré dans le code suivant.  
   
     ```  
     Sub Main()  

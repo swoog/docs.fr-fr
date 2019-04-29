@@ -3,11 +3,11 @@ title: 'Exceptions : fonction raise'
 description: Découvrez comment la F# 'raise' (fonction) est utilisée pour indiquer qu’une erreur ou une condition exceptionnelle s’est produite.
 ms.date: 05/16/2016
 ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772669"
 ---
 # <a name="exceptions-the-raise-function"></a>Exceptions : fonction raise
 
@@ -37,7 +37,7 @@ Le `raise` fonction peut également être utilisée pour lever des exceptions .N
 
 - [Gestion des exceptions](index.md)
 - [Types d'exceptions](exception-types.md)
-- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)
-- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
-- [Exceptions : Le `failwith` (fonction)](the-failwith-function.md)
-- [Exceptions : Le `invalidArg` (fonction)](the-invalidArg-function.md)
+- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)
+- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
+- [Exceptions : Le `failwith` (fonction)](the-failwith-function.md)
+- [Exceptions : Le `invalidArg` (fonction)](the-invalidArg-function.md)
