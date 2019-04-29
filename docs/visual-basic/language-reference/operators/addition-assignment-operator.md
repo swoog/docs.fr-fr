@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
 ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608331"
 ---
 # <a name="-operator-visual-basic"></a>+= (opérateur Visual Basic)
 Ajoute la valeur d’une expression numérique à la valeur d’une propriété ou une variable numérique et assigne le résultat à la variable ou propriété. Peut également être utilisé pour concaténer une `String` expression à une `String` variable ou propriété et assigner le résultat à la variable ou propriété.  

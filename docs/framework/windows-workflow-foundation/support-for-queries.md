@@ -3,28 +3,28 @@ title: Prise en charge des requêtes
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641513"
 ---
 # <a name="support-for-queries"></a>Prise en charge des requêtes
 Le magasin d'instances de workflow SQL enregistre un jeu de propriétés connues dans le magasin. Les utilisateurs peuvent demander des instances à partir de ces propriétés. La liste suivante comprend quelques-unes de ces propriétés connues :  
   
--   **Nom du site.** Nom du site Web qui contient le service.  
+- **Nom du site.** Nom du site Web qui contient le service.  
   
--   **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site Web.  
+- **Chemin d’accès de l’Application relatif.** Chemin d’accès à l’application relatif au site Web.  
   
--   **Chemin d’accès relatif de Service.** Chemin d’accès au service relatif à l’application.  
+- **Chemin d’accès relatif de Service.** Chemin d’accès au service relatif à l’application.  
   
--   **Nom du service.** Nom du service.  
+- **Nom du service.** Nom du service.  
   
--   **Service Namespace.** Nom de l'espace de noms que le service utilise.  
+- **Service Namespace.** Nom de l'espace de noms que le service utilise.  
   
--   **Ordinateur actuel.**  
+- **Ordinateur actuel.**  
   
--   **Dernier ordinateur**. Ordinateur sur lequel l'instance de service de workflow a été exécutée la dernière fois.  
+- **Dernier ordinateur**. Ordinateur sur lequel l'instance de service de workflow a été exécutée la dernière fois.  
   
 > [!NOTE]
 >  Pour les scénarios auto-hébergés à l'aide de l'hôte du service de workflow, seules les quatre dernières propriétés sont remplies. Pour les scénarios d'application de workflow, seule la dernière propriété est remplie.  

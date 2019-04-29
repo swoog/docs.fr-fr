@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627986"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo, fonction
 Obtient des informations de version et au répertoire sur le common language runtime (CLR) demandée par une application.  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  Dans le .NET Framework version 2.0, vous pouvez obtenir des informations sur la dernière version installée à l’aide de la `GetRequestedRuntimeInfo` méthode comme suit :  
   
--   Spécifiez le `pExe`, `pwszVersion`, et `pConfigurationFile` paramètres comme null.  
+- Spécifiez le `pExe`, `pwszVersion`, et `pConfigurationFile` paramètres comme null.  
   
--   Spécifiez l’indicateur RUNTIME_INFO_UPGRADE_VERSION dans le `RUNTIME_INFO_FLAGS` énumérations pour le `runtimeInfoFlags` paramètre.  
+- Spécifiez l’indicateur RUNTIME_INFO_UPGRADE_VERSION dans le `RUNTIME_INFO_FLAGS` énumérations pour le `runtimeInfoFlags` paramètre.  
   
  Le `GetRequestedRuntimeInfo` méthode ne retourne pas la dernière version CLR dans les circonstances suivantes :  
   
--   Il existe un fichier de configuration qui spécifie le chargement d’une version particulière du CLR. Notez que le .NET Framework utilisera le fichier de configuration même si vous spécifiez null pour le `pConfigurationFile` paramètre.  
+- Il existe un fichier de configuration qui spécifie le chargement d’une version particulière du CLR. Notez que le .NET Framework utilisera le fichier de configuration même si vous spécifiez null pour le `pConfigurationFile` paramètre.  
   
--   Le [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) méthode a été appelée en spécifiant une version antérieure du CLR.  
+- Le [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) méthode a été appelée en spécifiant une version antérieure du CLR.  
   
--   Une application qui a été compilée pour une version antérieure du CLR est en cours d’exécution.  
+- Une application qui a été compilée pour une version antérieure du CLR est en cours d’exécution.  
   
  Pour le `runtimeInfoFlags` paramètre, vous pouvez spécifier uniquement une des constantes d’architecture de la `RUNTIME_INFO_FLAGS` énumération à la fois :  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

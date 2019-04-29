@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6018b5b06a138b38b7b97df280a3e4c4ea0512d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598959"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (fonction)
 Notifie le profileur que le contrôle est passé à une fonction.  
@@ -46,9 +46,9 @@ void __stdcall FunctionEnter (
   
  Le moteur d’exécution n’enregistre pas les registres avant d’appeler cette fonction.  
   
--   À l’entrée, vous devez enregistrer tous les registres que vous utilisez, y compris celles dans l’unité de virgule flottante (FPU).  
+- À l’entrée, vous devez enregistrer tous les registres que vous utilisez, y compris celles dans l’unité de virgule flottante (FPU).  
   
--   À la sortie, vous devez restaurer la pile en dépilant tous les paramètres qui ont été envoyés par son appelant.  
+- À la sortie, vous devez restaurer la pile en dépilant tous les paramètres qui ont été envoyés par son appelant.  
   
  L’implémentation de `FunctionEnter` ne doivent pas bloquer, car il sera retarder le garbage collection. L’implémentation ne doit pas tenter un garbage collection, car la pile est peut-être pas à l’état garbage collection convivial. Si un garbage collection est tenté, le runtime bloque jusqu'à ce que `FunctionEnter` retourne.  
   

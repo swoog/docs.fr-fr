@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607824"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Création d'un objet DataView (LINQ to DataSet)
 Il existe deux manières de créer un <xref:System.Data.DataView> dans le contexte de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Vous pouvez créer un <xref:System.Data.DataView> à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sur une <xref:System.Data.DataTable>, ou vous pouvez la créer à partir d'une <xref:System.Data.DataTable> typée ou non typée. Dans les deux cas, vous allez créer le <xref:System.Data.DataView> en utilisant l’une de le <xref:System.Data.DataTableExtensions.AsDataView%2A> les méthodes d’extension ; <xref:System.Data.DataView> n’est pas être construit directement dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexte.  
@@ -31,19 +31,19 @@ Il existe deux manières de créer un <xref:System.Data.DataView> dans le contex
   
  Seuls les opérateurs de requête ci-dessous sont pris en charge dans une requête utilisée pour créer un <xref:System.Data.DataView> :  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  Notez que, lorsqu'un objet <xref:System.Data.DataView> est créé à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], la méthode <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> doit être la dernière méthode appelée dans la requête. Cela est illustré dans l’exemple suivant, qui crée un <xref:System.Data.DataView> de commandes en ligne triées par montant total dû :  
   

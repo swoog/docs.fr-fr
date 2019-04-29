@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596801"
 ---
 # <a name="instancing"></a>instanciation
 Cet exemple illustre l'utilisation du comportement d'instanciation qui contrôle la manière dont les instances d'une classe de service sont créées en réponse aux demandes du client. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit un nouveau contrat, `ICalculatorInstance`, lequel hérite d'`ICalculator`. Le contrat spécifié par `ICalculatorInstance` fournit trois opérations supplémentaires pour l'inspection de l'état de l'instance de service. Lorsque vous modifiez le paramètre d'instanciation, vous pouvez observer les changements au niveau du comportement en exécutant le client.  
@@ -22,11 +22,11 @@ Cet exemple illustre l'utilisation du comportement d'instanciation qui contrôle
   
  Les modes d'instanciation disponibles sont les suivants :  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Une nouvelle instance de service est créée pour chaque demande du client.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Une nouvelle instance de service est créée pour chaque demande du client.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Une nouvelle instance est créée pour chaque nouvelle session de client et conservée pendant la durée de vie de cette session (nécessite une liaison qui prend en charge de session).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Une nouvelle instance est créée pour chaque nouvelle session de client et conservée pendant la durée de vie de cette session (nécessite une liaison qui prend en charge de session).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Une seule instance de la classe de service gère toutes les demandes de client pour la durée de vie de l’application.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Une seule instance de la classe de service gère toutes les demandes de client pour la durée de vie de l’application.  
   
  La classe de service spécifie le comportement d'instanciation à l'aide de l'attribut `[ServiceBehavior(InstanceContextMode=<setting>)]`, tel qu'illustré dans l'exemple de code suivant. Pour observer le comportement de chacun des modes d'instance, modifiez les lignes commentées. N'oubliez pas de régénérer le service après avoir modifié le mode d'instanciation. Vous n'avez pas à spécifier de paramètres d'instanciation sur le client.  
   

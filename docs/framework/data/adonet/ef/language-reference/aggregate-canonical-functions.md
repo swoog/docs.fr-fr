@@ -3,11 +3,11 @@ title: Fonctions d'agrégation canoniques
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607451"
 ---
 # <a name="aggregate-canonical-functions"></a>Fonctions d'agrégation canoniques
 
@@ -74,8 +74,7 @@ Retourne la valeur maximale des valeurs non-Null.
 
 **Arguments**
 
-
-  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valeur de retour**
 
@@ -92,8 +91,7 @@ Retourne la valeur minimale des valeurs non Null.
 
 **Arguments**
 
-
-  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valeur de retour**
 
@@ -110,8 +108,7 @@ Retourne l'écart type des valeurs non Null.
 
 **Arguments**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -128,8 +125,7 @@ Retourne l'écart type pour le remplissage de toutes les valeurs.
 
 **Arguments**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -146,8 +142,7 @@ Retourne la somme des valeurs non-Null.
 
 **Arguments**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -164,8 +159,7 @@ Retourne la variance de toutes les valeurs non-Null.
 
 **Arguments**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 
@@ -182,8 +176,7 @@ Retourne la variance pour le remplissage de toutes les valeurs non-Null.
 
 **Arguments**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valeur de retour**
 

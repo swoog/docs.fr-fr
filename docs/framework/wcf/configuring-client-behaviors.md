@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608773"
 ---
 # <a name="configuring-client-behaviors"></a>Configuration des comportements clients
 Windows Communication Foundation (WCF) configure les comportements de deux manières : soit en vous reportant aux configurations de comportement, qui sont définies dans la `<behavior>` section d’un fichier de configuration client application – ou par programmation dans l’appel application. Cette rubrique décrit ces deux approches.  

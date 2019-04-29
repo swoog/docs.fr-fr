@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd3b977a894f8cb1fc9a866f5a43265d917db513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645563"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted, méthode
 Obtient une valeur qui indique si l’assembly a été accordé une confiance totale par le système de sécurité du runtime.  
@@ -42,7 +42,7 @@ HRESULT IsFullyTrusted(
 ## <a name="remarks"></a>Notes  
  Cette méthode retourne un HRESULT de CORDBG_E_NOTREADY si la stratégie de sécurité pour l’assembly n'a pas encore été résolue, autrement dit, si aucun code dans l’assembly a encore été exécuté.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

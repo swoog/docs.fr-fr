@@ -3,11 +3,11 @@ title: Construction de types (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605831"
 ---
 # <a name="constructing-types-entity-sql"></a>Construction de types (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] propose trois types de constructeurs : constructeurs de ligne, constructeurs de type nommé et constructeurs de collection.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073778"
   
  Les règles suivantes s'appliquent à l'utilisation d'alias dans les expressions d'un constructeur de ligne :  
   
--   les expressions contenues dans un constructeur de ligne ne peuvent pas faire référence aux autres alias du même constructeur ;  
+- les expressions contenues dans un constructeur de ligne ne peuvent pas faire référence aux autres alias du même constructeur ;  
   
--   deux expressions contenues dans un même constructeur de ligne ne peuvent pas avoir le même alias.  
+- deux expressions contenues dans un même constructeur de ligne ne peuvent pas avoir le même alias.  
   
  Pour plus d’informations sur les constructeurs de ligne, consultez [ligne](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   

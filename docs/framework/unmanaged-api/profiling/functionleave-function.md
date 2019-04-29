@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598868"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (fonction)
 Notifie le profileur qu’une fonction est sur le point de retourner à l’appelant.  
@@ -46,9 +46,9 @@ void __stdcall FunctionLeave (
   
  Le moteur d’exécution n’enregistre pas les registres avant d’appeler cette fonction.  
   
--   À l’entrée, vous devez enregistrer tous les registres que vous utilisez, y compris celles dans l’unité de virgule flottante (FPU).  
+- À l’entrée, vous devez enregistrer tous les registres que vous utilisez, y compris celles dans l’unité de virgule flottante (FPU).  
   
--   À la sortie, vous devez restaurer la pile en dépilant tous les paramètres qui ont été envoyés par son appelant.  
+- À la sortie, vous devez restaurer la pile en dépilant tous les paramètres qui ont été envoyés par son appelant.  
   
  L’implémentation de `FunctionLeave` ne doivent pas bloquer, car il sera retarder le garbage collection. L’implémentation ne doit pas tenter un garbage collection, car la pile est peut-être pas à l’état garbage collection convivial. Si un garbage collection est tenté, le runtime bloque jusqu'à ce que `FunctionLeave` retourne.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649996"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Dans la mesure où cet appel n'est pas attendu, la méthode actuelle continue de s'exécuter avant la fin de l'appel.
 Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continue avant la fin de l’appel. Envisagez d’appliquer l’opérateur « Await » au résultat de l’appel.  
@@ -29,7 +29,7 @@ Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continu
   
 ### <a name="to-address-this-warning"></a>Pour traiter cet avertissement  
   
--   Envisagez de supprimer l'avertissement uniquement si vous êtes certain que vous ne souhaitez pas attendre l'exécution de l'appel asynchrone et que la méthode appelée ne génèrera pas d'exception. Dans ce cas, vous pouvez supprimer l'avertissement en affectant le résultat de la tâche à une variable.  
+- Envisagez de supprimer l'avertissement uniquement si vous êtes certain que vous ne souhaitez pas attendre l'exécution de l'appel asynchrone et que la méthode appelée ne génèrera pas d'exception. Dans ce cas, vous pouvez supprimer l'avertissement en affectant le résultat de la tâche à une variable.  
   
      L'exemple suivant indique comment générer l'avertissement, comment le supprimer, et comment attendre l'appel.  
   

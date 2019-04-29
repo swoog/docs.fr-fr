@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609422"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP, structure
 Spécifie des modifications dans le décalage relatif d'une fonction.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Pour l’exécution pas à pas pour fonctionner correctement, les conditions suivantes doivent être remplies :  
   
--   Le mappage doit être trié dans l’ordre croissant.  
+- Le mappage doit être trié dans l’ordre croissant.  
   
--   Code MSIL instrumenté ne doit pas être réorganisé.  
+- Code MSIL instrumenté ne doit pas être réorganisé.  
   
--   Code MSIL d’origine ne doit pas être supprimé.  
+- Code MSIL d’origine ne doit pas être supprimé.  
   
--   Le mappage doit inclure des entrées pour tous les points de séquence fichier de programme (PDB) de la base de données de la carte.  
+- Le mappage doit inclure des entrées pour tous les points de séquence fichier de programme (PDB) de la base de données de la carte.  
   
  Le mappage n’interpole pas les entrées manquantes. L’exemple suivant montre un mappage et ses résultats.  
   
  Carte :  
   
--   ancien offset 0, 0 nouveau décalage  
+- ancien offset 0, 0 nouveau décalage  
   
--   ancien offset 5, 10 nouveau décalage  
+- ancien offset 5, 10 nouveau décalage  
   
--   ancien offset 9, 20 nouveau décalage  
+- ancien offset 9, 20 nouveau décalage  
   
  Résultats :  
   
--   Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé à un nouveau décalage de 0.  
+- Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé à un nouveau décalage de 0.  
   
--   Un ancien offset de 5, 6, 7 ou 8 sera mappé à nouveau décalage de 10.  
+- Un ancien offset de 5, 6, 7 ou 8 sera mappé à nouveau décalage de 10.  
   
--   Un ancien offset de 9 ou version ultérieure sera mappé à nouveau décalage de 20.  
+- Un ancien offset de 9 ou version ultérieure sera mappé à nouveau décalage de 20.  
   
--   Un nouveau décalage de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
+- Un nouveau décalage de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
   
--   Un nouveau décalage de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
+- Un nouveau décalage de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
   
--   Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
+- Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

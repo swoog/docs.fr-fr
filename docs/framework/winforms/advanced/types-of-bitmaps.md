@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663916"
 ---
 # <a name="types-of-bitmaps"></a>Types de bitmaps
 Une image bitmap est un tableau de bits qui spécifient la couleur de chaque pixel dans un tableau rectangulaire de pixels. Le nombre de bits associés à un pixel détermine le nombre de couleurs qui peuvent être affectés à ce pixel. Par exemple, si chaque pixel est représenté par 4 bits, puis un pixel donné peut avoir une des 16 couleurs différentes (2 ^ 4 = 16). Le tableau suivant présente quelques exemples du nombre de couleurs qui peuvent être attribués à un pixel représenté par un nombre donné de bits.  

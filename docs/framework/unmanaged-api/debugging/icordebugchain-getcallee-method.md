@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645294"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee, méthode
 Obtient la chaîne qui a été appelée par cette chaîne.  
@@ -42,7 +42,7 @@ HRESULT GetCallee (
 ## <a name="remarks"></a>Notes  
  Cette chaîne attendra la chaîne appelée retourner avant de reprendre l’exécution. La chaîne appelée peut être sur un autre thread dans le cas d’appels marshalés inter-threads.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

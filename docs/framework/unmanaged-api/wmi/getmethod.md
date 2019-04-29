@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb8919e8760616676ea5ff99069e2d2ceb5f7451
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608916"
 ---
 # <a name="getmethod-function"></a>GetMethod, fonction
 
@@ -80,7 +80,7 @@ Gestion de Windows peut définir le [IWbemClassObject](/windows/desktop/api/wbem
 
 Dans `ppInSignature` et `ppOutSignature` décrivent respectivement, en tant que propriétés dans les paramètres, in et out un `IWbemClassObject` instance de la classe système [_Parameters](/windows/desktop/WmiSdk/--parameters). Les propriétés dans `ppInSignature` sont nommés `Param` *n*, où *n* correspond à la position du paramètre dans la signature de méthode (tel que `Param1`, `Param2`, etc..). Les propriétés dans `ppOutSignature` sont également appelés `Param` *n*, et la valeur de retour est nommée `ReturnValue`. Pour plus d’informations et un exemple, consultez [IWbemClassObject::GetMethod méthode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

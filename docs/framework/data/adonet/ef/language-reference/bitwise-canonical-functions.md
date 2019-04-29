@@ -3,11 +3,11 @@ title: Fonctions de chaînes canoniques au niveau du bit
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
 ms.openlocfilehash: 67d78e8d31f0bc3564a0a111b9bc71cbd0e14f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606023"
 ---
 # <a name="bitwise-canonical-functions"></a>Fonctions de chaînes canoniques au niveau du bit
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] inclut des fonctions canoniques au niveau du bit.  

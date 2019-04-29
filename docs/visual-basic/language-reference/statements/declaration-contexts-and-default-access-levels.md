@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638179"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contextes de déclaration et niveaux d'accès par défaut (Visual Basic)
 Cette rubrique décrit les types Visual Basic peuvent être déclarées dans les autres types, et ce que leurs niveaux d’accès par défaut si ce n’est pas spécifié.  
@@ -24,11 +24,11 @@ Cette rubrique décrit les types Visual Basic peuvent être déclarées dans les
   
  Les niveaux de contextes de déclaration sont les suivantes :  
   
--   *Niveau de Namespace* — au sein d’un fichier source ou un espace de noms mais pas dans une classe, une structure, un module ou une interface  
+- *Niveau de Namespace* — au sein d’un fichier source ou un espace de noms mais pas dans une classe, une structure, un module ou une interface  
   
--   *Au niveau du module* — au sein d’une classe, une structure, un module ou une interface, mais pas dans une procédure ou un bloc  
+- *Au niveau du module* — au sein d’une classe, une structure, un module ou une interface, mais pas dans une procédure ou un bloc  
   
--   *Niveau de la procédure* — au sein d’une procédure ou un bloc (tel que `If` ou `For`)  
+- *Niveau de la procédure* — au sein d’une procédure ou un bloc (tel que `If` ou `For`)  
   
  Le tableau suivant présente les niveaux d’accès par défaut pour différents éléments de programmation déclarés, selon leurs contextes de déclaration.  
   

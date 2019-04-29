@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667000"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject, méthode
 Instancie un nouvel objet de type paramétré et appelle la méthode de constructeur de l’objet.  
@@ -58,7 +58,7 @@ HRESULT NewParameterizedObject (
 ## <a name="remarks"></a>Notes  
  Constructeur de l’objet peut prendre <xref:System.Type> paramètres.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608851"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Outil Éditeur de configuration (SvcConfigEditor.exe)
 L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communication Fondation (WCF) permet aux administrateurs et aux développeurs de créer et de modifier les paramètres de configuration pour les services WCF à l'aide d'une interface utilisateur graphique (GUI). Grâce à cet outil, vous pouvez gérer les paramètres des liaisons, des comportements, des services et des diagnostics WCF sans modifier directement les fichiers de configuration XML.  
@@ -50,11 +50,11 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
   
  L'interface utilisateur de l'Éditeur de configuration de service est divisée dans les zones suivantes :  
   
--   Volet (arborescence) qui affiche les éléments de configuration sous forme d’arborescence à gauche. Vous pouvez exécuter des opérations dans l'arbre en cliquant avec le bouton droit sur les nœuds.  
+- Volet (arborescence) qui affiche les éléments de configuration sous forme d’arborescence à gauche. Vous pouvez exécuter des opérations dans l'arbre en cliquant avec le bouton droit sur les nœuds.  
   
--   Volet de tâches qui présente les tâches courantes applicables aux éléments actuels dans la partie inférieure gauche de la fenêtre.  
+- Volet de tâches qui présente les tâches courantes applicables aux éléments actuels dans la partie inférieure gauche de la fenêtre.  
   
--   Volet Détail qui affiche les paramètres détaillés du nœud de configuration sélectionné dans l’arborescence à droite.  
+- Volet Détail qui affiche les paramètres détaillés du nœud de configuration sélectionné dans l’arborescence à droite.  
   
 ### <a name="opening-a-configuration-file"></a>Ouverture d'un fichier de configuration  
   
@@ -77,16 +77,16 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 #### <a name="creating-a-new-service-configuration"></a>Création d'une configuration de service  
  Vous pouvez créer une configuration de service de l'une des manières suivantes :  
   
--   À l’aide d’un Assistant : Cliquez sur le lien **créer un nouveau Service...** dans le volet de tâches ou la Page Résumé pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**.  
+- À l’aide d’un Assistant : Cliquez sur le lien **créer un nouveau Service...** dans le volet de tâches ou la Page Résumé pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**.  
   
--   Créer manuellement : Vous pouvez cliquer sur le **Services** nœud et choisissez **nouveau Service**.  
+- Créer manuellement : Vous pouvez cliquer sur le **Services** nœud et choisissez **nouveau Service**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Création d'une configuration de point de terminaison de service  
  Vous pouvez créer une nouvelle configuration de point de terminaison de service de l'une des manières suivantes :  
   
--   Créer à l’aide d’un Assistant : cliquez sur le lien **créer un nouveau point de terminaison de Service...** dans le volet de tâches ou la Page Résumé pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**.  
+- Créer à l’aide d’un Assistant : cliquez sur le lien **créer un nouveau point de terminaison de Service...** dans le volet de tâches ou la Page Résumé pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**.  
   
--   Créer manuellement : Une fois que vous avez créé un Service, vous pouvez cliquer sur le **points de terminaison** nœud et choisissez «**nouveau point de terminaison de Service**».  
+- Créer manuellement : Une fois que vous avez créé un Service, vous pouvez cliquer sur le **points de terminaison** nœud et choisissez «**nouveau point de terminaison de Service**».  
   
 #### <a name="editing-a-service-configuration"></a>Modification d'une configuration de service  
   
@@ -121,9 +121,9 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Création d'une configuration de point de terminaison client  
  Vous pouvez créer une configuration de point de terminaison client de l'une des manières suivantes :  
   
--   Créer par l’Assistant : Cliquez sur le lien **créer un nouveau Client...** sur le **volet** sur le coin inférieur gauche de la fenêtre, ou **Page Résumé** pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**. L'Assistant vous invite à désigner l'emplacement de la configuration du service, à partir duquel la configuration cliente est générée. Vous pouvez alors choisir le point de terminaison de service avec lequel établir une connexion.  
+- Créer par l’Assistant : Cliquez sur le lien **créer un nouveau Client...** sur le **volet** sur le coin inférieur gauche de la fenêtre, ou **Page Résumé** pour lancer l’Assistant. Vous pouvez également l’effectuer dans le **fichier** -> menu **ajouter un nouvel élément**. L'Assistant vous invite à désigner l'emplacement de la configuration du service, à partir duquel la configuration cliente est générée. Vous pouvez alors choisir le point de terminaison de service avec lequel établir une connexion.  
   
--   Créer manuellement : Avec le bouton droit le **points de terminaison** nœud sous **Client**, puis choisissez **nouveau point de terminaison Client**.  
+- Créer manuellement : Avec le bouton droit le **points de terminaison** nœud sous **Client**, puis choisissez **nouveau point de terminaison Client**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Modification d'une configuration de point de terminaison client  
   
@@ -141,27 +141,27 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Création d'une configuration de point de terminaison standard  
  Vous pouvez créer une configuration de point de terminaison standard de l'une des manières suivantes :  
   
--   Cliquez sur le **point de terminaison Standard** nœud et sélectionnez **nouvelle Configuration de point de terminaison Standard...** Sélectionnez le type de liaison dans la boîte de dialogue et cliquez sur **OK**.  
+- Cliquez sur le **point de terminaison Standard** nœud et sélectionnez **nouvelle Configuration de point de terminaison Standard...** Sélectionnez le type de liaison dans la boîte de dialogue et cliquez sur **OK**.  
   
--   Sélectionnez le **point de terminaison Standard** nœud et cliquez sur **nouvelle Configuration de point de terminaison Standard...** dans le **volet** sur le coin inférieur gauche de la fenêtre.  
+- Sélectionnez le **point de terminaison Standard** nœud et cliquez sur **nouvelle Configuration de point de terminaison Standard...** dans le **volet** sur le coin inférieur gauche de la fenêtre.  
   
  Le **création d’un nouveau point de terminaison Standard** boîte de dialogue affiche et répertorie les inscrit tous les types de point de terminaison standard.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Affichage et modification d'une configuration de point de terminaison standard  
  Vous pouvez ouvrir une configuration de point de terminaison standard en vue de l'afficher et de la modifier des façons suivantes :  
   
--   Cliquez pour développer le **point de terminaison Standard** nœud et cliquez sur le sous-nœud de point de terminaison respectif.  
+- Cliquez pour développer le **point de terminaison Standard** nœud et cliquez sur le sous-nœud de point de terminaison respectif.  
   
--   Cliquez sur le **point de terminaison Standard** nœud et cliquez sur le point de terminaison respectif dans le volet détails.  
+- Cliquez sur le **point de terminaison Standard** nœud et cliquez sur le point de terminaison respectif dans le volet détails.  
   
  Les attributs correspondant au point de terminaison s'affichent dans le volet droit pour modification.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Suppression d'une configuration de point de terminaison standard  
  Vous pouvez supprimer une configuration de point de terminaison standard de l'une des manières suivantes :  
   
--   Cliquez pour développer le **point de terminaison Standard** nœud et clic droit le sous-nœud de point de terminaison respectif. Utilisez la commande de contexte **supprimer la Configuration de point de terminaison Standard** pour supprimer le point de terminaison.  
+- Cliquez pour développer le **point de terminaison Standard** nœud et clic droit le sous-nœud de point de terminaison respectif. Utilisez la commande de contexte **supprimer la Configuration de point de terminaison Standard** pour supprimer le point de terminaison.  
   
--   Cliquez sur le **point de terminaison Standard** nœud. Dans le **tâche** volet, cliquez sur **supprimer la Configuration de point de terminaison Standard**.  
+- Cliquez sur le **point de terminaison Standard** nœud. Dans le **tâche** volet, cliquez sur **supprimer la Configuration de point de terminaison Standard**.  
   
  Si le point de terminaison standard dans sert, un message d’avertissement s’affiche lorsque vous essayez de le supprimer : **Le point de terminaison standard est en cours d’utilisation. Si vous le supprimez maintenant, veillez à supprimer toutes ses références dans d'autres parties de la configuration (par exemple, dans le point de terminaison de service ou le point de terminaison de client). Sinon, la configuration ne sera pas valide et ne pourra pas être ouverte la prochaine fois. Êtes-vous sûr de que vouloir supprimer le point de terminaison standard ? »**  
   
@@ -175,11 +175,11 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 #### <a name="creating-a-new-binding-configuration"></a>Création d’une configuration de liaison  
  Vous pouvez créer une configuration de liaison de l’une des manières suivantes :  
   
--   Cliquez sur le **liaisons** nœud et sélectionnez **nouvelle Configuration de liaison**... Sélectionnez le type de liaison dans la boîte de dialogue et cliquez sur **OK**.  
+- Cliquez sur le **liaisons** nœud et sélectionnez **nouvelle Configuration de liaison**... Sélectionnez le type de liaison dans la boîte de dialogue et cliquez sur **OK**.  
   
--   Sélectionnez le **liaisons** nœud et cliquez sur **nouvelle Configuration de liaison**... dans le **volet** sur le coin inférieur gauche de la fenêtre.  
+- Sélectionnez le **liaisons** nœud et cliquez sur **nouvelle Configuration de liaison**... dans le **volet** sur le coin inférieur gauche de la fenêtre.  
   
--   Dans la page Résumé client ou service, cliquez sur **cliquez ici pour créer** dans le **Configuration de liaison** champ pour créer une configuration de liaison pour le point de terminaison correspondant.  
+- Dans la page Résumé client ou service, cliquez sur **cliquez ici pour créer** dans le **Configuration de liaison** champ pour créer une configuration de liaison pour le point de terminaison correspondant.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Ajout d'extensions d'élément de liaison à une liaison personnalisée  
   
@@ -278,9 +278,9 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 ##### <a name="creating-a-new-behavior-configuration"></a>Création d'une configuration de comportement  
  Vous pouvez créer une nouvelle configuration de comportement de l'une des manières suivantes :  
   
--   Cliquez sur un des nœuds de comportement et sélectionnez «**nouvelle Configuration de comportement**  
+- Cliquez sur un des nœuds de comportement et sélectionnez «**nouvelle Configuration de comportement**  
   
--   Sélectionnez un des nœuds de comportement et cliquez sur le **nouvelle Configuration de comportement**... dans le **volet** sur le coin inférieur gauche de la fenêtre.  
+- Sélectionnez un des nœuds de comportement et cliquez sur le **nouvelle Configuration de comportement**... dans le **volet** sur le coin inférieur gauche de la fenêtre.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Ajout d’extensions d’éléments de comportement à un comportement  
   
@@ -319,13 +319,13 @@ L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communicati
 #### <a name="extensions"></a>Extensions  
  Nouvelles extensions de liaison, les extensions d’élément de liaison, les extensions de point de terminaison standard et les extensions de comportement peuvent être inscrits pour utiliser dans la configuration de WCF. Les extensions sont des paires de nom/type. Le nom définit le nom de l’extension dans la configuration, alors que le type implémente l’extension. Il existe quatre types d’extension :  
   
--   Les extensions de liaison définissent un type de liaison entier. Par exemple : `basicHttpBinding`  
+- Les extensions de liaison définissent un type de liaison entier. Par exemple : `basicHttpBinding`  
   
--   Les extensions d'élément de liaison définissent un élément d'une liaison. Par exemple : `textMessageEncoding`  
+- Les extensions d'élément de liaison définissent un élément d'une liaison. Par exemple : `textMessageEncoding`  
   
--   Les extensions de point de terminaison standard définissent un point de terminaison standard entier. Par exemple : `discoveryEndpoint`  
+- Les extensions de point de terminaison standard définissent un point de terminaison standard entier. Par exemple : `discoveryEndpoint`  
   
--   Les extensions d’élément de comportement définissent un élément d’un comportement. Par exemple : `clientVia`  
+- Les extensions d’élément de comportement définissent un élément d’un comportement. Par exemple : `clientVia`  
   
  Les extensions inscrites dans la configuration peuvent être utilisées comme tout autre composant WCF du même type.  
   

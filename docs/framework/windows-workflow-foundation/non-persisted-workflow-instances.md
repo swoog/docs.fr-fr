@@ -3,11 +3,11 @@ title: Instances de workflow non persistantes
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644263"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instances de workflow non persistantes
 Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persistant dans le <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'hôte de service crée une entrée pour ce service dans le magasin d'instances. Par la suite, lorsque l'instance de workflow est rendue persistante pour la première fois, le <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> stocke l'état de l'instance actuelle. Si le workflow est hébergé dans le service d'activation des processus Windows, les données de déploiement du service sont aussi écrites dans le magasin d'instances lorsque l'instance est rendue persistante pour la première fois.  
@@ -17,13 +17,13 @@ Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persist
 ## <a name="the-non-persisted-state"></a>État non persistant  
  Les instances de workflow durables qui n'ont pas été rendues persistantes restent dans un état non persistant dans les cas suivants :  
   
--   L'hôte de service se bloque avant que l'instance de workflow soit persistante pour la première fois. L'instance de workflow reste dans le magasin d'instances et n'est pas récupérée. Si un message corrélé arrive, l'instance de workflow devient à nouveau active.  
+- L'hôte de service se bloque avant que l'instance de workflow soit persistante pour la première fois. L'instance de workflow reste dans le magasin d'instances et n'est pas récupérée. Si un message corrélé arrive, l'instance de workflow devient à nouveau active.  
   
--   L'instance de workflow rencontre une exception avant qu'elle soit rendue persistante pour la première fois. Selon le <xref:System.Activities.UnhandledExceptionAction> retourné, les scénarios suivants se produisent :  
+- L'instance de workflow rencontre une exception avant qu'elle soit rendue persistante pour la première fois. Selon le <xref:System.Activities.UnhandledExceptionAction> retourné, les scénarios suivants se produisent :  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> a la valeur <xref:System.Activities.UnhandledExceptionAction.Abort> : lorsqu'une exception se produit, les informations de déploiement du service sont écrites dans le magasin d'instances et l'instance de workflow est déchargée de la mémoire. L'instance de workflow reste dans un état non persitant et ne peut pas être rechargée.  
+    - <xref:System.Activities.UnhandledExceptionAction> a la valeur <xref:System.Activities.UnhandledExceptionAction.Abort>: Lorsqu’une exception se produit, les informations de déploiement de service sont écrites dans le magasin d’instances, et l’instance de workflow est déchargée de la mémoire. L'instance de workflow reste dans un état non persitant et ne peut pas être rechargée.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> a la valeur <xref:System.Activities.UnhandledExceptionAction.Cancel> ou <xref:System.Activities.UnhandledExceptionAction.Terminate> : lorsqu'une exception se produit, les informations de déploiement du service sont écrites dans le magasin d'instances et l'état de l'instance d'activité a la valeur <xref:System.Activities.ActivityInstanceState.Closed>.  
+    - <xref:System.Activities.UnhandledExceptionAction> a la valeur <xref:System.Activities.UnhandledExceptionAction.Cancel> ou <xref:System.Activities.UnhandledExceptionAction.Terminate>: Lorsqu’une exception se produit, informations de déploiement de service sont écrites dans le magasin d’instances, et l’état d’instance activité a la valeur <xref:System.Activities.ActivityInstanceState.Closed>.  
   
  Pour réduire le risque de rencontrer des instances de workflow non persistantes déchargées, il est recommandé de rendre le workflow persistant tôt dans son cycle de vie.  
   
@@ -34,7 +34,7 @@ Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persist
   
  Pour rechercher les instances non persistantes dans le magasin d'instances de workflow SQL, vous pouvez utiliser les requêtes SQL suivantes :  
   
--   Cette requête recherche toutes les instances qui n'ont pas été rendues persistantes et retourne l'ID et l'heure de création (stockée en temps UTC) correspondants.  
+- Cette requête recherche toutes les instances qui n'ont pas été rendues persistantes et retourne l'ID et l'heure de création (stockée en temps UTC) correspondants.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persist
         where IsInitialized = 0  
     ```  
   
--   Cette requête recherche toutes les instances qui n'ont pas été rendues persistantes et qui ne sont pas chargées et retourne l'ID et l'heure de création (stockée en temps UTC) correspondants.  
+- Cette requête recherche toutes les instances qui n'ont pas été rendues persistantes et qui ne sont pas chargées et retourne l'ID et l'heure de création (stockée en temps UTC) correspondants.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persist
             and CurrentMachine is NULL  
     ```  
   
--   Cette requête recherche toutes les instances suspendues qui n'ont pas été rendues persistantes et retourne l'ID, l'heure de création (stockée en temps UTC), la raison de suspension et le nom de l'exception correspondants.  
+- Cette requête recherche toutes les instances suspendues qui n'ont pas été rendues persistantes et retourne l'ID, l'heure de création (stockée en temps UTC), la raison de suspension et le nom de l'exception correspondants.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

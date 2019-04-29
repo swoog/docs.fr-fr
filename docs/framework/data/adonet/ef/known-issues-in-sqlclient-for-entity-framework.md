@@ -3,11 +3,11 @@ title: Problèmes connus dans SqlClient pour l'Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607732"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problèmes connus dans SqlClient pour l'Entity Framework
 Cette section décrit les problèmes connus liés au fournisseur de données .NET Framework pour SQL Server (SqlClient).  
@@ -25,15 +25,15 @@ Cette section décrit les problèmes connus liés au fournisseur de données .NE
   
  Vous trouverez ci-dessous quelques scénarios classiques susceptibles d'aboutir à la présence d'opérateurs CROSS APPLY et/ou OUTER APPLY dans la requête de sortie :  
   
--   sous-requête corrélée avec pagination ;  
+- sous-requête corrélée avec pagination ;  
   
--   `AnyElement` sur une sous-requête corrélée ou sur une collection produite par navigation ;  
+- `AnyElement` sur une sous-requête corrélée ou sur une collection produite par navigation ;  
   
--   requêtes LINQ qui utilisent des méthodes de regroupement acceptant un sélecteur d'élément ;  
+- requêtes LINQ qui utilisent des méthodes de regroupement acceptant un sélecteur d'élément ;  
   
--   requête dans laquelle un CROSS APPLY ou un OUTER APPLY est explicitement spécifié ;  
+- requête dans laquelle un CROSS APPLY ou un OUTER APPLY est explicitement spécifié ;  
   
--   requête dotée d'une construction DEREF sur une construction REF.  
+- requête dotée d'une construction DEREF sur une construction REF.  
   
 ## <a name="skip-operator"></a>Opérateur SKIP  
  Si vous utilisez [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], l’utilisation de SKIP avec ORDER BY sur des colonnes non-clés peut retourner des résultats incorrects. Le nombre de lignes ignorées peut être supérieur au nombre de lignes spécifié si la colonne non-clé contient des données en double. Cela est dû à la manière dont la sous-clause SKIP est traduite pour [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Par exemple, dans la requête suivante, plus de cinq lignes peuvent être ignorées si `E.NonKeyColumn` a des valeurs en double :  

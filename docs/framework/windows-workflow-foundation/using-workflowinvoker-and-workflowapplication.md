@@ -3,11 +3,11 @@ title: Utilisation de WorkflowInvoker et WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
 ms.openlocfilehash: 29d152cd6011fb3b55aae60726d095dc44dd23a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669561"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Utilisation de WorkflowInvoker et WorkflowApplication
 Windows Workflow Foundation (WF) fournit plusieurs méthodes d’hébergement de workflows. <xref:System.Activities.WorkflowInvoker> offre un moyen simple pour appeler un workflow comme s'il s'agissait d'un appel de méthode et ne peut être utilisé que pour les workflows qui n'utilisent pas la persistance. <xref:System.Activities.WorkflowApplication> fournit un modèle plus riche pour exécuter des workflows, qui inclut la notification des événements de cycle de vie, le contrôle d'exécution, la modification de signet et la persistance. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fournit la prise en charge des activités de messagerie et est principalement utilisé avec les services de workflow. Cette rubrique vous présente l'hébergement de workflow avec <xref:System.Activities.WorkflowInvoker> et <xref:System.Activities.WorkflowApplication>. Pour plus d’informations sur l’hébergement de workflows avec <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consultez [Services de Workflow](../wcf/feature-details/workflow-services.md) et [d’hébergement de la vue d’ensemble des Services de Workflow](../wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -27,18 +27,18 @@ Windows Workflow Foundation (WF) fournit plusieurs méthodes d’hébergement de
  <xref:System.Activities.WorkflowInvoker> fournit également des versions asynchrones de la méthode invoke. Pour plus d’informations, consultez <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> et <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Définition des arguments d’entrée d’un workflow  
- Les données peuvent être passées dans un workflow à l'aide d'un dictionnaire de paramètres d'entrée, indexés par nom d'argument, qui correspondent aux arguments d'entrée du workflow. Dans cet exemple, un <xref:System.Activities.Statements.WriteLine> est appelé et la valeur de son argument <xref:System.Activities.Statements.WriteLine.Text%2A> est spécifiée à l'aide du dictionnaire de paramètres d'entrée.  
+ Les données peuvent être passées dans un workflow à l’aide d’un dictionnaire de paramètres d’entrée, indexés par nom d’argument, qui correspondent aux arguments d’entrée du workflow. Dans cet exemple, un <xref:System.Activities.Statements.WriteLine> est appelé et la valeur de son argument <xref:System.Activities.Statements.WriteLine.Text%2A> est spécifiée à l’aide du dictionnaire de paramètres d’entrée.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#3)]  
   
-### <a name="retrieving-output-arguments-of-a-workflow"></a>Récupération des arguments de sortie d'un workflow  
- Les paramètres de sortie d'un workflow peuvent être obtenus à l'aide du dictionnaire de sorties retourné à partir de l'appel à <xref:System.Activities.WorkflowInvoker.Invoke%2A>. L'exemple suivant appelle un workflow composé d'une activité `Divide` unique qui a deux arguments d'entrée et deux arguments de sortie. Lorsque le workflow est appelé, le dictionnaire d'arguments (`arguments`) est passé ; il contient les valeurs de chaque argument d'entrée, indexées par nom d'argument. Lors du retour de l'appel à `Invoke`, chaque argument de sortie, également indexé par nom d'argument, est retourné dans le dictionnaire `outputs`.  
+### <a name="retrieving-output-arguments-of-a-workflow"></a>Récupération des arguments de sortie d’un workflow  
+ Les paramètres de sortie d'un workflow peuvent être obtenus à l'aide du dictionnaire de sorties retourné à partir de l'appel à <xref:System.Activities.WorkflowInvoker.Invoke%2A>. L’exemple suivant appelle un workflow composé d’une activité `Divide` unique qui a deux arguments d’entrée et deux arguments de sortie. Lorsque le workflow est appelé, le dictionnaire d'arguments (`arguments`) est passé ; il contient les valeurs de chaque argument d'entrée, indexées par nom d'argument. Lors du retour de l'appel à `Invoke`, chaque argument de sortie, également indexé par nom d'argument, est retourné dans le dictionnaire `outputs`.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
   
  [!code-csharp[CFX_WorkflowInvokerExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#20)]  
   
- Si le workflow dérive de <xref:System.Activities.ActivityWithResult>, par exemple `CodeActivity<TResult>` ou `Activity<TResult>`, et qu'il existe des arguments de sortie en plus des arguments de sortie <xref:System.Activities.Activity%601.Result%2A> correctement définis, une surcharge non générique de `Invoke` doit être utilisée pour récupérer les arguments supplémentaires. Pour ce faire, la définition de workflow passée dans `Invoke` doit être de type <xref:System.Activities.Activity>. Dans cet exemple l'activité `Divide` dérive de `CodeActivity<int>`, mais est déclarée comme <xref:System.Activities.Activity> afin qu'une surcharge non générique de `Invoke` soit utilisée, qui retourne un dictionnaire d'arguments au lieu d'une valeur de retour unique.  
+ Si le workflow dérive de <xref:System.Activities.ActivityWithResult>, par exemple `CodeActivity<TResult>` ou `Activity<TResult>`, et qu’il existe des arguments de sortie en plus des arguments de sortie <xref:System.Activities.Activity%601.Result%2A> correctement définis, une surcharge non générique de `Invoke` doit être utilisée pour récupérer les arguments supplémentaires. Pour ce faire, la définition de workflow passée dans `Invoke` doit être de type <xref:System.Activities.Activity>. Dans cet exemple l'activité `Divide` dérive de `CodeActivity<int>`, mais est déclarée comme <xref:System.Activities.Activity> afin qu'une surcharge non générique de `Invoke` soit utilisée, qui retourne un dictionnaire d'arguments au lieu d'une valeur de retour unique.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
   
@@ -54,13 +54,13 @@ Windows Workflow Foundation (WF) fournit plusieurs méthodes d’hébergement de
   
  [!code-csharp[CFX_WorkflowApplicationExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#32)]  
   
-### <a name="setting-input-arguments-of-a-workflow"></a>Définition des arguments d'entrée d'un workflow  
- Les données peuvent être passées dans un workflow comme il est démarré à l'aide d'un dictionnaire de paramètres, de la même façon que les données sont passées lors de l'utilisation de <xref:System.Activities.WorkflowInvoker>. Chaque élément dans le dictionnaire correspond à un argument d'entrée du workflow spécifié. Dans cet exemple, un workflow qui consiste en une activité <xref:System.Activities.Statements.WriteLine> est appelé et son argument <xref:System.Activities.Statements.WriteLine.Text%2A> est spécifié à l'aide du dictionnaire de paramètres d'entrée.  
+### <a name="setting-input-arguments-of-a-workflow"></a>Définition des arguments d’entrée d’un workflow  
+ Les données peuvent être passées dans un workflow comme il est démarré à l'aide d'un dictionnaire de paramètres, de la même façon que les données sont passées lors de l'utilisation de <xref:System.Activities.WorkflowInvoker>. Chaque élément dans le dictionnaire correspond à un argument d’entrée du workflow spécifié. Dans cet exemple, un workflow qui consiste en une activité <xref:System.Activities.Statements.WriteLine> est appelé et son argument <xref:System.Activities.Statements.WriteLine.Text%2A> est spécifié à l’aide du dictionnaire de paramètres d’entrée.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
-### <a name="retrieving-output-arguments-of-a-workflow"></a>Récupération des arguments de sortie d'un workflow  
- Lorsque l'exécution d'un workflow est terminée, tous les arguments de sortie peuvent être récupérés dans le gestionnaire <xref:System.Activities.WorkflowApplication.Completed%2A> en accédant au dictionnaire <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. L'exemple suivant héberge un workflow à l'aide de <xref:System.Activities.WorkflowApplication>. Un <xref:System.Activities.WorkflowApplication> instance est construite à l’aide d’une définition de workflow consistant en un seul `DiceRoll` activité. L’activité `DiceRoll` a deux arguments de sortie qui représentent les résultats du jet de dés. Lorsque le workflow se termine, les sorties sont récupérées dans le gestionnaire <xref:System.Activities.WorkflowApplication.Completed%2A>.  
+### <a name="retrieving-output-arguments-of-a-workflow"></a>Récupération des arguments de sortie d’un workflow  
+ Lorsque l’exécution d’un workflow est terminée, tous les arguments de sortie peuvent être récupérés dans le gestionnaire <xref:System.Activities.WorkflowApplication.Completed%2A> en accédant au dictionnaire <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. L'exemple suivant héberge un workflow à l'aide de <xref:System.Activities.WorkflowApplication>. Un <xref:System.Activities.WorkflowApplication> instance est construite à l’aide d’une définition de workflow consistant en un seul `DiceRoll` activité. L’activité `DiceRoll` a deux arguments de sortie qui représentent les résultats du jet de dés. Lorsque le workflow se termine, les sorties sont récupérées dans le gestionnaire <xref:System.Activities.WorkflowApplication.Completed%2A>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   

@@ -3,11 +3,11 @@ title: Vue d'ensemble d'Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606175"
 ---
 # <a name="entity-sql-overview"></a>Vue d'ensemble d'Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est un langage similaire à SQL qui vous permet d'interroger des modèles conceptuels dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modèles conceptuels représentent des données en tant qu’entités et relations, et [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vous permet d’interroger ces entités et relations dans un format familier pour ceux qui ont utilisé SQL.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609448"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE, structure
 Contient des informations sur un objet qui doit faire l'objet d'une récupération de mémoire.  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>Notes  
  Le `type` champ est un [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valeur d’énumération qui indique la provenance de la référence. Un particulier `COR_GC_REFERENCE` valeur peut refléter un des types suivants d’objets gérés :  
   
--   Objets à partir de toutes les piles gérées (`CorGCReferenceType.CorReferenceStack`). Cela inclut des références en direct dans le code managé, ainsi que les objets créés par le common language runtime.  
+- Objets à partir de toutes les piles gérées (`CorGCReferenceType.CorReferenceStack`). Cela inclut des références en direct dans le code managé, ainsi que les objets créés par le common language runtime.  
   
--   Objets à partir de la table de handles (`CorGCReferenceType.CorHandle*`). Cela inclut des références fortes (`HNDTYPE_STRONG` et `HNDTYPE_REFCOUNT`) et les variables statiques dans un module.  
+- Objets à partir de la table de handles (`CorGCReferenceType.CorHandle*`). Cela inclut des références fortes (`HNDTYPE_STRONG` et `HNDTYPE_REFCOUNT`) et les variables statiques dans un module.  
   
--   Objets à partir de la file d’attente du finaliseur (`CorGCReferenceType.CorReferenceFinalizer`). La file d’attente du finaliseur racines des objets jusqu'à ce que le finaliseur s’est exécutée.  
+- Objets à partir de la file d’attente du finaliseur (`CorGCReferenceType.CorReferenceFinalizer`). La file d’attente du finaliseur racines des objets jusqu'à ce que le finaliseur s’est exécutée.  
   
  Le `extraData` champ contient des données supplémentaires en fonction de la source (ou type) de la référence. Les valeurs possibles sont :  
   
--   `DependentSource`. Si le `type` est `CorGCREferenceType.CorHandleStrongDependent`, ce champ est l’objet qui, si elle est actif, de l’objet pour le garbage collector à racines `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Si le `type` est `CorGCREferenceType.CorHandleStrongDependent`, ce champ est l’objet qui, si elle est actif, de l’objet pour le garbage collector à racines `COR_GC_REFERENCE.Location`.  
   
--   `RefCount`. Si le `type` est `CorGCREferenceType.CorHandleStrongRefCount`, ce champ est le nombre de références du handle.  
+- `RefCount`. Si le `type` est `CorGCREferenceType.CorHandleStrongRefCount`, ce champ est le nombre de références du handle.  
   
--   `Size`. Si le `type` est `CorGCREferenceType.CorHandleStrongSizedByref`, ce champ est la dernière taille de l’arborescence de l’objet pour lequel le garbage collector calculé les racines de l’objet. Notez que ce calcul n’est pas nécessairement à jour.  
+- `Size`. Si le `type` est `CorGCREferenceType.CorHandleStrongSizedByref`, ce champ est la dernière taille de l’arborescence de l’objet pour lequel le garbage collector calculé les racines de l’objet. Notez que ce calcul n’est pas nécessairement à jour.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

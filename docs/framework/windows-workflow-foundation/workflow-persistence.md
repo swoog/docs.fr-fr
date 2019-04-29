@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669339"
 ---
 # <a name="workflow-persistence"></a>Persistance du workflow
 La persistance de workflow est la capture durable de l'état d'une instance de workflow, indépendamment des informations sur le processus ou l'ordinateur. Cela permet d'abord de fournir, en cas de défaillance du système, un point connu de récupération de l'instance de workflow. Ensuite, la mémoire est conservée en déchargeant les instances de workflow qui ne fonctionnent pas activement. Enfin, l'état de l'instance de workflow peut être déplacé d'un nœud vers un autre dans une batterie de serveurs.  
@@ -27,30 +27,30 @@ La persistance de workflow est la capture durable de l'état d'une instance de w
 ## <a name="implicit-persistence-points"></a>Points de persistance implicites  
  La liste suivante comprend des exemples de conditions selon lesquelles un workflow est rendu persistant, lors de l'association d'un magasin d'instances à un workflow.  
   
--   Quand un **TransactionScope** activité est terminée ou un **TransactedReceiveScope** activité est terminée.  
+- Quand un **TransactionScope** activité est terminée ou un **TransactedReceiveScope** activité est terminée.  
   
--   Lorsqu’une instance de workflow devienne inactive et **WorkflowIdleBehavior** est défini sur l’hôte de flux de travail. Cela se produit, par exemple, lorsque vous utilisez des activités de messagerie ou un **délai** activité.  
+- Lorsqu’une instance de workflow devienne inactive et **WorkflowIdleBehavior** est défini sur l’hôte de flux de travail. Cela se produit, par exemple, lorsque vous utilisez des activités de messagerie ou un **délai** activité.  
   
--   Lorsqu’un WorkflowApplication devient inactif et le **PersistableIdle** propriété de l’application est définie sur **PersistableIdleAction.Persist**.  
+- Lorsqu’un WorkflowApplication devient inactif et le **PersistableIdle** propriété de l’application est définie sur **PersistableIdleAction.Persist**.  
   
--   Lorsqu'une application hôte a pour instruction de rendre persistante ou de décharger une instance de workflow.  
+- Lorsqu'une application hôte a pour instruction de rendre persistante ou de décharger une instance de workflow.  
   
--   Lorsqu'une instance de workflow est arrêtée ou prend fin.  
+- Lorsqu'une instance de workflow est arrêtée ou prend fin.  
   
--   Quand un **Persist** activité s’exécute.  
+- Quand un **Persist** activité s’exécute.  
   
--   Lorsqu'une instance d'un workflow développé à l'aide d'une version précédente de Windows Workflow Foundation rencontre un point de persistance lors de l'exécution interopérable.  
+- Lorsqu'une instance d'un workflow développé à l'aide d'une version précédente de Windows Workflow Foundation rencontre un point de persistance lors de l'exécution interopérable.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Magasin d’instances de workflow SQL](sql-workflow-instance-store.md)  
+- [Magasin d’instances de workflow SQL](sql-workflow-instance-store.md)  
   
--   [Magasins d’instances](instance-stores.md)  
+- [Magasins d’instances](instance-stores.md)  
   
--   [Participants de persistance](persistence-participants.md)  
+- [Participants de persistance](persistence-participants.md)  
   
--   [Bonnes pratiques sur la persistance](persistence-best-practices.md)  
+- [Bonnes pratiques sur la persistance](persistence-best-practices.md)  
   
--   [Instances de workflow non persistantes](non-persisted-workflow-instances.md)  
+- [Instances de workflow non persistantes](non-persisted-workflow-instances.md)  
   
--   [Suspension et reprise d’un workflow](pausing-and-resuming-a-workflow.md)
+- [Suspension et reprise d’un workflow](pausing-and-resuming-a-workflow.md)

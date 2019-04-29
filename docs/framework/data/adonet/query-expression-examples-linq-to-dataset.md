@@ -3,11 +3,11 @@ title: Exemples d'expression de requête (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
 ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637651"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Exemples d'expression de requête (LINQ to DataSet)
 Cette section fournit de LINQ à DataSet programmation des exemples de syntaxe d’expression de requête qui utilisent les opérateurs de requête standard. Le <xref:System.Data.DataSet> utilisé dans ces exemples est rempli à l’aide de la `FillDataSet` (méthode), qui est spécifié dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) ou [présentation des opérateurs de requête Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

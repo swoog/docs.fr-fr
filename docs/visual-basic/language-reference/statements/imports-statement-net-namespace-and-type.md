@@ -17,11 +17,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
 ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637880"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports, instruction (espace de noms et type .NET)
 Active les noms d’être référencés sans qualification d’espace de noms de type.  
@@ -38,9 +38,9 @@ Imports [ aliasname = ] namespace.element
   
 |Terme|Définition|  
 |---|---|  
-|`aliasname`|Optionnel. Un *alias d’importation* ou le nom par lequel le code peut faire référence à `namespace` au lieu de la chaîne de qualification complète. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`aliasname`|Facultatif. Un *alias d’importation* ou le nom par lequel le code peut faire référence à `namespace` au lieu de la chaîne de qualification complète. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`namespace`|Obligatoire. Le nom qualifié complet de l’espace de noms importé. Une chaîne d’espaces de noms imbriquée à n’importe quel niveau.|  
-|`element`|Optionnel. Le nom d’un élément de programmation déclaré dans l’espace de noms. Peut être n’importe quel élément de conteneur.|  
+|`element`|Facultatif. Le nom d’un élément de programmation déclaré dans l’espace de noms. Peut être n’importe quel élément de conteneur.|  
   
 ## <a name="remarks"></a>Notes  
  La `Imports` instruction permet aux types qui sont contenus dans un espace de noms donné pour être référencé directement.  

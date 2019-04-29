@@ -5,11 +5,11 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596776"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Traitement par lots des messages dans une transaction
 Les applications en file d’attente utilisent des transactions pour garantir l’exactitude et la remise fiable des messages. Toutefois, les transactions sont des opérations coûteuses et peuvent réduire considérablement le débit de message. L’une des méthodes utilisées pour améliorer le débit de message est de disposer d’une application capable de lire et de traiter plusieurs messages dans une transaction unique. Le compromis réside entre la performance et la récupération : à mesure que le nombre de messages dans un lot augmente, la quantité de travail de récupération nécessaire en cas de restauration des transactions augmente également. Il est important de noter la différence entre le traitement par lot des messages dans une transaction et dans des sessions. Un *session* est un regroupement de messages associés qui sont traités par une application unique et validée comme une seule unité. Les sessions sont en général utilisées lorsqu'un groupe de messages du même type doivent être traités ensemble. Un site Web d'achat en ligne en est un exemple. *Lots* servent à traiter plusieurs, les messages d’une manière qui augmente le débit de message de type différent. Pour plus d’informations sur les sessions, consultez [regrouper en file d’attente des Messages dans une Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Les messages d’un lot sont également traités par une application unique et sont validés en tant qu’unité unique, mais il peut n’y avoir aucune relation entre eux. Le traitement par lot des messages dans une transaction est une optimisation qui ne modifie pas la manière dont l’application s’exécute.  
@@ -20,13 +20,13 @@ Les applications en file d’attente utilisent des transactions pour garantir l�
 ## <a name="committing-a-transaction"></a>Validation d’une transaction  
  Une transaction par lot est validée selon les éléments suivants :  
   
--   `MaxBatchSize`. Propriété du comportement <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Cette propriété détermine le nombre maximal de messages placés dans un lot. Lorsque ce nombre est atteint, le lot est validé. Cette valeur n’est pas une limite stricte et il est possible de valider un lot avant d’avoir reçu ce nombre de messages.  
+- `MaxBatchSize`. Propriété du comportement <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Cette propriété détermine le nombre maximal de messages placés dans un lot. Lorsque ce nombre est atteint, le lot est validé. Cette valeur n’est pas une limite stricte et il est possible de valider un lot avant d’avoir reçu ce nombre de messages.  
   
--   `Transaction Timeout`. Lorsque 80 pourcent du délai d’expiration de la transaction est écoulé, le lot est validé et un nouveau lot est créé. Cela signifie que s'il reste 20 pourcent ou moins du temps accordé à une transaction pour se terminer, le lot est validé.  
+- `Transaction Timeout`. Lorsque 80 pourcent du délai d’expiration de la transaction est écoulé, le lot est validé et un nouveau lot est créé. Cela signifie que s'il reste 20 pourcent ou moins du temps accordé à une transaction pour se terminer, le lot est validé.  
   
--   `TransactionScopeRequired`. Lors du traitement d’un lot de messages, si WCF trouve un qui a `TransactionScopeRequired`  =  `false`, il valide le lot et rouvre un nouveau lot à la réception du premier message avec `TransactionScopeRequired`  =  `true` et `TransactionAutoComplete`  = `true`.  
+- `TransactionScopeRequired`. Lors du traitement d’un lot de messages, si WCF trouve un qui a `TransactionScopeRequired`  =  `false`, il valide le lot et rouvre un nouveau lot à la réception du premier message avec `TransactionScopeRequired`  =  `true` et `TransactionAutoComplete`  = `true`.  
   
--   S’il n’y a plus de message dans la file d’attente, le lot actuel est validé, même si `MaxBatchSize` n’a pas été atteint ou que 80 pourcent du délai d’expiration de la transaction ne se sont pas écoulés.  
+- S’il n’y a plus de message dans la file d’attente, le lot actuel est validé, même si `MaxBatchSize` n’a pas été atteint ou que 80 pourcent du délai d’expiration de la transaction ne se sont pas écoulés.  
   
 ## <a name="leaving-batching-mode"></a>Conservation du mode de traitement par lot  
  Si un message dans un lot provoque l’abandon de la transaction, les étapes suivantes se produisent :  

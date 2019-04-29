@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638054"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
 Répète un groupe d’instructions un nombre spécifié de fois.  
@@ -53,10 +53,10 @@ Next [ counter ]
 |`datatype`|Optionnel. Type de données de `counter`. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
 |`start`|Obligatoire. Expression numérique. Valeur initiale de `counter`.|  
 |`end`|Obligatoire. Expression numérique. La valeur finale de `counter`.|  
-|`step`|Facultatif. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
+|`step`|Optionnel. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
 |`statements`|Optionnel. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
 |`Continue For`|Facultatif. Transfère le contrôle à la prochaine itération de boucle.|  
-|`Exit For`|Facultatif. Transfère le contrôle de la `For` boucle.|  
+|`Exit For`|Optionnel. Transfère le contrôle de la `For` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For` boucle.|  
   
 > [!NOTE]
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` est souvent utilisé après l’évaluation d’une condition (par exemple, dans un `If`... `Then`... `Else` structure). Vous souhaiterez peut-être utiliser `Exit For` pour les conditions suivantes :  
   
--   Pour continuer à effectuer une itération est inutile ou impossible. Une valeur erronée ou une demande d’arrêt peut créer cette condition.  
+- Pour continuer à effectuer une itération est inutile ou impossible. Une valeur erronée ou une demande d’arrêt peut créer cette condition.  
   
--   Un `Try`... `Catch`... `Finally` instruction intercepte une exception. Vous pouvez utiliser `Exit For` à la fin de la `Finally` bloc.  
+- Un `Try`... `Catch`... `Finally` instruction intercepte une exception. Vous pouvez utiliser `Exit For` à la fin de la `Finally` bloc.  
   
--   Vous avez une boucle infinie, ce qui est une boucle qui pourrait s’exécuter de volumineux ou même infini de fois. Si vous détectez une telle condition, vous pouvez utiliser `Exit For` pour abandonner la boucle. Pour plus d’informations, consultez [faire... Instruction de boucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Vous avez une boucle infinie, ce qui est une boucle qui pourrait s’exécuter de volumineux ou même infini de fois. Si vous détectez une telle condition, vous pouvez utiliser `Exit For` pour abandonner la boucle. Pour plus d’informations, consultez [faire... Instruction de boucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Implémentation technique  
  Quand un `For`... `Next` commence, Visual Basic évalue `start`, `end`, et `step`. Visual Basic évalue ces valeurs uniquement à ce moment, puis assigne `start` à `counter`. Avant l’instruction bloc s’exécute, Visual Basic compare `counter` à `end`. Si `counter` est déjà supérieure à la `end` valeur (ou plus petits si `step` est un nombre négatif), le `For` boucle se termine et le contrôle passe à l’instruction qui suit la `Next` instruction. Sinon, le bloc d’instructions s’exécute.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  Le type de données de `counter` détermine le type de l’itération, qui doit être un des types suivants :  
   
--   Un `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, ou `Double`.  
+- Un `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, ou `Double`.  
   
--   Une énumération que vous déclarez en utilisant un [Enum, instruction](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Une énumération que vous déclarez en utilisant un [Enum, instruction](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Élément `Object`.  
+- Élément `Object`.  
   
--   Un type `T` qui a les opérateurs suivants, où `B` est un type qui peut être utilisé dans un `Boolean` expression.  
+- Un type `T` qui a les opérateurs suivants, où `B` est un type qui peut être utilisé dans un `Boolean` expression.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
 ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614984"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Exemples de syntaxe d’expression de requête : Filtrage
 Les exemples de cette rubrique montrent comment utiliser le `Where` et `Where…Contains` méthodes permettant d’interroger la [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) à l’aide de la syntaxe d’expression de requête. Notez que, dans lequel...`Contains` ne peut pas être utilisé dans le cadre d’un [requête compilée](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638023"
 ---
 # <a name="get-statement"></a>Get, instruction
 Déclare un `Get` procédure de propriété utilisée pour récupérer la valeur d’une propriété.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>Règles  
   
--   **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous procédez ainsi, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Get` procédure `Private`, mais pas `Public`.  
+- **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous procédez ainsi, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Get` procédure `Private`, mais pas `Public`.  
   
      Si vous définissez un `ReadOnly` propriété, le `Get` procédure représente la propriété entière. Vous ne pouvez pas déclarer un accès différents au niveau de `Get`, parce que seront définis à deux niveaux d’accès pour la propriété.  
   
--   **Type de retour.** Le [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) peut déclarer le type de données de la valeur de retour. Le `Get` procédure retourne automatiquement que le type de données. Vous pouvez spécifier n’importe quel type de données ou le nom d’une énumération, une structure, une classe ou une interface.  
+- **Type de retour.** Le [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) peut déclarer le type de données de la valeur de retour. Le `Get` procédure retourne automatiquement que le type de données. Vous pouvez spécifier n’importe quel type de données ou le nom d’une énumération, une structure, une classe ou une interface.  
   
      Si le `Property` instruction ne spécifie pas `returntype`, la procédure retourne `Object`.  
   
 ## <a name="behavior"></a>Comportement  
   
--   **Retour d’une procédure.** Lorsque le `Get` procédure retourne au code appelant, l’exécution se poursuit au sein de l’instruction qui a demandé la valeur de propriété.  
+- **Retour d’une procédure.** Lorsque le `Get` procédure retourne au code appelant, l’exécution se poursuit au sein de l’instruction qui a demandé la valeur de propriété.  
   
      `Get` procédures de propriété peuvent retourner une valeur en utilisant le [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou en attribuant la valeur de retour au nom de propriété. Pour plus d’informations, consultez « Valeur de retour » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Le `Exit Property` et `Return` instructions provoquent la sortie immédiate d’une procédure de propriété. Un nombre quelconque de `Exit Property` et `Return` instructions peuvent apparaître n’importe où dans la procédure, et vous pouvez combiner `Exit Property` et `Return` instructions.  
   
--   **Valeur de retour.** Pour retourner une valeur à partir d’un `Get` procédure, vous pouvez affecter la valeur au nom de propriété ou l’inclure dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md). Le `Return` instruction assigne simultanément le `Get` procédure retourner de valeur et termine la procédure.  
+- **Valeur de retour.** Pour retourner une valeur à partir d’un `Get` procédure, vous pouvez affecter la valeur au nom de propriété ou l’inclure dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md). Le `Return` instruction assigne simultanément le `Get` procédure retourner de valeur et termine la procédure.  
   
      Si vous utilisez `Exit Property` sans attribuer une valeur au nom de propriété, le `Get` procédure retourne la valeur par défaut type de la propriété de données. Pour plus d’informations, consultez « Valeur de retour » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
   

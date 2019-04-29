@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665791"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressions lambda (Visual Basic)
 Un *expression lambda* est une fonction ou une sous-routine sans nom qui peut être utilisé partout où un délégué est valid. Expressions lambda peuvent être des fonctions ou sous-routines et peuvent être une ou plusieurs lignes. Vous pouvez transmettre des valeurs à partir de la portée actuelle à une expression lambda.  
@@ -43,27 +43,27 @@ Un *expression lambda* est une fonction ou une sous-routine sans nom qui peut ê
 ## <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda  
  La syntaxe d’une expression lambda ressemble à celle d’une fonction standard ou une sous-routine. Les différences sont les suivantes :  
   
--   Une expression lambda n’a pas un nom.  
+- Une expression lambda n’a pas un nom.  
   
--   Expressions lambda ne peut pas avoir de modificateurs, tels que `Overloads` ou `Overrides`.  
+- Expressions lambda ne peut pas avoir de modificateurs, tels que `Overloads` ou `Overrides`.  
   
--   Les fonctions lambda sur une ligne n’utilisent pas un `As` clause pour désigner le type de retour. Au lieu de cela, le type est déduit à partir de la valeur que prend le corps de l’expression lambda. Par exemple, si le corps de l’expression lambda est `cust.City = "London"`, son type de retour est `Boolean`.  
+- Les fonctions lambda sur une ligne n’utilisent pas un `As` clause pour désigner le type de retour. Au lieu de cela, le type est déduit à partir de la valeur que prend le corps de l’expression lambda. Par exemple, si le corps de l’expression lambda est `cust.City = "London"`, son type de retour est `Boolean`.  
   
--   Dans les fonctions lambda sur plusieurs lignes, vous pouvez spécifier un type de retour à l’aide un `As` clause, ou omettre le `As` clause afin que le type de retour est déduit. Lorsque le `As` clause est omise pour une fonction lambda sur plusieurs lignes, le type de retour est déduit pour être le type dominant à partir de tous les `Return` instructions dans la fonction lambda sur plusieurs lignes. Le *type dominant* est un type unique auquel tous les autres types peuvent s’étendre. Si ce type unique ne peut pas être déterminé, le type dominant est le type unique auquel tous les autres types dans le tableau peuvent se limiter. Si aucun de ces types uniques ne peut être déterminé, le type dominant est `Object`. Dans ce cas, si `Option Strict` a la valeur `On`, une erreur du compilateur se produit.  
+- Dans les fonctions lambda sur plusieurs lignes, vous pouvez spécifier un type de retour à l’aide un `As` clause, ou omettre le `As` clause afin que le type de retour est déduit. Lorsque le `As` clause est omise pour une fonction lambda sur plusieurs lignes, le type de retour est déduit pour être le type dominant à partir de tous les `Return` instructions dans la fonction lambda sur plusieurs lignes. Le *type dominant* est un type unique auquel tous les autres types peuvent s’étendre. Si ce type unique ne peut pas être déterminé, le type dominant est le type unique auquel tous les autres types dans le tableau peuvent se limiter. Si aucun de ces types uniques ne peut être déterminé, le type dominant est `Object`. Dans ce cas, si `Option Strict` a la valeur `On`, une erreur du compilateur se produit.  
   
      Par exemple, si les expressions fournies dans le `Return` instruction contiennent des valeurs de type `Integer`, `Long`, et `Double`, le tableau obtenu est de type `Double`. Les deux `Integer` et `Long` s’étendre au `Double` et uniquement `Double`. Par conséquent, `Double` est le type dominant. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Le corps d’une fonction d’une ligne doit être une expression qui retourne une valeur, pas une instruction. Il existe aucune `Return` instruction pour les fonctions d’une ligne. La valeur retournée par la fonction d’une ligne est la valeur de l’expression dans le corps de la fonction.  
+- Le corps d’une fonction d’une ligne doit être une expression qui retourne une valeur, pas une instruction. Il existe aucune `Return` instruction pour les fonctions d’une ligne. La valeur retournée par la fonction d’une ligne est la valeur de l’expression dans le corps de la fonction.  
   
--   Le corps d’une sous-routine sur une ligne doit être l’instruction de ligne.  
+- Le corps d’une sous-routine sur une ligne doit être l’instruction de ligne.  
   
--   Fonctions sur une ligne et des sous-routines n’incluent pas une `End Function` ou `End Sub` instruction.  
+- Fonctions sur une ligne et des sous-routines n’incluent pas une `End Function` ou `End Sub` instruction.  
   
--   Vous pouvez spécifier le type de données d’un paramètre d’expression lambda à l’aide de la `As` mot clé ou le type de données du paramètre peut être déduit. Tous les paramètres doivent avoir spécifié les types de données ou l’ensemble doit être déduit.  
+- Vous pouvez spécifier le type de données d’un paramètre d’expression lambda à l’aide de la `As` mot clé ou le type de données du paramètre peut être déduit. Tous les paramètres doivent avoir spécifié les types de données ou l’ensemble doit être déduit.  
   
--   `Optional` et `Paramarray` les paramètres ne sont pas autorisés.  
+- `Optional` et `Paramarray` les paramètres ne sont pas autorisés.  
   
--   Paramètres génériques ne sont pas autorisées.  
+- Paramètres génériques ne sont pas autorisées.  
   
 ## <a name="async-lambdas"></a>Lambdas asynchrones  
  Vous pouvez facilement créer des expressions lambda et des instructions qui incorporent le traitement asynchrone à l’aide de la [Async](../../../../visual-basic/language-reference/modifiers/async.md) et [opérateur Await](../../../../visual-basic/language-reference/operators/await-operator.md) mots clés. Par exemple, l'exemple Windows Forms suivant contient un gestionnaire d'événements qui appelle et attend une méthode async `ExampleMethodAsync`.  
@@ -118,15 +118,15 @@ End Class
   
  L’exemple suivant montre le large éventail de droits d’accès de l’expression lambda imbriquée. Lorsque l’expression lambda retournée est exécutée à partir de `Main` comme `aDel`, il accède aux éléments suivants :  
   
--   Un champ de la classe dans laquelle elle est définie : `aField`  
+- Un champ de la classe dans laquelle elle est définie : `aField`  
   
--   Une propriété de la classe dans laquelle elle est définie : `aProp`  
+- Une propriété de la classe dans laquelle elle est définie : `aProp`  
   
--   Un paramètre de méthode `functionWithNestedLambda`, dans lequel il est défini : `level1`  
+- Un paramètre de méthode `functionWithNestedLambda`, dans lequel il est défini : `level1`  
   
--   Une variable locale du `functionWithNestedLambda`: `localVar`  
+- Une variable locale du `functionWithNestedLambda`: `localVar`  
   
--   Un paramètre de l’expression lambda dans laquelle elle est imbriquée : `level2`  
+- Un paramètre de l’expression lambda dans laquelle elle est imbriquée : `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Exemples  
   
--   L’exemple suivant définit une expression lambda qui retourne `True` si l’argument nullable a une valeur assignée, et `False` si sa valeur est `Nothing`.  
+- L’exemple suivant définit une expression lambda qui retourne `True` si l’argument nullable a une valeur assignée, et `False` si sa valeur est `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   L’exemple suivant définit une expression lambda qui retourne l’index du dernier élément dans un tableau.  
+- L’exemple suivant définit une expression lambda qui retourne l’index du dernier élément dans un tableau.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

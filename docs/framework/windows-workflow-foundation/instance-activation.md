@@ -3,11 +3,11 @@ title: Activation d'instance
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641668"
 ---
 # <a name="instance-activation"></a>Activation d'instance
 Le magasin d’instances de workflow SQL exécute une tâche interne qui se réveille régulièrement et détecte les instances de workflow exécutables ou activables dans la base de données de persistance. En cas de détection d'une instance de workflow exécutable, il avertit l'hôte de workflow capable d'activer l'instance. En cas de détection d'une instance de workflow activable, il avertit un hôte générique qui active un hôte de workflow qui, à son tour, exécute l'instance de workflow. Les sections suivantes de cette rubrique décrivent en détail le processus d'activation d'instance.  
@@ -15,11 +15,11 @@ Le magasin d’instances de workflow SQL exécute une tâche interne qui se ré
 ## <a name="RunnableSection"></a> Détection et activation d’Instances de Workflow exécutables  
  Le Store d’Instance de Workflow SQL considère comme une instance de workflow *exécutable* si l’instance n’est pas dans l’état suspendu ou l’état terminé et satisfait les conditions suivantes :  
   
--   L'instance est déverrouillée et a un minuteur en attente qui a expiré.  
+- L'instance est déverrouillée et a un minuteur en attente qui a expiré.  
   
--   L'instance a un verrou périmé.  
+- L'instance a un verrou périmé.  
   
--   L’instance est déverrouillée et son état est **lors de l’exécution**.  
+- L’instance est déverrouillée et son état est **lors de l’exécution**.  
   
  Lorsqu'il détecte une instance exécutable, le magasin d'instances de workflow SQL déclenche l'objet <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>. Ensuite, le SqlWorkflowInstanceStore cesse de surveiller jusqu'à ce que l'objet <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> soit appelé une fois sur le magasin.  
   
@@ -37,7 +37,7 @@ Le magasin d’instances de workflow SQL exécute une tâche interne qui se ré
   
  Actuellement, le Store d’Instance de Workflow SQL prend en charge les hôtes génériques ayant la valeur du paramètre ActivationType définie sur **WAS**. Si le paramètre ActivationType n'est pas défini sur WAS, le magasin d'instances de workflow SQL lève un objet <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. Le Service de gestion de flux de travail qui est fourni avec le [!INCLUDE[dublin](../../../includes/dublin-md.md)] est un hôte générique dont le type d’activation **WAS**.  
   
- Pour l'activation WAS, un hôte générique requiert un jeu de paramètres d'activation pour dériver l'adresse de point de terminaison à laquelle les nouveaux hôtes peuvent être activés. Les paramètres d'activation pour l'activation WAS sont : nom du site, chemin d'accès vers l'application relatif au site et chemin d'accès vers le service relatif à l'application. Lors de l'exécution de l'objet <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>, le magasin d'instances de workflow SQL stocke ces paramètres d'activation.  
+ Pour l'activation WAS, un hôte générique requiert un jeu de paramètres d'activation pour dériver l'adresse de point de terminaison à laquelle les nouveaux hôtes peuvent être activés. Les paramètres d’activation pour l’activation WAS sont : nom du site, chemin d’accès vers l’application relatif au site et chemin d’accès vers le service relatif à l’application. Lors de l'exécution de l'objet <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>, le magasin d'instances de workflow SQL stocke ces paramètres d'activation.  
   
 ## <a name="runnable-instances-detection-period"></a>Période de détection des instances activables  
  Le **période de détection des Instances exécutables** propriété du Store d’Instance de Workflow SQL spécifie la période de temps après lequel le Store d’Instance de Workflow SQL exécute une tâche de détection pour détecter tout workflow exécutable ou activable instances dans la base de données de persistance issue du cycle de détection précédent. Consultez [période de détection des Instances exécutables](runnable-instances-detection-period.md) pour plus d’informations sur cette propriété.

@@ -3,22 +3,22 @@ title: type d'entité
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667181"
 ---
 # <a name="entity-type"></a>type d'entité
 Le *type d’entité* est le bloc de construction fondamental pour décrire la structure de données avec le modèle EDM (Entity Data Model). Dans un modèle conceptuel, un type d'entité représente la structure des concepts de niveau supérieur, comme les clients ou les commandes. Un type d'entité est un modèle pour les instances de type d'entité. Chaque modèle contient les informations suivantes :  
   
--   Nom unique. (Obligatoire.)  
+- Nom unique. (Obligatoire.)  
   
--   Un [clé d’entité](../../../../docs/framework/data/adonet/entity-key.md) défini par une ou plusieurs propriétés. (Obligatoire.)  
+- Un [clé d’entité](../../../../docs/framework/data/adonet/entity-key.md) défini par une ou plusieurs propriétés. (Obligatoire.)  
   
--   Données sous la forme de [propriétés](../../../../docs/framework/data/adonet/property.md). (Facultatif)  
+- Données sous la forme de [propriétés](../../../../docs/framework/data/adonet/property.md). (Facultatif)  
   
--   [Propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) qui permettent de naviguer parmi [fin](../../../../docs/framework/data/adonet/association-end.md) d’un [association](../../../../docs/framework/data/adonet/association-type.md) à l’autre extrémité. (facultatif)  
+- [Propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) qui permettent de naviguer parmi [fin](../../../../docs/framework/data/adonet/association-end.md) d’un [association](../../../../docs/framework/data/adonet/association-type.md) à l’autre extrémité. (facultatif)  
   
  Dans une application, une instance d'un type d'entité représente un objet spécifique (tel qu'un client ou une commande spécifique). Chaque instance d’un type d’entité doit avoir une valeur unique [clé d’entité](../../../../docs/framework/data/adonet/entity-key.md) au sein d’un [jeu d’entités](../../../../docs/framework/data/adonet/entity-set.md).  
   

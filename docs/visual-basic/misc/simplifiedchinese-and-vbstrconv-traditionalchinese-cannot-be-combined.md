@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_StrConvSCandTC
 ms.assetid: d8e6a11b-f549-43b5-8337-0594340e1325
 ms.openlocfilehash: a209a83ce5bd3ecd9580abab330f1e09ecc3864e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594839"
 ---
 # <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a>Impossible de combiner SimplifiedChinese et VbStrConv.TraditionalChinese
 Votre application essaie de combiner les membres de l’énumération `VbStrConv` `SimplifiedChinese` et `TraditionalChinese`, qui s’excluent mutuellement.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Supprimez `VbStrConv.SimplifiedChinese` ou `VbStrConv.TraditionalChinese`.  
+- Supprimez `VbStrConv.SimplifiedChinese` ou `VbStrConv.TraditionalChinese`.  
   
 ## <a name="see-also"></a>Voir aussi
 

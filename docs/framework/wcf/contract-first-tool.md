@@ -6,8 +6,8 @@ ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608625"
 ---
 # <a name="contract-first-tool"></a>Outil « Contrat en premier »
 Les contrats de service doivent souvent être créés à partir de services existants. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les classes de contrat de données peuvent être créées automatiquement à partir des services existants à l'aide de l'outil Contrat en premier. Pour utiliser l'outil Contrat en premier, le fichier de définition de schéma XML (XSD) doit être téléchargé localement ; l'outil ne peut pas importer les contrats de données distants via HTTP.
@@ -69,31 +69,31 @@ Les contrats de service doivent souvent être créés à partir de services exis
 
  Les paramètres avancés suivants peuvent être configurés pour la génération du code à partir des contrats. Les paramètres peuvent être configurés pour tous les fichiers du projet ; les paramètres ne peuvent pas être configurés pour les fichiers individuels à ce stade.
 
--   **Mode de sérialiseur**: Ce paramètre détermine le sérialiseur utilisé pour la lecture des fichiers de contrat de service. Lorsque **sérialiseur XML** est sélectionnée, le **Types de collections** et **réutiliser les Types** options sont désactivées. Ces options s’appliquent uniquement à la **Data Contract Serializer**.
+- **Mode de sérialiseur**: Ce paramètre détermine le sérialiseur utilisé pour la lecture des fichiers de contrat de service. Lorsque **sérialiseur XML** est sélectionnée, le **Types de collections** et **réutiliser les Types** options sont désactivées. Ces options s’appliquent uniquement à la **Data Contract Serializer**.
 
--   **Réutiliser les Types**: Ce paramètre spécifie les bibliothèques qui sont utilisées pour la réutilisation du type. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **Réutiliser les Types**: Ce paramètre spécifie les bibliothèques qui sont utilisées pour la réutilisation du type. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **Type de collection**: Ce paramètre spécifie le type qualifié complet ou qualifié d’assembly à utiliser pour le type de données de collection. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **Type de collection**: Ce paramètre spécifie le type qualifié complet ou qualifié d’assembly à utiliser pour le type de données de collection. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **Type de dictionnaire**: Ce paramètre spécifie le type qualifié complet ou qualifié d’assembly à utiliser pour le type de données de dictionnaire.
+- **Type de dictionnaire**: Ce paramètre spécifie le type qualifié complet ou qualifié d’assembly à utiliser pour le type de données de dictionnaire.
 
--   **EnableDataBinding**: Ce paramètre spécifie s’il faut implémenter la <xref:System.ComponentModel.INotifyPropertyChanged> interface sur tous les types de données pour implémenter la liaison de données.
+- **EnableDataBinding**: Ce paramètre spécifie s’il faut implémenter la <xref:System.ComponentModel.INotifyPropertyChanged> interface sur tous les types de données pour implémenter la liaison de données.
 
--   **ExcludedTypes**: ce paramètre spécifie la liste des types complet ou qualifié d’assembly à exclure les assemblys référencés. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **ExcludedTypes**: ce paramètre spécifie la liste des types complet ou qualifié d’assembly à exclure les assemblys référencés. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **GenerateInternalTypes**: Ce paramètre spécifie s’il faut générer des classes marquées comme internes. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **GenerateInternalTypes**: Ce paramètre spécifie s’il faut générer des classes marquées comme internes. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **GenerateSerializableTypes**: Ce paramètre spécifie s’il faut générer des classes avec le <xref:System.SerializableAttribute> attribut. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **GenerateSerializableTypes**: Ce paramètre spécifie s’il faut générer des classes avec le <xref:System.SerializableAttribute> attribut. Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **/Importxmltypes**: Ce paramètre spécifie s’il faut configurer le sérialiseur de contrat de données pour appliquer le <xref:System.SerializableAttribute> attribut aux classes sans le <xref:System.Runtime.Serialization.DataContractAttribute> attribut.  Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
+- **/Importxmltypes**: Ce paramètre spécifie s’il faut configurer le sérialiseur de contrat de données pour appliquer le <xref:System.SerializableAttribute> attribut aux classes sans le <xref:System.Runtime.Serialization.DataContractAttribute> attribut.  Ce paramètre s’applique uniquement si **Mode de sérialiseur** a la valeur **Data Contract Serializer**.
 
--   **SupportFx35TypedDataSets**: Ce paramètre spécifie s’il faut fournir des fonctionnalités supplémentaires pour les jeux de données typés créés pour .NET Framework 3.5. Lorsque **Mode de sérialiseur** a la valeur **sérialiseur XML**, le <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> extension sera ajoutée à l’importateur de schéma XML lorsque cette valeur est définie sur True. Lorsque **Mode de sérialiseur** a la valeur **sérialiseur de contrat de données**, le type <xref:System.DateTimeOffset> sera exclu des références lorsque cette valeur est définie sur False, afin qu’un <xref:System.DateTimeOffset> est toujours généré pour les versions antérieures du framework.
+- **SupportFx35TypedDataSets**: Ce paramètre spécifie s’il faut fournir des fonctionnalités supplémentaires pour les jeux de données typés créés pour .NET Framework 3.5. Lorsque **Mode de sérialiseur** a la valeur **sérialiseur XML**, le <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> extension sera ajoutée à l’importateur de schéma XML lorsque cette valeur est définie sur True. Lorsque **Mode de sérialiseur** a la valeur **sérialiseur de contrat de données**, le type <xref:System.DateTimeOffset> sera exclu des références lorsque cette valeur est définie sur False, afin qu’un <xref:System.DateTimeOffset> est toujours généré pour les versions antérieures du framework.
 
--   **InputXsdFiles**: Ce paramètre spécifie la liste des fichiers d’entrée. Chaque fichier doit contenir un schéma XML valide.
+- **InputXsdFiles**: Ce paramètre spécifie la liste des fichiers d’entrée. Chaque fichier doit contenir un schéma XML valide.
 
--   **Langage**: Ce paramètre spécifie le langage du code généré de contrat. Le paramètre doit être reconnaissable par <xref:System.CodeDom.Compiler.CodeDomProvider>.
+- **Langage**: Ce paramètre spécifie le langage du code généré de contrat. Le paramètre doit être reconnaissable par <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
--   **NamespaceMappings**: Ce paramètre spécifie les mappages des espaces de noms cibles XSD aux espaces de noms CLR. Chaque mappage doit utiliser le format suivant :
+- **NamespaceMappings**: Ce paramètre spécifie les mappages des espaces de noms cibles XSD aux espaces de noms CLR. Chaque mappage doit utiliser le format suivant :
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ Les contrats de service doivent souvent être créés à partir de services exis
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Ce paramètre spécifie le répertoire où les fichiers de code sont générés.
+- **OutputDirectory**: Ce paramètre spécifie le répertoire où les fichiers de code sont générés.
 
  Les paramètres seront utilisés pour générer des types de contrat de service à partir des fichiers de contrat de service lorsque le projet est généré.
 

@@ -3,24 +3,24 @@ title: contrainte d'intégrité référentielle
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665296"
 ---
 # <a name="referential-integrity-constraint"></a>contrainte d'intégrité référentielle
 Un *contrainte d’intégrité référentielle* dans le modèle EDM (Entity Data Model) est similaire à une contrainte d’intégrité référentielle dans une base de données relationnelle. Dans la même façon qu’une (ou plusieurs colonnes) à partir d’une table de base de données peuvent faire référence à la clé primaire d’une autre table, un [propriété](../../../../docs/framework/data/adonet/property.md) (ou propriétés) d’un [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) peut faire référence à la [clé d’entité ](../../../../docs/framework/data/adonet/entity-key.md) d’un autre type d’entité. Le type d’entité référencé est appelé le *terminaison principale* de la contrainte. Le type d’entité qui fait référence à la terminaison principale est appelé le *terminaison dépendante* de la contrainte.  
   
  Une contrainte d’intégrité référentielle est définie en tant que partie d’un [association](../../../../docs/framework/data/adonet/association-type.md) entre deux types d’entité. La définition d'une contrainte d'intégrité référentielle spécifie les informations suivantes :  
   
--   Terminaison principale de la contrainte. (Type d'entité dont la clé d'entité est référencée par la terminaison dépendante.)  
+- Terminaison principale de la contrainte. (Type d'entité dont la clé d'entité est référencée par la terminaison dépendante.)  
   
--   Clé d'entité de la terminaison principale.  
+- Clé d'entité de la terminaison principale.  
   
--   Terminaison dépendante de la contrainte. (Type d'entité dont une ou plusieurs propriétés référencent la clé d'entité de la terminaison principale.)  
+- Terminaison dépendante de la contrainte. (Type d'entité dont une ou plusieurs propriétés référencent la clé d'entité de la terminaison principale.)  
   
--   Propriété ou propriétés de référence de la terminaison dépendante.  
+- Propriété ou propriétés de référence de la terminaison dépendante.  
   
  Les contraintes d'intégrité référentielle dans le modèle EDM ont pour objectif de vérifier que des associations valides existent toujours. Pour plus d’informations, consultez [propriété de clé étrangère](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   

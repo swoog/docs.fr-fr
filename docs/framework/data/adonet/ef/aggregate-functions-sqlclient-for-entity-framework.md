@@ -1,22 +1,22 @@
 ---
-title: Fonctions d’agrégation (SqlClient pour Entity Framework)
+title: Fonctions d'agrégation (SqlClient pour Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
 ms.openlocfilehash: f2f2b557cd9f126ddd513a0f42d3ac95114c3822
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606769"
 ---
-# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Fonctions d’agrégation (SqlClient pour Entity Framework)
+# <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Fonctions d'agrégation (SqlClient pour Entity Framework)
 Le fournisseur de données .NET Framework pour SQL Server (SqlClient) fournit des fonctions d'agrégation. Les fonctions d'agrégation effectuent des calculs sur un ensemble de valeurs d'entrée et retournent une valeur. Ces fonctions se trouvent dans l'espace de noms SqlServer, lequel est disponible lorsque vous utilisez SqlClient. La propriété d’espace de noms d’un fournisseur permet à Entity Framework de découvrir le préfixe attribué par ce fournisseur à des constructions spécifiques, telles que des types et des fonctions.  
   
  Voici les fonctions d’agrégation SqlClient.  
 
 ## <a name="avgexpression"></a>AVG(expression)
 
-Retourne la moyenne des valeurs d’une collection. Les valeurs NULL sont ignorées.
+Retourne la moyenne des valeurs d'une collection. Les valeurs NULL sont ignorées.
 
 **Arguments**
 

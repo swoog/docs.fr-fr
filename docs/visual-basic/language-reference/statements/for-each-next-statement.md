@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638075"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next, instruction (Visual Basic)
 Répète un groupe d’instructions pour chaque élément dans une collection.  
@@ -51,7 +51,7 @@ Next [ element ]
 |`element`|Requis dans le `For Each` instruction. Facultatif dans la `Next` instruction. variable. Utilisé pour itérer sur les éléments de la collection.|  
 |`datatype`|Obligatoire si `element` n’est pas déjà déclaré. Type de données de `element`.|  
 |`group`|Obligatoire. Une variable avec un type qui est un type de collection ou un objet. Fait référence à la collection sur laquelle le `statements` doivent être répétées.|  
-|`statements`|Optionnel. Une ou plusieurs instructions entre `For Each` et `Next` qui s’exécutent sur chaque élément dans `group`.|  
+|`statements`|Facultatif. Une ou plusieurs instructions entre `For Each` et `Next` qui s’exécutent sur chaque élément dans `group`.|  
 |`Continue For`|Optionnel. Transfère le contrôle au début de la `For Each` boucle.|  
 |`Exit For`|Optionnel. Transfère le contrôle de la `For Each` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For Each` boucle.|  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` est souvent utilisé après l’évaluation d’une condition, par exemple, dans un `If`... `Then`... `Else` structure. Vous souhaiterez peut-être utiliser `Exit For` pour les conditions suivantes :  
   
--   Pour continuer à effectuer une itération est inutile ou impossible. Cela peut résulter d’une valeur erronée ou une demande d’arrêt.  
+- Pour continuer à effectuer une itération est inutile ou impossible. Cela peut résulter d’une valeur erronée ou une demande d’arrêt.  
   
--   Une exception est interceptée dans un `Try`... `Catch`... `Finally`. Vous pouvez utiliser `Exit For` à la fin de la `Finally` bloc.  
+- Une exception est interceptée dans un `Try`... `Catch`... `Finally`. Vous pouvez utiliser `Exit For` à la fin de la `Finally` bloc.  
   
--   Il existe une boucle infinie, ce qui est une boucle qui pourrait s’exécuter de volumineux ou même infini de fois. Si vous détectez une telle condition, vous pouvez utiliser `Exit For` pour abandonner la boucle. Pour plus d’informations, consultez [faire... Instruction de boucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Il existe une boucle infinie, ce qui est une boucle qui pourrait s’exécuter de volumineux ou même infini de fois. Si vous détectez une telle condition, vous pouvez utiliser `Exit For` pour abandonner la boucle. Pour plus d’informations, consultez [faire... Instruction de boucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Vous utilisez un *itérateur* pour effectuer une itération personnalisée sur une collection. Un itérateur peut être une fonction ou un `Get` accesseur. Il utilise un `Yield` instruction pour retourner chaque élément de la collection un à la fois.  

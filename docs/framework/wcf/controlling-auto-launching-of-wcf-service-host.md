@@ -5,11 +5,11 @@ f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608448"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Contrôle de l'auto-lancement de l'hôte de service WCF
 Lorsque vous déboguez un autre projet dans la même solution Visual Studio contenant plusieurs projets, vous pouvez contrôler la fonction d’auto-lancement de l’hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) pour un projet de bibliothèque de Service WCF.  
@@ -20,13 +20,13 @@ Lorsque vous déboguez un autre projet dans la même solution Visual Studio cont
   
  Cette option est disponible dans le cadre des projets suivants :  
   
--   Projet de bibliothèque de Service WCF.  
+- Projet de bibliothèque de Service WCF.  
   
--   Projet de la bibliothèque du service du workflow séquentiel  
+- Projet de la bibliothèque du service du workflow séquentiel  
   
--   Projet de la bibliothèque du service de workflow d'ordinateur d'état  
+- Projet de la bibliothèque du service de workflow d'ordinateur d'état  
   
--   Projet de la bibliothèque du service de syndication  
+- Projet de la bibliothèque du service de syndication  
   
 ## <a name="see-also"></a>Voir aussi
 

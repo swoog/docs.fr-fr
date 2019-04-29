@@ -3,11 +3,11 @@ title: Syntaxe des chaînes de connexion
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608019"
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
 Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur. La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`. Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.  
@@ -22,13 +22,13 @@ Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérit
 ## <a name="connection-string-builders"></a>Builders de chaînes de connexion  
  ADO.NET 2.0 a introduit les générateurs de chaînes de connexion suivants pour les fournisseurs de données .NET Framework.  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Les générateurs de chaînes de connexion vous permettent de générer des chaînes de connexion valides lors de l'exécution, vous évitant ainsi d'avoir à concaténer manuellement les valeurs de chaîne dans votre code. Pour plus d’informations, consultez [Builders de chaînes de connexion](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 

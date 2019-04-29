@@ -3,15 +3,15 @@ title: Génération SQL à partir d'arborescences de commandes - meilleures prat
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606665"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Génération SQL à partir d'arborescences de commandes - meilleures pratiques
 
-Les arborescences de commandes de requête de sortie modèlent de façon précise les requêtes pouvant être exprimées en SQL. Toutefois, les développeurs de fournisseur sont confrontés à des problèmes courants lors de la génération SQL d'une arborescence de commandes de sortie. Cette rubrique expose ces difficultés. Dans la rubrique suivante, le fournisseur d'exemples indique comment résoudre ces problèmes.
+Les arborescences de commandes de requête de sortie modèlent de façon précise les requêtes pouvant être exprimées en SQL. Toutefois, les développeurs de fournisseur sont confrontés à des problèmes courants lors de la génération SQL d’une arborescence de commandes de sortie. Cette rubrique expose ces difficultés. Dans la rubrique suivante, le fournisseur d'exemples indique comment résoudre ces problèmes.
 
 ## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a>Grouper des nœuds DbExpression dans une instruction SQL SELECT
 
@@ -27,9 +27,9 @@ ORDER BY …
 
 Une ou plusieurs clauses peuvent être vides.  Une instruction SELECT imbriquée peut se produire dans une des lignes.
 
-Une éventuelle traduction d'une arborescence de commandes de requête en instruction SQL SELECT produirait une sous-requête pour chaque opérateur de relation. Cela entraîne toutefois des sous-requêtes imbriquées inutiles et difficiles à lire.  Dans certaines banques de données, la requête risque de mal s'effectuer.
+Une éventuelle traduction d’une arborescence de commandes de requête en instruction SQL SELECT produirait une sous-requête pour chaque opérateur de relation. Cela entraîne toutefois des sous-requêtes imbriquées inutiles et difficiles à lire.  Dans certaines banques de données, la requête risque de mal s'effectuer.
 
-Prenons comme exemple l'arborescence de commandes de requête suivante.
+Prenons comme exemple l’arborescence de commandes de requête suivante.
 
 ```
 Project (
@@ -66,7 +66,7 @@ WHERE b.y = 5
 
 Un cas d'agrégation de plusieurs nœuds en une instruction SQL SELECT unique consiste en l'agrégation de plusieurs expressions de jointure en une instruction SQL SELECT unique. DbJoinExpression représente une jointure unique entre deux entrées. Dans le cadre d'une instruction SQL SELECT unique, plusieurs jointures peuvent toutefois être spécifiées. Dans ce cas les jointures sont effectuées dans l'ordre spécifié.
 
-Les jointures externes à gauche (jointures qui apparaissent en tant qu'enfant gauche d'une autre jointure) peuvent être aplanies plus facilement dans une instruction SQL SELECT unique. Prenons comme exemple l'arborescence de commandes de requête suivante :
+Les jointures externes à gauche (jointures qui apparaissent en tant qu'enfant gauche d'une autre jointure) peuvent être aplanies plus facilement dans une instruction SQL SELECT unique. Prenons comme exemple l’arborescence de commandes de requête suivante :
 
 ```
 InnerJoin(
@@ -119,9 +119,9 @@ Pour expliquer la redirection d'alias d'entrée, considérez la structure des ex
 
 Chacun de ces types possède une ou plusieurs propriétés Input qui décrivent une collection d'entrée. Une variable de liaison correspondant à chaque entrée est utilisée pour représenter chaque élément de cette entrée pendant la traversée d'une collection. La variable de liaison est utilisée en cas de référence à l'élément d'entrée, par exemple dans la propriété Predicate d'un DbFilterExpression ou la propriété Projection d'un DbProjectExpression.
 
-Lors de l'agrégation de nœuds d'expression relationnelle supplémentaires en instruction SQL SELECT unique et lors de l'évaluation d'une expression appartenant à une expression relationnelle (par exemple faisant partie de la propriété Projection d'un DbProjectExpression), la variable de liaison utilisée risque de ne pas être identique à l'alias de l'entrée, étant donné que plusieurs liaisons d'expression doivent être redirigées vers une étendue unique.  Ce problème s'appelle le changement de nom d'alias.
+Lors de l’agrégation de nœuds d’expression relationnelle supplémentaires en instruction SQL SELECT unique et lors de l’évaluation d’une expression appartenant à une expression relationnelle (par exemple faisant partie de la propriété Projection d’un DbProjectExpression), la variable de liaison utilisée risque de ne pas être identique à l’alias de l’entrée, étant donné que plusieurs liaisons d’expression doivent être redirigées vers une étendue unique.  Ce problème s'appelle le changement de nom d'alias.
 
-Prenons le premier exemple de cette rubrique. Si nous effectuons une traduction naïve et que nous traduisons Projection a.x (DbPropertyExpression (a, x)), il est correct de le traduire par `a.x` parce que nous avons attribué à l'entrée « a » comme alias pour correspondre à la variable de liaison.  Toutefois, lorsque vous regroupez les deux nœuds dans une instruction SQL SELECT unique, vous devez traduire le même DbPropertyExpression en `b.x`, car l'entrée a « b » pour alias.
+Prenons le premier exemple de cette rubrique. Si nous effectuons une traduction naïve et que nous traduisons Projection a.x (DbPropertyExpression (a, x)), il est correct de le traduire par `a.x` parce que nous avons attribué à l’entrée « a » comme alias pour correspondre à la variable de liaison.  Toutefois, lorsque vous regroupez les deux nœuds dans une instruction SQL SELECT unique, vous devez traduire le même DbPropertyExpression en `b.x`, car l'entrée a « b » pour alias.
 
 ## <a name="join-alias-flattening"></a>Aplanissement d'alias de jointure
 

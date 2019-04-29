@@ -3,11 +3,11 @@ title: 'Procédure : créer une liaison fédérée duplex'
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
 ms.openlocfilehash: 510faa0b1d791b1d164c55e9fa32daafa559d56c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696208"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Procédure : créer une liaison fédérée duplex
 <xref:System.ServiceModel.WSFederationHttpBinding> ne prend en charge que le datagramme et les contrats d'échange de demande/message de réponse. Pour utiliser le contrat d'échange de messages duplex, vous devez créer une liaison personnalisée. Les procédures suivantes indiquent comment faire ceci dans la configuration, à l'aide de la sécurité de mode de transmission de messages pour les transports HTTP et TCP, et à l'aide de la sécurité de mode mixte pour le transport TCP. L’exemple de code illustrant les 3 liaisons est présenté à la fin de cette rubrique.  

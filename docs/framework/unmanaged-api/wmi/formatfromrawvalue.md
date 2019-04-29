@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609046"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue, fonction
 Convertit une valeur de données de performances brute au format spécifié, ou deux valeurs de données de performances brutes si la conversion de format est basé sur l’heure. 
@@ -87,7 +87,7 @@ Les valeurs suivantes sont retournées par cette fonction :
 
 Cette fonction encapsule un appel à la [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

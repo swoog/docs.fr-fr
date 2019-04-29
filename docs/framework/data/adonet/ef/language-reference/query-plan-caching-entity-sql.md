@@ -3,11 +3,11 @@ title: Mise en cache d'un plan de requête (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613662"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Mise en cache d'un plan de requête (Entity SQL)
 À chaque tentative d'exécution d'une requête, le pipeline de la requête recherche son cache de plan de requête pour voir si la requête exacte est déjà compilée et disponible. Si tel est le cas, il réutilise le plan mis en cache plutôt que d'en générer un nouveau. Si aucune correspondance n'est trouvée dans le cache du plan de requête, la requête est compilée et mise en cache. Une requête est identifiée par son texte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et sa collection de paramètres (noms et types). Toutes les comparaisons de texte respectent la casse.  
@@ -34,19 +34,19 @@ ms.locfileid: "59178176"
   
  Pour que les requêtes soient mappées correctement par le cache du plan de requête, elles doivent satisfaire les exigences suivantes :  
   
--   Le texte de requête doit être un modèle constant, de préférence une chaîne ou une ressource constante.  
+- Le texte de requête doit être un modèle constant, de préférence une chaîne ou une ressource constante.  
   
--   <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisé partout où une valeur fournie par l'utilisateur doit être transmise.  
+- <xref:System.Data.EntityClient.EntityParameter> ou <xref:System.Data.Objects.ObjectParameter> doit être utilisé partout où une valeur fournie par l'utilisateur doit être transmise.  
   
  Vous devez éviter les modèles de requête suivants, qui consomment inutilement des emplacements dans le cache du plan de requête :  
   
--   modifications de la casse du texte ;  
+- modifications de la casse du texte ;  
   
--   modifications des espaces blancs ;  
+- modifications des espaces blancs ;  
   
--   modifications des valeurs littérales ;  
+- modifications des valeurs littérales ;  
   
--   modifications du texte à l'intérieur des commentaires.  
+- modifications du texte à l'intérieur des commentaires.  
   
 ## <a name="see-also"></a>Voir aussi
 

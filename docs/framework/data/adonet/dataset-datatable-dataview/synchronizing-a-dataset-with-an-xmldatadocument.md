@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607492"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronisation d'un DataSet et d'un XmlDataDocument
 Cette section décrit l’une des étapes du traitement d’un bon de commande à l’aide d’un objet <xref:System.Data.DataSet> fortement typé, synchronisé avec un objet <xref:System.Xml.XmlDataDocument>. Les exemples suivants créent un **DataSet** avec un schéma minimal correspondant uniquement une partie du document XML source. Les exemples utilisent un **XmlDataDocument** pour préserver la fidélité du document XML source, l’activation de la **DataSet** à être utilisé pour exposer un sous-ensemble du document XML.  

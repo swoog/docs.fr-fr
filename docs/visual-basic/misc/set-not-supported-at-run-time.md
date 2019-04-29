@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
 ms.openlocfilehash: 1b3f8aa3811baae240e6baa546082d0dcf2cf667
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594865"
 ---
 # <a name="set-not-supported-at-run-time"></a>Set non pris en charge au moment de l’exécution
 Vous avez essayé de définir ou de modifier une propriété dont la valeur peut être uniquement définie au moment du design.  

@@ -3,11 +3,11 @@ title: Référence des événements de suivi
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699875"
 ---
 # <a name="tracking-events-reference"></a>Référence des événements de suivi
 Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] déclenche des événements de suivi en parcourant différentes étapes de sa durée de vie. L'hôte peut s'abonner à ces événements et rester informé sur l'état de la progression du workflow pendant sa durée de vie. Les événements de suivi déclenchés sont traités dans cette section.  
@@ -64,20 +64,20 @@ Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../i
 |[1024 - CreateBookmarkScope](1024-createbookmarkscope.md)|Verbose|Un BookmarkScope a été créé : %1.|WFRuntime|  
 |[1025 - BookmarkScopeInitialized](1025-bookmarkscopeinitialized.md)|Verbose|Le BookmarkScope avec TemporaryId : « %1 » a été initialisé avec l'ID : « %2 ».|WFRuntime|  
 |[1026 - ScheduleTransactionContextWorkItem](1026-scheduletransactioncontextworkitem.md)|Verbose|TransactionContextWorkItem a été planifié pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
-|[1027 - StartTransactionContextWorkItem](1027-starttransactioncontextworkitem.md)|Verbose|Début de l'exécution d'un TransactionContextWorkItem pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
-|[1028 - CompleteTransactionContextWorkItem](1028-completetransactioncontextworkitem.md)|Verbose|TransactionContextWorkItem est terminé pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
+|[1027 - StartTransactionContextWorkItem](1027-starttransactioncontextworkitem.md)|Verbose|Début de l’exécution d’un TransactionContextWorkItem pour l’activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
+|[1028 - CompleteTransactionContextWorkItem](1028-completetransactioncontextworkitem.md)|Verbose|TransactionContextWorkItem est terminé pour l’activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
 |[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|Verbose|Qu’un FaultWorkItem a été planifié pour l’activité « %1 », DisplayName : « %2 », InstanceId : '%3'.  L'exception a été propagée à partir de l'activité « %4 », DisplayName : « %5 », InstanceId : « %6 ».|WFRuntime|  
 |[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|Verbose|Démarrage de l’exécution d’un FaultWorkItem pour l’activité « %1 », DisplayName : « %2 », InstanceId : '%3'.  L'exception a été propagée à partir de l'activité « %4 », DisplayName : « %5 », InstanceId : « %6 ».|WFRuntime|  
 |[1031 - CompleteFaultWorkItem](1031-completefaultworkitem.md)|Verbose|Un FaultWorkItem est achevé pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ». L'exception a été propagée à partir de l'activité « %4 », DisplayName : « %5 », InstanceId : « %6 ».|WFRuntime|  
-|[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|Verbose|Un élément de travail runtime a été planifié pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
-|[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|Verbose|Début de l'exécution d'un élément de travail runtime pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
+|[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|Verbose|Un élément de travail runtime a été planifié pour l’activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
+|[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|Verbose|Début de l’exécution d’un élément de travail runtime pour l’activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
 |[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|Verbose|Un élément de travail runtime est terminé pour l'activité « %1 », DisplayName : « %2 », InstanceId : « %3 ».|WFRuntime|  
 |[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|Verbose|La transaction runtime a été définie par l’activité « %1 », DisplayName : « %2 », InstanceId : '%3'.  Exécution isolée à l’activité « %4 », DisplayName : « %5 », InstanceId : '%6'.|WFRuntime|  
-|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|Verbose|L'activité « %1 », DisplayName : « %2 », InstanceId : « %3 » a planifié la fin de la transaction runtime.|WFRuntime|  
-|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|Verbose|La transaction runtime s'est terminée en état « %1 ».|WFRuntime|  
+|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|Verbose|L’activité « %1 », DisplayName : « %2 », InstanceId : « %3 » a planifié la fin de la transaction runtime.|WFRuntime|  
+|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|Verbose|La transaction runtime s’est terminée en état « %1 ».|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|Verbose|Entrée dans un bloc sans persistance.|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|Verbose|Sortie d'un bloc sans persistance.|WFRuntime|  
-|[1040 - InArgumentBound](1040-inargumentbound.md)|Verbose|Dans l'argument « %1 » de l'activité « %2 », DisplayName : « %3 », InstanceId : « %4 » a été lié avec la valeur : %5.|WFActivities|  
+|[1040 - InArgumentBound](1040-inargumentbound.md)|Verbose|Dans l’argument « %1 » de l’activité « %2 », DisplayName : « %3 », InstanceId : « %4 » a été lié avec la valeur : %5.|WFActivities|  
 |[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|Information|WorkflowApplication Id : '%1' est inactif et persistant.  L’action suivante sera effectuée : %2.|WFRuntime|  
 |[1101 - WorkflowActivityStart](1101-workflowactivitystart.md)|Information|ID WorkflowInstance : « %1 » Activité E2E|WFRuntime|  
 |[1102 - WorkflowActivityStop](1102-workflowactivitystop.md)|Information|ID WorkflowInstance : « %1 » Activité E2E|WFRuntime|  
@@ -87,7 +87,7 @@ Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../i
 |[1125 - InvokeMethodIsNotStatic](1125-invokemethodisnotstatic.md)|Information|InvokeMethod « %1 » - la méthode n'est pas statique.|WFRuntime|  
 |[1126 - InvokedMethodThrewException](1126-invokedmethodthrewexception.md)|Information|Une exception a été levée dans la méthode appelée par l'activité « %1 ». %2|WFRuntime|  
 |[1131 - InvokeMethodUseAsyncPattern](1131-invokemethoduseasyncpattern.md)|Information|InvokeMethod « %1 » - la méthode utilise un modèle asynchrone de « %2 » et « %3 ».|WFRuntime|  
-|[1132 - InvokeMethodDoesNotUseAsyncPattern](1132-invokemethoddoesnotuseasyncpattern.md)|Information|InvokeMethod « %1 » - la méthode n'utilise pas un modèle asynchrone.|WFRuntime|  
+|[1132 - InvokeMethodDoesNotUseAsyncPattern](1132-invokemethoddoesnotuseasyncpattern.md)|Information|InvokeMethod « %1 » - la méthode n’utilise pas un modèle asynchrone.|WFRuntime|  
 |[1140 - FlowchartStart](1140-flowchartstart.md)|Information|Flowchart « %1 » - Le début a été planifié|WFActivities|  
 |[1141 - FlowchartEmpty](1141-flowchartempty.md)|Warning|Flowchart « %1 » a été exécuté sans Nodes. Une exception a été levée dans la méthode appelée par l'activité « %1 ». %2|WFActivities|  
 |[1143 - FlowchartNextNull](1143-flowchartnextnull.md)|Information|Flowchart « %1 »/FlowStep - Le nœud suivant est Null. L'exécution de Flowchart va se terminer.|WFActivities|  
@@ -136,5 +136,5 @@ Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../i
 |[39457 - TrackingRecordRaised](39457-trackingrecordraised.md)|Information|Enregistrement suivi %1 élevé à %2.|WFRuntime|  
 |[39458 - TrackingRecordTruncated](39458-trackingrecordtruncated.md)|Warning|Enregistrement de suivi %1 tronqué écrit dans la session ETW avec le fournisseur %2. Les données de variables/annotations/utilisateur ont été supprimées|WFTracking|  
 |[39459 - TrackingDataExtracted](39459-trackingdataextracted.md)|Verbose|Données de suivi %1 extraites dans l'activité %2.|WFRuntime|  
-|[39460 - TrackingValueNotSerializable](39460-trackingvaluenotserializable.md)|Warning|La variable ou l'argument « %1 » extrait ne peut pas être sérialisé.|WFTracking|  
+|[39460 - TrackingValueNotSerializable](39460-trackingvaluenotserializable.md)|Warning|La variable ou l’argument « %1 » extrait ne peut pas être sérialisé.|WFTracking|  
 |[57398 - MaxInstancesExceeded](57398-maxinstancesexceeded.md)|Warning|Le système a atteint la limite définie pour la limitation des 'MaxConcurrentInstances'. La limite a été définie sur %1. La valeur de limitation peut être modifiée en modifiant l'attribut « maxConcurrentInstances » de l'élément serviceThrottle ou en modifiant la propriété « MaxConcurrentInstances » à l'aide du comportement ServiceThrottlingBehavior.|WFServices|

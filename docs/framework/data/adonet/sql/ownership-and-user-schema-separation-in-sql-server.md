@@ -3,11 +3,11 @@ title: Propriété et séparation des schémas utilisateur dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646057"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriété et séparation des schémas utilisateur dans SQL Server
 Il existe un concept essentiel relative à la sécurité de SQL Server, selon lequel les propriétaires d'objets disposent d'autorisations irrévocables pour les administrer. Vous ne pouvez pas supprimer les privilèges d’un propriétaire d’objets et vous ne pouvez pas supprimer des utilisateurs d’une base de données dans laquelle se trouvent des objets qui leur appartiennent.  
@@ -29,13 +29,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>Schémas intégrés  
  SQL Server est livré avec six schémas prédéfinis qui possèdent les mêmes noms que les utilisateurs et les rôles de base de données intégrés. Ils sont principalement destinés à la compatibilité descendante. Vous pouvez supprimer les schémas qui possèdent les mêmes noms que ceux des rôles de base de données fixes si vous n’en avez pas besoin. Par contre, vous ne pouvez pas déposer les schémas suivants :  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  Si vous les supprimez de la base de données model, ils n'apparaîtront pas dans les nouvelles bases de données.  
   

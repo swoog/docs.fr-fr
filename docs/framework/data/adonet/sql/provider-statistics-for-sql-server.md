@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646008"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Fournisseur de statistiques pour SQL Server
 À partir du .NET Framework version 2.0, le fournisseur de données .NET Framework pour SQL Server prend en charge des statistiques d'exécution. Vous devez activer les statistiques en attribuant à la propriété <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> la valeur `True` après la création d'un objet de connexion valide. Une fois les statistiques activées, vous pouvez les consulter comme « instantané dans le temps » en extrayant une référence <xref:System.Collections.IDictionary> via la méthode <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection>. Vous détaillez la liste comme un ensemble d'entrées de dictionnaire de paires nom-valeur. Ces paires nom-valeur ne sont triées. À tout moment, vous pouvez appeler la méthode <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> pour réinitialiser les compteurs. Si la collecte de statistiques n'est pas activée, aucune exception n'est générée. En outre, si <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> est appelé sans que <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ait été appelé précédemment, les valeurs extraites sont les valeurs initiales de chaque entrée. Si vous activez les statistiques, exécutez votre application pendant un moment, puis désactivez les statistiques, les valeurs extraites reflètent celles collectées jusqu'au point où les statistiques étaient désactivées. Toutes les valeurs statistiques sont collectées par connexion.  

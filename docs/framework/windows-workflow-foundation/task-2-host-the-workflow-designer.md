@@ -3,11 +3,11 @@ title: 'Tâche 2 : héberger le concepteur de flux de travail'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641559"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le concepteur de flux de travail
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
@@ -42,7 +42,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
 8. Dans **l’Explorateur de solutions**, cliquez sur MainWindow.xaml et sélectionnez **afficher le Code**. Modifiez le code en procédant comme suit :  
   
-    1.  Ajoutez les espaces de noms suivants :  
+    1. Ajoutez les espaces de noms suivants :  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
         using System.ComponentModel;  
         ```  
   
-    2.  Pour déclarer un champ de membre privé devant contenir une instance de <xref:System.Activities.Presentation.WorkflowDesigner>, ajoutez le code suivant à la classe `MainWindow`.  
+    2. Pour déclarer un champ de membre privé devant contenir une instance de <xref:System.Activities.Presentation.WorkflowDesigner>, ajoutez le code suivant à la classe `MainWindow`.  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
         }  
         ```  
   
-    3.  Ajoutez la méthode `AddDesigner` suivante à la classe `MainWindow`. L’implémentation crée une instance de la <xref:System.Activities.Presentation.WorkflowDesigner>, ajoute un <xref:System.Activities.Statements.Sequence> activité et le place dans la colonne du milieu de la grid1 **grille**.  
+    3. Ajoutez la méthode `AddDesigner` suivante à la classe `MainWindow`. L’implémentation crée une instance de la <xref:System.Activities.Presentation.WorkflowDesigner>, ajoute un <xref:System.Activities.Statements.Sequence> activité et le place dans la colonne du milieu de la grid1 **grille**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
         }  
         ```  
   
-    4.  Pour ajouter la prise en charge du concepteur pour toutes les activités intégrées, enregistrez les métadonnées du concepteur. Cela vous permet de déplacer des activités, de la boîte à outils vers l'activité <xref:System.Activities.Statements.Sequence> d'origine dans le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Pour ce faire, ajoutez la méthode `RegisterMetadata` à la classe `MainWindow`.  
+    4. Pour ajouter la prise en charge du concepteur pour toutes les activités intégrées, enregistrez les métadonnées du concepteur. Cela vous permet de déplacer des activités, de la boîte à outils vers l'activité <xref:System.Activities.Statements.Sequence> d'origine dans le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Pour ce faire, ajoutez la méthode `RegisterMetadata` à la classe `MainWindow`.  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ Cette rubrique décrit la procédure pour l’hébergement d’une instance de l
   
          Pour plus d’informations sur l’inscription des concepteurs d’activités, consultez [Comment : Créer un concepteur d’activités personnalisées](how-to-create-a-custom-activity-designer.md).  
   
-    5.  Dans le constructeur de classes `MainWindow`, ajoutez des appels aux méthodes précédemment déclarées pour enregistrer les métadonnées dans le but de la prise en charge du concepteur et pour créer l'objet <xref:System.Activities.Presentation.WorkflowDesigner>.  
+    5. Dans le constructeur de classes `MainWindow`, ajoutez des appels aux méthodes précédemment déclarées pour enregistrer les métadonnées dans le but de la prise en charge du concepteur et pour créer l'objet <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
         ```csharp  
         public MainWindow()  

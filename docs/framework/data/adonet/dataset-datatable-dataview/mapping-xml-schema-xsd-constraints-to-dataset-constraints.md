@@ -3,22 +3,22 @@ title: Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607893"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet
 Le langage XSD (XML Schema Definition) permet la spécification de contraintes sur les éléments et attributs qu'il définit. Lors du mappage d’un schéma XML au schéma relationnel d’un <xref:System.Data.DataSet>, contraintes de schéma XML sont mappées aux contraintes relationnelles appropriées sur les tables et colonnes dans le **DataSet**.  
   
  Cette section présente le mappage des contraintes de schéma XML suivantes :  
   
--   La contrainte d’unicité spécifiée à l’aide du **unique** élément.  
+- La contrainte d’unicité spécifiée à l’aide du **unique** élément.  
   
--   La contrainte de clé spécifiée à l’aide de la **clé** élément.  
+- La contrainte de clé spécifiée à l’aide de la **clé** élément.  
   
--   La contrainte keyref spécifiée à l’aide de la **keyref** élément.  
+- La contrainte keyref spécifiée à l’aide de la **keyref** élément.  
   
  En utilisant une contrainte sur un élément ou un attribut, vous spécifiez certaines restrictions sur les valeurs de l'élément dans toute instance du document. Par exemple, une contrainte de clé sur un **CustomerID** élément enfant d’un **client** élément dans le schéma indique que les valeurs de la **CustomerID** élément enfant doit être unique dans n’importe quelle instance de document, et que les valeurs null ne sont pas autorisés.  
   

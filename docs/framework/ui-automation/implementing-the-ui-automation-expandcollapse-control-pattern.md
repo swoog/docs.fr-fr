@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610008"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implémentation du modèle de contrôle ExpandCollapse d'UI Automation
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211658"
 ## <a name="implementation-guidelines-and-conventions"></a>Conventions et recommandations en matière d'implémentation  
  Quand vous implémentez le modèle de contrôle ExpandCollapse, notez les conventions et directives suivantes :  
   
--   Les contrôles d'agrégat, générés avec des objets enfants qui fournissent la fonctionnalité de développement/réduction à l'interface utilisateur, doivent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.ExpandCollapsePattern> même si leurs éléments enfants ne le font pas. Par exemple, un contrôle zone de liste déroulante est généré avec une combinaison de contrôles zone de liste, de contrôles bouton et de contrôles d'édition, mais seule la zone de liste déroulante parente doit prendre en charge <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+- Les contrôles d'agrégat, générés avec des objets enfants qui fournissent la fonctionnalité de développement/réduction à l'interface utilisateur, doivent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.ExpandCollapsePattern> même si leurs éléments enfants ne le font pas. Par exemple, un contrôle zone de liste déroulante est généré avec une combinaison de contrôles zone de liste, de contrôles bouton et de contrôles d'édition, mais seule la zone de liste déroulante parente doit prendre en charge <xref:System.Windows.Automation.ExpandCollapsePattern>.  
   
     > [!NOTE]
     >  Le contrôle de menu, qui est un agrégat d'objets MenuItem individuels, fait exception à cette règle. Les objets MenuItem peuvent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.ExpandCollapsePattern> , mais le contrôle Menu parent ne le peut pas. Une exception semblable s'applique aux contrôles Tree et Tree Item.  
   
--   Quand l' <xref:System.Windows.Automation.ExpandCollapseState> d'un contrôle est défini sur <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, toute fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est actuellement inactive pour le contrôle et la seule information qui peut être obtenue à l'aide de ce modèle de contrôle est l' <xref:System.Windows.Automation.ExpandCollapseState>. Si des objets enfants sont ajoutés par la suite, l' <xref:System.Windows.Automation.ExpandCollapseState> change et la fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est activée.  
+- Quand l' <xref:System.Windows.Automation.ExpandCollapseState> d'un contrôle est défini sur <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, toute fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est actuellement inactive pour le contrôle et la seule information qui peut être obtenue à l'aide de ce modèle de contrôle est l' <xref:System.Windows.Automation.ExpandCollapseState>. Si des objets enfants sont ajoutés par la suite, l' <xref:System.Windows.Automation.ExpandCollapseState> change et la fonctionnalité <xref:System.Windows.Automation.ExpandCollapsePattern> est activée.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> fait référence uniquement à la visibilité des objets enfants immédiats ; il ne fait pas référence à celle de tous les objets descendants.  
+- <xref:System.Windows.Automation.ExpandCollapseState> fait référence uniquement à la visibilité des objets enfants immédiats ; il ne fait pas référence à celle de tous les objets descendants.  
   
--   La fonctionnalité de développement/réduction est propre au contrôle. Voici des exemples de ce comportement.  
+- La fonctionnalité de développement/réduction est propre au contrôle. Voici des exemples de ce comportement.  
   
-    -   Le menu personnel d'Office peut être un MenuItem à trois états (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> et <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) où le contrôle spécifie l'état à adopter quand un <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> est appelé.  
+    - Le menu personnel d'Office peut être un MenuItem à trois états (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> et <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) où le contrôle spécifie l'état à adopter quand un <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> est appelé.  
   
-    -   L'appel d' <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> sur un TreeItem peut afficher tous les descendants ou seulement les enfants immédiats.  
+    - L'appel d' <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> sur un TreeItem peut afficher tous les descendants ou seulement les enfants immédiats.  
   
-    -   Si l'appel d' <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou de <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> sur un contrôle maintient l'état de ses descendants, un événement de modification de la visibilité doit être envoyé, et non un événement de modification d'état. Si le contrôle parent ne maintient pas l'état de ses descendants quand il est réduit, le contrôle peut détruire tous les descendants qui ne sont plus visibles et déclencher un événement détruit, ou bien il peut modifier l' <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> pour chaque descendant et déclencher un événement de modification de la visibilité.  
+    - Si l'appel d' <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou de <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> sur un contrôle maintient l'état de ses descendants, un événement de modification de la visibilité doit être envoyé, et non un événement de modification d'état. Si le contrôle parent ne maintient pas l'état de ses descendants quand il est réduit, le contrôle peut détruire tous les descendants qui ne sont plus visibles et déclencher un événement détruit, ou bien il peut modifier l' <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> pour chaque descendant et déclencher un événement de modification de la visibilité.  
   
--   Pour assurer la navigation, il est souhaitable qu'un objet se trouve dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (avec l'état de visibilité approprié), quel que soit l' <xref:System.Windows.Automation.ExpandCollapseState>de ses parents. Si des descendants sont générés à la demande, il est possible qu'ils n'apparaissent dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] qu'après leur premier affichage ou que quand ils sont visibles.  
+- Pour assurer la navigation, il est souhaitable qu'un objet se trouve dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (avec l'état de visibilité approprié), quel que soit l' <xref:System.Windows.Automation.ExpandCollapseState>de ses parents. Si des descendants sont générés à la demande, il est possible qu'ils n'apparaissent dans l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] qu'après leur premier affichage ou que quand ils sont visibles.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>Membres nécessaires pour IExpandCollapseProvider  

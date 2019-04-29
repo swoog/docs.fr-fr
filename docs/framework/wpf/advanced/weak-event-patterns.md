@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669365"
 ---
 # <a name="weak-event-patterns"></a>Modèles d'événement faible
 Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne seront pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut entraîner des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *modèle d’événement faible*.  
@@ -40,13 +40,13 @@ Dans les applications, il est possible que les gestionnaires qui sont attachés 
 
  Les sections suivantes décrivent comment implémenter le modèle d’événement faible.  Pour les besoins de cette discussion, l’événement pour vous abonner à présente les caractéristiques suivantes.  
   
--   Le nom de l’événement est `SomeEvent`.  
+- Le nom de l’événement est `SomeEvent`.  
   
--   L’événement est déclenché par la `EventSource` classe.  
+- L’événement est déclenché par la `EventSource` classe.  
   
--   Le Gestionnaire d’événements a le type : `SomeEventEventHandler` (ou `EventHandler<SomeEventEventArgs>`).  
+- Le Gestionnaire d’événements a le type : `SomeEventEventHandler` (ou `EventHandler<SomeEventEventArgs>`).  
   
--   L’événement passe un paramètre de type `SomeEventEventArgs` aux gestionnaires d’événements.  
+- L’événement passe un paramètre de type `SomeEventEventArgs` aux gestionnaires d’événements.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>À l’aide d’une classe de gestionnaire d’événements faible existante  
   

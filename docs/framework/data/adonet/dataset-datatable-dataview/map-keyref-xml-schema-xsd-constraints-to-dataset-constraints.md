@@ -3,11 +3,11 @@ title: Mapper les contraintes keyref de schéma XML (XSD) aux contraintes de Dat
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607487"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapper les contraintes keyref de schéma XML (XSD) aux contraintes de DataSet
 Le **keyref** élément vous permet d’établir des liens entre les éléments dans un document. Le résultat est similaire à une relation de clé étrangère dans une base de données relationnelle. Si un schéma spécifie le **keyref** élément, l’élément est converti pendant le processus de mappage de schéma pour une contrainte de clé étrangère correspondante sur les colonnes dans les tables de la <xref:System.Data.DataSet>. Par défaut, le **keyref** élément génère aussi une relation, avec le **ParentTable**, **ChildTable**, **ParentColumn**et  **ChildColumn** propriétés spécifiées sur la relation.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  En outre, le **DataSet** définit les contraintes suivantes :  
   
--   Une contrainte unique sur la **ordre** table.  
+- Une contrainte unique sur la **ordre** table.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Une relation entre la **ordre** et **OrderDetail** tables. Le **Nested** propriété est définie sur **False** , car les deux éléments ne sont pas imbriqués dans le schéma.  
+- Une relation entre la **ordre** et **OrderDetail** tables. Le **Nested** propriété est définie sur **False** , car les deux éléments ne sont pas imbriqués dans le schéma.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Une contrainte de clé étrangère sur la **OrderDetail** table.  
+- Une contrainte de clé étrangère sur la **OrderDetail** table.  
   
     ```  
               ConstraintName: OrderNoRef  

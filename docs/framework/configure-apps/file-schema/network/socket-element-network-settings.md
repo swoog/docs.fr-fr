@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674387"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket >, élément (paramètres réseau)
 Spécifie si les opérations de socket utilisent des ports de terminaison.  
@@ -64,9 +64,9 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
   
  Cela `ipProtectionLevel` paramètre d’attribut affecte uniquement le trafic entrant initial :  
   
--   Un serveur TCP à l’écoute les connexions entrantes sur un socket.  
+- Un serveur TCP à l’écoute les connexions entrantes sur un socket.  
   
--   Application UDP qui reçoit un paquet sur un socket.  
+- Application UDP qui reçoit un paquet sur un socket.  
   
  Ce paramètre de configuration n’affecte pas les connexions TCP déjà établies (le trafic est illimité dans les deux directions) et n’affecte pas une application qui envoie des paquets UDP.  
   

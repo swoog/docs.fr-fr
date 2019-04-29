@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669093"
 ---
 # <a name="enum-design"></a>Conception d'énumérations
 Les enums sont un type spécial de type valeur. Il existe deux types d’énumérations : les enums enums et indicateur simples.  
@@ -48,17 +48,17 @@ Les enums sont un type spécial de type valeur. Il existe deux types d’énumé
   
  **✓ CONSIDER** à l’aide de <xref:System.Int32> (la valeur par défaut dans la plupart des langages de programmation) en tant que le type sous-jacent d’une énumération, sauf si une des opérations suivantes est vraie :  
   
--   L’énumération est une énumération d’indicateurs, et vous disposez de plus de 32 indicateurs ou souhaitez avoir plus d’informations à l’avenir.  
+- L’énumération est une énumération d’indicateurs, et vous disposez de plus de 32 indicateurs ou souhaitez avoir plus d’informations à l’avenir.  
   
--   Le type sous-jacent doit être différent de celui <xref:System.Int32> pour simplifier l’interopérabilité avec le code non managé attendu des énumérations de taille différente.  
+- Le type sous-jacent doit être différent de celui <xref:System.Int32> pour simplifier l’interopérabilité avec le code non managé attendu des énumérations de taille différente.  
   
--   Un type sous-jacent plus petit entraînerait des économies substantielles dans l’espace. Si vous pensez que l’énumération à utiliser principalement en tant qu’argument pour le flux de contrôle, la taille importe peu. Les économies de taille peuvent être importantes si :  
+- Un type sous-jacent plus petit entraînerait des économies substantielles dans l’espace. Si vous pensez que l’énumération à utiliser principalement en tant qu’argument pour le flux de contrôle, la taille importe peu. Les économies de taille peuvent être importantes si :  
   
-    -   Vous pensez que l’énumération à utiliser en tant que champ dans une structure très fréquemment instanciée ou une classe.  
+    - Vous pensez que l’énumération à utiliser en tant que champ dans une structure très fréquemment instanciée ou une classe.  
   
-    -   Vous prévoyez que les utilisateurs à créer des grands tableaux ou collections d’instances de l’enum.  
+    - Vous prévoyez que les utilisateurs à créer des grands tableaux ou collections d’instances de l’enum.  
   
-    -   Vous prévoyez un grand nombre d’instances de l’énumération à sérialiser.  
+    - Vous prévoyez un grand nombre d’instances de l’énumération à sérialiser.  
   
  Pour une utilisation en mémoire, n’oubliez pas que les objets managés sont toujours `DWORD`-alignés, vous devez efficacement plusieurs énumérations ou autres petites structures dans une instance de compresser un enum plus petits avec afin de faire la différence, car la taille du nombre total d’instances est toujours sera arrondie à un `DWORD`.  
   

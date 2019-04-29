@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651517"
 ---
 # <a name="three-categories-of-graphics-services"></a>Trois catégories de services graphiques
 Les offres de graphiques dans les Windows Forms se répartissent en trois grandes catégories :  
   
--   Graphiques vectoriels en deux dimensions (2D)  
+- Graphiques vectoriels en deux dimensions (2D)  
   
--   Création d’images  
+- Création d’images  
   
--   Typographie  
+- Typographie  
   
 ## <a name="2-d-vector-graphics"></a>Graphiques vectoriels en 2D  
  Les graphiques vectoriels en deux dimensions sont des primitives ; tels que des lignes, des courbes et des chiffres. qui sont spécifiées par les ensembles de points sur un système de coordonnées. Par exemple, une ligne droite est spécifiée par ses deux points de terminaison, et un rectangle est spécifié par un point indiquant l’emplacement de son coin supérieur gauche et une paire de valeurs indiquant sa largeur et sa hauteur. Un chemin d’accès simple est spécifié par un tableau de points reliés par des lignes droites. Une spline de Bézier est une courbe sophistiquée spécifiée par quatre points de contrôle.  

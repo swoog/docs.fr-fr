@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640426"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procédure : accéder à des objets dans une liste déroulante DataGridViewComboBoxCell Windows Forms
 Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows.Forms.DataGridViewComboBoxColumn> et <xref:System.Windows.Forms.DataGridViewComboBoxCell> types permettent d’ajouter des objets arbitraires à leurs listes déroulantes. Avec cette fonctionnalité, vous pouvez représenter des États complexes dans une liste déroulante, sans avoir à stocker des objets correspondants dans une collection distincte.  
@@ -44,7 +44,7 @@ Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>Pour récupérer l’objet métier actuellement sélectionné  
   
--   Obtenir la cellule <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propriété et les convertir en type d’objet métier.  
+- Obtenir la cellule <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propriété et les convertir en type d’objet métier.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ Comme le <xref:System.Windows.Forms.ComboBox> contrôle, le <xref:System.Windows
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System et System.Windows.Forms ;  
+- des références aux assemblys System et System.Windows.Forms ;  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
 ms.openlocfilehash: 430d869265b9add34c6de617a178aa27af6218f3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627861"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>Vue d'ensemble du composant NotifyIcon (Windows Forms)
 
-Le composant Windows Forms <xref:System.Windows.Forms.NotifyIcon> est généralement utilisé pour afficher des icônes pour les processus qui s'exécutent en arrière-plan et n'affichent pas d'interface utilisateur la plupart du temps. En guise d'exemple, on pourrait citer un programme antivirus accessible en cliquant sur une icône dans la zone de notification d'état de la barre des tâches.
+Le composant Windows Forms <xref:System.Windows.Forms.NotifyIcon> est généralement utilisé pour afficher des icônes pour les processus qui s'exécutent en arrière-plan et n'affichent pas d'interface utilisateur la plupart du temps. En guise d’exemple, on pourrait citer un programme antivirus accessible en cliquant sur une icône dans la zone de notification d’état de la barre des tâches.
 
 ## <a name="key-properties-of-notifyicons"></a>Principales propriétés de NotifyIcons
 

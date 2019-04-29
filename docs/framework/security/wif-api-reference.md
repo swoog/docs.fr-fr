@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
 ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645882"
 ---
 # <a name="wif-api-reference"></a>Référence de l’API WIF
 Les classes WIF (Windows Identity Foundation) sont réparties dans les assemblys suivants : `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) et `System.ServiceModel` (System.ServiceModel.dll). Cette rubrique fournit des liens vers les espaces de noms WIF et une brève explication des classes contenues dans chaque espace de noms.  

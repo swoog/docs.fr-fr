@@ -3,18 +3,18 @@ title: TargetFilePath spécifie un dossier existant
 ms.date: 07/20/2015
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
 ms.openlocfilehash: fcf8f9a8172ccece2175fc27bbc96aa421d853ca
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593877"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath spécifie un dossier existant
 Le paramètre `TargetFilePath` spécifie un répertoire existant, mais il doit spécifier le nom du nouveau répertoire.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Modifiez `TargetFilePath` pour spécifier un nouveau répertoire plutôt qu’un répertoire existant.  
+- Modifiez `TargetFilePath` pour spécifier un nouveau répertoire plutôt qu’un répertoire existant.  
   
 ## <a name="see-also"></a>Voir aussi
 

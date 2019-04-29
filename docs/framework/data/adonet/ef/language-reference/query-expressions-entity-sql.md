@@ -3,11 +3,11 @@ title: Expressions de requête (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
 ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614620"
 ---
 # <a name="query-expressions-entity-sql"></a>Expressions de requête (Entity SQL)
 Une expression de requête combine un grand nombre d'opérateurs de requête différents dans une syntaxe unique. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit différentes sortes d’expressions, y compris les éléments suivants : [littéraux](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [paramètres](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variables](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), opérateurs, [fonctions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), les opérateurs de jeu et ainsi de suite. Pour plus d’informations, consultez [référence Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  

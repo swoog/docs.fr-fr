@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
 ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606942"
 ---
 # <a name="dataview-performance"></a>Performances des DataViews
 Cette rubrique décrit les avantages en termes de performances de l'utilisation des méthodes <xref:System.Data.DataView.Find%2A> et <xref:System.Data.DataView.FindRows%2A> de la classe <xref:System.Data.DataView>, et de la mise en cache d'un <xref:System.Data.DataView> dans une application Web.  

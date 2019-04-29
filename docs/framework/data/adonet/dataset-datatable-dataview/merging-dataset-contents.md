@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607928"
 ---
 # <a name="merging-dataset-contents"></a>Fusion de contenu de DataSet
 
@@ -18,7 +18,7 @@ Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusion
 
 ## <a name="primary-keys"></a>Clés primaires
 
-Si la table qui reçoit les nouvelles données et informations de schéma suite à une fusion dispose d'une clé primaire, les nouvelles lignes des données entrantes sont mises en correspondance avec les lignes existantes ayant les mêmes valeurs de clé primaire <xref:System.Data.DataRowVersion.Original> que celles des données entrantes. Si les colonnes du schéma entrant correspondent à celles du schéma existant, les données des lignes existantes sont modifiées. Les colonnes qui ne correspondent pas au schéma existant sont soit ignorées soit ajoutées en fonction du paramètre <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Les nouvelles lignes dont les valeurs de clé primaire ne correspondent à aucune ligne existante sont ajoutées à la table existante.
+Si la table qui reçoit les nouvelles données et informations de schéma suite à une fusion dispose d’une clé primaire, les nouvelles lignes des données entrantes sont mises en correspondance avec les lignes existantes ayant les mêmes valeurs de clé primaire <xref:System.Data.DataRowVersion.Original> que celles des données entrantes. Si les colonnes du schéma entrant correspondent à celles du schéma existant, les données des lignes existantes sont modifiées. Les colonnes qui ne correspondent pas au schéma existant sont soit ignorées soit ajoutées en fonction du paramètre <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Les nouvelles lignes dont les valeurs de clé primaire ne correspondent à aucune ligne existante sont ajoutées à la table existante.
 
 Si des lignes entrantes ou existantes présentent un état de ligne <xref:System.Data.DataRowState.Added>, leurs valeurs de clé primaire sont mises en correspondance à l'aide de la valeur de clé primaire <xref:System.Data.DataRowVersion.Current> de la ligne `Added` car il n'existe pas de version `Original` de ces lignes.
 
@@ -28,7 +28,7 @@ Si aucune clé primaire n'est définie dans la table qui reçoit les nouvelles d
 
 ## <a name="table-names-and-namespaces"></a>Noms de tables et espaces de noms
 
-Une valeur de propriété <xref:System.Data.DataTable> peut être assignée à un objet <xref:System.Data.DataTable.Namespace%2A>. Lorsque des valeurs de propriété <xref:System.Data.DataTable.Namespace%2A> sont assignées, un <xref:System.Data.DataSet> peut contenir plusieurs objets <xref:System.Data.DataTable> avec la même valeur de propriété <xref:System.Data.DataTable.TableName%2A>. Au cours des opérations de fusion, les propriétés <xref:System.Data.DataTable.TableName%2A> et <xref:System.Data.DataTable.Namespace%2A> sont toutes deux utilisées pour identifier la cible d'une fusion. Si aucune propriété <xref:System.Data.DataTable.Namespace%2A> n'a été assignée, seule la propriété <xref:System.Data.DataTable.TableName%2A> est utilisée pour identifier la cible d'une fusion.
+Une valeur de propriété <xref:System.Data.DataTable> peut être assignée à un objet <xref:System.Data.DataTable.Namespace%2A>. Lorsque des valeurs de propriété <xref:System.Data.DataTable.Namespace%2A> sont assignées, un <xref:System.Data.DataSet> peut contenir plusieurs objets <xref:System.Data.DataTable> avec la même valeur de propriété <xref:System.Data.DataTable.TableName%2A>. Au cours des opérations de fusion, les propriétés <xref:System.Data.DataTable.TableName%2A> et <xref:System.Data.DataTable.Namespace%2A> sont toutes deux utilisées pour identifier la cible d'une fusion. Si aucune propriété <xref:System.Data.DataTable.Namespace%2A> n’a été assignée, seule la propriété <xref:System.Data.DataTable.TableName%2A> est utilisée pour identifier la cible d’une fusion.
 
 > [!NOTE]
 > Ce comportement est modifié dans la version 2.0 du .NET Framework. Dans la version 1.1, les espaces de noms étaient pris en charge mais étaient ignorés au cours des opérations de fusion. C'est pourquoi, un objet <xref:System.Data.DataSet> qui utilise les valeurs de propriété <xref:System.Data.DataTable.Namespace%2A> aura des comportements différents selon la version du .NET Framework qui est exécutée. Prenons par exemple deux `DataSets` contenant des `DataTables` avec les mêmes valeurs de propriété <xref:System.Data.DataTable.TableName%2A> mais des valeurs de propriété <xref:System.Data.DataTable.Namespace%2A> différentes. Dans la version 1.1 du .NET Framework, les noms <xref:System.Data.DataTable.Namespace%2A> différents seront ignorés lors de la fusion de deux objets <xref:System.Data.DataSet>. Toutefois, à partir de la version 2.0, la fusion entraîne la création de deux `DataTables` dans le <xref:System.Data.DataSet> cible. Les `DataTables` d'origine ne seront pas affectés par la fusion.
@@ -76,7 +76,7 @@ L’exemple de code suivant fusionne deux `DataSet` objets avec des schémas dif
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
 
-L'exemple de code suivant prend un `DataSet` existant avec des mises à jour et passe ces mises à jour à un `DataAdapter` pour qu'elles soient traitées au niveau de la source de données. Les résultats sont ensuite fusionnés dans le `DataSet` d'origine. Après rejet des modifications ayant abouti à une erreur, les modifications fusionnées sont validées avec `AcceptChanges`.
+L'exemple de code suivant prend un `DataSet` existant avec des mises à jour et passe ces mises à jour à un `DataAdapter` pour qu'elles soient traitées au niveau de la source de données. Les résultats sont ensuite fusionnés dans le `DataSet` d’origine. Après rejet des modifications ayant abouti à une erreur, les modifications fusionnées sont validées avec `AcceptChanges`.
 
 [!code-csharp[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#1)]

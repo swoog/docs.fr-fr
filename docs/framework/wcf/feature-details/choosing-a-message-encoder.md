@@ -3,11 +3,11 @@ title: Sélection d'un encodeur de message
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608383"
 ---
 # <a name="choosing-a-message-encoder"></a>Sélection d'un encodeur de message
 Cette rubrique traite des critères permettant de choisir parmi les encodeurs de message sont inclus dans Windows Communication Foundation (WCF) : fichier binaire, texte et Message Transmission Optimization Mechanism (MTOM).  
@@ -21,11 +21,11 @@ Cette rubrique traite des critères permettant de choisir parmi les encodeurs de
 ## <a name="system-provided-encoders"></a>Encodeurs fournis par le système  
  WCF inclut trois encodeurs de message, qui sont représentées par les trois classes suivantes :  
   
--   L'encodeur de message texte <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> prend à la fois en charge l'encodage XML brut et l'encodage SOAP. Le mode d'encodage XML brut de l'encodeur de message texte est appelé POX (Plain Old XML) afin de le distinguer de l'encodage SOAP basé sur le texte. Pour activer le mode POX, affectez la valeur <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> à la propriété <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Utiliser l’encodeur de message texte pour interagir avec les points de terminaison non-WCF.  
+- L'encodeur de message texte <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> prend à la fois en charge l'encodage XML brut et l'encodage SOAP. Le mode d'encodage XML brut de l'encodeur de message texte est appelé POX (Plain Old XML) afin de le distinguer de l'encodage SOAP basé sur le texte. Pour activer le mode POX, affectez la valeur <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> à la propriété <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Utiliser l’encodeur de message texte pour interagir avec les points de terminaison non-WCF.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, l’encodeur de message binaire utilise un format binaire compact et est optimisé pour WCF pour la communication WCF et par conséquent, n’est pas interopérable. Il s’agit également l’encodeur performante la plupart de tous les codeurs que WCF fournit.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, l’encodeur de message binaire utilise un format binaire compact et est optimisé pour WCF pour la communication WCF et par conséquent, n’est pas interopérable. Il s’agit également l’encodeur performante la plupart de tous les codeurs que WCF fournit.  
   
--   L'élément de liaison <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> spécifie l'encodage de caractères et le contrôle de version des messages encodés avec MTOM. MTOM est une technologie efficace de transmission de données binaires dans les messages WCF. L'encodeur MTOM tente de créer un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte. En termes d’efficacité, parmi les encodeurs que WCF fournit, MTOM est texte intermédiaires (la plus lente) et binaire (la plus rapide).  
+- L'élément de liaison <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> spécifie l'encodage de caractères et le contrôle de version des messages encodés avec MTOM. MTOM est une technologie efficace de transmission de données binaires dans les messages WCF. L'encodeur MTOM tente de créer un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte. En termes d’efficacité, parmi les encodeurs que WCF fournit, MTOM est texte intermédiaires (la plus lente) et binaire (la plus rapide).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Comment choisir un encodeur de message  
  Le tableau suivant décrit les facteurs courants utilisés pour choisir un encodeur de message. Donnez la priorité aux facteurs significatifs pour votre application, puis choisissez les encodeurs de message qui fonctionnent le mieux avec ceux-ci. Assurez-vous de prendre en compte les facteurs supplémentaires non répertoriés dans ce tableau et les encodeurs de message personnalisés qui peuvent s'avérer nécessaires dans votre application.  

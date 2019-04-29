@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
 ms.openlocfilehash: d7129d6a48bdf31dc4953bb450267ad3b38fdd17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651036"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Procédure : Spécifier HandoffBehavior entre des animations de table de montage séquentiel
 Cet exemple montre comment spécifier le comportement de transfert entre des animations de storyboard. Le <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> propriété du <xref:System.Windows.Media.Animation.BeginStoryboard> spécifie comment les nouvelles animations interagissent avec les animations existantes qui sont déjà appliquées à une propriété.  

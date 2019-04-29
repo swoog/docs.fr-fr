@@ -3,11 +3,11 @@ title: <security> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
 ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670559"
 ---
 # <a name="security-of-nethttpbinding"></a>\<security> of \<netHttpBinding>
 
@@ -39,7 +39,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 
 |Attribut|Description|
 |---------------|-----------------|
-|mode|Facultatif. Spécifie le type de sécurité qui est utilisé. La valeur par défaut est `None`. Cet attribut est de type <xref:System.ServiceModel.BasicHttpSecurityMode>.|
+|mode|Optionnel. Spécifie le type de sécurité qui est utilisé. La valeur par défaut est `None`. Cet attribut est de type <xref:System.ServiceModel.BasicHttpSecurityMode>.|
 
 ## <a name="mode-attribute"></a>attribut mode
 

@@ -3,18 +3,18 @@ title: Fonctions d'agrégation (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607217"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Fonctions d'agrégation (Entity SQL)
 Un agrégat est une construction de langage qui condense une collection en un scalaire dans le cadre d'une opération de groupe. Les agrégats [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se présentent sous deux formes :  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctions de collection qui peuvent être utilisées n’importe où dans une expression. Cela inclut l'utilisation de fonctions d'agrégation dans les projections et les prédicats qui agissent sur les collections. Dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la spécification des agrégats s’effectue de préférence par fonctions de collection.  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fonctions de collection qui peuvent être utilisées n’importe où dans une expression. Cela inclut l'utilisation de fonctions d'agrégation dans les projections et les prédicats qui agissent sur les collections. Dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la spécification des agrégats s’effectue de préférence par fonctions de collection.  
   
--   Les agrégats de groupe dans les expressions de requête dotées d'une clause GROUP BY. Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], les agrégats de groupe acceptent DISTINCT et ALL comme modificateurs de l'entrée de l'agrégat.  
+- Les agrégats de groupe dans les expressions de requête dotées d'une clause GROUP BY. Comme dans [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], les agrégats de groupe acceptent DISTINCT et ALL comme modificateurs de l'entrée de l'agrégat.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tente d’abord d’interpréter une expression comme une fonction de la collection et si l’expression est dans le contexte d’une expression SELECT il l’interprète comme un agrégat de groupe.  
   

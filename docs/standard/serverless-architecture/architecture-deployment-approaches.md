@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640252"
 ---
-# <a name="architecture-deployment-approaches"></a>Approches de déploiement d’architecture
+# <a name="architecture-deployment-approaches"></a>Approches du déploiement de l’architecture
 
 Quel que soit l’architecture approche permet de concevoir une application métier, l’implémentation ou le déploiement de ces applications peut-être varier. Les entreprises hébergent des applications sur tous les éléments du matériel physique pour les fonctions sans serveur.
 
@@ -156,7 +156,7 @@ Le chapitre suivant sera vous concentrer sur une architecture sans serveur, cas 
 
 * [Guide d’architecture application Windows Azure](https://docs.microsoft.com/azure/architecture/guide/)
 * [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database)
+* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Modèle d’architecture multiniveau](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes sur Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 * [Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)

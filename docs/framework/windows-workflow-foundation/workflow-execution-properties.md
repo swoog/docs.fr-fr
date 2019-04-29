@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
 ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669379"
 ---
 # <a name="workflow-execution-properties"></a>Propriétés d'exécution de workflow
 Par le biais du stockage local des threads (TLS), le CLR maintient un contexte d’exécution pour chaque thread. Ce contexte d’exécution gouverne des propriétés de thread connues, telles que l’identité de thread, la transaction ambiante et le jeu d’autorisations actuel, en plus des propriétés de thread définies par l’utilisateur (comme les emplacements nommés).  

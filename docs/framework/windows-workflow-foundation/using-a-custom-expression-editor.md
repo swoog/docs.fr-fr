@@ -3,18 +3,18 @@ title: Utilisation d'un éditeur d'expressions personnalisé
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669600"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
   
--   Pour assurer la prise en charge d'IntelliSense et d'autres fonctionnalités d'édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions de Visual Studio par défaut ne peut pas être utilisé dans les applications réhébergées.  
+- Pour assurer la prise en charge d'IntelliSense et d'autres fonctionnalités d'édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions de Visual Studio par défaut ne peut pas être utilisé dans les applications réhébergées.  
   
--   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, d’édition d’expressions afin qu’ils ne sont pas, par exemple, nécessaire pour découvrir Visual Basic ou de traiter des expressions Visual Basic.  
+- Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, d’édition d’expressions afin qu’ils ne sont pas, par exemple, nécessaire pour découvrir Visual Basic ou de traiter des expressions Visual Basic.  
   
  Trois étapes de base sont nécessaires pour implémenter un éditeur d'expressions personnalisé :  
   

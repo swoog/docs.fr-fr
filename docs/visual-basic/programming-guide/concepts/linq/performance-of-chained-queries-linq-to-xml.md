@@ -3,11 +3,11 @@ title: Performances des requêtes chaînées (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
 ms.openlocfilehash: 8634ca224f5892918721996114649c392a5080a0
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665869"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Performances des requêtes chaînées (LINQ to XML) (Visual Basic)
 

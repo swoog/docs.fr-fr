@@ -3,11 +3,11 @@ title: Liaison de données et LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607385"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Liaison de données et LINQ to DataSet
 *Liaison de données* est le processus qui établit une connexion entre l’interface utilisateur d’application et la logique métier. Si la liaison est correctement paramétrée et si les données fournissent les notifications appropriées, lorsque les données changent de valeur, les éléments qui sont liés aux données reflètent automatiquement ces changements. Le <xref:System.Data.DataSet> est une représentation de données résidente en mémoire qui propose un modèle de programmation relationnel cohérent, quelle que soit la source des données qu'il contient. Le <xref:System.Data.DataView> ADO.NET 2.0 vous permet de trier et de filtrer les données stockées dans un <xref:System.Data.DataTable>. Cette fonctionnalité est souvent utilisée dans les applications de liaison de données. En utilisant un <xref:System.Data.DataView>, vous pouvez présenter les données d'une table en appliquant différents ordres de tri et filtrer les données en fonction d'un état de ligne ou d'une expression de filtre. Pour plus d’informations sur la <xref:System.Data.DataView> d’objets, consultez [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  

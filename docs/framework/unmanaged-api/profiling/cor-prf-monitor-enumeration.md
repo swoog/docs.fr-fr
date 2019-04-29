@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599050"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR, énumération
 Contient des valeurs utilisées pour spécifier un comportement, des fonctionnalités ou des événements auxquels le profileur veut s'abonner.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Membres  
  Les sections suivantes répertorient `COR_PRF_MONITOR` membres de l’énumération par catégorie. Les catégories sont :  
   
--   [Aucun jeu d’indicateurs](#None)  
+- [Aucun jeu d’indicateurs](#None)  
   
--   [Indicateurs de rappel](#Callback)  
+- [Indicateurs de rappel](#Callback)  
   
--   [Indicateurs d’activation de fonctionnalité](#Feature)  
+- [Indicateurs d’activation de fonctionnalité](#Feature)  
   
--   [Indicateurs de configuration](#Config)  
+- [Indicateurs de configuration](#Config)  
   
--   [Indicateurs composites](#Composite)  
+- [Indicateurs composites](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Aucun jeu d’indicateurs  

@@ -3,11 +3,11 @@ title: Mappage de la méthode CLR aux fonctions de chaînes canoniques
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605715"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Mappage de la méthode CLR aux fonctions de chaînes canoniques
 
@@ -38,9 +38,9 @@ Pour les scénarios LINQ, les requêtes exécutées sur Entity Framework impliqu
 
 ## <a name="systemstring-method-instance-mapping"></a>Mappage de la méthode System.String (d'instance)
 
-|Méthode System.String (d'instance)|Fonction canonique|Remarques|
+|Méthode System.String (d'instance)|Fonction canonique|Notes|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` n'est pas une constante, cela mappe à IndexOf (`this`, `value`) > 0.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` n’est pas une constante, cela mappe à IndexOf (`this`, `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` COMME `'` % `value`'|Si `value` n'est pas une constante, cela mappe à Right (`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Si `value` n'est pas une constante, cela mappe à IndexOf (`this`, `value`) = 1.|
 |Longueur|Length(`this`)||
@@ -60,17 +60,17 @@ Pour les scénarios LINQ, les requêtes exécutées sur Entity Framework impliqu
 
 ## <a name="systemdatetime-method-static-mapping"></a>Mappage de la méthode System.DateTime (statique)
 
-|Méthode System.DateTime (statique)|Fonction canonique|Remarques|
+|Méthode System.DateTime (statique)|Fonction canonique|Notes|
 |---------------------------------------|------------------------|-----------|
 |Boolean Equals(DateTime `t1`, DateTime `t2`)|= (opérateur)||
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= (opérateur)||
-|Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> (opérateur)||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= (opérateur)||
+|Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> opérateur||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> =, opérateur||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (opérateur)||
-|Boolean op_LessThan (DateTime `t1`, DateTime `t2`)|< (opérateur)||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (opérateur)||
+|Boolean op_LessThan (DateTime `t1`, DateTime `t2`)|< opérateur||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< =, opérateur||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` comme DateInterval, \_<br /><br /> ByVal `DateValue` comme date/heure, \_<br /><br /> ByVal facultatif `FirstDayOfWeekValue` comme FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal facultatif `FirstWeekOfYearValue` comme FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Consultez la section concernant la fonction DatePart pour plus d'informations.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -97,7 +97,7 @@ Pour les scénarios LINQ, les requêtes exécutées sur Entity Framework impliqu
 
 Mappage indiqué pour les méthodes `get` sur les propriétés répertoriées.
 
-|Mappage de la méthode System.DateTimeOffset (d'instance)|Fonction canonique|Remarques|
+|Mappage de la méthode System.DateTimeOffset (d'instance)|Fonction canonique|Notes|
 |-----------------------------------------------|------------------------|-----------|
 |Jour|Day(`this`)|Non pris en charge dans SQL Server 2005.|
 |Heure|Hour(`this`)|Non pris en charge dans SQL Server 2005.|
@@ -114,7 +114,7 @@ Mappage indiqué pour les méthodes `get` sur les propriétés répertoriées.
 
 Mappage indiqué pour les méthodes `get` sur les propriétés répertoriées.
 
-|Mappage de la méthode System.DateTimeOffset (statique)|Fonction canonique|Remarques|
+|Mappage de la méthode System.DateTimeOffset (statique)|Fonction canonique|Notes|
 |---------------------------------------------|------------------------|-----------|
 |System.DateTimeOffset.Now()|CurrentDateTimeOffset()|Non pris en charge dans SQL Server 2005.|
 
@@ -122,7 +122,7 @@ Mappage indiqué pour les méthodes `get` sur les propriétés répertoriées.
 
 Mappage indiqué pour les méthodes `get` sur les propriétés répertoriées.
 
-|Mappage de la méthode System.TimeSpan (d'instance)|Fonction canonique|Remarques|
+|Mappage de la méthode System.TimeSpan (d'instance)|Fonction canonique|Notes|
 |-----------------------------------------|------------------------|-----------|
 |Heures|Hour(`this`)|Non pris en charge dans SQL Server 2005.|
 |Millisecondes|Millisecond(`this`)|Non pris en charge dans SQL Server 2005.|
