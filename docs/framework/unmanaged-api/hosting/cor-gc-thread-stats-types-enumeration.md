@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698120"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="69285-102">COR_GC_THREAD_STATS_TYPES (énumération)</span><span class="sxs-lookup"><span data-stu-id="69285-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="69285-103">Indique les statistiques de garbage collection pour un thread.</span><span class="sxs-lookup"><span data-stu-id="69285-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="27ff0-102">COR_GC_THREAD_STATS_TYPES (énumération)</span><span class="sxs-lookup"><span data-stu-id="27ff0-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="27ff0-103">Indique les statistiques de garbage collection pour un thread.</span><span class="sxs-lookup"><span data-stu-id="27ff0-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69285-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="69285-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27ff0-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="27ff0-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,19 +34,19 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="69285-105">Membres</span><span class="sxs-lookup"><span data-stu-id="69285-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="27ff0-105">Membres</span><span class="sxs-lookup"><span data-stu-id="27ff0-105">Members</span></span>  
   
-|<span data-ttu-id="69285-106">Membre</span><span class="sxs-lookup"><span data-stu-id="69285-106">Member</span></span>|<span data-ttu-id="69285-107">Description</span><span class="sxs-lookup"><span data-stu-id="69285-107">Description</span></span>|  
+|<span data-ttu-id="27ff0-106">Membre</span><span class="sxs-lookup"><span data-stu-id="27ff0-106">Member</span></span>|<span data-ttu-id="27ff0-107">Description</span><span class="sxs-lookup"><span data-stu-id="27ff0-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="69285-108">Le thread a octets qui ont été promus dans le garbage collection le plus récent.</span><span class="sxs-lookup"><span data-stu-id="69285-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="27ff0-108">Le thread a octets qui ont été promus dans le garbage collection le plus récent.</span><span class="sxs-lookup"><span data-stu-id="27ff0-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="69285-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="69285-109">Requirements</span></span>  
- <span data-ttu-id="69285-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69285-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27ff0-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="27ff0-109">Requirements</span></span>  
+ <span data-ttu-id="27ff0-110">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27ff0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69285-111">**En-tête :** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="69285-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="27ff0-111">**En-tête :** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="27ff0-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="69285-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69285-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="27ff0-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27ff0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69285-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="69285-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27ff0-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="27ff0-113">See also</span></span>
 
-- [<span data-ttu-id="69285-114">Énumérations d’hébergement</span><span class="sxs-lookup"><span data-stu-id="69285-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="27ff0-114">Énumérations d’hébergement</span><span class="sxs-lookup"><span data-stu-id="27ff0-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
