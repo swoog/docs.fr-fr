@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937720"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procédure : créer un paramètre au moment du design
 Vous pouvez créer un nouveau paramètre au moment du design à l’aide du Concepteur de paramètres. Le Concepteur de paramètres est une interface de style de la grille qui vous permet de créer de nouveaux paramètres et de spécifier des propriétés pour ces paramètres. Vous devez spécifier le nom, valeur, Type et l’étendue pour vos nouveaux paramètres. Une fois un paramètre est créé, il est accessible dans le code.  

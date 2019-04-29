@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940476"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Procédure : Activer la détection de relecture des jetons
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms ASP.NET®  
+- Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des procédures pas à pas détaillées pour l’activation de la détection de relecture de jetons dans une application ASP.NET qui utilise WIF. Elle fournit également des instructions pour tester l’application afin de vérifier que la détection de relecture de jetons est activée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Vue d'ensemble  
+- Vue d'ensemble  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : créer une simple application Web Forms ASP.NET et activer la détection de relecture  
+- Étape 1 : créer une simple application Web Forms ASP.NET et activer la détection de relecture  
   
--   Étape 2 : tester votre solution  
+- Étape 2 : tester votre solution  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Créer une simple application ASP.NET qui utilise WIF et le service STS de développement à partir de l’outil Identity and Access Tool  
+- Créer une simple application ASP.NET qui utilise WIF et le service STS de développement à partir de l’outil Identity and Access Tool  
   
--   Activer la détection de relecture de jetons et vérifier son fonctionnement  
+- Activer la détection de relecture de jetons et vérifier son fonctionnement  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Une attaque par relecture se produit quand un client essaie de s’authentifier auprès d’une partie de confiance avec un jeton STS que le client a déjà utilisé. Pour éviter ce genre d’attaque, WIF contient un cache de détection de relecture de jetons STS précédemment utilisés. Quand elle est activée, la détection de relecture vérifie le jeton de la demande entrante et si le jeton a été utilisé précédemment ou non. Si le jeton a déjà été utilisé, la demande est refusée et une exception <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> est levée.  
@@ -45,9 +45,9 @@ ms.locfileid: "59772919"
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : créer une simple application Web Forms ASP.NET et activer la détection de relecture  
+- Étape 1 : créer une simple application Web Forms ASP.NET et activer la détection de relecture  
   
--   Étape 2 : tester votre solution  
+- Étape 2 : tester votre solution  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>Étape 1 : créer une simple application Web Forms ASP.NET et activer la détection de relecture  
  Dans cette étape, vous allez créer une application Web Forms ASP.NET et modifier le fichier *Web.config* pour activer la détection de relecture.  

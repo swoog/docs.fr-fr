@@ -6,26 +6,26 @@ dev_langs:
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
 ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797837"
 ---
 # <a name="query-results"></a>Résultats de requête
 Une fois qu'une requête [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] a été convertie en arborescences de commandes puis exécutée, les résultats de la requête sont généralement retournés sous l'une des formes suivantes :  
   
--   une collection de zéro, un ou plusieurs objets entité typés ou une projection de types complexes dans le modèle conceptuel ;  
+- une collection de zéro, un ou plusieurs objets entité typés ou une projection de types complexes dans le modèle conceptuel ;  
   
--   des types CLR pris en charge par le modèle conceptuel ;  
+- des types CLR pris en charge par le modèle conceptuel ;  
   
--   Collections inline.  
+- Collections inline.  
   
--   Types anonymes.  
+- Types anonymes.  
   
  Lorsque la requête a été exécutée sur la source de données, les résultats sont matérialisés en types CLR et retournés au client. La matérialisation d'objets est entièrement assurée par [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Les erreurs qui résultent d'une impossibilité d'effectuer un mappage entre [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] et le CLR provoquent la levée d'exceptions pendant la matérialisation d'objets.  
   
- Si l'exécution de la requête retourne des types de modèle conceptuel primitifs, les résultats se composent de types CLR autonomes et déconnectés d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Toutefois, si la requête retourne une collection d'objets entité typés, représentée par <xref:System.Data.Objects.ObjectQuery%601>, ces types sont suivis par le contexte d'objet. Tous les comportements d’objet (par exemple, les collections enfants/parentes, le suivi des modifications, le polymorphisme, etc.) sont tels que définis dans le [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Ces fonctionnalités peuvent être utilisées en leur qualité, comme défini dans l'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Pour plus d’informations, consultez [utilisation des objets](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+ Si l'exécution de la requête retourne des types de modèle conceptuel primitifs, les résultats se composent de types CLR autonomes et déconnectés d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Toutefois, si la requête retourne une collection d’objets entité typés, représentée par <xref:System.Data.Objects.ObjectQuery%601>, ces types sont suivis par le contexte d’objet. Tous les comportements d’objet (par exemple, les collections enfants/parentes, le suivi des modifications, le polymorphisme, etc.) sont définies dans le [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Ces fonctionnalités peuvent être utilisées en leur qualité, comme défini dans l'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Pour plus d’informations, consultez [utilisation d’objets](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
  Les types Struct retournés par les requêtes (tels que les types anonymes et les types complexes Nullable) peuvent être de valeur `null`. Une propriété <xref:System.Data.Objects.DataClasses.EntityCollection%601> d'une entité retournée peut également être de valeur `null`. Cela peut être le résultat de la projection de la propriété de collection d'une entité de valeur `null`, par exemple, en cas d'appel de <xref:System.Linq.Queryable.FirstOrDefault%2A> sur un objet <xref:System.Data.Objects.ObjectQuery%601> qui n'a pas d'éléments.  
   

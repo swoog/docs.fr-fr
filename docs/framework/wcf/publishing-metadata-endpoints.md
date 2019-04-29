@@ -3,11 +3,11 @@ title: Publication de points de terminaison de métadonnées
 ms.date: 03/30/2017
 ms.assetid: 29cd8a60-dfb7-460c-bf5a-c2b31b782671
 ms.openlocfilehash: 143a46ce18a0d9dee89bbbffac9be9a467e951df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955153"
 ---
 # <a name="publishing-metadata-endpoints"></a>Publication de points de terminaison de métadonnées
 Services Windows Communication Foundation (WCF) publient les métadonnées en publiant un ou plusieurs points de terminaison de métadonnées. La publication de métadonnées de service permet d'accéder à celles-ci à l'aide de protocoles standardisés, tels que WS-MetadataExchange (MEX) et les requêtes HTTP/GET. Les points de terminaison de métadonnées sont semblables aux autres points de terminaison de service dans le sens où ils ont une adresse, une liaison et un contrat, et qu’ils peuvent être ajoutés à un hôte de service via la configuration ou dans du code. Pour activer la publication de points de terminaison de métadonnées, vous devez ajouter le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior> au service.  

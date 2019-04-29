@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
 ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936316"
 ---
 # <a name="identifier-expected"></a>Identificateur attendu
 Un élément de programmation qui n’est pas un nom d’élément déclaré reconnaissable se produit lorsque le contexte nécessite un nom d’élément. Il se peut qu’un attribut a été spécifié à un endroit différent au début de l’instruction.  
@@ -21,9 +21,9 @@ Un élément de programmation qui n’est pas un nom d’élément déclaré rec
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Vérifiez que tous les attributs dans l’instruction sont placés au début.  
+- Vérifiez que tous les attributs dans l’instruction sont placés au début.  
   
--   Vérifiez que tous les noms d’éléments dans l’instruction sont correctement orthographiés.  
+- Vérifiez que tous les noms d’éléments dans l’instruction sont correctement orthographiés.  
   
 ## <a name="see-also"></a>Voir aussi
 

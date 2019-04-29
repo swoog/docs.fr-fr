@@ -3,17 +3,17 @@ title: Modélisation du comportement d'annulation dans les workflows
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934704"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modélisation du comportement d'annulation dans les workflows
 Les activités peuvent être annulées à l’intérieur d’un workflow, par exemple par une activité <xref:System.Activities.Statements.Parallel> qui annule des branches incomplètes lorsque son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> a la valeur `true`, ou à l’extérieur du workflow, si l’hôte appelle <xref:System.Activities.WorkflowApplication.Cancel%2A>. Pour fournir la gestion des annulations, les auteurs de workflow peuvent utiliser l'activité <xref:System.Activities.Statements.CancellationScope>, l'activité <xref:System.Activities.Statements.CompensableActivity> ou créer des activités personnalisées qui fournissent la logique d'annulation. Cette rubrique fournit une vue d'ensemble de l'annulation dans les workflows.  
   
 ## <a name="cancellation-compensation-and-transactions"></a>Annulation, compensation et transactions  
- Les transactions permettent à votre application d'annuler (restaurer) toute modification exécutée dans une transaction en cas d'erreur au cours du processus de transaction. Toutefois, le travail qui peut devoir être annulé n'est pas dans sa totalité approprié pour les transactions, tel que le travail de longue durée ou le travail qui n'implique pas de ressources transactionnelles. La compensation fournit un modèle pour l'annulation de travail non transactionnel précédemment effectué en cas d'échec ultérieur dans le workflow. L'annulation fournit un modèle pour les auteurs de workflow et d'activité pour gérer le travail non transactionnel qui n'a pas été effectué. Si une activité n'a pas terminé son exécution et est annulée, sa logique d'annulation sera appelée si elle est disponible.  
+ Les transactions permettent à votre application d'annuler (restaurer) toute modification exécutée dans une transaction en cas d'erreur au cours du processus de transaction. Toutefois, le travail qui peut devoir être annulé n’est pas dans sa totalité approprié pour les transactions, tel que le travail de longue durée ou le travail qui n’implique pas de ressources transactionnelles. La compensation fournit un modèle pour l'annulation de travail non transactionnel précédemment effectué en cas d'échec ultérieur dans le workflow. L’annulation fournit un modèle pour les auteurs de workflow et d’activité pour gérer le travail non transactionnel qui n’a pas été effectué. Si une activité n'a pas terminé son exécution et est annulée, sa logique d'annulation sera appelée si elle est disponible.  
   
 > [!NOTE]
 >  Pour plus d’informations sur les transactions et compensation, consultez [Transactions](workflow-transactions.md) et [Compensation](compensation.md).  
@@ -46,7 +46,7 @@ Les activités peuvent être annulées à l’intérieur d’un workflow, par ex
 **CancellationHandler appelé.**   
 **Flux de travail 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 annulée.**    
 ### <a name="canceling-an-activity-from-inside-a-workflow"></a>Annulation d'une activité à l'intérieur d'un workflow  
- Une activité peut également être annulée par son parent. Par exemple, si une activité <xref:System.Activities.Statements.Parallel> a plusieurs branches en cours d'exécution et que son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> a la valeur `true`, ses branches incomplètes seront annulées. Dans cet exemple, une activité <xref:System.Activities.Statements.Parallel> avec deux branches est créée. Son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ayant la valeur `true`, le <xref:System.Activities.Statements.Parallel> est effectué dès que l'une de ses branches est terminée. Dans cet exemple, la branche 2 étant terminée, la branche 1 est annulée.  
+ Une activité peut également être annulée par son parent. Par exemple, si une activité <xref:System.Activities.Statements.Parallel> a plusieurs branches en cours d’exécution et que son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> a la valeur `true`, ses branches incomplètes seront annulées. Dans cet exemple, une activité <xref:System.Activities.Statements.Parallel> avec deux branches est créée. Son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ayant la valeur `true`, le <xref:System.Activities.Statements.Parallel> est effectué dès que l’une de ses branches est terminée. Dans cet exemple, la branche 2 étant terminée, la branche 1 est annulée.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#37](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#37)]  
   

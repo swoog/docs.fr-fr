@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954087"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 
@@ -45,13 +45,13 @@ Une boucle de nœud de lecture de base pour examiner un flux de nœud XAML prés
 
 - En fonction du <xref:System.Xaml.XamlNodeType> indiqué comme le nœud ou l'enregistrement actuel, appelez l'un des éléments suivants pour obtenir des informations sur le contenu du nœud :
 
-    - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> du nœud <xref:System.Xaml.XamlNodeType.StartMember> ou <xref:System.Xaml.XamlNodeType.EndMember>, appelez <xref:System.Xaml.XamlXmlReader.Member%2A> pour obtenir des informations de <xref:System.Xaml.XamlMember> pour un membre. Notez que le membre peut être un <xref:System.Xaml.XamlDirective>, qui n'est pas nécessairement un membre conventionnel défini par un type de l'objet précédent. Par exemple, `x:Name` appliqué à un objet apparaît comme un membre XAML pour lequel la propriété <xref:System.Xaml.XamlMember.IsDirective%2A> a la valeur true et la propriété <xref:System.Xaml.XamlMember.Name%2A> du membre est `Name`. Les autres propriétés indiquent que cette directive se trouve sous l'espace de noms XAML du langage XAML.
+  - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> du nœud <xref:System.Xaml.XamlNodeType.StartMember> ou <xref:System.Xaml.XamlNodeType.EndMember>, appelez <xref:System.Xaml.XamlXmlReader.Member%2A> pour obtenir des informations de <xref:System.Xaml.XamlMember> pour un membre. Notez que le membre peut être un <xref:System.Xaml.XamlDirective>, qui n'est pas nécessairement un membre conventionnel défini par un type de l'objet précédent. Par exemple, `x:Name` appliqué à un objet apparaît comme un membre XAML pour lequel la propriété <xref:System.Xaml.XamlMember.IsDirective%2A> a la valeur true et la propriété <xref:System.Xaml.XamlMember.Name%2A> du membre est `Name`. Les autres propriétés indiquent que cette directive se trouve sous l'espace de noms XAML du langage XAML.
 
-    - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.StartObject> ou <xref:System.Xaml.XamlNodeType.EndObject>, appelez <xref:System.Xaml.XamlXmlReader.Type%2A> pour obtenir des informations de <xref:System.Xaml.XamlType> pour un objet.
+  - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.StartObject> ou <xref:System.Xaml.XamlNodeType.EndObject>, appelez <xref:System.Xaml.XamlXmlReader.Type%2A> pour obtenir des informations de <xref:System.Xaml.XamlType> pour un objet.
 
-    - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.Value>, appelez <xref:System.Xaml.XamlXmlReader.Value%2A>. Un nœud est une valeur uniquement s'il est l'expression la plus simple de la valeur d'un membre, ou le texte d'initialisation d'un objet (toutefois, vous devez connaître le comportement de conversion de type, comme indiqué dans une section à venir de cette rubrique).
+  - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.Value>, appelez <xref:System.Xaml.XamlXmlReader.Value%2A>. Un nœud est une valeur uniquement s'il est l'expression la plus simple de la valeur d'un membre, ou le texte d'initialisation d'un objet (toutefois, vous devez connaître le comportement de conversion de type, comme indiqué dans une section à venir de cette rubrique).
 
-    - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, appelez <xref:System.Xaml.XamlXmlReader.Namespace%2A> pour obtenir des informations d'espace de noms pour un nœud d'espace de noms.
+  - Pour une propriété <xref:System.Xaml.XamlXmlReader.NodeType%2A> d'un nœud <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, appelez <xref:System.Xaml.XamlXmlReader.Namespace%2A> pour obtenir des informations d'espace de noms pour un nœud d'espace de noms.
 
 - Appelez <xref:System.Xaml.XamlXmlReader.Read%2A> pour faire avancer le lecteur XAML au nœud suivant dans le flux de nœud XAML, et recommencez les étapes.
 
@@ -140,15 +140,15 @@ Dans le flux de nœud XAML, vous pouvez compter sur le comportement suivant :
 
 - Un nœud `Value` représente la valeur elle-même. Il n'y a pas de « EndValue ». Il peut être suivi uniquement d'un nœud `EndMember`.
 
-    - Le texte d'initialisation XAML de l'objet, tel qu'il peut être utilisé par la construction, n'entraîne pas de structure objet-valeur. À la place, un nœud membre dédié à un membre nommé `_Initialization` est créé. Ce nœud membre contient la chaîne de valeur d'initialisation. S'il existe, le membre `_Initialization` est toujours le premier nœud `StartMember`. Le membre`_Initialization` peut être qualifié dans certaines représentations des services XAML avec la portée de nom XAML du langage XAML, pour préciser que le membre `_Initialization` n'est pas une propriété définie dans les types de stockage.
+  - Le texte d'initialisation XAML de l'objet, tel qu'il peut être utilisé par la construction, n'entraîne pas de structure objet-valeur. À la place, un nœud membre dédié à un membre nommé `_Initialization` est créé. Ce nœud membre contient la chaîne de valeur d'initialisation. S'il existe, le membre `_Initialization` est toujours le premier nœud `StartMember`. Le membre`_Initialization` peut être qualifié dans certaines représentations des services XAML avec la portée de nom XAML du langage XAML, pour préciser que le membre `_Initialization` n'est pas une propriété définie dans les types de stockage.
 
-    - Une combinaison membre-valeur représente un paramètre d'attribut de la valeur. Un convertisseur de valeurs peut éventuellement être impliqué dans le traitement de cette valeur, et la valeur est une chaîne simple. Toutefois, cela n'est pas évalué tant qu'un writer d'objet XAML traite ce flux de nœud. Le writer d'objet XAML possède le contexte de schéma XAML, le mappage de système de type et d'autres prises en charge nécessaires pour la conversion de valeurs.
+  - Une combinaison membre-valeur représente un paramètre d'attribut de la valeur. Un convertisseur de valeurs peut éventuellement être impliqué dans le traitement de cette valeur, et la valeur est une chaîne simple. Toutefois, cela n'est pas évalué tant qu'un writer d'objet XAML traite ce flux de nœud. Le writer d'objet XAML possède le contexte de schéma XAML, le mappage de système de type et d'autres prises en charge nécessaires pour la conversion de valeurs.
 
 - Un nœud `EndMember` peut être suivi d'un nœud `StartMember` pour un membre suivant ou d'un nœud `EndObject` pour le propriétaire du membre.
 
 - Un nœud `EndObject` peut être suivi d'un nœud `EndMember` . Il peut également être suivi d'un nœud `StartObject` si les objets sont des homologues dans les éléments d'une collection. Il peut également être suivi d'un nœud `Namespace` , qui s'applique à un nœud `StartObject`à venir.
 
-    - Dans le seul cas de la fermeture du flux de nœud entier, le nœud `EndObject` de la racine n'est pas suivi, le lecteur se trouve à la fin du fichier et <xref:System.Xaml.XamlReader.Read%2A> renvoie `false`.
+  - Dans le seul cas de la fermeture du flux de nœud entier, le nœud `EndObject` de la racine n'est pas suivi, le lecteur se trouve à la fin du fichier et <xref:System.Xaml.XamlReader.Read%2A> renvoie `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

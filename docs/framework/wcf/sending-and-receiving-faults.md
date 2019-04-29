@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949602"
 ---
 # <a name="sending-and-receiving-faults"></a>Envoi et réception des erreurs
 Les erreurs SOAP acheminent des informations de condition d'erreur d'un service à un client et, dans le cas duplex, d'un client à un service d'une manière interopérable. En général un service définit le contenu des erreurs personnalisées et spécifie quelles opérations peuvent les retourner. (Pour plus d’informations, consultez [définition et spécification des erreurs](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Cette rubrique explique comment un service ou un client duplex peut envoyer ces erreurs lorsque la condition d'erreur correspondante s'est produite et comment un client ou une application de service gère ces erreurs. Pour une vue d’ensemble de la gestion des erreurs dans les applications Windows Communication Foundation (WCF), consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ Les erreurs SOAP acheminent des informations de condition d'erreur d'un service 
 ## <a name="handling-faults"></a>Gestion des erreurs  
  Dans les clients WCF, les erreurs SOAP qui se produisent pendant la communication et qui présentent un intérêt pour les applications clientes sont levées en tant qu’exceptions managées. Bien qu’il existe de nombreuses exceptions qui peuvent se produire pendant l’exécution de n’importe quel programme, les applications utilisant le modèle de programmation client WCF peuvent vous attendre à gérer les exceptions de deux types suivants suite à la communication.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  Les objets <xref:System.TimeoutException> sont levés lorsqu'une opération dépasse le délai d'attente spécifié.  
   
@@ -81,13 +81,13 @@ Les erreurs SOAP acheminent des informations de condition d'erreur d'un service 
   
  En général, les canaux d'objets clients sont fermés dans les cas suivants :  
   
--   Lorsque l’objet de client WCF est recyclé.  
+- Lorsque l’objet de client WCF est recyclé.  
   
--   Lorsque l'application cliente appelle <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Lorsque l'application cliente appelle <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Lorsque l'application cliente appelle <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Lorsque l'application cliente appelle <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Lorsque l'application cliente appelle une opération qui est une opération de fin pour une session.  
+- Lorsque l'application cliente appelle une opération qui est une opération de fin pour une session.  
   
  Dans tous les cas, la fermeture du canal fait en sorte que celui-ci commence à fermer tous les canaux sous-jacents qui peuvent envoyer des messages pour prendre en charge la fonctionnalité complexe au niveau application. Par exemple, lorsqu’un contrat requiert des sessions, une liaison tente d’établir une session en échangeant des messages avec le canal de service jusqu’à ce qu’une session soit établie. Lorsque le canal est fermé, le canal de session sous-jacent signale au service que la session est terminée. Dans ce cas, si le canal a déjà abandonné, est déjà fermé ou est inutilisable (par exemple, lorsqu'un câble réseau est débranché), le canal client ne peut pas signaler au canal de service que la session est terminée et une exception peut être déclenchée.  
   

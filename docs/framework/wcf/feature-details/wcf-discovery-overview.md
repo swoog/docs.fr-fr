@@ -3,11 +3,11 @@ title: Vue d'ensemble de la découverte WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784252"
 ---
 # <a name="wcf-discovery-overview"></a>Vue d'ensemble de la découverte WCF
 Les API de découverte offrent un modèle de programmation unifié pour la publication et la découverte dynamiques de services Web, à l'aide du protocole WS-Discovery. Ces API permettent aux services de se publier eux-mêmes et permettent aux clients de rechercher des services publiés. Une fois un service rendu détectable, le service a la capacité d'envoyer des messages d'annonce, ainsi que d'écouter des demandes de découverte et d'y répondre. Les services détectables peuvent envoyer des messages de type Hello pour annoncer leur arrivée sur un réseau et des messages de type Bye pour annoncer leur départ d'un réseau. Pour trouver un service, les clients envoient une demande `Probe` qui contient des critères spécifiques tels que le type de contrat de service, les mots clés et l'étendue sur le réseau. Les services reçoivent la demande `Probe` et déterminent s'ils correspondent aux critères. Si un service correspond, il répond en renvoyant au client un message `ProbeMatch`, avec les informations nécessaires pour contacter le service. Les clients peuvent également envoyer des demandes `Resolve` qui leur permettent de trouver des services dont l'adresse du point de terminaison risque d'avoir été modifiée. Les services correspondants répondent aux demandes `Resolve` en renvoyant un message `ResolveMatch` au client.  
@@ -15,11 +15,11 @@ Les API de découverte offrent un modèle de programmation unifié pour la publi
 ## <a name="ad-hoc-and-managed-modes"></a>Modes ad hoc et managé  
  L’API de découverte prend en charge deux modes différents : Géré et Ad-Hoc. Dans le mode managé, un serveur centralisé, appelé proxy de découverte, gère des informations sur les services disponibles. Le proxy de découverte peut être rempli des informations sur les services de diverses manières. Par exemple, les services peuvent envoyer au proxy de découverte des messages d'annonce lors du démarrage, ou le proxy peut lire les données d'une base de données ou d'un fichier de configuration pour déterminer quels services sont disponibles. La manière dont le proxy de découverte est rempli dépend entièrement du développeur. Les clients utilisent le proxy de découverte pour récupérer des informations concernant les services disponibles. Lorsqu'un client recherche un service, il envoie un message `Probe` au proxy de découverte et le proxy détermine si l'un des services qu'il connaît correspond au service recherché par le client. S'il existe des correspondances, le proxy de découverte renvoie au client une réponse `ProbeMatch`. Le client peut ensuite contacter directement le service à l'aide des informations de service retournées par le proxy. Le principe essentiel du mode managé est que les demandes de découverte sont envoyées en mode monodiffusion à une autorité, le proxy de découverte. Le .NET Framework contient des composants clés qui vous permettent de générer votre propre proxy. Les clients et les services peuvent trouver le proxy selon plusieurs méthodes :  
   
--   Le proxy peut répondre aux messages ad hoc.  
+- Le proxy peut répondre aux messages ad hoc.  
   
--   Le proxy peut envoyer un message d'annonce lors du démarrage.  
+- Le proxy peut envoyer un message d'annonce lors du démarrage.  
   
--   Les clients et les services peuvent être écrits de manière à rechercher un point de terminaison connu spécifique.  
+- Les clients et les services peuvent être écrits de manière à rechercher un point de terminaison connu spécifique.  
   
  En mode ad hoc, il n'existe aucun serveur centralisé. Tous les messages de découverte, tels que les annonces de service et les demandes du client, sont envoyés en mode multidiffusion. Par défaut, le .NET Framework contient une prise en charge de la découverte ad hoc sur le protocole UDP. Par exemple, si un service est configuré pour envoyer une annonce de type Hello lors du démarrage, il l'envoie à une adresse de multidiffusion connue, à l'aide du protocole UDP. Les clients doivent écouter activement ces annonces et les traiter en conséquence. Lorsqu'un client envoie un message `Probe` pour un service, ce message est envoyé sur le réseau à l'aide d'un protocole de multidiffusion. Chaque service qui reçoit la demande détermine s'il correspond aux critères du message `Probe`, puis répond directement au client avec un message `ProbeMatch` si le service correspond aux critères spécifiés dans le message `Probe`.  
   

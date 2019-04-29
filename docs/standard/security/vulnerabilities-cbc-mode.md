@@ -1,17 +1,17 @@
 ---
-title: Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
+title: Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
 description: Apprenez à détecter et atténuer les vulnérabilités de minutage avec déchiffrement symétrique sur le mode Cipher Block Chaining (CBC) à l’aide de la marge intérieure.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933898"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
 
 Microsoft est convaincu qu’il n’est plus sûr déchiffrer les données chiffrées avec le mode Cipher Block Chaining (CBC) de chiffrement symétrique lors de la marge intérieure vérifiable a été appliqué sans d’abord vérifié que l’intégrité du texte chiffré, à l’exception de très spécifique circonstances. Cette opinion est basée sur les recherches sur le chiffrement connus. 
 

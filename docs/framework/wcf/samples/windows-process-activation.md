@@ -3,11 +3,11 @@ title: Activation des processus Windows
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
 ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949927"
 ---
 # <a name="windows-process-activation"></a>Activation des processus Windows
 Cette section contient des exemples qui illustrent l'activation de services via des protocoles réseau.  

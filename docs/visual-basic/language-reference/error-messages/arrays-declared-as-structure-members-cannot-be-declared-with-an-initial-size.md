@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
 ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935367"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Les tableaux déclarés en tant que membres de structures ne peuvent pas être déclarés avec une taille initiale
 Un tableau dans une structure est déclaré avec une taille initiale. Vous ne pouvez pas initialiser n’importe quel élément de structure et déclaration d’une taille de tableau est une forme d’initialisation.  

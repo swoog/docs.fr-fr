@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788816"
 ---
 # <a name="structured-navigation-overview"></a>Vue d'ensemble de la navigation structurée
 Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, ou un <xref:System.Windows.Navigation.NavigationWindow> est composé de pages qui peuvent être identifiés par le pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] et navigation en liens hypertexte. La structure des pages et comment elles sont accessibles, tel que défini par des liens hypertexte, porte le nom de topologie de navigation. Une telle topologie convient à différents types d’applications, notamment celles permettant de parcourir des documents. Pour de telles applications, l’utilisateur peut naviguer d’une page à une autre page sans qu’une page ait besoin de savoir quoi que ce soit sur l’autre page.  
@@ -25,15 +25,15 @@ Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../incl
 ## <a name="structured-navigation"></a>Navigation structurée  
  Quand une page en appelle une autre dans une navigation structurée, certains ou tous les comportements suivants sont nécessaires :  
   
--   La page appelante accède à la page appelée, éventuellement en passant les paramètres exigés par cette dernière.  
+- La page appelante accède à la page appelée, éventuellement en passant les paramètres exigés par cette dernière.  
   
--   La page appelée, quand un utilisateur a fini d’utiliser la page appelante, revient spécifiquement à la page appelante et, éventuellement :  
+- La page appelée, quand un utilisateur a fini d’utiliser la page appelante, revient spécifiquement à la page appelante et, éventuellement :  
   
-    -   Retourne des informations d’état qui décrivent comment la page appelante a été terminée (par exemple, si un utilisateur a appuyé sur un bouton OK ou Annuler)  
+    - Retourne des informations d’état qui décrivent comment la page appelante a été terminée (par exemple, si un utilisateur a appuyé sur un bouton OK ou Annuler)  
   
-    -   Retourne les données recueillies auprès de l’utilisateur (par exemple, les détails du nouvel employé)  
+    - Retourne les données recueillies auprès de l’utilisateur (par exemple, les détails du nouvel employé)  
   
--   Quand la page appelante revient à la page appelée, celle-ci est supprimée de l’historique de navigation afin d’isoler une instance d’une page appelée d’une autre.  
+- Quand la page appelante revient à la page appelée, celle-ci est supprimée de l’historique de navigation afin d’isoler une instance d’une page appelée d’une autre.  
   
  Ces comportements sont illustrés par la figure suivante :  
   
@@ -115,17 +115,17 @@ Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../incl
   
  Vous n’êtes pas obligé de passer des paramètres à la page appelée. Au lieu de cela, vous pouvez procéder comme suit :  
   
--   À partir de la page appelante :  
+- À partir de la page appelante :  
   
-    1.  Instanciez l’appelée <xref:System.Windows.Navigation.PageFunction%601> en utilisant le constructeur par défaut.  
+    1. Instanciez l’appelée <xref:System.Windows.Navigation.PageFunction%601> en utilisant le constructeur par défaut.  
   
-    2.  Store les paramètres dans <xref:System.Windows.Application.Properties%2A>.  
+    2. Store les paramètres dans <xref:System.Windows.Application.Properties%2A>.  
   
-    3.  Accédez à l’appelé <xref:System.Windows.Navigation.PageFunction%601>.  
+    3. Accédez à l’appelé <xref:System.Windows.Navigation.PageFunction%601>.  
   
--   À partir de l’appelé <xref:System.Windows.Navigation.PageFunction%601>:  
+- À partir de l’appelé <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   Récupérer et utiliser les paramètres stockés dans <xref:System.Windows.Application.Properties%2A>.  
+    - Récupérer et utiliser les paramètres stockés dans <xref:System.Windows.Application.Properties%2A>.  
   
  Toutefois, comme vous le verrez bientôt, vous devrez quand même utiliser du code pour instancier et accéder à la page appelée afin de recueillir les données qu’elle a retournées. Pour cette raison, le <xref:System.Windows.Navigation.PageFunction%601> doit être maintenu actif ; sinon, la prochaine fois que vous accédez à la <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instancie le <xref:System.Windows.Navigation.PageFunction%601> à l’aide du constructeur par défaut.  
   

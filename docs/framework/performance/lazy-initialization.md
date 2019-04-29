@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949940"
 ---
 # <a name="lazy-initialization"></a>Initialisation tardive
 *L’initialisation tardive* d’un objet signifie que sa création est différée jusqu’à sa première utilisation. (Pour cette rubrique, les termes *initialisation tardive* et *instanciation tardive* sont synonymes.) L’initialisation tardive est principalement utilisée pour améliorer les performances, éviter les calculs inutiles et réduire les besoins en mémoire programme. Voici les scénarios les plus courants :  
   
--   Lorsqu’un objet est coûteux à créer, et qu’il est possible que le programme ne l’utilise pas. Par exemple, supposons que vous ayez en mémoire un objet `Customer` avec une propriété `Orders` contenant un grand tableau d’objets `Order` qui, pour être initialisé, nécessite une connexion de base de données. Si l’utilisateur ne demande jamais à afficher les commandes ou à utiliser les données dans un calcul, il est inutile d’utiliser la mémoire système ou les cycles de calcul pour les créer. En utilisant `Lazy<Orders>` pour déclarer l’objet `Orders` en vue de son initialisation tardive, vous évitez de gaspiller les ressources système lorsque l’objet n’est pas utilisé.  
+- Lorsqu’un objet est coûteux à créer, et qu’il est possible que le programme ne l’utilise pas. Par exemple, supposons que vous ayez en mémoire un objet `Customer` avec une propriété `Orders` contenant un grand tableau d’objets `Order` qui, pour être initialisé, nécessite une connexion de base de données. Si l’utilisateur ne demande jamais à afficher les commandes ou à utiliser les données dans un calcul, il est inutile d’utiliser la mémoire système ou les cycles de calcul pour les créer. En utilisant `Lazy<Orders>` pour déclarer l’objet `Orders` en vue de son initialisation tardive, vous évitez de gaspiller les ressources système lorsque l’objet n’est pas utilisé.  
   
--   Si vous avez un objet qui est coûteux à créer, et si vous souhaitez différer sa création jusqu’à ce que d’autres opérations coûteuses soient terminées. Par exemple, supposons que votre programme charge plusieurs instances d’objet lorsqu’il démarre, mais que seules certaines d’entre elles soient immédiatement nécessaires. Vous pouvez améliorer les performances de démarrage du programme en différant l’initialisation des objets qui ne sont pas nécessaires tant que les objets nécessaires n’ont pas été créés.  
+- Si vous avez un objet qui est coûteux à créer, et si vous souhaitez différer sa création jusqu’à ce que d’autres opérations coûteuses soient terminées. Par exemple, supposons que votre programme charge plusieurs instances d’objet lorsqu’il démarre, mais que seules certaines d’entre elles soient immédiatement nécessaires. Vous pouvez améliorer les performances de démarrage du programme en différant l’initialisation des objets qui ne sont pas nécessaires tant que les objets nécessaires n’ont pas été créés.  
   
  Même si vous pouvez écrire votre propre code pour effectuer une initialisation tardive, nous vous recommandons d’utiliser <xref:System.Lazy%601>. <xref:System.Lazy%601> et ses types associés prennent également en charge la cohérence de thread et fournissent une stratégie cohérente de propagation des exceptions.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182297"
   
  <xref:System.Threading.ThreadLocal%601> encapsule son objet de la même façon que <xref:System.Lazy%601>, avec toutefois ces différences essentielles :  
   
--   Chaque thread initialise la variable de thread local à l’aide de ses données privées, qui ne sont pas accessibles par d’autres threads.  
+- Chaque thread initialise la variable de thread local à l’aide de ses données privées, qui ne sont pas accessibles par d’autres threads.  
   
--   La propriété <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> est en lecture-écriture et peut être modifiée autant de fois que nécessaire. Cela peut affecter la propagation des exceptions. Par exemple, une opération `get` peut lever une exception, mais celle qui suit peut initialiser la valeur.  
+- La propriété <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> est en lecture-écriture et peut être modifiée autant de fois que nécessaire. Cela peut affecter la propagation des exceptions. Par exemple, une opération `get` peut lever une exception, mais celle qui suit peut initialiser la valeur.  
   
--   Si aucun délégué d’initialisation n’est fourni, <xref:System.Threading.ThreadLocal%601> va initialiser son type encapsulé à l’aide de la valeur par défaut du type. À cet égard, <xref:System.Threading.ThreadLocal%601> est cohérent avec l’attribut <xref:System.ThreadStaticAttribute>.  
+- Si aucun délégué d’initialisation n’est fourni, <xref:System.Threading.ThreadLocal%601> va initialiser son type encapsulé à l’aide de la valeur par défaut du type. À cet égard, <xref:System.Threading.ThreadLocal%601> est cohérent avec l’attribut <xref:System.ThreadStaticAttribute>.  
   
  L’exemple suivant montre que chaque thread qui accède à l’instance `ThreadLocal<int>` obtient sa propre copie des données.  
   

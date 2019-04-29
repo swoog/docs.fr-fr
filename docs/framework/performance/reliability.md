@@ -11,11 +11,11 @@ ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949290"
 ---
 # <a name="reliability"></a>Fiabilité
 Il est important que l’exécution de code dans les environnements serveur tels que SQL Server puisse vous protéger des exceptions asynchrones. La fiabilité, comme nous allons le voir ici, ne se rapporte pas à SQL Server, mais à l’écriture de code pour tout hôte se trouvant dans un environnement .NET Framework 2.0. Toutefois, étant donné que SQL Server est le premier service qui recourt autant aux nouvelles fonctionnalités de fiabilité de la version 2.0, nous l’avons utilisé comme exemple.  

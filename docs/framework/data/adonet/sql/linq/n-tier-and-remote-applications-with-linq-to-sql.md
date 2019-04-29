@@ -3,11 +3,11 @@ title: Applications multicouches et distantes avec LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
 ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794496"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>Applications multicouches et distantes avec LINQ to SQL
 Vous pouvez créer des applications multicouches qui utilisent [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En règle générale, le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contexte de données, les classes d’entité et logique de construction de requête se trouvent sur la couche intermédiaire en tant que la couche d’accès aux données (DAL). La logique métier et toutes les données non persistantes peuvent être implémentées entièrement dans des classes et des méthodes partielles et le contexte de données, ou ils peuvent être implémentés dans des classes distinctes.
@@ -21,13 +21,13 @@ Vous pouvez créer des applications multicouches qui utilisent [!INCLUDE[vbtecdl
 ## <a name="additional-resources"></a>Ressources supplémentaires
  Pour plus d'informations sur l'implémentation des applications multicouches qui utilisent [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], consultez les rubriques suivantes :
 
--   [Applications multicouches LINQ to SQL avec ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+- [Applications multicouches LINQ to SQL avec ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
 
--   [Applications multicouches LINQ to SQL avec les services web](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+- [Applications multicouches LINQ to SQL avec les services web](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
 
--   [Implémentation de la logique métier dans les applications multicouches](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+- [Implémentation de la logique métier dans les applications multicouches](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
 
--   [Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
  Pour plus d’informations sur les applications multicouches qui utilisent des jeux de données ADO.NET, consultez [fonctionne avec les jeux de données dans les applications multicouches](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 

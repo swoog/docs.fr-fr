@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928579"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procédure : spécifier une liaison de service dans la configuration
 Dans cet exemple, un contrat `ICalculator` est défini pour un service de calculatrice de base, le service est implémenté dans la classe `CalculatorService`, puis son point de terminaison est configuré dans le fichier Web.config, où il est spécifié que le service utilise <xref:System.ServiceModel.BasicHttpBinding>. Pour obtenir une description de la configuration de ce service à l’aide de code au lieu d’une configuration, consultez [Comment : Spécifier une liaison de Service dans le Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  

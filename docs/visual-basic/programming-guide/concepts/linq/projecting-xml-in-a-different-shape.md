@@ -3,11 +3,11 @@ title: Projection de code XML en une autre forme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766583"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projection de code XML en une autre forme (Visual Basic)
 Cette rubrique illustre un exemple de projection de code XML dont la forme est différente du code XML source.  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>Étapes suivantes  
  Dans l’exemple suivant, vous allez effectuer une requête pour rechercher toutes les occurrences d’un texte dans un document Word :  
   
--   [Recherche de texte dans des Documents Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Recherche de texte dans des Documents Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

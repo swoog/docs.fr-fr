@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933050"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Sécurité de transport avec l'authentification de base
 L’illustration suivante montre un service Windows Communication Foundation (WCF) et un client. Le serveur nécessite un certificat X.509 valide qui peut être utilisé pour SSL (Secure Sockets Layer) et les clients doivent approuver le certificat du serveur. De plus, le service Web contient déjà une implémentation SSL disponible. Pour plus d’informations sur l’activation de l’authentification de base sur les Services Internet (IIS), consultez <https://go.microsoft.com/fwlink/?LinkId=83822>.  
@@ -30,9 +30,9 @@ L’illustration suivante montre un service Windows Communication Foundation (WC
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
   
--   Créez un service autonome à l'aide du code sans configuration.  
+- Créez un service autonome à l'aide du code sans configuration.  
   
--   Créez un service à l'aide de la configuration fournie, mais ne définissez pas de point de terminaison.  
+- Créez un service à l'aide de la configuration fournie, mais ne définissez pas de point de terminaison.  
   
 ### <a name="code"></a>Code  
  Le code suivant montre comment créer un point de terminaison de service qui utilise un nom d'utilisateur de domaine et un mot de passe Windows pour la sécurité de transfert. Notez que le service requiert un certificat X.509 pour s'authentifier auprès du client. Pour plus d’informations, consultez [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) et [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  

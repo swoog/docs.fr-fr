@@ -3,11 +3,11 @@ title: 'Procédure : inspecter ou modifier des messages sur le client'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766836"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procédure : inspecter ou modifier des messages sur le client
 Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client WCF en implémentant un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> et leur insertion dans l’exécution du client. Pour plus d’informations, consultez [Clients extension](../../../../docs/framework/wcf/extending/extending-clients.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Pour obtenir un exemple de code complet, consultez la [inspecteurs de Message](../../../../docs/framework/wcf/samples/message-inspectors.md) exemple.  
@@ -23,13 +23,13 @@ Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un clien
 ## <a name="example"></a>Exemple  
  Les exemples de code suivants affichent, dans l'ordre :  
   
--   Une implémentation d'inspecteur client.  
+- Une implémentation d'inspecteur client.  
   
--   Un comportement de point de terminaison qui insère l'inspecteur.  
+- Un comportement de point de terminaison qui insère l'inspecteur.  
   
--   Classe <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> dérivée qui vous permet d'ajouter le comportement dans un fichier de configuration.  
+- Classe <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> dérivée qui vous permet d'ajouter le comportement dans un fichier de configuration.  
   
--   Un fichier de configuration qui ajoute le comportement de point de terminaison pour insérer l'inspecteur de message client dans le runtime client.  
+- Un fichier de configuration qui ajoute le comportement de point de terminaison pour insérer l'inspecteur de message client dans le runtime client.  
   
 ```csharp  
 // Client message inspector  

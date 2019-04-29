@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794730"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procédure : Contrôler la portée d’une Variable (Visual Basic)
 Normalement, une variable est dans *étendue*, ou est visible par référence, tout au long de la région dans laquelle vous la déclarez. Dans de certains cas, la variable *niveau d’accès* peut influencer sa portée.  
@@ -28,13 +28,13 @@ Normalement, une variable est dans *étendue*, ou est visible par référence, t
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Pour rendre une variable visible uniquement dans un bloc  
   
--   Place le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour la variable entre le début et de fin des instructions de déclaration de ce bloc, par exemple entre les `For` et `Next` instructions d’un `For` boucle.  
+- Place le [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) pour la variable entre le début et de fin des instructions de déclaration de ce bloc, par exemple entre les `For` et `Next` instructions d’un `For` boucle.  
   
      Vous pouvez faire référence à la variable uniquement à partir du bloc.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Pour rendre une variable visible uniquement dans une procédure  
   
--   Place le `Dim` instruction pour la variable à l’intérieur de la procédure mais en dehors de tout bloc (comme un `With`... `End With` bloc).  
+- Place le `Dim` instruction pour la variable à l’intérieur de la procédure mais en dehors de tout bloc (comme un `With`... `End With` bloc).  
   
      Vous pouvez faire référence à la variable uniquement à partir de la procédure, y compris à l’intérieur de n’importe quel bloc contenue dans la procédure.  
   

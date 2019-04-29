@@ -3,11 +3,11 @@ title: Sécurité LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
 ms.openlocfilehash: fb811b86eef9123bf079b9eb45ff1eaa29fde7b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955855"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>Sécurité LINQ to XML (Visual Basic)
 Cette rubrique décrit les problèmes de sécurité associés à LINQ to XML. De plus, elle fournit quelques conseils pour réduire l'exposition aux risques de sécurité.  
@@ -26,25 +26,25 @@ Cette rubrique décrit les problèmes de sécurité associés à LINQ to XML. De
   
  Si vous opérez dans un environnement moins sécurisé, plusieurs problèmes de sécurité sont associés au langage XML et à l'utilisation des classes dans <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> et <xref:System.Xml.Xsl?displayProperty=nameWithType>. Ces problèmes incluent, entre autres, les suivants :  
   
--   XSD, Xpath et XSLT sont des langages basés sur des chaînes dans lesquels vous spécifiez des opérations qui consomment beaucoup de temps ou de mémoire. Il incombe aux programmeurs d'applications qui prennent des chaînes XSD, XPath ou XSLT à partir de sources non approuvées de confirmer que ces chaînes ne sont pas malveillantes ou de contrôler et de limiter le risque que l'évaluation de ces chaînes n'entraîne une consommation excessive de ressources système.  
+- XSD, Xpath et XSLT sont des langages basés sur des chaînes dans lesquels vous spécifiez des opérations qui consomment beaucoup de temps ou de mémoire. Il incombe aux programmeurs d'applications qui prennent des chaînes XSD, XPath ou XSLT à partir de sources non approuvées de confirmer que ces chaînes ne sont pas malveillantes ou de contrôler et de limiter le risque que l'évaluation de ces chaînes n'entraîne une consommation excessive de ressources système.  
   
--   Les schémas XSD (y compris les schémas en ligne), sont par nature vulnérables aux attaques par déni de service ; vous ne devez pas accepter de schémas provenant de sources non approuvées.  
+- Les schémas XSD (y compris les schémas en ligne), sont par nature vulnérables aux attaques par déni de service ; vous ne devez pas accepter de schémas provenant de sources non approuvées.  
   
--   XSD et XSLT peuvent inclure des références à d'autres fichiers, et ces références peuvent entraîner des attaques inter-zones ou inter-domaines.  
+- XSD et XSLT peuvent inclure des références à d'autres fichiers, et ces références peuvent entraîner des attaques inter-zones ou inter-domaines.  
   
--   Les entités externes dans les DTD peuvent entraîner des attaques inter-zones ou inter-domaines.  
+- Les entités externes dans les DTD peuvent entraîner des attaques inter-zones ou inter-domaines.  
   
--   Les DTD sont vulnérables aux attaques par déni de service.  
+- Les DTD sont vulnérables aux attaques par déni de service.  
   
--   Les documents XML extrêmement profonds peuvent présenter des risques de déni de service ; il peut être préférable de limiter la profondeur des documents XML.  
+- Les documents XML extrêmement profonds peuvent présenter des risques de déni de service ; il peut être préférable de limiter la profondeur des documents XML.  
   
--   N'acceptez pas de composants de prise en charge, tels que des objets <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> et <xref:System.Xml.XmlResolver>, provenant d'assemblys non approuvés.  
+- N'acceptez pas de composants de prise en charge, tels que des objets <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> et <xref:System.Xml.XmlResolver>, provenant d'assemblys non approuvés.  
   
--   Lisez les données en bloc afin de limiter les risques d'attaques sur les grands documents.  
+- Lisez les données en bloc afin de limiter les risques d'attaques sur les grands documents.  
   
--   Les blocs de scripts dans des feuilles de style XSLT peuvent donner lieu à de nombreuses attaques.  
+- Les blocs de scripts dans des feuilles de style XSLT peuvent donner lieu à de nombreuses attaques.  
   
--   Effectuez une validation soigneuse avant de construire des expressions XPath dynamiques.  
+- Effectuez une validation soigneuse avant de construire des expressions XPath dynamiques.  
   
 ## <a name="linq-to-xml-security-issues"></a>Problèmes de sécurité liés à LINQ to XML  
  Les problèmes de sécurité mentionnés dans cette rubrique ne sont pas présentés dans un ordre particulier. Tous ces problèmes sont importants et doivent être traités en conséquence.  

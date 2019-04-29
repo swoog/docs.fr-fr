@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954308"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Procédure : générer automatiquement des colonnes dans un contrôle DataGridView Windows Forms lié à des données
 L’exemple de code suivant montre comment afficher des colonnes à partir d’une source de données liées dans un <xref:System.Windows.Forms.DataGridView> contrôle. Lorsque le <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> valeur de propriété est `true` (la valeur par défaut), un <xref:System.Windows.Forms.DataGridViewColumn> est créé pour chaque colonne dans la table de source de données.  
@@ -28,11 +28,11 @@ L’exemple de code suivant montre comment afficher des colonnes à partir d’u
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   un contrôle <xref:System.Windows.Forms.DataGridView> nommé `customersDataGridView` ;  
+- un contrôle <xref:System.Windows.Forms.DataGridView> nommé `customersDataGridView` ;  
   
--   Un <xref:System.Data.DataSet> objet nommé `customersDataSet` qui a une table nommée `Customers`.  
+- Un <xref:System.Data.DataSet> objet nommé `customersDataSet` qui a une table nommée `Customers`.  
   
--   des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> et <xref:System.Xml?displayProperty=nameWithType>.  
+- des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> et <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

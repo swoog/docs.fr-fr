@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937967"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procédure : construire des familles de polices et des polices
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] regroupe les polices avec le même type de caractère, mais des styles différents dans des familles de polices. Par exemple, la famille de polices Arial contient les polices suivantes :  
   
--   Arial normal  
+- Arial normal  
   
--   Arial gras  
+- Arial gras  
   
--   Arial italique  
+- Arial italique  
   
--   Arial gras italique  
+- Arial gras italique  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utilise quatre styles pour former des familles : normal, gras, italique et gras italique. Adjectifs comme *affiner* et *arrondi* ne sont pas considérés comme des styles ; au lieu de cela ils font partie du nom de famille. Par exemple, Arial Narrow est une famille de polices avec les membres suivants :  
   
--   Arial Regular étroit  
+- Arial Regular étroit  
   
--   Arial Condensé en gras  
+- Arial Condensé en gras  
   
--   Arial italique étroit  
+- Arial italique étroit  
   
--   Arial gras italique étroit  
+- Arial gras italique étroit  
   
  Vous pouvez dessiner du texte avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous devez construire un <xref:System.Drawing.FontFamily> objet et un <xref:System.Drawing.Font> objet. Le <xref:System.Drawing.FontFamily> objet spécifie le type de caractères (par exemple, Arial) et le <xref:System.Drawing.Font> objet spécifie la taille, style et les unités.  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945325"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By, clause (Visual Basic)
 Regroupe les éléments d'un résultat de requête. Peut aussi être utilisée pour appliquer des fonctions d’agrégation à chaque groupe. L’opération de regroupement est basée sur une ou plusieurs clés.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>Composants  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      Optionnel. Un ou plusieurs champs de la ou des variables de requête qui identifient explicitement les champs à inclure dans le résultat groupé. Si aucun champ n’est spécifié, tous les champs de la ou des variables de requête sont inclus dans le résultat groupé.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      Obligatoire. Expression qui identifie la clé à utiliser pour déterminer les groupes d’éléments. Vous pouvez spécifier plusieurs clés pour spécifier une clé composite.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      Optionnel. Une ou plusieurs clés supplémentaires combinées à `keyExp1` pour créer une clé composite.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      Obligatoire. Une ou plusieurs expressions qui identifient la façon dont les groupes sont agrégés. Pour identifier un nom de membre pour les résultats groupés, utilisez le mot clé `Group` , qui peut prendre l’une des formes suivantes :  
   

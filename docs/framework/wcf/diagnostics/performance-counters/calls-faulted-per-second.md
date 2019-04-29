@@ -3,11 +3,11 @@ title: Appels ayant renvoyé une erreur par seconde
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
 ms.openlocfilehash: 5b7569b6a00757fbb863b90b25b44815a349ab07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797395"
 ---
 # <a name="calls-faulted-per-second"></a>Appels ayant renvoyé une erreur par seconde
 Nom du compteur : Appels ayant renvoyé une erreur par seconde  

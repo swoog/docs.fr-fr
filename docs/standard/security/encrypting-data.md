@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a89df5067fdf6d82ee9836da2409194371b05bc0
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795237"
 ---
 # <a name="encrypting-data"></a>Chiffrement de données
 Le chiffrement symétrique et le chiffrement asymétrique utilisent des processus différents. Le chiffrement symétrique est effectué sur des flux. Il est donc utile pour le chiffrement de grandes quantités de données. Le chiffrement asymétrique s'effectue sur un petit nombre d'octets. Il n'est donc utile que pour les petites quantités de données.  

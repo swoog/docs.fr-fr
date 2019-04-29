@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 417f99c2b9fa7e77f8696c27cb3929c92956c08c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946335"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID, méthode
 Obtient l’identificateur de la tâche en cours d’exécution sur ce thread.  
@@ -42,7 +42,7 @@ HRESULT GetTaskID (
 ## <a name="remarks"></a>Notes  
  Une tâche peut uniquement être en cours d’exécution sur le thread si le thread est associé à une connexion. `GetTaskID` retourne zéro `pTaskId` si le thread n’est pas associé à une connexion.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

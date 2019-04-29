@@ -1,15 +1,15 @@
 ---
-title: 'Communications principales : canaux de transport TCP'
+title: 'Communications principales : Canaux de transport TCP'
 ms.date: 03/30/2017
 ms.assetid: d5cd057f-faec-4e21-ae0e-18bbc22bcfb1
 ms.openlocfilehash: 0dfbf939b39d53f104d749e0c0d24e04a05185e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929920"
 ---
-# <a name="core-communications-tcp-transport-channels"></a>Communications principales : canaux de transport TCP
+# <a name="core-communications-tcp-transport-channels"></a>Communications principales : Canaux de transport TCP
 Cette rubrique répertorie toutes les exceptions générées par les canaux de transport TCP.  
   
 ## <a name="exception-list"></a>Liste des exceptions  

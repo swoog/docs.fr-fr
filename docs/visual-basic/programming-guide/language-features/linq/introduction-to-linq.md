@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781002"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduction à LINQ dans Visual Basic
 Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Basic et fournit des fonctionnalités puissantes et simples lorsque vous travaillez avec tous les types de données. Au lieu d’envoyer une requête à une base de données à traiter ou utilisation de la syntaxe de requête différente pour chaque type de données que vous recherchez, LINQ introduit des requêtes en tant que partie du langage Visual Basic. Il utilise une syntaxe unifiée indépendamment du type de données.  
@@ -82,7 +82,7 @@ Soit un [ `From` clause](../../../../visual-basic/language-reference/queries/fro
 
 ### <a name="select-clause"></a>Select (clause)
 
-Facultatif. Un [ `Select` clause](../../../../visual-basic/language-reference/queries/select-clause.md) déclare un ensemble de variables d’itération pour une requête. Exemple :
+Optionnel. Un [ `Select` clause](../../../../visual-basic/language-reference/queries/select-clause.md) déclare un ensemble de variables d’itération pour une requête. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,7 +90,7 @@ Si une clause `Select` n'est pas spécifiée, les variables d'itération de la r
 
 ### <a name="where-clause"></a>Where (clause)
 
-Facultatif. Un [ `Where` clause](../../../../visual-basic/language-reference/queries/where-clause.md) spécifie une condition de filtrage pour une requête. Exemple :
+Optionnel. Un [ `Where` clause](../../../../visual-basic/language-reference/queries/where-clause.md) spécifie une condition de filtrage pour une requête. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
@@ -108,13 +108,13 @@ Facultatif. Un [ `Join` clause](../../../../visual-basic/language-reference/quer
 
 ### <a name="group-by-clause"></a>Group By (clause)
 
-Facultatif. Un [ `Group By` clause](../../../../visual-basic/language-reference/queries/group-by-clause.md) regroupe les éléments d’un résultat de requête. Il peut être utilisé pour appliquer des fonctions d’agrégation à chaque groupe. Exemple :
+Optionnel. Un [ `Group By` clause](../../../../visual-basic/language-reference/queries/group-by-clause.md) regroupe les éléments d’un résultat de requête. Il peut être utilisé pour appliquer des fonctions d’agrégation à chaque groupe. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join (clause)
 
-Facultatif. Un [ `Group Join` clause](../../../../visual-basic/language-reference/queries/group-join-clause.md) combine deux collections en une collection hiérarchique unique. Exemple :
+Optionnel. Un [ `Group Join` clause](../../../../visual-basic/language-reference/queries/group-join-clause.md) combine deux collections en une collection hiérarchique unique. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
@@ -130,37 +130,37 @@ Vous pouvez également utiliser la clause `Aggregate` pour modifier une requête
 
 ### <a name="let-clause"></a>Let (clause)
 
-Facultatif. Un [ `Let` clause](../../../../visual-basic/language-reference/queries/let-clause.md) calcule une valeur et l’assigne à une nouvelle variable dans la requête. Exemple :
+Optionnel. Un [ `Let` clause](../../../../visual-basic/language-reference/queries/let-clause.md) calcule une valeur et l’assigne à une nouvelle variable dans la requête. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct (clause)
 
-Facultatif. Un `Distinct` clause restreint les valeurs de la variable d’itération actuelle pour éliminer les valeurs en double dans les résultats de la requête. Exemple :
+Optionnel. Un `Distinct` clause restreint les valeurs de la variable d’itération actuelle pour éliminer les valeurs en double dans les résultats de la requête. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip (clause)
 
-Facultatif. Un [ `Skip` clause](../../../../visual-basic/language-reference/queries/skip-clause.md) ignore un nombre spécifié d’éléments dans une collection, puis retourne les éléments restants. Exemple :
+Optionnel. Un [ `Skip` clause](../../../../visual-basic/language-reference/queries/skip-clause.md) ignore un nombre spécifié d’éléments dans une collection, puis retourne les éléments restants. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>SkipWhile (clause)
 
-Facultatif. Un [ `Skip While` clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignore les éléments d’une collection tant qu’une condition spécifiée est `true` , puis retourne les éléments restants. Exemple :
+Optionnel. Un [ `Skip While` clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md) ignore les éléments d’une collection tant qu’une condition spécifiée est `true` , puis retourne les éléments restants. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take (clause)
 
-Facultatif. Un [ `Take` clause](../../../../visual-basic/language-reference/queries/take-clause.md) retourne un nombre spécifié d’éléments contigus à partir du début d’une collection. Exemple :
+Optionnel. Un [ `Take` clause](../../../../visual-basic/language-reference/queries/take-clause.md) retourne un nombre spécifié d’éléments contigus à partir du début d’une collection. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While (clause)
 
-Facultatif. Un [ `Take While` clause](../../../../visual-basic/language-reference/queries/take-while-clause.md) inclut les éléments d’une collection tant qu’une condition spécifiée est `true` et ignore les éléments restants. Exemple :
+Optionnel. Un [ `Take While` clause](../../../../visual-basic/language-reference/queries/take-while-clause.md) inclut les éléments d’une collection tant qu’une condition spécifiée est `true` et ignore les éléments restants. Exemple :
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
@@ -182,11 +182,11 @@ Vous pouvez utiliser des fonctionnalités de requête LINQ supplémentaires en a
 ## <a name="visual-basic-features-that-support-linq"></a>Fonctionnalités de Visual Basic qui prennent en charge LINQ  
  Visual Basic inclut d’autres fonctionnalités notables qui facilitent l’utilisation de LINQ et réduisent la quantité de code que vous devez écrire pour effectuer des requêtes LINQ. Notamment :  
   
--   **Les types anonymes**, qui permettent de créer un nouveau type basé sur un résultat de requête.  
+- **Les types anonymes**, qui permettent de créer un nouveau type basé sur un résultat de requête.  
   
--   **Variables implicitement typées**, qui permettent de différer la spécification d’un type et laisser le compilateur le déduire le type en fonction du résultat de requête.  
+- **Variables implicitement typées**, qui permettent de différer la spécification d’un type et laisser le compilateur le déduire le type en fonction du résultat de requête.  
   
--   **Méthodes d’extension**, vous permettent d’étendre un type existant avec vos propres méthodes sans modifier le type lui-même.  
+- **Méthodes d’extension**, vous permettent d’étendre un type existant avec vos propres méthodes sans modifier le type lui-même.  
   
  Pour plus d’informations, consultez [fonctionnalités Visual Basic que prise en charge LINQ](../../concepts/linq/features-that-support-linq.md).  
   

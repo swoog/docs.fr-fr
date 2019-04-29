@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
 ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945286"
 ---
 # <a name="join-clause-visual-basic"></a>Join, clause (Visual Basic)
 Combine deux collections en une collection unique. L’opération de jointure est basée sur les clés correspondantes et utilise le `Equals` opérateur.  
@@ -37,10 +37,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Obligatoire. La collection à combiner avec la collection identifiée sur le côté gauche de la `Join` opérateur. Un `Join` clause peut être imbriquée dans une autre `Join` clause, ou dans un `Group Join` clause.  
   
  `joinClause`  
- Facultatif. Un ou plus supplémentaires `Join` clauses pour en savoir plus affiner la requête.  
+ Optionnel. Un ou plus supplémentaires `Join` clauses pour en savoir plus affiner la requête.  
   
  `groupJoinClause`  
- Optionnel. Un ou plus supplémentaires `Group Join` clauses pour en savoir plus affiner la requête.  
+ Facultatif. Un ou plus supplémentaires `Group Join` clauses pour en savoir plus affiner la requête.  
   
  `key1` `Equals` `key2`  
  Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` opérateur pour comparer les clés à partir des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1` doit être de la collection sur le côté gauche de la `Join` opérateur. `key2` doit être de la collection sur le côté droit de la `Join` opérateur.  

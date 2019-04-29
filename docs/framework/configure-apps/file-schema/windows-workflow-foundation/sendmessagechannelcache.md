@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
 ms.openlocfilehash: 60847f423c61b9e7f49a4a7594c965fb75354714
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794379"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
 Comportement de service qui permet de personnaliser le partage du cache niveaux, les paramètres de cache de fabrication de canal et les paramètres du cache de canal pour les workflows qui envoient des messages aux points de terminaison de service à l’aide des activités de messagerie Send.  

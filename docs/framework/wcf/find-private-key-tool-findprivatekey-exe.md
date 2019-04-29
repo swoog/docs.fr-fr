@@ -3,17 +3,18 @@ title: Outil de recherche de clé privée (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
 ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929582"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Outil de recherche de clé privée (FindPrivateKey.exe)
 
 Cet outil de ligne de commande peut être utilisé pour récupérer une clé privée provenant d'un magasin de certificats. Par exemple, *FindPrivateKey.exe* peut être utilisé pour rechercher l’emplacement et le nom du fichier de clé privée associé à un certificat X.509 spécifique dans le magasin de certificats.
 
 > [!IMPORTANT]
-> L'outil FindPrivateKey est fourni à titre d'exemple WCF. Pour plus d’informations sur où trouver l’exemple et comment le générer, consultez [FindPrivateKey](./samples/findprivatekey.md).
+> L'outil FindPrivateKey est fourni à titre d'exemple WCF. Pour plus d’informations sur l’accès à l’exemple et comment le créer, consultez [FindPrivateKey](./samples/findprivatekey.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +24,7 @@ FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprin
 
 ## <a name="remarks"></a>Notes
 
-Les tables suivantes décrivent les arguments et les options qui peuvent être utilisés avec l’outil de recherche de clé privée Clé (FindPrivateKey.exe).
+Les tables suivantes décrivent les arguments et les options qui peuvent être utilisés avec l'outil de recherche de clé privée Clé (FindPrivateKey.exe).
 
 |Argument|Description|
 |--------------|-----------------|
@@ -33,14 +34,14 @@ Les tables suivantes décrivent les arguments et les options qui peuvent être u
 |Option|Description|
 |------------|-----------------|
 |`/n <` *subjectName* `>`|Spécifie le nom du sujet du certificat.|
-|`/t <` *empreinte numérique* `>`|Spécifie l'empreinte numérique du certificat. Utilisez Certmgr.exe pour récupérer l'empreinte numérique du certificat.|
+|`/t <` *thumbprint* `>`|Spécifie l'empreinte numérique du certificat. Utilisez Certmgr.exe pour récupérer l'empreinte numérique du certificat.|
 |`/f`|Affiche le nom de fichier uniquement.|
 |`/d`|Affiche le répertoire uniquement.|
 |`/a`|Affiche le nom de fichier absolu.|
 
 ## <a name="examples"></a>Exemples
 
-La commande suivante récupère la clé privée associée à John Doe :
+La commande suivante récupère la clé privée pour John Doe :
 
 ```
 FindPrivateKey My CurrentUser -n "CN=John Doe"

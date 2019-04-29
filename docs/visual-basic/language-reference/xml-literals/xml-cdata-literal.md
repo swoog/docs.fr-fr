@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938628"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Littéral CDATA XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XCData> objet.  
@@ -40,9 +40,9 @@ Littéral représentant un <xref:System.Xml.Linq.XCData> objet.
 ## <a name="remarks"></a>Notes  
  Les sections CDATA XML contiennent du texte brut qui doit être inclus, mais non analysé, avec le code XML qui le contient. Une section CDATA XML peut contenir n’importe quel texte. Cela inclut les caractères XML réservés. La section CDATA XML se termine par la séquence »]] > ». Cela implique les points suivants :  
   
--   Vous ne pouvez pas utiliser une expression incorporée dans un littéral XML CDATA, car les délimiteurs d’expression sont contenu CDATA XML valide.  
+- Vous ne pouvez pas utiliser une expression incorporée dans un littéral XML CDATA, car les délimiteurs d’expression sont contenu CDATA XML valide.  
   
--   Les sections CDATA XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur «]] > ».  
+- Les sections CDATA XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur «]] > ».  
   
  Vous pouvez assigner un littéral XML CDATA à une variable ou l’inclure dans un littéral d’élément XML.  
   

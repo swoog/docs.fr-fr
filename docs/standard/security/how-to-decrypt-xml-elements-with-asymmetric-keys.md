@@ -15,11 +15,11 @@ ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795146"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procédure : déchiffrer des éléments XML avec des clés asymétriques
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer et déchiffrer un élément d'un document XML.  Le chiffrement XML est une méthode normalisée qui permet d'échanger et de stocker des données XML chiffrées sans que celles-ci ne puissent être lues facilement.  Pour plus d’informations sur la norme de chiffrement XML, consultez la recommandation du World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
@@ -70,9 +70,9 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Pour compiler cet exemple, vous devez inclure une référence à `System.Security.dll`.  
+- Pour compiler cet exemple, vous devez inclure une référence à `System.Security.dll`.  
   
--   Incluez les espaces de noms suivants : <xref:System.Xml>, <xref:System.Security.Cryptography> et <xref:System.Security.Cryptography.Xml>.  
+- Incluez les espaces de noms suivants : <xref:System.Xml>, <xref:System.Security.Cryptography> et <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne stockez jamais une clé de chiffrement symétrique en texte brut et ne transférez jamais une clé symétrique d'un ordinateur à l'autre en texte brut.  De plus, la clé privée d'une paire de clés asymétriques ne doit jamais être stockée ni transférée en texte brut.  Pour plus d’informations sur les clés de chiffrement symétriques et asymétriques, consultez [génération de clés pour le chiffrement et déchiffrement](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

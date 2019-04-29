@@ -8,11 +8,11 @@ helpviewer_keywords:
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
 ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938721"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>Gestion de xml:space en XAML
 Le `xml:space` attribut est un attribut XML qui déclare le comportement de traitement des espaces blancs significatifs dans un élément objet. Ce comportement s’applique pour tout le contenu (texte interne) contenu dans l’élément où `xml:space` est déclaré et s’étend également aux éléments enfants.  

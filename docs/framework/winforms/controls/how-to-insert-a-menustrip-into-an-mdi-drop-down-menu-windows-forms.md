@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 1b41699d8da1c99705f6796105dab6f3ab1d727d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941113"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Procédure : Insérer un MenuStrip dans un Menu du menu déroulant MDI (Windows Forms)
 Dans certaines applications, le type d'une fenêtre enfant d'interface multidocument (MDI) peut être différent de celui de la fenêtre parente MDI. Par exemple, le parent MDI peut être une feuille de calcul et l'enfant MDI un graphique. Dans ce cas, vous souhaitez mettre à jour le contenu du menu du parent MDI avec le contenu du menu de l'enfant MDI à mesure que des fenêtres enfants MDI de types différents sont activées.  
@@ -89,11 +89,11 @@ Dans certaines applications, le type d'une fenêtre enfant d'interface multidocu
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   deux <xref:System.Windows.Forms.Form> contrôles nommés `Form1` et `Form2` ;  
+- deux <xref:System.Windows.Forms.Form> contrôles nommés `Form1` et `Form2` ;  
   
--   un contrôle <xref:System.Windows.Forms.MenuStrip> sur `Form1` nommé `menuStrip1` et un contrôle <xref:System.Windows.Forms.MenuStrip> sur `Form2` nommé `menuStrip2` ;  
+- un contrôle <xref:System.Windows.Forms.MenuStrip> sur `Form1` nommé `menuStrip1` et un contrôle <xref:System.Windows.Forms.MenuStrip> sur `Form2` nommé `menuStrip2` ;  
   
--   des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- des références aux assemblys <xref:System?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

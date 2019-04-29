@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932598"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procédure pas à pas : exécution de tâches courantes à l’aide de balises actives dans les contrôles Windows Forms
 Lorsque vous construisez des formulaires et contrôles pour votre application Windows Forms, il existe de nombreuses tâches que vous allez effectuer à plusieurs reprises. Il existe quelques tâches courantes que vous rencontrerez :  
   
--   Ajout ou suppression d’un onglet sur un <xref:System.Windows.Forms.TabControl>.  
+- Ajout ou suppression d’un onglet sur un <xref:System.Windows.Forms.TabControl>.  
   
--   Ancrage d’un contrôle à son parent.  
+- Ancrage d’un contrôle à son parent.  
   
--   Modification de l’orientation d’un <xref:System.Windows.Forms.SplitContainer> contrôle.  
+- Modification de l’orientation d’un <xref:System.Windows.Forms.SplitContainer> contrôle.  
   
  Pour accélérer le développement, de nombreux contrôles offrent des balises actives, qui sont des menus contextuels qui vous permettent d’effectuer des tâches courantes comme celles-ci en un seul geste au moment du design. Ces tâches sont appelées *verbes de balise active*.  
   
@@ -28,11 +28,11 @@ Lorsque vous construisez des formulaires et contrôles pour votre application Wi
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms  
+- Création d’un projet Windows Forms  
   
--   À l’aide de balises actives  
+- À l’aide de balises actives  
   
--   Activation et désactivation des balises actives  
+- Activation et désactivation des balises actives  
   
  À l’issue de cette procédure, vous comprendrez le rôle joué par ces fonctionnalités de disposition importantes.  
   

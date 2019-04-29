@@ -3,11 +3,11 @@ title: Recherche du Style de paragraphe par défaut (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931311"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Recherche du Style de paragraphe par défaut (Visual Basic)
 La première tâche du didacticiel Manipulation d’informations dans un document WordprocessingML consiste à rechercher le style par défaut des paragraphes dans le document.  
@@ -89,7 +89,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>Étapes suivantes  
  Dans l'exemple suivant, nous allons créer une requête similaire qui recherche tous les paragraphes d'un document et leurs styles :  
   
--   [Récupération des paragraphes et leurs Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [Récupération des paragraphes et leurs Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

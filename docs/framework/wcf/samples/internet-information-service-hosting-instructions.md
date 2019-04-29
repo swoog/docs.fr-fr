@@ -3,11 +3,11 @@ title: Instructions relatives à l'hébergement dans les Services Internet (IIS)
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954854"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instructions relatives à l'hébergement dans les Services Internet (IIS)
 Pour exécuter les exemples hébergés par les services IIS (Internet Information Services), vous devez vous assurer que les services IIS sont correctement installés et en cours d'exécution.  
@@ -46,13 +46,13 @@ Pour exécuter les exemples hébergés par les services IIS (Internet Informatio
   
 8. Assurez-vous que les éléments suivants sont sélectionnés :  
   
-    1.  **Extensibilité .NET**  
+    1. **Extensibilité .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Extensions ISAPI**  
+    3. **Extensions ISAPI**  
   
-    4.  **Filtres ISAPI**  
+    4. **Filtres ISAPI**  
   
 9. Sous l’élément **Services World Wide Web**, développez **fonctionnalités Http communes**.  
   
@@ -104,13 +104,13 @@ Pour exécuter les exemples hébergés par les services IIS (Internet Informatio
   
 8. Assurez-vous que les éléments suivants sont sélectionnés :  
   
-    1.  **Extensibilité .NET**  
+    1. **Extensibilité .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Extensions ISAPI**  
+    3. **Extensions ISAPI**  
   
-    4.  **Filtres ISAPI**  
+    4. **Filtres ISAPI**  
   
 9. Développez l’élément **outils d’administration Web**, puis sélectionnez **Console de gestion IIS**.  
   

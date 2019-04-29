@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Naviguer vers l'avant ou vers l'arrière dans l'historique de navigation"
+title: 'Procédure : Naviguer en avant ou en arrière dans l’historique de navigation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947756"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procédure : Naviguer vers l'avant ou vers l'arrière dans l'historique de navigation
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procédure : Naviguer en avant ou en arrière dans l’historique de navigation
 Cet exemple illustre comment naviguer vers l’avant ou arrière à des entrées de l’historique de navigation.  
   
 ## <a name="example"></a>Exemple  
  Code qui s’exécute à partir du contenu dans les hôtes suivants peut naviguer vers l’avant ou arrière dans l’historique de navigation, une entrée à la fois.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> À l’aide de <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> À l’aide de <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> À l’aide de <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> À l’aide de <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  Avant que vous pouvez naviguer vers l’avant qu’une seule entrée, vous devez tout d’abord vérifier qu’il existe des entrées dans l’historique de navigation en inspectant le **CanGoForward** propriété. Pour naviguer vers l’avant qu’une seule entrée, vous appelez le **GoForward** (méthode). Cela est illustré dans l’exemple suivant :  
   

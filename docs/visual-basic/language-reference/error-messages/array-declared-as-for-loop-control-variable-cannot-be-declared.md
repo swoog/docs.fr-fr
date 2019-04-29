@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935380"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Un tableau déclaré en tant que variable de contrôle de boucle for ne peut pas être déclaré avec une taille initiale
 Un `For Each` boucle utilise un tableau en tant que son *élément* variable d’itération initialise, mais ce tableau.  
@@ -31,7 +31,7 @@ For Each listElement(1) As Integer In arrayList
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Supprimez l’initialisation de la déclaration de la *élément* variable d’itération.  
+- Supprimez l’initialisation de la déclaration de la *élément* variable d’itération.  
   
 ## <a name="see-also"></a>Voir aussi
 

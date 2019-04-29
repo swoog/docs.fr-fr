@@ -9,11 +9,11 @@ helpviewer_keywords:
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
 ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789309"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Vue d'ensemble du composant FontDialog (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.FontDialog> composant est une boîte de dialogue préconfigurée qui est le standard Windows **police** boîte de dialogue permet d’exposer les polices qui sont actuellement installés sur le système. Utilisez-la dans votre application Windows comme une solution simple pour la sélection de police que de configurer votre propre boîte de dialogue.  

@@ -8,20 +8,20 @@ ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949303"
 ---
 # <a name="interop-etw-events"></a>Événements ETW d'interopérabilité
 <a name="top"></a> Les événements d'interopérabilité capturent des informations sur la création et la mise en cache du stub MSIL (Microsoft Intermediate Language).  
   
  Cette catégorie comprend les événements suivants :  
   
--   [Événement ILStubGenerated](#ilstubgenerated_event)  
+- [Événement ILStubGenerated](#ilstubgenerated_event)  
   
--   [Événement ILStubCacheHit](#ilstubcachehit_event)  
+- [Événement ILStubCacheHit](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Événement ILStubGenerated  

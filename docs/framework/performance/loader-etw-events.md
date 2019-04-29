@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949264"
 ---
 # <a name="loader-etw-events"></a>Événements ETW de chargeur
 <a name="top"></a> Ces événements collectent des informations relatives au chargement et déchargement des domaines d'application, des assemblys et des modules.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141529"
   
  Les événements de chargeur sont subdivisés de la façon suivante :  
   
--   [Événements de domaine d'application](#application_domain_events)  
+- [Événements de domaine d'application](#application_domain_events)  
   
--   [Événements d'assembly de chargeur du CLR](#clr_loader_assembly_events)  
+- [Événements d'assembly de chargeur du CLR](#clr_loader_assembly_events)  
   
--   [Événements de module](#module_events)  
+- [Événements de module](#module_events)  
   
--   [Événements de module de domaine du CLR](#clr_domain_module_events)  
+- [Événements de module de domaine du CLR](#clr_domain_module_events)  
   
--   [Événements de plage de module](#module_range_events)  
+- [Événements de plage de module](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Événements de domaine d'application  
@@ -134,11 +134,11 @@ ms.locfileid: "59141529"
   
 ### <a name="remarks"></a>Notes  
   
--   Les champs dont le nom contient « Pdb » peuvent être utilisés par les outils de profilage pour localiser les fichiers PDB qui correspondent aux modules qui ont été chargés au cours de la session de profilage. Les valeurs de ces champs correspondent aux données écrites dans les sections IMAGE_DIRECTORY_ENTRY_DEBUG du module normalement utilisé par les débogueurs pour favoriser la localisation des fichiers PDB qui correspondent aux modules chargés.  
+- Les champs dont le nom contient « Pdb » peuvent être utilisés par les outils de profilage pour localiser les fichiers PDB qui correspondent aux modules qui ont été chargés au cours de la session de profilage. Les valeurs de ces champs correspondent aux données écrites dans les sections IMAGE_DIRECTORY_ENTRY_DEBUG du module normalement utilisé par les débogueurs pour favoriser la localisation des fichiers PDB qui correspondent aux modules chargés.  
   
--   Les noms de champ qui commencent par « ManagedPdb » font référence au fichier PDB managé correspondant au module MSIL qui a été généré par le compilateur managé (tels que le compilateur C# ou Visual Basic). Ce fichier PDB utilise le format de fichier PDB managé et décrit comment les éléments issus du code source managé d'origine, tels que les fichiers, les numéros de lignes et les noms de symboles, correspondent aux éléments MSIL qui sont compilés dans le module MSIL.  
+- Les noms de champ qui commencent par « ManagedPdb » font référence au fichier PDB managé correspondant au module MSIL qui a été généré par le compilateur managé (tels que le compilateur C# ou Visual Basic). Ce fichier PDB utilise le format de fichier PDB managé et décrit comment les éléments issus du code source managé d'origine, tels que les fichiers, les numéros de lignes et les noms de symboles, correspondent aux éléments MSIL qui sont compilés dans le module MSIL.  
   
--   Les noms de champs qui commencent par « NativePdb » font référence au fichier PDB NGen généré par l'appel à `NGEN createPDB`. Ce fichier PDB utilise le format de fichier PDB natif et décrit comment les éléments issus du code source managé d'origine, tels que les fichiers, les numéros de lignes et les noms de symboles sont mappés aux éléments natifs qui sont compilés dans le module NGen.  
+- Les noms de champs qui commencent par « NativePdb » font référence au fichier PDB NGen généré par l'appel à `NGEN createPDB`. Ce fichier PDB utilise le format de fichier PDB natif et décrit comment les éléments issus du code source managé d'origine, tels que les fichiers, les numéros de lignes et les noms de symboles sont mappés aux éléments natifs qui sont compilés dans le module NGen.  
   
  [Retour au début](#top)  
   

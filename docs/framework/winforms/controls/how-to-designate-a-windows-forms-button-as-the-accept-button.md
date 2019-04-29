@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
 ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943908"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Procédure : désigner un bouton Windows Forms comme bouton Accepter
 Sur n’importe quel formulaire Windows, vous pouvez désigner un <xref:System.Windows.Forms.Button> contrôle de bouton Accepter, également connu sous le bouton par défaut. Chaque fois que l’utilisateur appuie sur la touche entrée, le bouton par défaut un clic sur quel autre contrôle sur le formulaire a le focus.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942920"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Intégration de l'aide d'utilisateur dans les Windows Forms
 Un aspect essentiel mais souvent négligé, de la création d’applications basées sur Windows est le système d’aide, car cela est où les utilisateurs pour obtenir une assistance fois de confusion. Windows Forms prend en charge deux types différents d’aide, fourni par le [du composant HelpProvider](../controls/helpprovider-component-windows-forms.md). La première implique l’orientation de l’utilisateur à un fichier d’aide de code HTML ou HTML Help 1. *x* format ou ultérieur. Le second peut afficher brève « Qu’est-ce »-tapez Help sur chacun des contrôles. Cela est particulièrement utile sur les boîtes de dialogue. Les deux types d’aide peuvent être utilisés sur le même formulaire.  

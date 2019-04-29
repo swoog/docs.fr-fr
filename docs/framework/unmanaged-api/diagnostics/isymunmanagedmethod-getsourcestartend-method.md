@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939553"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd, méthode
 Obtient les positions de document de début et de fin de la source de cette méthode. La première position du tableau correspond au début, et la position du deuxième tableau est la fin.  

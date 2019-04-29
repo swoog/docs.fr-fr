@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946742"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -24,15 +24,15 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
 ## <a name="defining-settings"></a>Définition des paramètres  
  L’architecture des paramètres d’application est utilisée dans à la fois dans [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et les Windows Forms, et contient un certain nombre de classes de base qui sont partagées entre les deux environnements. La plus importante est <xref:System.Configuration.SettingsBase>, qui fournit l’accès aux paramètres via une collection et fournit des méthodes de bas niveau pour le chargement et l’enregistrement des paramètres. Chaque environnement implémente sa propre classe dérivée de <xref:System.Configuration.SettingsBase> pour fournir des fonctionnalités de paramètres supplémentaires pour cet environnement. Dans une application basée sur des Windows Forms, tous les paramètres de l’application doivent être définies sur une classe dérivée de la <xref:System.Configuration.ApplicationSettingsBase> classe, qui ajoute les fonctionnalités suivantes à la classe de base :  
   
--   Chargement et enregistrement d’opérations de plus haut niveau  
+- Chargement et enregistrement d’opérations de plus haut niveau  
   
--   Prise en charge des paramètres de portée utilisateur  
+- Prise en charge des paramètres de portée utilisateur  
   
--   Rétablissement des paramètres d’un utilisateur aux valeurs par défaut  
+- Rétablissement des paramètres d’un utilisateur aux valeurs par défaut  
   
--   Mise à niveau des paramètres à partir d’une version précédente de l’application  
+- Mise à niveau des paramètres à partir d’une version précédente de l’application  
   
--   Validation des paramètres, avant leur modification ou leur enregistrement  
+- Validation des paramètres, avant leur modification ou leur enregistrement  
   
  Les paramètres peuvent être décrits à l’aide d’un nombre d’attributs définis dans le <xref:System.Configuration> espace de noms ; ceux-ci sont décrits dans [attributs des paramètres d’Application](application-settings-attributes.md). Lorsque vous définissez un paramètre, vous devez l’appliquer avec soit <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, qui décrit si le paramètre s’applique à l’application entière ou uniquement à l’utilisateur actuel.  
   
@@ -46,11 +46,11 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
   
  Le système de configuration fourni initialement avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] prend en charge les données de configuration d’application statiques via le fichier machine.config de l’ordinateur local ou dans un fichier `app.`exe.config que vous déployez avec votre application. Le <xref:System.Configuration.LocalFileSettingsProvider> classe étend cette prise en charge native de plusieurs manières :  
   
--   Les paramètres de portée d’application peuvent être stockés dans des fichiers machine.config ou `app.`exe.config. Machine.config est toujours en lecture seule, tandis que `app`.exe.config est limité par des considérations de sécurité en lecture seule pour la plupart des applications.  
+- Les paramètres de portée d’application peuvent être stockés dans des fichiers machine.config ou `app.`exe.config. Machine.config est toujours en lecture seule, tandis que `app`.exe.config est limité par des considérations de sécurité en lecture seule pour la plupart des applications.  
   
--   Les paramètres de portée utilisateur peuvent être stockés dans des fichiers `app`.exe.config, fichiers, auquel cas ils sont traités comme des valeurs par défaut statiques.  
+- Les paramètres de portée utilisateur peuvent être stockés dans des fichiers `app`.exe.config, fichiers, auquel cas ils sont traités comme des valeurs par défaut statiques.  
   
--   Les paramètres de portée utilisateur non définis par défaut sont stockés dans un nouveau fichier, *user*.config, où *user* est le nom d’utilisateur de la personne qui exécute actuellement l’application. Vous pouvez spécifier une valeur par défaut pour un paramètre de portée utilisateur avec <xref:System.Configuration.DefaultSettingValueAttribute>. Étant donné que les paramètres de portée utilisateur changent souvent pendant l’exécution d’applications, `user`.config est toujours accessible en lecture/écriture.  
+- Les paramètres de portée utilisateur non définis par défaut sont stockés dans un nouveau fichier, *user*.config, où *user* est le nom d’utilisateur de la personne qui exécute actuellement l’application. Vous pouvez spécifier une valeur par défaut pour un paramètre de portée utilisateur avec <xref:System.Configuration.DefaultSettingValueAttribute>. Étant donné que les paramètres de portée utilisateur changent souvent pendant l’exécution d’applications, `user`.config est toujours accessible en lecture/écriture.  
   
  Ces trois fichiers de configuration stockent les paramètres au format XML. L’élément XML de niveau supérieur pour les paramètres de portée d’application est `<appSettings>`, tandis que `<userSettings>` est utilisé pour les paramètres de portée utilisateur. Un fichier `app`.exe.config contenant les paramètres de portée d’application et les valeurs par défaut pour les paramètres de portée utilisateur ressemblerait à ceci :  
   

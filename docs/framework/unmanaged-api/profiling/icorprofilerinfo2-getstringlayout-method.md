@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791653"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout, méthode
 Obtient des informations sur la disposition d'un objet string. Cette méthode est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]et est remplacée par la [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) (méthode).  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>Notes  
  Le `GetStringLayout` méthode obtient les offsets, relatif à la `ObjectID` pointeur, des emplacements dans lesquels sont stockés les éléments suivants :  
   
--   La longueur de la mémoire tampon de la chaîne.  
+- La longueur de la mémoire tampon de la chaîne.  
   
--   La longueur de la chaîne elle-même.  
+- La longueur de la chaîne elle-même.  
   
--   La mémoire tampon qui contient la chaîne réelle de caractères larges.  
+- La mémoire tampon qui contient la chaîne réelle de caractères larges.  
   
  Chaînes peuvent être se terminant par null.  
   

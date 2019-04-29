@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
 ms.openlocfilehash: bc1dff6dc3b580079087f370212b7d3acd30e4fb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938669"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propriété d'axe descendant XML (Visual Basic)
 
@@ -37,7 +37,7 @@ object...<descendant>
 
 |Élément|Description|
 |----------|-----------------|
-|`prefix`|Facultatif. Préfixe d’espace de noms XML pour le nœud descendant. Doit être un espace de noms XML global qui est défini à l’aide un `Imports` instruction.|
+|`prefix`|Optionnel. Préfixe d’espace de noms XML pour le nœud descendant. Doit être un espace de noms XML global qui est défini à l’aide un `Imports` instruction.|
 |`name`|Obligatoire. Nom local du nœud descendant. Consultez [nom des attributs et éléments XML déclarés](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
 `>` Obligatoire. Indique la fin d’une propriété d’axe descendant.

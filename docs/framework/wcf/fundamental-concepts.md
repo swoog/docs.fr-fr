@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929595"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concepts fondamentaux concernant Windows Communication Foundation
 Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un service WCF et un client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour découvrir la programmation WCF, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Ce document fournit une vue d’ensemble de l’architecture de Windows Communic
   
  Autre élément requis dans la pile de communication : l'encodage qui spécifie comment un message donné est mis en forme. WCF fournit les encodages suivants :  
   
--   L'encodage de texte, un encodage interopérable.  
+- L'encodage de texte, un encodage interopérable.  
   
--   L'encodage MTOM (Message Transmission Optimisation Mécanisme), une manière interopérable d'envoyer efficacement des données binaires non structurées à destination et en provenance d'un service.  
+- L'encodage MTOM (Message Transmission Optimisation Mécanisme), une manière interopérable d'envoyer efficacement des données binaires non structurées à destination et en provenance d'un service.  
   
--   L'encodage binaire pour un transfert efficace.  
+- L'encodage binaire pour un transfert efficace.  
   
  Mécanismes d’encodage plus (par exemple, un encodage de compression) peuvent être ajoutés à l’aide de points d’extension intégrés de WCF.  
   

@@ -3,11 +3,11 @@ title: Période de détection des instances activables
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
 ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937954"
 ---
 # <a name="runnable-instances-detection-period"></a>Période de détection des instances activables
 Le magasin d’instances de workflow SQL exécute une tâche interne qui se réveille régulièrement et détecte les instances exécutables ou activables dans la base de données de persistance. Le **période de détection des Instances exécutables** propriété du Store d’Instance de Workflow SQL spécifie la période de temps après lequel le Store d’Instance de Workflow SQL exécute une tâche de détection pour détecter tout workflow exécutable ou activable instances dans la base de données de persistance issue du cycle de détection précédent.  

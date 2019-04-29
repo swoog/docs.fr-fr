@@ -9,11 +9,11 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938968"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle CheckBox (Windows Forms)
 Le contrôle <xref:System.Windows.Forms.CheckBox> Windows Forms indique si une condition particulière est activée ou désactivée. Il est couramment utilisé pour présenter une sélection Oui/Non ou Vrai/Faux à l'utilisateur. Vous pouvez utiliser des contrôles de case à cocher dans des groupes pour afficher plusieurs choix à partir desquels l'utilisateur peut sélectionner un ou plusieurs éléments.  

@@ -3,11 +3,11 @@ title: L’exécution différée et évaluation différées dans LINQ to XML (Vi
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
 ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790531"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>L’exécution différée et évaluation différées dans LINQ to XML (Visual Basic)
 Les opérations de requête et d'axe sont souvent implémentées pour utiliser l'exécution différée. Cette rubrique explique les conditions requises et les avantages de l'exécution différée et certaines considérations relatives à l'implémentation.  
@@ -20,16 +20,16 @@ Les opérations de requête et d'axe sont souvent implémentées pour utiliser l
 ## <a name="eager-vs-lazy-evaluation"></a>Évaluation stricte et évaluation différée  
  Lorsque vous écrivez une méthode qui implémente l'exécution différée, vous devez également décider s'il faut implémenter la méthode à l'aide de l'évaluation différée ou de l'évaluation stricte.  
   
--   Avec l’*évaluation différée*, un seul élément de la collection source est traité pendant chaque appel à l’itérateur. Il s'agit du mode d'implémentation par défaut des itérateurs.  
+- Avec l’*évaluation différée*, un seul élément de la collection source est traité pendant chaque appel à l’itérateur. Il s'agit du mode d'implémentation par défaut des itérateurs.  
   
--   Avec l’*évaluation stricte*, le premier appel à l’itérateur entraîne le traitement de l’ensemble de la collection. Une copie temporaire de la collection source peut également être nécessaire. Par exemple, la méthode <xref:System.Linq.Enumerable.OrderBy%2A> doit trier l'ensemble de la collection avant de renvoyer le premier élément.  
+- Avec l’*évaluation stricte*, le premier appel à l’itérateur entraîne le traitement de l’ensemble de la collection. Une copie temporaire de la collection source peut également être nécessaire. Par exemple, la méthode <xref:System.Linq.Enumerable.OrderBy%2A> doit trier l'ensemble de la collection avant de renvoyer le premier élément.  
   
  L'évaluation différée procure en général de meilleures performances car elle répartit le traitement de surcharge de manière égale durant l'évaluation de la collection et limite l'utilisation des données temporaires. Bien entendu, pour certaines opérations il est impossible d'éviter la matérialisation de résultats intermédiaires.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  La rubrique suivante de ce didacticiel illustre l'exécution différée :  
   
--   [Exemple d’exécution différée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Exemple d’exécution différée (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

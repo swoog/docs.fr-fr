@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941152"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procédure : hériter de contrôles Windows Forms existants
 Si vous souhaitez étendre les fonctionnalités d’un contrôle existant, vous pouvez créer un contrôle dérivé d’un contrôle existant par héritage. Lorsque vous héritez d’un contrôle existant, vous héritez de toutes les fonctionnalités et propriétés visuelles de ce contrôle. Par exemple, si vous avez créé un contrôle hérité de <xref:System.Windows.Forms.Button>, votre aura l’aspect et le comportement standard <xref:System.Windows.Forms.Button> contrôle. Vous pourrez ensuite étendre ou modifier les fonctionnalités de votre nouveau contrôle en implémentant des méthodes et des propriétés personnalisées. Dans certains cas, vous pouvez également modifier l’apparence visuelle du contrôle hérité en substituant ses <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode).  

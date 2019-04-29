@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790063"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly, méthode
 Crée l’assembly. Appelez cette méthode après la fermeture de tous les autres fichiers à l’exception du fichier d’assembly. N’appelez pas cette méthode lors de la production de modules indépendants.  

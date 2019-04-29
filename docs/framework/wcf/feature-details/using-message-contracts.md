@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932793"
 ---
 # <a name="using-message-contracts"></a>Utilisation de contrats de message
 En général, lors de la création d’applications Windows Communication Foundation (WCF), les développeurs attention particulière aux structures de données et aux problèmes de sérialisation et n’avez pas besoin de se préoccuper de la structure des messages dans lesquels les données sont stockées. Pour ces applications, créer des contrats de données pour les paramètres ou les valeurs de retour est une procédure simple. (Pour plus d’informations, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Attributs d'en-tête SOAP  
  Le standard SOAP définit les attributs suivants qui peuvent exister dans un en-tête :  
   
--   `Actor/Role` (`Actor` dans SOAP 1.1, `Role` dans SOAP 1.2)  
+- `Actor/Role` (`Actor` dans SOAP 1.1, `Role` dans SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  L'attribut `Actor` ou `Role` spécifie l'URI (Uniform Resource Identifier) du nœud auquel un en-tête donné est destiné. L'attribut `MustUnderstand` spécifie si le nœud qui traite cet en-tête doit le comprendre. L'attribut `Relay` spécifie si l'en-tête sera relayé aux nœuds en aval. WCF n’effectue pas de tout traitement de ces attributs sur les messages entrants, à l’exception de la `MustUnderstand` attribut, tel que spécifié dans la section « Gestion des versions de contrat de Message » plus loin dans cette rubrique. Toutefois, il vous permet de lire et d'écrire ces attributs si nécessaire, comme dans la description suivante.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Les règles suivantes s'appliquent pour le contrôle de version des en-têtes :  
   
--   WCF de ne pas l’objet aux en-têtes manquants, les membres correspondants restent à leurs valeurs par défaut.  
+- WCF de ne pas l’objet aux en-têtes manquants, les membres correspondants restent à leurs valeurs par défaut.  
   
--   WCF ignore également les en-têtes supplémentaires inattendus. La seule exception à cette règle est si l'en-tête supplémentaire a un attribut `MustUnderstand` défini à `true` dans le message SOAP entrant ; dans ce cas, une exception est levée car un en-tête qui doit être compris ne peut pas être traité.  
+- WCF ignore également les en-têtes supplémentaires inattendus. La seule exception à cette règle est si l'en-tête supplémentaire a un attribut `MustUnderstand` défini à `true` dans le message SOAP entrant ; dans ce cas, une exception est levée car un en-tête qui doit être compris ne peut pas être traité.  
   
  Les corps de message ont des règles de contrôle de version similaires ; les parties de corps de message manquantes et supplémentaires sont ignorées.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Lors de la création ou de l'accès à un message à l'aide d'un type de contrat de message qui hérite d'autres types de contrats de message, les règles suivantes s'appliquent :  
   
--   Tous les en-têtes de message dans la hiérarchie d'héritage sont regroupés pour former le jeu complet d'en-têtes pour le message.  
+- Tous les en-têtes de message dans la hiérarchie d'héritage sont regroupés pour former le jeu complet d'en-têtes pour le message.  
   
--   Toutes les parties de corps du message dans la hiérarchie d'héritage sont regroupées pour former le corps du message complet. Les parties du corps sont ordonnées conformément aux règles de classement habituelles (par la propriété <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>, puis par ordre alphabétique), sans tenir compte de leur place dans la hiérarchie d'héritage. L’utilisation d’un héritage de contrat de message dans lequel les parties de corps du message se produisent à plusieurs niveaux de l’arborescence d’héritage est fortement déconseillée. Si une classe de base et une classe dérivée définissent un en-tête ou une partie du corps avec le même nom, le membre de la classe la plus de base est utilisé pour stocker la valeur de cet en-tête ou partie du corps.  
+- Toutes les parties de corps du message dans la hiérarchie d'héritage sont regroupées pour former le corps du message complet. Les parties du corps sont ordonnées conformément aux règles de classement habituelles (par la propriété <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>, puis par ordre alphabétique), sans tenir compte de leur place dans la hiérarchie d'héritage. L’utilisation d’un héritage de contrat de message dans lequel les parties de corps du message se produisent à plusieurs niveaux de l’arborescence d’héritage est fortement déconseillée. Si une classe de base et une classe dérivée définissent un en-tête ou une partie du corps avec le même nom, le membre de la classe la plus de base est utilisé pour stocker la valeur de cet en-tête ou partie du corps.  
   
  Examinons les classes dans l'exemple de code suivant.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Considérations sur WSDL  
  Lors de la génération d’un contrat WSDL (Web Services Description Language) à partir d’un service qui utilise des contrats de message, il est important de se souvenir que les fonctionnalités de contrat de message ne sont pas toutes répercutées dans le WSDL résultant. Considérez les points suivants :  
   
--   WSDL ne peut pas exprimer le concept d'un tableau d'en-têtes. Lors de la création de messages avec un tableau d'en-têtes à l'aide de <xref:System.ServiceModel.MessageHeaderArrayAttribute>, le WSDL résultant ne reflète qu'un seul en-tête au lieu du tableau.  
+- WSDL ne peut pas exprimer le concept d'un tableau d'en-têtes. Lors de la création de messages avec un tableau d'en-têtes à l'aide de <xref:System.ServiceModel.MessageHeaderArrayAttribute>, le WSDL résultant ne reflète qu'un seul en-tête au lieu du tableau.  
   
--   Le document WSDL résultant ne reflète pas certaines informations de niveau de protection.  
+- Le document WSDL résultant ne reflète pas certaines informations de niveau de protection.  
   
--   Le type de message généré dans le WSDL a le même nom que le nom de la classe du type de contrat de message.  
+- Le type de message généré dans le WSDL a le même nom que le nom de la classe du type de contrat de message.  
   
--   Lors de l'utilisation du même contrat de message dans plusieurs opérations, plusieurs types de message sont générés dans le document WSDL. Les noms sont rendus uniques en ajoutant les nombres « 2 », « 3 », et ainsi de suite, pour les utilisations suivantes. Lors de la réimportation du WSDL, plusieurs types de contrats de message sont créés et sont identiques à l'exception de leurs noms.  
+- Lors de l'utilisation du même contrat de message dans plusieurs opérations, plusieurs types de message sont générés dans le document WSDL. Les noms sont rendus uniques en ajoutant les nombres « 2 », « 3 », et ainsi de suite, pour les utilisations suivantes. Lors de la réimportation du WSDL, plusieurs types de contrats de message sont créés et sont identiques à l'exception de leurs noms.  
   
 ## <a name="soap-encoding-considerations"></a>Considérations sur l'encodage SOAP  
  WCF vous permet d’utiliser le style de code XML, d’encodage de SOAP hérité Toutefois, son utilisation n’est pas recommandée. Lors de l'utilisation de ce style (en affectant à la propriété `Use` la valeur `Encoded` sur le <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> appliqué au contrat de service), les considérations supplémentaires suivantes s'appliquent :  
   
--   Les en-têtes de message ne sont pas pris en charge ; cela signifie que l'attribut <xref:System.ServiceModel.MessageHeaderAttribute> et l'attribut de tableau <xref:System.ServiceModel.MessageHeaderArrayAttribute> sont incompatibles avec l'encodage SOAP.  
+- Les en-têtes de message ne sont pas pris en charge ; cela signifie que l'attribut <xref:System.ServiceModel.MessageHeaderAttribute> et l'attribut de tableau <xref:System.ServiceModel.MessageHeaderArrayAttribute> sont incompatibles avec l'encodage SOAP.  
   
--   Si le contrat de message n'est pas encapsulé, c'est-à-dire, si la propriété <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> a la valeur `false`, le contrat de message ne peut avoir qu'une seule partie de corps.  
+- Si le contrat de message n'est pas encapsulé, c'est-à-dire, si la propriété <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> a la valeur `false`, le contrat de message ne peut avoir qu'une seule partie de corps.  
   
--   Le nom de l'élément wrapper du contrat de message de demande doit correspondre au nom d'opération. Utilisez la propriété `WrapperName` du contrat de message à cette fin.  
+- Le nom de l'élément wrapper du contrat de message de demande doit correspondre au nom d'opération. Utilisez la propriété `WrapperName` du contrat de message à cette fin.  
   
--   Le nom de l'élément wrapper du contrat de message de réponse doit être le même que celui de l'opération suffixée par 'Response'. Utilisez la propriété <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> du contrat de message à cette fin.  
+- Le nom de l'élément wrapper du contrat de message de réponse doit être le même que celui de l'opération suffixée par 'Response'. Utilisez la propriété <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> du contrat de message à cette fin.  
   
--   L'encodage SOAP conserve les références d'objet. Par exemple, prenons le code suivant.  
+- L'encodage SOAP conserve les références d'objet. Par exemple, prenons le code suivant.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784057"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Déclare le symbole d’opérateur, opérandes et le code qui définissent une procédure d’opérateur sur une classe ou structure.  
@@ -41,7 +41,7 @@ End Operator
   
 ## <a name="parts"></a>Composants  
  `attrlist`  
- Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
  Obligatoire. Indique que cette procédure d’opérateur a [Public](../../../visual-basic/language-reference/modifiers/public.md) accès.  
@@ -53,7 +53,7 @@ End Operator
  Obligatoire. Indique que cette procédure d’opérateur est un [partagé](../../../visual-basic/language-reference/modifiers/shared.md) procédure.  
   
  `Shadows`  
- Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Obligatoire pour un opérateur de conversion, sauf si vous spécifiez `Narrowing`. Indique que cette procédure d’opérateur définit un [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. Consultez « Conversions étendues et restrictives » sur cette page d’aide.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Paires correspondantes  
  Vous devez définir certains opérateurs comme des paires correspondantes. Si vous définissez des opérateurs de cette paire, vous devez définir l’autre. Les paires correspondantes sont les suivantes :  
   
--   `=` et `<>`  
+- `=` et `<>`  
   
--   `>` et `<`  
+- `>` et `<`  
   
--   `>=` et `<=`  
+- `>=` et `<=`  
   
--   `IsTrue` et `IsFalse`  
+- `IsTrue` et `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Restrictions de Type de données  
  Chaque opérateur que vous définissez doit impliquer la classe ou la structure sur laquelle vous le définissez. Cela signifie que la classe ou structure doit apparaître en tant que le type de données des éléments suivants :  
   
--   L’opérande d’un opérateur unaire.  
+- L’opérande d’un opérateur unaire.  
   
--   Au moins un des opérandes d’un opérateur binaire.  
+- Au moins un des opérandes d’un opérateur binaire.  
   
--   L’opérande ou le type de retour d’un opérateur de conversion.  
+- L’opérande ou le type de retour d’un opérateur de conversion.  
   
  Certains opérateurs ont des données supplémentaires de type des restrictions, comme suit :  
   
--   Si vous définissez la `IsTrue` et `IsFalse` opérateurs, ils doivent retourner le `Boolean` type.  
+- Si vous définissez la `IsTrue` et `IsFalse` opérateurs, ils doivent retourner le `Boolean` type.  
   
--   Si vous définissez la `<<` et `>>` opérateurs, ils doivent tous deux spécifient le `Integer` type pour le `operandtype` de `operand2`.  
+- Si vous définissez la `<<` et `>>` opérateurs, ils doivent tous deux spécifient le `Integer` type pour le `operandtype` de `operand2`.  
   
  Le type de retour ne doit pas forcément correspondre au type de des opérandes. Par exemple, un opérateur de comparaison tel que `=` ou `<>` peut retourner `Boolean` même si aucun des opérandes sont `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Vous ne pouvez pas définir le `AndAlso` opérateur directement avec un `Operator` instruction. Toutefois, vous pouvez utiliser `AndAlso` si vous avez rempli les conditions suivantes :  
   
--   Vous avez défini `And` sur les mêmes types d’opérande à utiliser pour `AndAlso`.  
+- Vous avez défini `And` sur les mêmes types d’opérande à utiliser pour `AndAlso`.  
   
--   Votre définition de `And` retourne le même type que la classe ou la structure sur lequel vous l’avez défini.  
+- Votre définition de `And` retourne le même type que la classe ou la structure sur lequel vous l’avez défini.  
   
--   Vous avez défini le `IsFalse` opérateur sur la classe ou la structure sur laquelle vous avez défini `And`.  
+- Vous avez défini le `IsFalse` opérateur sur la classe ou la structure sur laquelle vous avez défini `And`.  
   
  De même, vous pouvez utiliser `OrElse` si vous avez défini `Or` sur les mêmes opérandes, avec le type de retour de la classe ou structure et que vous avez défini `IsTrue` sur la classe ou structure.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Si vous déclarez une procédure de conversion pour être `Widening`, votre code de procédure ne doit pas générer d’échecs. Par conséquent :  
   
--   Elle doit toujours retourner une valeur valide de type `type`.  
+- Elle doit toujours retourner une valeur valide de type `type`.  
   
--   Il doit gérer toutes les exceptions possibles et autres conditions d’erreur.  
+- Il doit gérer toutes les exceptions possibles et autres conditions d’erreur.  
   
--   Il doit gérer les erreurs retournées par toutes les procédures qu’elle appelle.  
+- Il doit gérer les erreurs retournées par toutes les procédures qu’elle appelle.  
   
  S’il est possible qu’une procédure de conversion peut échouer, ou qu’elle peut entraîner une exception non gérée, vous devez déclarer qu’elle soit `Narrowing`.  
   

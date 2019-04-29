@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928603"
 ---
 # <a name="introduction-to-extensibility"></a>Introduction à l'extensibilité
 Le modèle d’application Windows Communication Foundation (WCF) est conçu pour répondre en grande partie de la configuration requise des communications de toute application distribuée. Néanmoins, il existe des situations qui ne sont pas prises en charge par le modèle d'application par défaut et les implémentations fournies par le système. Le modèle d’extensibilité WCF est destiné à prendre en charge des scénarios personnalisés en vous permettant de modifier le comportement du système à chaque niveau, même pour le point de remplacer le modèle d’application dans son intégralité. Cette rubrique présente les différentes zones d’extension et fournit des informations détaillées sur chacune d’elles.  
@@ -19,11 +19,11 @@ Le modèle d’application Windows Communication Foundation (WCF) est conçu pou
 ## <a name="areas-to-extend"></a>Zones à étendre  
  Vous pouvez étendre les zones suivantes :  
   
--   Le runtime de l'application. Cela permet d'étendre la distribution et le traitement des messages pour l'application. Dans ce cadre, vous pouvez également étendre le système de sécurité, le système de métadonnées, le système de sérialisation, ainsi que les liaisons et éléments de liaison qui connectent l'application au système de canaux sous-jacent.  
+- Le runtime de l'application. Cela permet d'étendre la distribution et le traitement des messages pour l'application. Dans ce cadre, vous pouvez également étendre le système de sécurité, le système de métadonnées, le système de sérialisation, ainsi que les liaisons et éléments de liaison qui connectent l'application au système de canaux sous-jacent.  
   
--   Le canal et le runtime du canal. Cela permet d'étendre le système qui fonctionne au niveau du message, en fournissant la prise en charge du protocole, du transport et de l'encodage.  
+- Le canal et le runtime du canal. Cela permet d'étendre le système qui fonctionne au niveau du message, en fournissant la prise en charge du protocole, du transport et de l'encodage.  
   
--   Le runtime de l'hôte. Cela permet d'étendre la relation du domaine de l'application d'hébergement avec le runtime du canal de l'application.  
+- Le runtime de l'hôte. Cela permet d'étendre la relation du domaine de l'application d'hébergement avec le runtime du canal de l'application.  
   
 ### <a name="extending-the-application-runtime"></a>Extension du runtime de l'application  
  Dans les applications WCF, il existe une distinction entre les messages destinés à un canal correspondant et les messages destinés à l’application elle-même. Les messages de canaux prennent en charge des fonctionnalités relatives aux canaux, comme l'établissement d'une conversation sécurisée ou d'une session fiable. Ces messages ne sont pas disponibles pour le runtime de l'application. Ils sont traités avant que la couche Application ne soit impliquée.  

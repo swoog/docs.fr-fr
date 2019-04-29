@@ -16,11 +16,11 @@ ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795133"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procédure : déchiffrer des éléments XML avec des clés symétriques
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer un élément d'un document XML.  Le chiffrement XML vous permet de stocker et de transporter du code XML sensible, en empêchant qu'il soit facilement lu.  Cet exemple de code déchiffre un élément XML à l'aide de l'algorithme AES (Advanced Encryption Standard), également appelé Rijndael.  
@@ -72,9 +72,9 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Pour compiler cet exemple, vous devez inclure une référence à `System.Security.dll`.  
+- Pour compiler cet exemple, vous devez inclure une référence à `System.Security.dll`.  
   
--   Incluez les espaces de noms suivants : <xref:System.Xml>, <xref:System.Security.Cryptography> et <xref:System.Security.Cryptography.Xml>.  
+- Incluez les espaces de noms suivants : <xref:System.Xml>, <xref:System.Security.Cryptography> et <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne stockez jamais une clé de chiffrement en texte brut et ne transférez jamais une clé d'un ordinateur à l'autre en texte brut.  

@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940541"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification Windows
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms ASP.NET®  
+- Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application Web Forms ASP.NET prenant en charge les revendications et qui utilise l’authentification Windows. Elle fournit également des instructions pour tester l’application afin de vérifier que les revendications s’affichent quand un utilisateur se connecte à l’aide de l’authentification Windows.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Vue d'ensemble  
+- Vue d'ensemble  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : Créer une application Web Forms ASP.NET simple  
+- Étape 1 : Créer une application Web Forms ASP.NET simple  
   
--   Étape 2 : configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
+- Étape 2 : configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Configurer une application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
+- Configurer une application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
   
--   Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement  
+- Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Dans .NET 4.5, WIF et son autorisation basée sur les revendications ont été ajoutés en tant que partie intégrante du .NET Framework. Auparavant, si vous vouliez obtenir des revendications d’un utilisateur ASP.NET, vous deviez installer WIF et convertir les interfaces en objets Entité de sécurité tels que `Thread.CurrentPrincipal` ou `HttpContext.Current.User`. À présent, les revendications sont prises en charge automatiquement par ces objets Entité de sécurité.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767966"
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : Créer une application Web Forms ASP.NET simple  
+- Étape 1 : Créer une application Web Forms ASP.NET simple  
   
--   Étape 2 : configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
+- Étape 2 : configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification Windows  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Étape 1 : Créer une application Web Forms ASP.NET simple  
  Lors de cette étape, vous allez créer une application Web Forms ASP.NET.  

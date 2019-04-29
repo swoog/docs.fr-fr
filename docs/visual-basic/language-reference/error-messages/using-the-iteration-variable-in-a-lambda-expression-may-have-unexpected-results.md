@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774840"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>L’utilisation de la variable d’itération dans une expression lambda peut provoquer des résultats inattendus
 L’utilisation de la variable d’itération dans une expression lambda peut avoir des résultats inattendus. Au lieu de cela, créez une variable locale dans la boucle et affectez-lui la valeur de la variable d’itération.  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Affectez la valeur de la variable d’itération à une variable locale et utilisez la variable locale dans l’expression lambda.  
+- Affectez la valeur de la variable d’itération à une variable locale et utilisez la variable locale dans l’expression lambda.  
   
 ```vb  
 Module Module1  

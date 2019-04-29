@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762750"
 ---
 # <a name="nettcp-port-sharing"></a>Partage de ports Net.TCP
 Windows Communication Foundation (WCF) fournit un nouveau protocole réseau basé sur TCP (net.tcp://) pour une communication hautes performances. WCF introduit également un nouveau composant système, le Service de partage Net.TCP Port qui permet le partage de ports net.tcp à travers plusieurs processus utilisateur.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) fournit un nouveau protocole réseau bas�
 ## <a name="port-sharing-architecture"></a>Architecture de partage de ports  
  L’architecture de partage de Port dans WCF a trois composants principaux :  
   
--   Un processus de travail : Tout processus qui communique sur net.tcp:// en utilisant des ports partagés.  
+- Un processus de travail : Tout processus qui communique sur net.tcp:// en utilisant des ports partagés.  
   
--   Le transport TCP de WCF : Implémente le protocole net.tcp://.  
+- Le transport TCP de WCF : Implémente le protocole net.tcp://.  
   
--   Le Service de partage de ports Net.TCP : Permet à plusieurs processus de travail de partager le même port TCP.  
+- Le Service de partage de ports Net.TCP : Permet à plusieurs processus de travail de partager le même port TCP.  
   
  Le Service de partage de ports Net.TCP est un service Windows en mode utilisateur qui accepte les connexions net.tcp:// pour le compte des processus de travail qui se connectent à travers lui. Lorsqu'une connexion de socket arrive, le service de partage de ports inspecte le flux des message entrants pour obtenir son adresse de destination. En fonction de cette adresse, le service de partage de ports peut router le flux des données vers l'application qui finalement les traite.  
   

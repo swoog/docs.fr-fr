@@ -3,11 +3,11 @@ title: Client Validation
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943973"
 ---
 # <a name="client-validation"></a>Client Validation
 Les services publient fréquemment des métadonnées pour activer la génération et la configuration automatiques de types de proxy clients. Lorsque le service n'est pas approuvé, les applications clientes doivent valider que les métadonnées se conforment à la stratégie de l'application cliente en ce qui concerne la sécurité, les transactions, le type de contrat de service, etc. L'exemple suivant montre comment écrire un comportement de point de terminaison client qui valide le point de terminaison de service pour garantir que ce dernier est fiable.  
@@ -54,11 +54,11 @@ Les services publient fréquemment des métadonnées pour activer la génératio
   
 10. Sur l'ordinateur client, exécutez client.exe.  
   
-    1.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
--   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
+- Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
     > [!NOTE]
     >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le CurrentUser - TrustedPeople stocker. Pour ce faire, utilisez la ligne de commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

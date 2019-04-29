@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940528"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Procédure : Générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms ASP.NET®  
+- Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application Web Forms ASP.NET prenant en charge les revendications. Elle fournit également des instructions afin de tester cette simple application Web Forms ASP.NET prenant en charge les revendications pour une implémentation réussie de l’authentification fédérée. Cette procédure ne comprend pas d’instructions détaillées pour créer un service d’émission de jeton de sécurité (STS) et suppose que vous en avez déjà configuré un.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : Créer une application Web Forms ASP.NET simple  
+- Étape 1 : Créer une application Web Forms ASP.NET simple  
   
--   Étape 2 : configurer l’application Web Forms ASP.NET pour l’authentification basée sur les revendications  
+- Étape 2 : configurer l’application Web Forms ASP.NET pour l’authentification basée sur les revendications  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Configurer l’application Web Forms ASP.NET pour l’authentification basée sur les revendications  
+- Configurer l’application Web Forms ASP.NET pour l’authentification basée sur les revendications  
   
--   Tester le bon fonctionnement de l’application Web Forms ASP.NET prenant en charge les revendications  
+- Tester le bon fonctionnement de l’application Web Forms ASP.NET prenant en charge les revendications  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : créer une simple application Web Forms ASP.NET  
+- Étape 1 : créer une simple application Web Forms ASP.NET  
   
--   Étape 2 : configurer l’application Web Forms ASP.NET pour l’authentification fédérée  
+- Étape 2 : configurer l’application Web Forms ASP.NET pour l’authentification fédérée  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Étape 1 : Créer une application Web Forms ASP.NET simple  
  Lors de cette étape, vous allez créer une application Web Forms ASP.NET.  

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Redimensionner automatiquement une fenêtre pour s’ajuster à son contenu'
+title: 'Procédure : Redimensionner automatiquement une fenêtre en fonction de son contenu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - sizing windows to fit content [WPF]
 ms.assetid: 333ca72a-c2f3-4414-9303-3fdabaaa1b32
 ms.openlocfilehash: 920a7deac8efffe52a4837841b6327575e41b331
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947847"
 ---
-# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Procédure : Redimensionner automatiquement une fenêtre pour s’ajuster à son contenu
+# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Procédure : Redimensionner automatiquement une fenêtre en fonction de son contenu
 Cet exemple montre comment définir le <xref:System.Windows.Window.SizeToContent%2A> propriété pour spécifier la façon dont une fenêtre se redimensionne en fonction de son contenu.  
   
 ## <a name="example"></a>Exemple  

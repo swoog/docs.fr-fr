@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938643"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Littéraux de commentaires XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XComment> objet.  
@@ -39,9 +39,9 @@ Littéral représentant un <xref:System.Xml.Linq.XComment> objet.
 ## <a name="remarks"></a>Notes  
  Littéraux de commentaire XML ne contiennent pas de contenu de document ; ils contiennent des informations sur le document. La section de commentaire XML se termine par la séquence «--> ». Cela implique les points suivants :  
   
--   Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML, car les délimiteurs d’expression sont le contenu du commentaire XML valide.  
+- Vous ne pouvez pas utiliser une expression incorporée dans un littéral de commentaire XML, car les délimiteurs d’expression sont le contenu du commentaire XML valide.  
   
--   Sections de commentaire XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur de «--> ».  
+- Sections de commentaire XML ne peut pas être imbriquées, étant donné que `content` ne peut pas contenir la valeur de «--> ».  
   
  Vous pouvez assigner un littéral de commentaire XML à une variable, ou vous pouvez l’inclure dans un littéral d’élément XML.  
   

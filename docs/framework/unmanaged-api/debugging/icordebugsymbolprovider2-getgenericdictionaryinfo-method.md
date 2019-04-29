@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944647"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Méthode ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Récupère un mappage de dictionnaire générique.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  Le mappage se compose de deux sections de niveau supérieur :  
   
--   Un [directory](#Directory) contenant les adresses virtuelles relatives (RVA) de tous les dictionnaires inclus dans ce mappage.  
+- Un [directory](#Directory) contenant les adresses virtuelles relatives (RVA) de tous les dictionnaires inclus dans ce mappage.  
   
--   Aligné sur un octet [tas](#Heap) qui contient des informations d’instanciation d’objet. Il commence immédiatement après la dernière entrée du répertoire.  
+- Aligné sur un octet [tas](#Heap) qui contient des informations d’instanciation d’objet. Il commence immédiatement après la dernière entrée du répertoire.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Répertoire  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  La structure de la partie répertoire du mappage de dictionnaire générique est la suivante :  
   
--   Les 4 premiers octets contiennent le nombre d'entrées de dictionnaire (c'est-à-dire le nombre d'adresses virtuelles relatives dans le dictionnaire). Nous faisons référence à cette valeur en tant que *N*. Si le bit de poids fort est défini, les entrées sont triées par ordre croissant des adresses virtuelles relatives.  
+- Les 4 premiers octets contiennent le nombre d'entrées de dictionnaire (c'est-à-dire le nombre d'adresses virtuelles relatives dans le dictionnaire). Nous faisons référence à cette valeur en tant que *N*. Si le bit de poids fort est défini, les entrées sont triées par ordre croissant des adresses virtuelles relatives.  
   
--   Le *N* suivent des entrées de répertoire. Chaque entrée se compose de 8 octets dans deux segments de 4 octets :  
+- Le *N* suivent des entrées de répertoire. Chaque entrée se compose de 8 octets dans deux segments de 4 octets :  
   
-    -   Octets 0-3 : ADRESSE RVA ; adresse virtuelle relative du dictionnaire.  
+    - Octets 0-3 : ADRESSE RVA ; adresse virtuelle relative du dictionnaire.  
   
-    -   Octets 4-7 : Offset ; un décalage par rapport au début du segment de mémoire.  
+    - Octets 4-7 : Offset ; un décalage par rapport au début du segment de mémoire.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Tas  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  Le format de chaque élément d'informations d'instanciation sur le tas est le suivant :  
   
--   La longueur de cet élément d'informations d'instanciation en octets au format de métadonnées ECMA compressé. La valeur exclut ces informations de longueur.  
+- La longueur de cet élément d'informations d'instanciation en octets au format de métadonnées ECMA compressé. La valeur exclut ces informations de longueur.  
   
--   Le nombre de types d’instanciation générique, ou *T*, au format de métadonnées ECMA compressé.  
+- Le nombre de types d’instanciation générique, ou *T*, au format de métadonnées ECMA compressé.  
   
--   *T* types, chacun représenté au format de signature de type ECMA.  
+- *T* types, chacun représenté au format de signature de type ECMA.  
   
  L'inclusion de la longueur de chaque élément de tas permet d'effectuer un tri simple de la section répertoire sans affecter le tas.  
   

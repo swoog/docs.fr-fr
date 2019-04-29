@@ -3,11 +3,11 @@ title: 'Procédure : créer un service de workflow avec des activités de messa
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787797"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : créer un service de workflow avec des activités de messagerie
 Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [How To : Accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  

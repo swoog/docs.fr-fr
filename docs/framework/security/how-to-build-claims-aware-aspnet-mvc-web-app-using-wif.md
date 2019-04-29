@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940515"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procédure : Générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application web ASP.NET MVC prenant en charge les revendications. Elle fournit également des instructions afin de tester cette simple application web ASP.NET MVC prenant en charge les revendications pour une implémentation réussie de l’authentification basée sur les revendications. Cette procédure ne comprend pas d’instructions détaillées pour créer un service d’émission de jeton de sécurité (STS) et suppose que vous en avez déjà configuré un.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : créer une simple application ASP.NET MVC  
+- Étape 1 : créer une simple application ASP.NET MVC  
   
--   Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications  
+- Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
--   Éléments associés  
+- Éléments associés  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Configurer l’application web ASP.NET MVC pour l’authentification basée sur les revendications  
+- Configurer l’application web ASP.NET MVC pour l’authentification basée sur les revendications  
   
--   Tester le bon fonctionnement de l’application web ASP.NET MVC prenant en charge les revendications  
+- Tester le bon fonctionnement de l’application web ASP.NET MVC prenant en charge les revendications  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : créer une simple application ASP.NET MVC  
+- Étape 1 : créer une simple application ASP.NET MVC  
   
--   Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications  
+- Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Étape 1 : créer une simple application ASP.NET MVC  
  Dans cette étape, vous allez créer une application ASP.NET MVC.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335665"
   
 ## <a name="related-items"></a>Éléments associés  
   
--   [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

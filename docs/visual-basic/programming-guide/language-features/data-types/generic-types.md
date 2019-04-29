@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906779"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Types génériques Visual Basic (Visual Basic)
 Un *type générique* est un élément de programmation unique qui s’adapte pour exécuter la même fonction sur différents types de données. Quand vous définissez une classe ou procédure générique, vous n’avez pas besoin de définir une version distincte pour chaque type de données pour lequel vous voulez exécuter la fonction.  
@@ -89,19 +89,19 @@ Un *type générique* est un élément de programmation unique qui s’adapte po
   
  Un type générique présente les avantages suivants par rapport à ces alternatives :  
   
--   **Sécurité des types** . Avec les types génériques, une vérification des types est effectuée au moment de la compilation. Les types basés sur `Object` acceptent tous les types de données. Vous devez écrire le code permettant de vérifier si un type de données d’entrée est pris en charge. Avec les types génériques, le compilateur est capable d’identifier les incompatibilités de type avant l’exécution.  
+- **Sécurité des types** . Avec les types génériques, une vérification des types est effectuée au moment de la compilation. Les types basés sur `Object` acceptent tous les types de données. Vous devez écrire le code permettant de vérifier si un type de données d’entrée est pris en charge. Avec les types génériques, le compilateur est capable d’identifier les incompatibilités de type avant l’exécution.  
   
--   **Performances** . Les types génériques ne nécessitent pas de conversion *boxing* et *unboxing* des données, car chacun d’eux est utilisé pour un type de données spécifique. Les opérations basées sur `Object` doivent effectuer une conversion boxing des types de données d’entrée pour les convertir en `Object` et effectuer une conversion unboxing des données de sortie. Les conversions boxing et unboxing réduisent les performances.  
+- **Performances** . Les types génériques ne nécessitent pas de conversion *boxing* et *unboxing* des données, car chacun d’eux est utilisé pour un type de données spécifique. Les opérations basées sur `Object` doivent effectuer une conversion boxing des types de données d’entrée pour les convertir en `Object` et effectuer une conversion unboxing des données de sortie. Les conversions boxing et unboxing réduisent les performances.  
   
      Les types basés sur `Object` sont également à liaison tardive, ce qui signifie que l’accès à leurs membres nécessite du code supplémentaire au moment de l’exécution. Cela réduit aussi les performances.  
   
--   **Consolidation du code** . Le code d’un type générique doit être défini une seule fois. Un ensemble de versions spécifiques au type d’un type de données doit répliquer le même code dans chaque version, la seule différence étant le type de données spécifique à cette version. Avec les types génériques, les versions spécifiques au type sont toutes générées à partir du type générique d’origine.  
+- **Consolidation du code** . Le code d’un type générique doit être défini une seule fois. Un ensemble de versions spécifiques au type d’un type de données doit répliquer le même code dans chaque version, la seule différence étant le type de données spécifique à cette version. Avec les types génériques, les versions spécifiques au type sont toutes générées à partir du type générique d’origine.  
   
--   **Réutilisation du code** . S’il est générique, le code qui ne dépend pas d’un type de données particulier peut être réutilisé avec divers types de données. Vous pouvez généralement le réutiliser même avec un type de données que vous n’avez pas prévu initialement.  
+- **Réutilisation du code** . S’il est générique, le code qui ne dépend pas d’un type de données particulier peut être réutilisé avec divers types de données. Vous pouvez généralement le réutiliser même avec un type de données que vous n’avez pas prévu initialement.  
   
--   **Support de l’IDE** . Quand vous utilisez un type construit déclaré à partir d’un type générique, l’environnement de développement intégré (IDE) peut vous aider pendant le développement de votre code. Par exemple, IntelliSense vous indique les options spécifiques au type disponibles pour un argument d’une méthode ou d’un constructeur.  
+- **Support de l’IDE** . Quand vous utilisez un type construit déclaré à partir d’un type générique, l’environnement de développement intégré (IDE) peut vous aider pendant le développement de votre code. Par exemple, IntelliSense vous indique les options spécifiques au type disponibles pour un argument d’une méthode ou d’un constructeur.  
   
--   **Algorithmes génériques** . Les types génériques sont conseillés pour les algorithmes abstraits qui sont indépendants du type. Par exemple, une procédure générique qui trie des éléments à l’aide de l’interface <xref:System.IComparable> peut être utilisée avec n’importe quel type de données implémentant <xref:System.IComparable>.  
+- **Algorithmes génériques** . Les types génériques sont conseillés pour les algorithmes abstraits qui sont indépendants du type. Par exemple, une procédure générique qui trie des éléments à l’aide de l’interface <xref:System.IComparable> peut être utilisée avec n’importe quel type de données implémentant <xref:System.IComparable>.  
   
 ## <a name="constraints"></a>Contraintes  
  Dans la mesure du possible, le code d’une définition de type générique doit être indépendant du type. Toutefois, vous pouvez avoir besoin d’une fonction agissant sur tous les types de données fournis à votre type générique. Par exemple, si vous voulez comparer deux éléments pour les trier ou les classer, leur type de données doit implémenter l’interface <xref:System.IComparable> . Vous pouvez appliquer cette exigence en ajoutant une *contrainte* au paramètre de type.  
@@ -116,13 +116,13 @@ Un *type générique* est un élément de programmation unique qui s’adapte po
 ### <a name="types-of-constraints"></a>Types de contraintes  
  Une contrainte peut spécifier les exigences suivantes dans n’importe quelle combinaison :  
   
--   L’argument de type doit implémenter une ou plusieurs interfaces.  
+- L’argument de type doit implémenter une ou plusieurs interfaces.  
   
--   L’argument de type doit être du type d’une seule classe (ou hériter de cette classe).  
+- L’argument de type doit être du type d’une seule classe (ou hériter de cette classe).  
   
--   L’argument de type doit exposer un constructeur sans paramètre, accessible au code qui crée des objets à partir de celui-ci.  
+- L’argument de type doit exposer un constructeur sans paramètre, accessible au code qui crée des objets à partir de celui-ci.  
   
--   L’argument de type doit être un *type référence*ou un type *valeur*.  
+- L’argument de type doit être un *type référence*ou un type *valeur*.  
   
  Si vous devez spécifier plusieurs contraintes, utilisez une *liste de contraintes* séparée par des virgules et mise entre accolades (`{ }`). Pour exiger un constructeur accessible, vous incluez le [nouvel opérateur](../../../../visual-basic/language-reference/operators/new-operator.md) mot clé dans la liste. Pour exiger un type référence ou un type valeur, ajoutez le mot clé `Class` ou le mot clé `Structure` , respectivement.  
   
@@ -136,15 +136,15 @@ Un *type générique* est un élément de programmation unique qui s’adapte po
 ## <a name="important-terms"></a>Termes importants  
  La terminologie suivante s’applique aux types génériques :  
   
--   *Type générique*. Définition d’une classe, structure, interface, procédure ou délégué pour laquelle vous fournissez au moins un type de données lors de sa déclaration.  
+- *Type générique*. Définition d’une classe, structure, interface, procédure ou délégué pour laquelle vous fournissez au moins un type de données lors de sa déclaration.  
   
--   *Paramètre de type*. Dans une définition de type générique, espace réservé pour un type de données que vous fournissez lors de la déclaration du type.  
+- *Paramètre de type*. Dans une définition de type générique, espace réservé pour un type de données que vous fournissez lors de la déclaration du type.  
   
--   *Argument de type*. Type de données spécifique qui remplace un paramètre de type quand vous déclarez un type construit à partir d’un type générique.  
+- *Argument de type*. Type de données spécifique qui remplace un paramètre de type quand vous déclarez un type construit à partir d’un type générique.  
   
--   *Contrainte*. Condition sur un paramètre de type qui restreint l’argument de type que vous pouvez lui fournir. Une contrainte peut exiger que l’argument de type implémente une interface particulière, soit ou hérite d’une classe particulière, contienne un constructeur sans paramètre accessible, ou soit un type référence ou un type valeur. Vous pouvez combiner ces contraintes, mais vous ne pouvez spécifier qu’une seule classe.  
+- *Contrainte*. Condition sur un paramètre de type qui restreint l’argument de type que vous pouvez lui fournir. Une contrainte peut exiger que l’argument de type implémente une interface particulière, soit ou hérite d’une classe particulière, contienne un constructeur sans paramètre accessible, ou soit un type référence ou un type valeur. Vous pouvez combiner ces contraintes, mais vous ne pouvez spécifier qu’une seule classe.  
   
--   *Type construit*. Classe, structure, interface, procédure ou délégué déclaré à partir d’un type générique en fournissant des arguments de type pour ses paramètres de type.  
+- *Type construit*. Classe, structure, interface, procédure ou délégué déclaré à partir d’un type générique en fournissant des arguments de type pour ses paramètres de type.  
   
 ## <a name="see-also"></a>Voir aussi
 

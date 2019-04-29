@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 090183cad17aff6faf5e79639eadff086c1a26ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797460"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort, méthode
 Ferme le writer de symbole sans valider les symboles dans le magasin de symboles. Après cet appel, le writer de symbole devient non valide pour les nouvelles mises à jour. Pour valider les symboles et fermer le writer de symbole, utilisez le [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) méthode à la place.  

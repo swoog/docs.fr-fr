@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940502"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Procédure : Afficher l’état Connecté à l’aide de WIF
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   Web Forms ASP.NET®  
+- Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette rubrique décrit comment afficher l’état de la connexion dans une application ASP.NET WIF. WIF fournit le mécanisme permettant à votre application de prendre en charge les revendications, ainsi que pour gérer l’authentification et l’autorisation pour les ressources d’applications.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Vue d'ensemble  
+- Vue d'ensemble  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : installer l’extension Identity and Access Tool  
+- Étape 1 : installer l’extension Identity and Access Tool  
   
--   Étape 2 : créer une application ASP.NET par partie de confiance  
+- Étape 2 : créer une application ASP.NET par partie de confiance  
   
--   Étape 3 : activer le service STS de développement local pour authentifier les utilisateurs  
+- Étape 3 : activer le service STS de développement local pour authentifier les utilisateurs  
   
--   Étape 4 : modifier votre application ASP.NET pour afficher l’état de connexion  
+- Étape 4 : modifier votre application ASP.NET pour afficher l’état de connexion  
   
--   Étape 5 : tester l’intégration entre WIF et votre application ASP.NET  
+- Étape 5 : tester l’intégration entre WIF et votre application ASP.NET  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette rubrique montre comment créer une simple application prenant en charge les revendications à l’aide de WIF et indiquer facilement si un utilisateur est connecté ou non. Les étapes suivantes utilisent le service STS de développement local qui est inclus avec l’extension Visual Studio Identity and Access Tool. Le service STS de développement local est conçu pour un environnement de développement et de test afin de fournir une méthode simple d’intégration des revendications dans votre application. Il ne doit jamais être utilisé dans un environnement de production, car il n’effectue pas de véritable authentification et les informations d’identification ne sont pas requises. Toutefois, le code impératif dans les étapes suivantes est le même pour une application prête pour la production qui utilise l’authentification réelle.  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : installer l’extension Identity and Access Tool  
+- Étape 1 : installer l’extension Identity and Access Tool  
   
--   Étape 2 : créer une application ASP.NET par partie de confiance  
+- Étape 2 : créer une application ASP.NET par partie de confiance  
   
--   Étape 3 : activer le service STS de développement local pour authentifier les utilisateurs  
+- Étape 3 : activer le service STS de développement local pour authentifier les utilisateurs  
   
--   Étape 4 : modifier votre application ASP.NET pour afficher l’état de connexion  
+- Étape 4 : modifier votre application ASP.NET pour afficher l’état de connexion  
   
--   Étape 5 : tester l’intégration entre WIF et votre application ASP.NET  
+- Étape 5 : tester l’intégration entre WIF et votre application ASP.NET  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Étape 1 : installer l’extension Identity and Access Tool  
  Cette étape explique comment configurer l’extension Identity and Access Tool pour Visual Studio 2012. Cette extension automatise le processus de configuration de votre application afin de communiquer avec les points de terminaison STS.  

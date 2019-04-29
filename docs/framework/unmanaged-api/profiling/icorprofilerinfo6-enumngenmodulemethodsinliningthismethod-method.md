@@ -1,17 +1,17 @@
 ---
-title: Icorprofilerinfo6::enumngenmodulemethodsinliningthismethod, méthode
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, méthode
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948523"
 ---
-# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>Icorprofilerinfo6::enumngenmodulemethodsinliningthismethod, méthode
+# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, méthode
 
 Retourne un énumérateur pour toutes les méthodes qui sont définis dans un module NGen donné et un inline une méthode donnée.
 
@@ -73,7 +73,7 @@ Simple.Add(int a, int b)
 
 Toutefois, car `Fancy.AddTwice` a déjà inline `Simple.Add`, il continue à avoir le même comportement qu’avant. Pour contourner cette limitation, l’appelant doit rechercher toutes les méthodes dans tous les modules en ligne `Simple.Add` et utiliser `ICorProfilerInfo5::RequestRejit` sur chacune de ces méthodes. Lorsque les méthodes sont recompilés, ils ont le nouveau comportement `Simple.Add` au lieu de l’ancien comportement.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

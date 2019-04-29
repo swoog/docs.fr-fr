@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950304"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procédure : créer un jeton de contexte de sécurité pour une session sécurisée
 En utilisant un jeton de contexte de sécurité avec état (SCT) dans une session sécurisée, la session peut résister au service qui est recyclé. Par exemple, lorsqu'un SCT sans état est utilisé dans une session sécurisée et que les services IIS (Internet Information Services) sont réinitialisés, les données de session associées au service sont perdues. Ces données de session incluent un cache du jeton SCT. Ainsi, la prochaine fois qu'un client enverra au service un SCT sans état, une erreur sera retournée, parce que la clé associée au SCT ne peut pas être récupérée. Toutefois, si un SCT avec état est utilisé, la clé associée au SCT est contenue dans le SCT. Étant donné que la clé est contenue dans le SCT et donc contenue dans le message, la session sécurisée n'est pas affectée par le service qui est recyclé. Par défaut, Windows Communication Foundation (WCF) utilise des SCT sans état dans une session sécurisée. Cette rubrique détaille la manière d’utiliser des SCT avec état dans une session sécurisée.  
@@ -26,15 +26,15 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Pour utiliser des SCT avec état dans une session sécurisée  
   
--   Créez une liaison personnalisée qui spécifie que les messages SOAP sont protégés par une session sécurisée qui utilise un SCT avec état.  
+- Créez une liaison personnalisée qui spécifie que les messages SOAP sont protégés par une session sécurisée qui utilise un SCT avec état.  
   
-    1.  Définissez une liaison personnalisée, en ajoutant un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) au fichier de configuration pour le service.  
+    1. Définissez une liaison personnalisée, en ajoutant un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) au fichier de configuration pour le service.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2.  Ajouter un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    2. Ajouter un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Spécifiez un nom de liaison en affectant à l'attribut `name` un nom unique dans le fichier de configuration.  
   
@@ -42,7 +42,7 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  Spécifiez le mode d’authentification pour les messages envoyés vers et à partir de ce service en ajoutant un [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    3. Spécifiez le mode d’authentification pour les messages envoyés vers et à partir de ce service en ajoutant un [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) élément enfant à la [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Spécifiez qu'une session sécurisée est utilisée en affectant à l'attribut `authenticationMode` la valeur `SecureConversation`. Spécifiez que des SCT avec état sont utilisés en affectant à l'attribut `requireSecurityContextCancellation` la valeur `false`.  
   
@@ -51,7 +51,7 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  Spécifiez comment le client est authentifié pendant que la session sécurisée est établie en ajoutant un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) élément enfant à la [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+    4. Spécifiez comment le client est authentifié pendant que la session sécurisée est établie en ajoutant un [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) élément enfant à la [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Spécifiez comment le client est authentifié en définissant l'attribut `authenticationMode`.  
   
@@ -59,13 +59,13 @@ En utilisant un jeton de contexte de sécurité avec état (SCT) dans une sessio
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  Spécifier l’encodage de message en ajoutant un élément d’encodage, tel que [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+    5. Spécifier l’encodage de message en ajoutant un élément d’encodage, tel que [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  Spécifier le transport en ajoutant un élément de transport, tel que le [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6. Spécifier le transport en ajoutant un élément de transport, tel que le [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  

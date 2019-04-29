@@ -3,14 +3,14 @@ title: Arguments obligatoires et groupes surchargés
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937785"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Arguments obligatoires et groupes surchargés
-Les activités peuvent être configurées de sorte que certains arguments doivent être liés pour que l'activité soit valide pour l'exécution. L'attribut `RequiredArgument` sert à indiquer que certains arguments sur une activité sont requis et l'attribut `OverloadGroup` à grouper des catégories d'arguments requis. En utilisant les attributs, les auteurs d'activités peuvent fournir des configurations de validation d'activités simples ou complexes.  
+Les activités peuvent être configurées de sorte que certains arguments doivent être liés pour que l'activité soit valide pour l'exécution. L’attribut `RequiredArgument` sert à indiquer que certains arguments sur une activité sont requis et l’attribut `OverloadGroup` à grouper des catégories d’arguments requis. En utilisant les attributs, les auteurs d'activités peuvent fournir des configurations de validation d'activités simples ou complexes.  
   
 ## <a name="using-required-arguments"></a>Utilisation des arguments requis  
  Pour utiliser l'attribut `RequiredArgument` dans une activité, indiquez les arguments souhaités à l'aide de l'objet <xref:System.Activities.RequiredArgumentAttribute>. Cet exemple consiste à définir une activité `Add` qui a deux arguments requis.  
@@ -67,7 +67,7 @@ public sealed class Add : CodeActivity<int>
   
 ## <a name="using-overload-groups"></a>Utilisation des groupes surchargés
 
-Les groupes surchargés fournissent une méthode permettant d'indiquer quelles combinaisons d'arguments sont valides dans une activité. Les arguments sont groupés à l'aide de l'objet <xref:System.Activities.OverloadGroupAttribute>. Chaque groupe porte un nom spécifié par le <xref:System.Activities.OverloadGroupAttribute>. L’activité est valide lorsque qu’un seul jeu d’arguments dans un groupe surchargé sont liés. Dans l'exemple suivant, une classe `CreateLocation` est définie.  
+Les groupes surchargés fournissent une méthode permettant d’indiquer quelles combinaisons d’arguments sont valides dans une activité. Les arguments sont groupés à l'aide de l'objet <xref:System.Activities.OverloadGroupAttribute>. Chaque groupe porte un nom spécifié par le <xref:System.Activities.OverloadGroupAttribute>. L’activité est valide lorsque qu’un seul jeu d’arguments dans un groupe surchargé sont liés. Dans l'exemple suivant, une classe `CreateLocation` est définie.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Lors de la définition d'un groupe surchargé :  
   
--   Un groupe surchargé ne peut pas être un sous-ensemble ou un ensemble équivalent d'un autre groupe surchargé.  
+- Un groupe surchargé ne peut pas être un sous-ensemble ou un ensemble équivalent d'un autre groupe surchargé.  
   
     > [!NOTE]
-    >  Il existe une exception à cette règle. Si un groupe surchargé est un sous-ensemble d'un autre groupe surchargé, et le sous-ensemble contient uniquement des arguments où `RequiredArgument` a la valeur `false`, le groupe surchargé est valide.  
+    >  Il existe une exception à cette règle. Si un groupe surchargé est un sous-ensemble d’un autre groupe surchargé, et le sous-ensemble contient uniquement des arguments où `RequiredArgument` a la valeur `false`, le groupe surchargé est valide.  
   
--   Les groupes surchargés peuvent se chevaucher, mais il se produit une erreur si l'intersection des groupes contient tous les arguments obligatoires d'un groupe surchargé ou des deux. Dans l'exemple précédent les groupes surchargés `G2` et `G3` se chevauchaient, mais comme l'intersection ne contenait pas tous les arguments d'un ou des deux groupes, elle était valide.  
+- Les groupes surchargés peuvent se chevaucher, mais il se produit une erreur si l’intersection des groupes contient tous les arguments obligatoires d’un groupe surchargé ou des deux. Dans l’exemple précédent les groupes surchargés `G2` et `G3` se chevauchaient, mais comme l’intersection ne contenait pas tous les arguments d’un ou des deux groupes, elle était valide.  
   
  Lors de la liaison des arguments dans un groupe surchargé :  
   
--   Un groupe surchargé est considéré comme lié si tous les arguments `RequiredArgument` de celui-ci sont liés.  
+- Un groupe surchargé est considéré comme lié si tous les arguments `RequiredArgument` de celui-ci sont liés.  
   
--   Si un groupe n'a aucun argument `RequiredArgument` et au moins un argument lié, il est considéré comme lié.  
+- Si un groupe n’a aucun argument `RequiredArgument` et au moins un argument lié, il est considéré comme lié.  
   
--   Si aucun des groupes surchargés n'est lié à moins qu'un groupe surchargé ne contienne aucun argument `RequiredArgument`, cela correspond à une erreur.  
+- Si aucun des groupes surchargés n'est lié à moins qu'un groupe surchargé ne contienne aucun argument `RequiredArgument`, cela correspond à une erreur.  
   
--   Il se produit une erreur si vous avez plusieurs groupes surchargés liés, autrement dit si tous les arguments obligatoires d'un groupe surchargé sont liés et qu'un argument d'un autre groupe surchargé est également lié.
+- Il se produit une erreur si vous avez plusieurs groupes surchargés liés, autrement dit si tous les arguments obligatoires d'un groupe surchargé sont liés et qu'un argument d'un autre groupe surchargé est également lié.

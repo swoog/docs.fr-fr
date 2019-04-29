@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784097"
 ---
 # <a name="option-infer-statement"></a>Instruction Option Infer
 Permet l'utilisation de l'inférence de type de variable locale dans les variables déclaratives.  
@@ -31,7 +31,7 @@ Option Infer { On | Off }
   
 |Terme|Définition|  
 |---|---|  
-|`On`|Optionnel. Active l'inférence de type de variable locale.|  
+|`On`|Facultatif. Active l'inférence de type de variable locale.|  
 |`Off`|Optionnel. Désactive l'inférence de type de variable locale.|  
   
 ## <a name="remarks"></a>Notes  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Pour définir Option Infer sur la ligne de commande  
   
--   Inclure le [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) option du compilateur dans le **vbc** commande.  
+- Inclure le [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) option du compilateur dans le **vbc** commande.  
   
 ## <a name="default-data-types-and-values"></a>Types de données et valeurs par défaut  
  Le tableau suivant décrit les résultats des diverses combinaisons de spécification du type de données et d'un initialiseur dans une instruction `Dim`.  

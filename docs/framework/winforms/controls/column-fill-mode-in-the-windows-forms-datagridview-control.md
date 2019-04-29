@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956279"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Mode Remplissage des colonnes dans le contrôle DataGridView Windows Forms
 En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataGridView> redimensionne automatiquement ses colonnes pour qu'elles remplissent la largeur de la zone d'affichage disponible. Le contrôle n'affiche pas de barre de défilement horizontale, sauf quand cela est nécessaire pour faire en sorte que la largeur de chaque colonne soit supérieure ou égale à la valeur de sa propriété <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -45,22 +45,22 @@ En mode de remplissage de colonne, le contrôle <xref:System.Windows.Forms.DataG
 ### <a name="comments"></a>Commentaires  
  Pour utiliser cette application de démonstration  
   
--   Modifiez la taille du formulaire. Observez comment la largeur des colonnes change tout en conservant les proportions indiquées par les valeurs de propriétés <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Modifiez la taille du formulaire. Observez comment la largeur des colonnes change tout en conservant les proportions indiquées par les valeurs de propriétés <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Modifiez les tailles des colonnes en faisant glisser les séparateurs de colonnes avec la souris. Observez comment les valeurs <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> changent.  
+- Modifiez les tailles des colonnes en faisant glisser les séparateurs de colonnes avec la souris. Observez comment les valeurs <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> changent.  
   
--   Modifiez la valeur <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> d'une colonne, puis faites glisser pour redimensionner le formulaire. Observez comment, quand vous affectez au formulaire une taille suffisamment petite, les valeurs de <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> ne vont pas en dessous des valeurs de <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
+- Modifiez la valeur <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> d'une colonne, puis faites glisser pour redimensionner le formulaire. Observez comment, quand vous affectez au formulaire une taille suffisamment petite, les valeurs de <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> ne vont pas en dessous des valeurs de <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
--   Affectez des valeurs <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> élevées pour toutes les colonnes pour que les valeurs combinées dépassent la largeur du contrôle. Observez l'apparition de la barre de défilement horizontale.  
+- Affectez des valeurs <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> élevées pour toutes les colonnes pour que les valeurs combinées dépassent la largeur du contrôle. Observez l'apparition de la barre de défilement horizontale.  
   
--   Modifiez les valeurs de <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> de certaines colonnes. Observez l'effet quand vous redimensionnez des colonnes ou le formulaire.  
+- Modifiez les valeurs de <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> de certaines colonnes. Observez l'effet quand vous redimensionnez des colonnes ou le formulaire.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
--   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
+- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 

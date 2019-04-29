@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941494"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Procédure : arrimer des contrôles dans des Windows Forms
 Vous pouvez ancrer des contrôles sur les bords de votre formulaire ou demander qu’ils remplissent le conteneur du contrôle (un formulaire ou un contrôle conteneur). Par exemple, l’Explorateur Windows ancre son <xref:System.Windows.Forms.TreeView> contrôle vers le côté gauche de la fenêtre et son <xref:System.Windows.Forms.ListView> contrôle sur le côté droit de la fenêtre. Utilisez le <xref:System.Windows.Forms.Control.Dock%2A> propriété pour tous les contrôles Windows Forms visibles définir le mode d’ancrage.  

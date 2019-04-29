@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776218"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procédure : Déterminer si un travail d’impression peut être imprimé à cette heure de la journée
 Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils ont des propriétés au moment de début et de fin qui peuvent être définies pour les rendre indisponibles à certains moments de la journée. Cette fonctionnalité peut être utilisée, par exemple, pour réserver une imprimante à l’usage exclusif d’un département après 17 h 00. Ce département aurait une autre file d’attente l’imprimante que les autres services à utiliser. La file d’attente pour les autres départements serait défini comme être indisponible après 17 h 00, tandis que la file d’attente pour le département privilégié peut être définie pour être disponible à tout moment.  
@@ -41,9 +41,9 @@ Files d’attente ne concernent pas toujours disponibles 24 heures par jour. Ils
   
  Le **ReportQueueAndJobAvailability** méthode commence par vérifier si la file d’attente ou le travail d’impression n’est pas disponible pour l’instant. Si un d’eux n’est pas disponible, il vérifie ensuite si la file d’attente est indisponible. S’il n’est pas disponible, la méthode signale ce fait et l’heure lorsque la file d’attente redeviennent disponible. Elle vérifie ensuite le travail et si elle n’est pas disponible, il signale au prochain intervalle pendant qu’elle peut imprimer. Enfin, la méthode signale la première heure lorsque le travail peut être imprimé. Il s’agit la plus récente de deux fois de suite.  
   
--   L’heure auxquelles la file d’attente est ensuite disponible.  
+- L’heure auxquelles la file d’attente est ensuite disponible.  
   
--   L’heure auxquelles le travail d’impression est ensuite disponible.  
+- L’heure auxquelles le travail d’impression est ensuite disponible.  
   
  Lors du signalement des heures de la journée, la <xref:System.DateTime.ToShortTimeString%2A> méthode est également appelée car cette méthode supprime les années, les mois et jours de la sortie. Vous ne pouvez pas limiter la disponibilité d’une file d’attente à l’impression ou d’un travail d’impression à des années, mois ou jours.  
   

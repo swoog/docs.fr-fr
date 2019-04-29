@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937891"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procédure : créer un pinceau dégradé linéaire
 GDI + fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire Modifie uniformément. Toutefois, vous pouvez personnaliser un dégradé linéaire de sorte que la couleur change de façon non uniforme.  
@@ -35,7 +35,7 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Pour utiliser des dégradés linéaires horizontales  
   
--   Transmettre l’opaque rouge et le bleu opaque en tant que l’argument troisième et quatrième, respectivement.  
+- Transmettre l’opaque rouge et le bleu opaque en tant que l’argument troisième et quatrième, respectivement.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
 
 ### <a name="to-customize-linear-gradients"></a>Pour personnaliser des dégradés linéaires  
   
--   Transmettre la rouge à noir et opaque opaque en tant que l’argument troisième et quatrième, respectivement.  
+- Transmettre la rouge à noir et opaque opaque en tant que l’argument troisième et quatrième, respectivement.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Pour créer des dégradés linéaires en diagonale  
   
--   Transmettre l’opaque bleu et le vert opaque en tant que l’argument troisième et quatrième, respectivement.  
+- Transmettre l’opaque bleu et le vert opaque en tant que l’argument troisième et quatrième, respectivement.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

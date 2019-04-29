@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949238"
 ---
 # <a name="net-performance-tips"></a>Conseils relatifs aux performances .NET
 Le terme *performances* désigne généralement la vitesse d’exécution d’un programme. Vous pouvez parfois augmenter la vitesse d’exécution en suivant certaines règles de base dans votre code source. Dans certains programmes, il est important d’examiner attentivement le code et d’utiliser des profileurs pour garantir que le programme s’exécute aussi rapidement que possible. Dans d’autres programmes, vous n’avez pas à effectuer une telle optimisation, car le code, tel qu’il est écrit, est suffisamment rapide. Cet article répertorie les zones dont les performances sont fréquemment impactées, et fournit des conseils d’amélioration, ainsi que des liens vers d’autres rubriques relatives aux performances. Pour plus d’informations sur la planification et la mesure des performances, consultez [Performances](../../../docs/framework/performance/index.md)  
@@ -30,17 +30,17 @@ Le terme *performances* désigne généralement la vitesse d’exécution d’un
   
 ## <a name="other-resources"></a>Autres ressources  
   
--   [Écrire plus rapidement du Code managé : Know What Things Cost](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [Écrire plus rapidement du Code managé : Know What Things Cost](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Écriture de hautes performances des Applications managées : Notions fondamentales](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [Écriture de hautes performances des Applications managées : Notions fondamentales](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296)  
+- [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297)  
+- [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani’s Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Blog de Rico Mariani sur les performances)  
+- [Rico Mariani’s Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Blog de Rico Mariani sur les performances)  
 
--   [Blog de Vance](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog de Vance](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Voir aussi
 

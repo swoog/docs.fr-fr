@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
 ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783888"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case, instruction (Visual Basic)
 Exécute l’un des groupes d’instructions, selon la valeur d’une expression.  
@@ -48,8 +48,8 @@ End Select
 |---|---|  
 |`testexpression`|Obligatoire. expression. Doit correspondre à un des types de données élémentaires (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, et `UShort`).|  
 |`expressionlist`|Requis dans un `Case` instruction. Liste des clauses d’expression représentant les valeurs correspondantes pour `testexpression`. Plusieurs clauses d’expression sont séparées par des virgules. Chaque clause peut prendre une des formes suivantes :<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Utilisez le `To` mot clé pour spécifier les limites d’une plage de correspondance des valeurs `testexpression`. La valeur de `expression1` doit être inférieure ou égale à la valeur de `expression2`.<br /><br /> Utilisez le `Is` mot clé avec un opérateur de comparaison (`=`, `<>`, `<`, `<=`, `>`, ou `>=`) pour spécifier une restriction sur les valeurs correspondantes pour `testexpression`. Si le `Is` mot clé n’est pas fourni, il est automatiquement insérée avant *comparisonoperator*.<br /><br /> Le formulaire en spécifiant uniquement `expression` est traité comme un cas spécial de la `Is` forment where *comparisonoperator* est le signe égal (`=`). Ce formulaire est évalué comme `testexpression`  =  `expression`.<br /><br /> Les expressions dans `expressionlist` peut être n’importe quel type de données, à condition qu’ils soient implicitement convertibles au type de `testexpression` approprié `comparisonoperator` est valide pour les deux types avec lesquels il est utilisé.|  
-|`statements`|Facultatif. Une ou plusieurs instructions qui suivent `Case` s’exécutent si `testexpression` correspond à une clause dans `expressionlist`.|  
-|`elsestatements`|Facultatif. Une ou plusieurs instructions qui suivent `Case Else` s’exécutent si `testexpression` ne correspond pas à une clause dans la `expressionlist` de n’importe quel de la `Case` instructions.|  
+|`statements`|Optionnel. Une ou plusieurs instructions qui suivent `Case` s’exécutent si `testexpression` correspond à une clause dans `expressionlist`.|  
+|`elsestatements`|Optionnel. Une ou plusieurs instructions qui suivent `Case Else` s’exécutent si `testexpression` ne correspond pas à une clause dans la `expressionlist` de n’importe quel de la `Case` instructions.|  
 |`End Select`|Termine la définition de la `Select`... `Case` construction.|  
   
 ## <a name="remarks"></a>Notes  

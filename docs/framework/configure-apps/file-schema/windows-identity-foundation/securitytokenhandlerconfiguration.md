@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
 ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793846"
 ---
 # <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
 Fournit la configuration de la collection de gestionnaires de jetons.  
@@ -46,13 +46,13 @@ Fournit la configuration de la collection de gestionnaires de jetons.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Spécifie le jeu d’URI qui sont des identificateurs acceptables de cette partie de confiance. Facultatif.|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit les caches utilisés pour la détection de relecture de jetons et de jetons de session. Peut être spécifié au niveau du service ou sur une collection de gestionnaires de jetons de sécurité. Facultatif.|  
+|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Spécifie le jeu d’URI qui sont des identificateurs acceptables de cette partie de confiance. Optionnel.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Inscrit les caches utilisés pour la détection de relecture de jetons et de jetons de session. Peut être spécifié au niveau du service ou sur une collection de gestionnaires de jetons de sécurité. Optionnel.|  
 |[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Contrôle les paramètres qui utilisent des gestionnaires de jetons pour valider les certificats. Peut être spécifié au niveau du service ou sur une collection de gestionnaires de jetons de sécurité. Ces paramètres sont remplacés si un gestionnaire spécifique est configuré avec son propre validateur. Facultatif.|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configure le Registre de nom de l’émetteur qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons. Facultatif.|  
-|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Inscrit le résolveur de jeton de l’émetteur qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons. Le programme de résolution de jeton de l’émetteur est utilisé pour résoudre le jeton de signature sur les jetons et les messages entrant. Facultatif.|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configure le Registre de nom de l’émetteur qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons. Optionnel.|  
+|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Inscrit le résolveur de jeton de l’émetteur qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons. Le programme de résolution de jeton de l’émetteur est utilisé pour résoudre le jeton de signature sur les jetons et les messages entrant. Optionnel.|  
 |[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Inscrit le résolveur de jeton de service qui est utilisé par les gestionnaires dans la collection de gestionnaires de jetons. Le programme de résolution de jeton de service est utilisé pour résoudre le jeton de chiffrement sur les jetons et les messages entrant. Facultatif.|  
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Active la détection de relecture de jetons et spécifie le délai d’expiration pour les jetons. Peut être spécifié au niveau du service ou sur une collection de gestionnaires de jetons de sécurité. Facultatif.|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Active la détection de relecture de jetons et spécifie le délai d’expiration pour les jetons. Peut être spécifié au niveau du service ou sur une collection de gestionnaires de jetons de sécurité. Optionnel.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

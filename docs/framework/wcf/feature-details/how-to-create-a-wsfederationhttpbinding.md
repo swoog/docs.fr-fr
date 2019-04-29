@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer une liaison WSFederationHttpBinding'
+title: 'Procédure : créer un WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778350"
 ---
-# <a name="how-to-create-a-wsfederationhttpbinding"></a>Comment : créer une liaison WSFederationHttpBinding
+# <a name="how-to-create-a-wsfederationhttpbinding"></a>Procédure : créer un WSFederationHttpBinding
 
 Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans la configuration) fournit un mécanisme pour exposer un service fédéré. autrement dit, un service qui oblige les clients à s'authentifier à l'aide d'un jeton de sécurité émis par un service de jeton de sécurité. Cette rubrique montre comment installer <xref:System.ServiceModel.WSFederationHttpBinding> dans le code et la configuration. Une fois la liaison créée, vous pouvez installer un point de terminaison pour utiliser cette liaison.
 
@@ -30,7 +30,7 @@ Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFede
 
 2. Sur les clients fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> l'URL du service de jeton de sécurité. Affectez au <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> la liaison à utiliser pour communiquer avec le service de jeton de sécurité.
 
-3. Facultatif. Affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> l'URI (Uniform Resource Identifier) d'un type de jeton. Sur les services fédérés, spécifiez le type de jeton que le service attend. Sur les clients fédérés, spécifiez le type de jeton que le client demande au service de jeton de sécurité.
+3. Optionnel. Affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> l'URI (Uniform Resource Identifier) d'un type de jeton. Sur les services fédérés, spécifiez le type de jeton que le service attend. Sur les clients fédérés, spécifiez le type de jeton que le client demande au service de jeton de sécurité.
 
      Si aucun type de jeton n'est spécifié, les clients génèrent des jetons RST (Request Security Token) WS-Trust sans l'URI d'un type de jeton, et les services attendent l'authentification du client à l'aide d'un jeton SAML (Security Assertions Markup Language) 1.1 par défaut.
 
@@ -38,7 +38,7 @@ Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFede
 
 4. Facultatif. Sur les services fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> l'URL de métadonnées d'un service de jeton de sécurité. Le point de terminaison de métadonnées permet aux clients du service de sélectionner une paire liaison/point de terminaison appropriée, si le service est configuré pour publier des métadonnées. Pour plus d’informations sur la publication des métadonnées, consultez [publication des métadonnées](publishing-metadata.md).
 
- Vous pouvez également définir d’autres propriétés, y compris le type de clé utilisé comme clé de vérification dans le jeton émis, la suite algorithmique à utiliser entre le client et le service, l’option de négocier ou de spécifier explicitement les informations d’identification du service, toutes les revendications spécifiques que le service s’attend à trouver dans le jeton émis et tous les éléments XML supplémentaires qui doivent être ajoutés à la demande que le client envoie au service de jeton de sécurité.
+ Vous pouvez également définir d'autres propriétés, y compris le type de clé utilisé comme clé de vérification dans le jeton émis, la suite algorithmique à utiliser entre le client et le service, l'option de négocier ou de spécifier explicitement les informations d'identification du service, toutes les revendications spécifiques que le service s'attend à trouver dans le jeton émis et tous les éléments XML supplémentaires qui doivent être ajoutés à la demande que le client envoie au service de jeton de sécurité.
 
 > [!NOTE]
 >  La propriété `NegotiateServiceCredential` n'est pertinente que si `SecurityMode` a la valeur `Message`. Si `SecurityMode` a la valeur `TransportWithMessageCredential`, alors la propriété `NegotiateServiceCredential` est ignorée.
@@ -81,21 +81,21 @@ Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFede
 
 7. Facultatif. Si une clé de vérification asymétrique est requise, affectez à l'attribut `issuedKeyType` de l'élément `<message>` la valeur `AsymmetricKey`. La valeur par défaut est `SymmetricKey`.
 
-8. Facultatif. Définissez l'attribut `issuedTokenType` sur l'élément `<message>`.
+8. Optionnel. Définissez l'attribut `issuedTokenType` sur l'élément `<message>`.
 
 9. Requis sur le client si aucun émetteur local n'est spécifié ; facultatif sur le service. Créez un élément `<issuer>` en tant qu'enfant de l'élément `<message>`.
 
 10. Affectez l'attribut `address` à l'élément `<issuer>` et spécifiez l'adresse à laquelle le service de jeton de sécurité accepte des demandes de jeton.
 
-11. Facultatif. Ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
+11. Optionnel. Ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
 
 12. Pour plus d’informations, consultez [identité de Service et d’authentification](service-identity-and-authentication.md).
 
-13. Requis sur le client si aucun émetteur local n'est spécifié ; non utilisé sur le service. Créer un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans la section des liaisons qui peut être utilisée pour communiquer avec le service de jeton de sécurité. Pour plus d’informations sur la création d’une liaison, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Requis sur le client si aucun émetteur local n'est spécifié ; non utilisé sur le service. Créer un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans la section des liaisons qui peut être utilisée pour communiquer avec le service de jeton de sécurité. Pour plus d’informations sur la création d’une liaison, consultez [Comment : Spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
-14. Spécifiez la liaison créée à l'étape précédente en définissant les attributs `binding` et `bindingConfiguration` de l'élément `<issuer>`.
+14. Spécifiez la liaison créée à l’étape précédente en définissant les attributs `binding` et `bindingConfiguration` de l’élément `<issuer>`.
 
-15. Non utilisé sur le client ; facultatif sur le service. Créez un élément `<issuerMetadata>` en tant qu'enfant de l'élément <`message`>. Puis, dans un attribut `address` sur l'élément `<issuerMetadata>`, spécifiez l'adresse à laquelle le service de jeton de sécurité doit publier ses métadonnées. Éventuellement, ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
+15. Non utilisé sur le client ; facultatif sur le service. Créer un `<issuerMetadata>` élément en tant qu’enfant de la <`message`> élément. Puis, dans un attribut `address` sur l'élément `<issuerMetadata>`, spécifiez l'adresse à laquelle le service de jeton de sécurité doit publier ses métadonnées. Éventuellement, ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
 
 16. Facultatif sur le client et le service. Ajoutez un élément `<claimTypeRequirements>` en tant qu'enfant de l'élément `<message>`. Spécifier les revendications obligatoires et facultatifs que le service s’appuie sur en ajoutant [ \<Ajouter >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) éléments à la `<claimTypeRequirements>` type de l’élément et en spécifiant la revendication avec le `claimType` attribut. Spécifiez si une revendication donnée est requise ou facultative en définissant l'attribut `isOptional`.
 
@@ -110,4 +110,4 @@ L'exemple de code suivant montre comment installer `WSFederationHttpBinding` de 
 
 - [Fédération](federation.md)
 - [Exemple de fédération](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Guide pratique pour désactiver des sessions sécurisées sur une classe WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Guide pratique pour Désactiver des Sessions sécurisées sur une liaison WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

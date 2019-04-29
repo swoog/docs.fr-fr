@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773020"
 ---
 # <a name="how-to-enable-streaming"></a>Procédure : activer le streaming
 Windows Communication Foundation (WCF) peut envoyer des messages à l’aide de transferts mis en mémoire tampon ou transmis en continu. En mode de transfert par mise en mémoire tampon, un message doit être complètement remis avant qu'un récepteur puisse le lire. En mode de transfert par diffusion en continu, le récepteur peut commencer à traiter le message avant qu'il ne soit complètement remis. Le mode de diffusion en continu est utile lorsque les informations passées sont volumineuses et peuvent être traitées en série. Le mode de diffusion en continu est également utile lorsque le message est trop volumineux pour être mis entièrement en mémoire tampon.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) peut envoyer des messages à l’aide de 
   
 1. Pour transmettre des données en continu le `OperationContract` du service doit satisfaire deux spécifications :  
   
-    1.  Le paramètre qui gère les données diffusées en continu doit être le seul paramètre dans la méthode. Par exemple, si le message d'entrée est celui à diffuser en continu, l'opération ne doit avoir qu'un seul paramètre d'entrée. De la même façon, si le message de sortie doit être diffusé en continu, l'opération ne doit avoir qu'un seul paramètre de sortie ou qu'une seule valeur de retour.  
+    1. Le paramètre qui gère les données diffusées en continu doit être le seul paramètre dans la méthode. Par exemple, si le message d'entrée est celui à diffuser en continu, l'opération ne doit avoir qu'un seul paramètre d'entrée. De la même façon, si le message de sortie doit être diffusé en continu, l'opération ne doit avoir qu'un seul paramètre de sortie ou qu'une seule valeur de retour.  
   
-    2.  Au moins l'un des types de paramètre et de valeur de retour doit être <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>ou <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2. Au moins l'un des types de paramètre et de valeur de retour doit être <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>ou <xref:System.Xml.Serialization.IXmlSerializable>.  
   
      Ce qui suit est un exemple de contrat de diffusion des données en continu.  
   
@@ -34,28 +34,28 @@ Windows Communication Foundation (WCF) peut envoyer des messages à l’aide de 
   
 2. La diffusion en continu doit être activée sur la liaison. Affectez à une propriété `TransferMode` l'une des valeurs suivantes :  
   
-    1.  `Buffered`,  
+    1. `Buffered`,  
   
-    2.  `Streamed`, qui active la communication par diffusion en continu dans les deux directions.  
+    2. `Streamed`, qui active la communication par diffusion en continu dans les deux directions.  
   
-    3.  `StreamedRequest`, qui active la diffusion en continu de la demande uniquement.  
+    3. `StreamedRequest`, qui active la diffusion en continu de la demande uniquement.  
   
-    4.  `StreamedResponse`, qui active la diffusion en continu de la réponse uniquement.  
+    4. `StreamedResponse`, qui active la diffusion en continu de la réponse uniquement.  
   
      La `BasicHttpBinding` expose la propriété `TransferMode` sur la liaison, tout comme `NetTcpBinding` et `NetNamedPipeBinding`. La propriété `TransferMode` peut également être définie sur l’élément de liaison de transport et utilisée dans une liaison personnalisée.  
   
      Les exemples suivants indiquent comment définir le `TransferMode` par code et en modifiant le fichier de configuration. Les exemples attribuent également à la propriété `maxReceivedMessageSize` la valeur 64 Mo, qui limite la taille maximale autorisée des messages en réception. La valeur par défaut de `maxReceivedMessageSize` est 64 Ko, ce qui est habituellement trop bas pour les scénarios de diffusion en continu. Définissez ce paramètre de quota correctement selon la taille maximale des messages que votre application est susceptible de recevoir. Notez également que la `maxBufferSize` contrôle la taille maximale mise en mémoire tampon ; il convient de définir convenablement cette valeur.  
   
-    1.  L’extrait de code de configuration suivant tiré de l’exemple présente l’affectation du mode de diffusion en continu à la propriété `TransferMode` sur la `basicHttpBinding` et sur une liaison HTTP personnalisée.  
+    1. L’extrait de code de configuration suivant tiré de l’exemple présente l’affectation du mode de diffusion en continu à la propriété `TransferMode` sur la `basicHttpBinding` et sur une liaison HTTP personnalisée.  
   
          [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
-    2.  L'extrait de code suivant affiche l'affectation à la propriété `TransferMode` la diffusion en continu sur la `basicHttpBinding` et sur une liaison HTTP personnalisée.  
+    2. L'extrait de code suivant affiche l'affectation à la propriété `TransferMode` la diffusion en continu sur la `basicHttpBinding` et sur une liaison HTTP personnalisée.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3.  L’extrait de code suivant affiche l’affectation à la propriété `TransferMode` de la diffusion en continu une liaison TCP personnalisée.  
+    3. L’extrait de code suivant affiche l’affectation à la propriété `TransferMode` de la diffusion en continu une liaison TCP personnalisée.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  

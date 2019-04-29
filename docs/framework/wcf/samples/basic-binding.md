@@ -3,10 +3,11 @@ title: Liaisons de base
 ms.date: 03/30/2017
 ms.assetid: 2a0e8ac4-23e7-45ef-98dc-40691aac530a
 ms.openlocfilehash: 97529444b23c004604483d2cc4c61eea5ef07f85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954998"
 ---
 # <a name="basic-binding"></a>Liaisons de base
 Cette section contient des exemples de base qui illustrent l’utilisation de l’attribut de liaison d’un élément de point de terminaison.  

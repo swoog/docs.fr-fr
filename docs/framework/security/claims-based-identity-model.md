@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792822"
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
 Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, un autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
   
  Dans ce modèle, une authentification unique est beaucoup plus facile à effectuer, et votre application n'est plus responsable des opérations suivantes :  
   
--   Authentification des utilisateurs.  
+- Authentification des utilisateurs.  
   
--   Stockage des comptes d'utilisateurs et des mots de passe.  
+- Stockage des comptes d'utilisateurs et des mots de passe.  
   
--   Appel aux annuaires d'entreprise pour obtenir des détails sur l'identité d'un utilisateur.  
+- Appel aux annuaires d'entreprise pour obtenir des détails sur l'identité d'un utilisateur.  
   
--   Intégration avec des systèmes d'identité à partir d'autres plateformes ou sociétés.  
+- Intégration avec des systèmes d'identité à partir d'autres plateformes ou sociétés.  
   
  Dans ce modèle, votre application prend des décisions associées à l'identité basées sur les revendications fournies par le système qui a authentifié l'utilisateur. Il peut très bien s'agir d'une simple personnalisation de l'application avec le prénom de l'utilisateur, ou d'autorisation de l'utilisateur à accéder aux fonctionnalités et aux ressources de valeur dans votre application.  
   
  Cette rubrique fournit les informations suivantes :  
   
--   [Présentation de l’identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Présentation de l’identité basée sur les revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Scénario de base pour un modèle d’identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Scénario de base pour un modèle d’identité basé sur des revendications](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Présentation de l'identité basée sur les revendications  

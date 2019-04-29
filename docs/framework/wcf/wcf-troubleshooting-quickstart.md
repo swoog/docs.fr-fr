@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780820"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Démarrage rapide de la résolution des problèmes WCF
 Cette rubrique décrit quelques problèmes connus rencontrés par les clients lorsqu'ils développement des clients et services WCF. Si le problème que vous rencontrez n'est pas répertorié dans la liste, nous vous recommandons de configurer le traçage de votre service. Vous allez ainsi générer un fichier de suivi que vous pourrez consulter à l'aide de la visionneuse dédiée pour obtenir des informations détaillées sur les exceptions pouvant se produire au sein du service. Pour plus d’informations sur la configuration du traçage, consultez : [Configuration du traçage](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Pour plus d’informations sur la visionneuse de fichier de trace, consultez : [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Mon service et mon client fonctionnent convenablement, mais je ne parviens pas à les faire fonctionner lorsque le client est sur un autre ordinateur. Que se passe-t-il ?  
  En fonction de l'exception, plusieurs problèmes peuvent exister :  
   
--   Vous devrez peut-être remplacer les adresses de point de terminaison du client par le nom d'hôte, au lieu de « localhost ».  
+- Vous devrez peut-être remplacer les adresses de point de terminaison du client par le nom d'hôte, au lieu de « localhost ».  
   
--   Vous devrez peut-être ouvrir le port vers l'application. Pour plus d’informations, consultez [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) dans les exemples du Kit de développement logiciel.  
+- Vous devrez peut-être ouvrir le port vers l'application. Pour plus d’informations, consultez [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) dans les exemples du Kit de développement logiciel.  
   
--   Pour d’autres problèmes possibles, consultez la rubrique des exemples [en cours d’exécution les exemples Windows Communication Foundation](./samples/running-the-samples.md).  
+- Pour d’autres problèmes possibles, consultez la rubrique des exemples [en cours d’exécution les exemples Windows Communication Foundation](./samples/running-the-samples.md).  
   
--   Si votre client utilise des informations d'identification Windows et que l'exception est une <xref:System.ServiceModel.Security.SecurityNegotiationException>, configurez Kerberos comme suit.  
+- Si votre client utilise des informations d'identification Windows et que l'exception est une <xref:System.ServiceModel.Security.SecurityNegotiationException>, configurez Kerberos comme suit.  
   
-    1.  Ajoutez les informations d'identification à l'élément de point de terminaison dans le fichier App.config du client :  
+    1. Ajoutez les informations d'identification à l'élément de point de terminaison dans le fichier App.config du client :  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Exécutez le service auto-hébergé sous le compte System ou NetworkService. Vous pouvez exécuter cette commande pour créer une fenêtre de commande sous le compte System :  
+    2. Exécutez le service auto-hébergé sous le compte System ou NetworkService. Vous pouvez exécuter cette commande pour créer une fenêtre de commande sous le compte System :  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Hébergez le service sous IIS (Internet Information Services) qui, par défaut, utilise le compte du nom de principal du service (SPN).  
+    3. Hébergez le service sous IIS (Internet Information Services) qui, par défaut, utilise le compte du nom de principal du service (SPN).  
   
-    4.  Enregistrez un nouveau SPN avec le domaine à l'aide de SetSPN. Notez que vous devez être administrateur de domaine pour effectuer cette opération.  
+    4. Enregistrez un nouveau SPN avec le domaine à l'aide de SetSPN. Notez que vous devez être administrateur de domaine pour effectuer cette opération.  
   
  Pour plus d’informations sur le protocole Kerberos, consultez [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) et :  
   
--   [Débogage d’erreurs d’authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Débogage d’erreurs d’authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Inscription de noms de principaux du service Kerberos à l’aide de Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Inscription de noms de principaux du service Kerberos à l’aide de Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos Explained (Présentation de Kerberos)](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos Explained (Présentation de Kerberos)](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Lorsque je lève une FaultException\<Exception > où le type est une exception, je reçois toujours un type FaultException général sur le client et non le type générique. Que se passe-t-il ?  
  Il est fortement recommandé de créer votre propre type de données d'erreur personnalisé et de le déclarer comme le type de détail dans votre contrat d'erreur. La raison est que l'utilisation des types d'exceptions fournis par le système :  
   
--   crée une dépendance des types qui supprime l'une des plus grandes forces des applications orientées service ;  
+- crée une dépendance des types qui supprime l'une des plus grandes forces des applications orientées service ;  
   
--   ne peut pas dépendre d'exceptions sérialisant de manière standard (certaines, comme <xref:System.Security.SecurityException>risquent de pas être du tout sérialisables) ;  
+- ne peut pas dépendre d'exceptions sérialisant de manière standard (certaines, comme <xref:System.Security.SecurityException>risquent de pas être du tout sérialisables) ;  
   
--   expose des informations d'implémentation interne aux clients. Pour plus d’informations, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- expose des informations d'implémentation interne aux clients. Pour plus d’informations, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Si vous déboguez une application, toutefois, vous pouvez sérialiser des informations sur les exceptions et les renvoyer au client à l'aide de la classe <xref:System.ServiceModel.Description.ServiceDebugBehavior> .  
   

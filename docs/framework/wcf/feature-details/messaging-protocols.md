@@ -3,11 +3,11 @@ title: Protocoles de messagerie
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948120"
 ---
 # <a name="messaging-protocols"></a>Protocoles de messagerie
 
@@ -58,7 +58,7 @@ Les espaces de noms XML suivants et préfixes associés sont utilisés tout au l
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
 | xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| point de distribution |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 et SOAP 1.2
 
@@ -283,7 +283,7 @@ L'assertion de stratégie complète peut ressembler à ceci :
 </wsam:Addressing>
 ```
 
-Pour utiliser l’assertion suivante, qui possède un objet de stratégie de point de terminaison [WS-PA] sur les points de terminaison qui utilisent des liaisons HTTP WSDL 1.1 SOAP 1.x, il est nécessaire d’utiliser deux connexions HTTP réciproques séparées pour transmettre des messages du demandeur au répondeur et du répondeur au demandeur, respectivement.
+Pour utiliser l'assertion suivante, qui possède un objet de stratégie de point de terminaison [WS-PA] sur les points de terminaison qui utilisent des liaisons HTTP WSDL 1.1 SOAP 1.x, il est nécessaire d'utiliser deux connexions HTTP réciproques séparées pour transmettre des messages du demandeur au répondeur et du répondeur au demandeur, respectivement.
 
 ```xml
 <cdp:CompositeDuplex/>
@@ -297,7 +297,7 @@ L’instruction précédente mène aux exigences suivantes pour l’en-tête `ws
 
 - R3516 : Messages de demande envoyés à un point de terminaison doivent avoir un `ReplyTo` en-tête avec un `[address]` propriété égale à `http://www.w3.org/2005/08/addressing/anonymous` si le point de terminaison utilise une liaison de WSDL 1.1 SOAP 1.x HTTP et utilise une alternative de stratégie avec `wsap:UsingAddressing` assertion et aucune `cdp:CompositeDuplex` assertion attachée.
 
-La spécification WSDL de WS-Addressing tente de décrire des liaisons de protocole semblables en présentant un élément `<wsaw:Anonymous/>` avec trois valeurs textuelles (obligatoire, facultatif et a interdit) pour indiquer des besoins sur l’en-tête `wsa:ReplyTo` (section 3.2). Malheureusement, une telle définition d'élément n'est pas particulièrement utilisable comme une assertion dans le contexte de WS-Policy, car il requiert que les extensions spécifiques au domaine prennent en charge l'intersection d'alternatives à l'aide d'un élément de ce type comme une assertion. Une telle définition d’élément indique également la valeur de l’en-tête `ReplyTo` par opposition au comportement du point de terminaison sur la transmission, ce qui le rend spécifique au transport HTTP.
+La spécification WSDL de WS-Addressing tente de décrire des liaisons de protocole semblables en présentant un élément `<wsaw:Anonymous/>` avec trois valeurs textuelles (obligatoire, facultatif et a interdit) pour indiquer des besoins sur l’en-tête `wsa:ReplyTo` (section 3.2). Malheureusement, une telle définition d’élément n’est pas particulièrement utilisable comme une assertion dans le contexte de WS-Policy, car il requiert que les extensions spécifiques au domaine prennent en charge l’intersection d’alternatives à l’aide d’un élément de ce type comme une assertion. Une telle définition d'élément indique également la valeur de l'en-tête `ReplyTo` par opposition au comportement du point de terminaison sur la transmission, ce qui le rend spécifique au transport HTTP.
 
 #### <a name="action-definition"></a>Définition d'action
 WS-Addressing 2004/08 définit un attribut `wsa:Action` pour les éléments `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`. La liaison WS-Addressing 1.0 WSDL (WS-ADDR10-WSDL) définit un attribut semblable, `wsaw10:Action`.
@@ -388,7 +388,7 @@ Cette section décrit les détails d’implémentation de WCF pour le protocole 
 
 Il est possible d’utiliser MTOM avec des transports non-HTTP avec WCF. Toutefois, nous nous concentrerons sur le HTTP dans cette rubrique.
 
-Le format MTOM tire parti d'un grand ensemble de spécifications qui couvrent MTOM lui-même, XOP et MIME. La modularité de cet ensemble de spécifications rend quelque peu difficile la reconstruction des spécifications exactes sur le format et le traitement de la sémantique. Cette section décrit les spécifications de format et de traitement pour la liaison HTTP MTOM.
+Le format MTOM tire parti d'un grand ensemble de spécifications qui couvrent MTOM lui-même, XOP et MIME. La modularité de cet ensemble d’exigences rend quelque peu difficile la reconstruction des spécifications exactes sur le format et le traitement de la sémantique. Cette section décrit les exigences de format et de traitement pour la liaison HTTP MTOM.
 
 ### <a name="mtom-message-encoding"></a>Encodage de message MTOM
 
@@ -407,7 +407,7 @@ La séquence d'étapes suivante décrit le processus d'encodage spécifique à M
 
     1. Transformez les caractères remplacés en données binaires en les traitant comme des données encodées en Base64.
 
-    2. Générez une valeur d'en-tête Content-ID unique qui satisfait aux spécifications R3133 et R3134.
+    2. Générez une valeur d’en-tête Content-ID unique qui satisfait aux exigences R3133 et R3134.
 
     3. Générez un en-tête MIME Content-Transfer-Encoding avec la valeur binaire.
 

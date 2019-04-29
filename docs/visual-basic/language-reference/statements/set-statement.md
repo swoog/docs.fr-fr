@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783875"
 ---
 # <a name="set-statement-visual-basic"></a>Set, instruction (Visual Basic)
 Déclare un `Set` procédure de propriété utilisée pour affecter une valeur à une propriété.  
@@ -30,18 +30,18 @@ End Set
   
 ## <a name="parts"></a>Composants  
  `attributelist`  
- Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
  Facultatif sur un de la `Get` et `Set` instructions dans cette propriété. Il peut s'agir d'une des valeurs suivantes :  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Règles  
   
--   **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous procédez ainsi, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Set` procédure `Private`, mais pas `Public`.  
+- **Niveaux d’accès mixtes.** Si vous définissez une propriété en lecture-écriture, vous pouvez éventuellement spécifier un niveau d’accès différent pour un le `Get` ou `Set` procédure, mais pas les deux. Si vous procédez ainsi, le niveau d’accès de la procédure doit être plus restrictif que le niveau d’accès de la propriété. Par exemple, si la propriété est déclarée `Friend`, vous pouvez déclarer le `Set` procédure `Private`, mais pas `Public`.  
   
      Si vous définissez un `WriteOnly` propriété, le `Set` procédure représente la propriété entière. Vous ne pouvez pas déclarer un accès différents au niveau de `Set`, parce que seront définis à deux niveaux d’accès pour la propriété.  
   
 ## <a name="behavior"></a>Comportement  
   
--   **Retour d’une procédure de propriété.** Lorsque le `Set` procédure retourne au code appelant, l’exécution se poursuit après l’instruction qui a fourni la valeur à stocker.  
+- **Retour d’une procédure de propriété.** Lorsque le `Set` procédure retourne au code appelant, l’exécution se poursuit après l’instruction qui a fourni la valeur à stocker.  
   
      `Set` procédures de propriété peuvent retourner à l’aide du [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

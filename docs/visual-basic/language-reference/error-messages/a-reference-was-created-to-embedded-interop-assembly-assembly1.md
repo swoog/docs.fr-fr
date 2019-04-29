@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774859"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Une référence a été créée pour l’assembly d’interopérabilité incorporé '\<assembly1 >' en raison d’une référence indirecte à cet assembly à partir de l’assembly '\<assembly2 >'
 Une référence a été créée pour l’assembly d’interopérabilité incorporé '\<assembly1>' en raison d’une référence indirecte à cet assembly à partir de l’assembly '\<assembly2>'. Modifiez la propriété 'Incorporer les types interop' pour l’un des assemblys.  
@@ -27,9 +27,9 @@ Une référence a été créée pour l’assembly d’interopérabilité incorpo
   
 ### <a name="to-address-this-warning"></a>Pour traiter cet avertissement  
   
--   Pour incorporer des informations de type interop pour les deux assemblys, affectez la valeur `True` à la propriété `Embed Interop Types` de toutes les références à assembly1.  
+- Pour incorporer des informations de type interop pour les deux assemblys, affectez la valeur `True` à la propriété `Embed Interop Types` de toutes les références à assembly1.  
   
--   Pour supprimer cet avertissement, vous pouvez affecter à la propriété `Embed Interop Types` d’assembly1 la valeur `False`. Dans ce cas, les informations de type interop sont fournies par un assembly d’interopérabilité primaire (PIA).  
+- Pour supprimer cet avertissement, vous pouvez affecter à la propriété `Embed Interop Types` d’assembly1 la valeur `False`. Dans ce cas, les informations de type interop sont fournies par un assembly d’interopérabilité primaire (PIA).  
   
 ## <a name="see-also"></a>Voir aussi
 

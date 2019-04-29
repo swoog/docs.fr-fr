@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939631"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters, méthode
 Obtient les paramètres de cette méthode. Les paramètres sont retournés dans l’ordre dans lequel ils sont définis au sein de la signature de la méthode.  

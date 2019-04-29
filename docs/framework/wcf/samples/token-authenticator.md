@@ -3,30 +3,30 @@ title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779169"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associée au jeton.
 
  Les authentificateurs de jetons personnalisés sont utiles dans un grand nombre de cas, dont les suivants :
 
--   Lorsque vous souhaitez substituer le mécanisme d'authentification par défaut associé à un jeton.
+- Lorsque vous souhaitez substituer le mécanisme d'authentification par défaut associé à un jeton.
 
--   Lorsque vous générez un jeton personnalisé.
+- Lorsque vous générez un jeton personnalisé.
 
  Cet exemple indique :
 
--   la façon dont un client peut s'authentifier à l'aide d'une paire nom d'utilisateur/mot de passe ;
+- la façon dont un client peut s'authentifier à l'aide d'une paire nom d'utilisateur/mot de passe ;
 
--   Comment le serveur peut valider les informations d'identification du client à l'aide d'un authentificateur de jetons personnalisé.
+- Comment le serveur peut valider les informations d'identification du client à l'aide d'un authentificateur de jetons personnalisé.
 
--   Comment le code de service WCF est lié à l’authentificateur de jetons personnalisé.
+- Comment le code de service WCF est lié à l’authentificateur de jetons personnalisé.
 
--   Comment le serveur peut être authentifié à l'aide de son certificat X.509.
+- Comment le serveur peut être authentifié à l'aide de son certificat X.509.
 
  Cet exemple montre également comment identité de l’appelant est accessible à partir de WCF après le processus d’authentification du jeton personnalisé.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée.
 
--   Création du certificat de serveur
+- Création du certificat de serveur
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable `%SERVER_NAME%` spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut dans ce fichier de commandes est localhost.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvé du client.
+- Installation du certificat de serveur dans le magasin de certificats approuvé du client.
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
 

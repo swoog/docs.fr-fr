@@ -3,11 +3,11 @@ title: Guide de programmation (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
 ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785578"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Guide de programmation (LINQ to XML) (Visual Basic)
 Cette section fournit des informations conceptuelles et de procédure sur la programmation avec [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

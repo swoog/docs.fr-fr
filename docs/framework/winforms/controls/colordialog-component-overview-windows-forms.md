@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
 ms.openlocfilehash: 284d42218fb4fbce873325b1e45c883d51eefab8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956336"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>Vue d'ensemble du composant ColorDialog (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.ColorDialog> composant est une boîte de dialogue préconfigurée qui permet à l’utilisateur de sélectionner une couleur dans une palette et d’ajouter des couleurs personnalisées à cette palette. Il s’agit de la même boîte de dialogue que celle que vous voyez dans d’autres applications Windows pour sélectionner des couleurs. Vous pouvez l'utiliser dans votre application Windows comme alternative à la configuration de votre propre boîte de dialogue.  

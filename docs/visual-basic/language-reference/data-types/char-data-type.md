@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796979"
 ---
 # <a name="char-data-type-visual-basic"></a>Char, type de données (Visual Basic)
 Contient les points de code de (2 octets) de 16 bits non signé compris entre 0 et 65 535. Chaque *point de code*, ou code de caractère, représente un caractère Unicode.  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
--   **Nombres négatifs.** `Char` est un type non signé et ne peut pas représenter une valeur négative. Dans tous les cas, vous ne devez pas utiliser `Char` pour contenir des valeurs numériques.  
+- **Nombres négatifs.** `Char` est un type non signé et ne peut pas représenter une valeur négative. Dans tous les cas, vous ne devez pas utiliser `Char` pour contenir des valeurs numériques.  
   
--   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types de caractère ont une largeur de données différente (8 bits) dans d’autres environnements. Si vous passez un argument de 8 bits à un tel composant, déclarez-le en tant que `Byte` au lieu de `Char` dans votre nouveau code Visual Basic.  
+- **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types de caractère ont une largeur de données différente (8 bits) dans d’autres environnements. Si vous passez un argument de 8 bits à un tel composant, déclarez-le en tant que `Byte` au lieu de `Char` dans votre nouveau code Visual Basic.  
   
--   **Étendues.** Le `Char` type de données s’étend à `String`. Cela signifie que vous pouvez convertir `Char` à `String` et vous ne rencontrerez pas un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
+- **Étendues.** Le `Char` type de données s’étend à `String`. Cela signifie que vous pouvez convertir `Char` à `String` et vous ne rencontrerez pas un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Caractères de type.** L’ajout du caractère de type de littéral `C` à une chaîne à un caractère littéral force ce dernier à la `Char` type de données. `Char` n’a aucun caractère de type d’identificateur.  
+- **Caractères de type.** L’ajout du caractère de type de littéral `C` à une chaîne à un caractère littéral force ce dernier à la `Char` type de données. `Char` n’a aucun caractère de type d’identificateur.  
   
--   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Char?displayProperty=nameWithType>.  
+- **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Char?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

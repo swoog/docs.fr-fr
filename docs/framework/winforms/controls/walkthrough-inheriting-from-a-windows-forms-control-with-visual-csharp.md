@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792237"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Procédure pas à pas : Héritage d’un contrôle de formulaire Windows avec Visual C\#
 Avec [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], vous pouvez créer des contrôles personnalisés puissants grâce à *l’héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton héritera des fonctionnalités des formulaires Windows standard <xref:System.Windows.Forms.Button> contrôler et exposera une propriété personnalisée nommée `ButtonValue`.  

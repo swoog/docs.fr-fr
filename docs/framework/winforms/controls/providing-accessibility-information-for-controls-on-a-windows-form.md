@@ -7,24 +7,24 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
 ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948017"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Informations d'accessibilité sur les contrôles d'un Windows Form
 Les aides à l’accessibilité sont des programmes et des dispositifs spécialisés qui aident les personnes handicapées à utiliser plus efficacement les ordinateurs. Tel est le cas notamment des lecteurs d’écran pour les non-voyants et des systèmes d’entrée vocale pour les personnes qui prononcent des commandes verbales au lieu d’utiliser la souris ou le clavier. Ces aides à l’accessibilité interagissent avec les propriétés d’accessibilité exposées par les contrôles Windows Forms. Ces propriétés sont :  
   
--   **AccessibilityObject**  
+- **AccessibilityObject**  
   
--   **AccessibleDefaultActionDescription**  
+- **AccessibleDefaultActionDescription**  
   
--   **AccessibleDescription**  
+- **AccessibleDescription**  
   
--   **AccessibleName**  
+- **AccessibleName**  
   
--   **AccessibleRole**  
+- **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Propriété AccessibilityObject  
  Cette propriété en lecture seule contient une instance de la <xref:System.Windows.Forms.AccessibleObject> . La classe **AccessibleObject** implémente l’interface <xref:Accessibility.IAccessible> , qui fournit des informations concernant la description, l’emplacement à l’écran, les capacités de navigation et la valeur du contrôle. Le concepteur définit cette valeur au moment d’ajouter le contrôle au formulaire.  

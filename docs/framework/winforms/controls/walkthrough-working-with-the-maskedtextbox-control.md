@@ -12,20 +12,20 @@ helpviewer_keywords:
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
 ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792143"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Procédure pas à pas : utilisation du contrôle MaskedTextBox
 Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   L’initialisation du <xref:System.Windows.Forms.MaskedTextBox> contrôle  
+- L’initialisation du <xref:System.Windows.Forms.MaskedTextBox> contrôle  
   
--   À l’aide de la <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> Gestionnaire d’événements pour avertir l’utilisateur lorsqu’un caractère n’est pas conforme au masque  
+- À l’aide de la <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> Gestionnaire d’événements pour avertir l’utilisateur lorsqu’un caractère n’est pas conforme au masque  
   
--   Affecter un type à la <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propriété et à l’aide de la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> pour avertir l’utilisateur lorsque la valeur qu’il essaie de valider n’est pas valide pour le type de gestionnaire d’événements  
+- Affecter un type à la <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propriété et à l’aide de la <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> pour avertir l’utilisateur lorsque la valeur qu’il essaie de valider n’est pas valide pour le type de gestionnaire d’événements  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>Création du projet et l’ajout d’un contrôle  
   

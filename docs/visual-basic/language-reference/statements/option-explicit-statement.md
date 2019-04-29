@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784044"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit, instruction (Visual Basic)
 Force la déclaration explicite de toutes les variables dans un fichier, ou permet les déclarations implicites de variables.  
@@ -32,7 +32,7 @@ Option Explicit { On | Off }
  Optionnel. Permet de `Option Explicit` la vérification. Si `On` ou `Off` n’est pas spécifié, la valeur par défaut est `On`.  
   
  `Off`  
- Facultatif. Désactive `Option Explicit` la vérification.  
+ Optionnel. Désactive `Option Explicit` la vérification.  
   
 ## <a name="remarks"></a>Notes  
  Lorsque `Option Explicit On` ou `Option Explicit` apparaît dans un fichier, vous devez déclarer explicitement toutes les variables à l’aide de la `Dim` ou `ReDim` instructions. Si vous essayez d’utiliser un nom de variable non déclarée, une erreur se produit au moment de la compilation. La `Option Explicit Off` instruction permet une déclaration implicite de variables.  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Pour définir Option Explicit sur la ligne de commande  
   
--   Inclure le [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) option du compilateur dans le **vbc** commande.  
+- Inclure le [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) option du compilateur dans le **vbc** commande.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `Option Explicit` instruction pour forcer la déclaration explicite de toutes les variables. Essayez d’utiliser une variable non déclarée provoque une erreur au moment de la compilation.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783823"
 ---
 # <a name="synclock-statement"></a>SyncLock, instruction
 Acquiert un verrou exclusif pour un bloc d’instructions avant d’exécuter le bloc.  
@@ -32,7 +32,7 @@ End SyncLock
  Obligatoire. Expression qui correspond à une référence d’objet.  
   
  `block`  
- Facultatif. Bloc d’instructions à exécuter lorsque le verrou est acquis.  
+ Optionnel. Bloc d’instructions à exécuter lorsque le verrou est acquis.  
   
  `End SyncLock`  
  Met fin à une `SyncLock` bloc.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>Règles  
   
--   Création de branche. Vous ne pouvez pas créer de branche dans un `SyncLock` empêche en dehors du bloc.  
+- Création de branche. Vous ne pouvez pas créer de branche dans un `SyncLock` empêche en dehors du bloc.  
   
--   Valeur de l’objet verrou. La valeur de `lockobject` ne peut pas être `Nothing`. Vous devez créer l’objet verrou avant de l’utiliser dans un `SyncLock` instruction.  
+- Valeur de l’objet verrou. La valeur de `lockobject` ne peut pas être `Nothing`. Vous devez créer l’objet verrou avant de l’utiliser dans un `SyncLock` instruction.  
   
      Vous ne pouvez pas modifier la valeur de `lockobject` pendant l’exécution d’un `SyncLock` bloc. Le mécanisme exige que l’objet de verrouillage reste inchangé.  
   
--   Vous ne pouvez pas utiliser le [Await](../../../visual-basic/language-reference/operators/await-operator.md) opérateur dans un `SyncLock` bloc.  
+- Vous ne pouvez pas utiliser le [Await](../../../visual-basic/language-reference/operators/await-operator.md) opérateur dans un `SyncLock` bloc.  
   
 ## <a name="behavior"></a>Comportement  
   
--   Mécanisme. Lorsqu’un thread atteint le `SyncLock` instruction, elle prend la valeur la `lockobject` expression et suspend l’exécution jusqu'à ce qu’il acquiert un verrou exclusif sur l’objet retourné par l’expression. Lorsqu’un autre thread atteint le `SyncLock` instruction, elle ne pas acquérir un verrou jusqu'à ce que le premier thread exécute le `End SyncLock` instruction.  
+- Mécanisme. Lorsqu’un thread atteint le `SyncLock` instruction, elle prend la valeur la `lockobject` expression et suspend l’exécution jusqu'à ce qu’il acquiert un verrou exclusif sur l’objet retourné par l’expression. Lorsqu’un autre thread atteint le `SyncLock` instruction, elle ne pas acquérir un verrou jusqu'à ce que le premier thread exécute le `End SyncLock` instruction.  
   
--   Les données protégées. Si `lockobject` est un `Shared` variable, le verrou exclusif empêche un thread dans n’importe quelle instance de la classe d’exécuter le `SyncLock` bloquer pendant que n’importe quel autre thread l’exécute. Cela protège les données qui sont partagées entre toutes les instances.  
+- Les données protégées. Si `lockobject` est un `Shared` variable, le verrou exclusif empêche un thread dans n’importe quelle instance de la classe d’exécuter le `SyncLock` bloquer pendant que n’importe quel autre thread l’exécute. Cela protège les données qui sont partagées entre toutes les instances.  
   
      Si `lockobject` est une variable d’instance (pas `Shared`), le verrou empêche un thread en cours d’exécution dans l’instance actuelle à partir de l’exécution de la `SyncLock` bloc en même temps qu’un autre thread dans la même instance. Cela protège les données conservées par l’instance.  
   
--   Acquisition et la libération. A `SyncLock` bloc se comporte comme un `Try...Finally` dans laquelle le `Try` bloc acquiert un verrou exclusif sur `lockobject` et `Finally` bloc le libère. Pour cette raison, le `SyncLock` bloc garantit la libération du verrou, quelle que soit la manière dont vous quittez le bloc. Cela est vrai même en cas d’une exception non gérée.  
+- Acquisition et la libération. A `SyncLock` bloc se comporte comme un `Try...Finally` dans laquelle le `Try` bloc acquiert un verrou exclusif sur `lockobject` et `Finally` bloc le libère. Pour cette raison, le `SyncLock` bloc garantit la libération du verrou, quelle que soit la manière dont vous quittez le bloc. Cela est vrai même en cas d’une exception non gérée.  
   
--   Appels de Framework. Le `SyncLock` bloc acquiert et libère le verrou exclusif en appelant le `Enter` et `Exit` méthodes de la `Monitor` classe dans le <xref:System.Threading> espace de noms.  
+- Appels de Framework. Le `SyncLock` bloc acquiert et libère le verrou exclusif en appelant le `Enter` et `Exit` méthodes de la `Monitor` classe dans le <xref:System.Threading> espace de noms.  
   
 ## <a name="programming-practices"></a>Pratiques de programmation  
  Le `lockobject` expression doit toujours correspondre à un objet qui appartienne exclusivement à votre classe. Vous devez déclarer un `Private` variable d’objet pour protéger les données appartenant à l’instance actuelle, ou un `Private Shared` variable d’objet pour protéger les données communes à toutes les instances.  

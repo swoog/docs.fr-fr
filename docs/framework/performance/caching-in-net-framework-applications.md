@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788139"
 ---
 # <a name="caching-in-net-framework-applications"></a>Mise en cache dans les applications .NET Framework
 La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Quand vous accédez à nouveau aux données, les applications peuvent obtenir les données à partir du cache au lieu de devoir les récupérer à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.  
@@ -24,17 +24,17 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 ## <a name="caching-data"></a>Mise en cache des données  
  Vous pouvez mettre en cache des informations à l’aide des classes de l’espace de noms <xref:System.Runtime.Caching>. Les classes de mise en cache dans cet espace de noms fournissent les fonctionnalités suivantes :  
   
--   Des types abstraits qui fournissent la base pour la création d’implémentations de cache personnalisées  
+- Des types abstraits qui fournissent la base pour la création d’implémentations de cache personnalisées  
   
--   Une implémentation de cache d’objets en mémoire concrète  
+- Une implémentation de cache d’objets en mémoire concrète  
   
  La classe de mise en cache de base abstraite (<xref:System.Runtime.Caching.ObjectCache>) définit les tâches de mise en cache suivantes :  
   
--   Création et gestion des entrées de cache  
+- Création et gestion des entrées de cache  
   
--   Spécification des informations d’expiration et d’éviction  
+- Spécification des informations d’expiration et d’éviction  
   
--   Événements déclenchés en réponse aux modifications apportées aux entrées de cache  
+- Événements déclenchés en réponse aux modifications apportées aux entrées de cache  
   
  La classe <xref:System.Runtime.Caching.MemoryCache> est une implémentation de cache d’objets en mémoire de la classe <xref:System.Runtime.Caching.ObjectCache>. Vous pouvez utiliser la classe <xref:System.Runtime.Caching.MemoryCache> pour la plupart des tâches de mise en cache.  
   
@@ -67,11 +67,11 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
   
  Pour étendre la mise en cache, vous pouvez effectuer les étapes ci-dessous :  
   
--   Créer une classe personnalisée qui dérive de la classe <xref:System.Runtime.Caching.ObjectCache>, puis fournir une implémentation de cache personnalisée dans la classe dérivée.  
+- Créer une classe personnalisée qui dérive de la classe <xref:System.Runtime.Caching.ObjectCache>, puis fournir une implémentation de cache personnalisée dans la classe dérivée.  
   
--   Créer une classe qui dérive de la classe <xref:System.Runtime.Caching.MemoryCache> et personnaliser et étendre la classe dérivée. Pour obtenir un exemple illustrant comment procéder, consultez [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Créer une classe qui dérive de la classe <xref:System.Runtime.Caching.MemoryCache> et personnaliser et étendre la classe dérivée. Pour obtenir un exemple illustrant comment procéder, consultez [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
--   Créer une classe qui dérive de la classe <xref:System.Web.Caching.OutputCacheProvider> et configurer l’application pour qu’elle utilise le fournisseur de cache de sortie personnalisé.  
+- Créer une classe qui dérive de la classe <xref:System.Web.Caching.OutputCacheProvider> et configurer l’application pour qu’elle utilise le fournisseur de cache de sortie personnalisé.  
   
  Pour plus d’informations, consultez l’entrée [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) sur le blog de Scott Guthrie.  
   

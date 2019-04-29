@@ -8,17 +8,17 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949342"
 ---
 # <a name="net-framework-performance"></a>Performances .NET Framework
 Si vous voulez créer des applications dotées de hautes performances, vous devez concevoir et planifier les performances comme vous concevez n'importe quelle autre fonctionnalité de votre application. Vous pouvez utiliser les outils fournis par Microsoft pour mesurer les performances de votre application et, si nécessaire, apporter des améliorations à l'utilisation de la mémoire, au débit de code et à la réactivité. Cette rubrique répertorie les outils d'analyse de performance fournis par Microsoft et fournit des liens vers d'autres rubriques qui couvrent les performances dans des domaines spécifiques du développement d'applications.  
   
 ## <a name="designing-and-planning-for-performance"></a>Conception et planification des performances  
- Pour créer une application présentant d'excellentes performances, vous devez concevoir les performances dans votre application comme si vous conceviez n'importe quelle autre fonctionnalité. Vous devez déterminer les scénarios où les performances sont essentielles, définir des objectifs de performances et mesurer régulièrement les performances dans ces scénarios d'application. Comme chaque application est différente et possède différents chemins d'exécution aux performances critiques, le fait de déterminer précocement ces chemins et de concentrer vos efforts vous permet de maximiser votre productivité.  
+ Pour créer une application présentant d’excellentes performances, vous devez concevoir les performances dans votre application comme si vous conceviez n’importe quelle autre fonctionnalité. Vous devez déterminer les scénarios où les performances sont essentielles, définir des objectifs de performances et mesurer régulièrement les performances dans ces scénarios d'application. Comme chaque application est différente et possède différents chemins d'exécution aux performances critiques, le fait de déterminer précocement ces chemins et de concentrer vos efforts vous permet de maximiser votre productivité.  
   
  Il n'est pas nécessaire que votre plateforme cible vous soit complètement familière pour créer une application à hautes performances. Toutefois, vous devez chercher à comprendre quelles parties de votre plateforme cible sont coûteuses en termes de performances. Pour cela, vous pouvez mesurer les performances tôt dans votre processus de développement.  
   
@@ -30,7 +30,7 @@ Si vous voulez créer des applications dotées de hautes performances, vous deve
 ### <a name="performance-tools"></a>Outils d'analyse des performances  
  Voici certains outils de performance que vous pouvez utiliser avec vos applications .NET Framework.  
   
-|Outil|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |Analyse des performances Visual Studio|Utilisez cet outil pour analyser l'utilisation de l'UC de vos applications .NET Framework qui seront déployées sur des ordinateurs exécutant le système d'exploitation Windows.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de Visual Studio après avoir ouvert votre projet. Pour plus d'informations, consultez [Explorateur de performances](/visualstudio/profiling/performance-explorer). **Remarque :**  Utilisez l'analyse de l'application Windows Phone (voir ligne suivante) quand vous ciblez Windows Phone.|  
 |Analyse de l'application Windows Phone|Utilisez cet outil pour analyser l'UC et la mémoire, le taux de transfert des données réseau, la réactivité de l'application et la consommation de la batterie dans vos applications Windows Phone.<br /><br /> Vous trouverez cet outil dans le menu **Débogage** de votre projet Windows Phone dans Visual Studio après avoir installé [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Pour plus d’informations, consultez [profilage d’applications pour Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  

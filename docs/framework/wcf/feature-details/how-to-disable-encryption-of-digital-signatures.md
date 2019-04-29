@@ -3,11 +3,11 @@ title: 'Procédure : désactiver le chiffrement des signatures numériques'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
 ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773189"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Procédure : désactiver le chiffrement des signatures numériques
 Par défaut, un message est signé et la signature est chiffrée numériquement. Cette opération est contrôlée en créant une liaison personnalisée à l’aide d’une instance de <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ou de <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, et en affectant à la propriété `MessageProtectionOrder` de l’une de ces deux classes une valeur d’énumération <xref:System.ServiceModel.Security.MessageProtectionOrder>. La valeur par défaut est <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Ce processus consomme jusqu'à 30 pour cent de temps de plus que la simple signature et le chiffrement à partir de la taille de message totale (plus le message est petit, plus grand est l'impact sur les performances). Toutefois, désactiver le chiffrement de la signature présente un risque en matière de sécurité, puisqu'il peut permettre à un intrus de deviner le contenu du message. En effet, l'élément de la signature contient le code de hachage du texte brut de chaque partie signée du message. Par exemple, même si le corps des messages est chiffré par défaut, la signature non chiffrée contient le code de hachage du corps des messages avant le chiffrement. Si le jeu de valeurs possibles pour la partie signée et chiffrée est petit, un intrus peut être en mesure de deviner le contenu en consultant la valeur de hachage. Le chiffrement de la signature réduit les risques présents dans ce domaine.  

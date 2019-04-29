@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954260"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertisseurs de types et extensions de balisage pour XAML
 Les convertisseurs de type et les extensions de balisage sont deux techniques que les systèmes de type XAML et les writers XAML utilisent pour générer des composants de graphique d'objets. Bien qu'ils partagent certaines caractéristiques, les convertisseurs de type et les extensions de balisage sont représentés différemment dans un flux de nœud XAML. Dans cet ensemble de documentation, les convertisseurs de type, les extensions de balisage et les constructions similaires sont parfois désignés collectivement sous le nom de « convertisseurs de valeurs ».  
@@ -22,13 +22,13 @@ Les convertisseurs de type et les extensions de balisage sont deux techniques qu
 ## <a name="value-converters"></a>Convertisseurs de valeurs  
  En XAML, les convertisseurs de valeurs sont utilisés pour différents scénarios. La liste suivante présente les différents types de convertisseurs de valeur en XAML :  
   
--   Convertisseur de type  
+- Convertisseur de type  
   
--   Extension de balisage  
+- Extension de balisage  
   
--   Sérialiseur de valeur  
+- Sérialiseur de valeur  
   
--   Classe connexe ou classe de prise en charge qui fournit la logique pour une syntaxe de texte XAML  
+- Classe connexe ou classe de prise en charge qui fournit la logique pour une syntaxe de texte XAML  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertisseurs de type  

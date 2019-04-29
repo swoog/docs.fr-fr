@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8fa39a54437e60737aa052c495f58422bc0d3fe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946235"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters, méthode
 Obtient un pointeur d’interface ICorDebugTypeEnum qui contient le <xref:System.Type> paramètres de la classe référencée par ICorDebugType.  
@@ -42,13 +42,13 @@ HRESULT EnumerateTypeParameters (
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser `EnumerateTypeParameters` si la valeur CorElementType retournée par [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) est ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_ PTR, ou ELEMENT_TYPE_FNPTR. Le nombre de paramètres et leur ordre varie selon le type :  
   
--   ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE : Le nombre de paramètres de type contenues dans le `ICorDebugTypeEnum` que cette méthode est retournée, varient selon le nombre de paramètres de type formel pour la classe correspondante. Par exemple, si le type est `class Dict<String,int32>`, puis `EnumerateTypeParameters` retournera un `ICorDebugTypeEnum` qui contient des objets représentant `String` et `int32` dans la séquence.  
+- ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE : Le nombre de paramètres de type contenues dans le `ICorDebugTypeEnum` que cette méthode est retournée, varient selon le nombre de paramètres de type formel pour la classe correspondante. Par exemple, si le type est `class Dict<String,int32>`, puis `EnumerateTypeParameters` retournera un `ICorDebugTypeEnum` qui contient des objets représentant `String` et `int32` dans la séquence.  
   
--   ELEMENT_TYPE_FNPTR : Le nombre de paramètres de type contenues dans le `ICorDebugTypeEnum` sera supérieur au nombre d’arguments acceptés par la fonction. Le premier paramètre de type contenu dans le `ICorDebugTypeEnum` est le type de retour pour la fonction, et les paramètres de type suivants sont les paramètres de la fonction.  
+- ELEMENT_TYPE_FNPTR : Le nombre de paramètres de type contenues dans le `ICorDebugTypeEnum` sera supérieur au nombre d’arguments acceptés par la fonction. Le premier paramètre de type contenu dans le `ICorDebugTypeEnum` est le type de retour pour la fonction, et les paramètres de type suivants sont les paramètres de la fonction.  
   
--   ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF ou ELEMENT_TYPE_PTR : Un paramètre de type est retourné. Par exemple, si le type est un type tableau tel que `int32[]`,`EnumerateTypeParameters` retournera un `ICorDebugTypeEnum` qui contient un objet représentant `int32`.  
+- ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF ou ELEMENT_TYPE_PTR : Un paramètre de type est retourné. Par exemple, si le type est un type tableau tel que `int32[]`,`EnumerateTypeParameters` retournera un `ICorDebugTypeEnum` qui contient un objet représentant `int32`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

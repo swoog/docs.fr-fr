@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943934"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -19,9 +19,9 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 
  La configuration du service définit une liaison personnalisée prenant en charge les éléments suivants :
 
--   Communication TCP protégée à l'aide du protocole TLS/SSL.
+- Communication TCP protégée à l'aide du protocole TLS/SSL.
 
--   Sécurité de message Windows.
+- Sécurité de message Windows.
 
  La configuration de la liaison personnalisée active le transport sécurisé en activant simultanément la sécurité de niveau message. Le classement des éléments de liaison est important pour définir une liaison personnalisée, car chacun représente une couche dans la pile de canaux (consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md)). La liaison personnalisée est définie dans les fichiers de configuration du service et du client, tel qu'illustré dans l'exemple de configuration suivant.
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  Les informations suivantes fournissent une vue d'ensemble des différentes sections des fichiers de commandes applicables à cet exemple afin que vous puissiez les modifier en fonction de la configuration requise :
 
--   Création du certificat de serveur
+- Création du certificat de serveur
 
      Les lignes suivantes du fichier Setup.bat créent le certificat de serveur à utiliser. La variable `%SERVER_NAME%` spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. Ce fichier de commandes affecte par défaut la valeur localhost au nom du serveur.
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client.
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client.
 
      Les lignes suivantes du fichier Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple d'un certificat émis par Microsoft, il n'est pas nécessaire d'ajouter le certificat du serveur au magasin de certificats du client.
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. Sur l'ordinateur de service :  
   
-    1.  Créez un répertoire virtuel nommé servicemodelsamples sur l'ordinateur de service.  
+    1. Créez un répertoire virtuel nommé servicemodelsamples sur l'ordinateur de service.  
   
-    2.  Copiez les fichiers programme du service de \inetpub\wwwroot\servicemodelsamples dans le répertoire virtuel sur l'ordinateur de service. Assurez-vous de copier les fichiers dans le sous-répertoire \bin.  
+    2. Copiez les fichiers programme du service de \inetpub\wwwroot\servicemodelsamples dans le répertoire virtuel sur l'ordinateur de service. Assurez-vous de copier les fichiers dans le sous-répertoire \bin.  
   
-    3.  Copiez les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
+    3. Copiez les fichiers Setup.bat et Cleanup.bat sur l'ordinateur de service.  
   
-    4.  Exécutez la commande suivante dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur : `Setup.bat service`. L'exécution de cette commande crée un certificat de service dont le nom du sujet correspond au nom de l'ordinateur sur lequel le fichier de commandes a été exécuté.  
+    4. Exécutez la commande suivante dans une invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur : `Setup.bat service`. L'exécution de cette commande crée un certificat de service dont le nom du sujet correspond au nom de l'ordinateur sur lequel le fichier de commandes a été exécuté.  
   
         > [!NOTE]
         >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes de Visual Studio 2010. La variable d'environnement PATH doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes de Visual Studio 2010.
 
-    5.  Modifier le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dans le fichier Service.exe.config pour refléter le nom du sujet du certificat généré à l’étape précédente.
+    5. Modifier le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dans le fichier Service.exe.config pour refléter le nom du sujet du certificat généré à l’étape précédente.
 
-    6.  Exécutez Service.exe à partir d'une invite de commandes.
+    6. Exécutez Service.exe à partir d'une invite de commandes.
 
 2. Sur l'ordinateur client :
 
-    1.  Copiez les fichiers programme du client à partir du dossier \client\bin\ sur l'ordinateur client. Copiez également le fichier Cleanup.bat.
+    1. Copiez les fichiers programme du client à partir du dossier \client\bin\ sur l'ordinateur client. Copiez également le fichier Cleanup.bat.
 
-    2.  Exécutez Cleanup.bat pour supprimer tous les anciens certificats d'exemples précédents.
+    2. Exécutez Cleanup.bat pour supprimer tous les anciens certificats d'exemples précédents.
 
-    3.  Exporter le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et en exécutant la commande suivante sur l’ordinateur de service (remplacez `%SERVER_NAME%` par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
+    3. Exporter le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur et en exécutant la commande suivante sur l’ordinateur de service (remplacez `%SERVER_NAME%` par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  Copiez le fichier % SERVER_NAME%.cer sur l'ordinateur client (remplacez %SERVER_NAME% par le nom complet de l'ordinateur où le service s'exécute).
+    4. Copiez le fichier % SERVER_NAME%.cer sur l'ordinateur client (remplacez %SERVER_NAME% par le nom complet de l'ordinateur où le service s'exécute).
 
-    5.  Importer le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur, en exécutant la commande suivante sur l’ordinateur client (remplacez % SERVER_NAME % par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
+    5. Importer le certificat du service en ouvrant une invite de commandes développeur pour Visual Studio avec des privilèges d’administrateur, en exécutant la commande suivante sur l’ordinateur client (remplacez % SERVER_NAME % par le nom qualifié complet de l’ordinateur où le service est en cours d’exécution) :
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          Les étapes c, d et e ne sont pas requises lorsque le certificat est publié par un émetteur approuvé.
 
-    6.  Modifiez le fichier App.config du client comme suit :
+    6. Modifiez le fichier App.config du client comme suit :
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  Si le service s'exécute dans un environnement de domaine sous un compte autre que NetworkService ou LocalSystem, vous devrez peut-être modifier l'identité de son point de terminaison dans le fichier App.config du client afin de lui affecter une identité UPN ou SPN adaptée au compte utilisé pour l'exécuter. Pour plus d’informations sur l’identité du point de terminaison, consultez la [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) rubrique.
+    7. Si le service s'exécute dans un environnement de domaine sous un compte autre que NetworkService ou LocalSystem, vous devrez peut-être modifier l'identité de son point de terminaison dans le fichier App.config du client afin de lui affecter une identité UPN ou SPN adaptée au compte utilisé pour l'exécuter. Pour plus d’informations sur l’identité du point de terminaison, consultez la [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) rubrique.
 
-    8.  Exécutez Client.exe à partir d'une invite de commandes.
+    8. Exécutez Client.exe à partir d'une invite de commandes.
 
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple
 
--   Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.
+- Exécutez Cleanup.bat dans le dossier exemples une fois que vous avez terminé d'exécuter l'exemple.

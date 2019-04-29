@@ -3,11 +3,11 @@ title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
 ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943921"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer vos implémentations de canal personnalisées au système de configuration. Cela permet aux utilisateurs de votre canal personnalisé de configurer votre canal en utilisant un fichier .config comme ils configureraient une liaison fournie par le système telle que `NetTcpBinding` ou une liaison personnalisée à l'aide de `TcpTransportBindingElement`.  
@@ -42,9 +42,9 @@ Le ConfigurationCodeGenerator est un outil que vous pouvez utiliser pour exposer
   
      La commande génère trois fichiers .cs pour le `BindingElement` (si vous avez spécifié l'option /be:), cinq fichiers .cs pour la `Binding` standard (si vous avez spécifié l'option /sb:), et un fichier .xml.  
   
-    1.  Si vous avez utilisé l’option /be, l’un des fichiers .cs implémente `BindingElementExtensionSection` pour votre élément de liaison. Ce code expose votre `BindingElement` au système de configuration, afin que d'autres liaisons personnalisées puissent utiliser votre élément de liaison. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
+    1. Si vous avez utilisé l’option /be, l’un des fichiers .cs implémente `BindingElementExtensionSection` pour votre élément de liaison. Ce code expose votre `BindingElement` au système de configuration, afin que d'autres liaisons personnalisées puissent utiliser votre élément de liaison. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
   
-    2.  Si vous avez spécifié l'option /sb, deux des fichiers .cs implémentent respectivement un `StandardBindingElement` et un `StandardBindingCollectionElement`, qui expose votre liaison standard au système de configuration. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
+    2. Si vous avez spécifié l'option /sb, deux des fichiers .cs implémentent respectivement un `StandardBindingElement` et un `StandardBindingCollectionElement`, qui expose votre liaison standard au système de configuration. Les autres fichiers possèdent des classes qui représentent des valeurs par défaut et des constantes. Les fichiers comportent des commentaires `//TODO` pour vous rappeler de mettre à jour les valeurs par défaut.  
   
          Si vous avez spécifié le/SB : option le CodeToAddTo\<*YourStdBinding*> .cs comprend un code que vous devez ajouter manuellement à la classe qui implémente votre liaison standard.  
   

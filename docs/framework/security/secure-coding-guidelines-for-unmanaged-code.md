@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951708"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instructions de codage sécurisé pour le code non managé
 Du code de bibliothèque doit appeler dans du code non managé (par exemple, des API de code natif comme Win32). Comme cela signifie sortir du périmètre de sécurité pour le code managé, la prudence est de règle. S’il ne dépend pas de la sécurité, votre code, ainsi que tout code qui l’appelle, doit disposer de l’autorisation de code non managé (<xref:System.Security.Permissions.SecurityPermission> avec l’indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> spécifié).  
@@ -25,9 +25,9 @@ Du code de bibliothèque doit appeler dans du code non managé (par exemple, des
   
  Comme tout code managé qui fournit un chemin de code dans le code natif est une cible potentielle pour du code nuisible, déterminer le type de code non managé qui peut s'utiliser sans risque et la manière de l'utiliser nécessite beaucoup de précautions. Généralement, il ne faut jamais exposer du code non managé directement à des appelants d'un niveau de confiance partiel. Deux considérations principales gouvernent l'évaluation de la sécurité de l'utilisation de code non managé dans des bibliothèques pouvant être appelées par du code d'un niveau de confiance partiel :  
   
--   **Fonctionnalité**. Est-ce que l'API non managée fournit des fonctionnalités qui ne permettent pas aux appelants d'effectuer des opérations potentiellement risquées ? Comme la sécurité d'accès du code utilise des autorisations pour faire appliquer l'accès aux ressources, vous devez envisager si l'API utilise des fichiers, une interface utilisateur ou des technologies de threads ou si elle expose des informations protégées. Si tel est le cas, le code managé qui l'englobe doit exiger les autorisations nécessaires avant d'autoriser son entrée. De plus, même s'il ne fait pas l'objet d'une protection par autorisation, l'accès à la mémoire doit se limiter à la sécurité stricte des types.  
+- **Fonctionnalité**. Est-ce que l'API non managée fournit des fonctionnalités qui ne permettent pas aux appelants d'effectuer des opérations potentiellement risquées ? Comme la sécurité d'accès du code utilise des autorisations pour faire appliquer l'accès aux ressources, vous devez envisager si l'API utilise des fichiers, une interface utilisateur ou des technologies de threads ou si elle expose des informations protégées. Si tel est le cas, le code managé qui l'englobe doit exiger les autorisations nécessaires avant d'autoriser son entrée. De plus, même s'il ne fait pas l'objet d'une protection par autorisation, l'accès à la mémoire doit se limiter à la sécurité stricte des types.  
   
--   **Vérification des paramètres**. Une attaque courante passe des paramètres inattendus à des méthodes API de code non managé exposées dans le but de les faire fonctionner hors spécification. Le dépassement de mémoire tampon utilisant des index non valides ou des valeurs offset constitue un exemple courant de ce type d'attaque, comme tous les paramètres qui risquent d'exploiter un bogue dans le code sous-jacent. Ainsi, même si l'API du code non managé est sécurisée du point de vue fonctionnel (après des demandes nécessaires) pour des appelants d'un niveau de confiance partiel, le code managé doit également vérifier la validité des paramètres de manière exhaustive pour garantir qu'aucun appel involontaire n'est possible par du code nuisible utilisant la couche wrapper du code managé.  
+- **Vérification des paramètres**. Une attaque courante passe des paramètres inattendus à des méthodes API de code non managé exposées dans le but de les faire fonctionner hors spécification. Le dépassement de mémoire tampon utilisant des index non valides ou des valeurs offset constitue un exemple courant de ce type d'attaque, comme tous les paramètres qui risquent d'exploiter un bogue dans le code sous-jacent. Ainsi, même si l'API du code non managé est sécurisée du point de vue fonctionnel (après des demandes nécessaires) pour des appelants d'un niveau de confiance partiel, le code managé doit également vérifier la validité des paramètres de manière exhaustive pour garantir qu'aucun appel involontaire n'est possible par du code nuisible utilisant la couche wrapper du code managé.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Utilisation de SuppressUnmanagedCodeSecurityAttribute  
  Il existe un aspect performance lié à la déclaration, puis à l'appel de code non managé. Pour chaque appel de ce type, le système de sécurité exige automatiquement l'autorisation du code non managé, ce qui entraîne à chaque fois un parcours de pile. Si vous déclarez et appelez immédiatement du code non managé, le parcours de pile peut s'avérer inutile : il comporte votre déclaration et votre appel de code non managé.  
@@ -36,11 +36,11 @@ Du code de bibliothèque doit appeler dans du code non managé (par exemple, des
   
  Si vous utilisez **SuppressUnmanagedCodeSecurityAttribute**, vérifiez les points suivants :  
   
--   Faites en sorte que le point d'entrée du code non managé soit interne ou, si cela n'est pas possible, qu'il soit inaccessible hors de votre code.  
+- Faites en sorte que le point d'entrée du code non managé soit interne ou, si cela n'est pas possible, qu'il soit inaccessible hors de votre code.  
   
--   Tout appel dans du code non managé représente une faille de sécurité potentielle. Veillez à ce que votre code ne soit pas une porte ouverte à un appel indirect par du code nuisible dans du code non managé évitant ainsi une vérification de sécurité. Exigez des autorisations, si cela est approprié.  
+- Tout appel dans du code non managé représente une faille de sécurité potentielle. Veillez à ce que votre code ne soit pas une porte ouverte à un appel indirect par du code nuisible dans du code non managé évitant ainsi une vérification de sécurité. Exigez des autorisations, si cela est approprié.  
   
--   Utilisez une convention d'affectation de noms pour identifier de manière explicite les cas où vous créez un chemin à risque dans du code non managé, comme indiqué dans la section ci-dessous.  
+- Utilisez une convention d'affectation de noms pour identifier de manière explicite les cas où vous créez un chemin à risque dans du code non managé, comme indiqué dans la section ci-dessous.  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Convention d'affectation de noms pour les méthodes de code non managé  
  Une convention utile et fortement recommandée a été créée pour nommer des méthodes de code non managé. Toutes les méthodes de code non managé sont divisées en trois catégories : **safe**, **native**et **unsafe**. Ces mots clés peuvent être utilisés comme noms de classe dans lesquels les différents types de points d'entrée du code non managé sont définis. Dans le code source, ces mots clés doivent être ajoutés au nom de la classe, comme pour `Safe.GetTimeOfDay`, `Native.Xyz`ou `Unsafe.DangerousAPI`, par exemple. Chacun de ces mots clés fournit les informations de sécurité nécessaires aux développeurs utilisant cette classe, comme le montre le tableau suivant :  

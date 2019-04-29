@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956069"
 ---
 # <a name="constituent-controls"></a>Contrôles constitutifs
 Les contrôles qui composent un contrôle utilisateur, appelés *contrôles constitutifs*, sont relativement peu flexibles en matière de rendu graphique personnalisé. Tous les contrôles Windows Forms gèrent leur propre rendu par l’intermédiaire de leurs propres <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode). Comme cette méthode est protégée, elle n’est pas accessible au développeur et il n’est pas possible d’empêcher son exécution quand le contrôle est dessiné. Cela ne signifie pas pour autant que vous ne pouvez pas ajouter du code pour modifier l’apparence des contrôles constitutifs. Un rendu supplémentaire est possible en ajoutant un gestionnaire d’événements. Par exemple, supposons que vous créez un <xref:System.Windows.Forms.UserControl> avec un bouton nommé `MyButton`. Si vous voulez obtenir un rendu supplémentaires au-delà de ce qui a été fourni par le <xref:System.Web.UI.WebControls.Button>, vous devez ajouter le code à votre contrôle utilisateur similaire à ce qui suit :  

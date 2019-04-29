@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938138"
 ---
 # <a name="graphics-paths-in-gdi"></a>Tracés graphiques dans GDI+
 Chemins d’accès sont formés en combinant les lignes, des rectangles et des courbes simples. Nous avons vu dans la [vue d’ensemble des graphismes vectoriels](vector-graphics-overview.md) que les blocs de construction de base suivantes se sont avérées les plus utiles pour dessiner des images :  
   
--   Lignes  
+- Lignes  
   
--   Rectangles  
+- Rectangles  
   
--   Points de suspension  
+- Points de suspension  
   
--   Arcs  
+- Arcs  
   
--   Polygones  
+- Polygones  
   
--   Splines cardinales  
+- Splines cardinales  
   
--   Splines de Bézier  
+- Splines de Bézier  
   
  Dans GDI +, le <xref:System.Drawing.Drawing2D.GraphicsPath> objet vous permet de collecter une séquence de ces blocs de construction en une seule unité. La séquence entière de lignes, des rectangles, des polygones et des courbes peut ensuite être dessinée avec un seul appel à la <xref:System.Drawing.Graphics.DrawPath%2A> méthode de la <xref:System.Drawing.Graphics> classe. L’illustration suivante montre un chemin d’accès créé en combinant une ligne, un arc, une spline de Bézier et une spline cardinale.  
   

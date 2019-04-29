@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787463"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Nom \<nom_membre > n’est pas conforme CLS
 Un assembly est marqué comme `<CLSCompliant(True)>` mais expose un membre dont le nom commence par un trait de soulignement (`_`).  
@@ -29,9 +29,9 @@ Un assembly est marqué comme `<CLSCompliant(True)>` mais expose un membre dont 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si vous contrôlez le code source, modifiez le nom du membre afin qu’il ne commence pas par un trait de soulignement.  
+- Si vous contrôlez le code source, modifiez le nom du membre afin qu’il ne commence pas par un trait de soulignement.  
   
--   Si vous avez besoin que le nom de membre reste inchangé, supprimez le <xref:System.CLSCompliantAttribute> à partir de sa définition ou marquez-le comme `<CLSCompliant(False)>`. Vous pouvez toujours marquer l’assembly en tant que `<CLSCompliant(True)>`.  
+- Si vous avez besoin que le nom de membre reste inchangé, supprimez le <xref:System.CLSCompliantAttribute> à partir de sa définition ou marquez-le comme `<CLSCompliant(False)>`. Vous pouvez toujours marquer l’assembly en tant que `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Voir aussi
 

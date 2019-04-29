@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928672"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Développement d'applications orientées service avec WCF
 Cette section de la documentation contient des informations sur Windows Communication Foundation (WCF), qui est un modèle de programmation unifié pour générer des applications orientées service. Il permet aux développeurs de générer des solutions transactionnelles sécurisées et fiables qui s'intègrent à plusieurs plateformes et interagissent avec les investissements existants.
@@ -35,7 +35,7 @@ Cette section de la documentation contient des informations sur Windows Communic
  Décrit les notions de base pour la création d'applications Windows Communication Foundation.  
   
  [Informations détaillées sur les fonctionnalités de WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Présente des rubriques qui vous permettent de choisir l’ou les fonctionnalités WCF vous devez employer.  
+ Liste les rubriques qui vous permettent de choisir l’ou les fonctionnalités WCF vous devez employer.  
   
  [Extension de WCF](../../../docs/framework/wcf/extending/index.md)  
  Décrit comment modifier et étendre des composants d'exécution WCF  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
 ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785344"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Requêtes compilées (LINQ to Entities)
 Lorsque vous possédez une application qui exécute de nombreuses fois des requêtes similaires d’un point de vue structurel dans Entity Framework, vous pouvez souvent améliorer les performances en compilant la requête une fois et en l’exécutant plusieurs fois avec des paramètres différents. Par exemple, une application peut avoir besoin de récupérer tous les clients d'une ville spécifique ; la ville est spécifiée à l'exécution par l'utilisateur dans un formulaire. À cette fin, LINQ to Entities prend en charge l'utilisation des requêtes compilées.  

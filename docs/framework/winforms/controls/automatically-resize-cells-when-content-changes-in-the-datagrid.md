@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
 ms.openlocfilehash: 7acd7777ede726b9dfed2b821e4248a0ebf7797f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954321"
 ---
 # <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Procédure : redimensionner automatiquement les cellules quand le contenu change dans le contrôle DataGridView Windows Forms
 Vous pouvez configurer le contrôle <xref:System.Windows.Forms.DataGridView> pour redimensionner ses lignes, colonnes et en-têtes automatiquement chaque fois que du contenu change, pour que les cellules soient toujours assez grandes pour afficher leurs valeurs sans être découpées.  
@@ -34,9 +34,9 @@ Vous pouvez configurer le contrôle <xref:System.Windows.Forms.DataGridView> pou
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
--   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.
+- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.
   
 ## <a name="see-also"></a>Voir aussi
 

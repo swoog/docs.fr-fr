@@ -7,11 +7,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
 ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948003"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilisation du concepteur avec le contrôle DataGridView Windows Forms
 Visual Studio fournit la prise en charge du concepteur pour le `DataGridView` contrôle qui vous permet d’effectuer de nombreuses tâches d’installation sans écrire de code. Ces tâches comprennent la liaison utilisé par le contrôle à une source de données, modification des colonnes pour afficher des données et ajuster l’apparence et le comportement de base du contrôle.  

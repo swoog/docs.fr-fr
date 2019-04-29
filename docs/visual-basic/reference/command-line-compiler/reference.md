@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788880"
 ---
 # <a name="-reference-visual-basic"></a>-référence (Visual Basic)
 Indique au compilateur de rendre les informations de type dans les assemblys spécifiés disponibles pour le projet en cours de compilation.  
@@ -38,9 +38,9 @@ Indique au compilateur de rendre les informations de type dans les assemblys sp�
   
  Si vous référencez un assembly (Assembly A) qui lui-même référence un autre assembly (Assembly B), vous devez référencer l’Assembly B si :  
   
--   Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
+- Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
   
--   Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
+- Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
   
  Utilisez [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) pour spécifier le répertoire dans lequel sont trouvent une ou plusieurs de vos références d’assembly.  
   

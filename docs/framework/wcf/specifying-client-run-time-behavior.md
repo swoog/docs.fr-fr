@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935458"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Spécification du comportement du client au moment de l'exécution
 Windows Communication Foundation (WCF) clients, tels que les services Windows Communication Foundation (WCF), peuvent être configurés pour modifier le comportement au moment de l’exécution en fonction de l’application cliente. Trois attributs sont disponibles pour spécifier le comportement du client au moment de l'exécution. Les objets de rappel de client duplex peuvent utiliser les attributs <xref:System.ServiceModel.CallbackBehaviorAttribute> et <xref:System.ServiceModel.Description.CallbackDebugBehavior> pour modifier leur comportement à l'exécution. L'autre attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, peut être utilisé pour séparer la destination logique de la destination réseau immédiate. De plus, les types de rappel de client duplex peuvent utiliser certains des comportements du côté service. Pour plus d’informations, consultez [spécifiant le comportement de runtime du Service](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) clients, tels que les services Windows Co
   
  Étant donné les problèmes de sécurité impliqués, il est vivement recommandé :  
   
--   d'utiliser un fichier de configuration d'application pour affecter à la propriété <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> la valeur `true` ;  
+- d'utiliser un fichier de configuration d'application pour affecter à la propriété <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> la valeur `true` ;  
   
--   de ne procéder ainsi que dans des scénarios de débogage contrôlés.  
+- de ne procéder ainsi que dans des scénarios de débogage contrôlés.  
   
  L’exemple de code suivant montre un client de fichier de configuration qui indique à WCF pour retourner les informations d’exception gérées à partir d’un client objet de rappel dans les messages SOAP.  
   
