@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932889"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Sécurité de transport avec l'authentification Windows
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et un service sécurisé par la sécurité de Windows. Pour plus d’informations sur la programmation, consultez [Comment : Sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -32,9 +32,9 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
   
--   Créez un service autonome à l'aide du code sans configuration.  
+- Créez un service autonome à l'aide du code sans configuration.  
   
--   Créez un service à l'aide de la configuration fournie, mais ne définissez pas de point de terminaison.  
+- Créez un service à l'aide de la configuration fournie, mais ne définissez pas de point de terminaison.  
   
 ### <a name="code"></a>Code  
  Le code ci-dessous montre comment créer un point de terminaison de service qui utilise une sécurité Windows.  
@@ -76,9 +76,9 @@ Le scénario suivant montre un client Windows Communication Foundation (WCF) et 
 ## <a name="client"></a>Client  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
   
--   Créez un client autonome à l'aide du code (et du code client).  
+- Créez un client autonome à l'aide du code (et du code client).  
   
--   Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :  
+- Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

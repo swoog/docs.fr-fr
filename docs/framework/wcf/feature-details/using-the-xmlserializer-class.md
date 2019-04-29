@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933041"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilisation de la classe XmlSerializer
 Windows Communication Foundation (WCF) peut utiliser deux technologies de sérialisation différentes pour convertir les données dans votre application en code XML qui est transmis entre les clients et services, un processus appelé sérialisation.  
@@ -20,15 +20,15 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
 ## <a name="datacontractserializer-as-the-default"></a>DataContractSerializer comme classe par défaut  
  Par défaut, WCF utilise le <xref:System.Runtime.Serialization.DataContractSerializer> classe pour sérialiser les types de données. Ce sérialiseur prend en charge les types suivants :  
   
--   Types primitifs (par exemple, entiers, chaînes et tableaux d'octets), ainsi que quelques types spéciaux, tels que <xref:System.Xml.XmlElement> et <xref:System.DateTime>, traités comme des types primitifs.  
+- Types primitifs (par exemple, entiers, chaînes et tableaux d'octets), ainsi que quelques types spéciaux, tels que <xref:System.Xml.XmlElement> et <xref:System.DateTime>, traités comme des types primitifs.  
   
--   Types de contrat de données (types marqués avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute>).  
+- Types de contrat de données (types marqués avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute>).  
   
--   Types marqués avec l'attribut <xref:System.SerializableAttribute>, qui comprennent les types implémentant l'interface <xref:System.Runtime.Serialization.ISerializable>.  
+- Types marqués avec l'attribut <xref:System.SerializableAttribute>, qui comprennent les types implémentant l'interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Types qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable>.  
+- Types qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable>.  
   
--   Nombreux types de collections courants, notamment de nombreux types de collections génériques.  
+- Nombreux types de collections courants, notamment de nombreux types de collections génériques.  
   
  De nombreux types du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] appartiennent à ces deux dernières catégories et sont par conséquent sérialisables. Les tableaux de types sérialisables sont également sérialisables. Pour obtenir la liste complète, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
@@ -42,11 +42,11 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
 ## <a name="manually-switching-to-the-xmlserializer"></a>Basculement manuel vers le XmlSerializer  
  Il peut arriver parfois que vous deviez basculer manuellement vers le <xref:System.Xml.Serialization.XmlSerializer>. Cela peut arriver, par exemple, dans les cas suivants :  
   
--   Lorsque vous migrez une application à partir de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] services Web et WCF, vous voudrez réutiliser le fichier existant, <xref:System.Xml.Serialization.XmlSerializer>-types de contrats de types compatibles au lieu de créer de nouvelles données.  
+- Lorsque vous migrez une application à partir de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] services Web et WCF, vous voudrez réutiliser le fichier existant, <xref:System.Xml.Serialization.XmlSerializer>-types de contrats de types compatibles au lieu de créer de nouvelles données.  
   
--   Lorsqu'il est important de contrôler de manière précise le code XML qui apparaît dans les messages, mais qu'aucun document WSDL (Web Services Description Language) n'est disponible, par exemple lors de la création d'un service avec des types qui doivent se conformer à un certain schéma publié standardisé qui n'est pas compatible avec le DataContractSerializer.  
+- Lorsqu'il est important de contrôler de manière précise le code XML qui apparaît dans les messages, mais qu'aucun document WSDL (Web Services Description Language) n'est disponible, par exemple lors de la création d'un service avec des types qui doivent se conformer à un certain schéma publié standardisé qui n'est pas compatible avec le DataContractSerializer.  
   
--   Lors de la création de services qui respectent la norme d'encodage SOAP héritée.  
+- Lors de la création de services qui respectent la norme d'encodage SOAP héritée.  
   
  Dans les cas évoqués mais aussi dans d'autres cas, vous pouvez basculer manuellement vers la classe <xref:System.Xml.Serialization.XmlSerializer> en appliquant l'attribut `XmlSerializerFormatAttribute` à votre service, comme illustré dans le code suivant.  
   
@@ -101,11 +101,11 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
   
  Trois variétés de types implémentent `IXmlSerializable` : les types représentant le contenu arbitraire, les types représentant un élément unique et les types <xref:System.Data.DataSet> hérités.  
   
--   Les types de contenu utilisent une méthode du fournisseur de schéma spécifiée par l'attribut `XmlSchemaProviderAttribute`. La méthode ne retourne pas `null`, et la propriété <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> sur l'attribut conserve sa valeur par défaut `false`. Il s'agit de l'utilisation la plus courante des types `IXmlSerializable`.  
+- Les types de contenu utilisent une méthode du fournisseur de schéma spécifiée par l'attribut `XmlSchemaProviderAttribute`. La méthode ne retourne pas `null`, et la propriété <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> sur l'attribut conserve sa valeur par défaut `false`. Il s'agit de l'utilisation la plus courante des types `IXmlSerializable`.  
   
--   Les types d'élément sont utilisés lorsqu'un type `IXmlSerializable` doit contrôler son propre nom d'élément racine. Pour marquer un type comme type élément, affectez à la propriété <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> sur l'attribut <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> la valeur `true` ou retournez `null` à partir de la méthode du fournisseur de schéma. L'utilisation d'une méthode du fournisseur de schéma est facultative pour les types d'élément. Vous pouvez spécifier `null` au lieu du nom de méthode dans `XmlSchemaProviderAttribute`. Toutefois, si `IsAny` a la valeur `true` et qu'une méthode du fournisseur de schéma est spécifiée, la méthode doit retourner `null`.  
+- Les types d'élément sont utilisés lorsqu'un type `IXmlSerializable` doit contrôler son propre nom d'élément racine. Pour marquer un type comme type élément, affectez à la propriété <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> sur l'attribut <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> la valeur `true` ou retournez `null` à partir de la méthode du fournisseur de schéma. L'utilisation d'une méthode du fournisseur de schéma est facultative pour les types d'élément. Vous pouvez spécifier `null` au lieu du nom de méthode dans `XmlSchemaProviderAttribute`. Toutefois, si `IsAny` a la valeur `true` et qu'une méthode du fournisseur de schéma est spécifiée, la méthode doit retourner `null`.  
   
--   Les types <xref:System.Data.DataSet> hérités sont des types `IXmlSerializable` qui ne sont pas marqués avec l'attribut `XmlSchemaProviderAttribute`. À la place, ils comptent sur la méthode <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> pour la génération de schéma. Ce modèle est utilisé pour le type `DataSet` et son groupe de données typés dérive une classe dans les versions antérieures du .NET Framework, mais il est désormais obsolète et pris en charge uniquement pour des raisons d'héritage. Ne vous fiez pas à ce modèle et appliquez toujours `XmlSchemaProviderAttribute` à vos types `IXmlSerializable`.  
+- Les types <xref:System.Data.DataSet> hérités sont des types `IXmlSerializable` qui ne sont pas marqués avec l'attribut `XmlSchemaProviderAttribute`. À la place, ils comptent sur la méthode <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> pour la génération de schéma. Ce modèle est utilisé pour le type `DataSet` et son groupe de données typés dérive une classe dans les versions antérieures du .NET Framework, mais il est désormais obsolète et pris en charge uniquement pour des raisons d'héritage. Ne vous fiez pas à ce modèle et appliquez toujours `XmlSchemaProviderAttribute` à vos types `IXmlSerializable`.  
   
 ### <a name="ixmlserializable-content-types"></a>Types de contenu IXmlSerializable  
  Lors de la sérialisation d'un membre de données d'un type qui implémente `IXmlSerializable` et qui est un type de contenu défini précédemment, le sérialiseur écrit l'élément wrapper pour le membre de données et transmet le contrôle à la méthode <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>. L'implémentation <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> peut écrire n'importe quel code XML, y compris ajouter des attributs à l'élément wrapper. Au terme de l'écriture de `WriteXml`, le sérialiseur ferme l'élément.  
@@ -133,37 +133,37 @@ Windows Communication Foundation (WCF) peut utiliser deux technologies de séria
   
  La sérialisation et la désérialisation d'un type d'élément est très semblable à la sérialisation et la désérialisation d'un type de contenu. Toutefois, il y a des différences importantes :  
   
--   L'implémentation `WriteXml` est censée écrire exactement un élément (qui peut contenir évidemment plusieurs éléments enfants). Elle ne doit pas écrire d'attributs en dehors de cet élément unique, plusieurs éléments frères ou de contenu mixte. L'élément peut être vide.  
+- L'implémentation `WriteXml` est censée écrire exactement un élément (qui peut contenir évidemment plusieurs éléments enfants). Elle ne doit pas écrire d'attributs en dehors de cet élément unique, plusieurs éléments frères ou de contenu mixte. L'élément peut être vide.  
   
--   L'implémentation `ReadXml` ne doit pas lire l'élément wrapper. Elle est censée lire l'élément unique produit par `WriteXml`.  
+- L'implémentation `ReadXml` ne doit pas lire l'élément wrapper. Elle est censée lire l'élément unique produit par `WriteXml`.  
   
--   Lors de la sérialisation régulière d'un type d'élément (par exemple, comme membre de données dans un contrat de données), le sérialiseur produit un élément wrapper avant d'appeler `WriteXml`, comme avec les types de contenu. Cependant, lors de la sérialisation d'un type d'élément au niveau supérieur, le sérialiseur ne produit normalement pas un élément wrapper autour de l'élément écrit par `WriteXml`, sauf si un nom racine et l'espace de noms sont spécifiés explicitement lors de l'élaboration du sérialiseur dans les constructeurs `DataContractSerializer` ou `NetDataContractSerializer`. Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+- Lors de la sérialisation régulière d'un type d'élément (par exemple, comme membre de données dans un contrat de données), le sérialiseur produit un élément wrapper avant d'appeler `WriteXml`, comme avec les types de contenu. Cependant, lors de la sérialisation d'un type d'élément au niveau supérieur, le sérialiseur ne produit normalement pas un élément wrapper autour de l'élément écrit par `WriteXml`, sauf si un nom racine et l'espace de noms sont spécifiés explicitement lors de l'élaboration du sérialiseur dans les constructeurs `DataContractSerializer` ou `NetDataContractSerializer`. Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
--   Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut être `null` et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
+- Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut être `null` et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
   
--   Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>, avec le paramètre `verifyObjectName` ayant la valeur `true`, se comporte de la même façon que `IsStartObject` avant de lire l'objet. `ReadObject` passe ensuite le contrôle à la méthode `ReadXml`.  
+- Si vous désérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> retourne `true` s'il trouve le début d'un élément. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>, avec le paramètre `verifyObjectName` ayant la valeur `true`, se comporte de la même façon que `IsStartObject` avant de lire l'objet. `ReadObject` passe ensuite le contrôle à la méthode `ReadXml`.  
   
  Le schéma exporté pour les types d'élément est le même que pour le type `XmlElement` décrit dans une section antérieure, sauf que la méthode du fournisseur de schéma peut ajouter tout schéma supplémentaire au <xref:System.Xml.Schema.XmlSchemaSet> comme avec les types de contenu. L'utilisation de l'attribut `XmlRootAttribute` avec les types d'élément n'est pas autorisé, et les déclarations d'élément globales ne sont jamais émises pour ces types.  
   
 ### <a name="differences-from-the-xmlserializer"></a>Différences par rapport au XmlSerializer  
  L'interface `IXmlSerializable` et les attributs `XmlSchemaProviderAttribute` et `XmlRootAttribute` sont également compris par le <xref:System.Xml.Serialization.XmlSerializer>. Cependant, il existe des différences dans la manière dont ils sont traités dans le modèle de contrat de données. Ces différences importantes sont répertoriées dans la liste suivante :  
   
--   La méthode du fournisseur de schéma doit être publique pour être utilisée dans le `XmlSerializer`, mais ne doit pas être nécessairement publique pour être utilisée dans le modèle de contrat de données.  
+- La méthode du fournisseur de schéma doit être publique pour être utilisée dans le `XmlSerializer`, mais ne doit pas être nécessairement publique pour être utilisée dans le modèle de contrat de données.  
   
--   La méthode du fournisseur de schéma est appelée lorsque `IsAny` a la valeur `true` dans le modèle de contrat de données mais pas avec le `XmlSerializer`.  
+- La méthode du fournisseur de schéma est appelée lorsque `IsAny` a la valeur `true` dans le modèle de contrat de données mais pas avec le `XmlSerializer`.  
   
--   Lorsque l'attribut `XmlRootAttribute` n'est pas présent pour les types de contenu ou de groupes de données hérités, le `XmlSerializer` exporte une déclaration d'élément globale dans l'espace de noms vide. Dans le modèle de contrat de données, l'espace de noms utilisé est normalement l'espace de noms de contrat de données décrit précédemment.  
+- Lorsque l'attribut `XmlRootAttribute` n'est pas présent pour les types de contenu ou de groupes de données hérités, le `XmlSerializer` exporte une déclaration d'élément globale dans l'espace de noms vide. Dans le modèle de contrat de données, l'espace de noms utilisé est normalement l'espace de noms de contrat de données décrit précédemment.  
   
  Gardez ces différences à l'esprit lors de la création des types qui sont utilisés avec les deux technologies de sérialisation.  
   
 ### <a name="importing-ixmlserializable-schema"></a>Importation du schéma IXmlSerializable  
  Lorsque vous importez un schéma généré à partir des types `IXmlSerializable`, plusieurs possibilités sont offertes :  
   
--   Le schéma généré peut être un schéma de contrat de données valide comme décrit dans [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Dans ce cas, le schéma peut être importé comme d'habitude et les types de contrat de données normaux sont générés.  
+- Le schéma généré peut être un schéma de contrat de données valide comme décrit dans [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Dans ce cas, le schéma peut être importé comme d'habitude et les types de contrat de données normaux sont générés.  
   
--   Le schéma généré peut ne pas être un schéma de contrat de données valide. Par exemple, votre méthode du fournisseur de schéma peut générer un schéma qui implique des attributs XML qui ne sont pas pris en charge dans le modèle de contrat de données. Dans ce cas, vous pouvez importer le schéma comme des types `IXmlSerializable`. Ce mode d’importation est pas activée par défaut mais peut être activé facilement, par exemple, avec le `/importXmlTypes` commutateur de ligne de commande pour le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Cette opération est décrite en détail dans le [importation du schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Notez que vous devez utiliser directement le XML pour vos instances de type. Vous pouvez envisager d'utiliser également une technologie de sérialisation différente qui prend en charge une plage de schéma plus large. Consultez la rubrique sur l'utilisation du `XmlSerializer`.  
+- Le schéma généré peut ne pas être un schéma de contrat de données valide. Par exemple, votre méthode du fournisseur de schéma peut générer un schéma qui implique des attributs XML qui ne sont pas pris en charge dans le modèle de contrat de données. Dans ce cas, vous pouvez importer le schéma comme des types `IXmlSerializable`. Ce mode d’importation est pas activée par défaut mais peut être activé facilement, par exemple, avec le `/importXmlTypes` commutateur de ligne de commande pour le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Cette opération est décrite en détail dans le [importation du schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Notez que vous devez utiliser directement le XML pour vos instances de type. Vous pouvez envisager d'utiliser également une technologie de sérialisation différente qui prend en charge une plage de schéma plus large. Consultez la rubrique sur l'utilisation du `XmlSerializer`.  
   
--   Vous pouvez réutiliser vos types `IXmlSerializable` existants dans le proxy au lieu d'en générer de nouveaux. Dans ce cas, la fonctionnalité des types référencés décrite dans la rubrique « Importation du schéma pour générer des types » peut être utilisée pour indiquer le type à réutiliser. Cela revient à utiliser le commutateur `/reference` sur svcutil.exe qui spécifie l'assembly qui contient les types à réutiliser.  
+- Vous pouvez réutiliser vos types `IXmlSerializable` existants dans le proxy au lieu d'en générer de nouveaux. Dans ce cas, la fonctionnalité des types référencés décrite dans la rubrique « Importation du schéma pour générer des types » peut être utilisée pour indiquer le type à réutiliser. Cela revient à utiliser le commutateur `/reference` sur svcutil.exe qui spécifie l'assembly qui contient les types à réutiliser.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>Comportement hérité de XmlSerializer  
  Dans le .NET Framework 4.0 et versions antérieures, le XmlSerializer a généré les assemblys de sérialisation temporaires en écrivant le code C# dans un fichier. Le fichier a ensuite été compilé dans un assembly.  Ce comportement a eu certaines conséquences indésirables, comme ralentir le temps de démarrage du sérialiseur. Dans le .NET Framework 4.5, ce comportement a été modifié pour générer des assemblys sans exiger l'utilisation du compilateur. Certains développeurs peuvent souhaiter consulter le code C# généré. Vous pouvez spécifier d'utiliser ce comportement hérité par la configuration suivante :  

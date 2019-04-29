@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787671"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procédure : créer un service d’émission de jeton de sécurité
 Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d’échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
@@ -24,61 +24,61 @@ Un service de jeton de sécurité implémente le protocole défini dans la spéc
 ### <a name="request-message-structure"></a>Structure d'un message de demande  
  La structure d'un message de demande d'émission se compose en général des éléments suivants :  
   
--   Une demande de taper l’URI avec la valeur `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- Une demande de taper l’URI avec la valeur `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Un URI de type de jeton. Pour les jetons Security Assertions Markup Language (SAML) 1.1, la valeur de cet URI est `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Un URI de type de jeton. Pour les jetons Security Assertions Markup Language (SAML) 1.1, la valeur de cet URI est `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Une valeur de taille de clé qui indique le nombre de bits inclus dans la clé à associer au jeton émis.  
+- Une valeur de taille de clé qui indique le nombre de bits inclus dans la clé à associer au jeton émis.  
   
--   Un URI de type de clé. Pour les clés symétriques, la valeur de cet URI est `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Un URI de type de clé. Pour les clés symétriques, la valeur de cet URI est `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  De plus, plusieurs autres éléments peuvent être présents :  
   
--   Le matériel de clé fourni par le client.  
+- Le matériel de clé fourni par le client.  
   
--   Des informations d'étendue qui indiquent avec quel service cible le jeton émis sera utilisé.  
+- Des informations d'étendue qui indiquent avec quel service cible le jeton émis sera utilisé.  
   
  Le service de jeton de sécurité utilise les informations incluses dans le message de demande d'émission lorsqu'il construit le message de réponse d'émission.  
   
 ## <a name="response-message-structure"></a>Structure d'un message de réponse  
  La structure d'un message de réponse d'émission se compose en général des éléments suivants :  
   
--   Le jeton de sécurité émis, par exemple, une assertion SAML 1.1.  
+- Le jeton de sécurité émis, par exemple, une assertion SAML 1.1.  
   
--   Un jeton de preuve associé au jeton de sécurité. Pour des clés symétriques, il s'agit souvent d'une forme chiffrée du matériel de clé.  
+- Un jeton de preuve associé au jeton de sécurité. Pour des clés symétriques, il s'agit souvent d'une forme chiffrée du matériel de clé.  
   
--   Des références au jeton de sécurité émis. En général, le service de jeton de sécurité retourne une référence qui peut être utilisée lorsque le jeton émis apparaît dans un message ultérieur envoyé par le client et une autre référence qui peut être utilisée lorsque le jeton n'est pas présent dans les messages ultérieurs.  
+- Des références au jeton de sécurité émis. En général, le service de jeton de sécurité retourne une référence qui peut être utilisée lorsque le jeton émis apparaît dans un message ultérieur envoyé par le client et une autre référence qui peut être utilisée lorsque le jeton n'est pas présent dans les messages ultérieurs.  
   
  De plus, plusieurs autres éléments peuvent être présents :  
   
--   Le matériel de clé fourni par le service de jeton de sécurité.  
+- Le matériel de clé fourni par le service de jeton de sécurité.  
   
--   L'algorithme requis pour calculer la clé partagée.  
+- L'algorithme requis pour calculer la clé partagée.  
   
--   Les informations de durée de vie du jeton émis.  
+- Les informations de durée de vie du jeton émis.  
   
 ## <a name="processing-request-messages"></a>Traitement des messages de demande  
  Le service de jeton de sécurité traite la demande d'émission en examinant les différents éléments du message de demande et en s'assurant qu'il peut émettre un jeton satisfaisant la demande. Le service de jeton de sécurité doit déterminer les éléments suivants avant de créer le jeton à émettre :  
   
--   La demande est vraiment une demande d'émission de jeton.  
+- La demande est vraiment une demande d'émission de jeton.  
   
--   Le service de jeton de sécurité prend en charge le type de jeton demandé.  
+- Le service de jeton de sécurité prend en charge le type de jeton demandé.  
   
--   Le demandeur est autorisé à faire la demande.  
+- Le demandeur est autorisé à faire la demande.  
   
--   Le service de jeton de sécurité peut satisfaire les attentes du demandeur en ce qui concerne le matériel de clé.  
+- Le service de jeton de sécurité peut satisfaire les attentes du demandeur en ce qui concerne le matériel de clé.  
   
  Deux parties essentielles de la construction d'un jeton correspondent à la détermination de la clé utilisée pour signer le jeton et de la clé utilisée pour chiffrer la clé partagée. Le jeton doit être signé pour que, lorsque le client présente le jeton au service cible, ce service puisse déterminer que le jeton a été émis par un service de jeton de sécurité qu'il approuve. Le matériel de clé doit être chiffré de telle façon que le service cible puisse le déchiffrer.  
   
  La signature d'une assertion SAML implique la création d'une instance <xref:System.IdentityModel.Tokens.SigningCredentials>. Le constructeur pour cette classe utilise les éléments suivants :  
   
--   Un <xref:System.IdentityModel.Tokens.SecurityKey> pour la clé à utiliser pour signer l'assertion SAML.  
+- Un <xref:System.IdentityModel.Tokens.SecurityKey> pour la clé à utiliser pour signer l'assertion SAML.  
   
--   Une chaîne qui identifie l'algorithme de signature à utiliser.  
+- Une chaîne qui identifie l'algorithme de signature à utiliser.  
   
--   Une chaîne qui identifie l’algorithme de condensat à utiliser.  
+- Une chaîne qui identifie l’algorithme de condensat à utiliser.  
   
--   En option, un <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> qui identifie la clé à utiliser pour signer l'assertion.  
+- En option, un <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> qui identifie la clé à utiliser pour signer l'assertion.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

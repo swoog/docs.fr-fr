@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792130"
 ---
 # <a name="webbrowser-control-overview"></a>Vue d'ensemble du contrôle WebBrowser
 Le <xref:System.Windows.Forms.WebBrowser> contrôle fournit un wrapper managé pour le contrôle WebBrowser ActiveX. Le wrapper managé vous permet d’afficher des pages Web dans vos applications clientes Windows Forms. Vous pouvez utiliser la <xref:System.Windows.Forms.WebBrowser> contrôle dupliquer les fonctionnalités d’exploration de Web d’Internet Explorer dans votre application ou vous peut désactiver la fonctionnalité d’Internet Explorer par défaut et utiliser le contrôle comme une visionneuse de documents HTML simple. Vous pouvez également utiliser le contrôle pour ajouter des éléments d’interface utilisateur DHTML à votre formulaire et masquer le fait qu’ils sont hébergés dans le <xref:System.Windows.Forms.WebBrowser> contrôle. Cette approche vous permet de combiner de façon transparente les contrôles Web avec des contrôles Windows Forms dans une application unique.  

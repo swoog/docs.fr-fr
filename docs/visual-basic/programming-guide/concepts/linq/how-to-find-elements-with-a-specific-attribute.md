@@ -3,11 +3,11 @@ title: 'Procédure : Rechercher des éléments avec un attribut spécifique (XP
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
 ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780482"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Procédure : Rechercher des éléments avec un attribut spécifique (XPath-LINQ to XML) (Visual Basic)
 Parfois, vous souhaitez rechercher tous les éléments qui ont un attribut spécifique. Vous ne vous souciez pas du contenu de l'attribut. Au lieu de cela, vous souhaitez sélectionner les éléments en fonction de l'existence de l'attribut.  

@@ -3,17 +3,17 @@ title: Compensation
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774281"
 ---
 # <a name="compensation"></a>Compensation
 Compensation dans Windows Workflow Foundation (WF) est le mécanisme par lequel précédemment travail terminé peut être annulée ou compensée (à la suite la logique définie par l’application) lorsqu’un échec ultérieur se produit. Cette section décrit comment utiliser une compensation dans les flux de travail.  
   
 ## <a name="compensation-vs-transactions"></a>Compensation et Transactions  
- Une transaction vous permet de combiner plusieurs opérations en une seule unité de travail. L'utilisation d'une transaction permet à votre application d'annuler (restaurer) toute modification exécutée depuis une transaction en cas d'erreur au cours du processus de transaction. Toutefois, l'utilisation de transactions peut ne pas convenir dans le cas d'un travail de longue durée. Par exemple, une application de planification de voyage est implémentée en tant que flux de travail. Les étapes du flux de travail peuvent porter sur la réservation d'un vol, l'attente de l'approbation du gestionnaire et le paiement du vol. Ce processus pourrait prendre de nombreux jours et ne s'avère pas pratique pour que les étapes de réservation et de paiement du vol puissent participer à la même transaction. Dans un tel scénario, la compensation pourrait être utilisée pour annuler l'étape de réservation du flux de travail en cas d'erreur ultérieure lors du traitement.  
+ Une transaction vous permet de combiner plusieurs opérations en une seule unité de travail. L’utilisation d’une transaction permet à votre application d’annuler (restaurer) toute modification exécutée depuis une transaction en cas d’erreur au cours du processus de transaction. Toutefois, l’utilisation de transactions peut ne pas convenir dans le cas d’un travail de longue durée. Par exemple, une application de planification de voyage est implémentée en tant que flux de travail. Les étapes du flux de travail peuvent porter sur la réservation d'un vol, l'attente de l'approbation du gestionnaire et le paiement du vol. Ce processus pourrait prendre de nombreux jours et ne s’avère pas pratique pour que les étapes de réservation et de paiement du vol puissent participer à la même transaction. Dans un tel scénario, la compensation pourrait être utilisée pour annuler l'étape de réservation du flux de travail en cas d'erreur ultérieure lors du traitement.  
   
 > [!NOTE]
 >  Cette rubrique couvre la compensation dans les workflows. Pour plus d’informations sur les transactions dans les workflows, consultez [Transactions](workflow-transactions.md) et <xref:System.Activities.Statements.TransactionScope>. Pour plus d’informations sur les transactions, consultez <xref:System.Transactions?displayProperty=nameWithType> et <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
@@ -103,7 +103,7 @@ Compensation dans Windows Workflow Foundation (WF) est le mécanisme par lequel 
 > [!NOTE]
 >  <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> est appelé uniquement si les activités dans le <xref:System.Activities.Statements.CompensableActivity.Body%2A> de <xref:System.Activities.Statements.CompensableActivity> ne se sont pas terminées et que l'activité est annulée. <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> est exécuté uniquement si les activités dans le <xref:System.Activities.Statements.CompensableActivity.Body%2A> de <xref:System.Activities.Statements.CompensableActivity> se sont terminées avec succès et que la compensation est, par la suite, appelée sur l'activité.  
   
- <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> donne aux auteurs de workflow la possibilité de fournir n'importe quelle logique d'annulation appropriée. Dans l'exemple suivant, une exception est levée pendant l'exécution de <xref:System.Activities.Statements.CompensableActivity.Body%2A>, puis <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> est appelé.  
+ <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> donne aux auteurs de workflow la possibilité de fournir n’importe quelle logique d’annulation appropriée. Dans l'exemple suivant, une exception est levée pendant l'exécution de <xref:System.Activities.Statements.CompensableActivity.Body%2A>, puis <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> est appelé.  
   
 ```csharp  
 Activity wf = new Sequence()  

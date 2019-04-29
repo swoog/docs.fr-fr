@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791948"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Tableaux de paramètres (Visual Basic)
 En règle générale, vous ne pouvez pas appeler une procédure avec plus d’arguments que spécifie la déclaration de procédure. Lorsque vous avez besoin d’un nombre indéfini d’arguments, vous pouvez déclarer un *tableau de paramètres*, ce qui permet à la procédure d’accepter un tableau de valeurs pour un paramètre. Il est inutile de connaître le nombre d’éléments dans le tableau de paramètres lorsque vous définissez la procédure. La taille du tableau est déterminée individuellement par chaque appel à la procédure.  
@@ -23,22 +23,22 @@ En règle générale, vous ne pouvez pas appeler une procédure avec plus d’ar
 ## <a name="declaring-a-paramarray"></a>Déclaration d’un paramètre ParamArray  
  Vous utilisez le [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) mot clé pour désigner un tableau de paramètres dans la liste de paramètres. Les règles suivantes s'appliquent :  
   
--   Une procédure peut définir qu’un seul tableau de paramètres, et il doit être le dernier paramètre dans la définition de procédure.  
+- Une procédure peut définir qu’un seul tableau de paramètres, et il doit être le dernier paramètre dans la définition de procédure.  
   
--   Le tableau de paramètres doit être passé par valeur. Il est conseillé d’inclure explicitement les [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mot clé dans la définition de procédure.  
+- Le tableau de paramètres doit être passé par valeur. Il est conseillé d’inclure explicitement les [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mot clé dans la définition de procédure.  
   
--   Le tableau de paramètres est automatiquement facultatif. Sa valeur par défaut est un tableau unidimensionnel vide du type d’élément du tableau de paramètres.  
+- Le tableau de paramètres est automatiquement facultatif. Sa valeur par défaut est un tableau unidimensionnel vide du type d’élément du tableau de paramètres.  
   
--   Tous les paramètres précédant le tableau de paramètres doivent être requis. Le tableau de paramètres doit être le seul paramètre facultatif.  
+- Tous les paramètres précédant le tableau de paramètres doivent être requis. Le tableau de paramètres doit être le seul paramètre facultatif.  
   
 ## <a name="calling-a-paramarray"></a>Appel d’un ParamArray  
  Lorsque vous appelez une procédure qui définit un tableau de paramètres, vous pouvez fournir l’argument dans l’une des manières suivantes :  
   
--   Aucune valeur, ce qui signifie que vous pouvez omettre le [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. Dans ce cas, un tableau vide est passé à la procédure. Vous pouvez également passer le [rien](../../../../visual-basic/language-reference/nothing.md) mot clé, avec le même effet.  
+- Aucune valeur, ce qui signifie que vous pouvez omettre le [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. Dans ce cas, un tableau vide est passé à la procédure. Vous pouvez également passer le [rien](../../../../visual-basic/language-reference/nothing.md) mot clé, avec le même effet.  
   
--   Une liste d’un nombre arbitraire d’arguments, séparés par des virgules. Le type de données de chaque argument doit être implicitement convertible en le `ParamArray` type d’élément.  
+- Une liste d’un nombre arbitraire d’arguments, séparés par des virgules. Le type de données de chaque argument doit être implicitement convertible en le `ParamArray` type d’élément.  
   
--   Un tableau avec le même type d’élément en tant que type d’élément du tableau de paramètres.  
+- Un tableau avec le même type d’élément en tant que type d’élément du tableau de paramètres.  
   
  Dans tous les cas, le code au sein de la procédure traite le tableau de paramètres comme un tableau unidimensionnel avec des éléments du même type de données en tant que le `ParamArray` type de données.  
   

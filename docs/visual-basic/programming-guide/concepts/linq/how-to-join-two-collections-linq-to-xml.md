@@ -3,11 +3,11 @@ title: 'Procédure : Joindre deux Collections (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778051"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Procédure : Joindre deux Collections (LINQ to XML) (Visual Basic)
 Un élément ou attribut dans un document XML peut parfois faire référence à un autre élément ou attribut. Par exemple, le document XML [Exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) contient une liste de clients et une liste de commandes. Chaque élément `Customer` contient un attribut `CustomerID`. Chaque élément `Order` contient un élément `CustomerID`. L'élément `CustomerID` dans chaque commande fait référence à l'attribut `CustomerID` dans un client.  

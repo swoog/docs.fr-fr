@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Créer un Store d’Instance personnalisé'
+title: 'Procédure : créer un magasin d’instances personnalisé'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945637"
 ---
-# <a name="how-to-create-a-custom-instance-store"></a>Procédure : Créer un Store d’Instance personnalisé
+# <a name="how-to-create-a-custom-instance-store"></a>Procédure : créer un magasin d’instances personnalisé
 
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contient <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un magasin d'instance qui utilise SQL Server pour rendre les données de workflow persistantes. Si votre application est requise pour la persistance des données de workflow sur un autre support, tel qu'une autre base de données ou un système de fichiers, vous pouvez implémenter un magasin d'instances personnalisé. Un magasin d'instances personnalisé est créé en étendant la classe abstraite <xref:System.Runtime.DurableInstancing.InstanceStore> et en implémentant les méthodes nécessaires pour l'implémentation. Pour une implémentation complète d’un magasin d’instances personnalisé, consultez le [processus d’achat d’entreprise](./samples/corporate-purchase-process.md) exemple.
 
@@ -45,7 +45,7 @@ ms.locfileid: "57707766"
 
 - <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: Le moteur de persistance envoie cette commande au magasin d’instances lorsque l’ID d’instance d’un propriétaire de verrou peut être supprimé du magasin d’instances. Comme avec <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, l'ID du propriétaire du verrou doit être fourni par l'application.
 
-     L'extrait de code suivant montre comment libérer un verrou à l'aide de <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.
+     L’extrait de code suivant montre comment libérer un verrou à l’aide de <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.
 
     ```csharp
     static void FreeHandleAndDeleteOwner(InstanceStore store, InstanceHandle handle)

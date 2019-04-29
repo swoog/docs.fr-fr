@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956362"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle CheckedListBox (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.CheckedListBox> contrôle s’étend la <xref:System.Windows.Forms.ListBox> contrôle. Il fait presque tout ce qu’une zone de liste, également peut afficher une case à cocher en regard des éléments dans la liste. Autres différences entre les deux contrôles sont différencient uniquement prise en charge des zones de liste <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; et qui vérifiées des zones de liste ne peuvent avoir qu’un seul élément ou aucun sélectionné. Notez qu’un élément sélectionné s’affiche en surbrillance sur le formulaire et n’est pas identique à un élément activé.  

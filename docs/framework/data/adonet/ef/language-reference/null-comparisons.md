@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
 ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760426"
 ---
 # <a name="null-comparisons"></a>Comparaisons null
 Une valeur `null` dans la source de données indique que la valeur est inconnue. Dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], vous pouvez vérifier les valeurs Null afin que certains calculs ou certaines comparaisons soient effectués uniquement sur les lignes qui ont des données valides, ou non Null. Toutefois, la sémantique Null CLR peut différer par rapport à la sémantique Null de la source de données. La plupart des bases de données utilisent une version de logique à trois valeurs pour gérer les comparaisons de valeurs Null. Autrement dit, une comparaison par rapport à une valeur null ne correspond pas à `true` ou `false`, il renvoie la valeur `unknown`. Il s'agit souvent d'une implémentation de valeurs ANSI Null, mais ce n'est pas toujours le cas.  

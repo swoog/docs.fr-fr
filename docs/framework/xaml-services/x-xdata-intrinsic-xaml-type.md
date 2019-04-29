@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938825"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData, type XAML intrinsèque
 Permet de positionner des îlots de données XML dans une production XAML. Éléments XML dans `x:XData` ne doit pas être traités par les processeurs XAML comme s’ils sont une partie de l’espace de noms XAML par défaut d’agissant ou tout autre espace de noms XAML. `x:XData` peut contenir arbitraire XML bien formé.  
@@ -35,7 +35,7 @@ Permet de positionner des îlots de données XML dans une production XAML. Élé
 |||  
 |-|-|  
 |`elementDataRoot`|L’élément racine unique de l’îlot de données incorporé. Pour la plupart des consommateurs éventuelle, XML qui n’a pas d’une racine unique est considérée comme non valide. En particulier, une racine unique est requise si la `x:XData` est destiné à une source de données XML WPF ou bien d’autres technologies qui utilisent des sources XML pour la liaison de données.|  
-|`[elementData]`|Facultatif. Code XML qui représente les données XML. N’importe quel nombre d’éléments peut être inclu en tant que données de l’élément et les éléments imbriqués peuvent être contenus dans d’autres éléments ; Toutefois, les règles générales de XML s’appliquent.|  
+|`[elementData]`|Optionnel. Code XML qui représente les données XML. N’importe quel nombre d’éléments peut être inclu en tant que données de l’élément et les éléments imbriqués peuvent être contenus dans d’autres éléments ; Toutefois, les règles générales de XML s’appliquent.|  
   
 ## <a name="remarks"></a>Notes  
  Les éléments XML dans un `x:XData` objet peut déclarer de nouveau tous les espaces de noms possibles et les préfixes contenant XMLDOM leurs au sein des données.  

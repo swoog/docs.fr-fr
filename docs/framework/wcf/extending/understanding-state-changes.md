@@ -3,10 +3,11 @@ title: Fonctionnement des modifications d'état
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
 ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771594"
 ---
 # <a name="understanding-state-changes"></a>Fonctionnement des modifications d'état
 Cette rubrique présente les états et transitions des canaux, les types utilisés pour structurer les états des canaux et la manière de les implémenter.  
@@ -23,7 +24,7 @@ Cette rubrique présente les états et transitions des canaux, les types utilis�
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>États et transitions d'état ICommunicationObject et CommunicationObject  
  Un <xref:System.ServiceModel.ICommunicationObject> démarre dans l'état Created où ses différentes propriétés peuvent être configurées. Une fois dans l'état Opened, l'objet est utilisable pour envoyer et recevoir des messages mais ses propriétés sont considérées comme immuables. Une fois dans l'état Closing, l'objet ne peut plus traiter de nouvelles demandes d'envoi ou de réception, mais les demandes existantes ont la possibilité d'aboutir jusqu'à ce que le délai d'attente Close soit atteint.  Si une erreur irrécupérable se produit, l'objet passe à l'état Faulted qui permet de rechercher des informations sur l'erreur avant de le fermer. Dans l'état Closed, l'objet a atteint avant tout la fin de l'ordinateur d'état. Une fois qu'un objet est passé d'un état au suivant, il ne revient pas à l'état précédent.  
   
- Le diagramme suivant présente les états et les transitions d'état <xref:System.ServiceModel.ICommunicationObject>. Les transitions d'état peuvent être provoquées en appelant l'une des trois méthodes : Abort, Open ou Close. Elles peuvent également être provoquées en appelant d'autres méthodes spécifiques à l'implémentation. La transition vers l'état Faulted peut se produire suite à des erreurs lors de l'ouverture ou à l'issue de l'ouverture de l'objet de communication.  
+ Le diagramme suivant présente les états et les transitions d'état <xref:System.ServiceModel.ICommunicationObject>. Transitions d’état peuvent être provoquées en appelant une des trois méthodes : Abort, Open ou fermer. Elles peuvent également être provoquées en appelant d'autres méthodes spécifiques à l'implémentation. La transition vers l'état Faulted peut se produire suite à des erreurs lors de l'ouverture ou à l'issue de l'ouverture de l'objet de communication.  
   
  Chaque <xref:System.ServiceModel.ICommunicationObject> démarre dans l'état Created. Dans cet état, une application peut configurer l'objet en définissant ses propriétés. Une fois qu'un objet est dans un état autre que Created, il est considéré comme immuable.  
   
@@ -71,7 +72,7 @@ Figure 2. Implémentation CommunicationObject de l'ordinateur d'état ICommun
   
  `protected CommunicationObject(object mutex) { … }`  
   
- Enfin, un troisième constructeur prend un paramètre supplémentaire utilisé comme argument d'expéditeur lorsque des événements <xref:System.ServiceModel.ICommunicationObject> sont déclenchés.  
+ Enfin, un troisième constructeur prend un paramètre supplémentaire utilisé comme argument d’expéditeur lorsque des événements <xref:System.ServiceModel.ICommunicationObject> sont déclenchés.  
   
  `protected CommunicationObject(object mutex, object eventSender) { … }`  
   
@@ -79,9 +80,9 @@ Figure 2. Implémentation CommunicationObject de l'ordinateur d'état ICommun
   
  Méthode Open  
   
- Condition préalable : l'état est Created.  
+ Condition préalable : État est créé.  
   
- Post-condition : l'état est Opened ou Faulted. Peut lever une exception.  
+ Condition préalable : État est Opened ou Faulted. Peut lever une exception.  
   
  La méthode Open() essaiera d'ouvrir l'objet de communication et d'affecter la valeur Opened à l'état. Si elle rencontre une erreur, elle affectera la valeur Faulted à l'état.  
   
@@ -94,9 +95,9 @@ Substituez la méthode OnOpen pour implémenter une logique d'ouverture personna
   
  Close, méthode  
   
- Condition préalable : aucune.  
+ Condition préalable : Aucun.  
   
- Post-condition : l'état est Closed. Peut lever une exception.  
+ Condition préalable : État est fermé. Peut lever une exception.  
   
  La méthode Close() peut être appelée à tous les états. Elle essaie de fermer normalement l'objet. Si une erreur est rencontrée, elle arrête l'objet. La méthode ne fait rien si l'état actuel est Closing ou Closed. Sinon, elle affecte la valeur Closing à l'état. Si l'état d'origine est Created, Opening ou Faulted, elle appelle Abort() (voir le diagramme suivant). Si l'état d'origine est Opened, elle appelle OnClosing() (laquelle déclenche l'événement Closing), OnClose() et OnClosed() dans cet ordre. Si l'un de ces appels lève une exception, Close() appelle Abort() et permet à l'exception de se propager. OnClosed() affecte la valeur Closed à l'état et déclenche l'événement Closed. Le diagramme suivant présente le processus Close de manière plus détaillée.  
   
@@ -105,8 +106,8 @@ Substituez la méthode OnClose pour implémenter une logique de fermeture person
   
  Abandonner  
   
- Condition préalable : aucune.  
-Post-condition : l'état est Closed. Peut lever une exception.  
+ Condition préalable : Aucun.  
+Condition préalable : État est fermé. Peut lever une exception.  
   
  La méthode Abort() ne fait rien si l'état actuel est Closed ou si l'objet a été arrêté avant (par exemple, en faisant exécuter Abort() sur un autre thread). Sinon, elle affecte la valeur Closing à l'état et appelle OnClosing() (laquelle déclenche l'événement Closing), OnAbort() et OnClosed() dans cet ordre (elle n'appelle pas OnClose parce que l'objet est arrêté, mais pas fermé). OnClosed() affecte la valeur Closed à l'état et déclenche l'événement Closed. En cas de levée d'une exception, celle-ci est à nouveau levée pour l'appelant d'Abort. Les implémentations d'OnClosing(), OnClosed() et OnAbort() ne doivent pas bloquer (par exemple, lors de l'entrée/sortie). Le diagramme suivant présente le processus Abort de manière plus détaillée.  
   
@@ -117,9 +118,9 @@ Substituez la méthode OnAbort pour implémenter une logique d'arrêt personnali
   
  La méthode Fault est propre à <xref:System.ServiceModel.Channels.CommunicationObject> et ne fait pas partie de l'interface <xref:System.ServiceModel.ICommunicationObject>. Elle est incluse ici par souci d'exhaustivité.  
   
- Condition préalable : aucune.  
+ Condition préalable : Aucun.  
   
- Post-condition : l'état est Faulted. Peut lever une exception.  
+ Condition préalable : État est Faulted. Peut lever une exception.  
   
  La méthode Fault() ne fait rien si l'état actuel est Faulted ou Closed. Sinon, elle affecte la valeur Faulted à l'état et appelle OnFaulted(), laquelle déclenche l'événement Faulted. Si OnFaulted lève une exception, elle est à nouveau levée.  
   
@@ -136,7 +137,7 @@ Substituez la méthode OnAbort pour implémenter une logique d'arrêt personnali
   
 |État|La méthode Abort a-t-elle été appelée ?|Exception|  
 |-----------|----------------------------|---------------|  
-|Créé le|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Création|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opening|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|Oui|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  

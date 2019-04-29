@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
 ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939103"
 ---
 # <a name="bindingsource-component-overview"></a>Vue d'ensemble du composant BindingSource
 Le composant <xref:System.Windows.Forms.BindingSource> est conçu pour simplifier le processus de liaison de contrôles à une source de données sous-jacente. Le composant <xref:System.Windows.Forms.BindingSource> agit à la fois comme un canal de communication et comme une source de données avec laquelle d'autres contrôles établissent une liaison. Il fournit une abstraction de la connexion de données de votre formulaire tout en transmettant les commandes à la liste de données sous-jacente. De plus, vous pouvez y ajouter des données directement, pour que le composant lui-même fonctionne comme une source de données.  

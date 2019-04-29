@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
 ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770800"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>Procédure : Positionner les éléments enfants d’une grille
 Cet exemple montre comment obtenir et définir des méthodes qui sont définies sur <xref:System.Windows.Controls.Grid> pour positionner des éléments enfants.  

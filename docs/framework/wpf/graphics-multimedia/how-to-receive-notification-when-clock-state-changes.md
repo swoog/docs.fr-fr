@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Recevoir une notification en cas de changement d'état de l'horloge"
+title: 'Procédure : Recevoir une notification en cas de changement d’état de l’horloge'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942132"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Procédure : Recevoir une notification en cas de changement d'état de l'horloge
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Procédure : Recevoir une notification en cas de changement d’état de l’horloge
 D’une horloge <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> événement se produit lors de son <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> devient non valide, par exemple lorsque l’horloge démarre ou s’arrête. Vous pouvez vous inscrire à cet événement directement en utilisant un <xref:System.Windows.Media.Animation.Clock>, ou vous pouvez vous inscrire à l’aide un <xref:System.Windows.Media.Animation.Timeline>.  
   
  Dans l’exemple suivant, un <xref:System.Windows.Media.Animation.Storyboard> et deux <xref:System.Windows.Media.Animation.DoubleAnimation> objets sont utilisés pour animer la largeur de deux rectangles. Le <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> événement est utilisé pour écouter les changements d’état de l’horloge.  

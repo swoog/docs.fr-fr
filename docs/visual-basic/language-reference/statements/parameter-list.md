@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784005"
 ---
 # <a name="parameter-list-visual-basic"></a>Liste de paramètres (Visual Basic)
 Spécifie les paramètres de qu'une procédure attend lorsqu’elle est appelée. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre.  
@@ -32,10 +32,10 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  Facultatif. Liste des attributs qui s’appliquent à ce paramètre. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).  
   
  `Optional`  
- Optionnel. Spécifie que ce paramètre n’est pas obligatoire lorsque la procédure est appelée.  
+ Facultatif. Spécifie que ce paramètre n’est pas obligatoire lorsque la procédure est appelée.  
   
  `ByVal`  
- Facultatif. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
+ Optionnel. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
   
  `ByRef`  
  Optionnel. Spécifie que la procédure peut modifier l’élément de variable sous-jacent dans le code appelant la même façon que le code d’appel.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>Règles  
   
--   **Parenthèses.** Si vous spécifiez une liste de paramètres, vous devez le placer entre parenthèses. S’il n’y a aucun paramètre, vous pouvez toujours utiliser des parenthèses entourant une liste vide. Cela améliore la lisibilité de votre code en clarifiant que l’élément est une procédure.  
+- **Parenthèses.** Si vous spécifiez une liste de paramètres, vous devez le placer entre parenthèses. S’il n’y a aucun paramètre, vous pouvez toujours utiliser des parenthèses entourant une liste vide. Cela améliore la lisibilité de votre code en clarifiant que l’élément est une procédure.  
   
--   **Paramètres facultatifs.** Si vous utilisez le `Optional` modificateur sur un paramètre, tous les paramètres suivants dans la liste doivent également être facultatifs et être déclarés à l’aide de la `Optional` modificateur.  
+- **Paramètres facultatifs.** Si vous utilisez le `Optional` modificateur sur un paramètre, tous les paramètres suivants dans la liste doivent également être facultatifs et être déclarés à l’aide de la `Optional` modificateur.  
   
      Chaque déclaration de paramètre facultatif doit fournir le `defaultvalue` clause.  
   
      Pour plus d’informations, consultez [paramètres facultatifs](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Tableaux de paramètres.** Vous devez spécifier `ByVal` pour un `ParamArray` paramètre.  
+- **Tableaux de paramètres.** Vous devez spécifier `ByVal` pour un `ParamArray` paramètre.  
   
      Vous ne pouvez pas utiliser les deux `Optional` et `ParamArray` dans la même liste de paramètres.  
   
      Pour plus d’informations, consultez [tableaux de paramètres](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Mécanisme de passage.** Le mécanisme par défaut pour chaque argument est `ByVal`, ce qui signifie que la procédure ne peut pas modifier l’élément variable sous-jacent. Toutefois, si l’élément est un type référence, la procédure peut modifier le contenu ou les membres de l’objet sous-jacent, même si elle ne peut pas remplacer ou réassigner l’objet lui-même.  
+- **Mécanisme de passage.** Le mécanisme par défaut pour chaque argument est `ByVal`, ce qui signifie que la procédure ne peut pas modifier l’élément variable sous-jacent. Toutefois, si l’élément est un type référence, la procédure peut modifier le contenu ou les membres de l’objet sous-jacent, même si elle ne peut pas remplacer ou réassigner l’objet lui-même.  
   
--   **Noms de paramètre.** Si le type de données du paramètre est un tableau, suivez `parametername` immédiatement par des parenthèses. Pour plus d’informations sur les noms de paramètre, consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Noms de paramètre.** Si le type de données du paramètre est un tableau, suivez `parametername` immédiatement par des parenthèses. Pour plus d’informations sur les noms de paramètre, consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre un `Function` procédure qui définit deux paramètres.  

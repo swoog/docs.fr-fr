@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948068"
 ---
 # <a name="recoloring-images"></a>Recoloriage des images
 Recoloriage est le processus de réglage des couleurs d’une image. Le changement de couleur à un autre, ajuster l’intensité d’une couleur par rapport à une autre couleur, modifier la luminosité ou le contraste des couleurs et conversion des couleurs en nuances de gris sont des exemples de recoloriage.  

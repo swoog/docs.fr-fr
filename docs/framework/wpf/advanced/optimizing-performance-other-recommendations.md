@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773098"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimisation des performances : Autres recommandations
 <a name="introduction"></a> Cette rubrique fournit des recommandations pour améliorer les performances en plus de celles abordées dans les rubriques de la section [Optimisation des performances des applications WPF](optimizing-wpf-application-performance.md).  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Opacité au niveau des pinceaux et opacité au niveau des éléments](#Opacity)  
+- [Opacité au niveau des pinceaux et opacité au niveau des éléments](#Opacity)  
   
--   [Navigation vers un objet](#Navigation_Objects)  
+- [Navigation vers un objet](#Navigation_Objects)  
   
--   [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
+- [Test de positionnement sur les grandes surfaces 3D](#Hit_Testing)  
   
--   [Événement CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+- [Événement CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
--   [Éviter l’utilisation de ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Éviter l’utilisation de ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Configurer le service de mise en cache de polices pour réduire le temps de démarrage](#FontCache)  
+- [Configurer le service de mise en cache de polices pour réduire le temps de démarrage](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opacité au niveau des pinceaux et opacité au niveau des éléments  

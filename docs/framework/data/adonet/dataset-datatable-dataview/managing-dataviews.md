@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785409"
 ---
 # <a name="managing-dataviews"></a>Gestion des DataViews
 Vous pouvez utiliser un objet <xref:System.Data.DataViewManager> pour gérer les paramètres de vue pour toutes les tables d'un objet <xref:System.Data.DataView>. Si vous avez un contrôle que vous souhaitez lier à plusieurs tables, tel qu’une grille qui parcourt des relations, un **DataViewManager** est idéale.  

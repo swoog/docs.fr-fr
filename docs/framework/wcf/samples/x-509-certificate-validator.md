@@ -3,11 +3,11 @@ title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949914"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 Cet exemple montre comment implémenter un validateur de certificat X.509 personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation de certificat X.509 intégrés ne convient aux spécifications de l’application. Cet exemple illustre un service qui possède un validateur personnalisé qui accepte les certificats auto-émis. Le client utilise un certificat X.509 pour s'authentifier auprès du service.
@@ -16,11 +16,11 @@ Cet exemple montre comment implémenter un validateur de certificat X.509 person
 
  En résumé, cet exemple montre comment :
 
--   Le client peut être authentifié à l'aide d'un certificat X.509 ;
+- Le client peut être authentifié à l'aide d'un certificat X.509 ;
 
--   Le serveur valide les informations d'identification du client en fonction d'un X509CertificateValidator personnalisé ;
+- Le serveur valide les informations d'identification du client en fonction d'un X509CertificateValidator personnalisé ;
 
--   Le serveur est authentifié à l'aide du certificat X.509 du serveur.
+- Le serveur est authentifié à l'aide du certificat X.509 du serveur.
 
  Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une norme `wsHttpBinding` qui utilise par défaut `WSSecurity` et authentification par certificat client. Le comportement de service spécifie le mode personnalisé de validation des certificats clients X.509 ainsi que le type de classe du validateur. Le comportement spécifie également le certificat de serveur à l'aide de l'élément serviceCertificate. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` en tant que le `findValue` dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  Les éléments suivants fournissent une brève vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée :
 
--   Création du certificat de serveur :
+- Création du certificat de serveur :
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable %SERVER_NAME% spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut est localhost.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client :
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Création du certificat client :
+- Création du certificat client :
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat client à utiliser. La variable % USER_NAME% spécifie le nom du client. Cette valeur est « test1 » parce que c'est le nom que le code client recherche. Si vous modifiez la valeur de % USER_NAME%, vous devez modifier la valeur correspondante dans le fichier source Client.cs et reconstruire le client.
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat client dans le magasin de certificats approuvés du serveur :
+- Installation du certificat client dans le magasin de certificats approuvés du serveur :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat client dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système du serveur. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats du serveur avec le certificat client n'est pas requise.
 

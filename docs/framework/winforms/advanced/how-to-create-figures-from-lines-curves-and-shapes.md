@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937694"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procédure : créer des figures à partir de lignes, courbes et formes
 Pour créer une figure, construisez un <xref:System.Drawing.Drawing2D.GraphicsPath>, puis appeler les méthodes, telles que <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> et <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, pour ajouter des primitives pour le chemin d’accès.  
@@ -21,9 +21,9 @@ Pour créer une figure, construisez un <xref:System.Drawing.Drawing2D.GraphicsPa
 ## <a name="example"></a>Exemple  
  Les exemples de code suivants créent des chemins d’accès qui comportent des figures :  
   
--   Le premier exemple crée un chemin d’accès qui a une seule figure. La figure se compose d’un arc unique. L’arc a un angle de balayage de-180 degrés, ce qui est dans le sens inverse dans le système de coordonnées par défaut.  
+- Le premier exemple crée un chemin d’accès qui a une seule figure. La figure se compose d’un arc unique. L’arc a un angle de balayage de-180 degrés, ce qui est dans le sens inverse dans le système de coordonnées par défaut.  
   
--   Le deuxième exemple crée un chemin d’accès qui a deux chiffres. La première représente un arc suivi d’une ligne. La deuxième figure est une ligne suivie d’une courbe de suivi d’une ligne. La première figure est laissée ouverte, et la deuxième figure est fermée.  
+- Le deuxième exemple crée un chemin d’accès qui a deux chiffres. La première représente un arc suivi d’une ligne. La deuxième figure est une ligne suivie d’une courbe de suivi d’une ligne. La première figure est laissée ouverte, et la deuxième figure est fermée.  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  

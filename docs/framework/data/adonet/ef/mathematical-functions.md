@@ -3,11 +3,11 @@ title: Fonctions mathématiques
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 ms.openlocfilehash: b6f248382f069df59a55e85e9a764b0df700fb26
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780313"
 ---
 # <a name="mathematical-functions"></a>Fonctions mathématiques
 
@@ -294,7 +294,7 @@ Retourne une expression numérique, arrondie à la longueur ou à la précision 
 |--|--|
 |`numeric_expression`| Un `Int32`, `Int64`, `Double`, ou `Decimal`. 
 |`length`| `Int32` qui représente la précision selon laquelle arrondir `numeric_expression`. Lorsque `length` est un nombre positif, `numeric_expression` est arrondi au nombre de décimales indiqué par `length`. Lorsque `length` est un nombre négatif, `numeric_expression` est arrondi à gauche de la virgule décimale, selon l'indication fournie par `length`.|
-|`function` | Facultatif. Un `Int32` qui représente le type d’opération à effectuer. Lorsque function est omise ou a la valeur 0 (valeur par défaut), `numeric_expression` est arrondi. Lorsqu’une valeur autre que 0 est spécifiée, `numeric_expression` est tronqué. |
+|`function` | Optionnel. Un `Int32` qui représente le type d’opération à effectuer. Lorsque function est omise ou a la valeur 0 (valeur par défaut), `numeric_expression` est arrondi. Lorsqu’une valeur autre que 0 est spécifiée, `numeric_expression` est tronqué. |
 
 **Valeur de retour** 
 

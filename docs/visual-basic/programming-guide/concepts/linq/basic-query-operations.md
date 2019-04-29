@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925646"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Opérations de requête de base (Visual Basic)
 Cette rubrique fournit une brève introduction aux [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions en Visual Basic et certains types d’opérations que vous effectuez dans une requête classiques. Pour plus d’informations, consultez les rubriques suivantes :  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Pour sélectionner plusieurs champs à partir de la source de données, vous avez deux possibilités :  
   
--   Dans le `Select` clause, spécifiez les champs que vous souhaitez inclure dans le résultat. Le compilateur définira un type anonyme qui a ces champs en tant que ses propriétés. Pour plus d’informations, consultez [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- Dans le `Select` clause, spécifiez les champs que vous souhaitez inclure dans le résultat. Le compilateur définira un type anonyme qui a ces champs en tant que ses propriétés. Pour plus d’informations, consultez [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Étant donné que les éléments retournés dans l’exemple suivant sont des instances d’un type anonyme, vous ne pouvez pas faire référence au type par nom ailleurs dans votre code. Le nom désigné par le compilateur pour le type contient des caractères qui ne sont pas valides dans du code Visual Basic normal. Dans l’exemple suivant, les éléments dans la collection retournée par la requête dans `londonCusts4` sont des instances d’un type anonyme  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      - ou -  
   
--   Définir un type nommé qui contient les champs spécifiques que vous souhaitez inclure dans le résultat et créer et initialiser les instances du type dans le `Select` clause. Utilisez cette option uniquement si vous devez utiliser des résultats individuels en dehors de la collection dans laquelle ils sont retournés, ou si vous devez les passer en tant que paramètres dans les appels de méthode. Le type de `londonCusts5` dans l’exemple suivant est IEnumerable (Of NamePhone).  
+- Définir un type nommé qui contient les champs spécifiques que vous souhaitez inclure dans le résultat et créer et initialiser les instances du type dans le `Select` clause. Utilisez cette option uniquement si vous devez utiliser des résultats individuels en dehors de la collection dans laquelle ils sont retournés, ou si vous devez les passer en tant que paramètres dans les appels de méthode. Le type de `londonCusts5` dans l’exemple suivant est IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

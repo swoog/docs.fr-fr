@@ -3,11 +3,11 @@ title: Contraintes
 description: En savoir plus sur F# contraintes qui s’appliquent aux paramètres de type générique pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction.
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937512"
 ---
 # <a name="constraints"></a>Contraintes
 
@@ -31,8 +31,8 @@ Il existe plusieurs contraintes différentes que vous pouvez appliquer pour limi
 |Contrainte de constructeur|*paramètre de type* : (nouveau : unité -&gt; ' un)|Le type fourni doit avoir un constructeur par défaut.|
 |Contrainte de Type valeur|: struct|Le type fourni doit être un type valeur .NET.|
 |Contrainte de Type référence|: pas de struct|Le type fourni doit être un type référence .NET.|
-|Contrainte de Type énumération|: enum&lt;*type sous-jacent*&gt;|Le type fourni doit être un type énuméré qui a le type sous-jacent spécifié ; pas prévu pour une utilisation courante.|
-|Contrainte de délégué|: déléguer&lt;*-paramètre-type de tuple*, *type de retour*&gt;|Le type fourni doit être un type délégué qui a les arguments spécifiés et retourner la valeur ; pas prévu pour une utilisation courante.|
+|Contrainte de Type énumération|: enum&lt;*underlying-type*&gt;|Le type fourni doit être un type énuméré qui a le type sous-jacent spécifié ; pas prévu pour une utilisation courante.|
+|Contrainte de délégué|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Le type fourni doit être un type délégué qui a les arguments spécifiés et retourner la valeur ; pas prévu pour une utilisation courante.|
 |Contrainte de comparaison|: comparaison|Le type fourni doit prendre en charge la comparaison.|
 |Contrainte d’égalité|: l’égalité|Le type fourni doit prendre en charge l’égalité.|
 |Contrainte non managée|: non managé|Le type fourni doit être un type non managé. Les types non managés sont soit certains types primitifs (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, ou `decimal`), types énumération, `nativeptr<_>`, ou une structure non générique dont les champs sont tous les types non managés.|

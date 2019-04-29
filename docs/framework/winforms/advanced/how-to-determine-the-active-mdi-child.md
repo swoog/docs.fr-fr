@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937551"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procédure : déterminer l’enfant MDI actif
 Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a le focus sur le formulaire enfant actif. Par exemple, supposons que vous souhaitez copier le texte sélectionné dans le Presse-papiers à partir de la zone de texte du formulaire enfant. Vous devez créer une procédure qui copie le texte sélectionné dans le Presse-papiers à l’aide de la <xref:System.Windows.Forms.Control.Click> événements de l’élément de menu Copier dans le menu Edition standard.  

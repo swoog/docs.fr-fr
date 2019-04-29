@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
 ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929088"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procédure : restreindre l’accès à la classe PrincipalPermissionAttribute
 Le contrôle de l'accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autoriser l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -86,7 +86,6 @@ Le contrôle de l'accès aux ressources sur un ordinateur de domaine Windows est
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
 ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941269"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Procédure : gérer les erreurs et les exceptions qui se produisent avec Databinding
 Souvent, les exceptions et les erreurs surviennent quand vous liez des objets métier sous-jacents aux contrôles. Vous pouvez intercepter ces erreurs et ces exceptions, puis récupérer ou bien passer des informations d'erreur à l'utilisateur en gérant l'événement <xref:System.Windows.Forms.Binding.BindingComplete> pour un composant <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> ou <xref:System.Windows.Forms.CurrencyManager>.  
@@ -35,7 +35,7 @@ Souvent, les exceptions et les erreurs surviennent quand vous liez des objets m�
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- des références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

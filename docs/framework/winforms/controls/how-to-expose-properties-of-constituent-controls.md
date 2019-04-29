@@ -11,11 +11,11 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941373"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Procédure : exposer des propriétés de contrôles constitutifs
 Les contrôles qui composent un contrôle composite sont appelés *contrôles constitutifs*. Ces contrôles sont normalement déclarés privés et est donc pas accessible par le développeur. Si vous souhaitez rendre les propriétés de ces contrôles accessibles aux utilisateurs de futures, vous devez les exposer à l’utilisateur. Pour exposer une propriété d’un contrôle qui le composent en créant une propriété dans le contrôle utilisateur et à l’aide de la `get` et `set` accesseurs pour répercuter la modification dans la propriété privée du contrôle constitutif.  

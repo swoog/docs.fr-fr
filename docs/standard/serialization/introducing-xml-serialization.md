@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933690"
 ---
 # <a name="introducing-xml-serialization"></a>Introduction à la sérialisation XML
 
@@ -28,8 +28,7 @@ La sérialisation correspond au processus de conversion d'un objet en un formula
 > [!NOTE]
 > La sérialisation XML ne convertit pas les méthodes, les indexeurs, les champs privés ni les propriétés en lecture seule (à l'exception des collections en lecture seule). Pour sérialiser la totalité des champs et des propriétés d'un objet, publics et privés, utilisez <xref:System.Runtime.Serialization.DataContractSerializer> au lieu de la sérialisation XML.
 
- La classe centrale de la sérialisation XML est la classe <xref:System.Xml.Serialization.XmlSerializer>, et les méthodes les plus importantes de cette classe sont les méthodes **Serialize** et **Deserialize**. 
-  <xref:System.Xml.Serialization.XmlSerializer> crée des fichiers C# et les compile dans des fichiers .dll pour exécuter cette sérialisation. Dans .NET Framework 2.0, l’[outil XML Serializer Generator (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) est conçu pour générer préalablement les assemblys de sérialisation à déployer avec votre application et pour améliorer les performances de démarrage. Le flux XML généré par le **XmlSerializer** est compatible avec le World Wide Web Consortium (W3C) [langage de définition de schéma XML (XSD) 1.0 recommendation](https://www.w3.org/TR/xslt). En outre, les types de données générés sont conformes au document intitulé « XML Schema Part 2 : Les types de données. »
+ La classe centrale de la sérialisation XML est la classe <xref:System.Xml.Serialization.XmlSerializer>, et les méthodes les plus importantes de cette classe sont les méthodes **Serialize** et **Deserialize**. <xref:System.Xml.Serialization.XmlSerializer> crée des fichiers C# et les compile dans des fichiers .dll pour exécuter cette sérialisation. Dans .NET Framework 2.0, l’[outil XML Serializer Generator (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) est conçu pour générer préalablement les assemblys de sérialisation à déployer avec votre application et pour améliorer les performances de démarrage. Le flux XML généré par le **XmlSerializer** est compatible avec le World Wide Web Consortium (W3C) [langage de définition de schéma XML (XSD) 1.0 recommendation](https://www.w3.org/TR/xslt). En outre, les types de données générés sont conformes au document intitulé « XML Schema Part 2 : Les types de données. »
 
  Les données de vos objets sont décrites à l’aide des constructions du langage de programmation, telles que les classes, les champs, les propriétés, les types primitifs, les tableaux et même du code XML incorporé sous forme d’objets **XmlElement** ou **XmlAttribute**. Vous pouvez créer vos propres classes, annotées avec des attributs ou utiliser l'outil XML Schema Definition pour générer des classes à partir d'un schéma XML existant.
 

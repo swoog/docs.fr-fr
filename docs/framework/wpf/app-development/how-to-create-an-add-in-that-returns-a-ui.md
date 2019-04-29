@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947834"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Procédure : Créer un complément qui retourne une interface utilisateur
 Cet exemple montre comment créer un complément qui retourne une application Windows Presentation Foundation (WPF) à une application autonome WPF de l’hôte.  
@@ -25,9 +25,9 @@ Cet exemple montre comment créer un complément qui retourne une application Wi
   
  Cet exemple met en évidence les extensions WPF pour le modèle de complément .NET Framework qui permettent ce scénario et suppose ce qui suit :  
   
--   Base de connaissances du .NET Framework dans modèle, y compris le pipeline de complément et développement de l’hôte. Si vous n’êtes pas familiarisé avec ces concepts, consultez [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Pour obtenir un didacticiel qui montre l’implémentation d’un pipeline, un complément et une application hôte, consultez [procédure pas à pas : Création d’une Application Extensible](../../add-ins/walkthrough-create-extensible-app.md).  
+- Base de connaissances du .NET Framework dans modèle, y compris le pipeline de complément et développement de l’hôte. Si vous n’êtes pas familiarisé avec ces concepts, consultez [des compléments et extensibilité](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Pour obtenir un didacticiel qui montre l’implémentation d’un pipeline, un complément et une application hôte, consultez [procédure pas à pas : Création d’une Application Extensible](../../add-ins/walkthrough-create-extensible-app.md).  
   
--   Connaissances des extensions de WPF pour le .NET Framework-modèle de complément, qui se trouve ici : [Vue d’ensemble des compléments WPF](wpf-add-ins-overview.md).  
+- Connaissances des extensions de WPF pour le .NET Framework-modèle de complément, qui se trouve ici : [Vue d’ensemble des compléments WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Exemple  
  Pour créer un complément qui retourne qu'une UI WPF nécessite du code spécifique pour chaque segment de pipeline, le complément et l’application hôte.  

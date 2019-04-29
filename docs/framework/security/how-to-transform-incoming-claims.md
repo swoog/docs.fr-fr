@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940437"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Procédure : Transformer les revendications entrantes
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Forms ASP.NET®  
+- Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des procédures pas à pas détaillées pour créer une application Web Forms ASP.NET simple prenant en charge les revendications et pour transformer les revendications entrantes. Elle fournit également des instructions pour tester l’application afin de vérifier que les revendications transformées sont présentées au moment de l’exécution de l’application.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Vue d'ensemble  
+- Vue d'ensemble  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : Créer une application Web Forms ASP.NET simple  
+- Étape 1 : Créer une application Web Forms ASP.NET simple  
   
--   Étape 2 : Implémenter la transformation des revendications à l’aide d’un ClaimsAuthenticationManager personnalisé  
+- Étape 2 : Implémenter la transformation des revendications à l’aide d’un ClaimsAuthenticationManager personnalisé  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Configurer une application Web Forms ASP.NET pour l’authentification basée sur les revendications  
+- Configurer une application Web Forms ASP.NET pour l’authentification basée sur les revendications  
   
--   Transformer les revendications entrantes en ajoutant une revendication de rôle d’administrateur (Administrator)  
+- Transformer les revendications entrantes en ajoutant une revendication de rôle d’administrateur (Administrator)  
   
--   Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement  
+- Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement  
   
 ## <a name="overview"></a>Vue d'ensemble  
  WIF expose une classe nommée <xref:System.Security.Claims.ClaimsAuthenticationManager> qui permet aux utilisateurs de modifier les revendications avant leur présentation à une application par partie de confiance. La classe <xref:System.Security.Claims.ClaimsAuthenticationManager> est utile pour la séparation des responsabilités entre l’authentification et le code d’application sous-jacent. L’exemple ci-dessous montre comment ajouter un rôle aux revendications dans le principal <xref:System.Security.Claims.ClaimsPrincipal> entrant quand il est requis par l’application par partie de confiance.  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : Créer une application Web Forms ASP.NET simple  
+- Étape 1 : Créer une application Web Forms ASP.NET simple  
   
--   Étape 2 : Implémenter la transformation des revendications à l’aide d’un ClaimsAuthenticationManager personnalisé  
+- Étape 2 : Implémenter la transformation des revendications à l’aide d’un ClaimsAuthenticationManager personnalisé  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Étape 1 : Créer une application Web Forms ASP.NET simple  
  Lors de cette étape, vous allez créer une application Web Forms ASP.NET.  

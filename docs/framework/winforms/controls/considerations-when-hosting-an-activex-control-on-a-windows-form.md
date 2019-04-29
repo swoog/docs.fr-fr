@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956260"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Considérations sur l'hébergement d'un contrôle ActiveX dans un Windows Form
 Bien que les Windows Forms aient été optimisés pour héberger des contrôles Windows Forms, vous pouvez néanmoins utiliser des contrôles ActiveX. Gardez à l’esprit les considérations suivantes lors de la planification d’une application qui utilise des contrôles ActiveX :  
   
--   **Sécurité** : le common language runtime a été amélioré en ce qui concerne la sécurité d’accès du code. Les applications recourant aux Windows Forms peuvent fonctionner sans problème dans un environnement totalement fiable et dans un environnement partiellement fiable avec la plupart des fonctionnalités disponibles. Les contrôles Windows Forms peuvent être hébergés dans un navigateur sans aucune complication. Cependant, les contrôles ActiveX dans les Windows Forms ne tirent pas parti de ces améliorations de sécurité. Exécution d’un contrôle ActiveX nécessite une autorisation de code non managé, qui est définie avec la <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> propriété. Pour plus d’informations sur la sécurité et d’autorisation de code non managé, consultez <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
+- **Sécurité** : le common language runtime a été amélioré en ce qui concerne la sécurité d’accès du code. Les applications recourant aux Windows Forms peuvent fonctionner sans problème dans un environnement totalement fiable et dans un environnement partiellement fiable avec la plupart des fonctionnalités disponibles. Les contrôles Windows Forms peuvent être hébergés dans un navigateur sans aucune complication. Cependant, les contrôles ActiveX dans les Windows Forms ne tirent pas parti de ces améliorations de sécurité. Exécution d’un contrôle ActiveX nécessite une autorisation de code non managé, qui est définie avec la <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> propriété. Pour plus d’informations sur la sécurité et d’autorisation de code non managé, consultez <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
   
--   **Coût total de possession** : les contrôles ActiveX ajoutés à un Windows Form sont déployés dans leur intégralité avec ce Windows Form, ce qui peut accroître considérablement la taille des fichiers créés. En outre, l’utilisation de contrôles ActiveX sur des Windows Forms nécessite l’écriture dans le Registre. Ceci est plus invasif sur l’ordinateur d’un utilisateur que les contrôles Windows Forms, qui ne le nécessitent pas.  
+- **Coût total de possession** : les contrôles ActiveX ajoutés à un Windows Form sont déployés dans leur intégralité avec ce Windows Form, ce qui peut accroître considérablement la taille des fichiers créés. En outre, l’utilisation de contrôles ActiveX sur des Windows Forms nécessite l’écriture dans le Registre. Ceci est plus invasif sur l’ordinateur d’un utilisateur que les contrôles Windows Forms, qui ne le nécessitent pas.  
   
     > [!NOTE]
     >  L’utilisation d’un contrôle ActiveX nécessite l’utilisation d’un wrapper COM interop. Pour plus d’informations, consultez [Interopérabilité COM en Visual Basic et Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  

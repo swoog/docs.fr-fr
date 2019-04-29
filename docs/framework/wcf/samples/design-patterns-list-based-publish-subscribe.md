@@ -3,11 +3,11 @@ title: 'Modèles de conception : Publication/Abonnement par liste'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773059"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modèles de conception : Publication/Abonnement par liste
 Cet exemple illustre le modèle basé sur une liste de publication / abonnement implémenté comme un programme Windows Communication Foundation (WCF).  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Installez l'ordinateur de service:  
   
-    1.  Créez un répertoire virtuel nommé ServiceModelSamples sur l'ordinateur de service. Le fichier de commandes setupvroot.bat inclus dans le [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) peut être utilisé pour créer le répertoire de disque et le répertoire virtuel.  
+    1. Créez un répertoire virtuel nommé ServiceModelSamples sur l'ordinateur de service. Le fichier de commandes setupvroot.bat inclus dans le [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) peut être utilisé pour créer le répertoire de disque et le répertoire virtuel.  
   
-    2.  Copiez les fichiers du programme de service depuis %SystemDrive%\Inetpub\wwwroot\servicemodelsamples vers le répertoire virtuel ServiceModelSamples. Assurez-vous d'intégrer les fichiers au répertoire \bin.  
+    2. Copiez les fichiers du programme de service depuis %SystemDrive%\Inetpub\wwwroot\servicemodelsamples vers le répertoire virtuel ServiceModelSamples. Assurez-vous d'intégrer les fichiers au répertoire \bin.  
   
-    3.  Assurez-vous que le service est accessible depuis l'ordinateur du client en utilisant un navigateur.  
+    3. Assurez-vous que le service est accessible depuis l'ordinateur du client en utilisant un navigateur.  
   
 2. Installez les ordinateurs clients :  
   
-    1.  Copiez les fichiers de programme client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.  
+    1. Copiez les fichiers de programme client du dossier \client\bin\ (situé dans le dossier correspondant à votre langue) sur l'ordinateur client.  
   
-    2.  Dans chaque fichier de configuration client, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
+    2. Dans chaque fichier de configuration client, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
   
 3. Installez l'ordinateur de source de données:  
   
-    1.  Copiez les fichiers du programme de source de données du dossier \datasource\bin\ (dans le dossier correspondant à votre langue) sur l’ordinateur de source de données.  
+    1. Copiez les fichiers du programme de source de données du dossier \datasource\bin\ (dans le dossier correspondant à votre langue) sur l’ordinateur de source de données.  
   
-    2.  Dans le fichier de configuration de la source de données, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
+    2. Dans le fichier de configuration de la source de données, modifiez l'adresse de la définition du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
   
 4. Sur les ordinateurs clients, lancez Client.exe à partir d'une invite de commandes.  
   

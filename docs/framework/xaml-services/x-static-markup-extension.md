@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938934"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static, extension de balisage
 Fait référence à une entité de code par valeur statique qui est définie dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– manière conforme. La propriété statique qui est référencée peut être utilisée pour fournir la valeur d’une propriété dans XAML.  
@@ -30,7 +30,7 @@ Fait référence à une entité de code par valeur statique qui est définie dan
   
 | | |  
 |-|-|  
-|`prefix`|Facultatif. Un préfixe qui fait référence à un espace de noms XAML mappé, non définis par défaut. `prefix` est affiché explicitement dans l’utilisation parce que vous référencez rarement des propriétés statiques qui proviennent d’un espace de noms XAML par défaut. Consultez la section Notes.|  
+|`prefix`|Optionnel. Un préfixe qui fait référence à un espace de noms XAML mappé, non définis par défaut. `prefix` est affiché explicitement dans l’utilisation parce que vous référencez rarement des propriétés statiques qui proviennent d’un espace de noms XAML par défaut. Consultez la section Notes.|  
 |`typeName`|Obligatoire. Le nom du type qui définit le membre statique souhaité.|  
 |`staticMemberName`|Obligatoire. Le nom du membre de valeur statique souhaitée (une constante, une propriété statique, un champ ou une valeur d’énumération).|  
   
@@ -38,10 +38,10 @@ Fait référence à une entité de code par valeur statique qui est définie dan
 
 L’entité de code référencé doit être une des opérations suivantes :  
   
--   Une constante  
--   Une propriété statique  
--   Un champ  
--   Une valeur d’énumération
+- Une constante  
+- Une propriété statique  
+- Un champ  
+- Une valeur d’énumération
 
 Si vous spécifiez toute autre entité de code, comme une propriété non statique,, une erreur de compilation si le XAML est compilé par balisage, ou une exception d’analyse de temps de chargement XAML.  
 
@@ -74,11 +74,11 @@ Dans l’implémentation de Services XAML du .NET Framework, la gestion de cette
 ## <a name="wpf-usage-notes"></a>Remarques sur l’utilisation WPF  
  L’espace de noms XAML par défaut vous utilisez pour la programmation WPF ne contient pas de nombreuses propriétés statiques utiles, et la plupart des propriétés statiques utiles prennent en charge tels que les convertisseurs de type qui facilitent l’utilisation sans nécessiter de `{x:Static}` . Pour les propriétés statiques, vous devez mapper un préfixe pour un espace de noms XAML si une des opérations suivantes est vraie :  
   
--   Vous référencez un type qui existe dans WPF, mais ne fait pas partie de l’espace de noms XAML par défaut pour WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Il s’agit d’un scénario assez courant d’utilisation `x:Static`. Par exemple, vous pouvez utiliser un `x:Static` référence avec un mappage d’espace de noms XAML à la <xref:System> assembly CLR d’espace de noms et mscorlib pour référencer les propriétés statiques de la <xref:System.Environment> classe.  
+- Vous référencez un type qui existe dans WPF, mais ne fait pas partie de l’espace de noms XAML par défaut pour WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Il s’agit d’un scénario assez courant d’utilisation `x:Static`. Par exemple, vous pouvez utiliser un `x:Static` référence avec un mappage d’espace de noms XAML à la <xref:System> assembly CLR d’espace de noms et mscorlib pour référencer les propriétés statiques de la <xref:System.Environment> classe.  
   
--   Vous référencez un type à partir d’un assembly personnalisé.  
+- Vous référencez un type à partir d’un assembly personnalisé.  
   
--   Vous référencez un type qui existe dans un assembly WPF, mais que le type se trouve dans un espace de noms CLR qui n’a pas été mappé comme faisant partie de l’espace de noms WPF par défaut XAML. Le mappage d’espaces de noms CLR dans l’espace de noms XAML par défaut pour WPF est exécuté par les définitions dans les différents assemblys WPF (pour plus d’informations sur ce concept, consultez [espaces de noms XAML et mappage Namespace pour WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Espaces de noms CLR non mappés peuvent exister si cet espace de noms CLR est composé principalement de définitions de classe qui sont généralement pas prévues pour XAML, telles que <xref:System.Windows.Threading>.  
+- Vous référencez un type qui existe dans un assembly WPF, mais que le type se trouve dans un espace de noms CLR qui n’a pas été mappé comme faisant partie de l’espace de noms WPF par défaut XAML. Le mappage d’espaces de noms CLR dans l’espace de noms XAML par défaut pour WPF est exécuté par les définitions dans les différents assemblys WPF (pour plus d’informations sur ce concept, consultez [espaces de noms XAML et mappage Namespace pour WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Espaces de noms CLR non mappés peuvent exister si cet espace de noms CLR est composé principalement de définitions de classe qui sont généralement pas prévues pour XAML, telles que <xref:System.Windows.Threading>.  
   
  Pour plus d’informations sur l’utilisation des préfixes et espaces de noms XAML pour WPF, consultez [espaces de noms XAML et Namespace Mapping for WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4d2c2bd28640d0ac7124f8e0864e9e72fb1eb9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935627"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi (fonction)
 Retourne un énumérateur pour toutes les classes qui remplissent les critères de sélection spécifiés.
@@ -109,7 +109,7 @@ Cette fonction encapsule un appel à la [IWbemServices::CreateClassEnum](/window
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

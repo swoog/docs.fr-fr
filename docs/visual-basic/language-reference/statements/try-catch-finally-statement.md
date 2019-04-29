@@ -22,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 ms.custom: seodec18
 ms.openlocfilehash: 2e4fef836b08f536565105dbab76292b2fc4388e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934262"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally, instruction (Visual Basic)
 
@@ -51,16 +51,16 @@ End Try
 
 |Terme|Définition|
 |---|---|
-|`tryStatements`|Facultatif. Instructions où une erreur peut se produire. Il peut s'agir d'une instruction composée.|
-|`Catch`|Facultatif. Plusieurs `Catch` blocs autorisés. Si une exception se produit lors du traitement de la `Try` bloquer, chacun `Catch` instruction est examinée dans l’ordre textuel afin de déterminer si elle gère l’exception, avec `exception` représentant l’exception qui a été levée.|
-|`exception`|Facultatif. Tout nom de variable. La valeur initiale de l'argument `exception` est la valeur de l'erreur levée. Utilisé avec `Catch` pour spécifier l’erreur interceptée. Si omis, la `Catch` instruction intercepte toute exception.|
-|`type`|Facultatif. Spécifie le type de filtre de la classe. Si la valeur de `exception` est du type spécifié par `type` ou d’un type dérivé, l’identificateur est lié à l’objet exception.|
+|`tryStatements`|Optionnel. Instructions où une erreur peut se produire. Il peut s'agir d'une instruction composée.|
+|`Catch`|Optionnel. Plusieurs `Catch` blocs autorisés. Si une exception se produit lors du traitement de la `Try` bloquer, chacun `Catch` instruction est examinée dans l’ordre textuel afin de déterminer si elle gère l’exception, avec `exception` représentant l’exception qui a été levée.|
+|`exception`|Optionnel. Tout nom de variable. La valeur initiale de l'argument `exception` est la valeur de l'erreur levée. Utilisé avec `Catch` pour spécifier l’erreur interceptée. Si omis, la `Catch` instruction intercepte toute exception.|
+|`type`|Optionnel. Spécifie le type de filtre de la classe. Si la valeur de `exception` est du type spécifié par `type` ou d’un type dérivé, l’identificateur est lié à l’objet exception.|
 |`When`|Facultatif. Un `Catch` instruction avec un `When` clause intercepte les exceptions uniquement lorsque `expression` prend la valeur `True`. Un `When` clause est appliquée uniquement après la vérification du type de l’exception, et `expression` peut faire référence à l’identificateur qui représente l’exception.|
-|`expression`|Facultatif. Doit être implicitement convertible en `Boolean`. Toute expression qui décrit un filtre générique. Généralement utilisé pour filtrer par numéro d’erreur. Utilisé avec `When` mot clé pour spécifier les circonstances dans lesquelles l’erreur est interceptée.|
-|`catchStatements`|Facultatif. Instructions permettant de gérer les erreurs qui se produisent dans associé `Try` bloc. Il peut s'agir d'une instruction composée.|
-|`Exit Try`|Facultatif. Mot clé qui décompose le `Try...Catch...Finally` structure. L’exécution reprend avec le code qui suit immédiatement la `End Try` instruction. La `Finally` instruction sera exécutée. Interdit dans `Finally` blocs.|
-|`Finally`|Facultatif. Un `Finally` bloc est toujours exécuté quand l’exécution quitte une partie de la `Try...Catch` instruction.|
-|`finallyStatements`|Facultatif. Instructions qui sont exécutées une fois que tout autre traitement d’erreur s’est produite.|
+|`expression`|Optionnel. Doit être implicitement convertible en `Boolean`. Toute expression qui décrit un filtre générique. Généralement utilisé pour filtrer par numéro d’erreur. Utilisé avec `When` mot clé pour spécifier les circonstances dans lesquelles l’erreur est interceptée.|
+|`catchStatements`|Optionnel. Instructions permettant de gérer les erreurs qui se produisent dans associé `Try` bloc. Il peut s'agir d'une instruction composée.|
+|`Exit Try`|Optionnel. Mot clé qui décompose le `Try...Catch...Finally` structure. L’exécution reprend avec le code qui suit immédiatement la `End Try` instruction. La `Finally` instruction sera exécutée. Interdit dans `Finally` blocs.|
+|`Finally`|Optionnel. Un `Finally` bloc est toujours exécuté quand l’exécution quitte une partie de la `Try...Catch` instruction.|
+|`finallyStatements`|Optionnel. Instructions qui sont exécutées une fois que tout autre traitement d’erreur s’est produite.|
 |`End Try`|Met fin à la `Try...Catch...Finally` structure.|
 
 ## <a name="remarks"></a>Notes

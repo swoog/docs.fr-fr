@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764976"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Vue d'ensemble du rendu graphique de WPF
 Cette rubrique offre une vue d’ensemble de la couche visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il se concentre sur le rôle de la <xref:System.Windows.Media.Visual> classe pour le rendu de prise en charge dans la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modèle.  
@@ -24,27 +24,27 @@ Cette rubrique offre une vue d’ensemble de la couche visuelle [!INCLUDE[TLA2#t
   
  Le <xref:System.Windows.Media.Visual> objet est un cœur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objet, dont le rôle principal consiste à fournir la prise en charge du rendu. Contrôles d’interface utilisateur, tel que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TextBox>, dérivent la <xref:System.Windows.Media.Visual> classe et l’utiliser pour rendre leurs données de rendu persistantes. Le <xref:System.Windows.Media.Visual> objet prend en charge :  
   
--   Affichage de sortie : Rendu rendu persistant, de sérialiser le contenu de dessin d’un objet visuel.  
+- Affichage de sortie : Rendu rendu persistant, de sérialiser le contenu de dessin d’un objet visuel.  
   
--   Transformations : Effectuer des transformations sur un objet visuel.  
+- Transformations : Effectuer des transformations sur un objet visuel.  
   
--   Découpage : Prise en charge de région de découpage pour un élément visuel.  
+- Découpage : Prise en charge de région de découpage pour un élément visuel.  
   
--   Le test de positionnement : Déterminer si une coordonnée ou une géométrie est contenue dans les limites d’un objet visuel.  
+- Le test de positionnement : Déterminer si une coordonnée ou une géométrie est contenue dans les limites d’un objet visuel.  
   
--   Calculs de zones englobantes : Détermination du rectangle englobant d’un objet visuel.  
+- Calculs de zones englobantes : Détermination du rectangle englobant d’un objet visuel.  
   
  Toutefois, le <xref:System.Windows.Media.Visual> objet n’inclut pas de prise en charge des fonctions non de rendu, tels que :  
   
--   Gestion des événements  
+- Gestion des événements  
   
--   Mise en page  
+- Mise en page  
   
--   Styles  
+- Styles  
   
--   Liaison de données  
+- Liaison de données  
   
--   Globalisation  
+- Globalisation  
   
  <xref:System.Windows.Media.Visual> est exposé comme une classe abstraite publique à partir de laquelle les classes enfants doivent être dérivées. L’illustration suivante montre la hiérarchie des objets visuels exposés dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ Ordre des opérations DrawingGroup
   
  Prenez note des différents points suivants sur la hiérarchie d’objets visuels et les listes d’instructions de graphismes vectoriels :  
   
--   L’ordre de la hiérarchie représente l’ordre de rendu des informations de dessin. À partir de l’élément visuel racine, les éléments enfants sont parcourus de gauche à droite et de haut en bas. Si un élément comporte des éléments enfants, ils sont parcourus avant les frères de l’élément.  
+- L’ordre de la hiérarchie représente l’ordre de rendu des informations de dessin. À partir de l’élément visuel racine, les éléments enfants sont parcourus de gauche à droite et de haut en bas. Si un élément comporte des éléments enfants, ils sont parcourus avant les frères de l’élément.  
   
--   Éléments de nœuds non terminaux dans la hiérarchie, tels que <xref:System.Windows.Controls.ContentPresenter>, sont utilisés pour contenir les éléments enfants, qu’ils ne contiennent pas de listes d’instructions.  
+- Éléments de nœuds non terminaux dans la hiérarchie, tels que <xref:System.Windows.Controls.ContentPresenter>, sont utilisés pour contenir les éléments enfants, qu’ils ne contiennent pas de listes d’instructions.  
   
--   Si un élément visuel contient une liste d’instructions de graphismes vectoriels et des enfants visuels, la liste d’instructions de l’élément visuel parent est rendue avant les dessins des objets enfants visuels.  
+- Si un élément visuel contient une liste d’instructions de graphismes vectoriels et des enfants visuels, la liste d’instructions de l’élément visuel parent est rendue avant les dessins des objets enfants visuels.  
   
--   Les éléments dans la liste d’instructions de graphismes vectoriels sont rendus de gauche à droite.  
+- Les éléments dans la liste d’instructions de graphismes vectoriels sont rendus de gauche à droite.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Arborescence d'éléments visuels  

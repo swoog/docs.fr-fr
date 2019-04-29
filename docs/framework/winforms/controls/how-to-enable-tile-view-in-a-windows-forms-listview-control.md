@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
 ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941534"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Procédure : activer le mode Mosaïque dans un contrôle ListView Windows Forms
 Avec la fonctionnalité d'affichage en mosaïque du contrôle <xref:System.Windows.Forms.ListView>, vous pouvez fournir un équilibre visuel entre les informations graphiques et textuelles. Les informations textuelles affichées pour un élément dans l'affichage en mosaïque sont identiques aux informations de colonne définies pour le mode Détails. L'affichage en mosaïque fonctionne en association avec les fonctionnalités de regroupement ou de marques d'insertion du contrôle <xref:System.Windows.Forms.ListView>.  
@@ -52,9 +52,9 @@ Avec la fonctionnalité d'affichage en mosaïque du contrôle <xref:System.Windo
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System et System.Windows.Forms.  
+- des références aux assemblys System et System.Windows.Forms.  
   
--   un fichier d'icône nommé book.ico dans le même répertoire que le fichier exécutable.  
+- un fichier d'icône nommé book.ico dans le même répertoire que le fichier exécutable.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

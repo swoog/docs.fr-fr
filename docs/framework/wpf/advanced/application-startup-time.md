@@ -9,11 +9,11 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777128"
 ---
 # <a name="application-startup-time"></a>Temps de démarrage d'une application
 La quantité de temps nécessaire pour démarrer une application WPF peut varier considérablement. Cette rubrique décrit les différentes techniques permettant de réduire le temps de démarrage (perçu et réel) pour une application Windows Presentation Foundation (WPF).  

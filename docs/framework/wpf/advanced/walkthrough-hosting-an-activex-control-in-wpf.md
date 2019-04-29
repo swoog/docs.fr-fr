@@ -9,31 +9,31 @@ helpviewer_keywords:
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
 ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781379"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Procédure pas à pas : hébergement d’un contrôle ActiveX dans WPF
 Pour permettre une interaction améliorée avec les navigateurs, vous pouvez utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur. Cette procédure pas à pas montre comment vous pouvez héberger le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] en tant que contrôle sur une [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page.
 
  Cette procédure pas à pas décrit notamment les tâches suivantes :
 
--   Création du projet
+- Création du projet
 
--   Création du contrôle ActiveX.
+- Création du contrôle ActiveX.
 
--   Hébergement du contrôle ActiveX sur une Page WPF.
+- Hébergement du contrôle ActiveX sur une Page WPF.
 
  Lorsque vous avez terminé cette procédure pas à pas, vous comprendrez comment utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur.
 
 ## <a name="prerequisites"></a>Prérequis
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :
 
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] installé sur l’ordinateur où Visual Studio est installé.
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] installé sur l’ordinateur où Visual Studio est installé.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
 ## <a name="creating-the-project"></a>Création du projet
 

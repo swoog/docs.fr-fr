@@ -14,11 +14,11 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945039"
 ---
 # <a name="class-statement-visual-basic"></a>Class, instruction (Visual Basic)
 Déclare le nom d’une classe et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la classe.  
@@ -38,14 +38,14 @@ End Class
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br/><br/> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Optionnel. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br/><br/> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Facultatif. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Facultatif. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`MustInherit`|Optionnel. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Optionnel. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`Partial`|Optionnel. Indique une définition partielle de la classe. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette classe. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Optionnel. Spécifie qu’il s’agit d’une classe générique.|  
+|`Of`|Facultatif. Spécifie qu’il s’agit d’une classe générique.|  
 |`typelist`|Requis si vous utilisez le [de](../../../visual-basic/language-reference/statements/of-clause.md) mot clé. Liste de paramètres de type pour cette classe. Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|Optionnel. Indique que cette classe hérite des membres d’une autre classe. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Requis si vous utilisez la `Inherits` instruction. Le nom de la classe à partir de laquelle cette classe est dérivée.|  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>Règles  
   
--   **Imbrication.** Vous pouvez définir une classe dans une autre. La classe externe est appelée le *contenant la classe*, et la classe interne est appelée un *classe imbriquée*.  
+- **Imbrication.** Vous pouvez définir une classe dans une autre. La classe externe est appelée le *contenant la classe*, et la classe interne est appelée un *classe imbriquée*.  
   
--   **Héritage.** Si la classe utilise le [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), vous pouvez spécifier qu’une seule classe de base ou interface. Une classe ne peut pas hériter de plusieurs éléments.  
+- **Héritage.** Si la classe utilise le [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), vous pouvez spécifier qu’une seule classe de base ou interface. Une classe ne peut pas hériter de plusieurs éléments.  
   
      Une classe ne peut pas hériter d’une autre classe avec un niveau d’accès plus restrictif. Par exemple, un `Public` classe ne peut pas hériter d’un `Friend` classe.  
   
      Une classe ne peut pas hériter d’une classe imbriquée dans celui-ci.  
   
--   **Mise en œuvre.** Si la classe utilise le [Implements, instruction](../../../visual-basic/language-reference/statements/implements-statement.md), vous devez implémenter chaque membre défini par chaque interface que vous spécifiez dans `interfacenames`. Une exception à cela est la nouvelle implémentation d’un membre de classe de base. Pour plus d’informations, consultez « Nouvelle implémentation » dans [implémente](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **Mise en œuvre.** Si la classe utilise le [Implements, instruction](../../../visual-basic/language-reference/statements/implements-statement.md), vous devez implémenter chaque membre défini par chaque interface que vous spécifiez dans `interfacenames`. Une exception à cela est la nouvelle implémentation d’un membre de classe de base. Pour plus d’informations, consultez « Nouvelle implémentation » dans [implémente](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
--   **Propriété par défaut.** Une classe peut spécifier qu’une propriété en tant que son *propriété par défaut*. Pour plus d’informations, consultez [par défaut](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Propriété par défaut.** Une classe peut spécifier qu’une propriété en tant que son *propriété par défaut*. Pour plus d’informations, consultez [par défaut](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportement  
   
--   **Niveau d’accès.** Dans une classe, vous pouvez déclarer chaque membre avec son propre niveau d’accès. Membres de classe par défaut à [Public](../../../visual-basic/language-reference/modifiers/public.md) accéder, à l’exception des variables et des constantes, qui par défaut à [privé](../../../visual-basic/language-reference/modifiers/private.md) accès. Lorsqu’une classe a accès plus limité qu’un de ses membres, le niveau d’accès de classe est prioritaire.  
+- **Niveau d’accès.** Dans une classe, vous pouvez déclarer chaque membre avec son propre niveau d’accès. Membres de classe par défaut à [Public](../../../visual-basic/language-reference/modifiers/public.md) accéder, à l’exception des variables et des constantes, qui par défaut à [privé](../../../visual-basic/language-reference/modifiers/private.md) accès. Lorsqu’une classe a accès plus limité qu’un de ses membres, le niveau d’accès de classe est prioritaire.  
   
--   **Étendue.** Une classe est dans la portée tout au long de son espace de noms, classe, structure ou module conteneur.  
+- **Étendue.** Une classe est dans la portée tout au long de son espace de noms, classe, structure ou module conteneur.  
   
      L’étendue de chaque membre de classe est la classe entière.  
   
@@ -89,18 +89,18 @@ End Class
   
      Les membres de classe ont des durées de vie en fonction de comment et où ils sont déclarés. Pour plus d’informations, consultez [durée de vie dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   **Qualification.** Le code en dehors d’une classe doit qualifier le nom d’un membre avec le nom de cette classe.  
+- **Qualification.** Le code en dehors d’une classe doit qualifier le nom d’un membre avec le nom de cette classe.  
   
      Si le code à l’intérieur d’une classe imbriquée établit une référence non qualifiée à un élément de programmation, Visual Basic commence ses recherches pour l’élément de la classe imbriquée, puis dans sa classe conteneur, et ainsi de suite à l’élément conteneur extérieur.  
   
 ## <a name="classes-and-modules"></a>Classes et les Modules  
  Ces éléments présentent beaucoup de similitudes, mais il existe également des différences importantes.  
   
--   **Terminologie.** Les versions précédentes de Visual Basic reconnaissent deux types de modules : *modules de classe* (fichiers .cls) et *modules standard* (fichiers .bas). La version actuelle appelle ces *classes* et *modules*, respectivement.  
+- **Terminologie.** Les versions précédentes de Visual Basic reconnaissent deux types de modules : *modules de classe* (fichiers .cls) et *modules standard* (fichiers .bas). La version actuelle appelle ces *classes* et *modules*, respectivement.  
   
--   **Membres partagés.** Vous pouvez contrôler si un membre d’une classe est une connexion partagée ou membre d’instance.  
+- **Membres partagés.** Vous pouvez contrôler si un membre d’une classe est une connexion partagée ou membre d’instance.  
   
--   **Orientation de l’objet.** Les classes sont orientés objet, mais les modules ne sont pas. Vous pouvez créer une ou plusieurs instances d’une classe. Pour plus d’informations, consultez [objets et Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Orientation de l’objet.** Les classes sont orientés objet, mais les modules ne sont pas. Vous pouvez créer une ou plusieurs instances d’une classe. Pour plus d’informations, consultez [objets et Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise un `Class` instruction pour définir une classe et plusieurs membres.  

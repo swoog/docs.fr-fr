@@ -3,14 +3,14 @@ title: comportements
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
 ms.openlocfilehash: 949c56ea44162166f32eefec013b490a49272f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944103"
 ---
 # <a name="behaviors"></a>comportements
-Cette section contient des exemples qui illustrent des comportements de service Windows Communication Foundation (WCF).  
+Cette section contient des exemples qui illustrent les comportements de service Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Concurrence](../../../../docs/framework/wcf/samples/concurrency.md)  
@@ -23,10 +23,10 @@ Cette section contient des exemples qui illustrent des comportements de service 
  Illustre l'utilisation du comportement d'instanciation qui contrôle la manière dont les instances d'une classe de service sont créées en réponse aux demandes du client.  
   
  [Comportement de publication des métadonnées](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- Montre comment contrôler les fonctionnalités de publication de métadonnées d’un service.  
+ Montre comment contrôler les fonctionnalités de publication de métadonnées d'un service.  
   
  [Comportement de transaction de service](../../../../docs/framework/wcf/samples/service-transaction-behavior.md)  
- Illustre l'utilisation d'une transaction coordonnée par le client et des paramètres de <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute> pour contrôler le comportement de transaction du service.  
+ Illustre l’utilisation d’une transaction coordonnée par le client et des paramètres de <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute> pour contrôler le comportement de transaction du service.  
   
  [Comportement de débogage de service](../../../../docs/framework/wcf/samples/service-debug-behavior.md)  
  Montre comment configurer les paramètres de comportement de débogage de service.  

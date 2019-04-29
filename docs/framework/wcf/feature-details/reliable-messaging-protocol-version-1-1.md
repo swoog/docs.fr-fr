@@ -3,11 +3,11 @@ title: Protocole de messagerie fiable version 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933989"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Protocole de messagerie fiable version 1,1
 Cette rubrique traite des détails d’implémentation de Windows Communication Foundation (WCF) pour le WS-ReliableMessaging protocole février 2007 (version 1.1) nécessaire pour l’interopérabilité utilisant le transport HTTP. WCF suit la spécification de WS-ReliableMessaging avec les contraintes et les éclaircissements présentés dans cette rubrique. Notez que le protocole de la version 1.1 WS-ReliableMessaging est implémenté en commençant par le [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -419,7 +419,7 @@ Example TerminateSequenceResponse message:
 -   B4005 : WCF génère `netrm:BufferRemaining` entier des valeurs comprises entre 0 et inclusif de 4096 et lit les valeurs de nombre entier compris entre 0 et `xs:int`de `maxInclusive` valeur 214748364 inclusif.  
   
 ## <a name="message-exchange-patterns"></a>Modèles d’échange de messages  
- Cette section décrit le comportement de WCF lorsque WS-ReliableMessaging est utilisé pour différents modèles d’échange de Message. Pour chaque modèle d’échange de messages, les deux scénarios de déploiements suivants sont considérés :  
+ Cette section décrit le comportement de WCF lorsque WS-ReliableMessaging est utilisé pour différents modèles d’échange de Message. Pour chaque modèle d'échange de messages, les deux scénarios de déploiements suivants sont considérés :  
   
 -   Initiateur non adressable : L’initiateur est derrière un pare-feu ; Répondeur peut remettre des messages à l’initiateur uniquement sur les réponses HTTP.  
   
@@ -505,7 +505,7 @@ Example TerminateSequenceResponse message:
 ### <a name="requestreply-addressable-initiator"></a>Initiateur demande/réponse, adressable  
   
 #### <a name="binding"></a>Liaison  
- WCF fournit un modèle d’échange de message demande-réponse à l’aide de deux séquences sur un trafic entrant et un canal HTTP sortant. Ce modèle d’échange de messages peut être combiné avec le modèle d’échange de messages initiateur `Duplex, Addressable` d’une manière limitée. WCF utilise les requêtes HTTP pour transmettre tous les messages. Toutes les réponses HTTP ont un corps vide et le code d'état HTTP 202.  
+ WCF fournit un modèle d’échange de message demande-réponse à l’aide de deux séquences sur un trafic entrant et un canal HTTP sortant. Ce modèle d'échange de messages peut être combiné avec le modèle d'échange de messages initiateur `Duplex, Addressable` d'une manière limitée. WCF utilise les requêtes HTTP pour transmettre tous les messages. Toutes les réponses HTTP ont un corps vide et le code d'état HTTP 202.  
   
 #### <a name="createsequence-exchange"></a>Échange CreateSequence  
  L’initiateur de WCF transmet un `CreateSequence` message avec un `Offer` élément sur une requête HTTP. Le répondeur de WCF garantit que le `CreateSequence` a un `Offer` élément, puis crée une séquence et transmet le `CreateSequenceResponse` message avec un `Accept` élément.  

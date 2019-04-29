@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: d8451a028def44ec7d5b629a1c0749321684e4d2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789036"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Fait que le compilateur rend disponible pour le projet en cours de compilation les informations de type COM des assemblys spécifiés.  
@@ -49,9 +49,9 @@ Fait que le compilateur rend disponible pour le projet en cours de compilation l
   
  Si vous liez à un assembly COM (Assembly A) qui référence lui-même un autre assembly COM (Assembly B), vous devez également lier à l’Assembly B si une des conditions suivantes est vraie :  
   
--   Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
+- Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
   
--   Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
+- Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
   
  Utilisez [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) pour spécifier le répertoire dans lequel sont trouvent une ou plusieurs de vos références d’assembly.  
   

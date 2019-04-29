@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777141"
 ---
 # <a name="attached-events-overview"></a>Vue d'ensemble des événements attachés
 Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] définit un composant de langage et un type d’événement appelé *événement attaché*. Le concept d’un événement attaché vous permet d’ajouter un gestionnaire pour un événement particulier à un élément arbitraire plutôt qu’à un élément qui définit réellement l’événement ou qui en hérite. Dans ce cas, ni l’objet qui déclenche potentiellement l’événement, ni l’instance de gestion de destination ne définit ou ne « détient » l’événement.  
@@ -64,9 +64,9 @@ Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] défini
   
  Le modèle est le suivant :  
   
--   Une méthode **ajouter*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à laquelle le Gestionnaire d’événements est ajouté. Le deuxième paramètre est le Gestionnaire d’événements à ajouter. La méthode doit être `public` et `static`, sans valeur de retour.  
+- Une méthode **ajouter*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à laquelle le Gestionnaire d’événements est ajouté. Le deuxième paramètre est le Gestionnaire d’événements à ajouter. La méthode doit être `public` et `static`, sans valeur de retour.  
   
--   Une méthode **supprimer*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à partir de laquelle le Gestionnaire d’événements est supprimé. Le deuxième paramètre est le Gestionnaire d’événements à supprimer. La méthode doit être `public` et `static`, sans valeur de retour.  
+- Une méthode **supprimer*EventName*gestionnaire** avec deux paramètres. Le premier paramètre est l’instance à partir de laquelle le Gestionnaire d’événements est supprimé. Le deuxième paramètre est le Gestionnaire d’événements à supprimer. La méthode doit être `public` et `static`, sans valeur de retour.  
   
  Le **ajouter*EventName*gestionnaire** facilite la méthode d’accesseur le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] traitement lorsque attaché de gestionnaire d’événements sont les attributs déclarés sur un élément. Le **ajouter*EventName*gestionnaire** et **supprimer*EventName*gestionnaire** méthodes permettent également d’accès du code dans le magasin de gestionnaire d’événements pour le événement attaché.  
   

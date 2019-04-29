@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
 ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947639"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>Procédure : Encoder et décoder une image BMP
 Les exemples suivants montrent comment décoder et encoder une [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] de l’image à l’aide spécifique au <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> et <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> objets.  

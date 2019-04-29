@@ -3,11 +3,11 @@ title: Conception et implémentation d'activités personnalisées
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
 ms.openlocfilehash: 61a5de5a15835c728c18c0136952cf7ffdbaf000
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945845"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Conception et implémentation d'activités personnalisées
 Dans [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], les activités personnalisées sont créées soit en assemblant des activités fournies par le système dans des activités composites, soit en créant de nouveaux types qui dérivent des objets <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ou <xref:System.Activities.NativeActivity>. Cette section décrit la procédure de création des activités personnalisées avec l'une ou l'autre de ces méthodes.  

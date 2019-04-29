@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
 ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785396"
 ---
 # <a name="comparison-expressions"></a>Comparaison des expressions
 Une expression de comparaison définit une valeur constante, une valeur de propriété ou un résultat de méthode par rapport à une autre valeur (égal, différent de, supérieur à ou inférieur à). Si une comparaison particulière n'est pas valide pour [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], une exception est levée. Toutes les comparaisons, implicites et explicites, requièrent que tous les composants soient comparables dans la source de données. Des expressions de comparaison sont souvent utilisées dans des clauses `Where` pour restreindre les résultats d'une requête.  

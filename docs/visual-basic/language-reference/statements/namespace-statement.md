@@ -13,11 +13,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784135"
 ---
 # <a name="namespace-statement"></a>Namespace, instruction
 Déclare le nom d’un espace de noms et oblige le code source qui suit la déclaration à être compilé dans cet espace de noms.  
@@ -32,7 +32,7 @@ End Namespace
   
 ## <a name="parts"></a>Composants  
  Global  
- Optionnel. Vous permet de définir un espace de noms en dehors de l’espace de noms racine de votre projet. Consultez [espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Facultatif. Vous permet de définir un espace de noms en dehors de l’espace de noms racine de votre projet. Consultez [espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
  Obligatoire. Un nom unique qui identifie l’espace de noms. Doit être un identificateur Visual Basic valide. Pour plus d’informations, consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  

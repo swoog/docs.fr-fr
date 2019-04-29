@@ -1,5 +1,5 @@
 ---
-title: Instructions d’utilisation
+title: Indications relatives à l'utilisation
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: KrzysztofCwalina
 ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778805"
 ---
-# <a name="usage-guidelines"></a>Instructions d’utilisation
+# <a name="usage-guidelines"></a>Indications relatives à l'utilisation
 
 Cette section contient des instructions sur l’utilisation de types courants dans les API accessible publiquement. Il porte sur l’utilisation directe de types de Framework (par exemple, les attributs de sérialisation) et de la surcharge des opérateurs courants intégrés.
   

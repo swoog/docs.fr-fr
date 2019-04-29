@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934873"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType, méthode
 Obtient un tableau du type spécifié, ou un pointeur ou une référence vers le type spécifié.  
@@ -54,15 +54,15 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>Notes  
  La valeur de *elementType* doit être une des opérations suivantes :  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+- ELEMENT_TYPE_BYREF  
   
--   ELEMENT_TYPE_ARRAY ou ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY ou ELEMENT_TYPE_SZARRAY  
   
  Si la valeur de *elementType* est ELEMENT_TYPE_PTR ou ELEMENT_TYPE_BYREF, *nRank* doit être égal à zéro.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

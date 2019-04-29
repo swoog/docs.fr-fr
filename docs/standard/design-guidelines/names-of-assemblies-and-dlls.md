@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: KrzysztofCwalina
 ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945494"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Noms d'assemblys et de DLL
 Un assembly est l’unité de déploiement et d’identité pour les programmes de code managé. Bien que les assemblys peuvent s’étendre sur un ou plusieurs fichiers, en général, un assembly effectue un mappage avec une DLL. Par conséquent, cette section décrit les conventions d’affectation de noms de seul DLL peuvent alors être mappées aux conventions d’affectation de noms d’assembly.  

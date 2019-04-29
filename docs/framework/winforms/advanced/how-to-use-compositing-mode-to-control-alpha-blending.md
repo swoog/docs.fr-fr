@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779027"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procédure : utiliser le mode de composition pour contrôler la simulation de transparence
 Il peut arriver lorsque vous souhaitez créer un bitmap hors écran ayant les caractéristiques suivantes :  
   
--   Les couleurs ont les valeurs alphabétiques inférieur à 255.  
+- Les couleurs ont les valeurs alphabétiques inférieur à 255.  
   
--   Couleurs ne sont pas alphabétiques fusionnés entre eux lorsque vous créez l’image bitmap.  
+- Couleurs ne sont pas alphabétiques fusionnés entre eux lorsque vous créez l’image bitmap.  
   
--   Lorsque vous affichez la bitmap terminée, les couleurs de la bitmap sont fusionné alpha avec les couleurs d’arrière-plan sur le périphérique d’affichage.  
+- Lorsque vous affichez la bitmap terminée, les couleurs de la bitmap sont fusionné alpha avec les couleurs d’arrière-plan sur le périphérique d’affichage.  
   
  Pour créer une telle bitmap, construisez un espace <xref:System.Drawing.Bitmap> de l’objet et puis construire un <xref:System.Drawing.Graphics> objet basé sur cette bitmap. Le mode de composition le <xref:System.Drawing.Graphics> objet <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

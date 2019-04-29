@@ -6,11 +6,11 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772955"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procédure : activer le service de partage de ports Net.TCP
 Windows Communication Foundation (WCF) utilise un service Windows appelé Service de partage de Port Net.TCP pour faciliter le partage de ports TCP entre plusieurs processus. Ce service est installé en tant que partie de WCF, mais le service n’est pas activé par défaut par mesure de sécurité et par conséquent, doit être activé manuellement avant la première utilisation. Cette rubrique décrit comment configurer le service de partage de ports Net.TCP à l'aide du composant logiciel enfichable Microsoft Management Console (MMC).  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941139"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procédure : hériter de la classe Control
 Si vous souhaitez créer un contrôle entièrement personnalisé à utiliser sur un formulaire Windows, vous devez hériter de la <xref:System.Windows.Forms.Control> classe. Tout en héritant de la <xref:System.Windows.Forms.Control> classe nécessite que vous effectuer davantage de planification et de l’implémentation, il vous fournit également la plus grande plage d’options. Lorsque vous héritez de <xref:System.Windows.Forms.Control>, vous héritez des fonctionnalités très basique qui facilite le travail de contrôles. Les fonctionnalités inhérentes à la <xref:System.Windows.Forms.Control> classe gère l’entrée utilisateur via le clavier et de la souris, définissent les limites et la taille du contrôle, fournit un handle windows et fournit la gestion des messages et la sécurité. Elles n’intègrent pas la peinture, qui désigne ici le rendu réel de l’interface graphique du contrôle, ni les fonctionnalités d’interaction utilisateur spécifiques. Vous devez fournir tous ces aspects par le biais de code personnalisé.  

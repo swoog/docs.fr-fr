@@ -3,11 +3,11 @@ title: Architecture d'activation WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932707"
 ---
 # <a name="was-activation-architecture"></a>Architecture d'activation WAS
 Cette rubrique détaille et décrit les composants du service d'activation des processus de Windows (également appelé WAS).  
@@ -15,15 +15,15 @@ Cette rubrique détaille et décrit les composants du service d'activation des p
 ## <a name="activation-components"></a>Composants d'activation  
  Le service WAS se compose de plusieurs composants architecturaux :  
   
--   Adaptateurs d'écouteur. Services Windows qui reçoivent des messages sur des protocoles réseau spécifiques et communiquent avec WAS pour acheminer les messages entrants vers le processus de travail correct.  
+- Adaptateurs d'écouteur. Services Windows qui reçoivent des messages sur des protocoles réseau spécifiques et communiquent avec WAS pour acheminer les messages entrants vers le processus de travail correct.  
   
--   WAS. Service Windows qui gère la création et la durée de vie des processus de travail.  
+- WAS. Service Windows qui gère la création et la durée de vie des processus de travail.  
   
--   Fichier exécutable de processus de travail générique (w3wp.exe).  
+- Fichier exécutable de processus de travail générique (w3wp.exe).  
   
--   Gestionnaire d'application. Gère la création et la durée de vie des domaines d'application qui hébergent des applications dans le processus de travail.  
+- Gestionnaire d'application. Gère la création et la durée de vie des domaines d'application qui hébergent des applications dans le processus de travail.  
   
--   Gestionnaires de protocoles. Composants spécifiques au protocole qui s'exécutent dans le processus de travail et gèrent les communications entre le processus de travail et les différents adaptateurs d'écouteur. Il existe deux types de gestionnaires de protocoles : les gestionnaires de protocoles de processus et les gestionnaires de protocoles de domaine d'application (AppDomain).  
+- Gestionnaires de protocoles. Composants spécifiques au protocole qui s'exécutent dans le processus de travail et gèrent les communications entre le processus de travail et les différents adaptateurs d'écouteur. Il existe deux types de gestionnaires de protocoles : les gestionnaires de protocoles de processus et les gestionnaires de protocoles de domaine d'application (AppDomain).  
   
  Lorsque le service WAS active une instance de processus de traitement, il charge les gestionnaires de protocoles de processus requis dans le processus de traitement et utilise le gestionnaire d'application pour créer un domaine d'application destiné à héberger l'application. Le domaine d'application charge le code de l'application ainsi que les gestionnaires de protocoles AppDomain requis par l'application.  
   

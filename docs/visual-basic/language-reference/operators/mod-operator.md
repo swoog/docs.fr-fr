@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936667"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod, opérateur (Visual Basic)
 Divise deux nombres et retourne uniquement le reste.  
@@ -70,9 +70,9 @@ End Module
   
  Les opérateurs connexes sont les suivantes :  
   
--   Le [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) renvoie le quotient entier d’une division. Par exemple, l’expression `14 \ 4` prend la valeur 3.  
+- Le [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) renvoie le quotient entier d’une division. Par exemple, l’expression `14 \ 4` prend la valeur 3.  
   
--   Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retourne le quotient complet, y compris le reste, comme un nombre à virgule flottante. Par exemple, l’expression `14 / 4` prend la valeur 3.5.  
+- Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retourne le quotient complet, y compris le reste, comme un nombre à virgule flottante. Par exemple, l’expression `14 / 4` prend la valeur 3.5.  
   
 ## <a name="attempted-division-by-zero"></a>Tentative de division par zéro  
  Si `number2` prend la valeur zéro, le comportement de la `Mod` opérateur varie selon le type de données des opérandes. Une division intégrale lève un <xref:System.DivideByZeroException> exception. Retourne une division à virgule flottante <xref:System.Double.NaN>.  

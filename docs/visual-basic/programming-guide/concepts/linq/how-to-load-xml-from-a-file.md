@@ -3,11 +3,11 @@ title: 'Procédure : Charger XML à partir d’un fichier (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942582"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Procédure : Charger XML à partir d’un fichier (Visual Basic)
 Cette rubrique montre comment charger des données XML à partir d'un URI en utilisant la méthode <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 277e7e57ae01128039c3a280158110acde3363a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944545"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd, méthode
 Fusionne dans la portée actuelle toutes les portées de métadonnées spécifiées par un ou plusieurs appels précédents à [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -41,25 +41,25 @@ HRESULT MergeEnd ();
   
  Les conditions spéciales suivantes s’appliquent à la fusion :  
   
--   Un identificateur de version du module (MVID) n’est jamais importé, car il est propre aux métadonnées dans la portée d’importation.  
+- Un identificateur de version du module (MVID) n’est jamais importé, car il est propre aux métadonnées dans la portée d’importation.  
   
--   Aucune propriété au niveau du module existantes n’est remplacées.  
+- Aucune propriété au niveau du module existantes n’est remplacées.  
   
      Si les propriétés du module sont déjà configurées pour la portée actuelle, aucune propriété de module n’est importées. Toutefois, si les propriétés de module n’ont pas été définies dans la portée actuelle, elles sont importées une seule fois, lorsqu’elles sont tout d’abord rencontrées. Si ces propriétés de module sont de nouveau rencontrées, ils sont des doublons. Si les valeurs de toutes les propriétés de module (sauf MVID) sont comparées et aucun doublon n’est trouvé, une erreur est générée.  
   
--   Pour les définitions de type (`TypeDef`), sans doublons sont fusionnées dans la portée actuelle. `TypeDef` vérifie les doublons par rapport à chacun des objets *nom d’objet qualifié complet* + *GUID* + *numéro de version*. S’il existe une correspondance sur le nom ou le GUID et une des deux autres éléments est différent, une erreur est générée. Sinon, si les trois éléments correspondent, `MergeEnd` effectue une vérification rapide pour vérifier que les entrées sont des doublons ; le cas contraire, une erreur est générée. Ce rapide vérifie les :  
+- Pour les définitions de type (`TypeDef`), sans doublons sont fusionnées dans la portée actuelle. `TypeDef` vérifie les doublons par rapport à chacun des objets *nom d’objet qualifié complet* + *GUID* + *numéro de version*. S’il existe une correspondance sur le nom ou le GUID et une des deux autres éléments est différent, une erreur est générée. Sinon, si les trois éléments correspondent, `MergeEnd` effectue une vérification rapide pour vérifier que les entrées sont des doublons ; le cas contraire, une erreur est générée. Ce rapide vérifie les :  
   
-    -   Les mêmes déclarations de membre, qui se produisent dans le même ordre. Les membres qui sont signalés en tant que `mdPrivateScope` (voir la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) énumération) ne sont pas inclus dans ce contrôle ; elles sont fusionnées spécialement.  
+    - Les mêmes déclarations de membre, qui se produisent dans le même ordre. Les membres qui sont signalés en tant que `mdPrivateScope` (voir la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) énumération) ne sont pas inclus dans ce contrôle ; elles sont fusionnées spécialement.  
   
-    -   La même disposition de classe.  
+    - La même disposition de classe.  
   
      Cela signifie qu’un `TypeDef` objet doit toujours être complète et cohérente défini dans chaque portée de métadonnées dans laquelle elle est déclarée ; si ses implémentations de membres (pour une classe) sont réparties sur plusieurs unités de compilation, la définition complète est censée pour être dans chaque portée et non incrémentielle à chaque étendue. Par exemple, si les noms de paramètre sont pertinents pour le contrat, ils doivent être émises la même façon dans chaque portée ; Si elles ne sont pas pertinentes, ils ne doivent pas être émis dans des métadonnées.  
   
      L’exception est qu’un `TypeDef` objet peut avoir des membres incrémentiels signalés comme `mdPrivateScope`. Lorsqu’il les rencontre, `MergeEnd` les ajoute de façon incrémentielle à l’étendue actuelle sans tenir compte des doublons. Étant donné que le compilateur comprend la portée privée, le compilateur doit être responsable de l’application de règles.  
   
--   Les adresses virtuelles relatives (RVA) ne sont pas importées ou fusionnées ; le compilateur doit émettre à nouveau ces informations.  
+- Les adresses virtuelles relatives (RVA) ne sont pas importées ou fusionnées ; le compilateur doit émettre à nouveau ces informations.  
   
--   Attributs personnalisés sont fusionnés uniquement lorsque l’élément auquel ils sont associés est fusionné. Par exemple, les attributs personnalisés associés à une classe sont fusionnées lors de la classe est rencontrée pour la première fois. Si des attributs personnalisés sont associés un `TypeDef` ou `MemberDef` qui est spécifique à l’unité de compilation (par exemple, l’horodatage d’une compilation membre), ils ne sont pas fusionnées et il incombe au compilateur de supprimer ou mettre à jour ces métadonnées.  
+- Attributs personnalisés sont fusionnés uniquement lorsque l’élément auquel ils sont associés est fusionné. Par exemple, les attributs personnalisés associés à une classe sont fusionnées lors de la classe est rencontrée pour la première fois. Si des attributs personnalisés sont associés un `TypeDef` ou `MemberDef` qui est spécifique à l’unité de compilation (par exemple, l’horodatage d’une compilation membre), ils ne sont pas fusionnées et il incombe au compilateur de supprimer ou mettre à jour ces métadonnées.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

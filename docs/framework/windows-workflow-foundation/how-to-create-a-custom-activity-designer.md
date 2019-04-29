@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Créer un concepteur d’activités personnalisées'
+title: 'Procédure : créer un concepteur d’activités personnalisées'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945650"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>Procédure : Créer un concepteur d’activités personnalisées
+# <a name="how-to-create-a-custom-activity-designer"></a>Procédure : créer un concepteur d’activités personnalisées
 
 Les concepteurs d'activités personnalisées sont généralement implémentés de telle sorte que les activités qui leur sont associées soient composables avec d'autres activités dont les concepteurs peuvent être déposés dans l'aire de conception avec eux. Cette fonctionnalité nécessite qu’un concepteur d’activités personnalisées fournissent une « zone de dépôt » où une activité arbitraire peut être placée, ainsi que les moyens de gérer la collection résultante des éléments sur l’aire de conception. Cette rubrique décrit comment créer un concepteur d'activités personnalisées qui contient une telle zone de dépôt et comment créer un concepteur d'activités personnalisées qui fournit cette fonctionnalité d'édition requise pour gérer la collection d'éléments de concepteur.
 
@@ -17,7 +17,7 @@ Les concepteurs d'activités personnalisées héritent généralement d'<xref:Sy
 
 Pour faciliter le développement de concepteurs d'activités personnalisées, <xref:System.Activities.Presentation.ActivityDesigner> utilise deux contrôles d'assistance, <xref:System.Activities.Presentation.WorkflowItemPresenter> et <xref:System.Activities.Presentation.WorkflowItemsPresenter>. Ceux-ci gèrent les fonctionnalités communes telles que le glisser-déposer, la suppression, la sélection et l’ajout d’éléments enfants. Le <xref:System.Activities.Presentation.WorkflowItemPresenter> permet un seul enfant d’élément d’interface utilisateur à l’intérieur, en fournissant la « zone de dépôt », tandis que le <xref:System.Activities.Presentation.WorkflowItemsPresenter> peut fournir la prise en charge de plusieurs éléments d’interface utilisateur, notamment des fonctionnalités supplémentaires telles que le classement, le déplacement, la suppression et ajout d’éléments enfants.
 
-L'autre aspect essentiel qu'il faut mettre en évidence dans l'implémentation d'un concepteur d'activités personnalisées concerne la façon dont les modifications sur place sont liées à l'aide de la liaison de données [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] à l'instance stockée en mémoire de ce que nous modifions dans le concepteur. Cette tâche est effectuée par l'arborescence des éléments de modèles, qui est également chargée de l'activation de la notification de modification et du suivi d'événements tels que les modifications d'états.
+L'autre aspect essentiel qu'il faut mettre en évidence dans l'implémentation d'un concepteur d'activités personnalisées concerne la façon dont les modifications sur place sont liées à l'aide de la liaison de données [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] à l'instance stockée en mémoire de ce que nous modifions dans le concepteur. Cette tâche est effectuée par l’arborescence des éléments de modèles, qui est également chargée de l’activation de la notification de modification et du suivi d’événements tels que les modifications d’états.
 
 Cette rubrique présente deux procédures.
 

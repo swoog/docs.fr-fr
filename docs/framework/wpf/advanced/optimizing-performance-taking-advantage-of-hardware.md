@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773136"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimisation des performances : Tirer parti du matériel
 L’architecture interne de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a deux pipelines de rendu matériel et logiciel. Cette rubrique fournit des informations sur ces pipelines de rendu pour vous aider à prendre des décisions sur les optimisations des performances de vos applications.  
@@ -34,23 +34,23 @@ L’architecture interne de [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Les fonctionnalités du matériel graphique qui ont le plus d’impact sur les niveaux de la couche de rendu sont les suivantes :  
   
--   **RAM vidéo** La quantité de mémoire vidéo sur le matériel graphique détermine la taille et le nombre de mémoires tampon qui peuvent être utilisées pour la composition de graphiques.  
+- **RAM vidéo** La quantité de mémoire vidéo sur le matériel graphique détermine la taille et le nombre de mémoires tampon qui peuvent être utilisées pour la composition de graphiques.  
   
--   **Nuanceur de pixels** Un nuanceur de pixels est une fonction de traitement des graphiques qui calcule les effets pixel par pixel. En fonction de la résolution des graphiques affichés, il peut y avoir plusieurs millions de pixels à traiter pour chaque image de l’affichage.  
+- **Nuanceur de pixels** Un nuanceur de pixels est une fonction de traitement des graphiques qui calcule les effets pixel par pixel. En fonction de la résolution des graphiques affichés, il peut y avoir plusieurs millions de pixels à traiter pour chaque image de l’affichage.  
   
--   **Nuanceur de sommets** Un nuanceur de sommets est une fonction de traitement des graphiques qui effectue des opérations mathématiques sur les données de sommet de l’objet.  
+- **Nuanceur de sommets** Un nuanceur de sommets est une fonction de traitement des graphiques qui effectue des opérations mathématiques sur les données de sommet de l’objet.  
   
--   **Prise en charge de la multitexture** La prise en charge de la multitexture fait référence à la possibilité d’appliquer au moins deux textures distinctes pendant une opération de mélange sur un objet graphique 3D. Le degré de prise en charge de la multitexture est déterminé par le nombre d’unités de multitexture sur le matériel graphique.  
+- **Prise en charge de la multitexture** La prise en charge de la multitexture fait référence à la possibilité d’appliquer au moins deux textures distinctes pendant une opération de mélange sur un objet graphique 3D. Le degré de prise en charge de la multitexture est déterminé par le nombre d’unités de multitexture sur le matériel graphique.  
   
  Nuanceur de pixels, nuanceur de sommets, les fonctionnalités de multitexture servent à définir spécifique [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] les niveaux de version, qui, à son tour, sont utilisés pour définir les différentes couches de rendu dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Les fonctionnalités du matériel graphique déterminent la fonction de rendu d’une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le système [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] définit trois couches de rendu :  
   
--   **Couche de rendu 0** Aucune accélération matérielle graphique. Le [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] au niveau de version est inférieure à la version 7.0.  
+- **Couche de rendu 0** Aucune accélération matérielle graphique. Le [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] au niveau de version est inférieure à la version 7.0.  
   
--   **Couche de rendu 1** l’accélération matérielle graphique partielle. Le [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] au niveau de version est supérieure ou égale à la version 7.0, et **moindre** à la version 9.0.  
+- **Couche de rendu 1** l’accélération matérielle graphique partielle. Le [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] au niveau de version est supérieure ou égale à la version 7.0, et **moindre** à la version 9.0.  
   
--   **Couche de rendu 2** La plupart des fonctionnalités graphiques utilisent l’accélération matérielle graphique. Le niveau de version [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] est supérieur ou égal à la version 9.0.  
+- **Couche de rendu 2** La plupart des fonctionnalités graphiques utilisent l’accélération matérielle graphique. Le niveau de version [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] est supérieur ou égal à la version 9.0.  
   
  Pour plus d’informations sur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] couches de rendu, consultez [couches de rendu graphiques](graphics-rendering-tiers.md).  
   

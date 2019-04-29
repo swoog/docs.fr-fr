@@ -3,11 +3,11 @@ title: Comparaison de la programmation fonctionnelle et de la Programmation imp�
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931663"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)
 Cette rubrique compare et contraste la programmation fonctionnelle avec la programmation impérative (procédurale) plus traditionnelle.  
@@ -35,11 +35,11 @@ Cette rubrique compare et contraste la programmation fonctionnelle avec la progr
 ## <a name="advantages-of-pure-functions"></a>Avantages des fonctions pures  
  La raison principale pour implémenter des transformations fonctionnelles en tant que fonctions pures est que celles-ci sont composables, autrement dit autonomes et sans état. Ces caractéristiques apportent un certain nombre d'avantages, notamment les suivants :  
   
--   Une meilleure lisibilité et facilité de maintenance. Cela est dû au fait que chaque fonction est conçue pour accomplir une tâche spécifique étant donné ses arguments. La fonction ne repose pas sur un état externe.  
+- Une meilleure lisibilité et facilité de maintenance. Cela est dû au fait que chaque fonction est conçue pour accomplir une tâche spécifique étant donné ses arguments. La fonction ne repose pas sur un état externe.  
   
--   Un développement réitératif plus simple. Le code étant plus facile à refactoriser, les modifications de conception sont souvent plus faciles à implémenter. Par exemple, supposez que vous écrivez une transformation compliquée et que vous vous rendez compte par la suite que du code est répété à plusieurs reprises dans la transformation. Si vous refactorisez par le biais d'une méthode pure, vous pouvez appeler votre méthode pure comme bon vous semble sans vous soucier des effets secondaires.  
+- Un développement réitératif plus simple. Le code étant plus facile à refactoriser, les modifications de conception sont souvent plus faciles à implémenter. Par exemple, supposez que vous écrivez une transformation compliquée et que vous vous rendez compte par la suite que du code est répété à plusieurs reprises dans la transformation. Si vous refactorisez par le biais d'une méthode pure, vous pouvez appeler votre méthode pure comme bon vous semble sans vous soucier des effets secondaires.  
   
--   Une plus grande facilité de test et de débogage. Les fonctions pures étant plus faciles à tester de manière isolée, vous pouvez écrire du code test qui appelle la fonction pure avec des valeurs typiques, des cases de bord valides et des cases de bord non valides.  
+- Une plus grande facilité de test et de débogage. Les fonctions pures étant plus faciles à tester de manière isolée, vous pouvez écrire du code test qui appelle la fonction pure avec des valeurs typiques, des cases de bord valides et des cases de bord non valides.  
   
 ## <a name="transitioning-for-oop-developers"></a>Transition pour les développeurs OOP  
  Dans la programmation traditionnelle orientée objets (OOP), la plupart des développeurs sont habitués à programmer dans le style impératif/procédural. Pour passer au développement de style fonctionnel pur, ils doivent modifier leur manière de pensée et leur approche du développement.  

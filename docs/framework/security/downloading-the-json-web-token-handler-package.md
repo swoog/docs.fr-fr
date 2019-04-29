@@ -3,17 +3,17 @@ title: Téléchargement du package du Gestionnaire de jetons Web JSON
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792748"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>Télécharger le Package du Gestionnaire de jetons Web JSON
 
 Cette rubrique explique comment télécharger et utiliser le Gestionnaire de jetons Web JSON dans votre projet.
 
-L’extension du Gestionnaire de jetons Web JSON est disponible sous forme de package NuGet, qui ajoute les assemblys et les références nécessaires à votre projet. Si vous n’avez pas encore installé NuGet, accédez à [nuget.org](https://nuget.org) pour l’installer. Vous pouvez voir l’historique de gestion de version de l’extension en accédant à sa page sur NuGet : [Gestionnaire de jetons Web JSON sur NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
+L’extension du Gestionnaire de jetons Web JSON est disponible sous forme de package NuGet, qui ajoute les assemblys et les références nécessaires à votre projet. Si vous n’avez pas encore installé NuGet, accédez à [nuget.org](https://nuget.org) pour l’installer. Vous pouvez consulter l’historique de contrôle de version pour l’extension en visitant sa page sur NuGet : [Gestionnaire de jetons Web JSON sur NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>Utiliser l’interface utilisateur graphique du Gestionnaire de Package
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775022"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply, méthode
 Informe le profileur que la partie côté serveur d’un appel de communication à distance est terminée et le client reçoit maintenant et sur le point de traiter la réponse.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in] Valeur qui correspond à la valeur fournie dans [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) dans ces conditions :  
   
--   Les cookies GUID de communication à distance sont actifs.  
+- Les cookies GUID de communication à distance sont actifs.  
   
--   Le canal réussit à transmettre le message.  
+- Le canal réussit à transmettre le message.  
   
--   Les cookies GUID sont actifs sur le processus côté serveur.  
+- Les cookies GUID sont actifs sur le processus côté serveur.  
   
  Cela permet un appariement simple d’appels de communication à distance.  
   

@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940489"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procédure : Déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Service Trace Viewer Tool (SvcTraceViewer.exe)  
+- Service Trace Viewer Tool (SvcTraceViewer.exe)  
   
--   Dépannage et débogage des applications WIF  
+- Dépannage et débogage des applications WIF  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure décrit les étapes à suivre pour configurer le suivi WIF, collecter les journaux de suivi et analyser ceux-ci à l'aide de l'outil Trace Viewer. Elle établit une correspondance générale entre les entrées de suivi et les mesures nécessaires pour résoudre les problèmes liés à WIF.  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : configurer le suivi WIF à l'aide du fichier de configuration Web.config  
+- Étape 1 : configurer le suivi WIF à l'aide du fichier de configuration Web.config  
   
--   Étape 2 : analyser les fichiers de suivi WIF à l'aide de l'outil Trace Viewer  
+- Étape 2 : analyser les fichiers de suivi WIF à l'aide de l'outil Trace Viewer  
   
--   Étape 3 : identifier les solutions pour corriger les problèmes liés à WIF  
+- Étape 3 : identifier les solutions pour corriger les problèmes liés à WIF  
   
--   Éléments associés  
+- Éléments associés  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Configurer le suivi WIF.  
+- Configurer le suivi WIF.  
   
--   Consulter les journaux de suivi dans l'outil Trace Viewer.  
+- Consulter les journaux de suivi dans l'outil Trace Viewer.  
   
--   Identifier les problèmes liés à WIF dans les journaux de suivi.  
+- Identifier les problèmes liés à WIF dans les journaux de suivi.  
   
--   Prendre des mesures correctives pour les problèmes liés à WIF décelés dans les journaux de suivi.  
+- Prendre des mesures correctives pour les problèmes liés à WIF décelés dans les journaux de suivi.  
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : configurer le suivi WIF à l'aide du fichier de configuration Web.config  
+- Étape 1 : configurer le suivi WIF à l'aide du fichier de configuration Web.config  
   
--   Étape 2 : analyser les fichiers de suivi WIF à l'aide de l'outil Trace Viewer  
+- Étape 2 : analyser les fichiers de suivi WIF à l'aide de l'outil Trace Viewer  
   
--   Étape 3 : identifier les solutions pour corriger les problèmes liés à WIF  
+- Étape 3 : identifier les solutions pour corriger les problèmes liés à WIF  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Étape 1 : configurer le suivi WIF à l'aide du fichier de configuration Web.config  
  Dans cette étape, vous allez apporter des modifications aux sections de configuration du fichier *Web.config* pour permettre à WIF de suivre ses événements et les stocker dans un journal de suivi.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321547"
   
 ## <a name="related-items"></a>Éléments associés  
   
--   [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

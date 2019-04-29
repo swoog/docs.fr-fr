@@ -3,11 +3,11 @@ title: Publication du service WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791207"
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
 
@@ -17,19 +17,19 @@ Publication de Service Windows Communication Foundation (WCF) vous aide à la pr
 
 Publication de Service WCF prend en charge la publication des services WCF créés à partir de l’ensemble des modèles de bibliothèque de service WCF et leurs modèles d’élément correspondants, qui incluent les éléments suivants :
 
--   Modèle de bibliothèque du Service WCF avec le modèle d’élément.
+- Modèle de bibliothèque du Service WCF avec le modèle d’élément.
 
--   Bibliothèque du service de syndication.
+- Bibliothèque du service de syndication.
 
 Vous trouverez ces modèles de service en choisissant **fichier** > **nouveau projet** > [**Visual Basic** ou **Visual C#** ] > **WCF**. Pour les autres modèles WCF à cet emplacement (y compris l’Application de Service de Workflow WCF et Application de Service WCF), vous pouvez publier à l’aide de [de publication pour les applications web à un clic](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
 
 Le service peut être publié aux emplacements cibles suivants.
 
--   IIS local
+- IIS local
 
--   Système de fichiers
+- Système de fichiers
 
--   Site FTP
+- Site FTP
 
 ## <a name="using-wcf-service-publishing"></a>Utilisation de la publication de service WCF
 
@@ -63,9 +63,9 @@ Si vous choisissez de déployer votre application sur le serveur IIS local, vous
 
  Le fichier Web.config généré contient des sections Web qui sont utiles pour l’hébergement Web et le contenu du fichier App.config pour la bibliothèque de service WCF avec les modifications suivantes :
 
--   L'adresse de base est exclue.
+- L'adresse de base est exclue.
 
--   Les paramètres dans l'élément `<diagnostics>` sont exclus pour préserver les paramètres de suivi de la plateforme cible.
+- Les paramètres dans l'élément `<diagnostics>` sont exclus pour préserver les paramètres de suivi de la plateforme cible.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Publication sur IIS de services WCF avec des liaisons non-HTTP
  Si vous utilisez IIS 7.0 ou une version ultérieure, vous pouvez publier des services WCF avec des liaisons non-HTTP à IIS. Vous devez effectuer plusieurs tâches de préconfiguration. Pour plus d’informations, consultez les rubriques à [hébergement dans Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).

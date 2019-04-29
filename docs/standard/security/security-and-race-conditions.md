@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933807"
 ---
 # <a name="security-and-race-conditions"></a>Sécurité et conditions de concurrence
 Un autre problème concerne le risque de failles de sécurité exploité par les conditions de concurrence. Il existe plusieurs façons dans lequel cela peut se produire. Les sous-rubriques qui suivent décrivent certains des principaux pièges que le développeur doit éviter.  

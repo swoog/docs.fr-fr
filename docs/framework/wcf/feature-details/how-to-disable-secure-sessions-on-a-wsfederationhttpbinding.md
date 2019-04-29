@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 ms.openlocfilehash: 38863cbfe457afd923c3c8238d8c12b4d451c67f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773085"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procédure : désactiver des sessions sécurisées sur un WSFederationHttpBinding
 Certains services peuvent requérir des informations d'identification fédérées mais ne prennent pas en charge les sessions sécurisées. Dans ce cas, vous devez désactiver la fonctionnalité de session sécurisée. Contrairement à <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> n'offre aucun moyen de désactiver les sessions sécurisées lors de la communication avec un service. À la place, vous devez créer une liaison personnalisée qui remplace les paramètres de session sécurisée par un démarrage.  
@@ -40,7 +40,7 @@ Certains services peuvent requérir des informations d'identification fédérée
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Pour compiler l'exemple de code, créez un projet qui référence l'assembly System.ServiceModel.dll.  
+- Pour compiler l'exemple de code, créez un projet qui référence l'assembly System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Voir aussi
 

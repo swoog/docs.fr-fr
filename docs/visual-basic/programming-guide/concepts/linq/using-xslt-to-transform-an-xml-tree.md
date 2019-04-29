@@ -3,11 +3,11 @@ title: Utilisation de XSLT pour transformer une arborescence XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908152"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Utilisation de XSLT pour transformer une arborescence XML (Visual Basic)
 Vous pouvez créer une arborescence XML, créer un objet <xref:System.Xml.XmlReader> à partir de l'arborescence XML, créer un nouveau document, puis créer un objet <xref:System.Xml.XmlWriter> qui écrira dans le nouveau document. Ensuite, vous pouvez appeler la transformation XSLT, en passant le <xref:System.Xml.XmlReader> et le <xref:System.Xml.XmlWriter> à la transformation. Une fois la transformation terminée avec succès, la nouvelle arborescence XML est remplie avec les résultats de la transformation.  

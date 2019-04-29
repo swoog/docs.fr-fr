@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766884"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable '\<nom_variable >' masque une variable dans un bloc englobant
 Une variable dans un bloc a le même nom qu’une autre variable locale.  
@@ -21,7 +21,7 @@ Une variable dans un bloc a le même nom qu’une autre variable locale.
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Renommez la variable du bloc englobé afin qu’il ne soit pas identique à toutes les variables locales. Exemple :  
+- Renommez la variable du bloc englobé afin qu’il ne soit pas identique à toutes les variables locales. Exemple :  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,9 +30,9 @@ Une variable dans un bloc a le même nom qu’une autre variable locale.
     End If  
     ```  
   
--   Une cause courante de cette erreur est l’utilisation de `Catch e As Exception` à l’intérieur d’un gestionnaire d’événements. Si c’est le cas, nommez le `Catch` variable bloc `ex` plutôt que `e`.  
+- Une cause courante de cette erreur est l’utilisation de `Catch e As Exception` à l’intérieur d’un gestionnaire d’événements. Si c’est le cas, nommez le `Catch` variable bloc `ex` plutôt que `e`.  
   
--   Une autre source courante de cette erreur est une tentative d’accès d’une variable locale déclarée dans un `Try` bloquer dans une fonction `Catch` bloc. Pour corriger ce problème, déclarez la variable en dehors de la `Try...Catch...Finally` structure.  
+- Une autre source courante de cette erreur est une tentative d’accès d’une variable locale déclarée dans un `Try` bloquer dans une fonction `Catch` bloc. Pour corriger ce problème, déclarez la variable en dehors de la `Try...Catch...Finally` structure.  
   
 ## <a name="see-also"></a>Voir aussi
 

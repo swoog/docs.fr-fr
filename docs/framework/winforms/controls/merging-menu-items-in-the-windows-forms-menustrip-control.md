@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936355"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Fusion d'éléments de menu dans le contrôle MenuStrip Windows Forms
 Si vous avez une application d’interface multidocument (MDI), vous pouvez fusionner des éléments de menu ou des menus entiers à partir du formulaire enfant dans les menus du formulaire parent.  
@@ -20,9 +20,9 @@ Si vous avez une application d’interface multidocument (MDI), vous pouvez fusi
 ## <a name="general-concepts"></a>Concepts généraux  
  Procédures de fusion impliquent une cible et un contrôle de code source :  
   
--   La cible est le <xref:System.Windows.Forms.MenuStrip> contrôle sur le principal ou le formulaire MDI parent dans lequel vous fusionnez des éléments de menu.  
+- La cible est le <xref:System.Windows.Forms.MenuStrip> contrôle sur le principal ou le formulaire MDI parent dans lequel vous fusionnez des éléments de menu.  
   
--   La source est le <xref:System.Windows.Forms.MenuStrip> contrôle sur le formulaire enfant MDI qui contient les éléments de menu à fusionner dans le menu cible.  
+- La source est le <xref:System.Windows.Forms.MenuStrip> contrôle sur le formulaire enfant MDI qui contient les éléments de menu à fusionner dans le menu cible.  
   
  Le <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriété identifie l’élément de menu dont vous remplissez avec les titres de l’interface MDI en cours de la liste déroulante parente enfants MDI du formulaire. Par exemple, vous répertoriez en général les enfants MDI qui sont actuellement ouverts sur le **fenêtre** menu.  
   

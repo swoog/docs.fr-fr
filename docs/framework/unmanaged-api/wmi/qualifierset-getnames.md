@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943392"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames function
 
@@ -78,7 +78,7 @@ Une fois que vous avez extrait les noms de qualificateur, vous pouvez accéder �
 
 Il n’est pas une erreur pour un objet donné pour que les qualificateurs de zéro, par conséquent, le nombre de chaînes dans `pstrNames` en retour peut être 0, même si la fonction retourne `WBEM_S_NO_ERROR`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
 ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788711"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Procédure : Générer manuellement les Classes de Service de données Client (WCF Data Services)
 WCF Data Services s’intègre à Visual Studio pour vous permettre de générer automatiquement des classes de service de données client lorsque vous utilisez le **ajouter une référence de Service** boîte de dialogue pour ajouter une référence à un service de données dans un projet Visual Studio. Pour plus d'informations, voir [Procédure : Ajouter une référence de Service de données](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Vous pouvez également générer manuellement les mêmes classes de service de données client en utilisant l'outil de génération de code, `DataSvcUtil.exe`. Cet outil, qui est inclus avec WCF Data Services, génère des classes .NET Framework à partir de la définition de service de données. Il peut également être utilisé pour générer des classes de service des données depuis le fichier de modèle conceptuel (.csdl) et depuis le fichier .edmx qui représente un modèle Entity Framework dans un projet Visual Studio.
@@ -19,7 +19,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Pour générer des classes C# qui prennent en charge la liaison de données
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -30,7 +30,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>Pour générer des classes Visual Basic qui prennent en charge la liaison de données
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -41,7 +41,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Pour générer des classes C# basées sur l'URI de service
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -52,7 +52,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>Pour générer des classes Visual Basic basées sur l'URI de service
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -63,7 +63,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Pour générer des classes C# basées sur le fichier de modèle conceptuel (CSDL)
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
@@ -71,7 +71,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>Pour générer des classes Visual Basic basées sur le fichier de modèle conceptuel (CSDL)
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
@@ -79,7 +79,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>Pour générer des classes C# basées sur le fichier .edmx
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
@@ -87,7 +87,7 @@ WCF Data Services s’intègre à Visual Studio pour vous permettre de générer
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>Pour générer des classes Visual Basic basées sur le fichier .edmx
 
--   À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
+- À l'invite de commandes, exécutez la commande suivante sans saut de ligne :
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb

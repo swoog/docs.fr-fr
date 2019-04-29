@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946456"
 ---
 # <a name="statements-in-visual-basic"></a>Instructions dans Visual Basic
 
@@ -246,5 +246,5 @@ Si, après avoir tapé une ligne de code, la ligne est affichée avec une ligne 
 |---|---|
 |[Opérateurs d’assignation](../../../visual-basic/language-reference/operators/assignment-operators.md)|Fournit des liens vers les pages de référence du langage couvrant les opérateurs d’assignation comme `=`, `*=`, et `&=`.|
 |[Opérateurs et expressions](./operators-and-expressions/index.md)|Montre comment combiner des éléments avec des opérateurs pour obtenir de nouvelles valeurs.|
-|[Guide pratique : diviser et combiner des instructions dans le code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Montre comment diviser une instruction unique en plusieurs lignes et comment placer plusieurs instructions sur la même ligne.|
-|[Guide pratique : étiqueter des instructions](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Montre comment étiqueter une ligne de code.|
+|[Guide pratique pour diviser et combiner des instructions dans le code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Montre comment diviser une instruction unique en plusieurs lignes et comment placer plusieurs instructions sur la même ligne.|
+|[Guide pratique pour étiqueter des instructions](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Montre comment étiqueter une ligne de code.|

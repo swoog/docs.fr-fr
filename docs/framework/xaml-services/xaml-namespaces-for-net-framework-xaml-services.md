@@ -3,11 +3,11 @@ title: Espaces de noms XAML pour les services XAML .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938773"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Espaces de noms XAML pour les services XAML .NET Framework
 Un espace de noms XAML est un concept qui se développe sur la définition d’un espace de noms XML. Similaire à un espace de noms XML, vous pouvez définir un espace de noms XAML à l’aide un `xmlns` attribut dans le balisage. Espaces de noms XAML sont également représentées dans le flux de nœud XAML et d’autres API de Services XAML. Cette rubrique définit le concept d’espace de noms XAML et décrit comment les espaces de noms XAML peuvent être définies et utilisées par les contextes de schéma XAML et d’autres aspects des Services XAML du .NET Framework.  

@@ -3,11 +3,11 @@ title: Informations de l’appelant (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
 ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951944"
 ---
 # <a name="caller-information-visual-basic"></a>Informations de l’appelant (Visual Basic)
 À l'aide des attributs d'informations de l'appelant, vous pouvez obtenir des informations sur l'appelant d'une méthode. Vous pouvez obtenir le chemin d'accès du fichier de code source, le numéro de ligne dans le code source, puis le nom du membre de l'appelant. Ces informations sont utiles pour suivre, déboguer, et créer des outils de diagnostic.  
@@ -58,9 +58,9 @@ End Sub
 ### <a name="MEMBERNAMES"></a> Noms de membres  
  Vous pouvez utiliser l'attribut `CallerMemberName` pour éviter de spécifier le nom du membre comme argument de `String` à la méthode appelée. Vous évitez ainsi le problème que la **refactorisation de changement de nom** ne modifie pas les valeurs `String`. Cet avantage est particulièrement utile pour les tâches suivantes :  
   
--   Utilisation du traçage et des programmes de diagnostic.  
+- Utilisation du traçage et des programmes de diagnostic.  
   
--   Implémentation de l'interface <xref:System.ComponentModel.INotifyPropertyChanged> lors de la liaison de données. Cette interface permet à la propriété d'un objet de signaler à un contrôle dépendant que la propriété a été modifiée, afin que ce contrôle puisse afficher les informations mises à jour. Sans attribut `CallerMemberName`, vous devez spécifier le nom de la propriété comme littéral.  
+- Implémentation de l'interface <xref:System.ComponentModel.INotifyPropertyChanged> lors de la liaison de données. Cette interface permet à la propriété d'un objet de signaler à un contrôle dépendant que la propriété a été modifiée, afin que ce contrôle puisse afficher les informations mises à jour. Sans attribut `CallerMemberName`, vous devez spécifier le nom de la propriété comme littéral.  
   
  Le graphique suivant affiche les noms des membres qui sont retournés lorsque vous utilisez l'attribut `CallerMemberName`.  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948537"
 ---
 # <a name="setsecurity-function"></a>SetSecurity (fonction)
 
@@ -52,7 +52,7 @@ Si la fonction réussit, la valeur de retour est `S_OK` (0).
 
 Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro. Pour obtenir les informations d’erreur étendues, appelez le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

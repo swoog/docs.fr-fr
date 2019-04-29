@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940944"
 ---
-# <a name="serverless-architecture-considerations"></a>Considérations relatives à une architecture sans serveur
+# <a name="serverless-architecture-considerations"></a>Considérations relatives à l’architecture serverless
 
 Adoption d’une architecture sans serveur n’est fourni avec certains défis. Cette section explore certaines des considérations plus courantes à connaître. Tous ces défis proposent des solutions. Comme avec tous les choix d’architecture, la décision d’Adoptez le serverless doit être prise uniquement après avoir soigneusement les avantages et inconvénients. Selon les besoins de votre application, vous pouvez décider de qu'une implémentation sans serveur n’est pas la solution idéale pour certains composants.
 

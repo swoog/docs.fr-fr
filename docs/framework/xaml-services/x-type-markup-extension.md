@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938851"
 ---
 # <a name="xtype-markup-extension"></a>x:Type, extension de balisage
 Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type XAML spécifié.  
@@ -71,11 +71,11 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 prend également en charge pour les types génériques et modifie le comportement de la fonctionnalité de `x:TypeArguments` et `x:Type` pour fournir cette prise en charge.  
   
--   `x:TypeArguments` et l’élément objet associé pour une instanciation d’objet générique peut se trouver sur des éléments autres que la racine. Pour plus d’informations, consultez la section « XAML 2009 » de [x : TypeArguments Directive](x-typearguments-directive.md).  
+- `x:TypeArguments` et l’élément objet associé pour une instanciation d’objet générique peut se trouver sur des éléments autres que la racine. Pour plus d’informations, consultez la section « XAML 2009 » de [x : TypeArguments Directive](x-typearguments-directive.md).  
   
--   XAML 2009 prend en charge une syntaxe permettant de spécifier la contrainte d’un type générique dans le balisage. Cela peut être utilisé par `x:TypeArguments`, par `x:Type`, ou par les deux fonctionnalités conjointement.  
+- XAML 2009 prend en charge une syntaxe permettant de spécifier la contrainte d’un type générique dans le balisage. Cela peut être utilisé par `x:TypeArguments`, par `x:Type`, ou par les deux fonctionnalités conjointement.  
   
--   Implémentation WPF XAML lors du traitement de XAML 2009 pour le chargement ajoute également cette fonctionnalité pour le comportement de conversion de type implicite pour certaines propriétés de l’infrastructure qui utilisent le type <xref:System.Type>.  
+- Implémentation WPF XAML lors du traitement de XAML 2009 pour le chargement ajoute également cette fonctionnalité pour le comportement de conversion de type implicite pour certaines propriétés de l’infrastructure qui utilisent le type <xref:System.Type>.  
   
  Dans WPF, vous pouvez utiliser les fonctionnalités XAML 2009, mais uniquement pour XAML libre (XAML non compilé par balisage). Le code XAML compilé par balisage pour WPF et la forme BAML du code XAML ne prennent actuellement pas en charge les mots clés et les fonctionnalités XAML 2009.  
   

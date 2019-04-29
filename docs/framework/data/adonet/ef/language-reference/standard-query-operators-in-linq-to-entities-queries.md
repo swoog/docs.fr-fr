@@ -3,11 +3,11 @@ title: Opérateurs de requête standard dans les requêtes LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797720"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Opérateurs de requête standard dans les requêtes LINQ to Entities
 Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui comportent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  

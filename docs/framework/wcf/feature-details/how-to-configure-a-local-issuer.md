@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
 ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779299"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Procédure : configurer un émetteur local
 Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur local pour les jetons émis.  
@@ -67,9 +67,9 @@ Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur
   
 3. Affectez aux attributs `binding` et `bindingConfiguration` des valeurs référençant la liaison appropriée à utiliser lors de la communication avec le point de terminaison de l'émetteur local.  
   
-4. Optionnel. Définir le [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les informations d’identité de l’émetteur local.  
+4. Facultatif. Définir le [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les informations d’identité de l’émetteur local.  
   
-5. Optionnel. Définir le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les en-têtes supplémentaires qui sont requis pour adresser correctement l’émetteur local.  
+5. Facultatif. Définir le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les en-têtes supplémentaires qui sont requis pour adresser correctement l’émetteur local.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Notez que si une liaison et une adresse d’émetteur sont spécifiées pour une liaison donnée, l’émetteur local n’est pas utilisé pour les points de terminaison qui utilisent cette liaison. Les clients qui prévoient d'utiliser systématiquement l'émetteur local doivent s'assurer de ne pas utiliser de liaison de ce type ou de modifier la liaison afin que l'adresse de l'émetteur soit `null`.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946625"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>L’expression lambda ne sera pas supprimée de ce gestionnaire d’événements
 Expression lambda ne sera pas supprimée à partir de ce gestionnaire d’événements. Assignez l’expression lambda à une variable et utilisez la variable pour ajouter et supprimer l’événement.  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Pour éviter l’avertissement et supprimer l’expression lambda, assignez l’expression lambda à une variable et utilisez la variable à la fois dans le `AddHandler` et `RemoveHandler` instructions, comme indiqué dans l’exemple suivant.  
+- Pour éviter l’avertissement et supprimer l’expression lambda, assignez l’expression lambda à une variable et utilisez la variable à la fois dans le `AddHandler` et `RemoveHandler` instructions, comme indiqué dans l’exemple suivant.  
   
 ```vb  
 Module Module1  

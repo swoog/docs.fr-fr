@@ -1,5 +1,5 @@
 ---
-title: Profileurs CLR et les applications du Windows Store
+title: Profileurs CLR et applications du Windows Store
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775100"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>Profileurs CLR et les applications du Windows Store
+# <a name="clr-profilers-and-windows-store-apps"></a>Profileurs CLR et applications du Windows Store
 
 Cette rubrique explique ce que vous devez réfléchir à lorsque les outils de diagnostic d’écriture qui analysent géré code en cours d’exécution à l’intérieur d’une application Windows Store. Il fournit également des instructions pour modifier vos outils de développement existants afin qu’ils continuent de fonctionner lorsque vous les exécutez contre les applications Windows Store. Pour comprendre ces informations, il est préférable de que si vous êtes familiarisé avec l’API de profilage de Common Language Runtime, vous avez déjà utilisé cette API dans un outil de diagnostic que s’exécute correctement sur les applications de bureau Windows et vous êtes maintenant intéressé par la modification de l’outil Pour exécuter correctement sur les applications du Windows Store.
 

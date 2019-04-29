@@ -12,11 +12,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
 ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945312"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join, clause (Visual Basic)
 Combine deux collections en une collection hiérarchique unique. L’opération de jointure est basée sur les clés correspondantes.  
@@ -34,7 +34,7 @@ Group Join element [As type] In collection _
 |Terme|Définition|  
 |---|---|  
 |`element`|Obligatoire. La variable de contrôle pour la collection jointe.|  
-|`type`|Facultatif. Type d'élément `element`. Si aucun `type` est spécifié, le type de `element` est déduit à partir de `collection`.|  
+|`type`|Optionnel. Type d'élément `element`. Si aucun `type` est spécifié, le type de `element` est déduit à partir de `collection`.|  
 |`collection`|Obligatoire. La collection à combiner avec la collection qui se trouve sur le côté gauche de la `Group Join` opérateur. Un `Group Join` clause peut être imbriquée dans une `Join` clause ou dans un autre `Group Join` clause.|  
 |`key1` `Equals` `key2`|Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` opérateur pour comparer les clés à partir des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. Le `key1` paramètre doit être de la collection sur le côté gauche de la `Join` opérateur. Le `key2` paramètre doit être de la collection sur le côté droit de la `Join` opérateur.<br /><br /> Les clés utilisées dans la condition de jointure peuvent être des expressions incluant plusieurs éléments de la collection. Toutefois, chaque expression clé peut contenir uniquement des éléments à partir de sa collection respectif.|  
 |`expressionList`|Obligatoire. Une ou plusieurs expressions qui identifient la façon dont les groupes d’éléments de la collection sont agrégés. Pour identifier un nom de membre pour les résultats groupés, utilisez le `Group` mot clé (`<alias> = Group`). Vous pouvez aussi inclure des fonctions d’agrégation à appliquer au groupe.|  

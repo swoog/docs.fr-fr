@@ -3,11 +3,11 @@ title: Choix d'un filtre
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784460"
 ---
 # <a name="choosing-a-filter"></a>Choix d'un filtre
 Lors de la configuration du service de routage, il est important de sélectionner des filtres de message corrects et de les configurer pour vous permettre d'établir des correspondances exactes avec les messages que vous recevez. Si les filtres que vous sélectionnez établissent des correspondances trop générales ou ne sont pas configurés correctement, les messages sont routés de manière incorrecte. Si les filtres sont trop restrictifs, vous risquez de ne pas disposer d'itinéraires valides disponibles pour certains de vos messages.  

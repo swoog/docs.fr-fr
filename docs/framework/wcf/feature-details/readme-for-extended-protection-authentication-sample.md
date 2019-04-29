@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946664"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>ReadMe pour l'exemple d'authentification de protection étendue
 La Protection étendue est une initiative de sécurité pour vous protéger contre les attaques (d’intercepteur MITM) man-in-the-middle, dans lequel un attaquant (le « man-in-the-middle ») intercepte les informations d’identification d’un client et les utilise pour accéder aux ressources sécurisées sur le serveur du client prévue.  
@@ -27,9 +27,9 @@ La Protection étendue est une initiative de sécurité pour vous protéger cont
   
 4. Cet exemple requiert l'établissement par le client d'un canal sécurisé avec le serveur et nécessite la présence d'un certificat de serveur qui peut être installé à partir du gestionnaire des services IIS (Internet Information Services).  
   
-    1.  Ouvrez le Gestionnaire des services Internet -> certificats de serveur (à partir de l’onglet de vue fonctionnalité).  
+    1. Ouvrez le Gestionnaire des services Internet -> certificats de serveur (à partir de l’onglet de vue fonctionnalité).  
   
-    2.  À des fins de test de cet exemple, vous pouvez créer un certificat auto-signé. (Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, vous pouvez l'installer dans la banque d'autorités racine approuvées de certificats).  
+    2. À des fins de test de cet exemple, vous pouvez créer un certificat auto-signé. (Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, vous pouvez l'installer dans la banque d'autorités racine approuvées de certificats).  
   
 5. Accédez au volet Actions pour le site web par défaut. Cliquez sur Modifier Site -> liaisons. Ajoutez HTTPS comme type s'il ne l'est pas encore, avec le numéro de port 443, et affectez le certificat SSL créé à l'étape précédente.  
   

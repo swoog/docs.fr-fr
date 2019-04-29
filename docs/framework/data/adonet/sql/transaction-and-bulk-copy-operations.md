@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: f30974e020545a69ad20c03bc05ac6a28f289b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780248"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaction et opérations de copie en bloc
 Les opérations de copie en bloc peuvent être réalisées sous forme d'opérations isolées ou en tant qu'étape d'une transaction en comptant plusieurs. Cette dernière option vous permet d'effectuer plus d'une opération de copie en bloc dans la même transaction et d'effectuer d'autres opérations de base de données (telles que des insertions, des mises à jour et des suppressions) tout en vous laissant la possibilité de valider ou de restaurer toute la transaction.  

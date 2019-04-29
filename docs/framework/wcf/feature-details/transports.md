@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933729"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transports dans Windows Communication Foundation
 La couche de transport se situe au niveau le plus bas de la pile des canaux. Les principaux transports utilisés dans Windows Communication Foundation (WCF) sont HTTP, HTTPS, TCP et canaux nommés. Les rubriques de cette section contiennent des conseils et des instructions permettant de savoir quel protocole choisir, de le configurer et de définir les propriétés de réglage afférentes.  
   
- WCF inclut des transports supplémentaires. Pour plus d’informations sur le transport Message Queuing (également appelé MSMQ), consultez [les files d’attente et les Sessions fiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Pour plus d’informations sur le transport d’homologue à homologue, consultez [mise en réseau pair à pair](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF inclut des transports supplémentaires. Pour plus d’informations sur le transport Message Queuing (également appelé MSMQ), consultez [files d’attente et Sessions fiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Pour plus d’informations sur le transport de peer-to-peer, consultez [mise en réseau Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Choix d’un transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -31,7 +31,7 @@ La couche de transport se situe au niveau le plus bas de la pile des canaux. Les
  [Configuration de HTTP et HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Contient des instructions permettant de configurer les éléments de liaison de transport HTTP et HTTPS.  
   
- [Guide pratique pour remplacer la réservation d’URL WCF par une réservation restreinte](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Guide pratique pour Remplacer la réservation d’URL WCF par une réservation restreinte](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Décrit comment utiliser les réservations WCFURL restreint.  
   
  [Quotas de transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  

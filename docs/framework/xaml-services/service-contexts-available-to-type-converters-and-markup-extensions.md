@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953970"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextes de services disponibles aux convertisseurs de types ou aux extensions de balisage
 Les auteurs des types qui prennent en charge les utilisations de convertisseurs de type et d'extensions de balisage doivent souvent disposer d'informations contextuelles concernant l'emplacement où une utilisation existe dans le balisage ou dans la structure de graphique d'objets environnante. Les informations peuvent être exigées afin que l'objet fourni soit correctement instancié ou que les références d'objets à des objets existants dans le graphique d'objets puissent être créées. Lorsque vous utilisez les services XAML .NET Framework, le contexte qui peut être requis est exposé sous la forme d'une série d'interfaces de service. Le code de prise en charge de convertisseur de type ou d'extension de balisage peut lancer une requête pour un service, à l'aide d'un contexte de fournisseur de services disponible et passé à partir de <xref:System.Xaml.XamlObjectWriter> ou des types associés. Le contexte de schéma XAML est directement disponible via un service de ce type. Cette rubrique décrit comment accéder aux contextes de service à partir d'une implémentation de convertisseur de valeurs et répertorie les services qui sont généralement disponibles et leurs rôles.  

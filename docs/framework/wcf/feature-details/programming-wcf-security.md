@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946677"
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
 Cette rubrique décrit les tâches de programmation fondamentales utilisées pour créer une application Windows Communication Foundation (WCF) sécurisé. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, collectivement appelées *sécurité de transfert*. Cette rubrique ne couvre pas l’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -33,17 +33,17 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
   
      Trois choix sont possibles :  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          La sécurité de transport dépend du mécanisme utilisé par la liaison sélectionnée. Par exemple, si vous utilisez la liaison `WSHttpBinding`, la sécurité utilisée correspondra à Secure Sockets Layer (SSL) (il s'agit également de la sécurité utilisée pour le protocole HTTPS). De manière générale, le principal avantage de la sécurité de niveau transport réside dans le fait qu'elle offre un débit relativement élevé quel que soit le transport utilisé. Toutefois, il a deux limites : Le premier est que le mécanisme de transport détermine le type d’informations d’identification utilisé pour authentifier un utilisateur. Cela pose problème uniquement lorsque le service concerné doit interagir avec d'autres services exigeant un autre type d'informations d'identification. Le second réside dans le fait que la sécurité est implémentée saut par saut plutôt que de bout en bout. Cela peut poser un problème lorsque les messages circulant entre le client et le service concernés rencontrent des intermédiaires. Pour plus d’informations sur le transport à utiliser, consultez [choix d’un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour plus d’informations sur l’utilisation de la sécurité du transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
-    2.  `Message`  
+    2. `Message`  
   
          La sécurité de niveau message signifie que chaque message comporte les en-têtes et les données nécessaires à sa sécurisation. La composition des en-têtes variant, vous pouvez ajouter aux messages un nombre illimité d'informations d'identification. Cette possibilité est essentielle lorsque votre service doit interagir avec des services exigeant un type d'informations d'identification spécifique qu'un mécanisme de transport ne peut fournir ou lorsqu'un message doit être utilisé par plusieurs services, chacun d'eux exigeant un type d'informations d'identification différent.  
   
          Pour plus d’informations, consultez [sécurité de Message](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          Ce mode utilise la couche de transport pour sécuriser le transfert des messages, tandis que chaque message inclut l'ensemble des informations d'identification requises par les autres services. Ce mode allie les avantages de la sécurité de niveau transport aux avantages présentés par la sécurité de niveau message, notamment celui d'utiliser un nombre illimité d'informations d'identification. Ce mode est disponible avec les liaisons suivantes : <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> et <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -56,19 +56,19 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisées pou
 ## <a name="setting-the-client-credential-type"></a>Définition du type d'informations d'identification client  
  Sélectionnez un type d'informations d'identification client comme requis. Pour plus d’informations, consultez [sélection d’un Type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Les types suivants d'informations d'identification client sont disponibles :  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  Vous devez définir le type d'informations d'identification en fonction du mode de sécurité que vous avez sélectionné. Par exemple, si vous avez sélectionné la liaison `wsHttpBinding` et que vous avez affecté au mode de sécurité la valeur Message, vous pouvez alors affecter à l'attribut `clientCredentialType` de l'élément de message l'une des valeurs suivantes : `None`, `Windows`, `UserName`, `Certificate` et `IssuedToken`, comme illustré dans l'exemple de configuration suivant.  
   

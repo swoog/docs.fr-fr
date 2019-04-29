@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941183"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procédure : implémenter un ToolStripRenderer personnalisé
 Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.ToolStrip> en implémentant une classe qui dérive de <xref:System.Windows.Forms.ToolStripRenderer>. Cela offre la flexibilité nécessaire pour créer une apparence qui diffère de celle fournie par les classes <xref:System.Windows.Forms.ToolStripProfessionalRenderer> et <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
@@ -23,11 +23,11 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
   
  La classe `GridStripRenderer` personnalise trois aspects de l'apparence du contrôle `GridStrip` :  
   
--   la bordure `GridStrip` ;  
+- la bordure `GridStrip` ;  
   
--   la bordure <xref:System.Windows.Forms.ToolStripButton> ;  
+- la bordure <xref:System.Windows.Forms.ToolStripButton> ;  
   
--   l'image <xref:System.Windows.Forms.ToolStripButton>.  
+- l'image <xref:System.Windows.Forms.ToolStripButton>.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -35,7 +35,7 @@ Vous pouvez personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

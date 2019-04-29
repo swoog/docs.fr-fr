@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779819"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot, méthode
 Parcourt les frames managés sur la pile pour le thread spécifié et envoie des informations au profileur via un rappel.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Parcours de pile asynchrones peuvent facilement provoquer des interblocages ou violations d’accès, sauf si vous suivez ces instructions :  
   
--   Lorsque vous interrompez directement des threads, n’oubliez pas que seul un thread qui n’a jamais exécuté du code managé peut suspendre un autre thread.  
+- Lorsque vous interrompez directement des threads, n’oubliez pas que seul un thread qui n’a jamais exécuté du code managé peut suspendre un autre thread.  
   
--   Toujours bloquer votre [ICorProfilerCallback::ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) rappel jusqu'à la fin de parcours de pile de ce thread.  
+- Toujours bloquer votre [ICorProfilerCallback::ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) rappel jusqu'à la fin de parcours de pile de ce thread.  
   
--   Ne détenez pas un verrou pendant que votre profileur appelle une fonction CLR pouvant déclencher un garbage collection. Autrement dit, ne détenez pas un verrou si le thread propriétaire peut effectuer un appel qui déclenche un garbage collection.  
+- Ne détenez pas un verrou pendant que votre profileur appelle une fonction CLR pouvant déclencher un garbage collection. Autrement dit, ne détenez pas un verrou si le thread propriétaire peut effectuer un appel qui déclenche un garbage collection.  
   
  Il existe également un risque d’interblocage si vous appelez `DoStackSnapshot` à partir d’un thread que votre profileur a créé afin que vous pouvez parcourir la pile d’un thread cible séparé. La première fois que le thread que vous avez créé entre certaines `ICorProfilerInfo*` méthodes (y compris `DoStackSnapshot`), le CLR effectuera une initialisation par thread, spécifique au CLR sur ce thread. Si votre profileur a suspendu le thread cible dont vous essayez de parcourir la pile, et si ce thread cible est arrivé à possède un verrou nécessaires pour effectuer cette initialisation par thread, un interblocage se produit. Pour éviter ce blocage, faites un appel initial à `DoStackSnapshot` à partir de votre thread créé le profileur permettant de remonter thread cible distinct, mais n’interrompez pas le thread cible au préalable. Cet appel initial garantit que l’initialisation par thread peut s’effectuer sans blocage. Si `DoStackSnapshot` réussit et signale au moins une frame, après ce point, il sera sécurisé pour ce thread créé le profileur à interrompre n’importe quel thread cible et l’appel `DoStackSnapshot` pour remonter la pile du thread cible.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945338"
 ---
 # <a name="from-clause-visual-basic"></a>From, clause (Visual Basic)
 Spécifie une ou plusieurs variables de plage et une collection à interroger.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Chaque `From` clause peut être suivie de n’importe quelle combinaison de clauses de requête supplémentaires pour affiner la requête. Vous pouvez affiner la requête comme suit :  
   
--   Combinez plusieurs collections de manière implicite à l’aide de la `From` et `Select` clauses, ou explicitement en utilisant la `Join` ou `Group Join` clauses.  
+- Combinez plusieurs collections de manière implicite à l’aide de la `From` et `Select` clauses, ou explicitement en utilisant la `Join` ou `Group Join` clauses.  
   
--   Utilisez le `Where` clause pour filtrer le résultat de la requête.  
+- Utilisez le `Where` clause pour filtrer le résultat de la requête.  
   
--   Trier le résultat à l’aide de la `Order By` clause.  
+- Trier le résultat à l’aide de la `Order By` clause.  
   
--   Regrouper des résultats similaires à l’aide de la `Group By` clause.  
+- Regrouper des résultats similaires à l’aide de la `Group By` clause.  
   
--   Utilisez le `Aggregate` clause pour identifier les fonctions d’agrégation à évaluer pour le résultat de la requête entière.  
+- Utilisez le `Aggregate` clause pour identifier les fonctions d’agrégation à évaluer pour le résultat de la requête entière.  
   
--   Utilisez le `Let` clause pour introduire une variable d’itération dont la valeur est déterminée par une expression au lieu d’une collection.  
+- Utilisez le `Let` clause pour introduire une variable d’itération dont la valeur est déterminée par une expression au lieu d’une collection.  
   
--   Utilisez le `Distinct` clause pour ignorer les résultats de la requête en double.  
+- Utilisez le `Distinct` clause pour ignorer les résultats de la requête en double.  
   
--   Identifier les parties du résultat à retourner à l’aide de la `Skip`, `Take`, `Skip While`, et `Take While` clauses.  
+- Identifier les parties du résultat à retourner à l’aide de la `Skip`, `Take`, `Skip While`, et `Take While` clauses.  
   
 ## <a name="example"></a>Exemple  
  La requête suivante expression utilise un `From` clause pour déclarer une variable de portée `cust` pour chaque `Customer` de l’objet dans le `customers` collection. Le `Where` clause utilise la variable de portée pour restreindre la sortie aux clients à partir de la région spécifiée. Le `For Each` boucle affiche le nom de société pour chaque client dans le résultat de la requête.  

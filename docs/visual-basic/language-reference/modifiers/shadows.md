@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778727"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Spécifie qu’un élément de programmation déclaré redéclare et masque un élément portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base.  
@@ -28,19 +28,19 @@ Spécifie qu’un élément de programmation déclaré redéclare et masque un �
   
 ## <a name="rules"></a>Règles  
   
--   **Contexte de déclaration.** Vous pouvez utiliser `Shadows` uniquement au niveau de classe. Cela signifie que le contexte de déclaration pour un `Shadows` élément doit être une classe et ne peut pas être une fichier source, un espace de noms, un module, une structure ou une procédure.  
+- **Contexte de déclaration.** Vous pouvez utiliser `Shadows` uniquement au niveau de classe. Cela signifie que le contexte de déclaration pour un `Shadows` élément doit être une classe et ne peut pas être une fichier source, un espace de noms, un module, une structure ou une procédure.  
   
      Vous pouvez déclarer qu’un seul élément d’occultation dans une instruction de déclaration unique.  
   
--   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Shadows` avec `Overloads`, `Overrides`, ou `Static` dans la même déclaration.  
+- **Modificateurs combinés.** Vous ne pouvez pas spécifier `Shadows` avec `Overloads`, `Overrides`, ou `Static` dans la même déclaration.  
   
--   **Types d’éléments.** Vous pouvez occulter tout type d'élément déclaré par un autre type. Si vous masquez une propriété ou procédure avec une autre propriété ou procédure, les paramètres et le type de retour est inutile correspondre à ceux de la propriété de classe de base ou de la procédure.  
+- **Types d’éléments.** Vous pouvez occulter tout type d'élément déclaré par un autre type. Si vous masquez une propriété ou procédure avec une autre propriété ou procédure, les paramètres et le type de retour est inutile correspondre à ceux de la propriété de classe de base ou de la procédure.  
   
--   **L’accès à.** L’élément occulté dans la classe de base est normalement pas disponible dans la classe dérivée qui l’occulte. Toutefois, les considérations suivantes s’appliquent.  
+- **L’accès à.** L’élément occulté dans la classe de base est normalement pas disponible dans la classe dérivée qui l’occulte. Toutefois, les considérations suivantes s’appliquent.  
   
-    -   Si l’élément d’occultation n’est pas accessible à partir du code faisant référence à ce dernier, la référence est résolue à l’élément occulté. Par exemple, si un `Private` élément occulte un élément de la classe de base, le code qui n’est pas autorisé à accéder à la `Private` élément accède à l’élément de la classe de base à la place.  
+    - Si l’élément d’occultation n’est pas accessible à partir du code faisant référence à ce dernier, la référence est résolue à l’élément occulté. Par exemple, si un `Private` élément occulte un élément de la classe de base, le code qui n’est pas autorisé à accéder à la `Private` élément accède à l’élément de la classe de base à la place.  
   
-    -   Si vous masquez un élément, vous pouvez toujours accéder à l’élément occulté via un objet déclaré avec le type de la classe de base. Vous pouvez également y accéder via `MyBase`.  
+    - Si vous masquez un élément, vous pouvez toujours accéder à l’élément occulté via un objet déclaré avec le type de la classe de base. Vous pouvez également y accéder via `MyBase`.  
   
  Le modificateur `Shadows` peut être utilisé dans les contextes suivants :  
   

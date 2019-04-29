@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Créer un effet de substitution à l'aide d'événements"
+title: 'Procédure : Créer un effet de substitution à l’aide d’événements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776647"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>Procédure : Créer un effet de substitution à l'aide d'événements
+# <a name="how-to-create-a-rollover-effect-using-events"></a>Procédure : Créer un effet de substitution à l’aide d’événements
 Cet exemple montre comment modifier la couleur d’un élément que le pointeur de la souris entre et sort de la zone occupée par l’élément.  
   
  Cet exemple se compose d’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier et un fichier code-behind.  

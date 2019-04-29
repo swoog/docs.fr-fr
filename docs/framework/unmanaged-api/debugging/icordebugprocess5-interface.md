@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948679"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5, interface
 Étend l’interface ICorDebugProcess pour prendre en charge d’accès pour le tas managé, pour fournir des informations sur le garbage collection d’objets gérés, et pour déterminer si un débogueur charge des images à partir du cache d’images natives locales application.  

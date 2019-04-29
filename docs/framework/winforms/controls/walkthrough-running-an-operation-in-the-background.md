@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792169"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Procédure pas à pas : exécution d’une opération en arrière-plan
 Si vous avez une opération qui prendra un certain temps et que vous ne souhaitez pas causer de retards dans votre interface utilisateur, vous pouvez utiliser la classe <xref:System.ComponentModel.BackgroundWorker> pour exécuter l'opération sur un autre thread.  
@@ -96,9 +96,9 @@ Si vous avez une opération qui prendra un certain temps et que vous ne souhaite
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   Implémenter un formulaire qui signale la progression au fur et une opération asynchrone. Pour plus d'informations, voir [Procédure : Implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md).  
+- Implémenter un formulaire qui signale la progression au fur et une opération asynchrone. Pour plus d'informations, voir [Procédure : Implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Implémentez une classe qui prend en charge le modèle asynchrone pour les composants. Pour plus d’informations, consultez [implémenter le modèle asynchrone basé sur événement](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+- Implémentez une classe qui prend en charge le modèle asynchrone pour les composants. Pour plus d’informations, consultez [implémenter le modèle asynchrone basé sur événement](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
