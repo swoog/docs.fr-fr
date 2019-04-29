@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933781"
 ---
 # <a name="security-and-user-input"></a>Sécurité et entrées d'utilisateur
 Les données utilisateurs, quel que soit le type d’entrée (données d’une demande web ou URL, entrée de commandes d’une application Windows Forms, etc.), peuvent affecter négativement le code, dans la mesure où ces données sont souvent utilisées directement en tant que paramètres pour appeler un autre code. Cette situation, similaire à l’appel de votre code par du code malveillant à l’aide de paramètres étranges, nécessite les mêmes précautions. En réalité, une entrée utilisateur est plus difficile à sécuriser, car il n’existe aucune frame de pile permettant de détecter la présence de données potentiellement non fiables.  
@@ -24,39 +24,39 @@ Les données utilisateurs, quel que soit le type d’entrée (données d’une d
   
  Voici quelques considérations importantes associées aux données utilisateurs :  
   
--   Toutes les données utilisateur d’une réponse de serveur s’exécutent dans le contexte du site du serveur sur le client. Si votre serveur web utilise des données utilisateur qu’il insère dans la page web renvoyée, il peut, par exemple, inclure une balise **\<script>** et l’exécuter comme si l’opération était effectuée par le serveur.  
+- Toutes les données utilisateur d’une réponse de serveur s’exécutent dans le contexte du site du serveur sur le client. Si votre serveur web utilise des données utilisateur qu’il insère dans la page web renvoyée, il peut, par exemple, inclure une balise **\<script>** et l’exécuter comme si l’opération était effectuée par le serveur.  
   
--   N’oubliez pas que le client peut demander toute URL.  
+- N’oubliez pas que le client peut demander toute URL.  
   
--   Tenez compte des chemins d’accès délicats ou non valides :  
+- Tenez compte des chemins d’accès délicats ou non valides :  
   
-    -   ..\ , des chemins d’accès extrêmement longs.  
+    - ..\ , des chemins d’accès extrêmement longs.  
   
-    -   Utilisation de caractères génériques (*).  
+    - Utilisation de caractères génériques (*).  
   
-    -   Expansion de jeton (%token%).  
+    - Expansion de jeton (%token%).  
   
-    -   Formes étranges de chemins d’accès présentant une signification spécifique.  
+    - Formes étranges de chemins d’accès présentant une signification spécifique.  
   
-    -   Autres noms de flux de système de fichiers, comme `filename::$DATA`.  
+    - Autres noms de flux de système de fichiers, comme `filename::$DATA`.  
   
-    -   Versions courtes de noms de fichiers, comme `longfi~1` pour `longfilename`.  
+    - Versions courtes de noms de fichiers, comme `longfi~1` pour `longfilename`.  
   
--   N’oubliez pas que la commande Eval(userdata) peut effectuer tout type d’action.  
+- N’oubliez pas que la commande Eval(userdata) peut effectuer tout type d’action.  
   
--   Méfiez-vous de toute liaison tardive vers un nom comprenant des données utilisateur.  
+- Méfiez-vous de toute liaison tardive vers un nom comprenant des données utilisateur.  
   
--   Si vous traitez des données web, tenez compte des différents types d’échappements autorisés, notamment des suivants :  
+- Si vous traitez des données web, tenez compte des différents types d’échappements autorisés, notamment des suivants :  
   
-    -   Échappements haxadécimaux (%nn).  
+    - Échappements haxadécimaux (%nn).  
   
-    -   Échappements Unicode (%nnn).  
+    - Échappements Unicode (%nnn).  
   
-    -   Échappements UTF-8 longs (%nn%nn).  
+    - Échappements UTF-8 longs (%nn%nn).  
   
-    -   Doubles échappements (%nn devient %mmnn, où %mm est l’échappement de %).  
+    - Doubles échappements (%nn devient %mmnn, où %mm est l’échappement de %).  
   
--   Méfiez-vous des noms utilisateur pouvant présenter plusieurs formats canoniques. Par exemple, bien souvent, vous pouvez utiliser le format MONDOMAINE\\*nomutilisateur* ou le format *nomutilisateur*@mydomain.example.com.  
+- Méfiez-vous des noms utilisateur pouvant présenter plusieurs formats canoniques. Par exemple, bien souvent, vous pouvez utiliser le format MONDOMAINE\\*nomutilisateur* ou le format *nomutilisateur*@mydomain.example.com.  
   
 ## <a name="see-also"></a>Voir aussi
 

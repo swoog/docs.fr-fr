@@ -3,20 +3,20 @@ title: 210 - MessageThrottleExceeded
 ms.date: 03/30/2017
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
 ms.openlocfilehash: 7ba5948b36642085ef44661b3d580e7f1c4102cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781878"
 ---
 # <a name="210---messagethrottleexceeded"></a>210 - MessageThrottleExceeded
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
 |Id|210|  
 |Mots clés|EndToEndMonitoring, HealthMonitoring, Dépannage, ServiceModel|  
-|Niveau|Avertissement|  
+|Niveau|Warning|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analyse|  
   
 ## <a name="description"></a>Description  
@@ -31,5 +31,5 @@ ms.locfileid: "33460299"
 |--------------------|--------------------|-----------------|  
 |Nom de l'accélérateur|`xs:string`|Nom de l'accélérateur qui a été dépassé. `MaxConcurrentCalls`, `MaxConcurrentInstances` ou  `MaxConcurrentSessions`.|  
 |Limitation|`xs:long`|Limitation configurée actuellement pour l'accélérateur.|  
-|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que ' chemin d’accès virtuel de Site Web nom Application&#124;chemin d’accès virtuel du Service&#124;ServiceName'. Exemple : ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService ».|  
+|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que « chemin d’accès virtuel de Site Web nom Application&#124;chemin d’accès virtuel du Service&#124;ServiceName'. Exemple : « Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService ».|  
 |AppDomain|`xs:string`|Chaîne retournée par AppDomain.CurrentDomain.FriendlyName.|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791480"
 ---
 # <a name="windows-communication-foundation-tools"></a>Outils de Windows Communication Foundation
 Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour faciliter la créer, déployer et gérer des applications WCF. Cette section contient des informations détaillées sur ces outils. Notez que ces outils ne sont pas pris en charge.  
@@ -19,7 +19,7 @@ Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour fac
   
  Le tableau suivant répertorie ces outils et fournit une brève description.  
   
-|Outil|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |[Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|Génère le code de modèle de service à partir des documents de métadonnées et des documents de métadonnées issus du code de modèle de service.|  
 |[Outil de recherche de clé privée (FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|Récupère la clé privée dans le magasin spécifié.|  
@@ -34,4 +34,4 @@ Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour fac
 |[Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Outil GUI qui permet d'entrer des paramètres de types arbitraires, d'envoyer ces entrées au service et d'afficher la réponse que le service renvoie.|  
 |[Outil « Contrat en premier »](../../../docs/framework/wcf/contract-first-tool.md)|Tâche de génération Visual Studio qui crée des classes de code à partir des contrats de données XSD.|  
   
- Tous les outils précédents (à l'exception de ServiceModelReg.exe, de WsatConfig.exe et de ComSvcConfig.exe) sont fournis avec le Kit de développement logiciel Windows et se trouvent dans le dossier C:\Program Files\Microsoft SDKs\Windows\v6 .0\Bin.  Vous trouverez ces 3 outils spécifiques dans C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.
+ Tous les outils précédents (à l’exception de ServiceModelReg.exe, de WsatConfig.exe et de ComSvcConfig.exe) sont fournis avec le Kit de développement logiciel Windows et se trouvent dans le dossier C:\Program Files\Microsoft SDKs\Windows\v6 .0\Bin.  Vous trouverez ces 3 outils spécifiques dans C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.

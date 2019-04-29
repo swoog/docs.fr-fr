@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777037"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Procédure : Ajouter la gestion de classe d’un événement routé
 Les événements routés peuvent être gérés par les gestionnaires de classe ou gestionnaires d’instance sur n’importe quel nœud donné dans l’itinéraire. Gestionnaires de classe sont effectués en premier et utilisable par les implémentations de classe pour supprimer des événements de gestion d’instances ou d’introduire d’autres comportements spécifiques des événements sur les événements qui sont détenus par les classes de base. Cet exemple illustre deux techniques étroitement liées pour l’implémentation des gestionnaires de classe.  

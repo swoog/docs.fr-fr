@@ -3,11 +3,11 @@ title: Exposition de données avec CacheMetadata
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945702"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Exposition de données avec CacheMetadata
 
@@ -57,9 +57,9 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 ## <a name="using-cachemetadata-to-expose-implementation-children"></a>Utilisation de CacheMetadata pour exposer les enfants de l'implémentation
 
-Pour passer les données aux activités enfants qui doivent être planifiées par une activité à l'aide de variables, il est nécessaire d'ajouter les variables en tant que variables d'implémentation ; les valeurs des variables publiques ne peuvent pas être définies de cette façon. En effet, les activités sont conçues pour être exécutées plus comme des implémentations de fonctions (qui ont des paramètres), que comme des classes encapsulées (qui ont des propriétés). Toutefois, il existe des situations dans lesquelles les arguments doivent être définis explicitement, comme lors de l'utilisation de <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, puisque l'activité planifiée n'a pas accès aux arguments de l'activité parent comme une activité enfant.
+Pour passer les données aux activités enfants qui doivent être planifiées par une activité à l'aide de variables, il est nécessaire d'ajouter les variables en tant que variables d'implémentation ; les valeurs des variables publiques ne peuvent pas être définies de cette façon. En effet, les activités sont conçues pour être exécutées plus comme des implémentations de fonctions (qui ont des paramètres), que comme des classes encapsulées (qui ont des propriétés). Toutefois, il existe des situations dans lesquelles les arguments doivent être définis explicitement, comme lors de l’utilisation de <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, puisque l’activité planifiée n’a pas accès aux arguments de l’activité parent comme une activité enfant.
 
-L'extrait de code suivant montre comment passer un argument d'une activité native à une activité planifiée à l'aide de <xref:System.Activities.Activity.CacheMetadata%2A>.
+L’extrait de code suivant montre comment passer un argument d’une activité native à une activité planifiée à l’aide de <xref:System.Activities.Activity.CacheMetadata%2A>.
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

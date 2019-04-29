@@ -3,11 +3,11 @@ title: Métadonnées de l'infrastructure de service
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
 ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780794"
 ---
 # <a name="service-framework-metadata"></a>Métadonnées de l'infrastructure de service
 Cette rubrique répertorie toutes les exceptions générées par les métadonnées d'infrastructure de service.  
@@ -21,7 +21,7 @@ Cette rubrique répertorie toutes les exceptions générées par les métadonné
 |AttemptedToGetContractTypeForButThatTypeIs1|Tentative effectuée en vue d'obtenir le type de contrat pour le spécifié, mais ce type n'est pas un élément ServiceContract et il n'hérite pas d'un tel élément.|  
 |CannotHaveTwoOperationsWithTheSameName3|Deux opérations dans le même contrat ne peuvent pas avoir le même nom. Les méthodes spécifiées du type spécifié ne respectent pas cette règle. Modifiez le nom d'une des opérations en modifiant le nom de la méthode ou en utilisant la propriété Name de l'attribut OperationContractAttribute.|  
 |CannotInheritTwoOperationsWithTheSameName3|Impossible d'hériter de deux opérations différentes portant le même nom. L'opération spécifiée des contrats spécifiés violent cette règle. Modifiez le nom d'une des opérations en modifiant le nom de la méthode ou en utilisant la propriété Name de l'attribut OperationContractAttribute.|  
-|CantCreateChannelWithManualAddressing|Impossible de créer un canal pour un contrat qui requiert une demande/réponse et une liaison qui requiert l’adressage manuel mais prend en charge uniquement la communication duplex.|  
+|CantCreateChannelWithManualAddressing|Impossible de créer un canal pour un contrat qui requiert une demande/réponse et une liaison qui requiert l'adressage manuel mais prend en charge uniquement la communication duplex.|  
 |DuplicateBehavior1|La valeur ne peut pas être ajoutée à la collection. La collection contient déjà un élément du même type spécifié. Cette collection ne prend en charge qu’une seule instance de chaque type.|  
 |InAContractInheritanceHierarchyIfParentHasCallbackChildMustToo|Étant donné que le contrat de service de base spécifié a un contrat de rappel spécifié, le contrat de service dérivé spécifié doit également spécifier le type spécifié ou un type dérivé comme contrat de rappel.|  
 |InvalidAsyncBeginMethodSignatureForMethod2|La signature de méthode Begin asynchrone est non valide pour la méthode spécifiée dans le type d'élément ServiceContract spécifié. Votre méthode Begin doit prendre un élément AsyncCallback et un objet pour ses deux derniers arguments et renvoyer un élément IAsyncResult.|  

@@ -3,15 +3,15 @@ title: Liaison d’une propriété d’activité personnalisée à un contrôle 
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945897"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Liaison d’une propriété d’activité personnalisée à un contrôle de concepteur
 
-La liaison contrôle de concepteur de zone de texte à un argument d'activité est assez simple . Toutefois, la liaison d'un contrôle de concepteur complexe (tel qu'une zone de liste déroulante) à un argument d'activité peut poser des problèmes. Cette rubrique explique comment lier un argument d'activité à un contrôle de zone de liste déroulante sur un concepteur d'activités personnalisées.
+La liaison contrôle de concepteur de zone de texte à un argument d'activité est assez simple . Toutefois, la liaison d'un contrôle de concepteur complexe (tel qu'une zone de liste déroulante) à un argument d'activité peut poser des problèmes. Cette rubrique explique comment lier un argument d’activité à un contrôle de zone de liste déroulante sur un concepteur d’activités personnalisées.
 
 ## <a name="creating-the-combo-box-item-converter"></a>Création du convertisseur d'éléments de zone de liste déroulante
 
@@ -19,7 +19,7 @@ La liaison contrôle de concepteur de zone de texte à un argument d'activité e
 
 2. Créez une classe appelée ComboBoxItemConverter. Ajoutez une référence à System.Windows.Data et faites dériver la classe de <xref:System.Windows.Data.IValueConverter>. Faites en sorte que Visual Studio implémente l'interface pour générer des stubs pour `Convert` et `ConvertBack`.
 
-3. Ajoutez le code suivant à la méthode `Convert`. Ce code convertit l'<xref:System.Activities.InArgument%601> de l'activité de type <xref:System.String> en la valeur à placer dans le concepteur.
+3. Ajoutez le code suivant à la méthode `Convert` . Ce code convertit l'<xref:System.Activities.InArgument%601> de l'activité de type <xref:System.String> en la valeur à placer dans le concepteur.
 
     ```csharp
     ModelItem modelItem = value as ModelItem;
@@ -73,7 +73,7 @@ La liaison contrôle de concepteur de zone de texte à un argument d'activité e
     return null;
     ```
 
-4. Ajoutez le code suivant à la méthode `ConvertBack`. Ce code convertit à nouveau l'élément de zone de liste déroulante entrant en <xref:System.Activities.InArgument%601>.
+4. Ajoutez le code suivant à la méthode `ConvertBack` . Ce code convertit à nouveau l'élément de zone de liste déroulante entrant en <xref:System.Activities.InArgument%601>.
 
     ```csharp
     // Convert combo box value to InArgument<string>

@@ -3,11 +3,11 @@ title: Transports
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
 ms.openlocfilehash: dd141ab5f8ea3ae8bafad830777af75a452f4f95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788230"
 ---
 # <a name="transports"></a>Transports
 La couche de transport se situe au niveau le plus bas de la pile des canaux. Les principaux transports utilisés dans Windows Communication Foundation (WCF) sont HTTP, HTTPS, TCP et canaux nommés. Cette section répertorie tous les éléments de configuration qui vous permettent de configurer des types différents de transports.  

@@ -3,11 +3,11 @@ title: <synchronousReceive>, élément
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
 ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757922"
 ---
 # <a name="synchronousreceive-element"></a>\<synchronousReceive > élément
 Cet élément de configuration est utilisé en vue de spécifier le comportement de réception des messages au moment de l'exécution dans une application cliente ou de service. Il n'a aucun attribut ou élément enfant.  

@@ -3,11 +3,11 @@ title: Tableaux
 description: Découvrez comment créer et utiliser des tableaux dans les F# langage de programmation.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772708"
 ---
 # <a name="arrays"></a>Tableaux
 

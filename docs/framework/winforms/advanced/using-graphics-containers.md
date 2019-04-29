@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
 ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766153"
 ---
 # <a name="using-graphics-containers"></a>Utilisation de conteneurs graphiques
 Un <xref:System.Drawing.Graphics> objet fournit des méthodes telles que <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, et <xref:System.Drawing.Graphics.DrawString%2A> pour l’affichage des images vectorielles, des images raster et texte. Un <xref:System.Drawing.Graphics> objet possède également plusieurs propriétés qui influencent la qualité et l’orientation des éléments qui sont dessinées. Par exemple, la propriété de mode de lissage détermine si l’anticrénelage est appliquée à des lignes et des courbes, et la propriété de transformation world influence la position et la rotation des éléments qui sont dessinées.  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
 ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783931"
 ---
 # <a name="rem-statement-visual-basic"></a>REM, instruction (Visual Basic)
 Permet d’inclure des notes explicatives dans le code source d’un programme.  
@@ -32,7 +32,7 @@ REM comment
   
 ## <a name="parts"></a>Composants  
  `comment`  
- Facultatif. Le texte des commentaires que vous souhaitez inclure. Un espace est nécessaire entre le `REM` mot clé et `comment`.  
+ Optionnel. Le texte des commentaires que vous souhaitez inclure. Un espace est nécessaire entre le `REM` mot clé et `comment`.  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez placer un `REM` instruction seule sur une ligne, ou vous pouvez le placer sur une ligne qui suit une autre instruction. La `REM` instruction doit être la dernière instruction sur la ligne. Si elle suit une autre instruction, le `REM` doivent être séparés de cette instruction par un espace.  

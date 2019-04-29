@@ -3,11 +3,11 @@ title: Fonctions de première classe
 description: En savoir plus sur les fonctions de première classe et la façon dont elles sont importantes pour la programmation fonctionnelle dans F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772760"
 ---
 # <a name="first-class-functions"></a>Fonctions de première classe
 
@@ -194,4 +194,4 @@ Le code suivant contient tous les exemples dans cette rubrique.
 - [Tuples](../language-reference/tuples.md)
 - [Fonctions](../language-reference/functions/index.md)
 - [`let` liaisons](../language-reference/functions/let-bindings.md)
-- [Expressions lambda : Le `fun` mot clé](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Expressions lambda : le mot clé `fun` ](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

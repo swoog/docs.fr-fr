@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938734"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Classe XAMLServices et lecture ou écriture XAML de base
 <xref:System.Xaml.XamlServices> est une classe fournie par les services XAML .NET Framework et qui peut être utilisée dans le cadre des scénarios XAML ne nécessitant pas d'accès spécifique au flux de nœud XAML ou aux informations de système de type XAML obtenues à partir de ces nœuds. L'API de<xref:System.Xaml.XamlServices> peut se résumer comme suit : `Load` ou `Parse` to suppout a XAML load path, `Save` to suppout a XAML save path, and `Transform` pour fournir une technique qui associe un chemin de chargement et un chemin d'enregistrement. `Transform` peut être utilisé pour passer d'un schéma XAML à un autre. Cette rubrique résume chacune de ces classifications d'API et décrit les différences qui existent entre des surcharges de méthode particulières.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162263"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> et <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> sont des surcharges qui reposent sur des lecteurs de formats des versions antérieures du .NET Framework. Pour utiliser ces surcharges, vous devez déjà avoir créé une instance de lecteur et utiliser son API une instance de lecteur et utilisé son API `Create` pour charger le code XAML au format approprié (texte ou XML). Si vous avez déjà déplacé des pointeurs d'enregistrement dans les autres lecteurs ou exécuté d'autres opérations les concernant, cela ne pose aucun problème. La logique du chemin de chargement de <xref:System.Xaml.XamlServices.Load%2A> traite toujours l'entrée XAML entière à partir de la racine. Les scénarios associés à ces surcharges peuvent inclure les éléments suivants :  
   
--   les aires de conception dans lesquelles vous fournissez des fonctions d'édition XAML simples à partir d'un éditeur de texte XML existant ;  
+- les aires de conception dans lesquelles vous fournissez des fonctions d'édition XAML simples à partir d'un éditeur de texte XML existant ;  
   
--   les variantes des scénarios <xref:System.IO> de base dans lesquels vous utilisez les lecteurs dédiés pour ouvrir des fichiers ou des flux. Votre logique procède à un contrôle ou un traitement rudimentaire du contenu avant de tenter de le charger en tant que code XAML.  
+- les variantes des scénarios <xref:System.IO> de base dans lesquels vous utilisez les lecteurs dédiés pour ouvrir des fichiers ou des flux. Votre logique procède à un contrôle ou un traitement rudimentaire du contenu avant de tenter de le charger en tant que code XAML.  
   
  Vous pouvez charger un fichier ou un flux, ou bien encore un <xref:System.Xml.XmlReader>, un <xref:System.IO.TextReader>ou un <xref:System.Xaml.XamlReader> qui inclut dans un wrapper votre entrée XAML en procédant au chargement avec les API de ce lecteur.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162263"
   
  La signature `Load` permettant des scénarios plus avancés est <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>. Vous pouvez utiliser cette signature pour l'un des cas suivants :  
   
--   Vous avez défini votre propre implémentation de <xref:System.Xaml.XamlReader>.  
+- Vous avez défini votre propre implémentation de <xref:System.Xaml.XamlReader>.  
   
--   Vous devez spécifier des paramètres pour <xref:System.Xaml.XamlReader> qui diffèrent des paramètres par défaut.  
+- Vous devez spécifier des paramètres pour <xref:System.Xaml.XamlReader> qui diffèrent des paramètres par défaut.  
   
  Voici des exemples de paramètres autres que ceux par défaut : <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>, <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>, <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A> <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>et <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>. Le lecteur par défaut de <xref:System.Xaml.XamlServices> est <xref:System.Xaml.XamlXmlReader>. Si vous fournissez votre propre <xref:System.Xaml.XamlXmlReader>, avec des paramètres, les éléments suivants sont des propriétés permettant de définir des <xref:System.Xaml.XamlXmlReaderSettings>autres que ceux par défaut : <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A> <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>, <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>et <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>.  
   

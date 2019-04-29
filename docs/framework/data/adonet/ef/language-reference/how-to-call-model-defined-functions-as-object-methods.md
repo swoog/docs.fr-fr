@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774606"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procédure : Appeler des fonctions définies par modèle comme méthodes d’objet
 Cette rubrique décrit comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée. Un *fonction définie par modèle* est une fonction qui est définie dans le modèle conceptuel. Les procédures décrites dans cette rubrique montrent comment appeler directement ces fonctions au lieu de les appeler à partir de requêtes LINQ to Entities. Pour plus d’informations sur l’appel des fonctions définies par le modèle dans LINQ aux requêtes d’entités, consultez [Comment : Appeler des fonctions définies par le modèle dans les requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
   
 2. Ajoutez une méthode CLR (Common Language Runtime) à votre classe <xref:System.Data.Objects.ObjectContext> qui effectue les opérations suivantes :  
   
-    -   Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement. La résolution des noms de fonctions pour LINQ respecte la casse.  
+    - Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement. La résolution des noms de fonctions pour LINQ respecte la casse.  
   
-    -   Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
+    - Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
 3. Appelez la méthode en tant que membre sur une instance de la classe <xref:System.Data.Objects.ObjectContext>.  
   
@@ -35,11 +35,11 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
   
 1. Ajoutez une classe à votre application avec une méthode statique qui effectue les opérations suivantes :  
   
-    -   Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement.  
+    - Elle est mappée à la fonction définie dans le modèle conceptuel. Pour mapper la méthode, vous devez lui appliquer un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut correspondent au nom de l'espace de noms du modèle conceptuel et au nom de la fonction dans le modèle conceptuel, respectivement.  
   
-    -   Elle accepte un argument <xref:System.Linq.IQueryable>.  
+    - Elle accepte un argument <xref:System.Linq.IQueryable>.  
   
-    -   Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Linq.IQueryable.Provider%2A>.  
+    - Elle retourne les résultats de la méthode <xref:System.Linq.IQueryProvider.Execute%2A> retournée par la propriété <xref:System.Linq.IQueryable.Provider%2A>.  
   
 2. Appelez la méthode comme méthode statique sur la classe personnalisée.  
   

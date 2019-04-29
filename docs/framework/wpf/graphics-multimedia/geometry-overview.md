@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762842"
 ---
 # <a name="geometry-overview"></a>Vue d'ensemble de Geometry
 Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes pour décrire les formes. Cette rubrique compare également les différences entre <xref:System.Windows.Media.Geometry> objets et <xref:System.Windows.Shapes.Shape> éléments.  
@@ -55,11 +55,11 @@ Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](
   
  Classes de géométrie simple incluent <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>, et <xref:System.Windows.Media.EllipseGeometry> et sont utilisés pour créer des formes géométriques de base, telles que des lignes, des rectangles et des cercles.  
   
--   Un <xref:System.Windows.Media.LineGeometry> est défini en spécifiant le point de départ de la ligne et le point de terminaison.  
+- Un <xref:System.Windows.Media.LineGeometry> est défini en spécifiant le point de départ de la ligne et le point de terminaison.  
   
--   Un <xref:System.Windows.Media.RectangleGeometry> est définie avec un <xref:System.Windows.Rect> structure qui spécifie sa position relative et sa hauteur et sa largeur. Vous pouvez créer un rectangle arrondi en définissant le <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> et <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> propriétés.  
+- Un <xref:System.Windows.Media.RectangleGeometry> est définie avec un <xref:System.Windows.Rect> structure qui spécifie sa position relative et sa hauteur et sa largeur. Vous pouvez créer un rectangle arrondi en définissant le <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> et <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> propriétés.  
   
--   Un <xref:System.Windows.Media.EllipseGeometry> est défini par un point central, un rayon x et un rayon y.  Les exemples suivants montrent comment créer des géométries simples pour le rendu et le découpage.  
+- Un <xref:System.Windows.Media.EllipseGeometry> est défini par un point central, un rayon x et un rayon y.  Les exemples suivants montrent comment créer des géométries simples pour le rendu et le découpage.  
   
  Ces mêmes formes, ainsi que des formes plus complexes, peuvent être créés à l’aide un <xref:System.Windows.Media.PathGeometry> ou en combinant des objets géométriques, mais ces classes fournissent un moyen plus simple de générer ces formes géométriques de base.  
   
@@ -175,9 +175,9 @@ PathGeometry avec plusieurs figures
 ## <a name="composite-geometries"></a>Géométries composites  
  Objets de géométrie composite peuvent être créés à l’aide un <xref:System.Windows.Media.GeometryGroup>, un <xref:System.Windows.Media.CombinedGeometry>, ou en appelant la méthode statique <xref:System.Windows.Media.Geometry> méthode <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   Le <xref:System.Windows.Media.CombinedGeometry> objet et le <xref:System.Windows.Media.Geometry.Combine%2A> méthode effectue une opération booléenne pour combiner la zone définie par deux géométries. <xref:System.Windows.Media.Geometry> les objets qui n’ont aucune zone sont ignorés. Seuls deux <xref:System.Windows.Media.Geometry> objets peuvent être combinés (bien que ces deux géométries puissent également être composites).  
+- Le <xref:System.Windows.Media.CombinedGeometry> objet et le <xref:System.Windows.Media.Geometry.Combine%2A> méthode effectue une opération booléenne pour combiner la zone définie par deux géométries. <xref:System.Windows.Media.Geometry> les objets qui n’ont aucune zone sont ignorés. Seuls deux <xref:System.Windows.Media.Geometry> objets peuvent être combinés (bien que ces deux géométries puissent également être composites).  
   
--   Le <xref:System.Windows.Media.GeometryGroup> classe crée un amalgame de le <xref:System.Windows.Media.Geometry> objets qu’elle contient sans combiner leur zone. Un nombre quelconque de <xref:System.Windows.Media.Geometry> objets peuvent être ajoutés à un <xref:System.Windows.Media.GeometryGroup>. Pour obtenir un exemple, consultez [Créer une forme composite](how-to-create-a-composite-shape.md).  
+- Le <xref:System.Windows.Media.GeometryGroup> classe crée un amalgame de le <xref:System.Windows.Media.Geometry> objets qu’elle contient sans combiner leur zone. Un nombre quelconque de <xref:System.Windows.Media.Geometry> objets peuvent être ajoutés à un <xref:System.Windows.Media.GeometryGroup>. Pour obtenir un exemple, consultez [Créer une forme composite](how-to-create-a-composite-shape.md).  
   
  À l’aide, car elles n’effectuent pas une opération d’association, <xref:System.Windows.Media.GeometryGroup> objets offre les avantages de performances à l’aide <xref:System.Windows.Media.CombinedGeometry> objets ou le <xref:System.Windows.Media.Geometry.Combine%2A> (méthode).  
   
@@ -207,11 +207,11 @@ PathGeometry avec plusieurs figures
 ## <a name="other-geometry-features"></a>Autres fonctionnalités de géométrie  
  Le <xref:System.Windows.Media.Geometry> classe fournit également des méthodes utilitaires utiles, telles que les suivantes :  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -Obtient la zone de la <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -Obtient la zone de la <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> – Détermine si la géométrie contient une autre <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> – Détermine si la géométrie contient une autre <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> – Détermine si le trait d’un <xref:System.Windows.Media.Geometry> contient un point spécifié.  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> – Détermine si le trait d’un <xref:System.Windows.Media.Geometry> contient un point spécifié.  
   
  Consultez la <xref:System.Windows.Media.Geometry> classe pour une liste complète de ses méthodes.  
   

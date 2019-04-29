@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783862"
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la structure.  
@@ -37,14 +37,14 @@ End Structure
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private protégé](../../language-reference/modifiers/private-protected.md) <br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`Partial`|Facultatif. Indique une définition partielle de la structure. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette structure. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Optionnel. Spécifie qu’il s’agit d’une structure générique.|  
 |`typelist`|Requis si vous utilisez le [de](../../../visual-basic/language-reference/statements/of-clause.md) mot clé. Liste de paramètres de type pour cette structure. Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Optionnel. Indique que cette structure implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Facultatif. Indique que cette structure implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Requis si vous utilisez la `Implements` instruction. Les noms des interfaces que cette structure implémente.|  
 |`datamemberdeclarations`|Obligatoire. Zéro ou plusieurs `Const`, `Dim`, `Enum`, ou `Event` instructions déclaration *membres de données* de la structure.|  
 |`methodmemberdeclarations`|Optionnel. Zéro ou plusieurs déclarations de `Function`, `Operator`, `Property`, ou `Sub` procédures, qui sont utilisées comme *membres de la méthode* de la structure.|  
@@ -61,31 +61,31 @@ End Structure
   
 ## <a name="rules"></a>Règles  
   
--   **Imbrication.** Vous pouvez définir une structure dans une autre. La structure externe est appelée le *contenant la structure*, et la structure interne est appelée un *imbriquée de structure*. Toutefois, vous ne pouvez pas accéder les membres d’une structure imbriquée via la structure contenante. Au lieu de cela, vous devez déclarer une variable de type de données de la structure imbriquée.  
+- **Imbrication.** Vous pouvez définir une structure dans une autre. La structure externe est appelée le *contenant la structure*, et la structure interne est appelée un *imbriquée de structure*. Toutefois, vous ne pouvez pas accéder les membres d’une structure imbriquée via la structure contenante. Au lieu de cela, vous devez déclarer une variable de type de données de la structure imbriquée.  
   
--   **Déclaration de membre.** Vous devez déclarer chaque membre d’une structure. Un membre de structure ne peut pas être [protégé](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` , car rien ne peut hériter d’une structure. La structure elle-même, toutefois, peut être `Protected` ou `Protected Friend`.  
+- **Déclaration de membre.** Vous devez déclarer chaque membre d’une structure. Un membre de structure ne peut pas être [protégé](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` , car rien ne peut hériter d’une structure. La structure elle-même, toutefois, peut être `Protected` ou `Protected Friend`.  
   
      Vous pouvez déclarer zéro ou plusieurs variables non partagées ou non partagées, non personnalisés des événements dans une structure. Vous ne pouvez avoir uniquement des constantes, des propriétés et des procédures, même si certains d'entre eux sont non partagées.  
   
--   **Initialisation.** Vous ne pouvez pas initialiser la valeur de n’importe quel membre de données non partagée d’une structure dans le cadre de sa déclaration. Vous devez initialiser ce membre de données au moyen d’un constructeur paramétrable sur la structure, ou assigner une valeur au membre après avoir créé une instance de la structure.  
+- **Initialisation.** Vous ne pouvez pas initialiser la valeur de n’importe quel membre de données non partagée d’une structure dans le cadre de sa déclaration. Vous devez initialiser ce membre de données au moyen d’un constructeur paramétrable sur la structure, ou assigner une valeur au membre après avoir créé une instance de la structure.  
   
--   **Héritage.** Une structure ne peut pas hériter d’un type autre que <xref:System.ValueType>, à partir de laquelle toutes les structures héritent. En particulier, une structure ne peut pas hériter d’un autre.  
+- **Héritage.** Une structure ne peut pas hériter d’un type autre que <xref:System.ValueType>, à partir de laquelle toutes les structures héritent. En particulier, une structure ne peut pas hériter d’un autre.  
   
      Vous ne pouvez pas utiliser le [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) dans une définition de structure, même pour spécifier <xref:System.ValueType>.  
   
--   **Mise en œuvre.** Si la structure utilise la [Implements, instruction](../../../visual-basic/language-reference/statements/implements-statement.md), vous devez implémenter chaque membre défini par chaque interface que vous spécifiez dans `interfacenames`.  
+- **Mise en œuvre.** Si la structure utilise la [Implements, instruction](../../../visual-basic/language-reference/statements/implements-statement.md), vous devez implémenter chaque membre défini par chaque interface que vous spécifiez dans `interfacenames`.  
   
--   **Propriété par défaut.** Une structure peut spécifier au plus une propriété en tant que son *propriété par défaut*, en utilisant le [par défaut](../../../visual-basic/language-reference/modifiers/default.md) modificateur. Pour plus d’informations, consultez [par défaut](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Propriété par défaut.** Une structure peut spécifier au plus une propriété en tant que son *propriété par défaut*, en utilisant le [par défaut](../../../visual-basic/language-reference/modifiers/default.md) modificateur. Pour plus d’informations, consultez [par défaut](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportement  
   
--   **Niveau d’accès.** Dans une structure, vous pouvez déclarer chaque membre avec son propre niveau d’accès. Tous les membres de structure par défaut à [Public](../../../visual-basic/language-reference/modifiers/public.md) accès. Notez que si la structure elle-même a un niveau d’accès plus restreint, cela limite automatiquement l’accès à ses membres, même si vous modifiez leurs niveaux d’accès avec les modificateurs d’accès.  
+- **Niveau d’accès.** Dans une structure, vous pouvez déclarer chaque membre avec son propre niveau d’accès. Tous les membres de structure par défaut à [Public](../../../visual-basic/language-reference/modifiers/public.md) accès. Notez que si la structure elle-même a un niveau d’accès plus restreint, cela limite automatiquement l’accès à ses membres, même si vous modifiez leurs niveaux d’accès avec les modificateurs d’accès.  
   
--   **Étendue.** Une structure est dans l’étendue tout au long de son espace de noms, classe, structure ou module conteneur.  
+- **Étendue.** Une structure est dans l’étendue tout au long de son espace de noms, classe, structure ou module conteneur.  
   
      La portée de chaque membre de structure est la structure entière.  
   
--   **Lifetime.** Une structure ne pas lui-même a une durée de vie. Au lieu de cela, chaque instance de cette structure a une durée de vie indépendante de toutes les autres instances.  
+- **Lifetime.** Une structure ne pas lui-même a une durée de vie. Au lieu de cela, chaque instance de cette structure a une durée de vie indépendante de toutes les autres instances.  
   
      La durée de vie d’une instance commence lorsqu’elle est créée par un [nouvel opérateur](../../../visual-basic/language-reference/operators/new-operator.md) clause. Elle se termine lorsque la durée de vie de la variable qui contient elle se termine.  
   
@@ -93,11 +93,11 @@ End Structure
   
      Les membres de structure ont des durées de vie en fonction de comment et où ils sont déclarés. Pour plus d’informations, consultez « Durée de vie » dans [Class, instruction](../../../visual-basic/language-reference/statements/class-statement.md).  
   
--   **Qualification.** Le code en dehors d’une structure doit qualifier le nom d’un membre avec le nom de cette structure.  
+- **Qualification.** Le code en dehors d’une structure doit qualifier le nom d’un membre avec le nom de cette structure.  
   
      Si le code à l’intérieur d’une structure imbriquée établit une référence non qualifiée à un élément de programmation, Visual Basic commence ses recherches pour l’élément dans la structure imbriquée, puis dans sa structure de conteneur, et ainsi de suite à l’élément conteneur extérieur. Pour plus d'informations, consultez [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
--   **Consommation de mémoire.** Comme avec tous les types de données composites, vous ne peut pas calculer en toute sécurité la consommation totale de la mémoire d’une structure en additionnant les allocations de stockage nominal de ses membres. En outre, vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Si vous avez besoin contrôler la disposition de stockage d’une structure, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribut le `Structure` instruction.  
+- **Consommation de mémoire.** Comme avec tous les types de données composites, vous ne peut pas calculer en toute sécurité la consommation totale de la mémoire d’une structure en additionnant les allocations de stockage nominal de ses membres. En outre, vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Si vous avez besoin contrôler la disposition de stockage d’une structure, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribut le `Structure` instruction.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `Structure` instruction pour définir un jeu de données associées pour un employé. Il illustre l’utilisation de `Public`, `Friend`, et `Private` membres pour refléter la sensibilité des éléments de données. Il montre également la procédure, propriétés et événements membres.  

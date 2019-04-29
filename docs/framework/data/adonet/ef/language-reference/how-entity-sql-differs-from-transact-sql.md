@@ -3,11 +3,11 @@ title: Différences entre Entity SQL et Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774749"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Différences entre Entity SQL et Transact-SQL
 Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../
 ## <a name="support-for-collections"></a>Prise en charge des collections  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traite les collections en tant qu’entités de première classe. Exemple :  
   
--   Les expressions de collection sont valides dans une clause `from`.  
+- Les expressions de collection sont valides dans une clause `from`.  
   
--   Les sous-requêtes `in` et `exists` ont été généralisées pour autoriser toute collection.  
+- Les sous-requêtes `in` et `exists` ont été généralisées pour autoriser toute collection.  
   
      Une sous-requête est un type de collection. `e1 in e2` et `exists(e)` sont les constructions [!INCLUDE[esql](../../../../../../includes/esql-md.md)] qui permettent d'effectuer ces opérations.  
   
--   Les opérations de définition, telles que `union`, `intersect` et `except`, s’appliquent à présent aux collections.  
+- Les opérations de définition, telles que `union`, `intersect` et `except`, s’appliquent à présent aux collections.  
   
--   Les jointures s’appliquent aux collections.  
+- Les jointures s’appliquent aux collections.  
   
 ## <a name="support-for-expressions"></a>Prise en charge des expressions  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] a des sous-requêtes (tables) et des expressions (lignes et colonnes).  

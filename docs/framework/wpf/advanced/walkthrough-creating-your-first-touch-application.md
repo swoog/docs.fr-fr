@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778818"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Procédure pas à pas : création de votre première application tactile
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet aux applications de répondre aux entrées tactiles. Par exemple, vous pouvez interagir avec une application en utilisant l’une ou plusieurs doigts sur un appareil tactile, par exemple un écran tactile que cette procédure pas à pas crée une application qui permet à l’utilisateur à déplacer, redimensionnement ou faire pivoter un objet unique à l’aide de touch.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326981"
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Un appareil qui accepte une entrée tactile, par exemple un écran tactile, qui prend en charge Touch de Windows.  
+- Un appareil qui accepte une entrée tactile, par exemple un écran tactile, qui prend en charge Touch de Windows.  
   
  En outre, vous devez avoir une compréhension élémentaire de la création d’une application dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], en particulier pour savoir comment s’abonner à et gérer un événement. Pour plus d’informations, consultez [Procédure pas à pas : Ma première application de bureau WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326981"
 ## <a name="testing-the-application"></a>Test de l'application
  Pour tester l’application, essayez les manipulations suivantes. Notez que vous pouvez effectuer plusieurs des éléments suivants en même temps.
 
--   Pour déplacer le <xref:System.Windows.Shapes.Rectangle>, placez un doigt sur le <xref:System.Windows.Shapes.Rectangle> et déplacez le doigt sur l’écran.
+- Pour déplacer le <xref:System.Windows.Shapes.Rectangle>, placez un doigt sur le <xref:System.Windows.Shapes.Rectangle> et déplacez le doigt sur l’écran.
 
--   Pour redimensionner le <xref:System.Windows.Shapes.Rectangle>, placez deux doigts sur le <xref:System.Windows.Shapes.Rectangle> et déplacer les doigts rapprochez-les ou plus indépendamment les uns des autres.
+- Pour redimensionner le <xref:System.Windows.Shapes.Rectangle>, placez deux doigts sur le <xref:System.Windows.Shapes.Rectangle> et déplacer les doigts rapprochez-les ou plus indépendamment les uns des autres.
 
--   Pour faire pivoter le <xref:System.Windows.Shapes.Rectangle>, placez deux doigts sur le <xref:System.Windows.Shapes.Rectangle> et faites pivoter les doigts autour de l’autre.
+- Pour faire pivoter le <xref:System.Windows.Shapes.Rectangle>, placez deux doigts sur le <xref:System.Windows.Shapes.Rectangle> et faites pivoter les doigts autour de l’autre.
 
  Pour provoquer l’inertie, enlevez rapidement vos doigts à partir de l’écran que vous exécutez les manipulations précédentes. Le <xref:System.Windows.Shapes.Rectangle> continuera à déplacer, redimensionner ou faire pivoter pendant quelques secondes avant de s’arrêter.
 

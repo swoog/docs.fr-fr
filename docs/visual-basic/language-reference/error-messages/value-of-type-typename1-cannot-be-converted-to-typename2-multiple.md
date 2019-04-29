@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766816"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >' (plusieurs références de fichier)
 Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. Incompatibilité de type peut être dû à la combinaison d’une référence de fichier pour '\<chemin_fichier1 >' dans le projet '\<nom_projet1 >' avec une référence de fichier à '\<chemin_fichier2 >' dans le projet '\<nom_projet2 >'. Si les deux assemblys sont identiques, essayez de remplacer ces deux références pour qu’elles se situent au même emplacement.  
@@ -27,9 +27,9 @@ Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. I
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si les assemblys référencés ont la même identité de l’assembly, supprimez ou remplacez une des références de fichier afin qu’il soit uniquement une référence de fichier unique.  
+- Si les assemblys référencés ont la même identité de l’assembly, supprimez ou remplacez une des références de fichier afin qu’il soit uniquement une référence de fichier unique.  
   
--   Si les assemblys référencés n’ont pas la même identité d’assembly, puis modifiez votre code afin qu’il ne tente pas de convertir un type dans un à un type dans l’autre.  
+- Si les assemblys référencés n’ont pas la même identité d’assembly, puis modifiez votre code afin qu’il ne tente pas de convertir un type dans un à un type dans l’autre.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784200"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Provoque la classe en cours ou interface hérite des attributs, variables, propriétés, procédures et événements d’une autre classe ou ensemble d’interfaces.  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>Règles  
   
--   **Héritage de classes.** Si une classe utilise le `Inherits` instruction, vous pouvez spécifier qu’une seule classe de base.  
+- **Héritage de classes.** Si une classe utilise le `Inherits` instruction, vous pouvez spécifier qu’une seule classe de base.  
   
      Une classe ne peut pas hériter d’une classe imbriquée dans celui-ci.  
   
--   **Héritage de l’interface.** Si une interface utilise le `Inherits` instruction, vous pouvez spécifier une ou plusieurs interfaces de base. Vous pouvez hériter de deux interfaces même si chacune définit un membre portant le même nom. Si vous procédez ainsi, le code d’implémentation doit utiliser qualification de noms pour spécifier le membre qu’il implémente.  
+- **Héritage de l’interface.** Si une interface utilise le `Inherits` instruction, vous pouvez spécifier une ou plusieurs interfaces de base. Vous pouvez hériter de deux interfaces même si chacune définit un membre portant le même nom. Si vous procédez ainsi, le code d’implémentation doit utiliser qualification de noms pour spécifier le membre qu’il implémente.  
   
      Une interface ne peut pas hériter d’une autre interface avec un niveau d’accès plus restrictif. Par exemple, un `Public` interface ne peut pas hériter d’un `Friend` interface.  
   

@@ -3,11 +3,11 @@ title: Modèles Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780664"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modèles Visual Studio WCF
 Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfinis et des modèles d’élément que vous pouvez utiliser dans Visual Studio pour créer rapidement des services WCF et les applications s’y rapportant.  
@@ -20,11 +20,11 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfin
   
  Lorsque vous créez un projet à l’aide du **Service WCF** modèle, le nouveau projet inclut automatiquement les trois fichiers suivants :  
   
--   Fichier de contrat de service (IService1.cs ou IService1.vb). Le fichier de contrat de service est une interface qui possède les attributs de service WCF appliqués. Ce fichier contient la définition d'un service simple destinée à vous aider à définir vos services et inclut des opérations basées des paramètres, ainsi qu'un exemple de contrat de données simple. Il s’agit du fichier par défaut affiché dans l’éditeur de code après avoir créé un projet de service WCF.  
+- Fichier de contrat de service (IService1.cs ou IService1.vb). Le fichier de contrat de service est une interface qui possède les attributs de service WCF appliqués. Ce fichier contient la définition d'un service simple destinée à vous aider à définir vos services et inclut des opérations basées des paramètres, ainsi qu'un exemple de contrat de données simple. Il s’agit du fichier par défaut affiché dans l’éditeur de code après avoir créé un projet de service WCF.  
   
--   Fichier d'implémentation de service (Service1.cs ou Service1.vb). Le fichier d'implémentation de service implémente le contrat défini dans le fichier de contrat de service.  
+- Fichier d'implémentation de service (Service1.cs ou Service1.vb). Le fichier d'implémentation de service implémente le contrat défini dans le fichier de contrat de service.  
   
--   Fichier de configuration de l'application (App.config). Le fichier de configuration fournit les éléments de base d’un modèle de service WCF avec une liaison HTTP sécurisée. Il inclut également un point de terminaison applicable au service et active l'échange de métadonnées.  
+- Fichier de configuration de l'application (App.config). Le fichier de configuration fournit les éléments de base d’un modèle de service WCF avec une liaison HTTP sécurisée. Il inclut également un point de terminaison applicable au service et active l'échange de métadonnées.  
   
 > [!NOTE]
 >  Visual Studio est configuré pour reconnaître le fichier App.config comme fichier de configuration pour le projet lorsqu’il est exécuté à l’aide de la [hôte de Service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), qui est la configuration par défaut. Si la bibliothèque de services se trouve dans un fichier exécutable, vous devez déplacer le code de configuration vers le fichier de configuration du fichier exécutable : en effet, les fichiers de configuration des DLL ne sont pas valides.  
@@ -34,13 +34,13 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfin
   
  Lorsque vous créez un projet à l’aide du **Service d’Application Web WCF** modèle, le projet inclut les quatre fichiers suivants :  
   
--   Fichier d'hôte de service (service1.svc).  
+- Fichier d'hôte de service (service1.svc).  
   
--   Fichier de contrat de service (IService1.cs ou IService1.vb).  
+- Fichier de contrat de service (IService1.cs ou IService1.vb).  
   
--   Fichier d'implémentation de service (Service1.svc.cs ou Service1.svc.vb).  
+- Fichier d'implémentation de service (Service1.svc.cs ou Service1.svc.vb).  
   
--   Fichier de configuration Web (Web.config).  
+- Fichier de configuration Web (Web.config).  
   
  Le modèle crée automatiquement un site Web (à déployer dans un répertoire virtuel) et y héberge un service.  
   

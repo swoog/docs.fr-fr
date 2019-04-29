@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775867"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configuration des applications à l'aide de fichiers de configuration
 Le .NET Framework, par le biais de fichiers de configuration, permet aux développeurs et administrateurs de contrôler la façon dont les applications s'exécutent avec la souplesse requise. Les fichiers de configuration sont des fichiers XML qui peuvent être modifiés selon les besoins. Un administrateur peut exercer un contrôle sur les ressources protégées auxquelles une application peut accéder, les versions d'assemblys utilisées par une application et l'endroit où sont situés les applications et objets distants. Les développeurs peuvent stocker des paramètres dans des fichiers de configuration, de façon à ce qu'il ne leur soit pas nécessaire de recompiler une application chaque fois qu'un paramètre change. Cette section décrit les éléments qui peuvent être configurés et explique en quoi la configuration d'une application peut se révéler utile.  
@@ -66,7 +66,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
  Le nom et l'emplacement du fichier de configuration de l'application dépendent de l'hôte de l'application, qui peut être l'un des hôtes suivants :  
   
--   Application hébergée par l'exécutable.  
+- Application hébergée par l'exécutable.  
   
      Ces applications disposent de deux fichiers de configuration : un fichier de configuration source, modifié par le développeur lors du développement, et un fichier de sortie distribué avec l'application.  
   
@@ -74,11 +74,11 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
      Visual Studio copie automatiquement le fichier de configuration source dans le répertoire où se trouve l'assembly compilé pour créer le fichier de configuration de sortie, qui est déployé avec l'application. Dans certains cas, Visual Studio peut modifier le fichier de configuration de sortie ; pour plus d'informations, consultez la section [Redirection des versions d’assemblys au niveau de l’application](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) dans l’article [Redirection des versions d’assemblys](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  
   
--   Application hébergée par ASP.NET.  
+- Application hébergée par ASP.NET.  
   
      Pour plus d’informations sur les fichiers de configuration ASP.NET, consultez [les paramètres de Configuration ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Application hébergée par Internet Explorer.  
+- Application hébergée par Internet Explorer.  
   
      Si une application hébergée dans Internet Explorer possède un fichier de configuration, l'emplacement de ce fichier est spécifié dans une balise `<link>` dont la syntaxe est la suivante :  
   
@@ -94,11 +94,11 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
   
  Les fichiers de configuration de sécurité se trouvent dans les emplacements suivants :  
   
--   Fichier de configuration de la stratégie d’entreprise : %*chemin d’installation du runtime*%\Config\Enterprisesec.config  
+- Fichier de configuration de la stratégie d’entreprise : %*chemin d’installation du runtime*%\Config\Enterprisesec.config  
   
--   Fichier de configuration de la stratégie de l’ordinateur : %*chemin d’installation du runtime*%\Config\Security.config  
+- Fichier de configuration de la stratégie de l’ordinateur : %*chemin d’installation du runtime*%\Config\Security.config  
   
--   Fichier de configuration de la stratégie de l’utilisateur : %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- Fichier de configuration de la stratégie de l’utilisateur : %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Guide pratique pour Localiser des assemblys à l’aide de DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

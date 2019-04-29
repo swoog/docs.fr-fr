@@ -12,11 +12,11 @@ helpviewer_keywords:
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
 ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928555"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Validation et rappels de propriétés de dépendance
 Cette rubrique décrit comment créer des propriétés de dépendance à l’aide d’autres implémentations personnalisées pour des fonctionnalités liées aux propriétés telles que la détermination de la validation, les rappels effectués chaque fois que la valeur effective de la propriété change, et la non prise en compte des possibles influences extérieures sur la détermination de la valeur. Elle décrit également les scénarios où il est nécessaire de développer les comportements par défaut du système de propriétés à l’aide de ces techniques.  

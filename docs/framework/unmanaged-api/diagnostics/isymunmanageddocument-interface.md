@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939774"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument, interface
 Représente un document référencé par un magasin de symboles. Un document est défini par une adresse Web (URL) et un GUID de type de document. Vous pouvez rechercher le document, quel que soit la façon dont elle est stockée à l’aide de l’URL et le GUID de type de document. Vous pouvez stocker la source de document dans le magasin de symboles et en la récupérant via cette interface.  

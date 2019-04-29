@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
 ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769302"
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Procédure : Déclencher une animation en cas de modification d’une valeur de propriété
 Cet exemple montre comment utiliser un <xref:System.Windows.Trigger> pour démarrer un <xref:System.Windows.Media.Animation.Storyboard> quand une valeur de propriété change. Vous pouvez utiliser un <xref:System.Windows.Trigger> à l’intérieur d’un <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, ou <xref:System.Windows.DataTemplate>.  

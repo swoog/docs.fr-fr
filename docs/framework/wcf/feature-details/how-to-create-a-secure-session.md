@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787866"
 ---
 # <a name="how-to-create-a-secure-session"></a>Procédure : créer une session sécurisée
 À l’exception de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) de liaison, les liaisons fournies par le système dans Windows Communication Foundation (WCF) utilisent automatiquement des sessions sécurisées lorsque la sécurité de message est activée.  
@@ -21,7 +21,7 @@ ms.locfileid: "59205886"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Pour spécifier qu’un service utilise des sessions sécurisées à l’aide de l’une des liaisons fournies par le système  
   
--   Configurez un service pour utiliser une liaison fournie par le système qui prend en charge la sécurité de message.  
+- Configurez un service pour utiliser une liaison fournie par le système qui prend en charge la sécurité de message.  
   
      À l’exception de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) liaison, lorsque les liaisons fournies par le système sont configurés pour utiliser la sécurité de message, WCF automatiquement utilise des sessions sécurisées. Le tableau suivant répertorie les liaisons fournies par le système qui prennent en charge la sécurité de message et indique si la sécurité de message est le mécanisme de sécurité par défaut.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59205886"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Pour spécifier qu'un service utilise des sessions sécurisées à l'aide d'une liaison personnalisée  
   
--   Créez une liaison personnalisée qui spécifie que les messages SOAP sont protégés par une session sécurisée.  
+- Créez une liaison personnalisée qui spécifie que les messages SOAP sont protégés par une session sécurisée.  
   
      Pour plus d’informations sur la création d’une liaison personnalisée, consultez [Comment : Personnaliser une liaison fournie par le système](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

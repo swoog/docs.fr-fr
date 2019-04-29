@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773231"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetage de polices avec des applications
 Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des polices avec votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.  
@@ -158,17 +158,17 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
 ## <a name="limitations-on-font-usage"></a>Limitations de l’utilisation des polices  
  La liste suivante décrit plusieurs restrictions sur l’empaquetage et l’utilisation des polices dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications :  
   
--   **Bits d’autorisation d’incorporation de police :** Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne vérifient ni n’appliquent les bits d’autorisation d’incorporation de police. Consultez le [Introduction à l’empaquetage des polices](#introduction_to_packaging_fonts) section pour plus d’informations.  
+- **Bits d’autorisation d’incorporation de police :** Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne vérifient ni n’appliquent les bits d’autorisation d’incorporation de police. Consultez le [Introduction à l’empaquetage des polices](#introduction_to_packaging_fonts) section pour plus d’informations.  
   
--   **Site de polices d’origine :** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications n’autorisent pas une référence de police à http ou ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Site de polices d’origine :** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications n’autorisent pas une référence de police à http ou ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **URI absolu à l’aide du pack : notation :** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications ne vous permettent pas créer un <xref:System.Windows.Media.FontFamily> par programmation à l’aide de l’objet « pack : » dans le cadre d’absolue [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] référence à une police. Par exemple, `"pack://application:,,,/resources/#Pericles Light"` est une référence de police non valide.  
+- **URI absolu à l’aide du pack : notation :** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications ne vous permettent pas créer un <xref:System.Windows.Media.FontFamily> par programmation à l’aide de l’objet « pack : » dans le cadre d’absolue [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] référence à une police. Par exemple, `"pack://application:,,,/resources/#Pericles Light"` est une référence de police non valide.  
   
--   **Incorporation de police automatique :** Au moment du design, il n’existe aucune prise en charge pour la recherche d’utilisation d’une application de polices et d’automatiquement l’incorporation de polices dans les ressources de l’application.  
+- **Incorporation de police automatique :** Au moment du design, il n’existe aucune prise en charge pour la recherche d’utilisation d’une application de polices et d’automatiquement l’incorporation de polices dans les ressources de l’application.  
   
--   **Sous-ensembles de polices :** Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne prennent pas en charge la création de sous-ensembles de polices pour les documents non fixes.  
+- **Sous-ensembles de polices :** Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne prennent pas en charge la création de sous-ensembles de polices pour les documents non fixes.  
   
--   En cas de référence incorrecte, l’application utilise une police disponible à la place.  
+- En cas de référence incorrecte, l’application utilise une police disponible à la place.  
   
 ## <a name="see-also"></a>Voir aussi
 

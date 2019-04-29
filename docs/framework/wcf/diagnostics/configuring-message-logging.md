@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785006"
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
@@ -83,11 +83,11 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  
   
--   Consigner le Message entier (`logEntireMessage` attribut) : Cette valeur spécifie si le message entier (en-tête et corps) est enregistré. La valeur par défaut est `false`, ce qui signifie que seul l'en-tête est enregistré. Ce paramètre affecte les niveaux service et transport de journalisation des messages.  
+- Consigner le Message entier (`logEntireMessage` attribut) : Cette valeur spécifie si le message entier (en-tête et corps) est enregistré. La valeur par défaut est `false`, ce qui signifie que seul l'en-tête est enregistré. Ce paramètre affecte les niveaux service et transport de journalisation des messages.  
   
--   Messages maximal à enregistrer (`maxMessagesToLog` attribut) : Cette valeur spécifie le nombre maximal de messages à enregistrer. Tous les messages (service, transport et messages erronés) sont comptabilisés en fonction de cette limite. Une fois cette limite atteinte, un message de suivi est généré et aucun message supplémentaire n'est enregistré. La valeur par défaut est 10 000.  
+- Messages maximal à enregistrer (`maxMessagesToLog` attribut) : Cette valeur spécifie le nombre maximal de messages à enregistrer. Tous les messages (service, transport et messages erronés) sont comptabilisés en fonction de cette limite. Une fois cette limite atteinte, un message de suivi est généré et aucun message supplémentaire n'est enregistré. La valeur par défaut est 10 000.  
   
--   Taille maximale de message à consigner (`maxSizeOfMessageToLog` attribut) : Cette valeur spécifie la taille maximale des messages à consigner en octets. Les messages qui dépassent cette taille ne sont pas enregistrés et aucune opération les concernant n'est exécutée. Ce paramètre affecte tous les niveaux de suivi. Si le suivi ServiceModel est activé, un message d'avertissement de suivi est généré au premier point d'enregistrement (ServiceModelSend * ou TransportReceive) pour informer l'utilisateur de ce dépassement. La valeur par défaut pour les messages de niveau de service et de niveau de transport est 256K, alors que la valeur par défaut pour les messages erronés est 4K.  
+- Taille maximale de message à consigner (`maxSizeOfMessageToLog` attribut) : Cette valeur spécifie la taille maximale des messages à consigner en octets. Les messages qui dépassent cette taille ne sont pas enregistrés et aucune opération les concernant n'est exécutée. Ce paramètre affecte tous les niveaux de suivi. Si le suivi ServiceModel est activé, un message d'avertissement de suivi est généré au premier point d'enregistrement (ServiceModelSend * ou TransportReceive) pour informer l'utilisateur de ce dépassement. La valeur par défaut pour les messages de niveau de service et de niveau de transport est 256K, alors que la valeur par défaut pour les messages erronés est 4K.  
   
     > [!CAUTION]
     >  La taille de message calculée pour être comparée à `maxSizeOfMessageToLog` est celle présente dans la mémoire avant la sérialisation. Cette taille peut différer de la taille de chaîne des messages effectivement enregistrée et est, dans de nombreux cas, supérieure à leur grandeur réelle. Par conséquent, certains messages peuvent ne pas être enregistrés. Vous pouvez compenser ce phénomène en augmentant la valeur de l'attribut `maxSizeOfMessageToLog` de 10 %. En outre, si des messages erronés sont enregistrés, l'espace disque réel utilisé par les journaux de message peut atteindre jusqu'à 5 fois la valeur spécifiée par `maxSizeOfMessageToLog`.  

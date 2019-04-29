@@ -3,11 +3,11 @@ title: Données d'infrastructure de service
 ms.date: 03/30/2017
 ms.assetid: 2a2c8ddc-4e82-4e7f-a79f-97085c469517
 ms.openlocfilehash: 5c65e9d473b5fe3f2b1c29824dcc1151abb0c3f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780807"
 ---
 # <a name="service-framework-data"></a>Données d'infrastructure de service
 Cette rubrique répertorie toutes les exceptions générées par les données d'infrastructure de service.  
@@ -16,7 +16,7 @@ Cette rubrique répertorie toutes les exceptions générées par les données d'
   
 |Code de la ressource|Chaîne de la ressource|  
 |-------------------|---------------------|  
-|AddressingExtensionInBadNS|L'élément spécifié dans l'espace de noms indiqué n'est pas valide. Cela signifie que l'élément spécifié est un élément en double ou que l'extension n'est pas légale parce que les éléments d'extension ne peuvent pas être dans l'espace de noms d'adressage.|  
+|AddressingExtensionInBadNS|L'élément spécifié dans l'espace de noms indiqué n'est pas valide. Cela signifie que l’élément spécifié est un élément en double ou que l’extension n’est pas légale parce que les éléments d’extension ne peuvent pas être dans l’espace de noms d’adressage.|  
 |BinaryEncoderSessionInvalid|La session de l'encodeur binaire n'est pas valide en raison d'une erreur lors du décodage d'un message précédent.|  
 |CannotDetectAddressingVersion|Impossible de détecter la version de WS-Addressing. EndpointAddress ne commence pas par un élément.|  
 |CouldNotFindNamespaceForPrefix|Le préfixe spécifié n'a aucune liaison d'espace de noms dans la portée.|  
@@ -36,7 +36,7 @@ Cette rubrique répertorie toutes les exceptions générées par les données d'
 |MultipleMessageHeadersWithActor|Plusieurs en-têtes avec le nom, l'espace de noms et le rôle spécifiés ont été trouvés.|  
 |MultipleRelatesToHeaders|Plusieurs en-têtes RelatesTo avec la relation spécifiée ont été trouvés. Un seul en-tête est autorisé par relation.|  
 |QueryFunctionTypeNotSupported|Le type de retour spécifié pour IXsltContextFunction n’est pas pris en charge.|  
-|QueryIteratorOutOfScope|XPathNodeIterator a été invalidé. Les éléments XPathNodeIterator passés comme arguments à des fonctions IXsltContextFunctions sont uniquement valides à l’intérieur de la fonction. Ils ne peuvent pas être mis en cache pour une utilisation ultérieure ou être retournés par la fonction.|  
+|QueryIteratorOutOfScope|XPathNodeIterator a été invalidé. Les éléments XPathNodeIterator passés comme arguments à des fonctions IXsltContextFunctions sont uniquement valides à l'intérieur de la fonction. Ils ne peuvent pas être mis en cache pour une utilisation ultérieure ou être retournés par la fonction.|  
 |QueryVariableNull|Les méthodes IXsltContextVariable ne peuvent pas retourner la valeur null.|  
 |QueryVariableTypeNotSupported|Le type dérivé IXsltContextVariable spécifié n'est pas pris en charge.|  
 |ReceiveShutdownReturnedMessage|Le canal a reçu un message d'entrée inattendu avec l'action spécifiée lors de la fermeture. Fermez le canal lorsque vous n'attendez plus de message d'entrée.|  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762322"
 ---
 # <a name="transforms-overview"></a>Vue d'ensemble des transformations
 Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes pour faire pivoter, mettre à l’échelle, déplacer (translater) et incliner des <xref:System.Windows.FrameworkElement> objets.  
@@ -101,9 +101,9 @@ Un élément rectangle pivoté de 45 degrés autour du point (25, 25)
 ## <a name="transforming-a-frameworkelement"></a>Transformation d’un élément FrameworkElement  
  Pour appliquer des transformations à un <xref:System.Windows.FrameworkElement>, créer un <xref:System.Windows.Media.Transform> et appliquez-le à une des deux propriétés qui la <xref:System.Windows.FrameworkElement> classe fournit :  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – Une transformation appliquée avant la passe de disposition. Une fois la transformation appliquée, le système de disposition traite la taille et la position transformées de l’élément.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – Une transformation appliquée avant la passe de disposition. Une fois la transformation appliquée, le système de disposition traite la taille et la position transformées de l’élément.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – Une transformation qui modifie l’apparence de l’élément, mais est appliquée après la passe de disposition est terminée. À l’aide de la <xref:System.Windows.UIElement.RenderTransform%2A> propriété au lieu du <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété, vous pouvez obtenir de meilleures performances.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> – Une transformation qui modifie l’apparence de l’élément, mais est appliquée après la passe de disposition est terminée. À l’aide de la <xref:System.Windows.UIElement.RenderTransform%2A> propriété au lieu du <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété, vous pouvez obtenir de meilleures performances.  
   
  Quelle propriété utiliser ? En raison des avantages de performances qu’offre cette solution, utilisez le <xref:System.Windows.UIElement.RenderTransform%2A> propriété chaque fois que possible, en particulier lorsque vous utilisez animée <xref:System.Windows.Media.Transform> objets. Utilisez le <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété lors de la mise à l’échelle, faire pivoter ou incliner et que vous devez le parent de l’élément s’ajuste à la taille de l’élément. Notez que, lorsqu’ils sont utilisés avec la <xref:System.Windows.FrameworkElement.LayoutTransform%2A> propriété, <xref:System.Windows.Media.TranslateTransform> objets semblent n’ont aucun effet sur les éléments. Ceci est dû au fait que le système de disposition remet l’élément translaté dans sa position d’origine au cours de son traitement.  
   

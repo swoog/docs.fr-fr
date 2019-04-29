@@ -5,18 +5,18 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785994"
 ---
 # <a name="message-filters"></a>Filtres de message
 Pour implémenter le routage basé sur le contenu, le service de routage utilise des implémentations <xref:System.ServiceModel.Dispatcher.MessageFilter> qui inspectent des sections particulières d'un message, telles que l'adresse, le nom du point de terminaison ou une instruction XPath spécifique. Si aucun des filtres de message fournis avec [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ne répond à vos besoins, vous pouvez créer un filtre personnalisé en créant une nouvelle implémentation de la classe <xref:System.ServiceModel.Dispatcher.MessageFilter> de base.  
   
  Lorsque vous configurez le Service de routage, vous devez définir les éléments de filtre (<xref:System.ServiceModel.Routing.Configuration.FilterElement> objets) qui décrivent le type de **MessageFilter** et les données pertinentes nécessaires pour créer le filtre, telles que les valeurs de chaîne spécifique à rechercher pour dans le message. Notez que la création des éléments de filtre définit uniquement le filtre de message individuel ; pour que les filtres permettent d'évaluer et de router des messages, vous devez également définir une table de filtres (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
- Chaque entrée dans la table de filtres référence un élément de filtre et spécifie le point de terminaison client vers lequel un message sera routé si celui-ci correspond au filtre. Les entrées de table de filtres vous permettent également de spécifier une collection de points de terminaison de sauvegarde (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Cette collection définit une liste des points de terminaison auxquels le message est transmis en cas d'échec de transmission lors de l'envoi au point de terminaison primaire. Ces points de terminaison sont testés dans l'ordre spécifié jusqu'à la réussite de l'un d'eux.  
+ Chaque entrée dans la table de filtres référence un élément de filtre et spécifie le point de terminaison client vers lequel un message sera routé si celui-ci correspond au filtre. Les entrées de table de filtres vous permettent également de spécifier une collection de points de terminaison de sauvegarde (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Cette collection définit une liste des points de terminaison auxquels le message est transmis en cas d’échec de transmission lors de l’envoi au point de terminaison primaire. Ces points de terminaison sont testés dans l'ordre spécifié jusqu'à la réussite de l'un d'eux.  
   
 ## <a name="message-filters"></a>Filtres de message  
  Les filtres de message utilisés par le service de routage fournissent des fonctionnalités communes de sélection de message, par exemple, évaluer le nom du point de terminaison auquel un message a été envoyé, l'action SOAP, l'adresse ou le préfixe d'adresse auquel le message a été envoyé. Il est également possible de joindre deux filtres par une condition `AND`, de manière à router les messages vers un seul point de terminaison si le message correspond aux deux filtres. Vous pouvez aussi créer des filtres personnalisés en créant votre propre implémentation de <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
@@ -27,8 +27,8 @@ Pour implémenter le routage basé sur le contenu, le service de routage utilise
 |------------------|-----------------|-------------------------|--------------------|  
 |Action|Utilise la classe <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> pour filtrer les messages qui contiennent une action spécifique.|Action à laquelle appliquer un filtre.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
 |EndpointAddress|Utilise le <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> (classe), avec <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` pour filtrer les messages contenant une adresse spécifique.|Adresse à laquelle appliquer un filtre (dans l'en-tête À).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Utilise le <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> (classe), avec <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` pour filtrer les messages contenant un préfixe d’adresse spécifique.|Adresse à laquelle appliquer un filtre utilisant le plus long préfixe correspondant.|\<nom de filtre = « prefix1 » filterType = « EndpointAddressPrefix » filterData = « http://host/» / >|  
-|Et|Utilise la classe <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> qui évalue toujours les deux conditions avant de retourner.|filterData n’est pas utilisé ; à la place filter1 et filter2 ont les noms de message filtres correspondants (également dans la table), qui doivent être **AND**liées par OR.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|EndpointAddressPrefix|Utilise le <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> (classe), avec <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` pour filtrer les messages contenant un préfixe d’adresse spécifique.|Adresse à laquelle appliquer un filtre utilisant le plus long préfixe correspondant.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|and|Utilise la classe <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> qui évalue toujours les deux conditions avant de retourner.|filterData n’est pas utilisé ; à la place filter1 et filter2 ont les noms de message filtres correspondants (également dans la table), qui doivent être **AND**liées par OR.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Personnalisé|Type défini par l'utilisateur qui étend la classe <xref:System.ServiceModel.Dispatcher.MessageFilter> et possède un constructeur qui prend une chaîne.|L'attribut customType est le nom de type qualifié complet de la classe à créer ; filterData est la chaîne à passer au constructeur lors de la création du filtre.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|Utilise la classe <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> pour filtrer les messages en fonction du nom du point de terminaison de service sur lequel ils sont arrivés.|Le nom du point de terminaison de service, par exemple : « serviceEndpoint1 ».  Ce doit être l'un des points de terminaison exposés sur le service de routage.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Utilise la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Ce filtre correspond à tous les messages entrants.|filterData n'est pas utilisé. Ce filtre correspondra toujours à tous les messages.|\<filter name="matchAll1" filterType="MatchAll" />|  
@@ -59,7 +59,7 @@ Pour implémenter le routage basé sur le contenu, le service de routage utilise
 ### <a name="namespace-table"></a>Table d'espace de noms  
  Lors de l'utilisation d'un Filtre XPath, les données de filtre qui contiennent la requête XPath peuvent devenir extrêmement volumineuses en raison de l'utilisation d'espaces de noms. Pour pallier ce problème, le service de routage offre la possibilité de définir vos propres préfixes d'espace de noms à l'aide de la table d'espace de noms.  
   
- La table d'espace de noms est une collection d'objets <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> qui définit les préfixes d'espaces de noms communs qui peuvent être utilisés dans un XPath. Voici les espaces de noms et les préfixes d'espace de noms par défaut contenus dans la table d'espace de noms.  
+ La table d’espace de noms est une collection d’objets <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> qui définit les préfixes d’espaces de noms communs qui peuvent être utilisés dans un XPath. Voici les espaces de noms et les préfixes d'espace de noms par défaut contenus dans la table d'espace de noms.  
   
 |Préfixe|Espace de noms|  
 |------------|---------------|  
@@ -127,13 +127,13 @@ Pour implémenter le routage basé sur le contenu, le service de routage utilise
 </filterTables>  
 ```  
   
- Dans l'exemple précédent, si un message correspond au XPathFilter, il est routé vers le roundingCalcEndpoint et aucun filtre supplémentaire dans la table n'est évalué car tous les autres filtres sont de priorité plus faible. Toutefois, si le message ne correspond pas au XPathFilter, il est alors évalué par rapport à tous les filtres suivants de priorité plus faible, EndpointNameFilter et PrefixAddressFilter.  
+ Dans l’exemple précédent, si un message correspond au XPathFilter, il est routé vers le roundingCalcEndpoint et aucun filtre supplémentaire dans la table n’est évalué car tous les autres filtres sont de priorité plus faible. Toutefois, si le message ne correspond pas au XPathFilter, il est alors évalué par rapport à tous les filtres suivants de priorité plus faible, EndpointNameFilter et PrefixAddressFilter.  
   
 > [!NOTE]
 >  Si possible, utilisez des filtres exclusifs au lieu de spécifier une priorité. En effet, l'évaluation des priorités risque d'entraîner une dégradation des performances.  
   
 ### <a name="backup-lists"></a>Listes de sauvegarde  
- Chaque filtre de la table de filtres peut éventuellement spécifier une liste de sauvegarde, qui est une collection nommée de points de terminaison (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Cette collection contient une liste ordonnée des points de terminaison auxquels le message sera transmis en cas de <xref:System.ServiceModel.CommunicationException> lors de l'envoi au point de terminaison primaire spécifié dans la propriété <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. L’exemple suivant définit une liste de sauvegarde nommée « backupServiceEndpoints » qui contient les deux points de terminaison.  
+ Chaque filtre de la table de filtres peut éventuellement spécifier une liste de sauvegarde, qui est une collection nommée de points de terminaison (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Cette collection contient une liste ordonnée des points de terminaison auxquels le message sera transmis en cas de <xref:System.ServiceModel.CommunicationException> lors de l’envoi au point de terminaison primaire spécifié dans la propriété <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. L’exemple suivant définit une liste de sauvegarde nommée « backupServiceEndpoints » qui contient les deux points de terminaison.  
   
 ```xml  
 <filterTables>  

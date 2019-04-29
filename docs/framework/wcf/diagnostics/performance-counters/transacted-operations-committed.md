@@ -3,14 +3,14 @@ title: Opérations traitées validées
 ms.date: 03/30/2017
 ms.assetid: 6a1768cd-d103-4cd3-a26c-b014465f9236
 ms.openlocfilehash: 0e91502ea94d9cd202d4d3fde25ab035754b7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766322"
 ---
 # <a name="transacted-operations-committed"></a>Opérations traitées validées
-Nom du compteur : opérations transactionnelles validées  
+Nom du compteur : Opérations traitées validées.  
   
 ## <a name="description"></a>Description  
- Nombre d'opérations transactionnelles validées sur un service.
+ Nombre d’opérations transactionnelles validées sur un service.

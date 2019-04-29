@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776257"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d’impression problématique
 Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs concernant des travaux d’impression qui échouent ou s’impriment lentement. L’ensemble des propriétés du travail d’impression exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen pour effectuer un diagnostic rapide et à distance des travaux d’impression.  
@@ -25,13 +25,13 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
   
 1. Identifiez le travail d’impression à l’origine de la plainte de l’utilisateur. Les utilisateurs sont rarement en mesure de l’identifier avec précision. Ils peuvent par exemple ne pas connaître les noms des serveurs d’impression ou des imprimantes. Ils peuvent décrire l’emplacement de l’imprimante avec une terminologie différente de celle utilisée dans le paramètre son <xref:System.Printing.PrintQueue.Location%2A> propriété. Par conséquent, il est judicieux de générer une liste des travaux envoyés par l’utilisateur. S’il y en a plusieurs, l’utilisateur peut contacter l’administrateur du système d’impression pour identifier le travail qui pose problème. La procédure est la suivante.  
   
-    1.  Répertoriez l’ensemble des serveurs d’impression.  
+    1. Répertoriez l’ensemble des serveurs d’impression.  
   
-    2.  Parcourez les serveurs en boucle pour interroger leurs files d’attente à l’impression.  
+    2. Parcourez les serveurs en boucle pour interroger leurs files d’attente à l’impression.  
   
-    3.  À chaque étape de la boucle de serveur, parcourez en boucle toutes les files d’attente du serveur pour interroger les travaux associés.  
+    3. À chaque étape de la boucle de serveur, parcourez en boucle toutes les files d’attente du serveur pour interroger les travaux associés.  
   
-    4.  À chaque étape de la boucle de file d’attente, parcourez les travaux associés et collectez les informations d’identification des travaux ayant été envoyés par l’utilisateur à l’origine de la plainte.  
+    4. À chaque étape de la boucle de file d’attente, parcourez les travaux associés et collectez les informations d’identification des travaux ayant été envoyés par l’utilisateur à l’origine de la plainte.  
   
 2. Une fois le travail d’impression problématique identifié, examinez les propriétés pertinentes pour tenter de trouver ce qui pose problème. Le travail affiche-t-il un état d’erreur ou l’imprimante qui traite la file d’attente a-t-elle été déconnectée avant l’impression du travail ?  
   
@@ -49,9 +49,9 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
   
  À ce stade, l’application contient une structure en branches correspondant aux deux méthodes de vérification de l’état du travail d’impression :  
   
--   Vous pouvez lire les indicateurs de la <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriété qui est de type <xref:System.Printing.PrintJobStatus>.  
+- Vous pouvez lire les indicateurs de la <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriété qui est de type <xref:System.Printing.PrintJobStatus>.  
   
--   Vous pouvez lire chaque propriété pertinente comme <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> et <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Vous pouvez lire chaque propriété pertinente comme <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> et <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  Cet exemple illustre les deux méthodes, l’utilisateur a été auparavant invité à choisir la méthode à utiliser et a répondu par « Y » qu’il souhaitait utiliser les indicateurs de le <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriété. Voir ci-dessous pour obtenir des informations détaillées sur les deux méthodes. Enfin, l’application utilise une méthode appelée **ReportQueueAndJobAvailability** pour déterminer si le travail peut être imprimé à cette heure de la journée. Cette méthode est décrite dans l’article [Déterminer si un travail d’impression peut être imprimé à cette heure de la journée](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   

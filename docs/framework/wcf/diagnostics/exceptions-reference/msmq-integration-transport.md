@@ -3,11 +3,11 @@ title: Transport d'intégration MSMQ
 ms.date: 03/30/2017
 ms.assetid: 2bf9893a-fbd1-41fc-b6de-a41a44279936
 ms.openlocfilehash: 52fd98354ded57bd7d7c075d4f08ca543760e598
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777362"
 ---
 # <a name="msmq-integration-transport"></a>Transport d'intégration MSMQ
 Cette rubrique répertorie toutes les exceptions générées par le transport d'intégration MSMQ.  
@@ -20,7 +20,7 @@ Cette rubrique répertorie toutes les exceptions générées par le transport d'
 |MsmqByteArrayBodyExpected|Une incompatibilité s'est produite entre le format de sérialisation spécifié et le corps du message MSMQ. Le message ne peut pas être envoyé ou reçu. Le format de sérialisation ByteArray requiert que le corps du message MSMQ soit de type byte[].|  
 |MsmqCannotDeserializeActiveXMessage|Une erreur de sérialisation ActiveX s'est produite. Le message ne peut pas être envoyé ou reçu. Le type de variant spécifié pour le corps ne correspond pas au corps du message MSMQ réel.|  
 |MsmqCannotUseBodyTypeWithActiveXSerialization|Les propriétés du message sont incompatibles. Le message ne peut pas être envoyé ou reçu. La propriété de message BodyType ne peut pas être spécifiée si le format de sérialisation ActiveX est utilisé.|  
-|MsmqInvalidServiceOperationForMsmqIntegrationBinding|La validation de MsmqIntegrationBinding a échoué. Impossible de démarrer le point de terminaison de service. La liaison ne prend pas en charge la signature de méthode pour l’opération de service spécifiée dans le contrat. Corrigez l'opération de service afin d'utiliser MsmqIntegrationBinding.|  
+|MsmqInvalidServiceOperationForMsmqIntegrationBinding|La validation de MsmqIntegrationBinding a échoué. Impossible de démarrer le point de terminaison de service. La liaison ne prend pas en charge la signature de méthode pour l'opération de service spécifiée dans le contrat. Corrigez l'opération de service afin d'utiliser MsmqIntegrationBinding.|  
 |MsmqInvalidTypeDeserialization|La sérialisation ActiveX a échoué car le format de sérialisation ne peut pas être reconnu. Le message ne peut pas être envoyé ou reçu.|  
 |MsmqInvalidTypeSerialization|Le type de variant n'est pas reconnu. La sérialisation ActiveX a échoué. Le message ne peut pas être envoyé ou reçu. Le type de variant spécifié n'est pas pris en charge.|  
 |MsmqStreamBodyExpected|Incompatibilité entre le format de sérialisation et le contenu du corps. Le message ne peut pas être envoyé ou reçu. Seul un corps de type flux peut être envoyé ou reçu à l'aide du mode de sérialisation du flux.|

@@ -3,23 +3,23 @@ title: Activation d’une Source de données pour LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781028"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Activation d'une source de données pour l'interrogation LINQ
 
 Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour permettre l’interrogation de toute source de données dans le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La source de données peut être une structure de données, un service Web, un système de fichiers ou une base de données, par exemple. Le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permet aux clients d'interroger facilement une source de données pour laquelle l'interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est activée, car la syntaxe et le modèle de la requête ne changent pas. Il existe différentes manières d’étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] à ces sources de données, dont les suivantes :
 
--   Implémentation de l’interface <xref:System.Collections.Generic.IEnumerable%601> dans un type pour activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects de ce type.
+- Implémentation de l’interface <xref:System.Collections.Generic.IEnumerable%601> dans un type pour activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects de ce type.
 
--   Création de méthodes d’opérateur de requête standard telles que <xref:System.Linq.Enumerable.Where%2A> et <xref:System.Linq.Enumerable.Select%2A> qui étendent un type, pour activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] personnalisée de ce type.
+- Création de méthodes d’opérateur de requête standard telles que <xref:System.Linq.Enumerable.Where%2A> et <xref:System.Linq.Enumerable.Select%2A> qui étendent un type, pour activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] personnalisée de ce type.
 
--   Création d'un fournisseur pour votre source de données qui implémente l'interface <xref:System.Linq.IQueryable%601>. Un fournisseur qui implémente cette interface reçoit des requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans le formulaire des arborescences d'expression, qu'il peut exécuter d'une manière personnalisée, par exemple à distance.
+- Création d'un fournisseur pour votre source de données qui implémente l'interface <xref:System.Linq.IQueryable%601>. Un fournisseur qui implémente cette interface reçoit des requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans le formulaire des arborescences d'expression, qu'il peut exécuter d'une manière personnalisée, par exemple à distance.
 
--   Création d’un fournisseur pour votre source de données qui exploite une technologie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existante. Ce type de fournisseur permettrait non seulement l'interrogation, mais également l'insertion, la mise à jour et la suppression d'opérations et le mappage pour des types définis par l'utilisateur.
+- Création d’un fournisseur pour votre source de données qui exploite une technologie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existante. Ce type de fournisseur permettrait non seulement l'interrogation, mais également l'insertion, la mise à jour et la suppression d'opérations et le mappage pour des types définis par l'utilisateur.
 
 Cette rubrique décrit ces options.
 

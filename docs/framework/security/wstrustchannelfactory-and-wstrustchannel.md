@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780066"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory et WSTrustChannel
 Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous savez probablement que les clients WCF prennent déjà en charge la fédération. En configurant un client WCF avec une liaison <xref:System.ServiceModel.WSFederationHttpBinding> ou une liaison personnalisée similaire, vous pouvez utiliser l’authentification fédérée auprès d’un service.
@@ -25,7 +25,7 @@ Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous sav
 
 - Utilisation de WIF seul pour obtenir un jeton du STS et permettre à un client WCF de s’authentifier avec ce jeton. Pour plus d’informations, consultez l’exemple [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Le premier scénario est évident : les clients WCF existants continueront à utiliser les STS et parties de confiance de WIF. Cette rubrique explique les deux autres scénarios.
+ Le premier scénario est évident : Les clients WCF existants continue de fonctionner avec les parties de confiance de WIF et STS. Cette rubrique explique les deux autres scénarios.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Amélioration d’un client WCF existant avec ActAs/OnBehalfOf
 Dans un scénario de délégation d’identité standard, un client appelle un service de niveau intermédiaire, lequel appelle un service principal. Le service de niveau intermédiaire agit en tant que client ou pour le compte du client.

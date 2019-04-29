@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772968"
 ---
 # <a name="how-to-error-handling"></a>Procédure : Gestion des erreurs
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage utilisant la gestion des erreurs. Dans cet exemple, les messages sont routés vers un point de terminaison de destination. Si un message ne peut pas être remis en raison d'une panne réseau ou d'une défaillance liée aux communications (<xref:System.ServiceModel.CommunicationException>), le message est renvoyé à un autre point de terminaison.  

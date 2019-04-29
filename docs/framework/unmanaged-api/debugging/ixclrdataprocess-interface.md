@@ -1,5 +1,5 @@
 ---
-title: Interface de IXCLRDataProcess
+title: IXCLRDataProcess, interface
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775243"
 ---
-# <a name="ixclrdataprocess-interface"></a>Interface de IXCLRDataProcess
+# <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess, interface
 
 Fournit des méthodes pour obtenir des informations relatives à un processus.
 
@@ -44,7 +44,7 @@ Fournit des méthodes pour obtenir des informations relatives à un processus.
 
 Cette interface réside dans le runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque. Toutefois, il est une interface COM qui dérive de `IUnknown` avec le GUID `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` qui peuvent être obtenues via les mécanismes COM habituels.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).   
 **En-tête :** Aucun.  

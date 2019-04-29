@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778532"
 ---
 # <a name="function-expression-visual-basic"></a>Expression de fonction (Visual Basic)
 Déclare les paramètres et le code qui définissent une expression lambda de fonction.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda  
  La syntaxe d’une expression lambda ressemble à celle d’une fonction standard. Les différences sont les suivantes :  
   
--   Une expression lambda n’a pas un nom.  
+- Une expression lambda n’a pas un nom.  
   
--   Expressions lambda ne peut pas avoir de modificateurs, tels que `Overloads` ou `Overrides`.  
+- Expressions lambda ne peut pas avoir de modificateurs, tels que `Overloads` ou `Overrides`.  
   
--   Expressions lambda n’utilisent pas un `As` clause pour désigner le type de retour de la fonction. Au lieu de cela, le type est déduit à partir de la valeur que prend le corps d’une expression lambda sur une ligne ou la valeur de retour d’une expression lambda multiligne. Par exemple, si le corps d’une expression lambda sur une ligne est `Where cust.City = "London"`, son type de retour est `Boolean`.  
+- Expressions lambda n’utilisent pas un `As` clause pour désigner le type de retour de la fonction. Au lieu de cela, le type est déduit à partir de la valeur que prend le corps d’une expression lambda sur une ligne ou la valeur de retour d’une expression lambda multiligne. Par exemple, si le corps d’une expression lambda sur une ligne est `Where cust.City = "London"`, son type de retour est `Boolean`.  
   
--   Le corps d’une expression lambda sur une ligne doit être une expression, pas une instruction. Le corps peut se composer d’un appel à une procédure de fonction, mais pas un appel à une procédure sub.  
+- Le corps d’une expression lambda sur une ligne doit être une expression, pas une instruction. Le corps peut se composer d’un appel à une procédure de fonction, mais pas un appel à une procédure sub.  
   
--   Tous les paramètres doivent avoir spécifié les types de données ou l’ensemble doit être déduit.  
+- Tous les paramètres doivent avoir spécifié les types de données ou l’ensemble doit être déduit.  
   
--   Paramètres facultatifs et Paramarray ne sont pas autorisées.  
+- Paramètres facultatifs et Paramarray ne sont pas autorisées.  
   
--   Paramètres génériques ne sont pas autorisées.  
+- Paramètres génériques ne sont pas autorisées.  
   
 ## <a name="example"></a>Exemple  
  Les exemples suivants montrent deux façons de créer des expressions lambda simple. Le premier utilise un `Dim` à fournir un nom pour la fonction. Pour appeler la fonction, vous envoyez une valeur pour le paramètre.  

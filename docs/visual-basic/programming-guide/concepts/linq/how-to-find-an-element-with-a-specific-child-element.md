@@ -3,11 +3,11 @@ title: 'Procédure : Rechercher un élément avec un élément enfant spécifiq
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
 ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780599"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Procédure : Rechercher un élément avec un élément enfant spécifique (Visual Basic)
 Cette rubrique montre comment rechercher un élément particulier qui a un élément enfant avec une valeur spécifique.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785800"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
 Cette rubrique présente les animations d’image clé. Les animations d’image clé vous permettent d’effectuer des animation en utilisant plus de deux valeurs cibles et de contrôler la méthode d’interpolation d’une animation.  
@@ -28,11 +28,11 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
  Pour utiliser une animation d’image clé, procédez comme suit.  
   
--   Déclarez l’animation et spécifiez son <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, tout comme vous le feriez pour une animation from/to/by.  
+- Déclarez l’animation et spécifiez son <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, tout comme vous le feriez pour une animation from/to/by.  
   
--   Pour chaque valeur cible, créez une image clé du type approprié, définissez sa valeur et <xref:System.Windows.Media.Animation.KeyTime>et l’ajouter à l’animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.  
+- Pour chaque valeur cible, créez une image clé du type approprié, définissez sa valeur et <xref:System.Windows.Media.Animation.KeyTime>et l’ajouter à l’animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.  
   
--   Associez l’animation à une propriété, comme vous le feriez avec une animation From/To/By. Pour plus d’informations sur l’application d’une animation à une propriété à l’aide d’une table de montage séquentiel, consultez la [Vue d’ensemble des storyboards](storyboards-overview.md).  
+- Associez l’animation à une propriété, comme vous le feriez avec une animation From/To/By. Pour plus d’informations sur l’application d’une animation à une propriété à l’aide d’une table de montage séquentiel, consultez la [Vue d’ensemble des storyboards](storyboards-overview.md).  
   
  L’exemple suivant utilise un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> pour animer un <xref:System.Windows.Shapes.Rectangle> élément à quatre emplacements différents.  
   
@@ -85,33 +85,33 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
  L’objectif principal d’une image clé consiste à spécifier un <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> et un <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Chaque type d’image clé fournit ces deux propriétés.  
   
--   Le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété spécifie la valeur cible pour cette image clé.  
+- Le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété spécifie la valeur cible pour cette image clé.  
   
--   Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété spécifie à quel moment (au sein de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) une image clé <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> est atteinte.  
+- Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété spécifie à quel moment (au sein de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) une image clé <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> est atteinte.  
   
  Lorsqu’une animation d’image clé commence, effectue une itération via ses images clés dans l’ordre défini par leurs <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriétés.  
   
--   S’il n’existe aucune image clé à 0, l’animation crée une transition entre la valeur actuelle de la propriété cible et le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première image clé ; sinon, l’animation de sortie devient la valeur de la première image clé.  
+- S’il n’existe aucune image clé à 0, l’animation crée une transition entre la valeur actuelle de la propriété cible et le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première image clé ; sinon, l’animation de sortie devient la valeur de la première image clé.  
   
--   L’animation crée une transition entre le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première et deuxième image clé à l’aide de la méthode d’interpolation spécifiée par la deuxième image clé. La transition commence à la première image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> et se termine lorsque la deuxième image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> est atteinte.  
+- L’animation crée une transition entre le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première et deuxième image clé à l’aide de la méthode d’interpolation spécifiée par la deuxième image clé. La transition commence à la première image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> et se termine lorsque la deuxième image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> est atteinte.  
   
--   L’animation continue, en créant des transitions entre chaque image clé suivante et son image clé précédente.  
+- L’animation continue, en créant des transitions entre chaque image clé suivante et son image clé précédente.  
   
--   Enfin, l’animation passe à la valeur de l’image clé avec le plus grand temps clé qui est égale ou inférieure à l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+- Enfin, l’animation passe à la valeur de l’image clé avec le plus grand temps clé qui est égale ou inférieure à l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
  Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est <xref:System.Windows.Duration.Automatic%2A> ou son <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est égal à l’heure de la dernière image clé, l’animation se termine. Sinon, si l’animation <xref:System.Windows.Duration> est supérieur au temps clé de la dernière image clé, l’animation maintient la valeur de l’image clé jusqu'à ce qu’il atteint la fin de son <xref:System.Windows.Duration>. Comme toutes les animations, une animation d’image clé utilise sa <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriété afin de déterminer si elle maintient sa dernière valeur lorsqu’elle atteint la fin de sa période active. Pour plus d’informations, consultez l’article [Vue d’ensemble des comportements de minutage](timing-behaviors-overview.md).  
   
  L’exemple suivant utilise le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> objet défini dans l’exemple précédent pour montrer comment la <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> et <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriétés du travail.  
   
--   La première image clé affecte immédiatement la valeur de sortie de l’animation à 0.  
+- La première image clé affecte immédiatement la valeur de sortie de l’animation à 0.  
   
--   La deuxième image clé s’anime de 0 à 350. Elle démarre après la fin de la première image clé (au temps = 0 seconde) et est lue pendant 2 secondes, pour se terminer au temps = 0:0:2.  
+- La deuxième image clé s’anime de 0 à 350. Elle démarre après la fin de la première image clé (au temps = 0 seconde) et est lue pendant 2 secondes, pour se terminer au temps = 0:0:2.  
   
--   La troisième image clé s’anime de 350 à 50. Elle démarre après la fin de la deuxième image clé (au temps = 2 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:7.  
+- La troisième image clé s’anime de 350 à 50. Elle démarre après la fin de la deuxième image clé (au temps = 2 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:7.  
   
--   La quatrième image clé s’anime de 50 à 200. Elle démarre après la fin de la troisième image clé (au temps = 7 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:8.  
+- La quatrième image clé s’anime de 50 à 200. Elle démarre après la fin de la troisième image clé (au temps = 7 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:8.  
   
--   Étant donné que le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété de l’animation a été définie sur 10 secondes, l’animation maintient sa dernière valeur pendant deux secondes avant de se terminer au temps = 0:0:10.  
+- Étant donné que le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété de l’animation a été définie sur 10 secondes, l’animation maintient sa dernière valeur pendant deux secondes avant de se terminer au temps = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
 ### <a name="timespan-values"></a>Valeurs TimeSpan  
  Vous pouvez utiliser <xref:System.TimeSpan> valeurs pour spécifier un <xref:System.Windows.Media.Animation.KeyTime>. La valeur doit être supérieure ou égale à 0 et inférieure ou égale à la durée de l’animation. L’exemple suivant illustre une animation d’une durée de 10 secondes qui comporte quatre images clés dont les temps clés sont spécifiés en tant que valeurs de temps.  
   
--   La première image clé s’anime entre la valeur de base et 100 pendant les 3 premières secondes, et se termine au temps = 0:0:03.  
+- La première image clé s’anime entre la valeur de base et 100 pendant les 3 premières secondes, et se termine au temps = 0:0:03.  
   
--   La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 3 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:8.  
+- La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 3 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:8.  
   
--   La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 8 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:9.  
+- La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 8 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:9.  
   
--   La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la troisième image clé (au temps = 9 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:10.  
+- La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la troisième image clé (au temps = 9 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Valeurs de pourcentage  
  Une valeur de pourcentage spécifie que l’image clé se termine à un certain pourcentage de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous spécifiez le pourcentage sous la forme d’un nombre suivi par le symbole `%`. Dans le code, vous utilisez le <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> méthode et passez-lui un <xref:System.Double> indiquant le pourcentage. La valeur doit être supérieure ou égale à 0 et inférieure ou égale à 100 %. L’exemple suivant illustre une animation d’une durée de 10 secondes qui comporte quatre images clés dont les temps clés sont spécifiés en tant que pourcentages.  
   
--   La première image clé s’anime entre la valeur de base et 100 pendant les 3 premières secondes, et se termine au temps = 0:0:3.  
+- La première image clé s’anime entre la valeur de base et 100 pendant les 3 premières secondes, et se termine au temps = 0:0:3.  
   
--   La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 3 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:8 (0.8 * 10 = 8).  
+- La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 3 secondes) et est lue pendant 5 secondes, pour se terminer au temps = 0:0:8 (0.8 * 10 = 8).  
   
--   La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 8 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:9 (0.9 * 10 = 9).  
+- La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 8 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:9 (0.9 * 10 = 9).  
   
--   La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la troisième image clé (au temps = 9 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:10 (1 * 10 = 10).  
+- La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la troisième image clé (au temps = 9 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:10 (1 * 10 = 10).  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
  Un <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> temps clé divise le temps disponible équitablement par le nombre d’images clés pour déterminer l’heure de fin de chaque image clé. L’exemple suivant illustre une animation avec une durée de 10 secondes et quatre images clés dont les temps clés sont spécifiés comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
--   La première image clé s’anime entre la valeur de base et 100 pendant les 2,5 premières secondes, et se termine au temps = 0:0:2.5.  
+- La première image clé s’anime entre la valeur de base et 100 pendant les 2,5 premières secondes, et se termine au temps = 0:0:2.5.  
   
--   La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 2,5 secondes) et est lue pendant environ 2,5 secondes, pour se terminer au temps = 0:0:5.  
+- La deuxième image clé s’anime de 100 à 200. Elle démarre après la fin de la première image clé (au temps = 2,5 secondes) et est lue pendant environ 2,5 secondes, pour se terminer au temps = 0:0:5.  
   
--   La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 5 secondes) et est lue pendant 2,5 secondes, pour se terminer au temps = 0:0:7.5.  
+- La troisième image clé s’anime de 200 à 500. Elle démarre après la fin de la deuxième image clé (au temps = 5 secondes) et est lue pendant 2,5 secondes, pour se terminer au temps = 0:0:7.5.  
   
--   La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la deuxième image clé (au temps = 7,5 secondes) et est lue pendant 2,5 secondes, pour se terminer au temps = 0:0:1.  
+- La quatrième image clé s’anime de 500 à 600. Elle démarre après la fin de la deuxième image clé (au temps = 7,5 secondes) et est lue pendant 2,5 secondes, pour se terminer au temps = 0:0:1.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
 2. Déterminez le *temps total d’interpolation* de l’animation, c’est-à-dire la durée totale nécessaire à l’animation d’image clé pour exécuter une itération avancée.  
   
-    1.  Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> n’est pas <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, le temps total d’interpolation est la valeur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété.  
+    1. Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> n’est pas <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, le temps total d’interpolation est la valeur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété.  
   
-    2.  Sinon, le temps total d’interpolation est le plus grand <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeur spécifiée parmi ses images clés, le cas échéant.  
+    2. Sinon, le temps total d’interpolation est le plus grand <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeur spécifiée parmi ses images clés, le cas échéant.  
   
-    3.  Sinon, le temps total d’interpolation est de 1 seconde.  
+    3. Sinon, le temps total d’interpolation est de 1 seconde.  
   
 3. Utiliser la valeur de temps total d’interpolation pour résoudre <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   

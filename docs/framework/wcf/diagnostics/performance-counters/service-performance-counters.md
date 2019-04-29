@@ -3,11 +3,11 @@ title: Compteurs de performance de service
 ms.date: 03/30/2017
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
 ms.openlocfilehash: dc31e05f82f232095f6560c8fdd9bf75c040e2ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773437"
 ---
 # <a name="service-performance-counters"></a>Compteurs de performance de service
 Les compteurs de performance de service mesurent le comportement du service dans son ensemble et peuvent être utilisés pour diagnostiquer les performances de la totalité du service. Ils se trouvent sous l'objet de performance `ServiceModelService 4.0.0.0` dans l'affichage de l'analyseur de performances (Perfmon.exe). Les instances sont nommées à l'aide du modèle suivant :  

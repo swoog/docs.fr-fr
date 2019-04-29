@@ -3,11 +3,11 @@ title: Workflows d'organigramme
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
 ms.openlocfilehash: 1840f677929509e4902498c5aa8920f49cb13496
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773592"
 ---
 # <a name="flowchart-workflows"></a>Workflows d'organigramme
 
@@ -15,7 +15,7 @@ Un organigramme est un paradigme connu pour la conception de programmes. L'activ
 
 ## <a name="flowchart-workflow-structure"></a>Structure de workflow d’organigramme
 
- Une activité Flowchart est une activité qui contient une collection d’activités à exécuter.  Les organigrammes contiennent également des éléments de contrôle de flux tels que <xref:System.Activities.Statements.FlowDecision> et <xref:System.Activities.Statements.FlowSwitch%601> qui dirigent l'exécution entre les activités contenues en fonction des valeurs des variables.
+ Une activité Flowchart est une activité qui contient une collection d'activités à exécuter.  Les organigrammes contiennent également des éléments de contrôle de flux tels que <xref:System.Activities.Statements.FlowDecision> et <xref:System.Activities.Statements.FlowSwitch%601> qui dirigent l'exécution entre les activités contenues en fonction des valeurs des variables.
 
 ## <a name="types-of-flow-nodes"></a>Types de nœuds de flux
 
@@ -82,7 +82,7 @@ Pour modéliser un nœud de flux conditionnel dans un workflow d'organigramme (a
 
 ### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>Création d’un commutateur exclusif avec un nœud FlowSwitch
 
-Pour modéliser un organigramme dans lequel un chemin d'accès exclusif est sélectionné selon une valeur correspondante, le nœud <xref:System.Activities.Statements.FlowSwitch%601> est utilisé. La propriété <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> est définie sur un élément <xref:System.Activities.Activity%601> avec un paramètre de type <xref:System.Object> qui détermine la valeur de correspondance. La propriété <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> définit un dictionnaire de clés et d'objets <xref:System.Activities.Statements.FlowNode> à mettre en correspondance avec l'expression conditionnelle, ainsi qu'un jeu d'objets <xref:System.Activities.Statements.FlowNode> qui détermine le flux de l'exécution si une correspondance est établie avec l'expression conditionnelle. <xref:System.Activities.Statements.FlowSwitch%601> définit également une propriété <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> qui détermine le flux de l'exécution si aucune correspondance n'est établie avec l'expression conditionnelle. L'exemple suivant montre comment définir un workflow qui utilise un élément <xref:System.Activities.Statements.FlowSwitch%601>.
+Pour modéliser un organigramme dans lequel un chemin d’accès exclusif est sélectionné selon une valeur correspondante, le nœud <xref:System.Activities.Statements.FlowSwitch%601> est utilisé. La propriété <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> est définie sur un élément <xref:System.Activities.Activity%601> avec un paramètre de type <xref:System.Object> qui détermine la valeur de correspondance. La propriété <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> définit un dictionnaire de clés et d'objets <xref:System.Activities.Statements.FlowNode> à mettre en correspondance avec l'expression conditionnelle, ainsi qu'un jeu d'objets <xref:System.Activities.Statements.FlowNode> qui détermine le flux de l'exécution si une correspondance est établie avec l'expression conditionnelle. <xref:System.Activities.Statements.FlowSwitch%601> définit également une propriété <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> qui détermine le flux de l'exécution si aucune correspondance n'est établie avec l'expression conditionnelle. L'exemple suivant montre comment définir un workflow qui utilise un élément <xref:System.Activities.Statements.FlowSwitch%601>.
 
 ```xml
 <Flowchart>

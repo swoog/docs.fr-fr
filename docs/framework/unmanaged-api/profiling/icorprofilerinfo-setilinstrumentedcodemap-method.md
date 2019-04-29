@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792637"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap, méthode
 Définit une carte de code pour la fonction spécifiée à l’aide d’entrées de mappage Microsoft intermediate language (MSIL) spécifiées.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  Le débogueur suppose que chaque ancien offset fait référence à un offset MSIL dans le code MSIL non modifié d’origine, et que chaque nouveau décalage fait référence à l’offset MSIL dans le nouveau code instrumenté. Le mappage doit être trié par ordre croissant. Pour le pas à pas fonctionne correctement, suivez ces instructions :  
   
--   Ne réorganisez pas le code MSIL instrumenté.  
+- Ne réorganisez pas le code MSIL instrumenté.  
   
--   Ne supprimez pas le code MSIL d’origine.  
+- Ne supprimez pas le code MSIL d’origine.  
   
--   Inclure des entrées pour tous les points de séquence à partir du fichier de base de données (PDB) du programme dans le mappage. Le mappage n’interpole pas les entrées manquantes. Ainsi, étant donné le plan suivant :  
+- Inclure des entrées pour tous les points de séquence à partir du fichier de base de données (PDB) du programme dans le mappage. Le mappage n’interpole pas les entrées manquantes. Ainsi, étant donné le plan suivant :  
   
      (0 ancien, 0 nouveau)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 ancien, 20 nouveaux)  
   
-    -   Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé à nouveau décalage 0.  
+    - Un ancien offset de 0, 1, 2, 3 ou 4 sera mappé à nouveau décalage 0.  
   
-    -   Un ancien offset de 5, 6, 7 ou 8 sera mappé à nouveau décalage de 10.  
+    - Un ancien offset de 5, 6, 7 ou 8 sera mappé à nouveau décalage de 10.  
   
-    -   Un ancien offset de 9 ou version ultérieure sera mappé à nouveau décalage de 20.  
+    - Un ancien offset de 9 ou version ultérieure sera mappé à nouveau décalage de 20.  
   
-    -   Un nouveau décalage de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
+    - Un nouveau décalage de 0, 1, 2, 3, 4, 5, 6, 7, 8 ou 9 sera mappé à l’ancien offset 0.  
   
-    -   Un nouveau décalage de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
+    - Un nouveau décalage de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 sera mappé à l’ancien offset 5.  
   
-    -   Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
+    - Un nouveau décalage supérieur ou égal à 20 sera mappé à l’ancien offset 9.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

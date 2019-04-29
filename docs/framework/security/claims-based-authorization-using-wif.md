@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792832"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorisation basée sur les revendications utilisant WIF
 Dans une application de partie de confiance, une autorisation détermine les ressources auxquelles une identité authentifié est autorisé à accéder et les opérations qu'elle est autorisée à exécuter sur ces ressources. Une autorisation incorrecte ou faible entraîne la divulgation d'informations et la falsification de données. Cette rubrique présente les méthodes disponibles pour implémenter une autorisation pour les applications Web ASP.NET qui prennent en charge les revendications et les services qui utilisent Windows Identity Foundation (WIF) et le service d'émission de jetons de sécurité (STS), par exemple, le service de contrôle d'accès (ACS) Microsoft Azure.  
@@ -25,13 +25,13 @@ Dans une application de partie de confiance, une autorisation détermine les res
 ### <a name="iprincipalisinrole-method"></a>Méthode IPrincipal.IsInRole  
  Pour implémenter la méthode RBAC dans les applications prenant en charge les revendications, utilisez la méthode **IsInRole()** dans l’interface **IPrinicpal**, comme vous le feriez dans des applications qui ne prennent pas en charge les revendications. Il existe plusieurs façons d’utiliser la méthode **IsInRole()**  :  
   
--   En appelant explicitement **IPrincipal.IsInRole("Administrator")**. Dans cette approche, les résultats sont une valeur booléenne. Utilisez-les dans vos instructions conditionnelles. Ils peuvent être utilisés arbitrairement n'importe où dans votre code.  
+- En appelant explicitement **IPrincipal.IsInRole("Administrator")**. Dans cette approche, les résultats sont une valeur booléenne. Utilisez-les dans vos instructions conditionnelles. Ils peuvent être utilisés arbitrairement n'importe où dans votre code.  
   
--   En utilisant la demande de sécurité **PrincipalPermission.Demand()**. Dans cette approche, le résultat est une exception si jamais la demande n'est pas satisfaite. Cela doit répondre à votre stratégie de gestion des exceptions. La levée d’exceptions est beaucoup plus coûteuse du point de vue des performances que le retour de valeurs booléennes. Elle peut être utilisée n'importe où dans votre code.  
+- En utilisant la demande de sécurité **PrincipalPermission.Demand()**. Dans cette approche, le résultat est une exception si jamais la demande n'est pas satisfaite. Cela doit répondre à votre stratégie de gestion des exceptions. La levée d’exceptions est beaucoup plus coûteuse du point de vue des performances que le retour de valeurs booléennes. Elle peut être utilisée n'importe où dans votre code.  
   
--   En utilisant les attributs déclaratifs **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Cette approche est appelée déclarative parce qu'elle est utilisée pour décorer les méthodes. Elle ne peut pas être utilisée dans les blocs de code dans les implémentations de la méthode. Le résultat est une exception si jamais la demande n'est pas satisfaite. Vous devez vous assurer qu'elle répond à votre stratégie de gestion des exceptions.  
+- En utilisant les attributs déclaratifs **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Cette approche est appelée déclarative parce qu'elle est utilisée pour décorer les méthodes. Elle ne peut pas être utilisée dans les blocs de code dans les implémentations de la méthode. Le résultat est une exception si jamais la demande n'est pas satisfaite. Vous devez vous assurer qu'elle répond à votre stratégie de gestion des exceptions.  
   
--   En utilisant l’autorisation d’URL, à l’aide de la section **\<authorization>** dans **web.config**. Cette approche convient lorsque vous gérez une autorisation au niveau d'une URL. Il s'agit du niveau le plus simple parmi ceux précédemment mentionnés. L'avantage de cette méthode est que des modifications sont apportées au fichier de configuration, ce qui signifie que le code ne doit pas être compilé pour tirer parti de la modification.  
+- En utilisant l’autorisation d’URL, à l’aide de la section **\<authorization>** dans **web.config**. Cette approche convient lorsque vous gérez une autorisation au niveau d'une URL. Il s'agit du niveau le plus simple parmi ceux précédemment mentionnés. L'avantage de cette méthode est que des modifications sont apportées au fichier de configuration, ce qui signifie que le code ne doit pas être compilé pour tirer parti de la modification.  
   
 ### <a name="expressing-roles-as-claims"></a>Expression de rôles comme revendications  
  Quand la méthode **IsInRole()** est appelée, un contrôle est effectué pour déterminer si l’utilisateur actif détient ce rôle. Dans les applications qui prennent en charge les revendications, le rôle est exprimé par un rôle de revendication qui doit être disponible dans le jeton. Le type de revendication du rôle est exprimé à l'aide de l'URI suivante :  
@@ -40,11 +40,11 @@ Dans une application de partie de confiance, une autorisation détermine les res
   
  Il existe plusieurs façons d'enrichir un jeton avec un type de revendication du rôle :  
   
--   **Lors de l’émission de jeton**. Quand un utilisateur est authentifié, la revendication de rôle peut être émise par le STS du fournisseur d’identité ou par un fournisseur de fédération tel que le service de contrôle d’accès (ACS) Microsoft Azure.  
+- **Lors de l’émission de jeton**. Quand un utilisateur est authentifié, la revendication de rôle peut être émise par le STS du fournisseur d’identité ou par un fournisseur de fédération tel que le service de contrôle d’accès (ACS) Microsoft Azure.  
   
--   **Transformation des revendications aléatoires en type de rôle de revendications à l’aide de ClaimsAuthenticationManager**. ClaimsAuthorizationManager est un composant qui fournit une partie du WIF. Il permet aux demandes d'être interceptées lorsqu'elles lancent une application, en inspectant des jetons et en les transformant par l'ajout, la modification, ou la suppression de revendications. Pour plus d’informations sur l’utilisation de ClaimsAuthenticationManager pour transformer les revendications, consultez [How To : Contrôle d’accès (RBAC) en fonction du rôle de l’implémenter dans une Application ASP.NET prenant en charge de revendications à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Transformation des revendications aléatoires en type de rôle de revendications à l’aide de ClaimsAuthenticationManager**. ClaimsAuthorizationManager est un composant qui fournit une partie du WIF. Il permet aux demandes d'être interceptées lorsqu'elles lancent une application, en inspectant des jetons et en les transformant par l'ajout, la modification, ou la suppression de revendications. Pour plus d’informations sur l’utilisation de ClaimsAuthenticationManager pour transformer les revendications, consultez [How To : Contrôle d’accès (RBAC) en fonction du rôle de l’implémenter dans une Application ASP.NET prenant en charge de revendications à l’aide de WIF et ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Mappage des revendications arbitraires à un type de rôle à l’aide de la section de configuration samlSecurityTokenRequirement** : une approche déclarative dans laquelle la transformation des revendications est effectuée à l’aide de la configuration et aucun codage n’est nécessaire.  
+- **Mappage des revendications arbitraires à un type de rôle à l’aide de la section de configuration samlSecurityTokenRequirement** : une approche déclarative dans laquelle la transformation des revendications est effectuée à l’aide de la configuration et aucun codage n’est nécessaire.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Autorisation basée sur des revendications  

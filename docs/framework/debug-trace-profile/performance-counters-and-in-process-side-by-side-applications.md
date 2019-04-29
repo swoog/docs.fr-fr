@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775854"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Compteurs de performance et applications côte à côte in-process
 À l’aide de l’Analyseur de performances (Perfmon.exe), il est possible de différencier les compteurs de performance pour chaque runtime. Cette rubrique décrit la modification du Registre nécessaire pour activer cette fonctionnalité.  
@@ -25,9 +25,9 @@ ms.locfileid: "33392016"
 ## <a name="the-default-behavior"></a>Comportement par défaut  
  Par défaut, l’Analyseur de performances affiche les compteurs de performance pour chaque application. Toutefois, il existe deux scénarios dans lesquels cela pose problème :  
   
--   Quand vous surveillez deux applications qui ont le même nom. Par exemple, si les deux applications se nomment MonApp.exe, l’une sera affichée en tant que **MonApp** et l’autre en tant que **MonApp#1** dans la colonne **Instance**. Dans ce cas, il est difficile de faire correspondre un compteur de performance à une application particulière. On ne sait pas trop si les données recueillies pour **MonApp#1** font référence à la première MonApp.exe ou à la deuxième MonApp.exe.  
+- Quand vous surveillez deux applications qui ont le même nom. Par exemple, si les deux applications se nomment MonApp.exe, l’une sera affichée en tant que **MonApp** et l’autre en tant que **MonApp#1** dans la colonne **Instance**. Dans ce cas, il est difficile de faire correspondre un compteur de performance à une application particulière. On ne sait pas trop si les données recueillies pour **MonApp#1** font référence à la première MonApp.exe ou à la deuxième MonApp.exe.  
   
--   Quand une application utilise plusieurs instances du Common Language Runtime. Le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] prend en charge les scénarios d’hébergement côte à côte in-process ; autrement dit, un même processus ou une même application peut charger plusieurs instances du Common Language Runtime. Si une application nommée MonApp.exe charge deux instances d’exécution par défaut, elles sont désignées dans la colonne **Instance** en tant que **MonApp** et **MonApp#1**. Dans ce cas, il est difficile de savoir si **MonApp** et **MonApp#1** font référence à deux applications portant le même nom ou à la même application avec deux runtimes. Si plusieurs applications du même nom chargent plusieurs runtimes, il y a encore plus d’ambiguïté.  
+- Quand une application utilise plusieurs instances du Common Language Runtime. Le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] prend en charge les scénarios d’hébergement côte à côte in-process ; autrement dit, un même processus ou une même application peut charger plusieurs instances du Common Language Runtime. Si une application nommée MonApp.exe charge deux instances d’exécution par défaut, elles sont désignées dans la colonne **Instance** en tant que **MonApp** et **MonApp#1**. Dans ce cas, il est difficile de savoir si **MonApp** et **MonApp#1** font référence à deux applications portant le même nom ou à la même application avec deux runtimes. Si plusieurs applications du même nom chargent plusieurs runtimes, il y a encore plus d’ambiguïté.  
   
  Vous pouvez définir une clé de Registre pour lever cette ambiguïté. Pour les applications développées à l’aide du [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], cette modification du Registre ajoute un identificateur de processus suivi d’un identificateur d’instance de runtime au nom de l’application dans la colonne **Instance**. Au lieu de *application* ou *application*#1, l’application est maintenant identifiée comme *application*_`p`*ID_processus* \_ `r` *ID_runtime* dans la colonne **Instance**. Si une application a été développée à l’aide d’une version antérieure du Common Language Runtime, cette instance est représentée en tant que *application\_*`p`*ID_processus* à condition que le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] soit installé.  
   

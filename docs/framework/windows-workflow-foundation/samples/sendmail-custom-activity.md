@@ -3,11 +3,11 @@ title: Activité personnalisée SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785942"
 ---
 # <a name="sendmail-custom-activity"></a>Activité personnalisée SendMail
 Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L’activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> pour envoyer un e-mail de façon asynchrone et d’envoyer des messages avec l’authentification. Elle fournit aussi certaines fonctionnalités d'utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d'accès de dépôt de test.  
@@ -107,13 +107,13 @@ new SendMail
   
  Pour plus d’informations sur la configuration d’un serveur SMTP, consultez les liens suivants.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configuration du Service SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Configuration du Service SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0 : Configurer la messagerie électronique SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0 : Configurer la messagerie électronique SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Comment installer le Service SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Comment installer le Service SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Les émulateurs SMTP fournis par des tiers ne sont pas disponibles pour le téléchargement.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766264"
 ---
 # <a name="using-nested-graphics-containers"></a>Utilisation de conteneurs graphiques imbriqués
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit des conteneurs que vous pouvez utiliser pour remplacer ou augmenter la partie de l’état dans temporairement un <xref:System.Drawing.Graphics> objet. Vous créez un conteneur en appelant le <xref:System.Drawing.Graphics.BeginContainer%2A> méthode d’un <xref:System.Drawing.Graphics> objet. Vous pouvez appeler <xref:System.Drawing.Graphics.BeginContainer%2A> à plusieurs reprises pour former des conteneurs imbriqués. Chaque appel à <xref:System.Drawing.Graphics.BeginContainer%2A> doit être associé à un appel à <xref:System.Drawing.Graphics.EndContainer%2A>.  

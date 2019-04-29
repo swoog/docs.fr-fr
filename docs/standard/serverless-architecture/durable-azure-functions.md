@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776010"
 ---
-# <a name="durable-azure-functions"></a>Azure functions durables
+# <a name="durable-azure-functions"></a>Fonctions Azure durables
 
 Lorsque vous créez des applications sans serveur avec Azure Functions, vos opérations seront généralement conçues pour s’exécuter sans état. La raison de ce choix de conception est, car comme les échelles de plateforme, il devient difficile de savoir quels serveurs le code est en cours d’exécution. Il devient également difficile de savoir combien d’instances est actifs à un moment donné. Toutefois, il existe des classes d’applications qui nécessitent l’état actuel d’un processus connu. Considérons le processus de soumission d’une commande à un magasin en ligne. L’opération d’extraction peut être un flux de travail qui se compose de plusieurs opérations qui doivent connaître l’état du processus. Ces informations peuvent inclure l’inventaire de produits, si le client dispose d’aucun crédit sur leur compte et également les résultats du traitement de la carte de crédit. Ces opérations peuvent être facilement leurs propres flux de travail interne ou un voire des services à partir des systèmes tiers.
 
