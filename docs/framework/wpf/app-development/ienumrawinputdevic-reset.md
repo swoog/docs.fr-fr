@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Reset method [WPF]
 ms.assetid: 6f3255f0-90e0-4736-b184-c1d3b8387bd3
 ms.openlocfilehash: cf3885f34809fc1b35eef3035bd5ae829372d9d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949771"
 ---
-# <a name="ienumrawinputdevicreset"></a><span data-ttu-id="42302-102">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="42302-102">IEnumRAWINPUTDEVIC:Reset</span></span>
-<span data-ttu-id="42302-103">Réinitialise la séquence d'énumération au début.</span><span class="sxs-lookup"><span data-stu-id="42302-103">Resets the enumeration sequence to the beginning.</span></span>  
+# <a name="ienumrawinputdevicreset"></a><span data-ttu-id="e1ca4-102">IEnumRAWINPUTDEVIC:Reset</span><span class="sxs-lookup"><span data-stu-id="e1ca4-102">IEnumRAWINPUTDEVIC:Reset</span></span>
+<span data-ttu-id="e1ca4-103">Réinitialise la séquence d'énumération au début.</span><span class="sxs-lookup"><span data-stu-id="e1ca4-103">Resets the enumeration sequence to the beginning.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42302-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="42302-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1ca4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e1ca4-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="42302-105">Valeur de propriété/valeur de retour</span><span class="sxs-lookup"><span data-stu-id="42302-105">Property Value/Return Value</span></span>  
- <span data-ttu-id="42302-106">HRESULT : S_OK.</span><span class="sxs-lookup"><span data-stu-id="42302-106">HRESULT: S_OK.</span></span>
+## <a name="property-valuereturn-value"></a><span data-ttu-id="e1ca4-105">Valeur de propriété/valeur de retour</span><span class="sxs-lookup"><span data-stu-id="e1ca4-105">Property Value/Return Value</span></span>  
+ <span data-ttu-id="e1ca4-106">HRESULT : S_OK.</span><span class="sxs-lookup"><span data-stu-id="e1ca4-106">HRESULT: S_OK.</span></span>
