@@ -3,11 +3,11 @@ title: Transacted MSMQ Binding
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759984"
 ---
 # <a name="transacted-msmq-binding"></a>Transacted MSMQ Binding
 
@@ -92,7 +92,7 @@ Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fic
 > [!NOTE]
 > Le nom de la file d’attente comporte un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès lors de la création de la file d’attente à l’aide de <xref:System.Messaging>. Le point de terminaison Windows Communication Foundation (WCF) utilise l’adresse de la file d’attente avec le modèle net.msmq, « localhost » pour désigner l’ordinateur local et utilise des barres obliques dans son chemin d’accès.
 
-Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.
+Le client crée une étendue de transaction. La communication avec la file d’attente a lieu dans l’étendue de la transaction, entraînant son traitement en tant qu’une unité atomique dans laquelle tous les messages sont envoyés à la file d’attente ou aucun des messages n’est envoyé à la file d’attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.
 
 ```csharp
 // Create a client.

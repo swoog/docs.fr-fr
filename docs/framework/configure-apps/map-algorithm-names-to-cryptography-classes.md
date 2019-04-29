@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700810"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mappage de noms d'algorithmes à des classes de chiffrement
 Il existe quatre façons un développeur peut créer un objet de chiffrement à l’aide de la [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   Créer un objet à l’aide de la **nouveau** opérateur.  
+- Créer un objet à l’aide de la **nouveau** opérateur.  
   
--   Créer un objet qui implémente un algorithme de chiffrement particulier en appelant le **créer** méthode sur la classe abstraite pour cet algorithme.  
+- Créer un objet qui implémente un algorithme de chiffrement particulier en appelant le **créer** méthode sur la classe abstraite pour cet algorithme.  
   
--   Créer un objet qui implémente un algorithme de chiffrement particulier en appelant le <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> (méthode).  
+- Créer un objet qui implémente un algorithme de chiffrement particulier en appelant le <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> (méthode).  
   
--   Créer un objet qui implémente une classe d’algorithmes de chiffrement (par exemple, un chiffrement par bloc symétriques) en appelant le **créer** méthode sur la classe abstraite pour ce type d’algorithme (tel que <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Créer un objet qui implémente une classe d’algorithmes de chiffrement (par exemple, un chiffrement par bloc symétriques) en appelant le **créer** méthode sur la classe abstraite pour ce type d’algorithme (tel que <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Par exemple, qu'un développeur souhaite calculer le hachage SHA1 d’un jeu d’octets. Le <xref:System.Security.Cryptography> espace de noms contient deux implémentations de l’algorithme SHA1, une implémentation purement managée et une autre qui encapsule CryptoAPI. Le développeur peut choisir instancier une implémentation particulière de SHA1 (telles que la <xref:System.Security.Cryptography.SHA1Managed>) en appelant le **nouveau** opérateur. Toutefois, si elle n’a pas d’importance du common language runtime charge tant que la classe implémente l’algorithme de hachage SHA1, le développeur peut créer un objet en appelant le <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> (méthode). Cette méthode appelle **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, qui doit retourner une implémentation de l’algorithme de hachage SHA1.  
   

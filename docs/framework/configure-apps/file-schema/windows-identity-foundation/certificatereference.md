@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
 ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667377"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
 Spécifie les paramètres qui sont utilisés pour rechercher et valider le certificat X.509 dans un magasin de certificats.  
@@ -43,10 +43,10 @@ Spécifie les paramètres qui sont utilisés pour rechercher et valider le certi
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|storeName|Le nom du magasin de certificats X.509. La valeur par défaut est « My ». Facultatif.|  
-|storeLocation|Un <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valeur qui spécifie l’emplacement du magasin de certificats X.509. La valeur par défaut est « LocalMachine ». Facultatif.|  
-|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valeur qui spécifie le type de recherche doit être exécuté. La valeur par défaut est « FindBySubjectDistinguishedName ». Facultatif.|  
-|findValue|Valeur à rechercher dans le magasin de certificats X.509. Facultatif.|  
+|storeName|Le nom du magasin de certificats X.509. La valeur par défaut est « My ». Optionnel.|  
+|storeLocation|Un <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valeur qui spécifie l’emplacement du magasin de certificats X.509. La valeur par défaut est « LocalMachine ». Optionnel.|  
+|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valeur qui spécifie le type de recherche doit être exécuté. La valeur par défaut est « FindBySubjectDistinguishedName ». Optionnel.|  
+|findValue|Valeur à rechercher dans le magasin de certificats X.509. Optionnel.|  
 |isChainIncluded|Spécifie si la validation doit être effectuée à l’aide de la chaîne de certificats. La valeur par défaut est « true » ; la validation est effectuée à l’aide de la chaîne de certificats. Facultatif.|  
   
 ### <a name="child-elements"></a>Éléments enfants  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701019"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock, méthode
 Retourne le thread managé qui possède le verrou du moniteur sur cet objet.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Notes  
  Si un thread managé possède le verrou du moniteur sur cet objet :  
   
--   La méthode retourne S_OK.  
+- La méthode retourne S_OK.  
   
--   L’objet thread est valide jusqu'à ce que le thread se termine.  
+- L’objet thread est valide jusqu'à ce que le thread se termine.  
   
  Si aucun thread managé ne possède le verrou du moniteur sur cet objet, `ppThread` et `pAcquisitionCount` sont identiques, et la méthode retourne S_FALSE.  
   

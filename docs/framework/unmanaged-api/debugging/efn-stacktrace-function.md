@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698315"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace, fonction
 Fournit une représentation textuelle d'une trace de pile managée et un tableau d'enregistrements `CONTEXT` pour chaque transition entre du code non managé et du code managé.  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>Notes  
  Le `_EFN_StackTrace` structure peut être appelée à partir d’une interface de programmation WinDbg. Paramètres sont utilisés comme suit :  
   
--   Si `wszTextOut` a la valeur null et `puiTextLength` est non null, la fonction retourne la longueur de chaîne dans `puiTextLength`.  
+- Si `wszTextOut` a la valeur null et `puiTextLength` est non null, la fonction retourne la longueur de chaîne dans `puiTextLength`.  
   
--   Si `wszTextOut` est non null, la fonction stocke le texte dans `wszTextOut` jusqu'à l’emplacement indiqué par `puiTextLength`. Il retourne une valeur si il y a suffisamment d’espace dans la mémoire tampon, ou retourne E_OUTOFMEMORY si la mémoire tampon n’est pas assez long.  
+- Si `wszTextOut` est non null, la fonction stocke le texte dans `wszTextOut` jusqu'à l’emplacement indiqué par `puiTextLength`. Il retourne une valeur si il y a suffisamment d’espace dans la mémoire tampon, ou retourne E_OUTOFMEMORY si la mémoire tampon n’est pas assez long.  
   
--   La partie de la transition de la fonction est ignorée si `pTransitionContexts` et `puiTransitionContextCount` sont tous deux null. Dans ce cas, la fonction fournit les appelants avec sortie texte du uniquement les noms de fonction.  
+- La partie de la transition de la fonction est ignorée si `pTransitionContexts` et `puiTransitionContextCount` sont tous deux null. Dans ce cas, la fonction fournit les appelants avec sortie texte du uniquement les noms de fonction.  
   
--   Si `pTransitionContexts` a la valeur null et `puiTransitionContextCount` est non null, la fonction retourne le nombre nécessaire d’entrées de contexte dans `puiTransitionContextCount`.  
+- Si `pTransitionContexts` a la valeur null et `puiTransitionContextCount` est non null, la fonction retourne le nombre nécessaire d’entrées de contexte dans `puiTransitionContextCount`.  
   
--   Si `pTransitionContexts` est non null, la fonction traite comme un tableau de structures de longueur `puiTransitionContextCount`. La taille de la structure est fournie par `uiSizeOfContext`, et doit être la taille de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` pour l’architecture.  
+- Si `pTransitionContexts` est non null, la fonction traite comme un tableau de structures de longueur `puiTransitionContextCount`. La taille de la structure est fournie par `uiSizeOfContext`, et doit être la taille de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` pour l’architecture.  
   
--   `wszTextOut` est écrit dans le format suivant :  
+- `wszTextOut` est écrit dans le format suivant :  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Si l’offset en hexadécimal est 0 x 0, aucun offset n’est écrit.  
+- Si l’offset en hexadécimal est 0 x 0, aucun offset n’est écrit.  
   
--   S’il n’existe aucun code managé sur le thread actuellement dans le contexte, la fonction retourne alors SOS_E_NOMANAGEDCODE.  
+- S’il n’existe aucun code managé sur le thread actuellement dans le contexte, la fonction retourne alors SOS_E_NOMANAGEDCODE.  
   
--   Le `Flags` paramètre est 0 ou SOS_STACKTRACE_SHOWADDRESSES pour voir EBP et ESP devant chaque `module!functionname` ligne. Par défaut, il est 0.  
+- Le `Flags` paramètre est 0 ou SOS_STACKTRACE_SHOWADDRESSES pour voir EBP et ESP devant chaque `module!functionname` ligne. Par défaut, il est 0.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

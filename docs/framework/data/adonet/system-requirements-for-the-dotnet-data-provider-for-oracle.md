@@ -3,11 +3,11 @@ title: Configuration requise pour le fournisseur de données .NET Framework pou
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
 ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698406"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Configuration requise pour le fournisseur de données .NET Framework pour Oracle
 Le fournisseur de données .NET Framework pour Oracle requiert l'installation de Microsoft Data Access Components (MDAC) version 2.6 ou ultérieure. MDAC 2.8 SP1 est recommandé.  

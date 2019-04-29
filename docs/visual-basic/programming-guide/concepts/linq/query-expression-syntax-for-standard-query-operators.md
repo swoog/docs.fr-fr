@@ -3,11 +3,11 @@ title: Syntaxe d’Expression de requête pour les opérateurs de requête Stand
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766530"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Syntaxe d’Expression de requête pour les opérateurs de requête Standard (Visual Basic)
 Certains des opérateurs de requête standard plus fréquemment utilisés ont une dédiée syntaxe mot clé du langage Visual Basic qui leur permet d’être appelée comme partie d’un *expression de requête*. Une expression de requête est une façon différente et plus lisible d’exprimer une requête que son équivalent *fondé sur une méthode*. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation.  

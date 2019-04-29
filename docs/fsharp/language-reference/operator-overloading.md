@@ -3,11 +3,11 @@ title: Surcharge d'opérateur
 description: Découvrez comment surcharger des opérateurs arithmétiques dans une classe ou un type d’enregistrement et au niveau global dans F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666246"
 ---
 # <a name="operator-overloading"></a>Surcharge d'opérateur
 
@@ -97,7 +97,7 @@ Le tableau suivant répertorie les opérateurs standards et les noms générés 
 
 Autres combinaisons de caractères d’opérateur qui ne sont pas répertoriés ici peuvent être utilisés comme opérateurs et ont des noms qui sont composés en concaténant les noms pour les caractères individuels dans le tableau suivant. Par exemple, + ! devient `op_PlusBang`.
 
-|Caractère d’opérateur|Name|
+|Caractère d’opérateur|Nom|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|

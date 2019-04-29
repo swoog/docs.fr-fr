@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758455"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilation conditionnelle en Visual Basic
 Dans *compilation conditionnelle*, blocs de code dans un programme spécifiques compiler de façon sélective tandis que d’autres sont ignorés.  
@@ -29,11 +29,11 @@ Dans *compilation conditionnelle*, blocs de code dans un programme spécifiques 
 ## <a name="declaring-conditional-compilation-constants"></a>Déclarer des constantes de Compilation conditionnelle  
  Vous pouvez définir des constantes de compilation conditionnelle dans un des trois façons :  
   
--   Dans le **du Concepteur de projets**  
+- Dans le **du Concepteur de projets**  
   
--   Sur la ligne de commande lorsque vous utilisez le compilateur de ligne de commande  
+- Sur la ligne de commande lorsque vous utilisez le compilateur de ligne de commande  
   
--   Dans votre code  
+- Dans votre code  
   
  Constantes de compilation conditionnelle ont une portée spéciale et ne sont pas accessibles à partir du code standard. La portée d’une constante de compilation conditionnelle est dépendante de la façon dont elle est définie. Le tableau suivant répertorie la portée des constantes déclarées à l’aide de chacun des trois méthodes mentionnées ci-dessus.  
   

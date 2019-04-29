@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777453"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport, interface
 Fournit des méthodes pour importer et manipuler les métadonnées existantes à partir d'un fichier exécutable portable (PE) ou d'une autre source, comme une bibliothèque de types ou un fichier binaire de métadonnées autonome au moment de l'exécution.  
@@ -96,13 +96,13 @@ Fournit des méthodes pour importer et manipuler les métadonnées existantes à
 ## <a name="remarks"></a>Notes  
  La vocation première de la conception de l'interface `IMetaDataImport` est d'être utilisée par les outils et services qui importent des informations de type (par exemple, les outils de développement) ou qui gèrent des composants déployés (par exemple, les services de résolution/d'activation). Les méthodes `IMetaDataImport` appartiennent aux catégories de tâches suivantes :  
   
--   Énumération des collections d'éléments dans la portée des métadonnées.  
+- Énumération des collections d'éléments dans la portée des métadonnées.  
   
--   Recherche d'un élément qui possède un ensemble spécifique de caractéristiques.  
+- Recherche d'un élément qui possède un ensemble spécifique de caractéristiques.  
   
--   Obtention des propriétés d'un élément spécifié.  
+- Obtention des propriétés d'un élément spécifié.  
   
--   Les méthodes Get sont conçues spécifiquement pour retourner les propriétés à valeur unique d'un élément de métadonnées. Quand la propriété est une référence à un autre élément, un jeton est retourné pour cet élément. Tout type d'entrée de pointeur peut être NULL pour indiquer que la valeur particulière n'est pas demandée. Pour obtenir les propriétés qui sont essentiellement des objets de collection (par exemple, la collection des interfaces qu’une classe implémente), utilisez les méthodes d’énumération.  
+- Les méthodes Get sont conçues spécifiquement pour retourner les propriétés à valeur unique d'un élément de métadonnées. Quand la propriété est une référence à un autre élément, un jeton est retourné pour cet élément. Tout type d'entrée de pointeur peut être NULL pour indiquer que la valeur particulière n'est pas demandée. Pour obtenir les propriétés qui sont essentiellement des objets de collection (par exemple, la collection des interfaces qu’une classe implémente), utilisez les méthodes d’énumération.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

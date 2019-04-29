@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
 ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756869"
 ---
 # <a name="nested-types"></a>Types imbriqués
 Un type imbriqué est un type défini dans l’étendue d’un autre type, qui est appelé le type englobant. Un type imbriqué a accès à tous les membres de son type englobant. Par exemple, il a accès aux champs privés définis dans le type englobant et protégés des champs définis dans tous les ascendants du type englobant.  

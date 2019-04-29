@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762486"
 ---
 # <a name="one-way-services"></a>Services monodirectionnels
 Le comportement par défaut d'une opération de service est le modèle demande-réponse. Dans un modèle demande-réponse, le client attend le message de réponse, même si l'opération de service est représentée dans le code en tant que méthode `void`. Avec une opération monodirectionnelle, un seul message est transmis. Le récepteur n'envoie pas de message de réponse, l'expéditeur n'en attend pas.  
   
  Utilisez le modèle de design monodirectionnel :  
   
--   Lorsque le client doit appeler des opérations et n'est pas affecté par le résultat de l'opération au niveau de l'opération.  
+- Lorsque le client doit appeler des opérations et n'est pas affecté par le résultat de l'opération au niveau de l'opération.  
   
--   Lorsque vous utilisez la classe <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Pour plus d’informations sur ce scénario, consultez [files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Lorsque vous utilisez la classe <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Pour plus d’informations sur ce scénario, consultez [files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Lorsqu'une opération est monodirectionnelle, il n'y a pas de message pour renvoyer des informations sur l'erreur au client. Vous pouvez détecter des conditions d’erreur à l’aide de fonctionnalités de la liaison sous-jacente, telle que les sessions fiables, ou en concevant un contrat de service duplex qui utilise deux opérations monodirectionnelles : un contrat monodirectionnel du client au service afin d’appeler l’opération de service, et un autre contrat monodirectionnel entre le service et le client afin que le service puisse renvoyer des erreurs au client à l’aide d’un rappel que le client implémente.  
   

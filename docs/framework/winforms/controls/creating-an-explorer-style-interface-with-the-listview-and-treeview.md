@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768587"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procédure pas à pas : création d’une interface de style explorateur avec les contrôles ListView et TreeView à l’aide du concepteur
 Un des avantages de Visual Studio est la capacité de créer des applications Windows Forms de qualité professionnelle en un court laps de temps. Un scénario courant est création d’une interface utilisateur (IU) avec <xref:System.Windows.Forms.ListView> et <xref:System.Windows.Forms.TreeView> contrôles qui ressemble à la fonctionnalité de l’Explorateur Windows des systèmes d’exploitation de Windows. L’Explorateur Windows affiche une structure hiérarchique des fichiers et dossiers sur l’ordinateur d’un utilisateur.  
@@ -32,9 +32,9 @@ Un des avantages de Visual Studio est la capacité de créer des applications Wi
   
 2. Dans le **nouveau projet** boîte de dialogue zone, procédez comme suit :  
   
-    1.  Dans les catégories, choisissez **Visual Basic** ou **Visual C#**.  
+    1. Dans les catégories, choisissez **Visual Basic** ou **Visual C#**.  
   
-    2.  Dans la liste des modèles, choisissez **Windows Forms Application**.  
+    2. Dans la liste des modèles, choisissez **Windows Forms Application**.  
   
 3. Cliquez sur **OK**. Un nouveau projet Windows Forms est créé.  
   
@@ -44,19 +44,19 @@ Un des avantages de Visual Studio est la capacité de créer des applications Wi
   
 6. Ajouter un <xref:System.Windows.Forms.TreeView> contrôle nommé `treeview1` au formulaire et placez-le sur le côté gauche de la <xref:System.Windows.Forms.SplitContainer> contrôle. Dans la fenêtre Propriétés pour `treeView1` procédez comme suit :  
   
-    1.  Affectez à la propriété <xref:System.Windows.Forms.Control.Dock%2A> la valeur <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Affectez à la propriété <xref:System.Windows.Forms.Control.Dock%2A> la valeur <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Affectez à la propriété <xref:System.Windows.Forms.TreeView.ImageList%2A> la valeur `imagelist1.`  
+    2. Affectez à la propriété <xref:System.Windows.Forms.TreeView.ImageList%2A> la valeur `imagelist1.`  
   
 7. Ajouter un <xref:System.Windows.Forms.ListView> contrôle nommé `listView1` au formulaire et le positionner sur le côté droit de la <xref:System.Windows.Forms.SplitContainer> contrôle. Dans la fenêtre Propriétés pour `listview1` procédez comme suit :  
   
-    1.  Affectez à la propriété <xref:System.Windows.Forms.Control.Dock%2A> la valeur <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Affectez à la propriété <xref:System.Windows.Forms.Control.Dock%2A> la valeur <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Affectez à la propriété <xref:System.Windows.Forms.ListView.View%2A> la valeur <xref:System.Windows.Forms.View.Details>.  
+    2. Affectez à la propriété <xref:System.Windows.Forms.ListView.View%2A> la valeur <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Ouvrez l’éditeur de collections ColumnHeader en cliquant sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) dans le <xref:System.Windows.Forms.ListView.Columns%2A> propriété **.** Ajoutez trois colonnes et définissez leurs <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriété `Name`, `Type`, et `Last Modified`, respectivement. Cliquez sur **OK** pour fermer la boîte de dialogue.  
+    3. Ouvrez l’éditeur de collections ColumnHeader en cliquant sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) dans le <xref:System.Windows.Forms.ListView.Columns%2A> propriété **.** Ajoutez trois colonnes et définissez leurs <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriété `Name`, `Type`, et `Last Modified`, respectivement. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-    4.  Affectez à la propriété <xref:System.Windows.Forms.ListView.SmallImageList%2A> la valeur `imageList1.`  
+    4. Affectez à la propriété <xref:System.Windows.Forms.ListView.SmallImageList%2A> la valeur `imageList1.`  
   
 8. Implémentez le code pour remplir la <xref:System.Windows.Forms.TreeView> avec les nœuds et les sous-nœuds. Ajoutez ce code à la `Form1` classe.  
   
@@ -87,18 +87,18 @@ Un des avantages de Visual Studio est la capacité de créer des applications Wi
   
 #### <a name="to-test-the-form"></a>Pour tester le formulaire  
   
--   Appuyez sur F5 pour exécuter l'application.  
+- Appuyez sur F5 pour exécuter l'application.  
   
      Vous verrez un formulaire de fractionnement contenant un <xref:System.Windows.Forms.TreeView> contrôle qui affiche votre répertoire de projet sur le côté gauche, et un <xref:System.Windows.Forms.ListView> contrôle sur le côté droit avec trois colonnes. Vous pouvez parcourir le <xref:System.Windows.Forms.TreeView> en sélectionnant des nœuds de répertoire et le <xref:System.Windows.Forms.ListView> est rempli avec le contenu du répertoire sélectionné.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Cette application vous donne un exemple de la façon dont vous pouvez utiliser <xref:System.Windows.Forms.TreeView> et <xref:System.Windows.Forms.ListView> ensemble les contrôles. Pour plus d’informations sur ces contrôles, consultez les rubriques suivantes :  
   
--   [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+- [Guide pratique pour Ajouter des informations personnalisées à un contrôle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Guide pratique pour Ajouter des fonctionnalités de recherche à un contrôle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+- [Guide pratique pour Ajouter des fonctionnalités de recherche à un contrôle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Guide pratique pour Attacher un Menu contextuel à un nœud TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+- [Guide pratique pour Attacher un Menu contextuel à un nœud TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

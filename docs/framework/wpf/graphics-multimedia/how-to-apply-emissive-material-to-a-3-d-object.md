@@ -9,11 +9,11 @@ helpviewer_keywords:
 - 3-D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
 ms.openlocfilehash: b898148fa07950e3ad1eddcaf9206f7d6a837241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698964"
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procédure : Appliquer un matériau émissif à un objet 3D
 L’exemple suivant montre comment utiliser <xref:System.Windows.Media.Media3D.EmissiveMaterial> pour ajouter une couleur à un matériau existant égal à la couleur du pinceau du EmissiveMaterial. Le code ci-dessous montre <xref:System.Windows.Media.Media3D.DiffuseMaterial> et <xref:System.Windows.Media.Media3D.EmissiveMaterial> combinés pour ajouter du bleu à l’apparence du DiffuseMaterial.  

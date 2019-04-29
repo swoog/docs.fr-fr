@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761700"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nom des attributs et des éléments XML déclarés (Visual Basic)
 Cette rubrique fournit des instructions de Visual Basic pour nommer les éléments XML et les attributs dans les littéraux XML.  Dans un littéral XML, vous pouvez spécifier un nom local ou un nom qualifié. Un nom qualifié se compose d’un préfixe d’espace de noms XML, un signe deux-points et un nom local. Pour plus d’informations sur les préfixes d’espace de noms XML, consultez [XML élément littéral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -21,17 +21,17 @@ Cette rubrique fournit des instructions de Visual Basic pour nommer les élémen
 ## <a name="rules"></a>Règles  
  Un nom local d’un élément ou attribut en Visual Basic doit respecter les règles suivantes.  
   
--   Il peut commencer par un espace de noms. Il doit commencer par un caractère alphabétique ou un trait de soulignement (`_`).  
+- Il peut commencer par un espace de noms. Il doit commencer par un caractère alphabétique ou un trait de soulignement (`_`).  
   
--   Il doit contenir uniquement des caractères alphabétiques, des chiffres décimaux, des traits de soulignement, points (.) et des traits d’union (-).  
+- Il doit contenir uniquement des caractères alphabétiques, des chiffres décimaux, des traits de soulignement, points (.) et des traits d’union (-).  
   
--   Il ne doit pas être plus de 1 024 caractères.  
+- Il ne doit pas être plus de 1 024 caractères.  
   
--   Signes deux-points qui apparaissent dans les noms indiquent la délimitation de l’espace de noms. Par conséquent, vous pouvez utiliser des signes deux-points uniquement pour spécifier un espace de noms XML pour un nom particulier.  
+- Signes deux-points qui apparaissent dans les noms indiquent la délimitation de l’espace de noms. Par conséquent, vous pouvez utiliser des signes deux-points uniquement pour spécifier un espace de noms XML pour un nom particulier.  
   
  En outre, vous devez respecter les recommandations ci-après.  
   
--   La spécification XML 1.0 réserve tous les noms commençant par la chaîne « xml » de toute variation de la mise en majuscules. Par conséquent, n’utilisez pas ces noms pour votre élément et les noms d’attributs.  
+- La spécification XML 1.0 réserve tous les noms commençant par la chaîne « xml » de toute variation de la mise en majuscules. Par conséquent, n’utilisez pas ces noms pour votre élément et les noms d’attributs.  
   
 ### <a name="name-length-guidelines"></a>Instructions de longueur de nom  
  Dans la pratique, un nom doit être aussi court que possible tout en identifiant clairement la nature de l’élément. Cela améliore la lisibilité de votre code et réduit la taille de ligne de longueur et le fichier source.  

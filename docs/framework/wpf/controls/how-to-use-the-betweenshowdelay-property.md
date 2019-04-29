@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696052"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Procédure : Utiliser la propriété BetweenShowDelay
 Cet exemple montre comment utiliser le <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> moment propriété afin que les info-bulles s’affichent rapidement, avec peu ou pas de délai, lorsqu’un utilisateur déplace le pointeur de la souris à partir d’une info-bulle directement vers un autre.  
@@ -20,9 +20,9 @@ Cet exemple montre comment utiliser le <xref:System.Windows.Controls.ToolTipServ
   
  Dans un des scénarios suivants, le <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> s’applique, ce qui entraîne l’info-bulle pour la seconde à attendre une seconde avant d’apparaître :  
   
--   Si le temps nécessaire pour déplacer vers le deuxième bouton est plus de deux secondes.  
+- Si le temps nécessaire pour déplacer vers le deuxième bouton est plus de deux secondes.  
   
--   Si l’info-bulle n’est pas visible au début de l’intervalle de temps pour la première ellipse.  
+- Si l’info-bulle n’est pas visible au début de l’intervalle de temps pour la première ellipse.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

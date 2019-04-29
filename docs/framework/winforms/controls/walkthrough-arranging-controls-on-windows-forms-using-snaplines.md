@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759919"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide de lignes d’alignement
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. Le Concepteur de formulaires Windows offre de nombreux outils de disposition pour effectuer cette opération. Une des plus importantes est la <xref:System.Windows.Forms.Design.Behavior.SnapLine> fonctionnalité.  
@@ -23,27 +23,27 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms  
+- Création d’un projet Windows Forms  
   
--   Espacement et alignement des contrôles à l’aide des lignes d’alignement  
+- Espacement et alignement des contrôles à l’aide des lignes d’alignement  
   
--   Alignement sur le formulaire et les marges de conteneur  
+- Alignement sur le formulaire et les marges de conteneur  
   
--   Alignement des contrôles groupés  
+- Alignement des contrôles groupés  
   
--   À l’aide des lignes d’alignement pour placer un contrôle en définissant sa taille  
+- À l’aide des lignes d’alignement pour placer un contrôle en définissant sa taille  
   
--   À l’aide des lignes d’alignement lorsque vous faites glisser un contrôle à partir de la boîte à outils  
+- À l’aide des lignes d’alignement lorsque vous faites glisser un contrôle à partir de la boîte à outils  
   
--   Redimensionnement de contrôles à l’aide des lignes d’alignement  
+- Redimensionnement de contrôles à l’aide des lignes d’alignement  
   
--   Alignement d’une étiquette de texte d’un contrôle  
+- Alignement d’une étiquette de texte d’un contrôle  
   
--   À l’aide des lignes d’alignement avec la Navigation au clavier  
+- À l’aide des lignes d’alignement avec la Navigation au clavier  
   
--   Les lignes d’alignement et de panneaux de disposition  
+- Les lignes d’alignement et de panneaux de disposition  
   
--   Désactiver les lignes d’alignement  
+- Désactiver les lignes d’alignement  
   
  Lorsque vous avez terminé, vous devez comprendre le rôle de disposition joué par la fonctionnalité de lignes d’alignement.  
   
@@ -216,7 +216,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
   
 #### <a name="to-selectively-disable-snaplines"></a>Pour désactiver de manière sélective les lignes d’alignement  
   
--   Appuyez sur la touche ALT et tout en déplaçant un contrôle autour du formulaire.  
+- Appuyez sur la touche ALT et tout en déplaçant un contrôle autour du formulaire.  
   
      Notez que sans les lignes d’alignement apparaissent et que le contrôle ne s’aligne sur les positions d’alignement potentielles.  
   
@@ -233,9 +233,9 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
 ## <a name="next-steps"></a>Étapes suivantes  
  Les lignes d’alignement offrent un moyen intuitif de l’alignement des contrôles sur votre formulaire. Voici quelques suggestions à explorer :  
   
--   Essayez d’imbriquer un <xref:System.Windows.Forms.GroupBox> contrôle dans une autre <xref:System.Windows.Forms.GroupBox> contrôle. Place un <xref:System.Windows.Forms.Button> contrôle au sein de l’enfant <xref:System.Windows.Forms.GroupBox> contrôle et l’autre dans le parent <xref:System.Windows.Forms.GroupBox> contrôle. Déplacer le <xref:System.Windows.Forms.Button> contrôles autour pour voir comment les lignes d’accrochage franchissent les limites du conteneur.  
+- Essayez d’imbriquer un <xref:System.Windows.Forms.GroupBox> contrôle dans une autre <xref:System.Windows.Forms.GroupBox> contrôle. Place un <xref:System.Windows.Forms.Button> contrôle au sein de l’enfant <xref:System.Windows.Forms.GroupBox> contrôle et l’autre dans le parent <xref:System.Windows.Forms.GroupBox> contrôle. Déplacer le <xref:System.Windows.Forms.Button> contrôles autour pour voir comment les lignes d’accrochage franchissent les limites du conteneur.  
   
--   Créer une colonne de <xref:System.Windows.Forms.TextBox> contrôles et une colonne correspondante de <xref:System.Windows.Forms.Label> contrôles. Définissez la valeur de la <xref:System.Windows.Forms.Label> contrôles <xref:System.Windows.Forms.Control.AutoSize%2A> propriété `true`. Permet de déplacer les lignes d’alignement le <xref:System.Windows.Forms.Label> contrôle afin que leur texte affiché est aligné avec le texte dans le <xref:System.Windows.Forms.TextBox> contrôles.  
+- Créer une colonne de <xref:System.Windows.Forms.TextBox> contrôles et une colonne correspondante de <xref:System.Windows.Forms.Label> contrôles. Définissez la valeur de la <xref:System.Windows.Forms.Label> contrôles <xref:System.Windows.Forms.Control.AutoSize%2A> propriété `true`. Permet de déplacer les lignes d’alignement le <xref:System.Windows.Forms.Label> contrôle afin que leur texte affiché est aligné avec le texte dans le <xref:System.Windows.Forms.TextBox> contrôles.  
   
  Pour plus d’informations sur la conception de l’interface utilisateur Windows, consultez le livre *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, Washington : Microsoft Press, 1999. (USBN : 0-7356-0566-1).  
   

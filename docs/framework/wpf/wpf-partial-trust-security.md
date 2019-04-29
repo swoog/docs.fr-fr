@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696533"
 ---
 # <a name="wpf-partial-trust-security"></a>Sécurité de confiance partielle de WPF
 <a name="introduction"></a> En général, les applications Internet doivent disposer d’un accès direct limité aux ressources système critiques, afin d’éviter des dommages dus à des actes de malveillance. Par défaut, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] et langages de script côté client ne sont pas en mesure d’accéder aux ressources système critiques. Étant donné que les applications hébergées par un navigateur Windows Presentation Foundation (WPF) peuvent être lancées à partir du navigateur, elles doivent se conformer à un jeu de restrictions similaires. Pour appliquer ces restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] s’appuie sur les deux [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] et [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consultez [stratégie de sécurité de WPF - sécurité de la plateforme](wpf-security-strategy-platform-security.md)). Par défaut, les applications hébergées par un navigateur demandent la zone Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jeu d’autorisations, quelle que soit la si elles sont lancées à partir d’Internet, intranet local ou l’ordinateur local. Les applications qui sont exécutées sans jeu d’autorisations complet sont exécutées avec une confiance dite partielle.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218379"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Prise en charge de la confiance partielle avec des fonctionnalités WPF](#WPF_Feature_Partial_Trust_Support)  
+- [Prise en charge de la confiance partielle avec des fonctionnalités WPF](#WPF_Feature_Partial_Trust_Support)  
   
--   [Programmation de la confiance partielle](#Partial_Trust_Programming)  
+- [Programmation de la confiance partielle](#Partial_Trust_Programming)  
   
--   [Gestion des autorisations](#Managing_Permissions)  
+- [Gestion des autorisations](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Prise en charge de la confiance partielle avec des fonctionnalités WPF  
@@ -52,19 +52,19 @@ ms.locfileid: "59218379"
   
  Ce tableau décrit les [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fonctionnalités à un niveau élevé. Pour plus d’informations, le [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documente les autorisations qui sont requises par chaque membre dans [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. De plus, les fonctionnalités suivantes proposent des informations plus détaillées concernant l’exécution en mode confiance partielle, notamment des considérations spéciales.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consultez [vue d’ensemble de XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consultez [vue d’ensemble de XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   Menus contextuels (voir <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Menus contextuels (voir <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Glisser -déplacer (voir [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
+- Glisser -déplacer (voir [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
   
--   Presse-papiers (voir <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Presse-papiers (voir <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   Création d’images (voir <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Création d’images (voir <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Sérialisation (consultez <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Sérialisation (consultez <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   Ouvrez la boîte de dialogue de fichier (voir <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Ouvrez la boîte de dialogue de fichier (voir <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  Le tableau suivant présente le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jeu d’autorisations de zone de fonctionnalités qui ne sont pas sécurisées pour s’exécuter dans les limites d’Internet.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218379"
   
  Si vous devez augmenter le niveau d’autorisation, vous devez changer les paramètres du projet et le manifeste de l’application ClickOnce. Pour plus d’informations, consultez [Vue d’ensemble des applications de navigateur XAML](./app-development/wpf-xaml-browser-applications-overview.md). Les documents suivants peuvent également être utiles.  
   
--   [Mage.exe (outil Manifest Generation and Editing)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe (outil Manifest Generation and Editing)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe (outil Manifest Generation and Editing, client graphique)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
--   [Sécurisation des applications ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
+- [Sécurisation des applications ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
  Si votre [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] requiert une confiance totale, vous pouvez utiliser les mêmes outils pour élever les autorisations demandées. Bien qu’un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] ne recevra une confiance totale si elle est installée sur lancée à partir de l’ordinateur local, l’intranet, ou à partir d’une URL qui est répertoriée dans le navigateur sites fiables ou autorisés. Si l’application est installée à partir de l’intranet ou d’un site de confiance, l’utilisateur reçoit l’invite ClickOnce standard lui signalant les autorisations élevées. Il peut choisir de continuer ou d’annuler l’installation.  
   

@@ -3,11 +3,11 @@ title: Création de l'activité de workflow à l'aide de la classe CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669444"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Création de l'activité de workflow à l'aide de la classe CodeActivity
 Les activités créées en héritant de <xref:System.Activities.CodeActivity> peuvent implémenter un comportement impératif de base en remplaçant la méthode <xref:System.Activities.CodeActivity.Execute%2A>.
@@ -15,11 +15,11 @@ Les activités créées en héritant de <xref:System.Activities.CodeActivity> pe
 ## <a name="using-codeactivitycontext"></a>Utilisation de CodeActivityContext
  Les fonctionnalités de l'exécution du workflow sont accessibles à partir de la méthode <xref:System.Activities.CodeActivity.Execute%2A> en utilisant les membres du paramètre `context`, de type <xref:System.Activities.CodeActivityContext>. Les fonctionnalités disponibles via <xref:System.Activities.CodeActivityContext> sont notamment :
 
--   Obtention et définition des valeurs de variables et d’arguments.
+- Obtention et définition des valeurs de variables et d’arguments.
 
--   Fonctionnalités de suivi personnalisées à l'aide de <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Fonctionnalités de suivi personnalisées à l'aide de <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Accès aux propriétés d'exécution de l'activité à l'aide de <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Accès aux propriétés d'exécution de l'activité à l'aide de <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Pour créer une activité personnalisée qui hérite de CodeActivity
 

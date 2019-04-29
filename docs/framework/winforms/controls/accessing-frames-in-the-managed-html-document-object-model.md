@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640536"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Accès aux frames dans le modèle objet de document HTML managé
 Certains documents HTML sont composés de *frames*, ou windows qui peuvent contenir leurs propres documents HTML. L'utilisation de frames simplifie la création de pages HTML dans lesquelles un ou plusieurs éléments de la page (tels qu'une barre de navigation) restent statiques, tandis que d'autres frames changent constamment de contenu.  
   
  Les auteurs de code HTML peuvent créer des frames de deux façons :  
   
--   à l’aide des étiquettes `FRAMESET` et `FRAME`, qui créent des fenêtres fixes.  
+- à l’aide des étiquettes `FRAMESET` et `FRAME`, qui créent des fenêtres fixes.  
   
  - ou -  
   
--   à l'aide de la balise `IFRAME`, qui crée une fenêtre flottante pouvant être repositionnée au moment de l'exécution.  
+- à l'aide de la balise `IFRAME`, qui crée une fenêtre flottante pouvant être repositionnée au moment de l'exécution.  
   
 1. Les frames contenant des documents HTML, ils sont représentés dans le modèle DOM en tant qu'éléments de fenêtre et éléments de cadre.  
   

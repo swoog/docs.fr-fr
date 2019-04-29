@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762448"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test de positionnement dans la couche visuelle
 Cette rubrique fournit une vue d’ensemble de la fonctionnalité de test de positionnement fournie par la couche visuelle. En charge du test d’atteinte vous permet de déterminer si une valeur de géométrie ou un point se trouve dans le contenu rendu d’un <xref:System.Windows.Media.Visual>, ce qui vous permet d’implémenter le comportement de l’interface utilisateur comme un rectangle de sélection pour sélectionner plusieurs objets.  
@@ -22,13 +22,13 @@ Cette rubrique fournit une vue d’ensemble de la fonctionnalité de test de pos
 ## <a name="hit-testing-scenarios"></a>Scénarios de test de positionnement  
  Le <xref:System.Windows.UIElement> classe fournit le <xref:System.Windows.UIElement.InputHitTest%2A> (méthode), qui permet de test de positionnement sur un élément à l’aide d’une valeur de coordonnée donnée. Dans de nombreux cas, le <xref:System.Windows.UIElement.InputHitTest%2A> méthode propose les fonctionnalités souhaitées pour implémenter le test de positionnement d’éléments. Toutefois, il existe plusieurs scénarios dans lesquels vous devrez peut-être implémenter le test de positionnement sur la couche visuelle.  
   
--   Test de positionnement sur non -<xref:System.Windows.UIElement> objets : Cela s’applique si vous test de positionnement non -<xref:System.Windows.UIElement> objets, tels que <xref:System.Windows.Media.DrawingVisual> ou des objets graphiques.  
+- Test de positionnement sur non -<xref:System.Windows.UIElement> objets : Cela s’applique si vous test de positionnement non -<xref:System.Windows.UIElement> objets, tels que <xref:System.Windows.Media.DrawingVisual> ou des objets graphiques.  
   
--   Le test de positionnement à l’aide d’une géométrie : Cela s’applique si vous avez besoin à l’aide d’un objet géométrique plutôt que la valeur de coordonnée d’un point de test d’atteinte.  
+- Le test de positionnement à l’aide d’une géométrie : Cela s’applique si vous avez besoin à l’aide d’un objet géométrique plutôt que la valeur de coordonnée d’un point de test d’atteinte.  
   
--   Test de positionnement sur plusieurs objets : Cela s’applique lorsque vous avez besoin pour le test de positionnement sur plusieurs objets, tels que des objets superposés. Vous pouvez obtenir des résultats pour tous les objets visuels croisant une géométrie ou un point, pas seulement le premier.  
+- Test de positionnement sur plusieurs objets : Cela s’applique lorsque vous avez besoin pour le test de positionnement sur plusieurs objets, tels que des objets superposés. Vous pouvez obtenir des résultats pour tous les objets visuels croisant une géométrie ou un point, pas seulement le premier.  
   
--   En ignorant <xref:System.Windows.UIElement> stratégie de test d’atteinte : Cela s’applique lorsque vous devez ignorer la <xref:System.Windows.UIElement> stratégie, qui tienne compte des facteurs tels que si un élément est désactivé ou invisible de test de positionnement.  
+- En ignorant <xref:System.Windows.UIElement> stratégie de test d’atteinte : Cela s’applique lorsque vous devez ignorer la <xref:System.Windows.UIElement> stratégie, qui tienne compte des facteurs tels que si un élément est désactivé ou invisible de test de positionnement.  
   
 > [!NOTE]
 >  Pour un exemple de code complet illustrant le test de positionnement sur la couche visuelle, consultez [Test de positionnement à l’aide de l’exemple DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) et [Test de positionnement avec l’exemple Interopérabilité Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  

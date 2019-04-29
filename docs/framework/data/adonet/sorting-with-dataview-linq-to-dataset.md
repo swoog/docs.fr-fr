@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664127"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Tri avec DataView (LINQ to DataSet)
 La possibilité de trier des données en utilisant des critères spécifiques, puis de les présenter à un client via un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de trier les données et de retourner des sous-ensembles de lignes de données triés suivant des critères de tri spécifiques. En plus de sa chaîne-en fonction des fonctionnalités, de tri <xref:System.Data.DataView> vous permet également d’utiliser [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expressions pour les critères de tri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de tri beaucoup plus complexes et puissantes que le tri basé sur chaîne. Cette rubrique décrit les deux approches du tri à l'aide de <xref:System.Data.DataView>.  
@@ -65,9 +65,9 @@ La possibilité de trier des données en utilisant des critères spécifiques, p
 ## <a name="clearing-the-sort"></a>Suppression du tri  
  Les informations de tri d'un <xref:System.Data.DataView> peuvent être supprimées une fois qu'il a été défini à l'aide de la propriété <xref:System.Data.DataView.Sort%2A>. Il existe deux façons de supprimer les informations de tri d'un <xref:System.Data.DataView> :  
   
--   Affectez à la propriété <xref:System.Data.DataView.Sort%2A> la valeur `null`.  
+- Affectez à la propriété <xref:System.Data.DataView.Sort%2A> la valeur `null`.  
   
--   Définissez la propriété <xref:System.Data.DataView.Sort%2A> en tant que chaîne vide.  
+- Définissez la propriété <xref:System.Data.DataView.Sort%2A> en tant que chaîne vide.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant crée un <xref:System.Data.DataView> à partir d'une requête, puis supprime le tri en définissant la propriété <xref:System.Data.DataView.Sort%2A> en tant que chaîne vide :  

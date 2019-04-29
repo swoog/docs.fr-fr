@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762395"
 ---
 # <a name="fromtoby-animations-overview"></a>Vue d'ensemble des animations From/To/By
 Cette rubrique explique comment utiliser des animations From/To/By pour animer des propriétés de dépendance. Une animation From/To/By crée une transition entre deux valeurs.  
@@ -65,15 +65,15 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
 ## <a name="target-values"></a>Valeurs cibles  
  Une animation From/To/By crée une transition entre deux valeurs cibles. Il est courant de spécifier une valeur de départ (à l’aide de la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété) et une valeur de fin (à l’aide de la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété). Toutefois, vous pouvez également spécifier uniquement une valeur de début, une valeur de destination ou une valeur de décalage. Dans ces cas, l’animation obtient la valeur cible manquante de la propriété qui est animée. La liste suivante décrit les différentes manières de spécifier les valeurs cibles d’une animation.  
   
--   **Valeur de départ**  
+- **Valeur de départ**  
   
      Utilisez le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété lorsque vous souhaitez spécifier explicitement la valeur de départ d’une animation. Vous pouvez utiliser la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété, ou avec la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> ou <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété. Si vous spécifiez uniquement le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété, l’animation passe de cette valeur à la valeur de base de la propriété animée.  
   
--   **Valeur de fin**  
+- **Valeur de fin**  
   
      Pour spécifier une valeur de fin d’une animation, utilisez son <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété. Si vous utilisez le <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété par lui-même, l’animation obtient sa valeur de départ à partir de la propriété animée ou de la sortie d’une autre animation appliquée à la même propriété. Vous pouvez utiliser la <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> propriété avec le <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété pour spécifier explicitement le début et de fin des valeurs de l’animation.  
   
--   **Valeur de décalage**  
+- **Valeur de décalage**  
   
      Le <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété vous permet de spécifier un décalage au lieu d’un démarrage explicite ou de la valeur de fin de l’animation. Le <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété d’une animation spécifie de combien l’animation modifie une valeur sur sa durée. Vous pouvez utiliser la <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété seule ou avec la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> propriété. Si vous spécifiez uniquement le <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriété, l’animation ajoute la valeur de décalage à la valeur de base de la propriété ou à la sortie d’une autre animation.  
   
@@ -134,9 +134,9 @@ Cette rubrique explique comment utiliser des animations From/To/By pour animer d
 ## <a name="other-animation-types"></a>Autres types d’animations  
  Animations From/To/By ne sont pas le seul type d’animations qui [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit : il fournit également des animations d’image clé et des animations de tracés.  
   
--   Une animation d’image clé est animée avec n’importe quel nombre de valeurs de destination et décrite à l’aide d’images clés. Pour plus d’informations, consultez le [vue d’ensemble des Animations image clé](key-frame-animations-overview.md).  
+- Une animation d’image clé est animée avec n’importe quel nombre de valeurs de destination et décrite à l’aide d’images clés. Pour plus d’informations, consultez le [vue d’ensemble des Animations image clé](key-frame-animations-overview.md).  
   
--   Une animation de tracés génère des valeurs de sortie à partir d’un <xref:System.Windows.Media.PathGeometry>. Pour plus d’informations, consultez le [vue d’ensemble des Animations de tracés](path-animations-overview.md).  
+- Une animation de tracés génère des valeurs de sortie à partir d’un <xref:System.Windows.Media.PathGeometry>. Pour plus d’informations, consultez le [vue d’ensemble des Animations de tracés](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet également de créer vos propres types d’animations personnalisées. Pour plus d’informations, consultez le [vue d’ensemble des Animations personnalisées](custom-animations-overview.md).  
   

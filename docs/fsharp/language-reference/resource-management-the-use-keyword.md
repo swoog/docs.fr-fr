@@ -3,11 +3,11 @@ title: 'Gestion des ressources : L’utilisation du mot clé'
 description: En savoir plus sur les F# mot clé 'use' et la fonction 'using', qui permettre contrôler l’initialisation et la libération de ressources.
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770485"
 ---
 # <a name="resource-management-the-use-keyword"></a>Gestion des ressources : L’utilisation du mot clé
 
@@ -40,7 +40,7 @@ L’exemple suivant montre comment fermer automatiquement un fichier à l’aide
 
 Le `using` fonction a la forme suivante :
 
-`using` (*expression1*) *-ou-lambda function*
+`using` (*expression1*) *function-or-lambda*
 
 Dans un `using` expression, *expression1* crée l’objet qui doit être supprimée. Le résultat de *expression1* (l’objet qui doit être supprimé) devienne un argument, *valeur*à *lambda function ou*, qui est soit une fonction qui attend un seul restant argument d’un type qui correspond à la valeur produite par *expression1*, ou une expression lambda qui attend un argument de ce type. À la fin de l’exécution de la fonction, le runtime appelle `Dispose` et libère les ressources (sauf si la valeur est `null`, auquel cas l’appel à Dispose n’est pas tentée).
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760192"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies, méthode
 Obtient un pointeur d’interface vers un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) qui représente la liste des assemblys que l’hôte attend le common language runtime (CLR) à charger.  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>Notes  
  Le CLR résout les références à l’aide de l’ensemble des instructions suivantes :  
   
--   Tout d’abord, il consulte la liste des références d’assembly retourné par `GetNonHostStoreAssemblies`.  
+- Tout d’abord, il consulte la liste des références d’assembly retourné par `GetNonHostStoreAssemblies`.  
   
--   Si l’assembly apparaît dans la liste, le CLR se lie normalement à ce dernier.  
+- Si l’assembly apparaît dans la liste, le CLR se lie normalement à ce dernier.  
   
--   Si l’assembly n’apparaît pas dans la liste et que l’hôte a fourni une implémentation de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), le CLR appelle [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) pour autoriser l’hôte de fournir le assembly à lier.  
+- Si l’assembly n’apparaît pas dans la liste et que l’hôte a fourni une implémentation de [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), le CLR appelle [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) pour autoriser l’hôte de fournir le assembly à lier.  
   
--   Sinon, le CLR ne peut pas lier à l’assembly.  
+- Sinon, le CLR ne peut pas lier à l’assembly.  
   
  Si l’hôte définit `ppReferenceList` sur null, les sondes premier CLR appelle le global assembly cache, `ProvideAssembly`et des sondes puis la base de l’application pour résoudre une référence d’assembly.  
   

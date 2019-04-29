@@ -3,11 +3,11 @@ title: Collections de schémas ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772045"
 ---
 # <a name="odbc-schema-collections"></a>Collections de schémas ODBC
 
@@ -21,7 +21,7 @@ Le pilote ODBC de Microsoft SQL Server prend en charge les collections de schém
 
 - Index
 
-- Columns
+- Colonnes
 
 - Procédures
 
@@ -29,7 +29,7 @@ Le pilote ODBC de Microsoft SQL Server prend en charge les collections de schém
 
 - ProcedureParameters
 
-- Vues
+- Affichages
 
 ### <a name="tables-and-views"></a>Tables et vues
 
@@ -61,7 +61,7 @@ Le pilote ODBC de Microsoft SQL Server prend en charge les collections de schém
 |SS_TYPE_SCHEMA|Chaîne|
 |SS_DATA_TYPE|Byte|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Colonnes
 
 |Nom de colonne|Type de données|
 |----------------|--------------|
@@ -160,7 +160,7 @@ Le pilote Microsoft SQL Server Oracle ODBC prend en charge les collections de sc
 
 - Tables
 
-- Columns
+- Colonnes
 
 - Procédures
 
@@ -168,7 +168,7 @@ Le pilote Microsoft SQL Server Oracle ODBC prend en charge les collections de sc
 
 - ProcedureParameters
 
-- Vues
+- Affichages
 
 - Index
 
@@ -182,7 +182,7 @@ Le pilote Microsoft SQL Server Oracle ODBC prend en charge les collections de sc
 |TABLE_TYPE|Chaîne|
 |REMARKS|Chaîne|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Colonnes
 
 |Nom de colonne|Type de données|
 |----------------|--------------|
@@ -241,7 +241,7 @@ Le pilote Microsoft Jet ODBC prend en charge les collections de schémas spécif
 
 - Index
 
-- Columns
+- Colonnes
 
 - Procédures
 
@@ -249,7 +249,7 @@ Le pilote Microsoft Jet ODBC prend en charge les collections de schémas spécif
 
 - ProcedureParameters
 
-- Vues
+- Affichages
 
 ### <a name="tables-and-views"></a>Tables et vues
 
@@ -261,7 +261,7 @@ Le pilote Microsoft Jet ODBC prend en charge les collections de schémas spécif
 |TABLE_TYPE|Chaîne|
 |REMARKS|Chaîne|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Colonnes
 
 |Nom de colonne|Type de données|
 |----------------|--------------|

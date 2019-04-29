@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758494"
 ---
 # <a name="anonymous-types-visual-basic"></a>Types anonymes (Visual Basic)
 Visual Basic prend en charge les types anonymes, qui vous permettent de créer des objets sans écrire de définition de classe pour le type de données. À la place, le compilateur se charge de générer une classe. La classe n’a aucun nom utilisable, hérite directement de <xref:System.Object>et contient les propriétés que vous spécifiez dans la déclaration de l’objet. Étant donné que le nom du type de données n’est pas spécifié, il est appelé un *type anonyme*.  
@@ -53,22 +53,22 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ## <a name="key-properties"></a>Propriétés de clé  
  Propriétés de clé diffèrent des propriétés non-clé de plusieurs façons fondamentales :  
   
--   Seules les valeurs des propriétés de clé sont comparées afin de déterminer si deux instances sont égales.  
+- Seules les valeurs des propriétés de clé sont comparées afin de déterminer si deux instances sont égales.  
   
--   Les valeurs des propriétés de clé sont en lecture seule et ne peut pas être modifiés.  
+- Les valeurs des propriétés de clé sont en lecture seule et ne peut pas être modifiés.  
   
--   Uniquement les valeurs de propriété de clé sont incluses dans l’algorithme de code de hachage généré par le compilateur pour un type anonyme.  
+- Uniquement les valeurs de propriété de clé sont incluses dans l’algorithme de code de hachage généré par le compilateur pour un type anonyme.  
   
 ### <a name="equality"></a>Égalité  
  Instances de types anonymes peuvent être égales uniquement si elles sont des instances du même type anonyme. Le compilateur traite deux instances comme instances du même type s’ils répondent aux conditions suivantes :  
   
--   Ils sont déclarés dans le même assembly.  
+- Ils sont déclarés dans le même assembly.  
   
--   Leurs propriétés ont les mêmes noms, les mêmes types déduits et sont déclarées dans le même ordre. Les comparaisons de noms ne respectent pas la casse.  
+- Leurs propriétés ont les mêmes noms, les mêmes types déduits et sont déclarées dans le même ordre. Les comparaisons de noms ne respectent pas la casse.  
   
--   Les mêmes propriétés dans chacun sont marquées comme propriétés de clé.  
+- Les mêmes propriétés dans chacun sont marquées comme propriétés de clé.  
   
--   Au moins une propriété dans chaque déclaration est une propriété de clé.  
+- Au moins une propriété dans chaque déclaration est une propriété de clé.  
   
  Une instance d’un type anonyme qui ne possède aucune propriété de clé est uniquement égale à elle-même.  
   
@@ -86,11 +86,11 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ## <a name="anonymous-types-from-query-expressions"></a>Types anonymes à partir d’Expressions de requête  
  Expressions de requête ne nécessitent pas toujours de la création de types anonymes. Lorsque cela est possible, ils utilisent un type existant pour contenir les données de colonne. Cela se produit lorsque la requête retourne des enregistrements entiers à partir de la source de données, ou qu’un seul champ de chaque enregistrement. Dans les exemples de code suivants, `customers` est une collection d’objets d’un `Customer` classe. La classe comporte plusieurs propriétés, et vous pouvez inclure une ou plusieurs d'entre eux dans le résultat de requête, dans n’importe quel ordre. Dans les deux premiers exemples, aucun des types anonymes ne sont requis, car les requêtes sélectionnent des éléments de types nommés :  
   
--   `custs1` contient une collection de chaînes, car `cust.Name` est une chaîne.  
+- `custs1` contient une collection de chaînes, car `cust.Name` est une chaîne.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` contient une collection de `Customer` objets, étant donné que chaque élément de `customers` est un `Customer` objet et l’élément entier est sélectionné par la requête.  
+- `custs2` contient une collection de `Customer` objets, étant donné que chaque élément de `customers` est un `Customer` objet et l’élément entier est sélectionné par la requête.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

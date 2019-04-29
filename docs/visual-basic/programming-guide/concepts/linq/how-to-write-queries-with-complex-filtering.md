@@ -3,11 +3,11 @@ title: 'Procédure : Écrire des requêtes avec un filtrage complexe (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614842"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Procédure : Écrire des requêtes avec un filtrage complexe (Visual Basic)
 Il peut arriver que vous souhaitiez écrire des requêtes LINQ to XML à l'aide de filtres complexes. Par exemple, il se peut que vous deviez rechercher tous les éléments qui ont un élément enfant avec un nom et une valeur spécifiques. Cette rubrique fournit un exemple d'écriture de requête avec un filtrage complexe.  

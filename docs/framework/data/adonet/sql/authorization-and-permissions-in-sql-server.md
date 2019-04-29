@@ -3,11 +3,11 @@ title: Autorisation et permissions dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663958"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisation et permissions dans SQL Server
 Lorsque vous créez des objets de base de données, vous devez accorder explicitement des autorisations de manière à les rendre accessibles aux utilisateurs. Chaque objet sécurisable possède des autorisations qui peuvent être accordées à une principal de sécurité à l'aide d'instructions d'autorisation.  
@@ -37,7 +37,7 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
 |REVOKE|Révoque une autorisation. Il s'agit de l'état par défaut d'un nouvel objet. Une autorisation révoquée pour un utilisateur ou un rôle peut être héritée d'autres groupes ou rôles auxquels la principal de sécurité est assignée.|  
 |DENY|DENY révoque une autorisation afin qu'elle ne puisse plus être héritée. DENY a priorité sur toutes les autorisations, mais ne s'applique pas aux propriétaires d'objets ni aux membres de `sysadmin`. Si vous refusez des autorisations sur un objet au rôle `public`, elles sont refusées à tous les utilisateurs et rôles, à l'exception des propriétaires d'objets et des membres `sysadmin`.|  
   
--   L'instruction GRANT peut assigner des autorisations à un groupe ou un rôle qui peuvent être héritées par les utilisateurs de base de données. Toutefois, l'instruction DENY a priorité sur toutes les autres instructions d'autorisation. Par conséquent, un utilisateur à qui une autorisation a été refusée ne peut pas en hériter d'un autre rôle.  
+- L'instruction GRANT peut assigner des autorisations à un groupe ou un rôle qui peuvent être héritées par les utilisateurs de base de données. Toutefois, l'instruction DENY a priorité sur toutes les autres instructions d'autorisation. Par conséquent, un utilisateur à qui une autorisation a été refusée ne peut pas en hériter d'un autre rôle.  
   
 > [!NOTE]
 >  Les membres du rôle serveur fixe `sysadmin` et des propriétaires d'objets ne peuvent pas se voir refuser des autorisations.  

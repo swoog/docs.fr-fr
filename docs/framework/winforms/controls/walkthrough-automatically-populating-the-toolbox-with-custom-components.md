@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759906"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procédure pas à pas : remplissage automatique de la boîte à outils avec des composants personnalisés
 Si vos composants sont définis par un projet dans la solution actuellement ouverte, ils apparaissent automatiquement dans le **boîte à outils**, sans qu’aucune action requise par vous. Vous pouvez également remplir manuellement la **boîte à outils** avec vos composants personnalisés à l’aide de la [boîte à outils éléments de boîte de dialogue Choisir (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), mais la **boîte à outils** tient compte d’éléments dans de votre solution générer les sorties avec toutes les caractéristiques suivantes :  
   
--   Implémente <xref:System.ComponentModel.IComponent>;  
+- Implémente <xref:System.ComponentModel.IComponent>;  
   
--   N’a pas <xref:System.ComponentModel.ToolboxItemAttribute> définie sur `false`;  
+- N’a pas <xref:System.ComponentModel.ToolboxItemAttribute> définie sur `false`;  
   
--   N’a pas <xref:System.ComponentModel.DesignTimeVisibleAttribute> défini sur `false`.  
+- N’a pas <xref:System.ComponentModel.DesignTimeVisibleAttribute> défini sur `false`.  
   
 > [!NOTE]
 >  Le **boîte à outils** ne suit pas les chaînes de référence, il n’affichera pas les éléments qui ne sont pas générés par un projet dans votre solution.  
   
  Cette procédure pas à pas montre comment un composant personnalisé apparaît automatiquement dans le **boîte à outils** une fois que le composant est généré. Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms.  
+- Création d’un projet Windows Forms.  
   
--   Création d’un composant personnalisé.  
+- Création d’un composant personnalisé.  
   
--   Création d’une instance d’un composant personnalisé.  
+- Création d’une instance d’un composant personnalisé.  
   
--   Déchargement et rechargement d’un composant personnalisé.  
+- Déchargement et rechargement d’un composant personnalisé.  
   
  Lorsque vous avez terminé, vous verrez que le **boîte à outils** est remplie avec un composant que vous avez créé.  
   

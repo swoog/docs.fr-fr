@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765685"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personnalisation des flux (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer des données en tant que flux. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats Atom et JavaScript Objet Notation (JSON) pour les flux de données. Lorsque vous utilisez un flux Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit une méthode standard pour sérialiser les données, telles que les entités et relations, dans un format XML qui peut être inclus dans le corps du message HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] définit un mappage de propriété d’entité par défaut entre les données contenues dans les entités et les éléments Atom. Pour plus d’informations, consultez [OData : Format Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517315"
 ## <a name="feed-customization-considerations"></a>Considérations de personnalisation de flux  
  Tenez compte des considérations suivantes lorsque vous définissez des mappages de flux personnalisés.  
   
--   Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client traite les éléments mappés dans un flux comme vide lorsqu’ils contiennent uniquement des espaces blancs. Pour cette raison, les éléments mappés qui contiennent uniquement un espace blanc ne sont pas matérialisés sur le client avec le même espace blanc. Pour conserver cet espace blanc sur le client, vous devez définir la valeur de `KeepInContext` à `true` dans l’attribut de mappage de flux.  
+- Le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client traite les éléments mappés dans un flux comme vide lorsqu’ils contiennent uniquement des espaces blancs. Pour cette raison, les éléments mappés qui contiennent uniquement un espace blanc ne sont pas matérialisés sur le client avec le même espace blanc. Pour conserver cet espace blanc sur le client, vous devez définir la valeur de `KeepInContext` à `true` dans l’attribut de mappage de flux.  
   
 ## <a name="versioning-requirements"></a>Exigences pour le contrôle de version  
  La personnalisation de flux a les conditions requises pour le contrôle de version de protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] suivantes :  
   
--   La personnalisation de flux requiert que le client et le service de données prennent en charge les versions 2.0 et ultérieures du protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .  
+- La personnalisation de flux requiert que le client et le service de données prennent en charge les versions 2.0 et ultérieures du protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .  
   
  Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

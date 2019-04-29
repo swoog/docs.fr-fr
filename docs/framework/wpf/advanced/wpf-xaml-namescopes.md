@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764645"
 ---
 # <a name="wpf-xaml-namescopes"></a>Portées de nom XAML WPF
 Les portées de nom XAML correspondent à un concept qui identifie des objets définis en XAML. Les noms dans une portée de nom XAML peuvent être utilisés pour établir des relations entre les noms définis en XAML des objets et leurs instances équivalentes dans une arborescence d’objets. En règle générale, les portées de nom XAML dans du code managé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont créées lors du chargement des racines d’une page XAML spécifique pour une application XAML. Portées de nom XAML en tant qu’objet de programmation sont définies par le <xref:System.Windows.Markup.INameScope> interface et sont également implémentées par la classe pratique <xref:System.Windows.NameScope>.  
@@ -76,13 +76,13 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
 ### <a name="xaml-namescope-implementations"></a>Implémentations de portée de nom XAML  
  Les classes suivantes implémentent <xref:System.Windows.Markup.INameScope> directement :  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> n’utilise pas les noms XAML ni portées de nom ; Il utilise des clés à la place, car il s’agit d’une implémentation de dictionnaire. La seule raison pour laquelle <xref:System.Windows.ResourceDictionary> implémente <xref:System.Windows.Markup.INameScope> est afin de pouvoir déclencher les exceptions au code utilisateur qui aident à clarifier la distinction entre une portée de nom XAML true et la manière dont un <xref:System.Windows.ResourceDictionary> gère les touches et également pour vous assurer que les portées de nom XAML ne sont pas appliquées à un <xref:System.Windows.ResourceDictionary> par des éléments parents.  
   
@@ -90,9 +90,9 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
   
  Les classes suivantes définissent leur propre portée de nom XAML, à l’aide de la <xref:System.Windows.NameScope?displayProperty=nameWithType> classe d’assistance et la connexion à son implémentation de portée de nom XAML via le <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> propriété jointe :  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Voir aussi
 

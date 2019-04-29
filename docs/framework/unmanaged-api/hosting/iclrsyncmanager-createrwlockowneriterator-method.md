@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763709"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator, méthode
 Demande que le common language runtime (CLR) crée un itérateur pour l’hôte à utiliser pour déterminer l’ensemble de tâches en attente sur un verrou de lecteur-writer.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Notes  
  Les hôtes appellent généralement la `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, et `GetRWLockOwnerNext` méthodes pendant la détection des verrous mortels. L’hôte est chargé de s’assurer que le verrou de lecteur-writer est toujours valide, car le CLR n’effectue aucune tentative pour conserver le verrou de lecteur-writer actif. Plusieurs stratégies sont disponibles pour l’hôte garantir la validité du verrou :  
   
--   L’hôte peut bloquer des appels de libération sur le verrou de lecteur-writer (par exemple, [IHostSemaphore::ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) tout en garantissant que ce bloc ne provoque pas d’interblocage.  
+- L’hôte peut bloquer des appels de libération sur le verrou de lecteur-writer (par exemple, [IHostSemaphore::ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) tout en garantissant que ce bloc ne provoque pas d’interblocage.  
   
--   L’hôte peut bloquer la sortie d’attendre sur l’objet d’événement associé au verrou de lecteur-writer, à nouveau en garantissant que ce bloc ne provoque pas d’interblocage.  
+- L’hôte peut bloquer la sortie d’attendre sur l’objet d’événement associé au verrou de lecteur-writer, à nouveau en garantissant que ce bloc ne provoque pas d’interblocage.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` doit être appelée uniquement sur les threads qui exécutent du code non managé.  

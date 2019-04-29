@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763735"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper, interface
 Représente dans l'exécution du code une étape qui est effectuée par un débogueur, et qui sert d'identificateur entre l'émission et l'achèvement d'une commande tout en offrant un moyen d'annuler une étape.  
@@ -42,11 +42,11 @@ Représente dans l'exécution du code une étape qui est effectuée par un débo
 ## <a name="remarks"></a>Notes  
  Le `ICorDebugStepper` interface utilisé aux fins suivantes :  
   
--   Il agit comme un identificateur entre une commande d’étape qui est émise et la fin de cette commande.  
+- Il agit comme un identificateur entre une commande d’étape qui est émise et la fin de cette commande.  
   
--   Il fournit une interface centrale pour encapsuler le pas à pas qui peut être effectuée.  
+- Il fournit une interface centrale pour encapsuler le pas à pas qui peut être effectuée.  
   
--   Elle offre un moyen prématurément annuler une opération pas à pas.  
+- Elle offre un moyen prématurément annuler une opération pas à pas.  
   
  Il peut y avoir plus d’une exécution pas à pas par thread. Par exemple, un point d’arrêt peut être atteint lors de l’exécution pas à pas sur une fonction, et l’utilisateur peut souhaiter démarrer une nouvelle opération pas à pas à l’intérieur de cette fonction. Il incombe au débogueur de déterminer comment gérer cette situation. Le débogueur peut être amené à annuler l’opération pas à pas d’origine ou imbriquer les deux opérations. Le `ICorDebugStepper` interface prend en charge les deux choix.  
   

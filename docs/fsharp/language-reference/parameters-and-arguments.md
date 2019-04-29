@@ -3,11 +3,11 @@ title: Paramètres et arguments
 description: En savoir plus sur F# prise en charge de langage de définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.
 ms.date: 05/16/2016
 ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666259"
 ---
 # <a name="parameters-and-arguments"></a>Paramètres et arguments
 

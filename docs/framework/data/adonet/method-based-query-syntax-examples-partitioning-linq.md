@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
 ms.openlocfilehash: bfc26835258606ff20dd066ecb6e4c874d0be2f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772149"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>Exemples de syntaxe de requête fondée sur une méthode : Partitionnement (LINQ
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.Skip%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>, <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.TakeWhile%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  

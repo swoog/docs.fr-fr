@@ -11,20 +11,20 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651304"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procédure : Définir l’alignement horizontal et vertical d’un TileBrush
 Cet exemple montre comment contrôler l’alignement horizontal et vertical d’un contenu dans une mosaïque. Pour contrôler l’alignement horizontal et vertical d’un <xref:System.Windows.Media.TileBrush>, utilisez son <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés.  
   
  Le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés d’un <xref:System.Windows.Media.TileBrush> sont utilisées lorsque une des conditions suivantes est vraie :  
   
--   Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété est <xref:System.Windows.Media.Stretch.Uniform> ou <xref:System.Windows.Media.Stretch.UniformToFill> et <xref:System.Windows.Media.TileBrush.Viewbox%2A> et <xref:System.Windows.Media.TileBrush.Viewport%2A> ont des proportions différentes.  
+- Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété est <xref:System.Windows.Media.Stretch.Uniform> ou <xref:System.Windows.Media.Stretch.UniformToFill> et <xref:System.Windows.Media.TileBrush.Viewbox%2A> et <xref:System.Windows.Media.TileBrush.Viewport%2A> ont des proportions différentes.  
   
--   Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété est <xref:System.Windows.Media.Stretch.None> et <xref:System.Windows.Media.TileBrush.Viewbox%2A> et <xref:System.Windows.Media.TileBrush.Viewport%2A> sont de tailles différentes.  
+- Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété est <xref:System.Windows.Media.Stretch.None> et <xref:System.Windows.Media.TileBrush.Viewbox%2A> et <xref:System.Windows.Media.TileBrush.Viewport%2A> sont de tailles différentes.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant aligne le contenu d’un <xref:System.Windows.Media.DrawingBrush>, qui est un type de <xref:System.Windows.Media.TileBrush>, à l’angle supérieur gauche de sa mosaïque. Pour aligner le contenu, l’exemple définit le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriété de la <xref:System.Windows.Media.DrawingBrush> à <xref:System.Windows.Media.AlignmentX.Left> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriété <xref:System.Windows.Media.AlignmentY.Top>. Cet exemple produit la sortie suivante.  

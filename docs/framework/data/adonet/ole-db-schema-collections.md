@@ -3,11 +3,11 @@ title: Collections de schémas OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771993"
 ---
 # <a name="ole-db-schema-collections"></a>Collections de schémas OLE DB
 Cette section traite de la prise en charge des collections de schémas pour les fournisseurs OLE DB de Microsoft SQL Server, Oracle et Microsoft Jet.  
@@ -15,17 +15,17 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Fournisseur Microsoft SQL Server OLE DB  
  Le pilote OLE DB Microsoft SQL Server prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes :  
   
--   Tables  
+- Tables  
   
--   Colonnes  
+- Colonnes  
   
--   Procédures  
+- Procédures  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalogue  
+- Catalogue  
   
--   Index  
+- Index  
   
 ### <a name="tables"></a>Tables  
   
@@ -154,19 +154,19 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 ## <a name="microsoft-oracle-ole-db-provider"></a>Fournisseur Microsoft Oracle OLE DB  
  Le pilote Microsoft Oracle OLE DB prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes :  
   
--   Tables  
+- Tables  
   
--   Colonnes  
+- Colonnes  
   
--   Procédures  
+- Procédures  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Affichages  
+- Affichages  
   
--   Index  
+- Index  
   
 ### <a name="tables"></a>Tables  
   
@@ -297,15 +297,15 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 ## <a name="microsoft-jet-ole-db-provider"></a>Fournisseur Microsoft Jet OLE DB  
  Le pilote Microsoft Jet OLE DB prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes :  
   
--   Tables  
+- Tables  
   
--   Colonnes  
+- Colonnes  
   
--   Procédures  
+- Procédures  
   
--   Affichages  
+- Affichages  
   
--   Index  
+- Index  
   
 ### <a name="tables"></a>Tables  
   

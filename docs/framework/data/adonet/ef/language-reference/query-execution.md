@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614958"
 ---
 # <a name="query-execution"></a>Exécution de la requête
-Après avoir été créée par un utilisateur, une requête LINQ est convertie en arborescence de commandes. Une arborescence de commandes est une représentation de requête compatible avec Entity Framework. L'arborescence de requêtes est ensuite exécutée sur la source de données. Pendant l'exécution de la requête, toutes les expressions de la requête (c'est-à-dire, toutes ses composantes) sont évaluées, y compris les expressions utilisées dans la matérialisation des résultats.  
+Après avoir été créée par un utilisateur, une requête LINQ est convertie en arborescence de commandes. Une arborescence de commandes est une représentation de requête compatible avec Entity Framework. L’arborescence de requêtes est ensuite exécutée sur la source de données. Pendant l'exécution de la requête, toutes les expressions de la requête (c'est-à-dire, toutes ses composantes) sont évaluées, y compris les expressions utilisées dans la matérialisation des résultats.  
   
  Le moment où les expressions d'une requête sont exécutées peut varier. Les requêtes LINQ sont toujours exécutées lorsque la variable de requête fait l'objet d'une itération, et non au moment où elle est créée. Il s’agit *exécution différée*. Vous pouvez également forcer l'exécution immédiate de la requête, ce qui est utile pour mettre en cache les résultats de la requête. Ce sujet est abordé plus loin dans cette rubrique.  
   
  Lorsqu'une requête LINQ to Entities est exécutée, il est possible que certaines expressions de la requête soient exécutées sur le serveur et que certaines parties soient exécutées localement sur le client. L'évaluation côté client d'une expression a lieu avant l'exécution de la requête sur le serveur. Si une expression est évaluée sur le client, le résultat de cette évaluation remplace l'expression de la requête, et la requête est ensuite exécutée sur le serveur. Étant donné que les requêtes sont exécutées sur la source de données, la configuration de la source de données prévaut sur le comportement spécifié dans le client. Par exemple, la gestion des valeurs Null et la précision numérique dépendent des paramètres du serveur. Toutes les exceptions levées pendant l'exécution de la requête sur le serveur sont passées directement au client.  
  
 > [!TIP]
-> Pour obtenir un résumé pratique des opérateurs de requête au format de table, ce qui vous permet d’identifier rapidement le comportement de l’exécution d’un opérateur, consultez [Classification des opérateurs de requête Standard par la manière de l’exécution (c#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Pour obtenir un résumé pratique d’opérateurs de requête au format de table, ce qui vous permet d’identifier rapidement le comportement de l’exécution d’un opérateur, consultez [Classification des opérateurs de requête Standard en mode d’exécution (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Exécution de requête différée  
- Dans une requête qui retourne une séquence, la variable de requête elle-même ne contient jamais les résultats de la requête et stocke uniquement les commandes de requête. L'exécution de la requête est différée jusqu'à ce que la variable de requête soit itérée au sein d'une boucle `foreach` ou `For Each`. Il s’agit en tant que *exécution différée*; autrement dit, la requête est exécutée quelque temps après que la requête est construite. Vous pouvez ainsi exécuter une requête aussi fréquemment que vous le souhaitez. Cela est utile lorsque, par exemple, l'une de vos bases de données est en cours de mise à jour par d'autres applications. Dans votre application, vous pouvez créer une requête pour récupérer les informations les plus récentes et l'exécuter à plusieurs reprises, pour retourner chaque fois les informations à jour.  
+ Dans une requête qui retourne une séquence, la variable de requête elle-même ne contient jamais les résultats de la requête et stocke uniquement les commandes de requête. L'exécution de la requête est différée jusqu'à ce que la variable de requête soit itérée au sein d'une boucle `foreach` ou `For Each`. Il s’agit *exécution différée*; autrement dit, la requête exécution lieu un certain temps après la construction de la requête. Vous pouvez ainsi exécuter une requête aussi fréquemment que vous le souhaitez. Cela est utile lorsque, par exemple, l'une de vos bases de données est en cours de mise à jour par d'autres applications. Dans votre application, vous pouvez créer une requête pour récupérer les informations les plus récentes et l'exécuter à plusieurs reprises, pour retourner chaque fois les informations à jour.  
   
  L'exécution différée permet de combiner plusieurs requêtes ou d'étendre une requête. Lorsqu'une requête est étendue, elle est modifiée de manière à inclure les nouvelles opérations, et l'exécution finale reflète les modifications. Dans l'exemple suivant, la première requête retourne tous les produits. La deuxième requête étend la première en utilisant `Where` pour retourner tous les produits de taille « L » :  
   
@@ -38,7 +38,7 @@ Après avoir été créée par un utilisateur, une requête LINQ est convertie e
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
  [!code-vb[DP L2E Examples#ToArray](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#toarray)]  
   
- Vous pouvez également forcer l'exécution en plaçant la boucle `foreach` ou `For Each` de suite après l'expression de requête, mais en appelant <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A>, vous mettez en cache toutes les données contenues dans un objet de collection unique.  
+ Vous pouvez également forcer l’exécution en plaçant la boucle `foreach` ou `For Each` de suite après l’expression de requête, mais en appelant <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A>, vous mettez en cache toutes les données contenues dans un objet de collection unique.  
   
 ## <a name="store-execution"></a>Exécution sur les magasins  
  En règle générale, les expressions dans LINQ to Entities sont évaluées sur le serveur, et le comportement de l'expression n'est pas censé suivre la sémantique CLR (Common Language Runtime), mais celle de la source de données. Toutefois, il y a des exceptions à cette règle, notamment lorsque l'expression est exécutée sur le client. Cela peut donner lieu à des résultats inattendus, par exemple lorsque le serveur et le client sont situés dans des fuseaux horaires différents.  
@@ -87,13 +87,13 @@ Après avoir été créée par un utilisateur, une requête LINQ est convertie e
   
  Par exemple, voici quelques différences de comportement entre le CLR et SQL Server :  
   
--   SQL Server trie les GUID de façon différente par rapport au CLR.  
+- SQL Server trie les GUID de façon différente par rapport au CLR.  
   
--   Des différences peuvent également être constatées sur le plan de la précision des résultats lorsque le type Décimal est utilisé dans SQL Server. Cela est dû aux exigences de précision fixe inhérentes au type Décimal de SQL Server. Par exemple, la moyenne des valeurs <xref:System.Decimal> 0,0, 0,0 et 1,0 est de 0,3333333333333333333333333333 dans la mémoire du client, mais de 0,333333 dans le magasin (selon la précision par défaut du type Décimal de SQL Server).  
+- Des différences peuvent également être constatées sur le plan de la précision des résultats lorsque le type Décimal est utilisé dans SQL Server. Cela est dû aux exigences de précision fixe inhérentes au type Décimal de SQL Server. Par exemple, la moyenne des valeurs <xref:System.Decimal> 0,0, 0,0 et 1,0 est de 0,3333333333333333333333333333 dans la mémoire du client, mais de 0,333333 dans le magasin (selon la précision par défaut du type Décimal de SQL Server).  
   
--   De même, le traitement de certaines opérations de comparaison de chaînes est différent selon qu'elles sont traitées dans SQL Server ou dans le CLR. Le comportement en matière de comparaison de chaînes dépend des paramètres de classement du serveur.  
+- De même, le traitement de certaines opérations de comparaison de chaînes est différent selon qu'elles sont traitées dans SQL Server ou dans le CLR. Le comportement en matière de comparaison de chaînes dépend des paramètres de classement du serveur.  
   
--   Les appels de fonction ou de méthode éventuellement inclus dans une requête LINQ to Entities sont mappés aux fonctions canoniques d'Entity Framework, qui sont ensuite traduites dans Transact-SQL et exécutées sur la base de données SQL Server. Dans certains cas, le comportement affiché par ces fonctions mappées peut être différent de l'implémentation dans les bibliothèques de classes de base. Par exemple, l'appel des méthodes <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> et <xref:System.String.EndsWith%2A> avec une chaîne vide en guise de paramètre retourne une valeur `true` en cas d'exécution dans le CLR, mais retourne une valeur `false` en cas d'exécution dans SQL Server. La méthode <xref:System.String.EndsWith%2A> peut également retourner des résultats différents. En effet, SQL Server considère que deux chaînes sont égales si seul un espace à droite les différencie. Or, dans ce cas, le CLR les considère différentes. Ceci est illustré dans l'exemple suivant :  
+- Les appels de fonction ou de méthode éventuellement inclus dans une requête LINQ to Entities sont mappés aux fonctions canoniques d'Entity Framework, qui sont ensuite traduites dans Transact-SQL et exécutées sur la base de données SQL Server. Dans certains cas, le comportement affiché par ces fonctions mappées peut être différent de l'implémentation dans les bibliothèques de classes de base. Par exemple, l'appel des méthodes <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> et <xref:System.String.EndsWith%2A> avec une chaîne vide en guise de paramètre retourne une valeur `true` en cas d'exécution dans le CLR, mais retourne une valeur `false` en cas d'exécution dans SQL Server. La méthode <xref:System.String.EndsWith%2A> peut également retourner des résultats différents. En effet, SQL Server considère que deux chaînes sont égales si seul un espace à droite les différencie. Or, dans ce cas, le CLR les considère différentes. Ceci est illustré dans l'exemple suivant :  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

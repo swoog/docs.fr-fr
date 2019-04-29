@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
 ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768398"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Procédure : Sélectionner une entrée manuscrite à partir d’un contrôle personnalisé
 En ajoutant un <xref:System.Windows.Ink.IncrementalLassoHitTester> à votre contrôle personnalisé, vous pouvez activer votre contrôle afin qu’un utilisateur peut sélectionner l’encre avec un outil lasso, semblable à la façon dont le <xref:System.Windows.Controls.InkCanvas> sélectionne l’encre avec un lasso.  

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
 ms.openlocfilehash: 54639edb512a8bc6c5909282d5e4c210439e2a6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683416"
 ---
 # <a name="bindingsource-component"></a>Composant BindingSource
 Encapsule une source de données pour la liaison à des contrôles.  
   
- Le composant <xref:System.Windows.Forms.BindingSource> remplit deux fonctions. Tout d'abord, il fournit une couche d'indirection lors de la liaison des contrôles sur un formulaire de données. Vous devez pour cela lier le composant <xref:System.Windows.Forms.BindingSource> à votre source de données, puis lier les contrôles sur votre formulaire au composant <xref:System.Windows.Forms.BindingSource>. Toute interaction supplémentaire avec les données, y compris la navigation, le tri, le filtrage et la mise à jour, est effectuée en appelant le composant <xref:System.Windows.Forms.BindingSource>.  
+ Le composant <xref:System.Windows.Forms.BindingSource> remplit deux fonctions. Tout d’abord, il fournit une couche d’indirection lors de la liaison des contrôles sur un formulaire de données. Vous devez pour cela lier le composant <xref:System.Windows.Forms.BindingSource> à votre source de données, puis lier les contrôles sur votre formulaire au composant <xref:System.Windows.Forms.BindingSource>. Toute interaction supplémentaire avec les données, y compris la navigation, le tri, le filtrage et la mise à jour, est effectuée en appelant le composant <xref:System.Windows.Forms.BindingSource>.  
   
  Ensuite, le composant <xref:System.Windows.Forms.BindingSource> peut agir comme source de données fortement typée. L'ajout d'un type au composant <xref:System.Windows.Forms.BindingSource> avec la méthode <xref:System.Windows.Forms.BindingSource.Add%2A> crée une liste de ce type.  
   

@@ -3,11 +3,11 @@ title: QuoiF#
 description: En savoir plus sur ce que le F# langage de programmation est et ce qu’il F# ressemble par programmation. En savoir plus sur les types de données enrichis, fonctions et comment ils s’imbriquent.
 ms.date: 08/03/2018
 ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756336"
 ---
 # <a name="what-is-f"></a>Nouveautés de F\#
 

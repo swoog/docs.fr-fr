@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829658"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procédure : Accéder à une Variable masquée par une classe dérivée (Visual Basic)
 Lorsque le code dans une classe dérivée accède à une variable, le compilateur résout normalement la référence vers la version accessible le plus proche, autrement dit, la version accessible le moins qui d’étapes vers l’arrière de la classe. Si la variable est définie dans la classe dérivée, le code accède normalement à cette définition.  
@@ -23,7 +23,7 @@ Lorsque le code dans une classe dérivée accède à une variable, le compilateu
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Pour accéder à une variable de classe de base masquée par une classe dérivée  
   
--   Dans une expression ou une instruction d’assignation, faites précéder le nom de variable avec le `MyBase` mot clé et une période (`.`).  
+- Dans une expression ou une instruction d’assignation, faites précéder le nom de variable avec le `MyBase` mot clé et une période (`.`).  
   
      Le compilateur résout la référence à la version de la classe de base de la variable.  
   

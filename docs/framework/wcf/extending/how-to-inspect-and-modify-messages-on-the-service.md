@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
 ms.openlocfilehash: 87f9cf5040ffb757799c51d598d0755847c5bfd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767089"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Procédure : inspecter et modifier des messages sur le service
 Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client Windows Communication Foundation (WCF) en implémentant un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> et en l’insérant dans l’exécution du service. Pour plus d’informations, consultez [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
@@ -26,11 +26,11 @@ Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un clien
 ## <a name="example"></a>Exemple  
  Les exemples de code suivants affichent, dans l'ordre :  
   
--   L'implémentation d'un inspecteur de service.  
+- L'implémentation d'un inspecteur de service.  
   
--   Un comportement de service qui insère l'inspecteur.  
+- Un comportement de service qui insère l'inspecteur.  
   
--   Un fichier de configuration qui charge et exécute le comportement dans une application de service.  
+- Un fichier de configuration qui charge et exécute le comportement dans une application de service.  
   
  [!code-csharp[Interceptors#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
  [!code-vb[Interceptors#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  

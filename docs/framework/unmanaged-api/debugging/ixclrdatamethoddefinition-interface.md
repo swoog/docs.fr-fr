@@ -1,5 +1,5 @@
 ---
-title: Interface de IXCLRDataMethodDefinition
+title: IXCLRDataMethodDefinition, interface
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670089"
 ---
-# <a name="ixclrdatamethoddefinition-interface"></a>Interface de IXCLRDataMethodDefinition
+# <a name="ixclrdatamethoddefinition-interface"></a>IXCLRDataMethodDefinition, interface
 
 Fournit des méthodes pour obtenir des informations sur une définition de méthode.
 
@@ -42,7 +42,7 @@ Les méthodes suivantes sont certaines des méthodes disponibles dans l’interf
 
 Cette interface réside dans le runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque. Toutefois, il est une interface COM qui dérive de `IUnknown` avec le GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97` qui peuvent être obtenues via les mécanismes COM habituels.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  

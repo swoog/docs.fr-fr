@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757561"
 ---
 # <a name="profiling-overview"></a>Vue d'ensemble du profilage
 <a name="top"></a> Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654092"
   
  Cette vue d'ensemble comprend les sections suivantes :  
   
--   [L’API de profilage](#profiling_api)  
+- [L’API de profilage](#profiling_api)  
   
--   [Fonctionnalités prises en charge](#support)  
+- [Fonctionnalités prises en charge](#support)  
   
--   [Threads de notification](#notification_threads)  
+- [Threads de notification](#notification_threads)  
   
--   [Sécurité](#security)  
+- [Sécurité](#security)  
   
--   [Combinaison de Code managé et dans un Code de Profiler](#combining_managed_unmanaged)  
+- [Combinaison de Code managé et dans un Code de Profiler](#combining_managed_unmanaged)  
   
--   [Profilage de Code non managé](#unmanaged)  
+- [Profilage de Code non managé](#unmanaged)  
   
--   [À l’aide de COM](#com)  
+- [À l’aide de COM](#com)  
   
--   [Les piles d’appels](#call_stacks)  
+- [Les piles d’appels](#call_stacks)  
   
--   [Rappels et profondeur de la pile](#callbacks)  
+- [Rappels et profondeur de la pile](#callbacks)  
   
--   [Rubriques connexes](#related_topics)  
+- [Rubriques connexes](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>L'API de profilage  
@@ -96,33 +96,33 @@ ms.locfileid: "58654092"
   
  L'API de profilage récupère des informations sur les événements et actions ci-après qui se produisent dans le CLR :  
   
--   Événements de démarrage et d'arrêt du CLR.  
+- Événements de démarrage et d'arrêt du CLR.  
   
--   Événements de création et d'arrêt de domaine d'application.  
+- Événements de création et d'arrêt de domaine d'application.  
   
--   Événements de chargement et de déchargement d'assemblys.  
+- Événements de chargement et de déchargement d'assemblys.  
   
--   Événements de chargement et de déchargement de modules.  
+- Événements de chargement et de déchargement de modules.  
   
--   Événements de création et de destruction de tables vtable COM.  
+- Événements de création et de destruction de tables vtable COM.  
   
--   Événements de compilation juste-à-temps (JIT) et de lancement de code.  
+- Événements de compilation juste-à-temps (JIT) et de lancement de code.  
   
--   Événements de chargement et de déchargement de classes.  
+- Événements de chargement et de déchargement de classes.  
   
--   Événements de création et de destruction de threads.  
+- Événements de création et de destruction de threads.  
   
--   Événements d'entrée et de sortie de fonction.  
+- Événements d'entrée et de sortie de fonction.  
   
--   Exceptions.  
+- Exceptions.  
   
--   Transitions entre l'exécution de code managé et non managé.  
+- Transitions entre l'exécution de code managé et non managé.  
   
--   Transitions entre des contextes d'exécution différents.  
+- Transitions entre des contextes d'exécution différents.  
   
--   Informations sur les suspensions du runtime.  
+- Informations sur les suspensions du runtime.  
   
--   Informations sur l'activité du tas de mémoire du runtime et du garbage collection.  
+- Informations sur l'activité du tas de mémoire du runtime et du garbage collection.  
   
  L'API de profilage peut être appelée à partir de tout langage compatible COM (non managé).  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654092"
 ### <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  L'API de profilage ne prend pas en charge les fonctionnalités suivantes :  
   
--   Code non managé, qui doit être profilé à l'aide de méthodes Win32 classiques. Toutefois, le profileur CLR inclut des événements de transition pour déterminer les limites entre code managé et non managé.  
+- Code non managé, qui doit être profilé à l'aide de méthodes Win32 classiques. Toutefois, le profileur CLR inclut des événements de transition pour déterminer les limites entre code managé et non managé.  
   
--   Applications qui modifient elles-mêmes leur propre code à des fins de programmation orientée aspect par exemple.  
+- Applications qui modifient elles-mêmes leur propre code à des fins de programmation orientée aspect par exemple.  
   
--   Vérification des limites, car l'API de profilage ne fournit pas ces informations. Le CLR assure une prise en charge intrinsèque de la vérification des limites de tout le code managé.  
+- Vérification des limites, car l'API de profilage ne fournit pas ces informations. Le CLR assure une prise en charge intrinsèque de la vérification des limites de tout le code managé.  
   
--   Profilage distant, qui n'est pas pris en charge pour les raisons suivantes :  
+- Profilage distant, qui n'est pas pris en charge pour les raisons suivantes :  
   
-    -   Le profilage distant allonge le temps d'exécution. Quand vous utilisez les interfaces de profilage, vous devez minimiser le temps d'exécution afin que les résultats de profilage ne soient pas indûment affectés. Cela s'avère particulièrement pertinent quand les performances de l'exécution sont analysées. Toutefois, le profilage distant n'est pas une limitation quand les interfaces de profilage sont utilisées pour analyser l'utilisation de la mémoire ou pour obtenir des informations d'exécution sur les frames de pile, les objets, etc.  
+    - Le profilage distant allonge le temps d'exécution. Quand vous utilisez les interfaces de profilage, vous devez minimiser le temps d'exécution afin que les résultats de profilage ne soient pas indûment affectés. Cela s'avère particulièrement pertinent quand les performances de l'exécution sont analysées. Toutefois, le profilage distant n'est pas une limitation quand les interfaces de profilage sont utilisées pour analyser l'utilisation de la mémoire ou pour obtenir des informations d'exécution sur les frames de pile, les objets, etc.  
   
-    -   Le profileur de code CLR doit inscrire une ou plusieurs interfaces de rappel auprès du runtime sur l'ordinateur local sur lequel s'exécute l'application profilée. Cela limite la possibilité de créer un profileur de code distant.  
+    - Le profileur de code CLR doit inscrire une ou plusieurs interfaces de rappel auprès du runtime sur l'ordinateur local sur lequel s'exécute l'application profilée. Cela limite la possibilité de créer un profileur de code distant.  
   
--   Profilage dans des environnements de production avec des exigences de haute disponibilité. L'API de profilage a été créée pour prendre en charge les diagnostics au moment du développement. Elle n'a pas subi les tests rigoureux requis pour prendre en charge des environnements de production.  
+- Profilage dans des environnements de production avec des exigences de haute disponibilité. L'API de profilage a été créée pour prendre en charge les diagnostics au moment du développement. Elle n'a pas subi les tests rigoureux requis pour prendre en charge des environnements de production.  
   
  [Retour au début](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654092"
 ## <a name="profiling-unmanaged-code"></a>Profilage de code non managé  
  L'API de profilage CLR (Common Language Runtime) fournit la prise en charge minimale pour profiler du code non managé. Les fonctionnalités suivantes sont fournies :  
   
--   Énumération des chaînes de pile. Cette fonctionnalité permet à un profileur de code de déterminer la limite entre code managé et code non managé.  
+- Énumération des chaînes de pile. Cette fonctionnalité permet à un profileur de code de déterminer la limite entre code managé et code non managé.  
   
--   Détermination de la nature d'une chaîne de pile, à savoir s'il s'agit de code managé ou de code natif.  
+- Détermination de la nature d'une chaîne de pile, à savoir s'il s'agit de code managé ou de code natif.  
   
  Dans les versions 1.0 et 1.1 du .NET Framework, ces méthodes sont disponibles via le sous-ensemble in-process de l'API de débogage CLR. Elles sont définies dans le fichier CorDebug.idl.  
   

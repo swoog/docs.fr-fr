@@ -3,11 +3,11 @@ title: Traitement ordonné des messages en mode de concurrence simple
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769445"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>Traitement ordonné des messages en mode de concurrence simple
 WCF n’offre aucune garantie concernant l’ordre dans lequel les messages sont traités, à moins que le canal sous-jacent soit session.  Par exemple, un service WCF qui utilise MsmqInputChannel, qui n’est pas un canal de session, ne traite pas les messages dans l’ordre. Il existe certains cas où un développeur peut le comportement de traitement dans l’ordre, mais pas souhaitent utiliser des sessions. Cette rubrique décrit comment configurer ce comportement lorsqu'un service s'exécute en mode de concurrence simple.  

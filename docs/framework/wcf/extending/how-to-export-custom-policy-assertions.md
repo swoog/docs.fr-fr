@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767167"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procédure : exporter des assertions de stratégie personnalisées
 Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l'application cliente. Vous pouvez utiliser Windows Communication Foundation (WCF) pour exporter des assertions dans les expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, opération ou aux objets de message, selon les conditions de que communication ou de fonctionnalités.  

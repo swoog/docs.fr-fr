@@ -9,14 +9,14 @@ ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697717"
 ---
 # <a name="fusion-global-static-functions"></a>Fonctions statiques globales de la fusion
-Cette section décrit les fonctions statiques globales non managées que l’API de fusion utilise.  
+Cette section décrit les fonctions statiques globales non managées qui utilise l’API de fusion.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ClearDownloadCache, fonction](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
@@ -47,7 +47,7 @@ Cette section décrit les fonctions statiques globales non managées que l’API
  Obtient un pointeur vers un [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instance qui gère des clés pour les identités d’application et les références.  
   
  [GetAssemblyIdentityFromFile, fonction](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- Obtient un pointeur vers un `IUnknown` objet `IID` dans l’assembly sur le chemin d’accès de fichier spécifié.  
+ Obtient un pointeur vers un `IUnknown` objet avec la valeur `IID` dans l’assembly dans le chemin de fichier spécifié.  
   
  [GetCachePath, fonction](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
  Obtient le chemin d’accès à l’assembly mis en cache, à l’aide des indicateurs spécifiés.  
@@ -65,7 +65,7 @@ Cette section décrit les fonctions statiques globales non managées que l’API
  Supprime le cache de téléchargement du common language runtime.  
   
  [PreBindAssemblyEx, fonction](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- Obtient le nom complet de post-stratégie pour un assembly.  
+ Obtient le nom complet de la stratégie après d’un assembly.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Interfaces de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

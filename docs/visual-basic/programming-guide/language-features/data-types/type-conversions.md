@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663282"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversions de type en Visual Basic
 Le processus de modification d’une valeur à partir d’un type de données à un autre type est appelé *conversion*. Les conversions sont soit *étendues* ou *restrictives*, en fonction de la capacité de données des types impliqués. Ils sont également *implicite* ou *explicite*, en fonction de la syntaxe dans le code source.  
@@ -30,7 +30,7 @@ Le processus de modification d’une valeur à partir d’un type de données à
  [Conversion entre des chaînes et d’autres types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Décrit la conversion entre des chaînes et numériques, `Boolean`, ou les valeurs de date/heure.  
   
- [Comment : convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Guide pratique pour Convertir un objet en un autre Type dans Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  Montre comment convertir une `Object` variable en un autre type de données.  
   
  [Conversions de tableau](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

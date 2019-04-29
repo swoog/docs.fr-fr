@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698640"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With, instruction (Visual Basic)
 Exécute une série d'instructions qui font référence à plusieurs reprises à un objet ou une structure unique afin que ces instructions puissent utiliser une syntaxe simplifiée lors de l'accès aux membres de l'objet ou de la structure.  Lorsque vous utilisez une structure, vous ne pouvez lire que les valeurs des membres ou des méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  
@@ -48,9 +48,9 @@ End With
   
  Si votre code accède au même objet dans plusieurs instructions, vous bénéficiez des avantages suivants via l'instruction `With` :  
   
--   Vous n'avez pas besoin d'évaluer une expression complexe plusieurs fois, ni d'assigner le résultat à une variable temporaire pour faire référence à ses membres à plusieurs reprises.  
+- Vous n'avez pas besoin d'évaluer une expression complexe plusieurs fois, ni d'assigner le résultat à une variable temporaire pour faire référence à ses membres à plusieurs reprises.  
   
--   Vous rendez votre code plus lisible en éliminant les expressions qualifiantes répétitives.  
+- Vous rendez votre code plus lisible en éliminant les expressions qualifiantes répétitives.  
   
  Le type de données de `objectExpression` peut être un type de classe ou de structure, ou même un type élémentaire Visual Basic, tel que `Integer`.  Si `objectExpression` est autre chose qu'un objet, vous ne pouvez lire que les valeurs de ses membres ou de ses méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  Il s'agit de la même erreur que celle que vous obtenez si vous appelez une méthode qui a retourné une structure et qui a immédiatement accédé à une valeur pour l'assigner à un membre du résultat de la fonction, par exemple `GetAPoint().x = 1`.  Dans les deux cas, le problème vient du fait que la structure existe uniquement dans la pile des appels. Par ailleurs, il n'existe aucun moyen dans ce cas pour qu'un membre de structure modifié puisse écrire dans un emplacement de manière à ce qu'une autre partie du code du programme puisse observer la modification.  
   

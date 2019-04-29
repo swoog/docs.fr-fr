@@ -3,11 +3,11 @@ title: Écriture de Dynamic SQL sécurisé dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757714"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Écriture de Dynamic SQL sécurisé dans SQL Server
 L'injection SQL est le processus qui permet à un utilisateur malveillant d'entrer des instructions Transact-SQL au lieu d'une entrée valide. Si l’entrée est transmise directement au serveur sans validation et si l’application exécute accidentellement le code injecté, l’attaque risque d’endommager ou de détruire des données.  
@@ -21,34 +21,34 @@ L'injection SQL est le processus qui permet à un utilisateur malveillant d'entr
   
  Voici quelques conseils utiles :  
   
--   Ne générez jamais des instructions Transact-SQL directement à partir d'entrées d'utilisateur. Utilisez des procédures stockées pour valider les entrées d'utilisateur.  
+- Ne générez jamais des instructions Transact-SQL directement à partir d'entrées d'utilisateur. Utilisez des procédures stockées pour valider les entrées d'utilisateur.  
   
--   Validez les entrées d'utilisateur en testant le type, la longueur, le format et la plage. Utilisez la fonction Transact-SQL QUOTENAME() pour échapper les noms système ou la fonction REPLACE() pour échapper tout caractère d'une chaîne.  
+- Validez les entrées d'utilisateur en testant le type, la longueur, le format et la plage. Utilisez la fonction Transact-SQL QUOTENAME() pour échapper les noms système ou la fonction REPLACE() pour échapper tout caractère d'une chaîne.  
   
--   Implémentez plusieurs couches de validation dans chaque niveau de votre application.  
+- Implémentez plusieurs couches de validation dans chaque niveau de votre application.  
   
--   Testez la taille et le type de données des entrées et appliquez des limites appropriées. Cela permet d'éviter les dépassements délibérés de mémoire tampon.  
+- Testez la taille et le type de données des entrées et appliquez des limites appropriées. Cela permet d'éviter les dépassements délibérés de mémoire tampon.  
   
--   Testez le contenu des variables de chaîne et acceptez uniquement les valeurs attendues. Rejetez les entrées qui contiennent des données binaires, des séquences d'échappement et des caractères de commentaire.  
+- Testez le contenu des variables de chaîne et acceptez uniquement les valeurs attendues. Rejetez les entrées qui contiennent des données binaires, des séquences d'échappement et des caractères de commentaire.  
   
--   Lorsque vous travaillez avec des documents XML, validez toutes les données par rapport à leur schéma tel qu'il est entré.  
+- Lorsque vous travaillez avec des documents XML, validez toutes les données par rapport à leur schéma tel qu'il est entré.  
   
--   Dans les environnements multicouches, toutes les données doivent être validées avant admission dans la zone de confiance.  
+- Dans les environnements multicouches, toutes les données doivent être validées avant admission dans la zone de confiance.  
   
--   N’acceptez pas les chaînes suivantes dans les champs à partir de laquelle les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
+- N’acceptez pas les chaînes suivantes dans les champs à partir de laquelle les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
   
--   Utilisez des objets <xref:System.Data.SqlClient.SqlParameter>  avec des procédures stockées et des commandes pour fournir le contrôle de type et la validation de longueur.  
+- Utilisez des objets <xref:System.Data.SqlClient.SqlParameter>  avec des procédures stockées et des commandes pour fournir le contrôle de type et la validation de longueur.  
   
--   Utilisez des expressions <xref:System.Text.RegularExpressions.Regex> pour filtrer les caractères non valides.  
+- Utilisez des expressions <xref:System.Text.RegularExpressions.Regex> pour filtrer les caractères non valides.  
   
 ## <a name="dynamic-sql-strategies"></a>Stratégies SQL dynamique  
  L'exécution d'instructions SQL créées de manière dynamique dans votre code de procédure rompt la chaîne de propriétés, ce qui conduit SQL Server à vérifier les autorisations de l'appelant par rapport aux objets auxquels le code SQL dynamique accède.  
   
  SQL Server dispose de méthodes pour accorder aux utilisateurs l'accès aux données à l'aide de procédures stockées et de fonctions définies par l'utilisateur qui exécutent du code SQL dynamique.  
   
--   Utilisation de l’emprunt d’identité avec la clause Transact-SQL EXECUTE AS, comme décrit dans [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Utilisation de l’emprunt d’identité avec la clause Transact-SQL EXECUTE AS, comme décrit dans [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Signature de procédures stockées avec des certificats, comme décrit dans [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Signature de procédures stockées avec des certificats, comme décrit dans [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  La clause EXECUTE AS remplace les autorisations de l'appelant par celles de l'utilisateur spécifié dans la clause EXECUTE AS. Les procédures stockées ou déclencheurs imbriqués s'exécutent dans le contexte de sécurité de l'utilisateur proxy. Les applications qui reposent sur la sécurité de niveau ligne ou qui nécessitent un audit risquent alors de s'arrêter. Certaines fonctions qui retournent l'identité de l'utilisateur retournent l'utilisateur spécifié dans la clause EXECUTE AS, et non l'appelant d'origine. Le contexte d'exécution de l'appelant d'origine est rétabli uniquement après exécution de la procédure ou lorsqu'une instruction REVERT est émise.  

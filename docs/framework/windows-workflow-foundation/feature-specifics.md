@@ -3,11 +3,11 @@ title: Fonctionnalités spécifiques à Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773678"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Fonctionnalités spécifiques à Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ Le <xref:System.ServiceModel.WorkflowServiceHost> est l’hôte de flux de trava
 
 - Vous trouverez des exemples de <xref:System.ServiceModel.WorkflowServiceHost> dans les sections suivantes :
 
-    - [Exécution](./samples/execution.md)
+  - [Exécution](./samples/execution.md)
 
-    - Application : [Gestion de l’instance interrompue](./samples/suspended-instance-management.md)
+  - Application : [Gestion de l’instance interrompue](./samples/suspended-instance-management.md)
 
 - [Vue d’ensemble des services de Workflow d’hébergement](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Une corrélation correspond à l'un des deux concepts suivants :
 
 - À titre d'exemple de corrélation utilisé pour regrouper des messages, citons une corrélation demande-réponse.
 
-    - Sur un <xref:System.ServiceModel.Activities.Receive> activité, cliquez sur le <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propriété et ajoutez un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> à l’aide du CorrelationHandle créé dans la première étape ci-dessus.
+  - Sur un <xref:System.ServiceModel.Activities.Receive> activité, cliquez sur le <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propriété et ajoutez un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> à l’aide du CorrelationHandle créé dans la première étape ci-dessus.
 
-    - Créer un <xref:System.ServiceModel.Activities.SendReply> activité en cliquant sur le <xref:System.ServiceModel.Activities.Receive> et en cliquant sur « Create SendReply ». Collez-la dans votre flux de travail à la suite de l'activité <xref:System.ServiceModel.Activities.Receive>.
+  - Créer un <xref:System.ServiceModel.Activities.SendReply> activité en cliquant sur le <xref:System.ServiceModel.Activities.Receive> et en cliquant sur « Create SendReply ». Collez-la dans votre flux de travail à la suite de l'activité <xref:System.ServiceModel.Activities.Receive>.
 
 - Une corrélation basée sur le contenu qui mappe des données (un numéro de commande, par exemple) à une instance de flux de travail particulière constitue un exemple de mappage de données à une instance de service.
 
-    - Dans une activité de messagerie, cliquez sur la propriété `CorrelationInitializers` et ajoutez un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> à l'aide de la variable <xref:System.ServiceModel.Activities.CorrelationHandle> créée ci-dessus. Double-cliquez sur la propriété de votre choix dans le message (par exemple, OrderID) du menu déroulant. Définissez la propriété `CorrelatesWith` avec la variable <xref:System.ServiceModel.Activities.CorrelationHandle> utilisée précédemment.
+  - Dans une activité de messagerie, cliquez sur la propriété `CorrelationInitializers` et ajoutez un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> à l'aide de la variable <xref:System.ServiceModel.Activities.CorrelationHandle> créée ci-dessus. Double-cliquez sur la propriété de votre choix dans le message (par exemple, OrderID) du menu déroulant. Définissez la propriété `CorrelatesWith` avec la variable <xref:System.ServiceModel.Activities.CorrelationHandle> utilisée précédemment.
 
 - [Documentation conceptuelle de corrélation](../wcf/feature-details/correlation.md)
 
@@ -115,7 +115,7 @@ Le schéma de configuration WCF est complexe et fournit aux utilisateurs plusieu
 
 Dans .NET 3.5, il existait quelques limitations à la conception de types connus :
 
-- L'ajout de types connus de manière dynamique pendant la sérialisation ou la désérialisation était impossible.
+- L’ajout de types connus de manière dynamique pendant la sérialisation ou la désérialisation était impossible.
 
 - Les sérialiseurs n'étaient pas en mesure de gérer des informations xsi:type inconnues.
 
@@ -131,9 +131,9 @@ Le [DataContractResolver](../wcf/samples/datacontractresolver.md) résout ces pr
 
 - Exemples :
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Scénarios d'un programme de résolution de contrat de données
 
@@ -149,27 +149,27 @@ Un organigramme est un paradigme connu permettant la représentation visuelle de
 
 - Dans Visual Studio 2012, créez une application console de workflow. Ajoutez un organigramme dans le concepteur de workflow.
 
-- La fonctionnalité d'organigramme utilise les classes suivantes :
+- La fonctionnalité d’organigramme utilise les classes suivantes :
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Exemples :
 
-    - [Gestion des erreurs dans une activité Flowchart à l’aide de TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Gestion des erreurs dans une activité Flowchart à l’aide de TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Processus d’embauche](./samples/hiring-process.md)
+  - [Processus d’embauche](./samples/hiring-process.md)
 
 - Documentation relative au concepteur :
 
-    - [Concepteurs d’activités d’organigramme](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Concepteurs d’activités d’organigramme](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Scénarios d'organigramme
 
@@ -197,15 +197,15 @@ Les activités procédurales fournissent un mécanisme de modélisation d'un flu
 
 - Exemples :
 
-    - [Processus d’embauche](./samples/hiring-process.md)
+  - [Processus d’embauche](./samples/hiring-process.md)
 
-    - [Processus d’achat d’entreprise](./samples/corporate-purchase-process.md)
+  - [Processus d’achat d’entreprise](./samples/corporate-purchase-process.md)
 
 - Documentation relative au concepteur :
 
-    - [Concepteur d’activités Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Concepteur d’activités Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > Concepteur d’activités](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > Concepteur d’activités](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Scénarios d'activités procédurales
 
@@ -215,7 +215,7 @@ Les activités procédurales fournissent un mécanisme de modélisation d'un flu
 
 ## <a name="invokemethod"></a>InvokeMethod
 
-L'activité <xref:System.Activities.Statements.InvokeMethod> permet l'appel de méthodes publiques dans des objets ou des types de l'étendue. Elle prend en charge l'appel de méthodes statiques et d'instances avec ou sans paramètres (y compris les tableaux de paramètres), ainsi que les méthodes génériques. Elle permet également l'exécution de la méthode de façon synchrone et de façon asynchrone.
+L'activité <xref:System.Activities.Statements.InvokeMethod> permet l'appel de méthodes publiques dans des objets ou des types de l'étendue. Elle prend en charge l'appel de méthodes statiques et d'instances avec ou sans paramètres (y compris les tableaux de paramètres), ainsi que les méthodes génériques. Elle permet également l’exécution de la méthode de façon synchrone et de façon asynchrone.
 
 ### <a name="getting-started"></a>Prise en main
 
@@ -247,7 +247,7 @@ Un ensemble d'activités doit être exécuté et une logique spécifique être e
 
 ## <a name="pick-activity"></a>Activité Pick
 
-L'activité <xref:System.Activities.Statements.Pick> fournit une modélisation de flux de contrôle basée sur les événements dans WF. <xref:System.Activities.Statements.Pick> contient de nombreuses branches, où chacune d'entre elles attend qu'un événement particulier se produise avant de s'exécuter. Dans cette configuration, un <xref:System.Activities.Statements.Pick> se comporte de manière similaire à un <xref:System.Activities.Statements.Switch%601> dans lequel l'activité exécutera un seul des jeux d'événements qu'elle écoute. Chaque branche est pilotée par l'événement et celui qui se produit exécute la branche correspondante. Toutes les autres branches annulent et arrêtent l'écoute des événements.
+L'activité <xref:System.Activities.Statements.Pick> fournit une modélisation de flux de contrôle basée sur les événements dans WF. <xref:System.Activities.Statements.Pick> contient de nombreuses branches, où chacune d'entre elles attend qu'un événement particulier se produise avant de s'exécuter. Dans cette configuration, un <xref:System.Activities.Statements.Pick> se comporte de manière similaire à un <xref:System.Activities.Statements.Switch%601> dans lequel l'activité exécutera un seul des jeux d'événements qu'elle écoute. Chaque branche est pilotée par l’événement et celui qui se produit exécute la branche correspondante. Toutes les autres branches annulent et arrêtent l'écoute des événements.
 
 ### <a name="getting-started"></a>Prise en main
 
@@ -275,7 +275,7 @@ Le service de routage dans .NET 4 est conçu pour faciliter la résoudre ces pro
 
 1. Routage basé sur le contenu (les objets <xref:System.ServiceModel.Dispatcher.MessageFilter> examinent un message afin de déterminer sa destination.)
 
-2. Pontage de protocoles (transport et message)
+2. Protocole pontage (transport et message)
 
 3. Gestion des erreurs (le routeur intercepte les exceptions de communication et bascule sur les points de terminaison de sauvegarde)
 

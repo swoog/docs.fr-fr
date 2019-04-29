@@ -3,11 +3,11 @@ title: BFILE Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771967"
 ---
 # <a name="oracle-bfiles"></a>BFILE Oracle
 Le fournisseur de données .NET Framework pour Oracle inclut la classe <xref:System.Data.OracleClient.OracleBFile> qui est utilisée pour opérer avec le type de données <xref:System.Data.OracleClient.OracleType.BFile> Oracle.  
@@ -16,11 +16,11 @@ Le fournisseur de données .NET Framework pour Oracle inclut la classe <xref:Sys
   
  Autres caractéristiques d’un **BFILE** type de données qui le distinguent un **LOB** type de données :  
   
--   Il contient des données non structurées.  
+- Il contient des données non structurées.  
   
--   Il prend en charge la fragmentation côté serveur.  
+- Il prend en charge la fragmentation côté serveur.  
   
--   Il utilise une sémantique de copie de référence. Par exemple, si vous effectuez une opération de copie sur un **BFILE**, seule la **BFILE** (qui est une référence au fichier) est copiée. Les données du fichier ne sont pas copiées.  
+- Il utilise une sémantique de copie de référence. Par exemple, si vous effectuez une opération de copie sur un **BFILE**, seule la **BFILE** (qui est une référence au fichier) est copiée. Les données du fichier ne sont pas copiées.  
   
  Le **BFILE** type de données doit être utilisé pour référencer les LOB de grande taille et par conséquent, pas pratique de stocker dans la base de données. Davantage de surcharge client, serveur et communication intervient lorsque vous utilisez un **BFILE** type de données par rapport à la **LOB** type de données. Il est plus efficace d’accéder à un **BFILE** si vous avez besoin uniquement d’obtenir une petite quantité de données. Il est plus efficace d'accéder à des LOB résidant en mémoire si vous avez besoin d'obtenir l'objet entier.  
   

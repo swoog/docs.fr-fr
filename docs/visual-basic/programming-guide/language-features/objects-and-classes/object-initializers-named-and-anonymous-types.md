@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760751"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Initialiseurs d’objets : Types nommés et anonymes (Visual Basic)
 Initialiseurs d’objets permettent de spécifier les propriétés d’un objet complexe à l’aide d’une expression unique. Ils peuvent être utilisés pour créer des instances de types nommés et de types anonymes.  
@@ -63,11 +63,11 @@ Initialiseurs d’objets permettent de spécifier les propriétés d’un objet 
   
 ### <a name="remarks-about-named-types"></a>Remarques sur les Types nommés  
   
--   Un membre de classe ne peut pas être initialisé plusieurs fois dans la liste d’initialiseurs objet. La déclaration de `cust7` provoque une erreur.  
+- Un membre de classe ne peut pas être initialisé plusieurs fois dans la liste d’initialiseurs objet. La déclaration de `cust7` provoque une erreur.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   Un membre peut être utilisé pour initialiser lui-même ou un autre champ. Si un membre est accessible avant qu’il a été initialisé, comme dans la déclaration suivante pour `cust8`, la valeur par défaut sera utilisée. N’oubliez pas que lorsqu’une déclaration qui utilise un initialiseur d’objet est traitée, la première chose qui se produit est que le constructeur approprié est appelé. Après cela, les champs individuels dans la liste d’initialiseurs sont initialisés. Dans les exemples suivants, la valeur par défaut `Name` est attribué pour `cust8`, et une valeur initialisée est assignée dans `cust9`.  
+- Un membre peut être utilisé pour initialiser lui-même ou un autre champ. Si un membre est accessible avant qu’il a été initialisé, comme dans la déclaration suivante pour `cust8`, la valeur par défaut sera utilisée. N’oubliez pas que lorsqu’une déclaration qui utilise un initialiseur d’objet est traitée, la première chose qui se produit est que le constructeur approprié est appelé. Après cela, les champs individuels dans la liste d’initialiseurs sont initialisés. Dans les exemples suivants, la valeur par défaut `Name` est attribué pour `cust8`, et une valeur initialisée est assignée dans `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ Initialiseurs d’objets permettent de spécifier les propriétés d’un objet 
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   Initialiseurs d’objets peuvent être imbriquées. Dans l’exemple suivant, `AddressClass` est une classe qui a deux propriétés, `City` et `State`et le `Customer` classe a un `Address` propriété qui est une instance de `AddressClass`.  
+- Initialiseurs d’objets peuvent être imbriquées. Dans l’exemple suivant, `AddressClass` est une classe qui a deux propriétés, `City` et `State`et le `Customer` classe a un `Address` propriété qui est une instance de `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   La liste d’initialisation ne peut pas être vide.  
+- La liste d’initialisation ne peut pas être vide.  
   
--   L’instance en cours d’initialisation ne peut pas être de type Object.  
+- L’instance en cours d’initialisation ne peut pas être de type Object.  
   
--   Les membres de classe en cours d’initialisation ne peut pas être des membres partagés, des membres en lecture seule, des constantes ou des appels de méthode.  
+- Les membres de classe en cours d’initialisation ne peut pas être des membres partagés, des membres en lecture seule, des constantes ou des appels de méthode.  
   
--   Les membres de classe en cours d’initialisation ne peut pas être indexées ou qualifiés. Les exemples suivants déclenchent des erreurs du compilateur :  
+- Les membres de classe en cours d’initialisation ne peut pas être indexées ou qualifiés. Les exemples suivants déclenchent des erreurs du compilateur :  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ Initialiseurs d’objets permettent de spécifier les propriétés d’un objet 
   
 ### <a name="remarks-about-anonymous-types"></a>Remarques sur les Types anonymes  
   
--   En règle générale, tout ou partie des propriétés dans une déclaration de type anonyme sera des propriétés de clé, qui sont indiquées en tapant le mot clé `Key` devant le nom de propriété.  
+- En règle générale, tout ou partie des propriétés dans une déclaration de type anonyme sera des propriétés de clé, qui sont indiquées en tapant le mot clé `Key` devant le nom de propriété.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      Pour plus d’informations sur les propriétés de clé, consultez [clé](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Comme types nommés, les listes d’initialiseurs pour les définitions de type anonyme doivent déclarer au moins une propriété.  
+- Comme types nommés, les listes d’initialiseurs pour les définitions de type anonyme doivent déclarer au moins une propriété.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   Lorsqu’une instance d’un type anonyme est déclarée, le compilateur génère une définition de type anonyme correspondante. Les noms et types de données des propriétés sont extraites de la déclaration d’instance et sont inclus par le compilateur dans la définition. Les propriétés ne sont pas nommées et définies à l’avance, tels qu’ils seraient pour un type nommé. Leurs types sont déduits. Vous ne pouvez pas spécifier les types de données des propriétés en utilisant un `As` clause.  
+- Lorsqu’une instance d’un type anonyme est déclarée, le compilateur génère une définition de type anonyme correspondante. Les noms et types de données des propriétés sont extraites de la déclaration d’instance et sont inclus par le compilateur dans la définition. Les propriétés ne sont pas nommées et définies à l’avance, tels qu’ils seraient pour un type nommé. Leurs types sont déduits. Vous ne pouvez pas spécifier les types de données des propriétés en utilisant un `As` clause.  
   
--   Les types anonymes peuvent également établir les noms et valeurs de leurs propriétés de plusieurs autres façons. Par exemple, une propriété de type anonyme peut prendre le nom et la valeur d’une variable, ou le nom et la valeur d’une propriété d’un autre objet.  
+- Les types anonymes peuvent également établir les noms et valeurs de leurs propriétés de plusieurs autres façons. Par exemple, une propriété de type anonyme peut prendre le nom et la valeur d’une variable, ou le nom et la valeur d’une propriété d’un autre objet.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

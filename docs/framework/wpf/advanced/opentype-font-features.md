@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773878"
 ---
 # <a name="opentype-font-features"></a>Fonctionnalités des polices OpenType
 
@@ -26,15 +26,15 @@ Cette rubrique fournit une vue d’ensemble de quelques-unes des fonctionnalité
   
  Le format de police [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] répond aux problèmes suivants que rencontrent les développeurs :  
   
--   Prise en charge multi-plateforme élargie.  
+- Prise en charge multi-plateforme élargie.  
   
--   Meilleure prise en charge des jeux de caractères internationaux.  
+- Meilleure prise en charge des jeux de caractères internationaux.  
   
--   Meilleure protection des données de police.  
+- Meilleure protection des données de police.  
   
--   Taille des fichiers plus petite permettant une distribution plus efficace des polices.  
+- Taille des fichiers plus petite permettant une distribution plus efficace des polices.  
   
--   Prise en charge élargie des contrôles typographiques avancés.  
+- Prise en charge élargie des contrôles typographiques avancés.  
   
 > [!NOTE]
 >  Le Kit de développement logiciel (SDK) Windows contient un jeu d’exemples de polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] que vous pouvez utiliser avec les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Ces polices offrent la plupart des fonctionnalités illustrées dans le reste de cette rubrique. Pour plus d’informations, consultez [Exemple de pack de polices OpenType](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ Cette rubrique fournit une vue d’ensemble de quelques-unes des fonctionnalité
 ### <a name="advanced-typographic-extensions"></a>Extensions typographiques avancées  
  Les tableaux typographiques avancés (tableaux de disposition [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) étendent les fonctionnalités des polices avec des contours [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] ou CFF. Les polices de disposition [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contiennent des informations supplémentaires qui étendent les fonctionnalités des polices pour une prise en charge de la typographie internationale de haute qualité. La plupart des polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] exposent uniquement une partie des fonctionnalités [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponibles. Les polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrent les fonctionnalités suivantes :  
   
--   Mappage riche entre les caractères et les glyphes qui prennent en charge les ligatures, les formes positionnelles, les alternatives et les substitutions de police.  
+- Mappage riche entre les caractères et les glyphes qui prennent en charge les ligatures, les formes positionnelles, les alternatives et les substitutions de police.  
   
--   Prise en charge du positionnement à deux dimensions et de l’attachement de glyphes.  
+- Prise en charge du positionnement à deux dimensions et de l’attachement de glyphes.  
   
--   Présence d’informations explicites de script et de langage dans la police, ce qui permet à une application de traitement de texte d’ajuster son comportement en conséquence.  
+- Présence d’informations explicites de script et de langage dans la police, ce qui permet à une application de traitement de texte d’ajuster son comportement en conséquence.  
   
  Les tableaux de disposition [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] sont décrits plus en détail dans la section relative aux [tableaux de fichiers de police](https://www.microsoft.com/typography/otspec/otff.htm) de la spécification [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
@@ -120,13 +120,13 @@ Cette rubrique fournit une vue d’ensemble de quelques-unes des fonctionnalité
 ## <a name="ligatures"></a>Ligatures  
  Une ligature est un glyphe formé de deux ou plusieurs glyphes dans le but de créer un texte plus lisible ou esthétique. Les polices [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] prennent en charge quatre types de ligature :  
   
--   **Ligatures standard** : conçues pour améliorer la lisibilité. Par exemple, « fi », « fl » et « ff » sont des ligatures standard.  
+- **Ligatures standard** : conçues pour améliorer la lisibilité. Par exemple, « fi », « fl » et « ff » sont des ligatures standard.  
   
--   **Ligatures contextuelles** : conçues pour améliorer la lisibilité en offrant un meilleur comportement de jointure entre les caractères qui composent la ligature.  
+- **Ligatures contextuelles** : conçues pour améliorer la lisibilité en offrant un meilleur comportement de jointure entre les caractères qui composent la ligature.  
   
--   **Ligatures discrétionnaires** : conçues à des fins esthétiques et pas spécifiquement pour la lisibilité.  
+- **Ligatures discrétionnaires** : conçues à des fins esthétiques et pas spécifiquement pour la lisibilité.  
   
--   **Ligatures historiques** : conçues en fonction de critères historiques et pas spécifiquement pour la lisibilité.  
+- **Ligatures historiques** : conçues en fonction de critères historiques et pas spécifiquement pour la lisibilité.  
   
  Le texte suivant présente des glyphes à ligatures standard avec la police Pericles.  
   
