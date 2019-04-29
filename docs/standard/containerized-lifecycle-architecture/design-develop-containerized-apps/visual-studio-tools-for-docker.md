@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795566"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Utilisez des outils Docker dans Visual Studio 2017 sur Windows
 
@@ -29,7 +29,7 @@ Il existe deux niveaux de prise en charge de Docker que vous pouvez ajouter à u
 
 Le **Ajouter > prise en charge Docker** et **Ajouter > prise en charge de conteneurs Orchestrator** commandes se trouvent sur le menu contextuel (ou le menu contextuel) du nœud du projet pour un projet ASP.NET Core dans  **L’Explorateur de solutions**, comme illustré dans la Figure 4-31 :
 
-![Ajoutez l’option de menu de prise en charge Docker dans Visual Studio](./media/add-docker-support-menu.png)
+![Option de menu Ajouter la prise en charge de Docker dans Visual Studio](./media/add-docker-support-menu.png)
 
 **Figure 4-31**. Ajout de prise en charge Docker à un projet Visual Studio 2017
 
@@ -37,7 +37,7 @@ Le **Ajouter > prise en charge Docker** et **Ajouter > prise en charge de conten
 
 Vous pouvez ajouter la prise en charge Docker à un projet ASP.NET Core existant en sélectionnant **ajouter** > **prennent en charge de Docker** dans **l’Explorateur de solutions**. Vous pouvez également activer la prise en charge de Docker lors de la création du projet en sélectionnant **activer la prise en charge Docker** dans le **nouvelle Application de Web ASP.NET Core** boîte de dialogue qui s’ouvre après avoir cliqué sur **OK** dans le **nouveau projet** boîte de dialogue, comme illustré dans la Figure 4-32.
 
-![Activer la prise en charge de Docker pour l’application web ASP.NET Core dans Visual Studio](./media/enable-docker-support-visual-studio.png)
+![Activer la prise en charge de Docker pour une nouvelle application web ASP.NET Core dans Visual Studio](./media/enable-docker-support-visual-studio.png)
 
 **Figure 4-32**. Activer la prise en charge Docker lors de la création du projet dans Visual Studio 2017
 
@@ -46,7 +46,7 @@ Lorsque vous ajoutez ou activez la prise en charge Docker, Visual Studio ajoute 
 > [!NOTE]
 > Lorsque vous activez la prise en charge de Docker Compose lors de la création de projet pour un projet ASP.NET (.NET Framework, pas un projet .NET Core) comme indiqué dans la Figure 4-33, prise en charge d’orchestration de conteneurs est également ajouté.
 
-![Activer Docker compose prise en charge pour un projet ASP.NET](media/enable-docker-compose-support.png)
+![Activer la prise en charge de Docker Compose pour un projet ASP.NET](media/enable-docker-compose-support.png)
 
 **Figure 4-33**. Prise en charge de Docker Compose pour un projet ASP.NET dans Visual Studio 2017
 
@@ -58,11 +58,11 @@ Pour ajouter la prise en charge d’orchestration de conteneur, cliquez sur le n
 
 Après avoir ajouté la prise en charge d’orchestration de conteneurs à votre projet, vous voyez un fichier Dockerfile ajouté au projet et un **docker-compose** dossier ajouté à la solution dans **l’Explorateur de solutions**, comme illustré dans la Figure 4-34 :
 
-![Fichiers docker dans l’Explorateur de solutions dans Visual Studio](media/docker-support-solution-explorer.png)
+![Fichiers Docker dans l’Explorateur de solutions de Visual Studio](media/docker-support-solution-explorer.png)
 
 **Figure 4-34**. Fichiers docker dans l’Explorateur de solutions dans Visual Studio 2017
 
-Si *docker-compose.yml* existe déjà, Visual Studio ajoute simplement les lignes de code de configuration requises.
+Si le fichier *docker-compose.yml* existe déjà, Visual Studio ajoute simplement les lignes de code de configuration requises.
 
 ## <a name="configure-docker-tools"></a>Configurer les outils Docker
 
@@ -74,7 +74,7 @@ Dans le menu principal, choisissez **Outils > Options**et développez **conteneu
 
 Le tableau suivant peut vous aider à décider comment définir ces options.
 
-| Name | Paramètre par défaut | S'applique à | Description |
+| Nom | Paramètre par défaut | S'applique à | Description |
 | -----|:---------------:|:----------:| ----------- |
 | Extraire automatiquement des images Docker nécessaires lors du chargement du projet | Activé | Docker Compose | Pour améliorer les performances lors du chargement des projets, Visual Studio démarre une opération d’extraction de Docker en arrière-plan afin que lorsque vous êtes prêt à exécuter votre code, l’image est déjà téléchargée ou en cours de téléchargement. Si vous êtes simplement charger les projets et parcourez le code, vous pouvez désactiver cette option pour éviter le téléchargement des images de conteneur que vous n’avez pas besoin. |
 | Démarrer automatiquement les conteneurs en arrière-plan | Activé | Docker Compose | À nouveau pour de meilleures performances, Visual Studio crée un conteneur avec les montages de volume prêt pour lorsque vous générez et exécutez votre conteneur. Si vous souhaitez contrôler la création de votre conteneur, désactivez cette option. |

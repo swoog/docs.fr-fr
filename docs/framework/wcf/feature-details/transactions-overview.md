@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
 ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933651"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Vue d’ensemble des transactions Windows Communication Foundation
 Les transactions permettent de regrouper un ensemble d’actions ou d’opérations dans une unité d’exécution unique et indivisible. Une transaction est une collection d'opérations avec les propriétés suivantes :  
   
--   Atomicité. Cela garantit que toutes les mises à jour effectuées sous une transaction spécifique sont validées et rendues durable ou qu'elles sont toutes interrompues et rétablies à leur état précédent.  
+- Atomicité. Cela garantit que toutes les mises à jour effectuées sous une transaction spécifique sont validées et rendues durable ou qu'elles sont toutes interrompues et rétablies à leur état précédent.  
   
--   Cohérence. Cela garantit que les modifications effectuées sous une transaction représentent une transformation d'un état cohérent à un autre. Par exemple, une transaction qui transfère de l’argent d’un compte chèques à un compte épargne ne modifie pas la somme d’argent dans le compte bancaire global.  
+- Cohérence. Cela garantit que les modifications effectuées sous une transaction représentent une transformation d'un état cohérent à un autre. Par exemple, une transaction qui transfère de l’argent d’un compte chèques à un compte épargne ne modifie pas la somme d’argent dans le compte bancaire global.  
   
--   Isolement. Cela empêche une transaction d’observer des modifications non validées appartenant à d’autres transactions simultanées. L’isolation fournit une abstraction de l’accès concurrentiel tout en garantissant qu’une transaction ne peut pas avoir d’impact inattendu sur l’exécution d’une autre transaction.  
+- Isolement. Cela empêche une transaction d’observer des modifications non validées appartenant à d’autres transactions simultanées. L’isolation fournit une abstraction de l’accès concurrentiel tout en garantissant qu’une transaction ne peut pas avoir d’impact inattendu sur l’exécution d’une autre transaction.  
   
--   Durabilité. Cela signifie qu’une fois validées, les mises à jour des ressources managées (telles qu’un enregistrement de base de données) seront persistantes en cas de défaillance.  
+- Durabilité. Cela signifie qu’une fois validées, les mises à jour des ressources managées (telles qu’un enregistrement de base de données) seront persistantes en cas de défaillance.  
   
  Windows Communication Foundation (WCF) fournit un ensemble rich de fonctionnalités qui vous permettent de créer des transactions distribuées dans votre application de service Web.  
   
@@ -32,11 +32,11 @@ Les transactions permettent de regrouper un ensemble d’actions ou d’opérati
   
  Les attributs de transaction dans l’espace de noms <xref:System.ServiceModel> vous permettent d’effectuer les opérations suivantes :  
   
--   configurer des délais d’expiration de transaction et un filtrage de niveau isolation à l’aide de l’attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> ;  
+- configurer des délais d’expiration de transaction et un filtrage de niveau isolation à l’aide de l’attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> ;  
   
--   activer la fonctionnalité de transactions et configurer le comportement de fin de transaction à l'aide de l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> ;  
+- activer la fonctionnalité de transactions et configurer le comportement de fin de transaction à l'aide de l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> ;  
   
--   utiliser les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> sur une méthode de contrat pour exiger, autoriser ou refuser le flux de transaction.  
+- utiliser les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> sur une méthode de contrat pour exiger, autoriser ou refuser le flux de transaction.  
   
  Pour plus d’informations, consultez [attributs de Transaction ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   

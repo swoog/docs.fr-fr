@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937829"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procédure : créer une collection de polices privée
 Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:System.Drawing.Text.FontCollection> classe de base abstraite. Vous pouvez utiliser un <xref:System.Drawing.Text.PrivateFontCollection> objet pour maintenir un ensemble de polices spécifiquement pour votre application. Une collection de polices privées peut inclure des polices système installés, ainsi que des polices qui n’ont pas été installés sur l’ordinateur. Pour ajouter un fichier de polices à une collection de polices privées, appelez le <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> méthode d’un <xref:System.Drawing.Text.PrivateFontCollection> objet.  
@@ -25,11 +25,11 @@ Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:S
 ## <a name="example"></a>Exemple  
  L’exemple suivant ajoute les fichiers suivants de la trois police dans un <xref:System.Drawing.Text.PrivateFontCollection> objet :  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial, normal)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial, normal)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New, gras et italique)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New, gras et italique)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, gras)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, gras)  
   
  Le code récupère un tableau de <xref:System.Drawing.FontFamily> objets à partir de la <xref:System.Drawing.Text.FontCollection.Families%2A> propriété de la <xref:System.Drawing.Text.PrivateFontCollection> objet.  
   

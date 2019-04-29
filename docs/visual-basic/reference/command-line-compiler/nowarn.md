@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788984"
 ---
 # <a name="-nowarn"></a>-nowarn
 Supprime la capacité du compilateur à générer des avertissements.  
@@ -26,7 +26,7 @@ Supprime la capacité du compilateur à générer des avertissements.
   
 |Terme|Définition|  
 |---|---|  
-|`numberList`|Facultatif. Liste délimitée par des virgules des numéros d’identification avertissement que le compilateur doit supprimer. Si les ID d’avertissement ne sont pas spécifié, tous les avertissements sont supprimés.|  
+|`numberList`|Optionnel. Liste délimitée par des virgules des numéros d’identification avertissement que le compilateur doit supprimer. Si les ID d’avertissement ne sont pas spécifié, tous les avertissements sont supprimés.|  
   
 ## <a name="remarks"></a>Notes  
  La `-nowarn` option, le compilateur ne génère ne pas les avertissements. Pour supprimer un avertissement, fournissez l’ID d’avertissement pour le `-nowarn` option suit le signe deux-points. Séparez plusieurs numéros d’avertissement par des virgules.  

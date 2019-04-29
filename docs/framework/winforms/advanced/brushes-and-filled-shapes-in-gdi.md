@@ -14,11 +14,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779420"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinceaux et remplissage de formes dans GDI+
 Une forme fermée, comme un rectangle ou une ellipse, se compose d’un plan et un intérieur. Le contour est dessiné avec un stylet et l’intérieur est rempli avec un pinceau. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit plusieurs classes de pinceau pour remplir l’intérieur des formes fermées : <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, et <xref:System.Drawing.Drawing2D.PathGradientBrush>. Toutes ces classes héritent de la <xref:System.Drawing.Brush> classe. L’illustration suivante montre un rectangle rempli avec un pinceau uni et une ellipse remplie avec un pinceau de hachurage.  

@@ -3,11 +3,11 @@ title: Sérialisation de base, exemple de technologie
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795016"
 ---
 # <a name="basic-serialization-technology-sample"></a>Sérialisation de base, exemple de technologie
 [Télécharger l’exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315008"
   
  Les éléments de la liste suivante décrivent brièvement les classes et les technologies utilisées par cet exemple.  
   
--   Sérialisation du runtime  
+- Sérialisation du runtime  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Utilisé pour référencer un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objet.  
+    - <xref:System.Runtime.Serialization.IFormatter> Utilisé pour référencer un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objet.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Utilisé pour sérialiser une liste liée à un flux de données dans un format binaire. Le formateur binaire utilise un format reconnu uniquement par le type <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Toutefois, les données sont concises.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Utilisé pour sérialiser une liste liée à un flux de données dans un format binaire. Le formateur binaire utilise un format reconnu uniquement par le type <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Toutefois, les données sont concises.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Utilisé pour sérialiser une liste liée à un flux au format SOAP. SOAP est un format standard.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Utilisé pour sérialiser une liste liée à un flux au format SOAP. SOAP est un format standard.  
   
--   E/S de flux  
+- E/S de flux  
   
-    -   <xref:System.IO.Stream> Utilisé pour effectuer la sérialisation et la désérialisation. Le flux spécifique utilisé dans cet exemple est de type <xref:System.IO.FileStream>. Toutefois, la sérialisation peut être utilisée avec n'importe quel type dérivé de <xref:System.IO.Stream>.  
+    - <xref:System.IO.Stream> Utilisé pour effectuer la sérialisation et la désérialisation. Le flux spécifique utilisé dans cet exemple est de type <xref:System.IO.FileStream>. Toutefois, la sérialisation peut être utilisée avec n'importe quel type dérivé de <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Utilisé pour créer des objets <xref:System.IO.FileStream> afin de lire et de créer des fichiers sur le disque.  
+    - <xref:System.IO.File> Utilisé pour créer des objets <xref:System.IO.FileStream> afin de lire et de créer des fichiers sur le disque.  
   
-    -   <xref:System.IO.FileStream> Utilisé pour sérialiser et désérialiser des listes liées.  
+    - <xref:System.IO.FileStream> Utilisé pour sérialiser et désérialiser des listes liées.  
   
 ## <a name="see-also"></a>Voir aussi
 

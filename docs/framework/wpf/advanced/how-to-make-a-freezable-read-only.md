@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771018"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Procédure : Mettre un Freezable en lecture seule
 Cet exemple montre comment rendre un <xref:System.Windows.Freezable> en lecture seule en appelant son <xref:System.Windows.Freezable.Freeze%2A> (méthode).  
   
  Vous ne pouvez pas figer un <xref:System.Windows.Freezable> objet si l’une des conditions suivantes est `true` sur l’objet :  
   
--   Il a animé ou propriétés liées aux données.  
+- Il a animé ou propriétés liées aux données.  
   
--   Il possède des propriétés qui sont définies par une ressource dynamique. Pour plus d’informations sur les ressources dynamiques, consultez le [XAML ressources](xaml-resources.md).  
+- Il possède des propriétés qui sont définies par une ressource dynamique. Pour plus d’informations sur les ressources dynamiques, consultez le [XAML ressources](xaml-resources.md).  
   
--   Il contient <xref:System.Windows.Freezable> sous-objets qui ne peut pas être figés.  
+- Il contient <xref:System.Windows.Freezable> sous-objets qui ne peut pas être figés.  
   
  Si ces conditions sont `false` pour votre <xref:System.Windows.Freezable> objet et que vous ne souhaitez pas modifier, envisagez de geler pour profiter des avantages de performances.  
   

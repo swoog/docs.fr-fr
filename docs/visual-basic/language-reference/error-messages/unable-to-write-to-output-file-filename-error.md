@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787411"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Impossible d’écrire dans le fichier de sortie '\<nom_fichier >': \<erreur >
 Un problème s'est produit pendant la création du fichier.  
@@ -21,9 +21,9 @@ Un problème s'est produit pendant la création du fichier.
   
  Les situations courantes dans lesquelles un fichier est ouvert de manière exclusive sont les suivantes :  
   
--   L'application est déjà en cours d'exécution et utilise ses fichiers. Pour résoudre ce problème, vérifiez que l'application n'est pas en cours d'exécution.  
+- L'application est déjà en cours d'exécution et utilise ses fichiers. Pour résoudre ce problème, vérifiez que l'application n'est pas en cours d'exécution.  
   
--   Une autre application a ouvert le fichier. Pour résoudre ce problème, vérifiez qu'aucune autre application n'accède aux fichiers. Il n'est pas toujours évident de savoir quelle application accède à vos fichiers ; le cas échéant, le plus facile est de redémarrer l'ordinateur pour arrêter l'application.  
+- Une autre application a ouvert le fichier. Pour résoudre ce problème, vérifiez qu'aucune autre application n'accède aux fichiers. Il n'est pas toujours évident de savoir quelle application accède à vos fichiers ; le cas échéant, le plus facile est de redémarrer l'ordinateur pour arrêter l'application.  
   
  Si au moins un des fichiers de sortie du projet est marqué en lecture seule, cette exception est levée.  
   

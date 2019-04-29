@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778926"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procédure pas à pas : activation de Glisser-déplacer sur un contrôle utilisateur
 
@@ -23,13 +23,13 @@ Dans cette procédure pas à pas, vous allez créer un WPF personnalisé <xref:S
 
 Cette procédure pas à pas décrit les tâches suivantes :
 
--   Créer un contrôle utilisateur personnalisé.
+- Créer un contrôle utilisateur personnalisé.
 
--   Permettre au contrôle utilisateur d’être une source de glissement.
+- Permettre au contrôle utilisateur d’être une source de glissement.
 
--   Permettre au contrôle utilisateur d’être une cible de déplacement.
+- Permettre au contrôle utilisateur d’être une cible de déplacement.
 
--   Permettre à un panneau de recevoir des données déplacées à partir du contrôle utilisateur.
+- Permettre à un panneau de recevoir des données déplacées à partir du contrôle utilisateur.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -108,17 +108,17 @@ Cette procédure pas à pas nécessite Visual Studio.
 
      Cela <xref:System.Windows.UIElement.OnMouseMove%2A> remplacement effectue les tâches suivantes :
 
-    -   Vérifie si le bouton gauche de la souris est enfoncé quand la souris se déplace.
+    - Vérifie si le bouton gauche de la souris est enfoncé quand la souris se déplace.
 
-    -   Empaquette les données de cercle dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.
+    - Empaquette les données de cercle dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.
 
-    -   Appelle la méthode statique <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> méthode pour lancer l’opération de glisser-déplacer. Vous passez les trois paramètres suivants pour le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode :
+    - Appelle la méthode statique <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> méthode pour lancer l’opération de glisser-déplacer. Vous passez les trois paramètres suivants pour le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode :
 
-        -   `dragSource` : Référence à ce contrôle.
+        - `dragSource` : Référence à ce contrôle.
 
-        -   `data` – Les <xref:System.Windows.DataObject> créé dans le code précédent.
+        - `data` – Les <xref:System.Windows.DataObject> créé dans le code précédent.
 
-        -   `allowedEffects` – Les opérations de glisser-déplacer autorisées qui sont <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.
+        - `allowedEffects` – Les opérations de glisser-déplacer autorisées qui sont <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.
 
 3. Appuyez sur **F5** pour générer et exécuter l’application.
 
@@ -143,9 +143,9 @@ Par défaut, le curseur change pendant une opération de glisser-déplacer pour 
 
      Cela <xref:System.Windows.UIElement.OnGiveFeedback%2A> remplacement effectue les tâches suivantes :
 
-    -   Vérifie la <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valeurs qui sont définies dans la cible de dépôt <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements.
+    - Vérifie la <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valeurs qui sont définies dans la cible de dépôt <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements.
 
-    -   Définit un curseur personnalisé basé sur le <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valeur. Le curseur a pour objectif de fournir des commentaires visuels à l’utilisateur sur l’effet du déplacement des données.
+    - Définit un curseur personnalisé basé sur le <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valeur. Le curseur a pour objectif de fournir des commentaires visuels à l’utilisateur sur l’effet du déplacement des données.
 
 3. Appuyez sur **F5** pour générer et exécuter l’application.
 
@@ -181,15 +181,15 @@ Le <xref:System.Windows.UIElement.OnDrop%2A> méthode est appelée lorsque le <x
 
      Cela <xref:System.Windows.UIElement.OnDrop%2A> remplacement effectue les tâches suivantes :
 
-    -   Utilise le <xref:System.Windows.DataObject.GetDataPresent%2A> méthode permettant de vérifier si les données glissées contiennent un objet string.
+    - Utilise le <xref:System.Windows.DataObject.GetDataPresent%2A> méthode permettant de vérifier si les données glissées contiennent un objet string.
 
-    -   Utilise le <xref:System.Windows.DataObject.GetData%2A> méthode pour extraire les données de chaîne si elle est présente.
+    - Utilise le <xref:System.Windows.DataObject.GetData%2A> méthode pour extraire les données de chaîne si elle est présente.
 
-    -   Utilise un <xref:System.Windows.Media.BrushConverter> pour essayer de convertir la chaîne à un <xref:System.Windows.Media.Brush>.
+    - Utilise un <xref:System.Windows.Media.BrushConverter> pour essayer de convertir la chaîne à un <xref:System.Windows.Media.Brush>.
 
-    -   Si la conversion réussite, applique le pinceau pour le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle de cercle.
+    - Si la conversion réussite, applique le pinceau pour le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle de cercle.
 
-    -   Marque le <xref:System.Windows.UIElement.Drop> événement comme géré. Vous devez marquer l’événement de déplacement comme étant géré pour que les autres éléments qui reçoivent cet événement sachent que le contrôle utilisateur de cercle l’a géré.
+    - Marque le <xref:System.Windows.UIElement.Drop> événement comme géré. Vous devez marquer l’événement de déplacement comme étant géré pour que les autres éléments qui reçoivent cet événement sachent que le contrôle utilisateur de cercle l’a géré.
 
 3. Appuyez sur **F5** pour générer et exécuter l’application.
 
@@ -222,11 +222,11 @@ Quand les données sont glissées sur le contrôle utilisateur de cercle, le con
 
      Cela <xref:System.Windows.UIElement.OnDragOver%2A> remplacement effectue les tâches suivantes :
 
-    -   Affecte la valeur <xref:System.Windows.DragEventArgs.Effects%2A> à la propriété <xref:System.Windows.DragDropEffects.None>.
+    - Affecte la valeur <xref:System.Windows.DragEventArgs.Effects%2A> à la propriété <xref:System.Windows.DragDropEffects.None>.
 
-    -   Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si le contrôle utilisateur de cercle peut traiter les données glissées.
+    - Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si le contrôle utilisateur de cercle peut traiter les données glissées.
 
-    -   Si le contrôle utilisateur peut traiter les données, définit les <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.
+    - Si le contrôle utilisateur peut traiter les données, définit les <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.
 
 3. Appuyez sur **F5** pour générer et exécuter l’application.
 
@@ -252,11 +252,11 @@ Quand les données sont glissées sur le contrôle utilisateur de cercle, le con
 
      Cela <xref:System.Windows.UIElement.OnDragEnter%2A> remplacement effectue les tâches suivantes :
 
-    -   Enregistre le <xref:System.Windows.Shapes.Shape.Fill%2A> propriété de la <xref:System.Windows.Shapes.Ellipse> dans le `_previousFill` variable.
+    - Enregistre le <xref:System.Windows.Shapes.Shape.Fill%2A> propriété de la <xref:System.Windows.Shapes.Ellipse> dans le `_previousFill` variable.
 
-    -   Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si les données peuvent être converties à un <xref:System.Windows.Media.Brush>.
+    - Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si les données peuvent être converties à un <xref:System.Windows.Media.Brush>.
 
-    -   Si les données sont converties à valide <xref:System.Windows.Media.Brush>, s’applique à la <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse>.
+    - Si les données sont converties à valide <xref:System.Windows.Media.Brush>, s’applique à la <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse>.
 
 4. Ajoutez le code suivant <xref:System.Windows.UIElement.OnDragLeave%2A> override pour fournir la gestion de classe pour le <xref:System.Windows.UIElement.DragLeave> événement.
 
@@ -265,7 +265,7 @@ Quand les données sont glissées sur le contrôle utilisateur de cercle, le con
 
      Cela <xref:System.Windows.UIElement.OnDragLeave%2A> remplacement effectue les tâches suivantes :
 
-    -   S’applique le <xref:System.Windows.Media.Brush> enregistré dans le `_previousFill` à la variable le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle d’utilisateur de cercle.
+    - S’applique le <xref:System.Windows.Media.Brush> enregistré dans le `_previousFill` à la variable le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle d’utilisateur de cercle.
 
 5. Appuyez sur **F5** pour générer et exécuter l’application.
 
@@ -296,11 +296,11 @@ Dans cette section, vous permettez aux panneaux qui hébergent les contrôles ut
 
      Cela <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements effectue les tâches suivantes :
 
-    -   Vérifie que les données glissées contiennent les données « Object » qui a été empaquetées dans le <xref:System.Windows.DataObject> par le contrôle utilisateur de cercle et passées dans l’appel à <xref:System.Windows.DragDrop.DoDragDrop%2A>.
+    - Vérifie que les données glissées contiennent les données « Object » qui a été empaquetées dans le <xref:System.Windows.DataObject> par le contrôle utilisateur de cercle et passées dans l’appel à <xref:System.Windows.DragDrop.DoDragDrop%2A>.
 
-    -   Si les données « Object » sont présent, vérifie si le **Ctrl** touche est enfoncée.
+    - Si les données « Object » sont présent, vérifie si le **Ctrl** touche est enfoncée.
 
-    -   Si le **Ctrl** touche est enfoncée, définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy>. Sinon, définissez le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Move>.
+    - Si le **Ctrl** touche est enfoncée, définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy>. Sinon, définissez le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Move>.
 
 5. Ajoutez le code suivant pour le <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements.
 
@@ -309,15 +309,15 @@ Dans cette section, vous permettez aux panneaux qui hébergent les contrôles ut
 
      Cela <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements effectue les tâches suivantes :
 
-    -   Vérifie si le <xref:System.Windows.UIElement.Drop> événement a déjà été géré. Par exemple, si un cercle est déplacé sur un autre cercle qui gère la <xref:System.Windows.UIElement.Drop> événement, vous ne souhaitez pas que le panneau qui contient le contrôle de cercle gère aussi.
+    - Vérifie si le <xref:System.Windows.UIElement.Drop> événement a déjà été géré. Par exemple, si un cercle est déplacé sur un autre cercle qui gère la <xref:System.Windows.UIElement.Drop> événement, vous ne souhaitez pas que le panneau qui contient le contrôle de cercle gère aussi.
 
-    -   Si le <xref:System.Windows.UIElement.Drop> événement n'est pas géré, vérifie si le **Ctrl** touche est enfoncée.
+    - Si le <xref:System.Windows.UIElement.Drop> événement n'est pas géré, vérifie si le **Ctrl** touche est enfoncée.
 
-    -   Si le **Ctrl** touche est enfoncée quand le <xref:System.Windows.UIElement.Drop> se produit, effectue une copie du cercle, contrôle et ajoutez-la à la <xref:System.Windows.Controls.Panel.Children%2A> collection de la <xref:System.Windows.Controls.StackPanel>.
+    - Si le **Ctrl** touche est enfoncée quand le <xref:System.Windows.UIElement.Drop> se produit, effectue une copie du cercle, contrôle et ajoutez-la à la <xref:System.Windows.Controls.Panel.Children%2A> collection de la <xref:System.Windows.Controls.StackPanel>.
 
-    -   Si le **Ctrl** touche n’est pas enfoncée, déplace le cercle à partir de la <xref:System.Windows.Controls.Panel.Children%2A> collection de son panneau parent vers le <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau qui il a été supprimé.
+    - Si le **Ctrl** touche n’est pas enfoncée, déplace le cercle à partir de la <xref:System.Windows.Controls.Panel.Children%2A> collection de son panneau parent vers le <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau qui il a été supprimé.
 
-    -   Définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété pour notifier le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode si une opération de déplacement ou de copie a été effectuée.
+    - Définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété pour notifier le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode si une opération de déplacement ou de copie a été effectuée.
 
 6. Appuyez sur **F5** pour générer et exécuter l’application.
 

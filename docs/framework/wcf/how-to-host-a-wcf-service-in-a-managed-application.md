@@ -1,18 +1,18 @@
 ---
-title: 'Comment : héberger un service WCF dans une application managée'
+title: 'Procédure : héberger un service WCF dans une application managée'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929309"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Comment : héberger un service WCF dans une application gérée
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Procédure : Héberger un service WCF dans une application gérée
 
 Pour héberger un service à l'intérieur d'une application managée, incorporez le code du service à l'intérieur du code de l'application managée, définissez un point de terminaison pour le service soit de manière impérative dans le code, soit de façon déclarative par le biais de la configuration ou à l'aide des points de terminaison par défaut, puis créez une instance de <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ La procédure suivante montre comment implémenter un service auto-hébergé dan
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Pour plus d’informations sur la façon de définir et implémenter une interface de service, consultez [Comment : définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) et [Comment : implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Pour plus d’informations sur la façon de définir et implémenter une interface de service, consultez [Comment : Définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) et [Comment : Implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. En tête de la méthode `Main`, créez une instance de la classe <xref:System.Uri> avec l'adresse de base du service.
 
@@ -99,11 +99,11 @@ L'exemple suivant crée un objet <xref:System.ServiceModel.ServiceHost> pour hé
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [How to: Host a WCF Service in IIS (Comment : héberger un service WCF dans IIS)](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Guide pratique pour Héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Auto-hébergement](../../../docs/framework/wcf/samples/self-host.md)
 - [Hébergement de services](../../../docs/framework/wcf/hosting-services.md)
-- [Guide pratique pour définir un contrat de service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Guide pratique pour implémenter un contrat de service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Guide pratique pour Définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Guide pratique pour Implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Liaisons fournies par le système](../../../docs/framework/wcf/system-provided-bindings.md)

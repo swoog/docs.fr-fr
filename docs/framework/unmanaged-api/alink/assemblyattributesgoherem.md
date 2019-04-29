@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 69167fda194e9d916f44751fd1f9dcee92822377
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790141"
 ---
 # <a name="assemblyattributesgoherem-class"></a>Classe de AssemblyAttributesGoHereM
 
@@ -42,7 +42,7 @@ Les références à ce type indiquent des attributs personnalisés qui ne sont p
 
 Ces types sont marqués « internes » dans le .NET Framework et se trouvent dans le <xref:System.Runtime.CompilerServices> espace de noms.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 mscorlib.dll
 

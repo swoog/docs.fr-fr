@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938253"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Procédure pas à pas : Validation de mots de passe complexes (Visual Basic)
 Cette méthode vérifie certaines caractéristiques de mot de passe fort et met à jour un paramètre de chaîne avec des informations sur les vérifications le mot de passe échoue.  
@@ -28,20 +28,20 @@ Cette méthode vérifie certaines caractéristiques de mot de passe fort et met 
   
  Cet exemple nécessite :  
   
--   Un accès aux membres de l’espace de noms <xref:System.Text.RegularExpressions>. Ajoutez une instruction `Imports` si vous n’utilisez pas de noms de membres qualifiés complets dans votre code. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Un accès aux membres de l’espace de noms <xref:System.Text.RegularExpressions>. Ajoutez une instruction `Imports` si vous n’utilisez pas de noms de membres qualifiés complets dans votre code. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sécurité  
  Si vous déplacez le mot de passe sur un réseau, vous devez utiliser une méthode sécurisée pour transférer des données. Pour plus d’informations, consultez [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Vous pouvez améliorer la précision de la `ValidatePassword` fonction en ajoutant des contrôles de complexité supplémentaires :  
   
--   Comparez le mot de passe et ses sous-chaînes contre le nom d’utilisateur, l’identificateur d’utilisateur et un dictionnaire défini par l’application. En outre, considérez les caractères visuellement semblables comme équivalents lorsque vous effectuez des comparaisons. Par exemple, traiter les lettres « l » et « e » comme équivalentes aux chiffres « 1 » et « 3 ».  
+- Comparez le mot de passe et ses sous-chaînes contre le nom d’utilisateur, l’identificateur d’utilisateur et un dictionnaire défini par l’application. En outre, considérez les caractères visuellement semblables comme équivalents lorsque vous effectuez des comparaisons. Par exemple, traiter les lettres « l » et « e » comme équivalentes aux chiffres « 1 » et « 3 ».  
   
--   S’il n'existe qu’un seul caractère en majuscule, assurez-vous qu’il n’est pas premier caractère du mot de passe.  
+- S’il n'existe qu’un seul caractère en majuscule, assurez-vous qu’il n’est pas premier caractère du mot de passe.  
   
--   Assurez-vous que les deux derniers caractères du mot de passe sont des lettres.  
+- Assurez-vous que les deux derniers caractères du mot de passe sont des lettres.  
   
--   N’autorisez pas les mots de passe dans lequel tous les symboles sont entrés à partir de la ligne du haut du clavier.  
+- N’autorisez pas les mots de passe dans lequel tous les symboles sont entrés à partir de la ligne du haut du clavier.  
   
 ## <a name="see-also"></a>Voir aussi
 

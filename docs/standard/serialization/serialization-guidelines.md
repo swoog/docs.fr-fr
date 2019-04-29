@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794302"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  
@@ -32,22 +32,22 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
   
 ## <a name="guidelines"></a>Recommandations  
   
--   PENSEZ à la sérialisation lorsque vous concevez de nouveaux types.  
+- PENSEZ à la sérialisation lorsque vous concevez de nouveaux types.  
   
      La sérialisation constitue une considération de conception importante pour tout type, car les programmes devront peut-être rendre persistantes ou transmettre des instances du type.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Choix de la technologie de sérialisation appropriée à prendre en charge  
  Tout type donné peut prendre en charge une ou plusieurs des technologies de sérialisation ou aucune d'entre elles.  
   
--   ENVISAGEZ la prise en charge de la *sérialisation du contrat de données* si des instances de votre type doivent être rendues persistantes ou utilisées dans des services web.  
+- ENVISAGEZ la prise en charge de la *sérialisation du contrat de données* si des instances de votre type doivent être rendues persistantes ou utilisées dans des services web.  
   
--   ENVISAGEZ la prise en charge de la *sérialisation XML* à la place ou en plus de la sérialisation du contrat de données si vous devez davantage contrôler le format XML généré lors de la sérialisation du type.  
+- ENVISAGEZ la prise en charge de la *sérialisation XML* à la place ou en plus de la sérialisation du contrat de données si vous devez davantage contrôler le format XML généré lors de la sérialisation du type.  
   
      Cela peut être nécessaire dans certains scénarios d'interopérabilité où vous devez utiliser une construction XML qui n'est pas prise en charge par la sérialisation du contrat de données, par exemple, pour générer des attributs XML.  
   
--   ENVISAGEZ la prise en charge de la *sérialisation du runtime* si des instances de votre type doivent passer des limites .NET Remoting.  
+- ENVISAGEZ la prise en charge de la *sérialisation du runtime* si des instances de votre type doivent passer des limites .NET Remoting.  
   
--   ÉVITEZ de prendre en charge la sérialisation XML ou du runtime uniquement pour des raisons de persistance. Préférez plutôt la sérialisation du contrat de données.  
+- ÉVITEZ de prendre en charge la sérialisation XML ou du runtime uniquement pour des raisons de persistance. Préférez plutôt la sérialisation du contrat de données.  
   
 #### <a name="supporting-data-contract-serialization"></a>Prise en charge de la sérialisation du contrat de données  
  Les types peuvent prendre en charge la sérialisation du contrat de données en appliquant <xref:System.Runtime.Serialization.DataContractAttribute> au type et <xref:System.Runtime.Serialization.DataMemberAttribute> aux membres (champs et propriétés) du type.  

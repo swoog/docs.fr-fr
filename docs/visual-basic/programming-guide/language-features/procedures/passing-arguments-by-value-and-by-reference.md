@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791922"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passage d’un argument par valeur et par référence (Visual Basic)
 En Visual Basic, vous pouvez passer un argument à une procédure *par valeur* ou *par référence*. Il s’agit du *mécanisme de transmission*, et détermine si la procédure peut modifier l’élément de programmation sous-jacent à l’argument dans le code appelant. La déclaration de procédure détermine le mécanisme de passage pour chaque paramètre en spécifiant le [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) mot clé.  
@@ -22,22 +22,22 @@ En Visual Basic, vous pouvez passer un argument à une procédure *par valeur* o
 ## <a name="distinctions"></a>Distinctions  
  Lors du passage d’un argument à une procédure, tenez compte des diverses distinctions qui interagissent entre eux :  
   
--   Si l’élément de programmation sous-jacent est modifiable ou non modifiable  
+- Si l’élément de programmation sous-jacent est modifiable ou non modifiable  
   
--   Si l’argument lui-même est modifiable ou non modifiable  
+- Si l’argument lui-même est modifiable ou non modifiable  
   
--   Si l’argument est passé par valeur ou par référence  
+- Si l’argument est passé par valeur ou par référence  
   
--   Si le type de données d’argument est un type valeur ou un type référence  
+- Si le type de données d’argument est un type valeur ou un type référence  
   
  Pour plus d’informations, consultez [différences entre modifiables et non modifiables Arguments](./differences-between-modifiable-and-nonmodifiable-arguments.md) et [différences entre passage d’un Argument par valeur et par référence](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
 ## <a name="choice-of-passing-mechanism"></a>Choix du mécanisme de transmission  
  Vous devez choisir avec soin pour chaque argument, le mécanisme de passage.  
   
--   **Protection**. Dans le choix entre les deux mécanismes de transfert, le critère le plus important est l’exposition de l’appel de variables à modifier. L’avantage de passage d’un argument `ByRef` est que la procédure peut retourner une valeur au code appelant via cet argument. L’avantage de passage d’un argument `ByVal` permet d’empêcher une variable d’être modifiée par la procédure.  
+- **Protection**. Dans le choix entre les deux mécanismes de transfert, le critère le plus important est l’exposition de l’appel de variables à modifier. L’avantage de passage d’un argument `ByRef` est que la procédure peut retourner une valeur au code appelant via cet argument. L’avantage de passage d’un argument `ByVal` permet d’empêcher une variable d’être modifiée par la procédure.  
   
--   **Performances**. Bien que le mécanisme de passage peut affecter les performances de votre code, la différence est généralement insignifiante. Une exception à cette règle est un type de valeur passé `ByVal`. Dans ce cas, Visual Basic copie le contenu de la totalité des données de l’argument. Par conséquent, pour un type de valeur élevée comme une structure, il peut être plus efficace de passer `ByRef`.  
+- **Performances**. Bien que le mécanisme de passage peut affecter les performances de votre code, la différence est généralement insignifiante. Une exception à cette règle est un type de valeur passé `ByVal`. Dans ce cas, Visual Basic copie le contenu de la totalité des données de l’argument. Par conséquent, pour un type de valeur élevée comme une structure, il peut être plus efficace de passer `ByRef`.  
   
      Pour les types référence, seul le pointeur vers les données est copié (quatre octets sur les plateformes 32 bits, huit octets sur les plateformes 64 bits). Par conséquent, vous pouvez passer des arguments de type `String` ou `Object` par valeur sans nuire aux performances.  
   
@@ -50,15 +50,15 @@ En Visual Basic, vous pouvez passer un argument à une procédure *par valeur* o
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Quand passer un Argument par valeur  
   
--   Si l’élément de code appelant sous-jacent à l’argument est un élément non modifiable, déclarez le paramètre correspondant [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Aucun code ne peut modifier la valeur d’un élément comme étant non modifiable.  
+- Si l’élément de code appelant sous-jacent à l’argument est un élément non modifiable, déclarez le paramètre correspondant [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Aucun code ne peut modifier la valeur d’un élément comme étant non modifiable.  
   
--   Si l’élément sous-jacent est modifiable, mais vous ne souhaitez pas que la procédure pour être en mesure de modifier sa valeur, déclarez le paramètre `ByVal`. Uniquement le code appelant peut modifier la valeur d’un élément modifiable passé par valeur.  
+- Si l’élément sous-jacent est modifiable, mais vous ne souhaitez pas que la procédure pour être en mesure de modifier sa valeur, déclarez le paramètre `ByVal`. Uniquement le code appelant peut modifier la valeur d’un élément modifiable passé par valeur.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Quand passer un Argument par référence  
   
--   Si la procédure authentique besoin de modifier l’élément sous-jacent dans le code appelant, déclarez le paramètre correspondant [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Si la procédure authentique besoin de modifier l’élément sous-jacent dans le code appelant, déclarez le paramètre correspondant [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
--   Si l’exécution correcte du code dépend de la procédure de modification de l’élément sous-jacent dans le code appelant, déclarez le paramètre `ByRef`. Si vous le passez par valeur ou si le code appelant substitue le `ByRef` mécanisme de transmission en mettant l’argument entre parenthèses, l’appel de procédure peut produire des résultats inattendus.  
+- Si l’exécution correcte du code dépend de la procédure de modification de l’élément sous-jacent dans le code appelant, déclarez le paramètre `ByRef`. Si vous le passez par valeur ou si le code appelant substitue le `ByRef` mécanisme de transmission en mettant l’argument entre parenthèses, l’appel de procédure peut produire des résultats inattendus.  
   
 ## <a name="example"></a>Exemple  
   

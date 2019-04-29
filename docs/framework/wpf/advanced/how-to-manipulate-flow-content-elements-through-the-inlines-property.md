@@ -11,26 +11,26 @@ helpviewer_keywords:
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
 ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942842"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procédure : Manipuler des éléments de contenu de flux avec la propriété Inlines
 Ces exemples illustrent certaines des opérations plus courantes qui peuvent être effectuées sur les éléments de contenu de flux inline (et conteneurs de tels éléments, tels que <xref:System.Windows.Controls.TextBlock>) via la **Inlines** propriété. Cette propriété est utilisée pour ajouter et supprimer des éléments à partir de <xref:System.Windows.Documents.InlineCollection>. Éléments de contenu flux cette fonctionnalité une **Inlines** propriété incluent :  
   
--   <xref:System.Windows.Documents.Bold>  
+- <xref:System.Windows.Documents.Bold>  
   
--   <xref:System.Windows.Documents.Hyperlink>  
+- <xref:System.Windows.Documents.Hyperlink>  
   
--   <xref:System.Windows.Documents.Italic>  
+- <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Span>  
+- <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Underline>  
+- <xref:System.Windows.Documents.Underline>  
   
  Il arrive que ces exemples utilisent <xref:System.Windows.Documents.Span> en tant que le flux de contenu élément, mais ces techniques sont applicables à tous les éléments ou contrôles qui hébergent un <xref:System.Windows.Documents.InlineCollection> collection.  
   

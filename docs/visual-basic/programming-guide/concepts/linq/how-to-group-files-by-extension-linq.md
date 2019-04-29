@@ -3,11 +3,11 @@ title: 'Procédure : Regrouper les fichiers par Extension (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
 ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778077"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procédure : Regrouper les fichiers par Extension (LINQ) (Visual Basic)
 Cet exemple montre comment utiliser LINQ pour effectuer des opérations de regroupement et de tri avancées sur des listes de fichiers ou de dossiers. Il montre également comment parcourir les résultats dans la fenêtre de console à l’aide des méthodes <xref:System.Linq.Enumerable.Skip%2A> et <xref:System.Linq.Enumerable.Take%2A>.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776608"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Procédure : Créer une décoration de texte
 Un <xref:System.Windows.TextDecoration> objet est un ornement visuel que vous pouvez ajouter au texte. Il existe quatre types de décorations de texte : souligné, ligne de base, barré et surligné. L’exemple suivant montre les emplacements des ornements de texte par rapport au texte.  

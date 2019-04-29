@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788932"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Applique une sémantique de type stricte pour restreindre les conversions de types implicites.  
@@ -27,7 +27,7 @@ Applique une sémantique de type stricte pour restreindre les conversions de typ
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Optionnel. Le `-optionstrict+` option restreint les conversions de types implicites. La valeur par défaut pour cette option est `-optionstrict-`. Le `-optionstrict+` option est identique à `-optionstrict`. Vous pouvez utiliser les deux pour la sémantique de type permissive.  
+ Facultatif. Le `-optionstrict+` option restreint les conversions de types implicites. La valeur par défaut pour cette option est `-optionstrict-`. Le `-optionstrict+` option est identique à `-optionstrict`. Vous pouvez utiliser les deux pour la sémantique de type permissive.  
   
  `custom`  
  Obligatoire. Avertir lors de la syntaxe de langue stricte n’est pas respectée.  
@@ -47,7 +47,7 @@ Applique une sémantique de type stricte pour restreindre les conversions de typ
   
 ### <a name="to-set--optionstrict-programmatically"></a>Pour définir - optionstrict par programmation  
   
--   Consultez [Option Strict, instruction](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Consultez [Option Strict, instruction](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `Test.vb` à l’aide de la sémantique de type stricte.  

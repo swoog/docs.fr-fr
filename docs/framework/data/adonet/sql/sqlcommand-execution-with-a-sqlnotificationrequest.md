@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 90ec7653f7de931bd8127263643b5467998325b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780300"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Exécution de SqlCommand avec une SqlNotificationRequest
 
@@ -27,7 +27,7 @@ La manière dont vous interrogez la file d'attente SQL Server et interprétez le
 > [!NOTE]
 > Lors de l'utilisation de demandes de notification SQL Server avec <xref:System.Data.SqlClient.SqlDependency>, créez votre propre nom de file d'attente au lieu d'utiliser le nom de service par défaut.
 
-Il n'y a pas de nouveaux éléments de sécurité côté client pour <xref:System.Data.Sql.SqlNotificationRequest>. Il s'agit principalement d'une fonctionnalité du serveur et le serveur a créé des privilèges spéciaux dont les utilisateurs doivent disposer pour demander une notification.
+Il n'y a pas de nouveaux éléments de sécurité côté client pour <xref:System.Data.Sql.SqlNotificationRequest>. Il s’agit principalement d’une fonctionnalité du serveur et le serveur a créé des privilèges spéciaux dont les utilisateurs doivent disposer pour demander une notification.
 
 ### <a name="example"></a>Exemple
 

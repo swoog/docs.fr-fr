@@ -3,11 +3,11 @@ title: Compteurs de performance de point de terminaison
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
 ms.openlocfilehash: f07e318e39a68e689ec484b09fa743623cfb51d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797226"
 ---
 # <a name="endpoint-performance-counters"></a>Compteurs de performance de point de terminaison
 Les compteurs de performance de point de terminaison capturent des données qui révèlent comment un point de terminaison accepte des messages. Ils se trouvent sous l'objet de performance `ServiceModelEndpoint 4.0.0.0` dans l'affichage de l'analyseur de performances. Les instances sont nommées à l’aide du modèle suivant :  

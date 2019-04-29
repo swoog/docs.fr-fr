@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793677"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour indiquer qu'un bloc de code participe à une transaction, sans avoir à intervenir sur la transaction même. Une étendue de transaction peut sélectionner et gérer automatiquement la transaction ambiante. En raison de sa facilité d'utilisation et de son efficacité, il est recommandé d'utiliser la classe <xref:System.Transactions.TransactionScope> lors du développement d'une application de transaction.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Un objet <xref:System.Transactions.TransactionScope> dispose de trois options :  
   
--   Joindre la transaction ambiante ou en créer une nouvelle s'il n'en existe pas.  
+- Joindre la transaction ambiante ou en créer une nouvelle s'il n'en existe pas.  
   
--   Constituer une nouvelle étendue racine, c'est-à-dire démarrer une nouvelle transaction et en faire la nouvelle transaction ambiante de sa propre étendue.  
+- Constituer une nouvelle étendue racine, c'est-à-dire démarrer une nouvelle transaction et en faire la nouvelle transaction ambiante de sa propre étendue.  
   
--   Ne participer à aucune transaction. En conséquence, il n'y a pas de transaction ambiante.  
+- Ne participer à aucune transaction. En conséquence, il n'y a pas de transaction ambiante.  
   
  Si l'étendue est instanciée avec <xref:System.Transactions.TransactionScopeOption.Required> et qu'une transaction ambiante existe, l'étendue joint cette transaction. En revanche, s'il n'y a pas de transaction ambiante, l'étendue en crée une nouvelle et devient l'étendue racine. Valeur par défaut. Si <xref:System.Transactions.TransactionScopeOption.Required> est utilisé, le code de l'étendue n'a pas à se comporter différemment selon qu'il s'agit de la racine ou seulement de la jonction de la transaction ambiante. Il fonctionne de la même façon dans les deux cas.  
   

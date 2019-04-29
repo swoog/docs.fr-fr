@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2acade14f9d30ca7bf0d098d6f58c80a367f621c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795939"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>Méthode ICLRStrongName::StrongNameGetPublicKey
 Obtient la clé publique à partir d’une paire de clés publique/privée. La paire de clés peut être fournie sous la forme d’un nom de conteneur de clé au sein d’un fournisseur de services de chiffrement (CSP) ou une collection brute d’octets.  

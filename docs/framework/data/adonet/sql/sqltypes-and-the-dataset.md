@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
 ms.openlocfilehash: a218a8e0fe3d2c17a0f09a40645c7b3ad26fb5ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780170"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes et le DataSet
 ADO.NET 2.0 a introduit une prise en charge de type avancée du `DataSet` via l'espace de noms <xref:System.Data.SqlTypes>. Les types dans <xref:System.Data.SqlTypes> sont conçus pour fournir des types de données avec les mêmes sémantiques et précision que les types de données dans une base de données SQL Server. Chaque type de données dans <xref:System.Data.SqlTypes> a un type de données équivalent dans SQL Server, avec la même représentation de données sous-jacentes.  

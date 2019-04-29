@@ -3,11 +3,11 @@ title: Traitement transactionnel
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
 ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793664"
 ---
 # <a name="transaction-processing"></a>Traitement transactionnel
 Lorsque vous achetez un livre à une librairie en ligne, vous échangez de l'argent (sous forme de crédit) contre ce livre. Si votre crédit est correct, une série d'opérations connexes garantit la réception de votre livre et le versement de l'argent à la librairie. Cependant, si l'une des opérations de la série échoue lors de l'échange, c'est l'échange dans son intégralité qui échoue. Vous ne recevez pas le livre et la librairie ne perçoit pas votre argent.  

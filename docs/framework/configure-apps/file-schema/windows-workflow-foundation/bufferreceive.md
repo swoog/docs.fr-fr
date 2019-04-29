@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
 ms.openlocfilehash: 360d26fda964fa33640e833ad22dab7e06e153f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790258"
 ---
 # <a name="bufferreceive"></a>\<bufferReceive>
 Comportement de service qui permet à un service d'utiliser le traitement de la réception mise en mémoire tampon, ce qui permet à un service de flux de travail de traiter les messages dans le désordre.  

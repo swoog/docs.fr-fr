@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
 ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778977"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Procédure : utiliser le mode d’interpolation pour contrôler la qualité d’image pendant la mise à l’échelle
 Le mode d’interpolation d’une <xref:System.Drawing.Graphics> objet influence la façon dont [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dimensionne (étire et réduit) les images. Le <xref:System.Drawing.Drawing2D.InterpolationMode> énumération définit plusieurs modes d’interpolation, certains d'entre eux sont affichés dans la liste suivante :  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
  Pour étirer une image, chaque pixel de l’image d’origine doit être mappé à un groupe de pixels dans l’image plus grande. Pour réduire une image, des groupes de pixels dans l’image d’origine doivent être mappés en pixels individuels dans l’image plus petite. L’efficacité des algorithmes qui effectuent ces mappages détermine la qualité d’une image à l’échelle. Les algorithmes qui produisent des images à l’échelle de qualité supérieure ont tendance à nécessiter plus de temps de traitement. Dans la liste précédente, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> est le mode de qualité et <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> est le mode de qualité optimale.  
   

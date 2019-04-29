@@ -3,11 +3,11 @@ title: Prise en main F# avec les outils de ligne de commande
 description: Découvrez comment créer une solution à projets multiples simple F# à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938695"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Prise en main F# avec l’interface CLI .NET Core
 

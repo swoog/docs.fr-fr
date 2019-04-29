@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935224"
 ---
 # <a name="bad-file-name-or-number"></a>Nom ou numéro de fichier incorrect
 Une erreur s’est produite lors de la tentative d’accès au fichier spécifié. Parmi les causes possibles de cette erreur sont :  
   
--   Une instruction fait référence à un fichier avec un nom de fichier ou d’un nombre qui n’a pas été spécifié dans le `FileOpen` instruction ou qui a été spécifié dans un `FileOpen` instruction mais elle était par la suite fermé.  
+- Une instruction fait référence à un fichier avec un nom de fichier ou d’un nombre qui n’a pas été spécifié dans le `FileOpen` instruction ou qui a été spécifié dans un `FileOpen` instruction mais elle était par la suite fermé.  
   
--   Une instruction fait référence à un fichier avec un nombre qui est en dehors de la plage de numéros de fichier.  
+- Une instruction fait référence à un fichier avec un nombre qui est en dehors de la plage de numéros de fichier.  
   
--   Une instruction fait référence à un nom de fichier ou un nombre qui n’est pas valide.  
+- Une instruction fait référence à un nom de fichier ou un nombre qui n’est pas valide.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   

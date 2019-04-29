@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946336"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType, méthode
 Obtient le type de ce frame interne.  
@@ -42,7 +42,7 @@ HRESULT GetFrameType (
 ## <a name="remarks"></a>Notes  
  Le type de frame interne ne sera jamais STUBFRAME_NONE. Débogueurs doivent ignorer correctement les types de frame interne non reconnu.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

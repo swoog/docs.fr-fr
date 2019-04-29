@@ -3,11 +3,11 @@ title: Gestion de l'instance interrompue
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785903"
 ---
 # <a name="suspended-instance-management"></a>Gestion de l'instance interrompue
 Cet exemple montre comment gérer des instances de workflow qui ont été interrompues.  L'action par défaut pour <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> est `AbandonAndSuspend`. Cela signifie que, par défaut, les exceptions non gérées levées à partir d'une instance de workflow hébergée dans le <xref:System.ServiceModel.WorkflowServiceHost> provoqueront la suppression de l'instance de la mémoire (abandon), et la version durable/persistante de l'instance sera marquée comme interrompue. Une instance de workflow interrompue ne sera pas en mesure de fonctionner tant que l'interruption n'a pas été annulée.
@@ -26,41 +26,41 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 
 1. Cet exemple requiert que les composants Windows suivants soient activés :
 
-    1.  Serveur de file d'attente Microsoft Message Queue (MSMQ)
+    1. Serveur de file d'attente Microsoft Message Queue (MSMQ)
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. Configurez la base de données SQL Server.
 
-    1.  À partir d’une invite de commandes Visual Studio 2010, exécutez « setup.cmd » à partir de l’exemple suspendedinstancemanagement, qui effectue les opérations suivantes :
+    1. À partir d’une invite de commandes Visual Studio 2010, exécutez « setup.cmd » à partir de l’exemple suspendedinstancemanagement, qui effectue les opérations suivantes :
 
-        1.  Crée une base de données de persistance à l'aide de SQL Server Express. Si la base de données de persistance existe déjà, elle est supprimée et recréée.
+        1. Crée une base de données de persistance à l'aide de SQL Server Express. Si la base de données de persistance existe déjà, elle est supprimée et recréée.
 
-        2.  Configure la base de données pour la persistance.
+        2. Configure la base de données pour la persistance.
 
-        3.  Ajoute IIS APPPOOL\DefaultAppPool et NT AUTHORITY\Network Service au rôle InstanceStoreUsers qui a été défini lors de la configuration de la base de données pour la persistance.
+        3. Ajoute IIS APPPOOL\DefaultAppPool et NT AUTHORITY\Network Service au rôle InstanceStoreUsers qui a été défini lors de la configuration de la base de données pour la persistance.
 
 3. Configurez la file d'attente de service.
 
-    1.  Dans Visual Studio 2010, cliquez sur le **SampleWorkflowApp** projet puis cliquez sur **définir comme projet de démarrage**.
+    1. Dans Visual Studio 2010, cliquez sur le **SampleWorkflowApp** projet puis cliquez sur **définir comme projet de démarrage**.
 
-    2.  Compilez et exécutez SampleWorkflowApp en appuyant sur **F5**. La file d'attente requise sera ainsi créée.
+    2. Compilez et exécutez SampleWorkflowApp en appuyant sur **F5**. La file d'attente requise sera ainsi créée.
 
-    3.  Appuyez sur **entrée** pour arrêter SampleWorkflowApp.
+    3. Appuyez sur **entrée** pour arrêter SampleWorkflowApp.
 
-    4.  Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes.
+    4. Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes.
 
-    5.  Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.
+    5. Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.
 
-    6.  Bouton droit sur le **ReceiveTx** de file d’attente et sélectionnez **propriétés**.
+    6. Bouton droit sur le **ReceiveTx** de file d’attente et sélectionnez **propriétés**.
 
-    7.  Sélectionnez le **sécurité** onglet et autoriser **tout le monde** disposer d’autorisations à **recevoir un Message**, **lire le Message**, et  **Envoyer le Message**.
+    7. Sélectionnez le **sécurité** onglet et autoriser **tout le monde** disposer d’autorisations à **recevoir un Message**, **lire le Message**, et  **Envoyer le Message**.
 
 4. Exécutez maintenant l'exemple.
 
-    1.  Dans Visual Studio 2010, réexécutez le projet SampleWorkflowApp sans déboguer en appuyant sur **Ctrl + F5**. Deux adresses de point de terminaison seront imprimées dans la fenêtre de console : une pour le point de terminaison d'application et l'autre pour le <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Une instance de workflow est ensuite créée et les enregistrements de suivi pour cette instance s'afficheront dans la fenêtre de console. L'instance de workflow lèvera une exception qui provoquera l'interruption et l'abandon de l'instance.
+    1. Dans Visual Studio 2010, réexécutez le projet SampleWorkflowApp sans déboguer en appuyant sur **Ctrl + F5**. Deux adresses de point de terminaison seront imprimées dans la fenêtre de console : une pour le point de terminaison d'application et l'autre pour le <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Une instance de workflow est ensuite créée et les enregistrements de suivi pour cette instance s'afficheront dans la fenêtre de console. L'instance de workflow lèvera une exception qui provoquera l'interruption et l'abandon de l'instance.
 
-    2.  L'utilitaire en ligne de commande peut ensuite être utilisé pour entreprendre des actions supplémentaires sur chacune de ces instances. La syntaxe pour les arguments de ligne de commande est la suivante :
+    2. L'utilitaire en ligne de commande peut ensuite être utilisé pour entreprendre des actions supplémentaires sur chacune de ces instances. La syntaxe pour les arguments de ligne de commande est la suivante :
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

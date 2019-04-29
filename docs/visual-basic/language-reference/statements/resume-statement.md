@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
 ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783914"
 ---
 # <a name="resume-statement"></a>Resume, instruction
 Reprend l’exécution une fois une routine de gestion des erreurs est terminée.  
@@ -38,10 +38,10 @@ Resume [ Next | line ]
  Obligatoire. Si l’erreur s’est produite dans la même procédure que le Gestionnaire d’erreurs, l’exécution reprend avec l’instruction qui a provoqué l’erreur. Si l’erreur s’est produite dans une procédure appelée, l’exécution reprend à l’instruction qui a appelé la procédure contenant la routine de gestion des erreurs.  
   
  `Next`  
- Facultatif. Si l’erreur s’est produite dans la même procédure que le Gestionnaire d’erreurs, l’exécution reprend avec l’instruction qui suit immédiatement l’instruction ayant provoqué l’erreur. Si l’erreur s’est produite dans une procédure appelée, l’exécution se poursuit avec l’instruction qui suit immédiatement l’instruction qui a appelé la procédure contenant la routine de gestion des erreurs (ou `On Error Resume Next` instruction).  
+ Optionnel. Si l’erreur s’est produite dans la même procédure que le Gestionnaire d’erreurs, l’exécution reprend avec l’instruction qui suit immédiatement l’instruction ayant provoqué l’erreur. Si l’erreur s’est produite dans une procédure appelée, l’exécution se poursuit avec l’instruction qui suit immédiatement l’instruction qui a appelé la procédure contenant la routine de gestion des erreurs (ou `On Error Resume Next` instruction).  
   
  `line`  
- Optionnel. L’exécution reprend à la ligne spécifiée dans le champ obligatoire `line` argument. Le `line` argument est une étiquette de ligne ou un numéro de ligne et doit se trouver dans la même procédure que le Gestionnaire d’erreurs.  
+ Facultatif. L’exécution reprend à la ligne spécifiée dans le champ obligatoire `line` argument. Le `line` argument est une étiquette de ligne ou un numéro de ligne et doit se trouver dans la même procédure que le Gestionnaire d’erreurs.  
   
 ## <a name="remarks"></a>Notes  
   

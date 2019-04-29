@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794704"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procédure : Masquer une Variable portant le même nom que votre Variable (Visual Basic)
 Vous pouvez masquer une variable par *occultation* il, autrement dit, en le redéfinissant avec une variable du même nom. Vous pouvez occulter la variable que vous souhaitez masquer de deux manières :  
   
--   **Occultation par portée.** Vous pouvez occulter via étendue en redéclarant dans une sous-région de la région contenant la variable que vous souhaitez masquer.  
+- **Occultation par portée.** Vous pouvez occulter via étendue en redéclarant dans une sous-région de la région contenant la variable que vous souhaitez masquer.  
   
--   **Occultation par héritage.** Si la variable que vous souhaitez masquer est définie au niveau de classe, vous pouvez le masquer via l’héritage en redéclarant avec le [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) mot clé dans une classe dérivée.  
+- **Occultation par héritage.** Si la variable que vous souhaitez masquer est définie au niveau de classe, vous pouvez le masquer via l’héritage en redéclarant avec le [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) mot clé dans une classe dérivée.  
   
 ## <a name="two-ways-to-hide-a-variable"></a>Deux méthodes pour masquer une Variable  
   

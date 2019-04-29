@@ -3,11 +3,11 @@ title: Exemple Discovery with Scopes
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789374"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemple Discovery with Scopes
 Cet exemple montre comment utiliser des portées pour catégoriser des points de terminaison détectables et comment utiliser <xref:System.ServiceModel.Discovery.DiscoveryClient> pour rechercher des points de terminaison de façon asynchrone. Sur le service, cet exemple montre comment personnaliser la découverte pour chaque point de terminaison en ajoutant un comportement de découverte du point de terminaison, et en l'utilisant pour ajouter une portée au point de terminaison et contrôler la fonctionnalité de découverte du point de terminaison. Sur le client, l'exemple passe en revue la façon dont les clients peuvent créer un <xref:System.ServiceModel.Discovery.DiscoveryClient> et ajuster les paramètres de recherche de manière à inclure des portées en les ajoutant à <xref:System.ServiceModel.Discovery.FindCriteria>. Cet exemple montre comment les clients peuvent limiter les réponses en ajoutant un critère d'arrêt.  

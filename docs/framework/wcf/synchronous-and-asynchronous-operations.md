@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935510"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Opérations synchrones et asynchrones
 Cette rubrique traite de l'implémentation et de l'appel des opérations de service asynchrones.  
@@ -27,24 +27,24 @@ Cette rubrique traite de l'implémentation et de l'appel des opérations de serv
   
  L'indépendance du contrat de service vis-à-vis de l'implémentation du service ou du client autorise les types d'exécutions asynchrones suivants dans les applications WCF :  
   
--   Les clients peuvent appeler de façon asynchrone des opérations de demande/réponse à l'aide d'un échange de messages synchrone.  
+- Les clients peuvent appeler de façon asynchrone des opérations de demande/réponse à l'aide d'un échange de messages synchrone.  
   
--   Les services peuvent implémenter de façon asynchrone une opération de demande/réponse à l’aide d’un échange de messages synchrone.  
+- Les services peuvent implémenter de façon asynchrone une opération de demande/réponse à l’aide d’un échange de messages synchrone.  
   
--   Les échanges de messages peuvent être unidirectionnels, indépendamment de l'implémentation du client ou service.  
+- Les échanges de messages peuvent être unidirectionnels, indépendamment de l'implémentation du client ou service.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Scénarios asynchrones suggérés  
  Utilisez une approche asynchrone dans une implémentation de l'opération de service si celle-ci passe un appel bloquant, par exemple une tâche en E/S. Lorsque vous êtes dans une implémentation d’opération asynchrone, essayez d’appeler des méthodes et des opérations asynchrones pour étendre le chemin d’appel asynchrone aussi loin que possible. Par exemple, appelez `BeginOperationTwo()` à partir d'un `BeginOperationOne()`.  
   
--   Utilisez une approche asynchrone dans une application cliente ou appelante dans les cas suivants :  
+- Utilisez une approche asynchrone dans une application cliente ou appelante dans les cas suivants :  
   
--   Si vous appelez des opérations à partir d'une application intermédiaire. (Pour plus d’informations sur ces scénarios, consultez [Applications clientes de niveau intermédiaire](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+- Si vous appelez des opérations à partir d'une application intermédiaire. (Pour plus d’informations sur ces scénarios, consultez [Applications clientes de niveau intermédiaire](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
--   Si vous appelez des opérations à partir d'une page ASP.NET, utiliser des pages asynchrones.  
+- Si vous appelez des opérations à partir d'une page ASP.NET, utiliser des pages asynchrones.  
   
--   Si vous appelez des opérations à partir de n'importe quelle application monothread, telle que Windows Forms ou Windows Presentation Foundation (WPF). Lorsque vous utilisez le modèle d'appel asynchrone basé sur des événements, l'événement résultant est déclenché sur le thread d'interface utilisateur, ce qui accroît la réactivité de l'application sans exiger la gestion de plusieurs threads.  
+- Si vous appelez des opérations à partir de n'importe quelle application monothread, telle que Windows Forms ou Windows Presentation Foundation (WPF). Lorsque vous utilisez le modèle d'appel asynchrone basé sur des événements, l'événement résultant est déclenché sur le thread d'interface utilisateur, ce qui accroît la réactivité de l'application sans exiger la gestion de plusieurs threads.  
   
--   En général, si vous avez le choix entre un appel synchrone et asynchrone, choisissez l’appel asynchrone.  
+- En général, si vous avez le choix entre un appel synchrone et asynchrone, choisissez l’appel asynchrone.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implémentation d'une opération de service asynchrone  
  Les opérations asynchrones peuvent être implémentées à l'aide d'une des trois méthodes suivantes :  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  Pour définir une opération de contrat `X` exécutée de façon asynchrone quelle que soit la manière dont elle est appelée dans l'application cliente :  
   
--   Définissez deux méthodes à l’aide du modèle `BeginOperation` et `EndOperation`.  
+- Définissez deux méthodes à l’aide du modèle `BeginOperation` et `EndOperation`.  
   
--   La méthode `BeginOperation` inclut les paramètres `in` et `ref` pour l'opération et retourne un type <xref:System.IAsyncResult>.  
+- La méthode `BeginOperation` inclut les paramètres `in` et `ref` pour l'opération et retourne un type <xref:System.IAsyncResult>.  
   
--   La méthode `EndOperation` inclut un paramètre <xref:System.IAsyncResult> ainsi que les paramètres `out` et `ref` et elle retourne le type de retour des opérations.  
+- La méthode `EndOperation` inclut un paramètre <xref:System.IAsyncResult> ainsi que les paramètres `out` et `ref` et elle retourne le type de retour des opérations.  
   
  Par exemple, reportez-vous à la méthode suivante :  
   

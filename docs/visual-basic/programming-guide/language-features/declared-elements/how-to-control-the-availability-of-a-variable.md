@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943349"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Procédure : Contrôler la disponibilité d’une Variable (Visual Basic)
 Vous pouvez contrôler la disponibilité d’une variable en spécifiant son *niveau d’accès*. Le niveau d’accès détermine quel code est autorisé à lire ou écrire dans la variable.  
   
--   *Variables membres* (défini au niveau du module et en dehors de toute procédure) par défaut d’un accès public, ce qui signifie que tout code qui puisse les voir pour y accéder. Vous pouvez le modifier en spécifiant un modificateur d’accès.  
+- *Variables membres* (défini au niveau du module et en dehors de toute procédure) par défaut d’un accès public, ce qui signifie que tout code qui puisse les voir pour y accéder. Vous pouvez le modifier en spécifiant un modificateur d’accès.  
   
--   *Variables locales* (défini à l’intérieur d’une procédure) nominalement ont un accès public, bien que seul le code dans leur procédure permettre y accéder. Vous ne pouvez pas modifier le niveau d’accès d’une variable locale, mais vous pouvez modifier le niveau d’accès de la procédure qui le contient.  
+- *Variables locales* (défini à l’intérieur d’une procédure) nominalement ont un accès public, bien que seul le code dans leur procédure permettre y accéder. Vous ne pouvez pas modifier le niveau d’accès d’une variable locale, mais vous pouvez modifier le niveau d’accès de la procédure qui le contient.  
   
  Pour plus d’informations, consultez [niveaux en Visual Basic d’accès](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

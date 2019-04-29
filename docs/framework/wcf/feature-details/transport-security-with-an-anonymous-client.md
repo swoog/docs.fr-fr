@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932944"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Sécurité de transport avec un client anonyme
 
@@ -30,7 +30,7 @@ Pour plus d’informations sur l’utilisation d’un certificat avec un service
 |Intégrité|Oui|
 |Confidentialité|Oui|
 |Transport|HTTPS|
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|
+|Liaison|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>Service
 
@@ -84,7 +84,7 @@ La configuration et le code ci-dessous sont conçus pour s'exécuter indépendam
 
 - Créez un client autonome à l'aide du code (et du code client).
 
-- Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Par exemple :
+- Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

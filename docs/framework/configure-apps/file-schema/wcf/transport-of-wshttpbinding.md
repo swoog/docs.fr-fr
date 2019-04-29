@@ -3,11 +3,11 @@ title: <transport> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
 ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788217"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<transport > de \<wsHttpBinding >
 
@@ -54,27 +54,27 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 |---------------|-----------------|
 |`clientCredentialType`|Spécifie les informations d'identification utilisées pour authentifier le client auprès du service. Cet attribut est de type <xref:System.ServiceModel.HttpClientCredentialType>.|
 |`proxyCredentialType`|Spécifie les informations d'identification utilisées pour authentifier le client auprès d'un proxy de domaine. Cet attribut est de type <xref:System.ServiceModel.HttpProxyCredentialType>.|
-|`realm`|Chaîne indiquant le domaine de l'authentification de base ou Digest. La valeur par défaut est une chaîne vide.<br /><br /> Un domaine d'authentification spécifie au moins le nom de l'hôte qui exécute l'authentification. Il peut également spécifier une collection d'utilisateurs disposant d'un accès. Un utilisateur peut interroger le domaine d'authentification pour vérifier quels noms d'utilisateurs et mots de passe peuvent être utilisés.|
+|`realm`|Chaîne indiquant le domaine de l’authentification de base ou Digest. La valeur par défaut est une chaîne vide.<br /><br /> Un domaine d'authentification spécifie au moins le nom de l'hôte qui exécute l'authentification. Il peut également spécifier une collection d’utilisateurs disposant d’un accès. Un utilisateur peut interroger le domaine d'authentification pour vérifier quels noms d'utilisateurs et mots de passe peuvent être utilisés.|
 |`policyEnforcement`|Cette énumération spécifie à quel moment <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> doit être appliqué.<br /><br /> 1.  Never : la stratégie n'est jamais appliquée (la protection étendue est désactivée).<br />2.  WhenSupported : la stratégie est appliquée uniquement si le client prend en charge la protection étendue.<br />3.  Always : la stratégie est toujours appliquée. Les clients qui ne prennent pas en charge la protection étendue ne pourront pas être authentifiés.|
 
 ## <a name="clientcredentialtype-attribute"></a>Attribut clientCredentialType
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`None`|La sécurité est désactivée.|
 |`Basic`|Utilise l'authentification de base.|
-|`Digest`|Utilise l'authentification Digest.|
+|`Digest`|Utilise l’authentification Digest.|
 |`Ntlm`|Utilise l'authentification NTLM comme solution de secours dans un domaine Windows.|
 |`Windows`|Utilise l'authentification intégrée Windows.|
 |`Certificate`|Utilise des certificats X.509 pour authentifier le client.|
 
 ## <a name="proxycredentialtype-attribute"></a>Attribut proxyCredentialType
 
-|Valeur|Description|
+|Value|Description|
 |-----------|-----------------|
 |`None`|La sécurité est désactivée.|
 |`Basic`|Utilise l'authentification de base.|
-|`Digest`|Utilise l'authentification Digest.|
+|`Digest`|Utilise l’authentification Digest.|
 |`Ntlm`|Utilise l'authentification NTLM comme solution de secours dans un domaine Windows.|
 |`Windows`|Utilise l'authentification intégrée Windows.|
 |`Certificate`|Utilise des certificats X.509 pour authentifier le client.|

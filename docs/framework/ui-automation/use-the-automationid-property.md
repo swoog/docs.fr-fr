@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775753"
 ---
 # <a name="use-the-automationid-property"></a>Utiliser la propriété AutomationID
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173093"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Utiliser un AutomationID unique et détectable pour localiser un élément spécifique dans l’arborescence UI Automation  
   
--   Utilisez un outil comme [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] pour signaler la propriété <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> d’un élément [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] d’intérêt. Cette valeur peut ensuite être copiée et collée dans une application cliente telle qu’un script de test en vue de tests automatisés. Cette approche réduit et simplifie le code nécessaire pour identifier et localiser un élément au moment de l’exécution.  
+- Utilisez un outil comme [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] pour signaler la propriété <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> d’un élément [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] d’intérêt. Cette valeur peut ensuite être copiée et collée dans une application cliente telle qu’un script de test en vue de tests automatisés. Cette approche réduit et simplifie le code nécessaire pour identifier et localiser un élément au moment de l’exécution.  
   
 > [!CAUTION]
 >  En général, vous devez essayer d’obtenir uniquement les enfants directs de <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Une recherche des descendants peut itérer au sein de centaines ou de milliers d’éléments, ce qui peut provoquer un dépassement de capacité de la pile. Si vous tentez d’obtenir un élément spécifique de niveau inférieur, vous devez commencer votre recherche à partir de la fenêtre d’application ou d’un conteneur de niveau inférieur.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173093"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Utiliser un chemin persistant pour revenir à un AutomationElement déjà identifié  
   
--   Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’interface utilisateur grâce à l’utilisation des propriétés UI Automation comme AutomationID, les modèles de contrôle et les écouteurs d’événements.
+- Les applications clientes, qu’il s’agisse de simples scripts de test ou de véritables utilitaires d’enregistrement et de lecture, peuvent nécessiter l’accès à des éléments qui ne sont pas actuellement instanciés, comme une boîte de dialogue d’ouverture de fichier ou un élément de menu, et qui donc n’existent pas dans l’arborescence UI Automation. Ces éléments ne peuvent être instanciés qu’en reproduisant, ou en « lisant », une séquence spécifique d’actions d’interface utilisateur grâce à l’utilisation des propriétés UI Automation comme AutomationID, les modèles de contrôle et les écouteurs d’événements.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173093"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Utiliser un chemin relatif pour revenir à un AutomationElement déjà identifié  
   
--   Dans certaines circonstances, l’unicité d’AutomationID n’étant garantie que parmi ses frères, plusieurs éléments dans l’arborescence UI Automation peuvent avoir des valeurs de propriété AutomationID identiques. Dans ce cas, les éléments peuvent être identifiés de manière unique en fonction d’un parent et, si nécessaire, d’un grand-parent. Par exemple, un développeur peut fournir une barre de menus avec plusieurs éléments de menu, chacun contenant plusieurs éléments de menu enfants dans lesquels les enfants sont identifiés avec des AutomationID séquentiels tels que « Item1 », « Item2 » et ainsi de suite. Chaque élément de menu peut ensuite être identifié de manière unique par son AutomationID accompagné de l’AutomationID de son parent et, si nécessaire, de son grand-parent.  
+- Dans certaines circonstances, l’unicité d’AutomationID n’étant garantie que parmi ses frères, plusieurs éléments dans l’arborescence UI Automation peuvent avoir des valeurs de propriété AutomationID identiques. Dans ce cas, les éléments peuvent être identifiés de manière unique en fonction d’un parent et, si nécessaire, d’un grand-parent. Par exemple, un développeur peut fournir une barre de menus avec plusieurs éléments de menu, chacun contenant plusieurs éléments de menu enfants dans lesquels les enfants sont identifiés avec des AutomationID séquentiels tels que « Item1 », « Item2 » et ainsi de suite. Chaque élément de menu peut ensuite être identifié de manière unique par son AutomationID accompagné de l’AutomationID de son parent et, si nécessaire, de son grand-parent.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,11 +3,11 @@ title: Traitement des messages dans le désordre
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
 ms.openlocfilehash: 4e1864b25a4dbe8192cd5c692c75645bebbb92d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701240"
 ---
 # <a name="out-of-order-message-processing"></a>Traitement des messages dans le désordre
 Les services de workflow peuvent dépendre de l'ordre dans lequel sont envoyés les messages. Un service de workflow contient une ou plusieurs activités <xref:System.ServiceModel.Activities.Receive> et chaque activité <xref:System.ServiceModel.Activities.Receive> attend un message spécifique. Sans garanties particulières de remise par le transport, les messages envoyés par des clients peuvent être différés et par conséquent remis dans un ordre non prévu par le service de workflow. L'implémentation d'un service de workflow qui ne requiert aucun ordre particulier d'envoi des messages s'effectue en principe à l'aide d'une activité Parallèle. Pour un protocole d'application plus complexe, le workflow risque de se compliquer très rapidement.  La fonctionnalité dans Windows Communication Foundation (WCF) de traitement des messages de désordre vous permet de créer ce type d’un flux de travail sans l’ensemble de la complexité des activités parallèles imbriquées. Traitement des messages de la sortie de commande est uniquement pris en charge sur les canaux qui prennent en charge <xref:System.ServiceModel.Channels.ReceiveContext> telles que les liaisons MSMQ de WCF.  

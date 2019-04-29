@@ -3,11 +3,11 @@ title: Utilisation de NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932559"
 ---
 # <a name="using-the-nethttpbinding"></a>Utilisation de NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte si elle est utilisée avec un contrat demande-réponse ou un contrat duplex et modifie son comportement pour le faire correspondre - elle utilise HTTP pour les contrats de demande-réponse et WebSockets pour les contrats duplex. Vous pouvez substituer ce comportement au moyen du paramètre <xref:System.ServiceModel.Channels.WebSocketTransportUsage> :  

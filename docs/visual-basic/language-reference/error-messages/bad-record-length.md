@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935250"
 ---
 # <a name="bad-record-length"></a>Longueur d'enregistrement incorrecte
 Cette erreur peut avoir plusieurs causes, dont les suivantes :  
   
--   La longueur d’une variable de l’enregistrement spécifiée dans une `FileGet`, `FileGetObject`, `FilePut` ou `FilePutObject` instruction diffère de la longueur spécifiée dans le correspondantes `FileOpen` instruction.  
+- La longueur d’une variable de l’enregistrement spécifiée dans une `FileGet`, `FileGetObject`, `FilePut` ou `FilePutObject` instruction diffère de la longueur spécifiée dans le correspondantes `FileOpen` instruction.  
   
--   La variable dans un `FilePut` ou `FilePutObject` instruction est ou inclut une chaîne de longueur variable.  
+- La variable dans un `FilePut` ou `FilePutObject` instruction est ou inclut une chaîne de longueur variable.  
   
--   La variable dans un `FilePut` ou `FilePutObject` est ou inclut un `Variant` type.  
+- La variable dans un `FilePut` ou `FilePutObject` est ou inclut un `Variant` type.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   

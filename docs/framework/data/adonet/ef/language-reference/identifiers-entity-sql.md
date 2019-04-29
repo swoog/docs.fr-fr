@@ -3,11 +3,11 @@ title: Identificateurs (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774658"
 ---
 # <a name="identifiers-entity-sql"></a>Identificateurs (Entity SQL)
 Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] pour représenter des alias d'expression de requête, des références de variables, des propriétés d'objets, des fonctions, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit deux types d’identificateurs : les identificateurs simples et les identificateurs entre guillemets.  
@@ -20,15 +20,15 @@ Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includ
   
  Un identificateur entre guillemets ne peut pas inclure les caractères suivants :  
   
--   Saut de ligne  
+- Saut de ligne  
   
--   Retours chariot  
+- Retours chariot  
   
--   Tabulations  
+- Tabulations  
   
--   Retour arrière  
+- Retour arrière  
   
--   Crochets supplémentaires (c'est-à-dire des crochets situés entre les crochets qui délimitent l'identificateur)  
+- Crochets supplémentaires (c'est-à-dire des crochets situés entre les crochets qui délimitent l'identificateur)  
   
  Un identificateur entre guillemets peut inclure des caractères Unicode.  
   
@@ -53,13 +53,13 @@ Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includ
 ## <a name="aliasing-rules"></a>Règles d'alias  
  Nous vous recommandons de spécifier des alias dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] interroge chaque fois que nécessaire, y compris les éléments suivants [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construit :  
   
--   Champs d'un constructeur de ligne  
+- Champs d'un constructeur de ligne  
   
--   Éléments dans la clause FROM d'une expression de requête  
+- Éléments dans la clause FROM d'une expression de requête  
   
--   Éléments dans la clause SELECT d'une expression de requête  
+- Éléments dans la clause SELECT d'une expression de requête  
   
--   Éléments dans la clause GROUP BY d'une expression de requête  
+- Éléments dans la clause GROUP BY d'une expression de requête  
   
 ### <a name="valid-aliases"></a>Alias valides  
  Alias valides dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sont n’importe quel identificateur simple ou un identificateur entre guillemets.  
@@ -67,9 +67,9 @@ Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includ
 ### <a name="alias-generation"></a>Génération d'alias  
  Si aucun alias n’est spécifié dans un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression de requête, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] essaie de générer un alias en fonction des règles simples suivantes :  
   
--   Si l'expression de requête (pour laquelle l'alias n'est pas spécifié) est un identificateur simple ou entre guillemets, cet identificateur est utilisé comme alias. Par exemple, `ROW(a, [b])` devient `ROW(a AS a, [b] AS [b])` ;  
+- Si l'expression de requête (pour laquelle l'alias n'est pas spécifié) est un identificateur simple ou entre guillemets, cet identificateur est utilisé comme alias. Par exemple, `ROW(a, [b])` devient `ROW(a AS a, [b] AS [b])` ;  
   
--   Si l'expression de requête est une expression plus complexe, mais que le dernier composant de cette expression de requête est un identificateur simple, cet identificateur est utilisé comme alias. Par exemple, `ROW(a.a1, b.[b1])` devient `ROW(a.a1 AS a1, b.[b1] AS [b1])` ;  
+- Si l'expression de requête est une expression plus complexe, mais que le dernier composant de cette expression de requête est un identificateur simple, cet identificateur est utilisé comme alias. Par exemple, `ROW(a.a1, b.[b1])` devient `ROW(a.a1 AS a1, b.[b1] AS [b1])` ;  
   
  Nous vous recommandons de ne pas utiliser d'alias implicite si vous souhaitez utiliser le nom d'alias ultérieurement. Chaque fois que des alias (implicites ou explicites) sont en conflit ou sont répétés dans la même étendue, il se produit une erreur de compilation. Un alias implicite passera la compilation même s'il existe un alias explicite ou implicite du même nom.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Remarques supplémentaires sur les étendues :  
   
--   La liste de sélection peut introduire de nouveaux noms dans l'étendue, dans l'ordre. Les expressions de projection de droite peuvent faire référence aux noms projetés de gauche.  
+- La liste de sélection peut introduire de nouveaux noms dans l'étendue, dans l'ordre. Les expressions de projection de droite peuvent faire référence aux noms projetés de gauche.  
   
--   La clause ORDER BY peut faire référence aux noms (alias) spécifiés dans la liste de sélection.  
+- La clause ORDER BY peut faire référence aux noms (alias) spécifiés dans la liste de sélection.  
   
--   L'ordre d'évaluation des clauses au sein de l'expression SELECT détermine l'ordre dans lequel les noms sont introduits dans l'étendue. La clause FROM est évaluée en premier, suivie de la clause WHERE, de la clause GROUP BY, de la clause HAVING, de la clause SELECT et enfin de la clause ORDER BY.  
+- L'ordre d'évaluation des clauses au sein de l'expression SELECT détermine l'ordre dans lequel les noms sont introduits dans l'étendue. La clause FROM est évaluée en premier, suivie de la clause WHERE, de la clause GROUP BY, de la clause HAVING, de la clause SELECT et enfin de la clause ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Gestion des agrégats  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge deux formes d’agrégats : agrégats basés sur les collections et agrégats basés sur le groupe. Les agrégats basés sur les collections correspondent à la construction privilégiée dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], alors que les agrégats basés sur les groupes sont pris en charge pour la compatibilité avec SQL.  

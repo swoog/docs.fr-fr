@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779182"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Prise en charge bidirectionnelle pour les applications Windows Forms
 Vous pouvez utiliser Visual Studio pour créer des applications Windows qui prennent en charge bidirectionnelle (de droite à gauche) langues comme l’arabe et hébreu. Cela comprend les formulaires standard, les boîtes de dialogue, les formulaires MDI et tous les contrôles que vous pouvez utiliser dans ces formulaires, c'est-à-dire tous les objets de l'espace de noms <xref:System.Windows.Forms.Control>.  
@@ -29,53 +29,53 @@ Vous pouvez utiliser Visual Studio pour créer des applications Windows qui pren
   
 |Contrôle/composant|Effet de la propriété RightToLeft|Effet de la propriété RightToLeftLayout|Nécessite l'effet miroir ?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|Définit l'ordre de lecture de droite à gauche. Inverse <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, et <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.CheckBox>|La case à cocher est affichée à droite du texte|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.CheckedListBox>|Toutes les cases à cocher sont affichées à droite du texte|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ColorDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ComboBox>|Les éléments dans le contrôle de zone de liste déroulante sont alignés à droite|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ContextMenu>|Apparaît aligné à droite avec l'ordre de lecture de droite à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.DataGrid>|Apparaît aligné à droite avec l'ordre de lecture de droite à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.DataGridView>|Affecte à la fois l'ordre de lecture de droite à gauche et la disposition des contrôles|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.Button>|Définit l'ordre de lecture de droite à gauche. Inverse <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, et <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Aucun effet|Non|  
+|<xref:System.Windows.Forms.CheckBox>|La case à cocher est affichée à droite du texte|Aucun effet|Non|  
+|<xref:System.Windows.Forms.CheckedListBox>|Toutes les cases à cocher sont affichées à droite du texte|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ColorDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ComboBox>|Les éléments dans le contrôle de zone de liste déroulante sont alignés à droite|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ContextMenu>|Apparaît aligné à droite avec l'ordre de lecture de droite à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.DataGrid>|Apparaît aligné à droite avec l'ordre de lecture de droite à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.DataGridView>|Affecte à la fois l'ordre de lecture de droite à gauche et la disposition des contrôles|Aucun effet|Non|  
 |<xref:System.Windows.Forms.DateTimePicker>|Pas affecté ; dépend de la langue du système d'exploitation|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.DomainUpDown>|Aligne à gauche les boutons Haut et Bas|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ErrorProvider>|Non pris en charge|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.FontDialog>|Dépend de la langue du système d'exploitation|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.DomainUpDown>|Aligne à gauche les boutons Haut et Bas|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ErrorProvider>|Non pris en charge|Aucun effet|Non|  
+|<xref:System.Windows.Forms.FontDialog>|Dépend de la langue du système d'exploitation|Aucun effet|Non|  
 |<xref:System.Windows.Forms.Form>|Définit l'ordre de lecture de droite à gauche et inverse les barres de défilement|Applique un effet miroir sur le formulaire|Oui|  
-|<xref:System.Windows.Forms.GroupBox>|La légende est alignée à droite. Les contrôles enfants peuvent hériter de cette propriété.|Utilisez un <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle pour la prise en charge de l'effet miroir de droite à gauche|Aucune|  
-|<xref:System.Windows.Forms.HScrollBar>|Commence avec la case de défilement (curseur) alignée à droite|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ImageList>|Non nécessaire|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.Label>|Aligné à droite. Inverse <xref:System.Windows.Forms.Label.TextAlign%2A> et <xref:System.Windows.Forms.Label.ImageAlign%2A>|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.LinkLabel>|Aligné à droite. Inverse <xref:System.Windows.Forms.Label.TextAlign%2A> et <xref:System.Windows.Forms.Label.ImageAlign%2A>|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.ListBox>|Les éléments sont alignés à droite|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.GroupBox>|La légende est alignée à droite. Les contrôles enfants peuvent hériter de cette propriété.|Utilisez un <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle pour la prise en charge de l'effet miroir de droite à gauche|Non|  
+|<xref:System.Windows.Forms.HScrollBar>|Commence avec la case de défilement (curseur) alignée à droite|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ImageList>|Non nécessaire|Aucun effet|Non|  
+|<xref:System.Windows.Forms.Label>|Aligné à droite. Inverse <xref:System.Windows.Forms.Label.TextAlign%2A> et <xref:System.Windows.Forms.Label.ImageAlign%2A>|Aucun effet|Non|  
+|<xref:System.Windows.Forms.LinkLabel>|Aligné à droite. Inverse <xref:System.Windows.Forms.Label.TextAlign%2A> et <xref:System.Windows.Forms.Label.ImageAlign%2A>|Aucun effet|Non|  
+|<xref:System.Windows.Forms.ListBox>|Les éléments sont alignés à droite|Aucun effet|Non|  
 |<xref:System.Windows.Forms.ListView>|Définit l'ordre de lecture de droite à gauche ; les éléments restent alignés à gauche|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.MainMenu>|Aligné à droite avec l'ordre de lecture de droite à gauche au moment de l'exécution (et non au moment du design)|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.MaskedTextBox>|Affiche le texte de droite à gauche.|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.MainMenu>|Aligné à droite avec l'ordre de lecture de droite à gauche au moment de l'exécution (et non au moment du design)|Aucun effet|Non|  
+|<xref:System.Windows.Forms.MaskedTextBox>|Affiche le texte de droite à gauche.|Aucun effet|Non|  
 |<xref:System.Windows.Forms.MonthCalendar>|Pas affecté ; dépend de la langue du système d'exploitation|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.NotifyIcon>|Non pris en charge|Non pris en charge|Aucune|  
-|<xref:System.Windows.Forms.NumericUpDown>|Les boutons Haut et Bas sont alignés à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.OpenFileDialog>|Sur les systèmes d’exploitation de droite à gauche, définition du formulaire conteneur <xref:System.Windows.Forms.Control.RightToLeft> propriété <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localise la boîte de dialogue |Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.PageSetupDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.NotifyIcon>|Non pris en charge|Non pris en charge|Non|  
+|<xref:System.Windows.Forms.NumericUpDown>|Les boutons Haut et Bas sont alignés à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.OpenFileDialog>|Sur les systèmes d’exploitation de droite à gauche, définition du formulaire conteneur <xref:System.Windows.Forms.Control.RightToLeft> propriété <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localise la boîte de dialogue |Aucun effet|Non|  
+|<xref:System.Windows.Forms.PageSetupDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Non|  
 |<xref:System.Windows.Forms.Panel>|Les contrôles enfants peuvent hériter de cette propriété|Utilisez un <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle pour la prise en charge de l'effet miroir de droite à gauche|Oui|  
-|<xref:System.Windows.Forms.PictureBox>|Non pris en charge|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.PrintDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Aucune|  
-|<xref:System.Drawing.Printing.PrintDocument>|La barre de défilement verticale est alignée à gauche et la barre de défilement horizontale commence à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.PrintPreviewDialog>|Non pris en charge|Non pris en charge|Aucune|  
+|<xref:System.Windows.Forms.PictureBox>|Non pris en charge|Aucun effet|Non|  
+|<xref:System.Windows.Forms.PrintDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Non|  
+|<xref:System.Drawing.Printing.PrintDocument>|La barre de défilement verticale est alignée à gauche et la barre de défilement horizontale commence à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.PrintPreviewDialog>|Non pris en charge|Non pris en charge|Non|  
 |<xref:System.Windows.Forms.ProgressBar>|Non affecté par cette propriété|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.RadioButton>|La case d'option est affichée à droite du texte|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.RichTextBox>|Les éléments du contrôle qui comportent du texte sont affichés de droite à gauche avec l'ordre de lecture de droite à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.SaveFileDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.SplitContainer>|La disposition du panneau est inversée ; la barre de défilement verticale est affichée à gauche ; la barre de défilement horizontale commence à droite|Utilisez un <xref:System.Windows.Forms.TableLayoutPanel> pour appliquer un effet miroir à l'ordre des contrôles enfants|Aucune|  
-|<xref:System.Windows.Forms.Splitter>|Non pris en charge|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.StatusBar>|Non pris en charge ; utilisez plutôt <xref:System.Windows.Forms.StatusStrip>|Aucun effet ; utilisez plutôt <xref:System.Windows.Forms.StatusStrip>|Aucune|  
+|<xref:System.Windows.Forms.RadioButton>|La case d'option est affichée à droite du texte|Aucun effet|Non|  
+|<xref:System.Windows.Forms.RichTextBox>|Les éléments du contrôle qui comportent du texte sont affichés de droite à gauche avec l'ordre de lecture de droite à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.SaveFileDialog>|Pas affecté ; dépend de la langue du système d'exploitation|Aucun effet|Non|  
+|<xref:System.Windows.Forms.SplitContainer>|La disposition du panneau est inversée ; la barre de défilement verticale est affichée à gauche ; la barre de défilement horizontale commence à droite|Utilisez un <xref:System.Windows.Forms.TableLayoutPanel> pour appliquer un effet miroir à l'ordre des contrôles enfants|Non|  
+|<xref:System.Windows.Forms.Splitter>|Non pris en charge|Aucun effet|Non|  
+|<xref:System.Windows.Forms.StatusBar>|Non pris en charge ; utilisez plutôt <xref:System.Windows.Forms.StatusStrip>|Aucun effet ; utilisez plutôt <xref:System.Windows.Forms.StatusStrip>|Non|  
 |<xref:System.Windows.Forms.TabControl>|Non affecté par cette propriété|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.TextBox>|Affiche le texte de droite à gauche avec l'ordre de lecture de droite à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.Timer>|Non nécessaire|Non nécessaire|Aucune|  
+|<xref:System.Windows.Forms.TextBox>|Affiche le texte de droite à gauche avec l'ordre de lecture de droite à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.Timer>|Non nécessaire|Non nécessaire|Non|  
 |<xref:System.Windows.Forms.ToolBar>|Non affecté par cette propriété ; utilisez plutôt <xref:System.Windows.Forms.ToolStrip>|Aucun effet ; utilisez plutôt <xref:System.Windows.Forms.ToolStrip>|Oui|  
-|<xref:System.Windows.Forms.ToolTip>|Définit l'ordre de lecture de droite à gauche|Aucun effet|Aucune|  
-|<xref:System.Windows.Forms.TrackBar>|Le défilement ou le suivi commence à droite ; quand <xref:System.Windows.Forms.TrackBar.Orientation%2A> est verticale, les graduations commencent à droite|Aucun effet|Aucune|  
+|<xref:System.Windows.Forms.ToolTip>|Définit l'ordre de lecture de droite à gauche|Aucun effet|Non|  
+|<xref:System.Windows.Forms.TrackBar>|Le défilement ou le suivi commence à droite ; quand <xref:System.Windows.Forms.TrackBar.Orientation%2A> est verticale, les graduations commencent à droite|Aucun effet|Non|  
 |<xref:System.Windows.Forms.TreeView>|Définit l'ordre de lecture de droite à gauche uniquement|Applique un effet miroir sur le contrôle|Oui|  
-|<xref:System.Windows.Forms.UserControl>|La barre de défilement verticale est affichée à gauche ; la barre de défilement horizontale possède un curseur à droite|Aucune prise en charge directe ; utilisez un <xref:System.Windows.Forms.TableLayoutPanel>|Aucune|  
+|<xref:System.Windows.Forms.UserControl>|La barre de défilement verticale est affichée à gauche ; la barre de défilement horizontale possède un curseur à droite|Aucune prise en charge directe ; utilisez un <xref:System.Windows.Forms.TableLayoutPanel>|Non|  
 |<xref:System.Windows.Forms.VScrollBar>|Affiché sur le côté gauche plutôt que sur le côté droit des contrôles à défilement|Aucun effet|Non|  
   
 ## <a name="encoding"></a>Encodage  
@@ -101,19 +101,19 @@ Vous pouvez utiliser Visual Studio pour créer des applications Windows qui pren
   
  Vous pouvez créer des versions miroir des contrôles suivants :  
   
--   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
+- <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
--   <xref:System.Windows.Forms.Panel>  
+- <xref:System.Windows.Forms.Panel>  
   
--   <xref:System.Windows.Forms.StatusBar>  
+- <xref:System.Windows.Forms.StatusBar>  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
--   <xref:System.Windows.Forms.TabPage>  
+- <xref:System.Windows.Forms.TabPage>  
   
--   <xref:System.Windows.Forms.ToolBar>  
+- <xref:System.Windows.Forms.ToolBar>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Certains contrôles sont scellés, ce qui signifie que vous ne pouvez pas dériver un nouveau contrôle à partir d'eux. Il s'agit entre autres des contrôles <xref:System.Windows.Forms.ImageList> et <xref:System.Windows.Forms.ProgressBar>.  
   

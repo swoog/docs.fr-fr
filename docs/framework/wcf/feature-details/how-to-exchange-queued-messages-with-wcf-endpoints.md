@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778337"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procédure : échanger des messages mis en file d’attente avec des points de terminaison WCF
 Files d’attente vous assurer que la messagerie fiable peut se produire entre un client et un service Windows Communication Foundation (WCF), même si le service n’est pas disponible au moment de la communication. Les procédures suivantes indiquent comment garantir une communication durable entre un client et un service à l’aide de la norme en file d’attente liaison lors de l’implémentation du service WCF.  

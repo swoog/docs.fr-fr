@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768288"
 ---
 # <a name="-operator-visual-basic"></a>\<\< Opérateur (Visual Basic)
 Effectue un décalage arithmétique vers la gauche sur un modèle binaire.  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  Les résultats de l’exemple précédent sont les suivantes :  
   
--   `result1` is 192 (0000 0000 1100 0000).  
+- `result1` is 192 (0000 0000 1100 0000).  
   
--   `result2` is 3072 (0000 1100 0000 0000).  
+- `result2` is 3072 (0000 1100 0000 0000).  
   
--   `result3` is -32768 (1000 0000 0000 0000).  
+- `result3` is -32768 (1000 0000 0000 0000).  
   
--   `result4` is 384 (0000 0001 1000 0000).  
+- `result4` is 384 (0000 0001 1000 0000).  
   
--   `result5` est égal à 0 (décalé de 15 places vers la gauche).  
+- `result5` est égal à 0 (décalé de 15 places vers la gauche).  
   
  Le nombre de positions de décalage pour `result4` est calculé comme 17 AND 15, ce qui est égal à 1.  
   

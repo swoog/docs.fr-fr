@@ -3,18 +3,18 @@ title: 211 - ParameterInspectorAfterCallInvoked
 ms.date: 03/30/2017
 ms.assetid: c0e21297-10b8-4456-a0e1-e019145cd5ac
 ms.openlocfilehash: ada3ced31def2bb821b975e09f50ad83f28d56bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781860"
 ---
 # <a name="211---parameterinspectoraftercallinvoked"></a>211 - ParameterInspectorAfterCallInvoked
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
-|ID|211|  
+|Id|211|  
 |Mots clés|Dépannage, ServiceModel|  
 |Niveau|Information|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analyse|  
@@ -30,5 +30,5 @@ ms.locfileid: "33459715"
 |Nom d'élément de données|Type d'élément de données|Description|  
 |--------------------|--------------------|-----------------|  
 |Nom de type|`xs:string`|CLR FullName du type de `ParameterInspector` appelé.|  
-|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que ' chemin d’accès virtuel de Site Web nom Application&#124;chemin d’accès virtuel du Service&#124;ServiceName'. Exemple : ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService ».|  
+|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que « chemin d’accès virtuel de Site Web nom Application&#124;chemin d’accès virtuel du Service&#124;ServiceName'. Exemple : « Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService ».|  
 |AppDomain|`xs:string`|Chaîne retournée par AppDomain.CurrentDomain.FriendlyName.|

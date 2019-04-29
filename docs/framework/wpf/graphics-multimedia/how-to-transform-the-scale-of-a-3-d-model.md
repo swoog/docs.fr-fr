@@ -6,11 +6,11 @@ helpviewer_keywords:
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
 ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769328"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>Procédure : Transformer l’échelle d’un modèle 3D
 Cet exemple montre comment mettre à l’échelle un objet 3D. Pour mettre à l’échelle un objet 3D, vous devez utiliser un <xref:System.Windows.Media.Media3D.ScaleTransform3D>. Le <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, et <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> propriétés redimensionnent l’élément selon le facteur que vous spécifiez. Par exemple, un <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> valeur de 1,5 étire un objet à 150 % de sa largeur d’origine. A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> la valeur 0,5 diminue la hauteur d’un objet de 50 %. Le code ci-dessous montre à l’aide un <xref:System.Windows.Media.Media3D.ScaleTransform3D> en tant que la transformation pour un <xref:System.Windows.Media.Media3D.GeometryModel3D>.  

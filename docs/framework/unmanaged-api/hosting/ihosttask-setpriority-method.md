@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789498"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority, méthode
 Le niveau de demande que l’hôte ajuste la priorité de thread de la tâche représentée par l’actuel [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance.  
@@ -53,19 +53,19 @@ HRESULT SetPriority (
 ## <a name="remarks"></a>Notes  
  Threads de traitement sont accordé à l’aide d’un système de tourniquet (round-robin) est en partie basé sur un niveau de priorité. `SetPriority` permet au CLR de définir ce niveau de priorité de thread pour la tâche actuelle. Ce qui suit `newPriority` valeurs sont prises en charge.  
   
--   THREAD_PRIORITY_ABOVE_NORMAL  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
--   THREAD_PRIORITY_BELOW_NORMAL  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
--   THREAD_PRIORITY_HIGHEST  
+- THREAD_PRIORITY_HIGHEST  
   
--   THREAD_PRIORITY_IDLE  
+- THREAD_PRIORITY_IDLE  
   
--   THREAD_PRIORITY_LOWEST  
+- THREAD_PRIORITY_LOWEST  
   
--   THREAD_PRIORITY_NORMAL  
+- THREAD_PRIORITY_NORMAL  
   
--   THREAD_PRIORITY_TIME_CRITICAL  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
  Le CLR appelle `SetPriority` lorsque la valeur de la <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> est modifiée par le code utilisateur. Un hôte peut définir ses propres algorithmes d’affectation de priorité de thread et est libre d’ignorer cette demande.  
   

@@ -13,8 +13,8 @@ ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938069"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procédure : créer un dégradé de tracé
 Le <xref:System.Drawing.Drawing2D.PathGradientBrush> classe vous permet de personnaliser la façon dont vous remplissez une forme avec des couleurs progressifs. Par exemple, vous pouvez spécifier une couleur pour le centre d’un chemin d’accès et un autre pour la limite d’un chemin d’accès. Vous pouvez également spécifier des couleurs distinctes pour chacun des points le long de la limite d’un chemin d’accès.  
@@ -26,7 +26,7 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
 
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Pour remplir une ellipse avec un dégradé de tracé  
   
--   L’exemple suivant remplit une ellipse avec un pinceau de dégradé de chemin d’accès. La couleur centrale est définie sur le bleu et la couleur de la limite est définie sur « cyan ». L’illustration suivante montre l’ellipse remplie.  
+- L’exemple suivant remplit une ellipse avec un pinceau de dégradé de chemin d’accès. La couleur centrale est définie sur le bleu et la couleur de la limite est définie sur « cyan ». L’illustration suivante montre l’ellipse remplie.  
   
      ![Tracé en dégradé remplit une ellipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
@@ -43,12 +43,12 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
   
 ### <a name="to-specify-points-on-the-boundary"></a>Pour spécifier des points sur la limite  
   
--   L’exemple suivant construit un pinceau de dégradé de chemin d’accès à partir d’un chemin d’accès en étoile. Le code définit le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propriété, qui définit la couleur au centre de gravité de l’étoile rouge. Le code affecte ensuite la <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propriété pour spécifier différentes couleurs (stockées dans le `colors` tableau) des points dans le `points` tableau. La dernière instruction du code remplit le chemin d’accès en étoile avec le pinceau de dégradé de chemin d’accès.  
+- L’exemple suivant construit un pinceau de dégradé de chemin d’accès à partir d’un chemin d’accès en étoile. Le code définit le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> propriété, qui définit la couleur au centre de gravité de l’étoile rouge. Le code affecte ensuite la <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> propriété pour spécifier différentes couleurs (stockées dans le `colors` tableau) des points dans le `points` tableau. La dernière instruction du code remplit le chemin d’accès en étoile avec le pinceau de dégradé de chemin d’accès.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   L’exemple suivant dessine un dégradé de tracé sans un <xref:System.Drawing.Drawing2D.GraphicsPath> objet dans le code. Le particulier <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructeur dans l’exemple reçoit un tableau de points, mais ne nécessite pas un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Notez également que le <xref:System.Drawing.Drawing2D.PathGradientBrush> est utilisé pour remplir un rectangle, pas un chemin d’accès. Le rectangle est supérieur à la trajectoire fermée utilisé pour définir la brosse, le rectangle n’est pas dessiné par le pinceau. L’illustration suivante montre le rectangle (ligne en pointillés) et la partie du rectangle peint par le pinceau de dégradé de chemin d’accès : 
+- L’exemple suivant dessine un dégradé de tracé sans un <xref:System.Drawing.Drawing2D.GraphicsPath> objet dans le code. Le particulier <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructeur dans l’exemple reçoit un tableau de points, mais ne nécessite pas un <xref:System.Drawing.Drawing2D.GraphicsPath> objet. Notez également que le <xref:System.Drawing.Drawing2D.PathGradientBrush> est utilisé pour remplir un rectangle, pas un chemin d’accès. Le rectangle est supérieur à la trajectoire fermée utilisé pour définir la brosse, le rectangle n’est pas dessiné par le pinceau. L’illustration suivante montre le rectangle (ligne en pointillés) et la partie du rectangle peint par le pinceau de dégradé de chemin d’accès : 
   
      ![Partie dégradée peinte par le pinceau de dégradé de chemin d’accès.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -57,7 +57,7 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
   
 ### <a name="to-customize-a-path-gradient"></a>Pour personnaliser un dégradé de tracé  
   
--   Pour personnaliser un pinceau de dégradé de chemin d’accès consiste à définir son <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propriété. Cette propriété spécifie un chemin d’accès interne qui se trouve dans le chemin d’accès principal. La couleur centrale s’affiche partout à l’intérieur de ce chemin d’accès interne et non uniquement au point central.  
+- Pour personnaliser un pinceau de dégradé de chemin d’accès consiste à définir son <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> propriété. Cette propriété spécifie un chemin d’accès interne qui se trouve dans le chemin d’accès principal. La couleur centrale s’affiche partout à l’intérieur de ce chemin d’accès interne et non uniquement au point central.  
   
      L’exemple suivant crée un pinceau de dégradé de chemin d’accès basé sur un chemin d’accès elliptique. Le code définit la couleur de contour bleu, définit la couleur centrale sur « cyan » et utilise ensuite le pinceau à dégradé pour remplir le tracé elliptique.  
   
@@ -74,7 +74,7 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
   
 ### <a name="to-customize-with-interpolation"></a>Pour personnaliser avec interpolation  
   
--   Une autre façon de personnaliser un pinceau de dégradé de chemin d’accès consiste à spécifier un tableau de couleurs d’interpolation et un tableau de positions d’interpolation.  
+- Une autre façon de personnaliser un pinceau de dégradé de chemin d’accès consiste à spécifier un tableau de couleurs d’interpolation et un tableau de positions d’interpolation.  
   
      L’exemple suivant crée un pinceau de dégradé de chemin d’accès basé sur un triangle. Le code définit le <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> propriété du pinceau de dégradé de chemin d’accès pour spécifier un tableau de couleurs d’interpolation (vert foncé, cyan, bleu) et un tableau de positions d’interpolation (0, 0,25, 1). Lorsque vous déplacez du contour du triangle vers le point central, la couleur passe progressivement du vert foncé au cyan, puis du cyan au bleu. Le passage du vert foncé au cyan se produit à 25 pour cent de la distance du vert foncé au bleu.  
   
@@ -87,7 +87,7 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
   
 ### <a name="to-set-the-center-point"></a>Pour définir le point central  
   
--   Par défaut, le point central d’un pinceau de dégradé de chemin d’accès est au centre de gravité du chemin d’accès utilisé pour construire le pinceau. Vous pouvez modifier l’emplacement du point central en définissant le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriété de la <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
+- Par défaut, le point central d’un pinceau de dégradé de chemin d’accès est au centre de gravité du chemin d’accès utilisé pour construire le pinceau. Vous pouvez modifier l’emplacement du point central en définissant le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriété de la <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
   
      L’exemple suivant crée un pinceau de dégradé de chemin d’accès basé sur une ellipse. Le centre de l’ellipse est à (70, 35), mais le point central du pinceau de dégradé de chemin d’accès est défini sur (120, 40).  
   
@@ -98,7 +98,7 @@ Les exemples de cet article sont des méthodes qui sont appelées à partir d’
   
      ![Tracé en dégradé avec rempli ellipse et le point central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   Vous pouvez définir le point central d’un pinceau de dégradé de chemin d’accès à un emplacement en dehors du tracé qui a été utilisé pour construire le pinceau. L’exemple suivant remplace l’appel pour définir le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriété dans le code précédent.  
+- Vous pouvez définir le point central d’un pinceau de dégradé de chemin d’accès à un emplacement en dehors du tracé qui a été utilisé pour construire le pinceau. L’exemple suivant remplace l’appel pour définir le <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propriété dans le code précédent.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

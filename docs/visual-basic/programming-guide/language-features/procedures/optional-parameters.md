@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791961"
 ---
 # <a name="optional-parameters-visual-basic"></a>Paramètres facultatifs (Visual Basic)
 Vous pouvez spécifier qu’un paramètre de procédure est facultatif et qu’il n’est pas nécessaire de fournir un argument lorsque la procédure est appelée. *Paramètres facultatifs* sont indiquées par le `Optional` mot clé dans la définition de procédure. Les règles suivantes s'appliquent :  
   
--   Chaque paramètre facultatif dans la définition de la procédure doit spécifier une valeur par défaut.  
+- Chaque paramètre facultatif dans la définition de la procédure doit spécifier une valeur par défaut.  
   
--   La valeur par défaut d'un paramètre facultatif doit être une expression constante.  
+- La valeur par défaut d'un paramètre facultatif doit être une expression constante.  
   
--   Tous les paramètres qui suivent un paramètre facultatif dans la définition de la procédure doivent également être facultatifs.  
+- Tous les paramètres qui suivent un paramètre facultatif dans la définition de la procédure doivent également être facultatifs.  
   
  La syntaxe suivante montre une déclaration de procédure comprenant un paramètre facultatif :  
   

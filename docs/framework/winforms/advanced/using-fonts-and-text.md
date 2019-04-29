@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
 ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769422"
 ---
 # <a name="using-fonts-and-text"></a>Utilisation de polices et de texte
 Il existe plusieurs classes offertes par [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] et [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] pour dessiner du texte dans les Windows Forms. Le [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> classe dispose de plusieurs <xref:System.Drawing.Graphics.DrawString%2A> méthodes qui vous permettent de spécifier diverses fonctionnalités de texte, comme l’emplacement, le rectangle englobant, police et le format. En outre, vous pouvez dessiner et mesurer le texte avec [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] à l’aide de la méthode statique <xref:System.Windows.Forms.TextRenderer.DrawText%2A> et <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> méthodes proposées par le `TextRenderer` classe. Le [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] méthodes vous permettent également de spécifier la police, l’emplacement et le format. Vous pouvez choisir une [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] ou [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour le rendu de texte ; Toutefois, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] offre généralement de meilleures performances et une mesure de texte plus précis. Incluent d’autres classes qui contribuent au rendu de texte `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, et `TextFormatFlags`.  

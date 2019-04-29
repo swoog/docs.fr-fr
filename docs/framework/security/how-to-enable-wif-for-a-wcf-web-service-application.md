@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940463"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Procédure : Activer WIF pour une application de service web WCF
 ## <a name="applies-to"></a>S'applique à  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Récapitulatif  
  Cette procédure fournit des informations détaillées pour activer WIF dans un service Web WCF. Elle fournit également des instructions décrivant comment tester l'application pour vérifier que le service Web répertorie correctement les revendications lorsque l'application est exécutée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommaire  
   
--   Objectifs  
+- Objectifs  
   
--   Vue d'ensemble  
+- Vue d'ensemble  
   
--   Résumé des étapes  
+- Résumé des étapes  
   
--   Étape 1 : créer un service WCF simple  
+- Étape 1 : créer un service WCF simple  
   
--   Étape 2 : créer une application cliente pour le service WCF  
+- Étape 2 : créer une application cliente pour le service WCF  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="objectives"></a>Objectifs  
   
--   Créer un service WCF qui requiert des jetons émis  
+- Créer un service WCF qui requiert des jetons émis  
   
--   Créer un client WCF qui demande un jeton à partir de STS et le transmet au service WCF  
+- Créer un client WCF qui demande un jeton à partir de STS et le transmet au service WCF  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure est destinée à montrer comment un développeur peut utiliser l'authentification fédérée lors du développement des services WCF. Parmi les avantages de l'utilisation de la fédération dans des services WCF, on trouve :  
@@ -55,11 +55,11 @@ ms.locfileid: "59977429"
   
 ## <a name="summary-of-steps"></a>Résumé des étapes  
   
--   Étape 1 : créer un service WCF simple  
+- Étape 1 : créer un service WCF simple  
   
--   Étape 2 : créer une application cliente pour le service WCF  
+- Étape 2 : créer une application cliente pour le service WCF  
   
--   Étape 3 : tester votre solution  
+- Étape 3 : tester votre solution  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>Étape 1 : créer un service WCF simple  
  Dans cette étape, vous allez créer un service WCF qui utilise le développement STS inclus avec l'outil Identité et accès.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
 ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780287"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency dans une application ASP.NET
 L'exemple de cette section montre comment utiliser <xref:System.Data.SqlClient.SqlDependency> indirectement en tirant parti de l'objet <xref:System.Web.Caching.SqlCacheDependency> ASP.NET. L'objet <xref:System.Web.Caching.SqlCacheDependency> utilise un objet <xref:System.Data.SqlClient.SqlDependency> pour écouter les notifications et mettre correctement à jour le cache.  

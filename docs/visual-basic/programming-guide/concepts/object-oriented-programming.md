@@ -3,11 +3,11 @@ title: Programmation orientée objet (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783511"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programmation orientée objet (Visual Basic)
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Pour plus d'informations, voir : [Les Types anonymes](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Pour plus d'informations, voir : [Types anonymes](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Héritage
 

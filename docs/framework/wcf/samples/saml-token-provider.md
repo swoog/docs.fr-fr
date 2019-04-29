@@ -3,32 +3,32 @@ title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787502"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons SAML client personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :
 
--   si vous avez un magasin d'informations d'identification avec lequel ces fournisseurs de jetons ne peuvent pas fonctionner ;
+- si vous avez un magasin d'informations d'identification avec lequel ces fournisseurs de jetons ne peuvent pas fonctionner ;
 
--   Si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d’identification à partir du point où l’utilisateur fournit les détails lorsque l’infrastructure de client WCF utilise les informations d’identification.
+- Si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d’identification à partir du point où l’utilisateur fournit les détails lorsque l’infrastructure de client WCF utilise les informations d’identification.
 
--   si vous générez un jeton personnalisé.
+- si vous générez un jeton personnalisé.
 
  Cet exemple montre comment créer un fournisseur de jetons personnalisé qui permet à un jeton SAML obtenu en dehors de l’infrastructure de client WCF à utiliser.
 
  En résumé, cet exemple montre :
 
--   la façon dont un client peut être configuré avec un fournisseur de jetons personnalisé ;
+- la façon dont un client peut être configuré avec un fournisseur de jetons personnalisé ;
 
--   la façon dont un jeton SAML peut être transmis aux informations d'identification du client personnalisées ;
+- la façon dont un jeton SAML peut être transmis aux informations d'identification du client personnalisées ;
 
--   Comment le jeton SAML est fourni à l’infrastructure de client WCF.
+- Comment le jeton SAML est fourni à l’infrastructure de client WCF.
 
--   la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.
+- la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.
 
  Le service expose deux points de terminaison de communication avec le service, qui sont définis à l'aide du fichier de configuration App.config. Chaque point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec un `wsFederationHttpBinding` standard, qui utilise la sécurité des messages. Un point de terminaison attend une authentification du client à l'aide d'un jeton SAML qui utilise une clé de vérification symétrique tandis que l'autre attend une authentification du client avec un jeton SAML qui utilise une clé de vérification asymétrique. Le service configure également le certificat de service à l'aide du comportement `serviceCredentials`. Le comportement `serviceCredentials` permet de configurer un certificat de service. Un certificat de service est utilisé par un client pour authentifier le service et fournir la protection des messages. La configuration suivante référence le certificat « localhost » installé pendant l'installation de l'exemple, comme décrit dans les instructions d'installation à la fin de cette rubrique. Le comportement `serviceCredentials` permet également de configurer des certificats approuvés pour la signature des jetons SAML. La configuration suivante référence le certificat « Alice » installé au cours de l'exemple.
 
@@ -303,7 +303,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
 
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée.
 
--   Création du certificat de serveur :
+- Création du certificat de serveur :
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable `%SERVER_NAME%` spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut dans ce fichier de commandes est localhost.
 
@@ -319,7 +319,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client :
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple d'un certificat émis par Microsoft, il n'est pas nécessaire d'ajouter le certificat du serveur au magasin de certificats du client.
 
@@ -327,7 +327,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Création du certificat d'émetteur :
+- Création du certificat d'émetteur :
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat d'émetteur à utiliser. La variable `%USER_NAME%` représente le nom de l'émetteur. Modifiez cette variable pour spécifier votre propre nom d'émetteur. La valeur par défaut dans ce fichier de commandes est Alice.
 
@@ -343,7 +343,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat d'émetteur dans le magasin de certificats approuvés du serveur :
+- Installation du certificat d'émetteur dans le magasin de certificats approuvés du serveur :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si un certificat est déjà associé au certificat racine approuvé du client, par exemple un certificat Microsoft, le remplissage du magasin de certificats du serveur avec le certificat de l'émetteur n'est pas obligatoire.
 

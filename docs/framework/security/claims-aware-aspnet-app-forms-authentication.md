@@ -1,16 +1,16 @@
 ---
-title: 'Procédure : Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires'
+title: 'Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires'
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792742"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Procédure : Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Procédure : Générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires
 
 ## <a name="applies-to"></a>S'applique à
 

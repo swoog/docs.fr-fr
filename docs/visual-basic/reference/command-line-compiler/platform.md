@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788906"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut exécuter le fichier de sortie.  
@@ -38,31 +38,31 @@ Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut ex�
   
  En général, les assemblys .NET Framework écrits en Visual Basic s'exécutent de la même façon, quelle que soit la plateforme. Cependant, dans certains cas, leur comportement peut varier d'une plateforme à une autre. Voici les cas les plus courants :  
   
--   Structures contenant des membres qui changent de taille selon la plateforme, comme un type pointeur.  
+- Structures contenant des membres qui changent de taille selon la plateforme, comme un type pointeur.  
   
--   Opération arithmétique de pointeur qui inclut des tailles constantes.  
+- Opération arithmétique de pointeur qui inclut des tailles constantes.  
   
--   Appel de plateforme incorrect ou déclarations COM qui utilisent `Integer` pour des handles au lieu de <xref:System.IntPtr>.  
+- Appel de plateforme incorrect ou déclarations COM qui utilisent `Integer` pour des handles au lieu de <xref:System.IntPtr>.  
   
--   Cast de <xref:System.IntPtr> en `Integer`.  
+- Cast de <xref:System.IntPtr> en `Integer`.  
   
--   Utilisation d'un appel de plateforme ou de COM interop avec des composants qui n'existent pas sur toutes les plateformes.  
+- Utilisation d'un appel de plateforme ou de COM interop avec des composants qui n'existent pas sur toutes les plateformes.  
   
  Le **-plateforme** option atténuera certains problèmes si vous savez que vous avez fait des hypothèses sur l’architecture de votre code s’exécutera sur. Plus précisément :  
   
--   Si vous décidez de cibler une plateforme 64 bits et que l'application est exécutée sur un ordinateur 32 bits, le message d'erreur intervient bien plus tôt et est davantage axé sur le problème que sur l'erreur qui se produit quand ce commutateur n'est pas utilisé.  
+- Si vous décidez de cibler une plateforme 64 bits et que l'application est exécutée sur un ordinateur 32 bits, le message d'erreur intervient bien plus tôt et est davantage axé sur le problème que sur l'erreur qui se produit quand ce commutateur n'est pas utilisé.  
   
--   Si vous définissez l'indicateur `x86` au niveau de l'option et que l'application est par la suite exécutée sur un ordinateur 64 bits, l'application s'exécutera dans le sous-système WOW au lieu de s'exécuter en mode natif.  
+- Si vous définissez l'indicateur `x86` au niveau de l'option et que l'application est par la suite exécutée sur un ordinateur 64 bits, l'application s'exécutera dans le sous-système WOW au lieu de s'exécuter en mode natif.  
   
  Sur un système d'exploitation Windows 64 bits :  
   
--   Les assemblys compilés avec `-platform:x86` s'exécutent sur le CLR 32 bits fonctionnant sous WOW64.  
+- Les assemblys compilés avec `-platform:x86` s'exécutent sur le CLR 32 bits fonctionnant sous WOW64.  
   
--   Les fichiers exécutables compilés avec `-platform:anycpu` s'exécutent sur le CLR 64 bits.  
+- Les fichiers exécutables compilés avec `-platform:anycpu` s'exécutent sur le CLR 64 bits.  
   
--   Une DLL compilée avec `-platform:anycpu` s'exécute sur le même CLR que le processus dans lequel elle est chargée.  
+- Une DLL compilée avec `-platform:anycpu` s'exécute sur le même CLR que le processus dans lequel elle est chargée.  
   
--   Les fichiers exécutables compilés avec `-platform:anycpu32bitpreferred` s'exécutent sur le CLR 32 bits.  
+- Les fichiers exécutables compilés avec `-platform:anycpu32bitpreferred` s'exécutent sur le CLR 32 bits.  
   
  Pour plus d’informations sur la façon de développer une application à exécuter sur une version 64 bits de Windows, consultez [Applications 64 bits](../../../framework/64-bit-apps.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779118"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Splines cardinales dans GDI+
 Une spline cardinale est une séquence de courbes reliées entre elles pour former une courbe plus grande. La fonction spline est spécifiée par un tableau de points et un paramètre de tension. Une spline cardinale traverse sans heurts de chaque point dans le tableau ; Il existe des angles aigus et aucune modification soudain dans la précision de la courbe. L’illustration suivante montre un ensemble de points et une spline cardinale qui passe par chaque point dans le jeu.  

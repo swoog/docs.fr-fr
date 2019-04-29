@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791792"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procédures de dépannage (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des procédures.  
@@ -46,9 +46,9 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argument non modifié par un appel de procédure  
  Si vous souhaitez autoriser une procédure modifier un élément de programmation sous-jacent d’un argument dans le code appelant, vous devez le passer par référence. Mais une procédure peut accéder aux éléments d’un argument de type référence même si vous le passez par valeur.  
   
--   **Sous-jacent Variable**. Pour autoriser la procédure remplacer la valeur de l’élément variable sous-jacent lui-même, la procédure doit déclarer le paramètre [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). En outre, le code appelant ne doit pas mettre l’argument entre parenthèses, parce que pourrait écraser le `ByRef` mécanisme de transmission.  
+- **Sous-jacent Variable**. Pour autoriser la procédure remplacer la valeur de l’élément variable sous-jacent lui-même, la procédure doit déclarer le paramètre [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). En outre, le code appelant ne doit pas mettre l’argument entre parenthèses, parce que pourrait écraser le `ByRef` mécanisme de transmission.  
   
--   **Référencer les éléments de Type**. Si vous déclarez un paramètre [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la procédure ne peut pas modifier l’élément variable sous-jacent lui-même. Toutefois, si l’argument est un type référence, la procédure peut modifier les membres de l’objet vers lequel il pointe, même si elle ne peut pas remplacer la valeur de la variable. Par exemple, si l’argument est une variable de tableau, la procédure ne peut pas affecter un nouveau tableau à celui-ci, mais elle peut modifier un ou plusieurs de ses éléments. Les éléments modifiés sont répercutées dans la variable tableau sous-jacente dans le code appelant.  
+- **Référencer les éléments de Type**. Si vous déclarez un paramètre [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la procédure ne peut pas modifier l’élément variable sous-jacent lui-même. Toutefois, si l’argument est un type référence, la procédure peut modifier les membres de l’objet vers lequel il pointe, même si elle ne peut pas remplacer la valeur de la variable. Par exemple, si l’argument est une variable de tableau, la procédure ne peut pas affecter un nouveau tableau à celui-ci, mais elle peut modifier un ou plusieurs de ses éléments. Les éléments modifiés sont répercutées dans la variable tableau sous-jacente dans le code appelant.  
   
  L’exemple suivant définit deux procédures qui acceptent une variable tableau par valeur et opèrent sur ses éléments. Procédure `increase` ajoute simplement 1 à chaque élément. Procédure `replace` assigne un nouveau tableau au paramètre `a()` , puis ajoute 1 à chaque élément. Toutefois, la réaffectation n’affecte pas la variable tableau sous-jacente dans le code appelant, car `a()` est déclaré `ByVal`.  
   
@@ -75,13 +75,13 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
   
  Les éléments suivants, même si elles se rapportent à la liste de paramètres ne sont pas les composants de la signature d’une procédure :  
   
--   Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et `Static`  
+- Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et `Static`  
   
--   Noms de paramètres  
+- Noms de paramètres  
   
--   Mots clés de modificateur de paramètre, tel que `ByRef` et `Optional`  
+- Mots clés de modificateur de paramètre, tel que `ByRef` et `Optional`  
   
--   le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
+- le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
   
  Vous ne pouvez pas surcharger une procédure en faisant varier uniquement un ou plusieurs des éléments précédents.  
   
@@ -95,11 +95,11 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
   
  Lorsque vous avez déterminé quelle surcharge que vous souhaitez appeler, veillez à respecter les règles suivantes :  
   
--   Fournissez le nombre correct d’arguments et dans le bon ordre.  
+- Fournissez le nombre correct d’arguments et dans le bon ordre.  
   
--   Dans l’idéal, vos arguments doivent avoir les mêmes types de données exact en tant que les paramètres correspondants. Dans tous les cas, le type de données de chaque argument doit s’étendre à celui de son paramètre correspondant. Cela est vrai même avec le [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) défini sur `Off`. Si une surcharge requiert une conversion restrictive à partir de votre liste d’arguments, cette surcharge n’est pas éligible pour être appelée.  
+- Dans l’idéal, vos arguments doivent avoir les mêmes types de données exact en tant que les paramètres correspondants. Dans tous les cas, le type de données de chaque argument doit s’étendre à celui de son paramètre correspondant. Cela est vrai même avec le [Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md) défini sur `Off`. Si une surcharge requiert une conversion restrictive à partir de votre liste d’arguments, cette surcharge n’est pas éligible pour être appelée.  
   
--   Si vous fournissez des arguments qui requièrent l’extension, rendre leurs types de données aussi proche que possible pour les types de données de paramètre correspondant. Si deux ou plusieurs surcharges acceptent vos types de données d’argument, le compilateur résout votre appel à la surcharge qui demande la moins importante.  
+- Si vous fournissez des arguments qui requièrent l’extension, rendre leurs types de données aussi proche que possible pour les types de données de paramètre correspondant. Si deux ou plusieurs surcharges acceptent vos types de données d’argument, le compilateur résout votre appel à la surcharge qui demande la moins importante.  
   
  Vous pouvez réduire les risques d’incompatibilité entre les types de données à l’aide de la [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) mot clé de conversion lors de la préparation de vos arguments.  
   

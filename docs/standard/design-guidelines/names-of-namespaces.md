@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940983"
 ---
 # <a name="names-of-namespaces"></a>Noms d'espaces de noms
 Comme avec les autres instructions d’affectation de noms, l’objectif lorsque vous nommez des espaces de noms consiste à créer suffisamment claire pour le programmeur immédiatement savoir qui est le contenu de l’espace de noms susceptible d’être à l’aide de l’infrastructure. Le modèle suivant spécifie la règle générale pour nommer les espaces de noms :  
@@ -36,7 +36,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
  **✓ CONSIDER** à l’aide de noms au pluriel, le cas échéant.  
   
- Par exemple, utilisez `System.Collections` à la place `System.Collection`. Noms de marques et les acronymes sont toutefois des exceptions à cette règle. Par exemple, utilisez `System.IO` à la place `System.IOs`.  
+ Par exemple, utilisez `System.Collections` à la place de `System.Collection`. Noms de marques et les acronymes sont toutefois des exceptions à cette règle. Par exemple, utilisez `System.IO` à la place de `System.IOs`.  
   
  **X DO NOT** utiliser le même nom pour un espace de noms et un type dans cet espace de noms.  
   
@@ -49,7 +49,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
  Il existe des recommandations spécifiques pour éviter les conflits de nom de type pour différentes catégories d’espaces de noms.  
   
--   **Espaces de noms de modèle application**  
+- **Espaces de noms de modèle application**  
   
      Espaces de noms appartenant à un modèle d’application unique sont très souvent utilisés ensemble, mais ils sont presque jamais utilisés avec les espaces de noms des autres modèles d’application. Par exemple, le <xref:System.Windows.Forms?displayProperty=nameWithType> espace de noms est très rarement utilisée conjointement avec la <xref:System.Web.UI?displayProperty=nameWithType> espace de noms. Voici une liste connue modèle espace de noms de groupes d’applications :  
   
@@ -60,11 +60,11 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
      Par exemple, n’ajoutez pas d’un type nommé `Page` à la <xref:System.Web.UI.Adapters?displayProperty=nameWithType> espace de noms, car le <xref:System.Web.UI?displayProperty=nameWithType> espace de noms contient déjà un type nommé `Page`.  
   
--   **Espaces de noms infrastructure**  
+- **Espaces de noms infrastructure**  
   
      Ce groupe contient des espaces de noms qui sont rarement importées pendant le développement d’applications courantes. Par exemple, `.Design` espaces de noms sont utilisés principalement lorsque des outils de développement de programmation. Prévention des conflits avec les types dans ces espaces de noms n’est pas critique.  
   
--   **Espaces de noms principaux**  
+- **Espaces de noms principaux**  
   
      Espaces de noms Core incluent tous `System` espaces de noms, à l’exclusion des espaces de noms des modèles d’application et les espaces de noms d’Infrastructure. Espaces de noms Core incluent, entre autres, `System`, `System.IO`, `System.Xml`, et `System.Net`.  
   
@@ -72,7 +72,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
      Par exemple, n’utilisez jamais `Stream` comme nom de type. Elle serait en conflit avec <xref:System.IO.Stream?displayProperty=nameWithType>, un très couramment utilisés type.  
   
--   **Groupes d’espace de noms de technologies**  
+- **Groupes d’espace de noms de technologies**  
   
      Cette catégorie inclut tous les espaces de noms avec les deux premiers nœuds d’espace de noms même `(<Company>.<Technology>*`), tel que `Microsoft.Build.Utilities` et `Microsoft.Build.Tasks`. Il est important que les types appartenant à une technologie unique ne sont pas en conflit entre eux.  
   

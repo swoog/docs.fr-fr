@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781184"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Spécifie qu’une ou plusieurs variables locales déclarées doivent continuer à exister et conservent leurs valeurs les plus récentes après l’arrêt de la procédure dans laquelle elles sont déclarées.  
@@ -22,13 +22,13 @@ Spécifie qu’une ou plusieurs variables locales déclarées doivent continuer 
   
 ## <a name="rules"></a>Règles  
   
--   **Contexte de déclaration.** Vous pouvez utiliser `Static` uniquement sur les variables locales. Cela signifie que le contexte de déclaration pour un `Static` variable doit être une procédure ou un bloc dans une procédure, et il ne peut pas être un fichier source, un espace de noms, une classe, une structure ou un module.  
+- **Contexte de déclaration.** Vous pouvez utiliser `Static` uniquement sur les variables locales. Cela signifie que le contexte de déclaration pour un `Static` variable doit être une procédure ou un bloc dans une procédure, et il ne peut pas être un fichier source, un espace de noms, une classe, une structure ou un module.  
   
      Vous ne pouvez pas utiliser `Static` à l’intérieur d’une procédure de structure.  
   
--   Les types de données de `Static` variables locales ne peut pas être déduits. Pour plus d’informations, consultez [l’inférence de Type Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- Les types de données de `Static` variables locales ne peut pas être déduits. Pour plus d’informations, consultez [l’inférence de Type Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
--   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Static` avec `ReadOnly`, `Shadows`, ou `Shared` dans la même déclaration.  
+- **Modificateurs combinés.** Vous ne pouvez pas spécifier `Static` avec `ReadOnly`, `Shadows`, ou `Shared` dans la même déclaration.  
   
 ## <a name="behavior"></a>Comportement  
  Lorsque vous déclarez une variable statique dans un `Shared` procédure, qu’une seule copie de la variable statique est disponible pour l’application entière. Vous appelez un `Shared` nom de la procédure à l’aide de la classe, pas une variable qui pointe vers une instance de la classe.  

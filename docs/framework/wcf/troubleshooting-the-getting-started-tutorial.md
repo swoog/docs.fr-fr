@@ -3,11 +3,11 @@ title: Résoudre les problèmes de la méthode Get en main des didacticiels de W
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
 ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791467"
 ---
 # <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Résoudre les problèmes de la méthode Get en main des didacticiels de Windows Communication Foundation
 
@@ -39,8 +39,8 @@ Pour afficher tous les types de fichier, sélectionnez **tous les fichiers (\*.\
 Le point d’entrée est incorrect pour l’application Visual Basic. Apportez la modification suivante :
 
    1. Dans le **l’Explorateur de solutions** fenêtre, sélectionnez le **GettingStartedHost** dossier, puis sélectionnez **propriétés** dans le menu contextuel.
-    a. Dans le **GettingStartedHost** fenêtre, pour **objet de démarrage**, sélectionnez **Service.Program** (ou le point d’entrée pour votre application) dans la liste. 
-    b. Dans le menu principal, sélectionnez **fichier** > **Enregistrer tout**.
+    A. Dans le **GettingStartedHost** fenêtre, pour **objet de démarrage**, sélectionnez **Service.Program** (ou le point d’entrée pour votre application) dans la liste. 
+    B. Dans le menu principal, sélectionnez **fichier** > **Enregistrer tout**.
 
 ### <a name="run-the-service-application"></a>Exécutez l’application de service 
 

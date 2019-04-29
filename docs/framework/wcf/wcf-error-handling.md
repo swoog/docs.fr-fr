@@ -3,11 +3,11 @@ title: Gestion des erreurs WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791220"
 ---
 # <a name="wcf-error-handling"></a>Gestion des erreurs WCF
 Les erreurs rencontrées par une application WCF appartiennent à l'un de ces trois groupes :  
@@ -26,13 +26,13 @@ Les erreurs rencontrées par une application WCF appartiennent à l'un de ces tr
   
  Le traitement des erreurs dans WCF est effectué par un ou plusieurs des éléments suivants :  
   
--   Traitement direct de l'exception levée. Uniquement effectué pour les erreurs de communication et de proxy/canal.  
+- Traitement direct de l'exception levée. Uniquement effectué pour les erreurs de communication et de proxy/canal.  
   
--   Utilisation des contrats d'erreur  
+- Utilisation des contrats d'erreur  
   
--   Implémentation de l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
+- Implémentation de l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
   
--   Gestion des événements <xref:System.ServiceModel.ServiceHost>  
+- Gestion des événements <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Contrats d'erreur  
  Les contrats d'erreur vous permettent de définir les erreurs qui peuvent se produire au cours du fonctionnement du service de façon indépendante de la plate-forme. Par défaut, toutes les exceptions levées à partir d'une opération de service seront retournées au client en tant qu'objet <xref:System.ServiceModel.FaultException>. L'objet <xref:System.ServiceModel.FaultException> contiendra très peu d'informations. Vous pouvez contrôler les informations envoyées au client en définissant un contrat d'erreur et en retournant l'erreur en tant que <xref:System.ServiceModel.FaultException%601>. Pour plus d’informations, consultez [spécification et gestion des erreurs dans les contrats et Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

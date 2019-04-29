@@ -3,11 +3,11 @@ title: Persistance d’un objet dans Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783472"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procédure pas à pas : Persistance d’un objet dans Visual Studio (Visual Basic)
 Bien qu’il soit possible de définir des valeur par défaut pour les propriétés d’un objet au moment du design, les valeurs entrées lors de l’exécution sont perdues en cas de destruction de l’objet. Vous pouvez utiliser la sérialisation pour rendre les données d’un objet persistantes entre les instances, ce qui vous permet de stocker des valeurs et de les récupérer lors de la prochaine instanciation de l’objet.  
@@ -127,7 +127,7 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-mark-a-class-as-serializable"></a>Pour marquer une classe comme étant sérialisable  
   
--   Modifiez la déclaration de la classe Loan de la façon suivante :  
+- Modifiez la déclaration de la classe Loan de la façon suivante :  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Pour empêcher la sérialisation d’un membre  
   
--   Modifiez la déclaration de l’événement `PropertyChanged` comme suit :  
+- Modifiez la déclaration de l’événement `PropertyChanged` comme suit :  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-add-references-to-namespaces"></a>Pour ajouter des références aux espaces de noms  
   
--   Ajoutez les instructions suivantes au début de la classe `Form1` :  
+- Ajoutez les instructions suivantes au début de la classe `Form1` :  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Bien qu’il soit possible de définir des valeur par défaut pour les propriét
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Pour enregistrer les données et sérialiser la classe  
   
--   Ajoutez le code suivant à la procédure événementielle `Form1_FormClosing` :  
+- Ajoutez le code suivant à la procédure événementielle `Form1_FormClosing` :  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

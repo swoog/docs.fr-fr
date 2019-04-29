@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793482"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configuration du service de données (services de données WCF)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer des services de données qui exposent [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Les données de ces flux peuvent provenir de diverses sources. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise des fournisseurs de données pour exposer ces données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Ces fournisseurs comprennent un fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un fournisseur de réflexion et un jeu d'interfaces de fournisseur de services de données personnalisé. L'implémentation de fournisseur définit le modèle de données du service. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -77,9 +77,9 @@ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez cr
 ## <a name="versioning-requirements"></a>Exigences pour le contrôle de version  
  Les comportements de configuration du service de données suivants nécessitent la version 2 du protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ou les versions ultérieures.  
   
--   Prise en charge des demandes relatives au nombre de lignes.  
+- Prise en charge des demandes relatives au nombre de lignes.  
   
--   Prise en charge de l'option de requête $select pour la projection.  
+- Prise en charge de l'option de requête $select pour la projection.  
   
  Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

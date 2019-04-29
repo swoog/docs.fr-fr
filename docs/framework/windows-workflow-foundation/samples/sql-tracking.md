@@ -3,11 +3,11 @@ title: Suivi SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
 ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785916"
 ---
 # <a name="sql-tracking"></a>Suivi SQL
 Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL. Windows Workflow Foundation (WF) fournit des flux de travail de suivi pour gagner en visibilité concernant l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Pour plus d’informations sur le suivi de flux de travail, consultez [suivi et traçage de Workflow](../workflow-tracking-and-tracing.md).

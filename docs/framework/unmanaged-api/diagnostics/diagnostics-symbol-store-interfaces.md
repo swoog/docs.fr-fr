@@ -12,27 +12,27 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787892"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces du magasin de symboles de diagnostics
-Cette rubrique décrit les interfaces non managées qui permettent un compilateur à générer des informations de symbole pour une utilisation par un débogueur.  
+Cette rubrique décrit les interfaces non managées qui permettent un compilateur de générer des informations de symbole pour une utilisation par un débogueur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [IBindingDisplay, interface](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- Fournit des méthodes qui affichent des informations de liaison en cours sur l’application en cours d’exécution.  
+ Fournit des méthodes qui affichent des informations de liaison actuelles sur l’application en cours d’exécution.  
   
  [IDebugAutoAttach, interface](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
  Définit l’interface pour l’attachement automatique du débogueur appelé par serveur.  
   
  [INotifyConnection2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- Déclare des méthodes pour l’inscription et la désinscription d’une source de notification de connexion.  
+ Déclare des méthodes pour inscrire et désinscrire une source de notification de connexion.  
   
  [INotifySink2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- Déclare des méthodes pour la notification de récepteur.  
+ Déclare des méthodes pour la notification du récepteur.  
   
  [INotifySource2, interface](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
  Déclare une méthode pour définir des filtres de notification.  
@@ -41,19 +41,19 @@ Cette rubrique décrit les interfaces non managées qui permettent un compilateu
  Fournit des informations pour la fonctionnalité Modifier & Continuer.  
   
  [ISymUnmanagedAsyncMethod, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- Cette interface est le complément de la lecture à [isymunmanagedasyncmethodpropertieswriter, Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
+ Cette interface est le complément de lecture de [isymunmanagedasyncmethodpropertieswriter, Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Permet la définition d’informations sur la méthode async facultatif par le symbole de méthode. Doit utiliser avec une méthode ouverte (autrement dit, entre les appels à la [OpenMethod (méthode)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)et le [CloseMethod, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Permet la définition d’informations sur la méthode async facultatif par le symbole de méthode. Doit utiliser avec une méthode ouverte (autrement dit, entre les appels à la [OpenMethod, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)et [CloseMethod, méthode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- Représente un classeur de symboles pour le code non managé.  
+ Représente un classeur de symboles du code non managé.  
   
  [ISymUnmanagedBinder2, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- Représente un classeur de symboles pour le code non managé et étend la `ISymUnmanagedBinder` interface.  
+ Représente un classeur de symboles du code non managé et étend le `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedBinder3, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- Représente un classeur de symboles pour le code non managé et étend la `ISymUnmanagedBinder` interface.  
+ Représente un classeur de symboles du code non managé et étend le `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedConstant, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
  Fournit l’accès aux constantes non managées.  
@@ -80,22 +80,22 @@ Cette rubrique décrit les interfaces non managées qui permettent un compilateu
  Représente un lecteur de symboles qui fournit l’accès aux documents, des méthodes et des variables dans un magasin de symboles.  
   
  [ISymUnmanagedReader2, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Obtient une méthode de lecteur de symboles étant donnée un jeton de méthode et un numéro de version de la modifier et copier.  
+ Obtient une méthode de lecteur de symboles étant donnée un jeton de méthode et un numéro de version de modifier et copier.  
   
  [ISymUnmanagedReaderSymbolSearchInfo, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- Fournit des méthodes qui obtiennent des informations de la recherche de symbole.  
+ Fournit des méthodes permettant d’obtenir des informations de recherche de symboles.  
   
  [ISymUnmanagedScope, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
  Représente une portée lexicale dans une méthode.  
   
  [ISymUnmanagedScope2, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- Représente une portée lexicale dans une méthode et étend la `ISymUnmanagedScope` interface avec des méthodes qui obtiennent des informations sur les constantes définies dans l’étendue...  
+ Représente une portée lexicale dans une méthode et étend le `ISymUnmanagedScope` interface avec des méthodes qui obtiennent des informations sur les constantes définies dans l’étendue...  
   
  [ISymUnmanagedSourceServerModule, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
  Fournit des données du serveur source pour un module.  
   
  [ISymUnmanagedSymbolSearchInfo, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Fournit des méthodes qui obtiennent des informations sur le chemin de recherche.  
+ Fournit des méthodes permettant d’obtenir des informations sur le chemin de recherche.  
   
  [ISymUnmanagedVariable, interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
  Représente une variable, comme un paramètre, une variable locale ou un champ.  

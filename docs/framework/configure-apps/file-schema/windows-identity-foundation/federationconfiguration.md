@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791714"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configure le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) et le <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) lorsque vous utilisez federated authentication via le protocole WS-Federation. Configure le <xref:System.Security.Claims.ClaimsAuthorizationManager> lorsque vous utilisez le <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe pour fournir un contrôle d’accès basé sur les revendications.  
@@ -41,7 +41,7 @@ Configure le <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
 |-------------|-----------------|  
 |[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configure le Gestionnaire de cookies utilisé par le module SAM. Optionnel.|  
 |[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configure le certificat qui est utilisé pour chiffrer et déchiffrer les jetons. Optionnel.|  
-|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Configure le Module d’authentification WS-Federation (WSFAM). Optionnel.|  
+|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Configure le Module d’authentification WS-Federation (WSFAM). Facultatif.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -52,9 +52,9 @@ Configure le <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
 ## <a name="remarks"></a>Notes  
  Le \<federationConfiguration > élément fournit différents paramètres dans deux scénarios différents :  
   
--   Lorsque vous utilisez WS-Federation dans une application Web passive, l’élément contient des paramètres qui configurent le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) et le <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Il fait référence également à la configuration d’identité à utiliser pour configurer les gestionnaires de jetons de sécurité et des certificats et des composants tels que le Gestionnaire d’autorisation des revendications et le Gestionnaire d’authentification des revendications.  
+- Lorsque vous utilisez WS-Federation dans une application Web passive, l’élément contient des paramètres qui configurent le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) et le <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Il fait référence également à la configuration d’identité à utiliser pour configurer les gestionnaires de jetons de sécurité et des certificats et des composants tels que le Gestionnaire d’autorisation des revendications et le Gestionnaire d’authentification des revendications.  
   
--   Lorsque vous utilisez le <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> de classe pour fournir un contrôle d’accès basé sur les revendications dans votre code, l’élément fait référence à la configuration d’identité qui configure le Gestionnaire d’autorisation des revendications et une stratégie qui est utilisée pour rendre l’autorisation prendre des décisions. Cela est vrai, même dans les scénarios qui ne sont pas les scénarios Web passifs ; par exemple, les applications Windows Communication Foundation (WCF) ou une application qui n’est pas basée sur le Web. Si l’application n’est pas une application Web passive, le [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) élément (et ses éléments de la stratégie enfant, le cas échéant) de la configuration de l’identité référencée par le `<federationConfiguration>` élément les seuls paramètres sont appliqués. Tous les autres sont ignorés.  
+- Lorsque vous utilisez le <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> de classe pour fournir un contrôle d’accès basé sur les revendications dans votre code, l’élément fait référence à la configuration d’identité qui configure le Gestionnaire d’autorisation des revendications et une stratégie qui est utilisée pour rendre l’autorisation prendre des décisions. Cela est vrai, même dans les scénarios qui ne sont pas les scénarios Web passifs ; par exemple, les applications Windows Communication Foundation (WCF) ou une application qui n’est pas basée sur le Web. Si l’application n’est pas une application Web passive, le [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) élément (et ses éléments de la stratégie enfant, le cas échéant) de la configuration de l’identité référencée par le `<federationConfiguration>` élément les seuls paramètres sont appliqués. Tous les autres sont ignorés.  
   
  Quel que soit le scénario, le runtime charge la configuration de fédération par défaut. Le comportement est défini comme suit :  
   

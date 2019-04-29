@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929842"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -29,27 +29,27 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
 ## <a name="certificate-stores"></a>Magasin de certificats  
  Les certificats sont stockés dans des magasins. Deux emplacements de magasin majeurs existent et sont divisés en sous-magasins. Si vous disposez des droits administrateur sur un ordinateur, vous pouvez afficher ces deux principaux magasins à l'aide de l'outil enfichable MMC. Dans le cas contraire, vous pouvez uniquement afficher le magasin de l'utilisateur en cours.  
   
--   **Magasin de la machine locale**. Ce magasin contient les certificats utilisés par les processus informatiques tels que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilisez cet emplacement pour y stocker les certificats qui authentifient les serveurs auprès des clients.  
+- **Magasin de la machine locale**. Ce magasin contient les certificats utilisés par les processus informatiques tels que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilisez cet emplacement pour y stocker les certificats qui authentifient les serveurs auprès des clients.  
   
--   **Magasin de l’utilisateur actuel**. Les applications interactives stockent en principe les certificats à cet emplacement pour l'utilisateur en train d'utiliser l'ordinateur. Si vous créer des applications clientes, c'est également l'emplacement que vous utiliserez en principe pour stocker les certificats qui authentifient les utilisateurs auprès des services.  
+- **Magasin de l’utilisateur actuel**. Les applications interactives stockent en principe les certificats à cet emplacement pour l'utilisateur en train d'utiliser l'ordinateur. Si vous créer des applications clientes, c'est également l'emplacement que vous utiliserez en principe pour stocker les certificats qui authentifient les utilisateurs auprès des services.  
   
  Ces deux magasins sont divisés en sous-magasins. Les plus importants d’entre eux pour la programmation avec WCF sont notamment :  
   
--   **Autorités de certification racine approuvées**. Vous pouvez utiliser les certificats stockés dans ce magasin pour créer une chaîne de certificats, dont l'origine remontera à un certificat d'autorité de certification figurant dans ce magasin.  
+- **Autorités de certification racine approuvées**. Vous pouvez utiliser les certificats stockés dans ce magasin pour créer une chaîne de certificats, dont l'origine remontera à un certificat d'autorité de certification figurant dans ce magasin.  
   
     > [!IMPORTANT]
     >  L'ordinateur local approuve de manière implicite tous les certificats figurant dans ce magasin, même si ces certificats n'émanent pas d'une autorité de certification tierce approuvée. C'est pourquoi ne stockez pas de certificats dans ce magasin, à moins qu'il ne s'agisse de certificats publiés par des émetteurs dans lesquels vous entièrement confiance et à moins d'avoir pleinement conscience des conséquences d'un tel stockage.  
   
--   **Personnel**. Ce magasin est utilisé pour stocker les certificats associés à l'utilisateur d'un ordinateur. Ce magasin est en principe utilisé pour stocker les certificats publiés par l'un des certificats d'autorité de certification stockés dans le magasin Autorités de certification racine approuvées. Les certificats stockés dans ce magasin peuvent également s'être auto-publiés et avoir été approuvés par une application.  
+- **Personnel**. Ce magasin est utilisé pour stocker les certificats associés à l'utilisateur d'un ordinateur. Ce magasin est en principe utilisé pour stocker les certificats publiés par l'un des certificats d'autorité de certification stockés dans le magasin Autorités de certification racine approuvées. Les certificats stockés dans ce magasin peuvent également s'être auto-publiés et avoir été approuvés par une application.  
   
  Pour plus d’informations sur les magasins de certificats, consultez [Magasins de certificats](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Sélection d'un magasin  
  La sélection d'un magasin pour y stocker un certificat dépend de la manière dont un client ou service s'exécutent ainsi que de l'instant où ils s'exécutent. Les règles générales suivantes s'appliquent :  
   
--   Si le service WCF est hébergé dans un service Windows, utilisez le magasin **machine locale**. Remarque : des droits administrateur sont requis pour pouvoir stocker les certificats dans le magasin de l'ordinateur local.  
+- Si le service WCF est hébergé dans un service Windows, utilisez le magasin **machine locale**. Remarque : des droits administrateur sont requis pour pouvoir stocker les certificats dans le magasin de l'ordinateur local.  
   
--   Si le service ou le client est une application qui s’exécute sous un compte d’utilisateur, utilisez le magasin **utilisateur actuel**.  
+- Si le service ou le client est une application qui s’exécute sous un compte d’utilisateur, utilisez le magasin **utilisateur actuel**.  
   
 ### <a name="accessing-stores"></a>Accès aux magasins  
  Les magasins sont protégés par des listes de contrôle d’accès à l’instar des dossiers figurant sur un ordinateur. Lors de la création d'un service hébergé par les services Internet (IIS), le processus [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] s'exécute sous le compte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour savoir comment modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
  Vous pouvez également définir la propriété à l'aide de la configuration. Les éléments suivants sont utilisés pour spécifier le mode de validation :  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Authentification personnalisée  
  La propriété `CertificateValidationMode` vous permet également de personnaliser les modalités d'authentification des certificats. Par défaut, le niveau a la valeur `ChainTrust`. Pour utiliser la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, vous devez également affecter à l'attribut `CustomCertificateValidatorType` l'assembly et le type utilisés pour valider le certificat. Pour créer un validateur personnalisé, vous devez hériter de la classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstraite.  

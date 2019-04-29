@@ -3,11 +3,11 @@ title: 'Procédure : créer un service WCF qui communique sur WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787528"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procédure : créer un service WCF qui communique sur WebSockets
 Les services et les clients WCF peuvent utiliser la liaison <xref:System.ServiceModel.NetHttpBinding> pour communiquer sur WebSockets.  WebSockets est utilisé lorsque <xref:System.ServiceModel.NetHttpBinding> détermine que le contrat de service définit un contrat de rappel. Cette rubrique décrit comment implémenter un service WCF et un client qui utilise <xref:System.ServiceModel.NetHttpBinding> pour communiquer sur WebSockets.  
@@ -108,7 +108,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
   
      L'opération de contrat de rappel est implémentée comme une méthode asynchrone.  
   
-    1.  Implémentez le code client.  
+    1. Implémentez le code client.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ Les services et les clients WCF peuvent utiliser la liaison <xref:System.Service
   
          CallbackHandler est répété ici pour plus de clarté. L'application cliente crée un InstanceContext et indique l'implémentation de l'interface de rappel. Elle crée ensuite une instance de la classe proxy en envoyant une référence au nouveau InstanceContext créé. Lorsque le client appelle le service, le service appelle le client à l'aide du contrat de rappel spécifié.  
   
-    2.  Configurer le client  
+    2. Configurer le client  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

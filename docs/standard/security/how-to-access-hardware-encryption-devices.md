@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795198"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Procédure : accéder aux appareils de chiffrement matériel
 Vous pouvez utiliser la classe <xref:System.Security.Cryptography.CspParameters> pour accéder aux périphériques de chiffrement matériel. Par exemple, vous pouvez utiliser cette classe pour intégrer votre application à une carte à puce, à un générateur matériel de nombres aléatoires ou à une implémentation matérielle d'un algorithme de chiffrement.  
@@ -54,8 +54,8 @@ Vous pouvez utiliser la classe <xref:System.Security.Cryptography.CspParameters>
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Incluez les espaces de noms <xref:System> et <xref:System.Security.Cryptography>.  
+- Incluez les espaces de noms <xref:System> et <xref:System.Security.Cryptography>.  
   
--   Vous devez disposer d'un lecteur de carte à puce et de pilotes installés sur votre ordinateur.  
+- Vous devez disposer d'un lecteur de carte à puce et de pilotes installés sur votre ordinateur.  
   
--   Vous devez initialiser l'objet <xref:System.Security.Cryptography.CspParameters> à l'aide des informations spécifiques à votre lecteur de cartes.  Pour plus d'informations, consultez la documentation de votre lecteur de cartes.
+- Vous devez initialiser l'objet <xref:System.Security.Cryptography.CspParameters> à l'aide des informations spécifiques à votre lecteur de cartes.  Pour plus d'informations, consultez la documentation de votre lecteur de cartes.

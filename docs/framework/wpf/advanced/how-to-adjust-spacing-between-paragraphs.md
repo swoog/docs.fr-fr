@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Ajuster l'espacement entre les paragraphes"
+title: 'Procédure : Ajuster l’espacement entre les paragraphes'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - spacing between paragraphs [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
 ms.openlocfilehash: e2a6ba34e3ab15eb316671fef7c11bea03d53c73
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777011"
 ---
-# <a name="how-to-adjust-spacing-between-paragraphs"></a>Procédure : Ajuster l'espacement entre les paragraphes
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>Procédure : Ajuster l’espacement entre les paragraphes
 Cet exemple montre comment ajuster ou éliminer l’espacement entre les paragraphes dans le contenu dynamique.  
   
  Dans le contenu dynamique, un espace supplémentaire qui apparaît entre les paragraphes est le résultat des marges définies pour ces paragraphes ; Par conséquent, l’espacement entre les paragraphes peut être contrôlé en ajustant les marges sur ces paragraphes.  Pour éliminer complètement l’espacement supplémentaire entre deux paragraphes, définissez les marges pour les paragraphes à **0**.  Pour obtenir un espacement uniforme entre les paragraphes tout au long de l’intégralité d’un <xref:System.Windows.Documents.FlowDocument>, utilisez les styles pour définir une valeur de marge uniforme pour tous les paragraphes dans le <xref:System.Windows.Documents.FlowDocument>.  

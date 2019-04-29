@@ -3,11 +3,11 @@ title: Critères spéciaux
 description: Découvrez comment les modèles sont utilisées dans F# pour comparer des données avec les structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795458"
 ---
 # <a name="pattern-matching"></a>Critères spéciaux
 
@@ -29,7 +29,7 @@ Chaque modèle agit comme une règle transforme l’entrée d’une certaine fa�
 
 Modèles pris en charge sont affichés dans le tableau suivant. Au moment de l’exécution, l’entrée est testée par rapport à chacun des modèles suivants dans l’ordre indiqué dans la table, et modèles sont appliquées de manière récursive, à partir de tout d’abord au dernier telles qu’elles apparaissent dans votre code et de gauche à droite pour les modèles sur chaque ligne.
 
-|Name|Description|Exemple|
+|Nom|Description|Exemple|
 |----|-----------|-------|
 |Modèle de constante|Toute numérique, caractère, ou littéral de chaîne, une constante d’énumération ou identificateur littéral défini|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modèle d’identificateur|Valeur de cas d’une union discriminée, étiquette d’exception ou cas de modèle actif|`Some(x)`<br /><br />`Failure(msg)`|
@@ -39,8 +39,8 @@ Modèles pris en charge sont affichés dans le tableau suivant. Au moment de l�
 |ET le modèle|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Modèle Cons|*identificateur* :: *identificateur de la liste*|`h :: t`|
 |Modèle de liste|[ *modèle_1*;... ; *modèle_n* ]|`[ a; b; c ]`|
-|Modèle de tableau|[&#124; *modèle_1*;.. ; *modèle_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Modèle entre parenthèses|( *modèle* )|`( a )`|
+|Modèle de tableau|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Modèle entre parenthèses|( *pattern* )|`( a )`|
 |Modèle de tuple|( *modèle_1*,..., *modèle_n* )|`( a, b )`|
 |Modèle d’enregistrement|{ *identificateur1* = *modèle_1*;... ; *identificateur_n* = *modèle_n* }|`{ Name = name; }`|
 |Modèle de caractère générique|_|`_`|

@@ -3,11 +3,11 @@ title: Mise en forme de HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935471"
 ---
 # <a name="wcf-web-http-formatting"></a>Mise en forme de HTTP Web WCF
 Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquement le format le plus approprié pour permettre à une opération de service de retourner sa réponse. Deux méthodes pour déterminer le format approprié sont prises en charge : automatique et explicite.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  Si vous devez prendre en charge d’autres formats que XML ou JSON, définissez votre opération pour qu’elle ait un type de retour de <xref:System.ServiceModel.Channels.Message>. Dans le code d'opération, déterminez le format approprié à utiliser, puis créez un objet <xref:System.ServiceModel.Channels.Message> à l'aide de l'une des méthodes suivantes :  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Chacune de ces méthodes prend le contenu et crée un message au format approprié. La méthode `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` peut être utilisée pour obtenir une liste des formats préférés du client par ordre préférentiel décroissant. L'exemple suivant indique comment utiliser `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` pour déterminer le format à utiliser, puis il utilise la méthode de réponse appropriée pour créer le message de réponse.  
   

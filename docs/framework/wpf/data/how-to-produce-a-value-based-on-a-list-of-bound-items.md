@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
 ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931386"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Procédure : Produire une valeur en fonction d’une liste d’éléments liés
 <xref:System.Windows.Data.MultiBinding> vous permet de lier une propriété de cible de liaison à une liste de propriétés de la source, puis appliquer une logique pour produire une valeur avec les entrées données. Cet exemple montre comment utiliser <xref:System.Windows.Data.MultiBinding>.  

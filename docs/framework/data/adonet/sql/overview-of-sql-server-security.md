@@ -3,20 +3,20 @@ title: Vue d'ensemble de la sécurité SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922198"
 ---
 # <a name="overview-of-sql-server-security"></a>Vue d'ensemble de la sécurité SQL Server
 Une stratégie de défense en profondeur avec chevauchement des couches de sécurité est le meilleur moyen de contrer les menaces de sécurité. SQL Server propose une architecture de sécurité conçue pour permettre aux administrateurs et aux développeurs de bases de données de créer des applications de base de données sécurisées et de contrer les menaces. Chaque version de SQL Server offre des améliorations par rapport aux versions précédentes avec l’introduction de nouvelles fonctions et fonctionnalités. Pour autant, il ne peut exister de plan de sécurité prêt à l'emploi. Chaque application a des spécifications de sécurité uniques. Les développeurs doivent comprendre quelle combinaison de fonctions et fonctionnalités est la plus adéquate pour contrer les menaces identifiées et pour anticiper les menaces qui risquent de voir le jour dans l’avenir.  
   
  Une instance SQL Server contient une collection hiérarchique d'entités, qui commence par le serveur. Chaque serveur contient plusieurs bases de données et chaque base de données contient une collection d'objets sécurisables. Chaque élément sécurisable de SQL Server est associé à *autorisations* qui peuvent être accordées à un *principal*, qui est un groupe individuel, ou processus autorisé à accéder à SQL Server. L’infrastructure de sécurité de SQL Server gère l’accès aux entités sécurisables via *authentification* et *autorisation*.  
   
--   L'authentification est le processus de connexion à SQL Server dans lequel une principal de sécurité demande l'accès en soumettant des informations d'identification qui sont évaluées par le serveur. L'authentification établit l'identité de l'utilisateur ou du processus en cours d'authentification.  
+- L'authentification est le processus de connexion à SQL Server dans lequel une principal de sécurité demande l'accès en soumettant des informations d'identification qui sont évaluées par le serveur. L'authentification établit l'identité de l'utilisateur ou du processus en cours d'authentification.  
   
--   L'autorisation est le processus consistant à déterminer les ressources sécurisables auxquelles une principal de sécurité peut accéder et les opérations qui sont autorisées pour ces ressources.  
+- L'autorisation est le processus consistant à déterminer les ressources sécurisables auxquelles une principal de sécurité peut accéder et les opérations qui sont autorisées pour ces ressources.  
   
  Les rubriques de cette section présentent les concepts fondamentaux de la sécurité SQL Server et fournissent des liens vers la version appropriée de la documentation complète en ligne de SQL Server.  
   

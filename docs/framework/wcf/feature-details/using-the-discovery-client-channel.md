@@ -3,11 +3,11 @@ title: Utilisation du canal client de découverte
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932686"
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilisation du canal client de découverte
 Lors de l'écriture d'une application cliente WCF vous devez connaître l'adresse du point de terminaison du service que vous appelez. Dans de nombreux cas, l'adresse du point de terminaison d'un service n'est pas connue à l'avance ou bien l'adresse du service change avec le temps. Le canal client de découverte vous permet d'écrire une application cliente WCF, de décrire le service que vous souhaitez appeler, et le canal client envoie automatiquement une demande de sonde. Lorsqu'un service répond, le canal client de découverte extrait de la réponse de sonde l'adresse du point de terminaison du service et l'utilise pour appeler le service.  

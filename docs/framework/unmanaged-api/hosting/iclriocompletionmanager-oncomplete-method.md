@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792689"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete, méthode
 Notifie le common language runtime (CLR) de l’état d’une requête d’e/s qui a été effectuée à l’aide d’un appel à la [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) (méthode).  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Valeur HRESULT qui indique l’état de l’opération de liaison.  
   
--   S_OK indique que l’opération a réussi.  
+- S_OK indique que l’opération a réussi.  
   
--   HOST_E_INTERRUPTED indique que l’appel s’est arrêté avant la fin.  
+- HOST_E_INTERRUPTED indique que l’appel s’est arrêté avant la fin.  
   
--   E_FAIL indique qu’une défaillance grave, irrécupérable et inconnue s’est produite.  
+- E_FAIL indique qu’une défaillance grave, irrécupérable et inconnue s’est produite.  
   
  `NumberOfBytesTransferred`  
  [in] Le nombre d’octets transférés pendant le traitement de la demande d’e/s.  

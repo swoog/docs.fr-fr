@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
 ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794642"
 ---
 # <a name="navigation-topologies-overview"></a>Vue d'ensemble des topologies de navigation
 <a name="introduction"></a> Cette présentation fournit une introduction aux topologies de navigation dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trois topologies de navigation courantes, avec des exemples, sont abordées dans cet article.  
@@ -24,15 +24,15 @@ ms.locfileid: "59230861"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Topologies de navigation](#Navigation_Topologies)  
+- [Topologies de navigation](#Navigation_Topologies)  
   
--   [Topologies de navigation structurée](#Structured_Navigation_Topologies)  
+- [Topologies de navigation structurée](#Structured_Navigation_Topologies)  
   
--   [Navigation sur une topologie linéaire fixe](#Navigation_over_a_Fixed_Linear_Topology)  
+- [Navigation sur une topologie linéaire fixe](#Navigation_over_a_Fixed_Linear_Topology)  
   
--   [Navigation dynamique sur une topologie hiérarchique fixe](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [Navigation dynamique sur une topologie hiérarchique fixe](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
--   [Navigation sur une topologie générée de manière dynamique](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [Navigation sur une topologie générée de manière dynamique](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologies de navigation  
@@ -52,9 +52,9 @@ ms.locfileid: "59230861"
 ## <a name="structured-navigation-topologies"></a>Topologies de navigation structurée  
  Il existe deux grands types de topologies de navigation :  
   
--   **Topologie fixe** : elle est définie au moment de la compilation et ne change pas au moment de l’exécution. Les topologies fixes sont utiles pour la navigation parmi une séquence fixe de pages dans un ordre linéaire ou hiérarchique.  
+- **Topologie fixe** : elle est définie au moment de la compilation et ne change pas au moment de l’exécution. Les topologies fixes sont utiles pour la navigation parmi une séquence fixe de pages dans un ordre linéaire ou hiérarchique.  
   
--   **Topologie dynamique** : elle est définie au moment de l’exécution en fonction des informations recueillies auprès de l’utilisateur, de l’application ou du système. Les topologies dynamiques sont utiles quand les pages peuvent être parcourues dans différentes séquences.  
+- **Topologie dynamique** : elle est définie au moment de l’exécution en fonction des informations recueillies auprès de l’utilisateur, de l’application ou du système. Les topologies dynamiques sont utiles quand les pages peuvent être parcourues dans différentes séquences.  
   
  Bien qu’il soit possible de créer des topologies de navigation à l’aide de pages, les exemples utilisent des fonctions de page car elles fournissent une prise en charge supplémentaire qui simplifie la prise en charge de la transmission et du retour de données par l’intermédiaire des pages d’une topologie.  
   
@@ -66,21 +66,21 @@ ms.locfileid: "59230861"
   
  Les comportements types de navigation dans une topologie linéaire fixe sont les suivants :  
   
--   Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
+- Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
   
--   Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
+- Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
   
--   Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
+- Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
   
--   Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
+- Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
   
--   Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
+- Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
   
--   Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
+- Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Navigation dynamique sur une topologie hiérarchique fixe  
@@ -94,23 +94,23 @@ ms.locfileid: "59230861"
   
  Bien que la séquence dans laquelle les pages d’une structure hiérarchique fixe sont parcourues soit déterminée au moment de l’exécution, l’expérience utilisateur est identique à celle d’une topologie linéaire fixe :  
   
--   Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
+- Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
   
--   Les utilisateurs peuvent changer la séquence de navigation s’ils reviennent en arrière dans le journal.  
+- Les utilisateurs peuvent changer la séquence de navigation s’ils reviennent en arrière dans le journal.  
   
--   Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
+- Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
   
--   Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
+- Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
   
--   Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
+- Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
   
--   Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
+- Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
   
--   Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
+- Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navigation sur une topologie générée de manière dynamique  
@@ -124,21 +124,21 @@ ms.locfileid: "59230861"
   
  Cette séquence de navigation est une topologie générée de manière dynamique. Pour l’utilisateur, comme avec les autres topologies de navigation, l’expérience utilisateur est la même qu’avec les topologies précédentes :  
   
--   Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
+- Navigation de la page appelante vers une page de lancement qui initialise l’Assistant et accède à sa première page. Une page de lancement (un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-moins <xref:System.Windows.Navigation.PageFunction%601>) n’est pas obligatoire, car une page appelante peut appeler directement à la première page de l’Assistant. Une page de lancement vous permet toutefois de simplifier l’initialisation de l’Assistant, en particulier si l’initialisation est complexe.  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide de boutons Précédent et Suivant (ou de liens hypertexte).  
   
--   Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
+- Les utilisateurs peuvent naviguer parmi les pages à l’aide du journal.  
   
--   Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
+- Les utilisateurs peuvent annuler l’Assistant à partir de n’importe laquelle de ses pages en appuyant sur un bouton Annuler.  
   
--   Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
+- Les utilisateurs peuvent accepter l’Assistant dans sa dernière page en appuyant sur un bouton Terminer.  
   
--   Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
+- Si un Assistant est annulé, il retourne un résultat approprié et ne retourne aucune donnée.  
   
--   Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
+- Si un utilisateur accepte un Assistant, celui-ci retourne un résultat approprié et retourne les données recueillies.  
   
--   Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
+- Une fois l’Assistant terminé (accepté ou annulé), les pages que comporte l’Assistant sont supprimées du journal. Ainsi, chaque instance de l’Assistant est isolée, ce qui évite les anomalies de données ou d’état potentielles.  
   
 ## <a name="see-also"></a>Voir aussi
 

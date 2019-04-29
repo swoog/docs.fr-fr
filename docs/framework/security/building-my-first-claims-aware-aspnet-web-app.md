@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792939"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Création de ma première application web ASP.NET prenant en charge les revendications
 ## <a name="applies-to"></a>S'applique à  
   
--   Windows Identity Foundation (WIF)  
+- Windows Identity Foundation (WIF)  
   
--   ASP.NET  
+- ASP.NET  
   
  Cette rubrique décrit le scénario de création des applications Web qui prennent en charge les revendications ASP.NET à l'aide de WIF. Il y a généralement trois participants dans un scénario d'application qui prend en charge les revendications : l'application elle-même, l'utilisateur final et le service d'émission de jeton de sécurité (STS). L'illustration suivante décrit ce scénario :  
   
@@ -33,19 +33,19 @@ ms.locfileid: "59314553"
   
  STS est un service qui émet des jetons en cas de réussite de l'authentification. Microsoft propose deux STS standard compatibles :  
   
--   [Active Directory Federation Services (ADFS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory Federation Services (ADFS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
  AD FS 2.0 fait partie de Windows Server R2 et peut être utilisé comme un STS pour les scénarios sur site. ACS est un service Cloud, proposé dans le cadre de la plateforme Microsoft Azure. À des fins de test ou à titre éducatif, vous pouvez également utiliser d'autres STS pour générer des applications qui prennent en charge les revendications. Par exemple, vous pouvez utiliser le développement STS Local qui fait partie de la [Identity and Access Tool pour Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) qui est disponible gratuitement en ligne.  
   
  Pour créer votre première application ASP.NET. NET prenant en charge les revendications à l'aide de WIF, suivez les instructions de l'une des opérations suivantes :  
   
--   [Guide pratique pour Création d’Application de Web prenant en charge les revendications ASP.NET MVC à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Guide pratique pour Création d’Application de Web prenant en charge les revendications ASP.NET MVC à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Guide pratique pour Générer des revendications Application Web Forms ASP.NET à l’aide de WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Guide pratique pour Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Guide pratique pour Création d’Application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

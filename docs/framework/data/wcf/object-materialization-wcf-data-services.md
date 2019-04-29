@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774684"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Matérialisation d'objet (services de données WCF)
 Lorsque vous utilisez le **ajouter une référence de Service** boîte de dialogue pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de flux dans une application cliente .NET Framework, les classes de données équivalentes sont générées pour chaque type d’entité dans le modèle de données exposé par le flux. Pour plus d’informations, consultez [génération de la bibliothèque de Client de Service de données](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Les données d'entité retournées par une requête sont matérialisées dans une instance de l'une de ces classes de service de données client générées. Pour plus d’informations sur les options de fusion et de résolution d’identité pour les objets suivis, consultez [gérer le contexte de Service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -21,23 +21,23 @@ Lorsque vous utilisez le **ajouter une référence de Service** boîte de dialog
   
 1. La bibliothèque cliente lit le type sérialisé de l'élément `entry` dans le flux du message de réponse et tente de créer une nouvelle instance du type correct, de l'une des manières suivantes :  
   
-    -   Lorsque le type déclaré dans le flux a le même nom que le type <xref:System.Data.Services.Client.DataServiceQuery%601>, une nouvelle instance de ce type est créée à l'aide du constructeur vide.  
+    - Lorsque le type déclaré dans le flux a le même nom que le type <xref:System.Data.Services.Client.DataServiceQuery%601>, une nouvelle instance de ce type est créée à l'aide du constructeur vide.  
   
-    -   Lorsque le type déclaré dans le flux a le même nom qu'un type dérivé du type <xref:System.Data.Services.Client.DataServiceQuery%601>, une nouvelle instance de ce type dérivé est créée à l'aide du constructeur vide.  
+    - Lorsque le type déclaré dans le flux a le même nom qu'un type dérivé du type <xref:System.Data.Services.Client.DataServiceQuery%601>, une nouvelle instance de ce type dérivé est créée à l'aide du constructeur vide.  
   
-    -   Lorsque le type déclaré dans le flux ne correspond pas au type <xref:System.Data.Services.Client.DataServiceQuery%601> ou à tout type dérivé, une nouvelle instance du type demandé est créée à l'aide du constructeur vide.  
+    - Lorsque le type déclaré dans le flux ne correspond pas au type <xref:System.Data.Services.Client.DataServiceQuery%601> ou à tout type dérivé, une nouvelle instance du type demandé est créée à l'aide du constructeur vide.  
   
-    -   Lorsque la propriété <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> est définie, le délégué fourni est appelé pour remplacer le mappage du type basé sur le nom par défaut et une nouvelle instance du type retourné par <xref:System.Func%602> est créée à la place. Si ce délégué retourne une valeur Null, une nouvelle instance du type demandé est créée à la place. Il se peut que vous deviez remplacer le mappage du nom du type basé sur le nom par défaut qui prend en charge les scénarios d'héritage.  
+    - Lorsque la propriété <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> est définie, le délégué fourni est appelé pour remplacer le mappage du type basé sur le nom par défaut et une nouvelle instance du type retourné par <xref:System.Func%602> est créée à la place. Si ce délégué retourne une valeur Null, une nouvelle instance du type demandé est créée à la place. Il se peut que vous deviez remplacer le mappage du nom du type basé sur le nom par défaut qui prend en charge les scénarios d'héritage.  
   
 2. La bibliothèque cliente lit la valeur URI de l'élément `id` de `entry`, qui est la valeur d'identité de l'entité. À moins qu'une valeur <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> de <xref:System.Data.Services.Client.MergeOption.NoTracking> soit utilisée, la valeur d'identité est utilisée pour suivre l'objet dans <xref:System.Data.Services.Client.DataServiceContext>. La valeur d'identité est également utilisée pour garantir que seule une instance d'entité est créée, même lorsqu'une entité est retournée plusieurs fois dans la réponse à la requête.  
   
 3. La bibliothèque cliente lit les propriétés de l'entrée de flux et définit les propriétés correspondantes sur l'objet créé. Lorsqu'un objet qui a la même valeur d'identité existe déjà dans <xref:System.Data.Services.Client.DataServiceContext>, les propriétés sont définies selon le paramètre <xref:System.Data.Services.Client.MergeOption> de <xref:System.Data.Services.Client.DataServiceContext>. La réponse peut contenir des valeurs de propriété qui n'ont pas de propriété correspondante dans le type de client. Dans ce cas, l'action dépend de la valeur de la propriété <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> de <xref:System.Data.Services.Client.DataServiceContext>. Lorsque cette propriété est définie sur `true`, la propriété manquante est ignorée. Sinon, une erreur est générée. Les propriétés sont définies comme suit :  
   
-    -   Les propriétés scalaires sont définies sur la valeur correspondante dans l'entrée dans le message de réponse.  
+    - Les propriétés scalaires sont définies sur la valeur correspondante dans l'entrée dans le message de réponse.  
   
-    -   Les propriétés complexes sont définies sur une nouvelle instance de type complexe, définie avec les propriétés du type complexe de la réponse.  
+    - Les propriétés complexes sont définies sur une nouvelle instance de type complexe, définie avec les propriétés du type complexe de la réponse.  
   
-    -   Les propriétés de navigation qui retournent une collection d’entités associées sont définies sur une instance nouvelle ou existante de <xref:System.Collections.Generic.ICollection%601>, où `T` est le type d’entité associée. Cette collection est vide à moins que les objets connexes aient été chargés dans <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d’informations, consultez [le chargement du contenu différé](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+    - Les propriétés de navigation qui retournent une collection d’entités associées sont définies sur une instance nouvelle ou existante de <xref:System.Collections.Generic.ICollection%601>, où `T` est le type d’entité associée. Cette collection est vide à moins que les objets connexes aient été chargés dans <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d’informations, consultez [le chargement du contenu différé](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
         > [!NOTE]
         >  Lorsque les classes de données clientes générées prennent en charge la liaison de données, les propriétés de navigation retournent des instances de la classe <xref:System.Data.Services.Client.DataServiceCollection%601> à la place. Pour plus d’informations, consultez [liaison de données aux contrôles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

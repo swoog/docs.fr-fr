@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777908"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName, attribut
 Définit un attribut d’interface personnalisé qui spécifie le nom de l’espace de noms managé pour une bibliothèque de composant object model (COM).  
@@ -67,5 +67,5 @@ library Microsoft_VisualStudio_CommandBars
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** Cor.h

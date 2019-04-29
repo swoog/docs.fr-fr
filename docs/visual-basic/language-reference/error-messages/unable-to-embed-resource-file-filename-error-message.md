@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792078"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>Impossible d’incorporer le fichier de ressources '\<nom_fichier >': \<message d’erreur >
 Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur d'incorporation d'un fichier de ressources COM+ natif directement dans l'assembly.  

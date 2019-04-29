@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791974"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procédures d'opérateur (Visual Basic)
 Une procédure d’opérateur est une série d’instructions Visual Basic qui définissent le comportement d’un opérateur standard (tel que `*`, `<>`, ou `And`) sur une classe ou structure que vous avez défini. Cela est également appelé *surcharge d’opérateur*.  
@@ -31,13 +31,13 @@ Une procédure d’opérateur est une série d’instructions Visual Basic qui d
 ## <a name="types-of-operator-procedure"></a>Types de procédure d’opérateur  
  Une procédure d’opérateur peut être un des types suivants :  
   
--   Définition d’un opérateur unaire où l’argument est du type de votre classe ou structure.  
+- Définition d’un opérateur unaire où l’argument est du type de votre classe ou structure.  
   
--   Une définition d’un opérateur binaire, où au moins un des arguments est du type de votre classe ou structure.  
+- Une définition d’un opérateur binaire, où au moins un des arguments est du type de votre classe ou structure.  
   
--   Définition d’un opérateur de conversion où l’argument est du type de votre classe ou structure.  
+- Définition d’un opérateur de conversion où l’argument est du type de votre classe ou structure.  
   
--   Définition d’un opérateur de conversion qui retourne le type de votre classe ou structure.  
+- Définition d’un opérateur de conversion qui retourne le type de votre classe ou structure.  
   
  Les opérateurs de conversion sont toujours unaires, et vous utilisez toujours `CType` comme l’opérateur que vous définissez.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788958"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Spécifie la façon dont sont effectuées les comparaisons de chaînes.  
@@ -46,7 +46,7 @@ Spécifie la façon dont sont effectuées les comparaisons de chaînes.
   
 ### <a name="to-set--optioncompare-programmatically"></a>Pour définir - optioncompare par programmation  
   
--   Consultez [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+- Consultez [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `ProjFile.vb` et utilise des comparaisons de chaînes binaires.  

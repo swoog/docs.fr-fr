@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785032"
 ---
 # <a name="designing-service-contracts"></a>Conception de contrats de service
 Cette rubrique explique ce que sont les contrats de service, comment ils sont définis, quelles opérations sont disponibles (et les implications des échanges de messages sous-jacents), quels types de données sont utilisés et d'autres aspects qui vous aident à concevoir des opérations qui répondent aux spécifications de votre scénario.  
@@ -24,28 +24,28 @@ Cette rubrique explique ce que sont les contrats de service, comment ils sont d�
   
  Cette rubrique décrit les points de décision suivants lors de la conception d'un contrat de service :  
   
--   S'il faut utiliser des classes ou des interfaces.  
+- S'il faut utiliser des classes ou des interfaces.  
   
--   Comment spécifier les types de données que vous souhaitez échanger.  
+- Comment spécifier les types de données que vous souhaitez échanger.  
   
--   Les types de modèles d’échange que vous pouvez utiliser.  
+- Les types de modèles d’échange que vous pouvez utiliser.  
   
--   Si vous pouvez inclure des exigences de sécurité explicites dans le contrat.  
+- Si vous pouvez inclure des exigences de sécurité explicites dans le contrat.  
   
--   Les restrictions d'entrée et de sortie d'opération.  
+- Les restrictions d'entrée et de sortie d'opération.  
   
 ## <a name="classes-or-interfaces"></a>Classes ou interfaces  
  Classes et interfaces représentent un groupement de fonctionnalités et, par conséquent, deux peuvent être utilisées pour définir un contrat de service WCF. Toutefois, il est recommandé d'utiliser des interfaces car elles modèlent directement des contrats de service. Sans implémentation, les interfaces ne font que définir un groupement de méthodes avec certaines signatures. Implémenter une interface de contrat de service et que vous avez implémenté un service WCF.  
   
  Tous les avantages liées aux interfaces managées s'appliquent aux interfaces de contrat de service :  
   
--   Les interfaces de contrat de service peuvent étendre une quantité quelconque d'autres interfaces de contrat de service.  
+- Les interfaces de contrat de service peuvent étendre une quantité quelconque d'autres interfaces de contrat de service.  
   
--   Une classe unique peut implémenter une quantité quelconque de contrats de service en implémentant ces interfaces de contrat de service.  
+- Une classe unique peut implémenter une quantité quelconque de contrats de service en implémentant ces interfaces de contrat de service.  
   
--   Vous pouvez modifier l'implémentation d'un contrat de service en modifiant l'implémentation d'interface, tandis que le contrat de service reste le même.  
+- Vous pouvez modifier l'implémentation d'un contrat de service en modifiant l'implémentation d'interface, tandis que le contrat de service reste le même.  
   
--   Vous pouvez affecter une version à votre service en implémentant l'ancienne interface et la nouvelle. Les clients anciens se connectent à la version d'origine, tandis que les nouveaux clients peuvent se connecter à la version plus récente.  
+- Vous pouvez affecter une version à votre service en implémentant l'ancienne interface et la nouvelle. Les clients anciens se connectent à la version d'origine, tandis que les nouveaux clients peuvent se connecter à la version plus récente.  
   
 > [!NOTE]
 >  Lorsque vous héritez d'autres interfaces de contrat de service, vous ne pouvez pas substituer de propriétés d'opération, telles que le nom ou l'espace de noms. Si vous essayez, vous créez une nouvelle opération dans le contrat de service actuel.  
@@ -251,11 +251,11 @@ End Interface
   
  Un service qui implémente ce contrat `IExplicitProtectionLevelSampleService` et qui a un point de terminaison qui utilise le <xref:System.ServiceModel.WSHttpBinding> par défaut (le <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>par défaut, qui est <xref:System.ServiceModel.SecurityMode.Message>) a le comportement suivant :  
   
--   Les messages d'opération `GetString` sont chiffrés et signés.  
+- Les messages d'opération `GetString` sont chiffrés et signés.  
   
--   Les messages d'opération `GetInt` sont envoyés comme texte non chiffré et non signé (autrement dit, en texte clair).  
+- Les messages d'opération `GetInt` sont envoyés comme texte non chiffré et non signé (autrement dit, en texte clair).  
   
--   L'opération `GetGuid`<xref:System.Guid?displayProperty=nameWithType> est retournée dans un message qui est chiffré et signé.  
+- L'opération `GetGuid`<xref:System.Guid?displayProperty=nameWithType> est retournée dans un message qui est chiffré et signé.  
   
  Pour plus d’informations sur les niveaux de protection et leur utilisation, consultez [niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md). Pour plus d’informations sur la sécurité, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
   

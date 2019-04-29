@@ -3,18 +3,18 @@ title: Le dossier source n’existe pas
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
 ms.openlocfilehash: 6194e6e92a69ce3b81fe554ae49934dde075fb99
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942700"
 ---
 # <a name="the-source-folder-does-not-exist"></a>Le dossier source n’existe pas
 Vous avez tenté une opération qui référence un dossier source qui n’existe pas. Un chemin de fichier incorrect a peut-être été fourni.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Vérifiez que vous utilisez le chemin correct, en particulier si vous utilisez des chemins relatifs.  
+- Vérifiez que vous utilisez le chemin correct, en particulier si vous utilisez des chemins relatifs.  
   
 ## <a name="see-also"></a>Voir aussi
 

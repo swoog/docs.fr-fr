@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
 ms.openlocfilehash: 2aaf988f362baf9cd80eb16e4a08f7f65a5077bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937798"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Procédure : capturer des entrées utilisateur à partir d’un PrintDialog au moment de l’exécution
 Pendant que vous pouvez définir les options relatives à l’impression au moment du design, il est parfois utile de modifier ces options en cours d’exécution, probablement en raison des choix effectués par l’utilisateur. Vous pouvez capturer des entrées d’utilisateur pour l’impression d’un document à l’aide de la <xref:System.Windows.Forms.PrintDialog> et <xref:System.Drawing.Printing.PrintDocument> composants.  

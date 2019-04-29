@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773527"
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
 Cette section contient un ensemble de rubriques de procédure pas à pas qui vous présentent à la programmation d’applications de Windows Workflow Foundation (WF). En suivant les procédures dans ces rubriques, vous générerez une application qui est un jeu d'estimation de nombre. La première rubrique du didacticiel vous guide tout au long des étapes de création des activités personnalisées obligatoires pour le workflow. Dans la deuxième rubrique, ces activités sont assemblées avec les activités de workflow intégrées dans un workflow d'organigramme. Dans la troisième rubrique, l'application hôte est configurée pour exécuter le workflow et la persistance est introduite dans la dernière rubrique. Chaque étape de ce processus dépendant des étapes précédentes, nous vous recommandons de les exécuter dans l'ordre.  

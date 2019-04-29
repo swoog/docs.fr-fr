@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766803"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'
 Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. Incompatibilité de type peut être dû à la combinaison d’une référence de fichier avec une référence de projet à l’assembly '\<nom_assembly >'. Essayez de remplacer la référence de fichier à '\<filepath >' dans le projet '\<nom_projet1 >' avec une référence de projet à '\<nom_projet2 >'.  
@@ -57,7 +57,7 @@ Valeur de type '\<nom_type1 >' ne peut pas être convertie en '\<nom_type2 >'. I
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Modifiez la référence de fichier à une référence de projet.  
+- Modifiez la référence de fichier à une référence de projet.  
   
 ## <a name="see-also"></a>Voir aussi
 

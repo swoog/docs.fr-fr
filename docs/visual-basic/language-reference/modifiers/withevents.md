@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778636"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Spécifie qu’une ou plusieurs variables membres déclarées font référence à une instance d’une classe qui peut déclencher des événements.  
@@ -28,7 +28,7 @@ Spécifie qu’une ou plusieurs variables membres déclarées font référence �
   
 ## <a name="rules"></a>Règles  
   
--   **Types d’éléments.** Vous devez déclarer `WithEvents` variables comme des variables d’objet afin qu’ils acceptent les instances de la classe. Toutefois, vous ne pouvez pas déclarer en tant que `Object`. Vous devez les déclarer en tant que la classe spécifique capable de déclencher les événements.  
+- **Types d’éléments.** Vous devez déclarer `WithEvents` variables comme des variables d’objet afin qu’ils acceptent les instances de la classe. Toutefois, vous ne pouvez pas déclarer en tant que `Object`. Vous devez les déclarer en tant que la classe spécifique capable de déclencher les événements.  
   
  Le `WithEvents` modificateur peut être utilisé dans ce contexte : [Dim (instruction)](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

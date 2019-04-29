@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778844"
 ---
 # <a name="how-to-validate-application-settings"></a>Procédure : valider les paramètres d’application
 Cette rubrique illustre la validation des paramètres d’application avant qu’ils ne soient rendus persistants.  
@@ -34,11 +34,11 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
  Un gestionnaire d’événements exécute généralement l’une des actions suivantes lorsqu’il détecte une valeur non valide :  
   
--   Fournit automatiquement une valeur correcte, par exemple la valeur par défaut.  
+- Fournit automatiquement une valeur correcte, par exemple la valeur par défaut.  
   
--   Interroge de nouveau l’utilisateur de code serveur pour plus d’informations.  
+- Interroge de nouveau l’utilisateur de code serveur pour plus d’informations.  
   
--   Pour les événements déclenchés avant leurs actions associées, telles que <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> et <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, utilise le <xref:System.ComponentModel.CancelEventArgs> argument pour annuler l’opération.  
+- Pour les événements déclenchés avant leurs actions associées, telles que <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> et <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, utilise le <xref:System.ComponentModel.CancelEventArgs> argument pour annuler l’opération.  
   
  Pour plus d’informations sur la gestion des événements, consultez [Vue d’ensemble des gestionnaires d’événements](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
 ### <a name="to-obtain-the-application-settings-object"></a>Pour obtenir l’objet des paramètres de l’application  
   
--   Obtenez une référence à l’objet des paramètres d’application (instance de wrapper) en respectant l’un des éléments de la liste suivante :  
+- Obtenez une référence à l’objet des paramètres d’application (instance de wrapper) en respectant l’un des éléments de la liste suivante :  
   
-    -   Si vous avez créé vos paramètres à l’aide de la boîte de dialogue Paramètres de l’application Visual Studio de l’**éditeur de propriétés**, vous pouvez récupérer l’objet de paramètres par défaut généré pour votre langage par le biais de l’expression suivante.  
+    - Si vous avez créé vos paramètres à l’aide de la boîte de dialogue Paramètres de l’application Visual Studio de l’**éditeur de propriétés**, vous pouvez récupérer l’objet de paramètres par défaut généré pour votre langage par le biais de l’expression suivante.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ Cette rubrique illustre la validation des paramètres d’application avant qu�
   
          - ou -  
   
-    -   Si vous êtes un développeur Visual Basic et si vous avez créé vos paramètres d’application à l’aide du Concepteur de projet, vous pouvez récupérer vos paramètres à l’aide de l’[objet My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Si vous êtes un développeur Visual Basic et si vous avez créé vos paramètres d’application à l’aide du Concepteur de projet, vous pouvez récupérer vos paramètres à l’aide de l’[objet My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          - ou -  
   
-    -   Si vous avez créé vos paramètres en dérivant de <xref:System.Configuration.ApplicationSettingsBase> directement, vous devez instancier votre classe manuellement.  
+    - Si vous avez créé vos paramètres en dérivant de <xref:System.Configuration.ApplicationSettingsBase> directement, vous devez instancier votre classe manuellement.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

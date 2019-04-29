@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
 ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792208"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : fourniture d’éléments de menu standard à un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
   
  Cette procédure pas à pas montre comment utiliser un <xref:System.Windows.Forms.MenuStrip> contrôle pour créer un menu standard. Le formulaire répond également lorsqu’un utilisateur sélectionne un élément de menu. Les tâches suivantes sont illustrées dans cette procédure pas à pas :  
   
--   Création d’un projet Windows Forms.  
+- Création d’un projet Windows Forms.  
   
--   Création d’un menu standard.  
+- Création d’un menu standard.  
   
--   Création d’un <xref:System.Windows.Forms.StatusStrip> contrôle.  
+- Création d’un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
--   Gérer la sélection d’éléments de menu.  
+- Gérer la sélection d’éléments de menu.  
   
  Lorsque vous avez terminé, vous disposerez d’un formulaire avec un menu standard qui affiche les sélections d’élément de menu dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
@@ -40,7 +40,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :  
   
--   Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.  
+- Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.  
   
 ## <a name="creating-the-project"></a>Création du projet  
  La première étape consiste à créer le projet et à configurer le formulaire.  
@@ -113,11 +113,11 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
 ## <a name="next-steps"></a>Étapes suivantes  
  Dans cette procédure pas à pas, vous avez créé un formulaire avec un menu standard. Vous pouvez utiliser le <xref:System.Windows.Forms.ToolStrip> famille de contrôles à de nombreuses autres fins :  
   
--   Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md).  
+- Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d’informations, consultez [Procédure pas à pas : Création d’un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d’informations, consultez [Procédure pas à pas : Création d’un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Donnez à votre <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel. Pour plus d'informations, voir [Procédure : Définir le convertisseur ToolStrip pour une Application](how-to-set-the-toolstrip-renderer-for-an-application.md).  
+- Donnez à votre <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel. Pour plus d'informations, voir [Procédure : Définir le convertisseur ToolStrip pour une Application](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

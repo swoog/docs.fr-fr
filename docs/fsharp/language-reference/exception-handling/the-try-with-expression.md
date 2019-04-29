@@ -3,11 +3,11 @@ title: 'Exceptions : try...with (expression)'
 description: Découvrez comment utiliser le F# 'try... with' expression pour la gestion des exceptions.
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945533"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Exceptions : try...with (expression)
 
@@ -38,9 +38,9 @@ Vous pouvez utiliser divers modèles de filtrer sur le type d’exception et d�
 
 |Motif|Description|
 |-------|-----------|
-|:? *type d’exception*|Correspond au type d’exception .NET spécifié.|
+|:? *exception-type*|Correspond au type d’exception .NET spécifié.|
 |:? *type d’exception* comme *identificateur*|Correspond au type d’exception .NET spécifié, mais donne une valeur nommée à l’exception.|
-|*nom de l’exception*(*arguments*)|Correspond à un F# type d’exception et lie les arguments.|
+|*exception-name*(*arguments*)|Correspond à un F# type d’exception et lie les arguments.|
 |*identifier*|Correspond à n’importe quelle exception et lie le nom à l’objet exception. Équivalent à **: ? System.Exception comme**_identificateur_|
 |*identificateur* lorsque *condition*|Correspond à une exception si la condition est vraie.|
 
@@ -60,4 +60,4 @@ Les exemples de code suivants illustrent l’utilisation des différents modèle
 
 - [Gestion des exceptions](index.md)
 - [Types d'exceptions](exception-types.md)
-- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
+- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)

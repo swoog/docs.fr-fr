@@ -3,11 +3,11 @@ title: 'Procédure : Rechercher des éléments dans un Namespace (XPath-LINQ to
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
 ms.openlocfilehash: f48ae0a03d625a3510b2280aa6361e2a731e5afe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780469"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Procédure : Rechercher des éléments dans un Namespace (XPath-LINQ to XML) (Visual Basic)
 Les expressions XPath peuvent rechercher des nœuds dans un espace de noms particulier. Les expressions XPath utilisent des préfixes d'espaces de noms pour spécifier des espaces de noms. Pour analyser une expression XPath qui contient des préfixes d'espaces de noms, vous devez passer un objet aux méthodes XPath qui implémente <xref:System.Xml.IXmlNamespaceResolver>. Cet exemple utilise <xref:System.Xml.XmlNamespaceManager>.  

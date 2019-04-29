@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
 ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785773"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Procédure : utiliser la propriété Spring dans un StatusStrip de manière interactive
 Vous pouvez utiliser la propriété <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> pour positionner un contrôle <xref:System.Windows.Forms.ToolStripStatusLabel> dans un contrôle <xref:System.Windows.Forms.StatusStrip>. La propriété <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> détermine si le contrôle <xref:System.Windows.Forms.ToolStripStatusLabel> remplit automatiquement l'espace disponible sur le contrôle <xref:System.Windows.Forms.StatusStrip>.  
@@ -33,7 +33,7 @@ Vous pouvez utiliser la propriété <xref:System.Windows.Forms.ToolStripStatusLa
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
+- des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

@@ -3,22 +3,22 @@ title: Fabrication de canal et mise en cache
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784304"
 ---
 # <a name="channel-factory-and-caching"></a>Fabrication de canal et mise en cache
 Les applications clientes WCF utilisent la classe <xref:System.ServiceModel.ChannelFactory%601> pour créer un canal de communication avec un service WCF.  La création d'instances <xref:System.ServiceModel.ChannelFactory%601> entraîne une certaine charge, car elle comporte les opérations suivantes :  
   
--   Construction de l’arborescence <xref:System.ServiceModel.Description.ContractDescription>  
+- Construction de l’arborescence <xref:System.ServiceModel.Description.ContractDescription>  
   
--   Refléter tous les types CLR requis  
+- Refléter tous les types CLR requis  
   
--   Construction de la pile de canaux  
+- Construction de la pile de canaux  
   
--   Suppression de ressources  
+- Suppression de ressources  
   
  Pour réduire cette surcharge, WCF peut mettre en cache les fabriques de canaux lorsque vous utilisez un proxy du client WCF.  
   

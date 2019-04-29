@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791454"
 ---
 # <a name="using-sessions"></a>Utilisation de sessions
 Dans les applications Windows Communication Foundation (WCF), un *session* met en corrélation d’un groupe de messages dans une conversation. Sessions WCF diffèrent de celles disponibles dans l’objet de session [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications prennent en charge des comportements différents et sont contrôlées de différentes façons. Cette rubrique décrit les fonctionnalités qui permettent de sessions dans WCF des applications et comment les utiliser.  
@@ -22,31 +22,31 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
  Sessions WCF ont des principales fonctionnalités conceptuelles suivantes :  
   
--   Elles sont explicitement initialisées et terminées par l'application appelante (le client WCF).  
+- Elles sont explicitement initialisées et terminées par l'application appelante (le client WCF).  
   
--   Les messages remis pendant une session sont traités dans l'ordre dans lequel ils sont reçus.  
+- Les messages remis pendant une session sont traités dans l'ordre dans lequel ils sont reçus.  
   
--   Les sessions corrèlent un groupe de messages dans une conversation. Différents types de corrélation sont possibles : Par exemple, un canal basé sur session peut corréler des messages sur la base d'une connexion réseau partagée, pendant qu'un autre canal basé sur session corrèle des messages sur la base d'une balise partagée dans le corps du message. Les fonctionnalités qui peuvent être dérivées de la session varient en fonction de la nature de la corrélation.  
+- Les sessions corrèlent un groupe de messages dans une conversation. Différents types de corrélation sont possibles : Par exemple, un canal basé sur session peut corréler des messages sur la base d'une connexion réseau partagée, pendant qu'un autre canal basé sur session corrèle des messages sur la base d'une balise partagée dans le corps du message. Les fonctionnalités qui peuvent être dérivées de la session varient en fonction de la nature de la corrélation.  
   
--   Il n’existe aucun magasin de données général associé à une session WCF.  
+- Il n’existe aucun magasin de données général associé à une session WCF.  
   
  Si vous êtes familiarisé avec la <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications et des fonctionnalités qu’il fournit, vous remarquerez les différences suivantes entre ce type de session et des sessions WCF :  
   
--   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont systématiquement initialisées par le serveur.  
+- Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont systématiquement initialisées par le serveur.  
   
--   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont implicitement non ordonnées.  
+- Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sont implicitement non ordonnées.  
   
--   Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] fournissent un mécanisme de stockage général des données sur l'ensemble des demandes.  
+- Les sessions[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] fournissent un mécanisme de stockage général des données sur l'ensemble des demandes.  
   
  Cette rubrique décrit :  
   
--   Le comportement d'exécution par défaut lors de l'utilisation de liaisons basées sur session dans la couche de modèle de service.  
+- Le comportement d'exécution par défaut lors de l'utilisation de liaisons basées sur session dans la couche de modèle de service.  
   
--   Les types de fonctionnalités qui fournissent les liaisons WCF basé sur session, fournie par le système.  
+- Les types de fonctionnalités qui fournissent les liaisons WCF basé sur session, fournie par le système.  
   
--   Comment créer un contrat qui déclare une spécification de session.  
+- Comment créer un contrat qui déclare une spécification de session.  
   
--   Comment comprendre et contrôler la création de la session , la fin de la session et la relation entre la session et l'instance de service.  
+- Comment comprendre et contrôler la création de la session , la fin de la session et la relation entre la session et l'instance de service.  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Comportement d'exécution par défaut à l'aide de sessions  
  Une liaison qui tente d'initialiser une session est appelée une liaison *basée sur session* . Les contrats de service spécifient qu'ils requièrent, autorisent ou refusent des liaisons basées sur session en affectant l'une des valeurs d'énumération <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> à la propriété <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sur l'interface de contrat de service (ou classe). Par défaut, la valeur de cette propriété est <xref:System.ServiceModel.SessionMode.Allowed>, ce qui signifie que si un client utilise une liaison basée sur une session avec une implémentation de service WCF, le service établit et utilise la session fournie.  
@@ -62,24 +62,24 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
  WCF fournit les types de comportement de l’application basée sur session suivants :  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> prend en charge des sessions basées sur sécurité, dans lesquelles les deux terminaisons de communication ont convenu d'une conversation sécurisée spécifique. Pour plus d’informations, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md). Par exemple, la liaison <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> qui contient la prise en charge des sessions de sécurité et des sessions fiables, utilise par défaut uniquement une session sécurisée qui chiffre et signe numériquement les messages.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> prend en charge des sessions basées sur sécurité, dans lesquelles les deux terminaisons de communication ont convenu d'une conversation sécurisée spécifique. Pour plus d’informations, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md). Par exemple, la liaison <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> qui contient la prise en charge des sessions de sécurité et des sessions fiables, utilise par défaut uniquement une session sécurisée qui chiffre et signe numériquement les messages.  
   
--   La liaison <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> prend en charge les sessions basées sur TCP/IP pour garantir que tous les messages sont corrélés par la connexion au niveau du socket.  
+- La liaison <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> prend en charge les sessions basées sur TCP/IP pour garantir que tous les messages sont corrélés par la connexion au niveau du socket.  
   
--   L'élément <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> qui implémente la spécification WS-ReliableMessaging, fournit la prise en charge des sessions fiables dans lesquelles les messages peuvent être configurés afin d'être remis dans l'ordre et exactement une fois, ce qui garantit que les messages sont reçus même lorsqu'ils passent par plusieurs nœuds pendant la conversation. Pour plus d’informations, consultez [Sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- L'élément <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> qui implémente la spécification WS-ReliableMessaging, fournit la prise en charge des sessions fiables dans lesquelles les messages peuvent être configurés afin d'être remis dans l'ordre et exactement une fois, ce qui garantit que les messages sont reçus même lorsqu'ils passent par plusieurs nœuds pendant la conversation. Pour plus d’informations, consultez [Sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   La liaison <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> fournit des sessions de datagramme MSMQ. Pour plus d’informations, consultez [files d’attente dans WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- La liaison <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> fournit des sessions de datagramme MSMQ. Pour plus d’informations, consultez [files d’attente dans WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  La définition de la propriété <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> ne spécifie pas le type de session que le contrat requiert mais uniquement qu'il requiert un type de session.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Création d'un contrat qui requiert une session  
  La création d'un contrat qui requiert une session déclare que le groupe d'opérations que le contrat de service déclare doit entièrement être exécuté dans la même session et que les messages doivent être remis dans l'ordre. Pour déterminer le niveau de support de session qu'un contrat de service requiert, attribuez la valeur de l'énumération <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> à la propriété <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sur votre interface de contrat de service ou classe, afin de spécifier si le contrat :  
   
--   Requiert une session.  
+- Requiert une session.  
   
--   Permet à un client d'établir une session.  
+- Permet à un client d'établir une session.  
   
--   Interdit une session.  
+- Interdit une session.  
   
  Toutefois, la définition de la propriété <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> ne spécifie pas le type de comportement basé sur session que le contrat requiert. Elle indique à WCF pour confirmer lors de l’exécution qui le configuré la liaison (ce qui crée le canal de communication) pour le service de, ne le fait pas ou peut établir une session lors de l’implémentation d’un service. Une fois encore, la liaison peut satisfaire cette spécification avec tout type de comportement basé sur session choisi : sécurité, transport, fiable ou toute combinaison. Le comportement exact dépend de la valeur <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sélectionnée. Si la liaison configurée du service n'est pas conforme à la valeur <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>, une exception est levée. Les liaisons et les canaux créés prenant en charge ces sessions sont dits « basés sur session ».  
   
@@ -93,11 +93,11 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
 ## <a name="sessions-and-service-instances"></a>Sessions et instances de service  
  Si vous utilisez la valeur par défaut de comportement dans WCF d’instanciation, tous les appels entre un objet de client WCF sont gérées par la même instance de service. Par conséquent, au niveau de l'application, vous pouvez considérer une session comme un moyen d'activer un comportement d'application similaire au comportement d'appel local. Par exemple, lorsque vous créez un objet local :  
   
--   Un constructeur est appelé.  
+- Un constructeur est appelé.  
   
--   Tous les appels suivants à la référence d’objet client WCF sont traitées par la même instance d’objet.  
+- Tous les appels suivants à la référence d’objet client WCF sont traitées par la même instance d’objet.  
   
--   Un destructeur est appelé lorsque la référence d'objet est détruite.  
+- Un destructeur est appelé lorsque la référence d'objet est détruite.  
   
  Les sessions activent un comportement semblable entre les clients et les services tant que le comportement de l'instance de service par défaut est utilisé. Si un contrat de service requiert ou prend en charge des sessions, une ou plusieurs opérations de contrat peuvent être marquées comme initialisant ou terminant une session, par l'attribution des propriétés <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> et <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> .  
   
@@ -115,19 +115,19 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
  Les services ne démarrent pas de sessions avec les clients. Dans les applications clientes WCF, une relation directe existe entre la durée de vie du canal basé sur session et la durée de vie de la session elle-même. En tant que tels, les clients créent de nouvelles sessions en créant de nouveaux canaux basés sur des sessions et détruisent les sessions existantes en fermant correctement lesdits canaux. Un client démarre une session avec un point de terminaison de service en appelant l'un des éléments suivants :  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sur le canal retourné par un appel à <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sur le canal retourné par un appel à <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> sur l’objet de client WCF généré par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> sur l’objet de client WCF généré par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
--   Une opération d’initialisation sur un type d’objet client WCF (par défaut, toutes les opérations sont initialisent). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
+- Une opération d’initialisation sur un type d’objet client WCF (par défaut, toutes les opérations sont initialisent). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
   
  Habituellement, un client termine une session avec un point de terminaison de service en appelant l'un des éléments suivants :  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> sur le canal retourné par un appel à <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> sur le canal retourné par un appel à <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> sur l’objet de client WCF généré par Svcutil.exe.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> sur l’objet de client WCF généré par Svcutil.exe.  
   
--   Une opération de fin sur un type d’objet client WCF (par défaut, aucune opération ne termine ; le contrat doit spécifier explicitement une opération de fin). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
+- Une opération de fin sur un type d’objet client WCF (par défaut, aucune opération ne termine ; le contrat doit spécifier explicitement une opération de fin). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
   
  Pour obtenir des exemples, consultez [Guide pratique pour Créer un Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que le [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) exemples.  
   

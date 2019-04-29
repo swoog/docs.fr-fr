@@ -3,11 +3,11 @@ title: 'Procédure : Modifier des arborescences d’expressions (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
 ms.openlocfilehash: a9b94cbd7bf24b0cc8efcfc66d8c5e7df4e27307
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787151"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Procédure : Modifier des arborescences d’expressions (Visual Basic)
 Cette rubrique montre comment modifier une arborescence d’expressions. Les arborescences d’expressions sont immuables, ce qui signifie qu’elles ne peuvent pas être modifiées directement. Pour changer une arborescence d’expressions, vous devez créer une copie d’une arborescence d’expressions existante et, quand vous créez la copie, apporter les modifications nécessaires. Vous pouvez utiliser la classe <xref:System.Linq.Expressions.ExpressionVisitor> pour parcourir une arborescence d’expressions existante et copier chaque nœud visité.  

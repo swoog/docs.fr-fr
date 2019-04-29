@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785019"
 ---
 # <a name="designing-and-implementing-services"></a>Conception et implémentation de services
 Cette section vous montre comment définir et implémenter des contrats WCF. Un contrat de service spécifie ce qu'un point de terminaison communique au monde extérieur. À un niveau plus concret, il s'agit d'une instruction à propos d'un ensemble de messages spécifiques organisé en modèles d'échange de messages de base, tels que les messages demande/réponse, unidirectionnels et duplex. Si un contrat de service est un ensemble d'échanges de messages liés de manière logique, une opération de service est un échange de messages unique. Par exemple, une opération `Hello` doit évidemment accepter un message (de sorte que l'appelant puisse annoncer la salutation) et peut ou non retourner un message (en fonction du niveau de courtoisie de l'opération).  
@@ -19,22 +19,22 @@ Cette section vous montre comment définir et implémenter des contrats WCF. Un 
 ## <a name="overview"></a>Vue d'ensemble  
  Cette rubrique fournit une orientation conceptuelle de haut niveau à la conception et implémentation des services WCF. Les sous-rubriques contiennent des informations détaillées sur les particularités de ce type de conception et d'implémentation. Avant de concevoir et implémenter votre application WCF, il est recommandé que vous avez :  
   
--   comprendre ce qu'est un contrat de service, comment il fonctionne et comment en créer un ;  
+- comprendre ce qu'est un contrat de service, comment il fonctionne et comment en créer un ;  
   
--   comprendre que les contrats définissent des exigences minimales susceptibles de ne pas être prises en charge par la configuration d’exécution et l’environnement d’hébergement.  
+- comprendre que les contrats définissent des exigences minimales susceptibles de ne pas être prises en charge par la configuration d’exécution et l’environnement d’hébergement.  
   
 ## <a name="service-contracts"></a>Contrats de service  
  Un contrat de service spécifie les éléments suivants :  
   
--   les opérations qu'un contrat expose ;  
+- les opérations qu'un contrat expose ;  
   
--   la signature des opérations en termes de messages échangés ;  
+- la signature des opérations en termes de messages échangés ;  
   
--   les types de données de ces messages ;  
+- les types de données de ces messages ;  
   
--   l'emplacement des opérations ;  
+- l'emplacement des opérations ;  
   
--   les protocoles et formats de sérialisation spécifiques utilisés pour prendre en charge la communication avec le service.  
+- les protocoles et formats de sérialisation spécifiques utilisés pour prendre en charge la communication avec le service.  
   
  Par exemple, un contrat de commande fournisseur peut avoir une opération `CreateOrder` qui accepte une entrée de types d'informations de commande et retourne des information de succès ou d'échec, y compris un identificateur de commande. Il peut également avoir une opération `GetOrderStatus` qui accepte un identificateur de commande et retourne des informations d'état de commande. Un tel contrat de service spécifie alors :  
   

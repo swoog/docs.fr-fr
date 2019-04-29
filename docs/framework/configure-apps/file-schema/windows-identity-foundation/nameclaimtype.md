@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
 ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791597"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
 Définit le type de revendication qui spécifie le <xref:System.Security.Principal.IIdentity.Name%2A> propriété. Le type de revendication est utilisé pour rechercher un <xref:System.Security.Claims.Claim> dans la collection de <xref:System.Security.Claims.ClaimsIdentity> objets retournés par la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> méthode de ce gestionnaire de jetons. La valeur de la revendication correspondante est alors définie comme le nom de la <xref:System.Security.Principal.IIdentity> généré à partir de ce gestionnaire de jetons.  

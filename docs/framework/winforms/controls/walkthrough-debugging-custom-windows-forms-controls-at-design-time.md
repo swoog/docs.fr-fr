@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792286"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procédure pas à pas : débogage des contrôles Windows Forms personnalisés au moment du design
 Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il nécessaires pour déboguer son comportement au moment du design. Cela est particulièrement vrai si vous créez un concepteur personnalisé pour votre contrôle personnalisé. Pour plus d’informations, consultez [procédure pas à pas : Création d’un Windows Forms de contrôle qui tire parti des fonctionnalités au moment du Design de Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -29,17 +29,17 @@ Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il néces
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms pour héberger votre contrôle personnalisé  
+- Création d’un projet Windows Forms pour héberger votre contrôle personnalisé  
   
--   Création d’un projet de bibliothèque de contrôle  
+- Création d’un projet de bibliothèque de contrôle  
   
--   Ajout d’une propriété à votre contrôle personnalisé  
+- Ajout d’une propriété à votre contrôle personnalisé  
   
--   Ajout de votre contrôle personnalisé au formulaire hôte  
+- Ajout de votre contrôle personnalisé au formulaire hôte  
   
--   Configuration du projet pour le débogage au moment du design  
+- Configuration du projet pour le débogage au moment du design  
   
--   Débogage de votre contrôle personnalisé au moment du design  
+- Débogage de votre contrôle personnalisé au moment du design  
   
  Lorsque vous avez terminé, vous devez comprendre les tâches nécessaires pour déboguer le comportement au moment du design d’un contrôle personnalisé.  
   
@@ -51,7 +51,7 @@ Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il néces
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
--   Créer un projet d’Application de Windows appelé « DebuggingExample » (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
+- Créer un projet d’Application de Windows appelé « DebuggingExample » (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
   
 ## <a name="creating-a-control-library-project"></a>Création d’un projet de bibliothèque de contrôle  
  L’étape suivante consiste à créer le projet de bibliothèque de contrôle et de configurer le contrôle personnalisé.  
@@ -71,7 +71,7 @@ Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il néces
   
 #### <a name="to-check-your-progress"></a>Pour vérifier votre progression  
   
--   Recherchez le nouvel onglet appelé **Composants DebugControlLibrary** et cliquez sur pour le sélectionner. Quand il s’ouvre, vous verrez votre contrôle répertorié comme **DebugControl** avec l’icône par défaut en regard de celle-ci.  
+- Recherchez le nouvel onglet appelé **Composants DebugControlLibrary** et cliquez sur pour le sélectionner. Quand il s’ouvre, vous verrez votre contrôle répertorié comme **DebugControl** avec l’icône par défaut en regard de celle-ci.  
   
 ## <a name="adding-a-property-to-your-custom-control"></a>Ajout d’une propriété à votre contrôle personnalisé  
  Pour montrer que le code de votre contrôle personnalisé s’exécute au moment du design, vous ajoutez une propriété et définissez un point d’arrêt dans le code qui implémente la propriété.  
@@ -149,9 +149,9 @@ Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il néces
   
 2. Appuyez sur F5 pour démarrer la session de débogage. Notez qu’une nouvelle instance de Visual Studio est créée. Vous pouvez faire la distinction entre les instances de deux manières :  
   
-    -   L’instance de débogage a le mot **en cours d’exécution** dans sa barre de titre  
+    - L’instance de débogage a le mot **en cours d’exécution** dans sa barre de titre  
   
-    -   L’instance de débogage a le **Démarrer** bouton sur son **déboguer** barre d’outils désactivé  
+    - L’instance de débogage a le **Démarrer** bouton sur son **déboguer** barre d’outils désactivé  
   
      Votre point d’arrêt est défini dans l’instance de débogage.  
   
@@ -166,11 +166,11 @@ Lorsque vous créez un contrôle personnalisé, vous trouverez souvent il néces
 ## <a name="next-steps"></a>Étapes suivantes  
  Maintenant que vous pouvez déboguer vos contrôles personnalisés au moment du design, il existe de nombreuses possibilités pour le développement d’interaction de votre contrôle avec l’IDE Visual Studio.  
   
--   Vous pouvez utiliser la <xref:System.ComponentModel.Component.DesignMode%2A> propriété de la <xref:System.ComponentModel.Component> classe pour écrire du code qui s’exécutera seulement au moment du design. Pour plus d'informations, consultez <xref:System.ComponentModel.Component.DesignMode%2A>.  
+- Vous pouvez utiliser la <xref:System.ComponentModel.Component.DesignMode%2A> propriété de la <xref:System.ComponentModel.Component> classe pour écrire du code qui s’exécutera seulement au moment du design. Pour plus d'informations, consultez <xref:System.ComponentModel.Component.DesignMode%2A>.  
   
--   Il existe plusieurs attributs que vous pouvez appliquer aux propriétés de votre contrôle pour manipuler l’interaction de votre contrôle personnalisé avec le concepteur. Vous pouvez trouver ces attributs dans le <xref:System.ComponentModel?displayProperty=nameWithType> espace de noms.  
+- Il existe plusieurs attributs que vous pouvez appliquer aux propriétés de votre contrôle pour manipuler l’interaction de votre contrôle personnalisé avec le concepteur. Vous pouvez trouver ces attributs dans le <xref:System.ComponentModel?displayProperty=nameWithType> espace de noms.  
   
--   Vous pouvez écrire un concepteur personnalisé pour votre contrôle personnalisé. Cela vous donne un contrôle complet sur l’expérience de conception à l’aide de l’infrastructure du concepteur extensible exposée par Visual Studio. Pour plus d’informations, consultez [procédure pas à pas : Création d’un Windows Forms de contrôle qui tire parti des fonctionnalités au moment du Design de Visual Studio](creating-a-wf-control-design-time-features.md).  
+- Vous pouvez écrire un concepteur personnalisé pour votre contrôle personnalisé. Cela vous donne un contrôle complet sur l’expérience de conception à l’aide de l’infrastructure du concepteur extensible exposée par Visual Studio. Pour plus d’informations, consultez [procédure pas à pas : Création d’un Windows Forms de contrôle qui tire parti des fonctionnalités au moment du Design de Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

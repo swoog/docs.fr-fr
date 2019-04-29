@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795003"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procédure pas à pas : création d’une application de chiffrement
 Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. Les exemples de code sont conçus pour une application Windows Forms. Cette application ne montre pas de scénarios du monde réel, tels que l'utilisation de cartes à puce. Elle montre les principes fondamentaux du chiffrement et du déchiffrement.  
   
  Cette procédure pas à pas utilise les indications suivantes pour le chiffrement :  
   
--   Utilisez <xref:System.Security.Cryptography.RijndaelManaged> (algorithme symétrique) pour chiffrer et déchiffrer des données à l'aide des <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> et <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> générés automatiquement.  
+- Utilisez <xref:System.Security.Cryptography.RijndaelManaged> (algorithme symétrique) pour chiffrer et déchiffrer des données à l'aide des <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> et <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> générés automatiquement.  
   
--   Utilisez <xref:System.Security.Cryptography.RSACryptoServiceProvider> (algorithme asymétrique) pour chiffrer et déchiffrer la clé des données chiffrées par <xref:System.Security.Cryptography.RijndaelManaged>. Il est préférable d'utiliser les algorithmes asymétriques pour les petites quantités de données, telles qu'une clé.  
+- Utilisez <xref:System.Security.Cryptography.RSACryptoServiceProvider> (algorithme asymétrique) pour chiffrer et déchiffrer la clé des données chiffrées par <xref:System.Security.Cryptography.RijndaelManaged>. Il est préférable d'utiliser les algorithmes asymétriques pour les petites quantités de données, telles qu'une clé.  
   
     > [!NOTE]
     >  Si vous voulez protéger les données de votre ordinateur au lieu d'échanger du contenu chiffré avec d'autres personnes, envisagez d'utiliser les classes <xref:System.Security.Cryptography.ProtectedData> et <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -48,7 +48,7 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   Références aux espaces de noms <xref:System.IO> et <xref:System.Security.Cryptography>.  
+- Références aux espaces de noms <xref:System.IO> et <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Création d’une application Windows Forms  
  La plupart des exemples de code de cette procédure pas à pas sont conçus pour être des gestionnaires d'événements pour des contrôles de bouton. Le tableau suivant répertorie les contrôles requis par l'exemple d'application, ainsi que leur nom pour correspondre aux exemples de code.  
@@ -100,15 +100,15 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
   
  Le package chiffré utilise le format suivant :  
   
--   Longueur de la clé, octets 0-3  
+- Longueur de la clé, octets 0-3  
   
--   Longueur du vecteur d'initialisation, octets 4-7  
+- Longueur du vecteur d'initialisation, octets 4-7  
   
--   Clé chiffrée  
+- Clé chiffrée  
   
--   Vecteur d'initialisation  
+- Vecteur d'initialisation  
   
--   Texte chiffré  
+- Texte chiffré  
   
  Vous pouvez utiliser la longueur de la clé et du vecteur d'initialisation pour déterminer les points de départ et les longueurs de tous les composants du package chiffré, qui peuvent ensuite être utilisés pour déchiffrer le fichier.  
   

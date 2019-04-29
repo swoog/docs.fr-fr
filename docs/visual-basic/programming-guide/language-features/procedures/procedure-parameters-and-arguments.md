@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791912"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Paramètres et arguments d’une procédure (Visual Basic)
 Dans la plupart des cas, une procédure a besoin d’informations sur les circonstances dans lesquelles elle a été appelée. Une procédure qui effectue les tâches répétitives ou partagées utilise des informations différentes pour chaque appel. Ces informations se composent des variables, constantes et expressions que vous passez à la procédure lorsque vous l’appelez.  
@@ -49,11 +49,11 @@ Dans la plupart des cas, une procédure a besoin d’informations sur les circon
   
  Si le code appelant est censé fournir un argument avec un type de données différent de celui de son paramètre correspondant, tel que `Byte` à un `String` paramètre, il doit effectuer l’une des opérations suivantes :  
   
--   Fournissez uniquement des arguments avec les types de données qui s’étendent vers le type de données de paramètre ;  
+- Fournissez uniquement des arguments avec les types de données qui s’étendent vers le type de données de paramètre ;  
   
--   Définissez `Option Strict Off` pour permettre les conversions restrictives implicites ; ou  
+- Définissez `Option Strict Off` pour permettre les conversions restrictives implicites ; ou  
   
--   Utilisez un mot clé de conversion pour convertir explicitement le type de données.  
+- Utilisez un mot clé de conversion pour convertir explicitement le type de données.  
   
 ### <a name="type-parameters"></a>Paramètres de type  
  Un *procédure générique* définit également un ou plusieurs *paramètres de type* en plus de ses paramètres normaux. Une procédure générique permet au code appelant à passer différents types de données chaque fois qu’il appelle la procédure, il peut adapter les types de données sur les exigences de chaque appel. Consultez [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

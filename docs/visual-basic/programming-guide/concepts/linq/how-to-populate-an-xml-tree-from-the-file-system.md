@@ -3,11 +3,11 @@ title: 'Procédure : Remplir une arborescence XML à partir du système de fich
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
 ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789062"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Procédure : Remplir une arborescence XML à partir du système de fichiers (Visual Basic)
 Une application courante et utile des arborescences XML consiste à les utiliser en tant que banque de données nom/valeur hiérarchique. Vous pouvez remplir une arborescence XML avec des données hiérarchiques, puis les interroger, les transformer et, si nécessaire, les sérialiser. Dans ce scénario, une grande partie de la sémantique spécifique au langage XML, telle que les espaces de noms et le comportement d'espace blanc, n'est pas importante. Au lieu de cela, vous utilisez l’arborescence XML en tant que petite base de données hiérarchique en mémoire et à utilisateur unique.  

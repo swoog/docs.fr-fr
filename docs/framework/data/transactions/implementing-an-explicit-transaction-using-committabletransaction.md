@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793716"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implémentation d'une transaction explicite à l'aide de CommittableTransaction
 La classe <xref:System.Transactions.CommittableTransaction> permet aux applications d’utiliser une transaction de façon explicite au lieu d’utiliser la classe <xref:System.Transactions.TransactionScope> de façon implicite. Cela se révèle utile pour les applications qui souhaitent utiliser une même transaction pour plusieurs appels de fonction ou plusieurs appels de thread. Contrairement à la classe <xref:System.Transactions.TransactionScope>, le writer d’application doit absolument appeler les méthodes <xref:System.Transactions.CommittableTransaction.Commit%2A> et <xref:System.Transactions.Transaction.Rollback%2A> pour valider ou abandonner la transaction.  
@@ -22,9 +22,9 @@ La classe <xref:System.Transactions.CommittableTransaction> permet aux applicati
   
  Si vous utilisez la classe <xref:System.Transactions.CommittableTransaction>, notez les éléments suivants :  
   
--   La création d'une transaction <xref:System.Transactions.CommittableTransaction> ne définit pas la transaction ambiante. Vous devez définir et réinitialiser la transaction ambiante pour que le gestionnaire de ressources fonctionne sous le contexte de transaction approprié et de façon adaptée. Pour configurer la transaction ambiante en cours, affectez la propriété <xref:System.Transactions.Transaction.Current%2A> statique à l'objet <xref:System.Transactions.Transaction> global.  
+- La création d'une transaction <xref:System.Transactions.CommittableTransaction> ne définit pas la transaction ambiante. Vous devez définir et réinitialiser la transaction ambiante pour que le gestionnaire de ressources fonctionne sous le contexte de transaction approprié et de façon adaptée. Pour configurer la transaction ambiante en cours, affectez la propriété <xref:System.Transactions.Transaction.Current%2A> statique à l'objet <xref:System.Transactions.Transaction> global.  
   
--   Un objet <xref:System.Transactions.CommittableTransaction> ne peut pas être réutilisé. Un objet <xref:System.Transactions.CommittableTransaction> qui a été validé ou restauré ne peut pas être réutilisé pour une transaction. Autrement dit, on ne peut pas l'utiliser en tant que contexte de la transaction ambiante en cours.  
+- Un objet <xref:System.Transactions.CommittableTransaction> ne peut pas être réutilisé. Un objet <xref:System.Transactions.CommittableTransaction> qui a été validé ou restauré ne peut pas être réutilisé pour une transaction. Autrement dit, on ne peut pas l'utiliser en tant que contexte de la transaction ambiante en cours.  
   
 ## <a name="creating-a-committabletransaction"></a>Création d'une CommittableTransaction  
  L'exemple suivant illustre la création et la validation d'une nouvelle <xref:System.Transactions.CommittableTransaction>.  

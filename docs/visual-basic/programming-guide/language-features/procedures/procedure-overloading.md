@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791870"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Surcharge de procédure (Visual Basic)
 *La surcharge* une procédure consiste à définir celle-ci en plusieurs versions, à l’aide du même nom mais des listes de paramètres différentes. L’objectif de la surcharge consiste à définir plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom. Pour cela, en faisant varier la liste de paramètres.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828236"
 ## <a name="overloading-rules"></a>Règles de surcharge  
  Lorsque vous surchargez une procédure, les règles suivantes s’appliquent :  
   
--   **Nom de la même**. Chaque version surchargée doit utiliser le même nom de procédure.  
+- **Nom de la même**. Chaque version surchargée doit utiliser le même nom de procédure.  
   
--   **Signature différente**. Chaque version surchargée doit différer de toutes les autres versions surchargées dans au moins un des points suivants :  
+- **Signature différente**. Chaque version surchargée doit différer de toutes les autres versions surchargées dans au moins un des points suivants :  
   
-    -   Nombre de paramètres  
+    - Nombre de paramètres  
   
-    -   Ordre des paramètres  
+    - Ordre des paramètres  
   
-    -   Types de données des paramètres  
+    - Types de données des paramètres  
   
-    -   Nombre de paramètres de type (pour une procédure générique)  
+    - Nombre de paramètres de type (pour une procédure générique)  
   
-    -   Type de retour (uniquement pour un opérateur de conversion)  
+    - Type de retour (uniquement pour un opérateur de conversion)  
   
      Avec le nom de la procédure, les éléments précédents sont appelés collectivement le *signature* de la procédure. Lorsque vous appelez une procédure surchargée, le compilateur utilise la signature pour vérifier que l’appel correspond exactement à la définition.  
   
--   **Les éléments ne fait pas partie de la Signature de**. Vous ne pouvez pas surcharger une procédure sans faire varier la signature. En particulier, vous ne pouvez pas surcharger une procédure en faisant varier uniquement un ou plusieurs des éléments suivants :  
+- **Les éléments ne fait pas partie de la Signature de**. Vous ne pouvez pas surcharger une procédure sans faire varier la signature. En particulier, vous ne pouvez pas surcharger une procédure en faisant varier uniquement un ou plusieurs des éléments suivants :  
   
-    -   Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et `Static`  
+    - Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et `Static`  
   
-    -   Paramètre de type ou des noms de paramètres  
+    - Paramètre de type ou des noms de paramètres  
   
-    -   Contraintes de paramètre de type (pour une procédure générique)  
+    - Contraintes de paramètre de type (pour une procédure générique)  
   
-    -   Mots clés de modificateur de paramètre, tel que `ByRef` et `Optional`  
+    - Mots clés de modificateur de paramètre, tel que `ByRef` et `Optional`  
   
-    -   Si elle retourne une valeur  
+    - Si elle retourne une valeur  
   
-    -   le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
+    - le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
   
      Les éléments dans la liste précédente ne font pas partie de la signature. Bien que vous ne pouvez pas les utiliser pour faire la distinction entre les versions surchargées, vous pouvez les modifier parmi des versions surchargées qui sont correctement différenciées par leurs signatures.  
   
--   **À liaison tardive Arguments**. Si vous envisagez de passer une variable objet à liaison tardive à une version surchargée, vous devez déclarer le paramètre approprié en tant que <xref:System.Object>.  
+- **À liaison tardive Arguments**. Si vous envisagez de passer une variable objet à liaison tardive à une version surchargée, vous devez déclarer le paramètre approprié en tant que <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Plusieurs Versions d’une procédure  
  Supposons que vous écrivez un `Sub` procédure pour valider une transaction sur le solde d’un client et que vous souhaitez être en mesure de faire référence au client par nom ou par numéro de compte. Pour ce faire, vous pouvez définir deux différents `Sub` procédures, comme dans l’exemple suivant :  

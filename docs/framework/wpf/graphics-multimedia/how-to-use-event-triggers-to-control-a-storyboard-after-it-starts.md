@@ -7,28 +7,28 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
 ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769289"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Procédure : Utiliser des déclencheurs d’événements pour contrôler une table de montage séquentiel après son démarrage
 Cet exemple montre comment contrôler un <xref:System.Windows.Media.Animation.Storyboard> après son démarrage. Pour démarrer un <xref:System.Windows.Media.Animation.Storyboard> à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilisez <xref:System.Windows.Media.Animation.BeginStoryboard>, qui distribue les animations aux objets et aux propriétés qu’ils animent, puis démarre le storyboard. Si vous donnez <xref:System.Windows.Media.Animation.BeginStoryboard> un nom en spécifiant son <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propriété, vous rendiez une table de montage séquentiel contrôlable. Vous pouvez ensuite contrôler interactivement la table de montage séquentiel après son démarrage.  
   
  Utilisez les actions suivantes de la table de montage séquentiel avec <xref:System.Windows.EventTrigger> objets pour contrôler un storyboard.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Suspend le storyboard.  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Suspend le storyboard.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Reprend un storyboard suspendu.  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Reprend un storyboard suspendu.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Modifie la vitesse de la table de montage séquentiel.  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Modifie la vitesse de la table de montage séquentiel.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Fait avancer une table de montage séquentiel à la fin de sa période de remplissage, le cas échéant.  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Fait avancer une table de montage séquentiel à la fin de sa période de remplissage, le cas échéant.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Arrête le storyboard.  
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Arrête le storyboard.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Supprime la table de montage séquentiel, libérant ainsi des ressources.  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Supprime la table de montage séquentiel, libérant ainsi des ressources.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise des actions de la table de montage séquentiel contrôlable pour contrôler un storyboard de façon interactive.  

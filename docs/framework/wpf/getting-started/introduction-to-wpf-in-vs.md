@@ -1,5 +1,5 @@
 ---
-title: Présentation de WPF dans Visual Studio
+title: Présentation de WPF dans Visual Studio 2015
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
 ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934678"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a>Présentation de WPF dans Visual Studio
+# <a name="introduction-to-wpf-in-visual-studio"></a>Présentation de WPF dans Visual Studio 2015
 Windows Presentation Foundation (WPF) dans Visual Studio fournit aux développeurs un modèle de programmation unifié pour créer des applications de bureau line of business sur Windows.  
   
  [Créer des Applications de bureau avec Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  

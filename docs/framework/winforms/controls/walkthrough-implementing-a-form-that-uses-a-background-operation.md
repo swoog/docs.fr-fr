@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792195"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procédure pas à pas : implémentation d’un formulaire qui utilise une opération en arrière-plan
 Si vous avez une opération qui prendra un certain temps, et vous ne souhaitez pas votre interface utilisateur (IU) cesse de répondre ou « blocage », vous pouvez utiliser la <xref:System.ComponentModel.BackgroundWorker> classe pour exécuter l’opération sur un autre thread.  
@@ -29,13 +29,13 @@ Si vous avez une opération qui prendra un certain temps, et vous ne souhaitez p
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’une application Windows  
+- Création d’une application Windows  
   
--   Création d’un <xref:System.ComponentModel.BackgroundWorker> dans votre formulaire  
+- Création d’un <xref:System.ComponentModel.BackgroundWorker> dans votre formulaire  
   
--   Ajout de gestionnaires d’événements asynchrones  
+- Ajout de gestionnaires d’événements asynchrones  
   
--   Ajout de rapports de progression et prise en charge de l’annulation  
+- Ajout de rapports de progression et prise en charge de l’annulation  
   
  Pour obtenir une liste complète du code utilisé dans cet exemple, consultez [Comment : Implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Si vous avez une opération qui prendra un certain temps, et vous ne souhaitez p
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Pour créer un composant BackgroundWorker à l’aide du concepteur  
   
--   À partir de la **composants** onglet de la **boîte à outils**, faites glisser un <xref:System.ComponentModel.BackgroundWorker> vers le formulaire.  
+- À partir de la **composants** onglet de la **boîte à outils**, faites glisser un <xref:System.ComponentModel.BackgroundWorker> vers le formulaire.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Ajout de gestionnaires d’événements asynchrones  
  Vous êtes maintenant prêt à ajouter des gestionnaires d’événements pour le <xref:System.ComponentModel.BackgroundWorker> événements asynchrones du composant. L’opération de longue durée qui s’exécutera en arrière-plan et calculera les nombres de Fibonacci est appelée par l’un de ces gestionnaires d’événements.  
@@ -145,7 +145,7 @@ Si vous avez une opération qui prendra un certain temps, et vous ne souhaitez p
   
 #### <a name="to-test-your-project"></a>Pour tester votre projet  
   
--   Appuyez sur F5 pour compiler et exécuter l'application.  
+- Appuyez sur F5 pour compiler et exécuter l'application.  
   
      Le calcul s’exécute en arrière-plan, vous verrez la <xref:System.Windows.Forms.ProgressBar> affiche la progression du calcul en voie d’achèvement. Vous pouvez également annuler l’opération en attente.  
   
@@ -154,11 +154,11 @@ Si vous avez une opération qui prendra un certain temps, et vous ne souhaitez p
 ## <a name="next-steps"></a>Étapes suivantes  
  Maintenant que vous avez implémenté un formulaire qui utilise un <xref:System.ComponentModel.BackgroundWorker> composant pour effectuer un calcul en arrière-plan, vous pouvez Explorer d’autres possibilités pour les opérations asynchrones :  
   
--   Utilisez plusieurs <xref:System.ComponentModel.BackgroundWorker> objets pour plusieurs opérations simultanées.  
+- Utilisez plusieurs <xref:System.ComponentModel.BackgroundWorker> objets pour plusieurs opérations simultanées.  
   
--   Pour déboguer votre application multithread, consultez [Comment : Utiliser la fenêtre Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Pour déboguer votre application multithread, consultez [Comment : Utiliser la fenêtre Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implémentez votre propre composant qui prend en charge le modèle de programmation asynchrone. Pour plus d’informations, consultez l’article [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Implémentez votre propre composant qui prend en charge le modèle de programmation asynchrone. Pour plus d’informations, consultez l’article [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  Quand vous utilisez le multithreading, vous vous exposez potentiellement à des bogues très sérieux et complexes. Consultez les [Meilleures pratiques pour le threading managé](../../../standard/threading/managed-threading-best-practices.md) avant d’implémenter une solution qui utilise le multithreading.  

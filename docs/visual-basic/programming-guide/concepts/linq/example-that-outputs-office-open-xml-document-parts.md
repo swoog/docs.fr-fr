@@ -3,11 +3,11 @@ title: Exemple qui imprime des parties de Document Office Open XML (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
 ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931563"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Exemple qui imprime des parties de Document Office Open XML (Visual Basic)
 Cette rubrique montre comment ouvrir un document Office Open XML et accéder à ses parties.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778558"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Types de données des résultats d'opérateur (Visual Basic)
 Visual Basic détermine le type de données de résultat d’une opération basée sur les types de données des opérandes. Dans certains cas, cela peut être un type de données avec une plage supérieure à celle de des opérandes.  
@@ -22,21 +22,21 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
 ## <a name="data-type-ranges"></a>plages de types de données  
  Les plages des types de données pertinentes, dans l’ordre du plus petit au plus grand, sont les suivantes :  
   
--   [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — deux valeurs possibles  
+- [Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) — deux valeurs possibles  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [octets](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 valeurs intégrales possibles  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [octets](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 valeurs intégrales possibles  
   
--   [Court](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) : 65 536 (6.5... E + 4) des valeurs intégrales possibles  
+- [Court](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) : 65 536 (6.5... E + 4) des valeurs intégrales possibles  
   
--   [Entier](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) : 4 294 967 296 (4.2... E + 9) des valeurs intégrales possibles  
+- [Entier](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) : 4 294 967 296 (4.2... E + 9) des valeurs intégrales possibles  
   
--   [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) des valeurs intégrales possibles  
+- [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) des valeurs intégrales possibles  
   
--   [Décimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5... E + 29 possible de valeurs intégrales, nombre maximales de plage 7.9... E + 28 (valeur absolue)  
+- [Décimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) — 1.5... E + 29 possible de valeurs intégrales, nombre maximales de plage 7.9... E + 28 (valeur absolue)  
   
--   [Seul](../../../visual-basic/language-reference/data-types/single-data-type.md) : plage maximale 3.4... E + 38 (valeur absolue)  
+- [Seul](../../../visual-basic/language-reference/data-types/single-data-type.md) : plage maximale 3.4... E + 38 (valeur absolue)  
   
--   [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : plage maximale 1.7... E + 308 (valeur absolue)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) : plage maximale 1.7... E + 308 (valeur absolue)  
   
  Pour plus d’informations sur les types de données Visual Basic, consultez [Types de données](../../../visual-basic/language-reference/data-types/index.md).  
   
@@ -68,11 +68,11 @@ Visual Basic détermine le type de données de résultat d’une opération bas�
 ## <a name="integer-arithmetic"></a>Arithmétique sur les entiers  
  Le type de données de résultat d’une opération entière varie selon les types de données des opérandes. En général, Visual Basic utilise les stratégies suivantes pour déterminer le type de données de résultat :  
   
--   Si les deux opérandes d’un opérateur binaire ont le même type de données, le résultat a ce type de données. Une exception est `Boolean`, qui est obligé de `Short`.  
+- Si les deux opérandes d’un opérateur binaire ont le même type de données, le résultat a ce type de données. Une exception est `Boolean`, qui est obligé de `Short`.  
   
--   Si un opérande non signé fait partie avec un opérande signé, le résultat a un type signé au moins aussi grande une plage en tant que des opérandes.  
+- Si un opérande non signé fait partie avec un opérande signé, le résultat a un type signé au moins aussi grande une plage en tant que des opérandes.  
   
--   Sinon, le résultat est généralement le plus grand de deux types de données d’opérande.  
+- Sinon, le résultat est généralement le plus grand de deux types de données d’opérande.  
   
  Notez que le type de données de résultat ne peut pas être identique à un type de données d’opérande.  
   

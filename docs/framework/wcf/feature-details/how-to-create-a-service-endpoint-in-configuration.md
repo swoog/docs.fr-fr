@@ -1,15 +1,15 @@
 ---
-title: 'Comment : créer un point de terminaison de service dans la configuration.'
+title: 'Procédure : créer un point de terminaison de service dans la configuration'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787645"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Comment : créer un point de terminaison de service dans la configuration.
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procédure : créer un point de terminaison de service dans la configuration
 Points de terminaison fournissent aux clients l’accès à la fonctionnalité proposée par un service Windows Communication Foundation (WCF). Vous pouvez définir un ou plusieurs points de terminaison pour un service en utilisant une combinaison d'adresses de point de terminaison relative et absolue. Si vous ne définissez aucun point de terminaison de service, le runtime vous en fournit automatiquement par défaut. Cette rubrique montre comment ajouter des points de terminaison en utilisant un fichier de configuration qui contient à la fois des adresses absolues et relatives.  
   
 ## <a name="example"></a>Exemple  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796128"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Spécifie que le compilateur doit compiler sans référence à la bibliothèque runtime Visual Basic, ou avec une référence à une bibliothèque runtime spécifique.  
@@ -50,35 +50,35 @@ Spécifie que le compilateur doit compiler sans référence à la bibliothèque 
   
  Les membres du runtime suivants sont incorporés :  
   
--   Classe <xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
+- Classe <xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
   
--   Méthode <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>  
+- Méthode <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>  
   
--   Méthode <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>  
+- Méthode <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>  
   
--   Méthode <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
+- Méthode <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> Constante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Constante  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Constante  
   
--   Certains objets de la `My` type  
+- Certains objets de la `My` type  
   
  Si vous compilez à l’aide de la `-vbruntime*` option et votre code fait référence à un membre à partir de la bibliothèque Runtime Visual Basic qui ne sont pas incorporées avec la fonctionnalité principale, le compilateur retourne une erreur qui indique que le membre n’est pas disponible.  
   

@@ -3,20 +3,20 @@ title: Vue d'ensemble du flux de messages
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797478"
 ---
 # <a name="message-flow-overview"></a>Vue d'ensemble du flux de messages
 Dans un système distribué contenant des services interconnectés, il est nécessaire de déterminer les relations de causalité entre les services. Il est important de comprendre les différents composants faisant partie d'un flux de demandes pour prendre en charge des scénarios critiques, tels que le contrôle d'état, la résolution des problèmes et l'analyse de la cause première. Pour activer la corrélation des suivis entre différents services, la prise en prendre en charge des fonctionnalités suivantes a été ajoutée dans .NET Framework 4 :
 
--   Traçage analytique : Une fonctionnalité de suivi de faible niveau de détail à l’aide du suivi d’événements Windows (ETW) et de hautes performances.
+- Traçage analytique : Une fonctionnalité de suivi de faible niveau de détail à l’aide du suivi d’événements Windows (ETW) et de hautes performances.
 
--   Modèle d’activité de bout en bout pour les services WCF/WF : Cette fonctionnalité prend en charge la corrélation des suivis générés par le <xref:System.ServiceModel> et <xref:System.Workflow.ComponentModel> espaces de noms.
+- Modèle d’activité de bout en bout pour les services WCF/WF : Cette fonctionnalité prend en charge la corrélation des suivis générés par le <xref:System.ServiceModel> et <xref:System.Workflow.ComponentModel> espaces de noms.
 
--   Suivi ETW pour WF : Cette fonctionnalité utilise des enregistrements de suivi générés par les services WF pour fournir une visibilité sur l’état actuel et la progression du flux de travail.
+- Suivi ETW pour WF : Cette fonctionnalité utilise des enregistrements de suivi générés par les services WF pour fournir une visibilité sur l’état actuel et la progression du flux de travail.
 
  Les erreurs enregistrées dans un enregistrement de suivi peuvent être utilisées pour rechercher les erreurs de code ou les messages qui ne sont pas correctement formés. La propriété ActivityId du nœud Correlation dans l'en-tête de message de l'événement peut être utilisée pour déterminer l'activité générant une erreur. Pour activer le suivi du flux de messages par ID d’activité, consultez [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Cette rubrique montre comment activer le suivi de flux de messages dans le projet créé dans le didacticiel Mise en route.
 

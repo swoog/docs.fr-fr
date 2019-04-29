@@ -3,11 +3,11 @@ title: Extensibilité de l'hôte du service de workflow
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929790"
 ---
 # <a name="workflow-service-host-extensibility"></a>Extensibilité de l'hôte du service de workflow
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> pour l'hébergement de services de workflow. Cette classe est utilisée lorsque vous auto-hébergez un service de workflow dans une application managée ou un service Windows. Cette classe est également utilisée lors de l'hébergement d'un service de workflow dans les services IIS (Internet Information Services) ou WAS (Windows Process Activation Service). La classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> fournit des points d’extension qui vous permettent d’ajouter des extensions personnalisées, de modifier le comportement inactif et d’héberger des workflows sans service (workflows qui n’utilisent aucune activité de messagerie).  
@@ -18,13 +18,13 @@ ms.locfileid: "59196474"
 ## <a name="react-to-unhandled-exceptions"></a>Réagir aux exceptions non gérées  
  Le <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> vous permet de spécifier l'action à entreprendre si une exception non gérée est levée dans un service de workflow. La propriété <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> spécifie l'une des valeurs de <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> :  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> : abandonne l'instance de service de workflow.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> : abandonne l'instance de service de workflow.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> : restaure le dernier état persistant et interrompt l'instance du service de workflow. Cela ne se produit que si le workflow a déjà été persistant au moins une fois. Dans le cas contraire, l'instance de workflow est annulée.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> : restaure le dernier état persistant et interrompt l'instance du service de workflow. Cela ne se produit que si le workflow a déjà été persistant au moins une fois. Dans le cas contraire, l'instance de workflow est annulée.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> : annule l'instance.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> : annule l'instance.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> : met fin à l'instance.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> : met fin à l'instance.  
   
  Ce comportement peut être configuré dans le code, comme indiqué dans l'exemple suivant.  
   
