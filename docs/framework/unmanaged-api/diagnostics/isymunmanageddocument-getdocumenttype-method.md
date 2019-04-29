@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939891"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="bab53-102">ISymUnmanagedDocument::GetDocumentType, méthode</span><span class="sxs-lookup"><span data-stu-id="bab53-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="bab53-103">Obtient le type de document de ce document.</span><span class="sxs-lookup"><span data-stu-id="bab53-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="23ce5-102">ISymUnmanagedDocument::GetDocumentType, méthode</span><span class="sxs-lookup"><span data-stu-id="23ce5-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="23ce5-103">Obtient le type de document de ce document.</span><span class="sxs-lookup"><span data-stu-id="23ce5-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bab53-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bab53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23ce5-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="23ce5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bab53-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="bab53-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23ce5-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="23ce5-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="bab53-106">[out] Pointeur vers une variable qui reçoit le type de document.</span><span class="sxs-lookup"><span data-stu-id="bab53-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="23ce5-106">[out] Pointeur vers une variable qui reçoit le type de document.</span><span class="sxs-lookup"><span data-stu-id="23ce5-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bab53-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="bab53-107">Return Value</span></span>  
- <span data-ttu-id="bab53-108">S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="bab53-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23ce5-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="23ce5-107">Return Value</span></span>  
+ <span data-ttu-id="23ce5-108">S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="23ce5-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bab53-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bab53-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23ce5-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="23ce5-109">See also</span></span>
 
-- [<span data-ttu-id="bab53-110">ISymUnmanagedDocument, interface</span><span class="sxs-lookup"><span data-stu-id="bab53-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="23ce5-110">ISymUnmanagedDocument, interface</span><span class="sxs-lookup"><span data-stu-id="23ce5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

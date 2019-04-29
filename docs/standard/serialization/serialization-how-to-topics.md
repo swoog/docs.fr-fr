@@ -5,33 +5,33 @@ helpviewer_keywords:
 - serialization, how-tos
 ms.assetid: 46c972ab-2193-4f72-9413-eca4521ed4b0
 ms.openlocfilehash: 1c87245d6995e5231cc14d0c39968ec0ebe3c845
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946924"
 ---
-# <a name="serialization-how-to-topics"></a><span data-ttu-id="c1207-102">Rubriques Comment : ... pour la sérialisation</span><span class="sxs-lookup"><span data-stu-id="c1207-102">Serialization How-to Topics</span></span>
-<span data-ttu-id="c1207-103">La liste suivante inclut les liens vers les rubriques Comment de la documentation conceptuelle relatives à la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="c1207-103">The following list includes links to the How-to topics found in the conceptual documentation for serialization.</span></span>  
+# <a name="serialization-how-to-topics"></a><span data-ttu-id="df748-102">Rubriques Comment : ... pour la sérialisation</span><span class="sxs-lookup"><span data-stu-id="df748-102">Serialization How-to Topics</span></span>
+<span data-ttu-id="df748-103">La liste suivante inclut les liens vers les rubriques Comment de la documentation conceptuelle relatives à la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="df748-103">The following list includes links to the How-to topics found in the conceptual documentation for serialization.</span></span>  
   
--   [<span data-ttu-id="c1207-104">Guide pratique pour sérialiser un objet</span><span class="sxs-lookup"><span data-stu-id="c1207-104">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [<span data-ttu-id="df748-104">Guide pratique pour Sérialiser un objet</span><span class="sxs-lookup"><span data-stu-id="df748-104">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
   
--   [<span data-ttu-id="c1207-105">Guide pratique pour désérialiser un objet</span><span class="sxs-lookup"><span data-stu-id="c1207-105">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [<span data-ttu-id="df748-105">Guide pratique pour Désérialiser un objet</span><span class="sxs-lookup"><span data-stu-id="df748-105">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
   
--   [<span data-ttu-id="c1207-106">Guide pratique pour utiliser l’outil XML Schema Definition pour la génération de classes et de documents de schéma XML</span><span class="sxs-lookup"><span data-stu-id="c1207-106">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+- [<span data-ttu-id="df748-106">Guide pratique pour Utiliser l’outil XML Schema Definition pour générer des Classes et des Documents de schéma XML</span><span class="sxs-lookup"><span data-stu-id="df748-106">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
   
--   [<span data-ttu-id="c1207-107">Guide pratique pour spécifier un nom d’élément différent pour un flux XML</span><span class="sxs-lookup"><span data-stu-id="c1207-107">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [<span data-ttu-id="df748-107">Guide pratique pour Spécifiez un nom d’élément différent pour un Stream XML</span><span class="sxs-lookup"><span data-stu-id="df748-107">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
   
--   [<span data-ttu-id="c1207-108">Guide pratique pour contrôler la sérialisation de classes dérivées</span><span class="sxs-lookup"><span data-stu-id="c1207-108">How to: Control Serialization of Derived Classes</span></span>](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
+- [<span data-ttu-id="df748-108">Guide pratique pour Contrôler la sérialisation de Classes dérivées</span><span class="sxs-lookup"><span data-stu-id="df748-108">How to: Control Serialization of Derived Classes</span></span>](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
   
--   [<span data-ttu-id="c1207-109">Guide pratique pour qualifier des noms d’éléments XML et des noms d’attributs XML</span><span class="sxs-lookup"><span data-stu-id="c1207-109">How to: Qualify XML Element and XML Attribute Names</span></span>](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
+- [<span data-ttu-id="df748-109">Guide pratique pour Qualifier l’élément XML et les noms d’attributs XML</span><span class="sxs-lookup"><span data-stu-id="df748-109">How to: Qualify XML Element and XML Attribute Names</span></span>](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
   
--   [<span data-ttu-id="c1207-110">Guide pratique pour sérialiser un objet en tant que flux XML encodé selon le protocole SOAP</span><span class="sxs-lookup"><span data-stu-id="c1207-110">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+- [<span data-ttu-id="df748-110">Guide pratique pour Sérialiser un objet comme un Stream XML encodés en SOAP</span><span class="sxs-lookup"><span data-stu-id="df748-110">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
   
--   [<span data-ttu-id="c1207-111">Guide pratique pour remplacer la sérialisation XML encodée selon le protocole SOAP</span><span class="sxs-lookup"><span data-stu-id="c1207-111">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+- [<span data-ttu-id="df748-111">Guide pratique pour Substituer la sérialisation du XML SOAP encodé</span><span class="sxs-lookup"><span data-stu-id="df748-111">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
   
--   [<span data-ttu-id="c1207-112">Guide pratique pour segmenter des données sérialisées</span><span class="sxs-lookup"><span data-stu-id="c1207-112">How to: Chunk Serialized Data</span></span>](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
+- [<span data-ttu-id="df748-112">Guide pratique pour Segmenter des données sérialisées</span><span class="sxs-lookup"><span data-stu-id="df748-112">How to: Chunk Serialized Data</span></span>](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c1207-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c1207-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df748-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="df748-113">See also</span></span>
 
-- [<span data-ttu-id="c1207-114">Sérialisation</span><span class="sxs-lookup"><span data-stu-id="c1207-114">Serialization</span></span>](../../../docs/standard/serialization/index.md)
+- [<span data-ttu-id="df748-114">Sérialisation</span><span class="sxs-lookup"><span data-stu-id="df748-114">Serialization</span></span>](../../../docs/standard/serialization/index.md)
