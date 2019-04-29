@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669424"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Suivi et traçage de workflow
 Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] conçue pour offrir plus de visibilité lors de l’exécution de workflow. Il fournit une infrastructure de suivi pour suivre l'exécution d'une instance de workflow. L'infrastructure de suivi WF instrumente de façon transparente un workflow pour émettre des enregistrements qui reflètent des événements clés pendant l'exécution. Cette fonctionnalité est disponible par défaut pour tous les workflows [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Il n'est pas nécessaire de modifier un workflow [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] pour activer son suivi. Il suffit seulement de déterminer quelles données vous souhaitez obtenir. Lorsqu'une instance de workflow démarre ou se termine, les enregistrements de suivi de son exécution sont émis. Le suivi peut également extraire des données métier pertinentes associées aux variables de workflow. Par exemple, si le workflow représente un système de traitement des commandes, l'ID de commande peut être extrait avec l'objet <xref:System.Activities.Tracking.TrackingRecord>. En règle générale, le suivi WF facilite l'accès aux diagnostics ou aux analyses d'entreprise depuis l'exécution du workflow.  
@@ -22,11 +22,11 @@ Le suivi Windows Workflow est une fonctionnalité de [!INCLUDE[netfx_current_lon
   
  Pour vous aider à comprendre le modèle de programmation, les principaux composants de l'infrastructure de suivi sont traités dans cette rubrique :  
   
--   Des objets <xref:System.Activities.Tracking.TrackingRecord> sont émis par l'exécution du workflow. Pour plus d’informations, consultez [des enregistrements de suivi](tracking-records.md).  
+- Des objets <xref:System.Activities.Tracking.TrackingRecord> sont émis par l'exécution du workflow. Pour plus d’informations, consultez [des enregistrements de suivi](tracking-records.md).  
   
--   Les objets <xref:System.Activities.Tracking.TrackingParticipant>  s'abonnent aux objets <xref:System.Activities.Tracking.TrackingRecord>. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des objets <xref:System.Activities.Tracking.TrackingRecord> (par exemple, ils peuvent choisir d'écrire dans un fichier). Pour plus d’informations, consultez [les participants au suivi](tracking-participants.md).  
+- Les objets <xref:System.Activities.Tracking.TrackingParticipant>  s'abonnent aux objets <xref:System.Activities.Tracking.TrackingRecord>. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des objets <xref:System.Activities.Tracking.TrackingRecord> (par exemple, ils peuvent choisir d'écrire dans un fichier). Pour plus d’informations, consultez [les participants au suivi](tracking-participants.md).  
   
--   Les objets <xref:System.Activities.Tracking.TrackingProfile> filtrent les enregistrements de suivi émis par une instance de workflow. Pour plus d’informations, consultez [modèles de suivi](tracking-profiles.md).  
+- Les objets <xref:System.Activities.Tracking.TrackingProfile> filtrent les enregistrements de suivi émis par une instance de workflow. Pour plus d’informations, consultez [modèles de suivi](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infrastructure du suivi des flux de travail  
  L'infrastructure de suivi de workflow fonctionne sur un modèle Publier/Abonner. L’instance de workflow est le serveur de publication des enregistrements de suivi, alors que les abonnés des enregistrements de suivi sont inscrits en tant qu’extensions du workflow. Ces extensions qui s’abonnent aux objets <xref:System.Activities.Tracking.TrackingRecord> sont appelées des participants de suivi. Les participants de suivi sont des points d'extensibilité qui accèdent aux objets <xref:System.Activities.Tracking.TrackingRecord> afin de les traiter de la manière prévue. L'infrastructure de suivi permet l'application d'un filtre sur les enregistrements de suivi sortants pour permettre à un participant de s'abonner à un sous-ensemble des enregistrements. Ce mécanisme de filtrage s'effectue à l'aide d'un fichier modèle de suivi.  

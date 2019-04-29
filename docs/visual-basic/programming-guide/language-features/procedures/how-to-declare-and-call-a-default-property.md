@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665765"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procédure : Déclarer et appeler une propriété par défaut en Visual Basic
 Un *propriété par défaut* est une propriété de classe ou structure auquel votre code peut accéder sans la spécifier. Lors de l’appel des noms de code, une classe ou structure, mais pas une propriété et le contexte autorise l’accès à une propriété, Visual Basic résout l’accès à cette classe ou propriété par défaut de la structure s’il en existe.  

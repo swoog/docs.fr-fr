@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761364"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Vue d'ensemble du contrôle MenuStrip (Windows Forms)
 Menus exposent des fonctionnalités à vos utilisateurs en maintenant les commandes regroupées par un thème commun.  
@@ -26,11 +26,11 @@ Menus exposent des fonctionnalités à vos utilisateurs en maintenant les comman
 ## <a name="ways-to-use-the-menustrip-control"></a>Façons d’utiliser le contrôle MenuStrip  
  Utilisez le <xref:System.Windows.Forms.MenuStrip> le contrôle à :  
   
--   Créez facilement personnalisées, employées couramment menus qui prennent en charge utilisateur interface et mise en page fonctionnalités avancées, telles que texte et image classement et alignement, les opérations de glisser-déplacer, MDI, dépassement de capacité et autres modes d’accès aux commandes de menu.  
+- Créez facilement personnalisées, employées couramment menus qui prennent en charge utilisateur interface et mise en page fonctionnalités avancées, telles que texte et image classement et alignement, les opérations de glisser-déplacer, MDI, dépassement de capacité et autres modes d’accès aux commandes de menu.  
   
--   Prend en charge l’apparence classique et le comportement du système d’exploitation.  
+- Prend en charge l’apparence classique et le comportement du système d’exploitation.  
   
--   Gérer les événements cohérente pour tous les conteneurs et les éléments de contenu, de la même façon que vous gérez des événements pour d’autres contrôles.  
+- Gérer les événements cohérente pour tous les conteneurs et les éléments de contenu, de la même façon que vous gérez des événements pour d’autres contrôles.  
   
  Le tableau suivant présente certaines propriétés particulièrement importantes de <xref:System.Windows.Forms.MenuStrip> et des classes associées.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669534"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Nouveautés dans Windows Workflow Foundation
 Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] modifie plusieurs paradigmes de développement des versions précédentes. Les flux de travail sont désormais plus faciles à créer, à exécuter et à gérer et mettent en œuvre de nombreuses nouvelles fonctionnalités. Pour plus d’informations sur la migration applications de workflow .NET 3.0 et 3.5 de .NET à utiliser la dernière version, consultez [conseils de Migration](migration-guidance.md).  
@@ -22,15 +22,15 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/
  Grâce à la nouvelle et puissante activité de flux de contrôle <xref:System.Activities.Statements.Flowchart>, les auteurs peuvent modéliser des boucles arbitraires et la création de branches conditionnelles. <xref:System.Activities.Statements.Flowchart> fournit un modèle événementiel de programmation qui ne pouvait précédemment être implémenté qu'avec la classe <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Les flux de travail procéduraux bénéficient de nouvelles activités de contrôle de flux comme <xref:System.Activities.Statements.TryCatch> et <xref:System.Activities.Statements.Switch%601> qui modélisent les structures classiques de contrôle de flux.  
   
 ## <a name="expanded-built-in-activity-library"></a>Bibliothèque d'activités intégrée étendue  
- Les nouvelles fonctionnalités de la bibliothèque d'activités sont les suivantes :  
+ Les nouvelles fonctionnalités de la bibliothèque d’activités sont les suivantes :  
   
--   nouvelles activités de contrôle de flux comme <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> et <xref:System.Activities.Statements.ParallelForEach%601> ;  
+- nouvelles activités de contrôle de flux comme <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> et <xref:System.Activities.Statements.ParallelForEach%601> ;  
   
--   activités pour la manipulation des données membres comme <xref:System.Activities.Statements.Assign> et activités de collection comme <xref:System.Activities.Statements.AddToCollection%601> ;  
+- activités pour la manipulation des données membres comme <xref:System.Activities.Statements.Assign> et activités de collection comme <xref:System.Activities.Statements.AddToCollection%601> ;  
   
--   activités pour le contrôle de transactions comme <xref:System.Activities.Statements.TransactionScope> et <xref:System.Activities.Statements.Compensate> ;  
+- activités pour le contrôle de transactions comme <xref:System.Activities.Statements.TransactionScope> et <xref:System.Activities.Statements.Compensate> ;  
   
--   nouvelles activités de messagerie comme <xref:System.ServiceModel.Activities.SendContent> et <xref:System.ServiceModel.Activities.ReceiveReply>.  
+- nouvelles activités de messagerie comme <xref:System.ServiceModel.Activities.SendContent> et <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Modèle explicite de données d'activité  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclut de nouvelles options de stockage ou de déplacement de données. Les données peuvent être stockées dans une activité à l'aide de l'objet <xref:System.Activities.Variable>. Lors du déplacement de données vers l'intérieur et l'extérieur d'une activité, les types d'arguments spécialisés servent à déterminer quelles données de direction se déplacent. Ces types sont <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> et <xref:System.Activities.OutArgument>. Pour plus d’informations, consultez [modèle de données de Windows Workflow Foundation](data-model.md).  
@@ -38,21 +38,21 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Options d'hébergement, de persistance et de suivi améliorées  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] comporte des améliorations de persistance, dont les suivantes :  
   
--   Davantage d'options permettent d'exécuter les flux de travail, notamment les objets <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowInvoker>.  
+- Davantage d'options permettent d'exécuter les flux de travail, notamment les objets <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowInvoker>.  
   
--   Les données d'état du workflow peuvent être explicitement rendues persistantes à l'aide de l'activité <xref:System.Activities.Statements.Persist>.  
+- Les données d'état du workflow peuvent être explicitement rendues persistantes à l'aide de l'activité <xref:System.Activities.Statements.Persist>.  
   
--   Un hôte peut rendre persistant un objet <xref:System.Activities.ActivityInstance> sans le décharger.  
+- Un hôte peut rendre persistant un objet <xref:System.Activities.ActivityInstance> sans le décharger.  
   
--   Un flux de travail peut spécifier des zones sans persistance, tout en utilisant des données qui ne peuvent pas être rendues persistantes. De cette façon, la persistance est reportée jusqu'à la fermeture de la zone sans persistance.  
+- Un flux de travail peut spécifier des zones sans persistance, tout en utilisant des données qui ne peuvent pas être rendues persistantes. De cette façon, la persistance est reportée jusqu'à la fermeture de la zone sans persistance.  
   
--   Les transactions peuvent être passées dans un flux de travail à l'aide de l'objet <xref:System.Activities.Statements.TransactionScope>.  
+- Les transactions peuvent être passées dans un flux de travail à l’aide de l’objet <xref:System.Activities.Statements.TransactionScope>.  
   
--   L'objet <xref:System.Activities.Tracking.TrackingParticipant> facilite le suivi.  
+- L'objet <xref:System.Activities.Tracking.TrackingParticipant> facilite le suivi.  
   
--   L'objet <xref:System.Activities.Tracking.EtwTrackingParticipant> offre le suivi dans le journal des événements système.  
+- L'objet <xref:System.Activities.Tracking.EtwTrackingParticipant> offre le suivi dans le journal des événements système.  
   
--   La reprise d'un flux de travail en attente est désormais gérée à l'aide d'un objet <xref:System.Activities.Bookmark>.  
+- La reprise d'un flux de travail en attente est désormais gérée à l'aide d'un objet <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Meilleure capacité à étendre l'expérience du concepteur WF  
  Le nouveau concepteur WF repose sur Windows Presentation Foundation (WPF) et fournit un modèle plus facile à utiliser lors du réhébergement du concepteur WF en dehors de Visual Studio et fournit également des mécanismes simplifiés pour la création de concepteurs d’activités personnalisées. Pour plus d’informations, consultez [personnalisation de l’expérience de conception de flux de travail](customizing-the-workflow-design-experience.md).

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765516"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Procédure : Personnaliser les comportements (WCF Data Services) de liaison de données
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez fournir une logique personnalisée appelée par <xref:System.Data.Services.Client.DataServiceCollection%601> lorsqu’un objet est ajouté ou supprimé de la collection de liaisons ou lorsqu’une modification de propriété est détectée. Cette logique personnalisée est fournie en tant que méthodes, référencées sous la forme <xref:System.Func%602> les délégués qui retournent une valeur de `false` lorsque le comportement par défaut doit toujours être effectué lorsque la méthode personnalisée est terminée et `true` quand d’autres le traitement de la événement doit être arrêté.  

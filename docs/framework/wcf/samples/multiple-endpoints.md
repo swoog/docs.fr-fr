@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 ms.openlocfilehash: 90b8c3cb49ff7b246b6bf7799d6b76f8549b23e5
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755959"
 ---
 # <a name="multiple-endpoints"></a>Multiple Endpoints
 Cet exemple montre comment configurer plusieurs points de terminaison sur un service et comment communiquer avec chacun d'entre eux à partir d'un client. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuration de service a été modifiée pour définir deux points de terminaison qui prennent en charge le contrat `ICalculator`, mais chacun à une adresse différente à l’aide d’une liaison distincte. Le code et la configuration client ont été modifiés pour communiquer avec les deux points de terminaison de service.  

@@ -3,11 +3,11 @@ title: <add> de <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701461"
 ---
 # <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
 
@@ -36,7 +36,7 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 |Attribut|Description|
 |---------------|-----------------|
 |factory|Chaîne qui spécifie le nom de type CLR de la fabrique qui génère un élément d'activation de service.|
-|service|Le ServiceType qui implémente le service (Typename qualifié complet ou Typename court (s'il est placé dans le dossier App_Code).|
+|service|Le ServiceType qui implémente le service (Typename qualifié complet ou Typename court (s’il est placé dans le dossier App_Code).|
 |relativeAddress|L'adresse relative dans l'application IIS active (par exemple « Service.svc ». Dans WCF 4.0 cette adresse relative doit contenir une des extensions de fichiers connues (.svc, .xamlx,…). Aucun fichier physique ne doit exister pour relativeUrl.|
 
 ### <a name="child-elements"></a>Éléments enfants

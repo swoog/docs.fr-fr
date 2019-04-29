@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
 ms.openlocfilehash: 120b4bf22e310bee73ba006cfe5a060d0ecd9d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667013"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Procédure : Implémenter CopyToDataTable\<T > où le Type générique T n’est pas un DataRow
 L'objet <xref:System.Data.DataTable> est souvent utilisé pour la liaison de données. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> prend les résultats d'une requête et copie les données dans un objet <xref:System.Data.DataTable> qui peut ensuite être utilisé pour la liaison de données. Toutefois, les méthodes <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> ne fonctionneront que sur une source <xref:System.Collections.Generic.IEnumerable%601> où le paramètre générique `T` est de type <xref:System.Data.DataRow>. Bien qu'utile, cela ne permet pas de créer des tables à partir d'une séquence de types scalaires, de requêtes qui projettent des types anonymes ou de requêtes qui effectuent des jointures de tables.  

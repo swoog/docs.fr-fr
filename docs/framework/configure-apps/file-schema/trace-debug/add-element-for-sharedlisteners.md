@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701370"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<Ajouter > élément pour \<sharedListeners >
 Ajoute un écouteur à la collection `sharedListeners`. `sharedListeners` est une collection d’écouteurs que tout [ \<source >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<trace >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) peut faire référence.  Par défaut, les écouteurs dans le `sharedListeners` collection ne sont pas placées dans un `Listeners` collection. Ils doivent être ajoutés par un nom pour le [ \<source >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<trace >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Il n’est pas possible d’obtenir les écouteurs de la `sharedListeners` collection dans le code en cours d’exécution.  

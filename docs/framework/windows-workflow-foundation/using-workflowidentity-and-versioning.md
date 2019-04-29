@@ -3,24 +3,24 @@ title: Utilisation de WorkflowIdentity et du versioning
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669651"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Utilisation de WorkflowIdentity et du versioning
 <xref:System.Activities.WorkflowIdentity> permet aux développeurs d'applications de workflow d'associer un nom et un <xref:System.Version> à une définition de workflow, et d'associer ces informations à une instance persistante de workflow. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette rubrique fournit une vue d'ensemble de l'utilisation de <xref:System.Activities.WorkflowIdentity> avec l'hébergement <xref:System.Activities.WorkflowApplication>. Pour plus d’informations sur l’exécution côte à côte de définitions de workflow dans un service de workflow, consultez [Versioning côte à côte dans WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Pour plus d’informations sur la mise à jour dynamique, consultez [mise à jour dynamique](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>Dans cette rubrique  
   
--   [Utilisation de WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+- [Utilisation de WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [Exécution côte à côte à l’aide de WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
+    - [Exécution côte à côte à l’aide de WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
   
--   [La mise à niveau des bases de données de .NET Framework 4 de persistance pour prendre en charge le Versioning de Workflow](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+- [La mise à niveau des bases de données de .NET Framework 4 de persistance pour prendre en charge le Versioning de Workflow](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [Pour mettre à niveau le schéma de base de données](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    - [Pour mettre à niveau le schéma de base de données](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> Utilisation de WorkflowIdentity  
  Pour utiliser <xref:System.Activities.WorkflowIdentity>, créez une instance, configurez-la et associez-la à une instance <xref:System.Activities.WorkflowApplication>. Une instance <xref:System.Activities.WorkflowIdentity> contient trois informations d'identification. <xref:System.Activities.WorkflowIdentity.Name%2A> et <xref:System.Activities.WorkflowIdentity.Version%2A> contiennent un nom et un <xref:System.Version> et sont obligatoire, et <xref:System.Activities.WorkflowIdentity.Package%2A> est facultatif et peut être utilisé pour spécifier une chaîne supplémentaire contenant des informations telles que le nom de l'assembly ou d'autres informations souhaitées. <xref:System.Activities.WorkflowIdentity> est unique si l'une de ses trois propriétés est différente d'un autre <xref:System.Activities.WorkflowIdentity>.  
