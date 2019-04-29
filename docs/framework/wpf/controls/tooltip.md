@@ -9,30 +9,30 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59054986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790716"
 ---
-# <a name="tooltip"></a><span data-ttu-id="52c0d-102">Info-bulle</span><span class="sxs-lookup"><span data-stu-id="52c0d-102">ToolTip</span></span>
-<span data-ttu-id="52c0d-103">Une info-bulle est une petite fenêtre contextuelle qui s’affiche lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="52c0d-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="6a081-102">Info-bulle</span><span class="sxs-lookup"><span data-stu-id="6a081-102">ToolTip</span></span>
+<span data-ttu-id="6a081-103">Une info-bulle est une petite fenêtre contextuelle qui s’affiche lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6a081-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="52c0d-104">L’illustration suivante montre un pointeur de souris qui pointe vers le **fermer**<xref:System.Windows.Controls.Button>, qui affiche ensuite son identification <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="52c0d-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="6a081-104">L’illustration suivante montre un pointeur de souris qui pointe vers le **fermer**<xref:System.Windows.Controls.Button>, qui affiche ensuite son identification <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="6a081-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="52c0d-105">Bouton Fermer avec son info-bulle</span><span class="sxs-lookup"><span data-stu-id="52c0d-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="6a081-105">Bouton Fermer avec son info-bulle</span><span class="sxs-lookup"><span data-stu-id="6a081-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="52c0d-106">![Capture d’écran de l’info-bulle](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="52c0d-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="6a081-106">![Capture d’écran de l’info-bulle](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="6a081-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="52c0d-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="52c0d-107">In This Section</span></span>  
- [<span data-ttu-id="52c0d-108">Vue d’ensemble de l’info-bulle</span><span class="sxs-lookup"><span data-stu-id="52c0d-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="52c0d-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="52c0d-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6a081-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6a081-107">In This Section</span></span>  
+ [<span data-ttu-id="6a081-108">Vue d’ensemble de l’info-bulle</span><span class="sxs-lookup"><span data-stu-id="6a081-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="6a081-109">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="6a081-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="52c0d-110">Référence</span><span class="sxs-lookup"><span data-stu-id="52c0d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6a081-110">Référence</span><span class="sxs-lookup"><span data-stu-id="6a081-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="52c0d-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="52c0d-111">Related Sections</span></span>  
- [<span data-ttu-id="52c0d-112">Vue d’ensemble de Popup</span><span class="sxs-lookup"><span data-stu-id="52c0d-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="52c0d-113">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="52c0d-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="6a081-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="6a081-111">Related Sections</span></span>  
+ [<span data-ttu-id="6a081-112">Vue d’ensemble de Popup</span><span class="sxs-lookup"><span data-stu-id="6a081-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="6a081-113">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="6a081-113">How-to Topics</span></span>](popup-how-to-topics.md)

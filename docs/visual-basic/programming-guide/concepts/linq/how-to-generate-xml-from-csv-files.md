@@ -3,17 +3,17 @@ title: 'Procédure : Générer du code XML à partir de fichiers CSV (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
 ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780586"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="af3fe-102">Procédure : Générer du code XML à partir de fichiers CSV (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af3fe-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
-<span data-ttu-id="af3fe-103">Cet exemple montre comment utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour générer un fichier XML à partir d'un fichier de valeurs séparées par des virgules (CSV).</span><span class="sxs-lookup"><span data-stu-id="af3fe-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="f1915-102">Procédure : Générer du code XML à partir de fichiers CSV (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1915-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="f1915-103">Cet exemple montre comment utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour générer un fichier XML à partir d'un fichier de valeurs séparées par des virgules (CSV).</span><span class="sxs-lookup"><span data-stu-id="f1915-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af3fe-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="af3fe-104">Example</span></span>  
- <span data-ttu-id="af3fe-105">Le code suivant exécute une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sur un tableau de chaînes.</span><span class="sxs-lookup"><span data-stu-id="af3fe-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="f1915-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="f1915-104">Example</span></span>  
+ <span data-ttu-id="f1915-105">Le code suivant exécute une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sur un tableau de chaînes.</span><span class="sxs-lookup"><span data-stu-id="f1915-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -48,7 +48,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- <span data-ttu-id="af3fe-106">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="af3fe-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="f1915-106">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="f1915-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="af3fe-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="af3fe-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1915-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f1915-107">See also</span></span>
 
-- [<span data-ttu-id="af3fe-108">Projections et Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af3fe-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="f1915-108">Projections et Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1915-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

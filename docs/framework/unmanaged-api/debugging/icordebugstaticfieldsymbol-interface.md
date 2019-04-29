@@ -5,40 +5,40 @@ ms.assetid: c0b93609-631e-4b15-878a-189ede922631
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 382f3fc9377c25379809badac0bc580c3593cbde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782588"
 ---
-# <a name="icordebugstaticfieldsymbol-interface"></a><span data-ttu-id="c02d8-102">ICorDebugStaticFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="c02d8-102">ICorDebugStaticFieldSymbol Interface</span></span>
-<span data-ttu-id="c02d8-103">Représente les informations sur les symboles de débogage pour un champ static.</span><span class="sxs-lookup"><span data-stu-id="c02d8-103">Represents the debug symbol information for a static field.</span></span>  
+# <a name="icordebugstaticfieldsymbol-interface"></a><span data-ttu-id="1e3b4-102">ICorDebugStaticFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="1e3b4-102">ICorDebugStaticFieldSymbol Interface</span></span>
+<span data-ttu-id="1e3b4-103">Représente les informations sur les symboles de débogage pour un champ static.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-103">Represents the debug symbol information for a static field.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c02d8-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="c02d8-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1e3b4-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="1e3b4-104">Methods</span></span>  
   
-|<span data-ttu-id="c02d8-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="c02d8-105">Method</span></span>|<span data-ttu-id="c02d8-106">Description</span><span class="sxs-lookup"><span data-stu-id="c02d8-106">Description</span></span>|  
+|<span data-ttu-id="1e3b4-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="1e3b4-105">Method</span></span>|<span data-ttu-id="1e3b4-106">Description</span><span class="sxs-lookup"><span data-stu-id="1e3b4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c02d8-107">GetAddress, méthode</span><span class="sxs-lookup"><span data-stu-id="c02d8-107">GetAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|<span data-ttu-id="c02d8-108">Obtient l'adresse du champ statique.</span><span class="sxs-lookup"><span data-stu-id="c02d8-108">Gets the address of the static field.</span></span>|  
-|[<span data-ttu-id="c02d8-109">GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="c02d8-109">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|<span data-ttu-id="c02d8-110">Obtient le nom du champ static.</span><span class="sxs-lookup"><span data-stu-id="c02d8-110">Gets the name of the static field.</span></span>|  
-|[<span data-ttu-id="c02d8-111">GetSize, méthode</span><span class="sxs-lookup"><span data-stu-id="c02d8-111">GetSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|<span data-ttu-id="c02d8-112">Obtient la taille en octets du champ static.</span><span class="sxs-lookup"><span data-stu-id="c02d8-112">Gets the size in bytes of the static field.</span></span>|  
+|[<span data-ttu-id="1e3b4-107">GetAddress, méthode</span><span class="sxs-lookup"><span data-stu-id="1e3b4-107">GetAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|<span data-ttu-id="1e3b4-108">Obtient l'adresse du champ statique.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-108">Gets the address of the static field.</span></span>|  
+|[<span data-ttu-id="1e3b4-109">GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="1e3b4-109">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|<span data-ttu-id="1e3b4-110">Obtient le nom du champ static.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-110">Gets the name of the static field.</span></span>|  
+|[<span data-ttu-id="1e3b4-111">GetSize, méthode</span><span class="sxs-lookup"><span data-stu-id="1e3b4-111">GetSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|<span data-ttu-id="1e3b4-112">Obtient la taille en octets du champ static.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-112">Gets the size in bytes of the static field.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c02d8-113">Notes</span><span class="sxs-lookup"><span data-stu-id="c02d8-113">Remarks</span></span>  
- <span data-ttu-id="c02d8-114">L’interface `ICorDebugStaticFieldSymbol` est utilisée pour récupérer les informations sur les symboles de débogage pour un champ statique.</span><span class="sxs-lookup"><span data-stu-id="c02d8-114">The `ICorDebugStaticFieldSymbol` interface is used to retrieve the debug symbol information for a static field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1e3b4-113">Notes</span><span class="sxs-lookup"><span data-stu-id="1e3b4-113">Remarks</span></span>  
+ <span data-ttu-id="1e3b4-114">L’interface `ICorDebugStaticFieldSymbol` est utilisée pour récupérer les informations sur les symboles de débogage pour un champ statique.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-114">The `ICorDebugStaticFieldSymbol` interface is used to retrieve the debug symbol information for a static field.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c02d8-115">Cette interface est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="c02d8-115">This interface is available with .NET Native only.</span></span> <span data-ttu-id="c02d8-116">Si vous implémentez cette interface pour des scénarios ICorDebug en dehors de .NET Native, le Common Language Runtime ignore cette interface.</span><span class="sxs-lookup"><span data-stu-id="c02d8-116">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
+>  <span data-ttu-id="1e3b4-115">Cette interface est uniquement disponible avec .NET Native.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-115">This interface is available with .NET Native only.</span></span> <span data-ttu-id="1e3b4-116">Si vous implémentez cette interface pour des scénarios ICorDebug en dehors de .NET Native, le Common Language Runtime ignore cette interface.</span><span class="sxs-lookup"><span data-stu-id="1e3b4-116">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c02d8-117">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="c02d8-117">Requirements</span></span>  
- <span data-ttu-id="c02d8-118">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c02d8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e3b4-117">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1e3b4-117">Requirements</span></span>  
+ <span data-ttu-id="1e3b4-118">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e3b4-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c02d8-119">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c02d8-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1e3b4-119">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e3b4-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c02d8-120">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c02d8-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e3b4-120">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e3b4-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c02d8-121">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c02d8-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="1e3b4-121">**Versions du .NET Framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e3b4-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c02d8-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c02d8-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e3b4-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1e3b4-122">See also</span></span>
 
-- [<span data-ttu-id="c02d8-123">ICorDebugInstanceFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="c02d8-123">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [<span data-ttu-id="c02d8-124">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="c02d8-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c02d8-125">Débogage</span><span class="sxs-lookup"><span data-stu-id="c02d8-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="1e3b4-123">ICorDebugInstanceFieldSymbol, interface</span><span class="sxs-lookup"><span data-stu-id="1e3b4-123">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
+- [<span data-ttu-id="1e3b4-124">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="1e3b4-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1e3b4-125">Débogage</span><span class="sxs-lookup"><span data-stu-id="1e3b4-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

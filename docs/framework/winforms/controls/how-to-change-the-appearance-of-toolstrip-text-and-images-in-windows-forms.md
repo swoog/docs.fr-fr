@@ -14,18 +14,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781262"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="1f2fb-102">Procédure : modifier l’aspect du texte et des images du contrôle ToolStrip dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1f2fb-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
-<span data-ttu-id="1f2fb-103">Vous pouvez contrôler si le texte et les images sont affichés sur un <xref:System.Windows.Forms.ToolStripItem> et comment ils sont alignés par rapport aux autres et le <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="57960-102">Procédure : modifier l’aspect du texte et des images du contrôle ToolStrip dans Windows Forms</span><span class="sxs-lookup"><span data-stu-id="57960-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
+<span data-ttu-id="57960-103">Vous pouvez contrôler si le texte et les images sont affichés sur un <xref:System.Windows.Forms.ToolStripItem> et comment ils sont alignés par rapport aux autres et le <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="57960-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="1f2fb-104">Pour définir ce qui est affiché sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="1f2fb-104">To define what is displayed on a ToolStripItem</span></span>  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="57960-104">Pour définir ce qui est affiché sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="57960-104">To define what is displayed on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="1f2fb-105">Définir le <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="1f2fb-106">Les possibilités sont `Image`, `ImageAndText`, `None`, et `Text`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="1f2fb-107">La valeur par défaut est `ImageAndText`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-107">The default is `ImageAndText`.</span></span>  
+- <span data-ttu-id="57960-105">Définir le <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="57960-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="57960-106">Les possibilités sont `Image`, `ImageAndText`, `None`, et `Text`.</span><span class="sxs-lookup"><span data-stu-id="57960-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="57960-107">La valeur par défaut est `ImageAndText`.</span><span class="sxs-lookup"><span data-stu-id="57960-107">The default is `ImageAndText`.</span></span>  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -36,9 +36,9 @@ ms.locfileid: "59088470"
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
     ```  
   
-### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="1f2fb-108">Pour aligner le texte sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="1f2fb-108">To align text on a ToolStripItem</span></span>  
+### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="57960-108">Pour aligner le texte sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="57960-108">To align text on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="1f2fb-109">Définir le <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="1f2fb-110">Les possibilités sont n’importe quelle combinaison de haut, intermédiaire et en bas à gauche, centre et droite.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="1f2fb-111">La valeur par défaut est `MiddleCenter`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-111">The default is `MiddleCenter`.</span></span>  
+- <span data-ttu-id="57960-109">Définir le <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="57960-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="57960-110">Les possibilités sont n’importe quelle combinaison de haut, intermédiaire et en bas à gauche, centre et droite.</span><span class="sxs-lookup"><span data-stu-id="57960-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="57960-111">La valeur par défaut est `MiddleCenter`.</span><span class="sxs-lookup"><span data-stu-id="57960-111">The default is `MiddleCenter`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -49,9 +49,9 @@ ms.locfileid: "59088470"
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="1f2fb-112">Pour aligner une image sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="1f2fb-112">To align an image on a ToolStripItem</span></span>  
+### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="57960-112">Pour aligner une image sur un ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="57960-112">To align an image on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="1f2fb-113">Définir le <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="1f2fb-114">Les possibilités sont n’importe quelle combinaison de haut, intermédiaire et en bas à gauche, centre et droite.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="1f2fb-115">La valeur par défaut est `MiddleLeft`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-115">The default is `MiddleLeft`.</span></span>  
+- <span data-ttu-id="57960-113">Définir le <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="57960-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="57960-114">Les possibilités sont n’importe quelle combinaison de haut, intermédiaire et en bas à gauche, centre et droite.</span><span class="sxs-lookup"><span data-stu-id="57960-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="57960-115">La valeur par défaut est `MiddleLeft`.</span><span class="sxs-lookup"><span data-stu-id="57960-115">The default is `MiddleLeft`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -62,9 +62,9 @@ ms.locfileid: "59088470"
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="1f2fb-116">Pour définir l’affichent des images et du texte de ToolStripItem par rapport aux autres</span><span class="sxs-lookup"><span data-stu-id="1f2fb-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="57960-116">Pour définir l’affichent des images et du texte de ToolStripItem par rapport aux autres</span><span class="sxs-lookup"><span data-stu-id="57960-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
   
--   <span data-ttu-id="1f2fb-117">Définir le <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="1f2fb-118">Les possibilités sont `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, et `TextBeforeImage`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="1f2fb-119">La valeur par défaut est `ImageBeforeText`.</span><span class="sxs-lookup"><span data-stu-id="1f2fb-119">The default is `ImageBeforeText`.</span></span>  
+- <span data-ttu-id="57960-117">Définir le <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> propriété la valeur souhaitée.</span><span class="sxs-lookup"><span data-stu-id="57960-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="57960-118">Les possibilités sont `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, et `TextBeforeImage`.</span><span class="sxs-lookup"><span data-stu-id="57960-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="57960-119">La valeur par défaut est `ImageBeforeText`.</span><span class="sxs-lookup"><span data-stu-id="57960-119">The default is `ImageBeforeText`.</span></span>  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,9 +75,9 @@ ms.locfileid: "59088470"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f2fb-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1f2fb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57960-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="57960-120">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="1f2fb-121">Vue d’ensemble du contrôle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="1f2fb-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="1f2fb-122">Architecture du contrôle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="1f2fb-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="1f2fb-123">Résumé de la technologie ToolStrip</span><span class="sxs-lookup"><span data-stu-id="1f2fb-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="57960-121">Vue d’ensemble du contrôle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="57960-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="57960-122">Architecture du contrôle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="57960-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="57960-123">Résumé de la technologie ToolStrip</span><span class="sxs-lookup"><span data-stu-id="57960-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

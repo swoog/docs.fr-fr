@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
 ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772591"
 ---
-# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="da1e0-102">Les paramètres optionnels doivent spécifier une valeur par défaut</span><span class="sxs-lookup"><span data-stu-id="da1e0-102">Optional parameters must specify a default value</span></span>
-<span data-ttu-id="da1e0-103">Paramètres optionnels doivent fournir des valeurs par défaut qui peuvent être utilisées si aucun paramètre n’est fourni par une procédure appelante.</span><span class="sxs-lookup"><span data-stu-id="da1e0-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="052ee-102">Les paramètres optionnels doivent spécifier une valeur par défaut</span><span class="sxs-lookup"><span data-stu-id="052ee-102">Optional parameters must specify a default value</span></span>
+<span data-ttu-id="052ee-103">Paramètres optionnels doivent fournir des valeurs par défaut qui peuvent être utilisées si aucun paramètre n’est fourni par une procédure appelante.</span><span class="sxs-lookup"><span data-stu-id="052ee-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
   
- <span data-ttu-id="da1e0-104">**ID d’erreur :** BC30812</span><span class="sxs-lookup"><span data-stu-id="da1e0-104">**Error ID:** BC30812</span></span>  
+ <span data-ttu-id="052ee-104">**ID d’erreur :** BC30812</span><span class="sxs-lookup"><span data-stu-id="052ee-104">**Error ID:** BC30812</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="da1e0-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="da1e0-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="052ee-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="052ee-105">To correct this error</span></span>  
   
--   <span data-ttu-id="da1e0-106">Spécifiez les valeurs par défaut pour les paramètres facultatifs ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="da1e0-106">Specify default values for optional parameters; for example:</span></span>  
+- <span data-ttu-id="052ee-106">Spécifiez les valeurs par défaut pour les paramètres facultatifs ; par exemple :</span><span class="sxs-lookup"><span data-stu-id="052ee-106">Specify default values for optional parameters; for example:</span></span>  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -30,6 +30,6 @@ ms.locfileid: "58821723"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="da1e0-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="da1e0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="052ee-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="052ee-107">See also</span></span>
 
-- [<span data-ttu-id="da1e0-108">Optional</span><span class="sxs-lookup"><span data-stu-id="da1e0-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
+- [<span data-ttu-id="052ee-108">Optional</span><span class="sxs-lookup"><span data-stu-id="052ee-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)

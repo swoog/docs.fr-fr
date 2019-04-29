@@ -3,23 +3,23 @@ title: Le fichier est déjà ouvert
 ms.date: 07/20/2015
 ms.assetid: bbde8390-05cf-4ca4-9c24-073f656bd935
 ms.openlocfilehash: 97cfe5c5fe5548e66b53d6ff859ef9363117015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788464"
 ---
-# <a name="the-file-is-already-open"></a><span data-ttu-id="5cef4-102">Le fichier est déjà ouvert</span><span class="sxs-lookup"><span data-stu-id="5cef4-102">The file is already open</span></span>
-<span data-ttu-id="5cef4-103">Une tentative d’ouverture d’un fichier déjà ouvert a été effectuée.</span><span class="sxs-lookup"><span data-stu-id="5cef4-103">An attempt has been made to open a file that is already open.</span></span>  
+# <a name="the-file-is-already-open"></a><span data-ttu-id="872b6-102">Le fichier est déjà ouvert</span><span class="sxs-lookup"><span data-stu-id="872b6-102">The file is already open</span></span>
+<span data-ttu-id="872b6-103">Une tentative d’ouverture d’un fichier déjà ouvert a été effectuée.</span><span class="sxs-lookup"><span data-stu-id="872b6-103">An attempt has been made to open a file that is already open.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5cef4-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="5cef4-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="872b6-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="872b6-104">To correct this error</span></span>  
   
--   <span data-ttu-id="5cef4-105">Fermez le fichier avant de l’ouvrir.</span><span class="sxs-lookup"><span data-stu-id="5cef4-105">Close the file before attempting to open it.</span></span>  
+- <span data-ttu-id="872b6-105">Fermez le fichier avant de l’ouvrir.</span><span class="sxs-lookup"><span data-stu-id="872b6-105">Close the file before attempting to open it.</span></span>  
   
-     <span data-ttu-id="5cef4-106">ou</span><span class="sxs-lookup"><span data-stu-id="5cef4-106">-or-</span></span>  
+     <span data-ttu-id="872b6-106">- ou -</span><span class="sxs-lookup"><span data-stu-id="872b6-106">-or-</span></span>  
   
--   <span data-ttu-id="5cef4-107">Supprimez l’instruction `FileOpen` redondante de votre code.</span><span class="sxs-lookup"><span data-stu-id="5cef4-107">Remove the redundant `FileOpen` statement from your code.</span></span>  
+- <span data-ttu-id="872b6-107">Supprimez l’instruction `FileOpen` redondante de votre code.</span><span class="sxs-lookup"><span data-stu-id="872b6-107">Remove the redundant `FileOpen` statement from your code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cef4-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5cef4-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="872b6-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="872b6-108">See also</span></span>
 
-- [<span data-ttu-id="5cef4-109">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="5cef4-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="872b6-109">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="872b6-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
