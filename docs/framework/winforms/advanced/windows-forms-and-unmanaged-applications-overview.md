@@ -57,7 +57,7 @@ Les contrôles et les applications Windows Forms peuvent interagir avec des appl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Applications Windows Forms et non managées](windows-forms-and-unmanaged-applications.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interopérabilité COM dans les applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Exemples d’interopérabilité COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
