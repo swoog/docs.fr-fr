@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991250"
 ---
 # <a name="queues-overview"></a>Vue d'ensemble des files d'attente
 Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes passent en plus d’informations sur la façon dont les concepts de file d’attente décrits ici sont représentées dans Windows Communication Foundation (WCF).  
@@ -36,9 +36,9 @@ Cette section présente les concepts généraux et principaux relatifs à la com
 ## <a name="queues-and-transactions"></a>Files d’attente et transactions  
  Les transactions vous permettent de regrouper un jeu d'opérations pour que toutes les opérations échouent si une seule opération échoue. Un exemple d’utilisation des transactions est lorsqu’une personne utilise un distributeur de billets pour transférer 1 000 € de son compte épargne vers son compte chèques. Cela entraîne les opérations suivantes :  
   
--   Le retrait de 1 000 € du compte épargne.  
+- Le retrait de 1 000 € du compte épargne.  
   
--   Le placement de 1 000 € sur le compte chèques.  
+- Le placement de 1 000 € sur le compte chèques.  
   
  Si la première opération réussit et que les 1 000 € sont retirés du compte épargne mais que la deuxième opération échoue, les 1 000 € sont perdus parce qu'ils ont déjà été retirés du compte épargne. Pour garantir la validité des comptes, si une opération échoue, les deux opérations doivent échouer.  
   
@@ -59,9 +59,9 @@ Cette section présente les concepts généraux et principaux relatifs à la com
   
  Toute erreur, par exemple lorsqu'un message ne peut pas atteindre la file d'attente cible ou lors de l'expiration de la durée de vie, doit être traitée séparément. Ainsi, il arrive que les applications en file d'attente écrivent deux jeux de logique :  
   
--   La logique normale du client et du service relative à l'envoi et à la réception des messages.  
+- La logique normale du client et du service relative à l'envoi et à la réception des messages.  
   
--   La logique de compensation chargée de gérer les messages issus de la transmission ou de la remise ayant échoué.  
+- La logique de compensation chargée de gérer les messages issus de la transmission ou de la remise ayant échoué.  
   
  Les sections suivantes traitent de ces concepts.  
   

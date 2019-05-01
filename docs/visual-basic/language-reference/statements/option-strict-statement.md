@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051167"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limite les conversions de type de données implicites aux seules conversions étendues, interdit les liaisons tardives et interdit le typage implicite qui aboutit à un `Object` type.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Notes  
  Lorsque `Option Strict On` ou `Option Strict` apparaît dans un fichier, les conditions suivantes provoquent une erreur de compilation :  
   
--   Conversions restrictives implicites  
+- Conversions restrictives implicites  
   
--   Liaison tardive  
+- Liaison tardive  
   
--   Saisie implicite qui génère un type `Object`  
+- Saisie implicite qui génère un type `Object`  
   
 > [!NOTE]
 >  Dans les configurations des avertissements que vous pouvez définir sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), il existe trois paramètres qui correspondent aux trois conditions qui provoquent une erreur de compilation. Pour plus d’informations sur l’utilisation de ces paramètres, consultez [pour définir les configurations des avertissements dans l’IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) plus loin dans cette rubrique.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  Lorsque vous définissez `Option Strict` à `On`, Visual Basic vérifie que les types de données sont spécifiés pour tous les éléments de programmation. Types de données peuvent être spécifiés explicitement ou spécifiés à l’aide de l’inférence de type local. Spécification de types de données pour tous les éléments de programmation est recommandé pour les raisons suivantes :  
   
--   Il permet la prise en charge IntelliSense pour vos variables et des paramètres. Cela vous permet de vous permet de voir leurs propriétés et autres membres quand vous tapez du code.  
+- Il permet la prise en charge IntelliSense pour vos variables et des paramètres. Cela vous permet de vous permet de voir leurs propriétés et autres membres quand vous tapez du code.  
   
--   Il permet au compilateur d’effectuer la vérification du type. La vérification de type vous permet de trouver des instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de conversion de type. Il identifie également les appels aux méthodes sur les objets qui ne prennent pas en charge ces méthodes.  
+- Il permet au compilateur d’effectuer la vérification du type. La vérification de type vous permet de trouver des instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de conversion de type. Il identifie également les appels aux méthodes sur les objets qui ne prennent pas en charge ces méthodes.  
   
--   Il accélère l’exécution de code. Une des raisons sont que si vous ne spécifiez pas un type de données pour un élément de programmation, le compilateur Visual Basic lui assigne la `Object` type. Code compilé peut avoir à convertir dans les deux sens entre `Object` et d’autres types de données, ce qui réduit les performances.  
+- Il accélère l’exécution de code. Une des raisons sont que si vous ne spécifiez pas un type de données pour un élément de programmation, le compilateur Visual Basic lui assigne la `Object` type. Code compilé peut avoir à convertir dans les deux sens entre `Object` et d’autres types de données, ce qui réduit les performances.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Erreurs de Conversion restrictive implicite  
  Les erreurs de conversion restrictive implicite se produisent quand une conversion de types de données implicite est une conversion restrictive.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Les conversions qui peuvent provoquer des erreurs incluent les conversions implicites qui se produisent dans les expressions. Pour plus d’informations, consultez les rubriques suivantes :  
   
--   [+, opérateur](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+, opérateur](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= (opérateur)](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= (opérateur)](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ =, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ =, Opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char (type de données)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char (type de données)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Lorsque vous concaténez des chaînes à l’aide de la [& opérateur](../../../visual-basic/language-reference/operators/concatenation-operator.md), toutes les conversions pour les chaînes sont considérées comme des étendues. Pour ces conversions ne génèrent pas d’une erreur de conversion restrictive implicite, même `Option Strict` se trouve sur.  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> Pour définir les configurations des avertissements dans l’IDE  
  Lorsque vous utilisez le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) au lieu d’un `Option Strict` instruction, vous avez un contrôle supplémentaire sur les conditions qui génèrent des erreurs. Le **configurations des avertissements** section de la **Page Compiler** possède des paramètres qui correspondent aux trois conditions qui provoquent une erreur de compilation lorsque `Option Strict` est sur. Voici ces paramètres :  
   
--   **Conversion implicite**  
+- **Conversion implicite**  
   
--   **Liaison tardive ; l’appel peut échouer au moment de l’exécution**  
+- **Liaison tardive ; l’appel peut échouer au moment de l’exécution**  
   
--   **Type implicite ; objet pris par défaut**  
+- **Type implicite ; objet pris par défaut**  
   
  Quand vous affectez la valeur **On** à **Option Strict**, chacun de ces trois paramètres de configuration d’avertissement prend la valeur **Erreur**. Quand vous affectez la valeur **Off** à **Option Strict**, chacun des trois paramètres prend la valeur **Aucun**.  
   

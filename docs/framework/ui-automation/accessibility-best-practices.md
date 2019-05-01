@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033226"
 ---
 # <a name="accessibility-best-practices"></a>Meilleures pratiques d'accessibilité
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074233"
   
  Les applications doivent fournir les interfaces de clavier suivantes :  
   
--   des taquets de tabulations pour tous les contrôles avec lesquels l'utilisateur peut interagir, comme les boutons, les liens ou les zones de liste ;  
+- des taquets de tabulations pour tous les contrôles avec lesquels l'utilisateur peut interagir, comme les boutons, les liens ou les zones de liste ;  
   
--   un ordre logique de tabulation.  
+- un ordre logique de tabulation.  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Afficher le focus clavier  
@@ -90,11 +90,11 @@ ms.locfileid: "59074233"
   
  Les applications doivent procéder comme suit en ce qui concerne le focus clavier :  
   
--   un des éléments doit toujours avoir le focus clavier ;  
+- un des éléments doit toujours avoir le focus clavier ;  
   
--   le focus clavier doit être visible et évident ;  
+- le focus clavier doit être visible et évident ;  
   
--   les sélections et/ou les éléments possédant le focus doivent être visuellement mis en surbrillance.  
+- les sélections et/ou les éléments possédant le focus doivent être visuellement mis en surbrillance.  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Prendre en charge les standards de navigation et les schémas de navigation puissants  
@@ -102,11 +102,11 @@ ms.locfileid: "59074233"
   
  Les applications doivent fournir les interfaces de clavier suivantes :  
   
--   touches de raccourci et touches d'accès rapide soulignées pour toutes les commandes, ainsi que pour tous les menus et contrôles ;  
+- touches de raccourci et touches d'accès rapide soulignées pour toutes les commandes, ainsi que pour tous les menus et contrôles ;  
   
--   raccourcis clavier vers les liens importants ;  
+- raccourcis clavier vers les liens importants ;  
   
--   tous les éléments de menu ont une touche d'accès rapide ; tous les boutons ont des touches accélérateur ; toutes les commandes ont une touche accélérateur.  
+- tous les éléments de menu ont une touche d'accès rapide ; tous les boutons ont des touches accélérateur ; toutes les commandes ont une touche accélérateur.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Ne pas laisser l'emplacement de la souris interférer avec la navigation au clavier  

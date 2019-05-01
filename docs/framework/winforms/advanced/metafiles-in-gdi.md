@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010023"
 ---
 # <a name="metafiles-in-gdi"></a>Métafichiers dans GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit la <xref:System.Drawing.Imaging.Metafile> classe afin que vous pouvez enregistrer et afficher des métafichiers. Un métafichier, également appelé image vectorielle, est une image qui est stockée comme une séquence de commandes et les paramètres de dessin. Les commandes et les paramètres enregistrement dans un <xref:System.Drawing.Imaging.Metafile> objet peut être stocké en mémoire ou enregistré dans un fichier ou le flux.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119858"
 ## <a name="metafile-formats"></a>Formats de métafichier  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut afficher des métafichiers qui ont été stockés dans les formats suivants :  
   
--   Métafichier Windows (WMF)  
+- Métafichier Windows (WMF)  
   
--   métafichier amélioré (EMF)  
+- métafichier amélioré (EMF)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut enregistrer des métafichiers aux formats EMF et EMF +, mais pas dans le format WMF.  
   

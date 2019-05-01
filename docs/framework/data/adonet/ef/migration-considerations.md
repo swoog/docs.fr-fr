@@ -3,11 +3,11 @@ title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034032"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -17,13 +17,13 @@ ms.locfileid: "59310419"
 ## <a name="general-migration-considerations"></a>Considérations générales sur la migration  
  Les considérations suivantes s'appliquent lorsque vous effectuez la migration d'une application vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] :  
   
--   Toute application qui utilise le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] à partir de version 3.5 SP1 peut être migrée vers Entity Framework, tant que le fournisseur de données pour la source de données qui est utilisé par l’application prend en charge Entity Framework.  
+- Toute application qui utilise le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] à partir de version 3.5 SP1 peut être migrée vers Entity Framework, tant que le fournisseur de données pour la source de données qui est utilisé par l’application prend en charge Entity Framework.  
   
--   Il est possible qu’Entity Framework ne prenne pas en charge toutes les fonctionnalités d’un fournisseur de source de données, même si ce fournisseur prend en charge Entity Framework.  
+- Il est possible qu’Entity Framework ne prenne pas en charge toutes les fonctionnalités d’un fournisseur de source de données, même si ce fournisseur prend en charge Entity Framework.  
   
--   Pour une application volumineuse ou complexe, vous n'êtes pas obligé de migrer la totalité de l'application vers Entity Framework à la fois. Toutefois, toute partie de l’application qui n’utilise pas Entity Framework doit néanmoins être modifiée lorsque la source de données change.  
+- Pour une application volumineuse ou complexe, vous n'êtes pas obligé de migrer la totalité de l'application vers Entity Framework à la fois. Toutefois, toute partie de l’application qui n’utilise pas Entity Framework doit néanmoins être modifiée lorsque la source de données change.  
   
--   La connexion de fournisseur de données utilisée par Entity Framework peut être partagée avec d’autres parties de votre application car [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- La connexion de fournisseur de données utilisée par Entity Framework peut être partagée avec d’autres parties de votre application car [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Tâches de migration communes  
  Le chemin d’accès pour effectuer la migration d’une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dépend à la fois du type d’application et de la stratégie d’accès aux données existante. Toutefois, vous devez toujours effectuer les tâches suivantes lorsque vous migrez une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

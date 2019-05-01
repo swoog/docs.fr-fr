@@ -7,11 +7,11 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with Rotation3DAnimation
 ms.assetid: a92223ec-b634-4f5e-8e79-d33bc43ecfb3
 ms.openlocfilehash: dd804fefc174e28fc5211a0222ab13f38c6b6e5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010122"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Procédure : Animer une rotation 3D à l’aide de Rotation3DAnimation
 L’exemple suivant montre comment faire pivoter un objet 3D pendant qu’il « tremblement » à l’aide de <xref:System.Windows.Media.Animation.Rotation3DAnimation> pour animer la <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propriété de la <xref:System.Windows.Media.Media3D.RotateTransform3D> objet appliqué à l’objet 3D.  

@@ -3,11 +3,11 @@ title: Attaques par relecture
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991144"
 ---
 # <a name="replay-attacks"></a>Attaques par relecture
 Un *attaque par relecture* se produit lorsqu’un intrus copie un flux de messages entre deux correspondants et relit le flux à un ou plusieurs des parties. Sauf atténuation, les ordinateurs sujets à l'attaque traitent le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
@@ -17,11 +17,11 @@ Un *attaque par relecture* se produit lorsqu’un intrus copie un flux de messag
   
  Les attaques par réflexion sont atténuées par défaut, car le modèle de service WCF ajoute un ID de message signé aux messages de demande et attend un signé `relates-to` en-tête sur les messages de réponse. Par conséquent, le message de demande ne peut pas être relu en tant que réponse. Dans les scénarios de messages fiables sécurisés, les attaques de réflexion sont atténuées pour les raisons suivantes :  
   
--   Les schémas de séquence de création et de message de réponse de séquence de création sont différents.  
+- Les schémas de séquence de création et de message de réponse de séquence de création sont différents.  
   
--   Pour les séquences simplex, les messages de séquence envoyés par le client ne peuvent pas lui être relus car le client ne peut pas comprendre de tels messages.  
+- Pour les séquences simplex, les messages de séquence envoyés par le client ne peuvent pas lui être relus car le client ne peut pas comprendre de tels messages.  
   
--   Pour les séquences duplex, les deux ID de séquence doivent être uniques. Par conséquent, un message de séquence sortant ne peut pas être relu en tant que message de séquence entrant (tous les en-têtes et corps de séquence sont également signés).  
+- Pour les séquences duplex, les deux ID de séquence doivent être uniques. Par conséquent, un message de séquence sortant ne peut pas être relu en tant que message de séquence entrant (tous les en-têtes et corps de séquence sont également signés).  
   
  Les seules liaisons susceptibles aux attaques de réflexion sont celles sans WS-Addressing : des liaisons personnalisées pour lesquelles WS-Addressing est désactivé et qui utilisent la sécurité basée sur clé symétrique. Le <xref:System.ServiceModel.BasicHttpBinding> n'utilise pas WS-Addressing par défaut, mais il n'utilise pas la sécurité basée sur clé symétrique d'une manière qui lui permet d'être vulnérable à cette attaque.  
   
@@ -32,9 +32,9 @@ Un *attaque par relecture* se produit lorsqu’un intrus copie un flux de messag
   
  Les solutions d’atténuation sont les suivantes :  
   
--   Utilisez la sécurité de mode de message avec des jetons de contexte de sécurité avec état (avec ou sans la conversation sécurisée activée). Pour plus d'informations, voir [Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- Utilisez la sécurité de mode de message avec des jetons de contexte de sécurité avec état (avec ou sans la conversation sécurisée activée). Pour plus d'informations, voir [Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
--   Configurez le service pour utiliser la sécurité de niveau transport.  
+- Configurez le service pour utiliser la sécurité de niveau transport.  
   
 ## <a name="see-also"></a>Voir aussi
 

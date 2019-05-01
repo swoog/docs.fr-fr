@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Énumérer des polices système'
+title: 'Procédure : Énumérer les polices système'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - enumerating [WPF], system fonts
 ms.assetid: 36e37791-55b9-4f01-a496-5cc10335e6a6
 ms.openlocfilehash: c7e81b5d1b70ba911a0b505219f7977e019038cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001596"
 ---
-# <a name="how-to-enumerate-system-fonts"></a>Procédure : Énumérer des polices système
+# <a name="how-to-enumerate-system-fonts"></a>Procédure : Énumérer les polices système
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment énumérer les polices dans la collection de polices système. Le nom de famille de polices de chaque <xref:System.Windows.Media.FontFamily> dans <xref:System.Windows.Media.Fonts.SystemFontFamilies%2A> est ajouté en tant qu’élément à une zone de liste déroulante.  
   

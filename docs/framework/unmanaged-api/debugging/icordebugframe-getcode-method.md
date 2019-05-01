@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7a4e8c6fa91ee43c33fe0f99d50bd4b1af4a0fd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988778"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode, méthode
 Obtient un pointeur vers le code associé à ce frame de pile.  
@@ -39,7 +39,7 @@ HRESULT GetCode (
  `ppCode`  
  [out] Pointeur vers l’adresse d’un objet ICorDebugCode qui représente le code associé à ce frame.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

@@ -3,11 +3,11 @@ title: Problèmes de sécurité relatifs à la journalisation des messages
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998151"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
@@ -21,11 +21,11 @@ Cette rubrique contient des instructions permettant de protéger des données se
   
  Les conseils suivants vous permettent d'éviter l'exposition involontaire du contenu d'un fichier journal :  
   
--   Assurez-vous que les fichiers journaux sont protégés par des listes de contrôle d'accès (ACL, Access Control Lists), à la fois dans les scénarios auto-hébergés et hébergés sur le Web.  
+- Assurez-vous que les fichiers journaux sont protégés par des listes de contrôle d'accès (ACL, Access Control Lists), à la fois dans les scénarios auto-hébergés et hébergés sur le Web.  
   
--   Choisissez une extension de fichier qui ne peut pas être facilement fournie à l’aide d’une demande Web. Par exemple, l’extension de fichier .xml n’est pas un choix sûr. Consultez le guide d'administration IIS (Internet Information Services) pour obtenir la liste des extensions qui peuvent être fournies.  
+- Choisissez une extension de fichier qui ne peut pas être facilement fournie à l’aide d’une demande Web. Par exemple, l’extension de fichier .xml n’est pas un choix sûr. Consultez le guide d'administration IIS (Internet Information Services) pour obtenir la liste des extensions qui peuvent être fournies.  
   
--   Spécifiez un chemin d'accès absolu pour l'emplacement de fichier journal, qui doit se trouver hors du répertoire public de la racine virtuelle de l'hôte Web afin d'empêcher tout intervenant externe d'y accéder à l'aide d'un navigateur Web.  
+- Spécifiez un chemin d'accès absolu pour l'emplacement de fichier journal, qui doit se trouver hors du répertoire public de la racine virtuelle de l'hôte Web afin d'empêcher tout intervenant externe d'y accéder à l'aide d'un navigateur Web.  
   
  Par défaut, les clés et informations personnelles, telles que le nom d'utilisateur et le mot de passe, ne sont pas enregistrées dans les traces et les messages consignés. Toutefois, un administrateur d'ordinateur peut utiliser l'attribut `enableLoggingKnownPII` dans l'élément `machineSettings` du fichier Machine.config pour autoriser les applications s'exécutant sur l'ordinateur à enregistrer les informations personnelles connues. La configuration suivante montre comment procéder :  
   
@@ -99,13 +99,13 @@ Cette rubrique contient des instructions permettant de protéger des données se
 ## <a name="events-triggered-by-message-logging"></a>Événements déclenchés par la journalisation des messages  
  La section suivante répertorie tous les événements émis par la journalisation des messages.  
   
--   Enregistrement des messages : Cet événement est émis lors de l’enregistrement des messages est activé dans la configuration ou via WMI. Le contenu de l'événement est "La journalisation des messages a été activée. Des informations sensibles peuvent être enregistrées en clair, même si elles ont été chiffrées sur le câble, par exemple, corps de message."  
+- Enregistrement des messages : Cet événement est émis lors de l’enregistrement des messages est activé dans la configuration ou via WMI. Le contenu de l'événement est "La journalisation des messages a été activée. Des informations sensibles peuvent être enregistrées en clair, même si elles ont été chiffrées sur le câble, par exemple, corps de message."  
   
--   Message de déconnexion : Cet événement est émis lorsque la journalisation des messages est désactivée via WMI. Le contenu de l'événement est "La journalisation des messages a été activée."  
+- Message de déconnexion : Cet événement est émis lorsque la journalisation des messages est désactivée via WMI. Le contenu de l'événement est "La journalisation des messages a été activée."  
   
--   Ouvrez une session PII connu : Cet événement est émis lors de l’enregistrement des PII connu est activé. Cela se produit lorsque le `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
+- Ouvrez une session PII connu : Cet événement est émis lors de l’enregistrement des PII connu est activé. Cela se produit lorsque le `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
   
--   Ouvrez une session PII connu ne pas autorisé : Cet événement est émis lors de l’enregistrement des PII connu n’est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `false`. Aucune exception n'est levée.  
+- Ouvrez une session PII connu ne pas autorisé : Cet événement est émis lors de l’enregistrement des PII connu n’est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `false`. Aucune exception n'est levée.  
   
  Ces événements peuvent être affichés dans l'outil Observateur d'événements fourni avec Windows. Pour plus d’informations, consultez [la consignation des événements](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

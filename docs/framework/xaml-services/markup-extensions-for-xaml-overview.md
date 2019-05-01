@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971910"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Vue d'ensemble des extensions de balisage pour XAML
 Les extensions de balisage constituent une technique XAML permettant d'obtenir une valeur qui n'est ni une primitive ni un type XAML spécifique. Pour l'utilisation d'attributs, les extensions de balisage utilisent la séquence de caractères connue d'une accolade ouvrante `{` pour entrer la portée d'extension de balisage et d'une accolade fermante `}` pour quitter. Lors de l'utilisation des services XAML .NET Framework, vous pouvez utiliser certaines des extensions de balisage prédéfinies du langage XAML à partir de l'assembly System.Xaml. Vous pouvez également créer une sous-classe à partir de la classe <xref:System.Windows.Markup.MarkupExtension> , définie dans System.Xaml, et définir vos propres extensions de balisage. Vous pouvez également utiliser des extensions de balisage définies par une infrastructure particulière, si vous référencez déjà cette infrastructure.  
@@ -54,9 +54,9 @@ Les extensions de balisage constituent une technique XAML permettant d'obtenir u
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Définition du type de prise en charge pour une extension de balisage personnalisée  
  Lorsque vous utilisez des services XAML .NET Framework ou des infrastructures qui reposent sur ces services, vous avez deux possibilités pour nommer le type de prise en charge d'extension de balisage. Le nom de type se rapporte à la façon dont les writers d'objet XAML tentent d'accéder à un type de prise en charge d'extension de balisage et de l'appeler lorsqu'ils rencontrent une utilisation d'extension de balisage en XAML. Utilisez l'une des stratégies d'affectation de noms suivantes :  
   
--   Spécifiez le nom de type afin qu'il corresponde exactement au jeton d'utilisation du balisage XAML. Par exemple, pour prendre en charge l'utilisation d'une extension `{Collate ...}` , nommez le type de prise en charge `Collate`.  
+- Spécifiez le nom de type afin qu'il corresponde exactement au jeton d'utilisation du balisage XAML. Par exemple, pour prendre en charge l'utilisation d'une extension `{Collate ...}` , nommez le type de prise en charge `Collate`.  
   
--   Spécifiez le nom du type de façon à ce qu'il corresponde au jeton de la chaîne d'utilisation, suivi du suffixe `Extension`. Par exemple, pour prendre en charge l'utilisation d'une extension `{Collate ...}` , nommez le type de prise en charge `CollateExtension`.  
+- Spécifiez le nom du type de façon à ce qu'il corresponde au jeton de la chaîne d'utilisation, suivi du suffixe `Extension`. Par exemple, pour prendre en charge l'utilisation d'une extension `{Collate ...}` , nommez le type de prise en charge `CollateExtension`.  
   
  L'ordre de recherche consiste à rechercher d'abord le nom de classe avec le suffixe `Extension`, puis le nom de classe sans le suffixe `Extension` .  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  Le traitement fonctionne de manière conceptuelle comme si l'extension de balisage était un objet à créer, puis ses valeurs de membre sont définies. Chaque propriété spécifiée à définir est évaluée de la même manière qu'un membre spécifié peut être défini sur un objet créé lorsque le code XAML est analysé. Il existe deux différences majeures :  
   
--   Comme noté précédemment, un type de prise en charge d'extension de balisage n'a pas besoin d'un constructeur par défaut pour être instancié en XAML. Sa construction d'objet est différée jusqu'à ce que ses éventuels arguments dans la syntaxe de texte soient mis sous forme de jeton et évalués comme arguments de position ou nommés ; le constructeur approprié est appelé à ce moment-là.  
+- Comme noté précédemment, un type de prise en charge d'extension de balisage n'a pas besoin d'un constructeur par défaut pour être instancié en XAML. Sa construction d'objet est différée jusqu'à ce que ses éventuels arguments dans la syntaxe de texte soient mis sous forme de jeton et évalués comme arguments de position ou nommés ; le constructeur approprié est appelé à ce moment-là.  
   
--   Les utilisations d'extensions de balisage peuvent être imbriquées. L'extension de balisage la plus profonde est évaluée en premier. Vous pouvez donc supposer une utilisation de ce type et déclarer l'un des paramètres de construction comme étant un type qui exige un convertisseur de valeurs (tel qu'une extension de balisage) à générer.  
+- Les utilisations d'extensions de balisage peuvent être imbriquées. L'extension de balisage la plus profonde est évaluée en premier. Vous pouvez donc supposer une utilisation de ce type et déclarer l'un des paramètres de construction comme étant un type qui exige un convertisseur de valeurs (tel qu'une extension de balisage) à générer.  
   
  Un cas de dépendance d'un traitement de ce type se trouve dans l'exemple précédent. Le writer d'objet XAML des services XAML .NET Framework convertit les noms de constantes d'énumération en valeurs énumérées à un niveau natif.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> signale les informations <xref:System.Type> pour le type d'objet que <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne. Par sa simple signature <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> retourne <xref:System.Object>. Toutefois, divers consommateurs peuvent souhaiter obtenir des informations de type de retour plus précises. Cela inclut :  
   
--   des concepteurs et IDE qui peuvent être en mesure de fournir une prise en charge tenant compte du type pour les utilisations d'extensions de balisage ;  
+- des concepteurs et IDE qui peuvent être en mesure de fournir une prise en charge tenant compte du type pour les utilisations d'extensions de balisage ;  
   
--   des implémentations avancées de gestionnaires `SetMarkupExtension` sur les classes cibles, qui peuvent faire appel à la réflexion pour déterminer le type de retour d'une extension de balisage au lieu de se brancher sur des implémentations <xref:System.Windows.Markup.MarkupExtension> connues spécifiques via leur nom.  
+- des implémentations avancées de gestionnaires `SetMarkupExtension` sur les classes cibles, qui peuvent faire appel à la réflexion pour déterminer le type de retour d'une extension de balisage au lieu de se brancher sur des implémentations <xref:System.Windows.Markup.MarkupExtension> connues spécifiques via leur nom.  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Sérialisation d'utilisations d'extensions de balisage  

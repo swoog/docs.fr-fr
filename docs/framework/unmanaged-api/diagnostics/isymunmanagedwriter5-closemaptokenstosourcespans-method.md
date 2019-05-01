@@ -5,11 +5,11 @@ ms.assetid: f8a0c0a2-a11d-436c-aa85-bc110215cfd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b3dea6b9710f1ee5ccf8c51261f59b2de026f5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962277"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::CloseMapTokensToSourceSpans, méthode
 Fermez la section de données personnalisé spécial pour l’étendue de jeton pour source des informations de mappage. Après sa fermeture, aucune information de mappage plus ne peut être ajoutée.  

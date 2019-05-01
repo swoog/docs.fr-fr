@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050218"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : Disposition et conception
 La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application peut influer sur ses performances en créant des charges mémoire inutiles pour calculer la disposition et valider les références d’objet. La construction d’objets, en particulier au moment de l’exécution, peut affecter les caractéristiques de performances de votre application.  
@@ -26,25 +26,25 @@ La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
   
  Le système de disposition effectue deux passes pour chaque membre enfant d’une collection : une passe de mesure et une passe de réorganisation. Chaque objet enfant propose sa propre implémentation substituée de le <xref:System.Windows.UIElement.Measure%2A> et <xref:System.Windows.UIElement.Arrange%2A> méthodes afin de fournir son propre comportement de disposition spécifique. Pour schématiser, une disposition est un système récursif qui entraîne le dimensionnement, le positionnement et le tracé d’un élément à l’écran.  
   
--   Un enfant <xref:System.Windows.UIElement> objet commence le processus de disposition en faisant d’abord ses propriétés principales mesurées.  
+- Un enfant <xref:System.Windows.UIElement> objet commence le processus de disposition en faisant d’abord ses propriétés principales mesurées.  
   
--   L’objet <xref:System.Windows.FrameworkElement> propriétés liées à la taille, telles que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>, sont évaluées.  
+- L’objet <xref:System.Windows.FrameworkElement> propriétés liées à la taille, telles que <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, et <xref:System.Windows.FrameworkElement.Margin%2A>, sont évaluées.  
   
--   <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, telles que la <xref:System.Windows.Controls.DockPanel.Dock%2A> propriété de la <xref:System.Windows.Controls.DockPanel>, ou le <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriété de la <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-logique spécifique est appliquée, telles que la <xref:System.Windows.Controls.DockPanel.Dock%2A> propriété de la <xref:System.Windows.Controls.DockPanel>, ou le <xref:System.Windows.Controls.StackPanel.Orientation%2A> propriété de la <xref:System.Windows.Controls.StackPanel>.  
   
--   Le contenu est réorganisé, ou positionné, après que tous les objets enfants ont été mesurés.  
+- Le contenu est réorganisé, ou positionné, après que tous les objets enfants ont été mesurés.  
   
--   La collection d’objets enfants est dessinée à l’écran.  
+- La collection d’objets enfants est dessinée à l’écran.  
   
  Le processus de passe de disposition est encore appelé si l’une des actions suivantes se produit :  
   
--   Un objet enfant est ajouté à la collection.  
+- Un objet enfant est ajouté à la collection.  
   
--   Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué à l’objet enfant.  
+- Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> est appliqué à l’objet enfant.  
   
--   Le <xref:System.Windows.UIElement.UpdateLayout%2A> méthode est appelée pour l’objet enfant.  
+- Le <xref:System.Windows.UIElement.UpdateLayout%2A> méthode est appelée pour l’objet enfant.  
   
--   Quand une modification est apportée à la valeur d’une propriété de dépendance marquée avec des métadonnées qui affectent les passes de mesure ou de réorganisation.  
+- Quand une modification est apportée à la valeur d’une propriété de dépendance marquée avec des métadonnées qui affectent les passes de mesure ou de réorganisation.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Utiliser le panneau le plus efficace si possible  
  La complexité du processus de disposition est directement basée sur le comportement de disposition de la <xref:System.Windows.Controls.Panel>-éléments dérivés que vous utilisez. Par exemple, un <xref:System.Windows.Controls.Grid> ou <xref:System.Windows.Controls.StackPanel> contrôle fournit beaucoup plus de fonctionnalités qu’un <xref:System.Windows.Controls.Canvas> contrôle. Ce choix accru de fonctionnalités se traduit par une augmentation du coût des performances. Toutefois, si vous n’avez pas besoin de la fonctionnalité qui un <xref:System.Windows.Controls.Grid> fournit de contrôle, vous devez utiliser les alternatives moins coûteuses, comme un <xref:System.Windows.Controls.Canvas> ou un panneau personnalisé.  

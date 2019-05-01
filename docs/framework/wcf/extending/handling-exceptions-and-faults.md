@@ -3,11 +3,11 @@ title: Gestion des exceptions et des erreurs
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991406"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestion des exceptions et des erreurs
 Les exceptions sont utilisées pour communiquer localement des erreurs au sein du service ou de l'implémentation cliente. Les erreurs, en revanche, sont utilisées pour communiquer des erreurs au-delà des limites du service, notamment du serveur au client ou vice versa. En plus des erreurs, les canaux de transport utilisent souvent des mécanismes propres au transport pour communiquer des erreurs de niveau transport. Par exemple, le transport HTTP utilise des codes d'état tels que 404 pour communiquer une URL de point de terminaison inexistante (il n'existe aucun point de terminaison pour renvoyer une erreur). Ce document se compose de trois sections qui fournissent des indications aux auteurs de canaux personnalisés. La première section indique quand et comment définir et lever des exceptions. La deuxième section fournir des indications sur la génération et la consommation des erreurs. La troisième section explique comment fournir des informations de suivi afin d'aider l'utilisateur de votre canal personnalisé à résoudre les problèmes des applications en cours d'exécution.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>Traçage  
  .NET Framework fournit un mécanisme pour suivre l'exécution des programmes afin de faciliter le diagnostic des applications de production ou des problèmes intermittents lorsqu'il n'est pas possible de joindre juste un débogueur et de parcourir le code. Les composants principaux de ce mécanisme sont dans l'espace de noms <xref:System.Diagnostics?displayProperty=nameWithType> et se composent de :  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, qui est la source d'informations de suivi à écrire, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, qui est une classe de base abstraite pour les écouteurs concrets qui reçoivent les informations à suivre à partir de <xref:System.Diagnostics.TraceSource> et qui les transmettent à une destination spécifique à l'écouteur. Par exemple, <xref:System.Diagnostics.XmlWriterTraceListener> transmet les informations de suivi à un fichier XML. Enfin, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, qui permet à l'utilisateur de l'application de contrôler les commentaires de suivi et qui est en général spécifié dans la configuration.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, qui est la source d'informations de suivi à écrire, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, qui est une classe de base abstraite pour les écouteurs concrets qui reçoivent les informations à suivre à partir de <xref:System.Diagnostics.TraceSource> et qui les transmettent à une destination spécifique à l'écouteur. Par exemple, <xref:System.Diagnostics.XmlWriterTraceListener> transmet les informations de suivi à un fichier XML. Enfin, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, qui permet à l'utilisateur de l'application de contrôler les commentaires de suivi et qui est en général spécifié dans la configuration.  
   
--   Outre les composants principaux, vous pouvez utiliser la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) d’afficher et rechercher WCF effectue le suivi. L’outil est conçu spécifiquement pour les fichiers de trace généré par WCF et écrits à l’aide de <xref:System.Diagnostics.XmlWriterTraceListener>. La figure suivante montre les divers composants impliqués dans le suivi.  
+- Outre les composants principaux, vous pouvez utiliser la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) d’afficher et rechercher WCF effectue le suivi. L’outil est conçu spécifiquement pour les fichiers de trace généré par WCF et écrits à l’aide de <xref:System.Diagnostics.XmlWriterTraceListener>. La figure suivante montre les divers composants impliqués dans le suivi.  
   
  ![Gestion des exceptions et erreurs](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

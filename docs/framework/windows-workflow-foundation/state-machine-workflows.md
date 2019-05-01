@@ -3,11 +3,11 @@ title: Workflows d'ordinateur d'état
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004683"
 ---
 # <a name="state-machine-workflows"></a>Workflows d'ordinateur d'état
 Une machine à états représente un paradigme connu pour développer des programmes. L'activité <xref:System.Activities.Statements.StateMachine>, avec <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, et d'autres activités peut être utilisée pour générer des programmes de workflow de machine à états. Cette rubrique fournit une vue d'ensemble de la création des workflows de machine à états.  
@@ -15,11 +15,11 @@ Une machine à états représente un paradigme connu pour développer des progra
 ## <a name="state-machine-workflow-overview"></a>Présentation du workflow de machine à états  
  Les workflows de machine à états fournissent un style de modélisation avec lequel vous pouvez modéliser votre workflow de façon pilotée par événements. Une activité <xref:System.Activities.Statements.StateMachine> contient les états et les transitions qui composent la logique de la machine à états, et peut être utilisée partout où une activité peut être utilisée. Il existe plusieurs classes dans le runtime de machine à états :  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Pour créer un workflow de machine à états, les états sont ajoutés à une activité <xref:System.Activities.Statements.StateMachine>, et les transitions sont utilisées pour contrôler le flux entre les états. La capture d’écran suivante, à partir de la [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine d’état](how-to-create-a-state-machine-workflow.md), affiche un workflow d’ordinateur d’état avec trois états et transitions de trois. **Initialize Target** est l’état initial et représente le premier état dans le flux de travail. Cela est indiqué par la ligne de début à partir du **Démarrer** nœud. L’état final dans le flux de travail est nommé **FinalState**et représente le point auquel le flux de travail est terminé.  
   

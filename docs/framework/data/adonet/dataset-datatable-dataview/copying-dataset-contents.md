@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034425"
 ---
 # <a name="copying-dataset-contents"></a>Copie de contenu de DataSet
 Vous pouvez créer une copie d’un <xref:System.Data.DataSet> afin que vous pouvez travailler avec des données sans affecter les données d’origine, ou travailler avec un sous-ensemble des données à partir d’un **jeu de données**. Lorsque vous copiez un **DataSet**, vous pouvez :  
   
--   Créer une copie exacte de la **DataSet**, y compris le schéma, les données, les informations d’état de ligne et les versions de ligne.  
+- Créer une copie exacte de la **DataSet**, y compris le schéma, les données, les informations d’état de ligne et les versions de ligne.  
   
--   Créer un **DataSet** qui contient le schéma de configuration existant **DataSet**, mais uniquement les lignes qui ont été modifiées. Vous pouvez retourner toutes les lignes qui ont été modifiées, ou spécifier un spécifique **DataRowState**. Pour plus d’informations sur les États des lignes, consultez [États des lignes et des Versions de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Créer un **DataSet** qui contient le schéma de configuration existant **DataSet**, mais uniquement les lignes qui ont été modifiées. Vous pouvez retourner toutes les lignes qui ont été modifiées, ou spécifier un spécifique **DataRowState**. Pour plus d’informations sur les États des lignes, consultez [États des lignes et des Versions de ligne](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Copier le schéma, ou la structure relationnelle, de la **DataSet** uniquement, sans copie toutes les lignes. Les lignes peuvent être importées dans un objet <xref:System.Data.DataTable> existant à l'aide de la méthode <xref:System.Data.DataTable.ImportRow%2A>.  
+- Copier le schéma, ou la structure relationnelle, de la **DataSet** uniquement, sans copie toutes les lignes. Les lignes peuvent être importées dans un objet <xref:System.Data.DataTable> existant à l'aide de la méthode <xref:System.Data.DataTable.ImportRow%2A>.  
   
  Pour créer une copie exacte de la **DataSet** qui inclut le schéma et les données, utilisez le <xref:System.Data.DataSet.Copy%2A> méthode de la **DataSet**. L’exemple de code suivant montre comment créer une copie exacte de la **DataSet**.  
   

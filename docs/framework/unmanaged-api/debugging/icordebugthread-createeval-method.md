@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994069"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval, méthode
 Crée un objet ICorDebugEval qui recueille et expose les fonctionnalités de ICorDebugThread.  
@@ -42,7 +42,7 @@ HRESULT CreateEval (
 ## <a name="remarks"></a>Notes  
  L’objet d’évaluation envoie une nouvelle chaîne sur le thread avant de procéder à son calcul. Cela interrompt le calcul en cours d’exécution sur le thread jusqu'à ce que la version d’évaluation se termine.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

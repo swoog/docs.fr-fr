@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
 ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973158"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Procédure : Déclarer des événements personnalisés pour économiser la mémoire (Visual Basic)
 Il existe plusieurs circonstances quand il est important qu’une application limiter son utilisation de la mémoire. Événements personnalisés permettent à l’application pour utiliser la mémoire uniquement pour les événements qu’il gère.  

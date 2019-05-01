@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050049"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout, méthode
 Exécute la disposition des champs pour une classe qui a été défini par un appel antérieur à [DefineTypeDef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Toutefois, vous souhaiterez peut-être les champs disposés selon la disposition de code non managé. Dans ce cas, choisissez une disposition séquentielle ou explicite et appelez `SetClassLayout` pour terminer la disposition des champs :  
   
--   Disposition séquentielle : Spécifiez la taille de compression. Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le décalage plus petits du champ. Définissez `rFieldOffsets` et `ulClassSize` à zéro.  
+- Disposition séquentielle : Spécifiez la taille de compression. Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le décalage plus petits du champ. Définissez `rFieldOffsets` et `ulClassSize` à zéro.  
   
--   Disposition explicite : Spécifier le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.  
+- Disposition explicite : Spécifier le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

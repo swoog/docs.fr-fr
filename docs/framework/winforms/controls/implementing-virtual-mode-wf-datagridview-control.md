@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973769"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procédure pas à pas : implémentation du mode virtuel dans le contrôle DataGridView Windows Forms
 Lorsque vous souhaitez afficher de très grandes quantités de données tabulaires dans un <xref:System.Windows.Forms.DataGridView> contrôle, vous pouvez définir le <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriété `true` et gérer explicitement l’interaction du contrôle avec son magasin de données. Cela vous permet d’optimiser les performances du contrôle dans cette situation.  
@@ -112,16 +112,16 @@ Lorsque vous souhaitez afficher de très grandes quantités de données tabulair
   
 #### <a name="to-test-the-form"></a>Pour tester le formulaire  
   
--   Compilez et exécutez l'application.  
+- Compilez et exécutez l'application.  
   
      Vous verrez un <xref:System.Windows.Forms.DataGridView> contrôle rempli avec trois enregistrements de client. Vous pouvez modifier les valeurs de plusieurs cellules dans une ligne et appuyez sur ÉCHAP deux fois en mode édition et une fois en dehors du mode d’édition pour rétablir la ligne entière pour ses valeurs d’origine. Lorsque vous modifiez, ajouter ou supprimer des lignes dans le contrôle, `Customer` objets dans le magasin de données soient modifiés, ajoutés ou supprimés.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Cette application vous donne une compréhension élémentaire des événements que vous devez gérer pour implémenter le mode virtuel dans le <xref:System.Windows.Forms.DataGridView> contrôle. Vous pouvez améliorer cette application de base de plusieurs façons :  
   
--   Implémenter un magasin de données qui met en cache les valeurs à partir d’une base de données externe. Le cache doit récupérer et ignorer les valeurs en fonction des besoins afin qu’il contienne uniquement ce qui est nécessaire pour l’affichage tout en consommant une petite quantité de mémoire sur l’ordinateur client.  
+- Implémenter un magasin de données qui met en cache les valeurs à partir d’une base de données externe. Le cache doit récupérer et ignorer les valeurs en fonction des besoins afin qu’il contienne uniquement ce qui est nécessaire pour l’affichage tout en consommant une petite quantité de mémoire sur l’ordinateur client.  
   
--   Optimiser les performances de la banque de données selon vos besoins. Par exemple, vous souhaiterez peut-être compenser pour les connexions réseau lentes plutôt que des limitations de mémoire d’ordinateur du client en utilisant une plus grande taille de cache et en réduisant le nombre de requêtes de base de données.  
+- Optimiser les performances de la banque de données selon vos besoins. Par exemple, vous souhaiterez peut-être compenser pour les connexions réseau lentes plutôt que des limitations de mémoire d’ordinateur du client en utilisant une plus grande taille de cache et en réduisant le nombre de requêtes de base de données.  
   
  Pour plus d’informations sur la mise en cache des valeurs à partir d’une base de données externe, consultez [Comment : Implémenter le Mode virtuel avec le chargement de données juste-à-temps dans les Windows Forms DataGridView Control](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   

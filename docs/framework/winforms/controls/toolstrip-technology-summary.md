@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009485"
 ---
 # <a name="toolstrip-technology-summary"></a>Résumé de la technologie ToolStrip
 Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les classes qui prennent en charge son utilisation.  
@@ -25,23 +25,23 @@ Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les cl
 ## <a name="background"></a>Présentation  
  Grâce au contrôle `ToolStrip` et à ses classes, vous pouvez créer des fonctionnalités de barre d'outils avancées dont l'apparence et le comportement sont à la fois professionnels et cohérents. Le contrôle `ToolStrip` et ses classes offrent les améliorations suivantes par rapport aux contrôles précédents :  
   
--   Un modèle d'événement plus cohérent.  
+- Un modèle d'événement plus cohérent.  
   
--   Un comportement au moment du design plus cohérent avec des listes de tâches et des éditeurs de collections Items.  
+- Un comportement au moment du design plus cohérent avec des listes de tâches et des éditeurs de collections Items.  
   
--   Un rendu personnalisé grâce à `ToolStripManager` et `ToolStripRenderer`.  
+- Un rendu personnalisé grâce à `ToolStripManager` et `ToolStripRenderer`.  
   
--   Un rafting intégré (partage de l'espace horizontal ou vertical dans la zone d'outils quand celle-ci est ancrée) avec `ToolStripContainer` et `ToolStripPanel`.  
+- Un rafting intégré (partage de l'espace horizontal ou vertical dans la zone d'outils quand celle-ci est ancrée) avec `ToolStripContainer` et `ToolStripPanel`.  
   
--   La réorganisation des éléments au moment du design et de l’exécution avec la propriété <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>.  
+- La réorganisation des éléments au moment du design et de l’exécution avec la propriété <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>.  
   
--   Le déplacement des éléments vers un menu de dépassement de capacité avec la propriété <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
+- Le déplacement des éléments vers un menu de dépassement de capacité avec la propriété <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
   
--   Un emplacement du contrôle entièrement configurable avec `ToolStripContainer`, `ToolStripPanel` et `ToolStripContentPanel`.  
+- Un emplacement du contrôle entièrement configurable avec `ToolStripContainer`, `ToolStripPanel` et `ToolStripContentPanel`.  
   
--   L'hébergement de contrôles `ToolStrip`, traditionnels ou personnalisés à l'aide de `ToolStripControlHost`.  
+- L'hébergement de contrôles `ToolStrip`, traditionnels ou personnalisés à l'aide de `ToolStripControlHost`.  
   
--   La fusion des contrôles `ToolStrip` à l'aide de `ToolStripPanel`.  
+- La fusion des contrôles `ToolStrip` à l'aide de `ToolStripPanel`.  
   
  `ToolStrip` est la classe de base extensible de `MenuStrip`, `ContextMenuStrip` et `StatusStrip`. Ces contrôles sont des conteneurs <xref:System.Windows.Forms.ToolStripItem> qui héritent d'un comportement commun et de la gestion des événements, et qui sont étendus pour que chaque implémentation gère le comportement qui lui est associé. Les contrôles qui dérivent de <xref:System.Windows.Forms.ToolStripItem> sont répertoriés dans le tableau suivant. La classe de base `ToolStrip` gère les événements de peinture, d’entrée utilisateur et de glisser-déposer pour ces contrôles.  
   
@@ -63,26 +63,26 @@ Cette rubrique rassemble des informations sur le contrôle `ToolStrip` et les cl
 ### <a name="task-dialog-boxes"></a>Boîtes de dialogue de tâches  
  Dans Visual Studio, le fait de cliquer sur le Smart Tag d'un contrôle du concepteur affiche une liste de tâches pour accéder facilement à de nombreuses commandes fréquemment utilisées.  
   
--   [Tâches MenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [Tâches MenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Tâches ToolStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [Tâches ToolStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Tâches ContextMenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [Tâches ContextMenuStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Tâches StatusStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [Tâches StatusStrip, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Tâches ToolStripContainer, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [Tâches ToolStripContainer, boîte de dialogue](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Éditeurs de collections Items  
  Dans Visual Studio, lorsque vous cliquez sur **modifier les éléments** sur la tâche de liste ou cliquez sur le contrôle et sélectionnez **modifier les éléments** dans le menu contextuel, l’éditeur de collections pour le contrôle est affiché. Les éditeurs de collections vous permettent d’ajouter, de supprimer et de réorganiser les éléments que contient le contrôle. Vous pouvez également afficher et modifier les propriétés du contrôle et de ses éléments.  
   
--   [Éditeur de collections d’éléments MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [Éditeur de collections d’éléments MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Éditeur de collections d’éléments StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [Éditeur de collections d’éléments StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Éditeur de collections d’éléments ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [Éditeur de collections d’éléments ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Éditeur de collections d’éléments ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [Éditeur de collections d’éléments ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hébergement des contrôles  
  La classe <xref:System.Windows.Forms.ToolStripControlHost> fournit des wrappers intégrés pour les contrôles <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> et <xref:System.Windows.Forms.ToolStripProgressBar>. Vous pouvez également héberger tout autre contrôle existant ou contrôle COM dans un <xref:System.Windows.Forms.ToolStripControlHost>.  

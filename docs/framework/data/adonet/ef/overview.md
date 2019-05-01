@@ -3,11 +3,11 @@ title: Vue d’ensemble d’Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034064"
 ---
 # <a name="entity-framework-overview"></a>Présentation d’Entity Framework
 
@@ -16,9 +16,9 @@ ms.locfileid: "53145791"
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permet aux développeurs de travailler avec des données sous la forme de propriétés et d'objets spécifiques aux domaines, tels que des clients et des adresses de clients, sans qu'il soit nécessaire de se préoccuper des tables et des colonnes de base de données sous-jacentes dans lesquelles sont stockées ces données. Avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], les développeurs peuvent travailler à un niveau supérieur d'abstraction lorsqu'ils traitent les données, et peuvent créer et maintenir des applications orientées données avec moins de code que dans les applications traditionnelles. Étant donné que le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est un composant de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applications peuvent s’exécuter sur n’importe quel ordinateur sur lequel le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depuis la version 3.5 SP1 est installé.
 
 ## <a name="give-life-to-models"></a>Donner vie aux modèles
- La division de l’application ou du service en trois parties (modèle de domaine, modèle logique et modèle physique) constitue une approche de conception commune et utilisé de longue date pour la construction d’une application ou d’un service. Le modèle de domaine définit les entités et les relations dans le système qui est en cours de modélisation. Le modèle logique d'une base de données relationnelle normalise les entités et les relations dans des tables avec des contraintes de clé étrangère. Le modèle physique s'occupe des fonctionnalités d'un moteur de données particulier en spécifiant des détails de stockage tels que le partitionnement et l'indexation.
+ La division de l'application ou du service en trois parties (modèle de domaine, modèle logique et modèle physique) constitue une approche de conception commune et utilisé de longue date pour la construction d'une application ou d'un service. Le modèle de domaine définit les entités et les relations dans le système qui est en cours de modélisation. Le modèle logique d'une base de données relationnelle normalise les entités et les relations dans des tables avec des contraintes de clé étrangère. Le modèle physique s'occupe des fonctionnalités d'un moteur de données particulier en spécifiant des détails de stockage tels que le partitionnement et l'indexation.
 
- Le modèle physique est perfectionné par les administrateurs de bases de données pour améliorer les performances, mais les programmeurs qui écrivent du code d'application limitent principalement leur utilisation du modèle logique à l'écriture de requêtes SQL et à l'appel de procédures stockées. Les modèles de domaine sont généralement utilisés comme un outil permettant de capturer et de communiquer les besoins d'une application, fréquemment sous la forme de diagrammes inertes qui sont consultés et passés en revue dans les phases préliminaires d'un projet, puis abandonnés. De nombreuses équipes de développement ne créent pas de modèle conceptuel et commencent en spécifiant des tables, des colonnes et des clés dans une base de données relationnelle.
+ Le modèle physique est perfectionné par les administrateurs de bases de données pour améliorer les performances, mais les programmeurs qui écrivent du code d'application limitent principalement leur utilisation du modèle logique à l'écriture de requêtes SQL et à l'appel de procédures stockées. Les modèles de domaine sont généralement utilisés comme un outil permettant de capturer et de communiquer les besoins d’une application, fréquemment sous la forme de diagrammes inertes qui sont consultés et passés en revue dans les phases préliminaires d’un projet, puis abandonnés. De nombreuses équipes de développement ne créent pas de modèle conceptuel et commencent en spécifiant des tables, des colonnes et des clés dans une base de données relationnelle.
 
  Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] donne vie aux modèles en permettant aux développeurs d’interroger des entités et des relations dans le modèle de domaine (appelé un *conceptuel* modèle dans le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]) tout en s’appuyant sur le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pour traduire ces opérations de commandes spécifique à la source de données. Cela libère les applications des dépendances codées en dur sur une source de données particulière.
 
@@ -28,9 +28,9 @@ ms.locfileid: "53145791"
 
 - Le langage CSDL (Conceptual Schema Definition Language) définit le modèle conceptuel. CSDL est la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]d’implémentation de la [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). L’extension de fichier est .csdl.
 
-- Le langage SSDL (Store Schema Definition Language) définit le modèle de stockage, également appelé « modèle logique ». L'extension de fichier est .ssdl.
+- Le langage SSDL (Store Schema Definition Language) définit le modèle de stockage, également appelé « modèle logique ». L’extension de fichier est .ssdl.
 
-- Le langage MSL (Mapping Specification Language) définit les mappages entre le modèle de stockage et le modèle conceptuel. L'extension de fichier est .msl.
+- Le langage MSL (Mapping Specification Language) définit les mappages entre le modèle de stockage et le modèle conceptuel. L’extension de fichier est .msl.
 
 Le modèle de stockage et les mappages peuvent être modifiés le cas échéant, sans besoin de modifier le modèle conceptuel, les classes de données ou le code d'application. Étant donné que les modèles de stockage sont spécifiques au fournisseur, vous pouvez travailler avec un modèle conceptuel cohérent entre différentes sources de données.
 

@@ -3,11 +3,11 @@ title: Dead Letter Queues
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051960"
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
@@ -24,15 +24,15 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
 
  La file d’attente de lettres mortes dans la liaison `NetMsmqBinding` est exprimée dans les propriétés suivantes :
 
--   La propriété <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> permet d'exprimer le type de file d'attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
+- La propriété <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> permet d'exprimer le type de file d'attente de lettres mortes requis par le client. L'énumération a les valeurs suivantes :
 
--   `None`: Aucune file d’attente de lettres mortes n’est requis par le client.
+- `None`: Aucune file d’attente de lettres mortes n’est requis par le client.
 
--   `System`: La file d’attente de lettres mortes système est utilisé pour stocker les messages morts. La file d'attente de lettres mortes du système est partagée par toutes les applications exécutées sur l'ordinateur.
+- `System`: La file d’attente de lettres mortes système est utilisé pour stocker les messages morts. La file d'attente de lettres mortes du système est partagée par toutes les applications exécutées sur l'ordinateur.
 
--   `Custom`: Une file d’attente de lettres mortes personnalisée spécifiée à l’aide de la <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriété est utilisée pour stocker des messages morts. Cette fonctionnalité est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle est utilisée lorsque l'application doit utiliser sa propre file d'attente de lettres mortes au lieu de la partager avec d'autres applications exécutées sur le même ordinateur.
+- `Custom`: Une file d’attente de lettres mortes personnalisée spécifiée à l’aide de la <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriété est utilisée pour stocker des messages morts. Cette fonctionnalité est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle est utilisée lorsque l'application doit utiliser sa propre file d'attente de lettres mortes au lieu de la partager avec d'autres applications exécutées sur le même ordinateur.
 
--   La propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> permet d'exprimer la file d'attente spécifique à utiliser comme file d'attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- La propriété <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> permet d'exprimer la file d'attente spécifique à utiliser comme file d'attente de lettres mortes. Elle est disponible uniquement dans [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Dans cet exemple, le client envoie un lot de messages au service à partir de l’étendue d’une transaction et indique un valeur arbitraire faible de durée de vie pour ces messages (approximativement 2 secondes). Le client indique également la file d'attente de lettres mortes personnalisée à utiliser pour mettre les messages qui ont expiré en file d'attente.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
 
-    1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
+    1. Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
 
-    2.  Développez le **fonctionnalités** onglet.
+    2. Développez le **fonctionnalités** onglet.
 
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
+    3. Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
 
-    4.  Vérifier le **transactionnel** boîte.
+    4. Vérifier le **transactionnel** boîte.
 
-    5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
+    5. Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
 
 3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

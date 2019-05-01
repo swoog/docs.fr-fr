@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967273"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Procédure : définir la largeur et l’alignement du stylet
 Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur du stylet comme l’un des arguments au constructeur. Vous pouvez également modifier la largeur du stylet avec le <xref:System.Drawing.Pen.Width%2A> propriété de la <xref:System.Drawing.Pen> classe.  
@@ -26,7 +26,7 @@ Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Pour faire varier la largeur d’un stylet  
   
--   Définissez la valeur de la <xref:System.Drawing.Pen.Alignment%2A> propriété <xref:System.Drawing.Drawing2D.PenAlignment.Center> (la valeur par défaut) pour spécifier que les pixels dessinés avec le stylet vert seront centrés sur la ligne théorique. L’illustration suivante montre la ligne résultante.  
+- Définissez la valeur de la <xref:System.Drawing.Pen.Alignment%2A> propriété <xref:System.Drawing.Drawing2D.PenAlignment.Center> (la valeur par défaut) pour spécifier que les pixels dessinés avec le stylet vert seront centrés sur la ligne théorique. L’illustration suivante montre la ligne résultante.  
   
      ![Une fine ligne noire avec mise en surbrillance verte.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Pour modifier l’alignement d’un stylet  
   
--   Définissez la valeur de la <xref:System.Drawing.Pen.Alignment%2A> propriété <xref:System.Drawing.Drawing2D.PenAlignment.Center> pour spécifier que les pixels dessinés avec le stylet vert seront centrés sur la limite du rectangle.  
+- Définissez la valeur de la <xref:System.Drawing.Pen.Alignment%2A> propriété <xref:System.Drawing.Drawing2D.PenAlignment.Center> pour spécifier que les pixels dessinés avec le stylet vert seront centrés sur la limite du rectangle.  
   
      L’illustration suivante montre le rectangle résultant :
   
@@ -48,7 +48,7 @@ Lorsque vous créez un <xref:System.Drawing.Pen>, vous pouvez fournir la largeur
   
 ### <a name="to-create-an-inset-pen"></a>Pour créer un stylet d’incrustation  
   
--   Modifier l’alignement du stylet vert en modifiant la troisième instruction dans l’exemple de code précédent comme suit :  
+- Modifier l’alignement du stylet vert en modifiant la troisième instruction dans l’exemple de code précédent comme suit :  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

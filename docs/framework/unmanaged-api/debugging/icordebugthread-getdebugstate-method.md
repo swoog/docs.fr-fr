@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987153"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState, méthode
 Obtient l’état de débogage actuel de cet objet ICorDebugThread.  
@@ -42,7 +42,7 @@ HRESULT GetDebugState (
 ## <a name="remarks"></a>Notes  
  Si le processus est actuellement arrêté, `pState` représente l’état de débogage qui existerait pour ce thread si le processus de se poursuivre, pas l’état en cours réel de ce thread.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

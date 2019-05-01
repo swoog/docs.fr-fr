@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003884"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Procédure : définir le niveau de compression JPEG
 Vous pouvez modifier les paramètres d’une image quand vous enregistrez l’image sur disque de façon à réduire la taille du fichier ou améliorer sa qualité. Vous pouvez ajuster la qualité d’une image JPEG en changeant son niveau de compression. Pour spécifier le niveau de compression lorsque vous enregistrez une image JPEG, vous devez créer un <xref:System.Drawing.Imaging.EncoderParameters> de l’objet et transmettez-le à la <xref:System.Drawing.Image.Save%2A> méthode de la <xref:System.Drawing.Image> classe. Initialiser le <xref:System.Drawing.Imaging.EncoderParameters> objet afin qu’il a un tableau qui se compose d’un <xref:System.Drawing.Imaging.EncoderParameter>. Lorsque vous créez le <xref:System.Drawing.Imaging.EncoderParameter>, spécifiez la <xref:System.Drawing.Imaging.Encoder.Quality> codeur et le niveau de compression souhaité.  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   une application Windows Forms ;  
+- une application Windows Forms ;  
   
--   Un <xref:System.Windows.Forms.PaintEventArgs>, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+- Un <xref:System.Windows.Forms.PaintEventArgs>, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   Un fichier image nommé `TestPhoto.jpg` et qui se trouve sur **c:\\**.  
+- Un fichier image nommé `TestPhoto.jpg` et qui se trouve sur **c:\\**.  
   
 ## <a name="see-also"></a>Voir aussi
 

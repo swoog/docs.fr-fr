@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047958"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procédure : configurer un port avec un certificat SSL
 Lors de la création d’un service auto-hébergé de Windows Communication Foundation (WCF) avec le <xref:System.ServiceModel.WSHttpBinding> ce transport utilise la sécurité de classe, vous devez également configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
  Cette rubrique décrit comment exécuter plusieurs procédures :  
   
--   Détermination de la configuration de port actuelle d'un ordinateur.  
+- Détermination de la configuration de port actuelle d'un ordinateur.  
   
--   Obtention de l'empreinte numérique d'un certificat (nécessaire pour les deux procédures suivantes).  
+- Obtention de l'empreinte numérique d'un certificat (nécessaire pour les deux procédures suivantes).  
   
--   Liaison d’un certificat SSL à une configuration de port.  
+- Liaison d’un certificat SSL à une configuration de port.  
   
--   Liaison d'un certificat SSL à une configuration de port et prise en charge des certificats clients.  
+- Liaison d'un certificat SSL à une configuration de port et prise en charge des certificats clients.  
   
--   Suppression d’un certificat SSL d’un numéro de port.  
+- Suppression d’un certificat SSL d’un numéro de port.  
   
  Notez que la modification des certificats stockés sur l'ordinateur requiert des privilèges d'administrateur.  
   
@@ -71,9 +71,9 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   Le **-i** commutateur a la syntaxe de `IP`:`port` et indique à l’outil pour définir le certificat vers le port 8012 de l’ordinateur. Le cas échéant, les quatre zéros qui précédent le nombre peuvent aussi être remplacés par l'adresse IP réelle de l'ordinateur.  
+    - Le **-i** commutateur a la syntaxe de `IP`:`port` et indique à l’outil pour définir le certificat vers le port 8012 de l’ordinateur. Le cas échéant, les quatre zéros qui précédent le nombre peuvent aussi être remplacés par l'adresse IP réelle de l'ordinateur.  
   
-    -   Le **-h** commutateur spécifie l’empreinte numérique du certificat.  
+    - Le **-h** commutateur spécifie l’empreinte numérique du certificat.  
   
 2. Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], utilisez l'outil Netsh.exe, comme indiqué dans l'exemple suivant.  
   
@@ -81,11 +81,11 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   Le **certhash** paramètre spécifie l’empreinte numérique du certificat.  
+    - Le **certhash** paramètre spécifie l’empreinte numérique du certificat.  
   
-    -   Le **ipport** paramètre spécifie l’adresse IP et le port, et fonctionne exactement comme le **-i** switch de l’outil Httpcfg.exe décrit.  
+    - Le **ipport** paramètre spécifie l’adresse IP et le port, et fonctionne exactement comme le **-i** switch de l’outil Httpcfg.exe décrit.  
   
-    -   Le **appid** paramètre est un GUID qui peut être utilisé pour identifier l’application propriétaire.  
+    - Le **appid** paramètre est un GUID qui peut être utilisé pour identifier l’application propriétaire.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Pour lier un certificat SSL à un numéro de port et prendre en charge les certificats clients  
   

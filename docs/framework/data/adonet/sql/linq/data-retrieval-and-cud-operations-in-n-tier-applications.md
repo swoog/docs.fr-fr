@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037919"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)
 Lorsque vous sérialisez des objets d'entité tels que Customers ou Orders vers un client sur un réseau, ces entités sont détachées de leur contexte de données. Le contexte de données ne suit plus leurs modifications ou leurs associations avec d'autres objets. Ceci ne constitue pas un problème tant que les clients lisent uniquement les données. Il est également relativement simple de permettre aux clients d'ajouter de nouvelles lignes à une base de données. Toutefois, si votre application nécessite que les clients puissent mettre à jour ou supprimer des données, vous devez attacher les entités à un nouveau contexte de données avant d'appeler <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. De plus, si vous utilisez un contrôle d'accès concurrentiel optimiste avec les valeurs d'origine, vous aurez également besoin de trouver une manière de fournir à la base de données à la fois l'entité d'origine et l'entité modifiée. Les méthodes `Attach` sont fournies pour vous permettre de placer des entités dans un nouveau contexte de données après qu'elles ont été détachées.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implémentation de couche intermédiaire  
  L'exemple suivant montre une implémentation de la méthode d'interface sur la couche intermédiaire. Les deux points principaux à noter sont les suivants :  
   
--   Le <xref:System.Data.Linq.DataContext> est déclaré à la portée de la méthode.  
+- Le <xref:System.Data.Linq.DataContext> est déclaré à la portée de la méthode.  
   
--   La méthode retourne une collection <xref:System.Collections.IEnumerable> des résultats réels. Le sérialiseur exécutera la requête pour renvoyer les résultats au niveau client/à la couche Présentation. Pour accéder localement aux résultats de la requête sur la couche intermédiaire, vous pouvez forcer l'exécution en appelant `ToList` ou `ToArray` sur la variable de requête. Vous pouvez retourner ensuite cette liste ou ce tableau sous la forme de `IEnumerable`.  
+- La méthode retourne une collection <xref:System.Collections.IEnumerable> des résultats réels. Le sérialiseur exécutera la requête pour renvoyer les résultats au niveau client/à la couche Présentation. Pour accéder localement aux résultats de la requête sur la couche intermédiaire, vous pouvez forcer l'exécution en appelant `ToList` ou `ToArray` sur la variable de requête. Vous pouvez retourner ensuite cette liste ou ce tableau sous la forme de `IEnumerable`.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>Mise à jour des données  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge les modifications dans les scénarios suivants qui impliquent l'accès concurrentiel optimiste :  
   
--   accès concurrentiel optimiste basé sur les horodatages ou les nombres RowVersion ;  
+- accès concurrentiel optimiste basé sur les horodatages ou les nombres RowVersion ;  
   
--   accès concurrentiel optimiste basé sur les valeurs initiales d'un sous-ensemble de propriétés d'entité ;  
+- accès concurrentiel optimiste basé sur les valeurs initiales d'un sous-ensemble de propriétés d'entité ;  
   
--   accès concurrentiel optimiste basé sur les entités initiales et modifiées complètes.  
+- accès concurrentiel optimiste basé sur les entités initiales et modifiées complètes.  
   
  Vous pouvez également exécuter des mises à jour ou des suppressions sur une entité ainsi que ses relations, par exemple une entité Customer et une collection de ses objets Order associés. Lorsque vous apportez sur le client des modifications à un graphe d’objets d’entité et leurs collections (`EntitySet`), enfants, et que les contrôles d’accès concurrentiel optimiste requièrent les valeurs d’origine, le client doit fournir ces valeurs d’origine pour chaque entité et objet <xref:System.Data.Linq.EntitySet%601>. Si vous souhaitez permettre aux clients d'effectuer un ensemble de mises à jour, de suppressions et d'insertions connexes dans un appel de méthode unique, vous devez fournir au client une méthode pour indiquer le type d'opération à exécuter sur chaque entité. Sur la couche intermédiaire, vous devez appeler ensuite la méthode <xref:System.Data.Linq.ITable.Attach%2A> appropriée, puis <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (sans `Attach`, pour les insertions) pour chaque entité avant d'appeler <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Ne récupérez pas des données de base de données comme méthode pour obtenir des valeurs d'origine avant de tenter les mises à jour.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Membres d'entité attendus  
  Comme indiqué précédemment, seuls certains membres de l'objet d'entité doivent être définis pour que vous puissiez appeler les méthodes `Attach`. Les membres d'entité à définir doivent répondre aux critères suivants :  
   
--   faire partie de l'identité de l'entité ;  
+- faire partie de l'identité de l'entité ;  
   
--   être modifiable ;  
+- être modifiable ;  
   
--   être un horodatage ou avoir son attribut <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> défini à une valeur différente de `Never`.  
+- être un horodatage ou avoir son attribut <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> défini à une valeur différente de `Never`.  
   
  Si une table utilise un horodatage ou un numéro de version pour un contrôle d'accès concurrentiel optimiste, vous devez définir ces membres avant d'appeler <xref:System.Data.Linq.ITable.Attach%2A>. Un membre est dédié au contrôle de l'accès concurrentiel optimiste lorsque la propriété <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> a la valeur true sur cet attribut Column. Toutes les mises à jour demandées seront soumises uniquement si les valeurs de numéro de version ou d'horodatage sont identiques dans la base de données.  
   

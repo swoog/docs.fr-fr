@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
 ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053910"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 Spécifie qu’un paramètre de procédure accepte un tableau facultatif d’éléments du type spécifié. `ParamArray` peut être utilisé uniquement sur le dernier paramètre d’une liste de paramètres.  

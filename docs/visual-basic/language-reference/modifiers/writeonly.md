@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051817"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Spécifie qu’une propriété peut être écrite, mais pas lire.  
@@ -34,15 +34,15 @@ Spécifie qu’une propriété peut être écrite, mais pas lire.
 > [!IMPORTANT]
 >  Lorsque vous définissez et utilisez un `WriteOnly` propriété, envisagez les mesures de protection supplémentaires suivantes :  
   
--   **À substituer.** Si la propriété est un membre d’une classe, laissez-le par défaut [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)et ne la déclarez pas `Overridable` ou `MustOverride`. Cela empêche une classe dérivée d’apporter un droit d’accès via un remplacement.  
+- **À substituer.** Si la propriété est un membre d’une classe, laissez-le par défaut [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)et ne la déclarez pas `Overridable` ou `MustOverride`. Cela empêche une classe dérivée d’apporter un droit d’accès via un remplacement.  
   
--   **Niveau d’accès.** Si vous stockez des données sensibles de la propriété dans une ou plusieurs variables, déclarez-les [privée](../../../visual-basic/language-reference/modifiers/private.md) afin qu’aucun autre code pour n’y accéder.  
+- **Niveau d’accès.** Si vous stockez des données sensibles de la propriété dans une ou plusieurs variables, déclarez-les [privée](../../../visual-basic/language-reference/modifiers/private.md) afin qu’aucun autre code pour n’y accéder.  
   
--   **Chiffrement.** Store toutes les données sensibles sous forme chiffrée plutôt qu’en texte brut. Si un code malveillant d’une certaine manière parvient à accéder à cette zone de mémoire, il est plus difficile d’utiliser des données. Le chiffrement est également utile s’il est nécessaire de sérialiser les données sensibles.  
+- **Chiffrement.** Store toutes les données sensibles sous forme chiffrée plutôt qu’en texte brut. Si un code malveillant d’une certaine manière parvient à accéder à cette zone de mémoire, il est plus difficile d’utiliser des données. Le chiffrement est également utile s’il est nécessaire de sérialiser les données sensibles.  
   
--   **La réinitialisation.** Lors de la classe, une structure ou un module définissant la propriété est terminée, réinitialisez les données sensibles aux valeurs par défaut ou avec d’autres valeurs sans signification. Cela offre une protection supplémentaire lorsque cette zone de mémoire est libérée pour l’accès général.  
+- **La réinitialisation.** Lors de la classe, une structure ou un module définissant la propriété est terminée, réinitialisez les données sensibles aux valeurs par défaut ou avec d’autres valeurs sans signification. Cela offre une protection supplémentaire lorsque cette zone de mémoire est libérée pour l’accès général.  
   
--   **Persistance.** Ne sont pas conservés toutes les données sensibles, par exemple sur le disque, si vous pouvez l’éviter. En outre, n’écrivez pas toutes les données sensibles dans le Presse-papiers.  
+- **Persistance.** Ne sont pas conservés toutes les données sensibles, par exemple sur le disque, si vous pouvez l’éviter. En outre, n’écrivez pas toutes les données sensibles dans le Presse-papiers.  
   
  Le `WriteOnly` modificateur peut être utilisé dans ce contexte :  
   

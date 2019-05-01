@@ -3,11 +3,11 @@ title: Canal de segmentation
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002365"
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
 Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Autres informations dignes d'intérêt :  
   
--   La méthode Send appelle d'abord `ThrowIfDisposedOrNotOpened` afin de s'assurer que `CommunicationState` est ouvert.  
+- La méthode Send appelle d'abord `ThrowIfDisposedOrNotOpened` afin de s'assurer que `CommunicationState` est ouvert.  
   
--   L'envoi est synchronisé afin qu'un seul message puisse être envoyé à la fois pour chaque session. Lors de l'envoi d'un message segmenté, un événement `ManualResetEvent` appelé `sendingDone` est réinitialisé. Cet événement est défini, une fois le segment de fin envoyé. La méthode Send patiente jusqu'à la définition de cet événement avant d'essayer d'envoyer le message sortant.  
+- L'envoi est synchronisé afin qu'un seul message puisse être envoyé à la fois pour chaque session. Lors de l'envoi d'un message segmenté, un événement `ManualResetEvent` appelé `sendingDone` est réinitialisé. Cet événement est défini, une fois le segment de fin envoyé. La méthode Send patiente jusqu'à la définition de cet événement avant d'essayer d'envoyer le message sortant.  
   
--   La méthode Send verrouille `CommunicationObject.ThisLock` pour empêcher la modification des états synchronisés lors de l’envoi. Consultez la documentation <xref:System.ServiceModel.Channels.CommunicationObject> pour plus d'informations sur les états et l'ordinateur d'état <xref:System.ServiceModel.Channels.CommunicationObject>.  
+- La méthode Send verrouille `CommunicationObject.ThisLock` pour empêcher la modification des états synchronisés lors de l’envoi. Consultez la documentation <xref:System.ServiceModel.Channels.CommunicationObject> pour plus d'informations sur les états et l'ordinateur d'état <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
--   Le délai passé à la méthode Send correspond au délai appliqué à l'intégralité de l'opération d'envoi, notamment à l'envoi de tous les segments.  
+- Le délai passé à la méthode Send correspond au délai appliqué à l'intégralité de l'opération d'envoi, notamment à l'envoi de tous les segments.  
   
--   Le <xref:System.Xml.XmlDictionaryWriter> a été spécialement conçu pour éviter la mise en mémoire tampon de la totalité du corps des messages initiaux. Si le <xref:System.Xml.XmlDictionaryReader> du corps des messages était obtenu à l'aide de `message.GetReaderAtBodyContents`, tout leur corps serait mis en mémoire tampon. Au lieu de cela, nous avons personnalisé <xref:System.Xml.XmlDictionaryWriter> qui est passé à `message.WriteBodyContents`. Les messages appelant WriteBase64 sur l'enregistreur, ce dernier emballe les segments dans des messages, puis les envoie à l'aide du canal interne. WriteBase64 est verrouillé jusqu'à l'envoi des segments.  
+- Le <xref:System.Xml.XmlDictionaryWriter> a été spécialement conçu pour éviter la mise en mémoire tampon de la totalité du corps des messages initiaux. Si le <xref:System.Xml.XmlDictionaryReader> du corps des messages était obtenu à l'aide de `message.GetReaderAtBodyContents`, tout leur corps serait mis en mémoire tampon. Au lieu de cela, nous avons personnalisé <xref:System.Xml.XmlDictionaryWriter> qui est passé à `message.WriteBodyContents`. Les messages appelant WriteBase64 sur l'enregistreur, ce dernier emballe les segments dans des messages, puis les envoie à l'aide du canal interne. WriteBase64 est verrouillé jusqu'à l'envoi des segments.  
   
 ## <a name="implementing-the-receive-operation"></a>Implémentation de l'opération de réception  
  Au plus haut niveau, l'opération de réception s'assure d'abord que les deux conditions suivantes sont réunies : le message entrant n'est pas `null` et son action correspond à `ChunkingAction`. Si l'une ou l'autre de ces conditions n'est pas respectée, la méthode Receive retourne le message sans le modifier. En revanche, si ces deux conditions sont réunies, la méthode Receive crée un nouveau `ChunkingReader` ainsi qu'un nouveau `ChunkingMessage` encapsulé autour du premier (en appelant `GetNewChunkingMessage`). Avant de retourner ce nouveau `ChunkingMessage`, la méthode Receive utilise un thread Threadpool pour exécuter une `ReceiveChunkLoop` qui appelle la méthode `innerChannel.Receive` dans une boucle, puis remet les segments au `ChunkingReader` jusqu'à réception du segment de fin ou échéance du délai de réception.  
   
  Autres informations dignes d'intérêt :  
   
--   À l'instar de la méthode Send, la méthode Receive appelle d'abord `ThrowIfDisposedOrNotOepned` afin de s'assurer que `CommunicationState` est ouvert.  
+- À l'instar de la méthode Send, la méthode Receive appelle d'abord `ThrowIfDisposedOrNotOepned` afin de s'assurer que `CommunicationState` est ouvert.  
   
--   La méthode Receive est également synchronisée afin qu’un seul message puisse être reçu à la fois pour chaque session. Il s'agit d'une spécification particulièrement importante. En effet, une fois le segment de début reçu, tous les messages suivants sont censés correspondre à des segments appartenant à la nouvelle séquence de segments démarrée par ce segment de début, et ce jusqu'à réception du segment de fin. La méthode Receive ne peut extraire les segments du message en cours de désegmentation du canal interne qu'une fois tous ces segments reçus. À cette fin, la méthode Receive utilise un événement `ManualResetEvent` appelé `currentMessageCompleted` qui est défini à réception du segment de fin et réinitialisé à réception d'un nouveau segment de début.  
+- La méthode Receive est également synchronisée afin qu’un seul message puisse être reçu à la fois pour chaque session. Il s'agit d'une spécification particulièrement importante. En effet, une fois le segment de début reçu, tous les messages suivants sont censés correspondre à des segments appartenant à la nouvelle séquence de segments démarrée par ce segment de début, et ce jusqu'à réception du segment de fin. La méthode Receive ne peut extraire les segments du message en cours de désegmentation du canal interne qu'une fois tous ces segments reçus. À cette fin, la méthode Receive utilise un événement `ManualResetEvent` appelé `currentMessageCompleted` qui est défini à réception du segment de fin et réinitialisé à réception d'un nouveau segment de début.  
   
--   À la différence de la méthode Send, la méthode Receive n’empêche pas les transitions entre états synchronisés pendant la réception. Par exemple, la méthode Close, laquelle patiente alors jusqu'au terme de la réception en attente du message initial ou jusqu'à l'arrivée à échéance du délai spécifié, peut être appelée pendant la réception.  
+- À la différence de la méthode Send, la méthode Receive n’empêche pas les transitions entre états synchronisés pendant la réception. Par exemple, la méthode Close, laquelle patiente alors jusqu'au terme de la réception en attente du message initial ou jusqu'à l'arrivée à échéance du délai spécifié, peut être appelée pendant la réception.  
   
--   Le délai passé à la méthode Receive correspond au délai appliqué à l'intégralité de l'opération de réception, notamment à la réception de tous les segments.  
+- Le délai passé à la méthode Receive correspond au délai appliqué à l'intégralité de l'opération de réception, notamment à la réception de tous les segments.  
   
--   Lorsque la couche absorbe le corps des messages à une vitesse inférieure à la vitesse d'arrivée des segments entrants, le `ChunkingReader` met en mémoire tampon ces segments jusqu'à ce que la limite spécifiée par `ChunkingBindingElement.MaxBufferedChunks` soit atteinte. Cette limite atteinte, plus aucun segment n’est tiré de la couche inférieure jusqu’à absorption d’un des segments en mémoire tampon ou jusqu’à l’arrivée à échéance du délai de réception.  
+- Lorsque la couche absorbe le corps des messages à une vitesse inférieure à la vitesse d'arrivée des segments entrants, le `ChunkingReader` met en mémoire tampon ces segments jusqu'à ce que la limite spécifiée par `ChunkingBindingElement.MaxBufferedChunks` soit atteinte. Cette limite atteinte, plus aucun segment n’est tiré de la couche inférieure jusqu’à absorption d’un des segments en mémoire tampon ou jusqu’à l’arrivée à échéance du délai de réception.  
   
 ## <a name="communicationobject-overrides"></a>Substitutions CommunicationObject  
   

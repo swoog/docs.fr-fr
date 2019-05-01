@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962732"
 ---
 # <a name="document-serialization-and-storage"></a>Sérialisation et stockage de documents
 Microsoft .NET Framework fournit un environnement puissant pour créer et afficher des documents de haute qualité.  Les fonctionnalités améliorées qui prennent en charge les documents fixes et des documents dynamiques, advanced contrôles d’affichage associé à 2D puissantes et des capacités graphiques 3D prennent des applications .NET Framework d’un nouveau niveau de qualité et l’expérience utilisateur.  En mesure de gérer de manière flexible une représentation en mémoire d’un document est une fonctionnalité clé de .NET Framework, et pouvoir enregistrer et charger des documents à partir d’un magasin de données efficacement est nécessaire de presque toutes les applications.  Le processus de conversion d’un document d’une représentation en mémoire interne en magasin de données externe est appelé sérialisation.  Le processus inverse consistant à lire un magasin de données et à recréer l’instance en mémoire d’origine est appelé désérialisation.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework fournit un environnement puissant pour créer et affich
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Fonctionnalités des sérialiseurs de documents .NET Framework 3.0  
   
--   L’accès direct aux objets de document de niveau supérieur (arborescence logique et visuels) permet un stockage efficace de contenu paginé, d’éléments 2D/3D, d’images, de fichiers multimédias, de liens hypertexte, d’annotations et autre contenu de support.  
+- L’accès direct aux objets de document de niveau supérieur (arborescence logique et visuels) permet un stockage efficace de contenu paginé, d’éléments 2D/3D, d’images, de fichiers multimédias, de liens hypertexte, d’annotations et autre contenu de support.  
   
--   Fonctionnement synchrone et asynchrone.  
+- Fonctionnement synchrone et asynchrone.  
   
--   Prise en charge de sérialiseurs de plug-ins avec fonctionnalités améliorées :  
+- Prise en charge de sérialiseurs de plug-ins avec fonctionnalités améliorées :  
   
-    -   Accès de l’échelle du système pour une utilisation par toutes les applications .NET Framework.  
+    - Accès de l’échelle du système pour une utilisation par toutes les applications .NET Framework.  
   
-    -   Découvertibilité de plug-ins d’application simplifiée.  
+    - Découvertibilité de plug-ins d’application simplifiée.  
   
-    -   Déploiement, installation et mise à jour simples pour les plug-ins tiers personnalisés.  
+    - Déploiement, installation et mise à jour simples pour les plug-ins tiers personnalisés.  
   
-    -   Prise en charge des paramètres et des options d’exécution personnalisés par l’interface utilisateur.  
+    - Prise en charge des paramètres et des options d’exécution personnalisés par l’interface utilisateur.  
   
 ### <a name="xps-print-path"></a>Chemin d'impression XPS  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] chemin d’impression fournit également un mécanisme extensible pour l’écriture de documents via la sortie d’impression.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] fait office à la fois de format de fichier de document et de spool d’impression natif pour [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Les documents [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] peuvent être envoyés directement aux imprimantes compatibles [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sans nécessiter de conversion dans un format intermédiaire.  Consultez la rubrique [Vue d’ensemble de l’impression](printing-overview.md) pour obtenir des informations supplémentaires sur les options et les fonctionnalités de chemin d’impression.  

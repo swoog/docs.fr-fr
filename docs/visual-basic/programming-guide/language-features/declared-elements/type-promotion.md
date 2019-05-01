@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973301"
 ---
 # <a name="type-promotion-visual-basic"></a>Promotion de type (Visual Basic)
 Lorsque vous déclarez un élément de programmation dans un module, Visual Basic élève sa portée vers l’espace de noms contenant le module. Il s’agit *promotion de type*.  
@@ -54,9 +54,9 @@ Lorsque vous déclarez un élément de programmation dans un module, Visual Basi
 ## <a name="recommendations"></a>Recommandations  
  Les recommandations suivantes représentent la bonne pratique de programmation.  
   
--   **Noms uniques.** Lorsque vous avez un contrôle total sur l’affectation des noms d’éléments de programmation, il est toujours judicieux d’utiliser des noms uniques partout. Des noms identiques requièrent une qualification supplémentaire et peuvent rendre votre code plus difficile à lire. Elles peuvent également entraîner des erreurs subtiles et des résultats inattendus.  
+- **Noms uniques.** Lorsque vous avez un contrôle total sur l’affectation des noms d’éléments de programmation, il est toujours judicieux d’utiliser des noms uniques partout. Des noms identiques requièrent une qualification supplémentaire et peuvent rendre votre code plus difficile à lire. Elles peuvent également entraîner des erreurs subtiles et des résultats inattendus.  
   
--   **Nom qualifié complet.** Lorsque vous travaillez avec des modules et d’autres éléments dans le même espace de noms, l’approche la plus sûre consiste à toujours utiliser un nom qualifié complet pour tous les éléments de programmation. Si la promotion de type est invalidée pour un membre de module et vous ne qualifiez pas complètement ce membre, vous pouvez accéder par inadvertance un élément de programmation différents.  
+- **Nom qualifié complet.** Lorsque vous travaillez avec des modules et d’autres éléments dans le même espace de noms, l’approche la plus sûre consiste à toujours utiliser un nom qualifié complet pour tous les éléments de programmation. Si la promotion de type est invalidée pour un membre de module et vous ne qualifiez pas complètement ce membre, vous pouvez accéder par inadvertance un élément de programmation différents.  
   
 ## <a name="see-also"></a>Voir aussi
 

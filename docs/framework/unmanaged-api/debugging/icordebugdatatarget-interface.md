@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989194"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget, interface
 Fournit une interface de rappel qui permet d'accéder à un processus cible particulier.  
@@ -37,13 +37,13 @@ Fournit une interface de rappel qui permet d'accéder à un processus cible part
 ## <a name="remarks"></a>Notes  
  `ICorDebugDataTarget` et ses méthodes ont les caractéristiques suivantes :  
   
--   Les services de débogage appellent des méthodes sur cette interface pour accéder à la mémoire et autres données dans le processus cible.  
+- Les services de débogage appellent des méthodes sur cette interface pour accéder à la mémoire et autres données dans le processus cible.  
   
--   Le client de débogueur doit implémenter cette interface comme il convient pour la cible particulière (par exemple, un processus en cours ou une image mémoire).  
+- Le client de débogueur doit implémenter cette interface comme il convient pour la cible particulière (par exemple, un processus en cours ou une image mémoire).  
   
--   Le `ICorDebugDataTarget` méthodes peuvent être appelées qu’à partir de méthodes implémentées dans d’autres `ICorDebug*` interfaces. Cela garantit que le client de débogueur a contrôler sur quel thread, il est appelé et à quel moment.  
+- Le `ICorDebugDataTarget` méthodes peuvent être appelées qu’à partir de méthodes implémentées dans d’autres `ICorDebug*` interfaces. Cela garantit que le client de débogueur a contrôler sur quel thread, il est appelé et à quel moment.  
   
--   Le `ICorDebugDataTarget` implémentation doit toujours retourner des informations récentes sur la cible.  
+- Le `ICorDebugDataTarget` implémentation doit toujours retourner des informations récentes sur la cible.  
   
  Le processus cible doit être arrêté et pas changé pendant que `ICorDebug*` interfaces (et par conséquent `ICorDebugDataTarget` méthodes) sont appelées. Si la cible est un processus en cours et les modifications de son état, le [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) méthode doit être de nouveau appelée pour fournir une instance de ICorDebugProcess de remplacement.  
   

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001559"
 ---
 # <a name="input-overview"></a>Vue d'ensemble des entrées
 <a name="introduction"></a> Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sous-système fournit un puissant [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] pour obtenir des entrées à partir d’une variété de périphériques, y compris la souris, clavier, tactile et stylet. Cette rubrique décrit les services fournis par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et explique l’architecture des systèmes d’entrée.
@@ -144,43 +144,43 @@ ms.locfileid: "59320013"
 ### <a name="prerequisites"></a>Prérequis
  Vous devez disposer des composants suivants pour développer une application qui répond aux entrées tactiles.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Un appareil, tel qu’un écran tactile, qui prend en charge l’interface tactile Windows.
+- Un appareil, tel qu’un écran tactile, qui prend en charge l’interface tactile Windows.
 
 ### <a name="terminology"></a>Terminologie
  Les termes suivants sont utilisés quand l’entrée tactile est abordée.
 
--   L’**entrée tactile** est un type d’entrée d’utilisateur reconnu par Windows 7. En règle générale, l’entrée tactile est démarrée en plaçant des doigts sur un écran tactile. Notez que les appareils tels que les pavés tactiles qui sont courants sur les ordinateurs portables ne gèrent pas l’entrée tactile si l’appareil ne fait que convertir la position et le déplacement du doigt en tant qu’entrée de la souris.
+- L’**entrée tactile** est un type d’entrée d’utilisateur reconnu par Windows 7. En règle générale, l’entrée tactile est démarrée en plaçant des doigts sur un écran tactile. Notez que les appareils tels que les pavés tactiles qui sont courants sur les ordinateurs portables ne gèrent pas l’entrée tactile si l’appareil ne fait que convertir la position et le déplacement du doigt en tant qu’entrée de la souris.
 
--   L’**interaction tactile multipoint** est une entrée tactile qui se produit simultanément à partir de plusieurs points. Windows 7 et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prennent en charge l’interaction tactile multipoint. Chaque fois que l’entrée tactile est abordée dans la documentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les concepts s’appliquent à l’interaction tactile multipoint.
+- L’**interaction tactile multipoint** est une entrée tactile qui se produit simultanément à partir de plusieurs points. Windows 7 et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prennent en charge l’interaction tactile multipoint. Chaque fois que l’entrée tactile est abordée dans la documentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les concepts s’appliquent à l’interaction tactile multipoint.
 
--   Une **manipulation** se produit quand l’entrée tactile est interprétée comme une action physique appliquée à un objet. Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les événements de manipulation interprètent l’entrée comme une manipulation de translation, d’expansion ou de rotation.
+- Une **manipulation** se produit quand l’entrée tactile est interprétée comme une action physique appliquée à un objet. Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], les événements de manipulation interprètent l’entrée comme une manipulation de translation, d’expansion ou de rotation.
 
--   Un `touch device` représente un périphérique qui génère une entrée tactile, par exemple un seul doigt sur un écran tactile.
+- Un `touch device` représente un périphérique qui génère une entrée tactile, par exemple un seul doigt sur un écran tactile.
 
 ### <a name="controls-that-respond-to-touch"></a>Contrôles qui répondent aux entrées tactiles
  Les contrôles suivants peuvent être parcourus en faisant glisser un doigt sur le contrôle, s’il a du contenu qui défile hors de l’affichage.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  Le <xref:System.Windows.Controls.ScrollViewer> définit le <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> attaché de propriété qui vous permet de spécifier si le défilement tactile est activé horizontalement, verticalement, les deux ou aucun. Le <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> propriété spécifie la vitesse à laquelle le défilement ralentit lorsque l’utilisateur retire son doigt de l’écran tactile. Le <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> propriété jointe Spécifie le rapport de décalage pour traduire le décalage de manipulation de défilement.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320013"
 
  Les trois classes définissent les événements suivants, qui se comportent de la même manière quelle que soit la classe de définition.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Comme les événements de clavier et de souris, les événements tactiles sont des événements routés. Les événements qui commencent par `Preview` sont des événements de tunneling et les événements qui commencent par `Touch` sont des événements de propagation. Pour plus d’informations sur les événements routés, consultez [Vue d’ensemble des événements routés](routed-events-overview.md). Lorsque vous gérez ces événements, vous pouvez obtenir la position de l’entrée, par rapport à n’importe quel élément, en appelant le <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> ou <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> (méthode).
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320013"
 ### <a name="manipulation-events"></a>Événements de manipulation
  Pour les cas où une application permet à un utilisateur de manipuler un objet, le <xref:System.Windows.UIElement> classe définit des événements de manipulation. Contrairement aux événements tactiles qui signalent simplement la position de l’entrée tactile, les événements de manipulation signalent comment l’entrée peut être interprétée. Il existe trois types de manipulations : translation, expansion et rotation. La liste suivante décrit comment appeler les trois types de manipulations.
 
--   Placez un doigt sur un objet et déplacez le doigt sur l’écran tactile pour appeler une manipulation de translation. Cela déplace habituellement l’objet.
+- Placez un doigt sur un objet et déplacez le doigt sur l’écran tactile pour appeler une manipulation de translation. Cela déplace habituellement l’objet.
 
--   Placez deux doigts sur un objet et rapprochez ou éloignez les doigts pour appeler une manipulation d’expansion. Cela redimensionne habituellement l’objet.
+- Placez deux doigts sur un objet et rapprochez ou éloignez les doigts pour appeler une manipulation d’expansion. Cela redimensionne habituellement l’objet.
 
--   Placez deux doigts sur un objet et faites pivoter les doigts pour appeler une manipulation de rotation. Cela fait pivoter habituellement l’objet.
+- Placez deux doigts sur un objet et faites pivoter les doigts pour appeler une manipulation de rotation. Cela fait pivoter habituellement l’objet.
 
  Plusieurs types de manipulations peuvent se produire simultanément.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320013"
 
  Le <xref:System.Windows.UIElement> définit les événements de manipulation suivants.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Par défaut, un <xref:System.Windows.UIElement> ne reçoit pas ces événements de manipulation. Pour recevoir des événements de manipulation sur un <xref:System.Windows.UIElement>, affectez la valeur <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> à `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320013"
 
  La liste suivante décrit la relation entre les événements tactiles et les événements de manipulation indiquée dans l’illustration précédente.
 
--   Lorsque le premier appareil tactile génère un <xref:System.Windows.UIElement.TouchDown> événement sur un <xref:System.Windows.UIElement>, la logique de manipulation appelle la <xref:System.Windows.UIElement.CaptureTouch%2A> (méthode), qui génère le <xref:System.Windows.UIElement.GotTouchCapture> événement.
+- Lorsque le premier appareil tactile génère un <xref:System.Windows.UIElement.TouchDown> événement sur un <xref:System.Windows.UIElement>, la logique de manipulation appelle la <xref:System.Windows.UIElement.CaptureTouch%2A> (méthode), qui génère le <xref:System.Windows.UIElement.GotTouchCapture> événement.
 
--   Lorsque le <xref:System.Windows.UIElement.GotTouchCapture> se produit, la logique de manipulation appelle la <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> (méthode), qui génère le <xref:System.Windows.UIElement.ManipulationStarting> événement.
+- Lorsque le <xref:System.Windows.UIElement.GotTouchCapture> se produit, la logique de manipulation appelle la <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> (méthode), qui génère le <xref:System.Windows.UIElement.ManipulationStarting> événement.
 
--   Lorsque le <xref:System.Windows.UIElement.TouchMove> événements se produisent, la logique de manipulation génère les <xref:System.Windows.UIElement.ManipulationDelta> événements qui se produisent avant le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement.
+- Lorsque le <xref:System.Windows.UIElement.TouchMove> événements se produisent, la logique de manipulation génère les <xref:System.Windows.UIElement.ManipulationDelta> événements qui se produisent avant le <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement.
 
--   Lors de la dernière le dispositif tactile l’élément qui déclenche le <xref:System.Windows.UIElement.TouchUp> événement, la logique de manipulation génère les <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement.
+- Lors de la dernière le dispositif tactile l’élément qui déclenche le <xref:System.Windows.UIElement.TouchUp> événement, la logique de manipulation génère les <xref:System.Windows.UIElement.ManipulationInertiaStarting> événement.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Focus

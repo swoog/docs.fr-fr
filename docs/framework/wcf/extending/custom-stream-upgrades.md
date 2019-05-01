@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967906"
 ---
 # <a name="custom-stream-upgrades"></a>Mises à niveau de flux personnalisées
 Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur un flux continu d'octets entre le client et le serveur. Ce flux est réalisé par un objet <xref:System.IO.Stream>. Dans une mise à niveau de flux, le client souhaite ajouter une couche de protocole facultative à la pile de canaux et demande à l'autre extrémité du canal de communication de le faire. La mise à niveau de flux consiste à remplacer l'objet <xref:System.IO.Stream> d'origine par une version mise à niveau.  
@@ -32,35 +32,35 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
 ## <a name="how-to-implement-a-stream-upgrade"></a>Comment implémenter une mise à niveau de flux  
  Windows Communication Foundation (WCF) fournit quatre `abstract` classes que vous pouvez implémenter :  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Pour implémenter une mise à niveau de flux personnalisée, procédez comme suit. Cette procédure implémente un processus de mise à niveau de flux minimal sur les ordinateurs client et serveur.  
   
 1. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
-    1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour initier la mise à niveau de façon asynchrone.  
+    1. Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour initier la mise à niveau de façon asynchrone.  
   
-    2.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> pour rechercher des mises à niveau supplémentaires.  
+    2. Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> pour rechercher des mises à niveau supplémentaires.  
   
 2. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
-    1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour accepter la mise à niveau de façon asynchrone.  
+    1. Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> à appliquer au flux à mettre à niveau et retournez le flux mis à niveau. Cette méthode fonctionne de façon synchrone ; il existe des méthodes analogues pour accepter la mise à niveau de façon asynchrone.  
   
-    2.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> pour déterminer si la mise à niveau demandée est prise en charge, à ce stade, par cet accepteur de mise à niveau, lors du processus de mise à niveau.  
+    2. Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> pour déterminer si la mise à niveau demandée est prise en charge, à ce stade, par cet accepteur de mise à niveau, lors du processus de mise à niveau.  
   
 3. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Substituez les méthodes <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> et <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> pour retourner des instances de l'accepteur et de l'initiateur définies aux étapes 2 et 1.  
   
 4. Créez une classe qui implémente <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
-    1.  Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sur le service.  
+    1. Substituez la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sur le service.  
   
-    2.  Substituez la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sur le service pour ajouter l'élément de liaison de mise à niveau à <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
+    2. Substituez la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sur le client et la méthode <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sur le service pour ajouter l'élément de liaison de mise à niveau à <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
 5. Ajoutez le nouvel élément de liaison de mise à niveau de flux aux liaisons sur les ordinateurs serveur et client.  
   

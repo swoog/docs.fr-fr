@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
 ms.openlocfilehash: 90004ff2e9d5fcf1470b34b93091545b2b848b33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025234"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Propriétés d'axe XML (Visual Basic)
 Les rubriques de cette section documentent la syntaxe des propriétés d’axe XML en Visual Basic. Les propriétés d’axe XML facilitent l’accès au code XML directement dans votre code.  

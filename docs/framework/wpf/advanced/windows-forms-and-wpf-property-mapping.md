@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053130"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mappage de propriétés Windows Forms et WPF
 Le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologies ont deux modèles de propriété semblables mais différents. *Mappage de propriété* prend en charge l’interopérabilité entre les deux architectures et fournit les fonctionnalités suivantes :  
   
--   Rend plus facile mapper des modifications de propriété dans l’environnement d’hôte à l’élément ou le contrôle hébergé.  
+- Rend plus facile mapper des modifications de propriété dans l’environnement d’hôte à l’élément ou le contrôle hébergé.  
   
--   Fournit des propriétés de gestion par défaut pour le mappage le plus couramment utilisées.  
+- Fournit des propriétés de gestion par défaut pour le mappage le plus couramment utilisées.  
   
--   Autorise la suppression, substitution ou l’extension de propriétés par défaut.  
+- Autorise la suppression, substitution ou l’extension de propriétés par défaut.  
   
--   Garantit que les modifications de valeur de propriété sur l’ordinateur hôte sont automatiquement détectées et traduites à l’élément ou le contrôle hébergé.  
+- Garantit que les modifications de valeur de propriété sur l’ordinateur hôte sont automatiquement détectées et traduites à l’élément ou le contrôle hébergé.  
   
 > [!NOTE]
 >  Les événements de modification de propriété ne sont pas propagées vers le haut l’hébergement du contrôle ou de la hiérarchie de l’élément. Traduction de la propriété n’est pas effectuée si la valeur locale d’une propriété ne change pas en raison de la définition directe, les styles, l’héritage, la liaison de données ou autres mécanismes qui changent la valeur de la propriété.  
@@ -54,66 +54,66 @@ Le [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 ## <a name="updates-to-parent-properties"></a>Mises à jour des propriétés Parent  
  Modifications apportées à la plupart des propriétés parent entraînent des notifications pour le contrôle enfant hébergé. La liste suivante décrit les propriétés qui n’entraînent pas de notifications lorsque leurs valeurs changent.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Par exemple, si vous modifiez la valeur de la <xref:System.Windows.Controls.Control.Background%2A> propriété de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément, le <xref:System.Windows.Forms.Control.BackColor%2A> propriété du contrôle hébergé ne change pas.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>Mappage de propriété avec le contrôle ElementHost  
  Les propriétés suivantes fournissent la notification de modification intégrée. N’appelez pas la <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> méthode lorsque vous mappez ces propriétés :  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Curseur  
+- Curseur  
   
--   Station d' accueil  
+- Station d' accueil  
   
--   Activé  
+- Activé  
   
--   Police  
+- Police  
   
--   ForeColor  
+- ForeColor  
   
--   Emplacement  
+- Emplacement  
   
--   Marge  
+- Marge  
   
--   Padding  
+- Padding  
   
--   Parent  
+- Parent  
   
--   Région  
+- Région  
   
--   RightToLeft  
+- RightToLeft  
   
--   Size  
+- Size  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Texte  
+- Texte  
   
--   Visible  
+- Visible  
   
  Le <xref:System.Windows.Forms.Integration.ElementHost> contrôle traduit la valeur par défaut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propriétés à leurs [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] équivalents à l’aide de la table de traduction suivante.  
   

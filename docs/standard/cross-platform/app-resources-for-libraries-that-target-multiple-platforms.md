@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055015"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) type pour vous assurer que les ressources dans vos bibliothèques de classes sont accessible à partir de plusieurs plateformes de projet. Ce type de projet est disponible dans Visual Studio 2012 et qu’elle cible le sous-ensemble portable de la bibliothèque de classes .NET Framework. L'utilisation de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garantit l'accessibilité de votre bibliothèque à partir des applications de bureau, des [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], Silverlight et Windows Phone.
@@ -35,7 +35,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 
  Le projet [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] inclut les quatre membres <xref:System.Resources.ResourceManager> répertoriés dans le tableau suivant. Ces constructeurs et méthodes vous permettent d'instancier un objet <xref:System.Resources.ResourceManager> et d'extraire des ressources de chaîne.
 
-|Membre `ResourceManager`|Description|
+|Membre`ResourceManager` |Description|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Créé une instance <xref:System.Resources.ResourceManager> pour accéder au fichier de ressources nommé trouvé dans l'assembly spécifié.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Créé une instance <xref:System.Resources.ResourceManager> qui correspond au type spécifié.|
@@ -61,7 +61,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 |BornLength|12|
 |Embauché|Date d'embauche|
 |HiredLength|12|
-|ID|ID|
+|Id|Id|
 |ID.Length|12|
 |Nom|Nom|
 |NameLength|25|
@@ -90,7 +90,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 |BornLength|20|
 |Embauché|Date d'embauche|
 |HiredLength|16|
-|ID|ID|
+|Id|Id|
 |Nom|Nom|
 |Titre|Base de données des employés|
 

@@ -3,11 +3,11 @@ title: Configuration
 ms.date: 03/30/2017
 ms.assetid: 86a6e12f-73b5-450e-8725-f4ca5fe0702c
 ms.openlocfilehash: 3ef91a1f851f87ebf35669748f8beb1c6a880ae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998814"
 ---
 # <a name="configuration"></a>Configuration
 Cette rubrique répertorie toutes les exceptions générées par la configuration de Windows Communication Foundation (WCF).  
@@ -20,14 +20,14 @@ Cette rubrique répertorie toutes les exceptions générées par la configuratio
 |ConfigElementKeyNull|L'élément de configuration spécifique ne peut pas avoir la valeur null.|  
 |ConfigExtensionTypeNotRegisteredInCollection|Le type d’extension spécifique n’est pas inscrit dans la collection d’extensions spécifique.|  
 |ConfigIndexOutOfRange|La valeur de l'attribut spécifique est hors limites.|  
-|ConfigInvalidBindingConfigurationName|La configuration spécifique n’a pas de liaison avec le nom spécifique.|  
-|ConfigInvalidBindingName|La configuration spécifique n’a pas de liaison avec le nom spécifique. Cette valeur est non valide pour la liaison.|  
+|ConfigInvalidBindingConfigurationName|La configuration spécifique n'a pas de liaison avec le nom spécifique.|  
+|ConfigInvalidBindingName|La configuration spécifique n'a pas de liaison avec le nom spécifique. Cette valeur est non valide pour la liaison.|  
 |ConfigInvalidCommonEndpointBehaviorType|Impossible d'ajouter l'extension de comportement spécifique au comportement de point de terminaison commun car elle n'implémente pas le type spécifique.|  
-|ConfigInvalidCommonServiceBehaviorType|Impossible d'ajouter l'extension de comportement spécifique au comportement de service commun car elle n'implémente pas le type spécifique.|  
+|ConfigInvalidCommonServiceBehaviorType|Impossible d’ajouter l’extension de comportement spécifique au comportement de service commun car elle n’implémente pas le type spécifique.|  
 |ConfigInvalidEndpointBehaviorType|Impossible d’ajouter l’extension de comportement spécifique au comportement de point de terminaison spécifique car le type de comportement sous-jacent n’implémente pas l’interface IServiceBehavior.|  
 |ConfigInvalidExtensionType|Le type spécifique doit dériver de l’extension spécifique pour être utilisé dans la collection.|  
-|ConfigInvalidServiceBehaviorType|Impossible d’ajouter l’extension de comportement au comportement de service avec le nom spécifique car le type de comportement sous-jacent n’implémente pas l’interface IServiceBehavior.|  
-|ConfigMessageEncodingAlreadyInBinding|Impossible d'ajouter l'élément d'encodage de message spécifique. Un autre élément d'encodage de message existe déjà dans la liaison spécifique. Il ne peut y avoir qu’un seul élément d’encodage de message pour chaque de liaison.|  
-|ConfigNoExtensionCollectionAssociatedWithType|Impossible de trouver la collection d'extensions associée à l'extension du type spécifique.|  
+|ConfigInvalidServiceBehaviorType|Impossible d'ajouter l'extension de comportement au comportement de service avec le nom spécifique car le type de comportement sous-jacent n'implémente pas l'interface IServiceBehavior.|  
+|ConfigMessageEncodingAlreadyInBinding|Impossible d'ajouter l'élément d'encodage de message spécifique. Un autre élément d’encodage de message existe déjà dans la liaison spécifique. Il ne peut y avoir qu’un seul élément d’encodage de message pour chaque de liaison.|  
+|ConfigNoExtensionCollectionAssociatedWithType|Impossible de trouver la collection d’extensions associée à l’extension du type spécifique.|  
 |ConfigSectionNotFound|Impossible de créer la section de configuration spécifique. Il manque des informations dans le fichier Machine.config. Vérifiez que cette section de configuration est inscrite correctement et que vous avez orthographié le nom de section correctement. Pour les sections Windows Communication Foundation, exécutez ServiceModelReg.exe - i pour corriger cette erreur.|  
 |ConfigTransportAlreadyInBinding|Impossible d'ajouter l'élément de transport spécifique. Un autre élément de transport existe déjà dans la liaison spécifique. Il ne peut y avoir qu’un seul élément d’encodage de message pour chaque de liaison.|

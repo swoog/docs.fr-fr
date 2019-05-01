@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
 ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971642"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Propriété '\<nom_propriété >' ne retourne pas une valeur pour tous les chemins de code
 Propriété '\<nom_propriété >' ne retourne pas une valeur pour tous les chemins de code. Une exception de référence null peut se produire au moment de l'exécution lorsque le résultat est utilisé.  
@@ -21,11 +21,11 @@ Propriété '\<nom_propriété >' ne retourne pas une valeur pour tous les chemi
   
  Vous pouvez retourner une valeur d’une propriété `Get` procédure dans une des manières suivantes :  
   
--   Affectez la valeur au nom de propriété, puis effectuez une `Exit Property` instruction.  
+- Affectez la valeur au nom de propriété, puis effectuez une `Exit Property` instruction.  
   
--   Assignez la valeur au nom de propriété, puis exécutez le `End Get` instruction.  
+- Assignez la valeur au nom de propriété, puis exécutez le `End Get` instruction.  
   
--   Inclure la valeur dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Inclure la valeur dans un [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
  Si le contrôle passe à `Exit Property` ou `End Get` et vous n’avez pas affectés n’importe quelle valeur au nom de propriété, le `Get` procédure retourne la valeur par défaut de la propriété type de données. Pour plus d’informations, consultez « Comportement » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
   
@@ -35,7 +35,7 @@ Propriété '\<nom_propriété >' ne retourne pas une valeur pour tous les chemi
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Vérifiez votre logique de flux de contrôle et assurez-vous que vous assignez une valeur avant chaque instruction qui provoque un retour.  
+- Vérifiez votre logique de flux de contrôle et assurez-vous que vous assignez une valeur avant chaque instruction qui provoque un retour.  
   
      Il est plus facile de garantir que chaque retour de la procédure retourne une valeur si vous utilisez toujours la `Return` instruction. Si vous le faites, la dernière instruction avant `End Get` doit être un `Return` instruction.  
   

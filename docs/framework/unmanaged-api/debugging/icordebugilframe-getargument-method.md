@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995525"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument, méthode
 Obtient la valeur de l’argument spécifié dans ce frame de pile Microsoft intermediate language (MSIL).  
@@ -46,7 +46,7 @@ HRESULT GetArgument (
 ## <a name="remarks"></a>Notes  
  Le `GetArgument` méthode peut être utilisée dans un frame de pile MSIL ou dans un frame compilé juste-à-temps (JIT).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
 ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971208"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procédure : manipuler des bandes dans le contrôle DataGridView Windows Forms
 L'exemple de code suivant illustre différentes manières de manipuler des lignes et colonnes <xref:System.Windows.Forms.DataGridView> à l'aide des propriétés de la <xref:System.Windows.Forms.DataGridViewBand> classe à partir de laquelle les classes <xref:System.Windows.Forms.DataGridViewRow> et <xref:System.Windows.Forms.DataGridViewColumn> dérivent.  
@@ -28,7 +28,7 @@ L'exemple de code suivant illustre différentes manières de manipuler des ligne
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

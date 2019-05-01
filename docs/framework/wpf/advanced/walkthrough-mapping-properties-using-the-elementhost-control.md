@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053156"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Procédure pas à pas : mappage de propriétés à l’aide du contrôle ElementHost
 
@@ -21,13 +21,13 @@ Cette procédure pas à pas vous montre comment utiliser le <xref:System.Windows
 
 Cette procédure pas à pas décrit notamment les tâches suivantes :
 
--   Création du projet
+- Création du projet
 
--   Définition d’un nouveau mappage de propriété.
+- Définition d’un nouveau mappage de propriété.
 
--   Suppression d’un mappage de propriété par défaut.
+- Suppression d’un mappage de propriété par défaut.
 
--   Extension d’un mappage de propriété par défaut.
+- Extension d’un mappage de propriété par défaut.
 
 Pour l’intégralité du code des tâches illustrées dans cette procédure pas à pas, consultez [propriétés de mappage à l’aide de l’exemple de contrôle ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ Lorsque vous avez terminé, vous serez en mesure de mapper [!INCLUDE[TLA#tla_win
 
 Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Création du projet
 
@@ -47,13 +47,13 @@ Pour exécuter cette procédure pas à pas, vous devez disposer des composants s
 
 2. Dans **l’Explorateur de solutions**, ajoutez des références à ce qui suit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblys.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Copiez le code suivant en haut de la `Form1` fichier de code.
 
@@ -101,7 +101,7 @@ Supprimer un mappage de propriété par défaut en appelant le <xref:System.Wind
 
 ### <a name="to-remove-a-default-property-mapping"></a>Pour supprimer un mappage de propriété par défaut
 
--   Copiez le code suivant dans la définition de la `Form1` classe.
+- Copiez le code suivant dans la définition de la `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ Vous pouvez utiliser un mappage de propriété par défaut et l’étendre avec 
 
 ### <a name="to-extend-a-default-property-mapping"></a>Pour étendre un mappage de propriété par défaut
 
--   Copiez le code suivant dans la définition de la `Form1` classe.
+- Copiez le code suivant dans la définition de la `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ Vous pouvez utiliser un mappage de propriété par défaut et l’étendre avec 
 
      Le `Form1_Load` méthode gère le <xref:System.Windows.Forms.Form.Load> événement et effectue l’initialisation suivante.
 
-    -   Crée un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> élément.
+    - Crée un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> élément.
 
-    -   Appelle les méthodes que vous avez définies précédemment dans la procédure pas à pas pour configurer les mappages de propriétés.
+    - Appelle les méthodes que vous avez définies précédemment dans la procédure pas à pas pour configurer les mappages de propriétés.
 
-    -   Assigne les valeurs initiales aux propriétés mappées.
+    - Assigne les valeurs initiales aux propriétés mappées.
 
 2. Appuyez sur F5 pour générer et exécuter l'application.
 

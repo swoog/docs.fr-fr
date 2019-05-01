@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053429"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitations de sérialisation de XamlWriter.Save
 Le [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> peut être utilisé pour sérialiser le contenu d’un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application comme un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier. Toutefois, il existe quelques limitations importantes dans ce qui peut être sérialisé. Ces restrictions et certaines considérations d’ordre général sont abordées dans cette rubrique.  
@@ -36,8 +36,8 @@ Le [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sys
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Scénarios réalistes d’utilisation de XAMLWriter.Save  
  Si les limitations énumérées ici sont importantes, il reste toutefois plusieurs scénarios appropriés pour l’utilisation de <xref:System.Windows.Markup.XamlWriter.Save%2A> pour la sérialisation.  
   
--   Sortie vecteur ou graphique : La sortie de la zone de rendu peut être utilisée pour reproduire les mêmes vecteurs ou graphiques lors du rechargement.  
+- Sortie vecteur ou graphique : La sortie de la zone de rendu peut être utilisée pour reproduire les mêmes vecteurs ou graphiques lors du rechargement.  
   
--   Documents texte et flux riches : Texte et tout élément mise en forme et élément relation contenant-contenu qu’il contient sont conservés dans la sortie. Ceci peut être utile pour les mécanismes qui se rapprochent de la fonctionnalité de Presse-papiers.  
+- Documents texte et flux riches : Texte et tout élément mise en forme et élément relation contenant-contenu qu’il contient sont conservés dans la sortie. Ceci peut être utile pour les mécanismes qui se rapprochent de la fonctionnalité de Presse-papiers.  
   
--   Conservation des données d’objet métier : Si vous avez stocké des données dans des éléments personnalisés, tels que [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données, tant que vos objets métier suivent base [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] règles telles que la fourniture de constructeurs personnalisés et conversion pour les valeurs de propriété par référence, ces objets métier peuvent être conservés après la sérialisation.
+- Conservation des données d’objet métier : Si vous avez stocké des données dans des éléments personnalisés, tels que [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] données, tant que vos objets métier suivent base [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] règles telles que la fourniture de constructeurs personnalisés et conversion pour les valeurs de propriété par référence, ces objets métier peuvent être conservés après la sérialisation.

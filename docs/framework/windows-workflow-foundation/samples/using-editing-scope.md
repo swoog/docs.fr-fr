@@ -3,11 +3,11 @@ title: Utilisation de la portée d'édition
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004768"
 ---
 # <a name="using-editing-scope"></a>Utilisation de la portée d'édition
 Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'elles puissent être annulées dans une unité atomique unique. Par défaut, les actions effectuées par un auteur de concepteur d'activités sont automatiquement intégrées dans le système d'annulation/de rétablissement.  
@@ -28,9 +28,9 @@ Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'
   
 2. Cliquez sur **ouvrir la portée d’édition**.  
   
-    1.  Cette commande appelle <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> qui crée une portée d'édition et le place sur la pile d'édition.  
+    1. Cette commande appelle <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> qui crée une portée d'édition et le place sur la pile d'édition.  
   
-    2.  Trois activités sont ensuite ajoutées au <xref:System.Activities.Presentation.Model.ModelItem> sélectionné. Notez que si la portée d'édition n'avait pas été ouverte avec <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trois nouvelles activités apparaitraient sur la zone de conception. Étant donné que cette opération est toujours en attente dans <xref:System.Activities.Presentation.Model.EditingScope>, le concepteur n'est pas encore mis à jour.  
+    2. Trois activités sont ensuite ajoutées au <xref:System.Activities.Presentation.Model.ModelItem> sélectionné. Notez que si la portée d'édition n'avait pas été ouverte avec <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trois nouvelles activités apparaitraient sur la zone de conception. Étant donné que cette opération est toujours en attente dans <xref:System.Activities.Presentation.Model.EditingScope>, le concepteur n'est pas encore mis à jour.  
   
 3. Appuyez sur **fermer portée d’édition** pour valider la portée d’édition. Trois activités apparaissent dans le concepteur.  
   

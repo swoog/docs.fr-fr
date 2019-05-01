@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967035"
 ---
 # <a name="data-binding-and-windows-forms"></a>Liaison de données et Windows Forms
 Dans Windows Forms, vous pouvez créer des liaisons avec des sources de données traditionnelles, mais aussi avec quasiment toute structure contenant des données. Vous pouvez créer une liaison avec un tableau de valeurs que vous calculez au moment de l'exécution, que vous lisez depuis un fichier ou que vous dérivez de valeurs d'autres contrôles.  
   
  De plus, vous pouvez lier n'importe quelle propriété de n'importe quel contrôle à la source de données. Dans une liaison de données traditionnelle, vous liez généralement la propriété d'affichage (par exemple, la propriété <xref:System.Windows.Forms.Control.Text%2A> d'un contrôle <xref:System.Windows.Forms.TextBox>) à la source de données. Avec le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous avez également la possibilité de définir d'autres propriétés via la liaison de données. Vous pouvez utiliser des liaisons pour effectuer les tâches suivantes :  
   
--   Définir le graphisme d'un contrôle d'image  
+- Définir le graphisme d'un contrôle d'image  
   
--   Définir la couleur d'arrière-plan d'un ou plusieurs contrôles  
+- Définir la couleur d'arrière-plan d'un ou plusieurs contrôles  
   
--   Définition de la taille des contrôles  
+- Définition de la taille des contrôles  
   
  La liaison de données permet de définir automatiquement toute propriété d’un contrôle de formulaire accessible au moment de l’exécution.  
   

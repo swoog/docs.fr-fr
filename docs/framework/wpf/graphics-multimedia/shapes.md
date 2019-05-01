@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008174"
 ---
 # <a name="shapes"></a>Formes
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fournit la prise en charge pour dessiner des formes de base à l’aide de la <xref:System.Windows.Shapes.Shape> classe. Objets Shape dérivent <xref:System.Windows.FrameworkElement> et par conséquent, participent au système de disposition et peuvent être dessinés simplement à l’aide de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

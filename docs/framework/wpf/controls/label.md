@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
 ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052051"
 ---
 # <a name="label"></a>Etiquette
 <xref:System.Windows.Controls.Label> contrôles fournissent généralement des informations dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historiquement, un <xref:System.Windows.Controls.Label> contenait que du texte, mais étant donné que le <xref:System.Windows.Controls.Label> qui est livré avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est un <xref:System.Windows.Controls.ContentControl>, il peut contenir du texte ou un <xref:System.Windows.UIElement>.  

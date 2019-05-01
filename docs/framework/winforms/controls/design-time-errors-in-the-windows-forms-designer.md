@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972352"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erreurs au moment du design dans le Concepteur Windows Forms
 Cette rubrique explique la signification et l’utilisation de la liste d’erreurs au moment du design qui apparaît dans Microsoft Visual Studio en cas d’échec du chargement du Concepteur Windows Forms. Si cette liste d’erreurs s’affiche, ne l’interprétez pas comme un bogue du concepteur, mais comme une aide vous permettant de corriger les erreurs dans votre code.  
@@ -25,11 +25,11 @@ Cette rubrique explique la signification et l’utilisation de la liste d’erre
   
  Vous pouvez développer ou réduire une catégorie d’erreur en cliquant sur l’en-tête de la catégorie d’erreur ou en cliquant sur le chevron développer/réduire. Lorsque vous développez une catégorie d’erreur, l’aide supplémentaire suivante s’affiche :  
   
--   Instances de cette erreur.  
+- Instances de cette erreur.  
   
--   Aide sur cette erreur.  
+- Aide sur cette erreur.  
   
--   Publications du forum sur cette erreur.  
+- Publications du forum sur cette erreur.  
   
 ### <a name="instances-of-this-error"></a>Instances de cette erreur  
  L’aide supplémentaire liste toutes les instances de l’erreur dans le projet en cours. De nombreuses erreurs comprennent un emplacement exact au format suivant : *[nom du projet]* *[nom du formulaire]* Ligne :*[numéro de ligne]* Colonne :*[numéro de colonne]*. Le lien **Accéder au code** vous conduit à l’endroit où l’erreur se produit dans votre code.  
@@ -45,9 +45,9 @@ Cette rubrique explique la signification et l’utilisation de la liste d’erre
 ### <a name="forum-posts-about-this-error"></a>Publications de forum sur cette erreur  
  L’aide supplémentaire inclut un lien vers des publications du forum MSDN associées à l’erreur. La recherche dans les forums est effectuée en fonction de la chaîne du message d’erreur. Vous pouvez également effectuer une recherche dans les forums suivants :  
   
--   [Forum Concepteur Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Forum Concepteur Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Forums Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Forums Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorer et continuer  
  Vous pouvez choisir d’ignorer l’erreur et de continuer à charger le concepteur. Cette action peut entraîner un comportement inattendu. Par exemple, il est possible que les contrôles n’apparaissent pas sur l’aire de conception.  

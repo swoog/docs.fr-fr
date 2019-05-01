@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053091"
 ---
 # <a name="wpf-brushes-overview"></a>Vue d'ensemble des pinceaux WPF
 Tous les éléments visibles sur votre écran sont visible, car il a été peint par un pinceau. Par exemple, un pinceau est utilisé pour décrire l’arrière-plan d’un bouton, le premier plan du texte et le remplissage d’une forme. Cette rubrique présente les concepts de la peinture avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceaux et fournit des exemples. Les pinceaux permettent de peindre des objets de l’[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aussi bien avec de simples couleurs unies qu’avec des ensembles complexes de modèles et d’images.  
@@ -131,9 +131,9 @@ Rectangle peint avec un VisualBrush
 ## <a name="paint-using-predefined-and-system-brushes"></a>Peindre à l’aide de pinceaux système et prédéfinis  
  Pour plus de commodité, Windows Presentation Foundation (WPF) fournit un ensemble de système et pinceaux prédéfinis que vous pouvez utiliser pour peindre des objets.  
   
--   Pour obtenir la liste des pinceaux prédéfinis disponibles, consultez la <xref:System.Windows.Media.Brushes> classe. Pour obtenir un exemple montrant comment utiliser un pinceau prédéfini, consultez [peindre une zone avec une couleur unie](how-to-paint-an-area-with-a-solid-color.md).  
+- Pour obtenir la liste des pinceaux prédéfinis disponibles, consultez la <xref:System.Windows.Media.Brushes> classe. Pour obtenir un exemple montrant comment utiliser un pinceau prédéfini, consultez [peindre une zone avec une couleur unie](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Pour obtenir la liste des pinceaux système disponibles, consultez la <xref:System.Windows.SystemColors> classe. Pour obtenir un exemple, consultez [peindre une zone avec un pinceau système](how-to-paint-an-area-with-a-system-brush.md).  
+- Pour obtenir la liste des pinceaux système disponibles, consultez la <xref:System.Windows.SystemColors> classe. Pour obtenir un exemple, consultez [peindre une zone avec un pinceau système](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Fonctionnalités communes de pinceau  

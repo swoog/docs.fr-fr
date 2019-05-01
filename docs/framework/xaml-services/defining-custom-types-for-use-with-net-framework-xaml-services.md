@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971949"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
 Lorsque vous définissez des types personnalisés qui sont des objets métier ou sont des types qui n’ont pas d’une dépendance sur des infrastructures spécifiques, il existe certaines meilleures pratiques pour XAML, vous pouvez suivre. Si vous respectez ces pratiques, les Services XAML .NET Framework et ses lecteurs XAML et les writers XAML peuvent découvrir les caractéristiques XAML de votre type et lui donner une représentation appropriée dans un flux de nœud XAML à l’aide du système de type XAML. Cette rubrique décrit les meilleures pratiques pour les définitions de type, définitions de membre et aux attributs CLR des types ou membres.  
@@ -17,9 +17,9 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Modèles de constructeur et définitions de Type pour XAML  
  Pour être instancié en tant qu’objet élément dans XAML, une classe personnalisée doit remplir les conditions suivantes :  
   
--   La classe personnalisée doit être publique et doit exposer un constructeur public (sans paramètre) par défaut. (Consultez la section suivante pour des remarques concernant les structures.)  
+- La classe personnalisée doit être publique et doit exposer un constructeur public (sans paramètre) par défaut. (Consultez la section suivante pour des remarques concernant les structures.)  
   
--   La classe personnalisée ne doit pas être une classe imbriquée. Supplémentaire « point » dans le chemin d’accès du nom complet rend la division de l’espace de noms classe ambiguë et interfère avec d’autres fonctionnalités XAML telles que les propriétés jointes.  
+- La classe personnalisée ne doit pas être une classe imbriquée. Supplémentaire « point » dans le chemin d’accès du nom complet rend la division de l’espace de noms classe ambiguë et interfère avec d’autres fonctionnalités XAML telles que les propriétés jointes.  
   
  Si un objet peut être instancié comme un élément objet, l’objet créé peut remplir le formulaire d’élément de propriété de toutes les propriétés qui acceptent l’objet comme type sous-jacent.  
   
@@ -72,9 +72,9 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
   
  `public static object Get` *NomPropriété* `(object`  `target` `)`  
   
--   L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Vous pouvez l’utiliser pour limiter l’utilisation de votre membre pouvant être attaché ; utilisations en dehors de votre portée prévue lève des exceptions de cast non valide qui sont ensuite signalées par une erreur d’analyse XAML. Le nom du paramètre `target` n’est pas obligatoire, mais est nommé `target` par convention dans la plupart des implémentations.  
+- L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Vous pouvez l’utiliser pour limiter l’utilisation de votre membre pouvant être attaché ; utilisations en dehors de votre portée prévue lève des exceptions de cast non valide qui sont ensuite signalées par une erreur d’analyse XAML. Le nom du paramètre `target` n’est pas obligatoire, mais est nommé `target` par convention dans la plupart des implémentations.  
   
--   La valeur de retour peut être spécifiée comme un type plus spécifique dans votre implémentation.  
+- La valeur de retour peut être spécifiée comme un type plus spécifique dans votre implémentation.  
   
  Pour prendre en charge un <xref:System.ComponentModel.TypeConverter> appliquer de la syntaxe de texte est activée pour l’utilisation des attributs du membre pouvant être attachée, <xref:System.ComponentModel.TypeConverterAttribute> à la `Get` *PropertyName* accesseur. Application à la `get` au lieu du `set` peut sembler non intuitive ; Toutefois, cette convention peut prendre en charge le concept de membres en lecture seule pouvant être attachés qui sont sérialisables, ce qui est utile dans les scénarios de concepteur.  
   
@@ -83,9 +83,9 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
   
  `public static void Set` *NomPropriété* `(object`  `target` `, object`  `value` `)`  
   
--   Le `target` objet peut être spécifié comme un type plus spécifique dans votre implémentation, avec la même logique et les conséquences, comme décrit dans la section précédente.  
+- Le `target` objet peut être spécifié comme un type plus spécifique dans votre implémentation, avec la même logique et les conséquences, comme décrit dans la section précédente.  
   
--   L’objet `value` peut être défini comme un type plus spécifique dans votre implémentation.  
+- L’objet `value` peut être défini comme un type plus spécifique dans votre implémentation.  
   
  N’oubliez pas que la valeur de cette méthode est l’entrée provenant de l’utilisation XAML, généralement sous la forme d’attribut. À partir de la forme d’attribut doit être prise en charge de convertisseur de valeur pour une syntaxe de texte, et vous attribut sur le `Get` *PropertyName* accesseur.  
   

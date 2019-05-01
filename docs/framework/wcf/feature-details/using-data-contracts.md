@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050660"
 ---
 # <a name="using-data-contracts"></a>Utilisation de contrats de données
 Un *contrat de données* est un accord en bonne et due forme entre un service et un client qui décrit de manière abstraite les données à échanger. Autrement dit, pour communiquer, le client et le service n'ont pas besoin de partager les mêmes types, mais uniquement les mêmes contrats de données. Un contrat de données définit précisément, pour chaque type de paramètre ou de retour, les données qui doivent être sérialisées (converties en données XML) pour être échangées.  
@@ -38,21 +38,21 @@ Un *contrat de données* est un accord en bonne et due forme entre un service et
 ### <a name="notes"></a>Notes  
  Les remarques suivantes fournissent des éléments à prendre en compte lors de la création de contrats de données :  
   
--   L'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> est honoré uniquement lorsqu'il est utilisé avec des types non marqués. Cela inclut les types qui ne sont pas marqués avec l'un des attributs <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>ou <xref:System.Runtime.Serialization.EnumMemberAttribute> , ou qui sont marqués comme sérialisables par tout autre moyen (par exemple, objet <xref:System.Xml.Serialization.IXmlSerializable>).  
+- L'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> est honoré uniquement lorsqu'il est utilisé avec des types non marqués. Cela inclut les types qui ne sont pas marqués avec l'un des attributs <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>ou <xref:System.Runtime.Serialization.EnumMemberAttribute> , ou qui sont marqués comme sérialisables par tout autre moyen (par exemple, objet <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Vous pouvez appliquer l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> à des champs et à des propriétés.  
+- Vous pouvez appliquer l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> à des champs et à des propriétés.  
   
--   Les niveaux d'accessibilité des membres (interne, privé, protégé ou public) n'affectent en aucune façon le contrat de données.  
+- Les niveaux d'accessibilité des membres (interne, privé, protégé ou public) n'affectent en aucune façon le contrat de données.  
   
--   L'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est ignoré s'il est appliqué à des membres statiques.  
+- L'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est ignoré s'il est appliqué à des membres statiques.  
   
--   Pendant la sérialisation, le code de propriété get est appelé pour que les membres de données de propriété obtiennent la valeur des propriétés à sérialiser.  
+- Pendant la sérialisation, le code de propriété get est appelé pour que les membres de données de propriété obtiennent la valeur des propriétés à sérialiser.  
   
--   Pendant la désérialisation, un objet non initialisé est d'abord créé, sans appeler de constructeur sur le type. Puis, tous les membres de données sont désérialisés.  
+- Pendant la désérialisation, un objet non initialisé est d'abord créé, sans appeler de constructeur sur le type. Puis, tous les membres de données sont désérialisés.  
   
--   Pendant la désérialisation, le code de propriété set est appelé pour que les membres de données de propriété attribuent aux propriétés la valeur désérialisée.  
+- Pendant la désérialisation, le code de propriété set est appelé pour que les membres de données de propriété attribuent aux propriétés la valeur désérialisée.  
   
--   Pour qu'un contrat de données soit valide, il doit être possible de sérialiser tous ses membres de données. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Pour qu'un contrat de données soit valide, il doit être possible de sérialiser tous ses membres de données. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Les types génériques sont gérés exactement de la même façon que les types non génériques. Les paramètres génériques n'ont pas d'exigences particulières. Considérons par exemple le type suivant.  
   

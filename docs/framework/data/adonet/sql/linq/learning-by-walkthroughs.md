@@ -3,11 +3,11 @@ title: Apprentissage par les procédures pas à pas
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033526"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprentissage par les procédures pas à pas
 Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation fournit plusieurs procédures pas à pas. Cette rubrique aborde certains problèmes généraux de procédure pas à pas (y compris leur résolution) et fournit des liens vers plusieurs procédures pas à pas de base pour découvrir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,20 +30,20 @@ Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
 ## <a name="general"></a>Général  
  Les informations suivantes se rapportent à ces procédures pas à pas en général :  
   
--   Environnement : Chaque [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procédure pas à pas utilise Visual Studio comme environnement de développement intégré (IDE).  
+- Environnement : Chaque [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procédure pas à pas utilise Visual Studio comme environnement de développement intégré (IDE).  
   
--   Moteurs SQL : Ces procédures pas à pas sont écrites pour être implémentées à l’aide de SQL Server Express. Si vous n'avez pas SQL Server Express, vous pouvez le télécharger gratuitement. Pour plus d’informations, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Moteurs SQL : Ces procédures pas à pas sont écrites pour être implémentées à l’aide de SQL Server Express. Si vous n'avez pas SQL Server Express, vous pouvez le télécharger gratuitement. Pour plus d’informations, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  Les procédures pas à pas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent un nom de fichier comme chaîne de connexion. La simple spécification d'un nom de fichier est une commodité fournie par [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pour les utilisateurs de SQL Server Express. Faites toujours attention aux problèmes de sécurité. Pour plus d’informations, consultez [sécurité dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procédures pas à pas nécessite généralement la base de données Northwind. Pour plus d’informations, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procédures pas à pas nécessite généralement la base de données Northwind. Pour plus d’informations, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Les boîtes de dialogue et commandes de menu affichées dans les procédures pas à pas peuvent différer de celles décrites dans l’aide, en fonction de vos paramètres actifs ou votre édition de Visual Studio. Pour modifier ces paramètres, cliquez sur **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- Les boîtes de dialogue et commandes de menu affichées dans les procédures pas à pas peuvent différer de celles décrites dans l’aide, en fonction de vos paramètres actifs ou votre édition de Visual Studio. Pour modifier ces paramètres, cliquez sur **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Pour les procédures pas à pas qui abordent des scénarios multicouches, un serveur doit se trouver sur un ordinateur autre que l'ordinateur de développement et vous devez disposer des autorisations appropriées pour accéder au serveur.  
+- Pour les procédures pas à pas qui abordent des scénarios multicouches, un serveur doit se trouver sur un ordinateur autre que l'ordinateur de développement et vous devez disposer des autorisations appropriées pour accéder au serveur.  
   
--   Le nom de la classe qui représente en général la table Orders dans l'exemple de base de données Northwind est `[Order]`. La séquence d’échappement est nécessaire car `Order` est un mot clé dans Visual Basic.  
+- Le nom de la classe qui représente en général la table Orders dans l'exemple de base de données Northwind est `[Order]`. La séquence d’échappement est nécessaire car `Order` est un mot clé dans Visual Basic.  
   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
  Des erreurs d'exécution peuvent se produire car vous ne disposez pas des autorisations suffisantes pour accéder aux bases de données utilisées dans ces procédures pas à pas. Consultez les étapes suivantes pour résoudre les problèmes les plus courants.  

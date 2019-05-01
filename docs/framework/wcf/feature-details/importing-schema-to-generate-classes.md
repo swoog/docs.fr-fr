@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972664"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importation du schéma pour générer des classes
 Pour générer des classes à partir des schémas qui sont utilisables avec Windows Communication Foundation (WCF), utilisez la <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Cette rubrique décrit le processus et les variations.  
@@ -29,7 +29,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
   
 1. Créez une instance de <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Facultatif. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
+2. Optionnel. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
   
 3. Optionnel. Appelez une des méthodes <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . La méthode détermine si le schéma donné est un schéma de contrat de données valide et peut être importé. La méthode `CanImport` a les mêmes surcharges que `Import` (étape suivante).  
   
@@ -148,13 +148,13 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
   
 ##### <a name="design-considerations"></a>Considérations de design  
   
--   Il peut s'avérer difficile d'utiliser directement la représentation XML faiblement typée. Vous pouvez faire appel à un moteur de sérialisation différent, tel que <xref:System.Xml.Serialization.XmlSerializer>, pour utiliser d'une manière fortement typée un schéma incompatible avec les contrats de données. Pour plus d’informations, consultez [à l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+- Il peut s'avérer difficile d'utiliser directement la représentation XML faiblement typée. Vous pouvez faire appel à un moteur de sérialisation différent, tel que <xref:System.Xml.Serialization.XmlSerializer>, pour utiliser d'une manière fortement typée un schéma incompatible avec les contrats de données. Pour plus d’informations, consultez [à l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
--   Certaines constructions de schéma ne peuvent pas être importées par <xref:System.Runtime.Serialization.XsdDataContractImporter> même lorsque la propriété <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> a la valeur `true`. Là encore, utilisez <xref:System.Xml.Serialization.XmlSerializer> pour ces cas.  
+- Certaines constructions de schéma ne peuvent pas être importées par <xref:System.Runtime.Serialization.XsdDataContractImporter> même lorsque la propriété <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> a la valeur `true`. Là encore, utilisez <xref:System.Xml.Serialization.XmlSerializer> pour ces cas.  
   
--   Les constructions exactes de schéma qui sont pris en charge lorsque <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> est `true` ou `false` sont décrites dans [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+- Les constructions exactes de schéma qui sont pris en charge lorsque <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> est `true` ou `false` sont décrites dans [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
--   Le schéma pour les types <xref:System.Xml.Serialization.IXmlSerializable> générés ne conservent pas le respect lors de l'importation ou de l'exportation. Autrement dit, l'exportation du schéma à partir des types générés et son importation sous la forme de classes ne retournent pas le schéma d'origine.  
+- Le schéma pour les types <xref:System.Xml.Serialization.IXmlSerializable> générés ne conservent pas le respect lors de l'importation ou de l'exportation. Autrement dit, l'exportation du schéma à partir des types générés et son importation sous la forme de classes ne retournent pas le schéma d'origine.  
   
  Il est possible d'associer l'option <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> à l'option <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> décrite précédemment. Pour les types qui doivent être générés comme des implémentations <xref:System.Xml.Serialization.IXmlSerializable>, le contrôle structurel est ignoré lors de l'utilisation de la fonctionnalité <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>.  
   
@@ -175,9 +175,9 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
 #### <a name="import-options-advanced-options"></a>Options d’importation : Options avancées  
  Les éléments suivants représentent les options d'importation avancées :  
   
--   Propriété <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Spécifiez la <xref:System.CodeDom.Compiler.CodeDomProvider> à utiliser pour générer le code destiné aux classes générées. Le mécanisme d’importation cherche à éviter les fonctionnalités que la <xref:System.CodeDom.Compiler.CodeDomProvider> ne prend pas en charge. Si la <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> n'est pas définie, le jeu complet des fonctionnalités du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé sans restrictions.  
+- Propriété <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Spécifiez la <xref:System.CodeDom.Compiler.CodeDomProvider> à utiliser pour générer le code destiné aux classes générées. Le mécanisme d’importation cherche à éviter les fonctionnalités que la <xref:System.CodeDom.Compiler.CodeDomProvider> ne prend pas en charge. Si la <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> n'est pas définie, le jeu complet des fonctionnalités du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé sans restrictions.  
   
--   Propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. Pour plus d’informations, consultez [substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
+- Propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. Pour plus d’informations, consultez [substituts de contrats de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,24 +3,24 @@ title: Vue d’ensemble des attributs (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968049"
 ---
 # <a name="attributes-overview-visual-basic"></a>Vue d’ensemble des attributs (Visual Basic)
 Les attributs fournissent une méthode puissante permettant d’associer des métadonnées ou des informations déclaratives avec du code (assemblys, types, méthodes, propriétés, etc.). Une fois associé à une entité de programme, l’attribut peut être interrogé à l’exécution à l’aide d’une technique appelée *réflexion*. Pour plus d’informations, consultez la page [Réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
  Les attributs ont les propriétés suivantes :  
   
--   Les attributs ajoutent des métadonnées à un programme. Les *métadonnées* sont des informations sur les types définis dans un programme. Tous les assemblys .NET contiennent un ensemble spécifié de métadonnées qui décrivent les types et membres de types définis dans l’assembly. Vous pouvez ajouter des attributs personnalisés pour spécifier des informations supplémentaires si nécessaire. Pour plus d’informations, consultez la page [Création d’attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+- Les attributs ajoutent des métadonnées à un programme. Les *métadonnées* sont des informations sur les types définis dans un programme. Tous les assemblys .NET contiennent un ensemble spécifié de métadonnées qui décrivent les types et membres de types définis dans l’assembly. Vous pouvez ajouter des attributs personnalisés pour spécifier des informations supplémentaires si nécessaire. Pour plus d’informations, consultez la page [Création d’attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
--   Vous pouvez appliquer un ou plusieurs attributs à des modules ou des assemblys entiers ou à de plus petits éléments de programmes, comme des classes et des propriétés.  
+- Vous pouvez appliquer un ou plusieurs attributs à des modules ou des assemblys entiers ou à de plus petits éléments de programmes, comme des classes et des propriétés.  
   
--   Les attributs peuvent accepter des arguments de la même façon que les méthodes et les propriétés.  
+- Les attributs peuvent accepter des arguments de la même façon que les méthodes et les propriétés.  
   
--   Votre programme peut examiner ses propres métadonnées ou celles d’autres programmes grâce à la réflexion. Pour plus d’informations, consultez la page [Accéder à des attributs grâce à la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+- Votre programme peut examiner ses propres métadonnées ou celles d’autres programmes grâce à la réflexion. Pour plus d’informations, consultez la page [Accéder à des attributs grâce à la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="using-attributes"></a>Utilisation d'attributs  
  Les attributs peuvent être placés sur la quasi-totalité des déclarations, même si un attribut donné peut restreindre les types de déclarations sur lesquels il est valide. En Visual Basic, un attribut est placé entre chevrons (\< >). Il doit apparaître immédiatement avant l’élément auquel il s’applique, sur la même ligne.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Utilisations courantes des attributs  
  La liste suivante comprend certaines des utilisations courantes des attributs dans le code :  
   
--   Marquer des méthodes avec l’attribut `WebMethod` dans les services web pour indiquer que la méthode doit pouvoir être appelée via le protocole SOAP. Pour plus d'informations, consultez <xref:System.Web.Services.WebMethodAttribute>.  
+- Marquer des méthodes avec l’attribut `WebMethod` dans les services web pour indiquer que la méthode doit pouvoir être appelée via le protocole SOAP. Pour plus d'informations, consultez <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Décrire comment marshaler les paramètres de méthode en cas d’interaction avec du code natif. Pour plus d'informations, consultez <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Décrire comment marshaler les paramètres de méthode en cas d’interaction avec du code natif. Pour plus d'informations, consultez <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
--   Décrire les propriétés COM des classes, méthodes et interfaces.  
+- Décrire les propriétés COM des classes, méthodes et interfaces.  
   
--   Appeler du code non managé à l’aide de la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+- Appeler du code non managé à l’aide de la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
--   Décrire un assembly : titre, version, description ou marque.  
+- Décrire un assembly : titre, version, description ou marque.  
   
--   Décrire les membres d’une classe à sérialiser à des fins de persistance.  
+- Décrire les membres d’une classe à sérialiser à des fins de persistance.  
   
--   Décrire le mappage entre les membres de classe et des nœuds XML à des fins de sérialisation XML.  
+- Décrire le mappage entre les membres de classe et des nœuds XML à des fins de sérialisation XML.  
   
--   Décrire les exigences de sécurité des méthodes.  
+- Décrire les exigences de sécurité des méthodes.  
   
--   Spécifier les caractéristiques employées pour appliquer la sécurité.  
+- Spécifier les caractéristiques employées pour appliquer la sécurité.  
   
--   Contrôler les optimisations par le compilateur juste-à-temps (JIT) pour que le code reste facile à déboguer.  
+- Contrôler les optimisations par le compilateur juste-à-temps (JIT) pour que le code reste facile à déboguer.  
   
--   Obtenir des informations sur l’appelant d’une méthode.  
+- Obtenir des informations sur l’appelant d’une méthode.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  Pour plus d'informations, voir :  
   
--   [Créer des attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Créer des attributs personnalisés (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [Accéder à des attributs à l’aide de la réflexion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [Guide pratique pour Créer une Union C/C++ à l’aide d’attributs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Guide pratique pour Créer une Union C/C++ à l’aide d’attributs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Attributs courants (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [Attributs courants (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [Informations relatives à l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [Informations relatives à l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

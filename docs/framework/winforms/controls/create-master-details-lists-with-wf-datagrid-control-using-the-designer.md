@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961358"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : créer des listes maître/détails avec le contrôle DataGrid Windows Forms à l’aide du concepteur
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332077"
   
 6. Configurer le <xref:System.Windows.Forms.DataGrid> contrôle que vous souhaitez désigner comme grille principale, comme suit :  
   
-    1.  Sélectionnez le <xref:System.Data.DataSet> dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété.  
+    1. Sélectionnez le <xref:System.Data.DataSet> dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété.  
   
-    2.  Sélectionnez la table principale (par exemple, « Customers ») dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété.  
+    2. Sélectionnez la table principale (par exemple, « Customers ») dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété.  
   
 7. Configurer le <xref:System.Windows.Forms.DataGrid> contrôle que vous souhaitez désigner la grille des détails, comme suit :  
   
-    1.  Sélectionnez le <xref:System.Data.DataSet> dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété.  
+    1. Sélectionnez le <xref:System.Data.DataSet> dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriété.  
   
-    2.  Sélectionnez la relation (par exemple, « Customers.CustOrd ») entre les tables maître / détail dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété. Pour voir la relation, développez le nœud en cliquant sur le signe plus (**+**) en regard de la table principale dans la liste déroulante.  
+    2. Sélectionnez la relation (par exemple, « Customers.CustOrd ») entre les tables maître / détail dans la liste déroulante dans le <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriété. Pour voir la relation, développez le nœud en cliquant sur le signe plus (**+**) en regard de la table principale dans la liste déroulante.  
   
 ## <a name="see-also"></a>Voir aussi
 

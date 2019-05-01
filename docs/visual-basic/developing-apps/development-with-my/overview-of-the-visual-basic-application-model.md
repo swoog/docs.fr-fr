@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014158"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Vue d'ensemble du modèle d'application Visual Basic
 Visual Basic fournit un modèle précis pour contrôler le comportement des applications Windows Forms : le modèle d’Application Visual Basic. Ce modèle inclut les événements pour de l’application démarrage et arrêt, ainsi que les événements pour l’interception des exceptions non gérées. Il fournit également la prise en charge pour le développement d’applications à instance unique. Le modèle d’application est extensible, afin que les développeurs nécessitant davantage de contrôle peuvent personnaliser ses méthodes substituables.  
@@ -22,9 +22,9 @@ Visual Basic fournit un modèle précis pour contrôler le comportement des appl
   
  Une application à instance unique démarre et vérifie s’il s’agit de la première instance ou une instance de l’application suivante :  
   
--   Si elle est la première instance, elle démarre comme d’habitude.  
+- Si elle est la première instance, elle démarre comme d’habitude.  
   
--   Chaque nouvelle tentative pour démarrer l’application, tandis que la première instance s’exécute, entraîne un comportement très différent. La tentative suivante notifie la première instance sur les arguments de ligne de commande, puis quitte immédiatement. La première instance gère la `StartupNextInstance` événement pour déterminer ce que les arguments de ligne de commande de l’instance suivante, puis continue à s’exécuter.  
+- Chaque nouvelle tentative pour démarrer l’application, tandis que la première instance s’exécute, entraîne un comportement très différent. La tentative suivante notifie la première instance sur les arguments de ligne de commande, puis quitte immédiatement. La première instance gère la `StartupNextInstance` événement pour déterminer ce que les arguments de ligne de commande de l’instance suivante, puis continue à s’exécuter.  
   
      Ce diagramme illustre comment une instance suivante signale la première instance :  
   
@@ -35,21 +35,21 @@ Visual Basic fournit un modèle précis pour contrôler le comportement des appl
 ## <a name="events-in-the-application-model"></a>Événements dans le modèle d’Application  
  Les événements suivants sont trouvent dans le modèle d’application :  
   
--   **Démarrage de l’application**. L’application déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> événement lorsqu’il démarre. En gérant cet événement, vous pouvez ajouter du code qui initialise l’application avant de charger le formulaire principal. Le `Startup` événement prévoit également l’annulation de l’exécution de l’application pendant cette phase du processus de démarrage, si vous le souhaitez.  
+- **Démarrage de l’application**. L’application déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> événement lorsqu’il démarre. En gérant cet événement, vous pouvez ajouter du code qui initialise l’application avant de charger le formulaire principal. Le `Startup` événement prévoit également l’annulation de l’exécution de l’application pendant cette phase du processus de démarrage, si vous le souhaitez.  
   
      Vous pouvez configurer l’application pour afficher un écran de démarrage pendant que le code de démarrage d’application s’exécute. Par défaut, le modèle d’application supprime le démarrage de l’écran lorsque soit la `/nosplash` ou `-nosplash` argument de ligne de commande est utilisé.  
   
--   **Applications à instance unique**. Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> événement est déclenché au démarrage d’une instance suivante d’une application à instance unique. L’événement passe les arguments de ligne de commande de l’instance suivante.  
+- **Applications à instance unique**. Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> événement est déclenché au démarrage d’une instance suivante d’une application à instance unique. L’événement passe les arguments de ligne de commande de l’instance suivante.  
   
--   **Exceptions non gérées**. Si l’application rencontre une exception non gérée, elle déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> événement. Votre gestionnaire pour cet événement peut examiner l’exception et déterminer s’il faut continuer l’exécution.  
+- **Exceptions non gérées**. Si l’application rencontre une exception non gérée, elle déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> événement. Votre gestionnaire pour cet événement peut examiner l’exception et déterminer s’il faut continuer l’exécution.  
   
      Le `UnhandledException` événement n’est pas déclenché dans certaines circonstances. Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
--   **Modifications de la connectivité réseau**. Si la disponibilité de l’ordinateur réseau change, l’application déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> événement.  
+- **Modifications de la connectivité réseau**. Si la disponibilité de l’ordinateur réseau change, l’application déclenche le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> événement.  
   
      Le `NetworkAvailabilityChanged` événement n’est pas déclenché dans certaines circonstances. Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
--   **Application arrêtée**. L’application fournit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> événement pour signaler quand il est sur le point d’arrêt. Dans cet événement gestionnaire, vous pouvez vous assurer que les opérations de votre application doit effectuer, fermeture et l’enregistrement, par exemple, sont terminées. Vous pouvez configurer votre application pour arrêter lorsque le formulaire principal se ferme, ou d’arrêter lorsque tous les formulaires ferment uniquement.  
+- **Application arrêtée**. L’application fournit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> événement pour signaler quand il est sur le point d’arrêt. Dans cet événement gestionnaire, vous pouvez vous assurer que les opérations de votre application doit effectuer, fermeture et l’enregistrement, par exemple, sont terminées. Vous pouvez configurer votre application pour arrêter lorsque le formulaire principal se ferme, ou d’arrêter lorsque tous les formulaires ferment uniquement.  
   
 ## <a name="availability"></a>Disponibilité  
  Par défaut, le modèle d’Application Visual Basic est disponible pour les projets Windows Forms. Si vous configurez l’application pour utiliser un objet de démarrage différentes, ou commencer le code d’application personnalisé `Sub Main`, cet objet ou classe peut avoir besoin de fournir une implémentation de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe à utiliser le modèle d’application. Pour plus d’informations sur la modification de l’objet de démarrage, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
 ms.openlocfilehash: 4d051085bdba41b9784d3dd7f921189c1300daf0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052974"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Procédure : personnaliser les couleurs dans des applications ToolStrip
 Vous pouvez personnaliser l'apparence de votre <xref:System.Windows.Forms.ToolStrip> en utilisant la classe <xref:System.Windows.Forms.ToolStripProfessionalRenderer> pour appliquer des couleurs personnalisées.  
@@ -28,7 +28,7 @@ Vous pouvez personnaliser l'apparence de votre <xref:System.Windows.Forms.ToolSt
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
+- des références aux assemblys System.Design, System.Drawing et System.Windows.Forms.  
   
  Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   

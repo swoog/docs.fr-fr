@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9257ba57e0d087e3d6b9c7bb995b49a6b814c5f1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040740"
 ---
-# <a name="getmethodqualifierset-function"></a>Getmethodqualifierset, fonction
+# <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet, fonction
 
 Récupère le jeu de qualificateurs pour une méthode particulière.
 
@@ -72,7 +72,7 @@ Un appel à cette fonction est prise en charge uniquement si l’objet actuel es
 
 Étant donné que chaque méthode peut avoir son propre qualificateurs, le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permet à l’appelant ajouter, modifier ou supprimer ces qualificateurs.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

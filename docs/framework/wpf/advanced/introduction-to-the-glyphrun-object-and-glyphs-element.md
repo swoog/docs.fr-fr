@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031302"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introduction à l'objet GlyphRun et à l'élément Glyphs
 Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref:System.Windows.Documents.Glyphs> élément.  
@@ -27,13 +27,13 @@ Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref
   
 2. Scénarios d’impression.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] comme langage d’imprimante.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] comme langage d’imprimante.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   Pilotes d’imprimante précédents, sortie d’applications [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] au format fixe.  
+    - Pilotes d’imprimante précédents, sortie d’applications [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] au format fixe.  
   
-    -   Format de spouleur d’impression.  
+    - Format de spouleur d’impression.  
   
 3. Représentation sous forme de document de format fixe, notamment des clients pour des versions précédentes de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et autres appareils informatiques.  
   
@@ -67,15 +67,15 @@ Cette rubrique décrit la <xref:System.Windows.Media.GlyphRun> objet et le <xref
 ### <a name="indices-property"></a>Propriété Indices  
  Le <xref:System.Windows.Documents.Glyphs.Indices%2A> propriété est une chaîne de spécifications de glyphe. Quand une séquence de glyphes forme un groupement unique, la spécification du premier glyphe du groupement est précédée d’une spécification qui indique le nombre de glyphes et de points de code qui se combinent pour former le regroupement. Le <xref:System.Windows.Documents.Glyphs.Indices%2A> propriété collecte dans une chaîne les propriétés suivantes.  
   
--   Index de glyphe  
+- Index de glyphe  
   
--   Largeurs d’avance de glyphe  
+- Largeurs d’avance de glyphe  
   
--   Combinaison de vecteurs d’attachement de glyphe  
+- Combinaison de vecteurs d’attachement de glyphe  
   
--   Mappage de groupement des points de code aux glyphes  
+- Mappage de groupement des points de code aux glyphes  
   
--   Indicateurs de glyphe  
+- Indicateurs de glyphe  
   
  Chaque spécification de glyphe présente la forme suivante.  
   

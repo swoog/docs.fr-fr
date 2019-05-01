@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973755"
 ---
 # <a name="tilebrush-overview"></a>Vue d'ensemble de TileBrush
 <xref:System.Windows.Media.TileBrush> objets vous permettent de bien contrôler la peinture d’une zone avec une image, <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Cette rubrique explique comment utiliser <xref:System.Windows.Media.TileBrush> fonctionnalités pour mieux contrôler comment faire un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> peint une zone.  
@@ -40,11 +40,11 @@ Composants d’un TileBrush avec un TileMode de mosaïque
 ## <a name="brush-content"></a>Contenu de pinceau  
  Il existe trois types différents de <xref:System.Windows.Media.TileBrush> et chacun est peint avec un autre type de contenu.  
   
--   Si le pinceau est un <xref:System.Windows.Media.ImageBrush>, ce contenu est une image le <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.ImageBrush>.  
+- Si le pinceau est un <xref:System.Windows.Media.ImageBrush>, ce contenu est une image le <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.ImageBrush>.  
   
--   Si le pinceau est un <xref:System.Windows.Media.DrawingBrush>, ce contenu est un dessin. Le <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.DrawingBrush>.  
+- Si le pinceau est un <xref:System.Windows.Media.DrawingBrush>, ce contenu est un dessin. Le <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.DrawingBrush>.  
   
--   Si le pinceau est un <xref:System.Windows.Media.VisualBrush>, ce contenu est un élément visuel. Le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.VisualBrush>.  
+- Si le pinceau est un <xref:System.Windows.Media.VisualBrush>, ce contenu est un élément visuel. Le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété spécifie le contenu de la <xref:System.Windows.Media.VisualBrush>.  
   
  Vous pouvez spécifier la position et les dimensions de <xref:System.Windows.Media.TileBrush> contenu à l’aide de la <xref:System.Windows.Media.TileBrush.Viewbox%2A> propriété, bien qu’il soit courant de garder le <xref:System.Windows.Media.TileBrush.Viewbox%2A> définie sur sa valeur par défaut. Par défaut, le <xref:System.Windows.Media.TileBrush.Viewbox%2A> est configurée pour contenir entièrement le contenu du pinceau. Pour plus d’informations sur la configuration de la <xref:System.Windows.Controls.Viewbox>, consultez le <xref:System.Windows.Controls.Viewbox> page de propriétés.  
   
@@ -52,13 +52,13 @@ Composants d’un TileBrush avec un TileMode de mosaïque
 ## <a name="the-base-tile"></a>La mosaïque de base  
  Un <xref:System.Windows.Media.TileBrush> projette son contenu sur une mosaïque de base. Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété détermine comment <xref:System.Windows.Media.TileBrush> contenu est étiré pour remplir la mosaïque de base. Le <xref:System.Windows.Media.TileBrush.Stretch%2A> propriété accepte les valeurs suivantes, définies par le <xref:System.Windows.Media.Stretch> énumération :  
   
--   <xref:System.Windows.Media.Stretch.None>: Le contenu du pinceau n’est pas étiré pour remplir la mosaïque.  
+- <xref:System.Windows.Media.Stretch.None>: Le contenu du pinceau n’est pas étiré pour remplir la mosaïque.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Le contenu du pinceau est étiré pour remplir la mosaïque. Étant donné que la hauteur et la largeur du contenu sont mis à l’échelle indépendamment, les proportions d’origine du contenu risquent de ne pas être conservées. Autrement dit, le contenu du pinceau peut être déformé pour remplir complètement la mosaïque de sortie.  
+- <xref:System.Windows.Media.Stretch.Fill>: Le contenu du pinceau est étiré pour remplir la mosaïque. Étant donné que la hauteur et la largeur du contenu sont mis à l’échelle indépendamment, les proportions d’origine du contenu risquent de ne pas être conservées. Autrement dit, le contenu du pinceau peut être déformé pour remplir complètement la mosaïque de sortie.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Le contenu du pinceau est étiré afin de faire tenir entièrement dans la vignette. Les proportions du contenu sont conservées.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Le contenu du pinceau est étiré afin de faire tenir entièrement dans la vignette. Les proportions du contenu sont conservées.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Le contenu du pinceau est mis à l’échelle afin qu’il remplisse complètement la zone de sortie tout en conservant les proportions d’origine du contenu.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Le contenu du pinceau est mis à l’échelle afin qu’il remplisse complètement la zone de sortie tout en conservant les proportions d’origine du contenu.  
   
  L’image suivante illustre les différentes <xref:System.Windows.Media.TileBrush.Stretch%2A> paramètres.  
   
@@ -99,15 +99,15 @@ Composants d’un TileBrush avec un TileMode de mosaïque
 ### <a name="tiling-behavior"></a>Comportement des mosaïques  
  Un <xref:System.Windows.Media.TileBrush> produit un modèle en mosaïque lorsque sa mosaïque de base ne remplit pas complètement la zone de sortie et un mode de mosaïque autre <xref:System.Windows.Media.TileMode.None> est spécifié. Quand mosaïque un pinceau ne remplit pas complètement la zone de sortie, sa <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété spécifie si la mosaïque de base doit être dupliquée pour remplir la zone de sortie et, dans ce cas, comment la mosaïque de base doit être dupliqué. Le <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété accepte les valeurs suivantes, définies par le <xref:System.Windows.Media.TileMode> énumération :  
   
--   <xref:System.Windows.Media.TileMode.None>: Seule la mosaïque de base est dessinée.  
+- <xref:System.Windows.Media.TileMode.None>: Seule la mosaïque de base est dessinée.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: La mosaïque de base est dessinée et la zone restante est remplie en répétant la mosaïque de base telles que le bord droit d’une mosaïque soit adjacent au bord gauche de la suivante et de la même façon pour les bords haut et bas.  
+- <xref:System.Windows.Media.TileMode.Tile>: La mosaïque de base est dessinée et la zone restante est remplie en répétant la mosaïque de base telles que le bord droit d’une mosaïque soit adjacent au bord gauche de la suivante et de la même façon pour les bords haut et bas.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Identique à <xref:System.Windows.Media.TileMode.Tile>, mais une colonne de mosaïques sur deux est retournée horizontalement.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Identique à <xref:System.Windows.Media.TileMode.Tile>, mais une colonne de mosaïques sur deux est retournée horizontalement.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Identique à <xref:System.Windows.Media.TileMode.Tile>, mais une ligne de mosaïques sur deux est retournée verticalement.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Identique à <xref:System.Windows.Media.TileMode.Tile>, mais une ligne de mosaïques sur deux est retournée verticalement.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Combinaison de <xref:System.Windows.Media.TileMode.FlipX> et <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Combinaison de <xref:System.Windows.Media.TileMode.FlipX> et <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Les images suivantes illustrent les différents modes de mosaïque.  
   

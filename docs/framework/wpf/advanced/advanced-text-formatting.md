@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031999"
 ---
 # <a name="advanced-text-formatting"></a>Mise en forme de texte avancée
 Windows Presentation Foundation (WPF) fournit un ensemble robust de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] pour inclure du texte dans votre application. Mise en page et [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Controls.TextBlock>, fournir les plus courantes et éléments d’usage général pour la présentation de texte. Dessin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], tel que <xref:System.Windows.Media.GlyphRunDrawing> et <xref:System.Windows.Media.FormattedText>, fournissent un moyen pour inclure le texte mis en forme dans des dessins. Au niveau le plus avancé, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fournit un moteur pour contrôler chaque aspect de la présentation de texte, telles que la gestion du magasin de texte, la gestion de mise en forme de séquence de texte et gestion de l’objet incorporé de mise en forme du texte extensible.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) fournit un ensemble robust de [!INCLUDE[TL
   
  Pour gérer la virtualisation du magasin de texte, le magasin de texte doit être dérivé de <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> définit la méthode que le formateur de texte utilise pour récupérer les séquences de texte à partir du magasin de texte. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> est la méthode utilisée par le formateur de texte pour récupérer le texte exécute utilisée dans la ligne mise en forme. L’appel à <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> est effectuée à plusieurs reprises par le formateur de texte jusqu'à ce qu’une des conditions suivantes se produit :  
   
--   Un <xref:System.Windows.Media.TextFormatting.TextEndOfLine> ou une sous-classe est retournée.  
+- Un <xref:System.Windows.Media.TextFormatting.TextEndOfLine> ou une sous-classe est retournée.  
   
--   La largeur cumulée des séquences de texte dépasse la largeur de ligne maximale spécifiée dans l’appel pour créer le formateur de texte ou l’appel au formateur de texte <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> (méthode).  
+- La largeur cumulée des séquences de texte dépasse la largeur de ligne maximale spécifiée dans l’appel pour créer le formateur de texte ou l’appel au formateur de texte <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> (méthode).  
   
--   Un [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] séquence de saut de ligne, tels que « CF », « LF » ou « CRLF », est retournée.  
+- Un [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] séquence de saut de ligne, tels que « CF », « LF » ou « CRLF », est retournée.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Fourniture des séquences de texte  

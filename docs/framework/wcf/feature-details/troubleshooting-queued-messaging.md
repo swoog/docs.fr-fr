@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050764"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Résolution des problèmes de messagerie en file d'attente
 Cette section contient des questions et résolution des problèmes d’aide pour l’utilisation de files d’attente dans Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ Cette section contient des questions et résolution des problèmes d’aide pour
   
  **R :** Les fonctionnalités suivantes sont disponibles dans MSMQ 4.0 mais pas dans MSMQ 3.0 :  
   
--   La file d'attente de lettres mortes personnalisée est uniquement prise en charge sur MSMQ 4.0.  
+- La file d'attente de lettres mortes personnalisée est uniquement prise en charge sur MSMQ 4.0.  
   
--   MSMQ 3.0 et 4.0 gèrent les messages incohérents différemment.  
+- MSMQ 3.0 et 4.0 gèrent les messages incohérents différemment.  
   
--   Seul MSMQ 4.0 prend en charge la lecture transactionnelle à distance.  
+- Seul MSMQ 4.0 prend en charge la lecture transactionnelle à distance.  
   
  Pour plus d’informations, consultez [différences de fonctionnalités Queuing dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Cette section contient des questions et résolution des problèmes d’aide pour
   
  **R :** Pour déterminer la réponse, parcourez la liste de vérification suivante :  
   
--   Vérifiez que les spécifications de la file d’attente transactionnelle sont compatibles avec les garanties spécifiées. Notez les principes suivants :  
+- Vérifiez que les spécifications de la file d’attente transactionnelle sont compatibles avec les garanties spécifiées. Notez les principes suivants :  
   
-    -   Vous pouvez envoyer des messages durables (datagrammes et sessions) avec « exactement une fois » garanties (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) uniquement à une file d’attente transactionnelle.  
+    - Vous pouvez envoyer des messages durables (datagrammes et sessions) avec « exactement une fois » garanties (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) uniquement à une file d’attente transactionnelle.  
   
-    -   Vous pouvez envoyer des sessions uniquement avec des garanties « exactly-once ».  
+    - Vous pouvez envoyer des sessions uniquement avec des garanties « exactly-once ».  
   
-    -   Une transaction est requise pour recevoir des messages dans une session provenant d’une file d’attente transactionnelle.  
+    - Une transaction est requise pour recevoir des messages dans une session provenant d’une file d’attente transactionnelle.  
   
-    -   Vous pouvez envoyer ou recevoir des messages volatiles ou durables (datagrammes uniquement) sans assurances (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) uniquement à une file d’attente non transactionnelle.  
+    - Vous pouvez envoyer ou recevoir des messages volatiles ou durables (datagrammes uniquement) sans assurances (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) uniquement à une file d’attente non transactionnelle.  
   
--   Vérifiez la file d'attente de lettres mortes. Si vous y trouvez les messages, déterminez pourquoi ils n'ont pas été remis.  
+- Vérifiez la file d'attente de lettres mortes. Si vous y trouvez les messages, déterminez pourquoi ils n'ont pas été remis.  
   
--   Recherchez dans les files d'attente sortantes d'éventuels problèmes de connectivité ou d'adressage.  
+- Recherchez dans les files d'attente sortantes d'éventuels problèmes de connectivité ou d'adressage.  
   
  **Q :** J’ai spécifié une file d’attente de lettres mortes personnalisée, mais lorsque je démarre l’application expéditrice, j’obtiens une exception soit la file d’attente de lettres mortes est introuvable ou que l’application émettrice ne possède aucune autorisation sur la file d’attente de lettres mortes. Pourquoi ?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R :** Il existe trois raisons possibles à ce problème :  
   
--   Si vous êtes en mode domaine, la réception avec transaction distante requiert l'accès réseau MSDTC (Microsoft Distributed Transaction Coordinator). Vous pouvez l’activer à l’aide de **ajouter/supprimer des composants**.  
+- Si vous êtes en mode domaine, la réception avec transaction distante requiert l'accès réseau MSDTC (Microsoft Distributed Transaction Coordinator). Vous pouvez l’activer à l’aide de **ajouter/supprimer des composants**.  
   
      ![Capture d’écran montrant l’activation de réseau DTC accès.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Vérifiez le mode d’authentification pour communiquer avec le gestionnaire de transactions. Si vous êtes en mode groupe de travail, « Aucune authentification requise » ne doit être sélectionnée. Si vous êtes en mode de domaine, « Authentification mutuelle requise » doit être sélectionnée.  
+- Vérifiez le mode d’authentification pour communiquer avec le gestionnaire de transactions. Si vous êtes en mode groupe de travail, « Aucune authentification requise » ne doit être sélectionnée. Si vous êtes en mode de domaine, « Authentification mutuelle requise » doit être sélectionnée.  
   
      ![Activation des transactions XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Vérifiez que MSDTC est dans la liste des exceptions dans le **pare-feu** paramètres.  
+- Vérifiez que MSDTC est dans la liste des exceptions dans le **pare-feu** paramètres.  
   
--   Vérifiez que vous utilisez [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ sur [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge la lecture avec transaction distante. MSMQ sur les mises en production antérieures de Windows ne prend pas en charge la lecture avec transaction distante.  
+- Vérifiez que vous utilisez [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ sur [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge la lecture avec transaction distante. MSMQ sur les mises en production antérieures de Windows ne prend pas en charge la lecture avec transaction distante.  
   
  **Q :** Lorsque le service qui lit à partir de la file d’attente est un service réseau, par exemple, dans un site Web hôte, je reçois une exception d’accès refusé est générée lors de la lecture à partir de la file d’attente ?  
   

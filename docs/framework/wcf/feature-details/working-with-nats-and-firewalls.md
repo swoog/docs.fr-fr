@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050361"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Utilisation des NAT et des pare-feu
 Il arrive fréquemment que les client et serveur d'une connexion réseau ne disposent pas d'une voie de communication directe et ouverte. Les paquets sont filtrés, acheminés, analysés et transformés par les ordinateurs de point de terminaison ainsi que par les ordinateurs intermédiaires sur le réseau. Ces ordinateurs intermédiaires, qui participent à la communication, sont notamment les applications de traduction d'adresses réseau (Network address translation, NAT) et les pare-feu.  
@@ -45,11 +45,11 @@ Il arrive fréquemment que les client et serveur d'une connexion réseau ne disp
   
  La topologie la plus fréquente pour les applications client et serveur est la suivante : les clients se trouvent derrière une application NAT sans Teredo et un pare-feu autorisant uniquement les connexions sortantes tandis que les serveurs se trouvent derrière un pare-feu puissant, mais peuvent être adressés directement. Dans une telle situation, un transport TCP associé à un MEP duplex et un transport HTTP associé à un MEP demande-réponse fonctionneront correctement. La topologie la plus fréquente pour les applications pair-à-pair est la suivante : les deux points de terminaison se trouvent à la fois derrière une application NAT et un pare-feu. Dans une telle situation ainsi que dans les cas où la topologie du réseau n'est pas connue, prenez en compte les recommandations suivantes :  
   
--   N'utilisez pas de transports doubles. Un transport double ouvre plusieurs connexions, réduisant ainsi les chances d'établir une connexion réussie.  
+- N'utilisez pas de transports doubles. Un transport double ouvre plusieurs connexions, réduisant ainsi les chances d'établir une connexion réussie.  
   
--   Assurez la prise en charge des canaux d'arrière sur la connexion d'origine. L'utilisation de canaux d'arrière, notamment avec les transports TCP en mode duplex, permet d'ouvrir un nombre de connexions moindre, augmentant ainsi les chances d'établir une connexion réussie.  
+- Assurez la prise en charge des canaux d'arrière sur la connexion d'origine. L'utilisation de canaux d'arrière, notamment avec les transports TCP en mode duplex, permet d'ouvrir un nombre de connexions moindre, augmentant ainsi les chances d'établir une connexion réussie.  
   
--   Utilisez un service accessible pour inscrire les points de terminaison ou relayer le trafic. L'utilisation d'un service de connexion accessible de manière universelle, par exemple un serveur Teredo, augmente considérablement les chances d'établir une connexion réussie lorsque la topologie réseau est restreinte ou inconnue.  
+- Utilisez un service accessible pour inscrire les points de terminaison ou relayer le trafic. L'utilisation d'un service de connexion accessible de manière universelle, par exemple un serveur Teredo, augmente considérablement les chances d'établir une connexion réussie lorsque la topologie réseau est restreinte ou inconnue.  
   
  Les tableaux suivants examinent les unidirectionnel, demande-réponse et MEP duplex et TCP standard, TCP avec Teredo, et HTTP standard et double transports dans WCF.  
   

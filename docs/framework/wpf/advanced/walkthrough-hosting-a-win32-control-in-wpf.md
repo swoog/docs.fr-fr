@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032337"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procédure pas à pas : hébergement d’un contrôle Win32 dans WPF
 Windows Presentation Foundation (WPF) fournit un environnement riche pour la création d’applications. Toutefois, lorsque vous avez beaucoup investi dans du code Win32, il peut être plus efficace de réutiliser au moins une partie de ce code dans votre application WPF plutôt que de réécrire entièrement. WPF fournit un mécanisme simple pour héberger une fenêtre Win32, sur une page WPF.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) fournit un environnement riche pour la cr�
   
 6. Gérez les messages sélectionnés envoyés à la fenêtre hôte, comme les notifications des contrôles enfants. Il existe deux manières de procéder.  
   
-    -   Si vous préférez gérer des messages dans votre classe d’hébergement, substituez le <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthode de la <xref:System.Windows.Interop.HwndHost> classe.  
+    - Si vous préférez gérer des messages dans votre classe d’hébergement, substituez le <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthode de la <xref:System.Windows.Interop.HwndHost> classe.  
   
-    -   Si vous préférez que WPF gère les messages, gérer la <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> événement dans votre code-behind. Cet événement se produit pour chaque message reçu par la fenêtre hébergée. Si vous choisissez cette option, vous devez encore substituer <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mais vous devez uniquement une implémentation minime.  
+    - Si vous préférez que WPF gère les messages, gérer la <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> événement dans votre code-behind. Cet événement se produit pour chaque message reçu par la fenêtre hébergée. Si vous choisissez cette option, vous devez encore substituer <xref:System.Windows.Interop.HwndHost.WndProc%2A>, mais vous devez uniquement une implémentation minime.  
   
 7. Remplacer le <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> et <xref:System.Windows.Interop.HwndHost.WndProc%2A> méthodes de <xref:System.Windows.Interop.HwndHost>. Vous devez substituer ces méthodes pour satisfaire le <xref:System.Windows.Interop.HwndHost> contrat, mais vous devrez peut-être uniquement fournir une implémentation minimale.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) fournit un environnement riche pour la cr�
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implémenter une communication entre le contrôle et la page  
  Vous manipulez le contrôle en lui envoyant des messages de Windows. Le contrôle vous notifie quand l’utilisateur interagit avec lui en envoyant des notifications à sa fenêtre hôte. Le [hébergement d’un contrôle de ListBox Win32 dans WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) exemple inclut une interface utilisateur qui fournit plusieurs exemples montrant comment cela fonctionne :  
   
--   Ajouter un élément à la liste.  
+- Ajouter un élément à la liste.  
   
--   Supprimez l'élément sélectionné de la liste.  
+- Supprimez l'élément sélectionné de la liste.  
   
--   Afficher le texte de l'élément actuellement sélectionné.  
+- Afficher le texte de l'élément actuellement sélectionné.  
   
--   Afficher le nombre d’éléments de la liste.  
+- Afficher le nombre d’éléments de la liste.  
   
  L’utilisateur peut également sélectionner un élément dans la zone de liste en cliquant sur celle-ci, comme ils le feraient pour une application Win32 classique. Les données affichées sont mises à jour chaque fois que l’utilisateur change l’état de la zone de liste en sélectionnant ou ajoutant un élément.  
   

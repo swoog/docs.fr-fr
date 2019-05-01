@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050495"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilisation de la Bibliothèque de classes portable avec le modèle d'affichage Modèle-Affichage
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) pour implémenter le modèle modèle modèle-vue-vue (MVVM) et de partager des assemblages entre plusieurs plateformes.
@@ -32,27 +32,27 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 ## <a name="classes-that-support-mvvm"></a>Classes qui prennent en charge de MVVM
  Quand vous ciblez le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight ou Windows Phone 7.5 pour votre [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projet, les classes suivantes sont disponibles pour implémenter le modèle MVVM :
 
--   Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- Classe <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
 
--   Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
+- Classe <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
 
--   Classe <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
+- Classe <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
 
--   Classe <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
+- Classe <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
--   Toutes les classes dans le <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espace de noms
+- Toutes les classes dans le <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espace de noms
 
 ## <a name="implementing-mvvm"></a>Implémentation MVVM
  Pour implémenter le modèle MVVM, vous créez généralement le modèle et le modèle de vue dans un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] de projet, car un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projet ne peut pas référencer un projet non portable. Le modèle et le modèle de vue peuvent être dans le même projet ou dans des projets distincts. Si vous utilisez des projets distincts, ajoutez une référence à partir du projet de modèle de vue au projet de modèle.

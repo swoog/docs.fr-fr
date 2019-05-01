@@ -3,11 +3,11 @@ title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051843"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
 
@@ -46,7 +46,7 @@ public interface ICalculator
 }
 ```
 
-Le client fait des demandes synchrones à une opération mathématique donnée et l'implémentation du service calcule et retourne le résultat approprié.
+Le client fait des demandes synchrones à une opération mathématique donnée et l’implémentation du service calcule et retourne le résultat approprié.
 
 ```csharp
 // Service class that implements the service contract.
@@ -177,7 +177,7 @@ Press <ENTER> to terminate client.
 
     Par commodité, les deux étapes suivantes sont implémentées dans un fichier de commandes appelé AddNetPipeSiteBinding.cmd et qui se trouve dans le répertoire d'exemple.
 
-    1. Pour prendre en charge l'activation net.pipe, le site Web par défaut doit d'abord être lié au protocole net.pipe. Cela peut être fait à l'aide d'appcmd.exe, installé avec l'ensemble d'outils de gestion d'IIS 7.0. À partir d'une invite de commandes avec élévation de privilèges (administrateur), exécutez la commande suivante.
+    1. Pour prendre en charge l’activation net.pipe, le site web par défaut doit d’abord être lié au protocole net.pipe. Cela peut être fait à l'aide d'appcmd.exe, installé avec l'ensemble d'outils de gestion d'IIS 7.0. À partir d'une invite de commandes avec élévation de privilèges (administrateur), exécutez la commande suivante.
 
         ```
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -187,9 +187,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Cette commande est une ligne unique de texte.
 
-        Cette commande ajoute une liaison de site net.pipe au site Web par défaut.
+        Cette commande ajoute une liaison de site net.pipe au site web par défaut.
 
-    2. Bien que toutes les applications d'un site partagent une liaison commune net.pipe, chaque application peut activer individuellement la prise en charge net.pipe. Pour activer net.pipe pour l'application /servicemodelsamples, exécutez la commande suivante à partir d'une invite de commandes avec élévation de privilèges.
+    2. Bien que toutes les applications d’un site partagent une liaison commune net.pipe, chaque application peut activer individuellement la prise en charge net.pipe. Pour activer net.pipe pour l'application /servicemodelsamples, exécutez la commande suivante à partir d'une invite de commandes avec élévation de privilèges.
 
         ```
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
@@ -215,7 +215,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Cette commande doit être entrée comme une ligne unique de texte.
 
-    2. Supprimez la liaison du site net.tcp en exécutant la commande suivante à partir d'une invite de commandes avec élévation de privilèges.
+    2. Supprimez la liaison du site net.tcp en exécutant la commande suivante à partir d’une invite de commandes avec élévation de privilèges.
 
         ```
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']

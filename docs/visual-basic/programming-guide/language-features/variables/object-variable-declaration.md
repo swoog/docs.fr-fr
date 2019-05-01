@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959976"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Déclaration des variables objets (Visual Basic)
 Vous utilisez une instruction de déclaration normale pour déclarer une variable objet. Pour le type de données, vous spécifiez `Object` (autrement dit, le [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) ou une classe plus spécifique à partir duquel l’objet doit être créé.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Avantages de la liaison anticipée  
  Déclarez une variable objet comme une classe spécifique présente plusieurs avantages :  
   
--   La vérification de type automatique  
+- La vérification de type automatique  
   
--   La garantie d’accéder à tous les membres de la classe spécifique  
+- La garantie d’accéder à tous les membres de la classe spécifique  
   
--   Prise en charge de Microsoft IntelliSense dans l’éditeur de Code  
+- Prise en charge de Microsoft IntelliSense dans l’éditeur de Code  
   
--   Une meilleure lisibilité de votre code  
+- Une meilleure lisibilité de votre code  
   
--   Moins d’erreurs dans votre code  
+- Moins d’erreurs dans votre code  
   
--   Les erreurs interceptées au moment de la compilation plutôt que durée d’exécution  
+- Les erreurs interceptées au moment de la compilation plutôt que durée d’exécution  
   
--   Exécution de code plus rapide  
+- Exécution de code plus rapide  
   
 ## <a name="access-to-object-variable-members"></a>Accès aux membres des variables objets  
  Lorsque `Option Strict` est activé `On`, une variable objet peut accéder qu’aux méthodes et propriétés de la classe avec laquelle vous la déclarez. L'exemple suivant illustre ce comportement.  

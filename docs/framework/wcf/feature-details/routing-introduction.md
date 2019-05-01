@@ -3,11 +3,11 @@ title: Introduction au routage
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991092"
 ---
 # <a name="routing-introduction"></a>Introduction au routage
 Le service de routage fournit un intermédiaire SOAP générique connectable, capable de router des messages en fonction du contenu. Le service de routage vous permet de créer une logique de routage complexe et d'implémenter des scénarios, tels que l'agrégation de service, le contrôle des versions de service, le routage par priorité et en mode multidiffusion. Le service de routage fournit également une gestion des erreurs qui vous permet de définir des listes de points de terminaison de sauvegarde auxquels sont envoyés les messages en cas d'échec de l'envoi au point de terminaison de destination primaire.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Alors que de nombreuses configurations de service de routage utilisent une logique de filtre exclusive qui route les messages vers un seul point de terminaison spécifique, vous aurez peut-être besoin de router un message donné vers plusieurs points de terminaison de destination. Pour envoyer un message en mode multidiffusion à des destinations multiples, les conditions suivantes doivent être remplies :  
   
--   La forme de canal ne doit pas être de type demande-réponse (bien qu'elle puisse être monodirectionnelle ou duplex), parce qu'une seule réponse peut être reçue par l'application cliente en réponse à la demande.  
+- La forme de canal ne doit pas être de type demande-réponse (bien qu'elle puisse être monodirectionnelle ou duplex), parce qu'une seule réponse peut être reçue par l'application cliente en réponse à la demande.  
   
--   Plusieurs filtres doivent retourner une valeur `true` lors de l'évaluation du message.  
+- Plusieurs filtres doivent retourner une valeur `true` lors de l'évaluation du message.  
   
  Si ces conditions sont remplies, le message est routé vers tous les points de terminaison de tous les filtres qui doivent avoir la valeur `true`. L’exemple suivant définit une configuration de routage qui résulte dans les messages acheminés vers les deux points de terminaison si l’adresse de point de terminaison dans le message est `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Traitement des demandes**  
   
--   Obtenir le **MessageVersion** de la liaison/canal sortant.  
+- Obtenir le **MessageVersion** de la liaison/canal sortant.  
   
--   Obtenez le lecteur de corps du message d'origine.  
+- Obtenez le lecteur de corps du message d'origine.  
   
--   Créer un nouveau message avec la même action, lecteur de corps et un nouveau **MessageVersion**.  
+- Créer un nouveau message avec la même action, lecteur de corps et un nouveau **MessageVersion**.  
   
--   Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copiez la ligne à, de, FaultTo et les en-têtes RelatesTo dans le nouveau message.  
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copiez la ligne à, de, FaultTo et les en-têtes RelatesTo dans le nouveau message.  
   
--   Copiez toutes les propriétés du message dans le nouveau message.  
+- Copiez toutes les propriétés du message dans le nouveau message.  
   
--   Stockez le message de demande d'origine à utiliser lors du traitement de la réponse.  
+- Stockez le message de demande d'origine à utiliser lors du traitement de la réponse.  
   
--   Retournez le nouveau message de demande.  
+- Retournez le nouveau message de demande.  
   
  **Traitement de la réponse**  
   
--   Obtenir le **MessageVersion** du message de demande d’origine.  
+- Obtenir le **MessageVersion** du message de demande d’origine.  
   
--   Obtenez le lecteur de corps du message de réponse reçu.  
+- Obtenez le lecteur de corps du message de réponse reçu.  
   
--   Créer un nouveau message de réponse avec la même action, le lecteur de corps et le **MessageVersion** du message de demande d’origine.  
+- Créer un nouveau message de réponse avec la même action, le lecteur de corps et le **MessageVersion** du message de demande d’origine.  
   
--   Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copiez la ligne à, de, FaultTo et les en-têtes RelatesTo dans le nouveau message.  
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, copiez la ligne à, de, FaultTo et les en-têtes RelatesTo dans le nouveau message.  
   
--   Copiez les propriétés du message dans le nouveau message.  
+- Copiez les propriétés du message dans le nouveau message.  
   
--   Retournez le nouveau message de réponse.  
+- Retournez le nouveau message de réponse.  
   
  Par défaut, le **SoapProcessingBehavior** est automatiquement ajouté aux points de terminaison client par le <xref:System.ServiceModel.Routing.RoutingBehavior> lorsque le service démarre ; Toutefois, vous pouvez contrôler si le traitement SOAP est ajouté à tous les points de terminaison de client à l’aide de la <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> propriété. Vous pouvez également ajouter directement le comportement à un point de terminaison spécifique, au niveau duquel vous pouvez l'activer ou le désactiver, si un contrôle plus précis du traitement SOAP est nécessaire.  
   

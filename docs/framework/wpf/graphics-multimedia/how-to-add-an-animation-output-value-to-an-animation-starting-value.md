@@ -5,11 +5,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010239"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Procédure : Ajouter une valeur de sortie d’animation à une valeur de départ d’animation
 Cet exemple montre comment ajouter une valeur de sortie d’animation à une valeur de départ d’animation.  

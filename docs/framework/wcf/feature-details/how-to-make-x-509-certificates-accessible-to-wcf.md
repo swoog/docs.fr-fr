@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047943"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procédure : rendre des certificats X.509 accessibles à WCF
 Pour rendre un certificat X.509 accessible à Windows Communication Foundation (WCF), le code d’application doit spécifier le nom de magasin de certificat et l’emplacement. Dans certains cas, l'identité du processus doit avoir accès au fichier contenant la clé privée associée au certificat X.509. Pour obtenir la clé privée associée à un certificat X.509 dans un magasin de certificats, WCF devez être autorisé à le faire. Par défaut, seuls le propriétaire et le compte système peuvent accéder à la clé privée d'un certificat.  
@@ -23,7 +23,7 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
   
 1. Accordez au compte sous le WCF est en cours d’exécution un accès en lecture au fichier qui contient la clé privée associée au certificat X.509.  
   
-    1.  Déterminez si WCF requiert un accès en lecture à la clé privée pour le certificat X.509.  
+    1. Déterminez si WCF requiert un accès en lecture à la clé privée pour le certificat X.509.  
   
          Le tableau suivant précise si une clé privée doit être disponible lors de l'utilisation d'un certificat X.509.  
   
@@ -34,14 +34,14 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
         |Chiffrement d'un message SOAP sortant.|Non|  
         |Déchiffrement d'un message SOAP entrant.|Oui|  
   
-    2.  Déterminez l'emplacement et le nom du magasin de certificats dans lequel le certificat est stocké.  
+    2. Déterminez l'emplacement et le nom du magasin de certificats dans lequel le certificat est stocké.  
   
          Le magasin de certificats dans lequel le certificat est stocké est spécifié dans le code d'application ou dans la configuration. Ainsi, l'exemple suivant spécifie que le certificat se trouve dans le magasin de certificats `CurrentUser` nommé `My`.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  Déterminer où la clé privée pour le certificat se trouve sur l’ordinateur à l’aide de la [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil.  
+    3. Déterminer où la clé privée pour le certificat se trouve sur l’ordinateur à l’aide de la [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil.  
   
          Le [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) outil nécessite le nom de magasin de certificats, emplacement de magasin de certificats et quelque chose qui identifie de façon unique le certificat. Il accepte le nom de sujet du certificat ou son empreinte numérique comme identificateur unique. Pour plus d’informations sur la façon de déterminer l’empreinte numérique d’un certificat, consultez [Comment : Récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -51,7 +51,7 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Déterminez le compte WCF sous lequel s’exécute.  
+    4. Déterminez le compte WCF sous lequel s’exécute.  
   
          Le tableau suivant décrit en détail le compte sous lequel WCF est en cours d’exécution pour un scénario donné.  
   
@@ -62,7 +62,7 @@ Pour rendre un certificat X.509 accessible à Windows Communication Foundation (
         |Service hébergé dans IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) ou IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|SERVICE RÉSEAU|  
         |Service hébergé dans IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Contrôlé par l'élément `<processModel>` dans le fichier Machine.config. Le compte par défaut est ASPNET.|  
   
-    5.  Accorder l’accès en lecture au fichier qui contient la clé privée pour le compte WCF sous lequel s’exécute, à l’aide d’un outil tel que icacls.exe.  
+    5. Accorder l’accès en lecture au fichier qui contient la clé privée pour le compte WCF sous lequel s’exécute, à l’aide d’un outil tel que icacls.exe.  
   
          L’exemple de code suivant modifie la liste de contrôle d’accès discrétionnaire (DACL) pour le fichier spécifié accorder la lecture du compte SERVICE réseau ( : R) l’accès au fichier.  
   

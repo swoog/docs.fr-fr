@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033460"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Comment : retourner ou ignorer des éléments d'une séquence
 Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nombre donné d'éléments dans une séquence et ignorer le reste.  
@@ -22,9 +22,9 @@ Utilisez l'opérateur <xref:System.Linq.Queryable.Take%2A> pour retourner un nom
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit <xref:System.Linq.Queryable.Skip%2A> à l’aide d’une sous-requête avec le code SQL `NOT EXISTS` clause. Cette traduction présente les limites suivantes :  
   
--   L’argument doit être un jeu. Les multijeux ne sont pas pris en charge, même s'ils sont ordonnés.  
+- L’argument doit être un jeu. Les multijeux ne sont pas pris en charge, même s'ils sont ordonnés.  
   
--   La requête générée peut être beaucoup plus complexe que celle qui est générée pour la requête de base sur laquelle <xref:System.Linq.Queryable.Skip%2A> est appliqué. Cette complexité peut entraîner une dégradation des performances ou un délai d'expiration.  
+- La requête générée peut être beaucoup plus complexe que celle qui est générée pour la requête de base sur laquelle <xref:System.Linq.Queryable.Skip%2A> est appliqué. Cette complexité peut entraîner une dégradation des performances ou un délai d'expiration.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant utilise `Take` pour sélectionner les cinq premiers `Employees` embauchés. Notez que la collection est d’abord triée par `HireDate`.  

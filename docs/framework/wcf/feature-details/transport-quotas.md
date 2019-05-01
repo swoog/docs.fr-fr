@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050712"
 ---
 # <a name="transport-quotas"></a>Quotas de transport
 Les quotas de transport sont un mécanisme stratégique permettant de déterminer lorsqu'une connexion consomme trop de ressources. Un quota est une limite imposée qui empêche l'utilisation de ressources supplémentaires une fois la valeur du quota dépassée. Les quotas de transport permettent de lutter contre les attaques par déni de service malveillantes ou non intentionnelles.  
@@ -19,11 +19,11 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 ## <a name="types-of-transport-quotas"></a>Types de quotas de transport  
  Les transports WCF possèdent trois types de quotas :  
   
--   *Délais d’expiration* atténuer par déni de service qui s’appuient sur la monopolisation des ressources pendant une période prolongée.  
+- *Délais d’expiration* atténuer par déni de service qui s’appuient sur la monopolisation des ressources pendant une période prolongée.  
   
--   *Limites d’allocation de mémoire* empêcher une connexion unique épuise la mémoire système et de refus de service à d’autres connexions.  
+- *Limites d’allocation de mémoire* empêcher une connexion unique épuise la mémoire système et de refus de service à d’autres connexions.  
   
--   *Limites de taille de collection* limitent la consommation des ressources indirectement allouer de la mémoire ou qui sont en quantité limitée.  
+- *Limites de taille de collection* limitent la consommation des ressources indirectement allouer de la mémoire ou qui sont en quantité limitée.  
   
 ## <a name="transport-quota-descriptions"></a>Description des quotas de transport  
  Cette section décrit les quotas de transport disponibles pour les transports WCF standards : HTTP (S), TCP/IP et canaux nommés. Les transports personnalisés peuvent posséder des quotas configurables propres non inclus dans cette liste. Consultez la documentation relative à un transport personnalisé pour en savoir plus sur ses quotas.  

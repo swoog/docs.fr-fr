@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988765"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken, méthode
 Obtient le jeton de métadonnées pour la fonction qui contient le code associé à ce frame de pile.  
@@ -39,7 +39,7 @@ HRESULT GetFunctionToken (
  `pToken`  
  [out] Un pointeur vers un `mdMethodDef` jeton qui référence les métadonnées pour la fonction.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

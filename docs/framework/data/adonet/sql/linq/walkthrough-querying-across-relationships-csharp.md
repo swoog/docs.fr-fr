@@ -3,11 +3,11 @@ title: 'Procédure pas à pas : Interrogation entre relations (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033395"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Procédure pas à pas : Interrogation entre relations (C#)
 Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* pour représenter les relations de clé étrangère dans la base de données.  
@@ -22,18 +22,18 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
 ## <a name="overview"></a>Vue d'ensemble  
  Cette procédure pas à pas se compose de trois tâches principales :  
   
--   Ajout d'une classe d'entité pour représenter la table Orders dans l'exemple de base de données Northwind.  
+- Ajout d'une classe d'entité pour représenter la table Orders dans l'exemple de base de données Northwind.  
   
--   Ajout d'annotations à la classe `Customer` pour améliorer la relation entre les classes `Customer` et `Order`.  
+- Ajout d'annotations à la classe `Customer` pour améliorer la relation entre les classes `Customer` et `Order`.  
   
--   Création et exécution d'une requête pour tenter d'obtenir des informations `Order` en utilisant la classe `Customer`.  
+- Création et exécution d'une requête pour tenter d'obtenir des informations `Order` en utilisant la classe `Customer`.  
   
 ## <a name="mapping-relationships-across-tables"></a>Mappage de relations entre des tables  
  Une fois la définition de classe `Customer` terminée, créez la définition de classe d'entité `Order` qui inclut le code suivant indiquant que `Order.Customer` est une clé étrangère de `Customer.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Pour ajouter la classe d'entité Order  
   
--   Tapez ou collez le code suivant après la classe `Customer` :  
+- Tapez ou collez le code suivant après la classe `Customer` :  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ Cette procédure pas à pas illustre l’utilisation de [!INCLUDE[vbtecdlinq](..
   
 #### <a name="to-annotate-the-customer-class"></a>Pour annoter la classe Customer  
   
--   Tapez ou collez le code suivant dans la classe `Customer` :  
+- Tapez ou collez le code suivant dans la classe `Customer` :  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

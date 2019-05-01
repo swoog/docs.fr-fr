@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055054"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Le développement multiplateforme avec la bibliothèque de classes Portable
 
@@ -50,13 +50,13 @@ Si vous souhaitez évaluer la portabilité de vos assemblys avant d’apporter d
 
 Les types et les membres disponibles dans les projets de bibliothèque de classes portables dépendent de plusieurs facteurs de compatibilité :
 
--   Ils doivent être partagés entre les cibles que vous avez sélectionnées.
+- Ils doivent être partagés entre les cibles que vous avez sélectionnées.
 
--   Leur comportement doit être similaire sur ces cibles.
+- Leur comportement doit être similaire sur ces cibles.
 
--   Ils ne doivent pas être candidats pour la dépréciation.
+- Ils ne doivent pas être candidats pour la dépréciation.
 
--   Ils doivent s'avérer utiles dans un environnement portable, en particulier lorsque les membres qui les prennent en charge ne sont pas portables.
+- Ils doivent s'avérer utiles dans un environnement portable, en particulier lorsque les membres qui les prennent en charge ne sont pas portables.
 
 Si un membre est pris en charge dans la bibliothèque de classes portables et pour les cibles que vous avez sélectionnées, il apparaît dans votre projet dans IntelliSense. Toutefois, gardez à l'esprit que même si une API est prise en charge dans la bibliothèque de classes portables, ce sont les cibles que vous sélectionnez qui déterminent si vous pouvez utiliser cette API.
 
@@ -78,9 +78,9 @@ Lorsque vous créez une application Windows universelle qui fait référence à 
 
 Quand vous déployez une application .NET Framework qui référence un assembly de bibliothèque de classes portables, vous devez spécifier une dépendance sur la version appropriée du .NET Framework. En spécifiant cette dépendance, vous êtes assuré que la version requise est installée avec votre application.
 
--   Pour créer une dépendance avec un déploiement ClickOnce : dans **l’Explorateur de solutions**, choisissez le nœud de projet pour le projet que vous souhaitez publier. (Il s'agit du projet qui référence le projet de bibliothèque de classes portables.) Dans la barre de menus, choisissez **projet** > **propriétés**, puis choisissez le **publier** onglet. Sur le **publier** page, choisissez **conditions préalables**. Sélectionnez la version requise du .NET Framework en tant que composant requis.
+- Pour créer une dépendance avec un déploiement ClickOnce : Dans **l’Explorateur de solutions**, choisissez le nœud de projet pour le projet que vous souhaitez publier. (Il s'agit du projet qui référence le projet de bibliothèque de classes portables.) Dans la barre de menus, choisissez **projet** > **propriétés**, puis choisissez le **publier** onglet. Sur le **publier** page, choisissez **conditions préalables**. Sélectionnez la version requise du .NET Framework en tant que composant requis.
 
--   Pour créer une dépendance avec un projet d’installation : dans **l’Explorateur de solutions**, choisissez le projet d’installation. Dans la barre de menus, choisissez **projet** > **propriétés** > **conditions préalables**. Sélectionnez la version requise du .NET Framework en tant que composant requis.
+- Pour créer une dépendance avec un projet d’installation : Dans **l’Explorateur de solutions**, choisissez le projet d’installation. Dans la barre de menus, choisissez **projet** > **propriétés** > **conditions préalables**. Sélectionnez la version requise du .NET Framework en tant que composant requis.
 
 Pour plus d’informations sur le déploiement d’applications .NET Framework, consultez [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

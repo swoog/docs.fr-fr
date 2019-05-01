@@ -3,11 +3,11 @@ title: Hôte de service WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052610"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Hôte de service WCF (WcfSvcHost.exe)
 Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur de Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service en utilisant le Client Test WCF (WcfTestClient.exe) ou votre propre client, pour rechercher et corriger les erreurs potentielles.  
@@ -72,32 +72,32 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
   
  Le **hôte de Service WCF** fenêtre principale contient deux menus :  
   
--   **Fichier**: Contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, hôte de Service WCF est également arrêté. Cela arrête également tous les services hébergés.  
+- **Fichier**: Contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, hôte de Service WCF est également arrêté. Cela arrête également tous les services hébergés.  
   
--   **Aide**: Contient le **sur** commande qui contient des informations de version. Il contient également le **aide** commande capable d’ouvrir un fichier d’aide.  
+- **Aide**: Contient le **sur** commande qui contient des informations de version. Il contient également le **aide** commande capable d’ouvrir un fichier d’aide.  
   
  La principale **hôte de Service WCF** fenêtre contient deux zones :  
   
--   La première zone est **Service**. Elle contient une liste qui affiche des informations de base sur tous les services. Ces informations incluent :  
+- La première zone est **Service**. Elle contient une liste qui affiche des informations de base sur tous les services. Ces informations incluent :  
   
-    -   **Service** : Répertorie tous les services.  
+    - **Service** : Répertorie tous les services.  
   
-    -   **état**: Répertorie l’état du service. Les valeurs valides sont « Démarré », « Arrêté » et « Erreur ».  
+    - **état**: Répertorie l’état du service. Les valeurs valides sont « Démarré », « Arrêté » et « Erreur ».  
   
-    -   **Adresse des métadonnées**: Affiche l’adresse des métadonnées des services.  
+    - **Adresse des métadonnées**: Affiche l’adresse des métadonnées des services.  
   
--   La deuxième zone est **des informations supplémentaires**. Il affiche une explication détaillée de l’état du service lors de la ligne de service spécifique est sélectionnée dans le **Service** zone. Si l'état est Erreur, vous pouvez consulter le message d'erreur complet qui s'affiche à l'écran.  
+- La deuxième zone est **des informations supplémentaires**. Il affiche une explication détaillée de l’état du service lors de la ligne de service spécifique est sélectionnée dans le **Service** zone. Si l'état est Erreur, vous pouvez consulter le message d'erreur complet qui s'affiche à l'écran.  
   
 ## <a name="stopping-wcf-service-host"></a>Arrêt de l'Hôte de service WCF  
  Vous pouvez arrêter de l’hôte de Service WCF quatre manières suivantes :  
   
--   Arrêter la session de débogage dans Visual Studio.  
+- Arrêter la session de débogage dans Visual Studio.  
   
--   Sélectionnez **Exit** à partir de la **fichier** menu dans le **hôte de Service WCF** fenêtre.  
+- Sélectionnez **Exit** à partir de la **fichier** menu dans le **hôte de Service WCF** fenêtre.  
   
--   Sélectionnez **Exit** à partir du menu contextuel de l’icône de barre d’état d’hôte de Service WCF dans la zone de notification système.  
+- Sélectionnez **Exit** à partir du menu contextuel de l’icône de barre d’état d’hôte de Service WCF dans la zone de notification système.  
   
--   Quitter le Client Test WCF si elle est utilisée.  
+- Quitter le Client Test WCF si elle est utilisée.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Utilisation de l'hôte de service sans privilège d'administrateur  
  Pour permettre aux utilisateurs sans privilège d’administrateur développer des services WCF, une liste ACL (Access Control List) est créée pour l’espace de noms « http://+:8731/Design_Time_Addresses» lors de l’installation de Visual Studio. La liste ACL a la valeur (UI), qui inclut tous les utilisateurs interactifs ayant ouvert une session sur l'ordinateur. Les administrateurs peuvent ajouter ou supprimer des utilisateurs dans cette liste ACL ou ouvrir des ports supplémentaires. Cette liste ACL permet aux utilisateurs d’utiliser l’hôte de Service WCF (wcfSvcHost.exe) sans leur accorder des privilèges d’administrateur.  

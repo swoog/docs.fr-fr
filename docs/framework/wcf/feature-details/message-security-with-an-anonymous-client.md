@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038582"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Sécurité de message avec un client anonyme
 
@@ -25,7 +25,7 @@ Pour un exemple d’application, consultez [Message Security Anonymous](../../..
 |Mode de sécurité|Message|
 |Interopérabilité|WCF uniquement|
 |Authentification (serveur)|La négociation initiale requiert l'authentification du serveur, mais pas l'authentification du client|
-|Authentification (client)|None|
+|Authentification (client)|Aucun.|
 |Intégrité|Oui, à l'aide du contexte de sécurité partagé|
 |Confidentialité|Oui, à l'aide du contexte de sécurité partagé|
 |Transport|HTTP|
@@ -47,7 +47,7 @@ Le code suivant montre comment créer un point de terminaison de service qui uti
 
 ### <a name="configuration"></a>Configuration
 
-La configuration ci-dessous peut être utilisée à la place du code. L'élément de comportement du service est utilisé pour spécifier un certificat servant à authentifier le service auprès du client. L'élément de service doit spécifier le comportement à l'aide de l'attribut `behaviorConfiguration`. L'élément de liaison spécifie que le type d'informations d'identification du client est `None`, ce qui permet aux clients anonymes d'utiliser le service.
+La configuration ci-dessous peut être utilisée à la place du code. L'élément de comportement du service est utilisé pour spécifier un certificat servant à authentifier le service auprès du client. L'élément de service doit spécifier le comportement à l'aide de l'attribut `behaviorConfiguration`. L’élément de liaison spécifie que le type d’informations d’identification du client est `None`, ce qui permet aux clients anonymes d’utiliser le service.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -94,14 +94,14 @@ La configuration et le code ci-dessous sont conçus pour s'exécuter indépendam
 
 - Créez un client autonome à l'aide du code (et du code client).
 
-- Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Par exemple :
+- Créez un client qui ne définit pas d'adresse de point de terminaison. Au lieu de cela, utilisez le constructeur client qui accepte le nom de configuration comme argument. Exemple :
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
 ### <a name="code"></a>Code
 
-Le code suivant crée une instance du client. La liaison utilise le mode de sécurité au niveau du message, et le type d'informations d'identification du client a la valeur Aucun.
+Le code suivant crée une instance du client. La liaison utilise le mode de sécurité au niveau du message, et le type d’informations d’identification du client a la valeur Aucun.
 
 [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
 [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]

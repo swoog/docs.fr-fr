@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60b6d9c302cd3af9f41e5a8dce62d7eb268c4198
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961172"
 ---
 # <a name="closeclrenumeration-function"></a>Fonction CloseCLREnumeration
 Ferme tous valide common language runtime (CLR) continue-startup les événements situés dans un tableau de handles retourné par la [fonction EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)et libère la mémoire pour les tableaux de chemin d’accès de handles et de chaînes.  
@@ -58,7 +58,7 @@ HRESULT CloseCLREnumeration (
  E_FAIL (ou autres codes de retour E_)  
  La fonction ne peut pas libérer la mémoire pour `pHandleArray` et `pStringArray`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** dbgshim.h  

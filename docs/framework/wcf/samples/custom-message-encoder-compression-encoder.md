@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003091"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Encodeur de message personnalisé : Encodeur de compression
 Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de la plateforme Windows Communication Foundation (WCF).  
@@ -29,13 +29,13 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
   
  L’exemple montre comment créer et intégrer un encodeur de message personnalisé dans une application WCF. La bibliothèque GZipEncoder.dll est déployée avec le client et le service. Cet exemple montre également l'impact de la compression des messages. Le code dans GZipEncoder.dll présente les procédures suivantes :  
   
--   Création d'un encodeur personnalisé et d'une fabrique d'encodeur.  
+- Création d'un encodeur personnalisé et d'une fabrique d'encodeur.  
   
--   Développement d’un élément de liaison pour un encodeur personnalisé.  
+- Développement d’un élément de liaison pour un encodeur personnalisé.  
   
--   Utilisation de la configuration de liaison personnalisée permettant d’intégrer des éléments de liaison personnalisés.  
+- Utilisation de la configuration de liaison personnalisée permettant d’intégrer des éléments de liaison personnalisés.  
   
--   Développement d’un gestionnaire de configuration personnalisé afin de permettre la configuration de fichier d’un élément de liaison personnalisé.  
+- Développement d’un gestionnaire de configuration personnalisé afin de permettre la configuration de fichier d’un élément de liaison personnalisé.  
   
  Comme indiqué précédemment, plusieurs couches sont implémentées dans un encodeur personnalisé. Pour mieux illustrer la relation entre chacune d'elles, la liste suivante présente un ordre simplifié des événements de démarrage du service :  
   
@@ -43,13 +43,13 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
   
 2. Les informations de configuration sont lues.  
   
-    1.  La configuration du service enregistre le gestionnaire de configuration personnalisé.  
+    1. La configuration du service enregistre le gestionnaire de configuration personnalisé.  
   
-    2.  L'hôte de service est créé et ouvert.  
+    2. L'hôte de service est créé et ouvert.  
   
-    3.  L’élément de configuration personnalisé crée et retourne l’élément de liaison personnalisé.  
+    3. L’élément de configuration personnalisé crée et retourne l’élément de liaison personnalisé.  
   
-    4.  L’élément de liaison personnalisé crée et retourne une fabrique d’encodeur de message.  
+    4. L’élément de liaison personnalisé crée et retourne une fabrique d’encodeur de message.  
   
 3. Un message est reçu.  
   

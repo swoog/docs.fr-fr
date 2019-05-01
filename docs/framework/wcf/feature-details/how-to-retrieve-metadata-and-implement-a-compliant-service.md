@@ -3,11 +3,11 @@ title: 'Procédure : récupérer des métadonnées et implémenter un service c
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000790"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procédure : récupérer des métadonnées et implémenter un service conforme
 Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous souhaiterez également migrer un service existant à Windows Communication Foundation (WCF) tout en conservant le format de câble. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  
@@ -39,17 +39,17 @@ Souvent, la personne qui conçoit et implémente des services n'est pas la même
   
  L'exemple de code suivant montre :  
   
--   L’interface de contrat de service qui, lorsqu’elle est implémentée, se conforme aux exigences de contrat (`ISampleService`).  
+- L’interface de contrat de service qui, lorsqu’elle est implémentée, se conforme aux exigences de contrat (`ISampleService`).  
   
--   L'interface d'assistance destinée au client qui étend à la fois l'interface de contrat de service et <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, et doit être utilisée dans une application cliente `ISampleServiceChannel`.  
+- L'interface d'assistance destinée au client qui étend à la fois l'interface de contrat de service et <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, et doit être utilisée dans une application cliente `ISampleServiceChannel`.  
   
--   La classe d'assistance qui étend <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> et doit être utilisée dans une application cliente (`SampleServiceClient`).  
+- La classe d'assistance qui étend <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> et doit être utilisée dans une application cliente (`SampleServiceClient`).  
   
--   Le fichier de configuration généré à partir du service.  
+- Le fichier de configuration généré à partir du service.  
   
--   L'implémentation d'un service `ISampleService` simple.  
+- L'implémentation d'un service `ISampleService` simple.  
   
--   Conversion du fichier de configuration côté client vers une version côté service.  
+- Conversion du fichier de configuration côté client vers une version côté service.  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

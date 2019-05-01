@@ -3,11 +3,11 @@ title: Mise en file d'attente dans WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049633"
 ---
 # <a name="queuing-in-wcf"></a>Mise en file d'attente dans WCF
 Cette section décrit comment utiliser la communication en file d’attente dans Windows Communication Foundation (WCF).  
@@ -21,11 +21,11 @@ Cette section décrit comment utiliser la communication en file d’attente dans
   
  Mises en garde sur la liaison en file d’attente dans WCF sont les suivantes :  
   
--   Service de toutes les opérations doivent être unidirectionnelles, car la valeur par défaut en file d’attente de la liaison dans WCF ne prend pas en charge la communication duplex à l’aide de files d’attente. Un exemple de communication bidirectionnelle ([bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md)) illustre l’utilisation de deux contrats unidirectionnels pour implémenter la communication duplex à l’aide de files d’attente.  
+- Service de toutes les opérations doivent être unidirectionnelles, car la valeur par défaut en file d’attente de la liaison dans WCF ne prend pas en charge la communication duplex à l’aide de files d’attente. Un exemple de communication bidirectionnelle ([bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md)) illustre l’utilisation de deux contrats unidirectionnels pour implémenter la communication duplex à l’aide de files d’attente.  
   
--   Pour générer un service WCF client à l’aide d’échange de métadonnées requiert un point de terminaison HTTP supplémentaire sur le service afin qu’il peut être interrogé directement pour générer le client WCF et obtenir des informations de liaison permettant de configurer correctement la communication en file d’attente.  
+- Pour générer un service WCF client à l’aide d’échange de métadonnées requiert un point de terminaison HTTP supplémentaire sur le service afin qu’il peut être interrogé directement pour générer le client WCF et obtenir des informations de liaison permettant de configurer correctement la communication en file d’attente.  
   
--   En fonction de la liaison en file d’attente, une configuration supplémentaire en dehors de WCF est requise. Par exemple, le <xref:System.ServiceModel.NetMsmqBinding> classe qui est livré avec WCF, vous devez configurer les liaisons ainsi que la configuration minimale de Message Queuing (MSMQ).  
+- En fonction de la liaison en file d’attente, une configuration supplémentaire en dehors de WCF est requise. Par exemple, le <xref:System.ServiceModel.NetMsmqBinding> classe qui est livré avec WCF, vous devez configurer les liaisons ainsi que la configuration minimale de Message Queuing (MSMQ).  
   
  Les sections suivantes décrivent les liaisons en file d’attente spécifiques fournis avec WCF, qui sont basées sur MSMQ.  
   
@@ -48,9 +48,9 @@ Cette section décrit comment utiliser la communication en file d’attente dans
 #### <a name="exactlyonce-and-durable-properties"></a>Propriétés ExactlyOnce et Durable  
  Les propriétés `ExactlyOnce` et `Durable` affectent la manière dont les messages sont transférés entre des files d'attente :  
   
--   `ExactlyOnce`: Lorsque la valeur `true` (la valeur par défaut), le canal en file d’attente permet de s’assurer que le message, si fourni, n’est pas dupliqué. Il garantit également que le message n'est pas perdu. Si le message ne peut pas être remis ou si sa durée de vie expire avant que le message ait pu être remis, le message et la raison de l'échec de la remise sont enregistrés dans une file d'attente de lettres mortes. Lorsque sa valeur est `false`, le canal mis en file d'attente fait un effort pour transférer le message. Dans ce cas, vous pouvez éventuellement choisir une file d'attente de lettres mortes.  
+- `ExactlyOnce`: Lorsque la valeur `true` (la valeur par défaut), le canal en file d’attente permet de s’assurer que le message, si fourni, n’est pas dupliqué. Il garantit également que le message n'est pas perdu. Si le message ne peut pas être remis ou si sa durée de vie expire avant que le message ait pu être remis, le message et la raison de l'échec de la remise sont enregistrés dans une file d'attente de lettres mortes. Lorsque sa valeur est `false`, le canal mis en file d'attente fait un effort pour transférer le message. Dans ce cas, vous pouvez éventuellement choisir une file d'attente de lettres mortes.  
   
--   `Durable:` si sa valeur est `true` (valeur par défaut), le canal mis en file d'attente garantit que MSMQ stocke le message durablement sur le disque. Ainsi, en cas d'arrêt et de redémarrage du service MSMQ, les messages présents sur le disque sont transférés à la file d'attente cible ou sont remis au service. Lorsque sa valeur est `false`, les messages sont stockés dans un magasin volatil et sont perdus en cas d'arrêt et de redémarrage du service MSMQ.  
+- `Durable:` si sa valeur est `true` (valeur par défaut), le canal mis en file d'attente garantit que MSMQ stocke le message durablement sur le disque. Ainsi, en cas d'arrêt et de redémarrage du service MSMQ, les messages présents sur le disque sont transférés à la file d'attente cible ou sont remis au service. Lorsque sa valeur est `false`, les messages sont stockés dans un magasin volatil et sont perdus en cas d'arrêt et de redémarrage du service MSMQ.  
   
  Pour le transfert fiable `ExactlyOnce`, MSMQ requiert que la file d’attente soit transactionnelle. Par ailleurs, MSMQ requiert une transaction pour pouvoir lire les messages depuis une file d’attente transactionnelle. De ce fait, lorsque vous utilisez le `NetMsmqBinding`, n’oubliez pas qu’une transaction est requise pour envoyer ou recevoir des messages lorsque `ExactlyOnce` a la valeur `true`. De même, MSMQ requiert que la file d'attente soit non transactionnelle pour une garantie optimale, comme lorsque `ExactlyOnce` a la valeur `false` et pour la messagerie volatile. Ainsi, si la valeur `ExactlyOnce` est affectée à `false` ou à durable `false`, vous ne pouvez pas envoyer ni recevoir de messages à l'aide d'une transaction.  
   
@@ -66,9 +66,9 @@ Cette section décrit comment utiliser la communication en file d’attente dans
   
  La liaison possède deux propriétés intéressantes :  
   
--   `DeadLetterQueue`: Cette propriété est une énumération qui indique si une file d’attente de lettres mortes est demandée. Cette énumération contient également le type de file d'attente de lettres mortes, si une est demandée. Les valeurs sont `None`, `System` et `Custom`. Pour plus d’informations sur l’interprétation de ces propriétés, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`: Cette propriété est une énumération qui indique si une file d’attente de lettres mortes est demandée. Cette énumération contient également le type de file d'attente de lettres mortes, si une est demandée. Les valeurs sont `None`, `System` et `Custom`. Pour plus d’informations sur l’interprétation de ces propriétés, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`: Cette propriété est l’adresse de l’identificateur URI (Uniform Resource) de la file d’attente de lettres mortes spécifique à l’application. Cela est nécessaire si `DeadLetterQueue`.`Custom` est choisi.  
+- `CustomDeadLetterQueue`: Cette propriété est l’adresse de l’identificateur URI (Uniform Resource) de la file d’attente de lettres mortes spécifique à l’application. Cela est nécessaire si `DeadLetterQueue`.`Custom` est choisi.  
   
 #### <a name="poison-message-handling-properties"></a>Propriétés de gestion des messages incohérents  
  Lorsque le service lit des messages à partir de la file d'attente cible par le biais d'une transaction, il risque de ne pas pouvoir traiter le message pour différentes raisons. Le message est ensuite remis dans la file d'attente pour y être lu de nouveau. Pour traiter les messages qui échouent de manière répétée, un ensemble de propriétés de gestion des messages incohérents peut être configuré dans la liaison. Il existe quatre propriétés : `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` et `ReceiveErrorHandling`. Pour plus d’informations sur ces propriétés, consultez [des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
@@ -83,47 +83,47 @@ Cette section décrit comment utiliser la communication en file d’attente dans
 #### <a name="other-properties"></a>Autres propriétés  
  Outre les propriétés précédentes, les propriétés spécifiques à MSMQ suivantes sont exposées dans la liaison :  
   
--   `UseSourceJournal`: Une propriété pour indiquer que la journalisation source est activée. La journalisation source est une fonctionnalité MSMQ qui effectue le suivi des messages qui ont été transmis avec succès à partir de la file d’attente de transmission.  
+- `UseSourceJournal`: Une propriété pour indiquer que la journalisation source est activée. La journalisation source est une fonctionnalité MSMQ qui effectue le suivi des messages qui ont été transmis avec succès à partir de la file d’attente de transmission.  
   
--   `UseMsmqTracing`: Une propriété pour indiquer que le suivi MSMQ est activée. Le suivi MSMQ envoie des messages de rapport à une file d'attente de rapports chaque fois qu'un message arrive sur un ordinateur hébergeant un gestionnaire de files d'attente MSMQ ou le quitte.  
+- `UseMsmqTracing`: Une propriété pour indiquer que le suivi MSMQ est activée. Le suivi MSMQ envoie des messages de rapport à une file d'attente de rapports chaque fois qu'un message arrive sur un ordinateur hébergeant un gestionnaire de files d'attente MSMQ ou le quitte.  
   
--   `QueueTransferProtocol`: Énumération du protocole à utiliser pour les transferts de messages de file d’attente à file d’attente. MSMQ implémente un protocole natif de transfert entre files d'attente et un protocole SOAP nommé SRMP (SOAP Reliable Messaging Protocol). Le protocole SRMP est appliqué lors de l'utilisation du transport HTTP pour les transferts entre files d'attente. Le protocole SRMP sécurisé est appliqué lors de l'utilisation d'HTTPS pour les transferts entre files d'attente.  
+- `QueueTransferProtocol`: Énumération du protocole à utiliser pour les transferts de messages de file d’attente à file d’attente. MSMQ implémente un protocole natif de transfert entre files d'attente et un protocole SOAP nommé SRMP (SOAP Reliable Messaging Protocol). Le protocole SRMP est appliqué lors de l'utilisation du transport HTTP pour les transferts entre files d'attente. Le protocole SRMP sécurisé est appliqué lors de l'utilisation d'HTTPS pour les transferts entre files d'attente.  
   
--   `UseActiveDirectory`: Valeur booléenne pour indiquer si l’annuaire Active Directory doivent être utilisée pour la résolution d’adresse de file d’attente. Par défaut, cette propriété a la valeur Off. Pour plus d’informations, consultez [points de terminaison de Service et adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+- `UseActiveDirectory`: Valeur booléenne pour indiquer si l’annuaire Active Directory doivent être utilisée pour la résolution d’adresse de file d’attente. Par défaut, cette propriété a la valeur Off. Pour plus d’informations, consultez [points de terminaison de Service et adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Le `MsmqIntegrationBinding` est utilisée lorsque vous souhaitez un point de terminaison WCF pour communiquer avec une application MSMQ existante écrite en C, C++, COM ou System.Messaging APIs.  
   
  Les propriétés de liaison sont les mêmes que pour `NetMsmqBinding`, avec, toutefois, les différences suivantes :  
   
--   Le contrat d’opération de `MsmqIntegrationBinding` est limité à un seul paramètre de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, dans lequel le paramètre de type est le type de corps.  
+- Le contrat d’opération de `MsmqIntegrationBinding` est limité à un seul paramètre de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, dans lequel le paramètre de type est le type de corps.  
   
--   De nombreuses propriétés de message MSMQ natives sont exposées dans le <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> en vue d'être utilisées.  
+- De nombreuses propriétés de message MSMQ natives sont exposées dans le <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> en vue d'être utilisées.  
   
--   Pour faciliter la sérialisation et la désérialisation du corps des messages, des sérialiseurs, tels que XML et ActiveX, sont fournis.  
+- Pour faciliter la sérialisation et la désérialisation du corps des messages, des sérialiseurs, tels que XML et ActiveX, sont fournis.  
   
 ### <a name="sample-code"></a>Exemple de code  
  Pour obtenir des instructions étape par étape sur la manière d'écrire des services WCF qui utilisent MSMQ, consultez les rubriques suivantes :  
   
--   [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [Guide pratique pour Échanger des Messages avec les points de terminaison WCF et Message Queuing des Applications](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [Guide pratique pour Échanger des Messages en file d’attente avec les points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Pour obtenir un exemple de code complet illustrant l'utilisation de MSMQ dans WCF, consultez les rubriques suivantes :  
   
--   [Liaison MSMQ de transaction](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+- [Liaison MSMQ de transaction](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [Communications mises en file d’attente volatiles](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+- [Communications mises en file d’attente volatiles](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Files d’attente de lettres mortes](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+- [Files d’attente de lettres mortes](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+- [Sessions et files d’attente](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [Communications bidirectionnelles](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+- [Communications bidirectionnelles](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
--   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
+- [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Sécurité du message sur Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+- [Sécurité du message sur Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

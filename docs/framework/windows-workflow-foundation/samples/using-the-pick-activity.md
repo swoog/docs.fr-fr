@@ -3,11 +3,11 @@ title: Utilisation de l'activité Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004729"
 ---
 # <a name="using-the-pick-activity"></a>Utilisation de l'activité Pick
 Cet exemple montre comment utiliser l'activité <xref:System.Activities.Statements.Pick>.
@@ -24,17 +24,17 @@ Cet exemple montre comment utiliser l'activité <xref:System.Activities.Statemen
 
  Concepteur version le Concepteur de flux de travail de l’exemple montre comment créer un flux de travail dans le concepteur. Les fichiers suivants sont inclus :
 
--   Program.cs : Inclut le `Main` fonction qui exécute l’exemple de workflow.
+- Program.cs : Inclut le `Main` fonction qui exécute l’exemple de workflow.
 
--   ReadString.cs: Une activité personnalisée qui lit une entrée de la console.
+- ReadString.cs: Une activité personnalisée qui lit une entrée de la console.
 
--   Sequence1.XAML : Un flux de travail créé à l’aide du concepteur qui utilise Pick.
+- Sequence1.XAML : Un flux de travail créé à l’aide du concepteur qui utilise Pick.
 
  Workflow encodé la version encodée de l’exemple montre comment créer un flux de travail dans le concepteur. Les fichiers suivants sont inclus :
 
--   Program.cs : Inclut le `Main` fonction qui exécute l’exemple de workflow.
+- Program.cs : Inclut le `Main` fonction qui exécute l’exemple de workflow.
 
--   ReadString.cs: Une activité personnalisée qui lit une entrée de la console.
+- ReadString.cs: Une activité personnalisée qui lit une entrée de la console.
 
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
 

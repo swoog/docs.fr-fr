@@ -3,20 +3,20 @@ title: Instructions sur les pare-feu
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051934"
 ---
 # <a name="firewall-instructions"></a>Instructions sur les pare-feu
 Vous devez activer plusieurs ports ou programmes dans le pare-feu pour que les exemples Windows Communication Foundation (WCF) peuvent fonctionner. Un grand nombre d'exemples communique en utilisant des ports contenus dans la plage 8000-8003, ainsi que le port 9000. Le pare-feu est activé par défaut et empêche l'accès à ces ports. Pour activer le pare-feu pour les exemples, exécutez l’une des procédures suivantes, selon vos besoins et votre environnement de sécurité :  
   
--   Option 1 : Activation interactive des exemples en cours d’exécution. N'apportez aucune modification à l'avance à votre configuration de pare-feu et lancez la création et l'exécution des exemples. Lorsqu’un exemple est exécuté, un **alerte de sécurité Windows** boîte de dialogue s’affiche. L'exemple de programme en question peut ensuite être ajouté interactivement à une liste non bloquée. Dans le cadre de cette procédure, vous devrez peut-être redémarrer l'exemple.  
+- Option 1 : Activation interactive des exemples en cours d’exécution. N'apportez aucune modification à l'avance à votre configuration de pare-feu et lancez la création et l'exécution des exemples. Lorsqu’un exemple est exécuté, un **alerte de sécurité Windows** boîte de dialogue s’affiche. L'exemple de programme en question peut ensuite être ajouté interactivement à une liste non bloquée. Dans le cadre de cette procédure, vous devrez peut-être redémarrer l'exemple.  
   
--   Option 2 : Activer les exemples de programmes à l’avance. Démarrer le **le panneau de configuration pare-feu Windows** applet et activer les exemples de programmes que vous prévoyez d’exécuter. Vous devez générer en premier les programmes afin que les fichiers exécutables existent. Vous trouverez des instructions plus détaillées dans la procédure suivante.  
+- Option 2 : Activer les exemples de programmes à l’avance. Démarrer le **le panneau de configuration pare-feu Windows** applet et activer les exemples de programmes que vous prévoyez d’exécuter. Vous devez générer en premier les programmes afin que les fichiers exécutables existent. Vous trouverez des instructions plus détaillées dans la procédure suivante.  
   
--   Option 3 : Activer une plage de ports à l’avance. Démarrer le **Windows Firewall** **le panneau de configuration** applet et activer les ports 80, 443, 8000-8003 et 9000, qui sont utilisés par les exemples. Vous trouverez des instructions plus détaillées dans la procédure suivante. Cette option est moins sécurisée que les autres, car elle permet à tout programme d'utiliser ces ports, et non aux exemples uniquement.  
+- Option 3 : Activer une plage de ports à l’avance. Démarrer le **Windows Firewall** **le panneau de configuration** applet et activer les ports 80, 443, 8000-8003 et 9000, qui sont utilisés par les exemples. Vous trouverez des instructions plus détaillées dans la procédure suivante. Cette option est moins sécurisée que les autres, car elle permet à tout programme d'utiliser ces ports, et non aux exemples uniquement.  
   
  Si vous ne savez pas quelle procédure utiliser, choisissez la première option. Si vous utilisez le pare-feu d'un autre fournisseur, vous devrez peut-être apporter des modifications semblables.  
   
@@ -34,9 +34,9 @@ Vous devez activer plusieurs ports ou programmes dans le pare-feu pour que les e
   
 3. Effectuez l'une des étapes suivantes, selon votre système d'exploitation, pour autoriser un programme via le Pare-feu Windows :  
   
-    -   Dans Windows 7 ou Windows Server 2008 r2, cliquez sur **permettent à un programme ou une fonctionnalité via le pare-feu de Windows**. Cliquez sur **modifier les paramètres**, autoriser **un autre programme...** .  
+    - Dans Windows 7 ou Windows Server 2008 r2, cliquez sur **permettent à un programme ou une fonctionnalité via le pare-feu de Windows**. Cliquez sur **modifier les paramètres**, autoriser **un autre programme...** .  
   
-    -   Sur [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], cliquez sur **autoriser un programme via le pare-feu de Windows**.  
+    - Sur [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], cliquez sur **autoriser un programme via le pare-feu de Windows**.  
   
 4. Sur le **Exceptions** , cliquez sur **ajouter un programme**.  
   
@@ -52,21 +52,21 @@ Vous devez activer plusieurs ports ou programmes dans le pare-feu pour que les e
   
 2. Sur Windows 7 ou Windows Server 2008 R2, procédez comme suit.  
   
-    1.  Cliquez sur **paramètres avancés** dans la colonne de gauche de la fenêtre de pare-feu de Windows.  
+    1. Cliquez sur **paramètres avancés** dans la colonne de gauche de la fenêtre de pare-feu de Windows.  
   
-    2.  Cliquez sur **règles de trafic entrant** dans la colonne de gauche.  
+    2. Cliquez sur **règles de trafic entrant** dans la colonne de gauche.  
   
-    3.  Cliquez sur **nouvelles règles** dans la colonne de droite.  
+    3. Cliquez sur **nouvelles règles** dans la colonne de droite.  
   
-    4.  Sélectionnez **Port** et cliquez sur **suivant**.  
+    4. Sélectionnez **Port** et cliquez sur **suivant**.  
   
-    5.  Sélectionnez **TCP** et entrez `8000, 8001, 8002, 8003, 9000, 80, 443` dans le **ports locaux spécifiques** champ.  
+    5. Sélectionnez **TCP** et entrez `8000, 8001, 8002, 8003, 9000, 80, 443` dans le **ports locaux spécifiques** champ.  
   
-    6.  Cliquez sur **Suivant**.  
+    6. Cliquez sur **Suivant**.  
   
-    7.  Sélectionnez **autoriser la connexion**, puis cliquez sur **suivant** .  
+    7. Sélectionnez **autoriser la connexion**, puis cliquez sur **suivant** .  
   
-    8.  Sélectionnez **domaine** et **privé**, puis cliquez sur **suivant**.  
+    8. Sélectionnez **domaine** et **privé**, puis cliquez sur **suivant**.  
   
     9. Nommez cette règle `WCF-WF 4.0 Samples`, puis cliquez sur **Terminer**.  
   
@@ -74,15 +74,15 @@ Vous devez activer plusieurs ports ou programmes dans le pare-feu pour que les e
   
 3. Sur [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], procédez comme suit.  
   
-    1.  Cliquez sur **autoriser un programme via le pare-feu de Windows**.  
+    1. Cliquez sur **autoriser un programme via le pare-feu de Windows**.  
   
-    2.  Sur le **Exceptions** , cliquez sur **ajouter un Port**.  
+    2. Sur le **Exceptions** , cliquez sur **ajouter un Port**.  
   
-    3.  Entrez un nom, entrez le numéro de port 8000 et sélectionnez le **TCP** option.  
+    3. Entrez un nom, entrez le numéro de port 8000 et sélectionnez le **TCP** option.  
   
-    4.  Cliquez sur le **modifier l’étendue** bouton, sélectionnez le **mon réseau** seule option disponible (sous-réseau), puis cliquez sur **OK**.  
+    4. Cliquez sur le **modifier l’étendue** bouton, sélectionnez le **mon réseau** seule option disponible (sous-réseau), puis cliquez sur **OK**.  
   
-    5.  Répétez les étapes b à d pour les ports 8001, 8002, 8003, 9000, 80 et 443.  
+    5. Répétez les étapes b à d pour les ports 8001, 8002, 8003, 9000, 80 et 443.  
   
 4. Cliquez sur **OK** pour fermer l’applet de pare-feu.  
   

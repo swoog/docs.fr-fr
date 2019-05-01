@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053286"
 ---
 # <a name="-operator-visual-basic"></a>>>, Opérateur (Visual Basic)
 Effectue un décalage arithmétique vers la droite sur un modèle binaire.  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  Les résultats de l’exemple précédent sont les suivantes :  
   
--   `result1` est 2560 (0000 1010 0000 0000).  
+- `result1` est 2560 (0000 1010 0000 0000).  
   
--   `result2` est de 160 (0000 0000 1010 0000).  
+- `result2` est de 160 (0000 0000 1010 0000).  
   
--   `result3` est 2 (0000 0000 0000 0010).  
+- `result3` est 2 (0000 0000 0000 0010).  
   
--   `result4` est 640 (0000 0010 1000 0000).  
+- `result4` est 640 (0000 0010 1000 0000).  
   
--   `result5` est égal à 0 (décalé de 15 places à droite).  
+- `result5` est égal à 0 (décalé de 15 places à droite).  
   
  Le nombre de positions de décalage pour `result4` est calculé comme 18 et 15, ce qui est égal à 2.  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  Les résultats de l’exemple précédent sont les suivantes :  
   
--   `negresult1` is -512 (1111 1110 0000 0000).  
+- `negresult1` is -512 (1111 1110 0000 0000).  
   
--   `negresult2` est -1 (le bit de signe est propagé).  
+- `negresult2` est -1 (le bit de signe est propagé).  
   
 ## <a name="see-also"></a>Voir aussi
 

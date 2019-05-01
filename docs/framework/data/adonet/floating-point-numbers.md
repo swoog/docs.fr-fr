@@ -3,11 +3,11 @@ title: Nombres à virgule flottante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033980"
 ---
 # <a name="floating-point-numbers"></a>Nombres à virgule flottante
 Cette rubrique décrit certains des problèmes que les développeurs rencontrent fréquemment lorsqu'ils utilisent des nombres à virgule flottante dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Ces problèmes sont provoquées par le fait que les ordinateurs stockent les nombres à virgule flottante et ne sont pas spécifiques à un fournisseur particulier comme <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  

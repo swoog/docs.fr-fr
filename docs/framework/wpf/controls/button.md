@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
 ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051882"
 ---
 # <a name="button"></a>Bouton
 Un <xref:System.Windows.Controls.Button> contrôle réagit à l’utilisateur à partir d’une souris, clavier, stylet, ou tout autre périphérique d’entrée et déclenche un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement. Un <xref:System.Windows.Controls.Button> est un basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] composant qui peut contenir un contenu simple, telles que du texte et peut également contenir un contenu complexe, tels que des images et <xref:System.Windows.Controls.Panel> contrôles.  

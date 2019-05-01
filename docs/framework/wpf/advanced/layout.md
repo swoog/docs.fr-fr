@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054371"
 ---
 # <a name="layout"></a>Mise en page
 Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Pour créer des interfaces utilisateur dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], il est essentiel de comprendre quand et comment interviennent les calculs de disposition.  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Zones englobantes d’élément](#LayoutSystem_BoundingBox)  
+- [Zones englobantes d’élément](#LayoutSystem_BoundingBox)  
   
--   [Système de disposition](#LayoutSystem_Overview)  
+- [Système de disposition](#LayoutSystem_Overview)  
   
--   [Mesure et réorganisation d’enfants](#LayoutSystem_Measure_Arrange)  
+- [Mesure et réorganisation d’enfants](#LayoutSystem_Measure_Arrange)  
   
--   [Comportements des éléments de panneau et de disposition personnalisée](#LayoutSystem_PanelsCustom)  
+- [Comportements des éléments de panneau et de disposition personnalisée](#LayoutSystem_PanelsCustom)  
   
--   [Considérations sur les performances de disposition](#LayoutSystem_Performance)  
+- [Considérations sur les performances de disposition](#LayoutSystem_Performance)  
   
--   [Rendu d’une précision inférieure au pixel et arrondi de disposition](#LayoutSystem_LayoutRounding)  
+- [Rendu d’une précision inférieure au pixel et arrondi de disposition](#LayoutSystem_LayoutRounding)  
   
--   [Étapes suivantes](#LayoutSystem_whatsnext)  
+- [Étapes suivantes](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Zones englobantes d’élément  
@@ -120,19 +120,19 @@ Cette rubrique décrit le système de disposition de [!INCLUDE[TLA#tla_winclient
 ## <a name="layout-performance-considerations"></a>Considérations sur les performances de disposition  
  La disposition est un processus récursif. Chaque élément enfant dans un <xref:System.Windows.Controls.Panel.Children%2A> collection est traitée pendant chaque appel du système de disposition. Par conséquent, il est préférable d’éviter de déclencher le système de disposition quand cela n’est pas nécessaire. Les considérations suivantes peuvent vous aider à bénéficier de meilleures performances.  
   
--   Identifiez les changements de valeurs de propriétés qui forceront le système de disposition à procéder à une mise à jour récursive.  
+- Identifiez les changements de valeurs de propriétés qui forceront le système de disposition à procéder à une mise à jour récursive.  
   
      Les propriétés de dépendance dont les valeurs peuvent entraîner l’initialisation du système de disposition sont marquées avec des indicateurs publics. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> et <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> fournissent des indications utiles concernant la propriété des modifications de valeur forcera une récursive mettre à jour par le système de disposition. En règle générale, toute propriété qui peut affecter la taille du cadre englobant d’un élément doit avoir un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> l’indicateur est défini sur true. Pour plus d’informations, consultez [Vue d’ensemble des propriétés de dépendance](dependency-properties-overview.md).  
   
--   Si possible, utilisez un <xref:System.Windows.UIElement.RenderTransform%2A> au lieu d’un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Si possible, utilisez un <xref:System.Windows.UIElement.RenderTransform%2A> au lieu d’un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Un <xref:System.Windows.FrameworkElement.LayoutTransform%2A> peut être un moyen très utile pour affecter le contenu d’un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Toutefois, si l’effet de la transformation n’a pas d’impact sur la position d’autres éléments, il est préférable d’utiliser un <xref:System.Windows.UIElement.RenderTransform%2A> au lieu de cela, étant donné que <xref:System.Windows.UIElement.RenderTransform%2A> n’appelle pas le système de disposition. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> s’applique sa transformation et force une mise à jour de disposition récursive pour prendre en compte la nouvelle position de l’élément affecté.  
   
--   Évitez les appels inutiles à <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Évitez les appels inutiles à <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      Le <xref:System.Windows.UIElement.UpdateLayout%2A> méthode force une mise à jour de disposition récursive et n’est pas souvent nécessaire. À moins d’être certain qu’une mise à jour complète est nécessaire, laissez le système de disposition appeler cette méthode à votre place.  
   
--   Lorsque vous travaillez avec un grand <xref:System.Windows.Controls.Panel.Children%2A> collection, envisagez d’utiliser un <xref:System.Windows.Controls.VirtualizingStackPanel> au lieu d’une expression régulière <xref:System.Windows.Controls.StackPanel>.  
+- Lorsque vous travaillez avec un grand <xref:System.Windows.Controls.Panel.Children%2A> collection, envisagez d’utiliser un <xref:System.Windows.Controls.VirtualizingStackPanel> au lieu d’une expression régulière <xref:System.Windows.Controls.StackPanel>.  
   
      En virtualisant la collection enfant, le <xref:System.Windows.Controls.VirtualizingStackPanel> conserve uniquement les objets en mémoire qui se trouvent actuellement dans la fenêtre d’affichage du parent. De ce fait, les performances sont considérablement améliorées dans la plupart des scénarios.  
   

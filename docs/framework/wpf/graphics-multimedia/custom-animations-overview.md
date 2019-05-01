@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010148"
 ---
 # <a name="custom-animations-overview"></a>Vue d'ensemble des animations personnalisées
 Cette rubrique décrit comment et quand étendre le système d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en créant des images clés personnalisées et des classes d’animation, ou à l’aide du rappel image par image pour l’ignorer.  
@@ -28,11 +28,11 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
 ## <a name="extending-the-animation-system"></a>Extension du système d’animation  
  Il existe plusieurs façons d’étendre le système d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], en fonction du niveau de fonctionnalités intégrées que vous souhaitez utiliser.  Il existe trois points d’extensibilité principaux dans le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] :  
   
--   Créer un objet d’image clé personnalisée en héritant de la  *\<Type >* KeyFrame classes, telles que <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Cette approche utilise la plupart des fonctionnalités intégrées dans le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Créer un objet d’image clé personnalisée en héritant de la  *\<Type >* KeyFrame classes, telles que <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Cette approche utilise la plupart des fonctionnalités intégrées dans le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Créer votre propre classe d’animation en héritant de <xref:System.Windows.Media.Animation.AnimationTimeline> ou l’un de le  *\<Type >* AnimationBase classes.  
+- Créer votre propre classe d’animation en héritant de <xref:System.Windows.Media.Animation.AnimationTimeline> ou l’un de le  *\<Type >* AnimationBase classes.  
   
--   Utilisez le rappel image par image pour générer des animations image par image. Cette approche ignore entièrement l’animation et le système de minutage.  
+- Utilisez le rappel image par image pour générer des animations image par image. Cette approche ignore entièrement l’animation et le système de minutage.  
   
  Le tableau suivant décrit certains scénarios permettant d’étendre le système d’animation.  
   
@@ -47,11 +47,11 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
 ## <a name="create-a-custom-key-frame"></a>Création d’une image clé personnalisée  
  La création d’une classe d’image clé personnalisée est la façon la plus simple d’étendre le système d’animation. Utilisez cette approche lorsque vous souhaitez une autre méthode d’interpolation pour une animation d’image clé.  Comme décrit dans la [Vue d'ensemble des animations d'image clé](key-frame-animations-overview.md), une animation d’image clé utilise des objets d’images clés pour générer ses valeurs de sortie. Chaque objet d’image clé remplit trois fonctions :  
   
--   Spécifie une valeur de cible à l’aide de son <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété.  
+- Spécifie une valeur de cible à l’aide de son <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété.  
   
--   Spécifie l’heure à laquelle cette valeur doit être atteinte à l’aide de son <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété.  
+- Spécifie l’heure à laquelle cette valeur doit être atteinte à l’aide de son <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété.  
   
--   Interpole entre la valeur de l’image clé précédente et sa propre valeur en implémentant la méthode InterpolateValueCore.  
+- Interpole entre la valeur de l’image clé précédente et sa propre valeur en implémentant la méthode InterpolateValueCore.  
   
  **Instructions d’implémentation**  
   
@@ -87,13 +87,13 @@ Cette rubrique décrit comment et quand étendre le système d’animation [!INC
   
  Dériver à partir de la <xref:System.Windows.Media.Animation.AnimationTimeline> classe et substituer les membres suivants :  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Si votre nouvelle classe est concrète, vous devez substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Si votre nouvelle classe est concrète, vous devez substituer <xref:System.Windows.Freezable.CreateInstanceCore%2A> pour retourner une nouvelle instance de votre classe.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Remplacez cette méthode pour retourner la valeur actuelle de votre animation. Elle accepte trois paramètres : une valeur d’origine par défaut, une valeur de destination par défaut et un <xref:System.Windows.Media.Animation.AnimationClock>. Utilisez le <xref:System.Windows.Media.Animation.AnimationClock> pour obtenir l’heure actuelle ou la progression de l’animation. Vous pouvez choisir d’utiliser les valeurs d’origine et de destination par défaut.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> : Remplacez cette méthode pour retourner la valeur actuelle de votre animation. Elle accepte trois paramètres : une valeur d’origine par défaut, une valeur de destination par défaut et un <xref:System.Windows.Media.Animation.AnimationClock>. Utilisez le <xref:System.Windows.Media.Animation.AnimationClock> pour obtenir l’heure actuelle ou la progression de l’animation. Vous pouvez choisir d’utiliser les valeurs d’origine et de destination par défaut.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Remplacez cette propriété pour indiquer si votre animation utilise la valeur de destination par défaut spécifiée par le <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> (méthode).  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> : Remplacez cette propriété pour indiquer si votre animation utilise la valeur de destination par défaut spécifiée par le <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> (méthode).  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Remplacez cette propriété pour indiquer la <xref:System.Type> de sortie de votre animation produit.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Remplacez cette propriété pour indiquer la <xref:System.Type> de sortie de votre animation produit.  
   
  Si la classe n’utilise pas de propriétés de dépendance pour stocker ses données ou si elle nécessite une initialisation supplémentaire après la création, vous devrez peut-être substituer d’autres méthodes. Consultez [Vue d'ensemble des objets Freezable](../advanced/freezable-objects-overview.md) pour plus d’informations.  
   

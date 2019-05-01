@@ -1,25 +1,25 @@
 ---
-title: Quand déployer les conteneurs Windows sur Service Fabric
+title: Quand déployer des conteneurs Windows sur Service Fabric
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Quand déployer les conteneurs Windows sur Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973658"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quand déployer les conteneurs Windows sur Service Fabric
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quand déployer des conteneurs Windows sur Service Fabric
 
 Les applications qui reposent sur les conteneurs Windows devront rapidement utiliser plateformes éloignez davantage de machines virtuelles IaaS. Il s’agit d’améliore l’évolutivité automatique et d’évolutivité élevée et pour obtenir des améliorations significatives dans une expérience de gestion complète pour les déploiements, mises à niveau, le contrôle de version, vous permettez ainsi l’intégrité. Vous pouvez atteindre ces objectifs avec l’orchestrateur Azure Service Fabric, disponible dans le cloud Microsoft Azure, mais également en local, ou même dans un autre cloud.
 
 De nombreuses organisations sont soulever et déplacent des applications monolithiques existantes vers les conteneurs pour deux raisons :
 
--   Réductions de coûts, soit en raison de la consolidation et la suppression de matériel existant, ou à partir de l’exécution des applications à une densité plus élevée.
+- Réductions de coûts, soit en raison de la consolidation et la suppression de matériel existant, ou à partir de l’exécution des applications à une densité plus élevée.
 
--   Un contrat d’un déploiement cohérent entre le développement et les opérations.
+- Un contrat d’un déploiement cohérent entre le développement et les opérations.
 
 Poursuite de réductions de coûts est compréhensible, et il est probable que toutes les organisations sont repérage de cet objectif. Un déploiement cohérent est plus difficile à évaluer, mais il est tout aussi comme importantes. Un contrat d’un déploiement cohérent indique que les développeurs sont libres de choisir d’utiliser la technologie qui leur convient, et l’équipe d’exploitation Obtient un moyen simple pour déployer et gérer des applications. Le présent contrat inconfortable d’avoir des opérations de gérer la complexité de nombreuses technologies différentes, ou forcer les développeurs à travailler uniquement avec certaines technologies. En fait, chaque application est placée dans une image de déploiement autonome.
 

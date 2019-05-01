@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034552"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configuration des paramètres et types de données de paramètre
 
@@ -50,33 +50,33 @@ Le type de fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/d
 
 |Type .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Booléen|Bit|Byte|
+|<xref:System.Boolean>|Booléen|Bit|Booléen|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|Binaire|VarBinary. Cette conversion implicite échouera si le tableau d’octets est supérieur à la taille maximale d’un VarBinary, soit 8 000 octets. Pour des tableaux d’octets supérieurs à 8 000 octets, définissez explicitement le <xref:System.Data.SqlDbType>.|VarBinary|Binaire|Raw|
 |<xref:System.Char>| |La déduction de <xref:System.Data.SqlDbType> à partir de char n'est pas prise en charge.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
-|<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de DateTimeOffset n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numérique|Nombre|
+|<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de DateTimeOffset n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|||DateTime|
+|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numérique|nombre|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|GUID|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Nombre|
-|<xref:System.Object>|Objet|Variante|Variante|La déduction d'OdbcType à partir d'Object n'est pas prise en charge.|Blob|
-|<xref:System.String>|Chaîne|NVarChar. Cette conversion implicite échouera si la chaîne est supérieure à la taille maximale de NVarChar, soit 4 000 caractères. Pour les chaînes supérieures à 4 000 caractères, définissez explicitement <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
-|<xref:System.TimeSpan>|réflexion|Time dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de TimeSpan n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|DBTime|réflexion|DateTime|
+|<xref:System.Object>|Object|Variante|Variante|La déduction d'OdbcType à partir d'Object n'est pas prise en charge.|Blob|
+|<xref:System.String>|Chaîne|NVarChar. Cette conversion implicite échouera si la chaîne est supérieure à la taille maximale de NVarChar, soit 4 000 caractères. Pour les chaînes supérieures à 4 000 caractères, définissez explicitement <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
+|<xref:System.TimeSpan>|réflexion|Time dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de TimeSpan n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|DBTime|réflexion|DateTime|
 |<xref:System.UInt16>|UInt16|La déduction de <xref:System.Data.SqlDbType> à partir de UInt16 n'est pas prise en charge.|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|La déduction de <xref:System.Data.SqlDbType> à partir de UInt32 n'est pas prise en charge.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|La déduction de <xref:System.Data.SqlDbType> à partir de UInt64 n'est pas prise en charge.|UnsignedBigInt|Numérique|Nombre|
+|<xref:System.UInt64>|UInt64|La déduction de <xref:System.Data.SqlDbType> à partir de UInt64 n'est pas prise en charge.|UnsignedBigInt|Numérique|nombre|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Devise|Money|Devise|La déduction d' `OdbcType` à partir de `Currency` n'est pas prise en charge.|Nombre|
+||Devise|Money|Devise|La déduction d' `OdbcType` à partir de `Currency` n'est pas prise en charge.|nombre|
 ||Date|Date dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de Date n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|DBDate|Date|DateTime|
 ||SByte|La déduction de <xref:System.Data.SqlDbType> à partir de SByte n'est pas prise en charge.|TinyInt|La déduction de `OdbcType` à partir de SByte n'est pas prise en charge.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
-||réflexion|Time dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de Time n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|DBTime|réflexion|DateTime|
-||VarNumeric|La déduction de <xref:System.Data.SqlDbType> à partir de VarNumeric n'est pas prise en charge.|VarNumeric|La déduction de `OdbcType` à partir de VarNumeric n'est pas prise en charge.|Nombre|
+||réflexion|Time dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de Time n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|DBTime|réflexion|DateTime|
+||VarNumeric|La déduction de <xref:System.Data.SqlDbType> à partir de VarNumeric n'est pas prise en charge.|VarNumeric|La déduction de `OdbcType` à partir de VarNumeric n'est pas prise en charge.|nombre|
 |type défini par l'utilisateur (objet avec <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>)|Objet ou chaîne, selon le fournisseur (SqlClient retourne toujours un objet, ODBC retourne toujours une chaîne et le fournisseur de données managées OleDb l'un ou l'autre)|SqlDbType.Udt si <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> est présent, sinon Variant|OleDbType.VarWChar (si la valeur est Null), sinon OleDbType.Variant.|OdbcType.NVarChar|non pris en charge|
 
 > [!NOTE]
@@ -119,7 +119,7 @@ Cet exemple montre comment appeler une procédure stockée SQL Server dans l'exe
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Utilisation de paramètres avec OleDbCommand ou OdbcCommand
 
-Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, l'ordre des paramètres ajoutés à la collection `Parameters` doit correspondre à celui des paramètres définis dans votre procédure stockée. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC traitent les paramètres d'une procédure stockée comme des espaces réservés et appliquent des valeurs de paramètre par ordre. En outre, les paramètres des valeurs de retour doivent être les premiers paramètres ajoutés à la collection `Parameters` .
+Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, l'ordre des paramètres ajoutés à la collection `Parameters` doit correspondre à celui des paramètres définis dans votre procédure stockée. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC traitent les paramètres d'une procédure stockée comme des espaces réservés et appliquent des valeurs de paramètre par ordre. En outre, les paramètres des valeurs de retour doivent être les premiers paramètres ajoutés à la collection `Parameters` .
 
 Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC ne prennent pas en charge les paramètres nommés pour le passage des paramètres à une instruction SQL ou une procédure stockée. Dans ce cas, vous devez utiliser l'espace réservé de point d'interrogation (?), comme dans l'exemple suivant.
 

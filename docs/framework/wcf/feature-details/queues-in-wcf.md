@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046443"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Files d'attente dans Windows Communication Foundation
 Les rubriques de cette section traitent de prise en charge de Windows Communication Foundation (WCF) pour les files d’attente. WCF fournit la prise en charge de file d’attente en exploitant Microsoft Message Queuing (anciennement appelé MSMQ) comme transport et permet les scénarios suivants :  
   
--   Applications faiblement couplées. Les applications émettrices peuvent envoyer des messages aux files d'attente sans avoir besoin de savoir si l'application réceptrice est disponible pour traiter le message. La file d'attente permet l'indépendance du traitement, ce qui signifie que l'application émettrice peut envoyer des messages à la file d'attente à un taux de qui ne dépend pas de la rapidité avec laquelle les applications réceptrices peuvent traiter les messages. La disponibilité globale du système augmente lorsque l'envoi de messages à une file d'attente n'est pas fortement couplé au traitement du message.  
+- Applications faiblement couplées. Les applications émettrices peuvent envoyer des messages aux files d'attente sans avoir besoin de savoir si l'application réceptrice est disponible pour traiter le message. La file d'attente permet l'indépendance du traitement, ce qui signifie que l'application émettrice peut envoyer des messages à la file d'attente à un taux de qui ne dépend pas de la rapidité avec laquelle les applications réceptrices peuvent traiter les messages. La disponibilité globale du système augmente lorsque l'envoi de messages à une file d'attente n'est pas fortement couplé au traitement du message.  
   
--   Isolation de défaillance. Les applications qui envoient des messages à une file d'attente ou en reçoivent peuvent échouer sans impact mutuel. Par exemple, si l'application réceptrice échoue, l'application émettrice peut continuer à envoyer des messages à la file d'attente. Lorsque le récepteur est de nouveau en service, il peut traiter les messages de la file d'attente. L'isolation de défaillance augmente la fiabilité globale du système et sa disponibilité.  
+- Isolation de défaillance. Les applications qui envoient des messages à une file d'attente ou en reçoivent peuvent échouer sans impact mutuel. Par exemple, si l'application réceptrice échoue, l'application émettrice peut continuer à envoyer des messages à la file d'attente. Lorsque le récepteur est de nouveau en service, il peut traiter les messages de la file d'attente. L'isolation de défaillance augmente la fiabilité globale du système et sa disponibilité.  
   
--   Nivellement de charge. Les applications émettrices peuvent submerger de messages les applications réceptrices. Les files d'attente peuvent gérer la production de messages et les taux consommation incompatibles afin qu'un récepteur ne soit pas submergé.  
+- Nivellement de charge. Les applications émettrices peuvent submerger de messages les applications réceptrices. Les files d'attente peuvent gérer la production de messages et les taux consommation incompatibles afin qu'un récepteur ne soit pas submergé.  
   
--   Opérations hors circuit. L'envoi, la réception et le traitement d'opérations peut se faire hors circuit en cas de communication sur des réseaux à forte latence ou à disponibilité limitée, comme dans le cas des appareils mobiles. Les files d'attente permettent à ces opérations de se poursuivre, même lorsque les points de terminaison sont déconnectés. Lorsque la connexion est rétablie, la file d'attente envoie des messages à l'application réceptrice.  
+- Opérations hors circuit. L'envoi, la réception et le traitement d'opérations peut se faire hors circuit en cas de communication sur des réseaux à forte latence ou à disponibilité limitée, comme dans le cas des appareils mobiles. Les files d'attente permettent à ces opérations de se poursuivre, même lorsque les points de terminaison sont déconnectés. Lorsque la connexion est rétablie, la file d'attente envoie des messages à l'application réceptrice.  
   
  Pour utiliser la fonctionnalité de files d’attente dans une application WCF, vous pouvez utiliser une des liaisons standards, ou vous pouvez créer une liaison personnalisée si une des liaisons standard ne répondent pas à vos besoins. Pour plus d’informations sur les liaisons standard pertinentes et comment en choisir un, consultez [Comment : Échanger des Messages avec des points de terminaison WCF et Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

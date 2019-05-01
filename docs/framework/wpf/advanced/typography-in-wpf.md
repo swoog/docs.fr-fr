@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031315"
 ---
 # <a name="typography-in-wpf"></a>Typographie dans WPF
 Cette rubrique présente les principales fonctionnalités typographiques de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces fonctionnalités incluent l’amélioration de la qualité et des performances de rendu de texte, une prise en charge de la typographie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], un texte international amélioré, une prise en charge de police améliorée et de nouvelles interfaces de programmation d’applications (API, Application Programming Interface) texte.  
@@ -45,39 +45,39 @@ Texte avec anticrénelage ClearType dans la direction y
 ## <a name="enhanced-international-text-support"></a>Prise en charge améliorée du texte international  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre une prise en charge améliorée du texte international par le biais des fonctionnalités suivantes :  
   
--   Interligne automatique dans tous les systèmes d’écriture, par le biais de mesures adaptables.  
+- Interligne automatique dans tous les systèmes d’écriture, par le biais de mesures adaptables.  
   
--   Prise en charge générale du texte international. Pour plus d’informations, consultez [Globalisation pour WPF](globalization-for-wpf.md).  
+- Prise en charge générale du texte international. Pour plus d’informations, consultez [Globalisation pour WPF](globalization-for-wpf.md).  
   
--   Saut de ligne, césure et justification par langue.  
+- Saut de ligne, césure et justification par langue.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Prise en charge améliorée des polices  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre une prise en charge améliorée des polices par le biais des fonctionnalités suivantes :  
   
--   Unicode pour tout le texte. La sélection et le comportement de la police ne requièrent plus de jeu de caractères ou de page de codes.  
+- Unicode pour tout le texte. La sélection et le comportement de la police ne requièrent plus de jeu de caractères ou de page de codes.  
   
--   Comportement de police indépendant des paramètres globaux, tels que les paramètres régionaux du système.  
+- Comportement de police indépendant des paramètres globaux, tels que les paramètres régionaux du système.  
   
--   Distinct <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, et <xref:System.Windows.FontStyle> types permettant de définir un <xref:System.Windows.Media.FontFamily>. Cette fonctionnalité offre une souplesse plus importante que dans la programmation [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], dans laquelle des combinaisons Boolean de caractères italiques et gras sont utilisées pour définir une famille de polices.  
+- Distinct <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, et <xref:System.Windows.FontStyle> types permettant de définir un <xref:System.Windows.Media.FontFamily>. Cette fonctionnalité offre une souplesse plus importante que dans la programmation [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], dans laquelle des combinaisons Boolean de caractères italiques et gras sont utilisées pour définir une famille de polices.  
   
--   Sens d’écriture (horizontal ou vertical) géré indépendamment du nom de police.  
+- Sens d’écriture (horizontal ou vertical) géré indépendamment du nom de police.  
   
--   Police de liaison et police de substitution dans un fichier [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] portable, à l’aide de la technologie de police composite. Les polices composites permettent de générer une gamme complète de polices multilingues. Les polices composites fournissent également un mécanisme qui évite d’afficher les glyphes manquants. Pour plus d’informations, consultez la section Notes dans la <xref:System.Windows.Media.FontFamily> classe.  
+- Police de liaison et police de substitution dans un fichier [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] portable, à l’aide de la technologie de police composite. Les polices composites permettent de générer une gamme complète de polices multilingues. Les polices composites fournissent également un mécanisme qui évite d’afficher les glyphes manquants. Pour plus d’informations, consultez la section Notes dans la <xref:System.Windows.Media.FontFamily> classe.  
   
--   Polices internationales générées à partir de polices composites, à l’aide d’un groupe de polices d’une seule langue. Cela permet de limiter les coûts de ressources lors du développement de polices pour plusieurs langues.  
+- Polices internationales générées à partir de polices composites, à l’aide d’un groupe de polices d’une seule langue. Cela permet de limiter les coûts de ressources lors du développement de polices pour plusieurs langues.  
   
--   Polices composites incorporées dans un document, autorisant ainsi la portabilité du document. Pour plus d’informations, consultez la section Notes dans la <xref:System.Windows.Media.FontFamily> classe.  
+- Polices composites incorporées dans un document, autorisant ainsi la portabilité du document. Pour plus d’informations, consultez la section Notes dans la <xref:System.Windows.Media.FontFamily> classe.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Nouvelles interfaces de programmation d’applications (API) texte  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit plusieurs [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] texte que les développeurs doivent utiliser quand ils incluent du texte dans leurs applications. Ces [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sont réparties en trois catégories :  
   
--   **Disposition et interface utilisateur**. Contrôles de texte courants pour l’interface graphique utilisateur ([!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]).  
+- **Disposition et interface utilisateur**. Contrôles de texte courants pour l’interface graphique utilisateur ([!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]).  
   
--   **Dessin de texte léger**. Permet de dessiner du texte directement sur des objets.  
+- **Dessin de texte léger**. Permet de dessiner du texte directement sur des objets.  
   
--   **Mise en forme du texte avancée**. Permet d’implémenter un moteur de texte personnalisé.  
+- **Mise en forme du texte avancée**. Permet d’implémenter un moteur de texte personnalisé.  
   
 ### <a name="layout-and-user-interface"></a>Disposition et interface utilisateur  
  Niveau le plus élevé de fonctionnalités, le texte [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] fournir courantes [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] contrôles tels que <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, et <xref:System.Windows.Controls.TextBox>. Ces contrôles fournissent les éléments [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de base dans une application et proposent une méthode simple pour présenter le texte et interagir avec celui-ci. Les contrôles tels que <xref:System.Windows.Controls.RichTextBox> et <xref:System.Windows.Controls.PasswordBox> activer plus avancée ou spécialisée de la gestion du texte. Les classes telles que <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, et <xref:System.Windows.Documents.TextPointer> activer manipulation utile du texte. Ces [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] contrôles fournissent des propriétés telles que <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, et <xref:System.Windows.Controls.Control.FontStyle%2A>, qui permettent de contrôler la police qui est utilisée pour restituer le texte.  

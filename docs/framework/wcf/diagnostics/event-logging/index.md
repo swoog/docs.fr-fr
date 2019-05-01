@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999256"
 ---
 # <a name="event-logging-in-wcf"></a>Journalisation des événements dans WCF
 Windows Communication Foundation (WCF) effectue le suivi des événements internes dans le journal des événements Windows.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) effectue le suivi des événements intern
 ### <a name="application-event-log"></a>Journal des événements de l'application  
  Le **journal des événements Application** contient la plupart des événements générés par WCF. La plupart des entrées indiquent qu'une fonctionnalité particulière n'a pas réussi à démarrer pour une application. En voici quelques exemples :  
   
--   Journalisation/le suivi des messages : WCF écrit un événement dans le journal des événements lors de la trace et journalisation des messages échoue. Toutefois, tous les échecs de suivi ne déclenchent pas un événement. Pour empêcher le journal des événements de regorger d’échecs de traces, WCF implémente une période d’indisponibilité de 10 minutes pour un tel événement. Cela signifie que si WCF écrit un échec de la trace dans le journal des événements, il ne fera donc à nouveau au moins 10 minutes.  
+- Journalisation/le suivi des messages : WCF écrit un événement dans le journal des événements lors de la trace et journalisation des messages échoue. Toutefois, tous les échecs de suivi ne déclenchent pas un événement. Pour empêcher le journal des événements de regorger d’échecs de traces, WCF implémente une période d’indisponibilité de 10 minutes pour un tel événement. Cela signifie que si WCF écrit un échec de la trace dans le journal des événements, il ne fera donc à nouveau au moins 10 minutes.  
   
--   Écouteur partagé : Le Service de partage de Port TCP WCF journalise un événement lorsqu’il ne démarre.  
+- Écouteur partagé : Le Service de partage de Port TCP WCF journalise un événement lorsqu’il ne démarre.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Journalise des événements lorsque le service ne parvient pas à démarrer.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Journalise des événements lorsque le service ne parvient pas à démarrer.  
   
--   Événements critiques et erreurs, tels que les échecs de démarrage ou les blocages  
+- Événements critiques et erreurs, tels que les échecs de démarrage ou les blocages  
   
--   Journalisation des messages activée : Enregistre les événements lors de la journalisation des messages est activée. L'objectif consiste à avertir l'administrateur que des informations sensibles et spécifiques à l'application peuvent être journalisées dans les en-têtes et les corps des messages.  
+- Journalisation des messages activée : Enregistre les événements lors de la journalisation des messages est activée. L'objectif consiste à avertir l'administrateur que des informations sensibles et spécifiques à l'application peuvent être journalisées dans les en-têtes et les corps des messages.  
   
--   Un événement est journalisé lorsque l'attribut `enableLoggingKnownPII` de l'élément `machineSettings` du fichier `machine.config` est défini. Cet attribut indique si toute application qui s'exécute sur l'ordinateur est autorisée à journaliser des informations d'identification personnelle connues.  
+- Un événement est journalisé lorsque l'attribut `enableLoggingKnownPII` de l'élément `machineSettings` du fichier `machine.config` est défini. Cet attribut indique si toute application qui s'exécute sur l'ordinateur est autorisée à journaliser des informations d'identification personnelle connues.  
   
--   Si l'attribut `logKnownPii` dans le fichier `app.config` ou `web.config` a la valeur `true` pour qu'une application spécifique active la journalisation des informations d'identification personnelle, mais que l'attribut `enableLoggingKnownPII` dans l'élément `machineSettings` du fichier `machine.config` a la valeur `false`, un événement est journalisé. En outre, si `logKnownPii` et `enableLoggingKnownPII` ont la valeur `true`, un événement est journalisé. Pour plus d’informations sur ces paramètres de configuration, consultez la section sécurité de la [configuration de la journalisation du Message](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) rubrique.  
+- Si l'attribut `logKnownPii` dans le fichier `app.config` ou `web.config` a la valeur `true` pour qu'une application spécifique active la journalisation des informations d'identification personnelle, mais que l'attribut `enableLoggingKnownPII` dans l'élément `machineSettings` du fichier `machine.config` a la valeur `false`, un événement est journalisé. En outre, si `logKnownPii` et `enableLoggingKnownPII` ont la valeur `true`, un événement est journalisé. Pour plus d’informations sur ces paramètres de configuration, consultez la section sécurité de la [configuration de la journalisation du Message](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) rubrique.  
   
 ### <a name="security-event-log"></a>Journal des événements de sécurité  
  Le **journal des événements de sécurité** contient des événements d’audit de sécurité qui sont consignés par WCF.  

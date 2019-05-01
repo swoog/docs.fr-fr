@@ -3,11 +3,11 @@ title: Points de terminaison de service et adressage de files d'attente
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050387"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Points de terminaison de service et adressage de files d'attente
 Cette rubrique discute comment les clients adressent des services qui lisent à partir des files d'attente et comment les points de terminaison de service mappent aux files d'attente. En guise de rappel, l’illustration suivante montre le classique Windows Communication Foundation (WCF) en file d’attente de déploiement de l’application.  
@@ -34,11 +34,11 @@ Cette rubrique discute comment les clients adressent des services qui lisent à 
   
  où :  
   
--   \<*nom d’hôte*> est le nom de l’ordinateur qui héberge la file d’attente cible.  
+- \<*nom d’hôte*> est le nom de l’ordinateur qui héberge la file d’attente cible.  
   
--   [private] est facultatif. Il est utilisé lors de l'adressage d'une file d'attente cible qui est une file d'attente privée. Pour adresser une file d'attente publique, vous ne devez pas spécifier private. Notez que, contrairement aux chemins d’accès MSMQ, il est sans « $» dans la forme d’URI de WCF.  
+- [private] est facultatif. Il est utilisé lors de l'adressage d'une file d'attente cible qui est une file d'attente privée. Pour adresser une file d'attente publique, vous ne devez pas spécifier private. Notez que, contrairement aux chemins d’accès MSMQ, il est sans « $» dans la forme d’URI de WCF.  
   
--   \<*nom de la file d’attente*> est le nom de la file d’attente. Le nom de la file d'attente peut également faire référence à une sous-file d'attente. Par conséquent, \< *nom de la file d’attente*> = \< *name-of-queue*> [ ; *Sub queue-name*].  
+- \<*nom de la file d’attente*> est le nom de la file d’attente. Le nom de la file d'attente peut également faire référence à une sous-file d'attente. Par conséquent, \< *nom de la file d’attente*> = \< *name-of-queue*> [ ; *Sub queue-name*].  
   
  Exemple 1 : Pour répondre à une file d’attente privée PurchaseOrders hébergée sur l’ordinateur abc atadatum.com, l’URI serait NET.MSMQ://ABC.adatum.com/Private/PurchaseOrders.  
   
@@ -51,9 +51,9 @@ Cette rubrique discute comment les clients adressent des services qui lisent à 
 ### <a name="multiple-contracts-in-a-queue"></a>Contrats multiples dans une file d'attente  
  Les messages dans une file d'attente peuvent implémenter des contrats différents. Dans ce cas, il est essentiel que l'une des conditions suivantes soit remplie pour lire et traiter avec succès tous les messages :  
   
--   Spécifiez un point de terminaison pour un service qui implémente tous les contrats. Il s'agit de l'approche recommandée.  
+- Spécifiez un point de terminaison pour un service qui implémente tous les contrats. Il s'agit de l'approche recommandée.  
   
--   Spécifiez plusieurs points de terminaison avec différents contrats, mais assurez-vous que tous les points de terminaison utilisent le même objet `NetMsmqBinding`. La logique de distribution dans ServiceModel utilise une pompe de messages qui lit les messages du canal de transport pour distribution, et qui démultiplexe finalement les messages en fonction du contrat vers différents points de terminaison. Une pompe de messages est créée pour une paire d’écoute URI/liaison. L'adresse de la file d'attente est utilisée comme URI d'écoute par l'écouteur en file d'attente. Faire en sorte que tous les points de terminaison utilisent le même objet de liaison permet de s’assurer qu’une pompe de messages unique est utilisée pour lire le message et pour démultiplexer vers des points de terminaison pertinents en fonction du contrat.  
+- Spécifiez plusieurs points de terminaison avec différents contrats, mais assurez-vous que tous les points de terminaison utilisent le même objet `NetMsmqBinding`. La logique de distribution dans ServiceModel utilise une pompe de messages qui lit les messages du canal de transport pour distribution, et qui démultiplexe finalement les messages en fonction du contrat vers différents points de terminaison. Une pompe de messages est créée pour une paire d’écoute URI/liaison. L'adresse de la file d'attente est utilisée comme URI d'écoute par l'écouteur en file d'attente. Faire en sorte que tous les points de terminaison utilisent le même objet de liaison permet de s’assurer qu’une pompe de messages unique est utilisée pour lire le message et pour démultiplexer vers des points de terminaison pertinents en fonction du contrat.  
   
 ### <a name="srmp-messaging"></a>Messagerie SRMP  
  Comme discuté précédemment, vous pouvez utiliser le protocole SRMP pour les transferts de file d'attente à file d'attente. Cette procédure est utilisée couramment lorsqu'un transport HTTP transmet des messages entre la file d'attente de transmission et la file d'attente cible.  

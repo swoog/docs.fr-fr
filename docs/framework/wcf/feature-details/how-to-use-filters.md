@@ -3,22 +3,22 @@ title: 'Procédure : utiliser des filtres'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972859"
 ---
 # <a name="how-to-use-filters"></a>Procédure : utiliser des filtres
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage qui utilise plusieurs filtres. Dans cet exemple, les messages sont routés vers deux implémentations d'un service de calculatrice, regularCalc et roundingCalc. Les deux implémentations prennent en charge les mêmes opérations ; toutefois, l'un des services arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser la version arrondie de ce service ; si aucune préférence de service n'est exprimée, le message est équilibré entre les deux services. Les opérations exposées par les deux services sont :  
   
--   Ajouter  
+- Ajouter  
   
--   Soustraire  
+- Soustraire  
   
--   Multiplication  
+- Multiplication  
   
--   Diviser  
+- Diviser  
   
  Étant donné que les deux services implémentent les mêmes opérations, vous ne pouvez pas utiliser le filtre Action, car l'action spécifiée dans le message ne sera pas unique. Vous devez plutôt effectuer un travail supplémentaire pour vérifier que les messages sont routés vers les points de terminaison appropriés.  
   
@@ -137,10 +137,10 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
     > [!NOTE]
     >  Le filtre PrefixEndpointAddress n'évalue pas le nom d'hôte lorsqu'il effectue une correspondance, parce qu'il peut être fait référence à un hôte unique à l'aide de divers noms d'hôte qui tous peuvent constituer des moyens valides de faire référence à l'hôte à partir de l'application cliente. Par exemple, tous les éléments suivants peuvent faire référence au même hôte :  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. Le filtre définitif doit prendre en charge le routage des messages qui arrivent au point de terminaison général sans en-tête personnalisé. Pour ce scénario, les messages doivent alterner entre les services roundingCalc et regularCalc. Pour prendre en charge le routage de « tourniquet » de ces messages, utilisez un filtre personnalisé qui permet à une instance de filtre à faire correspondre pour chaque message traité.  Les éléments suivants définissent deux instances d'un RoundRobinMessageFilter, qui sont regroupées pour indiquer qu'elles doivent alterner entre elles.  
   

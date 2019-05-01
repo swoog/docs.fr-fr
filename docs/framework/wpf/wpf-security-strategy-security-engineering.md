@@ -11,24 +11,24 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053832"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Stratégie de sécurité de WPF - ingénierie de sécurité
 Trustworthy Computing (informatique de confiance) est une initiative de Microsoft qui vise à garantir la production de code sécurisé. Un élément clé de l'initiative Trustworthy Computing est [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] est une pratique d’ingénierie utilisée en association avec des processus d’ingénierie standard pour faciliter la livraison de code sécurisé. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] se compose de dix phases qui associent les meilleures pratiques à la formalisation, à la mesurabilité et à une structure supplémentaire qui comprend les aspects suivants :  
   
--   analyse de la conception de la sécurité ;  
+- analyse de la conception de la sécurité ;  
   
--   contrôles de qualité basés sur des outils ;  
+- contrôles de qualité basés sur des outils ;  
   
--   test de pénétration ;  
+- test de pénétration ;  
   
--   réexamen final de la sécurité ;  
+- réexamen final de la sécurité ;  
   
--   gestion de la sécurité du produit après lancement.  
+- gestion de la sécurité du produit après lancement.  
   
 ## <a name="wpf-specifics"></a>Spécificités de WPF  
  L'équipe d'ingénierie [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applique et étend [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], dont la combinaison inclut les aspects clés suivants :  
@@ -55,11 +55,11 @@ Trustworthy Computing (informatique de confiance) est une initiative de Microsof
   
  La modélisation des menaces s'applique à l'échelle de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] et comprend les éléments suivants :  
   
--   Comment l'analyseur [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] lit les fichiers, mappe le texte aux classes de modèle objet correspondantes et crée le code réel.  
+- Comment l'analyseur [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] lit les fichiers, mappe le texte aux classes de modèle objet correspondantes et crée le code réel.  
   
--   Comment un handle de fenêtre (hWnd) est créé, envoie des messages et est utilisé pour restituer le contenu d'une fenêtre.  
+- Comment un handle de fenêtre (hWnd) est créé, envoie des messages et est utilisé pour restituer le contenu d'une fenêtre.  
   
--   Comment la liaison de données obtient les ressources et interagit avec le système.  
+- Comment la liaison de données obtient les ressources et interagit avec le système.  
   
  Ces modèles de menace sont importants pour identifier les spécifications de conception de sécurité et les mesures de prévention pendant le processus de développement.  
   
@@ -67,23 +67,23 @@ Trustworthy Computing (informatique de confiance) est une initiative de Microsof
 ### <a name="source-analysis-and-editing-tools"></a>Analyse de la source et outils de modification  
  Outre les éléments manuels de révision du code de sécurité de [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], l'équipe [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] utilise plusieurs outils pour analyser la source et apporter les modifications associées pour réduire les vulnérabilités en matière de sécurité. Une large gamme d’outils sources est utilisée et comprend les éléments suivants :  
   
--   **FXCop**: Recherche les problèmes de sécurité courants dans le code managé allant des règles d’héritage à l’utilisation de la sécurité d’accès du code à comment interagir sans risque avec le code non managé. Consultez la page [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: Recherche les problèmes de sécurité courants dans le code managé allant des règles d’héritage à l’utilisation de la sécurité d’accès du code à comment interagir sans risque avec le code non managé. Consultez la page [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
--   **Prefix/Prefast**: Recherche les failles de sécurité et les problèmes de sécurité courants dans le code non managé, telles que les dépassements de mémoire tampon, les problèmes de chaîne de format et la vérification des erreurs.  
+- **Prefix/Prefast**: Recherche les failles de sécurité et les problèmes de sécurité courants dans le code non managé, telles que les dépassements de mémoire tampon, les problèmes de chaîne de format et la vérification des erreurs.  
   
--   **API interdites**: Recherche du code pour identifier une utilisation accidentelle de fonctions connues pour provoquer des problèmes de sécurité, telles que source `strcpy`. Une fois identifiées, ces fonctions sont remplacées par d'autres, plus sûres.  
+- **API interdites**: Recherche du code pour identifier une utilisation accidentelle de fonctions connues pour provoquer des problèmes de sécurité, telles que source `strcpy`. Une fois identifiées, ces fonctions sont remplacées par d'autres, plus sûres.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Techniques de test  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] utilise plusieurs techniques de test de sécurité, à savoir :  
   
--   **Test boîte blanche**: Afficher le code source les testeurs et les tests d’attaque  
+- **Test boîte blanche**: Afficher le code source les testeurs et les tests d’attaque  
   
--   **Test boîte noire**: Testeurs essaie de trouver les failles de sécurité en examinant l’API et les fonctionnalités, puis essaient d’attaquer le produit.  
+- **Test boîte noire**: Testeurs essaie de trouver les failles de sécurité en examinant l’API et les fonctionnalités, puis essaient d’attaquer le produit.  
   
--   **Problèmes de la sécurité de régression à partir d’autres produits**: Problèmes de sécurité provenant de produits connexes sont testés le cas échéant. Ainsi, des variantes appropriées d'une soixantaine de problèmes de sécurité pour [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] ont été identifiées et testées pour vérifier si elles étaient applicables à [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+- **Problèmes de la sécurité de régression à partir d’autres produits**: Problèmes de sécurité provenant de produits connexes sont testés le cas échéant. Ainsi, des variantes appropriées d'une soixantaine de problèmes de sécurité pour [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] ont été identifiées et testées pour vérifier si elles étaient applicables à [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
--   **Tests d’intrusion de basée sur les outils de fuzzing fichier**: Fuzzing de fichier est que l’exploitation d’un lecteur de fichier d’entrée de plage par le biais de diverses entrées. Par exemple, dans [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], cette technique est employée pour rechercher des défaillances dans le code de décodage d'image.  
+- **Tests d’intrusion de basée sur les outils de fuzzing fichier**: Fuzzing de fichier est que l’exploitation d’un lecteur de fichier d’entrée de plage par le biais de diverses entrées. Par exemple, dans [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], cette technique est employée pour rechercher des défaillances dans le code de décodage d'image.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Gestion du code critique  

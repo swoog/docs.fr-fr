@@ -3,11 +3,11 @@ title: Application
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
 ms.openlocfilehash: 5ee4f6513b8a400dcaef6e7e8caf168876db4dbc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967867"
 ---
 # <a name="application"></a>Application
 Cette section contient des exemples liés aux applications de workflow dans Windows Workflow Foundation (WF).  

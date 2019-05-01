@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994823"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly, méthode
 
@@ -49,7 +49,7 @@ HRESULT ResolveAssembly (
 
 Si l’assembly n'est pas déjà chargé quand `ResolveAssembly` est appelée, un HRESULT valeur CORDBG_E_CANNOT_RESOLVE_ASSEMBLY est retournée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

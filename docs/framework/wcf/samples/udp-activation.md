@@ -3,42 +3,42 @@ title: UDP Activation
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007667"
 ---
 # <a name="udp-activation"></a>UDP Activation
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. Il étend le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple pour prendre en charge l’activation de processus en utilisant le Service de l’Activation des processus Windows (WAS).  
   
  L'exemple se compose de trois éléments majeurs :  
   
--   Un activateur de protocole UDP, un processus autonome qui reçoit des messages UDP de la part des applications qui seront activées ;  
+- Un activateur de protocole UDP, un processus autonome qui reçoit des messages UDP de la part des applications qui seront activées ;  
   
--   Un client qui utilise le transport personnalisé d'UDP pour envoyer des messages ;  
+- Un client qui utilise le transport personnalisé d'UDP pour envoyer des messages ;  
   
--   Un service (hébergé dans un processus de travail activé par WAS) qui reçoit des messages sur le transport UDP personnalisé.  
+- Un service (hébergé dans un processus de travail activé par WAS) qui reçoit des messages sur le transport UDP personnalisé.  
   
 ## <a name="udp-protocol-activator"></a>Activateur de protocole UDP  
  L’activateur de protocole UDP est un pont entre le client WCF et le service WCF. Il assure la communication des données à travers le protocole UDP au niveau de la couche de transport. Il possède deux fonctionnalités majeures :  
   
--   L'adaptateur d'écouteur (LA) WAS, qui collabore avec WAS pour activer des processus en réponse à des messages entrants ;  
+- L'adaptateur d'écouteur (LA) WAS, qui collabore avec WAS pour activer des processus en réponse à des messages entrants ;  
   
--   L'écouteur de protocole UDP, qui accepte les messages UDP de la part des applications qui seront activées.  
+- L'écouteur de protocole UDP, qui accepte les messages UDP de la part des applications qui seront activées.  
   
  L'activateur doit s'exécuter comme un programme autonome sur l'ordinateur serveur. Normalement, les adaptateurs d'écouteur WAS (tels que NetTcpActivator et NetPipeActivator) sont implémentés dans les services Windows à durée d'exécution longue. Toutefois, pour des questions de simplicité et de clarté, cet exemple implémente l'activateur de protocole en tant qu'application autonome.  
   
 ### <a name="was-listener-adapter"></a>Adaptateur d'écouteur WAS  
  L'adaptateur d'écouteur WAS pour UDP est implémenté dans la classe `UdpListenerAdapter`. C'est le module qui interagit avec WAS pour effectuer l'activation d'application pour le protocole UDP. Cela s'effectue en appelant les API Webhost suivantes :  
   
--   `WebhostRegisterProtocol`  
+- `WebhostRegisterProtocol`  
   
--   `WebhostUnregisterProtocol`  
+- `WebhostUnregisterProtocol`  
   
--   `WebhostOpenListenerChannelInstance`  
+- `WebhostOpenListenerChannelInstance`  
   
--   `WebhostCloseAllListenerChannelInstances`  
+- `WebhostCloseAllListenerChannelInstances`  
   
  Après avoir appelé `WebhostRegisterProtocol`, l'adaptateur d'écouteur reçoit le rappel `ApplicationCreated` de WAS pour toutes les applications enregistrées dans applicationHost.config (localisé dans %windir%\system32\inetsrv). Dans cet exemple, nous gérons uniquement les applications avec le protocole UDP (avec l'identificateur de protocole « net.udp ») activé. D'autres implémentations peuvent gérer cela différemment si de telles implémentations répondent aux modifications de configuration dynamiques de l'application (par exemple, le passage d'application de l'état désactivé à l'état activé).  
   
@@ -83,17 +83,17 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
   
 2. Générez le projet sur Windows Vista. Après la compilation, il effectue également les opérations suivantes dans la phase de post-génération :  
   
-    -   Installe la liaison UDP avec le site « Site web par défaut » ;  
+    - Installe la liaison UDP avec le site « Site web par défaut » ;  
   
-    -   Crée l’application virtuelle « ServiceModelSamples » qui doit pointer vers le chemin d’accès physique : « %SystemDrive%\inetpub\wwwroot\servicemodelsamples » ;  
+    - Crée l’application virtuelle « ServiceModelSamples » qui doit pointer vers le chemin d’accès physique : « %SystemDrive%\inetpub\wwwroot\servicemodelsamples » ;  
   
-    -   Il active également le protocole « net.udp » pour cette application virtuelle.  
+    - Il active également le protocole « net.udp » pour cette application virtuelle.  
   
 3. Démarrez l'application d'interface utilisateur « WasNetActivator.exe ». Cliquez sur le **le programme d’installation** onglet, cochez les cases à cocher suivantes, puis sur **installer** pour les installer :  
   
-    -   Adaptateur d'écouteur UDP  
+    - Adaptateur d'écouteur UDP  
   
-    -   Gestionnaires de protocoles UDP  
+    - Gestionnaires de protocoles UDP  
   
 4. Cliquez sur le **Activation** onglet de l’application d’interface utilisateur « WasNetActivator.exe ». Cliquez sur le **Démarrer** bouton pour démarrer l’adaptateur d’écouteur. Vous êtes maintenant prêt à exécuter le programme.  
   
@@ -103,21 +103,21 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
 ## <a name="sample-usage"></a>Utilisation de l'exemple  
  Après la compilation, quatre binaires différents sont générés :  
   
--   Client.exe : Le code client. App.config est compilé dans le fichier de configuration client Client.exe.config.  
+- Client.exe : Le code client. App.config est compilé dans le fichier de configuration client Client.exe.config.  
   
--   UDPActivation.dll : la bibliothèque qui contient toutes les implémentations UDP majeures.  
+- UDPActivation.dll : la bibliothèque qui contient toutes les implémentations UDP majeures.  
   
--   Service.dll : Le code de service. Est copié dans le répertoire \bin de l'application virtuelle ServiceModelSamples. Le fichier du service est Service.svc et le fichier de configuration est Web.config. Après compilation, ils sont copiés à l'emplacement suivant : %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll : Le code de service. Est copié dans le répertoire \bin de l'application virtuelle ServiceModelSamples. Le fichier du service est Service.svc et le fichier de configuration est Web.config. Après compilation, ils sont copiés à l'emplacement suivant : %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator : Le programme de l’activateur UDP.  
+- WasNetActivator : Le programme de l’activateur UDP.  
   
--   Assurez-vous que tous les éléments requis sont installés correctement. Les étapes suivantes indiquent comment exécuter l'exemple :  
+- Assurez-vous que tous les éléments requis sont installés correctement. Les étapes suivantes indiquent comment exécuter l'exemple :  
   
 1. Assurez-vous que les services Windows suivants ont été démarrés :  
   
-    -   service d'activation des processus Windows (WAS) ;  
+    - service d'activation des processus Windows (WAS) ;  
   
-    -   Internet Information Services (IIS) : W3SVC.  
+    - Internet Information Services (IIS) : W3SVC.  
   
 2. Puis démarrez l'activateur, WasNetActivator.exe. Sous le **Activation** onglet, le seul protocole **UDP**, est sélectionné dans la liste déroulante. Cliquez sur le **Démarrer** bouton pour démarrer l’activateur.  
   

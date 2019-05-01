@@ -9,11 +9,11 @@ ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049815"
 ---
 # <a name="metadata-interfaces"></a>Interfaces de métadonnées
 Cette section décrit les interfaces non managées qui donnent accès aux métadonnées exposées par les types, méthodes, champs, etc. du .NET Framework.  
@@ -50,7 +50,7 @@ Cette section décrit les interfaces non managées qui donnent accès aux métad
  Fournit des méthodes pour définir et modifier les signatures de métadonnées de méthodes et de constructeurs avec les paramètres de type <xref:System.Type?displayProperty=nameWithType>.  
   
  [IMetaDataError, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
- Fournit un mécanisme de rappel pour signaler les erreurs pendant la résolution de la signature de métadonnées d’un assembly.  
+ Fournit un mécanisme de rappel pour signaler les erreurs pendant la résolution de la signature de métadonnées d'un assembly.  
   
  [IMetaDataFilter, interface](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)  
  Fournit des méthodes pour marquer et filtrer des jetons de métadonnées pour éviter de répéter des actions qui ont déjà été prises.  
