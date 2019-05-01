@@ -7,27 +7,27 @@ helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
 ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962440"
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="d9802-102">Rubriques "Comment" relatives aux événements</span><span class="sxs-lookup"><span data-stu-id="d9802-102">Events How-to Topics</span></span>
-<span data-ttu-id="d9802-103">Les rubriques de cette section décrivent comment utiliser des événements dans WPF.</span><span class="sxs-lookup"><span data-stu-id="d9802-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="d7ff3-102">Rubriques "Comment" relatives aux événements</span><span class="sxs-lookup"><span data-stu-id="d7ff3-102">Events How-to Topics</span></span>
+<span data-ttu-id="d7ff3-103">Les rubriques de cette section décrivent comment utiliser des événements dans WPF.</span><span class="sxs-lookup"><span data-stu-id="d7ff3-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d9802-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="d9802-104">In This Section</span></span>  
- [<span data-ttu-id="d9802-105">Ajouter un gestionnaire d'événements à l'aide de code</span><span class="sxs-lookup"><span data-stu-id="d9802-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="d9802-106">Gérer un événement routé</span><span class="sxs-lookup"><span data-stu-id="d9802-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="d9802-107">Créer un événement routé personnalisé</span><span class="sxs-lookup"><span data-stu-id="d9802-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="d9802-108">Rechercher l'élément source dans un gestionnaire d'événements</span><span class="sxs-lookup"><span data-stu-id="d9802-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="d9802-109">Ajouter la gestion de classe d'un événement routé</span><span class="sxs-lookup"><span data-stu-id="d9802-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d7ff3-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="d7ff3-104">In This Section</span></span>  
+ [<span data-ttu-id="d7ff3-105">Ajouter un gestionnaire d'événements à l'aide de code</span><span class="sxs-lookup"><span data-stu-id="d7ff3-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="d7ff3-106">Gérer un événement routé</span><span class="sxs-lookup"><span data-stu-id="d7ff3-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="d7ff3-107">Créer un événement routé personnalisé</span><span class="sxs-lookup"><span data-stu-id="d7ff3-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="d7ff3-108">Rechercher l'élément source dans un gestionnaire d'événements</span><span class="sxs-lookup"><span data-stu-id="d7ff3-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="d7ff3-109">Ajouter la gestion de classe d'un événement routé</span><span class="sxs-lookup"><span data-stu-id="d7ff3-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="d9802-110">Référence</span><span class="sxs-lookup"><span data-stu-id="d9802-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d7ff3-110">Référence</span><span class="sxs-lookup"><span data-stu-id="d7ff3-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="d9802-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="d9802-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d7ff3-111">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="d7ff3-111">Related Sections</span></span>

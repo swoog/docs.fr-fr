@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53db4dcb13303c9e7bdd77a46b3c9526364bac06
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995642"
 ---
-# <a name="icordebuggenericvaluegetvalue-method"></a><span data-ttu-id="e23fc-102">ICorDebugGenericValue::GetValue, méthode</span><span class="sxs-lookup"><span data-stu-id="e23fc-102">ICorDebugGenericValue::GetValue Method</span></span>
-<span data-ttu-id="e23fc-103">Copie la valeur de ce générique dans la mémoire tampon spécifiée.</span><span class="sxs-lookup"><span data-stu-id="e23fc-103">Copies the value of this generic into the specified buffer.</span></span>  
+# <a name="icordebuggenericvaluegetvalue-method"></a><span data-ttu-id="2891c-102">ICorDebugGenericValue::GetValue, méthode</span><span class="sxs-lookup"><span data-stu-id="2891c-102">ICorDebugGenericValue::GetValue Method</span></span>
+<span data-ttu-id="2891c-103">Copie la valeur de ce générique dans la mémoire tampon spécifiée.</span><span class="sxs-lookup"><span data-stu-id="2891c-103">Copies the value of this generic into the specified buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e23fc-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e23fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2891c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2891c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue (  
@@ -35,15 +35,15 @@ HRESULT GetValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e23fc-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e23fc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2891c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="2891c-105">Parameters</span></span>  
  `pTo`  
- <span data-ttu-id="e23fc-106">[out] Pointeur vers la valeur est représentée par cet objet ICorDebugGenericValue.</span><span class="sxs-lookup"><span data-stu-id="e23fc-106">[out] A pointer to the value that is represented by this ICorDebugGenericValue object.</span></span> <span data-ttu-id="e23fc-107">La valeur peut être un type simple ou un type référence (autrement dit, un pointeur).</span><span class="sxs-lookup"><span data-stu-id="e23fc-107">The value may be a simple type or a reference type (that is, a pointer).</span></span>  
+ <span data-ttu-id="2891c-106">[out] Pointeur vers la valeur est représentée par cet objet ICorDebugGenericValue.</span><span class="sxs-lookup"><span data-stu-id="2891c-106">[out] A pointer to the value that is represented by this ICorDebugGenericValue object.</span></span> <span data-ttu-id="2891c-107">La valeur peut être un type simple ou un type référence (autrement dit, un pointeur).</span><span class="sxs-lookup"><span data-stu-id="2891c-107">The value may be a simple type or a reference type (that is, a pointer).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e23fc-108">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e23fc-108">Requirements</span></span>  
- <span data-ttu-id="e23fc-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e23fc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2891c-108">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2891c-108">Requirements</span></span>  
+ <span data-ttu-id="2891c-109">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2891c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e23fc-110">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e23fc-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2891c-110">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2891c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e23fc-111">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e23fc-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2891c-111">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2891c-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e23fc-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e23fc-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2891c-112">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2891c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
