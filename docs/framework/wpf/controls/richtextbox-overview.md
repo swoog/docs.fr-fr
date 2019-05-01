@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052909"
 ---
 # <a name="richtextbox-overview"></a>Vue d'ensemble de RichTextBox
 Le <xref:System.Windows.Controls.RichTextBox> contrôle vous permet d’afficher ou modifier le contenu dynamique, notamment des paragraphes, des images, des tables et bien plus encore. Cette rubrique présente la <xref:System.Windows.Controls.TextBox> classe et fournit des exemples montrant comment l’utiliser dans les deux [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et C#.  
