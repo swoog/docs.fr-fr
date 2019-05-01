@@ -1,43 +1,33 @@
 ---
 title: 1102 - WorkflowActivityStop
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 285e5cb8-e90d-4914-ac06-e9b176ffefa2
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7332b528cde6da0bb10508fe1dcab2b895736c78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44617e9f53be0e601424746f83b171d33956197e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052792"
 ---
-# <a name="1102---workflowactivitystop"></a><span data-ttu-id="6832c-102">1102 - WorkflowActivityStop</span><span class="sxs-lookup"><span data-stu-id="6832c-102">1102 - WorkflowActivityStop</span></span>
-## <a name="properties"></a><span data-ttu-id="6832c-103">Propriétés</span><span class="sxs-lookup"><span data-stu-id="6832c-103">Properties</span></span>  
+# <a name="1102---workflowactivitystop"></a><span data-ttu-id="95625-102">1102 - WorkflowActivityStop</span><span class="sxs-lookup"><span data-stu-id="95625-102">1102 - WorkflowActivityStop</span></span>
+## <a name="properties"></a><span data-ttu-id="95625-103">Properties</span><span class="sxs-lookup"><span data-stu-id="95625-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="6832c-104">ID</span><span class="sxs-lookup"><span data-stu-id="6832c-104">ID</span></span>|<span data-ttu-id="6832c-105">1102</span><span class="sxs-lookup"><span data-stu-id="6832c-105">1102</span></span>|  
-|<span data-ttu-id="6832c-106">Mots clés</span><span class="sxs-lookup"><span data-stu-id="6832c-106">Keywords</span></span>|<span data-ttu-id="6832c-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="6832c-107">WFRuntime</span></span>|  
-|<span data-ttu-id="6832c-108">Niveau</span><span class="sxs-lookup"><span data-stu-id="6832c-108">Level</span></span>|<span data-ttu-id="6832c-109">Information</span><span class="sxs-lookup"><span data-stu-id="6832c-109">Information</span></span>|  
-|<span data-ttu-id="6832c-110">Canal</span><span class="sxs-lookup"><span data-stu-id="6832c-110">Channel</span></span>|<span data-ttu-id="6832c-111">Microsoft-Windows-Application Server-Applications/Débogage</span><span class="sxs-lookup"><span data-stu-id="6832c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="95625-104">Id</span><span class="sxs-lookup"><span data-stu-id="95625-104">ID</span></span>|<span data-ttu-id="95625-105">1102</span><span class="sxs-lookup"><span data-stu-id="95625-105">1102</span></span>|  
+|<span data-ttu-id="95625-106">Mots clés</span><span class="sxs-lookup"><span data-stu-id="95625-106">Keywords</span></span>|<span data-ttu-id="95625-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="95625-107">WFRuntime</span></span>|  
+|<span data-ttu-id="95625-108">Niveau</span><span class="sxs-lookup"><span data-stu-id="95625-108">Level</span></span>|<span data-ttu-id="95625-109">Information</span><span class="sxs-lookup"><span data-stu-id="95625-109">Information</span></span>|  
+|<span data-ttu-id="95625-110">Canal</span><span class="sxs-lookup"><span data-stu-id="95625-110">Channel</span></span>|<span data-ttu-id="95625-111">Microsoft-Windows-Application Server-Applications/Débogage</span><span class="sxs-lookup"><span data-stu-id="95625-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="6832c-112">Description</span><span class="sxs-lookup"><span data-stu-id="6832c-112">Description</span></span>  
- <span data-ttu-id="6832c-113">Indique qu'une activité du flux de travail s'est arrêtée.</span><span class="sxs-lookup"><span data-stu-id="6832c-113">Indicates a workflow activity has stopped.</span></span>  
+## <a name="description"></a><span data-ttu-id="95625-112">Description</span><span class="sxs-lookup"><span data-stu-id="95625-112">Description</span></span>  
+ <span data-ttu-id="95625-113">Indique qu'une activité du flux de travail s'est arrêtée.</span><span class="sxs-lookup"><span data-stu-id="95625-113">Indicates a workflow activity has stopped.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="6832c-114">Message</span><span class="sxs-lookup"><span data-stu-id="6832c-114">Message</span></span>  
- <span data-ttu-id="6832c-115">ID WorkflowInstance : « %1 » Activité E2E</span><span class="sxs-lookup"><span data-stu-id="6832c-115">WorkflowInstance Id: '%1' E2E Activity</span></span>  
+## <a name="message"></a><span data-ttu-id="95625-114">Message</span><span class="sxs-lookup"><span data-stu-id="95625-114">Message</span></span>  
+ <span data-ttu-id="95625-115">ID WorkflowInstance : « %1 » Activité E2E</span><span class="sxs-lookup"><span data-stu-id="95625-115">WorkflowInstance Id: '%1' E2E Activity</span></span>  
   
-## <a name="details"></a><span data-ttu-id="6832c-116">Détails</span><span class="sxs-lookup"><span data-stu-id="6832c-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="95625-116">Détails</span><span class="sxs-lookup"><span data-stu-id="95625-116">Details</span></span>  
   
-|<span data-ttu-id="6832c-117">Nom d'élément de données</span><span class="sxs-lookup"><span data-stu-id="6832c-117">Data Item Name</span></span>|<span data-ttu-id="6832c-118">Type d'élément de données</span><span class="sxs-lookup"><span data-stu-id="6832c-118">Data Item Type</span></span>|<span data-ttu-id="6832c-119">Description</span><span class="sxs-lookup"><span data-stu-id="6832c-119">Description</span></span>|  
+|<span data-ttu-id="95625-117">Nom d'élément de données</span><span class="sxs-lookup"><span data-stu-id="95625-117">Data Item Name</span></span>|<span data-ttu-id="95625-118">Type d'élément de données</span><span class="sxs-lookup"><span data-stu-id="95625-118">Data Item Type</span></span>|<span data-ttu-id="95625-119">Description</span><span class="sxs-lookup"><span data-stu-id="95625-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="6832c-120">WorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="6832c-120">WorkflowInstanceId</span></span>|<span data-ttu-id="6832c-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="6832c-121">xs:string</span></span>|<span data-ttu-id="6832c-122">ID de l'instance de flux de travail.</span><span class="sxs-lookup"><span data-stu-id="6832c-122">The workflow instance id.</span></span>|  
-|<span data-ttu-id="6832c-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="6832c-123">AppDomain</span></span>|<span data-ttu-id="6832c-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="6832c-124">xs:string</span></span>|<span data-ttu-id="6832c-125">Chaîne retournée par AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="6832c-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="95625-120">WorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="95625-120">WorkflowInstanceId</span></span>|<span data-ttu-id="95625-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="95625-121">xs:string</span></span>|<span data-ttu-id="95625-122">ID de l'instance de flux de travail.</span><span class="sxs-lookup"><span data-stu-id="95625-122">The workflow instance id.</span></span>|  
+|<span data-ttu-id="95625-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="95625-123">AppDomain</span></span>|<span data-ttu-id="95625-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="95625-124">xs:string</span></span>|<span data-ttu-id="95625-125">Chaîne retournée par AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="95625-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

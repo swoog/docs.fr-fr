@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4b4ac1a37c2b3506216499ed0c9f8194949b768
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985645"
 ---
-# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="8968a-102">GetRequestedRuntimeVersionForCLSID, fonction</span><span class="sxs-lookup"><span data-stu-id="8968a-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
-<span data-ttu-id="8968a-103">Obtient les informations de version du common language runtime (CLR) approprié pour la classe avec la valeur `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="8968a-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
+# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="c7dfc-102">GetRequestedRuntimeVersionForCLSID, fonction</span><span class="sxs-lookup"><span data-stu-id="c7dfc-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
+<span data-ttu-id="c7dfc-103">Obtient les informations de version du common language runtime (CLR) approprié pour la classe avec la valeur `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
   
- <span data-ttu-id="8968a-104">Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8968a-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="c7dfc-104">Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7dfc-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8968a-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8968a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7dfc-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c7dfc-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
@@ -40,43 +40,43 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8968a-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="8968a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c7dfc-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="c7dfc-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="8968a-107">[in]  Le `CLSID` du composant.</span><span class="sxs-lookup"><span data-stu-id="8968a-107">[in]  The `CLSID` of the component.</span></span>  
+ <span data-ttu-id="c7dfc-107">[in]  Le `CLSID` du composant.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-107">[in]  The `CLSID` of the component.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="8968a-108">[out]  Une mémoire tampon qui contient la chaîne de numéro de version en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="8968a-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="c7dfc-108">[out]  Une mémoire tampon qui contient la chaîne de numéro de version en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="8968a-109">[in]  La taille, en caractères larges, de la `pVersion` mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="8968a-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
+ <span data-ttu-id="c7dfc-109">[in]  La taille, en caractères larges, de la `pVersion` mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="8968a-110">[out] La longueur, en octets, de la mémoire tampon retournée.</span><span class="sxs-lookup"><span data-stu-id="8968a-110">[out] The length, in bytes, of the returned buffer.</span></span>  
+ <span data-ttu-id="c7dfc-110">[out] La longueur, en octets, de la mémoire tampon retournée.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-110">[out] The length, in bytes, of the returned buffer.</span></span>  
   
  `dwResolutionFlags`  
- <span data-ttu-id="8968a-111">[in]  Une des valeurs CLSID_RESOLUTION_FLAGS.</span><span class="sxs-lookup"><span data-stu-id="8968a-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="8968a-112">Les valeurs suivantes sont prises en charge :</span><span class="sxs-lookup"><span data-stu-id="8968a-112">The following values are supported:</span></span>  
+ <span data-ttu-id="c7dfc-111">[in]  Une des valeurs CLSID_RESOLUTION_FLAGS.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="c7dfc-112">Les valeurs suivantes sont prises en charge :</span><span class="sxs-lookup"><span data-stu-id="c7dfc-112">The following values are supported:</span></span>  
   
--   <span data-ttu-id="8968a-113">CLSID_RESOLUTION_DEFAULT : (0 x 0) Spécifie que le comportement d’interopérabilité par défaut doit être utilisé.</span><span class="sxs-lookup"><span data-stu-id="8968a-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
+- <span data-ttu-id="c7dfc-113">CLSID_RESOLUTION_DEFAULT : (0 x 0) Spécifie que le comportement d’interopérabilité par défaut doit être utilisé.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
   
--   <span data-ttu-id="8968a-114">CLSID_RESOLUTION_REGISTERED : (0 x 1) Spécifie que le Registre doit être recherché et stratégie de shim doit être appliquée.</span><span class="sxs-lookup"><span data-stu-id="8968a-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
+- <span data-ttu-id="c7dfc-114">CLSID_RESOLUTION_REGISTERED : (0 x 1) Spécifie que le Registre doit être recherché et stratégie de shim doit être appliquée.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8968a-115">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="8968a-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7dfc-115">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="c7dfc-115">Return Value</span></span>  
   
-|<span data-ttu-id="8968a-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8968a-116">HRESULT</span></span>|<span data-ttu-id="8968a-117">Description</span><span class="sxs-lookup"><span data-stu-id="8968a-117">Description</span></span>|  
+|<span data-ttu-id="c7dfc-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c7dfc-116">HRESULT</span></span>|<span data-ttu-id="c7dfc-117">Description</span><span class="sxs-lookup"><span data-stu-id="c7dfc-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8968a-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="8968a-118">S_OK</span></span>|<span data-ttu-id="8968a-119">La fonction a été retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="8968a-119">The function returned successfully.</span></span>|  
-|<span data-ttu-id="8968a-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="8968a-120">E_INVALIDARG</span></span>|<span data-ttu-id="8968a-121">L’un des paramètres a un type non valide ou le format.</span><span class="sxs-lookup"><span data-stu-id="8968a-121">One of the parameters has an invalid type or format.</span></span>|  
-|<span data-ttu-id="8968a-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="8968a-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="8968a-123">Le `pVersion` mémoire tampon n’est pas assez grand pour contenir la chaîne de version entière.</span><span class="sxs-lookup"><span data-stu-id="8968a-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
-|<span data-ttu-id="8968a-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="8968a-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="8968a-125">Aucune classe n’est enregistrée avec la valeur `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="8968a-125">There is no class registered with the specified `CLSID`.</span></span>|  
-|<span data-ttu-id="8968a-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="8968a-126">E_POINTER</span></span>|<span data-ttu-id="8968a-127">`dwLength` a la valeur null, ou `cchBuffer` est suffisamment grande pour contenir la chaîne de version, mais `pVersion` est null.</span><span class="sxs-lookup"><span data-stu-id="8968a-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
+|<span data-ttu-id="c7dfc-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="c7dfc-118">S_OK</span></span>|<span data-ttu-id="c7dfc-119">La fonction a été retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-119">The function returned successfully.</span></span>|  
+|<span data-ttu-id="c7dfc-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="c7dfc-120">E_INVALIDARG</span></span>|<span data-ttu-id="c7dfc-121">L’un des paramètres a un type non valide ou le format.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-121">One of the parameters has an invalid type or format.</span></span>|  
+|<span data-ttu-id="c7dfc-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="c7dfc-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="c7dfc-123">Le `pVersion` mémoire tampon n’est pas assez grand pour contenir la chaîne de version entière.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
+|<span data-ttu-id="c7dfc-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="c7dfc-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="c7dfc-125">Aucune classe n’est enregistrée avec la valeur `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-125">There is no class registered with the specified `CLSID`.</span></span>|  
+|<span data-ttu-id="c7dfc-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="c7dfc-126">E_POINTER</span></span>|<span data-ttu-id="c7dfc-127">`dwLength` a la valeur null, ou `cchBuffer` est suffisamment grande pour contenir la chaîne de version, mais `pVersion` est null.</span><span class="sxs-lookup"><span data-stu-id="c7dfc-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8968a-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="8968a-128">Requirements</span></span>  
- <span data-ttu-id="8968a-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8968a-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7dfc-128">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="c7dfc-128">Requirements</span></span>  
+ <span data-ttu-id="c7dfc-129">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7dfc-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8968a-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8968a-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c7dfc-130">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c7dfc-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8968a-131">**Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8968a-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="c7dfc-131">**Versions du .NET Framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7dfc-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8968a-132">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8968a-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7dfc-132">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c7dfc-132">See also</span></span>
 
-- [<span data-ttu-id="8968a-133">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="8968a-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="c7dfc-133">Fonctions d’hébergement CLR dépréciées</span><span class="sxs-lookup"><span data-stu-id="c7dfc-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
