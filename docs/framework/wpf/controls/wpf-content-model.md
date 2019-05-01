@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
 ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023920"
 ---
 # <a name="wpf-content-model"></a>Modèle de contenu WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est une plateforme de présentation qui fournit de nombreux contrôles et des éléments de type contrôle dont le principal objectif est d’afficher différents types de contenu. Pour déterminer le contrôle à utiliser ou le contrôle d’où dériver, vous devez comprendre les types d’objets qu’un contrôle donné peut afficher de manière optimale.  
@@ -43,45 +43,45 @@ ms.locfileid: "59134590"
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Contrôles qui contiennent un objet arbitraire unique  
  Le <xref:System.Windows.Controls.ContentControl> classe contient un seul élément de contenu arbitraire. Sa propriété de contenu est <xref:System.Windows.Controls.ContentControl.Content%2A>. Les contrôles suivants héritent <xref:System.Windows.Controls.ContentControl> et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Controls.Button>  
+- <xref:System.Windows.Controls.Button>  
   
--   <xref:System.Windows.Controls.Primitives.ButtonBase>  
+- <xref:System.Windows.Controls.Primitives.ButtonBase>  
   
--   <xref:System.Windows.Controls.CheckBox>  
+- <xref:System.Windows.Controls.CheckBox>  
   
--   <xref:System.Windows.Controls.ComboBoxItem>  
+- <xref:System.Windows.Controls.ComboBoxItem>  
   
--   <xref:System.Windows.Controls.ContentControl>  
+- <xref:System.Windows.Controls.ContentControl>  
   
--   <xref:System.Windows.Controls.Frame>  
+- <xref:System.Windows.Controls.Frame>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GroupItem>  
+- <xref:System.Windows.Controls.GroupItem>  
   
--   <xref:System.Windows.Controls.Label>  
+- <xref:System.Windows.Controls.Label>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Navigation.NavigationWindow>  
+- <xref:System.Windows.Navigation.NavigationWindow>  
   
--   <xref:System.Windows.Controls.RadioButton>  
+- <xref:System.Windows.Controls.RadioButton>  
   
--   <xref:System.Windows.Controls.Primitives.RepeatButton>  
+- <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
--   <xref:System.Windows.Controls.ScrollViewer>  
+- <xref:System.Windows.Controls.ScrollViewer>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
+- <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
--   <xref:System.Windows.Controls.Primitives.ToggleButton>  
+- <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
--   <xref:System.Windows.Controls.ToolTip>  
+- <xref:System.Windows.Controls.ToolTip>  
   
--   <xref:System.Windows.Controls.UserControl>  
+- <xref:System.Windows.Controls.UserControl>  
   
--   <xref:System.Windows.Window>  
+- <xref:System.Windows.Window>  
   
  L’illustration suivante montre quatre boutons dont <xref:System.Windows.Controls.ContentControl.Content%2A> est définie sur une chaîne, un <xref:System.DateTime> objet, un <xref:System.Windows.Shapes.Rectangle>et un <xref:System.Windows.Controls.Panel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59134590"
   
  Les contrôles suivants héritent <xref:System.Windows.Controls.HeaderedContentControl> et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Controls.Expander>  
+- <xref:System.Windows.Controls.Expander>  
   
--   <xref:System.Windows.Controls.GroupBox>  
+- <xref:System.Windows.Controls.GroupBox>  
   
--   <xref:System.Windows.Controls.TabItem>  
+- <xref:System.Windows.Controls.TabItem>  
   
  L’illustration suivante montre deux <xref:System.Windows.Controls.TabItem> objets. La première <xref:System.Windows.Controls.TabItem> a <xref:System.Windows.UIElement> objets comme les <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et <xref:System.Windows.Controls.ContentControl.Content%2A>. Le <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> est définie sur une <xref:System.Windows.Controls.StackPanel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>. Le <xref:System.Windows.Controls.ContentControl.Content%2A> est définie sur une <xref:System.Windows.Controls.StackPanel> qui contient un <xref:System.Windows.Controls.TextBlock> et un <xref:System.Windows.Controls.Label>. La seconde <xref:System.Windows.Controls.TabItem> a une chaîne le <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> et un <xref:System.Windows.Controls.TextBlock> dans le <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
@@ -111,37 +111,37 @@ ms.locfileid: "59134590"
   
  Les contrôles suivants héritent <xref:System.Windows.Controls.ItemsControl> et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Controls.Menu>  
+- <xref:System.Windows.Controls.Menu>  
   
--   <xref:System.Windows.Controls.Primitives.MenuBase>  
+- <xref:System.Windows.Controls.Primitives.MenuBase>  
   
--   <xref:System.Windows.Controls.ContextMenu>  
+- <xref:System.Windows.Controls.ContextMenu>  
   
--   <xref:System.Windows.Controls.ComboBox>  
+- <xref:System.Windows.Controls.ComboBox>  
   
--   <xref:System.Windows.Controls.ItemsControl>  
+- <xref:System.Windows.Controls.ItemsControl>  
   
--   <xref:System.Windows.Controls.ListBox>  
+- <xref:System.Windows.Controls.ListBox>  
   
--   <xref:System.Windows.Controls.ListView>  
+- <xref:System.Windows.Controls.ListView>  
   
--   <xref:System.Windows.Controls.TabControl>  
+- <xref:System.Windows.Controls.TabControl>  
   
--   <xref:System.Windows.Controls.TreeView>  
+- <xref:System.Windows.Controls.TreeView>  
   
--   <xref:System.Windows.Controls.Primitives.Selector>  
+- <xref:System.Windows.Controls.Primitives.Selector>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBar>  
+- <xref:System.Windows.Controls.Primitives.StatusBar>  
   
  L’illustration suivante montre un <xref:System.Windows.Controls.ListBox> qui contient ces types d’éléments :  
   
--   Chaîne.  
+- Chaîne.  
   
--   Objet <xref:System.DateTime>.  
+- Objet <xref:System.DateTime>.  
   
--   <xref:System.Windows.UIElement>  
+- <xref:System.Windows.UIElement>  
   
--   Un <xref:System.Windows.Controls.Panel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>.  
+- Un <xref:System.Windows.Controls.Panel> qui contient un <xref:System.Windows.Shapes.Ellipse> et un <xref:System.Windows.Controls.TextBlock>.  
   
  ![Capture d’écran montrant un ListBox avec quatre types de contenu.](./media/wpf-content-model/control-content-model-listbox.png)  
   
@@ -150,11 +150,11 @@ ms.locfileid: "59134590"
   
  Les contrôles suivants héritent <xref:System.Windows.Controls.HeaderedItemsControl> et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Controls.MenuItem>  
+- <xref:System.Windows.Controls.MenuItem>  
   
--   <xref:System.Windows.Controls.ToolBar>  
+- <xref:System.Windows.Controls.ToolBar>  
   
--   <xref:System.Windows.Controls.TreeViewItem>  
+- <xref:System.Windows.Controls.TreeViewItem>  
   
 <a name="classes_that_contain_a_collection_of_uielement_objects"></a>   
 ## <a name="classes-that-contain-a-collection-of-uielement-objects"></a>Classes qui contiennent une collection d’objets UIElement  
@@ -162,27 +162,27 @@ ms.locfileid: "59134590"
   
  Les classes suivantes héritent de la <xref:System.Windows.Controls.Panel> classe et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Controls.Canvas>  
+- <xref:System.Windows.Controls.Canvas>  
   
--   <xref:System.Windows.Controls.DockPanel>  
+- <xref:System.Windows.Controls.DockPanel>  
   
--   <xref:System.Windows.Controls.Grid>  
+- <xref:System.Windows.Controls.Grid>  
   
--   <xref:System.Windows.Controls.Primitives.TabPanel>  
+- <xref:System.Windows.Controls.Primitives.TabPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
   
--   <xref:System.Windows.Controls.Primitives.UniformGrid>  
+- <xref:System.Windows.Controls.Primitives.UniformGrid>  
   
--   <xref:System.Windows.Controls.StackPanel>  
+- <xref:System.Windows.Controls.StackPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingPanel>  
+- <xref:System.Windows.Controls.VirtualizingPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingStackPanel>  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>  
   
--   <xref:System.Windows.Controls.WrapPanel>  
+- <xref:System.Windows.Controls.WrapPanel>  
   
  Pour plus d’informations, consultez la page [Vue d’ensemble de Panel](panels-overview.md).  
   
@@ -190,23 +190,23 @@ ms.locfileid: "59134590"
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Classes qui affectent l’apparence d’un UIElement  
  Le <xref:System.Windows.Controls.Decorator> classe applique des effets visuels sur ou autour d’un seul enfant <xref:System.Windows.UIElement>. Sa propriété de contenu est <xref:System.Windows.Controls.Decorator.Child%2A>. Les classes suivantes héritent de <xref:System.Windows.Controls.Decorator> et utilisent son modèle de contenu :  
   
--   <xref:System.Windows.Documents.AdornerDecorator>  
+- <xref:System.Windows.Documents.AdornerDecorator>  
   
--   <xref:System.Windows.Controls.Border>  
+- <xref:System.Windows.Controls.Border>  
   
--   <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+- <xref:System.Windows.Controls.Primitives.BulletDecorator>  
   
--   <xref:Microsoft.Windows.Themes.ButtonChrome>  
+- <xref:Microsoft.Windows.Themes.ButtonChrome>  
   
--   <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
+- <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
   
--   <xref:System.Windows.Controls.InkPresenter>  
+- <xref:System.Windows.Controls.InkPresenter>  
   
--   <xref:Microsoft.Windows.Themes.ListBoxChrome>  
+- <xref:Microsoft.Windows.Themes.ListBoxChrome>  
   
--   <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
+- <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
   
--   <xref:System.Windows.Controls.Viewbox>  
+- <xref:System.Windows.Controls.Viewbox>  
   
  L’illustration suivante montre un <xref:System.Windows.Controls.TextBox> qui a (est décoré avec) un <xref:System.Windows.Controls.Border> autour d’elle.  
   

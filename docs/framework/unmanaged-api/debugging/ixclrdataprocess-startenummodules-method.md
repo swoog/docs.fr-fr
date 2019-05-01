@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: d871ca5dfd62dbca309f4ccc3dcedf959033a41e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986555"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess::StartEnumModules (méthode)
 
@@ -45,7 +45,7 @@ HRESULT StartEnumModules(
 
 La méthode fournie fait partie de la `IXCLRDataProcess` interface et correspond à l’emplacement de la table de la méthode virtuelle de 24.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
 **En-tête :** Aucun.  

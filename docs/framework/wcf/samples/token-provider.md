@@ -3,32 +3,32 @@ title: Token Provider
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965657"
 ---
 # <a name="token-provider"></a>Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jeton de gestionnaire d’informations d’identification par défaut. WCF est également livré avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :
 
--   si vous avez un magasin d'informations d'identification avec lequel ces fournisseurs de jetons ne peuvent pas fonctionner ;
+- si vous avez un magasin d'informations d'identification avec lequel ces fournisseurs de jetons ne peuvent pas fonctionner ;
 
--   Si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d’identification à partir du point où l’utilisateur fournit les détails lorsque l’infrastructure de client WCF utilise les informations d’identification.
+- Si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d’identification à partir du point où l’utilisateur fournit les détails lorsque l’infrastructure de client WCF utilise les informations d’identification.
 
--   si vous générez un jeton personnalisé.
+- si vous générez un jeton personnalisé.
 
  Cet exemple montre comment générer un fournisseur de jetons personnalisé qui convertit les entrées de l'utilisateur dans un autre format.
 
  En résumé, cet exemple montre :
 
--   la façon dont un client peut s'authentifier à l'aide d'une paire nom d'utilisateur/mot de passe ;
+- la façon dont un client peut s'authentifier à l'aide d'une paire nom d'utilisateur/mot de passe ;
 
--   la façon dont un client peut être configuré avec un fournisseur de jetons personnalisé ;
+- la façon dont un client peut être configuré avec un fournisseur de jetons personnalisé ;
 
--   la façon dont le serveur peut valider les informations d'identification du client à l'aide d'un mot de passe avec un <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personnalisé qui valide que le nom d'utilisateur et le mot de passe correspondent ;
+- la façon dont le serveur peut valider les informations d'identification du client à l'aide d'un mot de passe avec un <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> personnalisé qui valide que le nom d'utilisateur et le mot de passe correspondent ;
 
--   la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.
+- la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.
 
  Cet exemple montre également comment l'identité de l'appelant est accessible après le processus d'authentification du jeton personnalisé.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  Les éléments suivants fournissent une brève vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée :
 
--   Création du certificat de serveur
+- Création du certificat de serveur
 
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable `%SERVER_NAME%` spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut dans ce fichier de commandes est localhost.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvés du client :
+- Installation du certificat de serveur dans le magasin de certificats approuvés du client :
 
      Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
 

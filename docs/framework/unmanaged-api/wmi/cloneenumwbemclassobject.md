@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968166"
 ---
-# <a name="cloneenumwbemclassobject-function"></a>Cloneenumwbemclassobject, fonction
+# <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject, fonction
 Effectue une copie logique d’un énumérateur, en conservant sa position actuelle dans une énumération.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -88,7 +88,7 @@ Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreu
 
 Pour obtenir un exemple, consultez le [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) (méthode).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 
  **En-tête :** WMINet_Utils.idl

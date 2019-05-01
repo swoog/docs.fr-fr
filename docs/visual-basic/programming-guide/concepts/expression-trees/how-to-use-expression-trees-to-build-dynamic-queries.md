@@ -3,11 +3,11 @@ title: 'Procédure : Utiliser des arborescences d’Expression pour générer d
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966216"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procédure : Utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)
 Dans LINQ, des arborescences d’expressions sont utilisées pour représenter des requêtes structurées qui ciblent des sources de données qui implémentent <xref:System.Linq.IQueryable%601>. Par exemple, le fournisseur LINQ implémente l’interface <xref:System.Linq.IQueryable%601> pour interroger des magasins de données relationnelles. Le compilateur Visual Basic compile les requêtes qui ciblent ces sources de données dans le code qui génère une arborescence d’expression lors de l’exécution. Le fournisseur de requêtes peut ensuite parcourir la structure de données de l’arborescence d’expressions et la traduire en un langage de requête qui convienne à la source de données.  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Créez un projet **Application console**.  
+- Créez un projet **Application console**.  
   
--   Ajoutez une référence à System.Core.dll, si cette référence n’existe pas encore.  
+- Ajoutez une référence à System.Core.dll, si cette référence n’existe pas encore.  
   
--   Incluez l’espace de noms System.Linq.Expressions.  
+- Incluez l’espace de noms System.Linq.Expressions.  
   
--   Copiez le code à partir de l’exemple et collez-le dans le `Main` `Sub` procédure.  
+- Copiez le code à partir de l’exemple et collez-le dans le `Main` `Sub` procédure.  
   
 ## <a name="see-also"></a>Voir aussi
 

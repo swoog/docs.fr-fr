@@ -3,11 +3,11 @@ title: Concepts relatifs à la sécurité
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990897"
 ---
 # <a name="security-concepts"></a>Concepts relatifs à la sécurité
 Cette section explique brièvement les concepts liés à la sécurité de Windows Communication Foundation (WCF).  

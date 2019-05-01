@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Lire des paramètres au moment de l’exécution avecC#'
+title: 'Procédure : lire des paramètres au moment de l’exécution avec C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], reading
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: dbe8bf09-5e1c-49da-9192-154033d7240b
 ms.openlocfilehash: 8cdc1a79f1ab327ae037cd6a04aa769196405127
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966908"
 ---
 # <a name="how-to-read-settings-at-run-time-with-c"></a>Procédure : Lire des paramètres au moment de l’exécution avec C\#
 

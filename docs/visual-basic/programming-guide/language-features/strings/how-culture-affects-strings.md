@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024688"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Comment les informations de culture affectent les chaînes dans Visual Basic
 Cette page d’aide décrit comment Visual Basic utilise les informations de culture pour effectuer des comparaisons et les conversions de chaînes.  
@@ -29,9 +29,9 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
   
  Le `Str` (convertit les nombres en chaînes) et `Val` les fonctions (convertit des chaînes en nombres) n’utilisent pas les informations de culture de l’application lors de la conversion entre chaînes et des nombres. Au lieu de cela, ils ne reconnaissent que le point (.) comme séparateur décimal valide. Les culture prenant en charge les analogues de ces fonctions sont les suivantes :  
   
--   **Conversions qui utilisent la culture actuelle.** Le `CStr` et `Format` fonctions convertissent un nombre en une chaîne et le `CDbl` et `CInt` fonctions convertissent une chaîne en un nombre.  
+- **Conversions qui utilisent la culture actuelle.** Le `CStr` et `Format` fonctions convertissent un nombre en une chaîne et le `CDbl` et `CInt` fonctions convertissent une chaîne en un nombre.  
   
--   **Conversions qui utilisent une culture spécifique.** Chaque objet number a un `ToString(IFormatProvider)` méthode qui convertit un nombre en une chaîne, et un `Parse(String, IFormatProvider)` méthode qui convertit une chaîne en un nombre. Par exemple, le `Double` type fournit le <xref:System.Double.ToString%28System.IFormatProvider%29> et <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> méthodes.  
+- **Conversions qui utilisent une culture spécifique.** Chaque objet number a un `ToString(IFormatProvider)` méthode qui convertit un nombre en une chaîne, et un `Parse(String, IFormatProvider)` méthode qui convertit une chaîne en un nombre. Par exemple, le `Double` type fournit le <xref:System.Double.ToString%28System.IFormatProvider%29> et <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> méthodes.  
   
  Pour plus d’informations, consultez <xref:Microsoft.VisualBasic.Conversion.Str%2A> et <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
 ## <a name="comparing-strings"></a>Comparaison de chaînes  
  Il existe deux situations importantes où les comparaisons de chaînes sont nécessaires :  
   
--   **Tri des données pour l’affichage à l’utilisateur.** Utilisez des opérations basée sur la culture actuelle, le tri de chaînes en conséquence.  
+- **Tri des données pour l’affichage à l’utilisateur.** Utilisez des opérations basée sur la culture actuelle, le tri de chaînes en conséquence.  
   
--   **Déterminer si deux chaînes interne de l’application correspondent exactement (en général pour des raisons de sécurité).** Utilisez les opérations qui ignorent la culture actuelle.  
+- **Déterminer si deux chaînes interne de l’application correspondent exactement (en général pour des raisons de sécurité).** Utilisez les opérations qui ignorent la culture actuelle.  
   
  Vous pouvez effectuer les deux types de comparaisons avec Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> (fonction). Spécifiez le paramètre facultatif `Compare` argument pour contrôler le type de comparaison : `Text` pour la plupart des entrées et sorties `Binary` pour déterminer les correspondances exactes.  
   

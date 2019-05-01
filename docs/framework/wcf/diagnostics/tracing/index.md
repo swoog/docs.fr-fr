@@ -3,20 +3,20 @@ title: Traçage
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997982"
 ---
 # <a name="tracing"></a>Traçage
 Windows Communication Foundation (WCF) fournit une instrumentation de l’application et les données de diagnostic pour la surveillance des pannes et l’analyse. Vous pouvez utiliser le suivi au lieu d'un débogueur pour comprendre le comportement d'une application ou la raison de sa défaillance. Vous pouvez également mettre en corrélation les erreurs et le traitement sur l'ensemble des composants afin de fournir une expérience de bout en bout.  
   
  WCF génère les données suivantes pour le suivi de diagnostic :  
   
--   Suivis pour les jalons de processus sur l'ensemble des composants des applications, tels que les appels d'opération, exceptions de code, avertissements et autres événements de traitement significatifs.  
+- Suivis pour les jalons de processus sur l'ensemble des composants des applications, tels que les appels d'opération, exceptions de code, avertissements et autres événements de traitement significatifs.  
   
--   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi.  
+- Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Configuration du suivi](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

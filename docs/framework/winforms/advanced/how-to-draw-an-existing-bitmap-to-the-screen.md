@@ -10,11 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
 ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004189"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procédure : dessiner une image bitmap existante à l’écran
 Vous pouvez facilement dessiner une image existante sur l’écran. Vous devez d’abord créer un <xref:System.Drawing.Bitmap> objet à l’aide du constructeur de bitmap qui prend un nom de fichier <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Ce constructeur accepte des images avec différents formats de fichiers, notamment BMP, GIF, JPEG, PNG et TIFF. Après avoir créé le <xref:System.Drawing.Bitmap> d’objet, qui passez <xref:System.Drawing.Bitmap> de l’objet à la <xref:System.Drawing.Graphics.DrawImage%2A> méthode d’un <xref:System.Drawing.Graphics> objet.  

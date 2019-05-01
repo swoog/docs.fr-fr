@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966898"
 ---
 # <a name="using-keyboard-events"></a>Utilisation des événements du clavier
 La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant les événements de clavier. Cette rubrique fournit une vue d'ensemble des événements de clavier, explique quand utiliser chaque événement et détaille les données fournies pour chaque événement.  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](event-handlers-overview-windows-forms.md) et [vue d’ensemble des événements (Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant
 ## <a name="keyboard-events"></a>Événements de clavier  
  Windows Forms fournit deux événements qui se produisent quand l’utilisateur appuie sur une touche du clavier et un événement qui se produit quand l’utilisateur relâche une touche du clavier :  
   
--   L'événement <xref:System.Windows.Forms.Control.KeyDown> se produit une fois.  
+- L'événement <xref:System.Windows.Forms.Control.KeyDown> se produit une fois.  
   
--   L'événement <xref:System.Windows.Forms.Control.KeyPress>, qui peut se produire plusieurs fois quand l'utilisateur maintient la même touche enfoncée.  
+- L'événement <xref:System.Windows.Forms.Control.KeyPress>, qui peut se produire plusieurs fois quand l'utilisateur maintient la même touche enfoncée.  
   
--   L’événement <xref:System.Windows.Forms.Control.KeyUp> se produit une fois quand l’utilisateur relâche une touche.  
+- L’événement <xref:System.Windows.Forms.Control.KeyUp> se produit une fois quand l’utilisateur relâche une touche.  
   
  Quand l'utilisateur appuie sur une touche, Windows Forms détermine quel événement déclencher selon que le message de clavier spécifie une touche de caractère ou une touche physique. Pour plus d’informations sur les caractères et les touches physiques, consultez [fonctionnement des entrées au clavier](how-keyboard-input-works.md).  
   

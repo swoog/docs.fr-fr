@@ -3,11 +3,11 @@ title: Consultation des journaux de messages
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964396"
 ---
 # <a name="viewing-message-logs"></a>Consultation des journaux de messages
 Cette rubrique contient des instructions permettant d'afficher les journaux des messages.  
@@ -29,9 +29,9 @@ Cette rubrique contient des instructions permettant d'afficher les journaux des 
   
  Pour résoudre ce problème, utilisez l'une des méthodes suivantes :  
   
--   N’affichez que deux des trois journaux de messages dans la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) à tout moment.  
+- N’affichez que deux des trois journaux de messages dans la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) à tout moment.  
   
--   Si vous devez afficher tous les trois journaux dans le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) en même temps, vous pouvez modifier le service de relais en créant un nouveau <xref:System.ServiceModel.Channels.Message> instance. Cette instance doit être une copie du corps du message entrant et de tous les en-têtes à l'exception de `ActivityId` et `Action`. L'exemple de code suivant montre comment procéder.  
+- Si vous devez afficher tous les trois journaux dans le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) en même temps, vous pouvez modifier le service de relais en créant un nouveau <xref:System.ServiceModel.Channels.Message> instance. Cette instance doit être une copie du corps du message entrant et de tous les en-têtes à l'exception de `ActivityId` et `Action`. L'exemple de code suivant montre comment procéder.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Cas exceptionnels de contenu de journalisation de message inexact  
  Dans les conditions suivantes, les messages consignés peuvent ne pas être la représentation exacte du flux d'octets présent sur le câble.  
   
--   Concernant BasicHttpBinding, les en-têtes d'enveloppe sont enregistrés pour les messages entrants de l'espace de noms /addressing/none.  
+- Concernant BasicHttpBinding, les en-têtes d'enveloppe sont enregistrés pour les messages entrants de l'espace de noms /addressing/none.  
   
--   Espaces blancs peuvent être incompatibles.  
+- Espaces blancs peuvent être incompatibles.  
   
--   Concernant les messages entrants, les éléments vides peuvent être représentés différemment. Par exemple, \<balise >\</Tag > au lieu de \<tag / >  
+- Concernant les messages entrants, les éléments vides peuvent être représentés différemment. Par exemple, \<balise >\</Tag > au lieu de \<tag / >  
   
--   Lorsque la journalisation PII connue est désactivée soit par défaut, soit par le paramètre explicite enableLoggingKnownPii= "true".  
+- Lorsque la journalisation PII connue est désactivée soit par défaut, soit par le paramètre explicite enableLoggingKnownPii= "true".  
   
--   L'encodage est activé pour la conversion au format UTF-8.  
+- L'encodage est activé pour la conversion au format UTF-8.  
   
 ## <a name="see-also"></a>Voir aussi
 

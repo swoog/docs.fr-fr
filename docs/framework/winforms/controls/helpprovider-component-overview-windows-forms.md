@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971221"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Vue d'ensemble du composant HelpProvider (Windows Forms)
 Les formulaires Windows [HelpProvider](helpprovider-component-windows-forms.md) composant est utilisé pour associer un fichier d’aide HTML Help 1.x (fichier .chm généré par HTML Help Workshop ou fichier .htm) à votre application Windows. Vous pouvez fournir une aide de plusieurs façons :  
   
--   Fournir une aide contextuelle pour les contrôles Windows Forms.  
+- Fournir une aide contextuelle pour les contrôles Windows Forms.  
   
--   Fournir une aide contextuelle sur une boîte de dialogue particulier ou de contrôles spécifiques sur une boîte de dialogue.  
+- Fournir une aide contextuelle sur une boîte de dialogue particulier ou de contrôles spécifiques sur une boîte de dialogue.  
   
--   Ouvrez un fichier d’aide à des zones spécifiques, telles que la page principale d’une Table des matières, l’Index ou une fonction de recherche.  
+- Ouvrez un fichier d’aide à des zones spécifiques, telles que la page principale d’une Table des matières, l’Index ou une fonction de recherche.  
   
 ## <a name="using-the-help-provider"></a>L’utilisation du fournisseur d’aide  
  Ajout d’un <xref:System.Windows.Forms.HelpProvider> composant à votre formulaire Windows permet aux autres contrôles sur le formulaire pour exposer les propriétés de l’aide de la <xref:System.Windows.Forms.HelpProvider> composant. Cela vous permet de fournir une aide pour les contrôles sur votre formulaire Windows. Vous pouvez associer un fichier d’aide avec le <xref:System.Windows.Forms.HelpProvider> à l’aide du composant le <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propriété. Vous spécifiez le type d’aide fourni en appelant <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> et en fournissant une valeur comprise entre le <xref:System.Windows.Forms.HelpNavigator> énumération pour le contrôle spécifié. Vous fournissez le mot clé ou une rubrique d’aide en appelant le <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> (méthode).  

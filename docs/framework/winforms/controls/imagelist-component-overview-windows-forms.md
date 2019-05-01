@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
 ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971169"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Vue d'ensemble du composant ImageList (Windows Forms)
 
@@ -23,7 +23,7 @@ Le composant Windows Forms <xref:System.Windows.Forms.ImageList> sert à stocker
 
 Vous pouvez utiliser une liste d'images avec n'importe quel contrôle ayant une propriété `ImageList` ou, dans le cas du contrôle <xref:System.Windows.Forms.ListView>, les propriétés <xref:System.Windows.Forms.ListView.SmallImageList%2A> et <xref:System.Windows.Forms.ListView.LargeImageList%2A>. Les contrôles qui peuvent être associés à une liste d'images sont, entre autres, les contrôles <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> et <xref:System.Windows.Forms.Label>. Pour associer la liste d'images à un contrôle, affectez comme valeur de la propriété `ImageList` du contrôle le nom du composant <xref:System.Windows.Forms.ImageList>.
 
-## <a name="key-properties"></a>Principales propriétés
+## <a name="key-properties"></a>Propriétés de clé
 
 La principale propriété du composant <xref:System.Windows.Forms.ImageList> est <xref:System.Windows.Forms.ImageList.Images%2A>, qui contient les images devant être utilisées par le contrôle associé. Chaque image est accessible par sa valeur d'index ou par sa clé. La propriété <xref:System.Windows.Forms.ImageList.ColorDepth%2A> détermine le nombre de couleurs avec lesquelles les images sont affichées. Les images sont toutes affichées à la même taille, définie par la propriété <xref:System.Windows.Forms.ImageList.ImageSize%2A>. Les images plus grandes seront ajustées.
 

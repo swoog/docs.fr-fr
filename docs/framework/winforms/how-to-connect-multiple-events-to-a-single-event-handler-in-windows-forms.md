@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
 ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967028"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procédure : connecter plusieurs événements à un seul gestionnaire d’événements dans Windows Forms
 Conception de votre application, vous pouvez s’avérer nécessaire pour utiliser un seul gestionnaire d’événements pour plusieurs événements ou d’avoir plusieurs événements à effectuer la même procédure. Par exemple, il est souvent un temps précieux pour avoir une commande de menu à déclencher l’événement de même qu’un bouton sur votre formulaire peut si elles exposent les mêmes fonctionnalités. Vous pouvez faire à l’aide de l’affichage des événements de la fenêtre Propriétés dans C# ou à l’aide de la `Handles` mot clé et le **nom de la classe** et **nom de la méthode** listes déroulantes dans l’éditeur de Code Visual Basic.  

@@ -3,20 +3,20 @@ title: Opérateurs de séquence
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033434"
 ---
 # <a name="sequence-operators"></a>Opérateurs de séquence
 En général, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les opérateurs de séquence qui présentent une ou plusieurs des caractéristiques suivantes :  
   
--   Prennent un lambda avec un paramètre d'index.  
+- Prennent un lambda avec un paramètre d'index.  
   
--   S'appuient sur les propriétés de lignes séquentielles, telles que <xref:System.Linq.Queryable.TakeWhile%2A>.  
+- S'appuient sur les propriétés de lignes séquentielles, telles que <xref:System.Linq.Queryable.TakeWhile%2A>.  
   
--   S'appuient sur une implémentation CLR arbitraire, telle que <xref:System.Collections.Generic.IComparer%601>.  
+- S'appuient sur une implémentation CLR arbitraire, telle que <xref:System.Collections.Generic.IComparer%601>.  
   
 |Exemples d'opérateurs de séquence non pris en charge|  
 |-----------------------------|  

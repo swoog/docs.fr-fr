@@ -3,11 +3,11 @@ title: Exemple Configuration
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002241"
 ---
 # <a name="configuration-sample"></a>Exemple Configuration
 Cet exemple illustre l'utilisation d'un fichier de configuration pour rendre un service détectable.  
@@ -27,15 +27,15 @@ Cet exemple illustre l'utilisation d'un fichier de configuration pour rendre un 
 ## <a name="service-configuration"></a>Configuration du service  
  Le fichier de configuration de cet exemple illustre deux fonctionnalités :  
   
--   rendre le service détectable sur un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard ;  
+- rendre le service détectable sur un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard ;  
   
--   ajuster les informations relatives à la découverte pour le point de terminaison d'application du service et ajuster certains paramètres liés à découverte sur le point de terminaison standard.  
+- ajuster les informations relatives à la découverte pour le point de terminaison d'application du service et ajuster certains paramètres liés à découverte sur le point de terminaison standard.  
   
  Pour activer la découverte, quelques modifications doivent être apportées au fichier de configuration de l'application pour le service :  
   
--   Un point de terminaison de découverte doit être ajouté à l'élément `<service>`. Il s'agit d'un point de terminaison <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard. Ce point de terminaison système est associé au service de découverte par le runtime. Le service de découverte écoute les messages sur ce point de terminaison.  
+- Un point de terminaison de découverte doit être ajouté à l'élément `<service>`. Il s'agit d'un point de terminaison <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard. Ce point de terminaison système est associé au service de découverte par le runtime. Le service de découverte écoute les messages sur ce point de terminaison.  
   
--   Un comportement `<serviceDiscovery>` est ajouté à la section `<serviceBehaviors>`. Ainsi, le service peut être découvert au moment de l'exécution et utilise le point de terminaison de découverte mentionné précédemment pour écouter les messages de découverte `Probe` et `Resolve`. Grâce à ces deux ajouts, le service est détectable au point de terminaison de découverte spécifié.  
+- Un comportement `<serviceDiscovery>` est ajouté à la section `<serviceBehaviors>`. Ainsi, le service peut être découvert au moment de l'exécution et utilise le point de terminaison de découverte mentionné précédemment pour écouter les messages de découverte `Probe` et `Resolve`. Grâce à ces deux ajouts, le service est détectable au point de terminaison de découverte spécifié.  
   
  L'extrait de configuration suivant affiche un service avec un point de terminaison d'application et un point de terminaison de découverte définis :  
   

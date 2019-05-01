@@ -3,11 +3,11 @@ title: 'Procédure : Créer des assemblys Friend non signés (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022231"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Procédure : Créer des assemblys Friend non signés (Visual Basic)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.  

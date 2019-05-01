@@ -3,11 +3,11 @@ title: 'Procédure : créer un contrat de demande-réponse'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000985"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procédure : créer un contrat de demande-réponse
 Un contrat demande-réponse spécifie une méthode qui retourne une réponse. La réponse doit être envoyée et corrélée à la demande selon les termes de ce contrat. Même si la méthode ne retourne aucune réponse (`void` dans C# ou un `Sub` dans Visual Basic), l'infrastructure crée et envoie un message vide à l'appelant. Pour empêcher l'envoi d'un message de réponse vide, utilisez un contrat unidirectionnel pour l'opération.  
@@ -43,9 +43,9 @@ public interface ICalculator
 }
 ```
   
--   Pour plus d’informations sur la façon de spécifier des contrats d’opération, consultez le <xref:System.ServiceModel.OperationContractAttribute> classe et le <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriété.  
+- Pour plus d’informations sur la façon de spécifier des contrats d’opération, consultez le <xref:System.ServiceModel.OperationContractAttribute> classe et le <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriété.  
   
--   Appliquer les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> entraîne la génération automatique de définitions de contrat de service dans un document WSDL (Web Services Description Language) une fois le service déployé. Le document est téléchargé en ajoutant `?wsdl` à l'adresse de base HTTP du service. Par exemple, `http://microsoft/CalculatorService?wsdl`.  
+- Appliquer les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> entraîne la génération automatique de définitions de contrat de service dans un document WSDL (Web Services Description Language) une fois le service déployé. Le document est téléchargé en ajoutant `?wsdl` à l'adresse de base HTTP du service. Par exemple, `http://microsoft/CalculatorService?wsdl`.  
   
 ## <a name="see-also"></a>Voir aussi
 

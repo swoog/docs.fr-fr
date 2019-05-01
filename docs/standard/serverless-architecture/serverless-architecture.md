@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967793"
 ---
-# <a name="serverless-architecture"></a>Architecture sans serveur
+# <a name="serverless-architecture"></a>Architecture serverless
 
 Il existe plusieurs approches à l’utilisation de [sans serveur](http://azure.com/serverless) architectures. Ce chapitre explore les exemples d’architectures courantes qui s’intègrent sans serveur. Il couvre également les problèmes qui peuvent poser des problèmes supplémentaires ou requièrent une attention supplémentaire lors de l’implémentation sans serveur. Enfin, plusieurs exemples de conception sont fournies qui illustrent les différents cas d’utilisation sans serveur.
 
@@ -19,7 +19,7 @@ Les hôtes sans serveur utilisent souvent une existante basée sur le conteneur 
 
 ![Architecture de fonctions Azure](./media/azure-functions-architecture.png)
 
-Les principales tâches Web fournit un contexte d’exécution de la fonction. Le Runtime de langage exécute des scripts, exécute des bibliothèques et héberge l’infrastructure pour le langage cible. Par exemple, Node.js est utilisé pour exécuter des fonctions JavaScript et .NET Framework est utilisé pour exécuter des fonctions C#. Vous en apprendrez davantage sur les options de langage et plateforme plus loin dans ce chapitre.
+Les principales tâches Web fournit un contexte d’exécution de la fonction. Le Runtime de langage exécute des scripts, exécute des bibliothèques et héberge l’infrastructure pour le langage cible. Par exemple, Node.js est utilisé pour exécuter des fonctions JavaScript et .NET Framework est utilisé pour exécuter des fonctions c#. Vous en apprendrez davantage sur les options de langage et plateforme plus loin dans ce chapitre.
 
 Certains projets peuvent tirer parti d’une approche plus « complète » pour sans serveur. Les applications qui s’appuient sur des microservices peuvent implémenter tous les microservices à l’aide de la technologie sans serveur. La majorité des applications sont hybride, suivant une conception multicouche et de l’utilisation sans serveur pour les composants qui judicieux, car les composants sont modulaire et évolutif de façon indépendante. Pour aider à bien comprendre ces scénarios, cette section décrit quelques exemples d’architecture courants qui utilisent sans serveur.
 

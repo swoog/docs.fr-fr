@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4af328c537fbc3b64eb1a2ac3df3a4e4224789e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996019"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount, méthode
 Obtient le nombre d’éléments dans l’énumération.  
@@ -39,7 +39,7 @@ HRESULT GetCount (
  `pcelt`  
  [out] Pointeur vers le nombre d’éléments dans l’énumération.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

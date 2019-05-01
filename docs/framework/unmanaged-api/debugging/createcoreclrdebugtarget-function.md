@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965834"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Fonction CreateCoreClrDebugTarget
 Crée une connexion à un proxy de débogueur qui s’exécute sur un ordinateur distant et retourne un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objet qui peut être utilisé pour interroger les processus en cours d’exécution et les runtimes chargés sur l’ordinateur distant.  
@@ -46,7 +46,7 @@ HRESULT CreateCoreClrDebugTarget (
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK  
- Le nombre de CLR dans le processus a été correctement déterminé, et les tableaux de handles et de chemin d'accès correspondants ont été correctement remplis.  
+ Le nombre de CLR dans le processus a été correctement déterminé, et les tableaux de handles et de chemin d’accès correspondants ont été correctement remplis.  
   
  E_OUTOFMEMORY  
  Impossible d'allouer suffisamment de mémoire pour `ppTarget`.  
@@ -54,7 +54,7 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (ou autres codes de retour E_)  
  Autres échecs.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CoreClrRemoteDebuggingInterfaces.h  

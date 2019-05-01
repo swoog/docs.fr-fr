@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032082"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Procédure : Recherche dans une chaîne (Visual Basic)
 Cet exemple appelle la <xref:System.String.IndexOf%2A> méthode sur un <xref:System.String> objet pour signaler l’index de la première occurrence d’une sous-chaîne.  
@@ -22,7 +22,7 @@ Cet exemple appelle la <xref:System.String.IndexOf%2A> méthode sur un <xref:Sys
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Un `Imports` instruction spécifiant le <xref:System> espace de noms. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Un `Imports` instruction spécifiant le <xref:System> espace de noms. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Le <xref:System.String.IndexOf%2A> méthode signale l’emplacement du premier caractère de la première occurrence de la sous-chaîne. L’index est basé sur 0, ce qui signifie que le premier caractère d’une chaîne a un index de 0.  

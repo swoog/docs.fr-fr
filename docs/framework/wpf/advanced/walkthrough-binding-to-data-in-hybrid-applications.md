@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981810"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : liaison de données dans des applications hybrides
 Liaison d’une source de données à un contrôle est essentielle pour permettre aux utilisateurs ayant accès aux données sous-jacentes, que vous utilisiez [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette procédure pas à pas montre comment vous pouvez utiliser la liaison de données dans des applications hybrides qui incluent les [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création du projet  
+- Création du projet  
   
--   Définition du modèle de données.  
+- Définition du modèle de données.  
   
--   Spécification de la disposition du formulaire.  
+- Spécification de la disposition du formulaire.  
   
--   Spécification des liaisons de données.  
+- Spécification des liaisons de données.  
   
--   Affichage des données à l’aide de l’interopérabilité.  
+- Affichage des données à l’aide de l’interopérabilité.  
   
--   Ajout de la source de données au projet.  
+- Ajout de la source de données au projet.  
   
--   Liaison à la source de données.  
+- Liaison à la source de données.  
   
  Pour l’intégralité du code des tâches illustrées dans cette procédure pas à pas, consultez [une liaison de données dans des Applications hybrides, exemple](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Accès à la base de données Northwind s’exécutant sur Microsoft SQL Server.  
+- Accès à la base de données Northwind s’exécutant sur Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Création du projet  
   
@@ -53,9 +53,9 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 2. Dans l’Explorateur de solutions, ajoutez des références aux assemblys suivants.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Ouvrez MainWindow.xaml dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 #### <a name="to-define-the-data-template"></a>Pour définir le modèle de données  
   
--   Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
+- Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 #### <a name="to-set-up-the-grid-layout"></a>Pour configurer la disposition de la grille  
   
--   Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
+- Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Pour configurer les contrôles Label  
   
--   Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
+- Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 #### <a name="to-specify-data-bindings"></a>Pour spécifier des liaisons de données  
   
--   Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
+- Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
   
      Le <xref:System.Windows.Data.Binding> classe lie le <xref:System.Windows.Controls.TextBox> contrôles aux champs appropriés dans la base de données.  
   
@@ -111,7 +111,7 @@ Liaison d’une source de données à un contrôle est essentielle pour permettr
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Pour afficher des données dans le contrôle DataGridView  
   
--   Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
+- Copiez le XAML suivant dans le <xref:System.Windows.Controls.Grid> déclaration de l’élément.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

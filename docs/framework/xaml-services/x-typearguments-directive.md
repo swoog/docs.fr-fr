@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982590"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments, directive
 Passes contraindre les arguments d’un générique au constructeur du type générique de type.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Utilisations XAML générique de XAML 2006 et WPF  
  Pour l’utilisation de XAML 2006 et XAML qui est utilisé pour les applications WPF, les restrictions suivantes existent pour `x:TypeArguments` et utilisations de type générique à partir de XAML en général :  
   
--   Seul l’élément racine d’un fichier XAML peut prendre en charge une utilisation XAML générique qui fait référence à un type générique.  
+- Seul l’élément racine d’un fichier XAML peut prendre en charge une utilisation XAML générique qui fait référence à un type générique.  
   
--   L’élément racine doit mapper à un type générique au moins un argument de type. Par exemple, <xref:System.Windows.Navigation.PageFunction%601>. Les fonctions de page sont le scénario principal pour la prise en charge des génériques de l’utilisation XAML dans WPF.  
+- L’élément racine doit mapper à un type générique au moins un argument de type. Par exemple, <xref:System.Windows.Navigation.PageFunction%601>. Les fonctions de page sont le scénario principal pour la prise en charge des génériques de l’utilisation XAML dans WPF.  
   
--   L’élément d’objet racine élément XAML pour le modèle générique doit également déclarer une classe partielle à l’aide `x:Class`. Cela est vrai même si l’action de génération de définition d’un WPF.  
+- L’élément d’objet racine élément XAML pour le modèle générique doit également déclarer une classe partielle à l’aide `x:Class`. Cela est vrai même si l’action de génération de définition d’un WPF.  
   
--   `x:TypeArguments` Impossible de référencer les contraintes génériques imbriqués.  
+- `x:TypeArguments` Impossible de référencer les contraintes génériques imbriqués.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ou 2006 XAML sans WPF 3.0 ni les WPF 3.5 dépendance  
  Dans les Services XAML .NET Framework pour XAML 2006 ou XAML 2009, les restrictions liées à WPF sur l’utilisation XAML générique sont assouplies. Vous pouvez instancier un élément objet générique à n’importe quelle position dans le balisage XAML prenant en charge la sauvegarde type système et le modèle objet.  

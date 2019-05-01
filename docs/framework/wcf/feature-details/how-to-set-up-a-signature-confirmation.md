@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972924"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Procédure : configurer une confirmation de signature
 *Confirmation de signature* est un mécanisme pour un initiateur de message pour vous assurer qu’une réponse reçue a été générée en réponse au message d’origine de l’expéditeur. La confirmation de signature est définie dans la spécification WS-Security 1.1. Si un point de terminaison prend en charge WS-Security 1.0, vous ne pouvez pas utiliser la confirmation de signature.  

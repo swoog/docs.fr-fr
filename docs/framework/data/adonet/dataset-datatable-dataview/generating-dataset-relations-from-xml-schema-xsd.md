@@ -3,20 +3,20 @@ title: Génération de relations de DataSet à partir du schéma XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034318"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Génération de relations de DataSet à partir du schéma XML (XSD)
 Dans un objet <xref:System.Data.DataSet>, vous créez une association entre deux ou plusieurs colonnes en établissant une relation parent-enfant. Il existe trois façons pour représenter un **DataSet** relation au sein d’un schéma XML Schema definition language (XSD) :  
   
--   spécifier des types complexes imbriqués ;  
+- spécifier des types complexes imbriqués ;  
   
--   Utilisez le **msdata : Relationship** annotation.  
+- Utilisez le **msdata : Relationship** annotation.  
   
--   Spécifiez un **xs : keyref** sans le **msdata : ConstraintOnly** annotation.  
+- Spécifiez un **xs : keyref** sans le **msdata : ConstraintOnly** annotation.  
   
 ## <a name="nested-complex-types"></a>Types complexes imbriqués  
  Les définitions de types complexes imbriqués dans un schéma indiquent les relations parent-enfant des éléments. Le fragment de schéma XML suivant montre que **OrderDetail** est un élément enfant de le **ordre** élément.  

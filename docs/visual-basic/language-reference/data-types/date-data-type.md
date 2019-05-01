@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971806"
 ---
 # <a name="date-data-type-visual-basic"></a>Type de données date (Visual Basic)
 Contient des valeurs sous la forme IEEE 64 bits (8 octets) qui représentent des dates comprises entre le 1er janvier de l'année 0001 et le 31 décembre de l'année 9999 et des heures comprises entre de 0:00:00 (minuit) et 23:59:59,9999999. Chaque incrément représente 100 nanosecondes de durée calendaire depuis le début du 1er janvier de l’année 1 du calendrier grégorien. La valeur maximale représente 100 nanosecondes avant le début du 1er janvier de l'année 10 000.  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
--   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, tels que des objets Automation ou COM, n'oubliez pas que les types de date et d'heure utilisés dans les autres environnements ne sont pas compatibles avec le type `Date` de Visual Basic. Si vous transmettez un argument de date et d’heure à un tel composant, déclarez-le en tant que `Double` et non `Date` dans votre nouveau code Visual Basic, et utilisez les méthodes de conversion <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> et <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
+- **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, tels que des objets Automation ou COM, n'oubliez pas que les types de date et d'heure utilisés dans les autres environnements ne sont pas compatibles avec le type `Date` de Visual Basic. Si vous transmettez un argument de date et d’heure à un tel composant, déclarez-le en tant que `Double` et non `Date` dans votre nouveau code Visual Basic, et utilisez les méthodes de conversion <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> et <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Caractères de type.** `Date` n’a aucun caractère de type littéral ou un caractère de type identificateur. Toutefois, le compilateur traite les littéraux compris entre des signes dièse (`# #`) en tant que `Date`.  
+- **Caractères de type.** `Date` n’a aucun caractère de type littéral ou un caractère de type identificateur. Toutefois, le compilateur traite les littéraux compris entre des signes dièse (`# #`) en tant que `Date`.  
   
--   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.DateTime?displayProperty=nameWithType>.  
+- **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.DateTime?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemple  
  Une variable ou une constante du type de données `Date` contient à la fois la date et l'heure. L'exemple suivant illustre ce comportement.  

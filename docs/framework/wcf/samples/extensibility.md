@@ -3,11 +3,11 @@ title: Extensibilité
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
 ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969336"
 ---
 # <a name="extensibility"></a>Extensibilité
 Cette section contient des exemples qui traitent de l’extensibilité personnalisée et d’autres fonctionnalités de Windows Communication Foundation (WCF).  
@@ -50,7 +50,7 @@ Cette section contient des exemples qui traitent de l’extensibilité personnal
  Montre comment utiliser un dérivé personnalisé de la classe <xref:System.ServiceModel.ServiceHost> pour altérer le comportement d'exécution d'un service.  
   
  [Substitution de DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
- Montre comment des processus tels que la sérialisation, la désérialisation, l’exportation de schéma et l’importation de schéma peuvent être personnalisés à l’aide d’une classe de substitution d’un contrat de données.  
+ Montre comment des processus tels que la sérialisation, la désérialisation, l'exportation de schéma et l'importation de schéma peuvent être personnalisés à l'aide d'une classe de substitution d'un contrat de données.  
   
  [Extension du contrôle à la gestion des erreurs et au rapport d’erreurs](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Montre comment étendre le contrôle sur la gestion des erreurs et des rapports d’erreurs dans un service WCF à l’aide du <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  

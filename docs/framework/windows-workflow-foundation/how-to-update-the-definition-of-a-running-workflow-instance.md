@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Mise à jour la définition d’une Instance de Workflow en cours d’exécution'
+title: 'Procédure : mettre à jour la définition d’une instance de workflow en cours d’exécution'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969480"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procédure : Mise à jour la définition d’une Instance de Workflow en cours d’exécution
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procédure : mettre à jour la définition d’une instance de workflow en cours d’exécution
 
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s’agit de l’implémentation d’une résolution de bogue, de nouvelles exigences ou de l’adaptation à des modifications inattendues. Cette étape dans le didacticiel montre comment utiliser la mise à jour dynamique pour modifier des instances persistantes de la `v1` nombre workflow d’estimation pour correspondre à la nouvelle fonctionnalité introduite dans [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 

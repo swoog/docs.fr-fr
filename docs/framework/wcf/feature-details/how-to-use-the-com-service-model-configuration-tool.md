@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972677"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procédure : utiliser l’outil de configuration de modèle de service COM+
 Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez l'outil en ligne de commande de configuration de modèle de service COM+ (ComSvcConfig.exe) pour configurer les interfaces d'application qui seront exposées en tant que services Web.  
@@ -33,7 +33,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Pour ajouter une interface à l'ensemble des interfaces exposées en tant que services Web, à l'aide du mode d'hébergement COM+  
   
--   Exécutez ComSvcConfig avec les options `/install` et `/hosting:complus`, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec les options `/install` et `/hosting:complus`, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Pour ajouter uniquement des méthodes spécifiques d'une interface à l'ensemble des interfaces qui seront exposées en tant que services Web, à l'aide du mode d'hébergement COM+  
   
--   Exécutez ComSvcConfig avec les options `/install` et `/hosting:complus` et avec la désignation explicite des méthodes requises, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec les options `/install` et `/hosting:complus` et avec la désignation explicite des méthodes requises, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Pour ajouter une interface à l'ensemble des interfaces exposées en tant que services Web, à l'aide du mode d'hébergement Web  
   
--   Exécutez ComSvcConfig avec les options `/install` et `/hosting:was`, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec les options `/install` et `/hosting:was`, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Pour supprimer un service Web pour une interface spécifiée  
   
--   Exécutez ComSvcConfig avec l'option `/uninstall`, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec l'option `/uninstall`, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-list-currently-exposed-interfaces"></a>Pour répertorier les interfaces exposées actuellement  
   
--   Exécutez ComSvcConfig avec l'option `/list`, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec l'option `/list`, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>Pour répertorier des interfaces spécifiques exposées actuellement  
   
--   Exécutez ComSvcConfig avec l'option `/list`, comme illustré dans l'exemple suivant.  
+- Exécutez ComSvcConfig avec l'option `/list`, comme illustré dans l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ Une fois que vous avez sélectionné un mode d'hébergement approprié, utilisez
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Pour afficher une aide sur les options qui peuvent être utilisées avec l'utilitaire  
   
--   Exécutez ComSvcConfig à l'aide de l'option /?, tel qu'illustré par l'exemple suivant.  
+- Exécutez ComSvcConfig à l'aide de l'option /?, tel qu'illustré par l'exemple suivant.  
   
     ```  
     ComSvcConfig.exe /?  

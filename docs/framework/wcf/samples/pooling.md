@@ -3,11 +3,11 @@ title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
 ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007966"
 ---
 # <a name="pooling"></a>Pooling
 Cet exemple montre comment étendre Windows Communication Foundation (WCF) pour prendre en charge le pool d’objets. L'exemple montre comment créer un attribut syntaxiquement et sémantiquement similaire aux fonctionnalités de l'attribut `ObjectPoolingAttribute` de Enterprise Services. Le mise en pool d’objets permet une amélioration significative de la performance d'une application. Toutefois, il peut avoir l'effet inverse s'il n'est pas utilisé de manière appropriée. Le mise en pool d’objets évite d'avoir à recréer les objets fréquemment utilisés qui requièrent une initialisation complète. Toutefois, si un appel à une méthode sur un objet du pool met beaucoup de temps à s'exécuter, le mise en pool d’objets met les demandes supplémentaires en file d'attente dès que la taille de pool maximale est atteinte. Il peut donc ne pas traiter certaines demandes de création d'objet en levant une exception de délai d'attente.  
@@ -24,11 +24,11 @@ Cet exemple montre comment étendre Windows Communication Foundation (WCF) pour 
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
  Dans WCF, le répartiteur crée des instances de la classe de service à l’aide un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, qui implémente le <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interface. Cette interface a trois méthodes :  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Lorsqu’un message arrive le répartiteur appelle la <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> méthode pour créer une instance de la classe de service pour traiter le message. La fréquence des appels à cette méthode est déterminée par la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Par exemple, si la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> a la valeur <xref:System.ServiceModel.InstanceContextMode.PerCall>, une nouvelle instance de classe de service est créée pour traiter chaque message qui arrive, et <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> est donc appelé chaque fois qu'un message arrive.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Lorsqu’un message arrive le répartiteur appelle la <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> méthode pour créer une instance de la classe de service pour traiter le message. La fréquence des appels à cette méthode est déterminée par la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Par exemple, si la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> a la valeur <xref:System.ServiceModel.InstanceContextMode.PerCall>, une nouvelle instance de classe de service est créée pour traiter chaque message qui arrive, et <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> est donc appelé chaque fois qu'un message arrive.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Cela est identique à la méthode précédente, mais celle-ci est appelée lorsqu’il n’existe aucun argument de Message.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Cela est identique à la méthode précédente, mais celle-ci est appelée lorsqu’il n’existe aucun argument de Message.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Lorsque la durée de vie d’une instance de service est écoulé, le répartiteur appelle la <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> (méthode). À l'instar de la méthode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la fréquence des appels à cette méthode est déterminée par la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Lorsque la durée de vie d’une instance de service est écoulé, le répartiteur appelle la <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> (méthode). À l'instar de la méthode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la fréquence des appels à cette méthode est déterminée par la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Mise en pool d’objets  
  Une implémentation <xref:System.ServiceModel.Dispatcher.IInstanceProvider> personnalisée fournit la sémantique de mise en pool d’objet requise pour un service. Par conséquent, cet exemple a un type `ObjectPoolingInstanceProvider` qui fournit une implémentation personnalisée de <xref:System.ServiceModel.Dispatcher.IInstanceProvider> pour le pool. Lorsque `Dispatcher` appelle la méthode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, au lieu de créer une instance, l'implémentation personnalisée recherche un objet existant dans un pool en mémoire. Si aucun n'est disponible, il est retourné. Sinon, un nouvel objet est créé. L'implémentation pour `GetInstance` est présentée dans l'exemple de code suivant.  
@@ -85,27 +85,27 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
 ## <a name="adding-the-behavior"></a>Ajout du comportement  
  Les extensions de couche de répartiteur sont raccordées à l'aide des comportements suivants :  
   
--   Comportements de service : permettent de personnaliser l'ensemble de l'exécution du service.  
+- Comportements de service : permettent de personnaliser l'ensemble de l'exécution du service.  
   
--   Comportements de point de terminaison : permettent de personnaliser les points de terminaison de service, en particulier un répartiteur de canal et de point de terminaison.  
+- Comportements de point de terminaison : permettent de personnaliser les points de terminaison de service, en particulier un répartiteur de canal et de point de terminaison.  
   
--   Comportements de contrat : permettent de personnaliser les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sur le client et le service, respectivement.  
+- Comportements de contrat : permettent de personnaliser les classes <xref:System.ServiceModel.Dispatcher.ClientRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sur le client et le service, respectivement.  
   
  Dans le cadre d’une extension de mise en pool d’objets, vous devez créer un comportement de service. Pour ce faire, implémentez l'interface <xref:System.ServiceModel.Description.IServiceBehavior>. Il existe plusieurs méthodes pour que le modèle de service tienne compte des comportements personnalisés :  
   
--   Utilisation d'un attribut personnalisé.  
+- Utilisation d'un attribut personnalisé.  
   
--   L'ajouter de façon impérative à la collection de comportements de la description de service.  
+- L'ajouter de façon impérative à la collection de comportements de la description de service.  
   
--   Extension du fichier de configuration  
+- Extension du fichier de configuration  
   
  Cet exemple utilise un attribut personnalisé. Lorsque <xref:System.ServiceModel.ServiceHost> est construit, il examine les attributs utilisés dans la définition de type du service et ajoute les comportements disponibles à la collection de comportements de la description de service.  
   
  L'interface <xref:System.ServiceModel.Description.IServiceBehavior> a trois méthode : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. La méthode <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> permet de s'assurer que le comportement peut être appliqué au service. Dans cet exemple, l'implémentation garantit que le service n'est pas configuré avec <xref:System.ServiceModel.InstanceContextMode.Single>. La méthode <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> permet de configurer les liaisons du service. Elle n'est pas requise dans ce scénario. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> permet de configurer les répartiteurs du service. Cette méthode est appelée par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. Les paramètres suivants sont passés dans cette méthode :  
   
--   `Description`: Cet argument fournit la description de service pour l’ensemble du service. Il permet d’inspecter les données de description sur les points de terminaison, les contrats, les liaisons et autres données du service.  
+- `Description`: Cet argument fournit la description de service pour l’ensemble du service. Il permet d’inspecter les données de description sur les points de terminaison, les contrats, les liaisons et autres données du service.  
   
--   `ServiceHostBase`: Cet argument fournit le <xref:System.ServiceModel.ServiceHostBase> qui est en cours d’initialisation.  
+- `ServiceHostBase`: Cet argument fournit le <xref:System.ServiceModel.ServiceHostBase> qui est en cours d’initialisation.  
   
  Dans l'implémentation <xref:System.ServiceModel.Description.IServiceBehavior> personnalisée, une nouvelle instance de `ObjectPoolingInstanceProvider` est instanciée et assignée à la propriété <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> dans chaque <xref:System.ServiceModel.Dispatcher.DispatchRuntime> de ServiceHostBase.  
   

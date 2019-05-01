@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994284"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL, méthode
 Définit une valeur qui spécifie si les appels à [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passer un argument de valeurs qui sont par rapport à du code natif ou par rapport à Microsoft intermédiaire code language (MSIL) de la méthode qui est en cours en escalier par le biais.  
@@ -39,7 +39,7 @@ HRESULT SetRangeIL (
  `bIL`  
  [in] La valeur `true` pour spécifier que les plages sont relatives au code MSIL. La valeur `false` pour spécifier que les plages sont relatives au code natif. La valeur par défaut est `true`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

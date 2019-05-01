@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008213"
 ---
 # <a name="path-animations-overview"></a>Vue d'ensemble des animations de tracés
 <a name="introduction"></a> Cette rubrique présente les animations de tracés qui vous permettent d’utiliser un tracé géométrique pour générer des valeurs de sortie. Les animations de tracés sont utiles pour déplacer et faire pivoter des objets le long des tracés complexes.  

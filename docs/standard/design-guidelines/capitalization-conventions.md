@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966476"
 ---
 # <a name="capitalization-conventions"></a>Conventions de mise en majuscules
 Les lignes directrices de ce chapitre présentent une méthode simple d'utilisation des cas qui, lorsqu'ils sont appliqués de façon uniforme, rendent les identificateurs pour les types, les membres et les paramètres faciles à lire.  
@@ -23,9 +23,9 @@ Les lignes directrices de ce chapitre présentent une méthode simple d'utilisat
 ## <a name="capitalization-rules-for-identifiers"></a>Règles de casse des identificateurs  
  Afin de distinguer les mots dans un identificateur, il faut y mettre en majuscule la première lettre de chaque mot. N’utilisez pas de traits de soulignement pour différencier des mots, ni ailleurs à cette fin dans les identificateurs. Il existe deux façons appropriées d’utiliser des majuscules pour les identificateurs, en fonction de son utilisation :  
   
--   PascalCasing  
+- PascalCasing  
   
--   casseCamel  
+- casseCamel  
   
  La convention CassePascal, utilisée pour tous les identificateurs à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes d’une longueur de deux lettres), comme indiqué dans les exemples suivants :  
   

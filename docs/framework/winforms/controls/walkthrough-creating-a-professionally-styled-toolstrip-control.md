@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009095"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procédure pas à pas : création d’un contrôle ToolStrip de style professionnel
 Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un aspect professionnel et un comportement de contrôles en écrivant votre propre classe dérivée de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.  
   
  Cette procédure pas à pas montre comment utiliser <xref:System.Windows.Forms.ToolStrip> contrôles pour créer un contrôle composite qui ressemble à la **volet de Navigation** fourni par Microsoft® Outlook®. Les tâches suivantes sont illustrées dans cette procédure pas à pas :  
   
--   Création d’un projet de bibliothèque de contrôles Windows.  
+- Création d’un projet de bibliothèque de contrôles Windows.  
   
--   Conception du contrôle StackView.  
+- Conception du contrôle StackView.  
   
--   Implémentation d’un convertisseur personnalisé.  
+- Implémentation d’un convertisseur personnalisé.  
   
  Lorsque vous avez terminé, avoir un contrôle client personnalisé réutilisable avec l’aspect d’un contrôle Microsoft Office® XP Professionnel.  
   
@@ -38,7 +38,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :  
   
--   Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.  
+- Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Création d’un projet de bibliothèque de contrôles Windows  
  La première étape consiste à créer le projet de bibliothèque de contrôles.  
@@ -178,11 +178,11 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> un
 ## <a name="next-steps"></a>Étapes suivantes  
  Dans cette procédure pas à pas, vous avez créé un contrôle client personnalisé réutilisable avec l’apparence professionnelle d’un contrôle Office XP. Vous pouvez utiliser le <xref:System.Windows.Forms.ToolStrip> famille de contrôles à de nombreuses autres fins :  
   
--   Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md).  
+- Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](contextmenu-component-overview-windows-forms.md).  
   
--   Créer un formulaire avec un menu standard automatiquement rempli. Pour plus d’informations, consultez [Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire](walkthrough-providing-standard-menu-items-to-a-form.md).  
+- Créer un formulaire avec un menu standard automatiquement rempli. Pour plus d’informations, consultez [Procédure pas à pas : En fournissant des éléments de Menu Standard à un formulaire](walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d'informations, voir [Procédure : Créer un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+- Créer un formulaire d’interface (multidocument MDI) document avec l’ancrage <xref:System.Windows.Forms.ToolStrip> contrôles. Pour plus d'informations, voir [Procédure : Créer un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

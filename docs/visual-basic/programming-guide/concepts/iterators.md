@@ -3,11 +3,11 @@ title: Itérateurs (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966171"
 ---
 # <a name="iterators-visual-basic"></a>Itérateurs (Visual Basic)
 Un *itérateur* peut être utilisé pour parcourir des collections, comme des listes et des tableaux.  
@@ -44,21 +44,21 @@ End Function
   
  **Dans cette rubrique**  
   
--   [Itérateur simple](#BKMK_SimpleIterator)  
+- [Itérateur simple](#BKMK_SimpleIterator)  
   
--   [Création d’une classe de collection](#BKMK_CollectionClass)  
+- [Création d’une classe de collection](#BKMK_CollectionClass)  
   
--   [Blocs try](#BKMK_TryBlocks)  
+- [Blocs try](#BKMK_TryBlocks)  
   
--   [Méthodes anonymes](#BKMK_AnonymousMethods)  
+- [Méthodes anonymes](#BKMK_AnonymousMethods)  
   
--   [Utilisation d’itérateurs avec une liste générique](#BKMK_GenericList)  
+- [Utilisation d’itérateurs avec une liste générique](#BKMK_GenericList)  
   
--   [Informations sur la syntaxe](#BKMK_SyntaxInformation)  
+- [Informations sur la syntaxe](#BKMK_SyntaxInformation)  
   
--   [Implémentation technique](#BKMK_Technical)  
+- [Implémentation technique](#BKMK_Technical)  
   
--   [Utilisation d’itérateurs](#BKMK_UseOfIterators)  
+- [Utilisation d’itérateurs](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Pour tous les exemples dans la rubrique à l’exception de l’exemple d’itérateur Simple, ajoutez [importations](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instructions pour le `System.Collections` et `System.Collections.Generic` espaces de noms.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Utilisation d’itérateurs  
  Les itérateurs vous permettent de conserver la simplicité d’une boucle `For Each` quand vous avez besoin d’utiliser un code complexe pour remplir la séquence d’une liste. Ceci peut être utile quand vous voulez faire les opérations suivantes :  
   
--   Modifier la séquence de la liste après la première itération de la boucle `For Each`.  
+- Modifier la séquence de la liste après la première itération de la boucle `For Each`.  
   
--   Éviter de charger entièrement une grande liste avant la première itération d’une boucle `For Each`. Une extraction paginée pour charger un lot de lignes d’une table est un exemple. Un autre exemple est la méthode <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> , qui implémente les itérateurs dans le .NET Framework.  
+- Éviter de charger entièrement une grande liste avant la première itération d’une boucle `For Each`. Une extraction paginée pour charger un lot de lignes d’une table est un exemple. Un autre exemple est la méthode <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> , qui implémente les itérateurs dans le .NET Framework.  
   
--   Encapsuler la création de la liste dans l’itérateur. Dans la méthode d’itérateur, vous pouvez créer la liste et générer ensuite chaque résultat dans une boucle.  
+- Encapsuler la création de la liste dans l’itérateur. Dans la méthode d’itérateur, vous pouvez créer la liste et générer ensuite chaque résultat dans une boucle.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041897"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage, méthode
 Notifie le profileur que le client envoie une demande au serveur.  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in] Une valeur qui correspond à la valeur fournie dans [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) dans ces conditions :  
   
--   Les cookies GUID de communication à distance sont actifs.  
+- Les cookies GUID de communication à distance sont actifs.  
   
--   Le canal réussit à transmettre le message.  
+- Le canal réussit à transmettre le message.  
   
--   Les cookies GUID sont actifs sur le processus côté serveur.  
+- Les cookies GUID sont actifs sur le processus côté serveur.  
   
  Cela permet un appariement simple d’appels de communication à distance et de la création d’une pile d’appel logique.  
   

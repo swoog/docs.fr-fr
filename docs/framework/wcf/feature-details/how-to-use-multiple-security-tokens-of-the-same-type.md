@@ -6,13 +6,13 @@ ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972833"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procédure : utiliser plusieurs jetons de sécurité du même type
--   Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un message client ne pouvait contenir qu'un jeton d'un type donné. Désormais, les messages peuvent contenir plusieurs jetons d'un type donné. Cette rubrique explique comment inclure plusieurs jetons du même type dans un message client.  
+- Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un message client ne pouvait contenir qu'un jeton d'un type donné. Désormais, les messages peuvent contenir plusieurs jetons d'un type donné. Cette rubrique explique comment inclure plusieurs jetons du même type dans un message client.  
   
--   Notez que vous ne pouvez pas configurer un service ainsi : un service peut contenir un seul jeton de prise en charge.  
+- Notez que vous ne pouvez pas configurer un service ainsi : un service peut contenir un seul jeton de prise en charge.  
   
 ### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>Pour utiliser plusieurs jetons de sécurité du même type  
   

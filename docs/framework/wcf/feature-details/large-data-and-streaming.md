@@ -3,11 +3,11 @@ title: Données volumineuses et diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038603"
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 Windows Communication Foundation (WCF) est une infrastructure de communications basées sur XML. Étant donné que les données XML sont généralement codées au format texte standard défini dans le [spécification XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), connecté les architectes et développeurs de systèmes sont généralement concernées par l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte du XML pose des défis particuliers pour le transfert efficace de données binaires.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
   
  Le scénario le plus courant dans lequel de tels transferts de contenu de données volumineux se produisent implique les transferts d'objets de données binaires qui :  
   
--   ne peuvent pas être facilement divisés en séquence de message ;  
+- ne peuvent pas être facilement divisés en séquence de message ;  
   
--   doivent être remis de façon opportune ;  
+- doivent être remis de façon opportune ;  
   
--   ne sont pas disponibles dans leur intégralité lors de l'initialisation du transfert.  
+- ne sont pas disponibles dans leur intégralité lors de l'initialisation du transfert.  
   
  Pour les données qui ne présentent pas ces contraintes, il est en général préférable d'envoyer des séquences de messages au sein de la portée d'une session plutôt qu'un message volumineux. Pour plus d’informations, consultez la section « Diffusion en continu des données » plus loin dans cette rubrique.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Lors de l'utilisation de MTOM, le contrat de données précédent est sérialisé d'après les règles suivantes :  
   
--   Si `binaryBuffer` n'a pas la valeur `null` et contient individuellement assez de données pour justifier une charge mémoire d'externalisation MTOM (en-têtes MIME, et ainsi de suite) par rapport à un encodage Base64, les données sont externalisées et transportées avec le message en tant que partie MIME binaire. Si le seuil n'est pas dépassé, les données sont encodées en tant que Base64.  
+- Si `binaryBuffer` n'a pas la valeur `null` et contient individuellement assez de données pour justifier une charge mémoire d'externalisation MTOM (en-têtes MIME, et ainsi de suite) par rapport à un encodage Base64, les données sont externalisées et transportées avec le message en tant que partie MIME binaire. Si le seuil n'est pas dépassé, les données sont encodées en tant que Base64.  
   
--   La chaîne (et tous les autres types qui ne sont pas binaires) est toujours représentée comme une chaîne à l'intérieur du corps du message, indépendamment de sa taille.  
+- La chaîne (et tous les autres types qui ne sont pas binaires) est toujours représentée comme une chaîne à l'intérieur du corps du message, indépendamment de sa taille.  
   
  L'effet sur l'encodage MTOM est le même, que vous utilisiez un contrat de données explicite, comme indiqué dans l'exemple précédent, une liste de paramètres dans une opération, des contrats de données imbriqués ou que vous transfériez un objet de contrat de données dans une collection. Les tableaux d'octets sont toujours des candidats à l'optimisation et sont optimisés si les seuils d'optimisation sont atteints.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Restrictions  
  Vous ne pouvez pas utiliser un nombre important de fonctionnalités WCF lors de la diffusion en continu est activée :  
   
--   Les signatures numériques pour le corps du message ne peuvent pas être effectuées parce qu'elles requièrent un calcul de hachage sur le contenu entier du message. Avec la diffusion en continu, le contenu n'est pas complètement disponible lorsque les en-têtes de message sont construits et envoyés et, par conséquent, une signature numérique ne peut pas être calculée.  
+- Les signatures numériques pour le corps du message ne peuvent pas être effectuées parce qu'elles requièrent un calcul de hachage sur le contenu entier du message. Avec la diffusion en continu, le contenu n'est pas complètement disponible lorsque les en-têtes de message sont construits et envoyés et, par conséquent, une signature numérique ne peut pas être calculée.  
   
--   Le chiffrement dépend des signatures numériques pour vérifier que les données ont été reconstruites correctement.  
+- Le chiffrement dépend des signatures numériques pour vérifier que les données ont été reconstruites correctement.  
   
--   Les sessions fiables doivent mettre en mémoire tampon les messages envoyés sur le client à des fins de nouvelle livraison si un message se perd lors du transfert et elles doivent conserver les messages sur le service avant de les rendre à l'implémentation du service afin de conserver leur ordre s'ils ne sont pas reçus dans l'ordre.  
+- Les sessions fiables doivent mettre en mémoire tampon les messages envoyés sur le client à des fins de nouvelle livraison si un message se perd lors du transfert et elles doivent conserver les messages sur le service avant de les rendre à l'implémentation du service afin de conserver leur ordre s'ils ne sont pas reçus dans l'ordre.  
   
  En raison de ces contraintes fonctionnelles, vous pouvez uniquement utiliser des options de sécurité au niveau du transport pour diffuser en continu et vous ne pouvez pas activer de sessions fiables. La diffusion en continu est uniquement disponible avec les liaisons définies par le système suivantes :  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Parce que les transports sous-jacents de <xref:System.ServiceModel.NetTcpBinding> et <xref:System.ServiceModel.NetNamedPipeBinding> prennent en charge la remise fiable inhérente et les sessions basées sur la connexion, contrairement à HTTP, ces deux liaisons sont uniquement affectées de manière minime par ces contraintes, dans la pratique.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Activation de la diffusion en continu  
  Vous pouvez activer la diffusion en continu des manières suivantes :  
   
--   Envoyez et acceptez des demandes en mode de diffusion en continu, puis acceptez et renvoyez les réponses en mode mémoire tampon (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Envoyez et acceptez des demandes en mode de diffusion en continu, puis acceptez et renvoyez les réponses en mode mémoire tampon (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Envoyez et acceptez des demandes en mode mémoire tampon, puis acceptez et renvoyez les réponses en mode de diffusion en continu (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Envoyez et acceptez des demandes en mode mémoire tampon, puis acceptez et renvoyez les réponses en mode de diffusion en continu (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Envoyez et recevez des demandes et des réponses en mode de diffusion en continu dans les deux sens. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Envoyez et recevez des demandes et des réponses en mode de diffusion en continu dans les deux sens. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Vous pouvez désactiver la diffusion en continu en affectant au mode de transfert la valeur <xref:System.ServiceModel.TransferMode.Buffered>, ce qui correspond au paramètre par défaut sur toutes les liaisons. Le code suivant montre comment définir le mode de transfert dans la configuration.  
   

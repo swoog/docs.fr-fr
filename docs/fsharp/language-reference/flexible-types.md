@@ -3,11 +3,11 @@ title: Types flexibles
 description: Découvrez comment utiliser F# annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié.
 ms.date: 05/16/2016
 ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981381"
 ---
 # <a name="flexible-types"></a>Types flexibles
 

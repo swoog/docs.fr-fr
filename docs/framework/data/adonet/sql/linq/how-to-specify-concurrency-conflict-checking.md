@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033681"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>Procédure : Spécifier la vérification de conflits d’accès concurrentiel
 Vous pouvez spécifier les colonnes de la base de données qui feront l'objet d'une vérification de conflits d'accès concurrentiel lorsque vous appelez <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Pour plus d'informations, voir [Procédure : Spécifier les membres sont vérifiés pour les conflits d’accès concurrentiel](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  

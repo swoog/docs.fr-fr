@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971702"
 ---
 # <a name="single-data-type-visual-basic"></a>Single, type de données (Visual Basic)
 Contient des nombres à virgule flottante IEEE 32 bits (4 octets) simple précision compris entre - 3,4028235E + 38 signés et - 1, 401298E-45 pour les valeurs négatives et entre 1, 401298E-45 et 3,4028235E + 38 pour les valeurs positives. Nombres en simple précision stockent une approximation d’un nombre réel.  
@@ -37,15 +37,15 @@ Contient des nombres à virgule flottante IEEE 32 bits (4 octets) simple précis
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
--   **Précision.** Lorsque vous travaillez avec des nombres à virgule flottante, n’oubliez pas qu’ils n’ont pas toujours de représentation précise dans la mémoire. Cela peut entraîner des résultats inattendus à partir de certaines opérations, comme la comparaison de valeurs et les `Mod` opérateur. Pour plus d’informations, consultez [dépannage des Types de données](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Précision.** Lorsque vous travaillez avec des nombres à virgule flottante, n’oubliez pas qu’ils n’ont pas toujours de représentation précise dans la mémoire. Cela peut entraîner des résultats inattendus à partir de certaines opérations, comme la comparaison de valeurs et les `Mod` opérateur. Pour plus d’informations, consultez [dépannage des Types de données](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Étendues.** Le `Single` type de données s’étend à `Double`. Cela signifie que vous pouvez convertir `Single` à `Double` sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
+- **Étendues.** Le `Single` type de données s’étend à `Double`. Cela signifie que vous pouvez convertir `Single` à `Double` sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Les zéros de fin.** Les types de données à virgule flottante n’ont pas d’aucune représentation interne du 0 de fin. Par exemple, ils n'effectuent pas de distinction entre 4,2000 et 4.2. Par conséquent, les caractères 0 de fin n’apparaissent pas lorsque vous affichez ou imprimez les valeurs à virgule flottante.  
+- **Les zéros de fin.** Les types de données à virgule flottante n’ont pas d’aucune représentation interne du 0 de fin. Par exemple, ils n'effectuent pas de distinction entre 4,2000 et 4.2. Par conséquent, les caractères 0 de fin n’apparaissent pas lorsque vous affichez ou imprimez les valeurs à virgule flottante.  
   
--   **Caractères de type.** L'ajout du caractère de type littéral `F` à un littéral force ce dernier en type de données `Single`. L'ajout du caractère de type identificateur `!` à un identificateur force ce dernier en type `Single`.  
+- **Caractères de type.** L'ajout du caractère de type littéral `F` à un littéral force ce dernier en type de données `Single`. L'ajout du caractère de type identificateur `!` à un identificateur force ce dernier en type `Single`.  
   
--   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Single?displayProperty=nameWithType>.  
+- **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

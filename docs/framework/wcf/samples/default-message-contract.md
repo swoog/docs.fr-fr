@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990338"
 ---
 # <a name="default-message-contract"></a>Default Message Contract
 Cet exemple présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente une interface de calculatrice comme un service typé. Au lieu d’opérations de service individuelles pour l’addition, soustraction, multiplication et division utilisées dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), cet exemple transmet un message personnalisé qui contient les opérandes et l’opérateur et retourne le résultat du calcul arithmétique.  

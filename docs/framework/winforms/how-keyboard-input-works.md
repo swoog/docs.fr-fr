@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966965"
 ---
 # <a name="how-keyboard-input-works"></a>Fonctionnement de l'entrée au clavier
 Windows Forms traite l’entrée au clavier en déclenchant des événements de clavier en réponse aux messages de Windows. La plupart des applications Windows Forms traitent l’entrée au clavier exclusivement en gérant les événements de clavier. Toutefois, vous devez comprendre le fonctionnement des messages de clavier pour pouvoir implémenter des scénarios d’entrée au clavier plus avancés, comme l’interception des touches avant qu’elles n’atteignent un contrôle. Cette rubrique décrit les types de données de touches que Windows Forms reconnaît et fournit une vue d’ensemble du routage des messages de clavier. Pour plus d’informations sur les événements de clavier, consultez [Utilisation des événements de clavier](using-keyboard-events.md).  

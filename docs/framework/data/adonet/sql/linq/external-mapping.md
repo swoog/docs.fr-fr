@@ -3,31 +3,31 @@ title: Mappage externe
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037893"
 ---
 # <a name="external-mapping"></a>Mappage externe
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge *mappage externe*, un processus par lequel vous utilisez un fichier XML distinct pour spécifier le mappage entre le modèle de données de la base de données et votre modèle objet. Les avantages de l'utilisation d'un fichier de mappage externe sont notamment les suivants :  
   
--   Vous pouvez conserver votre code de mappage en dehors de votre code d'application. Cette méthode permet de réduire l'encombrement dans votre code d'application.  
+- Vous pouvez conserver votre code de mappage en dehors de votre code d'application. Cette méthode permet de réduire l'encombrement dans votre code d'application.  
   
--   Vous pouvez traiter un fichier de mappage externe un peu comme un fichier de configuration. Par exemple, vous pouvez modifier la manière dont votre application se comporte après l'envoi des binaires par la simple permutation du fichier binaire externe.  
+- Vous pouvez traiter un fichier de mappage externe un peu comme un fichier de configuration. Par exemple, vous pouvez modifier la manière dont votre application se comporte après l'envoi des binaires par la simple permutation du fichier binaire externe.  
   
 ## <a name="requirements"></a>Configuration requise  
  Le fichier de mappage doit être un fichier XML, et le fichier doit valider un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fichier schema definition (.xsd).  
   
  Les règles suivantes s'appliquent :  
   
--   Le fichier de mappage doit être un fichier XML.  
+- Le fichier de mappage doit être un fichier XML.  
   
--   Le fichier de mappage XML doit être valide par rapport au fichier de définition de schéma XML. Pour plus d'informations, voir [Procédure : Valider les fichiers de mappage externes et DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- Le fichier de mappage XML doit être valide par rapport au fichier de définition de schéma XML. Pour plus d'informations, voir [Procédure : Valider les fichiers de mappage externes et DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   Le mappage externe substitue le mappage basé sur les attributs. En d'autres termes, lorsque vous utilisez une source de mappage externe pour créer un <xref:System.Data.Linq.DataContext>, le <xref:System.Data.Linq.DataContext> ignore tous les attributs de mappage que vous avez créés sur les classes. Ce comportement est vrai si la classe est incluse dans le fichier de mappage externe.  
+- Le mappage externe substitue le mappage basé sur les attributs. En d'autres termes, lorsque vous utilisez une source de mappage externe pour créer un <xref:System.Data.Linq.DataContext>, le <xref:System.Data.Linq.DataContext> ignore tous les attributs de mappage que vous avez créés sur les classes. Ce comportement est vrai si la classe est incluse dans le fichier de mappage externe.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge l'utilisation hybride des deux approches de mappage (basé sur les attributs et externe).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge l'utilisation hybride des deux approches de mappage (basé sur les attributs et externe).  
   
 ## <a name="xml-schema-definition-file"></a>Fichier de définition de schéma XML  
  Le mappage externe dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] doit être valide par rapport à la définition de schéma XML suivante.  

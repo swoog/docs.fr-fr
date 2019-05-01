@@ -3,22 +3,22 @@ title: UriTemplate Table, exemple
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006445"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate Table, exemple
 La classe <xref:System.UriTemplateTable> fournit une structure de table associative de type dictionnaire permettant d'utiliser un ensemble d'instances d'`UriTemplate`. Les URI (Uniform Resource Identifier) spécifiques peuvent être mis en correspondance avec tous les modèles de la table de manière efficace, et les données associées au modèle mis en correspondance peuvent être récupérées.  
   
  Cet exemple présente les concepts clés suivants relatifs à la classe `UriTemplateTable` :  
   
--   Syntaxe d'instanciation de `UriTemplateTable`.  
+- Syntaxe d'instanciation de `UriTemplateTable`.  
   
--   Remplissage de `UriTemplateTable` avec un jeu de paires clé/valeur.  
+- Remplissage de `UriTemplateTable` avec un jeu de paires clé/valeur.  
   
--   Mise en correspondance d'un URI candidat avec la table à l'aide de <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Mise en correspondance d'un URI candidat avec la table à l'aide de <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir la largeur d’une fenêtre à partir d’une Page'
+title: 'Procédure : Définir la largeur d’une fenêtre à partir d’une page'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - width of windows [WPF], setting from a page
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - pages [WPF], setting window width from
 ms.assetid: 31601c92-7889-472a-b07e-bf675ad21c92
 ms.openlocfilehash: fee6d4c9ae9dae03e81cc4be56576763cb59958b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006713"
 ---
-# <a name="how-to-set-the-width-of-a-window-from-a-page"></a>Procédure : Définir la largeur d’une fenêtre à partir d’une Page
+# <a name="how-to-set-the-width-of-a-window-from-a-page"></a>Procédure : Définir la largeur d’une fenêtre à partir d’une page
 Cet exemple illustre comment définir la largeur de la fenêtre à partir d’un <xref:System.Windows.Controls.Page>.  
   
 ## <a name="example"></a>Exemple  

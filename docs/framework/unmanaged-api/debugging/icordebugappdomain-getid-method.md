@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996253"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId, méthode
 Obtient l’identificateur unique du domaine d’application.  
@@ -42,7 +42,7 @@ HRESULT GetID (
 ## <a name="remarks"></a>Notes  
  L’identificateur du domaine d’application est unique au sein du processus de conteneur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

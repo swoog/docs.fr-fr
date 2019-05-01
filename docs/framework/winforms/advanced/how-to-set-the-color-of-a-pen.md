@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966864"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Procédure : définir la couleur d’un stylet
 Cet exemple modifie la couleur d’un préexistants <xref:System.Drawing.Pen> objet  
@@ -27,7 +27,7 @@ Cet exemple modifie la couleur d’un préexistants <xref:System.Drawing.Pen> ob
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Un <xref:System.Drawing.Pen> objet nommé `myPen`.  
+- Un <xref:System.Drawing.Pen> objet nommé `myPen`.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Vous devez appeler <xref:System.Drawing.Pen.Dispose%2A> sur les objets qui consomment des ressources système (telles que <xref:System.Drawing.Pen> objets) une fois que vous avez terminé.  

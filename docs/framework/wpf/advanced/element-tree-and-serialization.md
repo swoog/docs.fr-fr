@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
 ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962435"
 ---
 # <a name="element-tree-and-serialization"></a>Sérialisation et arborescence d'éléments
 Il existe souvent des éléments de programmation WPF sous une forme quelconque de relation d’arborescence. Par exemple, une interface utilisateur d’application créée en XAML peut être conceptualisée sous la forme d’une arborescence d’objets. L’arborescence d’éléments peut être à son tour divisée en deux arborescences discrètes, mais néanmoins parfois parallèles : l’arborescence logique et l’arborescence visuelle. La sérialisation dans WPF implique l’enregistrement de l’état de ces deux arborescences et de l’application, et son écriture dans un fichier, éventuellement au format XAML.  

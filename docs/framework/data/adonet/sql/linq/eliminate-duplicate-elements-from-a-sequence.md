@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b224a84-bad5-4843-adcc-14e784d280f5
 ms.openlocfilehash: 49138e9b130b1a2137b5e9e779875d6107972578
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032589"
 ---
 # <a name="eliminate-duplicate-elements-from-a-sequence"></a>Comment : éliminer des éléments en double d'une séquence
 Utilisez l'opérateur <xref:System.Linq.Queryable.Distinct%2A> pour éliminer des éléments en double d'une séquence.  

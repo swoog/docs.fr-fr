@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957584"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager, interface
 Fournit des méthodes qui permettent l’accès et contrôle sur le contexte de sécurité du thread en cours d’exécution.  
@@ -42,13 +42,13 @@ Fournit des méthodes qui permettent l’accès et contrôle sur le contexte de 
   
  Le CLR gère le contexte de thread managé en interne. Elle interroge les processus spécifiques `IHostSecurityManager` dans les situations suivantes :  
   
--   Sur le thread finaliseur, pendant l’exécution du finaliseur.  
+- Sur le thread finaliseur, pendant l’exécution du finaliseur.  
   
--   Pendant l’exécution de constructeur de classe et le module.  
+- Pendant l’exécution de constructeur de classe et le module.  
   
--   Aux points asynchrones sur le thread de travail, dans les appels à la [IHostThreadPoolManager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) (méthode).  
+- Aux points asynchrones sur le thread de travail, dans les appels à la [IHostThreadPoolManager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) (méthode).  
   
--   Prise en charge des ports de terminaison d’e/s.  
+- Prise en charge des ports de terminaison d’e/s.  
   
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

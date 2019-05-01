@@ -3,11 +3,11 @@ title: Sécurisation des applications de canal homologue
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990949"
 ---
 # <a name="securing-peer-channel-applications"></a>Sécurisation des applications de canal homologue
 Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` a la sécurité activée par défaut et offre les sécurités de transport et de message. Cette rubrique traite de ces deux types de sécurité. Le type de sécurité est spécifié par l’étiquette de mode de sécurité dans la spécification de liaison (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
@@ -15,16 +15,16 @@ Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstec
 ## <a name="transport-based-security"></a>Sécurité basée sur le transport  
  Le canal homologue prend en charge deux types d'informations d'identification pour l'authentification en vue de sécuriser le transport. Les deux impliquent la définition de la propriété `ClientCredentialSettings.Peer` sur la `ChannelFactory` associée :  
   
--   Mot de passe. Les clients utilisent leur connaissance d'un mot de passe secret pour authentifier les connexions. Lorsque ce type d'informations d'identification est utilisé, `ClientCredentialSettings.Peer.MeshPassword` doit contenir un mot de passe valide et éventuellement une instance `X509Certificate2`.  
+- Mot de passe. Les clients utilisent leur connaissance d'un mot de passe secret pour authentifier les connexions. Lorsque ce type d'informations d'identification est utilisé, `ClientCredentialSettings.Peer.MeshPassword` doit contenir un mot de passe valide et éventuellement une instance `X509Certificate2`.  
   
--   certificat ;  L'authentification d'application spécifique est utilisée. Lorsque ce type d'informations d'identification est utilisé, vous devez utiliser une implémentation concrète de <xref:System.IdentityModel.Selectors.X509CertificateValidator> dans `ClientCredentialSettings.Peer.PeerAuthentication`.  
+- certificat ;  L'authentification d'application spécifique est utilisée. Lorsque ce type d'informations d'identification est utilisé, vous devez utiliser une implémentation concrète de <xref:System.IdentityModel.Selectors.X509CertificateValidator> dans `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>Sécurité basée sur le message  
  Avec la sécurité basée sur le message, une application peut signer les messages sortants afin que tous les destinataires puissent vérifier que le message a été envoyé par un correspondant approuvé et qu'il n'a pas été falsifié. Actuellement, le canal homologue prend en charge uniquement la signature des messages d'informations d'identification X.509.  
   
 ## <a name="best-practices"></a>Meilleures pratiques  
   
--   Cette section présente les meilleures pratiques pour sécuriser les applications de canal homologue.  
+- Cette section présente les meilleures pratiques pour sécuriser les applications de canal homologue.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Activer la sécurité avec les applications de canal homologue  
  En raison de la nature distribuée des protocoles de canal homologue, il est difficile d'appliquer l'appartenance de maille et la confidentialité dans une maille non protégée. Il convient également de penser à sécuriser la communication entre les clients et le service de résolution. Sous le protocole PNRP (Peer Name Resolution Protocol), utilisez des noms sécurisés afin d’éviter l’usurpation et autres attaques courantes. Sécurisez un service de résolution personnalisé en activant la sécurité sur les clients de connexion utilisés pour contacter le service de résolution, avec à la fois la sécurité de message et la sécurité de transport.  

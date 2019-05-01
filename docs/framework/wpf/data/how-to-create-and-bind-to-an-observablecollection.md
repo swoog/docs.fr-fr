@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020918"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procédure : Créer et effectuer une liaison à un ObservableCollection
 Cet exemple montre comment créer et lier à une collection qui dérive de la <xref:System.Collections.ObjectModel.ObservableCollection%601> (classe), qui est une classe de collection qui fournit des notifications lorsque des éléments sont ajoutés ou supprimés.  

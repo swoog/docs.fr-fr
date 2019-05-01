@@ -6,8 +6,8 @@ ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965618"
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s’avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l’expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -15,11 +15,11 @@ Cet exemple montre comment ajouter des jetons supplémentaires à un message qui
 ## <a name="demonstrates"></a>Démonstrations
  L'exemple montre :
 
--   Comment un client peut passer des jetons de sécurité supplémentaires à un service.
+- Comment un client peut passer des jetons de sécurité supplémentaires à un service.
 
--   Comment le serveur peut accéder aux revendications associées aux jetons de sécurité supplémentaires.
+- Comment le serveur peut accéder aux revendications associées aux jetons de sécurité supplémentaires.
 
--   Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.
+- Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.
 
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.
@@ -461,7 +461,7 @@ iisreset
   
 ##### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
--   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
+- Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
 > [!NOTE]
 >  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

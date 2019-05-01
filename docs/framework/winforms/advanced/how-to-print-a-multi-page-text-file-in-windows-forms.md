@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003910"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procédure : imprimer un fichier texte de plusieurs pages dans Windows Forms
 Il est très courant que les applications Windows impriment du texte. La classe <xref:System.Drawing.Graphics> fournit des méthodes pour dessiner des objets (graphismes ou texte) sur un périphérique, tel qu'un écran ou une imprimante.  
@@ -54,11 +54,11 @@ Il est très courant que les applications Windows impriment du texte. La classe 
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Un fichier texte nommé testPage.txt contenant le texte à imprimer, situé à la racine du lecteur C:\\. Modifiez le code pour imprimer un fichier différent.  
+- Un fichier texte nommé testPage.txt contenant le texte à imprimer, situé à la racine du lecteur C:\\. Modifiez le code pour imprimer un fichier différent.  
   
--   Références aux assemblys System, System.Windows.Forms, System.Drawing.  
+- Références aux assemblys System, System.Windows.Forms, System.Drawing.  
   
--   Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
+- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 

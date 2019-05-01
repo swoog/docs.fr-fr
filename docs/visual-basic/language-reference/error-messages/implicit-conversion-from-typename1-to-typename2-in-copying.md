@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
 ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013827"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversion implicite de '\<nom_type1 >' à '\<nom_type2 >' lors de la copie de la valeur du paramètre 'ByRef' '\<nom_paramètre >' dans l’argument correspondant.
 Une procédure est appelée avec un [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument d’un type autre que celui de son paramètre correspondant.  
@@ -27,9 +27,9 @@ Une procédure est appelée avec un [ByRef](../../../visual-basic/language-refer
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si possible, utilisez un argument d’appel du même type que le paramètre de procédure pour Visual Basic n’a pas besoin d’effectuer de conversion.  
+- Si possible, utilisez un argument d’appel du même type que le paramètre de procédure pour Visual Basic n’a pas besoin d’effectuer de conversion.  
   
--   Si vous devez appeler la procédure avec un type d’argument différent du type de paramètre, mais n’avez pas besoin de retourner une valeur dans l’argument d’appel, définissez le paramètre sur [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) au lieu de `ByRef`.  
+- Si vous devez appeler la procédure avec un type d’argument différent du type de paramètre, mais n’avez pas besoin de retourner une valeur dans l’argument d’appel, définissez le paramètre sur [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) au lieu de `ByRef`.  
   
 ## <a name="see-also"></a>Voir aussi
 

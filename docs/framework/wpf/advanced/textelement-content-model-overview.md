@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981875"
 ---
 # <a name="textelement-content-model-overview"></a>Vue d'ensemble du modèle de contenu de TextElement
 Cette vue d’ensemble du modèle de contenu décrit le contenu pris en charge pour un <xref:System.Windows.Documents.TextElement>. Le <xref:System.Windows.Documents.Paragraph> classe est un type de <xref:System.Windows.Documents.TextElement>. Un modèle de contenu décrit les objets/éléments qui peuvent être contenus dans d’autres. Cette vue d’ensemble résume le modèle de contenu utilisé pour les objets dérivés de <xref:System.Windows.Documents.TextElement>. Pour plus d’informations, consultez [vue d’ensemble du Document de flux](flow-document-overview.md).  
@@ -57,11 +57,11 @@ Cette vue d’ensemble du modèle de contenu décrit le contenu pris en charge p
 ## <a name="working-with-textelement-content-programmatically"></a>Utilisation du contenu de TextElement par programmation  
  Le contenu d’un <xref:System.Windows.Documents.TextElement> est constitué par les collections et donc manipulation par programmation le contenu de <xref:System.Windows.Documents.TextElement> objets s’effectue à l’aide de ces collections. Il existe trois collections différentes utilisées par <xref:System.Windows.Documents.TextElement> -classes dérivées :  
   
--   <xref:System.Windows.Documents.InlineCollection>: Représente une collection d'éléments <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> définit le contenu enfant autorisé des éléments <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> et <xref:System.Windows.Controls.TextBlock>.  
+- <xref:System.Windows.Documents.InlineCollection>: Représente une collection d'éléments <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> définit le contenu enfant autorisé des éléments <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> et <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Représente une collection d'éléments <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> définit le contenu enfant autorisé des éléments <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> et <xref:System.Windows.Documents.Figure>.  
+- <xref:System.Windows.Documents.BlockCollection>: Représente une collection d'éléments <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> définit le contenu enfant autorisé des éléments <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> et <xref:System.Windows.Documents.Figure>.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Un élément de contenu de flux qui représente un élément de contenu particulier dans une liste ordonnée ou non ordonnée <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Un élément de contenu de flux qui représente un élément de contenu particulier dans une liste ordonnée ou non ordonnée <xref:System.Windows.Documents.List>.  
   
  Vous pouvez manipuler (ajouter ou supprimer des éléments) à partir de ces collections à l’aide des propriétés **Inlines**, **blocs**, et **ListItems**. Les exemples suivants montrent comment manipuler le contenu d’un Span à l’aide du **Inlines** propriété.  
   

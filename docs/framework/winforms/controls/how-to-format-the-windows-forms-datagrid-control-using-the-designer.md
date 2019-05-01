@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013372"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procédure : mettre en forme le contrôle DataGrid Windows Forms à l’aide du concepteur
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333572"
   
  Il existe trois aspects essentiels de la mise en forme le <xref:System.Windows.Forms.DataGrid> contrôle :  
   
--   Vous pouvez définir des propriétés pour établir un style par défaut dans lequel les données sont affichées.  
+- Vous pouvez définir des propriétés pour établir un style par défaut dans lequel les données sont affichées.  
   
--   À partir de cette base, vous pouvez ensuite personnaliser la façon de que certaines tables sont affichées au moment de l’exécution.  
+- À partir de cette base, vous pouvez ensuite personnaliser la façon de que certaines tables sont affichées au moment de l’exécution.  
   
--   Enfin, vous pouvez modifier les colonnes qui sont affichées dans la grille de données, ainsi que les couleurs et autres mises en forme qui s’affiche.  
+- Enfin, vous pouvez modifier les colonnes qui sont affichées dans la grille de données, ainsi que les couleurs et autres mises en forme qui s’affiche.  
   
  Comme étape initiale de mise en forme d’une grille de données, vous pouvez définir les propriétés de la <xref:System.Windows.Forms.DataGrid> lui-même. Ces choix de couleur et format forme une base à partir de laquelle vous pouvez ensuite modifier selon les tables et les colonnes affichées.  
   

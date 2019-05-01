@@ -3,11 +3,11 @@ title: Transférer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964487"
 ---
 # <a name="transfer"></a>Transférer
 Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windows Communication Foundation (WCF).  
@@ -35,9 +35,9 @@ Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windo
 ## <a name="example-of-transfers"></a>Exemples de transferts  
  Deux exemples de transferts sont présentés ci-dessous.  
   
--   Lorsque vous créez un hôte de service, le constructeur prend le contrôle à partir du code appelant, ou le code appelant est transféré au constructeur. Lorsque le constructeur a terminé de s'exécuter, il retourne le contrôle au code appelant, ou le constructeur est transféré au code appelant. C'est le cas d'une relation imbriquée.  
+- Lorsque vous créez un hôte de service, le constructeur prend le contrôle à partir du code appelant, ou le code appelant est transféré au constructeur. Lorsque le constructeur a terminé de s'exécuter, il retourne le contrôle au code appelant, ou le constructeur est transféré au code appelant. C'est le cas d'une relation imbriquée.  
   
--   Lorsqu'un écouteur commence à traiter des données de transport, il crée un nouveau thread et remet à l'activité Recevoir des octets le contexte de traitement approprié, c'est-à-dire en passant le contrôle et les données. Lorsque ce thread a fini de traiter la demande, l'activité Recevoir des octets ne repasse aucune donnée à l'écouteur. Dans ce cas, la nouvelle activité de thread fait l'objet d'un transfert entrant mais pas d'un transfert sortant. Les deux activités sont liées mais pas imbriquées.  
+- Lorsqu'un écouteur commence à traiter des données de transport, il crée un nouveau thread et remet à l'activité Recevoir des octets le contexte de traitement approprié, c'est-à-dire en passant le contrôle et les données. Lorsque ce thread a fini de traiter la demande, l'activité Recevoir des octets ne repasse aucune donnée à l'écouteur. Dans ce cas, la nouvelle activité de thread fait l'objet d'un transfert entrant mais pas d'un transfert sortant. Les deux activités sont liées mais pas imbriquées.  
   
 ## <a name="activity-transfer-sequence"></a>Séquence de transfert d'activité  
  Une séquence de transfert d'activité bien formée comprend les étapes suivantes.  

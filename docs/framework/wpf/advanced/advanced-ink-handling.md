@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008939"
 ---
 # <a name="advanced-ink-handling"></a>Gestion avancée de l'encre
 Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est livré avec la <xref:System.Windows.Controls.InkCanvas>, et est un élément que vous pouvez placer dans votre application pour commencer à collecter et afficher l’encre. Toutefois, si le <xref:System.Windows.Controls.InkCanvas> contrôle ne fournit pas un niveau de contrôle assez, vous pouvez conserver le contrôle à un niveau supérieur en personnalisant vos propres collecte d’encre et les classes de rendu de l’encre à l’aide de <xref:System.Windows.Input.StylusPlugIns>.  

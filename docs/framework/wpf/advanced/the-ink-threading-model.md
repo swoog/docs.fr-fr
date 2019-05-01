@@ -14,22 +14,22 @@ helpviewer_keywords:
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
 ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007393"
 ---
 # <a name="the-ink-threading-model"></a>Modèle de thread de l'encre
 Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écriture avec un crayon régulière et du papier.  Pour ce faire, le stylet collecte les données d’entrée à un rythme beaucoup plus élevée que la souris et restitue l’encre lorsque l’utilisateur écrit.  Thread d’interface (UI) de l’application utilisateur n’est pas suffisant pour collecter les données de stylet et encre de rendu, car il peut se bloquer.  Pour y remédier, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application utilise deux threads supplémentaires lorsqu’un utilisateur écrit l’encre.  
   
  La liste suivante décrit les threads qui participent à la collecte et le rendu de l’encre numérique :  
   
--   Thread de stylet - le thread qui accepte une entrée à partir du stylet.  (En réalité, il s’agit d’un pool de threads, mais cette rubrique fait référence à ce dernier en tant qu’un thread de stylet.)  
+- Thread de stylet - le thread qui accepte une entrée à partir du stylet.  (En réalité, il s’agit d’un pool de threads, mais cette rubrique fait référence à ce dernier en tant qu’un thread de stylet.)  
   
--   Thread d’interface utilisateur application - le thread qui contrôle l’interface utilisateur de l’application.  
+- Thread d’interface utilisateur application - le thread qui contrôle l’interface utilisateur de l’application.  
   
--   Thread de rendu dynamique - le thread qui restitue l’encre lorsque l’utilisateur dessine un trait. Le thread de rendu dynamique est différent du thread qui restitue des autres éléments d’interface utilisateur pour l’application, comme indiqué dans la fenêtre Presentation Foundation [modèle de thread](threading-model.md).  
+- Thread de rendu dynamique - le thread qui restitue l’encre lorsque l’utilisateur dessine un trait. Le thread de rendu dynamique est différent du thread qui restitue des autres éléments d’interface utilisateur pour l’application, comme indiqué dans la fenêtre Presentation Foundation [modèle de thread](threading-model.md).  
   
  Le modèle d’encrage est le même si l’application utilise le <xref:System.Windows.Controls.InkCanvas> ou un contrôle personnalisé similaire à celui de [création d’un contrôle d’entrée d’encre](creating-an-ink-input-control.md).  Bien que cette rubrique étudie les threads en termes de la <xref:System.Windows.Controls.InkCanvas>, les mêmes concepts s’appliquent lorsque vous créez un contrôle personnalisé.  
   
@@ -40,17 +40,17 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
 1. Actions qui se produisent pendant que l’utilisateur dessine le trait  
   
-    1.  Lorsque l’utilisateur dessine un trait, les points du stylet arrivent sur le thread de stylet.  Plug-ins du stylet, y compris le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acceptez les points du stylet sur le thread de stylet et ont la possibilité de les modifier avant du <xref:System.Windows.Controls.InkCanvas> les reçoit.  
+    1. Lorsque l’utilisateur dessine un trait, les points du stylet arrivent sur le thread de stylet.  Plug-ins du stylet, y compris le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acceptez les points du stylet sur le thread de stylet et ont la possibilité de les modifier avant du <xref:System.Windows.Controls.InkCanvas> les reçoit.  
   
-    2.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> restitue les points du stylet sur le thread de rendu dynamique. Cela se produit en même temps que l’étape précédente.  
+    2. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> restitue les points du stylet sur le thread de rendu dynamique. Cela se produit en même temps que l’étape précédente.  
   
-    3.  Le <xref:System.Windows.Controls.InkCanvas> reçoit les points du stylet sur le thread d’interface utilisateur.  
+    3. Le <xref:System.Windows.Controls.InkCanvas> reçoit les points du stylet sur le thread d’interface utilisateur.  
   
 2. Actions qui se produisent une fois que l’utilisateur termine le trait  
   
-    1.  Lorsque l’utilisateur termine le trait, la <xref:System.Windows.Controls.InkCanvas> crée un <xref:System.Windows.Ink.Stroke> de l’objet et l’ajoute à la <xref:System.Windows.Controls.InkPresenter>, qui le restitue de manière statique.  
+    1. Lorsque l’utilisateur termine le trait, la <xref:System.Windows.Controls.InkCanvas> crée un <xref:System.Windows.Ink.Stroke> de l’objet et l’ajoute à la <xref:System.Windows.Controls.InkPresenter>, qui le restitue de manière statique.  
   
-    2.  Les alertes de thread d’interface utilisateur la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> qui le trait est restitué de manière statique, par conséquent, le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> supprime la représentation visuelle du trait.  
+    2. Les alertes de thread d’interface utilisateur la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> qui le trait est restitué de manière statique, par conséquent, le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> supprime la représentation visuelle du trait.  
   
 ## <a name="ink-collection-and-stylus-plug-ins"></a>Collecte d’encre et de stylet Plug-ins  
  Chaque <xref:System.Windows.UIElement> a un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  Le <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> des objets dans le <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> reçoivent et peuvent modifier les points du stylet sur le thread de stylet. Le <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objets reçoivent les points du stylet selon leur ordre dans le <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
@@ -85,16 +85,16 @@ Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écritur
   
 1. L’utilisateur commence le trait.  
   
-    1.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crée l’arborescence visuelle.  
+    1. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crée l’arborescence visuelle.  
   
 2. L’utilisateur est le trait.  
   
-    1.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> génère l’arborescence visuelle.  
+    1. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> génère l’arborescence visuelle.  
   
 3. L’utilisateur termine le trait.  
   
-    1.  Le <xref:System.Windows.Controls.InkPresenter> ajoute le trait à son arborescence d’éléments visuels.  
+    1. Le <xref:System.Windows.Controls.InkPresenter> ajoute le trait à son arborescence d’éléments visuels.  
   
-    2.  La couche MIL (Media Integration) restitue les traits de manière statique.  
+    2. La couche MIL (Media Integration) restitue les traits de manière statique.  
   
-    3.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> nettoie les éléments visuels.
+    3. Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> nettoie les éléments visuels.

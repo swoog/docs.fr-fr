@@ -3,11 +3,11 @@ title: Mise en route (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: c3a9062d-9d51-4a8e-bac6-071d16a7d9ea
 ms.openlocfilehash: 59dd85691c10c74b6ce89e70124096e9824a994e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968426"
 ---
 # <a name="getting-started-linq-to-xml"></a>Mise en route (LINQ to XML)
 Les rubriques suivantes présentent LINQ to XML.  

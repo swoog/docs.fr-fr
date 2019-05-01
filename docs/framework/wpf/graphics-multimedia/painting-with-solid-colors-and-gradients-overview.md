@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009429"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, et <xref:System.Windows.Media.RadialGradientBrush> objets pour peindre avec des couleurs unies, des dégradés linéaires et des dégradés radiaux.  
@@ -27,15 +27,15 @@ Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBr
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Utiliser un élément SolidColorBrush en « XAML »  
  Pour peindre une zone avec une couleur unie en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilisez l’une des options suivantes.  
   
--   Sélectionnez un pinceau couleur unie prédéfinie en fonction d’un nom.  Par exemple, vous pouvez définir un bouton de <xref:System.Windows.Controls.Control.Background%2A> à « Rouge » ou « MediumBlue ».  Pour une liste des autres prédéfinies pinceaux de couleur unie, consultez les propriétés statiques de la <xref:System.Windows.Media.Brushes> classe. Voici un exemple.  
+- Sélectionnez un pinceau couleur unie prédéfinie en fonction d’un nom.  Par exemple, vous pouvez définir un bouton de <xref:System.Windows.Controls.Control.Background%2A> à « Rouge » ou « MediumBlue ».  Pour une liste des autres prédéfinies pinceaux de couleur unie, consultez les propriétés statiques de la <xref:System.Windows.Media.Brushes> classe. Voici un exemple.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Choisissez une couleur dans la palette de couleurs 32 bits en spécifiant les quantités de rouge, de vert et de bleu à combiner en une seule couleur unie.  Le format pour spécifier une couleur de la palette 32 bits est «  *#rrggbb* », où *rr* est un nombre hexadécimal à deux chiffres spécifiant la quantité relative de rouge, où *gg* spécifie la quantité de vert et où *bb* spécifie la quantité de bleu.  En outre, la couleur peut être spécifiée sous la forme « #*aarrggbb* » où *aa* spécifie la valeur *alpha*, ou transparence, de la couleur. Cette approche vous permet de créer des couleurs qui sont partiellement transparentes.  Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est définie sur un rouge entièrement opaque à l’aide de la notation hexadécimale.  
+- Choisissez une couleur dans la palette de couleurs 32 bits en spécifiant les quantités de rouge, de vert et de bleu à combiner en une seule couleur unie.  Le format pour spécifier une couleur de la palette 32 bits est «  *#rrggbb* », où *rr* est un nombre hexadécimal à deux chiffres spécifiant la quantité relative de rouge, où *gg* spécifie la quantité de vert et où *bb* spécifie la quantité de bleu.  En outre, la couleur peut être spécifiée sous la forme « #*aarrggbb* » où *aa* spécifie la valeur *alpha*, ou transparence, de la couleur. Cette approche vous permet de créer des couleurs qui sont partiellement transparentes.  Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est définie sur un rouge entièrement opaque à l’aide de la notation hexadécimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Utiliser la syntaxe de balise de propriété pour décrire un <xref:System.Windows.Media.SolidColorBrush>. Cette syntaxe est plus détaillée mais vous permet de spécifier des paramètres supplémentaires, tels que l’opacité du pinceau. Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> propriétés de deux <xref:System.Windows.Controls.Button> éléments sont définis sur un rouge entièrement opaque. La première couleur du pinceau est décrite à l’aide d’un nom de couleur prédéfinie. La deuxième couleur du pinceau est décrite à l’aide de la notation hexadécimale.  
+- Utiliser la syntaxe de balise de propriété pour décrire un <xref:System.Windows.Media.SolidColorBrush>. Cette syntaxe est plus détaillée mais vous permet de spécifier des paramètres supplémentaires, tels que l’opacité du pinceau. Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> propriétés de deux <xref:System.Windows.Controls.Button> éléments sont définis sur un rouge entièrement opaque. La première couleur du pinceau est décrite à l’aide d’un nom de couleur prédéfinie. La deuxième couleur du pinceau est décrite à l’aide de la notation hexadécimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBr
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Peindre avec un élément SolidColorBrush dans le code  
  Pour peindre une zone avec une couleur unie dans le code, utilisez l’une des options suivantes.  
   
--   Utilisez un des pinceaux prédéfinis fournis par le <xref:System.Windows.Media.Brushes> classe. Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est défini sur <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Utilisez un des pinceaux prédéfinis fournis par le <xref:System.Windows.Media.Brushes> classe. Dans l’exemple suivant, le <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est défini sur <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Créer un <xref:System.Windows.Media.SolidColorBrush> et définissez son <xref:System.Windows.Media.SolidColorBrush.Color%2A> à l’aide de la propriété un <xref:System.Windows.Media.Color> structure. Vous pouvez utiliser une couleur prédéfinie à partir de la <xref:System.Windows.Media.Colors> classe, ou vous pouvez créer un <xref:System.Windows.Media.Color> à l’aide de la méthode statique <xref:System.Windows.Media.Color.FromArgb%2A> (méthode).  
+- Créer un <xref:System.Windows.Media.SolidColorBrush> et définissez son <xref:System.Windows.Media.SolidColorBrush.Color%2A> à l’aide de la propriété un <xref:System.Windows.Media.Color> structure. Vous pouvez utiliser une couleur prédéfinie à partir de la <xref:System.Windows.Media.Colors> classe, ou vous pouvez créer un <xref:System.Windows.Media.Color> à l’aide de la méthode statique <xref:System.Windows.Media.Color.FromArgb%2A> (méthode).  
   
      L’exemple suivant montre comment définir le <xref:System.Windows.Media.SolidColorBrush.Color%2A> propriété d’un <xref:System.Windows.Media.SolidColorBrush> à l’aide d’une couleur prédéfinie.  
   
@@ -81,9 +81,9 @@ Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBr
   
  Le <xref:System.Windows.Media.GradientStop> est le bloc de construction de base d’un pinceau de dégradé.  Un point de dégradé spécifie un <xref:System.Windows.Media.GradientStop.Color%2A> à un <xref:System.Windows.Media.GradientStop.Offset%2A> le long de l’axe du dégradé.  
   
--   Du point de dégradé <xref:System.Windows.Media.GradientStop.Color%2A> propriété spécifie la couleur du point de dégradé. Vous pouvez définir la couleur à l’aide d’une couleur prédéfinie (fournie par la <xref:System.Windows.Media.Colors> classe) ou en spécifiant les valeurs ScRGB ou ARGB. En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous pouvez également utiliser la notation hexadécimale pour décrire une couleur. Pour plus d’informations, consultez le <xref:System.Windows.Media.Color> structure.  
+- Du point de dégradé <xref:System.Windows.Media.GradientStop.Color%2A> propriété spécifie la couleur du point de dégradé. Vous pouvez définir la couleur à l’aide d’une couleur prédéfinie (fournie par la <xref:System.Windows.Media.Colors> classe) ou en spécifiant les valeurs ScRGB ou ARGB. En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous pouvez également utiliser la notation hexadécimale pour décrire une couleur. Pour plus d’informations, consultez le <xref:System.Windows.Media.Color> structure.  
   
--   Du point de dégradé <xref:System.Windows.Media.GradientStop.Offset%2A> propriété spécifie la position de la couleur du dégradé sur l’axe du dégradé. Le décalage est un <xref:System.Double> qui comprise entre 0 et 1. Plus une valeur de décalage de point de dégradé est proche de 0, plus la couleur est proche du début du dégradé. Plus une valeur de décalage de point de dégradé est proche de 1, plus la couleur est proche de la fin du dégradé.  
+- Du point de dégradé <xref:System.Windows.Media.GradientStop.Offset%2A> propriété spécifie la position de la couleur du dégradé sur l’axe du dégradé. Le décalage est un <xref:System.Double> qui comprise entre 0 et 1. Plus une valeur de décalage de point de dégradé est proche de 0, plus la couleur est proche du début du dégradé. Plus une valeur de décalage de point de dégradé est proche de 1, plus la couleur est proche de la fin du dégradé.  
   
  La couleur de chaque point entre les points de dégradé est interpolée de façon linéaire comme une combinaison de la couleur spécifiée par les deux points de dégradé liés. L’illustration suivante met en évidence les points de dégradé de l’exemple précédent. Les cercles indiquent l’emplacement des points de dégradé et une ligne en pointillés montre l’axe du dégradé.  
   

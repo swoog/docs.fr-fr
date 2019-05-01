@@ -1,17 +1,17 @@
 ---
-title: Principes de conception communs conteneur
+title: Principes de conception communs des conteneurs
 description: Découvrez un principe fondamental de la conception de conteneur bon, c’est qu’un conteneur doit héberger qu’un seul processus.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 206963d63cf8e6ab4fc61b9176f1ba095868c6fc
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969115"
 ---
-# <a name="common-container-design-principles"></a>Principes de conception communs conteneur
+# <a name="common-container-design-principles"></a>Principes de conception communs des conteneurs
 
 À l’avance d’aborder le processus de développement, il existe quelques concepts de base intéressant de mentionner en ce qui concerne la façon dont vous utilisez des conteneurs.
 

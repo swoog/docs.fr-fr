@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983344"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implémentation du modèle de contrôle Invoke d’UI Automation
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134782"
 ## <a name="implementation-guidelines-and-conventions"></a>Conventions et recommandations en matière d'implémentation  
  Quand vous implémentez le modèle de contrôle Invoke, notez les conventions et recommandations suivantes :  
   
--   Les contrôles implémentent <xref:System.Windows.Automation.Provider.IInvokeProvider> si le même comportement n’est pas exposé par le biais d’un autre fournisseur de modèle de contrôle. Par exemple, si la méthode <xref:System.Windows.Automation.InvokePattern.Invoke%2A> exécute, sur un contrôle, la même action que la méthode <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , le contrôle ne doit pas implémenter <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+- Les contrôles implémentent <xref:System.Windows.Automation.Provider.IInvokeProvider> si le même comportement n’est pas exposé par le biais d’un autre fournisseur de modèle de contrôle. Par exemple, si la méthode <xref:System.Windows.Automation.InvokePattern.Invoke%2A> exécute, sur un contrôle, la même action que la méthode <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , le contrôle ne doit pas implémenter <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
   
--   Pour appeler un contrôle, il convient généralement de cliquer, de double-cliquer ou d’appuyer sur Entrée, sur un raccourci clavier prédéfini ou sur une autre combinaison de touches.  
+- Pour appeler un contrôle, il convient généralement de cliquer, de double-cliquer ou d’appuyer sur Entrée, sur un raccourci clavier prédéfini ou sur une autre combinaison de touches.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> est déclenché sur un contrôle qui a été activé (en réponse à un contrôle effectuant l’action qui lui est associée). Si possible, l’événement doit être déclenché une fois que le contrôle a terminé l’action et retourné une valeur sans se bloquer. L’événement Invoked doit être déclenché avant de prendre en charge la requête Invoke dans les scénarios suivants :  
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> est déclenché sur un contrôle qui a été activé (en réponse à un contrôle effectuant l’action qui lui est associée). Si possible, l’événement doit être déclenché une fois que le contrôle a terminé l’action et retourné une valeur sans se bloquer. L’événement Invoked doit être déclenché avant de prendre en charge la requête Invoke dans les scénarios suivants :  
   
-    -   Il n’est pas possible ou pratique d’attendre que l’action soit terminée.  
+    - Il n’est pas possible ou pratique d’attendre que l’action soit terminée.  
   
-    -   L’action requiert une intervention de l’utilisateur.  
+    - L’action requiert une intervention de l’utilisateur.  
   
-    -   L’action prend du temps et bloque le client pendant un long moment.  
+    - L’action prend du temps et bloque le client pendant un long moment.  
   
--   Si l’appel du contrôle entraîne des effets secondaires significatifs, ces effets secondaires doivent être exposés via la propriété <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Par exemple, bien que la méthode <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ne soit pas associée à la sélection, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> peut entraîner la sélection d’un autre contrôle.  
+- Si l’appel du contrôle entraîne des effets secondaires significatifs, ces effets secondaires doivent être exposés via la propriété <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Par exemple, bien que la méthode <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ne soit pas associée à la sélection, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> peut entraîner la sélection d’un autre contrôle.  
   
--   Les effets du pointage (ou du pointage avec la souris) ne constituent généralement pas un événement Invoked. Toutefois, les contrôles qui exécutent une action (et non pas un effet visuel) basée sur l’état de pointage doivent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.InvokePattern> .  
+- Les effets du pointage (ou du pointage avec la souris) ne constituent généralement pas un événement Invoked. Toutefois, les contrôles qui exécutent une action (et non pas un effet visuel) basée sur l’état de pointage doivent prendre en charge le modèle de contrôle <xref:System.Windows.Automation.InvokePattern> .  
   
 > [!NOTE]
 >  Cette implémentation est considérée comme un problème d’accessibilité si le contrôle ne peut être appelé que suite à un effet secondaire lié à la souris.  
   
--   L’appel d’un contrôle est différent de la sélection d’un élément. Toutefois, selon le contrôle, l’appel peut avoir comme effet secondaire la sélection de l’élément. Par exemple, l’appel d’un élément de la liste de documents [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] dans le dossier Mes documents sélectionne l’élément et ouvre le document.  
+- L’appel d’un contrôle est différent de la sélection d’un élément. Toutefois, selon le contrôle, l’appel peut avoir comme effet secondaire la sélection de l’élément. Par exemple, l’appel d’un élément de la liste de documents [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] dans le dossier Mes documents sélectionne l’élément et ouvre le document.  
   
--   Un élément peut disparaître de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dès qu’il est appelé. La requête d’informations de l’élément fourni par le rappel d’événement peut échouer. La pré-récupération des informations mises en cache est la solution recommandée.  
+- Un élément peut disparaître de l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dès qu’il est appelé. La requête d’informations de l’élément fourni par le rappel d’événement peut échouer. La pré-récupération des informations mises en cache est la solution recommandée.  
   
--   Les contrôles peuvent implémenter plusieurs modèles de contrôle. Par exemple, le contrôle Fill Color dans la barre d’outils [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implémente les deux modèles de contrôle <xref:System.Windows.Automation.InvokePattern> et <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expose le menu et le <xref:System.Windows.Automation.InvokePattern> remplit la sélection active de la couleur choisie.  
+- Les contrôles peuvent implémenter plusieurs modèles de contrôle. Par exemple, le contrôle Fill Color dans la barre d’outils [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implémente les deux modèles de contrôle <xref:System.Windows.Automation.InvokePattern> et <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> expose le menu et le <xref:System.Windows.Automation.InvokePattern> remplit la sélection active de la couleur choisie.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Membres requis pour IInvokeProvider  

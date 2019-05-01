@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc409d409cd4da54b61b16d069ce50c2456b53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985840"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx, fonction
 Permet aux hôtes non managés de charger le common language runtime (CLR) dans un processus. Le [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) et `CorBindToRuntimeEx` fonctions effectuent la même opération, mais la `CorBindToRuntimeEx` fonction vous permet de définir des indicateurs pour spécifier le comportement du CLR.  
@@ -31,18 +31,18 @@ Permet aux hôtes non managés de charger le common language runtime (CLR) dans 
   
  Cette fonction accepte un ensemble de paramètres qui permettent à un hôte effectuer les opérations suivantes :  
   
--   Spécifiez la version du runtime qui est chargée.  
+- Spécifiez la version du runtime qui est chargée.  
   
--   Indiquer si la build du serveur ou station de travail doit être chargée.  
+- Indiquer si la build du serveur ou station de travail doit être chargée.  
   
--   Contrôler si le garbage collection simultané ou le garbage collection non simultané est effectué.  
+- Contrôler si le garbage collection simultané ou le garbage collection non simultané est effectué.  
   
 > [!NOTE]
 >  Le garbage collection simultané n’est pas pris en charge dans les applications en cours d’exécution WOW64 x86 émulateur sur les systèmes 64 bits qui implémentent l’architecture Intel Itanium (anciennement appelée IA-64). Pour plus d’informations sur l’utilisation de WOW64 sur les systèmes Windows 64 bits, consultez [Applications en cours d’exécution de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).  
   
--   Contrôler si les assemblys sont chargés comme indépendants du domaine.  
+- Contrôler si les assemblys sont chargés comme indépendants du domaine.  
   
--   Obtenir un pointeur d’interface vers un [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) qui peut être utilisé pour définir des options supplémentaires pour configurer une instance du CLR avant son démarrage.  
+- Obtenir un pointeur d’interface vers un [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) qui peut être utilisé pour définir des options supplémentaires pour configurer une instance du CLR avant son démarrage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,31 +75,31 @@ HRESULT CorBindToRuntimeEx (
  `startupFlags`  
  [in] Une combinaison de valeurs de la [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) énumération. Ces indicateurs contrôlent le garbage collection simultané, code indépendant du domaine et le comportement de le `pwszVersion` paramètre. La valeur par défaut est le domaine unique si aucun indicateur n’est défini. Les valeurs suivantes sont valides :  
   
--   `STARTUP_CONCURRENT_GC`  
+- `STARTUP_CONCURRENT_GC`  
   
--   `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
   
--   `STARTUP_LOADER_SAFEMODE`  
+- `STARTUP_LOADER_SAFEMODE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_LOADER_SETPREFERENCE`  
+- `STARTUP_LOADER_SETPREFERENCE`  
   
--   `STARTUP_SERVER_GC`  
+- `STARTUP_SERVER_GC`  
   
--   `STARTUP_HOARD_GC_VM`  
+- `STARTUP_HOARD_GC_VM`  
   
--   `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
+- `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_DISABLE_COMMITTHREADSTACK`  
+- `STARTUP_DISABLE_COMMITTHREADSTACK`  
   
--   `STARTUP_ALWAYSFLOW_IMPERSONATION`  
+- `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
  Pour obtenir une description de ces indicateurs, consultez la [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) énumération.  
   
@@ -124,9 +124,9 @@ HRESULT CorBindToRuntimeEx (
   
 2. En modifiant le mode par défaut de processus en mode de compatibilité de la version 1, où le <xref:System.Security.Principal.WindowsIdentity> objet ne transmet pas d’un point asynchrone, quel que soit le <xref:System.Threading.ExecutionContext> paramètres sur le thread actuel. Comment vous modifier le mode par défaut varie selon que vous utilisez un fichier exécutable managé ou une interface d’hébergement non managée pour charger le CLR :  
   
-    1.  Pour les fichiers exécutables managés, vous devez définir le `enabled` attribut de la [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) élément à `true`.  
+    1. Pour les fichiers exécutables managés, vous devez définir le `enabled` attribut de la [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) élément à `true`.  
   
-    2.  Pour les interfaces d’hébergement non managées, définissez le `STARTUP_LEGACY_IMPERSONATION` indicateur dans le `startupFlags` paramètre lors de l’appel le `CorBindToRuntimeEx` (fonction).  
+    2. Pour les interfaces d’hébergement non managées, définissez le `STARTUP_LEGACY_IMPERSONATION` indicateur dans le `startupFlags` paramètre lors de l’appel le `CorBindToRuntimeEx` (fonction).  
   
      Le mode de compatibilité de version 1 s’applique à l’ensemble du processus et tous les domaines d’application dans le processus.  
   

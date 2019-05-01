@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
 ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004293"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Procédure : dessiner une ligne remplie par une texture
 Au lieu de dessiner une ligne avec une couleur unie, vous pouvez dessiner une ligne avec une texture. Pour dessiner des lignes et des courbes avec une texture, créez un <xref:System.Drawing.TextureBrush> de l’objet et la transmettre <xref:System.Drawing.TextureBrush> de l’objet à un <xref:System.Drawing.Pen.%23ctor%2A> constructeur. L’image bitmap associée au pinceau de la texture est utilisé à la vignette du plan (de façon invisible), et lorsque le stylet dessine une ligne ou la courbe, le trait du stylet permet de récupérer certains pixels de la texture en mosaïque.  

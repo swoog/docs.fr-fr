@@ -3,11 +3,11 @@ title: Sécurité dans WCF
 ms.date: 03/30/2017
 ms.assetid: 05d73638-30a9-43b4-8c86-f27f57b6eef1
 ms.openlocfilehash: 0cfb034e78cf1fc1cce9a2d16471425e09e1a494
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007992"
 ---
 # <a name="security-in-wcf"></a>Sécurité dans WCF
 Cette section contient des exemples relatifs à la sécurité de Windows Communication Foundation (WCF).  

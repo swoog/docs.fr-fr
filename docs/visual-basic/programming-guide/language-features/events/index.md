@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973197"
 ---
 # <a name="events-visual-basic"></a>Événements (Visual Basic)
 Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par des occurrences externes nommées *événements*.  
@@ -53,11 +53,11 @@ Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une s�
   
  L’instruction `WithEvents` et la clause `Handles` représentent souvent le meilleur choix pour les gestionnaires d’événements, car la syntaxe déclarative qu’elles utilisent facilite le codage, la lecture et le débogage de la gestion des événements. Toutefois, soyez conscient des limitations suivantes de l’utilisation de variables `WithEvents` :  
   
--   Il n’est pas possible d’utiliser une variable `WithEvents` comme variable objet. Autrement dit, vous ne pouvez pas la déclarer comme `Object` : vous devez spécifier le nom de classe lorsque vous déclarez la variable.  
+- Il n’est pas possible d’utiliser une variable `WithEvents` comme variable objet. Autrement dit, vous ne pouvez pas la déclarer comme `Object` : vous devez spécifier le nom de classe lorsque vous déclarez la variable.  
   
--   Événements partagés ne sont pas liés aux instances de classe, vous ne pouvez pas utiliser `WithEvents` pour les gérer de façon déclarative. De même, vous ne pouvez pas utiliser `WithEvents` ni `Handles` pour gérer les événements d’une `Structure`. Dans les deux cas, vous pouvez utiliser l’instruction `AddHandler` pour gérer ces événements.  
+- Événements partagés ne sont pas liés aux instances de classe, vous ne pouvez pas utiliser `WithEvents` pour les gérer de façon déclarative. De même, vous ne pouvez pas utiliser `WithEvents` ni `Handles` pour gérer les événements d’une `Structure`. Dans les deux cas, vous pouvez utiliser l’instruction `AddHandler` pour gérer ces événements.  
   
--   Il n’est pas possible de créer des tableaux de variables `WithEvents`.  
+- Il n’est pas possible de créer des tableaux de variables `WithEvents`.  
   
  Les variables `WithEvents` permettent à un même gestionnaire d’événements de gérer un ou plusieurs types d’événements, ou à un ou plusieurs gestionnaires d’événements de gérer le même type d’événements.  
   
@@ -91,7 +91,7 @@ Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une s�
   
 ### <a name="to-handle-events-from-a-base-class"></a>Gérer des événements provenant d’une classe de base  
   
--   Déclarez un gestionnaire d’événements dans la classe dérivée en ajoutant une instruction `Handles MyBase.`*eventname* à la ligne de déclaration de votre procédure de gestionnaire d’événements, où *eventname* est le nom de l’événement dans la classe de base que vous gérez. Exemple :  
+- Déclarez un gestionnaire d’événements dans la classe dérivée en ajoutant une instruction `Handles MyBase.`*eventname* à la ligne de déclaration de votre procédure de gestionnaire d’événements, où *eventname* est le nom de l’événement dans la classe de base que vous gérez. Exemple :  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

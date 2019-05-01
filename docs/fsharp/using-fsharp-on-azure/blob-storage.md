@@ -4,11 +4,11 @@ description: Store les données non structurées dans le cloud avec stockage Blo
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982512"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure avec F\#
 
@@ -242,7 +242,7 @@ Une application autonome et gratuite de Microsoft qui vous permet d’exploiter 
 
 ### <a name="related-guides"></a>Guides connexes
 
-- [Prise en main stockage Blob Azure en C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Prise en main stockage Blob Azure en c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Transférer des données avec l’utilitaire de ligne de commande AzCopy sur Windows](/azure/storage/common/storage-use-azcopy)
 - [Transfert de données avec l’utilitaire de ligne de commande AzCopy sur Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurer les chaînes de connexion de stockage Azure](/azure/storage/common/storage-configure-connection-string)

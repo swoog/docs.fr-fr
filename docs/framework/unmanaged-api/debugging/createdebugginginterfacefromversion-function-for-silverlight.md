@@ -11,11 +11,11 @@ ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965809"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Fonction CreateDebuggingInterfaceFromVersion Function pour Silverlight
 Accepte une chaîne de version de runtime (CLR) langage commun qui est retournée à partir de la [fonction CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)et retourne une interface de débogueur correspondante (en règle générale, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
@@ -55,7 +55,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="remarks"></a>Notes  
  L'interface retournée fournit les fonctionnalités permettant l'attachement à un CLR dans un processus cible et le débogage du code managé exécuté par le CLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** dbgshim.h  

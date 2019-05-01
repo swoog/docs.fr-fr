@@ -3,11 +3,11 @@ title: Sécurisation des messages à l'aide de la sécurité de transport
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990962"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sécurisation des messages à l'aide de la sécurité de transport
 Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vous pouvez utiliser pour sécuriser des messages envoyés vers une file d'attente.  
@@ -25,11 +25,11 @@ Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vo
   
  La sécurité de transport à l'aide de <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> a un impact sur la manière dont les messages MSMQ sont sécurisés en transit entre la file d'attente de transmission et la file d'attente cible, où le terme « sécurisé » implique les éléments suivants :  
   
--   Signature du message afin de s'assurer qu'il n'est pas falsifié.  
+- Signature du message afin de s'assurer qu'il n'est pas falsifié.  
   
--   Chiffrement du message afin de s'assurer qu'il ne peut pas être vu ou falsifié. Cela est recommandé mais facultatif.  
+- Chiffrement du message afin de s'assurer qu'il ne peut pas être vu ou falsifié. Cela est recommandé mais facultatif.  
   
--   Le gestionnaire de files d'attente cibles qui identifie l'expéditeur du message pour le non-rejet.  
+- Le gestionnaire de files d'attente cibles qui identifie l'expéditeur du message pour le non-rejet.  
   
  Dans MSMQ, quelle que soit l'authentification, la file d'attente cible possède une liste de contrôle d'accès (ACL, Access Control List) afin de vérifier si le client est autorisé à envoyer le message à la file d'attente cible. Il est également vérifié si l'application réceptrice est autorisée à recevoir le message depuis la file d'attente cible.  
   

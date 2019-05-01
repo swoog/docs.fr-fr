@@ -3,11 +3,11 @@ title: Exemples d’hébergement de WCF
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
 ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968114"
 ---
 # <a name="hosting"></a>Hébergement
 Cette section contient des exemples qui illustrent des services d’hébergement Windows Communication Foundation (WCF).  

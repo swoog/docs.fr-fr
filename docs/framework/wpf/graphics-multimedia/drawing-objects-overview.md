@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020421"
 ---
 # <a name="drawing-objects-overview"></a>Vue d'ensemble des objets Drawing
 Cette rubrique présente <xref:System.Windows.Media.Drawing> objets et explique comment les utiliser pour dessiner efficacement des formes, bitmaps, texte et média. Utilisez <xref:System.Windows.Media.Drawing> objets lorsque vous créez des images clipart, dessinez avec un <xref:System.Windows.Media.DrawingBrush>, ou utilisez <xref:System.Windows.Media.Visual> objets.  
@@ -23,25 +23,25 @@ Cette rubrique présente <xref:System.Windows.Media.Drawing> objets et explique 
 ## <a name="what-is-a-drawing-object"></a>Qu’est-ce qu’un objet Drawing ?  
  Un <xref:System.Windows.Media.Drawing> objet décrit du contenu visible, comme une forme, bitmap, vidéo ou une ligne de texte. Différents types de dessins décrivent différents types de contenus. La liste suivante répertorie les différents types d’objets Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
+- <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
+- <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
+- <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
+- <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
   
  <xref:System.Windows.Media.Drawing> les objets sont polyvalents. Il existe plusieurs façons, vous pouvez utiliser un <xref:System.Windows.Media.Drawing> objet.  
   
--   Vous pouvez l’afficher en tant qu’image en utilisant un <xref:System.Windows.Media.DrawingImage> et un <xref:System.Windows.Controls.Image> contrôle.  
+- Vous pouvez l’afficher en tant qu’image en utilisant un <xref:System.Windows.Media.DrawingImage> et un <xref:System.Windows.Controls.Image> contrôle.  
   
--   Vous pouvez l’utiliser avec un <xref:System.Windows.Media.DrawingBrush> pour peindre un objet, tel que le <xref:System.Windows.Controls.Page.Background%2A> d’un <xref:System.Windows.Controls.Page>.  
+- Vous pouvez l’utiliser avec un <xref:System.Windows.Media.DrawingBrush> pour peindre un objet, tel que le <xref:System.Windows.Controls.Page.Background%2A> d’un <xref:System.Windows.Controls.Page>.  
   
--   Vous pouvez l’utiliser pour décrire l’apparence d’un <xref:System.Windows.Media.DrawingVisual>.  
+- Vous pouvez l’utiliser pour décrire l’apparence d’un <xref:System.Windows.Media.DrawingVisual>.  
   
--   Vous pouvez l’utiliser pour énumérer le contenu d’un <xref:System.Windows.Media.Visual>.  
+- Vous pouvez l’utiliser pour énumérer le contenu d’un <xref:System.Windows.Media.Visual>.  
   
  WPF fournit d’autres types d’objets qui sont capables de dessiner des formes, des images bitmaps, du texte et des médias. Par exemple, vous pouvez également utiliser <xref:System.Windows.Shapes.Shape> pour dessiner des formes, les objets et les <xref:System.Windows.Controls.MediaElement> contrôle fournit une autre façon d’ajouter une vidéo à votre application. Par conséquent, quand faut-il utiliser <xref:System.Windows.Media.Drawing> objets ? Lorsque vous pouvez sacrifier des fonctionnalités au niveau du framework pour optimiser les performances ou lorsque vous devez <xref:System.Windows.Freezable> fonctionnalités. Étant donné que <xref:System.Windows.Media.Drawing> objets ne prennent pas [disposition](../advanced/layout.md), d’entrée et le focus, ils fournissent de meilleures performances idéales pour décrire les arrière-plans et images clipart et pour le dessin de bas niveau avec <xref:System.Windows.Media.Visual> objets.  
   

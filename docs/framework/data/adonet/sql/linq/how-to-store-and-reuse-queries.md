@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
 ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033642"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Procédure : Stocker et réutiliser des requêtes
 Lorsque vous possédez une application qui exécute de nombreuses fois des requêtes similaires d'un point de vue structurel, vous pouvez souvent améliorer les performances en compilant la requête une fois et en l'exécutant plusieurs fois avec des paramètres différents. Par exemple, une application peut avoir besoin de récupérer tous les clients d'une ville spécifique, où la ville est spécifiée à l'exécution par l'utilisateur dans un formulaire. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l’utilisation de *requêtes compilées* à cet effet.  

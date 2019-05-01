@@ -3,11 +3,11 @@ title: Divulgation d'informations
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972599"
 ---
 # <a name="information-disclosure"></a>Divulgation d'informations
 La divulgation d'informations permet à un intrus d'obtenir des informations précieuses à propos d'un système. Par conséquent, examinez toujours les informations que vous révélez et demandez-vous si elles peuvent être utilisées par un utilisateur malveillant. Vous trouverez ci-dessous la liste des attaques par divulgation d’informations possibles et les moyens d’atténuation pour chacune d’elles.  
@@ -32,16 +32,16 @@ La divulgation d'informations permet à un intrus d'obtenir des informations pr�
   
  Les mesures d'atténuation des risques sont les suivantes :  
   
--   Les références de service sont supposées dignes de confiance. Prenez soin, chaque fois que vous transférez des instances de références de service, de vérifier qu'elles n'ont pas fait l'objet d'une falsification.  
+- Les références de service sont supposées dignes de confiance. Prenez soin, chaque fois que vous transférez des instances de références de service, de vérifier qu'elles n'ont pas fait l'objet d'une falsification.  
   
--   Certaines applications peuvent présenter une expérience utilisateur qui autorise l'établissement interactif de la confiance selon les données de la référence de service et les données de confiance prouvées par l'hôte distant. WCF fournit des points d’extensibilité pour une telle fonctionnalité, mais l’utilisateur doit les implémenter.  
+- Certaines applications peuvent présenter une expérience utilisateur qui autorise l'établissement interactif de la confiance selon les données de la référence de service et les données de confiance prouvées par l'hôte distant. WCF fournit des points d’extensibilité pour une telle fonctionnalité, mais l’utilisateur doit les implémenter.  
   
 ## <a name="ntlm"></a>NTLM  
  Par défaut, dans l'environnement de domaine Windows, l'authentification Windows utilise le protocole Kerberos pour authentifier et autoriser des utilisateurs. Si le protocole Kerberos ne peut pas être utilisé pour quelque raison que ce soit, l'authentification NTLM (NT LAN Manager) est utilisée en guise de secours. Vous pouvez désactiver ce comportement en attribuant à la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> la valeur `false`. Sachez que l'activation de NTLM entraîne les problèmes suivants :  
   
--   NTLM expose le nom d'utilisateur du client. Si le nom d’utilisateur doit rester confidentiel, affectez `AllowNTLM` à la propriété `false` sur la liaison.  
+- NTLM expose le nom d'utilisateur du client. Si le nom d’utilisateur doit rester confidentiel, affectez `AllowNTLM` à la propriété `false` sur la liaison.  
   
--   NTLM n'assure pas l'authentification du serveur. Par conséquent, le client ne peut pas vérifier qu'il communique avec le bon service lorsque vous utilisez le protocole d'authentification NTLM.  
+- NTLM n'assure pas l'authentification du serveur. Par conséquent, le client ne peut pas vérifier qu'il communique avec le bon service lorsque vous utilisez le protocole d'authentification NTLM.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Spécification des informations d'identification du client ou utilisation forcée de NTLM sur une identité non valide  
  Lorsque vous créez un client, le fait de spécifier des informations d'identification du client sans un nom de domaine ou de spécifier une identité de serveur non valide provoque l'utilisation de NTLM au lieu du protocole Kerberos (si la propriété `AlllowNtlm` a la valeur `true`). Vu que NTLM ne procède pas à l'authentification du serveur, les informations peuvent potentiellement être divulguées.  

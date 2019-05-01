@@ -3,11 +3,11 @@ title: Configuration du suivi de flux de messages
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
 ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999516"
 ---
 # <a name="configuring-message-flow-tracing"></a>Configuration du suivi de flux de messages
 Lorsque le suivi des activités Windows Communication Foundation (WCF) est activé, les ID d’activité de bout en bout sont affectés à des activités logiques dans toute la pile WCF. Il existe désormais dans [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], une version plus performante de cette fonctionnalité qui fonctionne avec ETW (Suivi d'événements Windows), appelée le suivi de flux de messages. Lorsqu'il est activé, les ID d'activité de bout en bout sont extraits des messages entrants (ou leur sont affectés, s'ils sont vides) et sont propagés à tous les événements de suivi émis une fois que le message a été décodé par le canal. Les clients peuvent utiliser cette fonctionnalité pour reconstruire des flux de messages avec les journaux de suivi de différents services après décodage.  

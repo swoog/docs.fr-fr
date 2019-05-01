@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971741"
 ---
 # <a name="data-type-summary-visual-basic"></a>Liste des types de données (Visual Basic)
 Le tableau suivant présente les types de données Visual Basic, leurs types du common language runtime prise en charge, leur allocation de stockage nominal et leur plage de valeurs.  
@@ -77,16 +77,16 @@ Le tableau suivant présente les types de données Visual Basic, leurs types du 
 ## <a name="memory-consumption"></a>Consommation de mémoire  
  Lorsque vous déclarez un type de données élémentaire, il est déconseillé de supposer que sa consommation de mémoire est identique à son allocation de stockage nominal. Il s’agit en raison de considérations suivantes :  
   
--   **Attribution de stockage.** Le common language runtime peut affecter du stockage en fonction des caractéristiques de la plateforme sur laquelle s’exécute votre application en cours. Si la mémoire est presque pleine, il peut regrouper vos éléments déclarés aussi étroitement que possible. Dans d’autres cas, il peut aligner leurs adresses mémoire sur les limites matérielles naturelles pour optimiser les performances.  
+- **Attribution de stockage.** Le common language runtime peut affecter du stockage en fonction des caractéristiques de la plateforme sur laquelle s’exécute votre application en cours. Si la mémoire est presque pleine, il peut regrouper vos éléments déclarés aussi étroitement que possible. Dans d’autres cas, il peut aligner leurs adresses mémoire sur les limites matérielles naturelles pour optimiser les performances.  
   
--   **Largeur de la plateforme.** Attribution de stockage sur une plateforme 64 bits est différente de l’affectation sur une plateforme 32 bits.  
+- **Largeur de la plateforme.** Attribution de stockage sur une plateforme 64 bits est différente de l’affectation sur une plateforme 32 bits.  
   
 ### <a name="composite-data-types"></a>Types de données composites  
  Les mêmes considérations s’appliquent à chaque membre d’un type de données composites, comme une structure ou un tableau. Vous ne pouvez pas compter sur simplement additionner les allocations de stockage nominal des membres du type. En outre, il existe d’autres considérations, telles que les éléments suivants :  
   
--   **Surcharge.** Certains types composites ont des besoins en mémoire supplémentaires. Par exemple, un tableau utilise davantage de mémoire pour le tableau lui-même et également pour chaque dimension. Sur une plateforme 32 bits, cette surcharge est actuellement de 12 octets plus de 8 octets pour chaque dimension. Sur une plateforme 64 bits, cette exigence est doublée.  
+- **Surcharge.** Certains types composites ont des besoins en mémoire supplémentaires. Par exemple, un tableau utilise davantage de mémoire pour le tableau lui-même et également pour chaque dimension. Sur une plateforme 32 bits, cette surcharge est actuellement de 12 octets plus de 8 octets pour chaque dimension. Sur une plateforme 64 bits, cette exigence est doublée.  
   
--   **Disposition de stockage.** Vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Vous ne pouvez pas même faire d’hypothèses sur l’alignement des octets, comme une limite de 2 ou 4 octets. Si vous définissez une classe ou une structure et que vous avez besoin de contrôler la disposition de stockage de ses membres, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> d’attribut à la classe ou structure.  
+- **Disposition de stockage.** Vous ne pouvez pas raisonnablement supposer que l’ordre de stockage en mémoire est identique à l’ordre de déclaration. Vous ne pouvez pas même faire d’hypothèses sur l’alignement des octets, comme une limite de 2 ou 4 octets. Si vous définissez une classe ou une structure et que vous avez besoin de contrôler la disposition de stockage de ses membres, vous pouvez appliquer le <xref:System.Runtime.InteropServices.StructLayoutAttribute> d’attribut à la classe ou structure.  
   
 ### <a name="object-overhead"></a>Surcharge de l’objet  
  Un `Object` faisant référence à des données élémentaires ou composites de type utilise 4 octets en plus des données contenues dans le type de données.  

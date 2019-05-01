@@ -3,11 +3,11 @@ title: Compatibilité des fonctionnalités dans un environnement de confiance pa
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039063"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilité des fonctionnalités dans un environnement de confiance partielle
 Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité de fonctionnalités lors de l’exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -15,20 +15,20 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
 ## <a name="minimum-permission-requirements"></a>Autorisations minimales requises  
  WCF prend en charge un sous-ensemble de fonctionnalités dans les applications qui s’exécutent sous des ensembles d’autorisations nommés standard suivants :  
   
--   Autorisations de confiance moyenne  
+- Autorisations de confiance moyenne  
   
--   Autorisations de la zone Internet  
+- Autorisations de la zone Internet  
   
  Tentative d’utilisation de WCF dans les applications de confiance partielle avec des autorisations plus restrictives peut entraîner des exceptions de sécurité lors de l’exécution.  
   
 ## <a name="contracts"></a>Contrats  
  Les contrats sont soumis aux restrictions suivantes lors de leur exécution dans un environnement de confiance partielle :  
   
--   La classe de service qui implémente l'interface `[ServiceContract]` doit être `public` et doit avoir un constructeur `public` . Si elle définit des méthodes `[OperationContract]` , celles-ci doivent être `public`. Si, au lieu de cela, elle implémente une interface `[ServiceContract]` , ces implémentations de méthode peuvent être explicites ou `private`, pourvu que l'interface `[ServiceContract]` soit `public`.  
+- La classe de service qui implémente l'interface `[ServiceContract]` doit être `public` et doit avoir un constructeur `public` . Si elle définit des méthodes `[OperationContract]` , celles-ci doivent être `public`. Si, au lieu de cela, elle implémente une interface `[ServiceContract]` , ces implémentations de méthode peuvent être explicites ou `private`, pourvu que l'interface `[ServiceContract]` soit `public`.  
   
--   Lors de l'utilisation de l'attribut `[ServiceKnownType]` , la méthode spécifiée doit être `public`.  
+- Lors de l'utilisation de l'attribut `[ServiceKnownType]` , la méthode spécifiée doit être `public`.  
   
--   Les classes`[MessageContract]` et leurs membres peuvent être `public`. Si la classe `[MessageContract]` est définie dans l'assembly d'application, elle peut être `internal` et avoir des membres `internal` .  
+- Les classes`[MessageContract]` et leurs membres peuvent être `public`. Si la classe `[MessageContract]` est définie dans l'assembly d'application, elle peut être `internal` et avoir des membres `internal` .  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
  <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WebHttpBinding> sont totalement pris en charge dans un environnement de confiance partielle. <xref:System.ServiceModel.WSHttpBinding> est pris en charge uniquement pour le mode de sécurité Transport.  
@@ -44,11 +44,11 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
 ### <a name="encoders"></a>Encodeurs  
  Les encodeurs suivants sont autorisés :  
   
--   Encodeur de texte (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
+- Encodeur de texte (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
--   Encodeur binaire (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
+- Encodeur binaire (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
   
--   Encodeur de message Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
+- Encodeur de message Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
   
  Les encodeurs MTOM (Message Transmission Optimization Mechanism) ne sont pas pris en charge.  
   
@@ -61,15 +61,15 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
 ## <a name="serialization"></a>Sérialisation  
  Le <xref:System.Runtime.Serialization.DataContractSerializer> et le <xref:System.Xml.Serialization.XmlSerializer> sont pris en charge dans un environnement de confiance partielle. Toutefois, l'utilisation du <xref:System.Runtime.Serialization.DataContractSerializer> est soumise aux conditions suivantes :  
   
--   Tous les types `[DataContract]` sérialisables doivent être `public`.  
+- Tous les types `[DataContract]` sérialisables doivent être `public`.  
   
--   Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et désérialisation de [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) champs n’est pas pris en charge lors de l’exécution de WCF dans une application partiellement fiable.  
+- Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et désérialisation de [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) champs n’est pas pris en charge lors de l’exécution de WCF dans une application partiellement fiable.  
   
--   Le modèle de programmation `[Serializable]`/ISerializable n'est pas pris en charge dans un environnement de confiance partielle.  
+- Le modèle de programmation `[Serializable]`/ISerializable n'est pas pris en charge dans un environnement de confiance partielle.  
   
--   Les types connus doivent être spécifiés dans le code ou la configuration au niveau de l'ordinateur (machine.config). Les types connus ne peuvent pas être spécifiés dans la configuration au niveau de l'application pour des raisons de sécurité.  
+- Les types connus doivent être spécifiés dans le code ou la configuration au niveau de l'ordinateur (machine.config). Les types connus ne peuvent pas être spécifiés dans la configuration au niveau de l'application pour des raisons de sécurité.  
   
--   Les types qui implémentent <xref:System.Runtime.Serialization.IObjectReference> lèvent une exception dans un environnement de confiance partielle.  
+- Les types qui implémentent <xref:System.Runtime.Serialization.IObjectReference> lèvent une exception dans un environnement de confiance partielle.  
   
  Consultez la section Sérialisation de [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) pour plus d’informations sur la sécurité lors de l’utilisation de <xref:System.Runtime.Serialization.DataContractSerializer> dans une application partiellement fiable.  
   
@@ -88,9 +88,9 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
 ## <a name="enabling-common-behaviors-to-run"></a>Activation de l'exécution des comportements courants  
  Comportements de service ou de point de terminaison non marqués avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut (APTCA) qui sont ajoutés à la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section d’un fichier de configuration ne sont pas exécutés lorsque l’application s’exécute dans une confiance partielle environnement et aucune exception n’est levée lorsque cela se produit. Pour appliquer l'exécution des comportements courants, vous devez effectuer l'une des actions suivantes :  
   
--   Marquez votre comportement courant avec l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> afin qu'il soit exécuté lorsqu'il est déployé comme une application de confiance partielle. Notez qu'une entrée de Registre peut être définie sur l'ordinateur pour interdire l'exécution des assemblys marqués avec l'attribut APTCA. .  
+- Marquez votre comportement courant avec l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> afin qu'il soit exécuté lorsqu'il est déployé comme une application de confiance partielle. Notez qu'une entrée de Registre peut être définie sur l'ordinateur pour interdire l'exécution des assemblys marqués avec l'attribut APTCA. .  
   
--   Si l'application est déployée comme une application de confiance partielle, vérifiez que les utilisateurs ne peuvent pas modifier les paramètres de sécurité d'accès du code pour exécuter l'application dans un environnement de confiance partielle. S'ils peuvent le faire, le comportement ne s'exécute pas et aucune exception n'est levée. Pour ce faire, consultez le **levelfinal** option à l’aide de [Caspol.exe (outil de stratégie de sécurité d’accès de Code)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+- Si l'application est déployée comme une application de confiance partielle, vérifiez que les utilisateurs ne peuvent pas modifier les paramètres de sécurité d'accès du code pour exécuter l'application dans un environnement de confiance partielle. S'ils peuvent le faire, le comportement ne s'exécute pas et aucune exception n'est levée. Pour ce faire, consultez le **levelfinal** option à l’aide de [Caspol.exe (outil de stratégie de sécurité d’accès de Code)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Pour obtenir un exemple d’un comportement commun, consultez [Comment : Verrouiller des points de terminaison dans l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
@@ -115,25 +115,25 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
   
  Les sources de suivi prises en charge sont :  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>et <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>et <xref:System.IdentityModel.Tokens>.  
   
  Les sources de suivi suivantes ne sont pas prises en charge :  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Les membres suivants de l'énumération <xref:System.Diagnostics.TraceOptions> ne doivent pas être spécifiés:  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  Lors de l'utilisation du traçage dans un environnement de confiance partielle, assurez-vous que l'application dispose des autorisations nécessaires pour stocker la sortie de l'écouteur de trace. Par exemple, lors de l'utilisation de <xref:System.Diagnostics.TextWriterTraceListener> pour écrire le résultat du traçage dans un fichier texte, assurez-vous que l'application bénéficie de l'autorisation FileIOPermission requise pour écrire dans le fichier de trace.  
   
@@ -148,11 +148,11 @@ Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité 
   
  Les fonctionnalités supplémentaires suivantes ne sont pas activées en cas d’exécution d’indigo2 dans un environnement de confiance partielle :  
   
--   WMI (Windows Management Instrumentation)  
+- WMI (Windows Management Instrumentation)  
   
--   La journalisation des événements n'est activée que partiellement (consultez la discussion dans la section **Diagnostics** ).  
+- La journalisation des événements n'est activée que partiellement (consultez la discussion dans la section **Diagnostics** ).  
   
--   Compteurs de performance  
+- Compteurs de performance  
   
  Utilisation des fonctionnalités de WCF qui ne sont pas pris en charge dans un environnement de confiance partielle peut entraîner des exceptions lors de l’exécution.  
   

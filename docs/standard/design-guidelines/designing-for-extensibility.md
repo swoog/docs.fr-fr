@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: KrzysztofCwalina
 ms.openlocfilehash: 94900dee72230a1b9d099d78168acc508af62af7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026456"
 ---
 # <a name="designing-for-extensibility"></a>Conception en vue de l'extensibilité
 Un aspect important de la conception d’une infrastructure consiste à s’assurer de que l’extensibilité de l’infrastructure a été examinée avec soin. Cela nécessite que vous comprenez les coûts et les avantages associés à différents mécanismes d’extensibilité. Ce chapitre vous aide à décider des mécanismes d’extensibilité : sous-classement, les événements, les membres virtuels, les rappels et ainsi de suite, pouvez répondent le mieux aux exigences de votre infrastructure.  

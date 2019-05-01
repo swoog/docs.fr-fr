@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970831"
 ---
 # <a name="myresources-object"></a>My.Resources, objet
 Fournit des propriétés et des classes permettant d’accéder aux ressources de l’application.  
@@ -32,11 +32,11 @@ Fournit des propriétés et des classes permettant d’accéder aux ressources d
   
  Chaque ressource a un nom, la catégorie et la valeur, et ces paramètres de ressources déterminent comment la propriété pour accéder à la ressource dans le `My.Resources` objet. Pour les ressources ajoutées dans le **Concepteur de projets**:  
   
--   Le nom détermine le nom de la propriété,  
+- Le nom détermine le nom de la propriété,  
   
--   Les données de ressources sont la valeur de la propriété,  
+- Les données de ressources sont la valeur de la propriété,  
   
--   La catégorie détermine le type de la propriété :  
+- La catégorie détermine le type de la propriété :  
   
 |Category|Type de données de propriété|  
 |---|---|  

@@ -3,11 +3,11 @@ title: 'Procédure : utiliser la configuration pour ajouter un point de termina
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: db5085d01dbed841109ac46fe4e8b2a0143352e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039115"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procédure : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET
 Windows Communication Foundation (WCF) vous permet de créer un service qui rend un compatible ASP.NET AJAX point de terminaison disponible qui peuvent être appelés à partir de JavaScript sur un site Web client. Pour créer ce point de terminaison, vous pouvez utiliser un fichier de configuration, comme avec tous les autres points de terminaison Windows Communication Foundation (WCF), ou utiliser une méthode qui ne nécessite pas d’éléments de configuration. Cette rubrique décrit l'approche utilisant le fichier de configuration.  

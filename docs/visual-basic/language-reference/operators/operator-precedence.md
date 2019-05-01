@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013528"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Priorité des opérateurs en Visual Basic
 Lorsque plusieurs opérations se produisent dans une expression, chaque partie est évaluée et résolue dans un ordre prédéterminé *priorité des opérateurs*.  
@@ -27,13 +27,13 @@ Lorsque plusieurs opérations se produisent dans une expression, chaque partie e
 ## <a name="precedence-rules"></a>Règles de priorité  
  Les expressions contenant des opérateurs à partir de plusieurs catégories, ils sont évalués selon les règles suivantes :  
   
--   Les opérateurs arithmétiques et de concaténation ont l’ordre de priorité décrite dans la section suivante, et que tous ont une priorité supérieure à celle de la comparaison, logiques et les opérateurs au niveau du bit.  
+- Les opérateurs arithmétiques et de concaténation ont l’ordre de priorité décrite dans la section suivante, et que tous ont une priorité supérieure à celle de la comparaison, logiques et les opérateurs au niveau du bit.  
   
--   Tous les opérateurs de comparaison ont la même priorité et avoir une priorité supérieure à celle des opérateurs logiques et au niveau du bit, mais une priorité inférieure à celle des opérateurs arithmétiques et de concaténation.  
+- Tous les opérateurs de comparaison ont la même priorité et avoir une priorité supérieure à celle des opérateurs logiques et au niveau du bit, mais une priorité inférieure à celle des opérateurs arithmétiques et de concaténation.  
   
--   Les opérateurs logiques et au niveau du bit ont l’ordre de priorité décrite dans la section suivante, et leur priorité inférieure à celle des opérations arithmétiques, concaténation, les opérateurs de comparaison.  
+- Les opérateurs logiques et au niveau du bit ont l’ordre de priorité décrite dans la section suivante, et leur priorité inférieure à celle des opérations arithmétiques, concaténation, les opérateurs de comparaison.  
   
--   Opérateurs ayant la même priorité sont évalués de gauche à droite dans l’ordre dans lequel ils apparaissent dans l’expression.  
+- Opérateurs ayant la même priorité sont évalués de gauche à droite dans l’ordre dans lequel ils apparaissent dans l’expression.  
   
 ## <a name="precedence-order"></a>Ordre de priorité  
  Les opérateurs sont évalués dans l’ordre de priorité suivant :  

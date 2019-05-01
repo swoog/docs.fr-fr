@@ -3,11 +3,11 @@ title: Durable Instance Context
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990261"
 ---
 # <a name="durable-instance-context"></a>Durable Instance Context
 Cet exemple montre comment personnaliser le runtime Windows Communication Foundation (WCF) pour activer des contextes d’instance fiables. Il utilise SQL Server 2005 comme magasin de sauvegarde (SQL Server 2005 Express dans ce cas précis). Toutefois, il permet également d'accéder aux mécanismes de stockage personnalisés.  
@@ -233,11 +233,11 @@ else
   
  WCF permet d’étendre son composant d’exécution InstanceContext en ajoutant un nouvel état et le comportement à l’aide de son modèle d’objet extensible. Le modèle d’objet extensible est utilisé dans WCF pour étendre les classes de runtime existantes avec de nouvelles fonctionnalités ou pour ajouter de nouvelles fonctionnalités d’état à un objet. Il existe trois interfaces dans le modèle d’objet extensible - IExtensibleObject\<T >, IExtension\<T > et IExtensionCollection\<T > :  
   
--   IExtensibleObject\<T > interface est implémentée par les objets permettant des extensions qui personnalisent leurs fonctionnalités.  
+- IExtensibleObject\<T > interface est implémentée par les objets permettant des extensions qui personnalisent leurs fonctionnalités.  
   
--   IExtension\<T > interface est implémentée par les objets qui sont des extensions de classes de type T.  
+- IExtension\<T > interface est implémentée par les objets qui sont des extensions de classes de type T.  
   
--   La IExtensionCollection\<T > interface est une collection de IExtensions qui permet de récupérer les IExtensions par leur type.  
+- La IExtensionCollection\<T > interface est une collection de IExtensions qui permet de récupérer les IExtensions par leur type.  
   
  Par conséquent, vous devez créer une classe InstanceContextExtension qui implémente l'interface IExtension et définit l'état requis pour enregistrer l'ID de contexte. Cette classe fournit également l'état permettant de conserver le gestionnaire de stockage utilisé. Une fois que le nouvel état est enregistré, il ne doit pas être possible de le modifier. L'état est donc fourni et enregistré dans l'instance au moment de sa construction et n'est ensuite accessible qu'en lecture seule.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007326"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters et XAML
 Cette rubrique présente l’objectif de la conversion de types de chaîne comme une fonctionnalité générale du langage XAML. Dans le .NET Framework, la <xref:System.ComponentModel.TypeConverter> classe sert un objectif particulier dans le cadre de l’implémentation pour une classe personnalisée managée qui peut être utilisée en tant que valeur de propriété dans l’utilisation d’attribut XAML. Si vous écrivez une classe personnalisée, et que les instances de la classe soient utilisables comme valeurs d’attribut définissables XAML, vous devrez peut-être appliquer un <xref:System.ComponentModel.TypeConverterAttribute> à votre classe, écrire une personnalisée <xref:System.ComponentModel.TypeConverter> classe, ou les deux.  
@@ -59,13 +59,13 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
   
  <xref:System.ComponentModel.TypeConverter> définit quatre membres qui sont utiles pour la conversion vers et à partir de chaînes à des fins de traitement de XAML :  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Parmi ceux-ci, la méthode la plus importante est <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>. Cette méthode convertit la chaîne d’entrée en type d’objet exigé. À proprement parler, la <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> méthode peut être implémentée pour convertir une plage beaucoup plus large de types en type de destination prévu du convertisseur et donc permettre à des fins qui dépassent le XAML telles que la prise en charge des conversions au moment de l’exécution, mais à des fins de XAML Il est uniquement le chemin de code qui peut traiter un <xref:System.String> entrée est important.  
   

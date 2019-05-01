@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024089"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procédure pas à pas : Afficher des données à partir d’une base de données SQL Server dans un contrôle DataGrid
 
@@ -23,9 +23,9 @@ Dans cette procédure pas à pas, vous récupérer des données à partir d’un
 
 Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :
 
--   Visual Studio.
+- Visual Studio.
 
--   Accès à une instance en cours d’exécution de SQL Server ou SQL Server Express qui a la base de données AdventureWorks attachée. Vous pouvez télécharger la base de données AdventureWorks à partir de la [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
+- Accès à une instance en cours d’exécution de SQL Server ou SQL Server Express qui a la base de données AdventureWorks attachée. Vous pouvez télécharger la base de données AdventureWorks à partir de la [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
 
 ## <a name="create-entity-classes"></a>Créer des classes d’entité
 
