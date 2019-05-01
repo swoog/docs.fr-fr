@@ -1,1 +1,9 @@
-<span data-ttu-id="c7ef4-101">Concepteur WPF pour Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c7ef4-101">WPF Designer for Visual Studio</span></span>
+---
+ms.openlocfilehash: ab22a2cb159372443ef2354eef40381fd056327a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696400"
+---
+<span data-ttu-id="25309-101">Concepteur WPF pour Visual Studio</span><span class="sxs-lookup"><span data-stu-id="25309-101">WPF Designer for Visual Studio</span></span>

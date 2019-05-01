@@ -1,1 +1,9 @@
-<span data-ttu-id="d90e3-101">Disponible depuis novembre 2013 mise à jour vers la version 4.5.1</span><span class="sxs-lookup"><span data-stu-id="d90e3-101">Available since November 2013 update to 4.5.1</span></span>
+---
+ms.openlocfilehash: dd4c4dcfbbfe5f92746b28d2107bb081e16afcb1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697876"
+---
+<span data-ttu-id="53e09-101">Disponible depuis novembre 2013 mise à jour vers la version 4.5.1</span><span class="sxs-lookup"><span data-stu-id="53e09-101">Available since November 2013 update to 4.5.1</span></span>
