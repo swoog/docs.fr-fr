@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018262"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procédure pas à pas : Créer un bouton à l’aide de Microsoft Expression Blend
 Cette procédure pas à pas vous guide tout au long des processus de création d’un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bouton personnalisé à l’aide de Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
   
 10. **Donner à glassCube verre :** Définir le <xref:System.Windows.Shapes.Shape.Fill%2A> à un coup de œil vitreux en utilisant un dégradé linéaire qui est opaque à 75 % et alterne entre la couleur blanc et Transparent 6 environ uniformément espacées intervalles. C’est ce qu’il faut définir les points de dégradé :  
   
-    -   Point de dégradé 1 : Blanc avec une valeur Alpha de 75 %  
+    - Point de dégradé 1 : Blanc avec une valeur Alpha de 75 %  
   
-    -   Point de dégradé 2 : Transparent  
+    - Point de dégradé 2 : Transparent  
   
-    -   Point de dégradé 3 : Blanc avec une valeur Alpha de 75 %  
+    - Point de dégradé 3 : Blanc avec une valeur Alpha de 75 %  
   
-    -   Point de dégradé 4 : Transparent  
+    - Point de dégradé 4 : Transparent  
   
-    -   Point de dégradé 5 : Blanc avec une valeur Alpha de 75 %  
+    - Point de dégradé 5 : Blanc avec une valeur Alpha de 75 %  
   
-    -   Point de dégradé 6 : Transparent  
+    - Point de dégradé 6 : Transparent  
   
      Cette opération crée une apparence de verre « ondulé ».  
   
@@ -173,9 +173,9 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
   
 6. **Créer le déclencheur de propriété pour IsFocused :** À l’aide de la même procédure que pour <xref:System.Windows.UIElement.IsMouseOver%2A> (voir la première étape de cette section), créez un autre déclencheur de propriété pour le <xref:System.Windows.UIElement.IsFocused%2A> propriété. Bien que **l’enregistrement du déclencheur est activé**, ajoutez les actions suivantes au déclencheur :  
   
-    -   **glassCube** Obtient un <xref:System.Windows.UIElement.Opacity%2A> de 100 %.  
+    - **glassCube** Obtient un <xref:System.Windows.UIElement.Opacity%2A> de 100 %.  
   
-    -   **RectangleExterne** Obtient un <xref:System.Windows.Shapes.Shape.Stroke%2A> valeur d’expression personnalisée de « {DynamicResource {x : Static SystemColors.HighlightBrushKey}} ».  
+    - **RectangleExterne** Obtient un <xref:System.Windows.Shapes.Shape.Stroke%2A> valeur d’expression personnalisée de « {DynamicResource {x : Static SystemColors.HighlightBrushKey}} ».  
   
  La dernière étape dans cette procédure pas à pas, nous ajouterons des animations au bouton. Ces animations seront déclenchées par des événements, en particulier, le <xref:System.Windows.UIElement.MouseEnter> et <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événements.  
   
@@ -208,19 +208,19 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
   
 5. **Créer un autre déclencheur d’événement et lui associer une animation différents :** Nous allons ajouter une animation plus. Utilisez une procédure similaire à ce qui vous permet de créer l’animation de déclencheur d’événements précédent :  
   
-    1.  Créer un nouvel événement déclencheur à l’aide de la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
+    1. Créer un nouvel événement déclencheur à l’aide de la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
   
-    2.  Associez une nouvelle chronologie avec la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
+    2. Associez une nouvelle chronologie avec la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement.  
   
      ![Comment créer une nouvelle chronologie](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Pour cette chronologie, créez deux images clés, une à 0,0 secondes et l’autre à 0,3 secondes.  
+    1. Pour cette chronologie, créez deux images clés, une à 0,0 secondes et l’autre à 0,3 secondes.  
   
-    2.  Avec l’image clé à 0,3 secondes mis en surbrillance, définir le **faire pivoter un Angle de transformation** à 360 degrés.  
+    2. Avec l’image clé à 0,3 secondes mis en surbrillance, définir le **faire pivoter un Angle de transformation** à 360 degrés.  
   
      ![Comment créer une transformation de rotation](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  Appuyez sur F5 pour exécuter l'application. Cliquez sur le bouton. Notez que la couche de verre tourne.  
+    1. Appuyez sur F5 pour exécuter l'application. Cliquez sur le bouton. Notez que la couche de verre tourne.  
   
 ## <a name="conclusion"></a>Conclusion  
  Vous avez terminé un bouton personnalisé. Vous l’avez fait à l’aide d’un modèle de bouton qui a été appliqué à tous les boutons dans l’application. Si vous quittez le mode de modification de modèle (voir la figure suivante) et créer des boutons de plus, vous verrez que leur apparence et le comportement de votre bouton personnalisé plutôt que comme le bouton par défaut.  
@@ -237,15 +237,15 @@ Cette procédure pas à pas vous guide tout au long des processus de création d
   
  En conclusion, processus de personnalisation d’un modèle de bouton vous avez appris à effectuer les opérations suivantes Microsoft Expression Blend :  
   
--   Personnaliser l’apparence d’un contrôle.  
+- Personnaliser l’apparence d’un contrôle.  
   
--   Définir des déclencheurs de propriété. Déclencheurs de propriété sont très utiles, car ils peuvent être utilisés sur la plupart des objets, pas seulement sur les contrôles.  
+- Définir des déclencheurs de propriété. Déclencheurs de propriété sont très utiles, car ils peuvent être utilisés sur la plupart des objets, pas seulement sur les contrôles.  
   
--   Définir des déclencheurs d’événements. Déclencheurs d’événements sont très utiles, car ils peuvent être utilisés sur la plupart des objets, pas seulement sur les contrôles.  
+- Définir des déclencheurs d’événements. Déclencheurs d’événements sont très utiles, car ils peuvent être utilisés sur la plupart des objets, pas seulement sur les contrôles.  
   
--   Créer des animations.  
+- Créer des animations.  
   
--   Divers : créer des dégradés, ajouter des effets bitmap, utiliser des transformations et définir les propriétés de base des objets.  
+- Divers : créer des dégradés, ajouter des effets bitmap, utiliser des transformations et définir les propriétés de base des objets.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052545"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procédure pas à pas : hébergement d’un contrôle composite WPF dans Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Toutefois, lorsque vous avez beaucoup investi dans [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] code, il peut être plus efficace d’étendre votre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plutôt que de réécrire de zéro. Un scénario courant est lorsque vous souhaitez incorporer un ou plusieurs contrôles implémentés avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] au sein de votre application Windows Forms. Pour plus d’informations sur la personnalisation des contrôles WPF, consultez [personnalisation des contrôles](../controls/control-customization.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "59322834"
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Implémentation du contrôle composite WPF  
+- Implémentation du contrôle composite WPF  
   
--   Implémentation de l’application hôte Windows Forms  
+- Implémentation de l’application hôte Windows Forms  
   
  Pour l’intégralité du code des tâches illustrées dans cette procédure pas à pas, consultez [hébergement d’un contrôle Composite WPF dans Windows Forms, exemple](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
@@ -54,13 +54,13 @@ Cette procédure pas à pas nécessite Visual Studio.
   
  Votre projet doit comporter des références aux DLL système suivantes. Si l’une de ces DLL n’est pas incluse par défaut, ajoutez-la à votre projet.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   Système  
+- Système  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Création de l’interface utilisateur  
  Le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] pour le contrôle composite est implémenté avec [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Le contrôle composite [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se compose de cinq <xref:System.Windows.Controls.TextBox> éléments. Chaque <xref:System.Windows.Controls.TextBox> élément est associé à un <xref:System.Windows.Controls.TextBlock> élément qui sert d’étiquette. Il existe deux <xref:System.Windows.Controls.Button> éléments en bas, **OK** et **Annuler**. Lorsque l’utilisateur clique sur l’un de ces boutons, le contrôle déclenche un événement personnalisé pour retourner les informations à l’hôte.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>Initialisation du contrôle  
  Le code suivant implémente plusieurs tâches de base :  
   
--   Déclare un événement privé, `OnButtonClick`et son délégué associé, `MyControlEventHandler`.  
+- Déclare un événement privé, `OnButtonClick`et son délégué associé, `MyControlEventHandler`.  
   
--   Crée plusieurs variables globales privées qui stockent les données de l’utilisateur. Ces données sont exposées via les propriétés correspondantes.  
+- Crée plusieurs variables globales privées qui stockent les données de l’utilisateur. Ces données sont exposées via les propriétés correspondantes.  
   
--   Implémente un gestionnaire, `Init`, pour le contrôle <xref:System.Windows.FrameworkElement.Loaded> événement. Ce gestionnaire initialise les variables globales en leur assignant les valeurs définies dans MyControl1.xaml. Pour ce faire, il utilise le <xref:System.Windows.FrameworkElement.Name%2A> affectée à un type <xref:System.Windows.Controls.TextBlock> élément, `nameLabel`, pour accéder aux paramètres de propriété de cet élément.  
+- Implémente un gestionnaire, `Init`, pour le contrôle <xref:System.Windows.FrameworkElement.Loaded> événement. Ce gestionnaire initialise les variables globales en leur assignant les valeurs définies dans MyControl1.xaml. Pour ce faire, il utilise le <xref:System.Windows.FrameworkElement.Name%2A> affectée à un type <xref:System.Windows.Controls.TextBlock> élément, `nameLabel`, pour accéder aux paramètres de propriété de cet élément.  
   
  Supprimez le constructeur existant et ajoutez le code suivant à votre `MyControl1` classe.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>Gestion des événements de clic de bouton  
  L’utilisateur indique que la tâche de saisie de données est terminée en cliquant sur le **OK** bouton ou le **Annuler** bouton. Les deux boutons utilisent le même <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Gestionnaire d’événements, `ButtonClicked`. Les deux boutons ont un nom, `btnOK` ou `btnCancel`, qui permet au Gestionnaire de déterminer quel bouton l’utilisateur a cliqué en examinant la valeur de la `sender` argument. Le gestionnaire fait ce qui suit :  
   
--   Crée un `MyControlEventArgs` objet qui contient les données à partir de la <xref:System.Windows.Controls.TextBox> éléments.  
+- Crée un `MyControlEventArgs` objet qui contient les données à partir de la <xref:System.Windows.Controls.TextBox> éléments.  
   
--   Si l’utilisateur a cliqué sur le **Annuler** bouton, définit le `MyControlEventArgs` l’objet `IsOK` propriété `false`.  
+- Si l’utilisateur a cliqué sur le **Annuler** bouton, définit le `MyControlEventArgs` l’objet `IsOK` propriété `false`.  
   
--   Déclenche le `OnButtonClick` événement pour indiquer à l’hôte que l’utilisateur est terminé, et repasse les données collectées.  
+- Déclenche le `OnButtonClick` événement pour indiquer à l’hôte que l’utilisateur est terminé, et repasse les données collectées.  
   
  Ajoutez le code suivant à votre `MyControl1` classe après le `Init` (méthode).  
   
@@ -209,15 +209,15 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
   
 4. Ajoutez les références aux assemblys suivants.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>Implémentation de l’interface utilisateur de l’application  
  L’interface utilisateur de l’application Windows Forms contient plusieurs contrôles permettant d’interagir avec le contrôle composite WPF.  
@@ -296,9 +296,9 @@ L’illustration suivante montre un contrôle composite WPF hébergé dans une a
   
  Les deux lignes restantes dans le `Form1_Load` méthode joindre des gestionnaires à deux événements de contrôle :  
   
--   `OnButtonClick` est un événement personnalisé qui est déclenché par le contrôle composite lorsque l’utilisateur clique sur le **OK** ou **Annuler** bouton. Vous gérez l’événement pour obtenir la réponse de l’utilisateur et pour collecter les données spécifiées par l’utilisateur.  
+- `OnButtonClick` est un événement personnalisé qui est déclenché par le contrôle composite lorsque l’utilisateur clique sur le **OK** ou **Annuler** bouton. Vous gérez l’événement pour obtenir la réponse de l’utilisateur et pour collecter les données spécifiées par l’utilisateur.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> est un événement standard déclenché par un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle lorsqu’il est entièrement chargé. L’événement est utilisé ici, parce que l’exemple doit initialiser plusieurs variables globales à l’aide de propriétés du contrôle. Au moment de l’écran <xref:System.Windows.Forms.Form.Load> événement, le contrôle n’est pas entièrement chargé et ces valeurs sont toujours définies sur `null`. Vous devez attendre jusqu'à ce que le contrôle <xref:System.Windows.FrameworkElement.Loaded> événement se produit avant que vous pouvez accéder à ces propriétés.  
+- <xref:System.Windows.FrameworkElement.Loaded> est un événement standard déclenché par un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôle lorsqu’il est entièrement chargé. L’événement est utilisé ici, parce que l’exemple doit initialiser plusieurs variables globales à l’aide de propriétés du contrôle. Au moment de l’écran <xref:System.Windows.Forms.Form.Load> événement, le contrôle n’est pas entièrement chargé et ces valeurs sont toujours définies sur `null`. Vous devez attendre jusqu'à ce que le contrôle <xref:System.Windows.FrameworkElement.Loaded> événement se produit avant que vous pouvez accéder à ces propriétés.  
   
  Le <xref:System.Windows.FrameworkElement.Loaded> Gestionnaire d’événements est indiqué dans le code précédent. Le `OnButtonClick` gestionnaire est abordé dans la section suivante.  
   

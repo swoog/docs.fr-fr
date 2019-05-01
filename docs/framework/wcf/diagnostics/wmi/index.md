@@ -3,11 +3,11 @@ title: Utilisation de Windows Management Instrumentation pour les diagnostics
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048282"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 Windows Communication Foundation (WCF) expose des données d’inspection d’un service lors de l’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI).  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
   
      Ce script PowerShell utilise la définition de langage SDDL (Security Descriptor) pour accorder l’accès de groupe d’utilisateurs intégrés à l’espace de noms WMI « root/servicemodel ». Il spécifie les listes de contrôle d'accès (ACL) suivantes :  
   
-    -   Administrateurs intégrés (BA) - Bénéficie déjà d'un accès.  
+    - Administrateurs intégrés (BA) - Bénéficie déjà d'un accès.  
   
-    -   Service réseau (NS) - Bénéficie déjà d'un accès.  
+    - Service réseau (NS) - Bénéficie déjà d'un accès.  
   
-    -   Système local (LS) - Bénéficie déjà d'un accès.  
+    - Système local (LS) - Bénéficie déjà d'un accès.  
   
-    -   Utilisateurs intégrés - Groupe auquel octroyer l'accès.  
+    - Utilisateurs intégrés - Groupe auquel octroyer l'accès.  
   
 #### <a name="to-grant-provider-registration-access"></a>Pour octroyer l'accès d'inscription du fournisseur  
   

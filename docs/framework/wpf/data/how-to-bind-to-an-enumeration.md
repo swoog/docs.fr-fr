@@ -7,11 +7,11 @@ helpviewer_keywords:
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
 ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021009"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Procédure : Effectuer une liaison à une énumération
 Cet exemple montre comment effectuer une liaison à une énumération en le liant à une méthode de GetValues de l’énumération.  

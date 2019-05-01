@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022348"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduction à COM Interop (Visual Basic)
 Le composant COM (Object Model) permet un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Bien que les objets COM ont été essentiels à Windows de programmation de nombreuses années, les applications conçues pour le common language runtime (CLR) offrent de nombreux avantages.  
@@ -28,15 +28,15 @@ Le composant COM (Object Model) permet un objet d’exposer ses fonctionnalités
 ## <a name="type-libraries-and-assembly-manifests"></a>Bibliothèques de types et les manifestes d’Assembly  
  Bibliothèques de types décrivent les caractéristiques des objets COM, tels que les noms des membres et types de données. Manifestes d’assembly exécutent la même fonction pour [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications. Ils incluent des informations sur les éléments suivants :  
   
--   Identité de l’assembly, version, culture et signature numérique.  
+- Identité de l’assembly, version, culture et signature numérique.  
   
--   Fichiers qui composent l’implémentation de l’assembly.  
+- Fichiers qui composent l’implémentation de l’assembly.  
   
--   Types et ressources qui composent l’assembly. Comprennent celles qui sont exportés à partir de celui-ci.  
+- Types et ressources qui composent l’assembly. Comprennent celles qui sont exportés à partir de celui-ci.  
   
--   Dépendances de compilation des autres assemblys.  
+- Dépendances de compilation des autres assemblys.  
   
--   Autorisations requises pour l’assembly pour s’exécuter correctement.  
+- Autorisations requises pour l’assembly pour s’exécuter correctement.  
   
  Pour plus d’informations sur les assemblys et les manifestes d’assembly, consultez [assemblys dans .NET](../../../standard/assembly/index.md).  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033720"
 ---
 # <a name="how-to-map-database-relationships"></a>Procédure : Mapper des relations de base de données
 Vous pouvez encoder comme références de propriété dans votre classe d'entité toutes les relations de données qui seront toujours fixes. Dans l'exemple de base de données Northwind, par exemple, comme les clients passent généralement des commandes, il existe toujours une relation dans le modèle entre les clients et leurs commandes.  
@@ -22,11 +22,11 @@ Vous pouvez encoder comme références de propriété dans votre classe d'entit�
   
  La plupart des relations sont de type un-à-plusieurs, comme dans l'exemple présenté ultérieurement dans cette rubrique. Vous pouvez également représenter les relations de type un-à-un et plusieurs à plusieurs comme suit :  
   
--   -À-un : Représentez ce type de relation en incluant <xref:System.Data.Linq.EntitySet%601> des deux côtés.  
+- -À-un : Représentez ce type de relation en incluant <xref:System.Data.Linq.EntitySet%601> des deux côtés.  
   
      Par exemple, considérez un `Customer` - `SecurityCode` relation, créé afin que le code de sécurité du client sera introuvable dans le `Customer` de table et sont accessibles uniquement par les personnes autorisées.  
   
--   Plusieurs-à-plusieurs : Dans les relations plusieurs-à-plusieurs, la clé primaire de la table de liens (également appelée le *jonction* table) est souvent formée par un composite des clés étrangères des deux autres tables.  
+- Plusieurs-à-plusieurs : Dans les relations plusieurs-à-plusieurs, la clé primaire de la table de liens (également appelée le *jonction* table) est souvent formée par un composite des clés étrangères des deux autres tables.  
   
      Par exemple, considérez un `Employee` - `Project` relation plusieurs-à-plusieurs formée à l’aide de table de liens `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige qu'une telle relation soit modélisée à l'aide de trois classes : `Employee`, `Project` et `EmployeeProject`. Dans ce cas, la modification de la relation entre `Employee` et `Project` peut sembler nécessiter une mise à jour de la clé primaire `EmployeeProject`. Toutefois, la modélisation recommandée dans ce cas consiste à supprimer le `EmployeeProject` existant et à créer un autre `EmployeeProject`.  
   

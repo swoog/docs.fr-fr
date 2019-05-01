@@ -3,11 +3,11 @@ title: 'Procédure : Générer le modèle objet sous forme de fichier externe'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033746"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procédure : Générer le modèle objet sous forme de fichier externe
 Comme alternative au mappage basé sur les attributs, vous pouvez générer votre modèle objet comme un fichier XML externe à l'aide de l'outil de ligne de commande SQLMetal. Pour plus d’informations, consultez [SqlMetal.exe (outil de génération de code)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). En utilisant un fichier de mappage XML externe, vous réduisez l'encombrement dans votre code. Vous pouvez également modifier le comportement en modifiant le fichier externe sans recompiler les binaires de votre application. Pour plus d’informations, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

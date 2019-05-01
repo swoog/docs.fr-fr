@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036229"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributs et commentaires de localisation
 Les commentaires de localisation [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sont des propriétés, à l’intérieure du code source [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], fournies par les développeurs pour communiquer des règles et des conseils pour la localisation. Les commentaires de localisation [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contiennent deux ensembles d’informations : les attributs d’adaptabilité et les commentaires de localisation au format libre. Les attributs d’adaptabilité sont utilisés par l’API de localisation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pour indiquer les ressources à localiser. Les commentaires au format libre sont des informations que l’auteur de l’application veut inclure.  
@@ -27,11 +27,11 @@ Les commentaires de localisation [!INCLUDE[TLA#tla_winclient](../../../../includ
   
 3. Les valeurs qui peuvent être attribuées sont :  
   
-    -   **None** : les commentaires et les attributs sont conservés dans l’assembly et aucun fichier distinct n’est généré.  
+    - **None** : les commentaires et les attributs sont conservés dans l’assembly et aucun fichier distinct n’est généré.  
   
-    -   **CommentsOnly** : seuls les commentaires sont retirés de l’assembly et placés dans un fichier LocFile distinct.  
+    - **CommentsOnly** : seuls les commentaires sont retirés de l’assembly et placés dans un fichier LocFile distinct.  
   
-    -   **All** : les commentaires et les attributs sont retirés de l’assembly et placés dans un fichier LocFile distinct.  
+    - **All** : les commentaires et les attributs sont retirés de l’assembly et placés dans un fichier LocFile distinct.  
   
 4. Quand les ressources localisables sont extraites de [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], les attributs d’adaptabilité sont respectés par l’API de localisation [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
   
@@ -74,11 +74,11 @@ Les commentaires de localisation [!INCLUDE[TLA#tla_winclient](../../../../includ
   
  Il existe trois types d’attribut :  
   
--   **Catégorie** : spécifie si une valeur doit pouvoir être modifiée à partir d’un outil de localisation. Consultez <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Catégorie** : spécifie si une valeur doit pouvoir être modifiée à partir d’un outil de localisation. Consultez <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Readability**. spécifie si un outil de localisation doit lire (et afficher) une valeur. Consultez <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Readability**. spécifie si un outil de localisation doit lire (et afficher) une valeur. Consultez <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modifiability**. spécifie si un outil de localisation autorise la modification d’une valeur. Consultez <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modifiability**. spécifie si un outil de localisation autorise la modification d’une valeur. Consultez <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Ces attributs peuvent être spécifiés dans n’importe quel ordre et doivent être séparés par un espace. Si des attributs dupliqués sont spécifiés, le dernier attribut remplace les précédents. Par exemple, Localization.Attributes = "Unmodifiable Modifiable" indique que la valeur est Modifiable, car c’est le dernier attribut indiqué.  
   

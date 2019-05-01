@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025221"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propriété d'axe d'attribut XML (Visual Basic)
 Fournit l’accès à la valeur d’un attribut pour un <xref:System.Xml.Linq.XElement> objet ou vers le premier élément dans une collection de <xref:System.Xml.Linq.XElement> objets.  
@@ -36,7 +36,7 @@ object.@<attribute>
  Obligatoire. Indique le début de la propriété d’axe d’attribut.  
   
  <  
- Facultatif. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
+ Optionnel. Indique le début du nom de l’attribut lorsque `attribute` n’est pas un identificateur valide en Visual Basic.  
   
  `attribute`  
  Obligatoire. Nom de l’attribut d’accès, sous la forme [`prefix`:]`name`.  

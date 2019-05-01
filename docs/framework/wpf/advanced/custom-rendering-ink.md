@@ -10,26 +10,26 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010629"
 ---
 # <a name="custom-rendering-ink"></a>Encre de rendu personnalisé
 Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trait vous permet de spécifier l’apparence d’un trait, telles que sa taille, la couleur et la forme, mais il peut arriver que vous souhaitez personnaliser l’apparence au-delà de ce que <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> autoriser. Vous souhaiterez peut-être personnaliser l’apparence de l’encre en appliquant des effets tels qu’aérographe, peinture à l’huile et autres. Permet à Windows Presentation Foundation (WPF) vous permettent de personnaliser l’encre de rendu en implémentant un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et <xref:System.Windows.Ink.Stroke> objet.  
   
  Cette rubrique contient les sous-sections suivantes :  
   
--   [Architecture](#Architecture)  
+- [Architecture](#Architecture)  
   
--   [Implémentation d’un renderer dynamique](#ImplementingADynamicRenderer)  
+- [Implémentation d’un renderer dynamique](#ImplementingADynamicRenderer)  
   
--   [Implémentation de traits personnalisés](#ImplementingCustomStrokes)  
+- [Implémentation de traits personnalisés](#ImplementingCustomStrokes)  
   
--   [Implémentation d’un InkCanvas personnalisé](#ImplementingACustomInkCanvas)  
+- [Implémentation d’un InkCanvas personnalisé](#ImplementingACustomInkCanvas)  
   
--   [Conclusion](#Conclusion)  
+- [Conclusion](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architecture  
@@ -75,11 +75,11 @@ Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trai
   
  Pour personnaliser le rendu traits sur un <xref:System.Windows.Controls.InkCanvas> procédez comme suit :  
   
--   Créez une classe qui dérive de la <xref:System.Windows.Controls.InkCanvas>.  
+- Créez une classe qui dérive de la <xref:System.Windows.Controls.InkCanvas>.  
   
--   Affectez votre personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> à la <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> propriété.  
+- Affectez votre personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> à la <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> propriété.  
   
--   Remplacez la méthode <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> . Dans cette méthode, supprimez le trait d’origine qui a été ajouté à InkCanvas. Ensuite, créez un trait personnalisé, ajoutez-le à la <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propriété, puis appelez la classe de base avec un nouveau <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> qui contient le trait personnalisé.  
+- Remplacez la méthode <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> . Dans cette méthode, supprimez le trait d’origine qui a été ajouté à InkCanvas. Ensuite, créez un trait personnalisé, ajoutez-le à la <xref:System.Windows.Controls.InkCanvas.Strokes%2A> propriété, puis appelez la classe de base avec un nouveau <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> qui contient le trait personnalisé.  
   
  Ce qui suit C# code illustre un personnalisé <xref:System.Windows.Controls.InkCanvas> classe qui utilise un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et collecte des traits personnalisés.  
   

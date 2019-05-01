@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037750"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey, extension de balisage
 Définit et référence des clés pour les ressources qui sont chargés à partir des assemblys externes. Cela permet une recherche de ressource spécifier un type de cible dans un assembly, plutôt qu’un dictionnaire de ressources explicite dans un assembly ou une classe.  
@@ -52,9 +52,9 @@ Définit et référence des clés pour les ressources qui sont chargés à parti
 ## <a name="remarks"></a>Notes  
  Comme indiqué dans les utilisations ci-dessus, un {`ComponentResourceKey`} extension de balisage est trouvée dans deux emplacements :  
   
--   La définition d’une clé dans un dictionnaire de ressources de thème, tel que fourni par un auteur de contrôle.  
+- La définition d’une clé dans un dictionnaire de ressources de thème, tel que fourni par un auteur de contrôle.  
   
--   L’accès à une ressource de thème à partir de l’assembly, lorsque vous êtes recréation d’un modèle du contrôle, mais pour utiliser les valeurs de propriété provenant de ressources fournies par les thèmes du contrôle.  
+- L’accès à une ressource de thème à partir de l’assembly, lorsque vous êtes recréation d’un modèle du contrôle, mais pour utiliser les valeurs de propriété provenant de ressources fournies par les thèmes du contrôle.  
   
  Pour faire référence à des ressources de composant qui proviennent de thèmes, il est généralement recommandé d’utiliser `{DynamicResource}` plutôt que `{StaticResource}`. Cela est illustré dans les utilisations. `{DynamicResource}` est recommandée car le thème lui-même peut être modifié par l’utilisateur. Si vous souhaitez que la ressource de composant qui correspond le mieux à intention de l’auteur du contrôle pour prendre en charge un thème, vous devez activer votre référence de ressource de composant d’être également dynamique.  
   

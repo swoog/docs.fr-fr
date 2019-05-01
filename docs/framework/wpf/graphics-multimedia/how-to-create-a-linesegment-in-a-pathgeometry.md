@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer un LineSegment dans un PathGeometry'
+title: 'Procédure : Créer un LineSegment dans une PathGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
 ms.openlocfilehash: a50c98ccc3f6d517e0917cb774af4d49d2bfa7a3
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054547"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Procédure : Créer un LineSegment dans un PathGeometry
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Procédure : Créer un LineSegment dans une PathGeometry
 
 Cet exemple indique comment créer un segment de ligne. Pour créer un segment de ligne, utilisez le <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, et <xref:System.Windows.Media.LineSegment> classes.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014204"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empaqueter et déployer des extensions My (Visual Basic) personnalisé
 
-Visual Basic fournit un moyen simple pour vous permettent de déployer votre personnalisé `My` extensions d’espace de noms à l’aide de modèles Visual Studio. Si vous créez un modèle de projet pour lequel votre `My` extensions font partie intégrante du nouveau type de projet, vous pouvez simplement inclure votre personnalisé `My` code d’extension avec le projet lorsque vous exportez le modèle. Pour plus d’informations sur l’exportation des modèles de projet, consultez [Comment : créer des modèles de projet](/visualstudio/ide/how-to-create-project-templates).
+Visual Basic fournit un moyen simple pour vous permettent de déployer votre personnalisé `My` extensions d’espace de noms à l’aide de modèles Visual Studio. Si vous créez un modèle de projet pour lequel votre `My` extensions font partie intégrante du nouveau type de projet, vous pouvez simplement inclure votre personnalisé `My` code d’extension avec le projet lorsque vous exportez le modèle. Pour plus d’informations sur l’exportation des modèles de projet, consultez [Comment : Créer des modèles de projet](/visualstudio/ide/how-to-create-project-templates).
 
 Si votre personnalisé `My` extension est dans un seul fichier de code, vous pouvez exporter le fichier en tant que modèle d’élément que les utilisateurs peuvent ajouter à n’importe quel type de projet Visual Basic. Vous pouvez ensuite personnaliser le modèle d’élément pour activer des fonctionnalités supplémentaires et le comportement de votre personnalisé `My` extension dans un projet Visual Basic. Ces fonctionnalités sont les suivantes :
 
@@ -33,7 +33,7 @@ La première étape de création d’un package de déploiement personnalisé `M
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Exporter une extension de mon espace de noms comme un modèle d’élément
 
-Une fois que vous avez un fichier de code qui inclut votre `My` extension de l’espace de noms, vous pouvez exporter le fichier de code comme un modèle d’élément Visual Studio. Pour obtenir des instructions sur l’exportation d’un fichier comme un modèle d’élément Visual Studio, consultez [Comment : créer des modèles d’élément](/visualstudio/ide/how-to-create-item-templates).
+Une fois que vous avez un fichier de code qui inclut votre `My` extension de l’espace de noms, vous pouvez exporter le fichier de code comme un modèle d’élément Visual Studio. Pour obtenir des instructions sur l’exportation d’un fichier comme un modèle d’élément Visual Studio, consultez [Comment : Créer des modèles d’élément](/visualstudio/ide/how-to-create-item-templates).
 
 > [!NOTE]
 > Si votre `My` extension de l’espace de noms a une dépendance sur un assembly particulier, vous pouvez personnaliser votre modèle d’élément pour installer automatiquement votre `My` extension d’espace de noms lors de l’ajout d’une référence à cet assembly. Par conséquent, vous devez exclure cette référence d’assembly lorsque vous exportez le fichier de code comme un modèle d’élément Visual Studio.
@@ -62,7 +62,7 @@ Le fichier CustomData contient un <`VBMyExtensionTemplate>` élément possédant
 |---|---|
 |`ID`|Obligatoire. Un identificateur unique pour l’extension. Si l’extension qui possède cet ID a déjà été ajoutée au projet, l’utilisateur ne sera pas invité à ajouter à nouveau.|
 |`Version`|Obligatoire. Un numéro de version du modèle d’élément.|
-|`AssemblyFullName`|Facultatif. Nom d'assembly Lorsqu’une référence à cet assembly est ajoutée au projet, l’utilisateur sera invité à ajouter le `My` extension à partir de ce modèle d’élément.|
+|`AssemblyFullName`|Optionnel. Nom d'assembly Lorsqu’une référence à cet assembly est ajoutée au projet, l’utilisateur sera invité à ajouter le `My` extension à partir de ce modèle d’élément.|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Ajouter le \<CustomDataSignature > élément dans le fichier .vstemplate
 

@@ -3,30 +3,30 @@ title: Comparaison entre la programmation fonctionnelle Programmation procédura
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028393"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Comparaison entre la programmation fonctionnelle Programmation procédurale (LINQ to XML) (Visual Basic)
 Il existe différents types d'applications XML :  
   
--   Certaines applications prennent des documents XML sources et produisent de nouveaux documents XML d'une forme différente des documents sources.  
+- Certaines applications prennent des documents XML sources et produisent de nouveaux documents XML d'une forme différente des documents sources.  
   
--   Certaines applications prennent des documents XML sources et produisent des documents d'une forme totalement différente, tels que des fichiers texte CSV ou HTML.  
+- Certaines applications prennent des documents XML sources et produisent des documents d'une forme totalement différente, tels que des fichiers texte CSV ou HTML.  
   
--   Certaines applications prennent des documents XML sources et insèrent des enregistrements dans une base de données.  
+- Certaines applications prennent des documents XML sources et insèrent des enregistrements dans une base de données.  
   
--   Certaines applications prennent des données à partir d'une autre source, telle qu'une base de données, et créent des documents XML à partir de celle-ci.  
+- Certaines applications prennent des données à partir d'une autre source, telle qu'une base de données, et créent des documents XML à partir de celle-ci.  
   
  Il existe d'autres types d'applications XML, mais ceux-ci sont représentatifs des types de fonctionnalités qu'un programmateur XML doit implémenter.  
   
  Avec tous ces types d'applications, un développeur peut suivre deux approches contrastées :  
   
--   Construction fonctionnelle à l'aide d'une approche déclarative.  
+- Construction fonctionnelle à l'aide d'une approche déclarative.  
   
--   Modification d'arborescence XML en mémoire à l'aide de procédures de code.  
+- Modification d'arborescence XML en mémoire à l'aide de procédures de code.  
   
  LINQ to XML prend en charge les deux approches.  
   

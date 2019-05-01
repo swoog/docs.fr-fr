@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023778"
 ---
 # <a name="binding-sources-overview"></a>Vue d'ensemble des sources de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez des données. Cette rubrique décrit les types d’objets que vous pouvez utiliser comme source de liaison.  
@@ -42,13 +42,13 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
 ### <a name="other-characteristics"></a>Autres caractéristiques  
  La liste suivante fournit d’autres points importants à noter :  
   
--   Si vous souhaitez créer l’objet dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe doit avoir un constructeur par défaut. Dans certains [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] langages, tels que C#, le constructeur par défaut peut être créé pour vous.  
+- Si vous souhaitez créer l’objet dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe doit avoir un constructeur par défaut. Dans certains [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] langages, tels que C#, le constructeur par défaut peut être créé pour vous.  
   
--   Les propriétés que vous utilisez comme propriétés de source de liaison pour une liaison doivent être des propriétés publiques de votre classe. Les propriétés d’interface explicitement définies ne sont pas accessibles pour la liaison, tout comme les propriétés protégées, privées, internes ou virtuelles qui n’ont aucune implémentation de base.  
+- Les propriétés que vous utilisez comme propriétés de source de liaison pour une liaison doivent être des propriétés publiques de votre classe. Les propriétés d’interface explicitement définies ne sont pas accessibles pour la liaison, tout comme les propriétés protégées, privées, internes ou virtuelles qui n’ont aucune implémentation de base.  
   
--   Vous ne pouvez pas lier des champs publics.  
+- Vous ne pouvez pas lier des champs publics.  
   
--   Le type de la propriété déclarée dans votre classe est le type qui est passé à la liaison. Toutefois, le type utilisé par la liaison varie en fonction du type de propriété de cible de liaison, et non de la propriété de source de liaison. S’il existe une différence de type, vous souhaiterez écrire un convertisseur pour gérer la manière dont votre propriété personnalisée est initialement passée à la liaison. Pour plus d'informations, consultez <xref:System.Windows.Data.IValueConverter>.  
+- Le type de la propriété déclarée dans votre classe est le type qui est passé à la liaison. Toutefois, le type utilisé par la liaison varie en fonction du type de propriété de cible de liaison, et non de la propriété de source de liaison. S’il existe une différence de type, vous souhaiterez écrire un convertisseur pour gérer la manière dont votre propriété personnalisée est initialement passée à la liaison. Pour plus d'informations, consultez <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Utilisation d’objets entiers comme source de liaison  
@@ -80,11 +80,11 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
   
  Ce tableau décrit les points importants suivants à propos des exigences relatives à l’autorisation dans la liaison de données :  
   
--   Pour les propriétés [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], la liaison de données fonctionne tant que le moteur de liaison est en mesure d’accéder à la propriété de source de liaison à l’aide de la réflexion. Sinon, le moteur de liaison émet un avertissement indiquant que la propriété ne peut pas être trouvée et utilise la valeur de secours ou la valeur par défaut, si elle est disponible.  
+- Pour les propriétés [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], la liaison de données fonctionne tant que le moteur de liaison est en mesure d’accéder à la propriété de source de liaison à l’aide de la réflexion. Sinon, le moteur de liaison émet un avertissement indiquant que la propriété ne peut pas être trouvée et utilise la valeur de secours ou la valeur par défaut, si elle est disponible.  
   
--   Vous pouvez lier des propriétés sur les objets dynamiques qui sont définies au moment de la compilation ou de l’exécution.  
+- Vous pouvez lier des propriétés sur les objets dynamiques qui sont définies au moment de la compilation ou de l’exécution.  
   
--   Vous pouvez toujours lier aux propriétés de dépendance.  
+- Vous pouvez toujours lier aux propriétés de dépendance.  
   
  L’exigence d’autorisation pour la liaison [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] est similaire. Dans un sandbox de confiance partielle, <xref:System.Windows.Data.XmlDataProvider> échoue lorsqu’il ne dispose pas des autorisations pour accéder aux données spécifiées.  
   

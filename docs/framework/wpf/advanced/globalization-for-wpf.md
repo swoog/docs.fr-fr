@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031347"
 ---
 # <a name="globalization-for-wpf"></a>Globalisation pour WPF
 Cette rubrique présente certains problèmes dont vous devez être conscient lors de l’écriture [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications pour le marché international. Les éléments de programmation de la globalisation sont définis dans [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] dans `System.Globalization`.
@@ -69,59 +69,59 @@ L’exemple suivant montre une référence de caractère hexadécimale. Notez la
 
  Les scripts suivants sont pris en charge :
 
--   Arabe
+- Arabe
 
--   Bengali
+- Bengali
 
--   Dévanâgarî
+- Dévanâgarî
 
--   Cyrillique
+- Cyrillique
 
--   Grec
+- Grec
 
--   Gujarati
+- Gujarati
 
--   Gurmukhi
+- Gurmukhi
 
--   Hébreu
+- Hébreu
 
--   Scripts idéographiques
+- Scripts idéographiques
 
--   Kannada
+- Kannada
 
--   Lao
+- Lao
 
--   Latin
+- Latin
 
--   Malayalam
+- Malayalam
 
--   Mongol
+- Mongol
 
--   Odia
+- Odia
 
--   Syriaque
+- Syriaque
 
--   Tamoul
+- Tamoul
 
--   Télougou
+- Télougou
 
--   Tana
+- Tana
 
--   Thaï*
+- Thaï*
 
--   Tibétain
+- Tibétain
 
  *Cette version prend en charge l’affichage et la modification de texte thaïlandais, mais pas la césure de mots.
 
  Les scripts suivants ne sont pas pris en charge :
 
--   Khmer
+- Khmer
 
--   Hangûl (ancien coréen)
+- Hangûl (ancien coréen)
 
--   Myanmar
+- Myanmar
 
--   Sinhala
+- Sinhala
 
  Système d’écriture moteurs prennent en charge [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] polices peuvent inclure la [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] des tableaux de disposition qui permettent aux créateurs de polices de concevoir de meilleures polices typographiques internationales et haut de gamme. Le [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tableaux de disposition de police contiennent des informations sur les substitutions de glyphe, positionnement de glyphes, justification et le positionnement de ligne de base, permettant aux applications de traitement de texte d’améliorer la disposition du texte.
 
@@ -133,9 +133,9 @@ L’exemple suivant montre une référence de caractère hexadécimale. Notez la
 ### <a name="international-layout"></a>Disposition internationale
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un moyen très pratique pour prendre en charge des dispositions horizontales, bidirectionnelles et verticales. Dans l’infrastructure de présentation la <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété peut être utilisée pour définir la disposition. Les modèles de sens du déroulement sont les suivants :
 
--   *LeftToRight* : disposition horizontale pour le latin, les langues d’Asie orientale, etc.
+- *LeftToRight* : disposition horizontale pour le latin, les langues d’Asie orientale, etc.
 
--   *RightToLeft* : disposition bidirectionnelle pour l’arabe, l’hébreu, etc.
+- *RightToLeft* : disposition bidirectionnelle pour l’arabe, l’hébreu, etc.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Développement d’applications localisables

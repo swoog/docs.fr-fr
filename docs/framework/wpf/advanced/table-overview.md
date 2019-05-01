@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053104"
 ---
 # <a name="table-overview"></a>Vue d'ensemble de Table
 <xref:System.Windows.Documents.Table> est un élément de niveau bloc qui prend en charge sous forme de grille de présentation du contenu de document dynamique. La flexibilité de cet élément est très utile, mais rend plus difficiles sa compréhension et son utilisation.  
   
  Cette rubrique contient les sections suivantes.  
   
--   [Principes de base de l’élément Table](#table_basics)  
+- [Principes de base de l’élément Table](#table_basics)  
   
--   [Différences entre l’élément Table et l’élément Grid](#table_vs_Grid)  
+- [Différences entre l’élément Table et l’élément Grid](#table_vs_Grid)  
   
--   [Structure de base de l’élément Table](#basic_table_structure)  
+- [Structure de base de l’élément Table](#basic_table_structure)  
   
--   [Imbrication des tables](#table_containment)  
+- [Imbrication des tables](#table_containment)  
   
--   [Regroupements de lignes](#row_groupings)  
+- [Regroupements de lignes](#row_groupings)  
   
--   [Priorité du rendu en arrière-plan](#rendering_precedence)  
+- [Priorité du rendu en arrière-plan](#rendering_precedence)  
   
--   [Étendue des lignes et des colonnes](#spanning_rows_or_columns)  
+- [Étendue des lignes et des colonnes](#spanning_rows_or_columns)  
   
--   [Génération d’une table avec du code](#building_a_table_with_code)  
+- [Génération d’une table avec du code](#building_a_table_with_code)  
   
--   [Rubriques connexes] 
+- [Rubriques connexes] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Principes de base de l’élément Table  
@@ -50,15 +50,15 @@ ms.locfileid: "59317660"
 ### <a name="basic-table-structure"></a>Structure de base de l’élément Table  
  <xref:System.Windows.Documents.Table> Fournit une présentation sous forme de grille composée de colonnes (représentées par <xref:System.Windows.Documents.TableColumn> éléments) et des lignes (représentées par <xref:System.Windows.Documents.TableRow> éléments). <xref:System.Windows.Documents.TableColumn> éléments n’hébergent pas de contenu ; ils définissent simplement les colonnes et les caractéristiques des colonnes. <xref:System.Windows.Documents.TableRow> les éléments doivent être hébergés dans un <xref:System.Windows.Documents.TableRowGroup> élément, qui définit un regroupement de lignes pour la table. <xref:System.Windows.Documents.TableCell> éléments qui contiennent le contenu devant être présenté dans la table, doivent être hébergés dans un <xref:System.Windows.Documents.TableRow> élément. <xref:System.Windows.Documents.TableCell> peut uniquement contenir des éléments qui dérivent de <xref:System.Windows.Documents.Block>.  Les éléments enfants valides pour un <xref:System.Windows.Documents.TableCell> inclure.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> éléments ne peuvent pas héberger directement le contenu de texte. Pour plus d’informations sur les règles de relation contenant-contenu de flux tels que les éléments de contenu <xref:System.Windows.Documents.TableCell>, consultez [vue d’ensemble du Document de flux](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317660"
 ### <a name="table-containment"></a>Imbrication des tables  
  <xref:System.Windows.Documents.Table> dérive le <xref:System.Windows.Documents.Block> élément et respecte les règles communes applicables <xref:System.Windows.Documents.Block> éléments de niveau.  Un <xref:System.Windows.Documents.Table> élément peut être contenu par chacun des éléments suivants :  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Regroupements de lignes  

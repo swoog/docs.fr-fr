@@ -18,11 +18,11 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053871"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marquage des événements routés comme étant gérés et gestion de classe
 Les gestionnaires d’un événement routé peuvent marquer l’événement comme étant géré dans les données d’événement. La gestion de l’événement a pour effet de raccourcir efficacement l’itinéraire. La gestion de classe est un concept de programmation pris en charge par les événements routés. Un gestionnaire de classe peut gérer un événement routé particulier au niveau d’une classe à l’aide d’un gestionnaire appelé avant tout gestionnaire d’instance sur une instance de la classe.  
@@ -57,9 +57,9 @@ Les gestionnaires d’un événement routé peuvent marquer l’événement comm
   
  À un niveau plus approfondi que l’itinéraire d’événement se trouvent également des gestionnaires de classe potentiellement multiples qui agissent sur une instance donnée d’une classe. Cela est dû au fait que le modèle de gestion de classe des événements routés permet à toutes les classes possibles d’une hiérarchie de classes d’enregistrer chacune son propre gestionnaire de classe pour chaque événement routé. Chaque gestionnaire de classe est ajouté à un magasin interne, et quand l’itinéraire d’événement d’une application est construit, les gestionnaires de classe sont tous ajoutés à l’itinéraire d’événement. Les gestionnaires de classe sont ajoutés à l’itinéraire de sorte que le gestionnaire de classe le plus dérivé soit appelé en premier et que les gestionnaires de chaque classe de base consécutive soient appelés ensuite. En règle générale, les gestionnaires de classe ne sont pas enregistrés de sorte qu’ils répondent aussi aux événements routés qui étaient déjà marqués comme étant gérés. Par conséquent, ce mécanisme de gestion de classe permet d’opter pour l’un des deux choix suivants :  
   
--   Les classes dérivées peuvent compléter la gestion de classe héritée de la classe de base en ajoutant un gestionnaire qui ne marque pas l’événement routé comme étant géré, car le gestionnaire de classe de base sera appelé peu de temps après le gestionnaire de classe dérivé.  
+- Les classes dérivées peuvent compléter la gestion de classe héritée de la classe de base en ajoutant un gestionnaire qui ne marque pas l’événement routé comme étant géré, car le gestionnaire de classe de base sera appelé peu de temps après le gestionnaire de classe dérivé.  
   
--   Les classes dérivées peuvent remplacer la gestion de classe à partir de la classe de base en ajoutant un gestionnaire de classe qui marque l’événement routé comme étant géré. Vous devez être prudent avec cette approche, car elle est susceptible de changer la conception du contrôle de base prévu dans des domaines tels que l’apparence visuelle, la logique d’état, la gestion des entrées et la gestion des commandes.  
+- Les classes dérivées peuvent remplacer la gestion de classe à partir de la classe de base en ajoutant un gestionnaire de classe qui marque l’événement routé comme étant géré. Vous devez être prudent avec cette approche, car elle est susceptible de changer la conception du contrôle de base prévu dans des domaines tels que l’apparence visuelle, la logique d’état, la gestion des entrées et la gestion des commandes.  
   
 <a name="Class_Handling_of_Routed_Events"></a>   
 ## <a name="class-handling-of-routed-events-by-control-base-classes"></a>Gestion de classe des événements routés par les classes de base de contrôle  

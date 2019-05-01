@@ -3,11 +3,11 @@ title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051908"
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  
@@ -17,13 +17,13 @@ Cet exemple présente la sécurité fédérée :
   
  Le scénario comporte 4 parties :  
   
--   Service BookStore  
+- Service BookStore  
   
--   STS BookStore  
+- STS BookStore  
   
--   STS HomeRealm  
+- STS HomeRealm  
   
--   Client BookStore  
+- Client BookStore  
   
  Le service BookStore prend en charge deux opérations : `BrowseBooks` et `BuyBook`. Il autorise l'accès anonyme à l'opération `BrowseBooks`, mais requiert l'authentification pour accéder à l'opération `BuyBooks`. L'authentification prend la forme d'un jeton émis par le STS BookStore. Le fichier de configuration du service BookStore pointe des clients sur le STS BookStore à l'aide de `wsFederationHttpBinding`.  
   

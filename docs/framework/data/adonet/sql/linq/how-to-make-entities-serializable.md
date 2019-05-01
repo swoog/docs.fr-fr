@@ -3,11 +3,11 @@ title: 'Procédure : Rendre les entités sérialisables'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
 ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033798"
 ---
 # <a name="how-to-make-entities-serializable"></a>Procédure : Rendre les entités sérialisables
 Vous pouvez rendre des entités sérialisables lorsque vous générez votre code. Les classes d'entité sont décorées avec l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> et les colonnes avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute>.  

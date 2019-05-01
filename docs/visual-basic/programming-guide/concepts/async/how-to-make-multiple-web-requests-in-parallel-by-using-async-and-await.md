@@ -3,11 +3,11 @@ title: 'Procédure : Effectuer plusieurs requêtes Web en parallèle en utilisa
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021997"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procédure : Effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)
 Dans une méthode asynchrone, les tâches sont démarrées quand elles sont créées. Le [Await](../../../../visual-basic/language-reference/operators/await-operator.md) opérateur est appliqué à la tâche au point dans la méthode où le traitement ne peut pas continuer jusqu'à ce que la tâche se termine. Souvent, une tâche est attendue dès sa création, comme le montre l’exemple suivant.  
@@ -46,11 +46,11 @@ Dim result = Await myTask
   
 1. Pour configurer une application WPF, effectuez les étapes suivantes. Vous trouverez des instructions détaillées pour ces étapes dans [Procédure pas à pas : Accès Web à l’aide d’Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Créez une application WPF qui contient une zone de texte et un bouton. Nommez le bouton `startButton` et la zone de texte `resultsTextBox`.  
+    - Créez une application WPF qui contient une zone de texte et un bouton. Nommez le bouton `startButton` et la zone de texte `resultsTextBox`.  
   
-    -   Ajoutez une référence pour <xref:System.Net.Http>.  
+    - Ajoutez une référence pour <xref:System.Net.Http>.  
   
-    -   Dans le fichier MainWindow.xaml.vb, ajoutez un `Imports` instruction pour `System.Net.Http`.  
+    - Dans le fichier MainWindow.xaml.vb, ajoutez un `Imports` instruction pour `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Pour ajouter le code  
   
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Ajoutez les méthodes de prise en charge suivantes au projet :  
   
-    -   `ProcessURLAsync` utilise une méthode <xref:System.Net.Http.HttpClient> pour télécharger le contenu d’un site web sous la forme d’un tableau d’octets. La méthode de prise en charge, `ProcessURLAsync`, affiche et retourne ensuite la longueur du tableau.  
+    - `ProcessURLAsync` utilise une méthode <xref:System.Net.Http.HttpClient> pour télécharger le contenu d’un site web sous la forme d’un tableau d’octets. La méthode de prise en charge, `ProcessURLAsync`, affiche et retourne ensuite la longueur du tableau.  
   
-    -   `DisplayResults` affiche le nombre d’octets dans le tableau d’octets pour chaque URL. Cet affichage indique quand le téléchargement de chaque tâche est terminé.  
+    - `DisplayResults` affiche le nombre d’octets dans le tableau d’octets pour chaque URL. Cet affichage indique quand le téléchargement de chaque tâche est terminé.  
   
      Copiez les méthodes suivantes, puis collez-les après le `startButton_Click` Gestionnaire d’événements dans MainWindow.xaml.vb.  
   
@@ -96,13 +96,13 @@ Dim result = Await myTask
   
 4. Pour finir, définissez la méthode `CreateMultipleTasksAsync`, qui effectue les étapes suivantes.  
   
-    -   La méthode déclare un objet `HttpClient`, dont vous avez besoin pour accéder à la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> dans `ProcessURLAsync`.  
+    - La méthode déclare un objet `HttpClient`, dont vous avez besoin pour accéder à la méthode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> dans `ProcessURLAsync`.  
   
-    -   La méthode crée et démarre trois tâches de type <xref:System.Threading.Tasks.Task%601>, où `TResult` est un entier. À mesure que chaque tâche se termine, `DisplayResults` affiche son URL et la longueur du contenu téléchargé. Les tâches s’exécutant de façon asynchrone, l’ordre d’affichage des résultats peut différer de celui dans lequel les tâches ont été déclarées.  
+    - La méthode crée et démarre trois tâches de type <xref:System.Threading.Tasks.Task%601>, où `TResult` est un entier. À mesure que chaque tâche se termine, `DisplayResults` affiche son URL et la longueur du contenu téléchargé. Les tâches s’exécutant de façon asynchrone, l’ordre d’affichage des résultats peut différer de celui dans lequel les tâches ont été déclarées.  
   
-    -   La méthode attend l’achèvement de chaque tâche. Chaque opérateur `Await` suspend l’exécution de `CreateMultipleTasksAsync` jusqu’à la fin de la tâche attendue. L’opérateur récupère également la valeur de retour de l’appel à `ProcessURLAsync` à partir de chaque tâche terminée.  
+    - La méthode attend l’achèvement de chaque tâche. Chaque opérateur `Await` suspend l’exécution de `CreateMultipleTasksAsync` jusqu’à la fin de la tâche attendue. L’opérateur récupère également la valeur de retour de l’appel à `ProcessURLAsync` à partir de chaque tâche terminée.  
   
-    -   Une fois les tâches terminées et les valeurs entières récupérées, la méthode additionne les longueurs des sites web et affiche le résultat.  
+    - Une fois les tâches terminées et les valeurs entières récupérées, la méthode additionne les longueurs des sites web et affiche le résultat.  
   
      Copiez la méthode suivante et collez-la dans votre solution.  
   

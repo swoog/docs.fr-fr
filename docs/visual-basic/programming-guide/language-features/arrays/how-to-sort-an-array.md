@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053658"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Procédure : Trier un tableau en Visual Basic
 Cet exemple déclare un tableau de `String` objets nommés `zooAnimals`, il remplit, puis le tri par ordre alphabétique.  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Accès à Mscorlib.dll et <xref:System> espace de noms.  
+- Accès à Mscorlib.dll et <xref:System> espace de noms.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Tableau est vide (<xref:System.ArgumentNullException> classe)  
+- Tableau est vide (<xref:System.ArgumentNullException> classe)  
   
--   Tableau est multidimensionnel (<xref:System.RankException> classe)  
+- Tableau est multidimensionnel (<xref:System.RankException> classe)  
   
--   Un ou plusieurs éléments du tableau n’implémentent pas le <xref:System.IComparable> interface (<xref:System.InvalidOperationException> classe)  
+- Un ou plusieurs éléments du tableau n’implémentent pas le <xref:System.IComparable> interface (<xref:System.InvalidOperationException> classe)  
   
 ## <a name="see-also"></a>Voir aussi
 

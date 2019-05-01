@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a676989bdc6866f85fabe3e15b1e6b7b8b5a9a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000712"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc, méthode
 
@@ -47,7 +47,7 @@ PVOID Alloc (
 
  Le `Alloc` méthode doit être utilisée conjointement avec la [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) (méthode).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 
  **En-tête :** CorProf.idl, CorProf.h

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047007"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM
 Windows Communication Foundation (WCF) fournit au développeur de code managé avec un environnement riche pour la création d’applications connectées. Toutefois, si vous avez beaucoup investi dans le code COM non managé et que vous ne souhaitez pas migrer, vous pouvez toujours intégrer les services Web WCF directement dans votre code existant à l’aide du moniker de service WCF. Le moniker de service peut être utilisé à partir d'une large gamme d'environnements de développement COM, tels qu'Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) fournit au développeur de code managé a
   
  En commun avec d’autres clients WCF, lors de l’utilisation du moniker, les applications spécifier l’adresse, la liaison et le contrat pour communiquer avec un service. Le contrat peut être spécifié (au choix) comme suit :  
   
--   Contrat typé : le contrat est enregistré sur l'ordinateur client sous la forme d'un type visible par COM.  
+- Contrat typé : le contrat est enregistré sur l'ordinateur client sous la forme d'un type visible par COM.  
   
--   Contrat WSDL : le contrat est fourni sous forme de document WSDL.  
+- Contrat WSDL : le contrat est fourni sous forme de document WSDL.  
   
--   Contrat MEX : le contrat est récupéré pendant l'exécution depuis un point de terminaison d'échange de métadonnées (Metadata Exchange, MEX).  
+- Contrat MEX : le contrat est récupéré pendant l'exécution depuis un point de terminaison d'échange de métadonnées (Metadata Exchange, MEX).  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Paramètres pris en charge par le moniker de service  
  Le tableau suivant contient les paramètres pris en charge par le moniker de service.  

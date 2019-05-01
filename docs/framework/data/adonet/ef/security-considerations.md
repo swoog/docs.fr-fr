@@ -3,11 +3,11 @@ title: Considérations sur la sécurité (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033967"
 ---
 # <a name="security-considerations-entity-framework"></a>Considérations sur la sécurité (Entity Framework)
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution d'applications [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sécurisées. Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -18,11 +18,11 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 #### <a name="use-only-trusted-data-source-providers"></a>Utilisez uniquement des fournisseurs de sources de données approuvés.  
  Pour communiquer avec la source de données, un fournisseur doit effectuer les opérations suivantes :  
   
--   recevoir la chaîne de connexion d'[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ;  
+- recevoir la chaîne de connexion d'[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ;  
   
--   traduire l’arborescence de commandes en langage de requête natif de la source de données ;  
+- traduire l’arborescence de commandes en langage de requête natif de la source de données ;  
   
--   assembler et retourner des jeux de résultats.  
+- assembler et retourner des jeux de résultats.  
   
  Pendant l'opération d'ouverture de session, les informations qui sont basées sur le mot de passe de l'utilisateur sont passées au serveur via bibliothèques réseau de la source de données sous-jacente. Un fournisseur malveillant peut voler les informations d'identification de l'utilisateur, générer des requêtes malveillantes ou falsifier le jeu de résultats.  
   
@@ -32,19 +32,19 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 #### <a name="secure-the-connection-string"></a>Sécurisez la chaîne de connexion.  
  La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée ou si elle n'est pas correctement construite. Lorsque vous stockez les informations de connexion au format texte brut ou que vous les conservez dans la mémoire, vous risquez de compromettre l'ensemble de votre système. Les méthodes recommandées pour sécuriser des chaînes de connexion sont les suivantes :  
   
--   Utilisez l'authentification Windows avec une source de données SQL Server.  
+- Utilisez l'authentification Windows avec une source de données SQL Server.  
   
      Lorsque vous utilisez l'authentification Windows pour vous connecter à une source de données SQL Server, la chaîne de connexion ne contient pas d'informations d'ouverture de session et de mot de passe.  
   
--   Chiffrez les sections du fichier de configuration à l'aide d'une configuration protégée.  
+- Chiffrez les sections du fichier de configuration à l'aide d'une configuration protégée.  
   
      ASP.NET fournit une nouvelle fonctionnalité, appelée « configuration protégée », qui vous permet de chiffrer les informations sensibles dans un fichier de configuration. Bien qu'elle ait été conçue à l'origine pour ASP.NET, vous pouvez utiliser la configuration protégée pour chiffrer les sections des fichiers de configuration dans des applications Windows. Pour obtenir une description détaillée des nouvelles fonctionnalités de configuration protégée, consultez [chiffrement Configuration des informations à l’aide de la Configuration protégée](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
--   Stockez les chaînes de connexion dans des fichiers de configuration sécurisés.  
+- Stockez les chaînes de connexion dans des fichiers de configuration sécurisés.  
   
      Vous ne devez jamais incorporer des chaînes de connexion dans votre code source. Vous pouvez stocker des chaînes de connexion dans des fichiers de configuration, ce qui évite d'avoir à les incorporer dans le code de votre application. Par défaut, l'Assistant EDM stocke les chaînes de connexion dans le fichier de configuration de l'application. Vous devez sécuriser ce fichier pour empêcher l'accès non autorisé.  
   
--   Utilisez des générateurs de chaînes de connexion lors de la création dynamique de connexions.  
+- Utilisez des générateurs de chaînes de connexion lors de la création dynamique de connexions.  
   
      Si vous devez construire des chaînes de connexion au moment de l'exécution, utilisez la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Cette classe du générateur de chaînes permet d'empêcher les attaques par injection de chaîne de connexion en validant et en plaçant dans une séquence d'échappement les informations d'entrée non valides. Pour plus d'informations, voir [Procédure : Créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Utilisez également la classe de générateur de chaînes appropriée pour construire la chaîne de connexion de source de données qui fait partie de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] chaîne de connexion. Pour plus d’informations sur les générateurs de chaînes de connexion pour les fournisseurs ADO.NET, consultez [générateurs de chaînes de connexion](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
@@ -65,15 +65,15 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 #### <a name="run-applications-with-the-minimum-permissions"></a>Exécutez les applications avec les autorisations minimales.  
  Lorsque vous permettez à une application managée de s'exécuter avec une autorisation de confiance totale, le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ne limite pas l'accès de l'application à votre ordinateur. De ce fait, une faille de sécurité dans votre application risque de compromettre l'ensemble de votre système. Pour utiliser la sécurité d'accès du code et d'autres mécanismes de sécurité dans le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], vous devez exécuter les applications en utilisant des autorisations de confiance partielle et avec l'ensemble minimal des autorisations qui sont requises pour permettre à l'application de fonctionner. Les autorisations d'accès au code suivantes sont les autorisations minimales requises par votre application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] :  
   
--   <xref:System.Security.Permissions.FileIOPermission> : <xref:System.Security.Permissions.FileIOPermissionAccess.Write> pour ouvrir les fichiers de métadonnées spécifiés ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> pour rechercher des fichiers de métadonnées dans un répertoire.  
+- <xref:System.Security.Permissions.FileIOPermission> : <xref:System.Security.Permissions.FileIOPermissionAccess.Write> pour ouvrir les fichiers de métadonnées spécifiés ou <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> pour rechercher des fichiers de métadonnées dans un répertoire.  
   
--   <xref:System.Security.Permissions.ReflectionPermission> : <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> pour prendre en charge des requêtes LINQ to Entities.  
+- <xref:System.Security.Permissions.ReflectionPermission> : <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> pour prendre en charge des requêtes LINQ to Entities.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> pour s'inscrire dans un objet <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> pour s'inscrire dans un objet <xref:System.Transactions><xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission> : <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l'aide de l'interface <xref:System.Runtime.Serialization.ISerializable>.  
+- <xref:System.Security.Permissions.SecurityPermission> : <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l'aide de l'interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, telles que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
+- Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, telles que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
   
  Pour plus d'informations, consultez [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -94,31 +94,31 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
 #### <a name="prevent-sql-injection-attacks"></a>Empêchez les attaques par injection de code SQL.  
  Les applications reçoivent fréquemment des entrées externes (provenant d'un utilisateur ou d'un autre agent externe) et exécutent des actions en fonction de ces entrées. Toute entrée qui provient directement ou indirectement d'un utilisateur ou d'un agent externe doit avoir un contenu qui utilise la syntaxe du langage cible afin d'exécuter des actions non autorisées. Lorsque le langage cible est un langage SQL, tel que [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], cette manipulation est appelée « attaque par injection de code SQL ». Un utilisateur malveillant peut injecter des commandes directement dans la requête et déposer une table de base de données, provoquer un déni de service ou modifier d’une manière ou d’une autre la nature de l’opération en cours.  
   
--   Attaques par injection [!INCLUDE[esql](../../../../../includes/esql-md.md)] :  
+- Attaques par injection [!INCLUDE[esql](../../../../../includes/esql-md.md)] :  
   
      Les attaques par injection de code SQL peuvent être effectuées dans [!INCLUDE[esql](../../../../../includes/esql-md.md)] en fournissant une entrée malveillante à des valeurs qui sont utilisées dans un prédicat de requête et dans les noms de paramètres. Pour éviter le risque d'injection de code SQL, vous ne devez jamais associer une entrée d'utilisateur à un texte de commande [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
      Les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] acceptent des paramètres partout où des littéraux sont admis. Vous devez utiliser des requêtes paramétrables plutôt que d'injecter des littéraux directement dans la requête à partir d'un agent externe. Vous devez également envisager d’utiliser [méthodes du Générateur de requêtes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) pour construire sans risque Entity SQL.  
   
--   Attaques par injection [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] :  
+- Attaques par injection [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] :  
   
      Bien qu'il soit possible de composer des requêtes dans [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], cette opération est effectuée via l'API de modèle objet. Contrairement aux requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)], les requêtes [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ne sont pas composées par manipulation ou concaténation de chaînes, et elles ne sont pas sujettes à des attaques par injection de code SQL au sens classique du terme.  
   
 #### <a name="prevent-very-large-result-sets"></a>Évitez les jeux de résultats très volumineux.  
  Un jeu de résultats très volumineux pourrait entraîner l'arrêt du système client si le client effectue des opérations qui consomment des ressources proportionnelles à la taille du jeu de résultats. Les jeux de résultats volumineux inattendus peuvent se produire dans les conditions suivantes :  
   
--   dans les requêtes qui n'incluent pas de conditions de filtre appropriées sur une base de données volumineuse ;  
+- dans les requêtes qui n'incluent pas de conditions de filtre appropriées sur une base de données volumineuse ;  
   
--   dans les requêtes qui créent des jointures cartésiennes sur le serveur ;  
+- dans les requêtes qui créent des jointures cartésiennes sur le serveur ;  
   
--   dans les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] imbriquées.  
+- dans les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] imbriquées.  
   
  Lorsque vous acceptez une entrée d'utilisateur, vous devez vous assurer que l'entrée ne peut pas générer des jeux de résultats plus volumineux que ce que le système peut gérer. Vous pouvez également utiliser le <xref:System.Linq.Queryable.Take%2A> méthode dans [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ou [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) opérateur dans [!INCLUDE[esql](../../../../../includes/esql-md.md)] pour limiter la taille du jeu de résultats.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Évitez de retourner les résultats IQueryable lors de l'exposition de méthodes à des appelants potentiellement non fiables.  
  Évitez de retourner des types <xref:System.Linq.IQueryable%601> des méthodes exposées aux appelants potentiellement non fiables pour les raisons suivantes :  
   
--   Le consommateur d'une requête qui expose un type <xref:System.Linq.IQueryable%601> pourrait appeler des méthodes qui exposent des données sécurisées ou augmentent la taille du jeu de résultats. Par exemple, considérez la signature de méthode suivante :  
+- Le consommateur d'une requête qui expose un type <xref:System.Linq.IQueryable%601> pourrait appeler des méthodes qui exposent des données sécurisées ou augmentent la taille du jeu de résultats. Par exemple, considérez la signature de méthode suivante :  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
@@ -126,7 +126,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
      Un consommateur de cette requête pourrait appeler `.Include("Orders")` sur le `IQueryable<Customer>` retourné pour récupérer des données que la requête ne projette pas d'exposer. Cela peut être évité en modifiant le type de retour de la méthode en <xref:System.Collections.Generic.IEnumerable%601> et en appelant une méthode (telle que `.ToList()`) qui matérialise les résultats.  
   
--   Parce que les requêtes <xref:System.Linq.IQueryable%601> sont exécutées lorsque les résultats sont itérés, le consommateur d'une requête qui expose un type <xref:System.Linq.IQueryable%601> pourrait intercepter des exceptions levées. Les exceptions pourraient contenir des informations non prévues pour le consommateur.  
+- Parce que les requêtes <xref:System.Linq.IQueryable%601> sont exécutées lorsque les résultats sont itérés, le consommateur d'une requête qui expose un type <xref:System.Linq.IQueryable%601> pourrait intercepter des exceptions levées. Les exceptions pourraient contenir des informations non prévues pour le consommateur.  
   
 ## <a name="security-considerations-for-entities"></a>Considérations sur la sécurité pour les entités  
  Les considérations sur la sécurité suivantes s'appliquent lors de la génération et l'utilisation de types d'entités.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050309"
 ---
 # <a name="mysettings-object"></a>My.Settings, objet
 Fournit des propriétés et méthodes permettant d’accéder aux paramètres de l’application.  
@@ -25,13 +25,13 @@ Fournit des propriétés et méthodes permettant d’accéder aux paramètres de
   
  Chaque paramètre a un **nom**, **Type**, **étendue**, et **valeur**, et ces paramètres déterminent comment la propriété qui accède à chaque paramètre s’affiche dans le `My.Settings` objet :  
   
--   **Nom** détermine le nom de la propriété.  
+- **Nom** détermine le nom de la propriété.  
   
--   **Type** détermine le type de la propriété.  
+- **Type** détermine le type de la propriété.  
   
--   **Étendue** indique si la propriété est en lecture seule. Si la valeur est **Application**, la propriété est en lecture seule ; si la valeur est **utilisateur**, la propriété est en lecture-écriture.  
+- **Étendue** indique si la propriété est en lecture seule. Si la valeur est **Application**, la propriété est en lecture seule ; si la valeur est **utilisateur**, la propriété est en lecture-écriture.  
   
--   **Valeur** est la valeur par défaut de la propriété.  
+- **Valeur** est la valeur par défaut de la propriété.  
   
 ## <a name="methods"></a>Méthodes  
   

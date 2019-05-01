@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012709"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Vue d'ensemble de l'utilisation des contrôles dans Windows Forms
 Cette rubrique décrit les éléments essentiels d’une application Windows Forms et fournit un exemple simple qui utilise des contrôles et gère les événements dans une application Windows Forms.  
@@ -22,9 +22,9 @@ Cette rubrique décrit les éléments essentiels d’une application Windows For
 ## <a name="simple-windows-forms-applications"></a>Applications de formulaires Windows simple  
  Au minimum, une application Windows Forms se compose des éléments suivants :  
   
--   Une ou plusieurs classes qui dérivent de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Une ou plusieurs classes qui dérivent de <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Un `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> et transmet un <xref:System.Windows.Forms.Form> instance à ce dernier. Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.  
+- Un `Main` méthode qui appelle le `static` (`shared` en Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> et transmet un <xref:System.Windows.Forms.Form> instance à ce dernier. Le <xref:System.Windows.Forms.Application.Run%2A> méthode traite les messages à partir du système d’exploitation à l’application.  
   
  L’exemple de code suivant montre les éléments essentiels d’une application Windows Forms.  
   

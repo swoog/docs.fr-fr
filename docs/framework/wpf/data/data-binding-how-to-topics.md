@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
 ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023752"
 ---
 # <a name="data-binding-how-to-topics"></a>Rubriques "Comment" relatives aux liaisons de données
 Les rubriques de cette section décrivent comment utiliser la liaison de données pour lier des éléments à des données à partir de diverses sources de données sous la forme d’objets common language runtime (CLR) et XML.  

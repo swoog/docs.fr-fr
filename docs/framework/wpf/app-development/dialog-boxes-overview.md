@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052259"
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
 Les applications autonomes ont en général une fenêtre principale qui affiche les données principales sur lesquelles l’application fonctionne et expose les fonctionnalités pour traiter ces données via [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des mécanismes tels que les barres de menus, barres d’outils et barres d’état. Une application non triviale peut également afficher des fenêtres supplémentaires pour effectuer les opérations suivantes :  
   
--   Présenter des informations spécifiques aux utilisateurs  
+- Présenter des informations spécifiques aux utilisateurs  
   
--   Recueillir des informations auprès des utilisateurs  
+- Recueillir des informations auprès des utilisateurs  
   
--   Afficher et recueillir des informations  
+- Afficher et recueillir des informations  
   
  Ces types de fenêtres sont appelées *boîtes de dialogue*, et il existe deux types : modales et non modales.  
   
@@ -122,27 +122,27 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 #### <a name="configuring-a-modal-dialog-box"></a>Configuration d’une boîte de dialogue modale  
  L’interface utilisateur pour une boîte de dialogue classique comprend les éléments suivants :  
   
--   Les différents contrôles nécessaires pour recueillir les données souhaitées  
+- Les différents contrôles nécessaires pour recueillir les données souhaitées  
   
--   Montrant un **OK** bouton que les utilisateurs cliquez sur pour fermer la boîte de dialogue, revenir à la fonction et continuent le traitement.  
+- Montrant un **OK** bouton que les utilisateurs cliquez sur pour fermer la boîte de dialogue, revenir à la fonction et continuent le traitement.  
   
--   Montrant un **Annuler** bouton que les utilisateurs cliquent pour fermer la boîte de dialogue et arrêter la traitement de la fonction.  
+- Montrant un **Annuler** bouton que les utilisateurs cliquent pour fermer la boîte de dialogue et arrêter la traitement de la fonction.  
   
--   Montrant un **fermer** bouton dans la barre de titre.  
+- Montrant un **fermer** bouton dans la barre de titre.  
   
--   Une icône  
+- Une icône  
   
--   Affichage **réduire**, **agrandir**, et **restaurer** boutons.  
+- Affichage **réduire**, **agrandir**, et **restaurer** boutons.  
   
--   Montrant un **système** menu pour réduire, agrandir, restaurer et fermer la boîte de dialogue.  
+- Montrant un **système** menu pour réduire, agrandir, restaurer et fermer la boîte de dialogue.  
   
--   L’ouverture par-dessus et au centre de la fenêtre qui a ouvert la boîte de dialogue  
+- L’ouverture par-dessus et au centre de la fenêtre qui a ouvert la boîte de dialogue  
   
--   Les boîtes de dialogue doivent être redimensionnables dans la mesure du possible. Ainsi, pour empêcher que la boîte de dialogue soit trop petite et pour proposer à l’utilisateur une taille par défaut utile, vous devez définir respectivement des dimensions par défaut et minimales.  
+- Les boîtes de dialogue doivent être redimensionnables dans la mesure du possible. Ainsi, pour empêcher que la boîte de dialogue soit trop petite et pour proposer à l’utilisateur une taille par défaut utile, vous devez définir respectivement des dimensions par défaut et minimales.  
   
--   En appuyant sur la touche ÉCHAP doit être configuré comme un raccourci clavier qui provoque le **Annuler** bouton à enfoncer. Cela s’effectue en définissant le <xref:System.Windows.Controls.Button.IsCancel%2A> propriété de la **Annuler** bouton à `true`.  
+- En appuyant sur la touche ÉCHAP doit être configuré comme un raccourci clavier qui provoque le **Annuler** bouton à enfoncer. Cela s’effectue en définissant le <xref:System.Windows.Controls.Button.IsCancel%2A> propriété de la **Annuler** bouton à `true`.  
   
--   En appuyant sur la touche entrée (ou retour) doit être configuré comme un raccourci clavier qui provoque le **OK** bouton à enfoncer. Cela s’effectue en définissant le <xref:System.Windows.Controls.Button.IsDefault%2A> propriété de la **OK** bouton `true`.  
+- En appuyant sur la touche entrée (ou retour) doit être configuré comme un raccourci clavier qui provoque le **OK** bouton à enfoncer. Cela s’effectue en définissant le <xref:System.Windows.Controls.Button.IsDefault%2A> propriété de la **OK** bouton `true`.  
   
  Le code suivant illustre cette configuration.  
   
@@ -183,13 +183,13 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 #### <a name="validating-user-provided-data"></a>Validation des données fournies par l’utilisateur  
  Quand une boîte de dialogue est ouverte et que l’utilisateur fournit les données requises, une boîte de dialogue est chargée de vérifier que les données fournies sont valides pour les raisons suivantes :  
   
--   Du point de vue de la sécurité, toutes les entrées doivent être validées.  
+- Du point de vue de la sécurité, toutes les entrées doivent être validées.  
   
--   D’un point de vue propre au domaine, la validation des données empêche que des données erronées soient traitées par le code, ce qui pourrait éventuellement lever des exceptions.  
+- D’un point de vue propre au domaine, la validation des données empêche que des données erronées soient traitées par le code, ce qui pourrait éventuellement lever des exceptions.  
   
--   Du point de vue de l’expérience utilisateur, une boîte de dialogue peut aider les utilisateurs en leur montrant lesquelles des données entrées ne sont pas valides.  
+- Du point de vue de l’expérience utilisateur, une boîte de dialogue peut aider les utilisateurs en leur montrant lesquelles des données entrées ne sont pas valides.  
   
--   Du point de vue des performances, la validation des données dans une application multicouche peut réduire le nombre d’allers-retours entre le client et les couches Application, en particulier quand l’application est composée de services web ou de bases de données basées sur serveur.  
+- Du point de vue des performances, la validation des données dans une application multicouche peut réduire le nombre d’allers-retours entre le client et les couches Application, en particulier quand l’application est composée de services web ou de bases de données basées sur serveur.  
   
  Pour valider un contrôle dépendant dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vous devez définir une règle de validation et l’associer à la liaison. Une règle de validation est une classe personnalisée qui dérive de <xref:System.Windows.Controls.ValidationRule>. L’exemple suivant montre une règle de validation, `MarginValidationRule`, qui vérifie qu’une valeur liée est un <xref:System.Double> et se trouve dans une plage spécifiée.  
   
@@ -329,11 +329,11 @@ Les applications autonomes ont en général une fenêtre principale qui affiche 
 #### <a name="closing-a-modeless-dialog-box"></a>Fermeture d’une boîte de dialogue non modale  
  Étant donné que <xref:System.Windows.Window.DialogResult%2A> n’a pas besoin d’être définie, une boîte de dialogue non modale peut être fermée à l’aide du système fournissent des mécanismes, y compris les éléments suivants :  
   
--   En cliquant sur le **fermer** bouton dans la barre de titre.  
+- En cliquant sur le **fermer** bouton dans la barre de titre.  
   
--   en appuyant sur Alt+F4 ;  
+- en appuyant sur Alt+F4 ;  
   
--   En choisissant **fermer** à partir de la **système** menu.  
+- En choisissant **fermer** à partir de la **système** menu.  
   
  Ou bien, votre code peut appeler <xref:System.Windows.Window.Close%2A> lorsque le **fermer** bouton.  
   

@@ -3,11 +3,11 @@ title: jeu d'associations
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034610"
 ---
 # <a name="association-set"></a>jeu d'associations
 Un *ensemble d’associations* est un conteneur logique pour [association](../../../../docs/framework/data/adonet/association-type.md) instances du même type. Un ensemble d'associations n'est pas une construction de modélisation des données ; autrement dit, il ne décrit ni la structure de données ni les relations. Au lieu de cela, un ensemble d'associations fournit une construction pour un environnement d'hébergement ou de stockage (tel que le Common Language Runtime ou une base de données SQL Server) pour regrouper des instances d'association afin qu'elles puissent être mappées à un magasin de données.  
@@ -16,11 +16,11 @@ Un *ensemble d’associations* est un conteneur logique pour [association](../..
   
  Une définition d'ensemble d'associations contient les informations suivantes :  
   
--   Nom de l'ensemble d'associations. (Requis)  
+- Nom de l'ensemble d'associations. (Requis)  
   
--   Association dont l'ensemble d'associations contient des instances. (Requis)  
+- Association dont l'ensemble d'associations contient des instances. (Requis)  
   
--   Deux [terminaisons d’ensemble d’associations](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Deux [terminaisons d’ensemble d’associations](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Exemple  
  Le diagramme suivant montre un modèle conceptuel avec deux associations : `PublishedBy` et `WrittenBy`. Bien que les informations sur les ensembles d'associations ne soient pas transmises au diagramme, le diagramme suivant montre un exemple d'ensembles d'associations et de jeux d'entités basés sur ce modèle.  

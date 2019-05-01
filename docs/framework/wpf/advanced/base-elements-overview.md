@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032056"
 ---
 # <a name="base-elements-overview"></a>Vue d'ensemble des éléments de base
 Un pourcentage élevé de classes dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est dérivé de quatre classes souvent appelées classes d’éléments de base dans la documentation du [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Ces classes sont <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, et <xref:System.Windows.FrameworkContentElement>. Le <xref:System.Windows.DependencyObject> classe est également liée, car c’est une classe de base commune des deux <xref:System.Windows.UIElement> et <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ Un pourcentage élevé de classes dans [!INCLUDE[TLA#tla_winclient](../../../../
   
  Si vous créez une classe qui dérive de <xref:System.Windows.DependencyObject>, vous héritez des fonctionnalités suivantes :  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> prise en charge et la prise en charge du système de propriétés Général.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> et <xref:System.Windows.DependencyObject.SetValue%2A> prise en charge et la prise en charge du système de propriétés Général.  
   
--   Capacité d’utiliser les propriétés de dépendance et les propriétés jointes implémentées comme propriétés de dépendance.  
+- Capacité d’utiliser les propriétés de dépendance et les propriétés jointes implémentées comme propriétés de dépendance.  
   
  Si vous créez une classe qui dérive de <xref:System.Windows.UIElement>, vous héritez des fonctionnalités suivantes en plus de celles fournies par <xref:System.Windows.DependencyObject>:  
   
--   Prise en charge de base pour les valeurs de propriété animées. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
+- Prise en charge de base pour les valeurs de propriété animées. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
   
--   Prise en charge de base des événements d’entrée et prise en charge des commandes. Pour plus d’informations, consultez [Vue d’ensemble des entrées](input-overview.md) et [Vue d’ensemble des commandes](commanding-overview.md).  
+- Prise en charge de base des événements d’entrée et prise en charge des commandes. Pour plus d’informations, consultez [Vue d’ensemble des entrées](input-overview.md) et [Vue d’ensemble des commandes](commanding-overview.md).  
   
--   Méthodes virtuelles qui peuvent être substituées pour fournir des informations à un système de disposition.  
+- Méthodes virtuelles qui peuvent être substituées pour fournir des informations à un système de disposition.  
   
  Si vous créez une classe qui dérive de <xref:System.Windows.FrameworkElement>, vous héritez des fonctionnalités suivantes en plus de celles fournies par <xref:System.Windows.UIElement>:  
   
--   Prise en charge des styles et des tables de montage séquentiel. Pour plus d’informations, consultez <xref:System.Windows.Style> et [vue d’ensemble des Storyboards](../graphics-multimedia/storyboards-overview.md).  
+- Prise en charge des styles et des tables de montage séquentiel. Pour plus d’informations, consultez <xref:System.Windows.Style> et [vue d’ensemble des Storyboards](../graphics-multimedia/storyboards-overview.md).  
   
--   Prise en charge de la liaison de données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md).  
+- Prise en charge de la liaison de données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md).  
   
--   Prise en charge des références de ressource dynamique. Pour plus d’informations, consultez [Ressources XAML](xaml-resources.md).  
+- Prise en charge des références de ressource dynamique. Pour plus d’informations, consultez [Ressources XAML](xaml-resources.md).  
   
--   Prise en charge de l’héritage de la valeur de propriété, et d’autres indicateurs dans les métadonnées qui aident à faire part des conditions traitant des propriétés aux services de framework, comme la liaison de données, les styles ou l’implémentation du framework de disposition. Pour plus d’informations, consultez [Métadonnées de propriété de framework](framework-property-metadata.md).  
+- Prise en charge de l’héritage de la valeur de propriété, et d’autres indicateurs dans les métadonnées qui aident à faire part des conditions traitant des propriétés aux services de framework, comme la liaison de données, les styles ou l’implémentation du framework de disposition. Pour plus d’informations, consultez [Métadonnées de propriété de framework](framework-property-metadata.md).  
   
--   Le concept de l’arborescence logique. Pour plus d’informations, consultez [Arborescences dans WPF](trees-in-wpf.md).  
+- Le concept de l’arborescence logique. Pour plus d’informations, consultez [Arborescences dans WPF](trees-in-wpf.md).  
   
--   Prise en charge pour l’implémentation de niveau infrastructure WPF pratique du système de disposition, y compris un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> remplacement qui peut détecter les changements apportés aux propriétés qui influencent la disposition.  
+- Prise en charge pour l’implémentation de niveau infrastructure WPF pratique du système de disposition, y compris un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> remplacement qui peut détecter les changements apportés aux propriétés qui influencent la disposition.  
   
  Si vous créez une classe qui dérive de <xref:System.Windows.ContentElement>, vous héritez des fonctionnalités suivantes en plus de celles fournies par <xref:System.Windows.DependencyObject>:  
   
--   Prise en charge des animations. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
+- Prise en charge des animations. Pour plus d’informations, consultez [Vue d’ensemble de l’animation](../graphics-multimedia/animation-overview.md).  
   
--   Prise en charge de base des événements d’entrée et prise en charge des commandes. Pour plus d’informations, consultez [Vue d’ensemble des entrées](input-overview.md) et [Vue d’ensemble des commandes](commanding-overview.md).  
+- Prise en charge de base des événements d’entrée et prise en charge des commandes. Pour plus d’informations, consultez [Vue d’ensemble des entrées](input-overview.md) et [Vue d’ensemble des commandes](commanding-overview.md).  
   
  Si vous créez une classe qui dérive de <xref:System.Windows.FrameworkContentElement>, vous obtenez les fonctionnalités suivantes en plus de celles fournies par <xref:System.Windows.ContentElement>:  
   
--   Prise en charge des styles et des tables de montage séquentiel. Pour plus d’informations, consultez <xref:System.Windows.Style> et [vue d’ensemble de l’Animation](../graphics-multimedia/animation-overview.md).  
+- Prise en charge des styles et des tables de montage séquentiel. Pour plus d’informations, consultez <xref:System.Windows.Style> et [vue d’ensemble de l’Animation](../graphics-multimedia/animation-overview.md).  
   
--   Prise en charge de la liaison de données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md).  
+- Prise en charge de la liaison de données. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](../data/data-binding-overview.md).  
   
--   Prise en charge des références de ressource dynamique. Pour plus d’informations, consultez [Ressources XAML](xaml-resources.md).  
+- Prise en charge des références de ressource dynamique. Pour plus d’informations, consultez [Ressources XAML](xaml-resources.md).  
   
--   Prise en charge de l’héritage de la valeur de propriété, et d’autres indicateurs dans les métadonnées qui aident à faire part des conditions traitant des propriétés aux services de framework, comme la liaison de données, les styles ou l’implémentation du framework de disposition. Pour plus d’informations, consultez [Métadonnées de propriété de framework](framework-property-metadata.md).  
+- Prise en charge de l’héritage de la valeur de propriété, et d’autres indicateurs dans les métadonnées qui aident à faire part des conditions traitant des propriétés aux services de framework, comme la liaison de données, les styles ou l’implémentation du framework de disposition. Pour plus d’informations, consultez [Métadonnées de propriété de framework](framework-property-metadata.md).  
   
--   Vous n’héritez pas de l’accès aux modifications du système de disposition (tel que <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Les implémentations de système de disposition sont uniquement disponibles sur <xref:System.Windows.FrameworkElement>. Toutefois, vous héritez une <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> remplacement qui peut détecter les modifications apportées aux propriétés qui influencent la disposition et les signaler aux hôtes de contenu.  
+- Vous n’héritez pas de l’accès aux modifications du système de disposition (tel que <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Les implémentations de système de disposition sont uniquement disponibles sur <xref:System.Windows.FrameworkElement>. Toutefois, vous héritez une <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> remplacement qui peut détecter les modifications apportées aux propriétés qui influencent la disposition et les signaler aux hôtes de contenu.  
   
  Les modèles de contenu sont documentés pour diverses classes. Le modèle de contenu pour une classe est l’un des facteurs dont vous devez tenir compte si vous souhaitez rechercher une classe appropriée à partir de laquelle dériver. Pour plus d’informations, consultez [Modèle de contenu WPF](../controls/wpf-content-model.md).  
   

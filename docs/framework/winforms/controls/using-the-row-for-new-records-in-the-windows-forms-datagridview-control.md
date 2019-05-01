@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009168"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilisation de la ligne pour les nouveaux enregistrements dans le contrôle DataGridView Windows Forms
 Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modification des données dans votre application, vous souhaiterez souvent donner aux utilisateurs la possibilité d’ajouter de nouvelles lignes de données au magasin de données. Le <xref:System.Windows.Forms.DataGridView> contrôle prend en charge cette fonctionnalité en fournissant une ligne pour les nouveaux enregistrements, qui est toujours affichée en tant que la dernière ligne. Elle est marquée avec un astérisque (*) dans son en-tête de ligne. Les sections suivantes décrivent certains éléments que vous devez envisager lorsque vous programmez avec la ligne pour les nouveaux enregistrements est activé.  
@@ -29,9 +29,9 @@ Lorsque vous utilisez un <xref:System.Windows.Forms.DataGridView> pour la modifi
 ## <a name="the-rows-collection"></a>La Collection de lignes  
  La ligne des nouveaux enregistrements est contenue dans le <xref:System.Windows.Forms.DataGridView> du contrôle <xref:System.Windows.Forms.DataGridView.Rows%2A> collection mais se comporte différemment à deux égards :  
   
--   Impossible de supprimer la ligne des nouveaux enregistrements de la <xref:System.Windows.Forms.DataGridView.Rows%2A> collection par programme. Un <xref:System.InvalidOperationException> est levée si cette opération est tentée. L’utilisateur ne peut pas également supprimer la ligne pour les nouveaux enregistrements. Le <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> méthode ne supprime pas cette ligne à partir de la <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.  
+- Impossible de supprimer la ligne des nouveaux enregistrements de la <xref:System.Windows.Forms.DataGridView.Rows%2A> collection par programme. Un <xref:System.InvalidOperationException> est levée si cette opération est tentée. L’utilisateur ne peut pas également supprimer la ligne pour les nouveaux enregistrements. Le <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> méthode ne supprime pas cette ligne à partir de la <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.  
   
--   Aucune ligne ne peut être ajoutée après la ligne pour les nouveaux enregistrements. Un <xref:System.InvalidOperationException> est levée si cette opération est tentée. Par conséquent, la ligne des nouveaux enregistrements est toujours la dernière ligne dans le <xref:System.Windows.Forms.DataGridView> contrôle. Les méthodes sur <xref:System.Windows.Forms.DataGridViewRowCollection> qui ajoutent des lignes :<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, et <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— appellent toutes les méthodes d’insertion en interne lorsque la ligne pour les nouveaux enregistrements est présente.  
+- Aucune ligne ne peut être ajoutée après la ligne pour les nouveaux enregistrements. Un <xref:System.InvalidOperationException> est levée si cette opération est tentée. Par conséquent, la ligne des nouveaux enregistrements est toujours la dernière ligne dans le <xref:System.Windows.Forms.DataGridView> contrôle. Les méthodes sur <xref:System.Windows.Forms.DataGridViewRowCollection> qui ajoutent des lignes :<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, et <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— appellent toutes les méthodes d’insertion en interne lorsque la ligne pour les nouveaux enregistrements est présente.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personnalisation visuelle de la ligne pour les nouveaux enregistrements  
  Lorsque la ligne pour les nouveaux enregistrements est créée, elle est basée sur la ligne spécifiée par le <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propriété. Les styles de cellules qui ne sont pas spécifiés pour cette ligne sont hérités d’autres propriétés. Pour plus d’informations sur l’héritage de style de cellule, consultez [Styles de cellules dans le contrôle DataGridView Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  

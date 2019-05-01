@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006331"
 ---
 # <a name="usage-of-standard-endpoints"></a>Utilisation de points de terminaison standard
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Permettez à plusieurs projets de démarrer.
 
-    1.  Dans **l’Explorateur de solutions**, avec le bouton droit de la solution de points de terminaison Standard, puis sélectionnez **propriétés**.
+    1. Dans **l’Explorateur de solutions**, avec le bouton droit de la solution de points de terminaison Standard, puis sélectionnez **propriétés**.
 
-    2.  Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis cliquez sur **plusieurs projets de démarrage**.
+    2. Dans **propriétés communes**, sélectionnez **projet de démarrage**, puis cliquez sur **plusieurs projets de démarrage**.
 
-    3.  Déplacer le projet de Service au début de la liste, avec la **Action** définie sur **Démarrer**.
+    3. Déplacer le projet de Service au début de la liste, avec la **Action** définie sur **Démarrer**.
 
-    4.  Déplacer le projet Client après le projet de Service, également avec la **Action** définie sur **Démarrer**.
+    4. Déplacer le projet Client après le projet de Service, également avec la **Action** définie sur **Démarrer**.
 
          De cette façon, le projet Client est exécuté après le projet Service.
 

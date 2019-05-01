@@ -3,11 +3,11 @@ title: Vue d’ensemble des services de flux de travail - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050335"
 ---
 # <a name="workflow-services-overview"></a>Vue d’ensemble des services de workflow
 
@@ -42,7 +42,7 @@ Le résultat final de l’inférence de contrat est une description du service �
 
 ## <a name="workflow-services-and-msmq-based-bindings"></a>Services de workflow et liaisons basées sur MSMQ
 
-WCF définit deux liaisons <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> basées sur MSMQ.  Les liaisons basées sur MSMQ sont souvent utilisées avec les services de workflow en raison de la longue durée d'exécution de ces services. Les liaisons basées sur MSMQ ont une propriété `ValidityDuration` qui spécifie comment de temps les messages MSMQ peuvent supposer être valides. En raison de la longue durée d'exécution des services de workflow, il est possible que la durée de validité d'un message MSMQ expire avant que le service de workflow puisse le traiter. Il est donc très important d'affecter une valeur appropriée à la durée de validité d'une liaison MSMQ. Cette valeur doit être choisie en fonction du workflow et de sa manière de traiter les messages. Par exemple si vous avez un workflow avec une activité <xref:System.ServiceModel.Activities.Receive> suivie d'une activité personnalisée qui s'exécute pendant 10 minutes, elle-même suivie d'une autre activité <xref:System.ServiceModel.Activities.Receive>, la valeur correcte pour `ValidityDuration` doit être supérieure à 10 minutes.
+WCF définit deux liaisons <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> basées sur MSMQ.  Les liaisons basées sur MSMQ sont souvent utilisées avec les services de workflow en raison de la longue durée d’exécution de ces services. Les liaisons basées sur MSMQ ont une propriété `ValidityDuration` qui spécifie comment de temps les messages MSMQ peuvent supposer être valides. En raison de la longue durée d'exécution des services de workflow, il est possible que la durée de validité d'un message MSMQ expire avant que le service de workflow puisse le traiter. Il est donc très important d’affecter une valeur appropriée à la durée de validité d’une liaison MSMQ. Cette valeur doit être choisie en fonction du workflow et de sa manière de traiter les messages. Par exemple si vous avez un workflow avec une activité <xref:System.ServiceModel.Activities.Receive> suivie d'une activité personnalisée qui s'exécute pendant 10 minutes, elle-même suivie d'une autre activité <xref:System.ServiceModel.Activities.Receive>, la valeur correcte pour `ValidityDuration` doit être supérieure à 10 minutes.
 
 ## <a name="hosting-a-workflow-service"></a>Hébergement d’un service de flux de travail
 

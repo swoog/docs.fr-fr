@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053533"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath, syntaxe XAML
 Le <xref:System.Windows.PropertyPath> objet prend en charge un ligne de complex [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntaxe permettant de définir les propriétés qui prennent le <xref:System.Windows.PropertyPath> type comme valeur. Cette rubrique explique comment le <xref:System.Windows.PropertyPath> syntaxe comme appliquée aux syntaxes de liaison et d’animation.  
@@ -69,11 +69,11 @@ Le <xref:System.Windows.PropertyPath> objet prend en charge un ligne de complex 
   
  Les parenthèses indiquent que cette propriété dans un <xref:System.Windows.PropertyPath> doit être construite à l’aide d’une qualification partielle. Elle peut utiliser un espace de noms XML pour rechercher le type avec un mappage approprié. Le `ownerType` recherche des types auxquels un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur peut accéder, via le <xref:System.Windows.Markup.XmlnsDefinitionAttribute> déclarations dans chaque assembly. Dans la plupart des applications, l’espace de noms XML par défaut est mappé à l’espace de noms [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Un préfixe est donc généralement nécessaire uniquement pour les types personnalisés ou les types en dehors de cet espace de noms.  `propertyName` doit correspondre au nom d’une propriété existant sur le `ownerType`. Cette syntaxe est généralement utilisée pour l’un des cas suivants :  
   
--   Le chemin est spécifié dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], qui se trouve dans un style ou un modèle qui n’est pas un type de cible spécifié. Une utilisation qualifiée n’est généralement pas valide pour les autres cas, car dans les cas sans style ni modèle, la propriété existe sur une instance et non un type.  
+- Le chemin est spécifié dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], qui se trouve dans un style ou un modèle qui n’est pas un type de cible spécifié. Une utilisation qualifiée n’est généralement pas valide pour les autres cas, car dans les cas sans style ni modèle, la propriété existe sur une instance et non un type.  
   
--   La propriété est une propriété jointe.  
+- La propriété est une propriété jointe.  
   
--   Vous effectuez une liaison à une propriété statique.  
+- Vous effectuez une liaison à une propriété statique.  
   
  Pour une utilisation comme cible de la table de montage séquentiel, la propriété spécifiée en tant que `propertyName` doit être un <xref:System.Windows.DependencyProperty>.  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>Échappements pour les chaînes de chemin de propriété  
  Pour certains objets métiers, la chaîne de chemin de propriété peut nécessiter une séquence d’échappement pour effectuer correctement l’analyse. La nécessité d’une séquence d’échappement doit être rare, car la plupart de ces caractères ont des problèmes d’interactions de noms similaires dans les langages qui doivent normalement être utilisés pour définir l’objet métier.  
   
--   À l’intérieur des indexeurs ([ ]), le signe ^ échappe le caractère suivant.  
+- À l’intérieur des indexeurs ([ ]), le signe ^ échappe le caractère suivant.  
   
--   Vous devez échapper (à l’aide d’entités XML) certains caractères qui sont spécifiques de la définition de langage XML. Utilisez `&` pour échapper le caractère « & ». Utilisez `>` pour échapper la balise de fin « > ».  
+- Vous devez échapper (à l’aide d’entités XML) certains caractères qui sont spécifiques de la définition de langage XML. Utilisez `&` pour échapper le caractère « & ». Utilisez `>` pour échapper la balise de fin « > ».  
   
--   Vous devez échapper (à l’aide de la barre oblique inverse `\`) les caractères spécifiques du comportement de l’analyseur XAML WPF pour le traitement d’une extension de balisage.  
+- Vous devez échapper (à l’aide de la barre oblique inverse `\`) les caractères spécifiques du comportement de l’analyseur XAML WPF pour le traitement d’une extension de balisage.  
   
-    -   La barre oblique inverse (`\`) est le caractère d’échappement lui-même.  
+    - La barre oblique inverse (`\`) est le caractère d’échappement lui-même.  
   
-    -   Le signe égal (`=`) sépare le nom et la valeur de la propriété.  
+    - Le signe égal (`=`) sépare le nom et la valeur de la propriété.  
   
-    -   La virgule (`,`) sépare les propriétés.  
+    - La virgule (`,`) sépare les propriétés.  
   
-    -   L’accolade fermante (`}`) marque la fin d’une extension de balisage.  
+    - L’accolade fermante (`}`) marque la fin d’une extension de balisage.  
   
 > [!NOTE]
 >  Techniquement, ces échappements fonctionnent également pour un chemin de propriété de plan conceptuel, mais vous parcourez habituellement des modèles d’objet pour les objets WPF existants et l’échappement est inutile.  

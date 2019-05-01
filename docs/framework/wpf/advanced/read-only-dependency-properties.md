@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053520"
 ---
 # <a name="read-only-dependency-properties"></a>Propriétés de dépendance en lecture seule
 Cette rubrique décrit les propriétés de dépendance en lecture seule, y compris les propriétés de dépendance en lecture seule existantes, et les scénarios et techniques de création d’une propriété de dépendance en lecture seule personnalisée.  
@@ -31,11 +31,11 @@ Cette rubrique décrit les propriétés de dépendance en lecture seule, y compr
   
  Une grande partie du processus de création d’une propriété de dépendance en lecture seule est identique à celui décrit dans les rubriques [Propriétés de dépendance personnalisées](custom-dependency-properties.md) et [Implémenter une propriété de dépendance](how-to-implement-a-dependency-property.md). Il existe trois différences majeures :  
   
--   Lorsque vous inscrivez votre propriété, appelez le <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> méthode au lieu de la normale <xref:System.Windows.DependencyProperty.Register%2A> méthode d’inscription de propriété.  
+- Lorsque vous inscrivez votre propriété, appelez le <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> méthode au lieu de la normale <xref:System.Windows.DependencyProperty.Register%2A> méthode d’inscription de propriété.  
   
--   Quand vous implémentez la propriété de « wrapper » [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], vérifiez que le wrapper n’a pas non plus d’implémentation définie, pour qu’il n’y ait pas d’incohérence dans l’état en lecture seule pour le wrapper public que vous exposez.  
+- Quand vous implémentez la propriété de « wrapper » [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], vérifiez que le wrapper n’a pas non plus d’implémentation définie, pour qu’il n’y ait pas d’incohérence dans l’état en lecture seule pour le wrapper public que vous exposez.  
   
--   L’objet retourné par l’inscription en lecture seule est <xref:System.Windows.DependencyPropertyKey> plutôt que <xref:System.Windows.DependencyProperty>. Vous devez toujours stocker ce champ sous forme de membre, mais, en général, vous ne le convertissez pas en membre public du type.  
+- L’objet retourné par l’inscription en lecture seule est <xref:System.Windows.DependencyPropertyKey> plutôt que <xref:System.Windows.DependencyProperty>. Vous devez toujours stocker ce champ sous forme de membre, mais, en général, vous ne le convertissez pas en membre public du type.  
   
  Indépendamment de la valeur ou champ privé que vous utilisez, le stockage de votre propriété de dépendance en lecture seule peut être entièrement inscriptible en utilisant la logique de votre choix. Toutefois, la méthode la plus simple pour définir la propriété initialement ou dans le cadre de la logique d’exécution est d’utiliser les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] du système de propriétés plutôt que de contourner le système de propriétés et de définir directement le champ de stockage privé. En particulier, il existe une signature de <xref:System.Windows.DependencyObject.SetValue%2A> qui accepte un paramètre de type <xref:System.Windows.DependencyPropertyKey>. Comment et où vous définissez la valeur par programmation au sein de votre logique d’application affecteront la manière dont vous voulez définir l’accès sur le <xref:System.Windows.DependencyPropertyKey> créé quand vous avez inscrit la propriété de dépendance. Si vous gérez cette logique entièrement dans la classe, vous pouvez indiquer qu’elle est privée ou, si vous voulez qu’elle soit définie à partir d’autres parties de l’assembly, vous pouvez la définir en interne. Une approche consiste à appeler <xref:System.Windows.DependencyObject.SetValue%2A> au sein d’un gestionnaire d’événements de classe d’un événement pertinent qui indique à une instance de classe, la valeur de propriété stockée doit être modifiée. Une autre approche consiste à relier les propriétés de dépendance à l’aide associée <xref:System.Windows.PropertyChangedCallback> et <xref:System.Windows.CoerceValueCallback> rappels dans le cadre des métadonnées de ces propriétés lors de l’inscription.  
   

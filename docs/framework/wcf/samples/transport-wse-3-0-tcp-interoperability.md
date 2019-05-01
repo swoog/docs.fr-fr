@@ -3,11 +3,11 @@ title: 'Transport : Interopérabilité TCP WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032738"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport : Interopérabilité TCP WSE 3.0
 L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémenter une session duplex TCP comme transport personnalisé Windows Communication Foundation (WCF). Il décrit également comment utiliser l'extensibilité de la couche du canal pour assurer l'interface sur le câble avec les systèmes déployés existants. Les étapes suivantes montrent comment générer ce transport WCF personnalisé :  
@@ -20,7 +20,7 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
 4. Assurez-vous que les exceptions spécifiques au réseau sont normalisées selon la classe dérivée appropriée de <xref:System.ServiceModel.CommunicationException>.  
   
-5. Ajoutez un élément de liaison qui ajoute le transport personnalisé à une pile de canaux. Pour plus d’informations, consultez [Ajout d’un élément de liaison].  
+5. Ajoutez un élément de liaison qui ajoute le transport personnalisé à une pile de canaux. Pour plus d’informations, consultez [Ajout d’un Élément de Liaison].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Création de IDuplexSessionChannel  
  La première étape de l'écriture du transport WSE 3.0 TCP Interoperability consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> sur <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` dérive de <xref:System.ServiceModel.Channels.ChannelBase>. La logique de l’envoi d’un message se compose de deux parties principales : (1) encodage du message en octets et (2) tramage ces octets et les envoyer sur le câble.  
@@ -43,16 +43,16 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  Le `WseTcpDuplexSessionChannel` de base suppose qu'il reçoit un socket connecté. La classe de base gère l'arrêt du socket. Trois valeurs correspondent à la fermeture du socket :  
   
--   OnAbort : fermeture du socket de façon incorrecte (fermeture stricte).  
+- OnAbort : fermeture du socket de façon incorrecte (fermeture stricte).  
   
--   On[Begin]Close : fermeture du socket de façon correcte (fermeture souple).  
+- On[Begin]Close : fermeture du socket de façon correcte (fermeture souple).  
   
--   session.CloseOutputSession : arrêt du flux de données sortant (fermeture partielle).  
+- session.CloseOutputSession : arrêt du flux de données sortant (fermeture partielle).  
   
 ## <a name="channel-factory"></a>Fabrique de canaux  
  L'étape suivante de l'écriture du transport TCP consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IChannelFactory> pour les canaux clients.  
   
--   `WseTcpChannelFactory` dérive de <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Il s'agit d'une fabrique qui substitue `OnCreateChannel` pour produire des canaux clients.  
+- `WseTcpChannelFactory` dérive de <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Il s'agit d'une fabrique qui substitue `OnCreateChannel` pour produire des canaux clients.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` Ajoute une logique à la base de `WseTcpDuplexSessionChannel` pour se connecter à un serveur TCP à `channel.Open` heure. Le nom d'hôte est d'abord résolu en une adresse IP, comme indiqué dans le code suivant.  
+- `ClientWseTcpDuplexSessionChannel` Ajoute une logique à la base de `WseTcpDuplexSessionChannel` pour se connecter à un serveur TCP à `channel.Open` heure. Le nom d'hôte est d'abord résolu en une adresse IP, comme indiqué dans le code suivant.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Ensuite, le nom d'hôte est connecté à la première adresse IP disponible dans une boucle, comme indiqué dans le code suivant.  
+- Ensuite, le nom d'hôte est connecté à la première adresse IP disponible dans une boucle, comme indiqué dans le code suivant.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémente
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Dans le cadre du contrat de canal, les exceptions spécifiques du domaine sont incluses dans un wrapper, comme `SocketException` dans <xref:System.ServiceModel.CommunicationException>.  
+- Dans le cadre du contrat de canal, les exceptions spécifiques du domaine sont incluses dans un wrapper, comme `SocketException` dans <xref:System.ServiceModel.CommunicationException>.  
   
 ## <a name="channel-listener"></a>Écouteur de canal  
  L'étape suivante de l'écriture du transport TCP consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IChannelListener> permettant d'accepter les canaux serveur.  
   
--   `WseTcpChannelListener` dérive de <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > et remplacements sur [Begin] Open et On [Begin] Close pour contrôlent la durée de vie de son socket d’écoute. Dans OnOpen, un socket est créé pour écouter sur IP_ANY. Des implémentations plus avancées peuvent créer un deuxième socket pour écouter également sur IPv6. Elles permettent également de spécifier l'adresse IP dans le nom d'hôte.  
+- `WseTcpChannelListener` dérive de <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > et remplacements sur [Begin] Open et On [Begin] Close pour contrôlent la durée de vie de son socket d’écoute. Dans OnOpen, un socket est créé pour écouter sur IP_ANY. Des implémentations plus avancées peuvent créer un deuxième socket pour écouter également sur IPv6. Elles permettent également de spécifier l'adresse IP dans le nom d'hôte.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. Après avoir installé l'exemple `TcpSyncStockService`, procédez comme suit :  
   
-    1.  Ouvrez `TcpSyncStockService` dans Visual Studio (notez que l'exemple TcpSyncStockService est installé avec WSE 3.0. Il ne fait pas partie du code de cet exemple).  
+    1. Ouvrez `TcpSyncStockService` dans Visual Studio (notez que l'exemple TcpSyncStockService est installé avec WSE 3.0. Il ne fait pas partie du code de cet exemple).  
   
-    2.  Définissez StockService comme projet de démarrage.  
+    2. Définissez StockService comme projet de démarrage.  
   
-    3.  Ouvrez StockService.cs dans le projet StockService et commentez l'attribut [Policy] sur la classe `StockService`. Cette opération désactive la sécurité de l'exemple. Bien que WCF peut interagir avec les points de terminaison sécurisés WSE 3.0, sécurité est désactivée afin que cet exemple reste axé sur le transport TCP personnalisé.  
+    3. Ouvrez StockService.cs dans le projet StockService et commentez l'attribut [Policy] sur la classe `StockService`. Cette opération désactive la sécurité de l'exemple. Bien que WCF peut interagir avec les points de terminaison sécurisés WSE 3.0, sécurité est désactivée afin que cet exemple reste axé sur le transport TCP personnalisé.  
   
-    4.  Appuyez sur F5 pour démarrer `TcpSyncStockService`. Le service démarre dans une nouvelle fenêtre de console.  
+    4. Appuyez sur F5 pour démarrer `TcpSyncStockService`. Le service démarre dans une nouvelle fenêtre de console.  
   
-    5.  Ouvrez cet exemple de transport TCP dans Visual Studio.  
+    5. Ouvrez cet exemple de transport TCP dans Visual Studio.  
   
-    6.  Dans TestCode.cs, mettez la variable « hostname » à jour afin qu'elle corresponde au nom de l'ordinateur qui exécute `TcpSyncStockService`.  
+    6. Dans TestCode.cs, mettez la variable « hostname » à jour afin qu'elle corresponde au nom de l'ordinateur qui exécute `TcpSyncStockService`.  
   
-    7.  Appuyez sur F5 pour démarrer l'exemple de transport TCP.  
+    7. Appuyez sur F5 pour démarrer l'exemple de transport TCP.  
   
-    8.  Le client test du transport TCP démarre dans une nouvelle console. Le client demande les cotations boursières au service, puis affiche les résultats dans sa fenêtre de console.  
+    8. Le client test du transport TCP démarre dans une nouvelle console. Le client demande les cotations boursières au service, puis affiche les résultats dans sa fenêtre de console.  

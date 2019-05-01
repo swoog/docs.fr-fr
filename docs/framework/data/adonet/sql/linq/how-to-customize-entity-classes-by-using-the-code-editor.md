@@ -3,11 +3,11 @@ title: 'Procédure : Personnaliser des classes d’entité à l’aide de l’�
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037828"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procédure : Personnaliser des classes d’entité à l’aide de l’éditeur de code
 Les développeurs à l’aide de Visual Studio peuvent utiliser le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] pour créer ou personnaliser leurs classes d’entité.  

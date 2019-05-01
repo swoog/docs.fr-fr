@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032472"
 ---
 # <a name="handling-null-values"></a>Gestion des valeurs null
 Une valeur null dans une base de données relationnelle est utilisée lorsque la valeur d'une colonne est inconnue ou manquante. Une valeur null n'est ni une chaîne vide (pour les types de données caractère ou datetime) ni une valeur zéro (pour les types de données numériques). La spécification ANSI SQL-92 stipule qu'une valeur null doit être la même pour tous les types de données afin que toutes les valeurs null soient traitées de manière cohérente. L'espace de noms <xref:System.Data.SqlTypes> fournit des sémantiques de valeurs null en implémentant l'interface <xref:System.Data.SqlTypes.INullable>. Chacun des types de données de l'espace de noms <xref:System.Data.SqlTypes> possède sa propre propriété `IsNull` et une valeur `Null` qui peut être assignée à une instance de ce type de données.  
@@ -21,11 +21,11 @@ Une valeur null dans une base de données relationnelle est utilisée lorsque la
 ## <a name="nulls-and-three-valued-logic"></a>Valeurs null et logique à trois valeurs  
  Permettre des valeurs null dans des définitions de colonnes introduit une logique à trois valeurs dans votre application. Une comparaison peut correspondre à l'une des trois conditions :  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   Inconnu  
+- Inconnu  
   
  Comme la valeur null est considérée comme inconnue, les deux valeurs null comparées l'une à l'autre ne sont pas considérées comme égales. Dans des expressions utilisant des opérateurs arithmétiques, si l'un des opérandes est une valeur null, le résultat est une valeur null également.  
   

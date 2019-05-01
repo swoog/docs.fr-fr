@@ -16,11 +16,11 @@ ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026560"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Choisir entre DateTime, DateTimeOffset, TimeSpan et TimeZoneInfo
 
@@ -65,10 +65,10 @@ La structure <xref:System.DateTime> convient pour les applications qui :
 
 * Effectuent des calculs de dates et d'heures, mais sont surtout concernées par des résultats d'ordre général. Par exemple, dans une opération d'addition qui ajoute six mois à une date/heure, il n'est souvent pas important que le résultat soit ajusté pour l'heure d'été.
 
-Sauf si une valeur <xref:System.DateTime> particulière représente le temps UTC, cette valeur de date/heure est souvent ambiguë ou limitée en termes de portabilité. Par exemple, si une valeur <xref:System.DateTime> représente l'heure locale, elle est portable dans ce fuseau horaire local (c'est-à-dire que si la valeur est désérialisée sur un autre système dans le même fuseau horaire, cette valeur continue d'identifier de façon non ambiguë un point unique dans le temps). En dehors du fuseau horaire local, cette valeur <xref:System.DateTime> peut être interprétée de plusieurs façons. Si la propriété <xref:System.DateTime.Kind%2A> de la valeur est <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, elle est encore moins portable : elle est maintenant ambiguë dans le même fuseau horaire, voire même sur le système où elle a été sérialisée pour la première fois. Seulement dans le cas où une valeur <xref:System.DateTime> représente le temps UTC, celle-ci identifie de façon non ambiguë un point unique dans le temps, indépendamment du système ou du fuseau horaire où la valeur est utilisée.
+Sauf si une valeur <xref:System.DateTime> particulière représente le temps UTC, cette valeur de date/heure est souvent ambiguë ou limitée en termes de portabilité. Par exemple, si une valeur <xref:System.DateTime> représente l'heure locale, elle est portable dans ce fuseau horaire local (c'est-à-dire que si la valeur est désérialisée sur un autre système dans le même fuseau horaire, cette valeur continue d'identifier de façon non ambiguë un point unique dans le temps). En dehors du fuseau horaire local, cette valeur <xref:System.DateTime> peut être interprétée de plusieurs façons. Si la propriété <xref:System.DateTime.Kind%2A> de la valeur est <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, elle est encore moins portable : elle est maintenant ambiguë dans le même fuseau horaire, voire même sur le système où elle a été sérialisée pour la première fois. Seulement dans le cas où une valeur <xref:System.DateTime> représente le temps UTC, celle-ci identifie de façon non ambiguë un point unique dans le temps, indépendamment du système ou du fuseau horaire où la valeur est utilisée.
 
 > [!IMPORTANT]
-> Lors de l'enregistrement ou du partage de données <xref:System.DateTime>, le temps UTC doit être utilisé et la propriété <xref:System.DateTime> de la valeur <xref:System.DateTime.Kind%2A> doit être définie à <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+> Lors de l'enregistrement ou du partage de données <xref:System.DateTime> , le temps UTC doit être utilisé et la propriété <xref:System.DateTime> de la valeur <xref:System.DateTime.Kind%2A> doit être définie à <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
 
 ## <a name="the-datetimeoffset-structure"></a>La structure DateTimeOffset
 
@@ -80,7 +80,7 @@ Le type <xref:System.DateTimeOffset> comprend toutes les fonctionnalités du typ
 
 * Effectuent des calculs de date et d'heure.
 
-* Conserver plusieurs dates/heures ayant un lien entre elles, comme les dates/heures qui sont stockées sous la forme de deux valeurs distinctes ou de deux membres d'une structure.
+* Conservent plusieurs dates/heures ayant un lien entre elles, comme les dates/heures qui sont stockées sous la forme de deux valeurs distinctes ou de deux membres d'une structure.
 
 > [!NOTE]
 > Ces utilisations pour des valeurs <xref:System.DateTimeOffset> sont beaucoup plus courantes que celles pour les valeurs <xref:System.DateTime> . Par conséquent, <xref:System.DateTimeOffset> doit être considéré comme le type de date et d'heure par défaut pour le développement d'applications.
@@ -94,7 +94,7 @@ La sortie montre que chaque valeur de date et d'heure de cet exemple peut appart
 
 ## <a name="the-timespan-structure"></a>La structure TimeSpan
 
-La structure <xref:System.TimeSpan> représente un intervalle de temps. Ses deux utilisations courantes sont :
+La structure <xref:System.TimeSpan> représente un intervalle de temps. Ses deux utilisations courantes sont :
 
 * Refléter un intervalle de temps entre deux valeurs de date/heure. Par exemple, la soustraction d'une valeur <xref:System.DateTime> d'une autre retourne une valeur <xref:System.TimeSpan> .
 

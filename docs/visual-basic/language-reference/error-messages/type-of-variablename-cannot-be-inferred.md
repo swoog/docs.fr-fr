@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052675"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Type de '\<nom_variable >' ne peut pas être déduit, car les limites de la boucle et la variable étape s’étend pas au même type
 Vous avez écrit un `For...Next` boucle dans laquelle le compilateur ne peut pas déduire un type de données pour la variable de contrôle de boucle, car les conditions suivantes sont remplies :  
   
--   Le type de données de la variable de contrôle de boucle n’est pas spécifié avec une clause `As` .  
+- Le type de données de la variable de contrôle de boucle n’est pas spécifié avec une clause `As` .  
   
--   Les limites de la boucle et l’incrémentation contiennent au moins deux types de données.  
+- Les limites de la boucle et l’incrémentation contiennent au moins deux types de données.  
   
--   Il n’existe aucune conversion standard entre les types de données.  
+- Il n’existe aucune conversion standard entre les types de données.  
   
  Par conséquent, le compilateur ne peut pas déduire le type de données de variable de contrôle d’une boucle.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Modifier les types des limites de la boucle et selon vos besoins afin qu’au moins un d'entre eux est un type de la clause d’incrémentation. Dans l’exemple précédent, remplacez le type de `stepVar` à `Integer`.  
+- Modifier les types des limites de la boucle et selon vos besoins afin qu’au moins un d'entre eux est un type de la clause d’incrémentation. Dans l’exemple précédent, remplacez le type de `stepVar` à `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Utiliser les fonctions de conversion explicite pour convertir les limites de la boucle et la variable de l’étape pour les types appropriés. Dans l’exemple précédent, vous devez appliquer le `Val` à fonction `stepVar`.  
+- Utiliser les fonctions de conversion explicite pour convertir les limites de la boucle et la variable de l’étape pour les types appropriés. Dans l’exemple précédent, vous devez appliquer le `Val` à fonction `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051869"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 Spécifie ne qu’aucune restriction d’accès à un ou plusieurs éléments de programmation déclarés.  
@@ -25,15 +25,15 @@ Spécifie ne qu’aucune restriction d’accès à un ou plusieurs éléments de
   
 ## <a name="rules"></a>Règles  
   
--   **Contexte de déclaration.** Vous pouvez utiliser `Public` uniquement au niveau du module, interface ou espace de noms. Cela signifie que le contexte de déclaration pour un `Public` élément doit être un fichier source, un espace de noms, un module, une classe ou une structure et ne peut pas être une procédure.  
+- **Contexte de déclaration.** Vous pouvez utiliser `Public` uniquement au niveau du module, interface ou espace de noms. Cela signifie que le contexte de déclaration pour un `Public` élément doit être un fichier source, un espace de noms, un module, une classe ou une structure et ne peut pas être une procédure.  
   
 ## <a name="behavior"></a>Comportement  
   
--   **Niveau d’accès.** Tout le code qui peut accéder à un module, une classe ou une structure peut accéder à ses `Public` éléments.  
+- **Niveau d’accès.** Tout le code qui peut accéder à un module, une classe ou une structure peut accéder à ses `Public` éléments.  
   
--   **Accès par défaut.** Les variables locales à l’intérieur d’une procédure reviennent par défaut pour l’accès public et vous ne pouvez pas utiliser n’importe quel modificateur d’accès sur ces derniers.  
+- **Accès par défaut.** Les variables locales à l’intérieur d’une procédure reviennent par défaut pour l’accès public et vous ne pouvez pas utiliser n’importe quel modificateur d’accès sur ces derniers.  
   
--   **Modificateurs d’accès.** Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs d’accès*. Pour obtenir une comparaison des modificateurs d’accès, consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modificateurs d’accès.** Les mots clés qui spécifient le niveau d’accès sont appelés *modificateurs d’accès*. Pour obtenir une comparaison des modificateurs d’accès, consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Le modificateur `Public` peut être utilisé dans les contextes suivants :  
   

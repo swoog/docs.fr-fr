@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
 ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013398"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procédure : afficher des images dans les cellules du contrôle DataGridView Windows Forms
 Une image ou un graphique est une des valeurs que vous pouvez afficher dans une ligne de données. Souvent, ces graphiques prennent la forme d’une photographie de salarié ou un logo de société.  
@@ -33,11 +33,11 @@ Une image ou un graphique est une des valeurs que vous pouvez afficher dans une 
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` ;  
+- un contrôle <xref:System.Windows.Forms.DataGridView> nommé `dataGridView1` ;  
   
--   Une ressource d’icône incorporée nommée `tree.ico`.  
+- Une ressource d’icône incorporée nommée `tree.ico`.  
   
--   des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> et <xref:System.Drawing?displayProperty=nameWithType>.  
+- des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> et <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

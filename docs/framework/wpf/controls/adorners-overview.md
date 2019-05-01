@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019091"
 ---
 # <a name="adorners-overview"></a>Vue d'ensemble des ornements
 Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, utilisé pour fournir des signaux visuels à un utilisateur. Les ornements permettent notamment d’ajouter des descripteurs fonctionnels à des éléments ou de fournir des informations d’état sur un contrôle.  
@@ -23,13 +23,13 @@ Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, u
   
  Parmi les applications courantes des ornements, citons les suivantes :  
   
--   Ajout de descripteurs fonctionnels à un <xref:System.Windows.UIElement> qui permettent à un utilisateur de manipuler l’élément d’une certaine façon (redimensionnement, rotation, repositionnement, etc.).  
+- Ajout de descripteurs fonctionnels à un <xref:System.Windows.UIElement> qui permettent à un utilisateur de manipuler l’élément d’une certaine façon (redimensionnement, rotation, repositionnement, etc.).  
   
--   Retour visuel pour indiquer différents états, ou en réponse à différents événements  
+- Retour visuel pour indiquer différents états, ou en réponse à différents événements  
   
--   Superposition de décorations visuelles sur un <xref:System.Windows.UIElement>.  
+- Superposition de décorations visuelles sur un <xref:System.Windows.UIElement>.  
   
--   Masquage visuel ou remplacement de tout ou partie d’un <xref:System.Windows.UIElement>.  
+- Masquage visuel ou remplacement de tout ou partie d’un <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit une infrastructure de base pour orner des éléments visuels. Le tableau suivant répertorie les principaux types utilisés pour orner des objets et leur but. Plusieurs exemples d’utilisation suivent.  
   

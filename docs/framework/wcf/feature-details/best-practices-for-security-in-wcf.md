@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048242"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Meilleures pratiques pour la sécurité dans WCF
 Les sections suivantes répertorient les bonnes pratiques à prendre en compte durant la création d’applications sécurisées à l’aide de WCF (Windows Communication Foundation). Pour plus d’informations sur la sécurité, consultez [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) et [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -26,11 +26,11 @@ Les sections suivantes répertorient les bonnes pratiques à prendre en compte d
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Utiliser des certificats X509 au lieu de NTLM  
  WCF offre deux mécanismes d’authentification de peer-to-peer : X509 certificats (utilisés par le canal homologue) et l’authentification Windows où une négociation SSPI passe de Kerberos à NTLM.  L'authentification basée sur des certificats utilisant des tailles de clé de 1 024 bits ou plus est préférée à NTLM pour plusieurs raisons :  
   
--   la disponibilité de l'authentification mutuelle ;  
+- la disponibilité de l'authentification mutuelle ;  
   
--   l'utilisation d'algorithmes de chiffrement plus robustes ;  
+- l'utilisation d'algorithmes de chiffrement plus robustes ;  
   
--   la plus grande complexité liée à l'utilisation des informations d'identification X509 transférées.  
+- la plus grande complexité liée à l'utilisation des informations d'identification X509 transférées.  
    
 ## <a name="always-revert-after-impersonation"></a>Toujours rétablir après l'emprunt d'identité  
  Lorsque vous utilisez des API qui activent l'emprunt d'identité d'un client, veillez à rétablir l'identité d'origine. Par exemple, quand vous utilisez <xref:System.Security.Principal.WindowsIdentity> et <xref:System.Security.Principal.WindowsImpersonationContext>, employez l’instruction C# `using` ou l’instruction Visual Basic `Using`, comme indiqué dans le code suivant. La classe <xref:System.Security.Principal.WindowsImpersonationContext> implémente l'interface <xref:System.IDisposable>, et par conséquent, le common language runtime (CLR) rétablit automatiquement l'identité d'origine dès que le code quitte le bloc `using`.  

@@ -3,11 +3,11 @@ title: Poison Message Handling in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052090"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4,0
 Cet exemple montre comment assurer la gestion des messages incohérents dans un service. Cet exemple est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.
@@ -27,13 +27,13 @@ Cet exemple montre comment assurer la gestion des messages incohérents dans un 
 
  Une fois que le message est marqué comme étant incohérent, il est traité en fonction des paramètres dans l'énumération <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Pour rappeler les valeurs possibles :
 
--   Erreur (par défaut) : Erreur de l’écouteur, ainsi que l’hôte de service.
+- Erreur (par défaut) : Erreur de l’écouteur, ainsi que l’hôte de service.
 
--   DROP : Pour supprimer le message.
+- DROP : Pour supprimer le message.
 
--   Déplacement : Pour déplacer le message vers la sous-file d’attente des messages incohérents. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Déplacement : Pour déplacer le message vers la sous-file d’attente des messages incohérents. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reject : Pour rejeter le message, envoyer le message en file d’attente de lettres mortes de l’expéditeur. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject : Pour rejeter le message, envoyer le message en file d’attente de lettres mortes de l’expéditeur. Cette valeur est uniquement disponible sur [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` permet de déplacer le message vers la sous-file d'attente de messages incohérents.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :
 
-    1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
+    1. Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.
 
-    2.  Développez le **fonctionnalités** onglet.
+    2. Développez le **fonctionnalités** onglet.
 
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
+    3. Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.
 
-    4.  Vérifier le **transactionnel** boîte.
+    4. Vérifier le **transactionnel** boîte.
 
-    5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
+    5. Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.
 
 3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

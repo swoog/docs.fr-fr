@@ -3,11 +3,11 @@ title: 'Procédure : Contrôle des versions du service'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047475"
 ---
 # <a name="how-to-service-versioning"></a>Procédure : Contrôle des versions du service
 Cette rubrique présente les étapes de base nécessaires pour créer une configuration de routage qui route les messages vers des versions différentes du même service. Dans cet exemple, les messages sont routés vers deux versions différentes d'un service de calculatrice, `roundingCalc` (v1) et `regularCalc` (v2). Les deux implémentations prennent en charge les mêmes opérations ; toutefois, le service le plus ancien, `roundingCalc`, arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser le service `regularCalc` plus récent.  
@@ -17,13 +17,13 @@ Cette rubrique présente les étapes de base nécessaires pour créer une config
   
  Les opérations exposées par les deux services sont :  
   
--   Ajouter  
+- Ajouter  
   
--   Soustraire  
+- Soustraire  
   
--   Multiplication  
+- Multiplication  
   
--   Diviser  
+- Diviser  
   
  Comme les deux implémentations de service gèrent les mêmes opérations et sont pour l'essentiel identiques en dehors des données qu'elles retournent, les données de base contenues dans les messages envoyés à partir d'applications clientes ne sont pas assez uniques pour vous permettre de déterminer comment router la demande. Par exemple, les filtres Action ne peuvent pas être utilisés, parce que les actions par défaut des deux services sont identiques.  
   

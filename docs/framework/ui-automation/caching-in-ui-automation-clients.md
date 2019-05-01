@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032355"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Mise en cache dans les clients UI Automation
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175823"
 ## <a name="retrieving-cached-properties"></a>Récupération des propriétés mises en cache  
  Vous pouvez récupérer les propriétés mises en cache d’un élément via les méthodes et les propriétés suivantes.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Une exception est levée si la propriété demandée ne figure pas dans le cache.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175823"
 ## <a name="retrieving-cached-control-patterns"></a>Récupération des modèles de contrôle mis en cache  
  Vous pouvez récupérer les modèles de contrôle mis en cache d’un élément via les méthodes suivantes.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Si le modèle n’est pas dans le cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> lève une exception et <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> retourne `false`.  
   

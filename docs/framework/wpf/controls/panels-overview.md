@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051024"
 ---
 # <a name="panels-overview"></a>Vue d'ensemble de Panel
 <xref:System.Windows.Controls.Panel> les éléments sont des composants qui contrôlent le rendu des éléments : leur taille et dimensions, leur position et la disposition de leur contenu enfant. Le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un certain nombre de prédéfinis <xref:System.Windows.Controls.Panel> éléments, ainsi que la possibilité de construire personnalisé <xref:System.Windows.Controls.Panel> éléments.  
   
  Cette rubrique contient les sections suivantes.  
   
--   [La classe Panel](#Panels_view_from_10000_feet)  
+- [La classe Panel](#Panels_view_from_10000_feet)  
   
--   [Membres communs aux éléments Panel](#Panels_declared_members)  
+- [Membres communs aux éléments Panel](#Panels_declared_members)  
   
--   [Éléments Panel dérivés](#Panels_derived_elements)  
+- [Éléments Panel dérivés](#Panels_derived_elements)  
   
--   [Éléments Panel d’interface utilisateur](#Panels_main_UI_elements)  
+- [Éléments Panel d’interface utilisateur](#Panels_main_UI_elements)  
   
--   [Éléments Panel imbriqués](#Panels_nested_panel_elements)  
+- [Éléments Panel imbriqués](#Panels_nested_panel_elements)  
   
--   [Éléments Panel personnalisés](#Panels_custom_panel_elements)  
+- [Éléments Panel personnalisés](#Panels_custom_panel_elements)  
   
--   [Prise en charge de la localisation/globalisation](#Panels_global_localization)  
+- [Prise en charge de la localisation/globalisation](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>La classe Panel  

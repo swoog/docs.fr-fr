@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008423"
 ---
 # <a name="opacity-masks-overview"></a>Vue d'ensemble des masques d'opacité
 Les masques d’opacité vous permettent de rendre les parties d’un élément ou d’un visuel totalement ou partiellement transparentes. Pour créer un masque d’opacité, vous appliquez un <xref:System.Windows.Media.Brush> à la <xref:System.Windows.UIElement.OpacityMask%2A> propriété d’un élément ou <xref:System.Windows.Media.Visual>.  Le pinceau est mappé à l’élément ou à l’objet visuel, et la valeur d’opacité de chaque pixel de pinceau est utilisée pour déterminer l’opacité obtenu pour chaque pixel correspondant de l’élément ou de l’objet visuel.  
@@ -36,21 +36,21 @@ Exemple de masque d’opacité
 ## <a name="creating-an-opacity-mask"></a>Création d’un masque d’opacité  
  Pour créer un masque d’opacité, vous créez un <xref:System.Windows.Media.Brush> et appliquez-le à la <xref:System.Windows.UIElement.OpacityMask%2A> propriété d’un élément ou d’un visuel. Vous pouvez utiliser n’importe quel type de <xref:System.Windows.Media.Brush> comme masque d’opacité.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Utilisé pour rendre un élément ou un visuel disparaisse de l’affichage.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush> : Utilisé pour rendre un élément ou un visuel disparaisse de l’affichage.  
   
      L’illustration suivante montre un <xref:System.Windows.Media.LinearGradientBrush> utilisé comme masque d’opacité.  
   
      ![Un objet avec un masque d’opacité LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Exemple de masque d’opacité LinearGradientBrush  
   
--   <xref:System.Windows.Media.ImageBrush>: Utilisé pour créer une texture et des effets de contour souple ou usés.  
+- <xref:System.Windows.Media.ImageBrush>: Utilisé pour créer une texture et des effets de contour souple ou usés.  
   
      L’illustration suivante montre un <xref:System.Windows.Media.ImageBrush> utilisé comme masque d’opacité.  
   
      ![Objet qui a un masque d’opacité ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Exemple de masque d’opacité LinearGradientBrush  
   
--   <xref:System.Windows.Media.DrawingBrush>: Utilisé pour créer des masques d’opacité complexes à partir de modèles de formes, des images et des dégradés.  
+- <xref:System.Windows.Media.DrawingBrush>: Utilisé pour créer des masques d’opacité complexes à partir de modèles de formes, des images et des dégradés.  
   
      L’illustration suivante montre un <xref:System.Windows.Media.DrawingBrush> utilisé comme masque d’opacité.  
   

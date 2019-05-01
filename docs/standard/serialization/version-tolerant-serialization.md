@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028250"
 ---
 # <a name="version-tolerant-serialization"></a>Sérialisation avec tolérance de version
 Dans les versions 1.0 et 1.1 du .NET Framework, la création de types sérialisables pouvant être réutilisés d'une version d'application à l'autre était problématique. Si un type était modifié via l'ajout de champs supplémentaires, les problèmes suivants étaient susceptibles de se produire :  
   
--   Les versions antérieures d'une application pouvaient lever des exceptions lorsque l'utilisateur tentait de désérialiser les nouvelles versions du type précédent.  
+- Les versions antérieures d'une application pouvaient lever des exceptions lorsque l'utilisateur tentait de désérialiser les nouvelles versions du type précédent.  
   
--   Les versions plus récentes d'une application pouvaient lever des exceptions lors de la désérialisation de versions antérieures d'un type ayant des données manquantes.  
+- Les versions plus récentes d'une application pouvaient lever des exceptions lors de la désérialisation de versions antérieures d'un type ayant des données manquantes.  
   
  La Sérialisation avec tolérance de version (VTS) comprend un ensemble de fonctionnalités introduites dans .NET Framework 2.0 et qui simplifient, au fil du temps, la modification des types sérialisables. Plus précisément, les fonctions VTS sont activées pour les classes auxquelles l'attribut <xref:System.SerializableAttribute> a été appliqué, y compris des types génériques. VTS permet d'ajouter de nouveaux champs à ces classes en assurant la compatibilité avec d'autres versions du type. Pour obtenir un exemple d’application opérationnelle, consultez [Sérialisation avec tolérance de version, exemple de technologie](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
   
@@ -36,11 +36,11 @@ Dans les versions 1.0 et 1.1 du .NET Framework, la création de types sérial
 ## <a name="feature-list"></a>Liste des fonctionnalités  
  Cette liste comprend les fonctionnalités suivantes :  
   
--   Tolérance de données étrangères ou inattendues. Cette fonctionnalité permet aux versions plus récentes du type d'envoyer des données aux versions antérieures.  
+- Tolérance de données étrangères ou inattendues. Cette fonctionnalité permet aux versions plus récentes du type d'envoyer des données aux versions antérieures.  
   
--   Tolérance de données facultatives manquantes. Cette fonctionnalité permet aux versions antérieures d'envoyer des données aux versions plus récentes.  
+- Tolérance de données facultatives manquantes. Cette fonctionnalité permet aux versions antérieures d'envoyer des données aux versions plus récentes.  
   
--   Rappels de sérialisation. Cette fonctionnalité active le paramètre de valeur par défaut intelligent en cas de données manquantes.  
+- Rappels de sérialisation. Cette fonctionnalité active le paramètre de valeur par défaut intelligent en cas de données manquantes.  
   
  Une fonctionnalité permet en outre de générer une déclaration lors de l'ajout d'un nouveau champ facultatif. Il s'agit de la propriété <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> de l'attribut <xref:System.Runtime.Serialization.OptionalFieldAttribute>.  
   
@@ -129,7 +129,7 @@ End Class
  \* Ce rappel est appelé avant le constructeur de désérialisation, le cas échéant.  
   
 ### <a name="using-callbacks"></a>Utilisation de rappels  
- Pour utiliser des rappels, appliquez l'attribut approprié à une méthode qui accepte un paramètre <xref:System.Runtime.Serialization.StreamingContext>. Une seule méthode par classe peut être marquée avec chacun de ces attributs. Par exemple :  
+ Pour utiliser des rappels, appliquez l'attribut approprié à une méthode qui accepte un paramètre <xref:System.Runtime.Serialization.StreamingContext>. Une seule méthode par classe peut être marquée avec chacun de ces attributs. Exemple :  
   
 ```csharp  
 [OnDeserializing]  
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>meilleures pratiques recommandées.  
  Pour garantir un comportement de versioning correct, suivez les règles ci-dessous lors de la modification d'un type d'une version à l'autre :  
   
--   Ne supprimez jamais un champ sérialisé.  
+- Ne supprimez jamais un champ sérialisé.  
   
--   N'appliquez jamais l'attribut <xref:System.NonSerializedAttribute> à un champ si cet attribut n'a pas été appliqué au champ dans la version antérieure.  
+- N'appliquez jamais l'attribut <xref:System.NonSerializedAttribute> à un champ si cet attribut n'a pas été appliqué au champ dans la version antérieure.  
   
--   Ne modifiez jamais le nom ou le type d'un champ sérialisé.  
+- Ne modifiez jamais le nom ou le type d'un champ sérialisé.  
   
--   Quand vous ajoutez un nouveau champ sérialisé, appliquez l’attribut **OptionalFieldAttribute**.  
+- Quand vous ajoutez un nouveau champ sérialisé, appliquez l’attribut **OptionalFieldAttribute**.  
   
--   Quand vous supprimez un attribut **NonSerializedAttribute** d’un champ (qui n’était pas sérialisable dans une version antérieure), appliquez l’attribut **OptionalFieldAttribute**.  
+- Quand vous supprimez un attribut **NonSerializedAttribute** d’un champ (qui n’était pas sérialisable dans une version antérieure), appliquez l’attribut **OptionalFieldAttribute**.  
   
--   Assignez des valeurs par défaut significatives à tous les champs facultatifs à l’aide des rappels de sérialisation, sauf si les valeurs par défaut 0 ou **null** sont acceptables.  
+- Assignez des valeurs par défaut significatives à tous les champs facultatifs à l’aide des rappels de sérialisation, sauf si les valeurs par défaut 0 ou **null** sont acceptables.  
   
  Pour garantir la compatibilité d'un type avec les futurs moteurs de sérialisation, suivez ces indications :  
   
--   Définissez toujours la propriété **VersionAdded** sur l’attribut **OptionalFieldAttribute** de manière appropriée.  
+- Définissez toujours la propriété **VersionAdded** sur l’attribut **OptionalFieldAttribute** de manière appropriée.  
   
--   Évitez le versioning avec des branches.  
+- Évitez le versioning avec des branches.  
   
 ## <a name="see-also"></a>Voir aussi
 

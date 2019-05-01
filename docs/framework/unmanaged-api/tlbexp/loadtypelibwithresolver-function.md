@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049334"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver, fonction
 Charge une bibliothèque de types et utilise fourni [ITypeLibResolver, interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) pour résoudre toutes bibliothèques de types référencées en interne.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Un [énumération de regkind a](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) indicateur qui contrôle comment la bibliothèque de types est enregistrée. Ses valeurs possibles sont :  
   
--   `REGKIND_DEFAULT`: Utiliser le comportement de l’inscription par défaut.  
+- `REGKIND_DEFAULT`: Utiliser le comportement de l’inscription par défaut.  
   
--   `REGKIND_REGISTER`: Inscrire cette bibliothèque de types.  
+- `REGKIND_REGISTER`: Inscrire cette bibliothèque de types.  
   
--   `REGKIND_NONE`: N’enregistrez pas cette bibliothèque de types.  
+- `REGKIND_NONE`: N’enregistrez pas cette bibliothèque de types.  
   
  `pTlbResolver`  
  [in] Un pointeur vers l’implémentation de la [ITypeLibResolver, interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

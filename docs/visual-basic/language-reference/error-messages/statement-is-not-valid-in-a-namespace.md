@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013713"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Instruction non valide dans un espace de noms
 L’instruction ne peut pas apparaître au niveau d’un espace de noms. Les seules déclarations autorisées au niveau de l’espace de noms sont module, interface, classe, délégué, énumération et déclarations de structure.  
@@ -21,7 +21,7 @@ L’instruction ne peut pas apparaître au niveau d’un espace de noms. Les seu
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Déplacez l’instruction à un emplacement au sein d’un module, classe, interface, de structure, énumération ou définition du délégué.  
+- Déplacez l’instruction à un emplacement au sein d’un module, classe, interface, de structure, énumération ou définition du délégué.  
   
 ## <a name="see-also"></a>Voir aussi
 

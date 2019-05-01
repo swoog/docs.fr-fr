@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053208"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Procédure pas à pas : hébergement de contenu WPF dans Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Cependant, si vous avez écrit une bonne partie du code [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], il est peut-être plus judicieux d'ajouter la fonctionnalité [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à votre application plutôt que de réécrire le code d'origine. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit un mécanisme simple pour l’hébergement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu dans un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] fenêtre.  
@@ -41,13 +41,13 @@ ms.locfileid: "59296106"
   
 4. Gérer le [WM_CREATE](/windows/desktop/winmsg/wm-create)notification dans votre procédure de fenêtre, puis effectuez ce qui suit :  
   
-    1.  Créez un objet <xref:System.Windows.Interop.HwndSource> en faisant de la fenêtre parente son paramètre `parent`.  
+    1. Créez un objet <xref:System.Windows.Interop.HwndSource> en faisant de la fenêtre parente son paramètre `parent`.  
   
-    2.  Créez une instance de la classe de contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+    2. Créez une instance de la classe de contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-    3.  Assignez une référence à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objet de contenu pour le <xref:System.Windows.Interop.HwndSource.RootVisual%2A> propriété de la <xref:System.Windows.Interop.HwndSource>.  
+    3. Assignez une référence à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objet de contenu pour le <xref:System.Windows.Interop.HwndSource.RootVisual%2A> propriété de la <xref:System.Windows.Interop.HwndSource>.  
   
-    4.  Obtenez le HWND pour le contenu. La propriété <xref:System.Windows.Interop.HwndSource.Handle%2A> de l'objet <xref:System.Windows.Interop.HwndSource> contient le handle de fenêtre (HWND). Pour obtenir un HWND que vous pouvez utiliser dans la partie non managée de l'application, effectuez un cast de `Handle.ToPointer()` en HWND.  
+    4. Obtenez le HWND pour le contenu. La propriété <xref:System.Windows.Interop.HwndSource.Handle%2A> de l'objet <xref:System.Windows.Interop.HwndSource> contient le handle de fenêtre (HWND). Pour obtenir un HWND que vous pouvez utiliser dans la partie non managée de l'application, effectuez un cast de `Handle.ToPointer()` en HWND.  
   
 5. Implémentez une classe managée qui contient un champ statique pour contenir une référence à votre contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette classe vous permet d'obtenir une référence au contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à partir de votre code [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
@@ -65,13 +65,13 @@ ms.locfileid: "59296106"
  Cette section décrit comment héberger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu dans un base [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] application. Le contenu proprement dit est implémenté dans [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] en tant que classe managée. Pour l'essentiel, il s'agit d'une programmation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] simple. Les principaux aspects de l’implémentation de contenu sont décrits dans [implémentation du contenu WPF](#implementing_the_wpf_page).
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [Application de base](#the_basic_application)
+- [Application de base](#the_basic_application)
 
--   [Hébergement du contenu WPF](#hosting_the_wpf_page)
+- [Hébergement du contenu WPF](#hosting_the_wpf_page)
 
--   [Stockage d’une référence au contenu WPF](#holding_a_reference)
+- [Stockage d’une référence au contenu WPF](#holding_a_reference)
 
--   [Communication avec le contenu WPF](#communicating_with_the_page)
+- [Communication avec le contenu WPF](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>Application de base
@@ -87,11 +87,11 @@ ms.locfileid: "59296106"
 
  Le modèle crée une application [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] de base avec les éléments suivants :
 
--   Un point d'entrée pour l'application
+- Un point d'entrée pour l'application
 
--   Une fenêtre avec une procédure de fenêtre associée (WndProc)
+- Une fenêtre avec une procédure de fenêtre associée (WndProc)
 
--   Un menu avec **fichier** et **aide** des en-têtes. Le **fichier** menu a un **Exit** élément qui ferme l’application. Le **aide** menu a un **sur** élément qui lance une boîte de dialogue simple.
+- Un menu avec **fichier** et **aide** des en-têtes. Le **fichier** menu a un **Exit** élément qui ferme l’application. Le **aide** menu a un **sur** élément qui lance une boîte de dialogue simple.
 
  Avant de commencer à écrire le code pour héberger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu, vous devez apporter deux modifications au modèle de base.
 
@@ -170,11 +170,11 @@ ms.locfileid: "59296106"
  Vous pouvez héberger et utiliser le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu sans aucune connaissance de l’implémentation réelle. Si le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu avait été empaqueté dans une fonction [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], il aurait pu être créé dans les [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] langage. Voici une brève procédure pas à pas de l'implémentation [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] utilisée dans l'exemple. Cette section comprend les sous-sections suivantes.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [Disposition](#page_layout)
+- [Disposition](#page_layout)
 
--   [Retour des données à la fenêtre hôte](#returning_data_to_window)
+- [Retour des données à la fenêtre hôte](#returning_data_to_window)
 
--   [Définition des propriétés WPF](#set_page_properties)
+- [Définition des propriétés WPF](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Mise en page

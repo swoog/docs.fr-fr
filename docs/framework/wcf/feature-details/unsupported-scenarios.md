@@ -3,11 +3,11 @@ title: Scénarios non pris en charge
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050751"
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en charge certains scénarios de sécurité spécifiques. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n’implémente pas les protocoles d’authentification SSPI ou Kerberos, et par conséquent, WCF ne prend pas en charge l’exécution d’un service avec l’authentification Windows sur cette plateforme. Autres mécanismes d’authentification, telles que le nom d’utilisateur/mot de passe et l’authentification intégrée HTTP/HTTPS sont pris en charge lors de l’exécution de WCF sous Windows XP Édition familiale.  
@@ -20,13 +20,13 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP avec le cookie de jeton de contexte sécurisé activé  
  WCF ne prend pas en charge l’emprunt d’identité et un <xref:System.InvalidOperationException> est levée lorsque les conditions suivantes sont réunies :  
   
--   Le système d'exploitation correspond à [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Le système d'exploitation correspond à [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Le mode d'authentification aboutit à un identité Windows.  
+- Le mode d'authentification aboutit à un identité Windows.  
   
--   La propriété <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de l'objet <xref:System.ServiceModel.OperationBehaviorAttribute> a la valeur <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- La propriété <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de l'objet <xref:System.ServiceModel.OperationBehaviorAttribute> a la valeur <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Un jeton de contexte de sécurité basé sur l'état est créé (cette création est désactivée par défaut).  
+- Un jeton de contexte de sécurité basé sur l'état est créé (cette création est désactivée par défaut).  
   
  Ce jeton peut uniquement être crée à l’aide d’une liaison personnalisée. Pour plus d'informations, voir [Procédure : Créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Dans le code, ce jeton est activé en créant un élément de liaison de sécurité (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) à l'aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> et en affectant au paramètre `requireCancellation` la valeur `false`. Ce paramètre concerne la mise en cache du jeton. L'affectation de la valeur `false` à ce paramètre permet d'activer la fonctionnalité de jeton basé sur l'état.  
   
@@ -68,18 +68,18 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
   
  Pour indiquer si un certificat utilise KSP, deux méthodes sont possibles :  
   
--   Exécutez `p/invoke` de `CertGetCertificateContextProperty` et inspectez `dwProvType` sur la `CertGetCertificateContextProperty` retournée.  
+- Exécutez `p/invoke` de `CertGetCertificateContextProperty` et inspectez `dwProvType` sur la `CertGetCertificateContextProperty` retournée.  
   
--   Utilisez le `certutil` commande à partir de la ligne de commande pour interroger des certificats. Pour plus d’informations, consultez [Tâches Certutil pour le dépannage des certificats](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Utilisez le `certutil` commande à partir de la ligne de commande pour interroger des certificats. Pour plus d’informations, consultez [Tâches Certutil pour le dépannage des certificats](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
  WCF ne prend pas en charge la combinaison suivante de paramètres, car ils peuvent également empêcher l’authentification du client ne se produise :  
   
--   L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
+- L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
   
--   Le mode de sécurité de niveau message est utilisé.  
+- Le mode de sécurité de niveau message est utilisé.  
   
  Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ou, si le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est requis, désactivez le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] l’emprunt d’identité des fonctionnalités et utilisez à la place de l’emprunt d’identité fourni par WCF. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   

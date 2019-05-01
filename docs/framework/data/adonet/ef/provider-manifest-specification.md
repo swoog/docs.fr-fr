@@ -3,11 +3,11 @@ title: Spécification de manifeste du fournisseur
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034012"
 ---
 # <a name="provider-manifest-specification"></a>Spécification de manifeste du fournisseur
 Cette section explique comment un fournisseur de banques de données peut prendre en charge les types et les fonctions dans la banque de données.  
@@ -45,18 +45,18 @@ Cette section explique comment un fournisseur de banques de données peut prendr
   
  Vous écrivez un fichier XML qui a deux sections :  
   
--   Liste de types de fournisseurs exprimés en termes d'« équivalent EDM » d'un type ou d'une fonction de banque. Les types de banque ont des types EDM équivalents. Les fonctions de banque ont des fonctions EDM correspondantes. Par exemple, varchar est un type SQL Server mais le type EDM correspondant est chaîne.  
+- Liste de types de fournisseurs exprimés en termes d'« équivalent EDM » d'un type ou d'une fonction de banque. Les types de banque ont des types EDM équivalents. Les fonctions de banque ont des fonctions EDM correspondantes. Par exemple, varchar est un type SQL Server mais le type EDM correspondant est chaîne.  
   
--   Liste de fonctions prises en charge par le fournisseur dans lesquelles les types de paramètres et les types de retour sont exprimés en termes EDM.  
+- Liste de fonctions prises en charge par le fournisseur dans lesquelles les types de paramètres et les types de retour sont exprimés en termes EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Écriture d'un fournisseur avec mappage de type asymétrique  
  Lors de l'écriture d'un fournisseur de banques de données pour [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], le mappage des types EDM vers les types fournisseur pour certains types peut être différent du mappage des types fournisseur vers les types EDM. Par exemple, unbounded EDM PrimitiveTypeKind.String peut être mappé à nvarchar (4000) sur le fournisseur, alors que nvarchar (4000) est mappé à EDM PrimitiveTypeKind.String (MaxLength=4000).  
   
  Vous écrivez un fichier XML qui a deux sections :  
   
--   Une liste de types de fournisseurs exprimés en termes d’EDM et définir le mappage dans les deux sens : EDM-à-fournisseur et fournisseur-à-EDM.  
+- Une liste de types de fournisseurs exprimés en termes d’EDM et définir le mappage dans les deux sens : EDM-à-fournisseur et fournisseur-à-EDM.  
   
--   Liste de fonctions prises en charge par le fournisseur dans lesquelles les types de paramètres et les types de retour sont exprimés en termes EDM.  
+- Liste de fonctions prises en charge par le fournisseur dans lesquelles les types de paramètres et les types de retour sont exprimés en termes EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Manifeste du fournisseur Discoverability  
  Le manifeste est utilisé de manière indirecte par plusieurs types de composants dans les Services d'entités (par exemple Outils ou Requête), mais il est plus directement exploité par les métadonnées via l'utilisation du chargeur de métadonnées de la banque de données.  

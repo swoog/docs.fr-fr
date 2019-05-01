@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010616"
 ---
 # <a name="data-and-data-objects"></a>Données et objets de données
 Les données transférées en tant que partie d’une opération de glisser-déplacer sont stockées dans un objet de données.  Conceptuellement, un objet de données se compose d’un ou plusieurs des paires suivantes :  
   
--   Un <xref:System.Object> qui contient les données réelles.  
+- Un <xref:System.Object> qui contient les données réelles.  
   
--   Un identificateur de format de données correspondant.  
+- Un identificateur de format de données correspondant.  
   
  Les données proprement dites peuvent se composer de tout ce qui peut être représentée comme une base de <xref:System.Object>.  Le format de données correspondant est une chaîne ou <xref:System.Type> qui fournit une indication sur le format des données est dans.  Objets de données prennent en charge l’hébergement de plusieurs paires de format de données/données ; Cela permet à un objet de données unique fournir des données dans plusieurs formats.  
   

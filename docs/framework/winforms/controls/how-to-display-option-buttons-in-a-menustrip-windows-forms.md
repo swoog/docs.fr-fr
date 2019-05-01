@@ -10,11 +10,11 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013419"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Procédure : Afficher les boutons d’Option dans un MenuStrip (Windows Forms)
 Cases d’option, également connu sous les boutons radio, sont similaires aux cases à cocher sauf que les utilisateurs peuvent sélectionner qu’un seul à la fois. Bien que, par défaut le <xref:System.Windows.Forms.ToolStripMenuItem> classe ne fournit pas de comportement de case d’option, la classe fournit un comportement de case à cocher que vous pouvez personnaliser pour implémenter le comportement de case d’option pour les éléments de menu dans un <xref:System.Windows.Forms.MenuStrip> contrôle.  
@@ -78,7 +78,7 @@ Cases d’option, également connu sous les boutons radio, sont similaires aux c
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références aux assemblys System, System.Drawing et System.Windows.Forms.  
+- Références aux assemblys System, System.Drawing et System.Windows.Forms.  
   
 ## <a name="see-also"></a>Voir aussi
 

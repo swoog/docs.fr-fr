@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037087"
 ---
 # <a name="commanding-overview"></a>Vue d'ensemble des commandes
 <a name="introduction"></a> L’exécution de commandes est un mécanisme d’entrée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] qui fournit la gestion des entrées à un niveau plus sémantique que l’entrée de périphérique. Les opérations **Copier**, **Couper** et **Coller** sont des exemples de commandes figurant dans de nombreuses applications.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139033"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Qu’est-ce qu’une commande ?](#commands_at_10000_feet)  
+- [Qu’est-ce qu’une commande ?](#commands_at_10000_feet)  
   
--   [Exemple de commande simple dans WPF](#simple_command)  
+- [Exemple de commande simple dans WPF](#simple_command)  
   
--   [Quatre principaux concepts de l’exécution de commandes WPF](#Four_main_Concepts)  
+- [Quatre principaux concepts de l’exécution de commandes WPF](#Four_main_Concepts)  
   
--   [Bibliothèque de commandes](#Command_Library)  
+- [Bibliothèque de commandes](#Command_Library)  
   
--   [Création de commandes personnalisées](#creating_commands)  
+- [Création de commandes personnalisées](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Qu’est-ce qu’une commande ?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139033"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Quatre principaux concepts de l’exécution de commandes WPF  
  Le modèle de commande routée dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peut être divisé en quatre concepts principaux : la commande, la source de commande, la cible de commande et la liaison de commande.  
   
--   La *commande* est l’action à exécuter.  
+- La *commande* est l’action à exécuter.  
   
--   La *source de la commande* est l’objet qui appelle la commande.  
+- La *source de la commande* est l’objet qui appelle la commande.  
   
--   La *cible de la commande* est l’objet sur lequel la commande est exécutée.  
+- La *cible de la commande* est l’objet sur lequel la commande est exécutée.  
   
--   La *liaison de commande* est l’objet qui mappe la logique de commande à la commande.  
+- La *liaison de commande* est l’objet qui mappe la logique de commande à la commande.  
   
  Dans l’exemple précédent, la commande <xref:System.Windows.Input.ApplicationCommands.Paste%2A> est la commande, <xref:System.Windows.Controls.MenuItem> est la source de commande, <xref:System.Windows.Controls.TextBox> est la cible de commande, et la liaison de commande est fournie par le contrôle <xref:System.Windows.Controls.TextBox>.  Il est important de noter que <xref:System.Windows.Input.CommandBinding> n’est pas toujours fourni par le contrôle qui représente la classe de la cible de commande.  Bien souvent, <xref:System.Windows.Input.CommandBinding> doit être créé par le développeur d’applications, ou <xref:System.Windows.Input.CommandBinding> peut être associé à un ancêtre de la cible de commande.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139033"
   
  <xref:System.Windows.Input.ICommandSource> expose trois propriétés : <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> et <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> :  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> est la commande à exécuter quand la source de commande est appelée.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> est la commande à exécuter quand la source de commande est appelée.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est l’objet sur lequel exécuter la commande.  Il est important de noter que dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], la propriété <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> sur <xref:System.Windows.Input.ICommandSource> est applicable uniquement quand <xref:System.Windows.Input.ICommand> est un <xref:System.Windows.Input.RoutedCommand>.  Si <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est défini sur <xref:System.Windows.Input.ICommandSource> et si la commande correspondante n’est pas <xref:System.Windows.Input.RoutedCommand>, la cible de commande est ignorée. Si <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> n’est pas défini, l’élément qui a le focus clavier est la cible de commande.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est l’objet sur lequel exécuter la commande.  Il est important de noter que dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], la propriété <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> sur <xref:System.Windows.Input.ICommandSource> est applicable uniquement quand <xref:System.Windows.Input.ICommand> est un <xref:System.Windows.Input.RoutedCommand>.  Si <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est défini sur <xref:System.Windows.Input.ICommandSource> et si la commande correspondante n’est pas <xref:System.Windows.Input.RoutedCommand>, la cible de commande est ignorée. Si <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> n’est pas défini, l’élément qui a le focus clavier est la cible de commande.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> est un type de données défini par l’utilisateur, qui permet de passer des informations aux gestionnaires implémentant la commande.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> est un type de données défini par l’utilisateur, qui permet de passer des informations aux gestionnaires implémentant la commande.  
   
  Les classes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] qui implémentent <xref:System.Windows.Input.ICommandSource> sont <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink> et <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem> et <xref:System.Windows.Documents.Hyperlink> appellent une commande quand l’utilisateur clique sur ces derniers, et <xref:System.Windows.Input.InputBinding> appelle une commande quand le <xref:System.Windows.Input.InputGesture> associé est exécuté.  
   

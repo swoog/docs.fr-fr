@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044133"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod, méthode
 Crée une définition pour une méthode ou une fonction globale avec la signature spécifiée et retourne un jeton pour cette définition de méthode.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Définition d’une méthode pour PInvoke  
  Pour chaque fonction non managée à appeler via PInvoke, vous devez définir une méthode managée qui représente la fonction non managée cible. Pour définir la méthode managée, utilisez `DefineMethod` avec certains des paramètres définis sur certaines valeurs, selon la façon dont PInvoke est utilisé :  
   
--   PInvoke true : implique l’appel d’une méthode non managée externe qui réside dans une DLL non managée.  
+- PInvoke true : implique l’appel d’une méthode non managée externe qui réside dans une DLL non managée.  
   
--   PInvoke local : implique l’appel d’une méthode non managée native qui est incorporée dans le module managé actuel.  
+- PInvoke local : implique l’appel d’une méthode non managée native qui est incorporée dans le module managé actuel.  
   
  Les paramètres sont fournis dans le tableau suivant.  
   

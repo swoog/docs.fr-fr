@@ -3,11 +3,11 @@ title: Sécurité dans LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036996"
 ---
 # <a name="security-in-linq-to-sql"></a>Sécurité dans LINQ to SQL
 Les risques de sécurité sont toujours présents lorsque vous vous connectez à une base de données. Même si LINQ to SQL inclut de nouvelles méthodes d'utilisation des données dans SQL Server, il ne fournit pas de mécanismes de sécurité supplémentaires.  
@@ -25,13 +25,13 @@ Les risques de sécurité sont toujours présents lorsque vous vous connectez à
   
  En l'absence de sécurité intégrée, un mot de passe en texte clair est nécessaire dans la chaîne de connexion. La méthode la plus appropriée pour sécuriser votre chaîne de connexion, dans l'ordre croissant de risque, est la suivante :  
   
--   Utilisez la sécurité intégrée.  
+- Utilisez la sécurité intégrée.  
   
--   Sécurisez les chaînes de connexion à l'aide de mots de passe et minimisez l'accès à celles-ci.  
+- Sécurisez les chaînes de connexion à l'aide de mots de passe et minimisez l'accès à celles-ci.  
   
--   Utilisez une classe <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> au lieu d'une chaîne de connexion car elle limite la durée d'exposition. La classe <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> LINQ to SQL peut être instanciée à l'aide d'un objet <xref:System.Data.SqlClient.SqlConnection>.  
+- Utilisez une classe <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> au lieu d'une chaîne de connexion car elle limite la durée d'exposition. La classe <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> LINQ to SQL peut être instanciée à l'aide d'un objet <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Minimisez les durées de vie et les points d'accès pour toutes les chaînes de connexion.  
+- Minimisez les durées de vie et les points d'accès pour toutes les chaînes de connexion.  
   
 ## <a name="see-also"></a>Voir aussi
 

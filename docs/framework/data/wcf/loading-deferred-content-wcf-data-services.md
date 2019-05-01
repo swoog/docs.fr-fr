@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037126"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Chargement de contenu différé (services de données WCF)
 Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite la quantité de données retournées par une requête. Toutefois, vous pouvez charger explicitement des données supplémentaires, notamment les entités connexes, les données de réponse paginées et les flux de données binaires, à partir du service de données si nécessaire. Cette rubrique décrit comment charger un contenu différé dans votre application.  
@@ -22,14 +22,14 @@ Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite 
 ## <a name="related-entities"></a>Entités connexes  
  Lorsque vous exécutez une requête, seules les entités dans le jeu d'entités traitées sont retournées. Par exemple, lorsqu'une requête exécutée sur le service de données Northwind retourne les entités `Customers`, par défaut, les entités `Orders` connexes ne sont pas retournées, même s'il existe une relation entre `Customers` et `Orders`. De plus, lorsque la pagination est autorisée dans le service de données, vous devez charger explicitement les pages de données suivantes à partir du service. Il y a deux façons de charger des entités connexes :  
   
--   **Le chargement hâtif**: Vous pouvez utiliser la `$expand` option de requête pour demander que la requête retourne des entités liées par une association à l’entité qui a défini la requête demandée. Utilisez la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> sur le <xref:System.Data.Services.Client.DataServiceQuery%601> pour ajouter l'option `$expand` à la requête envoyée au service de données. Vous pouvez demander plusieurs jeux d'entités connexes en les séparant par une virgule, comme dans l'exemple suivant. Toutes les entités demandées par la requête sont retournées dans une réponse unique. L'exemple de code suivant retourne `Order_Details` et `Customers` ainsi que le jeu d'entités `Orders` :  
+- **Le chargement hâtif**: Vous pouvez utiliser la `$expand` option de requête pour demander que la requête retourne des entités liées par une association à l’entité qui a défini la requête demandée. Utilisez la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> sur le <xref:System.Data.Services.Client.DataServiceQuery%601> pour ajouter l'option `$expand` à la requête envoyée au service de données. Vous pouvez demander plusieurs jeux d'entités connexes en les séparant par une virgule, comme dans l'exemple suivant. Toutes les entités demandées par la requête sont retournées dans une réponse unique. L'exemple de code suivant retourne `Order_Details` et `Customers` ainsi que le jeu d'entités `Orders` :  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite à 12 le nombre de jeux d'entités pouvant être inclus dans une requête unique à l'aide de l'option de requête `$expand`.  
   
--   **Chargement explicite**: Vous pouvez appeler la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> méthode sur le <xref:System.Data.Services.Client.DataServiceContext> instance pour charger explicitement des entités associées. Chaque appel à la méthode <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crée une demande séparée au service de données. L'exemple suivant charge explicitement `Order_Details` pour une entité `Orders` :  
+- **Chargement explicite**: Vous pouvez appeler la <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> méthode sur le <xref:System.Data.Services.Client.DataServiceContext> instance pour charger explicitement des entités associées. Chaque appel à la méthode <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crée une demande séparée au service de données. L'exemple suivant charge explicitement `Order_Details` pour une entité `Orders` :  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039141"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Procédure : installer et configurer des composants d’activation WCF
 Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
   
--   Installer (ou vérifiez l’installation) les composants d’activation de WCF.  
+- Installer (ou vérifiez l’installation) les composants d’activation de WCF.  
   
--   Configurer le service WAS pour prendre en charge un protocole non HTTP. La procédure suivante configure [!INCLUDE[wv](../../../../includes/wv-md.md)] pour l'activation TCP.  
+- Configurer le service WAS pour prendre en charge un protocole non HTTP. La procédure suivante configure [!INCLUDE[wv](../../../../includes/wv-md.md)] pour l'activation TCP.  
   
  Une fois l’installation et configuration du service WAS, consultez [Comment : Héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) pour connaître les procédures créer un service WCF qui expose un point de terminaison non HTTP qui emploie WAS.  
   
@@ -57,7 +57,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
   
      Pour des raisons pratiques, les deux étapes suivantes sont implémentées dans le fichier de commandes RemoveNetTcpSiteBinding.cmd situé dans le répertoire de l'exemple.  
   
-    1.  Supprimez le protocole net.tcp de la liste des protocoles activés en exécutant la commande suivante dans une invite de commandes au niveau de l'administrateur.  
+    1. Supprimez le protocole net.tcp de la liste des protocoles activés en exécutant la commande suivante dans une invite de commandes au niveau de l'administrateur.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ Cette rubrique décrit les étapes requises pour configurer le service Windows P
         > [!NOTE]
         >  Cette commande est une ligne unique de texte.  
   
-    2.  Supprimez la liaison du site net.tcp en exécutant la commande suivante dans une invite de commandes de niveau élevé :  
+    2. Supprimez la liaison du site net.tcp en exécutant la commande suivante dans une invite de commandes de niveau élevé :  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Accéder aux objets de fuseau UTC et l’heure locale prédéfinis'
+title: 'Procédure : accéder aux objets de fuseau horaire UTC et local prédéfinis'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026604"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procédure : Accéder aux objets de fuseau UTC et l’heure locale prédéfinis
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procédure : accéder aux objets de fuseau horaire UTC et local prédéfinis
 
 Le <xref:System.TimeZoneInfo> classe fournit deux propriétés, <xref:System.TimeZoneInfo.Utc%2A> et <xref:System.TimeZoneInfo.Local%2A>, qui vous offrent votre code d’accéder aux objets de fuseau horaire prédéfini. Cette rubrique explique comment accéder aux objets <xref:System.TimeZoneInfo> retournés par ces propriétés.
 

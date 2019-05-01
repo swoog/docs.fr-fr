@@ -9,18 +9,18 @@ ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042196"
 ---
 # <a name="metadata-enumerations"></a>Énumérations de métadonnées
 Cette section décrit les énumérations non managées utilisées par l'API de métadonnées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [AssemblyFlags, énumération](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)  
- Contient des valeurs qui décrivent les fonctionnalités d’exécution d’un assembly.  
+ Contient des valeurs qui décrivent les fonctionnalités d'exécution d'un assembly.  
   
  [AssemblyRefFlags, énumération](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)  
  Contient des valeurs qui décrivent les fonctionnalités d’une référence d’assembly.  
@@ -71,7 +71,7 @@ Cette section décrit les énumérations non managées utilisées par l'API de m
  Contient des valeurs qui décrivent le type de fichier défini dans un appel à la [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) (méthode).  
   
  [CorFileMapping, énumération](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- Contient des valeurs qui décrivent le type de mappage de fichier retourné par un appel à la [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) (méthode).  
+ Contient des valeurs qui décrivent le type de mappage de fichier est retourné à partir d’un appel à la [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) (méthode).  
   
  [CorGenericParamAttr, énumération](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
  Contient des valeurs qui décrivent le <xref:System.Type> paramètres pour les types génériques, comme utilisés lors d’appels à la [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) (méthode).  
@@ -149,10 +149,10 @@ Cette section décrit les énumérations non managées utilisées par l'API de m
  Contient des valeurs qui indiquent les métadonnées de type.  
   
  [CorUnmanagedCallingConvention, énumération](../../../../docs/framework/unmanaged-api/metadata/corunmanagedcallingconvention-enumeration.md)  
- Contient des valeurs qui décrivent les conventions d’appel non managées.  
+ Contient des valeurs qui décrivent les conventions d'appel non managées.  
   
  [CorValidatorModuleType, énumération](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Fournit des valeurs utilisées par le [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface afin de spécifier le type du module (fichier PE et fichier .obj).  
+ Fournit des valeurs utilisées par le [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface pour spécifier le type du module (fichier PE et fichier .obj).  
   
  [COUNINITIEE, énumération](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
  Spécifie les constantes utilisées par [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) lors de l’initialisation du common language runtime.  

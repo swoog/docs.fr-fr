@@ -3,11 +3,11 @@ title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034142"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 
@@ -50,7 +50,7 @@ DbDeleteCommandTree représente une opération de suppression d'une seule ligne 
 
 ### <a name="restrictions-on-modification-command-tree-properties"></a>Restrictions sur les propriétés de l'arborescence de commandes de modification
 
-Les informations et restrictions suivantes s'appliquent aux propriétés de l'arborescence de commandes de modification.
+Les informations et restrictions suivantes s’appliquent aux propriétés de l’arborescence de commandes de modification.
 
 #### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>Renvoi dans DbInsertCommandTree et DbUpdateCommandTree
 
@@ -96,7 +96,7 @@ Le module de génération SQL de modification du fournisseur d'exemples (situé 
 
 ### <a name="helper-classes-expressiontranslator"></a>Classes d’assistance : ExpressionTranslator
 
-ExpressionTranslator fait office de traducteur commun léger pour toutes les propriétés de l’arborescence de commandes de modification de type DbExpression. Il prend uniquement en charge la traduction des types de l'expression auxquels les propriétés de l'arborescence de commandes de modification sont contraintes et est construit en fonction de ces contraintes particulières.
+ExpressionTranslator fait office de traducteur commun léger pour toutes les propriétés de l’arborescence de commandes de modification de type DbExpression. Il prend uniquement en charge la traduction des types de l’expression auxquels les propriétés de l’arborescence de commandes de modification sont contraintes et est construit en fonction de ces contraintes particulières.
 
 Les informations suivantes décrivent la visite de types de l'expression spécifiques (les nœuds avec des traductions simples sont omis).
 
@@ -158,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Ce code produit l'arborescence de commandes suivante, passée au fournisseur :
+Ce code produit l’arborescence de commandes suivante, passée au fournisseur :
 
 ```
 DbInsertCommandTree
@@ -228,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Ce code utilisateur produit l'arborescence de commandes suivante, passée au fournisseur :
+Ce code utilisateur produit l’arborescence de commandes suivante, passée au fournisseur :
 
 ```
 DbUpdateCommandTree
@@ -279,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Ce code utilisateur produit l'arborescence de commandes suivante, passée au fournisseur.
+Ce code utilisateur produit l’arborescence de commandes suivante, passée au fournisseur.
 
 ```
 DbDeleteCommandTree

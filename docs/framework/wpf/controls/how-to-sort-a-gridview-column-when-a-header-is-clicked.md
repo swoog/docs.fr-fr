@@ -1,5 +1,5 @@
 ---
-title: "Procédure : Trier une colonne GridView lors d'un clic sur un en-tête"
+title: 'Procédure : Trier une colonne GridView lors d’un clic sur un en-tête'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
 ms.openlocfilehash: 3438ab91045a144a7fa1d531e9d7d55ad30e89ea
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052025"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procédure : Trier une colonne GridView lors d'un clic sur un en-tête
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procédure : Trier une colonne GridView lors d’un clic sur un en-tête
 
 Cet exemple montre comment créer un <xref:System.Windows.Controls.ListView> contrôle qui implémente un <xref:System.Windows.Controls.GridView> afficher en mode trie le contenu des données lorsqu’un utilisateur clique sur un en-tête de colonne.
 
