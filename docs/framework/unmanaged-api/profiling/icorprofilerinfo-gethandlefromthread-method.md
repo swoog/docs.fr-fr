@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8fc26ad9b25ad243bf868d6ef3155360509e6483
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049581"
 ---
-# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="a050c-102">ICorProfilerInfo::GetHandleFromThread, méthode</span><span class="sxs-lookup"><span data-stu-id="a050c-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
-<span data-ttu-id="a050c-103">Mappe l’ID d’un thread à un handle de thread Win32.</span><span class="sxs-lookup"><span data-stu-id="a050c-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
+# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="1674c-102">ICorProfilerInfo::GetHandleFromThread, méthode</span><span class="sxs-lookup"><span data-stu-id="1674c-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
+<span data-ttu-id="1674c-103">Mappe l’ID d’un thread à un handle de thread Win32.</span><span class="sxs-lookup"><span data-stu-id="1674c-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a050c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a050c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1674c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1674c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandleFromThread(  
@@ -35,25 +35,25 @@ HRESULT GetHandleFromThread(
     [out] HANDLE  *phThread);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a050c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a050c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1674c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1674c-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="a050c-106">[in] L’ID de thread à mapper.</span><span class="sxs-lookup"><span data-stu-id="a050c-106">[in] The thread ID to be mapped.</span></span>  
+ <span data-ttu-id="1674c-106">[in] L’ID de thread à mapper.</span><span class="sxs-lookup"><span data-stu-id="1674c-106">[in] The thread ID to be mapped.</span></span>  
   
  `phThread`  
- <span data-ttu-id="a050c-107">[out] Un pointeur vers un handle de thread Win32.</span><span class="sxs-lookup"><span data-stu-id="a050c-107">[out] A pointer to a Win32 thread handle.</span></span>  
+ <span data-ttu-id="1674c-107">[out] Un pointeur vers un handle de thread Win32.</span><span class="sxs-lookup"><span data-stu-id="1674c-107">[out] A pointer to a Win32 thread handle.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a050c-108">Notes</span><span class="sxs-lookup"><span data-stu-id="a050c-108">Remarks</span></span>  
- <span data-ttu-id="a050c-109">Le profileur doit appeler Win32 `DuplicateHandle` fonction sur le handle avant de l’utiliser.</span><span class="sxs-lookup"><span data-stu-id="a050c-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1674c-108">Notes</span><span class="sxs-lookup"><span data-stu-id="1674c-108">Remarks</span></span>  
+ <span data-ttu-id="1674c-109">Le profileur doit appeler Win32 `DuplicateHandle` fonction sur le handle avant de l’utiliser.</span><span class="sxs-lookup"><span data-stu-id="1674c-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a050c-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="a050c-110">Requirements</span></span>  
- <span data-ttu-id="a050c-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a050c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1674c-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1674c-110">Requirements</span></span>  
+ <span data-ttu-id="1674c-111">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1674c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a050c-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a050c-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1674c-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1674c-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a050c-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a050c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1674c-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1674c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a050c-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a050c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1674c-114">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1674c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a050c-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a050c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1674c-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1674c-115">See also</span></span>
 
-- [<span data-ttu-id="a050c-116">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="a050c-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="1674c-116">ICorProfilerInfo, interface</span><span class="sxs-lookup"><span data-stu-id="1674c-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
