@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011152"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Procédure : ajouter des contrôles ActiveX à des Windows Forms
 Alors que le Concepteur de formulaires Windows est optimisé pour héberger des contrôles Windows Forms, vous pouvez également placer des contrôles ActiveX sur Windows Forms.  
@@ -26,7 +26,7 @@ Alors que le Concepteur de formulaires Windows est optimisé pour héberger des 
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Pour ajouter un contrôle ActiveX à votre formulaire Windows  
   
--   Double-cliquez sur le contrôle sur la boîte à outils.  
+- Double-cliquez sur le contrôle sur la boîte à outils.  
   
      Visual Studio ajoute toutes les références au contrôle dans votre projet. Pour plus d’informations sur les éléments à prendre en compte lors de l’utilisation de contrôles ActiveX sur Windows Forms, consultez [considérations sur l’hébergement d’un contrôle ActiveX sur un formulaire Windows](considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
   

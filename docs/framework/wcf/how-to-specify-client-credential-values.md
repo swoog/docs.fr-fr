@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003026"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procédure : spécifier des informations d’identification de client
 À l’aide de Windows Communication Foundation (WCF), le service peut spécifier comment un client est authentifié auprès du service. Par exemple, un service peut stipuler que le client soit authentifié avec un certificat.  

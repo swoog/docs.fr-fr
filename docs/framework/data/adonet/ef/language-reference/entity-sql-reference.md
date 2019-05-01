@@ -3,11 +3,11 @@ title: Référence Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034266"
 ---
 # <a name="entity-sql-reference"></a>Référence Entity SQL
 
@@ -41,7 +41,7 @@ Les fonctions canoniques sont prises en charge par tous les fournisseurs de donn
 
 ## <a name="comparison-operators"></a>Opérateurs de comparaison
 
-Des opérateurs de comparaison sont définis pour les types suivants : `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`. La promotion de type implicite intervient pour les opérandes avant application de l'opérateur de comparaison. Les opérateurs de comparaison produisent toujours des valeurs booléennes. Lorsque au moins l'un des opérandes est `null`, le résultat est `null`.
+Des opérateurs de comparaison sont définis pour les types suivants : `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`. La promotion de type implicite intervient pour les opérandes avant application de l’opérateur de comparaison. Les opérateurs de comparaison produisent toujours des valeurs booléennes. Lorsque au moins l’un des opérandes est `null`, le résultat est `null`.
 
 L'égalité et l'inégalité sont définies pour tout type d'objet qui possède une identité, comme le type `Boolean`. Les objets non primitifs possédant une identité sont considérés comme égaux s'ils partagent la même identité. Le tableau suivant répertorie les opérateurs de comparaison Entity SQL :
 
@@ -77,7 +77,7 @@ Les opérateurs de requête permettent de définir des expressions de requête q
 |--------------|---------|
 |[FROM](from-entity-sql.md)|Spécifie la collection qui est utilisée dans [sélectionnez](select-entity-sql.md) instructions.|
 |[GROUP BY](group-by-entity-sql.md)|Spécifie les groupes dans laquelle des objets qui sont retournés par une requête ([sélectionnez](select-entity-sql.md)) expression doivent être placés.|
-|[GroupPartition](grouppartition-entity-sql.md)|Retourne une collection de valeurs d’argument, projetées en dehors de la partition de groupe à laquelle l’agrégat est associé.|
+|[GroupPartition](grouppartition-entity-sql.md)|Retourne une collection de valeurs d'argument, projetées en dehors de la partition de groupe à laquelle l'agrégat est associé.|
 |[HAVING](having-entity-sql.md)|Spécifie une condition de recherche pour un groupe ou un agrégat.|
 |[LIMIT](limit-entity-sql.md)|Utilisé avec le [ORDER BY](order-by-entity-sql.md) clause pour effectuer une pagination physique.|
 |[ORDER BY](order-by-entity-sql.md)|Spécifie l’ordre de tri utilisé sur les objets retournés dans un [sélectionnez](select-entity-sql.md) instruction.|

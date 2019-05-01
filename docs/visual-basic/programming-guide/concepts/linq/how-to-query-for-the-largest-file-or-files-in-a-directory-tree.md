@@ -3,24 +3,24 @@ title: 'Procédure : Requête la plus grande ou des fichiers dans une arboresce
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008900"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procédure : Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)
 Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :  
   
--   Comment récupérer la taille en octets du plus grand fichier.  
+- Comment récupérer la taille en octets du plus grand fichier.  
   
--   Comment récupérer la taille en octets du plus petit fichier.  
+- Comment récupérer la taille en octets du plus petit fichier.  
   
--   Comment récupérer le plus grand ou le plus petit fichier de l’objet <xref:System.IO.FileInfo> dans un ou plusieurs dossiers situés dans le dossier racine spécifié.  
+- Comment récupérer le plus grand ou le plus petit fichier de l’objet <xref:System.IO.FileInfo> dans un ou plusieurs dossiers situés dans le dossier racine spécifié.  
   
--   Comment récupérer une séquence, telle que les 10 fichiers les plus volumineux.  
+- Comment récupérer une séquence, telle que les 10 fichiers les plus volumineux.  
   
--   Comment regrouper des fichiers selon leur taille en octets, en ignorant les fichiers qui sont inférieurs à une taille spécifiée.  
+- Comment regrouper des fichiers selon leur taille en octets, en ignorant les fichiers qui sont inférieurs à une taille spécifiée.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant contient cinq requêtes distinctes qui montrent comment interroger et regrouper des fichiers selon leur taille en octets. Vous pouvez facilement modifier ces exemples pour baser la requête sur une autre propriété de l’objet <xref:System.IO.FileInfo>.  

@@ -3,11 +3,11 @@ title: Unit, type
 description: Découvrez comment la F# 'unit' type est souvent utilisé pour marquer l’emplacement où une valeur est requise par la syntaxe du langage lorsqu’aucune valeur n’est nécessaire ou souhaitée.
 ms.date: 05/16/2016
 ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982525"
 ---
 # <a name="unit-type"></a>Unit, type
 
@@ -36,5 +36,5 @@ Cet avertissement est une caractéristique de la programmation fonctionnelle ; 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Primitifs](primitive-types.md)
+- [Primitive](primitive-types.md)
 - [Informations de référence du langage F#](index.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008783"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procédure : Contrôler une animation avec From, To et By
 Un « From/To/By » ou « animation de base » crée une transition entre deux valeurs cibles (consultez [vue d’ensemble de l’Animation](animation-overview.md) pour une introduction aux différents types d’animations). Pour définir les valeurs cibles d’une animation de base, utilisez son <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriétés.  Le tableau suivant résume comment la <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, et <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propriétés peuvent être utilisées ensemble ou séparément pour déterminer les cibles d’une animation les valeurs.  

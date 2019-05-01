@@ -3,11 +3,11 @@ title: Custom Channel Dispatcher
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
 ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003104"
 ---
 # <a name="custom-channel-dispatcher"></a>Custom Channel Dispatcher
 Cet exemple montre comment générer la pile de canaux de façon personnalisée en implémentant <xref:System.ServiceModel.ServiceHostBase> directement et comment créer un répartiteur de canal personnalisé dans un environnement avec hôte Web. Le répartiteur de canal interagit avec <xref:System.ServiceModel.Channels.IChannelListener> pour accepter des canaux et récupère des messages de la pile de canaux. Cet exemple fournit également un exemple de base pour montrer comment construire une pile de canaux dans un environnement avec hôte Web à l'aide de <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -15,7 +15,7 @@ Cet exemple montre comment générer la pile de canaux de façon personnalisée 
 ## <a name="custom-servicehostbase"></a>Custom ServiceHostBase  
  Cet exemple implémente le type de base <xref:System.ServiceModel.ServiceHostBase> au lieu de <xref:System.ServiceModel.ServiceHost> pour montrer comment remplacer l’implémentation de pile Windows Communication Foundation (WCF) avec un message personnalisé qui gère la couche sur la pile de canaux. Vous devez substituer la méthode virtuelle <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> pour générer des écouteurs de canal et le répartiteur de canal.  
   
- Pour implémenter un service hébergé sur le Web, obtenez l'extension de service <xref:System.ServiceModel.Activation.VirtualPathExtension> de la collection <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> et ajoutez-la au <xref:System.ServiceModel.Channels.BindingParameterCollection> afin que la couche transport sache comment configurer l'écouteur de canal selon les paramètres de l'environnement d'hébergement, à savoir, les paramètres Internet Information Services (IIS) et ceux du service d'activation des processus Windows (WAS).  
+ Pour implémenter un service hébergé sur le Web, obtenez l’extension de service <xref:System.ServiceModel.Activation.VirtualPathExtension> de la collection <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> et ajoutez-la au <xref:System.ServiceModel.Channels.BindingParameterCollection> afin que la couche transport sache comment configurer l’écouteur de canal selon les paramètres de l’environnement d’hébergement, à savoir, les paramètres Internet Information Services (IIS) et ceux du service d’activation des processus Windows (WAS).  
   
 ## <a name="custom-channel-dispatcher"></a>Custom Channel Dispatcher  
  Le répartiteur de canal personnalisé étend le type <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>. Ce type implémente la logique de programmation de la couche du canal. Dans cet exemple, seul <xref:System.ServiceModel.Channels.IReplyChannel> est pris en charge pour le modèle d'échange de messages demande/réponse, mais le répartiteur de canal personnalisé peut facilement être étendu à d'autres types de canaux.  

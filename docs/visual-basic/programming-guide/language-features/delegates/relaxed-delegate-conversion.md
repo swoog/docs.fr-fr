@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973280"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversion simplifiée des délégués (Visual Basic)
 Conversion simplifiée des délégués vous permet de vous permettent d’affecter des sous-routines et des fonctions aux délégués ou aux gestionnaires même lorsque leurs signatures ne sont pas identiques. Par conséquent, la liaison aux délégués devient cohérente avec la liaison déjà autorisée pour les appels de méthode.  
@@ -19,7 +19,7 @@ Conversion simplifiée des délégués vous permet de vous permettent d’affect
 ## <a name="parameters-and-return-type"></a>Paramètres et Type de retour  
  À la place de correspondance exacte de signature, la conversion simplifiée requiert que les conditions suivantes est remplie lorsque `Option Strict` est défini sur `On`:  
   
--   Une conversion étendue doit avoir le type de données de chaque paramètre de délégué au type de données du paramètre correspondant de la fonction attribué ou `Sub`. Dans l’exemple suivant, le délégué `Del1` a un paramètre, un `Integer`. Paramètre `m` dans l’expression lambda assigné expressions doivent avoir un type de données pour laquelle il existe une conversion étendue de `Integer`, tel que `Long` ou `Double`.  
+- Une conversion étendue doit avoir le type de données de chaque paramètre de délégué au type de données du paramètre correspondant de la fonction attribué ou `Sub`. Dans l’exemple suivant, le délégué `Del1` a un paramètre, un `Integer`. Paramètre `m` dans l’expression lambda assigné expressions doivent avoir un type de données pour laquelle il existe une conversion étendue de `Integer`, tel que `Long` ou `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ Conversion simplifiée des délégués vous permet de vous permettent d’affect
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   Une conversion étendue doit exister dans la direction opposée du type de retour de la fonction assignée ou `Sub` pour le type de retour du délégué. Dans les exemples suivants, le corps de chaque expression lambda assignée doit correspondre à un type de données qui s’étend à `Integer` , car le type de retour de `del1` est `Integer`.  
+- Une conversion étendue doit exister dans la direction opposée du type de retour de la fonction assignée ou `Sub` pour le type de retour du délégué. Dans les exemples suivants, le corps de chaque expression lambda assignée doit correspondre à un type de données qui s’étend à `Integer` , car le type de retour de `del1` est `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

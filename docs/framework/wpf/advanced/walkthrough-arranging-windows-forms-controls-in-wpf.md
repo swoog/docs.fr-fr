@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007160"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procédure pas à pas : organisation des contrôles Windows Forms dans WPF
 Cette procédure pas à pas vous montre comment utiliser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] des fonctionnalités de disposition pour réorganiser [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles dans une application hybride.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création du projet  
+- Création du projet  
   
--   Utilisation des paramètres de disposition par défaut  
+- Utilisation des paramètres de disposition par défaut  
   
--   Dimensionnement en fonction du contenu  
+- Dimensionnement en fonction du contenu  
   
--   Utilisation du positionnement absolu  
+- Utilisation du positionnement absolu  
   
--   Spécification explicite de la taille  
+- Spécification explicite de la taille  
   
--   Définition des propriétés de disposition  
+- Définition des propriétés de disposition  
   
--   Présentation des limitations dans l’ordre de plan  
+- Présentation des limitations dans l’ordre de plan  
   
--   Ancrage  
+- Ancrage  
   
--   Définition de la visibilité  
+- Définition de la visibilité  
   
--   Hébergement d’un contrôle qui ne s’étire pas  
+- Hébergement d’un contrôle qui ne s’étire pas  
   
--   Mise à l’échelle  
+- Mise à l’échelle  
   
--   Rotation  
+- Rotation  
   
--   Définition d’une marge intérieure et de marges  
+- Définition d’une marge intérieure et de marges  
   
--   Utilisation de conteneurs de présentation dynamiques  
+- Utilisation de conteneurs de présentation dynamiques  
   
  Pour l’intégralité du code des tâches illustrées dans cette procédure pas à pas, consultez [disposition de contrôles Windows Forms dans WPF, exemple](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Cette procédure pas à pas nécessite Visual Studio.
   
 2. Dans l’Explorateur de solutions, ajoutez des références aux assemblys suivants.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Double-cliquez sur MainWindow.xaml pour l’ouvrir dans la vue XAML.  
   

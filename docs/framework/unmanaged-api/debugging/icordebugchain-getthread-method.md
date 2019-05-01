@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989363"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread, méthode
 Obtient le thread physique cette chaîne d’appel est partie.  
@@ -39,7 +39,7 @@ HRESULT GetThread (
  `ppThread`  
  [out] Un pointeur vers un objet ICorDebugThread qui représente le thread physique fait partie de cette chaîne d’appel.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

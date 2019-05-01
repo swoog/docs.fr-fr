@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991050"
 ---
 # <a name="routing-scenarios"></a>Scénarios de routage
 Bien que le service de routage soit entièrement personnalisable, concevoir une logique de routage efficace lors de la création d'une configuration à partir de zéro peut s'avérer difficile.  Toutefois, il existe plusieurs scénarios courants que suivent la plupart des configurations de service de routage. Bien que ces scénarios puissent ne pas s'appliquer directement à votre configuration spécifique, comprendre comment configurer le service de routage en vue de gérer ces scénarios vous permet de mieux maîtriser le fonctionnement du service de routage.  
@@ -49,9 +49,9 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
 ### <a name="multicast"></a>Multidiffusion  
  Lors du routage de messages, vous routez habituellement chaque message vers un point de terminaison de destination spécifique.  Toutefois, vous pouvez avoir besoin occasionnellement de router une copie du message vers plusieurs points de terminaison de destination. Pour effectuer un routage en multidiffusion, les conditions suivantes doivent être remplies :  
   
--   La forme du canal ne doit pas être de type demande-réponse (bien qu'elle puisse être monodirectionnelle ou duplex), car cette forme exige que l'application cliente ne reçoive qu'une seule réponse en réponse à la demande.  
+- La forme du canal ne doit pas être de type demande-réponse (bien qu'elle puisse être monodirectionnelle ou duplex), car cette forme exige que l'application cliente ne reçoive qu'une seule réponse en réponse à la demande.  
   
--   Plusieurs filtres doivent retourner **true** lors de l’évaluation du message.  
+- Plusieurs filtres doivent retourner **true** lors de l’évaluation du message.  
   
  Si ces conditions sont réunies, chaque point de terminaison de destination associé à un filtre qui retourne true recevra une copie du message.  
   

@@ -3,11 +3,11 @@ title: Outil WorkFlow Service Registration (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
 ms.openlocfilehash: 3ea0f737cc050ec3f918044e0e105a41011a3e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052571"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Outil WorkFlow Service Registration (WFServicesReg.exe)
 Workflow Services Registration (WFServicesReg.exe) est un outil autonome qui peut être utilisé pour ajouter, supprimer ou réparer les éléments de configuration correspondant aux services Windows Workflow Foundation (WF).  
@@ -34,25 +34,25 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>Inscription  
  L'outil vérifie le fichier Web.config et enregistre les éléments suivants :  
   
--   Assemblys de référence de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
+- Assemblys de référence de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
   
--   Fournisseur de version pour fichiers .xoml.  
+- Fournisseur de version pour fichiers .xoml.  
   
--   Gestionnaires HTTP pour fichiers .xoml et .rules.  
+- Gestionnaires HTTP pour fichiers .xoml et .rules.  
   
- L’outil vérifie le fichier Machine.config et enregistre les extensions suivantes :  
+ L'outil vérifie le fichier Machine.config et enregistre les extensions suivantes :  
   
--   behaviorExtensions  
+- behaviorExtensions  
   
--   bindingElementExtensions  
+- bindingElementExtensions  
   
--   bindingExtensions  
+- bindingExtensions  
   
  L'outil enregistre également les importateurs de métadonnées clients suivants :  
   
--   policyImporters  
+- policyImporters  
   
--   wsdlImporters  
+- wsdlImporters  
   
  L'outil enregistre également des mappages de scripts .xoml et .rules ainsi que des gestionnaires dans la métabase IIS.  
   
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Sur les ordinateurs 64 bits, l'outil enregistre les mappages de scripts en mode WOW si le commutateur `Enable32BitAppOnWin64` est activé, ou les mappages de scripts 64 bits natifs si le commutateur `Enable32BitAppOnWin64` est désactivé.  
   
- Sur [!INCLUDE[wv](../../../includes/wv-md.md)] et Windows Server 2008 (IIS 7.0 et versions ultérieures) machines, deux jeux de gestionnaires .xoml et .rules sont enregistrés : un pour le mode intégré et un pour le mode classique.  
+ Sur [!INCLUDE[wv](../../../includes/wv-md.md)] et Windows Server 2008 (IIS 7.0 et versions ultérieures) machines, deux jeux de gestionnaires .xoml et .rules sont enregistrés : un pour le mode intégré et l’autre pour le mode classique.  
   
  Sur les ordinateurs 64 bits, trois jeux de gestionnaires sont enregistrés (indépendamment de l'état du commutateur `Enable32BitAppOnWin64`) : un pour le mode intégré, un pour le mode classique WOW et le dernier pour le mode classique 64 bits natif.  
   
@@ -80,9 +80,9 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  Sous [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], le mappage de scripts .xoml ou .rules est supprimé par erreur du nœud Sites Web. Ce problème peut être résolu en exécutant l'outil WFServicesReg.exe avec le commutateur `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Mappage de scripts supprimé sous un site web particulier  
- Sous [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], un mappage de scripts .xoml ou .rules est supprimé par erreur d'un site Web particulier (celui par défaut, par exemple) et non du nœud Sites Web.  
+ Sous [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], un mappage de scripts .xoml ou .rules est supprimé par erreur d’un site web particulier (celui par défaut, par exemple) et non du nœud Sites Web.  
   
- Pour réparer des gestionnaires supprimés d’un site Web particulier, vous devez exécuter « r WFServicesReg.exe » pour supprimer des gestionnaires de tous les sites Web, puis exécuter « c WFServicesReg.exe » pour créer les gestionnaires appropriés pour tous les sites Web.  
+ Pour réparer des gestionnaires supprimés d’un site Web particulier, vous devez exécuter « r WFServicesReg.exe » pour supprimer les gestionnaires de tous les sites Web, puis exécuter « c WFServicesReg.exe » pour créer les gestionnaires appropriés pour tous les sites Web.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>Configuration de gestionnaires après activation du mode IIS  
- Si les services IIS sont en mode de configuration partagé et si [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] est installé, la métabase IIS est configurée sous un emplacement partagé. Si vous basculez IIS en mode de configuration non partagé, la métabase locale ne contiendra pas les gestionnaires requis. Pour configurer la métabase locale correctement, vous pouvez importer la métabase partagée à local, soit exécuter « /c WFServicesReg.exe », qui configure la métabase locale.
+ Si les services IIS sont en mode de configuration partagé et si [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] est installé, la métabase IIS est configurée sous un emplacement partagé. Si vous basculez IIS en mode de configuration non partagé, la métabase locale ne contiendra pas les gestionnaires requis. Pour configurer correctement la métabase locale, vous pouvez importer la métabase partagée à local, ou exécuter « /c WFServicesReg.exe », qui configure la métabase locale.

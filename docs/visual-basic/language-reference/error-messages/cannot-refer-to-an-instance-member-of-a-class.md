@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
 ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013840"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Impossible de faire référence à un membre instance d'une classe à partir d'une méthode partagée ou d'un initialiseur de membre partagé sans une instance explicite de la classe
 Vous avez essayé de faire référence à un membre non partagé d’une classe à partir d’une procédure partagée. L’exemple suivant illustre une telle situation.  

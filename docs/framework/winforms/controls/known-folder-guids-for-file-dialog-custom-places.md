@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
 ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973838"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID de dossier connus pour des emplacements personnalisés de boîtes de dialogue Fichier
 Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dossier connu lorsque vous ajoutez des dossiers à un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection. Connus GUID de dossier respectent pas la casse et sont définis dans le fichier KnownFolders.h dans le [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

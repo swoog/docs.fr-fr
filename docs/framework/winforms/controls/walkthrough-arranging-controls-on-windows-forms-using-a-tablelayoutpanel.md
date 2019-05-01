@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009108"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Procédure pas à pas : organisation des contrôles dans Windows Forms à l’aide d’un TableLayoutPanel
 Certaines applications exigent un formulaire dont la disposition s’organise de manière appropriée à mesure que le formulaire est redimensionné ou que le contenu change de taille. Si vous avez besoin d’une disposition dynamique et que vous ne souhaitez pas gérer les événements <xref:System.Windows.Forms.Control.Layout> explicitement dans votre code, envisagez d’utiliser un panneau de disposition.  
@@ -28,21 +28,21 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms  
+- Création d’un projet Windows Forms  
   
--   Organisation des contrôles dans des lignes et colonnes  
+- Organisation des contrôles dans des lignes et colonnes  
   
--   Ligne de paramètre et les propriétés de colonne  
+- Ligne de paramètre et les propriétés de colonne  
   
--   Étendue de lignes et colonnes avec un contrôle  
+- Étendue de lignes et colonnes avec un contrôle  
   
--   Gestion automatique des dépassements de capacité  
+- Gestion automatique des dépassements de capacité  
   
--   Insertion de contrôles en double-cliquant dessus dans la boîte à outils  
+- Insertion de contrôles en double-cliquant dessus dans la boîte à outils  
   
--   Insertion d’un contrôle en dessinant son contour  
+- Insertion d’un contrôle en dessinant son contour  
   
--   Réassignation de contrôles existants à un parent différent  
+- Réassignation de contrôles existants à un parent différent  
   
  À l’issue de cette procédure, vous comprendrez le rôle joué par ces fonctionnalités de disposition importantes.  
   
@@ -158,25 +158,25 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Pour illustrer que plusieurs contrôles dans des cellules ne sont pas autorisées  
   
--   Faites glisser un <xref:System.Windows.Forms.Button> contrôle depuis la **boîte à outils** dans le <xref:System.Windows.Forms.TableLayoutPanel> contrôler et déposez-le dans une des cellules occupées. Notez que le <xref:System.Windows.Forms.TableLayoutPanel> contrôle n’autorise pas supprimer le <xref:System.Windows.Forms.Button> contrôle dans la cellule occupée.  
+- Faites glisser un <xref:System.Windows.Forms.Button> contrôle depuis la **boîte à outils** dans le <xref:System.Windows.Forms.TableLayoutPanel> contrôler et déposez-le dans une des cellules occupées. Notez que le <xref:System.Windows.Forms.TableLayoutPanel> contrôle n’autorise pas supprimer le <xref:System.Windows.Forms.Button> contrôle dans la cellule occupée.  
   
 ## <a name="swapping-controls"></a>Échange de contrôles  
  Le <xref:System.Windows.Forms.TableLayoutPanel> contrôle vous permet d’échanger des contrôles occupe deux différentes cellules.  
   
 #### <a name="to-swap-controls"></a>Échanger des contrôles  
   
--   Faites glisser un de le <xref:System.Windows.Forms.Button> contrôles cellule occupée et déposez-le sur une autre cellule occupée. Notez que les deux contrôles sont déplacés à partir d’une cellule dans l’autre.  
+- Faites glisser un de le <xref:System.Windows.Forms.Button> contrôles cellule occupée et déposez-le sur une autre cellule occupée. Notez que les deux contrôles sont déplacés à partir d’une cellule dans l’autre.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous pouvez obtenir une disposition complexe en combinant plusieurs contrôles et panneaux de disposition. Voici quelques suggestions à explorer :  
   
--   Essayez de redimensionner un de la <xref:System.Windows.Forms.Button> contrôles à une taille supérieure et notez l’effet sur la disposition.  
+- Essayez de redimensionner un de la <xref:System.Windows.Forms.Button> contrôles à une taille supérieure et notez l’effet sur la disposition.  
   
--   Collez une sélection de plusieurs contrôles dans le <xref:System.Windows.Forms.TableLayoutPanel> contrôler et notez la façon dont les contrôles sont insérés.  
+- Collez une sélection de plusieurs contrôles dans le <xref:System.Windows.Forms.TableLayoutPanel> contrôler et notez la façon dont les contrôles sont insérés.  
   
--   Les panneaux de disposition peuvent contenir d’autres panneaux de disposition. Faites l’expérience de déposer un contrôle <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle existant.  
+- Les panneaux de disposition peuvent contenir d’autres panneaux de disposition. Faites l’expérience de déposer un contrôle <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle existant.  
   
--   Ancrez le contrôle <xref:System.Windows.Forms.TableLayoutPanel> au formulaire parent. Redimensionnez le formulaire et observez-en l’effet sur la disposition.  
+- Ancrez le contrôle <xref:System.Windows.Forms.TableLayoutPanel> au formulaire parent. Redimensionnez le formulaire et observez-en l’effet sur la disposition.  
   
 ## <a name="see-also"></a>Voir aussi
 

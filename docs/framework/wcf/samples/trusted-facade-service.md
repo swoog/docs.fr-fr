@@ -3,11 +3,11 @@ title: Trusted Facade Service
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007693"
 ---
 # <a name="trusted-facade-service"></a>Trusted Facade Service
 Cet exemple de scénario montre comment transférer les informations d’identité de l’appelant à partir d’un service à un autre à l’aide de Windows Communication Foundation (WCF) infrastructure de sécurité.  
@@ -16,11 +16,11 @@ Cet exemple de scénario montre comment transférer les informations d’identit
   
  Cet exemple comporte les composants suivants :  
   
--   Client de calculatrice  
+- Client de calculatrice  
   
--   Service de façade de calculatrice  
+- Service de façade de calculatrice  
   
--   Service principal de calculatrice  
+- Service principal de calculatrice  
   
  Le service de façade est chargé de valider la demande et d'authentifier l'appelant. Après authentification de l'appelant et validation de la demande, il transfert celle-ci au service principal à l'aide du canal de communication contrôlé depuis le réseau de périmètre vers le réseau interne. Le service de façade ajoute à la demande transférée des informations relatives à l'identité de l'appelant que le service principal pourra utiliser à des fins de traitement. L'identité de l'appelant est transmise à l'aide d'un jeton de sécurité `Username` figurant dans l'en-tête `Security` du message. L’exemple utilise l’infrastructure de sécurité WCF pour transmettre et extraire ces informations à partir de la `Security` en-tête.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  Les éléments suivants fournissent une vue d'ensemble des différentes sections des fichiers de commandes.  
   
--   Création du certificat de serveur  
+- Création du certificat de serveur  
   
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      La variable `%SERVER_NAME%` spécifie le nom du serveur, sa valeur par défaut est localhost. Le certificat est stocké dans le magasin LocalMachine.  
   
--   Installation du certificat du service de façade dans le magasin de certificats approuvés du client.  
+- Installation du certificat du service de façade dans le magasin de certificats approuvés du client.  
   
      La ligne suivante copie le certificat du service de façade dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple d'un certificat émis par Microsoft, il n'est pas nécessaire d'ajouter le certificat du serveur au magasin de certificats du client.  
   

@@ -3,11 +3,11 @@ title: Concepts de la sérialisation
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018110"
 ---
 # <a name="serialization-concepts"></a>Concepts de la sérialisation
 Pourquoi utiliser la sérialisation ? L'une des deux raisons majeures est que vous pouvez, d'une part, rendre persistant l'état d'un objet sur un support de stockage afin qu'une copie exacte puisse être recréée ultérieurement. D'autre part, vous pouvez envoyer cet objet par valeur d'un domaine d'application à l'autre. Par exemple, la sérialisation est utilisée pour enregistrer l'état de session dans ASP.NET et copier des objets vers le Presse-papiers dans les Windows Forms. Elle est également utilisée par la communication à distance pour passer des objets par valeur d'un domaine d'application à un autre.

@@ -3,11 +3,11 @@ title: Covariance et contravariance (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
 ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022011"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covariance et contravariance (Visual Basic)
 En Visual Basic, la covariance et la contravariance permettent la conversion de références implicite pour les types tableau, les types délégués et les arguments de type générique. La covariance conserve la compatibilité d’assignation et la contravariance l’inverse.  

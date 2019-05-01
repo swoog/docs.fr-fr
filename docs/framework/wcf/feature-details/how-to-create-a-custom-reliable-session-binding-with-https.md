@@ -1,15 +1,15 @@
 ---
-title: 'Procédure : Créer une liaison de Session fiable personnalisée avec HTTPS'
+title: 'Procédure : créer une liaison de session fiable personnalisée avec HTTPS'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
 ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039531"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Procédure : Créer une liaison de Session fiable personnalisée avec HTTPS
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Procédure : créer une liaison de session fiable personnalisée avec HTTPS
 
 Cette rubrique décrit l'utilisation de la sécurité de transport SSL (Secure Socket Layer) avec les sessions fiables. Pour utiliser une session fiable sur HTTPS, vous devez créer une liaison personnalisée qui utilise une session fiable et le transport HTTPS. Vous activez la session fiable soit impérativement en utilisant du code ou de façon déclarative dans le fichier de configuration. Cette procédure utilise les fichiers de configuration client et le service pour activer la session fiable et le [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) élément.
 

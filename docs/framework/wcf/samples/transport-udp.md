@@ -3,11 +3,11 @@ title: 'Transport : UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007719"
 ---
 # <a name="transport-udp"></a>Transport : UDP
 L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et multidiffusion comme un transport personnalisé de Windows Communication Foundation (WCF). L’exemple décrit la procédure recommandée pour la création d’un transport personnalisé dans WCF, en utilisant l’infrastructure de canal et en suivant les bonnes pratiques WCF. Les étapes de la création d'un transport personnalisé sont les suivantes :  
@@ -32,15 +32,15 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
 ## <a name="message-exchange-patterns"></a>Modèles d’échange de messages  
  La première étape de l’écriture d’un transport personnalisé consiste à déterminer les MEP (Message Exchange Pattern, modèle d’échange de messages) requis pour le transport. Trois MEP sont disponibles :  
   
--   Datagramme (IInputChannel/IOutputChannel)  
+- Datagramme (IInputChannel/IOutputChannel)  
   
      Lorsque vous utilisez un MEP datagramme, un client envoie un message en utilisant un échange de type « déclenché et oublié » (fire and forget). Un échange de ce type requiert une confirmation hors bande de la réussite de la remise. Le message peut être perdu lors de la transmission et ne jamais atteindre le service. Si l'opération d'envoi s'exécute correctement au niveau du client, cela ne garantit pas que le point de terminaison distant a effectivement reçu le message. Le datagramme est un bloc de construction de messagerie fondamental. Vous pouvez en effet définir vos propres protocoles au-dessus de ce bloc, notamment des protocoles fiables et sécurisés. Les canaux de datagramme du client implémentent l'interface <xref:System.ServiceModel.Channels.IOutputChannel> et ceux du service implémentent l'interface <xref:System.ServiceModel.Channels.IInputChannel>.  
   
--   Demande-réponse (IRequestChannel/IReplyChannel)  
+- Demande-réponse (IRequestChannel/IReplyChannel)  
   
      Dans ce MEP, un message est envoyé et une réponse est reçue. Ce modèle se compose de paires demande-réponse. Parmi les exemples d'appels demande-réponse figurent notamment les appels de procédure distante (RPC) et les demandes GET de navigateur. Ce modèle est également connu sous le nom de mode semi-duplex. Dans ce MEP, les canaux du client implémentent <xref:System.ServiceModel.Channels.IRequestChannel> et ceux du service implémentent <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (IDuplexChannel)  
+- Duplex (IDuplexChannel)  
   
      Le MEP duplex permet à un nombre aléatoire de messages d'être envoyés par un client et d'être reçus dans un ordre indifférencié. Le MEP duplex est similaire à une conversation téléphonique, où chaque mot prononcé correspond à un message. Les deux côtés pouvant envoyer et recevoir des messages dans ce MEP, l'interface implémentée par les canaux du client et du service est <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject et cycle de vie des objets WCF  
  WCF propose une machine d’état commune qui est utilisée pour gérer le cycle de vie des objets tels que <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, et <xref:System.ServiceModel.Channels.IChannelListener> qui sont utilisés pour la communication. Ces objets de communication peuvent avoir cinq états différents. Ces états sont représentés par l'énumération <xref:System.ServiceModel.CommunicationState> et sont les suivants :  
   
--   Créé : C’est l’état d’un <xref:System.ServiceModel.ICommunicationObject> quand elle est instanciée. Aucune entrée/sortie (E/S) ne se produit dans cet état.  
+- Créé : C’est l’état d’un <xref:System.ServiceModel.ICommunicationObject> quand elle est instanciée. Aucune entrée/sortie (E/S) ne se produit dans cet état.  
   
--   Ouverture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Open%2A> est appelée. À ce stade, les propriétés sont rendues immuables, et les entrées/sorties peuvent commencer. Cette transition est uniquement valide à partir de l'état Created.  
+- Ouverture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Open%2A> est appelée. À ce stade, les propriétés sont rendues immuables, et les entrées/sorties peuvent commencer. Cette transition est uniquement valide à partir de l'état Created.  
   
--   Ouvert : Objets passent à cet état lorsque le processus d’ouverture est terminée. Cette transition est uniquement valide à partir de l'état Opening. À ce stade, l'objet est totalement utilisable pour le transfert.  
+- Ouvert : Objets passent à cet état lorsque le processus d’ouverture est terminée. Cette transition est uniquement valide à partir de l'état Opening. À ce stade, l'objet est totalement utilisable pour le transfert.  
   
--   Fermeture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Close%2A> est appelée pour un arrêt approprié. Cette transition est uniquement valide à partir de l'état Opened.  
+- Fermeture : Objets passent à cet état lorsque <xref:System.ServiceModel.ICommunicationObject.Close%2A> est appelée pour un arrêt approprié. Cette transition est uniquement valide à partir de l'état Opened.  
   
--   Fermé : Dans cet état objets ne sont plus utilisables. En général, la configuration est encore accessible pour l'inspection, mais aucune communication ne peut se produire. Cet état est équivalent à la suppression des objets.  
+- Fermé : Dans cet état objets ne sont plus utilisables. En général, la configuration est encore accessible pour l'inspection, mais aucune communication ne peut se produire. Cet état est équivalent à la suppression des objets.  
   
--   A généré une erreur : Dans l’état Faulted, les objets sont accessibles pour l’inspection, mais n’est plus utilisable. Lorsqu'une erreur non récupérable se produit, l'objet passe à cet état. La seule transition valide à partir de cet état est dans le `Closed` état.  
+- A généré une erreur : Dans l’état Faulted, les objets sont accessibles pour l’inspection, mais n’est plus utilisable. Lorsqu'une erreur non récupérable se produit, l'objet passe à cet état. La seule transition valide à partir de cet état est dans le `Closed` état.  
   
  Des événements se déclenchent pour chaque transition d'état. La méthode <xref:System.ServiceModel.ICommunicationObject.Abort%2A> peut être appelée à tout moment et provoquer la transition immédiate de l'objet de son état actuel à l'état Closed. L'appel de <xref:System.ServiceModel.ICommunicationObject.Abort%2A> termine toute tâche inachevée.  
   
@@ -70,13 +70,13 @@ L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et mu
 ## <a name="channel-factory-and-channel-listener"></a>Fabrication et écouteur de canal  
  L'étape suivante de l'écriture d'un transport personnalisé consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IChannelFactory> pour les canaux clients et de <xref:System.ServiceModel.Channels.IChannelListener> pour les canaux de service. La couche de canal utilise un modèle de fabrication pour construire des canaux. WCF fournit des Assistants de classe de base pour ce processus.  
   
--   La classe <xref:System.ServiceModel.Channels.CommunicationObject> implémente <xref:System.ServiceModel.ICommunicationObject> et applique la machine d'état précédemment décrite à l'étape 2. 
+- La classe <xref:System.ServiceModel.Channels.CommunicationObject> implémente <xref:System.ServiceModel.ICommunicationObject> et applique la machine d'état précédemment décrite à l'étape 2. 
 
--   Le <xref:System.ServiceModel.Channels.ChannelManagerBase> la classe implémente <xref:System.ServiceModel.Channels.CommunicationObject> et fournit une classe de base unifiée pour <xref:System.ServiceModel.Channels.ChannelFactoryBase> et <xref:System.ServiceModel.Channels.ChannelListenerBase>. La classe <xref:System.ServiceModel.Channels.ChannelManagerBase> fonctionne avec <xref:System.ServiceModel.Channels.ChannelBase>, qui est une classe de base implémentant <xref:System.ServiceModel.Channels.IChannel>.  
+- Le <xref:System.ServiceModel.Channels.ChannelManagerBase> la classe implémente <xref:System.ServiceModel.Channels.CommunicationObject> et fournit une classe de base unifiée pour <xref:System.ServiceModel.Channels.ChannelFactoryBase> et <xref:System.ServiceModel.Channels.ChannelListenerBase>. La classe <xref:System.ServiceModel.Channels.ChannelManagerBase> fonctionne avec <xref:System.ServiceModel.Channels.ChannelBase>, qui est une classe de base implémentant <xref:System.ServiceModel.Channels.IChannel>.  
   
--   Le <xref:System.ServiceModel.Channels.ChannelFactoryBase> la classe implémente <xref:System.ServiceModel.Channels.ChannelManagerBase> et <xref:System.ServiceModel.Channels.IChannelFactory> et consolide les `CreateChannel` dans une des surcharges `OnCreateChannel` méthode abstraite.  
+- Le <xref:System.ServiceModel.Channels.ChannelFactoryBase> la classe implémente <xref:System.ServiceModel.Channels.ChannelManagerBase> et <xref:System.ServiceModel.Channels.IChannelFactory> et consolide les `CreateChannel` dans une des surcharges `OnCreateChannel` méthode abstraite.  
   
--   Le <xref:System.ServiceModel.Channels.ChannelListenerBase> la classe implémente <xref:System.ServiceModel.Channels.IChannelListener>. Elle se charge de la gestion d'état de base.  
+- Le <xref:System.ServiceModel.Channels.ChannelListenerBase> la classe implémente <xref:System.ServiceModel.Channels.IChannelListener>. Elle se charge de la gestion d'état de base.  
   
  Dans cet exemple, l'implémentation de la fabrication est contenue dans UdpChannelFactory.cs et l'implémentation de l'écouteur est contenue dans UdpChannelListener.cs. Les implémentations <xref:System.ServiceModel.Channels.IChannel> sont contenues dans UdpOutputChannel.cs et UdpInputChannel.cs.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Ajout d’une liaison standard  
  Notre élément de liaison peut être utilisé des deux façons suivantes :  
   
--   Via une liaison personnalisée : Une liaison personnalisée permet à l’utilisateur créer leur propres liaison basée sur un ensemble arbitraire d’éléments de liaison.  
+- Via une liaison personnalisée : Une liaison personnalisée permet à l’utilisateur créer leur propres liaison basée sur un ensemble arbitraire d’éléments de liaison.  
   
--   En utilisant une liaison fournie par le système qui inclut notre élément de liaison. WCF fournit un nombre de ces liaisons définies par le système, tel que `BasicHttpBinding`, `NetTcpBinding`, et `WsHttpBinding`. Chacune de ces liaisons est associée à un profil bien défini.  
+- En utilisant une liaison fournie par le système qui inclut notre élément de liaison. WCF fournit un nombre de ces liaisons définies par le système, tel que `BasicHttpBinding`, `NetTcpBinding`, et `WsHttpBinding`. Chacune de ces liaisons est associée à un profil bien défini.  
   
  L'exemple implémente la liaison de profil dans `SampleProfileUdpBinding`, lequel dérive de <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` contient jusqu'à quatre éléments de liaison : `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` et `ReliableSessionBindingElement`.  
   

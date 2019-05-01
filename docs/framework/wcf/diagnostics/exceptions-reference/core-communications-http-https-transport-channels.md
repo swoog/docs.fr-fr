@@ -1,15 +1,15 @@
 ---
-title: 'Communications principales : Canaux de Transport HTTP-HTTPS'
+title: 'Communications principales : Les canaux de Transport HTTP-HTTPS'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998749"
 ---
-# <a name="core-communications-httphttps-transport-channels"></a>Communications principales : canaux de transport HTTP/HTTPS
+# <a name="core-communications-httphttps-transport-channels"></a>Communications principales : Canaux de transport HTTP/HTTPS
 Cette rubrique répertorie toutes les exceptions générées par les canaux de Windows Communication Foundation (WCF) Transport HTTP/HTTPS.  
   
 ## <a name="exception-list"></a>Liste des exceptions  
@@ -24,10 +24,10 @@ Cette rubrique répertorie toutes les exceptions générées par les canaux de W
 |HttpRegistrationAccessDenied|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée. Le processus n’a pas de droits d’accès à cet espace de noms (consultez [Namespace réservations, les enregistrements et routage](/windows/desktop/http/namespace-reservations-registrations-and-routing) pour plus d’informations).|  
 |HttpRegistrationAlreadyExists|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée. Une autre application a déjà enregistré cette adresse URL avec HTTP.SYS.|  
 |HttpRegistrationPortInUse|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée car le port TCP indiqué est utilisé par une autre application. .|  
-|HttpSendFailure|Une erreur s'est produite lors de la requête HTTP au spécifié. Assurez-vous qu'un éventuel problème de disparité au niveau des liaisons de sécurité n'est pas à l'origine de cette erreur. Assurez-vous également que la configuration du service ne requiert pas l'utilisation du protocole SSL.|  
+|HttpSendFailure|Une erreur s'est produite lors de la requête HTTP au spécifié. Assurez-vous qu’un éventuel problème de disparité au niveau des liaisons de sécurité n’est pas à l’origine de cette erreur. Assurez-vous également que la configuration du service ne requiert pas l'utilisation du protocole SSL.|  
 |MessageXmlProtocolError|Un problème s'est produit au niveau du document XML reçu depuis le réseau. Pour plus d'informations, consultez l'exception interne.|  
 |MissingContentType|Le destinataire a retourné une erreur indiquant que le type de contenu ne figurait pas sur la demande au spécifié. Pour plus d'informations, consultez l'exception interne.|  
-|ProxyAuthenticationLevelMismatch|Les informations d'identification dans le cadre de l'authentification proxy HTTP exigent un niveau d'authentification (authentification mutuelle) plus rigoureux que le niveau d'authentification requis par l'authentification du serveur cible.|  
+|ProxyAuthenticationLevelMismatch|Les informations d’identification dans le cadre de l’authentification proxy HTTP exigent un niveau d’authentification (authentification mutuelle) plus rigoureux que le niveau d’authentification requis par l’authentification du serveur cible.|  
 |ProxyImpersonationLevelMismatch|Les informations d'identification dans le cadre de l'authentification proxy HTTP définissent une restriction en matière de niveau d'emprunt d'identité plus rigoureuse que la restriction définie par l'authentification du serveur cible.|  
 |SecureChannelFailure|Il n'est pas possible de générer un canal sécurisé pour SSL / TLS avec l'autorité spécifiée.|  
 |TrustFailure|Impossible d'établir une relation d'approbation pour le canal sécurisé SSL / TLS avec l'autorité spécifiée.|  

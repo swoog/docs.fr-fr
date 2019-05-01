@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981536"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Déploiement d'une application WPF (WPF)
 Une fois que les applications de Windows Presentation Foundation (WPF) sont créées, elles doivent être déployées. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et le .NET Framework inclut plusieurs technologies de déploiement. La technologie de déploiement utilisée pour déployer une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dépend du type d’application. Cette rubrique fournit une vue d’ensemble des différentes technologies de déploiement et explique leur utilisation avec les spécifications de déploiement de chaque type d’application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -19,21 +19,21 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 ## <a name="deployment-technologies"></a>Technologies de déploiement  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et le .NET Framework inclut plusieurs technologies de déploiement, notamment :  
   
--   Déploiement XCopy.  
+- Déploiement XCopy.  
   
--   Déploiement [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Déploiement [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
   
--   Déploiement [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+- Déploiement [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Déploiement XCopy  
  Le déploiement XCopy fait référence à l’utilisation du programme en ligne de commande XCopy pour copier les fichiers d’un emplacement vers un autre. Le déploiement XCopy convient dans les cas suivants :  
   
--   L’application est autonome. Elle n’a pas besoin de mettre à jour le client pour fonctionner.  
+- L’application est autonome. Elle n’a pas besoin de mettre à jour le client pour fonctionner.  
   
--   Les fichiers d’application doivent être déplacés d’un emplacement vers un autre, par exemple d’un emplacement de génération (disque local, partage de fichiers [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.) vers un emplacement de publication (site web, partage de fichiers [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.).  
+- Les fichiers d’application doivent être déplacés d’un emplacement vers un autre, par exemple d’un emplacement de génération (disque local, partage de fichiers [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.) vers un emplacement de publication (site web, partage de fichiers [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)], etc.).  
   
--   L’application ne nécessite pas d’interface intégrée (raccourci du menu Démarrer, icône sur le Bureau, et ainsi de suite).  
+- L’application ne nécessite pas d’interface intégrée (raccourci du menu Démarrer, icône sur le Bureau, et ainsi de suite).  
   
  XCopy convient pour les scénarios de déploiement simples. Toutefois, il est limité quand des fonctions de déploiement plus complexes sont requises. En particulier, l’utilisation de XCopy entraîne souvent une surcharge de temps afin de créer, d’exécuter et de gérer des scripts permettant de gérer le déploiement de manière fiable. En outre, XCopy ne prend pas en charge la gestion de version, la désinstallation ni la restauration.  
   
@@ -49,15 +49,15 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 ### <a name="clickonce-deployment"></a>déploiement ClickOnce  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] permet le déploiement d’applications de style web pour les applications non-web. Les applications sont publiées vers et déployées depuis des serveurs de fichiers ou web. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ne prend pas en charge l’ensemble des fonctionnalités clientes proposées par les applications installées par [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], mais prend en charge un sous-ensemble qui intègre les éléments suivants :  
   
--   Intégration au menu Démarrer et au Panneau de configuration des programmes.  
+- Intégration au menu Démarrer et au Panneau de configuration des programmes.  
   
--   Gestion de version, restauration et désinstallation.  
+- Gestion de version, restauration et désinstallation.  
   
--   Mode d’installation en ligne, qui lance toujours une application à partir de l’emplacement de déploiement.  
+- Mode d’installation en ligne, qui lance toujours une application à partir de l’emplacement de déploiement.  
   
--   Mise à jour automatique quand de nouvelles versions sont disponibles.  
+- Mise à jour automatique quand de nouvelles versions sont disponibles.  
   
--   Inscription d’extensions de fichiers.  
+- Inscription d’extensions de fichiers.  
   
  Pour plus d’informations sur [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], consultez [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 ## <a name="deploying-wpf-applications"></a>Déploiement d’applications WPF  
  Les options de déploiement d’une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dépendent du type d’application. Du point de vue du déploiement, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] a trois types d’applications significatifs :  
   
--   Applications autonomes.  
+- Applications autonomes.  
   
--   Applications [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage.  
+- Applications [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] à balisage.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Déploiement d’applications autonomes  
@@ -89,11 +89,11 @@ Une fois que les applications de Windows Presentation Foundation (WPF) sont cré
 ### <a name="deploying-xaml-browser-applications"></a>Déploiement d’applications du navigateur XAML  
  Les [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sont des applications compilées qui nécessitent le déploiement des trois fichiers suivants :  
   
--   *ApplicationName*.exe : Fichier application de l’assembly exécutable.  
+- *ApplicationName*.exe : Fichier application de l’assembly exécutable.  
   
--   *ApplicationName*.xbap : Le manifeste de déploiement.  
+- *ApplicationName*.xbap : Le manifeste de déploiement.  
   
--   *ApplicationName*. exe.manifest : Manifeste d’application.  
+- *ApplicationName*. exe.manifest : Manifeste d’application.  
   
 > [!NOTE]
 >  Pour plus d’informations sur les manifestes de déploiement et d’application, consultez [Génération d’une application WPF](building-a-wpf-application-wpf.md).  

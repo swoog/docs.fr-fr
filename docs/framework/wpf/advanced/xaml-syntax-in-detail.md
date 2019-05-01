@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981368"
 ---
 # <a name="xaml-syntax-in-detail"></a>Syntaxe XAML en détail
 Cette rubrique définit les termes qui sont utilisés pour décrire les éléments de syntaxe XAML. Ces termes sont utilisés fréquemment dans le reste de cette documentation, à la fois pour la documentation WPF spécifiquement et pour les autres infrastructures qui utilisent XAML ou les concepts XAML de base activées par la prise en charge du langage XAML au niveau de System.Xaml. Cette rubrique s’appuie sur la terminologie de base introduite dans la rubrique [vue d’ensemble de XAML (WPF)](xaml-overview-wpf.md).  
@@ -58,9 +58,9 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
 ## <a name="object-element-syntax"></a>Syntaxe de l’élément objet  
  *Syntaxe d’élément de l’objet* est la syntaxe de balisage XAML qui instancie une structure ou une classe CLR en déclarant un élément XML. Cette syntaxe ressemble à la syntaxe d’élément d’autres langages de balisage tels que HTML. Syntaxe d’élément objet commence par un crochet pointu (\<), suivi immédiatement par le nom de type de la classe ou structure en cours d’instanciation. Zéro ou plusieurs espaces peuvent suivre le nom de type, et zéro ou plusieurs attributs peuvent également être déclarées sur l’élément objet, avec un ou plusieurs espaces séparant chaque nom d’attribut = paire « valeur ». Enfin, il se peut que parmi les options suivantes doit être remplie :  
   
--   L’élément et la balise doivent être fermées par une barre oblique (/) suivie immédiatement par un crochet angulaire à droite (>).  
+- L’élément et la balise doivent être fermées par une barre oblique (/) suivie immédiatement par un crochet angulaire à droite (>).  
   
--   La balise d’ouverture doit être complétée par un crochet angulaire à droite (>). Autres éléments objet, éléments de propriété ou texte interne, pouvez suivre la balise d’ouverture. Exactement le contenu qui peut-être être contenu ici est généralement limité par le modèle objet de l’élément. L’équivalent de balise de fermeture pour l’élément objet doit également exister dans une imbrication correcte et équilibre avec d’autres paires de balises d’ouverture et de fermeture.  
+- La balise d’ouverture doit être complétée par un crochet angulaire à droite (>). Autres éléments objet, éléments de propriété ou texte interne, pouvez suivre la balise d’ouverture. Exactement le contenu qui peut-être être contenu ici est généralement limité par le modèle objet de l’élément. L’équivalent de balise de fermeture pour l’élément objet doit également exister dans une imbrication correcte et équilibre avec d’autres paires de balises d’ouverture et de fermeture.  
   
  XAML tel qu’implémenté par .NET possède un ensemble de règles qui mappent des éléments object en types, les attributs dans des propriétés ou des événements et des espaces de noms XAML pour les espaces de noms CLR et assembly. Mappent les éléments d’objet XAML pour WPF et .NET Framework, à [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] types, comme défini dans les assemblys référencés et les attributs sont mappés aux membres de ces types. Lorsque vous référencez un type CLR dans XAML, vous avez accès aux membres hérités de ce type.  
   
@@ -154,11 +154,11 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
 ## <a name="collection-syntax"></a>Syntaxe des collections  
  La spécification de XAML requiert des implémentations de processeur XAML pour identifier les propriétés dont le type de valeur est une collection. L’implémentation du processeur XAML générale dans .NET est basée sur du code managé et le CLR, et il identifie les types de collections via une des opérations suivantes :  
   
--   Type implémente <xref:System.Collections.IList>.  
+- Type implémente <xref:System.Collections.IList>.  
   
--   Type implémente <xref:System.Collections.IDictionary>.  
+- Type implémente <xref:System.Collections.IDictionary>.  
   
--   Type dérive <xref:System.Array> (pour plus d’informations sur les tableaux en XAML, consultez [x : Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- Type dérive <xref:System.Array> (pour plus d’informations sur les tableaux en XAML, consultez [x : Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
   
  Si le type d’une propriété est une collection, le type de collection déduit doit-elle pas être spécifié dans le balisage en tant qu’objet élément. Au lieu de cela, les éléments qui sont destinés à devenir des éléments de la collection sont spécifiés comme un ou plusieurs éléments enfants de l’élément de propriété. Chacun de ces éléments est évaluée à un objet pendant le chargement et ajouté à la collection en appelant le `Add` méthode de la collection implicite. Par exemple, le <xref:System.Windows.Style.Triggers%2A> propriété du <xref:System.Windows.Style> prend le type de collection spécialisée <xref:System.Windows.TriggerCollection>, qui implémente <xref:System.Collections.IList>. Il n’est pas nécessaire instancier un <xref:System.Windows.TriggerCollection> élément objet dans le balisage. Au lieu de cela, vous spécifiez un ou plusieurs <xref:System.Windows.Trigger> éléments en tant qu’éléments dans le `Style.Triggers` élément de propriété, où <xref:System.Windows.Trigger> (ou une classe dérivée) est le type attendu comme type d’élément pour fortement typé et implicite <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
  Les propriétés attachées utilisent une syntaxe qui ressemble en apparence à la syntaxe d’élément de propriété, dans la mesure où vous spécifiez également un *typeName*. *propertyName* combinaison. Il existe deux différences majeures :  
   
--   Vous pouvez utiliser la *typeName*. *propertyName* combinaison même lors de la définition d’une propriété jointe via la syntaxe d’attribut. Propriétés jointes sont que le seul cas où la qualification du nom de la propriété est une exigence dans une syntaxe d’attribut.  
+- Vous pouvez utiliser la *typeName*. *propertyName* combinaison même lors de la définition d’une propriété jointe via la syntaxe d’attribut. Propriétés jointes sont que le seul cas où la qualification du nom de la propriété est une exigence dans une syntaxe d’attribut.  
   
--   Vous pouvez également utiliser la syntaxe d’élément de propriété pour les propriétés jointes. Toutefois, pour la syntaxe d’élément de propriété classique, le *typeName* que vous spécifiez est l’élément objet qui contient l’élément de propriété. Si vous faites référence à une propriété jointe, puis le *typeName* est la classe qui définit la propriété jointe, pas l’élément objet contenant.  
+- Vous pouvez également utiliser la syntaxe d’élément de propriété pour les propriétés jointes. Toutefois, pour la syntaxe d’élément de propriété classique, le *typeName* que vous spécifiez est l’élément objet qui contient l’élément de propriété. Si vous faites référence à une propriété jointe, puis le *typeName* est la classe qui définit la propriété jointe, pas l’élément objet contenant.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Événements attachés  

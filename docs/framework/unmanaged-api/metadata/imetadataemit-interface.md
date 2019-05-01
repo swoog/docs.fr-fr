@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043821"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit, interface
 Fournit des méthodes pour créer, modifier et enregistrer les métadonnées relatives à l’assembly dans la portée actuellement définie. Les métadonnées peuvent être stockées en mémoire ou enregistrées sur le disque.  

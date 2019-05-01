@@ -3,11 +3,11 @@ title: 'Procédure : utiliser un moniker de service avec des contrats d’écha
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972898"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Procédure : utiliser un moniker de service avec des contrats d’échange de métadonnées
 Après avoir développé des nouveaux services WCF, vous pouvez décider que vous souhaitez être en mesure d’appeler ces services à partir d’un script ou une application Visual Basic 6.0. Une méthode consisterait à générer un assembly de client WCF, inscrire l’assembly avec COM, installez l’assembly dans le GAC et ensuite référencer les types COM à partir de votre code Visual Basic. Lorsque vous distribuez l’application, vous devrez distribuer également l’assembly Client WCF. L'utilisateur devra ensuite inscrire l'assembly client WCF avec COM et le placer dans le GAC. WCF COM Interop permet d’effectuer les mêmes appels de service sans se baser sur un assembly de client WCF. Le moniker WCF vous permet d’appeler n’importe quel service WCF à partir de n’importe quel langage compatible COM (Visual Basic, VBScript, Visual Basic pour Applications (VBA) et ainsi de suite) en spécifiant un point de terminaison exchange (Mex) métadonnées URI que le moniker de service utilise pour extraire de type informations sur le service. Cette rubrique décrit comment appeler l’exemple de mise en route WCF à l’aide d’un moniker WCF qui spécifie un point de terminaison Mex.  

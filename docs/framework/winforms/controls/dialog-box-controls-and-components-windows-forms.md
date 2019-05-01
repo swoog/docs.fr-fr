@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
 ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972274"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Contrôles et composants de boîte de dialogue (Windows Forms)
 Les contrôles et les composants Windows Forms suivants présentent des boîtes de dialogue standard. Suivez les liens pour obtenir plus d'informations sur les fonctions disponibles dans chaque boîte de dialogue.  

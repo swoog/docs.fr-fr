@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972092"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : activer la réorganisation des colonnes dans le contrôle DataGridView Windows Forms à l’aide du concepteur
 Lorsque vous affichez les données affichées dans un formulaire Windows <xref:System.Windows.Forms.DataGridView> contrôle, les utilisateurs souhaitent parfois comparer les valeurs dans des colonnes spécifiques. Cela peut être gênant si les colonnes sont séparées largement dans le contrôle, en particulier si les utilisateurs doivent faire défiler horizontalement pour voir toutes les colonnes qui que les intéressent. Vous pouvez rendre la tâche de la comparaison des valeurs de colonne en activant vos utilisateurs de réorganiser les colonnes. Lorsque vous activez la réorganisation des colonnes, les utilisateurs peuvent déplacer une colonne vers une nouvelle position en faisant glisser l’en-tête de colonne avec la souris.  
@@ -24,7 +24,7 @@ Lorsque vous affichez les données affichées dans un formulaire Windows <xref:S
   
 ### <a name="to-enable-column-reordering"></a>Pour activer la réorganisation des colonnes  
   
--   Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **activer la réorganisation des colonnes**.  
+- Cliquez sur le glyphe de balise active (![glyphe de balise active](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) dans le coin supérieur droit de la <xref:System.Windows.Forms.DataGridView> contrôler, puis sélectionnez **activer la réorganisation des colonnes**.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,34 +3,34 @@ title: Service de routage
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991041"
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
   
  Le <xref:System.ServiceModel.Routing.RoutingService> est implémenté comme un service Windows Communication Foundation (WCF) dans le <xref:System.ServiceModel.Routing> espace de noms. Le service de routage expose un ou plusieurs points de terminaison de service qui reçoivent des messages, puis routent chaque message vers un ou plusieurs points de terminaison client en fonction du contenu du message. Le service offre les fonctionnalités suivantes :  
   
--   Routage basé sur le contenu  
+- Routage basé sur le contenu  
   
-    -   Agrégation de service  
+    - Agrégation de service  
   
-    -   Contrôle des versions du service  
+    - Contrôle des versions du service  
   
-    -   Routage par priorité  
+    - Routage par priorité  
   
-    -   Configuration dynamique  
+    - Configuration dynamique  
   
--   Pontage de protocoles  
+- Pontage de protocoles  
   
--   Traitement SOAP  
+- Traitement SOAP  
   
--   Gestion avancée des erreurs  
+- Gestion avancée des erreurs  
   
--   Points de terminaison de sauvegarde  
+- Points de terminaison de sauvegarde  
   
  Bien qu'il soit possible de créer un service intermédiaire répondant à un ou plusieurs de ces objectifs, une telle implémentation est souvent liée à un scénario ou à une solution spécifique et ne peut pas être appliquée facilement à de nouvelles applications.  
   
@@ -48,13 +48,13 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
  En regroupant des filtres de message dans des tables de filtres, vous pouvez construire une logique de routage permettant de gérer plusieurs scénarios de routage, tels que les suivants :  
   
--   Agrégation de service  
+- Agrégation de service  
   
--   Contrôle des versions du service  
+- Contrôle des versions du service  
   
--   Routage par priorité  
+- Routage par priorité  
   
--   Configuration dynamique  
+- Configuration dynamique  
   
  Pour plus d’informations sur les filtres de messages et tables de filtres, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
 ## <a name="streaming"></a>Diffusion en continu  
  Le service de routage peut diffuser en continu les messages si vous définissez la liaison qui prend en charge la diffusion en continu.  Toutefois, dans certains cas, les messages doivent être mis en mémoire tampon :  
   
--   Multidiffusion (mise en mémoire tampon pour créer des copies de message supplémentaires)  
+- Multidiffusion (mise en mémoire tampon pour créer des copies de message supplémentaires)  
   
--   Basculement (mise en mémoire tampon si le message doit être envoyé à une sauvegarde)  
+- Basculement (mise en mémoire tampon si le message doit être envoyé à une sauvegarde)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly a la valeur false (mise en mémoire tampon pour présenter la table MessageFilterTable avec un MessageBuffer afin que les filtres puissent analyser le corps)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly a la valeur false (mise en mémoire tampon pour présenter la table MessageFilterTable avec un MessageBuffer afin que les filtres puissent analyser le corps)  
   
--   Configuration dynamique  
+- Configuration dynamique  
   
 ## <a name="see-also"></a>Voir aussi
 

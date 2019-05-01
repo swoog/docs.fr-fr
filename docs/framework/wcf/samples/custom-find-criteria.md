@@ -3,11 +3,11 @@ title: Custom Find Criteria
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006367"
 ---
 # <a name="custom-find-criteria"></a>Custom Find Criteria
 Cet exemple montre comment créer une correspondance de portée personnalisée à l'aide de la logique et comment implémenter un service de découverte personnalisé. Les clients utilisent la fonctionnalité de correspondance de portée personnalisée pour affiner et mieux tirer parti de la fonctionnalité de recherche système de la découverte WCF. Le scénario couvert par cet exemple est le suivant :  
@@ -20,9 +20,9 @@ Cet exemple montre comment créer une correspondance de portée personnalisée �
   
 ## <a name="demonstrates"></a>Démonstrations  
   
--   Création d'un service de découverte personnalisé  
+- Création d'un service de découverte personnalisé  
   
--   Implémentation d'une correspondance de portée personnalisée par algorithme  
+- Implémentation d'une correspondance de portée personnalisée par algorithme  
   
 ## <a name="discussion"></a>Discussion  
  Le client pour le type « Ou » correspondant aux critères de recherche. Un service répond si les portées de ses points de terminaison correspondent à l'une des portées fournies par le client. Dans ce cas, le client recherche un service de calculatrice dont la portée figure dans la liste suivante :  

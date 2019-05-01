@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988921"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort, méthode
-Abandonne le calcul par ce `ICorDebugEval2` est en cours.  
+Abandonne le calcul que ce `ICorDebugEval2` en cours d’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Notes  
- `RudeAbort` ne libère pas les verrous maintenus par l’évaluateur, et laisse donc la session de débogage dans un état potentiellement dangereux. Appelez cette méthode avec une extrême prudence.  
+ `RudeAbort` ne libère pas les verrous maintenus par l’évaluateur, donc elle ne laisse la session de débogage dans un état potentiellement dangereux. Appelez cette méthode avec une extrême prudence.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

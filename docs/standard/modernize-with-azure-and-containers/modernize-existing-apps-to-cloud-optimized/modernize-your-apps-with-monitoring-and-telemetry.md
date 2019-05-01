@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012087"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Moderniser vos applications avec la surveillance et la télémétrie
 
@@ -35,15 +35,15 @@ Vous pouvez accéder aux journaux Analytique via le portail OMS ou le portail Az
 
 Le [solution Container Monitoring](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) permet d’Analytique de journal vous permet d’afficher et gérer vos hôtes Docker et des conteneurs de Windows dans un emplacement unique. La solution montre les conteneurs qui sont en cours d’exécution, image conteneur qu’ils s’exécutent, et où les conteneurs sont en cours d’exécution. Vous pouvez afficher des informations d’audit détaillées, y compris les commandes qui sont utilisées avec des conteneurs. Vous pouvez également résoudre les conteneurs par afficher et rechercher des journaux centralisés, sans avoir besoin d’afficher à distance les hôtes Docker ou Windows. Vous pouvez trouver des conteneurs qui peuvent être bruyants et consommant des ressources excessives sur un ordinateur hôte. En outre, vous pouvez afficher centralisées sur le processeur, mémoire, stockage, l’utilisation du réseau et des informations relatives aux performances, les conteneurs. Sur les ordinateurs exécutant Windows, vous pouvez centraliser et comparer les journaux à partir de Windows Server, Hyper-V et les conteneurs Docker. La solution prend en charge les orchestrateurs de conteneurs suivants :
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Figure 4-11 montre les relations entre les différents hôtes de conteneur et les agents et OMS.
 
@@ -53,45 +53,45 @@ Figure 4-11 montre les relations entre les différents hôtes de conteneur et le
 
 Vous pouvez utiliser la solution d’analyse de journal Analytique conteneur pour :
 
--   Afficher des informations sur tous les hôtes de conteneur dans un emplacement unique.
+- Afficher des informations sur tous les hôtes de conteneur dans un emplacement unique.
 
--   Savoir quels conteneurs sont en cours d’exécution, image qu’ils s’exécutent et où ils s’exécutent.
+- Savoir quels conteneurs sont en cours d’exécution, image qu’ils s’exécutent et où ils s’exécutent.
 
--   Consultez une piste d’audit pour les actions sur les conteneurs.
+- Consultez une piste d’audit pour les actions sur les conteneurs.
 
--   Résoudre les problèmes en affichant et en recherchant des journaux centralisés sans connexion à distance pour les hôtes Docker.
+- Résoudre les problèmes en affichant et en recherchant des journaux centralisés sans connexion à distance pour les hôtes Docker.
 
--   Rechercher des conteneurs qui peuvent être « voisins bruyants » et consommer des ressources excessives sur un ordinateur hôte.
+- Rechercher des conteneurs qui peuvent être « voisins bruyants » et consommer des ressources excessives sur un ordinateur hôte.
 
--   Afficher centralisées sur le processeur, mémoire, stockage, l’utilisation du réseau et des informations relatives aux performances, les conteneurs.
+- Afficher centralisées sur le processeur, mémoire, stockage, l’utilisation du réseau et des informations relatives aux performances, les conteneurs.
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Vue d’ensemble de l’analyse dans Microsoft Azure**
+- **Vue d’ensemble de l’analyse dans Microsoft Azure**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Présentation d’Application Insights**
+- **Présentation d’Application Insights**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Nouveautés d’Analytique de journal ?**
+- **Nouveautés d’Analytique de journal ?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Solution Container Monitoring dans Azure Monitor**
+- **Solution Container Monitoring dans Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Vue d’ensemble d’Azure Monitor**
+- **Vue d’ensemble d’Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Nouveautés d’Operations Management Suite (OMS) ?**
+- **Nouveautés d’Operations Management Suite (OMS) ?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **Surveillance des conteneurs Windows Server dans Service Fabric avec OMS**
+- **Surveillance des conteneurs Windows Server dans Service Fabric avec OMS**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

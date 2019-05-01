@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
 ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055106"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Structure '\<nom_structure >' doit contenir au moins une variable membre d’instance ou une déclaration d’événement au moins une instance non marquée comme 'Custom'
 Une définition de structure n’inclut pas les variables non partagées ou des événements non personnalisés non partagées.  
@@ -23,7 +23,7 @@ Une définition de structure n’inclut pas les variables non partagées ou des 
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Définissez au moins une variable ou un événement qui n’est pas `Shared`. Si vous définissez un seul événement, il doit être non personnalisés, ainsi que non partagée.  
+- Définissez au moins une variable ou un événement qui n’est pas `Shared`. Si vous définissez un seul événement, il doit être non personnalisés, ainsi que non partagée.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026417"
 ---
 # <a name="extension-methods"></a>Méthodes d’extension
 Méthodes d’extension sont une fonctionnalité de langage qui permet des méthodes statiques pour être appelée à l’aide de la syntaxe de méthode d’appel d’instance. Ces méthodes doivent disposer d’au moins un paramètre, qui représente l’instance de que la méthode consiste à utiliser.  
@@ -22,9 +22,9 @@ Méthodes d’extension sont une fonctionnalité de langage qui permet des méth
   
  **✓ CONSIDER** à l’aide des méthodes d’extension dans un des scénarios suivants :  
   
--   Pour fournir d’assistance fonctionnalités pertinentes pour chaque implémentation d’une interface, si vous dit de fonctionnalités peuvent être écrits en termes de l’interface principale. Il s’agit, car les implémentations concrètes sinon ne peut pas être attribuées aux interfaces. Par exemple, le `LINQ to Objects` opérateurs sont implémentées en tant que méthodes d’extension pour tous les <xref:System.Collections.Generic.IEnumerable%601> types. Par conséquent, les `IEnumerable<>` implémentation est automatiquement prenant en charge LINQ.  
+- Pour fournir d’assistance fonctionnalités pertinentes pour chaque implémentation d’une interface, si vous dit de fonctionnalités peuvent être écrits en termes de l’interface principale. Il s’agit, car les implémentations concrètes sinon ne peut pas être attribuées aux interfaces. Par exemple, le `LINQ to Objects` opérateurs sont implémentées en tant que méthodes d’extension pour tous les <xref:System.Collections.Generic.IEnumerable%601> types. Par conséquent, les `IEnumerable<>` implémentation est automatiquement prenant en charge LINQ.  
   
--   Quand une méthode d’instance créerait une dépendance sur un type, mais une telle dépendance ne fonctionneraient pas les règles de gestion de dépendance. Par exemple, une dépendance à partir de <xref:System.String> à <xref:System.Uri?displayProperty=nameWithType> n’est pas souhaitable et donc `String.ToUri()` retour de méthode d’instance `System.Uri` serait la conception incorrecte à partir d’un point de vue de gestion de dépendance. Une méthode d’extension statique `Uri.ToUri(this string str)` retournant `System.Uri` serait une bien meilleure conception.  
+- Quand une méthode d’instance créerait une dépendance sur un type, mais une telle dépendance ne fonctionneraient pas les règles de gestion de dépendance. Par exemple, une dépendance à partir de <xref:System.String> à <xref:System.Uri?displayProperty=nameWithType> n’est pas souhaitable et donc `String.ToUri()` retour de méthode d’instance `System.Uri` serait la conception incorrecte à partir d’un point de vue de gestion de dépendance. Une méthode d’extension statique `Uri.ToUri(this string str)` retournant `System.Uri` serait une bien meilleure conception.  
   
  **X AVOID** définition des méthodes d’extension sur <xref:System.Object?displayProperty=nameWithType>.  
   

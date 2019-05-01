@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971728"
 ---
 # <a name="uinteger-data-type"></a>UInteger (type de données)
 
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  Le `UInteger` et `Integer` types de données offrent des performances optimales sur un processeur 32 bits, car les types d’entier plus petits (`UShort`, `Short`, `Byte`, et `SByte`), même si elles utilisent moins de bits, davantage de temps charger, stocker et à extraire.  
   
--   **Nombres négatifs.** Étant donné que `UInteger` est un type non signé, il ne peut pas représenter un nombre négatif. Si vous utilisez le moins unaire (`-`) opérateur sur une expression qui correspond au type `UInteger`, Visual Basic convertit l’expression à `Long` première.  
+- **Nombres négatifs.** Étant donné que `UInteger` est un type non signé, il ne peut pas représenter un nombre négatif. Si vous utilisez le moins unaire (`-`) opérateur sur une expression qui correspond au type `UInteger`, Visual Basic convertit l’expression à `Long` première.  
   
--   **Conformité CLS.** Le `UInteger` type de données n’est pas dans le cadre de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), le code conforme CLS ne peut pas consommer un composant qui l’utilise.
+- **Conformité CLS.** Le `UInteger` type de données n’est pas dans le cadre de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), le code conforme CLS ne peut pas consommer un composant qui l’utilise.
   
--   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types tels que `uint` peut avoir une largeur de données différente (16 bits) dans d’autres environnements. Si vous passez un argument de 16 bits à un tel composant, déclarez-le en tant que `UShort` au lieu de `UInteger` dans votre code managé de Visual Basic.  
+- **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types tels que `uint` peut avoir une largeur de données différente (16 bits) dans d’autres environnements. Si vous passez un argument de 16 bits à un tel composant, déclarez-le en tant que `UShort` au lieu de `UInteger` dans votre code managé de Visual Basic.  
   
--   **Étendues.** Le `UInteger` type de données s’étend à `Long`, `ULong`, `Decimal`, `Single`, et `Double`. Cela signifie que vous pouvez convertir `UInteger` à un de ces types sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
+- **Étendues.** Le `UInteger` type de données s’étend à `Long`, `ULong`, `Decimal`, `Single`, et `Double`. Cela signifie que vous pouvez convertir `UInteger` à un de ces types sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Caractères de type.** Ajout des caractères de type littéral `UI` à un littéral force ce dernier à la `UInteger` type de données. `UInteger` n’a aucun caractère de type d’identificateur.  
+- **Caractères de type.** Ajout des caractères de type littéral `UI` à un littéral force ce dernier à la `UInteger` type de données. `UInteger` n’a aucun caractère de type d’identificateur.  
   
--   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt32?displayProperty=nameWithType>.  
+- **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt32?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,11 +3,11 @@ title: Service Debug Behavior
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007914"
 ---
 # <a name="service-debug-behavior"></a>Service Debug Behavior
 Cet exemple montre comment configurer les paramètres de comportement de débogage de service. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit explicitement le comportement de débogage de service dans le fichier de configuration. Cela peut également être fait de façon impérative dans le code.  
@@ -33,12 +33,12 @@ Cet exemple montre comment configurer les paramètres de comportement de déboga
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) est l’élément de configuration qui permet de modifier les propriétés de comportement de débogage de service. L'utilisateur peut modifier ce comportement aux fins suivantes :  
   
--   Cela permet au service de retourner une exceptions levée par le code d'application même si celle-ci n'est pas déclarée à l'aide de <xref:System.ServiceModel.FaultContractAttribute>. Pour ce faire, affectez `includeExceptionDetailInFaults` à `true`. Ce paramètre est utile lors du débogage de cas où le serveur lève une exception inattendue.  
+- Cela permet au service de retourner une exceptions levée par le code d'application même si celle-ci n'est pas déclarée à l'aide de <xref:System.ServiceModel.FaultContractAttribute>. Pour ce faire, affectez `includeExceptionDetailInFaults` à `true`. Ce paramètre est utile lors du débogage de cas où le serveur lève une exception inattendue.  
   
     > [!IMPORTANT]
     >  Pour des raisons de sécurité, il est déconseillé d'activer ce paramètre dans un environnement de production. Une exception de serveur inattendue peut contenir des informations qui ne sont pas destinées au client et l'affectation de `includeExceptionDetailsInFaults` à `true` peut entraîner une fuite des informations.  
   
--   Le [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) permet également à un utilisateur Activer ou désactiver la page d’aide. Chaque service peut éventuellement exposer une page d'aide qui contient des informations sur le service, et notamment le point de terminaison permettant d'obtenir le WSDL pour le service. Pour ce faire, affectez `httpHelpPageEnabled` à `true`. Cela permet de retourner la page d'aide dans une demande GET à l'adresse de base du service. Pour modifier cette adresse, définissez un autre attribut `httpHelpPageUrl`. Pour sécuriser cette procédure, utilisez HTTPS au lieu de HTTP. Pour ce faire, définissez `httpsHelpPageEnabled` et `httpsHelpPageUrl`  
+- Le [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) permet également à un utilisateur Activer ou désactiver la page d’aide. Chaque service peut éventuellement exposer une page d'aide qui contient des informations sur le service, et notamment le point de terminaison permettant d'obtenir le WSDL pour le service. Pour ce faire, affectez `httpHelpPageEnabled` à `true`. Cela permet de retourner la page d'aide dans une demande GET à l'adresse de base du service. Pour modifier cette adresse, définissez un autre attribut `httpHelpPageUrl`. Pour sécuriser cette procédure, utilisez HTTPS au lieu de HTTP. Pour ce faire, définissez `httpsHelpPageEnabled` et `httpsHelpPageUrl`  
   
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Les trois premières opérations (ajout, soustraction et multiplication) doivent réussir. La dernière (division) échoue avec une exception de division par zéro.  
   

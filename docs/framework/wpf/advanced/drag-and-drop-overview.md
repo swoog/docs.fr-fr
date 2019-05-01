@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051635"
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
 Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplacer dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le glisser-déplacer fait généralement référence à une méthode de transfert de données qui implique l'utilisation d'une souris (ou d'un autre dispositif de pointage) pour sélectionner un ou plusieurs objets, les faire glisser vers une cible de déplacement souhaitée dans l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] et les y déplacer.  
@@ -41,11 +41,11 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 ## <a name="data-transfer"></a>Transfert de données  
  Le glisser-déplacer fait partie du domaine plus général du transfert de données. Le transfert de données comprend les opérations de glisser-déplacer et de copier-coller. L'opération de glisser-déplacer est similaire aux opérations de copier-coller et de couper-coller utilisées pour transférer des données d'un objet ou d'une application à l'autre, à l'aide du presse-papiers du système. Ces deux types d'opération nécessitent :  
   
--   un objet source qui fournit les données ;  
+- un objet source qui fournit les données ;  
   
--   un moyen de stockage temporaire des données transférées ;  
+- un moyen de stockage temporaire des données transférées ;  
   
--   un objet cible qui reçoit les données.  
+- un objet cible qui reçoit les données.  
   
  Dans une opération de copier-coller, le presse-papiers du système est utilisé pour stocker temporairement les données transférées ; dans une opération de glisser-déplacer, <xref:System.Windows.DataObject> est utilisé pour stocker les données. Par concept, un objet de données se compose d'une ou plusieurs paires de <xref:System.Object> qui contient les données réelles et un identificateur de format de données correspondant.  
   
@@ -94,31 +94,31 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Pour implémenter le glisser-déplacer de base, effectuez les tâches suivantes :  
   
--   Identifiez l'élément destiné à être la source du glissement. Une source de glissement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
+- Identifiez l'élément destiné à être la source du glissement. Une source de glissement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
   
--   Créez un gestionnaire d’événements pour la source du glissement, qui sera chargé de lancer l’opération de glisser-déplacer. L'événement est généralement un événement <xref:System.Windows.UIElement.MouseMove>.  
+- Créez un gestionnaire d’événements pour la source du glissement, qui sera chargé de lancer l’opération de glisser-déplacer. L'événement est généralement un événement <xref:System.Windows.UIElement.MouseMove>.  
   
--   Dans le gestionnaire d'événements de la source de glissement, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. Dans l'appel <xref:System.Windows.DragDrop.DoDragDrop%2A>, spécifiez la source de glissement, les données à transférer et les effets autorisés.  
+- Dans le gestionnaire d'événements de la source de glissement, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. Dans l'appel <xref:System.Windows.DragDrop.DoDragDrop%2A>, spécifiez la source de glissement, les données à transférer et les effets autorisés.  
   
--   Identifiez l'élément destiné à être la cible du glissement. Une cible de déplacement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
+- Identifiez l'élément destiné à être la cible du glissement. Une cible de déplacement peut être un <xref:System.Windows.UIElement> ou un <xref:System.Windows.ContentElement>.  
   
--   Sur la cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`.  
+- Sur la cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`.  
   
--   Dans la cible de déplacement, créez un gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>  pour traiter les données déplacées.  
+- Dans la cible de déplacement, créez un gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>  pour traiter les données déplacées.  
   
--   Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, extrayez les données de <xref:System.Windows.DragEventArgs> à l'aide des méthodes <xref:System.Windows.DataObject.GetDataPresent%2A> et <xref:System.Windows.DataObject.GetData%2A>.  
+- Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, extrayez les données de <xref:System.Windows.DragEventArgs> à l'aide des méthodes <xref:System.Windows.DataObject.GetDataPresent%2A> et <xref:System.Windows.DataObject.GetData%2A>.  
   
--   Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, utilisez les données pour effectuer l'opération de glisser-déplacer souhaitée.  
+- Dans le gestionnaire d'événements <xref:System.Windows.DragDrop.Drop>, utilisez les données pour effectuer l'opération de glisser-déplacer souhaitée.  
   
  Vous pouvez améliorer votre implémentation du glisser-déplacer en créant un <xref:System.Windows.DataObject> personnalisé et en gérant des événements facultatifs de source de glissement et de cible de déplacement, comme le montrent les tâches suivantes :  
   
--   Pour transférer des données personnalisées ou plusieurs éléments de données, créez un <xref:System.Windows.DataObject> à passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
+- Pour transférer des données personnalisées ou plusieurs éléments de données, créez un <xref:System.Windows.DataObject> à passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
   
--   Pour effectuer des actions supplémentaires pendant une opération de glissement, gérez les événements <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> et <xref:System.Windows.DragDrop.DragLeave> sur la cible de déplacement.  
+- Pour effectuer des actions supplémentaires pendant une opération de glissement, gérez les événements <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> et <xref:System.Windows.DragDrop.DragLeave> sur la cible de déplacement.  
   
--   Pour modifier l'apparence du pointeur de la souris, gérez l'événement <xref:System.Windows.DragDrop.GiveFeedback> sur la source de glissement.  
+- Pour modifier l'apparence du pointeur de la souris, gérez l'événement <xref:System.Windows.DragDrop.GiveFeedback> sur la source de glissement.  
   
--   Pour modifier la façon dont l'opération de glisser-déplacer est annulée, gérez l'événement <xref:System.Windows.DragDrop.QueryContinueDrag> sur la source de glissement.  
+- Pour modifier la façon dont l'opération de glisser-déplacer est annulée, gérez l'événement <xref:System.Windows.DragDrop.QueryContinueDrag> sur la source de glissement.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Exemple de glisser-déplacer  
@@ -129,13 +129,13 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Autoriser un élément à être une source de glissement  
  Un objet qui devient source de glissement est chargé des opérations suivantes :  
   
--   Identification du moment où se produit le glissement.  
+- Identification du moment où se produit le glissement.  
   
--   Lancement de l’opération de glisser-déplacer.  
+- Lancement de l’opération de glisser-déplacer.  
   
--   Identification des données à transférer.  
+- Identification des données à transférer.  
   
--   Spécification des effets que l’opération de glisser-déplacer est autorisée à avoir sur les données transférées.  
+- Spécification des effets que l’opération de glisser-déplacer est autorisée à avoir sur les données transférées.  
   
  La source de glissement peut aussi fournir une rétroaction visuelle au sujet des actions autorisées (déplacement, copie, aucune) et peut annuler l'opération de glisser-déplacer en fonction d'autres entrées utilisateur, comme par exemple, appuyer sur la touche Échap durant l'opération de glissement.  
   
@@ -146,11 +146,11 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
   
  Dans le gestionnaire d'événements <xref:System.Windows.UIElement.MouseMove>, appelez la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> pour initier l'opération de glisser-déplacer. La méthode <xref:System.Windows.DragDrop.DoDragDrop%2A> accepte trois paramètres :  
   
--   `dragSource` : référence à l'objet de dépendance correspondant à la source des données transférées ; il s'agit généralement de la source de l'événement <xref:System.Windows.UIElement.MouseMove>.  
+- `dragSource` : référence à l'objet de dépendance correspondant à la source des données transférées ; il s'agit généralement de la source de l'événement <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data` : objet qui contient les données transférées, inclus dans un wrapper dans un <xref:System.Windows.DataObject>.  
+- `data` : objet qui contient les données transférées, inclus dans un wrapper dans un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` : une des valeurs d'énumération <xref:System.Windows.DragDropEffects> qui spécifie les effets autorisés de l'opération de glisser-déplacer.  
+- `allowedEffects` : une des valeurs d'énumération <xref:System.Windows.DragDropEffects> qui spécifie les effets autorisés de l'opération de glisser-déplacer.  
   
  N'importe quel objet sérialisable peut être passé dans le paramètre `data`. Si les données ne sont pas déjà incluses dans un wrapper dans un <xref:System.Windows.DataObject>, elles sont automatiquement incluses dans un wrapper dans un nouveau <xref:System.Windows.DataObject>. Pour passer plusieurs éléments de données, vous devez créer vous-même le <xref:System.Windows.DataObject> et le passer à la méthode <xref:System.Windows.DragDrop.DoDragDrop%2A>. Pour plus d’informations, consultez [Données et objets de données](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplac
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Autoriser un élément à être une cible de déplacement  
  Un objet qui devient cible de déplacement est chargé des opérations suivantes :  
   
--   Confirmation qu’il s’agit d’une cible de déplacement valide.  
+- Confirmation qu’il s’agit d’une cible de déplacement valide.  
   
--   Réponse à la source du glissement quand elle effectue le glissement vers la cible.  
+- Réponse à la source du glissement quand elle effectue le glissement vers la cible.  
   
--   Vérification que les données transférées sont dans un format qu’elle peut recevoir.  
+- Vérification que les données transférées sont dans un format qu’elle peut recevoir.  
   
--   Traitement des données déplacées.  
+- Traitement des données déplacées.  
   
  Pour spécifier un élément en tant que cible de déplacement, attribuez la valeur <xref:System.Windows.UIElement.AllowDrop%2A> à la propriété `true`. Les événements de cible de déplacement seront ensuite déclenchés sur cet élément pour que vous puissiez les gérer. Pendant une opération de glisser-déplacer, la séquence d'événements suivante se produit sur la cible du déplacement :  
   

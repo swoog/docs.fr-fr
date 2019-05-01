@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000764"
 ---
 # <a name="security-considerations-in-wcf"></a>Considérations relatives à la sécurité dans WCF
 Les rubriques de cette section répertorient les divers éléments relatifs à la sécurité à prendre en compte lorsque vous concevez une application Windows Communication Foundation (WCF).  

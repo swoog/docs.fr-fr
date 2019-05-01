@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 39ce72451f3a375f0cd3adb67a431162fc421a93
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041599"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences, méthode
 
@@ -84,7 +84,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 Un profileur pour le [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ou ultérieur implémente le [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface et enregistre les dépendances spécifiées par le `ConditionalWeakTableElementReferences` (méthode). `ICorProfilerCallback5` fournit l’ensemble complet des dépendances entre les objets actifs représentés par `ConditionalWeakTable` entrées. Ces dépendances et le membre spécifiés par les références de champ la [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) méthode activer un profileur managé générer le graphique d’objet complet d’objets actifs.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009121"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Procédure pas à pas : organisation des contrôles dans des Windows Forms à l’aide d’un FlowLayoutPanel
 Certaines applications exigent un formulaire dont la disposition s’organise de manière appropriée à mesure que le formulaire est redimensionné ou que le contenu change de taille. Si vous avez besoin d’une disposition dynamique et que vous ne souhaitez pas gérer les événements <xref:System.Windows.Forms.Control.Layout> explicitement dans votre code, envisagez d’utiliser un panneau de disposition.  
@@ -23,23 +23,23 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
   
  <xref:System.Windows.Forms.FlowLayoutPanel> organise son contenu dans un sens de flux spécifique : horizontal ou vertical. Vous pouvez encapsuler son contenu d'une ligne à la suivante ou d'une colonne à la suivante. Vous pouvez également découper son contenu au lieu de l'encapsuler. Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Création d’un projet Windows Forms  
+- Création d’un projet Windows Forms  
   
--   Organisation de contrôles dans le sens horizontal ou vertical  
+- Organisation de contrôles dans le sens horizontal ou vertical  
   
--   Modification du sens du flux  
+- Modification du sens du flux  
   
--   Insertion d’interruptions de flux  
+- Insertion d’interruptions de flux  
   
--   Organisation des contrôles en utilisant le remplissage et les marges  
+- Organisation des contrôles en utilisant le remplissage et les marges  
   
--   Insertion de contrôles en double-cliquant dessus dans la boîte à outils  
+- Insertion de contrôles en double-cliquant dessus dans la boîte à outils  
   
--   Insertion d’un contrôle en dessinant son contour  
+- Insertion d’un contrôle en dessinant son contour  
   
--   Insertion de contrôles en utilisant le signe insertion  
+- Insertion de contrôles en utilisant le signe insertion  
   
--   Réassignation de contrôles existants à un parent différent  
+- Réassignation de contrôles existants à un parent différent  
   
  À l’issue de cette procédure, vous comprendrez le rôle joué par ces fonctionnalités de disposition importantes.  
   
@@ -179,13 +179,13 @@ Certaines applications exigent un formulaire dont la disposition s’organise de
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous pouvez obtenir une disposition complexe en combinant plusieurs contrôles et panneaux de disposition. Voici quelques suggestions à explorer :  
   
--   Agrandissez l’un des contrôles <xref:System.Windows.Forms.Button> et observez l’effet du redimensionnement sur la disposition.  
+- Agrandissez l’un des contrôles <xref:System.Windows.Forms.Button> et observez l’effet du redimensionnement sur la disposition.  
   
--   Les panneaux de disposition peuvent contenir d’autres panneaux de disposition. Faites l’expérience de déposer un contrôle <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle existant.  
+- Les panneaux de disposition peuvent contenir d’autres panneaux de disposition. Faites l’expérience de déposer un contrôle <xref:System.Windows.Forms.TableLayoutPanel> dans le contrôle existant.  
   
--   Ancrez le contrôle <xref:System.Windows.Forms.FlowLayoutPanel> au formulaire parent. Redimensionnez le formulaire et observez-en l’effet sur la disposition.  
+- Ancrez le contrôle <xref:System.Windows.Forms.FlowLayoutPanel> au formulaire parent. Redimensionnez le formulaire et observez-en l’effet sur la disposition.  
   
--   Affectez à la propriété <xref:System.Windows.Forms.Control.Visible%2A> de l’un des contrôles la valeur `false` et observez la façon dont le <xref:System.Windows.Forms.FlowLayoutPanel> est réajusté en réponse.  
+- Affectez à la propriété <xref:System.Windows.Forms.Control.Visible%2A> de l’un des contrôles la valeur `false` et observez la façon dont le <xref:System.Windows.Forms.FlowLayoutPanel> est réajusté en réponse.  
   
 ## <a name="see-also"></a>Voir aussi
 

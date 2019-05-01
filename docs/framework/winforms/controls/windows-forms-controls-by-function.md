@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969466"
 ---
 # <a name="windows-forms-controls-by-function"></a>Classement par fonction des contrôles Windows Forms
 Windows Forms offre des contrôles et composants qui effectuent un nombre de fonctions. Le tableau suivant répertorie les contrôles Windows Forms et les composants en fonction de la fonction général. En outre, il existe plusieurs contrôles qui remplissent la même fonction, le contrôle recommandé est répertorié avec une remarque concernant le contrôle qu’il est remplacé. Dans une table distincte ultérieure, les contrôles remplacés sont répertoriés avec leurs remplacements recommandés.  

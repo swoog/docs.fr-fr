@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991014"
 ---
 # <a name="schema-import-and-export"></a>Importation et exportation de schémas
 Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le moteur de sérialisation `DataContractSerializer` traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Outre le sérialiseur lui-même, WCF inclut l’importation de schéma associé et d’exporter les schémas afférents. *Schéma* est une description formelle, précise et lisible par machine de la forme du XML que le sérialiseur produit ou que le désérialiseur peut accéder. WCF utilise le langage de définition de World Wide Web Consortium (W3C) XML Schema (XSD) en tant que sa représentation sous forme de schéma, qui est largement interopérable avec nombreuses plateformes tierces.  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
  Notez que le type généré respecte les bonnes pratiques du contrat de données plusieurs (trouvé dans [meilleures pratiques : Le contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)) :  
   
--   Ce type implémente l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject>. Pour plus d’informations, consultez [Contrats de données compatibles avec des versions ultérieures](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Ce type implémente l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject>. Pour plus d’informations, consultez [Contrats de données compatibles avec des versions ultérieures](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
--   Les membres de données sont implémentés sous forme de propriétés publiques qui encapsulent des champs privés.  
+- Les membres de données sont implémentés sous forme de propriétés publiques qui encapsulent des champs privés.  
   
--   La classe est une classe partielle et des éléments peuvent y être ajoutés sans modifier le code généré.  
+- La classe est une classe partielle et des éléments peuvent y être ajoutés sans modifier le code généré.  
   
  L'exportateur <xref:System.Runtime.Serialization.XsdDataContractExporter> vous permet d'effectuer l'opération inverse, c'est-à-dire de prendre des types pouvant être sérialisés à l'aide de `DataContractSerializer`, puis de générer un document de schéma XSD.  
   

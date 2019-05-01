@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
 ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971845"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code, type XAML intrinsèque
 Permet le placement du code au sein d’une production XAML. Ce code peut être compilé par une implémentation de processeur XAML qui compile XAML, ou à gauche dans la production XAML pour les utilisations ultérieures comme interprétation par un runtime.  
@@ -38,15 +38,15 @@ Permet le placement du code au sein d’une production XAML. Ce code peut être 
 ## <a name="wpf-usage-notes"></a>Remarques sur l’utilisation WPF  
  Code déclaré dans `x:Code` pour WPF a plusieurs limitations notables :  
   
--   Le `x:Code` élément de directive doit être un élément enfant immédiat de l’élément racine de la production XAML.  
+- Le `x:Code` élément de directive doit être un élément enfant immédiat de l’élément racine de la production XAML.  
   
--   [x : Class Directive](x-class-directive.md) doit être fourni sur l’élément racine parent.  
+- [x : Class Directive](x-class-directive.md) doit être fourni sur l’élément racine parent.  
   
--   Le code placé dans `x:Code` sera traité par compilation pour figurer dans la portée de la classe partielle qui est déjà en cours de création pour cette page XAML. Par conséquent, tout code que vous définissez doit être membres ou des variables de cette classe partielle.  
+- Le code placé dans `x:Code` sera traité par compilation pour figurer dans la portée de la classe partielle qui est déjà en cours de création pour cette page XAML. Par conséquent, tout code que vous définissez doit être membres ou des variables de cette classe partielle.  
   
--   Vous ne pouvez pas définir de classes supplémentaires autrement qu’en imbriquant une classe à l’intérieur de la classe partielle (l’imbrication est autorisée, mais il n’est pas courant, car les classes imbriquées ne peuvent pas être référencées dans XAML). Espaces de noms CLR autres que l’espace de noms qui est utilisé pour la classe partielle existante ne peut pas être définie ou ajouté à.  
+- Vous ne pouvez pas définir de classes supplémentaires autrement qu’en imbriquant une classe à l’intérieur de la classe partielle (l’imbrication est autorisée, mais il n’est pas courant, car les classes imbriquées ne peuvent pas être référencées dans XAML). Espaces de noms CLR autres que l’espace de noms qui est utilisé pour la classe partielle existante ne peut pas être définie ou ajouté à.  
   
--   Références aux entités de code en dehors de l’espace de noms CLR classe partielle doivent être qualifiés complet. Si les membres déclarés sont des remplacements pour les membres substituables de classe partielle, cela doit être spécifié avec le mot clé override de spécifique à la langue. Si les membres déclarés dans `x:Code` étendue sont en conflit avec les membres de la classe partielle créée à partir du XAML, de sorte que le compilateur signale le conflit, le fichier XAML ne peut pas compiler ou charger.  
+- Références aux entités de code en dehors de l’espace de noms CLR classe partielle doivent être qualifiés complet. Si les membres déclarés sont des remplacements pour les membres substituables de classe partielle, cela doit être spécifié avec le mot clé override de spécifique à la langue. Si les membres déclarés dans `x:Code` étendue sont en conflit avec les membres de la classe partielle créée à partir du XAML, de sorte que le compilateur signale le conflit, le fichier XAML ne peut pas compiler ou charger.  
   
 ## <a name="see-also"></a>Voir aussi
 

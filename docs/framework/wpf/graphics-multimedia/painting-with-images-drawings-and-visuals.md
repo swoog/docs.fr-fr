@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002291"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Peinture avec des objets d'image, de dessin et visuels
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> objets pour peindre une zone avec une image, un <xref:System.Windows.Media.Drawing>, ou un <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ Objets peints par un élément DrawingBrush
   
  Un <xref:System.Windows.Media.DrawingBrush> peint une zone avec un <xref:System.Windows.Media.Drawing> objet. Un <xref:System.Windows.Media.Drawing> objet décrit du contenu visible, comme une forme, bitmap, vidéo ou une ligne de texte. Différents types de dessins décrivent différents types de contenus. La liste suivante répertorie les différents types d’objets Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
+- <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
+- <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
+- <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
+- <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
   
  Pour plus d’informations sur <xref:System.Windows.Media.Drawing> , voir la [vue d’ensemble des objets Drawing](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ Objets peints par un élément DrawingBrush
   
  Il existe deux façons de spécifier le <xref:System.Windows.Media.VisualBrush.Visual%2A> contenu d’un <xref:System.Windows.Media.VisualBrush>.  
   
--   Créer un nouveau <xref:System.Windows.Media.Visual> et utilisez-le pour définir le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété de la <xref:System.Windows.Media.VisualBrush>. Pour obtenir un exemple, consultez la [exemple : Peindre un objet avec un visuel](#examplevisualbrush1) section qui suit.  
+- Créer un nouveau <xref:System.Windows.Media.Visual> et utilisez-le pour définir le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété de la <xref:System.Windows.Media.VisualBrush>. Pour obtenir un exemple, consultez la [exemple : Peindre un objet avec un visuel](#examplevisualbrush1) section qui suit.  
   
--   Utiliser une existante <xref:System.Windows.Media.Visual>, ce qui crée une image dupliquée de la cible <xref:System.Windows.Media.Visual>. Vous pouvez ensuite utiliser le <xref:System.Windows.Media.VisualBrush> pour créer des effets intéressants, tels que la réflexion et l’agrandissement. Pour obtenir un exemple, consultez la [exemple : Créer une réflexion](#examplevisualbrush2) section.  
+- Utiliser une existante <xref:System.Windows.Media.Visual>, ce qui crée une image dupliquée de la cible <xref:System.Windows.Media.Visual>. Vous pouvez ensuite utiliser le <xref:System.Windows.Media.VisualBrush> pour créer des effets intéressants, tels que la réflexion et l’agrandissement. Pour obtenir un exemple, consultez la [exemple : Créer une réflexion](#examplevisualbrush2) section.  
   
  Lorsque vous définissez un nouveau <xref:System.Windows.Media.VisualBrush.Visual%2A> pour un <xref:System.Windows.Media.VisualBrush> et qui <xref:System.Windows.Media.Visual> est un <xref:System.Windows.UIElement> (par exemple, un panneau ou un contrôle), le système de disposition s’exécute sur le <xref:System.Windows.UIElement> et ses éléments enfants lorsque le <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propriété est définie sur `true`. Toutefois, la racine <xref:System.Windows.UIElement> est principalement isolé du reste du système : les styles et la disposition externe ne peuvent pas franchir cette limite. Par conséquent, vous devez spécifier explicitement la taille de la racine <xref:System.Windows.UIElement>, car son seul parent est le <xref:System.Windows.Media.VisualBrush> et ne peut donc pas se dimensionner automatiquement à la zone peinte. Pour plus d’informations sur la disposition en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consultez [Disposition](../advanced/layout.md).  
   

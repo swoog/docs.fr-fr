@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009212"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Dépannage de la création de contrôles et de composants
 Cette rubrique répertorie les problèmes courants suivants qui surviennent lors du développement de composants et de contrôles. Pour plus d’informations, consultez l’article [Programmation à l’aide de composants](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Impossible d’ajouter le contrôle à la boîte à outils  
+- Impossible d’ajouter le contrôle à la boîte à outils  
   
--   Impossible de déboguer le composant ou contrôle utilisateur Windows Forms  
+- Impossible de déboguer le composant ou contrôle utilisateur Windows Forms  
   
--   Un événement est généré deux fois dans le composant ou le contrôle hérité  
+- Un événement est généré deux fois dans le composant ou le contrôle hérité  
   
--   Erreur au moment de la conception : « Impossible de créer le composant '*nom du composant*' »  
+- Erreur au moment de la conception : « Impossible de créer le composant '*nom du composant*' »  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   L’icône du composant n’apparaît pas dans la boîte à outils  
+- L’icône du composant n’apparaît pas dans la boîte à outils  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Impossible d’ajouter le contrôle à la boîte à outils  
  Si vous souhaitez ajouter un contrôle personnalisé que vous avez créé dans un autre projet ou un contrôle tiers pour la **boîte à outils**, vous devez le faire manuellement. Si le projet actuel contient votre contrôle ou composant, il doit apparaître automatiquement dans la **boîte à outils**. Pour plus d’informations, consultez [Procédure pas à pas : Remplissage automatique de la boîte à outils avec des composants personnalisés](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
 2. Dans la boîte de dialogue **Choisir des éléments de boîte à outils**, ajoutez le composant :  
   
-    -   Si vous souhaitez ajouter un contrôle ou un composant .NET Framework, cliquez sur l’onglet **Composants .NET Framework**.  
+    - Si vous souhaitez ajouter un contrôle ou un composant .NET Framework, cliquez sur l’onglet **Composants .NET Framework**.  
   
          – ou –  
   
-    -   Si vous souhaitez ajouter un composant COM ou un contrôle ActiveX, cliquez sur l’onglet **Composants COM**.  
+    - Si vous souhaitez ajouter un composant COM ou un contrôle ActiveX, cliquez sur l’onglet **Composants COM**.  
   
 3. Si votre contrôle est répertorié dans la boîte de dialogue, vérifiez qu’il est sélectionné, puis cliquez sur **OK**.  
   
@@ -54,15 +54,15 @@ Cette rubrique répertorie les problèmes courants suivants qui surviennent lors
   
 4. Si votre contrôle n’est pas répertorié dans la boîte de dialogue, procédez comme suit :  
   
-    1.  Cliquez sur le bouton **Parcourir**.  
+    1. Cliquez sur le bouton **Parcourir**.  
   
-    2.  Accédez au dossier contenant le fichier .dll qui contient votre contrôle.  
+    2. Accédez au dossier contenant le fichier .dll qui contient votre contrôle.  
   
-    3.  Sélectionnez le fichier .dll et cliquez sur **Ouvrir**.  
+    3. Sélectionnez le fichier .dll et cliquez sur **Ouvrir**.  
   
          Votre contrôle s’affiche dans la boîte de dialogue.  
   
-    4.  Vérifiez que votre contrôle est sélectionné, puis cliquez sur **OK**.  
+    4. Vérifiez que votre contrôle est sélectionné, puis cliquez sur **OK**.  
   
          Le contrôle est ajouté à la **boîte à outils**.  
   

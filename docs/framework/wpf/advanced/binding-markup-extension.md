@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010681"
 ---
 # <a name="binding-markup-extension"></a>Binding, extension de balisage
 Diffère d’une valeur de propriété une valeur liée aux données, création d’un objet d’expression et l’interprétation de contexte de données qui s’applique à l’élément et sa liaison au moment de l’exécution.  
@@ -54,55 +54,55 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
   
  Plusieurs de ces valeurs de propriété nécessitent des types d’objets qui ne prennent pas une conversion de type natif à partir d’une syntaxe de texte dans XAML et nécessitent donc des extensions de balisage pour pouvoir être définie comme valeur d’attribut. Consultez la section Utilisation d’attributs XAML dans la bibliothèque de classes .NET Framework pour chaque propriété pour plus d’informations ; la chaîne que vous utilisez pour la syntaxe d’attribut XAML avec ou sans l’extension de balisage supplémentaire utilisation est essentiellement identique à la valeur que vous spécifiez dans un `Binding` expression, à l’exception que vous ne placez pas de guillemets autour de chaque `bindProp` = `value` dans le `Binding` expression.  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: chaîne qui identifie un groupe de liaison possible. Il s’agit d’un concept de liaison relativement avancé ; consultez la page de référence de <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>.  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: chaîne qui identifie un groupe de liaison possible. Il s’agit d’un concept de liaison relativement avancé ; consultez la page de référence de <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>.  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais pour ce faire, requiert une référence d’objet pour la valeur, par exemple un [Extension de balisage StaticResource](staticresource-markup-extension.md). Dans ce cas, la valeur est une instance d’une classe de convertisseur personnalisé.  
+- <xref:System.Windows.Data.Binding.Converter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais pour ce faire, requiert une référence d’objet pour la valeur, par exemple un [Extension de balisage StaticResource](staticresource-markup-extension.md). Dans ce cas, la valeur est une instance d’une classe de convertisseur personnalisé.  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: peut être défini dans l’expression comme un identificateur de normes ; consultez la rubrique de référence <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: peut être défini dans l’expression comme un identificateur de normes ; consultez la rubrique de référence <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si vous passez un type de référence pour la valeur, cette utilisation nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si vous passez un type de référence pour la valeur, cette utilisation nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md).  
+- <xref:System.Windows.Data.Binding.ElementName%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md).  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de la valeur passée. Si vous passez un type référence, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de la valeur passée. Si vous passez un type référence, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>: *valeur* est un nom de constante à partir de la <xref:System.Windows.Data.BindingMode> énumération. Par exemple, `{Binding Mode=OneWay}`.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *valeur* est un nom de constante à partir de la <xref:System.Windows.Data.BindingMode> énumération. Par exemple, `{Binding Mode=OneWay}`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`.  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: chaîne qui décrit un chemin d’accès dans un objet de données ou un modèle objet général. Le format fournit plusieurs conventions différentes permettant de parcourir un modèle objet qui ne peut pas être correctement décrits dans cette rubrique. Consultez [PropertyPath XAML syntaxe](propertypath-xaml-syntax.md).  
+- <xref:System.Windows.Data.Binding.Path%2A>: chaîne qui décrit un chemin d’accès dans un objet de données ou un modèle objet général. Le format fournit plusieurs conventions différentes permettant de parcourir un modèle objet qui ne peut pas être correctement décrits dans cette rubrique. Consultez [PropertyPath XAML syntaxe](propertypath-xaml-syntax.md).  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.ElementName%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite un imbriquée [RelativeSource MarkupExtension](relativesource-markupextension.md) utilisation pour spécifier la valeur.  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.ElementName%2A> et <xref:System.Windows.Data.Binding.Source%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite un imbriquée [RelativeSource MarkupExtension](relativesource-markupextension.md) utilisation pour spécifier la valeur.  
   
--   <xref:System.Windows.Data.Binding.Source%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.ElementName%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite une utilisation de l’extension imbriquée, généralement une [Extension de balisage StaticResource](staticresource-markup-extension.md) qui fait référence à une objet source de données à partir d’un dictionnaire de ressources de clé.  
+- <xref:System.Windows.Data.Binding.Source%2A>: mutuellement exclusif avec <xref:System.Windows.Data.Binding.RelativeSource%2A> et <xref:System.Windows.Data.Binding.ElementName%2A>; chaque de ces propriétés de liaison représente une méthodologie de liaison spécifique. Consultez [vue d’ensemble de liaison de données](../data/data-binding-overview.md). Nécessite une utilisation de l’extension imbriquée, généralement une [Extension de balisage StaticResource](staticresource-markup-extension.md) qui fait référence à une objet source de données à partir d’un dictionnaire de ressources de clé.  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: chaîne qui décrit une convention de format de chaîne pour les données liées. Il s’agit d’un concept de liaison relativement avancé ; consultez la page de référence de <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: chaîne qui décrit une convention de format de chaîne pour les données liées. Il s’agit d’un concept de liaison relativement avancé ; consultez la page de référence de <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si le passage d’un type de référence pour la valeur, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: peut être défini comme un `bindProp` = `value` chaîne dans l’expression, mais il est dépendant du type de paramètre passé. Si le passage d’un type de référence pour la valeur, nécessite une référence d’objet tels qu’imbriquée [Extension de balisage StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *valeur* est un nom de constante à partir de la <xref:System.Windows.Data.UpdateSourceTrigger> énumération. Par exemple, `{Binding UpdateSourceTrigger=LostFocus}`. Des contrôles spécifiques susceptibles d’avoir différentes valeurs par défaut pour cette propriété de liaison. Consultez <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *valeur* est un nom de constante à partir de la <xref:System.Windows.Data.UpdateSourceTrigger> énumération. Par exemple, `{Binding UpdateSourceTrigger=LostFocus}`. Des contrôles spécifiques susceptibles d’avoir différentes valeurs par défaut pour cette propriété de liaison. Consultez <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`. Consultez la section Notes.  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`. Consultez la section Notes.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`. Consultez la section Notes.  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Boolean, peut être `true` ou `false`. La valeur par défaut est `false`. Consultez la section Notes.  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: chaîne qui décrit un chemin d’accès vers le XMLDOM d’une source de données XML. Consultez [lier aux données XML à l’aide d’un XMLDataProvider et requêtes XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+- <xref:System.Windows.Data.Binding.XPath%2A>: chaîne qui décrit un chemin d’accès vers le XMLDOM d’une source de données XML. Consultez [lier aux données XML à l’aide d’un XMLDataProvider et requêtes XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Les éléments suivants sont des propriétés de <xref:System.Windows.Data.Binding> qui ne peut pas être définie à l’aide de la `Binding` extension de balisage /`{Binding}` formulaire de l’expression.  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: cette propriété attend une référence à une implémentation de rappel. Rappels/méthodes autres que des gestionnaires d’événements ne peut pas être référencés dans la syntaxe XAML.  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: cette propriété attend une référence à une implémentation de rappel. Rappels/méthodes autres que des gestionnaires d’événements ne peut pas être référencés dans la syntaxe XAML.  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>: la propriété accepte une collection générique de <xref:System.Windows.Controls.ValidationRule> objets. Cela peut être exprimée comme un élément de propriété dans un <xref:System.Windows.Data.Binding> élément objet, mais n’a aucune technique d’analyse de l’attribut disponible pour une utilisation dans un `Binding` expression. Consultez la rubrique de référence <xref:System.Windows.Data.Binding.ValidationRules%2A>.  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>: la propriété accepte une collection générique de <xref:System.Windows.Controls.ValidationRule> objets. Cela peut être exprimée comme un élément de propriété dans un <xref:System.Windows.Data.Binding> élément objet, mais n’a aucune technique d’analyse de l’attribut disponible pour une utilisation dans un `Binding` expression. Consultez la rubrique de référence <xref:System.Windows.Data.Binding.ValidationRules%2A>.  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>Notes  
   

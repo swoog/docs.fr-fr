@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032459"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Comparaison entre le chargement différé et le chargement immédiat
 Lorsque vous recherchez un objet, vous récupérez en réalité uniquement l'objet que vous avez demandé. Le *connexes* objets ne sont pas automatiquement extraits en même temps. (Pour plus d’informations, consultez [interrogation de relations](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Vous ne pouvez pas voir que les objets connexes ne sont pas déjà chargés car une tentative d'accès à ceux-ci génère une demande qui les récupère.  
@@ -29,9 +29,9 @@ Lorsque vous recherchez un objet, vous récupérez en réalité uniquement l'obj
   
  Vous avez principalement besoin d'une méthode pour récupérer simultanément un ensemble d'objets connexes. Cet ensemble est une section délimitée d'un graphique pour que vous ne récupériez jamais plus ou moins de données nécessaires que prévu pour votre utilisation. Pour cela, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit <xref:System.Data.Linq.DataLoadOptions> pour le chargement immédiat d’une région de votre modèle objet. Méthodes incluses :  
   
--   Méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour charger immédiatement des données en rapport avec la cible principale.  
+- Méthode <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> pour charger immédiatement des données en rapport avec la cible principale.  
   
--   Méthode <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> pour filtrer des objets récupérés pour une relation particulière.  
+- Méthode <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> pour filtrer des objets récupérés pour une relation particulière.  
   
 ## <a name="see-also"></a>Voir aussi
 

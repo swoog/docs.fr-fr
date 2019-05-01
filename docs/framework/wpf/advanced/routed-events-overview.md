@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982358"
 ---
 # <a name="routed-events-overview"></a>Vue d'ensemble des événements routés
 Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Elle définit les termes utilisés pour les événements routés, elle explique comment ces événements sont routés via une arborescence d’éléments, elle résume la façon dont sont gérés les événements routés et elle explique comment créer ses propres événements routés personnalisés.
@@ -86,11 +86,11 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
 ## <a name="routing-strategies"></a>Stratégies de routage  
  Les événements routés utilisent l’une des trois stratégies de routage suivantes :  
   
--   **Propagation :** Gestionnaires d’événements sur la source d’événements sont appelés. L’événement routé est acheminé ensuite vers des éléments parents successifs jusqu’à atteindre la racine de l’arborescence d’éléments. La plupart des événements routés utilisent la stratégie de routage par propagation. Les événements routés par propagation sont généralement utilisés pour signaler des entrées ou des changements d’état à partir de contrôles distincts ou d’autres éléments d’interface utilisateur.  
+- **Propagation :** Gestionnaires d’événements sur la source d’événements sont appelés. L’événement routé est acheminé ensuite vers des éléments parents successifs jusqu’à atteindre la racine de l’arborescence d’éléments. La plupart des événements routés utilisent la stratégie de routage par propagation. Les événements routés par propagation sont généralement utilisés pour signaler des entrées ou des changements d’état à partir de contrôles distincts ou d’autres éléments d’interface utilisateur.  
   
--   **Direct :** Seul l’élément de source est la possibilité d’appeler des gestionnaires en réponse. Cela s’apparente au « routage » que [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utilise pour les événements. Toutefois, contrairement à une norme [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] événement, diriger les événements routés prennent en charge la gestion de classe (gestion de classe est expliquée dans une section à venir) et peut être utilisé par <xref:System.Windows.EventSetter> et <xref:System.Windows.EventTrigger>.  
+- **Direct :** Seul l’élément de source est la possibilité d’appeler des gestionnaires en réponse. Cela s’apparente au « routage » que [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utilise pour les événements. Toutefois, contrairement à une norme [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] événement, diriger les événements routés prennent en charge la gestion de classe (gestion de classe est expliquée dans une section à venir) et peut être utilisé par <xref:System.Windows.EventSetter> et <xref:System.Windows.EventTrigger>.  
   
--   **Tunneling :** Initialement, les gestionnaires d’événements à la racine d’arborescence des éléments sont appelés. L’événement routé passe ensuite par des éléments enfants successifs pour aller vers l’élément de nœud correspondant à la source de l’événement routé (l’élément qui a déclenché l’événement routé). Les événements routés de tunneling sont souvent utilisés ou gérés dans le cadre de la composition d’un contrôle, de telle manière que les événements issus de parties composites peuvent être délibérément supprimés ou remplacés par des événements spécifiques au contrôle complet. Les événements d’entrée fournis dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont souvent implémentés comme une paire tunneling/propagation. Les événements de tunneling sont parfois appelés événements Preview en raison d’une convention de nommage utilisée pour les paires.  
+- **Tunneling :** Initialement, les gestionnaires d’événements à la racine d’arborescence des éléments sont appelés. L’événement routé passe ensuite par des éléments enfants successifs pour aller vers l’élément de nœud correspondant à la source de l’événement routé (l’élément qui a déclenché l’événement routé). Les événements routés de tunneling sont souvent utilisés ou gérés dans le cadre de la composition d’un contrôle, de telle manière que les événements issus de parties composites peuvent être délibérément supprimés ou remplacés par des événements spécifiques au contrôle complet. Les événements d’entrée fournis dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont souvent implémentés comme une paire tunneling/propagation. Les événements de tunneling sont parfois appelés événements Preview en raison d’une convention de nommage utilisée pour les paires.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>Pourquoi utiliser des événements routés ?  
@@ -104,9 +104,9 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Outre l’aspect du routage, il existe deux autres raisons pour lesquelles un événement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peut être implémenté comme un événement routé au lieu d’un événement [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Si vous implémentez vos propres événements, vous pouvez également prendre en compte ces principes :  
   
--   Certains [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fonctionnalités telles que des styles et modèles <xref:System.Windows.EventSetter> et <xref:System.Windows.EventTrigger> l’événement référencé doit être un événement routé. Il s’agit du scénario d’identificateur d’événement mentionné précédemment.  
+- Certains [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fonctionnalités telles que des styles et modèles <xref:System.Windows.EventSetter> et <xref:System.Windows.EventTrigger> l’événement référencé doit être un événement routé. Il s’agit du scénario d’identificateur d’événement mentionné précédemment.  
   
--   Les événements routés prennent en charge un mécanisme de gestion de classe par lequel la classe peut spécifier des méthodes statiques qui ont l’opportunité de gérer des événements routés avant que les gestionnaires d’instance inscrits puissent y accéder. Ceci est très utile pour la conception de contrôles, car la classe peut appliquer des comportements de classe pilotés par les événements qui ne peuvent pas être supprimés par inadvertance lorsque vous gérez un événement sur une instance.  
+- Les événements routés prennent en charge un mécanisme de gestion de classe par lequel la classe peut spécifier des méthodes statiques qui ont l’opportunité de gérer des événements routés avant que les gestionnaires d’instance inscrits puissent y accéder. Ceci est très utile pour la conception de contrôles, car la classe peut appliquer des comportements de classe pilotés par les événements qui ne peuvent pas être supprimés par inadvertance lorsque vous gérez un événement sur une instance.  
   
  Toutes les considérations ci-dessus sont abordées dans une autre section de cette rubrique.  
   
@@ -147,21 +147,21 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Toutefois, il existe un mécanisme « handledEventsToo » par laquelle écouteurs d’exécuter des gestionnaires en réponse aux événements routés où <xref:System.Windows.RoutedEventArgs.Handled%2A> est `true` dans les données d’événement. En d’autres termes, l’itinéraire d’événement n’est pas réellement arrêté quand les données d’événement sont marquées comme gérées. Vous pouvez uniquement utiliser le mécanisme handledEventsToo dans le code ou dans un <xref:System.Windows.EventSetter>:  
   
--   Dans le code, au lieu d’utiliser une syntaxe d’événement spécifique au langage qui fonctionne pour général [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] événements, appelez le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] méthode <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> pour ajouter votre gestionnaire. Définissez la valeur de `handledEventsToo` sur `true`.  
+- Dans le code, au lieu d’utiliser une syntaxe d’événement spécifique au langage qui fonctionne pour général [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] événements, appelez le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] méthode <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> pour ajouter votre gestionnaire. Définissez la valeur de `handledEventsToo` sur `true`.  
   
--   Dans un <xref:System.Windows.EventSetter>, définissez le <xref:System.Windows.EventSetter.HandledEventsToo%2A> attribut soit `true`.  
+- Dans un <xref:System.Windows.EventSetter>, définissez le <xref:System.Windows.EventSetter.HandledEventsToo%2A> attribut soit `true`.  
   
  Outre le comportement qui <xref:System.Windows.RoutedEventArgs.Handled%2A> état se produit dans les événements routés, le concept de <xref:System.Windows.RoutedEventArgs.Handled%2A> a des conséquences sur la façon dont vous devez concevoir votre application et écrire le code de gestionnaire d’événements. Vous pouvez conceptualiser <xref:System.Windows.RoutedEventArgs.Handled%2A> comme étant un protocole simple qui est exposé par les événements routés. Exactement comment vous utilisez ce protocole est à vous, mais le modèle conceptuel d’une façon la valeur de <xref:System.Windows.RoutedEventArgs.Handled%2A> est destinée à être utilisée est la suivante :  
   
--   Si un événement routé est marqué comme géré, il n’a pas besoin d’être géré de nouveau par d’autres éléments sur l’itinéraire.  
+- Si un événement routé est marqué comme géré, il n’a pas besoin d’être géré de nouveau par d’autres éléments sur l’itinéraire.  
   
--   Si un événement routé n’est pas marqué comme géré, alors que les autres écouteurs situés en amont sur l’itinéraire ont choisi ne pas inscrire de gestionnaire ou les gestionnaires inscrits ont choisi de pas à manipuler les données d’événement et de définir <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true`. Il est également possible que l’écouteur actuel soit le premier de l’itinéraire. Les gestionnaires de l’écouteur actuel ont maintenant trois possibilités :  
+- Si un événement routé n’est pas marqué comme géré, alors que les autres écouteurs situés en amont sur l’itinéraire ont choisi ne pas inscrire de gestionnaire ou les gestionnaires inscrits ont choisi de pas à manipuler les données d’événement et de définir <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true`. Il est également possible que l’écouteur actuel soit le premier de l’itinéraire. Les gestionnaires de l’écouteur actuel ont maintenant trois possibilités :  
   
-    -   Ne rien faire. L’événement reste non géré et l’événement est dirigé vers l’écouteur suivant.  
+    - Ne rien faire. L’événement reste non géré et l’événement est dirigé vers l’écouteur suivant.  
   
-    -   Exécuter du code en réponse à l’événement, mais décider que l’action entreprise n’était pas suffisamment importante pour garantir le marquage de l’événement comme géré. L’événement est dirigé vers l’écouteur suivant.  
+    - Exécuter du code en réponse à l’événement, mais décider que l’action entreprise n’était pas suffisamment importante pour garantir le marquage de l’événement comme géré. L’événement est dirigé vers l’écouteur suivant.  
   
-    -   Exécuter du code en réponse à l’événement. Marquer l’événement comme géré dans les données d’événement passées au gestionnaire, car l’action entreprise est jugée suffisamment importante pour garantir le marquage de l’événement comme géré. L’événement est encore dirigé vers l’écouteur suivant, mais avec <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` dans ses données d’événement, afin que seuls `handledEventsToo` écouteurs ont la possibilité d’appeler les gestionnaires.  
+    - Exécuter du code en réponse à l’événement. Marquer l’événement comme géré dans les données d’événement passées au gestionnaire, car l’action entreprise est jugée suffisamment importante pour garantir le marquage de l’événement comme géré. L’événement est encore dirigé vers l’écouteur suivant, mais avec <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` dans ses données d’événement, afin que seuls `handledEventsToo` écouteurs ont la possibilité d’appeler les gestionnaires.  
   
  Cette étude conceptuelle est renforcée par le comportement de routage mentionné précédemment : il est plus difficile (bien que possible dans le code ou les styles) pour joindre des gestionnaires pour les événements routés qui sont appelés même si un gestionnaire précédent le long de l’itinéraire a déjà défini <xref:System.Windows.RoutedEventArgs.Handled%2A>à `true`.  
   

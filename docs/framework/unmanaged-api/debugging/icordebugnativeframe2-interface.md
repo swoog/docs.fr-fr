@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987842"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2, interface
 Fournit des méthodes qui testent les relations entre frames enfant et parent.  
@@ -40,7 +40,7 @@ Fournit des méthodes qui testent les relations entre frames enfant et parent.
 > [!NOTE]
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012475"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Rendu d'un contrôle Windows Forms
 Le rendu désigne le processus de création d’une représentation visuelle sur l’écran d’un utilisateur. Windows Forms utilise [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nouvelle bibliothèque de graphiques Windows) pour le rendu. Les classes managées qui donnent accès aux [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] se trouvent dans le <xref:System.Drawing?displayProperty=nameWithType> espace de noms et ses sous-espaces de noms.  
   
  Les éléments suivants sont impliqués dans le rendu du contrôle :  
   
--   Fonctionnalités de dessin fournies par la classe de base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Fonctionnalités de dessin fournies par la classe de base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Les éléments essentiels de la [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bibliothèque de graphiques.  
+- Les éléments essentiels de la [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bibliothèque de graphiques.  
   
--   La géométrie de la zone de dessin.  
+- La géométrie de la zone de dessin.  
   
--   La procédure pour libérer les ressources graphiques.  
+- La procédure pour libérer les ressources graphiques.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>La fonctionnalité fournie par le contrôle de dessin  
  La classe de base <xref:System.Windows.Forms.Control> fournit des fonctionnalités de dessin via son <xref:System.Windows.Forms.Control.Paint> événement. Un contrôle déclenche le <xref:System.Windows.Forms.Control.Paint> événement chaque fois qu’il doit mettre à jour son affichage. Pour plus d’informations sur les événements dans le .NET Framework, consultez [gestion et déclenchement d’événements](../../../standard/events/index.md).  

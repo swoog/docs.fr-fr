@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004200"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Procédure : dessiner une ligne avec des extrémités de fin
 Vous pouvez dessiner le début ou la fin d’une ligne dans plusieurs formes appelé embouts de ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prend en charge plusieurs embouts de ligne, tels que round, carré, losange et pointe de flèche.  
@@ -32,7 +32,7 @@ Vous pouvez dessiner le début ou la fin d’une ligne dans plusieurs formes app
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Créer un formulaire Windows et de gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez l’exemple de code dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements en passant `e` comme <xref:System.Windows.Forms.PaintEventArgs>.  
+- Créer un formulaire Windows et de gérer le formulaire <xref:System.Windows.Forms.Control.Paint> événement. Collez l’exemple de code dans le <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements en passant `e` comme <xref:System.Windows.Forms.PaintEventArgs>.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987452"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask, méthode
 Définit une valeur qui spécifie le type de code non mappé dans lequel l’exécution s’arrêtera.  
@@ -46,7 +46,7 @@ HRESULT SetUnmappedStopMask (
   
  Si le débogueur n’utilise pas une exécution pas à pas pour une méthode d’entrée, puis il ne sont pas nécessairement effectuer un survol code non mappé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

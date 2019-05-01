@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013645"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante
 Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante. Modifiez le nom de «\<nom_variable >', ou utilisez le nom qualifié complet (par exemple, 'Me.NomVariable' ou 'MyBase.NomVariable').  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>Pour traiter cet avertissement  
   
--   Rendre la variable de contrôle de boucle locale en modifiant son nom à un identificateur qui n’est pas également le nom d’un champ de la classe.  
+- Rendre la variable de contrôle de boucle locale en modifiant son nom à un identificateur qui n’est pas également le nom d’un champ de la classe.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Préciser que la variable de contrôle de boucle est liée au champ de classe en ajoutant le préfixe `Me.` au nom de variable.  
+- Préciser que la variable de contrôle de boucle est liée au champ de classe en ajoutant le préfixe `Me.` au nom de variable.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Au lieu d’utiliser l’inférence de type local, utilisez un `As` clause pour spécifier un type pour la variable de contrôle de boucle.  
+- Au lieu d’utiliser l’inférence de type local, utilisez un `As` clause pour spécifier un type pour la variable de contrôle de boucle.  
   
     ```  
     For Index As Integer = 1 To 10  

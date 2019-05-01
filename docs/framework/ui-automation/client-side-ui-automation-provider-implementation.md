@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032376"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implémentation de fournisseur UI Automation côté client
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224458"
   
  Les fournisseurs implémentés dans le propre code du client sont inscrits à l’aide de <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Cette méthode utilise comme argument un tableau de structures <xref:System.Windows.Automation.ClientSideProviderDescription> , qui spécifient chacune les propriétés suivantes :  
   
--   une fonction de rappel qui crée l’objet fournisseur ;  
+- une fonction de rappel qui crée l’objet fournisseur ;  
   
--   le nom de la classe des contrôles que le fournisseur doit traiter ;  
+- le nom de la classe des contrôles que le fournisseur doit traiter ;  
   
--   le nom d’image de l’application (généralement le nom complet du fichier exécutable) que le fournisseur doit traiter ;  
+- le nom d’image de l’application (généralement le nom complet du fichier exécutable) que le fournisseur doit traiter ;  
   
--   les indicateurs qui déterminent la comparaison du nom de la classe aux classes de fenêtres trouvées dans l’application cible.  
+- les indicateurs qui déterminent la comparaison du nom de la classe aux classes de fenêtres trouvées dans l’application cible.  
   
  Les deux derniers paramètres sont facultatifs. Le client peut spécifier le nom d’image de l’application cible quand il souhaite utiliser différents fournisseurs pour différentes applications. Par exemple, le client peut utiliser un fournisseur pour un contrôle ListView [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] dans une application connue prenant en charge le modèle MultipleView, et un autre fournisseur pour un contrôle similaire dans une autre application connue n’assurant pas cette prise en charge.  
   

@@ -3,11 +3,11 @@ title: ASP.NET Caching Integration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002727"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Caching Integration
 Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  
@@ -34,11 +34,11 @@ Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle d
 ## <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
  Cet exemple est composé de trois projets :  
   
--   **Service** : Un projet d’Application Web qui inclut un service HTTP WCF hébergé dans ASP.NET.  
+- **Service** : Un projet d’Application Web qui inclut un service HTTP WCF hébergé dans ASP.NET.  
   
--   **Client**: Projet d'application console qui passe des appels au service.  
+- **Client**: Projet d'application console qui passe des appels au service.  
   
--   **Common**: Une bibliothèque partagée qui contient le type de client utilisé par le client et le service.  
+- **Common**: Une bibliothèque partagée qui contient le type de client utilisé par le client et le service.  
   
  Lorsque l'application console Client s'exécute, le client adresse des requêtes au service et affiche les informations pertinentes des réponses dans la fenêtre de console.  
   

@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018617"
 ---
 # <a name="key-security-concepts"></a>Concepts fondamentaux sur la sécurité
 Le Microsoft .NET Framework offre la sécurité basée sur les rôles pour aider à résoudre les problèmes de sécurité relatifs au code mobile et pour permettre aux composants de déterminer ce que les utilisateurs sont autorisés à faire.  
@@ -35,11 +35,11 @@ Le Microsoft .NET Framework offre la sécurité basée sur les rôles pour aider
 ## <a name="principal"></a>Principal  
  Un principal représente l'identité et le rôle d'un utilisateur et agit au nom de l'utilisateur. Dans .NET Framework, la sécurité basée sur les rôles prend en charge trois types de principaux :  
   
--   Les principaux génériques représentent les utilisateurs et les rôles qui existent indépendamment des utilisateurs et des rôles Windows.  
+- Les principaux génériques représentent les utilisateurs et les rôles qui existent indépendamment des utilisateurs et des rôles Windows.  
   
--   Les principaux Windows représentent les utilisateurs et les rôles Windows (ou leurs groupes Windows). Un principal Windows peut emprunter l'identité d'un autre utilisateur, ce qui signifie qu'il peut accéder à une ressource sous le nom d'un utilisateur tout en présentant l'identité de l'autre utilisateur.  
+- Les principaux Windows représentent les utilisateurs et les rôles Windows (ou leurs groupes Windows). Un principal Windows peut emprunter l'identité d'un autre utilisateur, ce qui signifie qu'il peut accéder à une ressource sous le nom d'un utilisateur tout en présentant l'identité de l'autre utilisateur.  
   
--   Les principaux personnalisés peuvent être définis par une application, en fonction des besoins de celle-ci. Ils peuvent étendre les notions de base applicables à l'identité et aux rôles du principal.  
+- Les principaux personnalisés peuvent être définis par une application, en fonction des besoins de celle-ci. Ils peuvent étendre les notions de base applicables à l'identité et aux rôles du principal.  
   
  Pour plus d’informations, consultez [Objets Principal et Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
   

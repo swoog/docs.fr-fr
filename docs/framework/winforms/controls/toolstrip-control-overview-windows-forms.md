@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009524"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ToolStrip (Windows Forms)
 Les formulaires Windows <xref:System.Windows.Forms.ToolStrip> contrôle et ses classes associées fournissent une infrastructure commune pour combiner les éléments d’interface utilisateur en barres d’outils, des barres d’état et des menus. <xref:System.Windows.Forms.ToolStrip> contrôles offrent une riche expérience au moment du design qui inclut l’activation sur place et la modification, la disposition personnalisée et la rafting, qui est la capacité des barres d’outils à partager l’espace horizontal ou vertical.  
@@ -24,19 +24,19 @@ Les formulaires Windows <xref:System.Windows.Forms.ToolStrip> contrôle et ses c
 ## <a name="features-of-the-toolstrip-controls"></a>Fonctionnalités des contrôles ToolStrip  
  Utilisez le <xref:System.Windows.Forms.ToolStrip> le contrôle à :  
   
--   Présenter une interface utilisateur commune entre les conteneurs.  
+- Présenter une interface utilisateur commune entre les conteneurs.  
   
--   Créez facilement personnalisées, employées couramment barres d’outils qui prennent en charge utilisateur interface et la disposition des fonctionnalités avancées, telles que des boutons d’ancrage, le rafting, avec le texte et des images, des boutons de liste déroulante et des contrôles, dépassement de capacité des boutons et réorganisation au moment de l’exécution de <xref:System.Windows.Forms.ToolStrip> éléments.  
+- Créez facilement personnalisées, employées couramment barres d’outils qui prennent en charge utilisateur interface et la disposition des fonctionnalités avancées, telles que des boutons d’ancrage, le rafting, avec le texte et des images, des boutons de liste déroulante et des contrôles, dépassement de capacité des boutons et réorganisation au moment de l’exécution de <xref:System.Windows.Forms.ToolStrip> éléments.  
   
--   Prend en charge le dépassement de capacité et la réorganisation des éléments au moment de l’exécution. La fonctionnalité de dépassement de capacité déplace les éléments à un menu déroulant lorsqu’il n’est pas assez de place pour les afficher dans un <xref:System.Windows.Forms.ToolStrip>.  
+- Prend en charge le dépassement de capacité et la réorganisation des éléments au moment de l’exécution. La fonctionnalité de dépassement de capacité déplace les éléments à un menu déroulant lorsqu’il n’est pas assez de place pour les afficher dans un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Prend en charge l’apparence classique et le comportement du système d’exploitation via un modèle de rendu commun.  
+- Prend en charge l’apparence classique et le comportement du système d’exploitation via un modèle de rendu commun.  
   
--   Gérer les événements cohérente pour tous les conteneurs et les éléments de contenu, de la même façon que vous gérez des événements pour d’autres contrôles.  
+- Gérer les événements cohérente pour tous les conteneurs et les éléments de contenu, de la même façon que vous gérez des événements pour d’autres contrôles.  
   
--   Faites glisser des éléments à partir d’un <xref:System.Windows.Forms.ToolStrip> vers un autre ou dans un <xref:System.Windows.Forms.ToolStrip>.  
+- Faites glisser des éléments à partir d’un <xref:System.Windows.Forms.ToolStrip> vers un autre ou dans un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Créer des éditeurs de type d’interface utilisateur et les contrôles de liste déroulante avec des présentations avancées dans un <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Créer des éditeurs de type d’interface utilisateur et les contrôles de liste déroulante avec des présentations avancées dans un <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Utiliser le <xref:System.Windows.Forms.ToolStripControlHost> classe à utiliser d’autres contrôles sur un <xref:System.Windows.Forms.ToolStrip> et d’en prendre <xref:System.Windows.Forms.ToolStrip> fonctionnalité pour eux.  
   

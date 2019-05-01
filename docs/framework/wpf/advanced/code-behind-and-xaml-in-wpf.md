@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010668"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind et XAML dans WPF
 <a name="introduction"></a> Code-behind est un terme utilisé pour décrire le code joint avec les objets définis par le balisage, quand un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page est compilé par balisage. Cette rubrique décrit la configuration requise pour le code-behind ainsi qu’un mécanisme alternatif incorporé code pour le code dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Composants requis](#Prerequisites)  
+- [Composants requis](#Prerequisites)  
   
--   [Code-Behind et le langage XAML](#codebehind_and_the_xaml_language)  
+- [Code-Behind et le langage XAML](#codebehind_and_the_xaml_language)  
   
--   [Code-behind, gestionnaire d’événements et spécifications de la classe partielle dans WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Code-behind, gestionnaire d’événements et spécifications de la classe partielle dans WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [Limitations de Code inline](#Inline_Code_Limitations)  
+- [Limitations de Code inline](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Prérequis  
@@ -38,15 +38,15 @@ ms.locfileid: "59088568"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-behind, gestionnaire d’événements et spécifications de la classe partielle dans WPF  
   
--   La classe partielle doit dériver du type qui stocke l’élément racine.  
+- La classe partielle doit dériver du type qui stocke l’élément racine.  
   
--   Notez que sous le comportement par défaut des actions de génération de compilation de balisage, vous pouvez laisser la dérivation vide dans la définition de classe partielle sur le côté du code-behind. Le résultat compilé supposera type de sauvegarde de la racine de la page pour servir de base à la classe partielle, même si elle pas spécifiée. Toutefois, s’appuyer sur ce comportement n’est pas une bonne pratique.  
+- Notez que sous le comportement par défaut des actions de génération de compilation de balisage, vous pouvez laisser la dérivation vide dans la définition de classe partielle sur le côté du code-behind. Le résultat compilé supposera type de sauvegarde de la racine de la page pour servir de base à la classe partielle, même si elle pas spécifiée. Toutefois, s’appuyer sur ce comportement n’est pas une bonne pratique.  
   
--   Les gestionnaires d’événements que vous écrivez dans le code-behind doivent être des méthodes d’instance et ne peut pas être des méthodes statiques. Ces méthodes doivent être définies par la classe partielle dans l’espace de noms CLR identifié par `x:Class`. Vous ne pouvez pas qualifier le nom d’un gestionnaire d’événements pour demander à un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur à rechercher un gestionnaire d’événements pour la connexion d’événements dans une portée de classe différente.  
+- Les gestionnaires d’événements que vous écrivez dans le code-behind doivent être des méthodes d’instance et ne peut pas être des méthodes statiques. Ces méthodes doivent être définies par la classe partielle dans l’espace de noms CLR identifié par `x:Class`. Vous ne pouvez pas qualifier le nom d’un gestionnaire d’événements pour demander à un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur à rechercher un gestionnaire d’événements pour la connexion d’événements dans une portée de classe différente.  
   
--   Le gestionnaire doit correspondre le délégué pour l’événement approprié dans le système de type de stockage.  
+- Le gestionnaire doit correspondre le délégué pour l’événement approprié dans le système de type de stockage.  
   
--   Pour le langage Microsoft Visual Basic, vous pouvez utiliser spécifique au langage `Handles` mot clé à associer les gestionnaires d’instances et des événements dans la déclaration de gestionnaire, au lieu d’attacher des gestionnaires avec des attributs dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Toutefois, cette technique a certaines limitations, car le `Handles` mot clé ne peut pas prendre en charge toutes les fonctionnalités spécifiques de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de l’événement, comme dans certains scénarios d’événements routés ou événements attachés. Pour plus d’informations, consultez [Visual Basic et la gestion des événements de WPF](visual-basic-and-wpf-event-handling.md).  
+- Pour le langage Microsoft Visual Basic, vous pouvez utiliser spécifique au langage `Handles` mot clé à associer les gestionnaires d’instances et des événements dans la déclaration de gestionnaire, au lieu d’attacher des gestionnaires avec des attributs dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Toutefois, cette technique a certaines limitations, car le `Handles` mot clé ne peut pas prendre en charge toutes les fonctionnalités spécifiques de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de l’événement, comme dans certains scénarios d’événements routés ou événements attachés. Pour plus d’informations, consultez [Visual Basic et la gestion des événements de WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

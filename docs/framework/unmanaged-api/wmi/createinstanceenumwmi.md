@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040701"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi (fonction)
 
-Retourne un énumérateur qui retourne les instances d’une classe spécifiée qui répondent aux critères de sélection spécifiés.
+Retourne un énumérateur qui retourne les instances d’une classe spécifiée remplissant les critères de sélection spécifiés.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -112,7 +112,7 @@ Notez que l’énumérateur retourné peut avoir zéro élément.
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

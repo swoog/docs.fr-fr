@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007277"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : mise en cache des données d’application dans une application WPF
 La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Quand vous accédez à nouveau aux données, les applications peuvent obtenir les données à partir du cache au lieu de devoir les récupérer à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.
@@ -28,24 +28,24 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
  Cette procédure pas à pas décrit les tâches suivantes :
 
--   Création d’un projet d’application WPF.
+- Création d’un projet d’application WPF.
 
--   Ajout d’une référence à la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Ajout d’une référence à la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
 
--   Initialisation d’un cache.
+- Initialisation d’un cache.
 
--   Ajout d’une entrée de cache qui contient le contenu d’un fichier texte.
+- Ajout d’une entrée de cache qui contient le contenu d’un fichier texte.
 
--   En fournissant une stratégie d’éviction de l’entrée de cache.
+- En fournissant une stratégie d’éviction de l’entrée de cache.
 
--   Analyse le chemin d’accès du fichier mis en cache et l’informant de l’instance de cache des modifications apportées à l’élément analysé.
+- Analyse le chemin d’accès du fichier mis en cache et l’informant de l’instance de cache des modifications apportées à l’élément analysé.
 
 ## <a name="prerequisites"></a>Prérequis
  Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :
 
--   Microsoft Visual Studio 2010
+- Microsoft Visual Studio 2010
 
--   Un fichier texte qui contient une petite quantité de texte. (Vous afficherez le contenu du fichier texte dans une boîte de message.) Le code illustré dans la procédure pas à pas suppose que vous travaillez avec le fichier suivant :
+- Un fichier texte qui contient une petite quantité de texte. (Vous afficherez le contenu du fichier texte dans une boîte de message.) Le code illustré dans la procédure pas à pas suppose que vous travaillez avec le fichier suivant :
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
 7. Ajoutez une référence à l’assembly de mise en cache en suivant ces étapes :
 
-    1.  Dans **l’Explorateur de solutions**, cliquez sur le nom du projet, puis cliquez sur **ajouter une référence**.
+    1. Dans **l’Explorateur de solutions**, cliquez sur le nom du projet, puis cliquez sur **ajouter une référence**.
 
-    2.  Sélectionnez le **.NET** onglet, sélectionnez `System.Runtime.Caching`, puis cliquez sur **OK**.
+    2. Sélectionnez le **.NET** onglet, sélectionnez `System.Runtime.Caching`, puis cliquez sur **OK**.
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Pour modifier la cible de .NET Framework dans un projet Visual c#
 
@@ -125,9 +125,9 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 
 4. Ajoutez une référence à l’assembly de mise en cache en suivant ces étapes :
 
-    1.  Cliquez sur le **références** dossier, puis cliquez sur **ajouter une référence**.
+    1. Cliquez sur le **références** dossier, puis cliquez sur **ajouter une référence**.
 
-    2.  Sélectionnez le **.NET** onglet, sélectionnez `System.Runtime.Caching`, puis cliquez sur **OK**.
+    2. Sélectionnez le **.NET** onglet, sélectionnez `System.Runtime.Caching`, puis cliquez sur **OK**.
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>Ajout d’un bouton dans la fenêtre WPF
  Ensuite, vous ajoutez un contrôle button et créerez un gestionnaire d’événements du bouton `Click` événement. Plus tard, vous allez ajouter de code lorsque vous cliquez sur le bouton, le contenu du fichier texte est mis en cache et affiché.
@@ -143,13 +143,13 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>L’initialisation du Cache et la mise en cache une entrée
  Ensuite, vous allez ajouter le code pour effectuer les tâches suivantes :
 
--   Créez une instance de la classe de cache, c'est-à-dire instancier un nouvel <xref:System.Runtime.Caching.MemoryCache> objet.
+- Créez une instance de la classe de cache, c'est-à-dire instancier un nouvel <xref:System.Runtime.Caching.MemoryCache> objet.
 
--   Spécifiez que le cache utilise un <xref:System.Runtime.Caching.HostFileChangeMonitor> objet à surveiller les modifications dans le fichier texte.
+- Spécifiez que le cache utilise un <xref:System.Runtime.Caching.HostFileChangeMonitor> objet à surveiller les modifications dans le fichier texte.
 
--   Lire le fichier texte et mettre en cache son contenu comme une entrée de cache.
+- Lire le fichier texte et mettre en cache son contenu comme une entrée de cache.
 
--   Afficher le contenu du fichier texte mis en cache.
+- Afficher le contenu du fichier texte mis en cache.
 
 #### <a name="to-create-the-cache-object"></a>Pour créer l’objet de cache
 

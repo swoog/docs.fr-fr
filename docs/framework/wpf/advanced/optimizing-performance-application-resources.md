@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
 ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017941"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimisation des performances : Ressources d’application
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de partager des ressources d’application afin que vous pouvez prendre en charge une apparence cohérente ou un comportement à travers des éléments similaires type. Cette rubrique fournit quelques recommandations dans ce domaine qui peut vous aider à améliorent les performances de vos applications.  

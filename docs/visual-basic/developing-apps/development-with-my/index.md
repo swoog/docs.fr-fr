@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014184"
 ---
 # <a name="development-with-my-visual-basic"></a>Développement avec My (Visual Basic)
 Visual Basic propose de nouvelles fonctionnalités pour le développement rapide d’applications qui simplifient l’utilisation et améliorent la productivité tout en renforçant les performances. Parmi ces nouvelles fonctionnalités, `My` permet d’accéder à des informations et des instances d’objet par défaut liées à l’application et à son environnement d’exécution. Ces informations sont organisées dans un format pouvant être découvert par IntelliSense et sont représentées logiquement, en fonction de l’utilisation.  

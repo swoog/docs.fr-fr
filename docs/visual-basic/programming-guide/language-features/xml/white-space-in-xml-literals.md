@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054937"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Espaces blancs dans les littéraux XML (Visual Basic)
 Le compilateur Visual Basic incorpore uniquement les caractères d’espace blanc significatif à partir d’un littéral XML lorsqu’il crée un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objet. Les caractères d’espaces blancs non significatifs ne sont pas incorporées.  
@@ -18,11 +18,11 @@ Le compilateur Visual Basic incorpore uniquement les caractères d’espace blan
 ## <a name="significant-and-insignificant-white-space"></a>Espaces blancs significatifs et non significatifs  
  Caractères d’espace blanc dans les littéraux XML sont significatifs que dans trois zones :  
   
--   Lorsqu’ils sont dans une valeur d’attribut.  
+- Lorsqu’ils sont dans une valeur d’attribut.  
   
--   Quand ils font partie d’un élément contenu de texte et le texte contient également d’autres caractères.  
+- Quand ils font partie d’un élément contenu de texte et le texte contient également d’autres caractères.  
   
--   Lorsqu’ils sont dans une expression incorporée pour le contenu de texte d’un élément.  
+- Lorsqu’ils sont dans une expression incorporée pour le contenu de texte d’un élément.  
   
  Sinon, le compilateur traite les caractères d’espace blanc comme insignifiants et ne les inclut pas dans le [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objet pour le littéral.  
   

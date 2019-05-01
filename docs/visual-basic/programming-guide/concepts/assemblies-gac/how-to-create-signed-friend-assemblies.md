@@ -3,11 +3,11 @@ title: 'Procédure : Créer des assemblys Friend signés (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022270"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procédure : Créer des assemblys Friend signés (Visual Basic)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayant des noms forts. Les deux assemblys doivent avoir des noms forts. Bien que les deux assemblys dans cet exemple utilisent les mêmes clés, vous pouvez utiliser des clés différentes pour deux assemblys.  
@@ -18,15 +18,15 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
   
 2. Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
-    1.  Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
+    1. Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extrayez la clé publique de FriendAssemblies.snk et mettez-la dans FriendAssemblies.publickey :  
+    2. Extrayez la clé publique de FriendAssemblies.snk et mettez-la dans FriendAssemblies.publickey :  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Affichez la clé publique stockée dans le fichier FriendAssemblies.publickey :  
+    3. Affichez la clé publique stockée dans le fichier FriendAssemblies.publickey :  
   
          `sn -tp FriendAssemblies.publickey`  
   

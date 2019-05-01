@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049269"
 ---
-# <a name="compareto-function"></a>CompareTo (fonction)
+# <a name="compareto-function"></a>CompareTo, fonction
 
 Compare un objet à un autre objet WMI.
 
@@ -88,7 +88,7 @@ Ou vous pouvez spécifier un indicateur composite unique comme suit :
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Prendre en compte toutes les fonctionnalités dans la comparaison. |
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011370"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : définir des styles de cellules par défaut et des formats de données pour le contrôle DataGridView Windows Forms à l’aide du concepteur
 Le <xref:System.Windows.Forms.DataGridView> contrôle vous permet de spécifier des styles de cellules par défaut et les formats de données pour l’ensemble du contrôle pour des colonnes spécifiques, pour les en-têtes de lignes et de colonnes et de lignes pour créer un effet de livre de remplacement de la cellule. Les styles par défaut définie pour l’ensemble du contrôle sont remplacées par les styles par défaut définis pour les colonnes et lignes en alternance. En outre, les styles que vous définissez dans le code des lignes individuelles et des cellules remplacent les styles par défaut.  

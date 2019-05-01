@@ -3,11 +3,11 @@ title: Magasin d'instances de workflow SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004625"
 ---
 # <a name="sql-workflow-instance-store"></a>Magasin d'instances de workflow SQL
 Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] est fourni avec le magasin d'instances de workflow SQL, qui permet aux workflows de rendre les informations d'état persistantes à propos des instances de workflow dans SQL Server 2005 ou dans une base de données SQL Server 2008. Cette fonctionnalité est implémentée principalement dans le formulaire de la classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, qui dérive de la classe <xref:System.Runtime.DurableInstancing.InstanceStore> abstraite de l'infrastructure de persistance. La fonctionnalité de magasin d’instances de workflow SQL constitue un fournisseur de persistance SQL, qui est une implémentation concrète de l’API de persistance qu’un hôte utilise pour envoyer des commandes de persistance au magasin.  
@@ -22,19 +22,19 @@ Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Propriétés du magasin d’instances de workflow SQL](properties-of-sql-workflow-instance-store.md)  
+- [Propriétés du magasin d’instances de workflow SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Guide pratique pour Activer la persistance SQL pour les Workflows et les Services de Workflow](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Guide pratique pour Activer la persistance SQL pour les Workflows et les Services de Workflow](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Activation d’instance](instance-activation.md)  
+- [Activation d’instance](instance-activation.md)  
   
--   [Prise en charge des requêtes](support-for-queries.md)  
+- [Prise en charge des requêtes](support-for-queries.md)  
   
--   [Stocker l’extensibilité](store-extensibility.md)  
+- [Stocker l’extensibilité](store-extensibility.md)  
   
--   [Sécurité](security.md)  
+- [Sécurité](security.md)  
   
--   [Base de données de persistance SQL Server](sql-server-persistence-database.md)  
+- [Base de données de persistance SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

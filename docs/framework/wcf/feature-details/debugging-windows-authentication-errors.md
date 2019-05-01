@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048047"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Débogage d'erreurs d'authentification Windows
 Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurité, l'interface SSPI (Security Support Provider Interface) gère les processus de sécurité. En cas d’erreur de sécurité au niveau de la couche SSPI, elles sont signalées par Windows Communication Foundation (WCF). Cette rubrique fournit une infrastructure et un ensemble de questions permettant de diagnostiquer les erreurs.  
@@ -45,13 +45,13 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
   
  Plus précisément, les quatre types de comptes incluent :  
   
--   Utilisateur local : Profil de l’utilisateur, ordinateur uniquement. Par exemple : `MachineName\Administrator` ou `MachineName\ProfileName`.  
+- Utilisateur local : Profil de l’utilisateur, ordinateur uniquement. Par exemple : `MachineName\Administrator` ou `MachineName\ProfileName`.  
   
--   Système local : Le compte système intégré sur un ordinateur qui n’est pas joint à un domaine.  
+- Système local : Le compte système intégré sur un ordinateur qui n’est pas joint à un domaine.  
   
--   Utilisateur de domaine : Un compte d’utilisateur sur un domaine Windows. Par exemple : `DomainName\ProfileName`.  
+- Utilisateur de domaine : Un compte d’utilisateur sur un domaine Windows. Par exemple : `DomainName\ProfileName`.  
   
--   Ordinateur de domaine : Un processus avec l’identité de l’ordinateur en cours d’exécution sur un ordinateur joint à un domaine Windows. Par exemple : `MachineName\Network Service`.  
+- Ordinateur de domaine : Un processus avec l’identité de l’ordinateur en cours d’exécution sur un ordinateur joint à un domaine Windows. Par exemple : `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Les informations d'identification du service sont capturées lorsque la méthode <xref:System.ServiceModel.ICommunicationObject.Open%2A> de la classe <xref:System.ServiceModel.ServiceHost> est appelée. Les informations d'identification du client sont lues chaque fois que le client envoie un message.  
@@ -85,15 +85,15 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
   
 2. Requérez la négociation SSPI :  
   
-    1.  Si vous utilisez des liaisons standard, affectez `NegotiateServiceCredential` à la propriété `true`.  
+    1. Si vous utilisez des liaisons standard, affectez `NegotiateServiceCredential` à la propriété `true`.  
   
-    2.  Si vous utilisez des liaisons personnalisées, affectez `AuthenticationMode` à l’attribut `Security` de l’élément `SspiNegotiated`.  
+    2. Si vous utilisez des liaisons personnalisées, affectez `AuthenticationMode` à l’attribut `Security` de l’élément `SspiNegotiated`.  
   
 3. Requérez que la négociation SSPI utilise Kerberos en interdisant l'utilisation de NTLM :  
   
-    1.  Effectuez cette opération dans le code, à l'aide de l'instruction suivante : `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Effectuez cette opération dans le code, à l'aide de l'instruction suivante : `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  Vous pouvez également effectuer cette opération dans le fichier de configuration en affectant `allowNtlm` à l'attribut `false`. Cet attribut est contenu dans le [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. Vous pouvez également effectuer cette opération dans le fichier de configuration en affectant `allowNtlm` à l'attribut `false`. Cet attribut est contenu dans le [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protocole NTLM  
   

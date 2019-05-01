@@ -3,11 +3,11 @@ title: Hello World avec le service de routage
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006601"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World avec le service de routage
 Cet exemple montre le Service de routage de Windows Communication Foundation (WCF). Le Service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le Service de routage. Dans cet exemple, le client Calculator est configuré pour envoyer des messages à un point de terminaison exposé par le routeur. Le service de routage (Routing Service) est configuré de façon à accepter tous les messages qui lui sont envoyés et les transférer à un point de terminaison qui correspond au service Calculator. Les messages envoyés à partir du client sont donc reçus par le routeur et reroutés au véritable service Calculator. Les messages du service Calculator sont renvoyés au routeur, qui à son tour les retransmet au client Calculator.
@@ -21,9 +21,9 @@ Cet exemple montre le Service de routage de Windows Communication Foundation (WC
     > [!NOTE]
     >  Si vous appuyez sur F5, le client Calculator démarre automatiquement. Si vous appuyez sur CTRL+MAJ+B (génération), vous devez démarrer vous-même les applications suivantes.
     >
-    > 1.  Client Calculator (./CalculatorClient/bin/client.exe)
-    > 2.  Service Calculator (./CalculatorService/bin/service.exe)
-    > 3.  Routing service (./RoutingService/bin/RoutingService.exe)
+    > 1. Client Calculator (./CalculatorClient/bin/client.exe)
+    > 2. Service Calculator (./CalculatorService/bin/service.exe)
+    > 3. Routing service (./RoutingService/bin/RoutingService.exe)
 
 3. Appuyez sur ENTRÉE pour démarrer le client.
 

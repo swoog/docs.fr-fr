@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030385"
 ---
 # <a name="multimedia-overview"></a>Vue d'ensemble du multimédia
 Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permettent d’intégrer des données audio et vidéo dans vos applications afin d’améliorer l’expérience utilisateur. Cette rubrique présente les fonctionnalités multimédias de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ### <a name="independent-mode"></a>Mode indépendant  
  En mode indépendant, le contenu du média déclenche la lecture du média. Le mode indépendant comprend les options suivantes :  
   
--   De support <xref:System.Uri> ne peut être spécifiée directement.  
+- De support <xref:System.Uri> ne peut être spécifiée directement.  
   
--   La lecture du média peut être directement contrôlée.  
+- La lecture du média peut être directement contrôlée.  
   
--   De support <xref:System.Windows.Controls.MediaElement.Position%2A> et <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> propriétés peuvent être modifiées.  
+- De support <xref:System.Windows.Controls.MediaElement.Position%2A> et <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> propriétés peuvent être modifiées.  
   
  Média est chargé soit en définissant le <xref:System.Windows.Controls.MediaElement> l’objet <xref:System.Windows.Controls.MediaElement.Source%2A> propriété ou en appelant le <xref:System.Windows.Media.MediaPlayer> l’objet <xref:System.Windows.Media.MediaPlayer.Open%2A> (méthode).  
   
@@ -52,11 +52,11 @@ Les fonctionnalités multimédias de [!INCLUDE[TLA#tla_winclient](../../../../in
 ### <a name="clock-mode"></a>Mode horloge  
  En mode horloge, un <xref:System.Windows.Media.MediaTimeline> la lecture du média lecteurs. Le mode horloge présente les caractéristiques suivantes :  
   
--   De support <xref:System.Uri> est défini indirectement via un <xref:System.Windows.Media.MediaTimeline>.  
+- De support <xref:System.Uri> est défini indirectement via un <xref:System.Windows.Media.MediaTimeline>.  
   
--   La lecture du média peut être contrôlée par l’horloge. Les méthodes de contrôle de l’objet média ne peuvent pas être utilisées.  
+- La lecture du média peut être contrôlée par l’horloge. Les méthodes de contrôle de l’objet média ne peuvent pas être utilisées.  
   
--   Média est chargé en définissant un <xref:System.Windows.Media.MediaTimeline> l’objet <xref:System.Windows.Media.MediaTimeline.Source%2A> propriété, créez l’horloge à partir de la chronologie et assignez l’horloge à l’objet média. Média est également chargé de cette façon quand un <xref:System.Windows.Media.MediaTimeline> à l’intérieur d’un <xref:System.Windows.Media.Animation.Storyboard> cibles un <xref:System.Windows.Controls.MediaElement>.  
+- Média est chargé en définissant un <xref:System.Windows.Media.MediaTimeline> l’objet <xref:System.Windows.Media.MediaTimeline.Source%2A> propriété, créez l’horloge à partir de la chronologie et assignez l’horloge à l’objet média. Média est également chargé de cette façon quand un <xref:System.Windows.Media.MediaTimeline> à l’intérieur d’un <xref:System.Windows.Media.Animation.Storyboard> cibles un <xref:System.Windows.Controls.MediaElement>.  
   
  Pour contrôler la lecture média en mode horloge, la <xref:System.Windows.Media.Animation.ClockController> doivent utiliser les méthodes de contrôle. Un <xref:System.Windows.Media.Animation.ClockController> est obtenu à partir de la <xref:System.Windows.Media.Animation.ClockController> propriété de la <xref:System.Windows.Media.MediaClock>. Si vous essayez d’utiliser les méthodes de contrôle d’un <xref:System.Windows.Controls.MediaElement> ou <xref:System.Windows.Media.MediaPlayer> de l’objet en mode horloge, une <xref:System.InvalidOperationException> sera levée.  
   

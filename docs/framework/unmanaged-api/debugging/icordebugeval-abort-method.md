@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995993"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort, méthode
-Abandonne le calcul que cet objet ICorDebugEval effectue actuellement.  
+Abandonne le calcul que cet objet ICorDebugEval exécute actuellement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>Notes  
- Si l’évaluation est imbriquée et qu’il n’est pas la plus récente, la `Abort` méthode risque d’échouer.  
+ Si l’évaluation est imbriquée et qu’il n’est pas la plus récente, la `Abort` méthode peut échouer.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

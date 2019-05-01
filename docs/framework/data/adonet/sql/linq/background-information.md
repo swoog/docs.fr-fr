@@ -3,22 +3,22 @@ title: Informations générales
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
 ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033785"
 ---
 # <a name="background-information"></a>Informations générales
 Les rubriques de cette section présentent des concepts et des procédures plus approfondis sur l'utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Suivez ces étapes pour rechercher des exemples supplémentaires de code et d'applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
   
--   Pour connaître les problèmes spécifiques de recherche Microsoft Docs.  
+- Pour connaître les problèmes spécifiques de recherche Microsoft Docs.  
   
--   Participer à la [Forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts.  
+- Participer à la [Forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts.  
   
--   Étudiez le livre blanc qui détaille [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, obtenir des exemples de code Visual Basic et c#. Pour plus d’informations, consultez [LINQ to SQL : Language-Integrated Query pour les données relationnelles](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Étudiez le livre blanc qui détaille [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, obtenir des exemples de code Visual Basic et c#. Pour plus d’informations, consultez [LINQ to SQL : Language-Integrated Query pour les données relationnelles](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ADO.NET et LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -51,7 +51,7 @@ Les rubriques de cette section présentent des concepts et des procédures plus 
  [États des objets et suivi des modifications](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  Fournit des informations détaillées à propos du suivi des modifications de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Accès concurrentiel optimiste : vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Accès concurrentiel optimiste : vue d’ensemble](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  Décrit l'accès concurrentiel optimiste et définit des termes.  
   
  [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

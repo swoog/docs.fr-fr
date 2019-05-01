@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973088"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Procédure pas à pas : Déclaration et déclenchement des événements (Visual Basic)
 Cette procédure pas à pas montre comment déclarer et déclencher des événements pour une classe nommée `Widget`. Après avoir terminé les étapes, vous souhaiterez lire la rubrique connexe, [procédure pas à pas : Gestion des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), qui montre comment utiliser des événements à partir de `Widget` objets pour fournir des informations d’état dans une application.  
@@ -44,7 +44,7 @@ Cette procédure pas à pas montre comment déclarer et déclencher des événem
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Pour déclarer un événement pour la classe Widget  
   
--   Utilisez le `Event` mot clé pour déclarer un événement dans le `Widget` classe. Notez qu’un événement peut avoir `ByVal` et `ByRef` arguments, comme `Widget`de `PercentDone` illustre l’événement :  
+- Utilisez le `Event` mot clé pour déclarer un événement dans le `Widget` classe. Notez qu’un événement peut avoir `ByVal` et `ByRef` arguments, comme `Widget`de `PercentDone` illustre l’événement :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

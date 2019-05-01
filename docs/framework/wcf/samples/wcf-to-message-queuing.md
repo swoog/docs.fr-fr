@@ -3,11 +3,11 @@ title: Windows Communication Foundation to Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007537"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation to Message Queuing
 Cet exemple montre comment une application Windows Communication Foundation (WCF) peut envoyer un message à une application Message Queuing (MSMQ). Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente. Il n'est pas nécessaire que le service et le client s'exécutent simultanément.
@@ -138,15 +138,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2. Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :  
   
-    1.  Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.  
+    1. Ouvrez le Gestionnaire de serveur dans Visual Studio 2012.  
   
-    2.  Développez le **fonctionnalités** onglet.  
+    2. Développez le **fonctionnalités** onglet.  
   
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.  
+    3. Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.  
   
-    4.  Vérifier le **transactionnel** boîte.  
+    4. Vérifier le **transactionnel** boîte.  
   
-    5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.  
+    5. Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.  
   
 3. Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

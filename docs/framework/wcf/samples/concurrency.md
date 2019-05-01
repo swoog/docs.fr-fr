@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002454"
 ---
 # <a name="concurrency"></a>Concurrence
 Cet exemple montre l'utilisation du <xref:System.ServiceModel.ServiceBehaviorAttribute> avec l'énumération <xref:System.ServiceModel.ConcurrencyMode> qui contrôle si une instance de service traite des messages l'un après l'autre ou simultanément. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit un nouveau contrat, `ICalculatorConcurrency`, qui hérite d' `ICalculator`, fournissant deux opérations supplémentaires pour l'inspection de l'état d'accès concurrentiel du service. En modifiant le paramètre d'accès concurrentiel, vous pouvez observer le changement de comportement en exécutant le client.  
@@ -22,11 +22,11 @@ Cet exemple montre l'utilisation du <xref:System.ServiceModel.ServiceBehaviorAtt
   
  Trois modes d'accès concurrentiel sont disponibles :  
   
--   `Single`: Chaque instance de service traite un message à la fois. Il s'agit du mode d'accès concurrentiel par défaut.  
+- `Single`: Chaque instance de service traite un message à la fois. Il s'agit du mode d'accès concurrentiel par défaut.  
   
--   `Multiple`: Chaque instance de service traite plusieurs messages simultanément. Pour utiliser ce mode, l'implémentation de service doit être « thread-safe ».  
+- `Multiple`: Chaque instance de service traite plusieurs messages simultanément. Pour utiliser ce mode, l'implémentation de service doit être « thread-safe ».  
   
--   `Reentrant`: Chaque instance de service traite un message à la fois, mais accepte des appels réentrants. Le service accepte seulement ces appels lorsqu'il appelle. Ce mode est illustré dans le [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) exemple.  
+- `Reentrant`: Chaque instance de service traite un message à la fois, mais accepte des appels réentrants. Le service accepte seulement ces appels lorsqu'il appelle. Ce mode est illustré dans le [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) exemple.  
   
  L'utilisation de l'accès concurrentiel est associée au mode d'instanciation. Dans l'instanciation <xref:System.ServiceModel.InstanceContextMode.PerCall>, l'accès concurrentiel n'est pas pertinent, parce que chaque message est traité par une nouvelle instance de service. Dans l'instanciation <xref:System.ServiceModel.InstanceContextMode.Single>, l'accès concurrentiel <xref:System.ServiceModel.ConcurrencyMode.Single> ou <xref:System.ServiceModel.ConcurrencyMode.Multiple> est pertinent, selon que la même instance traite des messages l'un après l'autre ou simultanément. Dans l'instanciation <xref:System.ServiceModel.InstanceContextMode.PerSession>, chacun des modes d'accès concurrentiel peut être pertinent.  
   

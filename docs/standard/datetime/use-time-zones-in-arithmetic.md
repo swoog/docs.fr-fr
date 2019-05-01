@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Utiliser des fuseaux horaires dans les date et heure arithmétique'
+title: 'Procédure : utiliser des fuseaux horaires en arithmétique de date et heure'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026495"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procédure : Utiliser des fuseaux horaires dans les date et heure arithmétique
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procédure : utiliser des fuseaux horaires en arithmétique de date et heure
 
 En règle générale, lorsque vous effectuer la date et l’heure à l’aide d’arithmétique <xref:System.DateTime> ou <xref:System.DateTimeOffset> valeurs, le résultat ne reflète pas les règles d’ajustement de fuseau horaire. Cela est vrai même lorsque le fuseau horaire de la valeur de date et d’heure est clairement identifiable (par exemple, lors de la <xref:System.DateTime.Kind%2A> propriété est définie sur <xref:System.DateTimeKind.Local>). Cette rubrique montre comment effectuer des opérations arithmétiques sur les valeurs de date et d’heure qui appartiennent à un fuseau horaire particulier. Les résultats de ces opérations arithmétiques reflètent les règles d’ajustement du fuseau horaire.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008763"
 ---
 # <a name="gridview-overview"></a>Vue d'ensemble de GridView
 <xref:System.Windows.Controls.GridView> mode d’affichage est un des modes d’affichage pour un <xref:System.Windows.Controls.ListView> contrôle. Le <xref:System.Windows.Controls.GridView> classe et ses classes de prise en charge permettent aux administrateurs et vos utilisateurs afficher des collections d’éléments dans une table qui utilise généralement des boutons comme en-têtes de colonnes interactifs. Cette rubrique présente la <xref:System.Windows.Controls.GridView> classe et décrit son utilisation.  
@@ -73,30 +73,30 @@ ms.locfileid: "59201297"
   
  La liste suivante décrit plus en détail les possibilités d’utilisation <xref:System.Windows.Controls.GridView> pour l’interaction utilisateur :  
   
--   **Réorganiser les colonnes à l’aide de la méthode glisser-déplacer.**  
+- **Réorganiser les colonnes à l’aide de la méthode glisser-déplacer.**  
   
      Les utilisateurs peuvent réorganiser les colonnes dans un <xref:System.Windows.Controls.GridView> en appuyant sur le bouton gauche de la souris au-dessus d’un en-tête de colonne, puis en faisant glisser cette colonne vers une nouvelle position. Lorsque l’utilisateur fait glisser l’en-tête de colonne, une version flottante de l’en-tête s’affiche ainsi qu’une ligne noire unie qui indique où insérer la colonne.  
   
      Si vous souhaitez modifier le style par défaut de la version flottante d’un en-tête, spécifiez un <xref:System.Windows.Controls.ControlTemplate> pour un <xref:System.Windows.Controls.GridViewColumnHeader> type qui est déclenchée lorsque le <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> propriété est définie sur <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Pour plus d’informations, consultez [Créer un style pour un en-tête de colonne GridView déplacé](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Redimensionner une colonne selon son contenu.**  
+- **Redimensionner une colonne selon son contenu.**  
   
      Les utilisateurs peuvent double-cliquer sur la barre de redimensionnement à droite d’un en-tête de colonne afin de redimensionner une colonne en fonction de son contenu.  
   
     > [!NOTE]
     >  Vous pouvez définir le <xref:System.Windows.Controls.GridViewColumn.Width%2A> propriété `Double.NaN` pour produire le même effet.  
   
--   **Sélectionner des éléments de lignes.**  
+- **Sélectionner des éléments de lignes.**  
   
      Les utilisateurs peuvent sélectionner un ou plusieurs éléments dans un <xref:System.Windows.Controls.GridView>.  
   
      Si vous souhaitez modifier le <xref:System.Windows.Style> d’un élément sélectionné, consultez [utiliser des déclencheurs de Style des éléments sélectionnés dans un ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Faire défiler pour afficher le contenu qui n’est pas initialement visible à l’écran.**  
+- **Faire défiler pour afficher le contenu qui n’est pas initialement visible à l’écran.**  
   
      Si la taille de la <xref:System.Windows.Controls.GridView> est pas suffisamment grande pour afficher tous les éléments, les utilisateurs peuvent faire défiler horizontalement ou verticalement à l’aide des barres de défilement, qui sont fournis par un <xref:System.Windows.Controls.ScrollViewer> contrôle. Un <xref:System.Windows.Controls.Primitives.ScrollBar> est masquée si tout le contenu est visible dans un sens spécifique. Les en-têtes de colonnes ne défilent pas avec une barre de défilement verticale. Ils défilent horizontalement.  
   
--   **Interagir avec les colonnes en cliquant sur les boutons d’en-tête de colonne.**  
+- **Interagir avec les colonnes en cliquant sur les boutons d’en-tête de colonne.**  
   
      Lorsque les utilisateurs cliquent sur un bouton d’en-tête de colonne, ils peuvent trier les données qui s’affichent dans la colonne si vous avez fourni un algorithme de tri.  
   
@@ -110,17 +110,17 @@ ms.locfileid: "59201297"
 ## <a name="gridview-supporting-classes"></a>Classes de prise en charge pour GridView  
  Les classes suivantes prise en charge la <xref:System.Windows.Controls.GridView> mode d’affichage.  
   
--   <xref:System.Windows.Controls.GridViewColumn>  
+- <xref:System.Windows.Controls.GridViewColumn>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GridViewRowPresenter>  
+- <xref:System.Windows.Controls.GridViewRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewColumnCollection>  
+- <xref:System.Windows.Controls.GridViewColumnCollection>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+- <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Voir aussi
 

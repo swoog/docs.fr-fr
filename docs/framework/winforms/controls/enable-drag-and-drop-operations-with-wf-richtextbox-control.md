@@ -12,11 +12,11 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972131"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procédure : activer les opérations glisser-déplacer avec le contrôle RichTextBox Windows Forms
 Les opérations glisser-déplacer avec le contrôle Windows Forms <xref:System.Windows.Forms.RichTextBox> s’effectuent en gérant les événements <xref:System.Windows.Forms.RichTextBox.DragEnter> et <xref:System.Windows.Forms.RichTextBox.DragDrop> . De ce fait, ces opérations sont extrêmement simples avec le contrôle <xref:System.Windows.Forms.RichTextBox> .  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050558"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commentaires dans le code (Visual Basic)
 Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de commentaire (`'`). Ce symbole indique au compilateur de Visual Basic d’ignorer le texte suivant, ou le *commentaire*. Les commentaires sont de courtes explications destinées à éclairer ceux qui lisent le code.  
@@ -48,11 +48,11 @@ Lorsque vous lisez les exemples de code, vous rencontrez souvent le symbole de c
   
  N'oubliez pas :  
   
--   Pour chaque déclaration de variable importante, faites précéder d'un commentaire décrivant son utilisation.  
+- Pour chaque déclaration de variable importante, faites précéder d'un commentaire décrivant son utilisation.  
   
--   Les noms des variables, contrôles et procédures doivent être suffisamment clairs pour que les commentaires servent uniquement à fournir des détails d'implémentation complexes.  
+- Les noms des variables, contrôles et procédures doivent être suffisamment clairs pour que les commentaires servent uniquement à fournir des détails d'implémentation complexes.  
   
--   Vous ne pouvez pas faire suivre une séquence de continuation par un commentaire sur la même ligne.  
+- Vous ne pouvez pas faire suivre une séquence de continuation par un commentaire sur la même ligne.  
   
  Vous pouvez ajouter ou supprimer les symboles de commentaires pour un bloc de code en sélectionnant une ou plusieurs lignes de code et en choisissant le **commentaire** (![bouton le commentaire Visual Basic dans Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) et **marques**  (![Bouton de la supprimez les commentaires de Visual Basic dans Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) des boutons de la **modifier** barre d’outils.  
   

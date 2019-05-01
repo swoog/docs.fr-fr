@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006692"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Les applications qui hébergent [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenu via PresentationHost.exe implémentent cette interface pour fournir un point d’intégration entre l’hôte et PresentationHost.exe.  
@@ -19,11 +19,11 @@ Les applications qui hébergent [!INCLUDE[TLA#tla_winclient](../../../../include
   
  L’intégration activée par `IWpfHostSupport` permet à PresentationHost.exe de :  
   
--   Découvrir et enregistrer avec les périphériques d’entrée brute (périphériques d’Interface utilisateur) qui intéresse l’application hôte.  
+- Découvrir et enregistrer avec les périphériques d’entrée brute (périphériques d’Interface utilisateur) qui intéresse l’application hôte.  
   
--   Recevoir des messages d’entrée à partir des périphériques d’entrée brute et transférer les messages appropriés à l’application hôte.  
+- Recevoir des messages d’entrée à partir des périphériques d’entrée brute et transférer les messages appropriés à l’application hôte.  
   
--   L’application hôte pour les interfaces d’utilisateur de progression et d’erreur personnalisées de la requête.  
+- L’application hôte pour les interfaces d’utilisateur de progression et d’erreur personnalisées de la requête.  
   
 > [!NOTE]
 >  Cette API est conçue et pris en charge uniquement sur l'ordinateur client local  

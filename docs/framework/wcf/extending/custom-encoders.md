@@ -3,11 +3,11 @@ title: Encodeurs personnalisés
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996903"
 ---
 # <a name="custom-encoders"></a>Encodeurs personnalisés
 Cette rubrique décrit comment créer des encodeurs personnalisés.  
@@ -30,11 +30,11 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
   
  WCF fournit les types suivants d’éléments de liaison dérivés de la <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> classe qui peut fournir pour le texte, binaire et l’encodage de Message Transmission Optimization Mechanism (MTOM) :  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Le plus interopérable, mais l’encodeur moins efficace pour les messages XML. Un service Web ou un client de service Web comprend généralement le langage XML textuel. Toutefois, transmettre de larges blocs de données binaires sous la forme de texte n'est pas efficace.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Le plus interopérable, mais l’encodeur moins efficace pour les messages XML. Un service Web ou un client de service Web comprend généralement le langage XML textuel. Toutefois, transmettre de larges blocs de données binaires sous la forme de texte n'est pas efficace.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Représente l’élément de liaison qui spécifie l’encodage de caractères et de message utilisé par le contrôle de version pour les messages XML binaires. Cela est plus efficace des options d’encodage, mais la moins interopérable, car il est uniquement pris en charge par les points de terminaison WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Représente l’élément de liaison qui spécifie l’encodage de caractères et de message utilisé par le contrôle de version pour les messages XML binaires. Cela est plus efficace des options d’encodage, mais la moins interopérable, car il est uniquement pris en charge par les points de terminaison WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Représente l’élément de liaison qui spécifie l’encodage de caractères et le versioning de messages utilisés pour un message à l’aide d’un encodage de Message Transmission Optimization Mechanism (MTOM). MTOM est une technologie efficace de transmission de données binaires dans les messages WCF. L'encodeur MTOM tente de parvenir à un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Représente l’élément de liaison qui spécifie l’encodage de caractères et le versioning de messages utilisés pour un message à l’aide d’un encodage de Message Transmission Optimization Mechanism (MTOM). MTOM est une technologie efficace de transmission de données binaires dans les messages WCF. L'encodeur MTOM tente de parvenir à un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte.  
   
  L’élément de liaison crée un <xref:System.ServiceModel.Channels.MessageEncoderFactory> Binary, MTOM ou Text. La fabrique crée une instance <xref:System.ServiceModel.Channels.MessageEncoderFactory> Binary, MTOM ou Text. En général, il n'y a qu'une instance unique. Toutefois si des sessions sont utilisées, un encodeur différent peut être fourni à chaque session. L'encodeur Binary utilise celle-ci pour coordonner des dictionnaires dynamiques (consultez Infrastructure XML).  
   
@@ -69,19 +69,19 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
 ## <a name="writing-your-own-encoder"></a>Écriture de votre propre encodeur  
  Pour implémenter votre propre encodeur de message personnalisé, vous devez fournir des implémentations personnalisées des classes de base abstraites suivantes :  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  La conversion de la représentation en mémoire d'un message en une représentation qui peut être écrite dans un flux de données est encapsulée dans la classe <xref:System.ServiceModel.Channels.MessageEncoder> qui agit en tant que fabrique pour les lecteurs XML et writers XML qui prennent en charge des types spécifiques d'encodages XML.  
   
--   Les méthodes clés de cette classe que vous devez substituer sont :  
+- Les méthodes clés de cette classe que vous devez substituer sont :  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> qui accepte un objet <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> et l'écrit dans un objet <xref:System.IO.Stream>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> qui accepte un objet <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> et l'écrit dans un objet <xref:System.IO.Stream>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> qui accepte un objet <xref:System.IO.Stream> et une taille d'en-tête maximale et retourne un objet <xref:System.ServiceModel.Channels.Message>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> qui accepte un objet <xref:System.IO.Stream> et une taille d'en-tête maximale et retourne un objet <xref:System.ServiceModel.Channels.Message>.  
   
  C'est le code que vous écrivez dans ces méthodes qui gèrent la conversion entre le protocole de transport standard et votre encodage personnalisé.  
   

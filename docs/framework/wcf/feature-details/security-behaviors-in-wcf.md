@@ -3,24 +3,24 @@ title: Comportements de sécurité dans WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990910"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportements de sécurité dans WCF
 Dans Windows Communication Foundation (WCF), les comportements modifient comportement au moment de l’exécution au niveau du service ou au niveau du point de terminaison. (Pour plus d’informations sur les comportements en général, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportements de sécurité* permettent de contrôler les informations d’identification, l’authentification, autorisation et les journaux d’audit. Vous pouvez les utiliser via la programmation ou la configuration. Cette rubrique se concentre sur la configuration des comportements relatifs aux fonctions de sécurité suivants :  
   
--   [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
--   [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), ce qui vous permet également de spécifier un point de terminaison sécurisé auquel les clients peuvent accéder pour les métadonnées.  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), ce qui vous permet également de spécifier un point de terminaison sécurisé auquel les clients peuvent accéder pour les métadonnées.  
   
 ## <a name="setting-credentials-with-behaviors"></a>Définition d'informations d'identification avec des comportements  
  Utilisez le [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) et [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) pour définir les valeurs des informations d’identification pour un service ou d’un client. La configuration de liaison sous-jacente détermine si une information d’identification doit être définie. Par exemple, si le mode de sécurité a la valeur `None`, les clients et les services ne s'authentifient pas l'un l'autre et ne requièrent pas d'information d'identification d'aucun type.  
@@ -78,9 +78,9 @@ Dans Windows Communication Foundation (WCF), les comportements modifient comport
   
  Vous devez utiliser le [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md) collection dans une application fédérée qui utilise un *secure token service* (STS) qui émet `SamlSecurityToken` des jetons de sécurité. Lorsque le STS émet le jeton de sécurité, il peut spécifier l'URI des services Web pour lesquels le jeton de sécurité est prévu en ajoutant un `SamlAudienceRestrictionCondition` au jeton de sécurité. Cela permet au `SamlSecurityTokenAuthenticator` du service Web destinataire de vérifier que le jeton de sécurité émis est prévu pour ce service Web en spécifiant que ce contrôle doit arriver en effectuant les opérations suivantes :  
   
--   Définir le `audienceUriMode` attribut de [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) à `Always` ou `BearerKeyOnly`.  
+- Définir le `audienceUriMode` attribut de [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) à `Always` ou `BearerKeyOnly`.  
   
--   Spécifiez le jeu d'URI valides en ajoutant les URI à cette collection. Pour ce faire, insérez un [ \<Ajouter >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) pour chaque URI  
+- Spécifiez le jeu d'URI valides en ajoutant les URI à cette collection. Pour ce faire, insérez un [ \<Ajouter >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) pour chaque URI  
   
  Pour plus d'informations, consultez <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   

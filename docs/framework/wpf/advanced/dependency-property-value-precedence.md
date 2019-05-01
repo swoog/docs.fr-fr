@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010538"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorité de la valeur de propriété de dépendance
 <a name="introduction"></a> Cette rubrique explique comment le fonctionnement du système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peut affecter la valeur d’une propriété de dépendance, et décrit la priorité selon laquelle les aspects du système de propriétés s’appliquent à la valeur effective d’une propriété.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315684"
   
 4. **Propriétés de modèle TemplatedParent.** Un élément a un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si elle a été créée en tant que partie d’un modèle (un <xref:System.Windows.Controls.ControlTemplate> ou <xref:System.Windows.DataTemplate>). Pour plus d’informations sur les cas où ceci est applicable, consultez [TemplatedParent](#templatedparent) plus loin dans cette rubrique. Dans le modèle, la priorité suivante s’applique :  
   
-    1.  Se déclenche à partir du <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
+    1. Se déclenche à partir du <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
   
-    2.  Jeux de propriétés (généralement via [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributs) dans le <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
+    2. Jeux de propriétés (généralement via [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributs) dans le <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modèle.  
   
 5. **Style implicite.** S’applique uniquement à la propriété `Style`. La propriété `Style` est renseignée par toute ressource de style avec une clé qui correspond au type de cet élément. Cette ressource de style doit exister dans la page ou dans l’application ; la recherche d’une ressource de style implicite ne se poursuit pas dans les thèmes.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315684"
   
 9. **Style (de thème) par défaut.** Pour plus d’informations sur les cas où ceci est applicable, et sur la relation entre les styles de thème et les modèles dans les styles de thème, consultez [Style (de thème) par défaut](#themestyles) plus loin dans cette rubrique. Dans un style par défaut, l’ordre de priorité suivant s’applique :  
   
-    1.  Déclencheurs actifs dans le style de thème.  
+    1. Déclencheurs actifs dans le style de thème.  
   
-    2.  Méthodes setter dans le style de thème.  
+    2. Méthodes setter dans le style de thème.  
   
 10. **Héritage.** Quelques propriétés de dépendance héritent de leurs valeurs d’élément parent à éléments enfants, et n’ont donc pas besoin d’être définies spécifiquement sur chaque élément dans une application. Pour plus d’informations, consultez [Héritage de la valeur de propriété](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315684"
 ## <a name="the-style-property"></a>Propriété Style  
  L’ordre de recherche décrit précédemment s’applique à toutes les propriétés de dépendance possibles sauf une : la <xref:System.Windows.FrameworkElement.Style%2A> propriété. Le <xref:System.Windows.FrameworkElement.Style%2A> propriété est unique, car il ne peut pas elle-même un style, les éléments de priorité 5 à 8 s’appliquent pas. En outre, l’animation ou le forçage de <xref:System.Windows.FrameworkElement.Style%2A> n’est pas recommandé (et l’animation <xref:System.Windows.FrameworkElement.Style%2A> nécessiterait une classe d’animation personnalisée). Cela nous laisse trois manières qui le <xref:System.Windows.FrameworkElement.Style%2A> propriété peut-être être définie :  
   
--   **Style explicite.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété est définie directement. Dans la plupart des scénarios, le style n’est pas défini inline. Il est plutôt référencé en tant que ressource, par clé explicite. Dans ce cas, la propriété Style proprement dite se comporte comme s’il s’agissait d’une valeur locale (élément de priorité 3).  
+- **Style explicite.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété est définie directement. Dans la plupart des scénarios, le style n’est pas défini inline. Il est plutôt référencé en tant que ressource, par clé explicite. Dans ce cas, la propriété Style proprement dite se comporte comme s’il s’agissait d’une valeur locale (élément de priorité 3).  
   
--   **Style implicite.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété n’est pas définie directement. Toutefois, le <xref:System.Windows.FrameworkElement.Style%2A> existe à un certain niveau dans la séquence de recherche de ressource (page, application) et est indexé à l’aide d’une clé de ressource qui correspond au type que le style est appliqué à. Dans ce cas, le <xref:System.Windows.FrameworkElement.Style%2A> fait Office de propriété proprement dite identifié dans la séquence comme élément 5. Cette condition peut être détectée à l’aide de <xref:System.Windows.DependencyPropertyHelper> contre le <xref:System.Windows.FrameworkElement.Style%2A> propriété et en recherchant <xref:System.Windows.BaseValueSource.ImplicitStyleReference> dans les résultats.  
+- **Style implicite.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété n’est pas définie directement. Toutefois, le <xref:System.Windows.FrameworkElement.Style%2A> existe à un certain niveau dans la séquence de recherche de ressource (page, application) et est indexé à l’aide d’une clé de ressource qui correspond au type que le style est appliqué à. Dans ce cas, le <xref:System.Windows.FrameworkElement.Style%2A> fait Office de propriété proprement dite identifié dans la séquence comme élément 5. Cette condition peut être détectée à l’aide de <xref:System.Windows.DependencyPropertyHelper> contre le <xref:System.Windows.FrameworkElement.Style%2A> propriété et en recherchant <xref:System.Windows.BaseValueSource.ImplicitStyleReference> dans les résultats.  
   
--   **Style par défaut**, également appelé **style de thème.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété n’est pas définie directement et sera lue en fait comme `null` jusqu’au moment de l’exécution. Dans ce cas, le style provient de l’évaluation du thème d’exécution qui fait partie du moteur de présentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- **Style par défaut**, également appelé **style de thème.** Le <xref:System.Windows.FrameworkElement.Style%2A> propriété n’est pas définie directement et sera lue en fait comme `null` jusqu’au moment de l’exécution. Dans ce cas, le style provient de l’évaluation du thème d’exécution qui fait partie du moteur de présentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Les styles implicites pas dans les thèmes, le type doit correspondre exactement - un `MyButton` `Button`-classe dérivée n’utilisera pas implicitement un style pour `Button`.  
   

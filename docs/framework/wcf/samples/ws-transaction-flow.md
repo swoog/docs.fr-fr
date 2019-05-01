@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007472"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et des options de client et de serveur pour le flux de transaction, à l’aide du protocole WS-Atomic Transaction ou OleTransactions. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais les opérations sont attribuées pour montrer l’utilisation de la `TransactionFlowAttribute` avec la **TransactionFlowOption** énumération pour déterminer à quel degré de transaction le flux est activé. Dans l’étendue de la transaction passée, un journal des opérations demandées est écrit dans une base de données et est conservé jusqu’à ce que la transaction coordonnée par le client soit terminée. Si la transaction cliente ne se termine pas, la transaction de service Web garantit que les mises à jour appropriées de la base de données ne sont pas validées.  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  Cela permet de définir les opérations dans l'ordre dans lequel elles seront traitées :  
   
--   Une demande d'opération `Add` doit inclure une transaction passée.  
+- Une demande d'opération `Add` doit inclure une transaction passée.  
   
--   Une demande d'opération `Subtract` peut inclure une transaction passée.  
+- Une demande d'opération `Subtract` peut inclure une transaction passée.  
   
--   Une demande d'opération `Multiply` ne doit pas inclure de transaction passée par l'intermédiaire du paramètre NotAllowed explicite.  
+- Une demande d'opération `Multiply` ne doit pas inclure de transaction passée par l'intermédiaire du paramètre NotAllowed explicite.  
   
--   Une demande d'opération `Divide` ne doit pas inclure de transaction passée par omission d'un attribut `TransactionFlow`.  
+- Une demande d'opération `Divide` ne doit pas inclure de transaction passée par omission d'un attribut `TransactionFlow`.  
   
  Pour activer le flux de transaction, les liaisons avec le [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) propriété activée doit être utilisée en plus des attributs de l’opération appropriée. Dans cet exemple, la configuration du service expose un point de terminaison TCP et un point de terminaison HTTP en plus du point de terminaison d'échange de métadonnées. Le point de terminaison TCP et le point de terminaison HTTP utilisent les liaisons suivantes, qui ont toutes deux la [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) propriété activée.  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  Les appels aux opérations sont comme suit :  
   
--   La demande `Add` transmet la transaction requise au service et les actions du service se produisent dans la portée de la transaction du client.  
+- La demande `Add` transmet la transaction requise au service et les actions du service se produisent dans la portée de la transaction du client.  
   
--   La première demande `Subtract` transmet également la transaction autorisée au service et, de nouveau, les actions du service se produisent dans la portée de la transaction du client.  
+- La première demande `Subtract` transmet également la transaction autorisée au service et, de nouveau, les actions du service se produisent dans la portée de la transaction du client.  
   
--   La seconde demande `Subtract` est effectuée dans une nouvelle portée de transaction déclarée avec l'option `TransactionScopeOption.Suppress`. Cela supprime la transaction externe initiale du client et la demande ne transmet pas de transaction au service. Cette approche permet à un client de choisir explicitement de ne pas transmettre une transaction à un service lorsque cela n'est pas obligatoire et de se protéger également contre toute transmission. Les actions du service se produisent dans l’étendue d’une transaction nouvelle et non connectée.  
+- La seconde demande `Subtract` est effectuée dans une nouvelle portée de transaction déclarée avec l'option `TransactionScopeOption.Suppress`. Cela supprime la transaction externe initiale du client et la demande ne transmet pas de transaction au service. Cette approche permet à un client de choisir explicitement de ne pas transmettre une transaction à un service lorsque cela n'est pas obligatoire et de se protéger également contre toute transmission. Les actions du service se produisent dans l’étendue d’une transaction nouvelle et non connectée.  
   
--   La demande `Multiply` ne transmet pas de transaction au service, car la définition générée du client de l’interface `ICalculator` inclut un <xref:System.ServiceModel.TransactionFlowAttribute> ayant la valeur <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+- La demande `Multiply` ne transmet pas de transaction au service, car la définition générée du client de l’interface `ICalculator` inclut un <xref:System.ServiceModel.TransactionFlowAttribute> ayant la valeur <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
--   La demande `Divide` ne transmet pas de transaction au service, car la définition générée du client de l'interface `ICalculator` n'inclut pas de `TransactionFlowAttribute`. Les actions du service se produisent encore dans l'étendue d'une autre transaction nouvelle et non connectée.  
+- La demande `Divide` ne transmet pas de transaction au service, car la définition générée du client de l'interface `ICalculator` n'inclut pas de `TransactionFlowAttribute`. Les actions du service se produisent encore dans l'étendue d'une autre transaction nouvelle et non connectée.  
   
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. Sur un ordinateur de service Windows Server 2003 ou Windows XP, configurez MSDTC pour autoriser des transactions réseau entrantes en suivant ces instructions.  
   
-    1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
+    1. À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
-    2.  Développez **Services de composants**. Ouvrez le **ordinateurs** dossier.  
+    2. Développez **Services de composants**. Ouvrez le **ordinateurs** dossier.  
   
-    3.  Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
+    3. Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
   
-    4.  Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
+    4. Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
   
-    5.  Vérifiez **les accès DTC réseau** et **autoriser entrant**.  
+    5. Vérifiez **les accès DTC réseau** et **autoriser entrant**.  
   
-    6.  Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
+    6. Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
   
-    7.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
+    7. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 2. Sur un ordinateur de service Windows Server 2008 ou Windows Vista, configurez MSDTC pour autoriser des transactions réseau entrantes en suivant ces instructions.  
   
-    1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
+    1. À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
-    2.  Développez **Services de composants**. Ouvrez le **ordinateurs** dossier. Sélectionnez **Distributed Transaction Coordinator**.  
+    2. Développez **Services de composants**. Ouvrez le **ordinateurs** dossier. Sélectionnez **Distributed Transaction Coordinator**.  
   
-    3.  Avec le bouton droit **coordinateur DTC** et sélectionnez **propriétés**.  
+    3. Avec le bouton droit **coordinateur DTC** et sélectionnez **propriétés**.  
   
-    4.  Sur le **sécurité** onglet, vérification **accès DTC réseau** et **autoriser les transactions entrantes**.  
+    4. Sur le **sécurité** onglet, vérification **accès DTC réseau** et **autoriser les transactions entrantes**.  
   
-    5.  Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
+    5. Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
   
-    6.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
+    6. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 3. Sur l’ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
   
-    1.  À partir de la **Démarrer** menu, accédez à `Control Panel`, puis **outils d’administration**, puis **Services de composants**.  
+    1. À partir de la **Démarrer** menu, accédez à `Control Panel`, puis **outils d’administration**, puis **Services de composants**.  
   
-    2.  Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
+    2. Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
   
-    3.  Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
+    3. Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
   
-    4.  Vérifiez **les accès DTC réseau** et **autoriser le trafic sortant**.  
+    4. Vérifiez **les accès DTC réseau** et **autoriser le trafic sortant**.  
   
-    5.  Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
+    5. Cliquez sur **OK**, puis cliquez sur **Oui** pour redémarrer le service MSDTC.  
   
-    6.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
+    6. Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

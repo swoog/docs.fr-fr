@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
 ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004157"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>Procédure : dessiner une ligne dans un formulaire Windows
 Cet exemple dessine une ligne dans un formulaire. En général, lorsque vous dessinez dans un formulaire, vous gérez le formulaire <xref:System.Windows.Forms.Control.Paint> événements et effectuer le dessin à l’aide du <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propriété de la <xref:System.Windows.Forms.PaintEventArgs>, comme illustré dans cet exemple  

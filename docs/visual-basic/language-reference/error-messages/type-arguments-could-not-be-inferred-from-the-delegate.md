@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013632"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Les arguments de type ne peuvent pas être déduits à partir du délégué
 Une instruction d’assignation utilise `AddressOf` pour assigner l’adresse d’une procédure générique à un délégué, mais elle ne fournit aucun argument de type à la procédure générique.  
@@ -23,7 +23,7 @@ Une instruction d’assignation utilise `AddressOf` pour assigner l’adresse d�
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Spécifiez les arguments de type pour la procédure générique dans l’expression `AddressOf` .  
+- Spécifiez les arguments de type pour la procédure générique dans l’expression `AddressOf` .  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050699"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages
 La remise de messages en file d'attente peut échouer. Les messages qui ont échoué sont enregistrés dans une file d'attente de lettres mortes. L'échec de la remise peut être dû à des défaillances du réseau, une file d'attente supprimée, une file d'attente saturée, un échec d'authentification ou un retard de remise.  
@@ -30,18 +30,18 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
   
  La liaison a les propriétés de file d’attente de lettres mortes suivantes :  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lecture des messages stockés dans la file d'attente de lettres mortes  
  Une application qui lit les messages à partir d’une file d’attente de lettres mortes est similaire à un service WCF qui lit à partir d’une file d’attente application, à l’exception des différences mineures suivantes :  
   
--   Pour lire des messages à partir d’une file d’attente de lettres mortes transactionnelle système, l’URI (Uniform Resource Identifier) doit être de la forme : net.msmq://localhost/system$;DeadXact.  
+- Pour lire des messages à partir d’une file d’attente de lettres mortes transactionnelle système, l’URI (Uniform Resource Identifier) doit être de la forme : net.msmq://localhost/system$;DeadXact.  
   
--   Pour lire des messages à partir d'une file d'attente de lettres mortes non transactionnelle système, l'URI doit être de la forme : net.msmq://localhost/system$;DeadLetter.  
+- Pour lire des messages à partir d'une file d'attente de lettres mortes non transactionnelle système, l'URI doit être de la forme : net.msmq://localhost/system$;DeadLetter.  
   
--   Pour lire des messages à partir d’une file d’attente de lettres mortes personnalisée, l’URI doit être de la forme : NET.MSMQ://localhost/Private/\<*nom-falm-personnalisée*> où *nom-falm-personnalisée* est le nom de la personnalisation file d’attente de lettres mortes.  
+- Pour lire des messages à partir d’une file d’attente de lettres mortes personnalisée, l’URI doit être de la forme : NET.MSMQ://localhost/Private/\<*nom-falm-personnalisée*> où *nom-falm-personnalisée* est le nom de la personnalisation file d’attente de lettres mortes.  
   
  Pour plus d’informations sur l’adresse des files d’attente, consultez [points de terminaison de Service et adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

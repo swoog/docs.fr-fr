@@ -3,11 +3,11 @@ title: Accès à OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005600"
 ---
 # <a name="accessing-operationcontext"></a>Accès à OperationContext
 Cet exemple montre comment les activités de messagerie (<xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.Send>) peut être utilisé avec une activité d’étendue personnalisée pour accéder à <xref:System.ServiceModel.OperationContext.Current%2A> et attacher ou récupérer un en-tête de message personnalisé dans un message sortant ou entrant.  
@@ -28,13 +28,13 @@ Cet exemple montre comment les activités de messagerie (<xref:System.ServiceMod
   
 2. Une fois les listes de contrôle d'accès (ACL) d'URL ajoutées, effectuez les étapes suivantes.  
   
-    1.  Générez la solution.  
+    1. Générez la solution.  
   
-    2.  Définir plusieurs projets de démarrage en double-cliquant sur la solution et en sélectionnant **définir les projets de démarrage**.  
+    2. Définir plusieurs projets de démarrage en double-cliquant sur la solution et en sélectionnant **définir les projets de démarrage**.  
   
-    3.  Ajouter **Service** et **Client** (dans cet ordre) en tant que plusieurs projets de démarrage.  
+    3. Ajouter **Service** et **Client** (dans cet ordre) en tant que plusieurs projets de démarrage.  
   
-    4.  Exécutez l'application. La console cliente affiche un workflow qui est exécuté deux fois et la fenêtre Service affiche l'ID d'instance de ces workflows.  
+    4. Exécutez l'application. La console cliente affiche un workflow qui est exécuté deux fois et la fenêtre Service affiche l'ID d'instance de ces workflows.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

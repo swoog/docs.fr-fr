@@ -3,14 +3,14 @@ title: Extension de l'hébergement à l'aide de ServiceHostFactory
 ms.date: 03/30/2017
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
 ms.openlocfilehash: e553fe161ffc5b50850d916cf1cef6b38dd5c1a9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991313"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Extension de l'hébergement à l'aide de ServiceHostFactory
-La norme <xref:System.ServiceModel.ServiceHost> API d’hébergement des services Windows Communication Foundation (WCF) est un point d’extensibilité de l’architecture WCF. Les utilisateurs peuvent dériver leurs propres classes d'hôte de <xref:System.ServiceModel.ServiceHost>, habituellement pour substituer <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> et utiliser <xref:System.ServiceModel.Description.ServiceDescription> afin d'ajouter des points de terminaison par défaut de façon impérative ou modifier des comportements, avant d'ouvrir le service.  
+La norme <xref:System.ServiceModel.ServiceHost> API d’hébergement des services dans Windows Communication Foundation (WCF) est un point d’extensibilité dans l’architecture WCF. Les utilisateurs peuvent dériver leurs propres classes d'hôte de <xref:System.ServiceModel.ServiceHost>, habituellement pour substituer <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> et utiliser <xref:System.ServiceModel.Description.ServiceDescription> afin d'ajouter des points de terminaison par défaut de façon impérative ou modifier des comportements, avant d'ouvrir le service.  
   
  Dans l'environnement auto-hébergé, vous ne devez pas créer un <xref:System.ServiceModel.ServiceHost> personnalisé parce que vous écrivez le code qui instancie l'hôte puis appelle <xref:System.ServiceModel.ICommunicationObject.Open> après l'avoir instancié. Entre ces deux étapes, vous pouvez faire ce que vous souhaitiez. Par exemple, vous pouvez ajouter un nouveau <xref:System.ServiceModel.Description.IServiceBehavior> :  
   
@@ -58,7 +58,7 @@ public static void Main()
   
  Il n'est pas évident de savoir comment utiliser cette version <xref:System.ServiceModel.ServiceHost> personnalisée dans IIS (Internet Information Services) ou dans le service d'activation de processus de Windows (WAS). Ces environnements sont différents de l'environnement auto-hébergé, car l'environnement d'hébergement est celui qui instancie le <xref:System.ServiceModel.ServiceHost> pour le compte de l'application. L'infrastructure d'hébergement IIS et WAS ne connaît rien de votre dérivée <xref:System.ServiceModel.ServiceHost> personnalisée.  
   
- <xref:System.ServiceModel.Activation.ServiceHostFactory> a été conçu pour résoudre ce problème d'accès à votre <xref:System.ServiceModel.ServiceHost> personnalisé dans IIS ou WAS. Parce qu'un hôte personnalisé dérivé de <xref:System.ServiceModel.ServiceHost> est configuré dynamiquement et appartient potentiellement à des types différents, l'environnement d'hébergement ne l'instancie jamais directement. Au lieu de cela, WCF utilise un modèle de fabrique pour fournir une couche d’indirection entre l’environnement d’hébergement et le type concret du service. À moins que vous lui indiquiez d'agir autrement, il utilise une implémentation par défaut de <xref:System.ServiceModel.Activation.ServiceHostFactory> qui retourne une instance de <xref:System.ServiceModel.ServiceHost>. Mais vous pouvez également fournir votre propre fabrique renvoyant votre hôte dérivé en spécifiant le nom de type CLR de l’implémentation de fabrique dans la @ServiceHost directive.  
+ <xref:System.ServiceModel.Activation.ServiceHostFactory> a été conçu pour résoudre ce problème d'accès à votre <xref:System.ServiceModel.ServiceHost> personnalisé dans IIS ou WAS. Parce qu'un hôte personnalisé dérivé de <xref:System.ServiceModel.ServiceHost> est configuré dynamiquement et appartient potentiellement à des types différents, l'environnement d'hébergement ne l'instancie jamais directement. Au lieu de cela, WCF utilise un modèle de fabrique pour fournir une couche d’indirection entre l’environnement d’hébergement et le type concret du service. À moins que vous lui indiquiez d'agir autrement, il utilise une implémentation par défaut de <xref:System.ServiceModel.Activation.ServiceHostFactory> qui retourne une instance de <xref:System.ServiceModel.ServiceHost>. Mais vous pouvez également fournir votre propre fabrique renvoyant votre hôte dérivé en spécifiant le nom de type CLR de votre implémentation de la fabrique dans la @ServiceHost directive.  
   
  Le but est que pour les cas de base, l'implémentation de votre propre fabrique soit un exercice simple. Par exemple, voici un <xref:System.ServiceModel.Activation.ServiceHostFactory> personnalisé qui retourne un <xref:System.ServiceModel.ServiceHost>dérivé :  
   
@@ -80,4 +80,4 @@ public class DerivedFactory : ServiceHostFactory
   
  Bien qu'il n'y ait aucune limitation technique en ce qui concerne ce que vous pouvez faire au niveau du <xref:System.ServiceModel.ServiceHost> que vous avez retourné de <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, nous vous suggérons de garder vos implémentations de fabrique aussi simples que possible. Si vous avez beaucoup de logique personnalisée, il est préférable de la placer dans votre hôte plutôt que dans la fabrique, afin de pouvoir la réutiliser.  
   
- Il existe une autre couche de l'API d'hébergement qui doit être indiquée ici. WCF prend également en <xref:System.ServiceModel.ServiceHostBase> et <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, à partir de laquelle <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.Activation.ServiceHostFactory> dérivent respectivement. Ceux-ci sont prévus pour des scénarios plus avancés où vous devez permuter des parties importantes du système de métadonnées avec vos propres créations personnalisées.
+ Il existe une autre couche de l'API d'hébergement qui doit être indiquée ici. WCF dispose également de <xref:System.ServiceModel.ServiceHostBase> et <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, à partir de laquelle <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.Activation.ServiceHostFactory> dérivent respectivement. Ceux-ci sont prévus pour des scénarios plus avancés où vous devez permuter des parties importantes du système de métadonnées avec vos propres créations personnalisées.
