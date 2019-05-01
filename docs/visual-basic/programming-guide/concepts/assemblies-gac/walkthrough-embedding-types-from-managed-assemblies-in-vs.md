@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)'
+title: 'Procédure pas à pas : Incorporer des types provenant d’assemblys managés dans Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359455"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809135"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procédure pas à pas : Incorporation de Types provenant d’assemblys managés dans Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procédure pas à pas : Incorporer des types provenant d’assemblys managés dans Visual Studio (Visual Basic)
 
 Si vous incorporez des informations de type d’un assembly managé avec nom fort, vous pouvez coupler faiblement des types dans une application pour obtenir une indépendance de version. Autrement dit, votre programme peut être écrit de façon à ce qu’il utilise des types de plusieurs versions d’une bibliothèque managée sans que vous n’ayez à effectuer de recompilation pour chaque version.
 
@@ -209,13 +209,13 @@ Après avoir spécifié les interfaces publiques qui peuvent être incorporées,
 
 3. Ouvrez le fichier SampleClass.vb. Ajoutez les lignes de code suivantes à la classe SampleClass.
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    Enregistrez le fichier.
 
 4. Enregistrez le projet.
 

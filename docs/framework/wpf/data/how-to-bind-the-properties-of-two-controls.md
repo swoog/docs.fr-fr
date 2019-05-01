@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222059"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809524"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Procédure : Lier les propriétés de deux contrôles
 Cet exemple montre comment lier la propriété d’un contrôle instancié à celle d’un autre en utilisant le <xref:System.Windows.Data.Binding.ElementName%2A> propriété.  
@@ -23,9 +23,10 @@ Cet exemple montre comment lier la propriété d’un contrôle instancié à ce
   
  Lors de l’affichage, on obtient un résultat similaire à ce qui suit :  
   
- ![Canevas avec arrière-plan vert](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **Remarque** la propriété de cible de liaison (dans cet exemple, le <xref:System.Windows.Controls.Panel.Background%2A> propriété) doit être une propriété de dépendance. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](data-binding-overview.md).  
+![Capture d’écran montrant une liste déroulante case avec la valeur verte et un carré vert.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> La propriété de cible de liaison (dans cet exemple, le <xref:System.Windows.Controls.Panel.Background%2A> propriété) doit être une propriété de dépendance. Pour plus d’informations, consultez [Vue d’ensemble de la liaison de données](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

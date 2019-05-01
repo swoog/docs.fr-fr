@@ -4,12 +4,12 @@ description: Fonctions Azure offrent des fonctionnalités sans serveur dans plus
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145161"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807899"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -25,7 +25,7 @@ Pour plus d’informations, consultez [documentation Azure Functions](https://do
 
 Il existe deux versions du runtime Azure Functions : 1.x et 2.x. Version 1.x est généralement disponible (GA). Il prend en charge le développement de .NET à partir du portail ou les machines Windows et utilise le .NET Framework. 1.x prend en charge C#, JavaScript, et F#, avec prise en charge expérimentale pour Python, PHP, TypeScript, Batch, Bash et PowerShell.
 
-Version 2.x est en version préliminaire. Il s’appuie sur .NET Core et prend en charge le développement multiplateforme sur Windows, macOS et les machines Linux. 2.x ajoute la prise en charge de première classe pour Java, mais n’encore directement prend pas en charge les langages expérimentaux. Version 2.x utilise un nouveau modèle d’extensibilité de liaison qui permet des extensions tierces pour la plateforme, le contrôle de version indépendant de liaisons, et une plus rationalisé l’environnement d’exécution.
+[Version 2.x est également généralement disponible maintenant](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Il s’appuie sur .NET Core et prend en charge le développement multiplateforme sur Windows, macOS et les machines Linux. 2.x ajoute la prise en charge de première classe pour Java, mais n’encore directement prend pas en charge les langages expérimentaux. Version 2.x utilise un nouveau modèle d’extensibilité de liaison qui permet des extensions tierces pour la plateforme, le contrôle de version indépendant de liaisons, et une plus rationalisé l’environnement d’exécution.
 
 > **Il existe un problème connu dans la version 1.x avec [prise en charge de la redirection de liaison](https://github.com/Azure/azure-functions-host/issues/992).** Le problème est spécifique au développement .NET. Projets avec des dépendances sur les bibliothèques qui sont une version différente des bibliothèques incluses dans le runtime sont affectées. L’équipe de fonctions a validés dans progresse concrètes sur le problème. L’équipe traiteront des redirections de liaison dans la version 2.x avant sa mise en disponibilité générale. L’instruction officiel de l’équipe avec des suggestions de correction et les solutions de contournement est disponible ici : [Résolution d’assembly dans Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
@@ -37,9 +37,9 @@ Les langues suivantes sont prises en charge soit en général à la disposition 
 
 |Langue      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |DISPONIBILITÉ GÉNÉRALE          |Preview  |
-|**JavaScript**|DISPONIBILITÉ GÉNÉRALE          |Preview  |
-|**F#**        |DISPONIBILITÉ GÉNÉRALE          |         |
+|**C#**        |GA          |Preview  |
+|**JavaScript**|GA          |Preview  |
+|**F#**        |GA          |         |
 |**Java**      |            |Preview  |
 |**Python**    |Expérimental|         |
 |**PHP**       |Expérimental|         |

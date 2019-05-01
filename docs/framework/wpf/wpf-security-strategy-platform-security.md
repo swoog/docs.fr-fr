@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212412"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808329"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Stratégie de sécurité de WPF - sécurité de la plateforme
 Bien que Windows Presentation Foundation (WPF) offre une variété de services de sécurité, il s’appuie également sur les fonctionnalités de sécurité de la plateforme sous-jacente, qui inclut le système d’exploitation, le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], et [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Ces couches se combinent pour fournir à [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modèle de sécurité de défense en profondeur renforcé qui essaie d'éviter le moindre point de défaillance, comme cela est illustré dans l'image suivante :  
   
- ![Illustration de la sécurité WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Diagramme illustrant le modèle de sécurité WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  Le reste de cette rubrique traite des fonctionnalités dans chacune de ces couches qui concernent plus particulièrement [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
 
@@ -39,9 +39,9 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Outre une révision générale et renforcement de Windows, il existe trois fonctionnalités clés de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] qui seront abordées dans cette rubrique :  
   
--   Compilation /GS  
+- Compilation /GS  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>Compilation /GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre une protection en recompilant de nombreuses bibliothèques système de base, notamment toutes les dépendances [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] telles que le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], pour aider à atténuer les dépassements de mémoire tampon. Cela est accompli en utilisant le paramètre /GS avec le compilateur de ligne de commande C/C++. Même s'il est clairement préférable d'éviter les dépassements de mémoire, la compilation /GS fournit un exemple de défense en profondeur contre les vulnérabilités potentielles qui sont créées par inadvertance ou par malveillance par ces derniers.  
@@ -66,9 +66,9 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  Une façon de se protéger contre cette menace de sécurité est d'exécuter les applications avec le moins de privilèges requis. C'est ce que l'on appelle le principe du moindre privilège, qui est une fonctionnalité de base du système d'exploitation [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]. Cette fonctionnalité est appelée Contrôle de compte d'utilisateur (UAC) et est utilisée par [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] de deux façons principales :  
   
--   Pour exécuter la plupart des applications avec les privilèges de contrôle de compte d'utilisateur par défaut, même si l'utilisateur est administrateur ; seules les applications qui ont besoin de privilèges d'administrateur s'exécuteront avec les privilèges d'administrateur. Pour s'exécuter avec des privilèges d'administrateur, les applications doivent être marquées explicitement dans leur manifeste d'application ou comme entrée dans la stratégie de sécurité.  
+- Pour exécuter la plupart des applications avec les privilèges de contrôle de compte d'utilisateur par défaut, même si l'utilisateur est administrateur ; seules les applications qui ont besoin de privilèges d'administrateur s'exécuteront avec les privilèges d'administrateur. Pour s'exécuter avec des privilèges d'administrateur, les applications doivent être marquées explicitement dans leur manifeste d'application ou comme entrée dans la stratégie de sécurité.  
   
--   Pour fournir des solutions de compatibilité comme la virtualisation. Par exemple, de nombreuses applications tentent d'écrire dans des emplacements restreints comme C:\Program Files. Pour les applications s'exécutant sous contrôle de compte d'utilisateur, il existe un autre emplacement par utilisateur dans lequel les opérations d'écriture ne nécessitent pas de privilèges d'administrateur. Pour les applications s'exécutant sous contrôle de compte d'utilisateur, cette fonctionnalité virtualise C:\Program Files de sorte que les applications qui pensent écrire à cet emplacement écrivent en réalité à l'autre emplacement utilisateur. Ce type de travail de compatibilité permet au système d'exploitation d'exécuter de nombreuses applications qui ne pouvaient pas s'exécuter précédemment dans le contrôle de compte d'utilisateur.  
+- Pour fournir des solutions de compatibilité comme la virtualisation. Par exemple, de nombreuses applications tentent d'écrire dans des emplacements restreints comme C:\Program Files. Pour les applications s'exécutant sous contrôle de compte d'utilisateur, il existe un autre emplacement par utilisateur dans lequel les opérations d'écriture ne nécessitent pas de privilèges d'administrateur. Pour les applications s'exécutant sous contrôle de compte d'utilisateur, cette fonctionnalité virtualise C:\Program Files de sorte que les applications qui pensent écrire à cet emplacement écrivent en réalité à l'autre emplacement utilisateur. Ce type de travail de compatibilité permet au système d'exploitation d'exécuter de nombreuses applications qui ne pouvaient pas s'exécuter précédemment dans le contrôle de compte d'utilisateur.  
   
 #### <a name="code-integrity-checks"></a>Contrôles d'intégrité du code  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] incorpore des contrôles d'intégrité du code plus approfondis pour éviter que le code malveillant soit injecté dans les fichiers système ou dans le noyau au moment du chargement/exécution. Cela va au-delà de la protection des fichiers système.  
@@ -100,11 +100,11 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  Les applications managées sont compilées en langage MSIL (Microsoft Intermediate Language). Quand les méthodes d'une application managée sont exécutées, son code MSIL est compilé en code natif par le biais de la compilation juste-à-temps (JIT). La compilation JIT inclut un processus de vérification qui applique de nombreuses règles de sécurité et de robustesse qui garantissent que le code :  
   
--   ne viole pas les contrats des types ;  
+- ne viole pas les contrats des types ;  
   
--   n'introduit pas de dépassements de mémoire tampon ;  
+- n'introduit pas de dépassements de mémoire tampon ;  
   
--   n'accède pas intensément à la mémoire.  
+- n'accède pas intensément à la mémoire.  
   
  Le code managé qui ne se conforme pas aux règles de vérification n'est pas autorisé à s'exécuter, à moins qu'il soit considéré comme un code approuvé.  
   
@@ -116,29 +116,29 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  L'ensemble des autorisations accordées à une application managée par [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] quand elle commence à s'exécuter est appelé jeu d'autorisations et est déterminé par une preuve fournie par l'application. Pour les applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], la preuve fournie est l'emplacement, ou zone, à partir duquel les applications sont lancées. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] identifie les zones suivantes :  
   
--   **Poste de travail** : applications lancées à partir de l'ordinateur client (entièrement fiable).  
+- **Poste de travail** : applications lancées à partir de l'ordinateur client (entièrement fiable).  
   
--   **Intranet local** : applications lancées à partir de l'intranet (niveau de confiance moyen).  
+- **Intranet local** : applications lancées à partir de l'intranet (niveau de confiance moyen).  
   
--   **Internet** : applications lancées à partir d'Internet (niveau de confiance le plus faible).  
+- **Internet** : applications lancées à partir d'Internet (niveau de confiance le plus faible).  
   
--   **Sites de confiance** : applications identifiées par un utilisateur comme dignes de confiance (niveau de confiance le plus faible).  
+- **Sites de confiance** : applications identifiées par un utilisateur comme dignes de confiance (niveau de confiance le plus faible).  
   
--   **Sites non fiables** : applications identifiées par un utilisateur comme étant non fiables (non approuvé).  
+- **Sites non fiables** : applications identifiées par un utilisateur comme étant non fiables (non approuvé).  
   
  Pour chacune de ces zones, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] fournit un jeu d'autorisations prédéfini qui inclut les autorisations qui correspondent au niveau de confiance associé à chacune. Elles incluent notamment :  
   
--   **FullTrust** : Pour les applications lancées à partir de la **poste de travail** zone. Toutes les autorisations possibles sont accordées.  
+- **FullTrust** : Pour les applications lancées à partir de la **poste de travail** zone. Toutes les autorisations possibles sont accordées.  
   
--   **LocalIntranet** : Pour les applications lancées à partir de la **Intranet Local** zone. Un sous-ensemble d'autorisations est accordé pour fournir un accès modéré aux ressources d'un ordinateur client : emplacement de stockage isolé, accès illimité à l'interface utilisateur, accès illimité aux boîtes de dialogue de fichier, réflexion limitée et accès limité aux variables d'environnement. Les autorisations permettant d'accéder aux ressources critiques comme le Registre ne sont pas fournies.  
+- **LocalIntranet** : Pour les applications lancées à partir de la **Intranet Local** zone. Un sous-ensemble d'autorisations est accordé pour fournir un accès modéré aux ressources d'un ordinateur client : emplacement de stockage isolé, accès illimité à l'interface utilisateur, accès illimité aux boîtes de dialogue de fichier, réflexion limitée et accès limité aux variables d'environnement. Les autorisations permettant d'accéder aux ressources critiques comme le Registre ne sont pas fournies.  
   
--   **Internet** : Pour les applications lancées à partir de la **Internet** ou **Sites de confiance** zone. Un sous-ensemble d'autorisations est accordé pour octroyer un accès limité aux ressources d'un ordinateur client : emplacement de stockage isolé, ouverture des fichiers uniquement et interface utilisateur limitée. En fait, ce jeu d'autorisations isole les applications de l'ordinateur client.  
+- **Internet** : Pour les applications lancées à partir de la **Internet** ou **Sites de confiance** zone. Un sous-ensemble d'autorisations est accordé pour octroyer un accès limité aux ressources d'un ordinateur client : emplacement de stockage isolé, ouverture des fichiers uniquement et interface utilisateur limitée. En fait, ce jeu d'autorisations isole les applications de l'ordinateur client.  
   
  Applications identifiées comme étant le **Sites non fiables** zone sont voient accorder aucune autorisation par [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] du tout. Par conséquent, il n'existe pas de jeu d'autorisations prédéfini pour ces applications.  
   
- Le schéma suivant illustre la relation entre les zones, les jeux d'autorisations, les autorisations et les ressources.  
+ La figure suivante illustre la relation entre les zones, les jeux d’autorisations, les autorisations et les ressources :  
   
- ![Jeux d’autorisations CAS](./media/caspermissionsets.png "CASPermissionSets")  
+ ![Diagramme illustrant les autorités de certification des jeux d’autorisations.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Les restrictions du bac à sable (sandbox) de sécurité de la zone Internet s'appliquent de la même manière à tout code importé par une application [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] à partir d'une bibliothèque système, y compris au code [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Cela garantit que chaque partie du code est verrouillée, même pour [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Malheureusement, pour pouvoir s'exécuter, une application [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] doit exécuter des fonctionnalités qui nécessitent davantage d'autorisations que celles permises par le bac à sable de sécurité de la zone Internet.  
   
@@ -149,11 +149,11 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  Pour exécuter cette application [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], le code [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sous-jacent doit exécuter plus de fonctionnalités que celles auxquelles l'application [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] appelant a accès, à savoir :  
   
--   création d'un handle de fenêtre (hWnd) pour le rendu ;  
+- création d'un handle de fenêtre (hWnd) pour le rendu ;  
   
--   distribution de messages ;  
+- distribution de messages ;  
   
--   chargement de la police Tahoma.  
+- chargement de la police Tahoma.  
   
  Du point de vue de la sécurité, il serait catastrophique d'autoriser l'application sandbox à accéder directement à l'une de ces opérations.  
   
@@ -190,11 +190,11 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
   
  Avant [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], les utilisateurs pouvaient être confrontés aux situations suivantes :  
   
--   affichage de fenêtres intempestives aléatoires ;  
+- affichage de fenêtres intempestives aléatoires ;  
   
--   redirection de script confuse ;  
+- redirection de script confuse ;  
   
--   nombreuses boîtes de dialogue de sécurité sur certains sites web.  
+- nombreuses boîtes de dialogue de sécurité sur certains sites web.  
   
  Dans certains cas, des sites web non fiables pouvaient essayer de tromper les utilisateurs en imitant l'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] d'installation ou en affichant une boîte de dialogue d'installation [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] de manière répétée, même après avoir été annulée par l'utilisateur. Il possible que ces techniques aient amené un nombre significatif d'utilisateurs à prendre de mauvaises décisions aboutissant à l'installation de logiciels espions.  
   

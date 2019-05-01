@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343589"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807963"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Bien démarrer avec l’encre dans WPF
 
@@ -104,7 +104,7 @@ Vous pouvez accéder à toutes les fonctionnalités WPF à partir de code procé
 
 1. Ajouter des références aux assemblys PresentationCore, PresentationFramework et WindowsBase en cliquant sur **références** dans **l’Explorateur de solutions** et en choisissant **ajouter une référence**.
 
-   ![Gestionnaire de références montrant PresentationCore et PresentationFramework](./media/getting-started-with-ink/references.png)
+   ![Gestionnaire de références montrant PresentationCore et PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Générez l’application en appuyant sur **F5**.
 

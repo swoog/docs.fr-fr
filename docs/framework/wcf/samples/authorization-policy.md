@@ -2,12 +2,12 @@
 title: Authorization Policy
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332674"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807970"
 ---
 # <a name="authorization-policy"></a>Authorization Policy
 
@@ -18,17 +18,17 @@ Cet exemple montre comment implémenter une stratégie d'autorisation de revendi
 
  En résumé, cet exemple montre comment :
 
--   Le client peut être authentifié à l'aide d'un nom d'utilisateur et d'un mot de passe ;
+- Le client peut être authentifié à l'aide d'un nom d'utilisateur et d'un mot de passe ;
 
--   Le client peut être authentifié à l'aide d'un certificat X.509 ;
+- Le client peut être authentifié à l'aide d'un certificat X.509 ;
 
--   Le serveur valide les informations d'identification du client en fonction d'un validateur `UsernamePassword` personnalisé ;
+- Le serveur valide les informations d'identification du client en fonction d'un validateur `UsernamePassword` personnalisé ;
 
--   Le serveur est authentifié à l'aide du certificat X.509 du serveur.
+- Le serveur est authentifié à l'aide du certificat X.509 du serveur.
 
--   Le serveur peut utiliser <xref:System.ServiceModel.ServiceAuthorizationManager> pour contrôler l'accès à certaines méthodes dans le service ;
+- Le serveur peut utiliser <xref:System.ServiceModel.ServiceAuthorizationManager> pour contrôler l'accès à certaines méthodes dans le service ;
 
--   Implémenter une interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Implémenter une interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
 Le service expose deux points de terminaison de communication avec le service, qui sont définis à l'aide du fichier de configuration App.config. Chaque point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. Une liaison est configurée avec une liaison `wsHttpBinding` standard qui utilise WS-Security et l’authentification du nom d’utilisateur du client. L'autre liaison est configurée avec une liaison `wsHttpBinding` standard qui utilise WS-Security et l'authentification du certificat du client. Le [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Spécifie que les informations d’identification doivent être utilisées pour l’authentification de service. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` propriété en tant que le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -397,9 +397,9 @@ Le fichier de commandes Setup.bat inclus avec cet exemple permet de configurer l
 
 Les éléments suivants fournissent une brève vue d'ensemble des différentes sections des fichiers de commandes afin qu'ils puissent être modifiés pour s'exécuter dans la configuration appropriée :
 
--   Création du certificat de serveur
+- Création du certificat de serveur
 
-     Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable %SERVER_NAME% spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut est localhost.
+    Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser. La variable %SERVER_NAME% spécifie le nom du serveur. Modifiez cette variable pour spécifier votre propre nom de serveur. La valeur par défaut est localhost.
 
     ```
     echo ************
@@ -411,19 +411,19 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat de serveur dans le magasin de certificats approuvé du client.
+- Installation du certificat de serveur dans le magasin de certificats approuvé du client.
 
-     Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
+    Les lignes suivantes du fichier de commandes Setup.bat copient le certificat de serveur dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système client. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats client avec le certificat de serveur n'est pas requise.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Création du certificat client
+- Création du certificat client
 
-     Les lignes suivantes du fichier de commandes Setup.bat créent le certificat client à utiliser. La variable %USER_NAME% spécifie le nom du serveur. Cette valeur est « test1 » parce que c'est le nom que la `IAuthorizationPolicy` recherche. Si vous modifiez la valeur de %USER_NAME%, vous devez modifier la valeur correspondante dans la méthode `IAuthorizationPolicy.Evaluate`.
+    Les lignes suivantes du fichier de commandes Setup.bat créent le certificat client à utiliser. La variable %USER_NAME% spécifie le nom du serveur. Cette valeur est « test1 » parce que c'est le nom que la `IAuthorizationPolicy` recherche. Si vous modifiez la valeur de %USER_NAME%, vous devez modifier la valeur correspondante dans la méthode `IAuthorizationPolicy.Evaluate`.
 
-     Le certificat est stocké dans le magasin My (Personal) sous l'emplacement de magasin CurrentUser.
+    Le certificat est stocké dans le magasin My (Personal) sous l'emplacement de magasin CurrentUser.
 
     ```
     echo ************
@@ -432,9 +432,9 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Installation du certificat client dans le magasin de certificats approuvés du serveur.
+- Installation du certificat client dans le magasin de certificats approuvés du serveur.
 
-     Les lignes suivantes du fichier de commandes Setup.bat copient le certificat client dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système du serveur. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats du serveur avec le certificat client n'est pas requise.
+    Les lignes suivantes du fichier de commandes Setup.bat copient le certificat client dans le magasin de personnes de confiance du client. Cette étape est requise car les certificats générés par Makecert.exe ne sont pas implicitement approuvés par le système du serveur. Si vous disposez déjà d'un certificat associé à un certificat racine approuvé du client, par exemple un certificat émis par Microsoft, cette étape de remplissage du magasin de certificats du serveur avec le certificat client n'est pas requise.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 1. Lancez Client.exe à partir *\client\bin*. L'activité du client s'affiche sur son application de console.
 
-  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs
 
@@ -474,7 +474,7 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 5. Sur le serveur, exécutez `setup.bat service` invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.
 
-   En cours d’exécution `setup.bat` avec la `service` argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé *Service.cer*.
+    En cours d’exécution `setup.bat` avec la `service` argument crée un certificat de service portant le nom de domaine complet de l’ordinateur et exporte le certificat de service dans un fichier nommé *Service.cer*.
 
 6. Modifier *Service.exe.config* afin de refléter le nouveau nom de certificat (dans le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) qui est le même que le nom de domaine complet de l’ordinateur. Également modifier le **computername** dans le \<service > /\<baseAddresses > élément à partir de localhost au nom qualifié complet de votre ordinateur de service.
 
@@ -482,7 +482,7 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 8. Sur le client, exécutez `setup.bat client` invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.
 
-   En cours d’exécution `setup.bat` avec la `client` argument crée un certificat client appelé **test1** , puis exporte le certificat client vers un fichier nommé *Client.cer*.
+    En cours d’exécution `setup.bat` avec la `client` argument crée un certificat client appelé **test1** , puis exporte le certificat client vers un fichier nommé *Client.cer*.
 
 9. Dans le *Client.exe.config* sur l’ordinateur client, modifiez la valeur de l’adresse du point de terminaison pour correspondre à la nouvelle adresse de votre service. Cela en remplaçant **localhost** avec le nom de domaine complet du serveur.
 
@@ -490,17 +490,17 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 11. Sur le client, exécutez *ImportServiceCert.bat* invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.
 
-   Cette opération importe le certificat de service à partir du fichier Service.cer dans le **CurrentUser - TrustedPeople** stocker.
+    Cette opération importe le certificat de service à partir du fichier Service.cer dans le **CurrentUser - TrustedPeople** stocker.
 
 12. Sur le serveur, exécutez *ImportClientCert.bat* invite de commandes développeur pour Visual Studio ouverte avec des privilèges d’administrateur.
 
-   Cette opération importe le certificat client à partir du fichier Client.cer dans le **LocalMachine - TrustedPeople** stocker.
+    Cette opération importe le certificat client à partir du fichier Client.cer dans le **LocalMachine - TrustedPeople** stocker.
 
 13. Sur l'ordinateur serveur, lancez Service.exe à partir de la fenêtre d'invite de commandes.
 
 14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.
 
-   Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage pour obtenir des exemples WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Nettoyer après l’exemple
 

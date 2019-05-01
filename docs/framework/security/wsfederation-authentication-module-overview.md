@@ -3,20 +3,20 @@ title: Vue d’ensemble du module d’authentification WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310250"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808283"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Vue d’ensemble du module d’authentification WSFederation
 Windows Identity Foundation (WIF) prend en charge l’authentification fédérée dans les applications ASP.NET par le biais du module WS-FAM (WS-Federated Authentication Module). Cette rubrique explique le fonctionnement et l’utilisation de l’authentification fédérée.  
   
 ### <a name="overview-of-federated-authentication"></a>Vue d’ensemble de l’authentification fédérée  
- L’authentification fédérée permet à un service d’émission de jeton de sécurité (STS) dans un domaine d’approbation de fournir des informations d’authentification à un STS situé dans un autre domaine d’approbation avec lequel il a une relation d’approbation. L’illustration suivante représente un exemple de scénario d’authentification fédérée.  
+ L’authentification fédérée permet à un service d’émission de jeton de sécurité (STS) dans un domaine d’approbation de fournir des informations d’authentification à un STS situé dans un autre domaine d’approbation avec lequel il a une relation d’approbation. Un exemple de ceci est illustré dans l’illustration suivante :  
   
- ![Scénario d’authentification fédérée](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![Diagramme montrant le scénario d’authentification fédérée.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Un client situé dans le domaine d’approbation Fabrikam envoie une demande à une application par partie de confiance qui se trouve dans le domaine d’approbation Contoso.  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
   
  Le diagramme suivant illustre le flux global des données dans le cas de la redirection passive. La demande est automatiquement redirigée via le STS pour spécifier les informations d’identification sans passer par une page de connexion :  
   
- ![Diagramme de minutage de la connexion avec la redirection passive](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Diagramme illustrant connectez-vous avec redirection passive.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  Le diagramme suivant détaille ce qui se passe quand l’utilisateur est authentifié auprès du STS et que ses jetons de sécurité sont traités par <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> :  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
 ### <a name="events"></a>Événements  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> et leur classe parente <xref:System.IdentityModel.Services.HttpModuleBase> déclenchent des événements à différentes étapes du traitement d’une requête HTTP. Gérez ces événements dans le fichier `global.asax` de votre application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
--   L’infrastructure ASP.NET appelle la méthode <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> du module pour initialiser le module.  
+- L’infrastructure ASP.NET appelle la méthode <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> du module pour initialiser le module.  
   
--   L’événement <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> est déclenché quand l’infrastructure ASP.NET appelle la méthode <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> pour la première fois sur l’un des modules de l’application qui dérivent de <xref:System.IdentityModel.Services.HttpModuleBase>. Cette méthode accède à la propriété <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> statique, qui spécifie le chargement de la configuration à partir du fichier Web.config. Cet événement est déclenché uniquement lors du premier accès à cette propriété. L’objet <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> initialisé à partir de la configuration est accessible par le biais de la propriété <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> dans un gestionnaire d’événements. Vous pouvez utiliser cet événement pour modifier la configuration avant de l’appliquer aux modules. Vous pouvez ajouter un gestionnaire pour cet événement dans la méthode Application_Start :  
+- L’événement <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> est déclenché quand l’infrastructure ASP.NET appelle la méthode <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> pour la première fois sur l’un des modules de l’application qui dérivent de <xref:System.IdentityModel.Services.HttpModuleBase>. Cette méthode accède à la propriété <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> statique, qui spécifie le chargement de la configuration à partir du fichier Web.config. Cet événement est déclenché uniquement lors du premier accès à cette propriété. L’objet <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> initialisé à partir de la configuration est accessible par le biais de la propriété <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> dans un gestionnaire d’événements. Vous pouvez utiliser cet événement pour modifier la configuration avant de l’appliquer aux modules. Vous pouvez ajouter un gestionnaire pour cet événement dans la méthode Application_Start :  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
   
      Chaque module substitue les méthodes abstraites <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> et <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType>. La première de ces méthodes ajoute des gestionnaires pour les événements de pipeline ASP.NET qui sont pertinents pour le module. Dans la plupart des cas, l’implémentation par défaut du module est suffisante. La seconde méthode initialise les propriétés du module à partir de sa propriété <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType>. (Il s’agit d’une copie de la configuration ayant déjà été chargée.) Vous devrez substituer cette deuxième méthode si vous souhaitez autoriser l’initialisation de nouvelles propriétés à partir de la configuration dans les classes que vous dérivez de <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> ou <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Pour la prise en charge des propriétés de configuration supplémentaires, vous devrez également les dériver à partir des objets de configuration appropriés, par exemple <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> ou <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
--   Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> quand il intercepte un jeton de sécurité ayant été émis par le STS.  
+- Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> quand il intercepte un jeton de sécurité ayant été émis par le STS.  
   
--   Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> une fois qu’il a validé le jeton.  
+- Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> une fois qu’il a validé le jeton.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> déclenche l’événement <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> quand il crée un jeton de sécurité de session pour l’utilisateur.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> déclenche l’événement <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> quand il crée un jeton de sécurité de session pour l’utilisateur.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> déclenche l’événement <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> quand il intercepte d’autres demandes avec le cookie contenant le jeton de sécurité de session.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> déclenche l’événement <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> quand il intercepte d’autres demandes avec le cookie contenant le jeton de sécurité de session.  
   
--   Avant de rediriger l’utilisateur vers l’émetteur, le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>. La demande de connexion de WS-Federation est disponible via la propriété <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> du <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> passé dans l’événement. Vous pouvez modifier la demande avant de l’envoyer à l’émetteur.  
+- Avant de rediriger l’utilisateur vers l’émetteur, le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>. La demande de connexion de WS-Federation est disponible via la propriété <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> du <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> passé dans l’événement. Vous pouvez modifier la demande avant de l’envoyer à l’émetteur.  
   
--   Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> une fois que le cookie a été écrit et que l’utilisateur est connecté.  
+- Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> une fois que le cookie a été écrit et que l’utilisateur est connecté.  
   
--   Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> une seule fois par session, au moment de la fermeture de la session de chaque utilisateur. Cet événement n’est pas déclenché si la session est fermée côté client (par exemple, en supprimant le cookie de session). Dans un environnement SSO, l’IP/STS peut également demander à chaque partie de confiance de se déconnecter. Cela déclenche aussi cet événement, avec <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> défini sur `true`.  
+- Le module WS-FAM déclenche l’événement <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> une seule fois par session, au moment de la fermeture de la session de chaque utilisateur. Cet événement n’est pas déclenché si la session est fermée côté client (par exemple, en supprimant le cookie de session). Dans un environnement SSO, l’IP/STS peut également demander à chaque partie de confiance de se déconnecter. Cela déclenche aussi cet événement, avec <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> défini sur `true`.  
   
 > [!NOTE]
 >  Vous ne devez pas utiliser la propriété <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> pendant un événement déclenché par <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> ou <xref:System.IdentityModel.Services.SessionAuthenticationModule>. La raison est que la propriété <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> est définie après le processus d’authentification, alors que les événements sont déclenchés pendant le processus d’authentification.  

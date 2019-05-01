@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : Hébergement d’un WPF Clock dans Win32'
+title: 'Procédure pas à pas : hébergement d’une horloge WPF dans Win32'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494946"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808047"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Procédure pas à pas : Hébergement d’un WPF Clock dans Win32
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Procédure pas à pas : hébergement d’une horloge WPF dans Win32
 
 Pour placer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à l’intérieur de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] applications, utilisez <xref:System.Windows.Interop.HwndSource>, qui fournit le HWND qui contient votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu. Tout d’abord, vous créez le <xref:System.Windows.Interop.HwndSource>, en lui attribuant des paramètres similaires à CreateWindow. Vous indiquez ensuite le <xref:System.Windows.Interop.HwndSource> sur le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu que vous voulez qu’il. Enfin, vous obtenez le HWND de la <xref:System.Windows.Interop.HwndSource>. Cette procédure pas à pas montre comment créer un mixte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à l’intérieur de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] application qui implémente de nouveau le système d’exploitation **propriétés de Date et heure** boîte de dialogue.
 
@@ -29,11 +29,11 @@ Ce didacticiel se concentre sur les étapes importantes de la production d’une
 
 Le graphique suivant illustre le produit final prévu pour ce didacticiel :
 
-![Boîte de dialogue Propriétés de date et d’heure](./media/interoparch06.PNG "InteropArch06")
+![Capture d’écran qui affiche la boîte de dialogue Propriétés de Date et heure.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Vous pouvez recréer cette boîte de dialogue en créant C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projet [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]et à l’aide de l’éditeur de boîtes de dialogue pour créer les éléments suivants :
+Vous pouvez recréer cette boîte de dialogue en créant un C++ projet Win32 dans Visual Studio et à l’aide de l’éditeur de boîtes de dialogue pour créer les éléments suivants :
 
-![Boîte de dialogue Propriétés de date et d’heure](./media/interoparch07.PNG "InteropArch07")
+![Boîte de dialogue Propriétés de Date et heure recréée](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Vous n’avez pas besoin d’utiliser [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] à utiliser <xref:System.Windows.Interop.HwndSource>, et vous n’avez pas besoin d’utiliser C++ pour écrire [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programmes, mais cela est un moyen classique pour ce faire et se prête bien à une explication de didacticiel pas à pas).
 
@@ -229,7 +229,7 @@ Voici le code-behind correspondant :
 
 Le résultat final ressemble à ceci :
 
-![Boîte de dialogue Propriétés de date et d’heure](./media/interoparch08.PNG "InteropArch08")
+![Boîte de dialogue Propriétés de Date et heure de résultat final](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Pour comparer votre résultat final au code qui a produit cette capture d’écran, consultez [interopérabilité Win32 Clock, exemple](https://go.microsoft.com/fwlink/?LinkID=160051).
 
