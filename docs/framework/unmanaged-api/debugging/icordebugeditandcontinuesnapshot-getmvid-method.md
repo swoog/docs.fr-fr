@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9218dd87b0794f3972365a4049cd8941e6671312
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996045"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="6c148-102">ICorDebugEditAndContinueSnapshot::GetMvid, méthode</span><span class="sxs-lookup"><span data-stu-id="6c148-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="6c148-103">`GetMvid` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="6c148-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="6c148-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="6c148-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="3b640-102">ICorDebugEditAndContinueSnapshot::GetMvid, méthode</span><span class="sxs-lookup"><span data-stu-id="3b640-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="3b640-103">`GetMvid` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="3b640-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="3b640-104">N'appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="3b640-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c148-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6c148-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b640-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3b640-105">See also</span></span>
 
-- [<span data-ttu-id="6c148-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="6c148-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3b640-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="3b640-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,19 +16,19 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965956"
 ---
-# <a name="dacpmoduledata-structure"></a><span data-ttu-id="e73a4-102">DacpModuleData, structure</span><span class="sxs-lookup"><span data-stu-id="e73a4-102">DacpModuleData Structure</span></span>
+# <a name="dacpmoduledata-structure"></a><span data-ttu-id="eda03-102">DacpModuleData, structure</span><span class="sxs-lookup"><span data-stu-id="eda03-102">DacpModuleData Structure</span></span>
 
-<span data-ttu-id="e73a4-103">Définit une mémoire tampon de transport pour les informations d’exécution d’un module.</span><span class="sxs-lookup"><span data-stu-id="e73a4-103">Defines a transport buffer for a module's runtime information.</span></span>
+<span data-ttu-id="eda03-103">Définit une mémoire tampon de transport pour les informations d’exécution d’un module.</span><span class="sxs-lookup"><span data-stu-id="eda03-103">Defines a transport buffer for a module's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="e73a4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e73a4-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="eda03-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="eda03-104">Syntax</span></span>
 
 ```
 struct DacpModuleData
@@ -40,26 +40,26 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="e73a4-105">Membres</span><span class="sxs-lookup"><span data-stu-id="e73a4-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="eda03-105">Membres</span><span class="sxs-lookup"><span data-stu-id="eda03-105">Members</span></span>
 
-| <span data-ttu-id="e73a4-106">Membre</span><span class="sxs-lookup"><span data-stu-id="e73a4-106">Member</span></span>    | <span data-ttu-id="e73a4-107">Description</span><span class="sxs-lookup"><span data-stu-id="e73a4-107">Description</span></span>                                                             |
+| <span data-ttu-id="eda03-106">Membre</span><span class="sxs-lookup"><span data-stu-id="eda03-106">Member</span></span>    | <span data-ttu-id="eda03-107">Description</span><span class="sxs-lookup"><span data-stu-id="eda03-107">Description</span></span>                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | <span data-ttu-id="e73a4-108">Adresse de l’objet de module.</span><span class="sxs-lookup"><span data-stu-id="e73a4-108">Address of the module object.</span></span>                                           |
-| `File`    | <span data-ttu-id="e73a4-109">Pointeur vers le fichier exécutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="e73a4-109">A pointer to the portable executable (PE) file.</span></span>                       |
-| `ilBase`  | <span data-ttu-id="e73a4-110">L’adresse de l’image chargée de base.</span><span class="sxs-lookup"><span data-stu-id="e73a4-110">The address of the loaded image's base.</span></span>                                 |
-| `payLoad` | <span data-ttu-id="e73a4-111">Un tampon de la charge utile pour les informations de module supplémentaire utilisées par le runtime.</span><span class="sxs-lookup"><span data-stu-id="e73a4-111">A payload buffer for additional module information used by the runtime.</span></span> |
+| `Address` | <span data-ttu-id="eda03-108">Adresse de l’objet de module.</span><span class="sxs-lookup"><span data-stu-id="eda03-108">Address of the module object.</span></span>                                           |
+| `File`    | <span data-ttu-id="eda03-109">Pointeur vers le fichier exécutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="eda03-109">A pointer to the portable executable (PE) file.</span></span>                       |
+| `ilBase`  | <span data-ttu-id="eda03-110">L’adresse de l’image chargée de base.</span><span class="sxs-lookup"><span data-stu-id="eda03-110">The address of the loaded image's base.</span></span>                                 |
+| `payLoad` | <span data-ttu-id="eda03-111">Un tampon de la charge utile pour les informations de module supplémentaire utilisées par le runtime.</span><span class="sxs-lookup"><span data-stu-id="eda03-111">A payload buffer for additional module information used by the runtime.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="e73a4-112">Notes</span><span class="sxs-lookup"><span data-stu-id="e73a4-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eda03-112">Notes</span><span class="sxs-lookup"><span data-stu-id="eda03-112">Remarks</span></span>
 
-<span data-ttu-id="e73a4-113">Cette structure se trouve au sein du runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque.</span><span class="sxs-lookup"><span data-stu-id="e73a4-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="e73a4-114">Pour l’utiliser, définir la structure comme indiqué ci-dessus.</span><span class="sxs-lookup"><span data-stu-id="e73a4-114">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="eda03-113">Cette structure se trouve au sein du runtime et n’est pas exposée par le biais d’en-têtes ou les fichiers de bibliothèque.</span><span class="sxs-lookup"><span data-stu-id="eda03-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="eda03-114">Pour l’utiliser, définir la structure comme indiqué ci-dessus.</span><span class="sxs-lookup"><span data-stu-id="eda03-114">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e73a4-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e73a4-115">Requirements</span></span>
-<span data-ttu-id="e73a4-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e73a4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="e73a4-117">**En-tête :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="e73a4-117">**Header:** None</span></span>  
-<span data-ttu-id="e73a4-118">**Bibliothèque :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="e73a4-118">**Library:** None</span></span>  
-<span data-ttu-id="e73a4-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e73a4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eda03-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="eda03-115">Requirements</span></span>
+<span data-ttu-id="eda03-116">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eda03-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="eda03-117">**En-tête :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="eda03-117">**Header:** None</span></span>  
+<span data-ttu-id="eda03-118">**Bibliothèque :** Aucun.</span><span class="sxs-lookup"><span data-stu-id="eda03-118">**Library:** None</span></span>  
+<span data-ttu-id="eda03-119">**Versions du .NET Framework :** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="eda03-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="e73a4-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e73a4-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eda03-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="eda03-120">See also</span></span>
 
-- [<span data-ttu-id="e73a4-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="e73a4-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="e73a4-122">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="e73a4-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="eda03-121">Débogage</span><span class="sxs-lookup"><span data-stu-id="eda03-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="eda03-122">Structures de débogage</span><span class="sxs-lookup"><span data-stu-id="eda03-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
