@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fbf2b15105a9fdcda5c7f6653753a4da54b394b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622340"
 ---
 # <a name="class-statement-visual-basic"></a>Class, instruction (Visual Basic)
 Déclare le nom d’une classe et introduit la définition des variables, des propriétés, des événements et des procédures qui comprend la classe.  
@@ -38,20 +38,20 @@ End Class
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optionnel. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br/><br/> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protégé](../../language-reference/modifiers/private-protected.md)<br/><br/> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Optionnel. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Optionnel. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Optionnel. Indique une définition partielle de la classe. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`MustInherit`|Facultatif. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Facultatif. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|Facultatif. Indique une définition partielle de la classe. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette classe. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Facultatif. Spécifie qu’il s’agit d’une classe générique.|  
 |`typelist`|Requis si vous utilisez le [de](../../../visual-basic/language-reference/statements/of-clause.md) mot clé. Liste de paramètres de type pour cette classe. Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Optionnel. Indique que cette classe hérite des membres d’une autre classe. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Facultatif. Indique que cette classe hérite des membres d’une autre classe. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Requis si vous utilisez la `Inherits` instruction. Le nom de la classe à partir de laquelle cette classe est dérivée.|  
-|`Implements`|Optionnel. Indique que cette classe implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Facultatif. Indique que cette classe implémente les membres d’une ou plusieurs interfaces. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Requis si vous utilisez la `Implements` instruction. Les noms des interfaces que cette classe implémente.|  
-|`statements`|Optionnel. Instructions qui définissent les membres de cette classe.|  
+|`statements`|Facultatif. Instructions qui définissent les membres de cette classe.|  
 |`End Class`|Obligatoire. Met fin à la `Class` définition.|  
   
 ## <a name="remarks"></a>Notes  

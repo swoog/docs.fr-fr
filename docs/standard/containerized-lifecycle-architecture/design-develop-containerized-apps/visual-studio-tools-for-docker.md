@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664349"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Utilisez des outils Docker dans Visual Studio 2017 sur Windows
 
@@ -79,7 +79,7 @@ Le tableau suivant peut vous aider à décider comment définir ces options.
 | Extraire automatiquement des images Docker nécessaires lors du chargement du projet | Activé | Docker Compose | Pour améliorer les performances lors du chargement des projets, Visual Studio démarre une opération d’extraction de Docker en arrière-plan afin que lorsque vous êtes prêt à exécuter votre code, l’image est déjà téléchargée ou en cours de téléchargement. Si vous êtes simplement charger les projets et parcourez le code, vous pouvez désactiver cette option pour éviter le téléchargement des images de conteneur que vous n’avez pas besoin. |
 | Démarrer automatiquement les conteneurs en arrière-plan | Activé | Docker Compose | À nouveau pour de meilleures performances, Visual Studio crée un conteneur avec les montages de volume prêt pour lorsque vous générez et exécutez votre conteneur. Si vous souhaitez contrôler la création de votre conteneur, désactivez cette option. |
 | Ferment automatiquement les conteneurs kill sur la solution | Activé | Docker Compose | Désactiver cette option si vous souhaitez que les conteneurs de votre solution continuer à exécuter après la fermeture de la solution ou de fermeture de Visual Studio. |
-| Ne demande pas de certificat SSL localhost approbation | Off | Projets ASP.NET Core 2.1 | Si le certificat SSL localhost n’est pas approuvé, Visual Studio vous invite chaque fois que vous exécutez votre projet, sauf si cette case à cocher est activée. |
+| Ne demande pas de certificat SSL localhost approbation | Off | Projets ASP.NET Core 2.2 | Si le certificat SSL localhost n’est pas approuvé, Visual Studio vous invite chaque fois que vous exécutez votre projet, sauf si cette case à cocher est activée. |
 
 > [!WARNING]
 > Si le certificat SSL localhost n’est pas approuvé et que vous cochez la case pour supprimer l’invite, les demandes web HTTPS peuvent échouer lors de l’exécution dans votre application ou service. Dans ce cas, désactivez le **ne pas demander** case à cocher, exécuter votre projet et indiquer l’approbation à l’invite.

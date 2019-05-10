@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622746"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configuration du service de données (services de données WCF)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer des services de données qui exposent [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Les données de ces flux peuvent provenir de diverses sources. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise des fournisseurs de données pour exposer ces données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Ces fournisseurs comprennent un fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un fournisseur de réflexion et un jeu d'interfaces de fournisseur de services de données personnalisé. L'implémentation de fournisseur définit le modèle de données du service. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

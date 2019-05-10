@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011754"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469515"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Contrôles à utiliser dans les Windows Forms
 Voici une liste alphabétique des contrôles et composants qui peuvent être utilisés dans les Windows Forms. Outre les contrôles Windows Forms abordés dans cette section, vous pouvez ajouter des contrôles ActiveX et des contrôles personnalisés à Windows Forms. Si vous ne trouvez pas ici le contrôle donc vous avez besoin, vous pouvez également créer votre propre contrôle. Pour plus d’informations, consultez [Développement de contrôles Windows Forms au moment du design](developing-windows-forms-controls-at-design-time.md). Pour plus d’informations sur le choix du contrôle dont vous avez besoin, consultez [Classement par fonction des contrôles Windows Forms](windows-forms-controls-by-function.md).  
@@ -229,7 +229,7 @@ Voici une liste alphabétique des contrôles et composants qui peuvent être uti
  Fournit des liens vers des rubriques pas à pas, des recommandations sur le type de contrôle à créer et d’autres informations sur la création de votre propre contrôle.  
   
  [Comparaison des contrôles et des objets programmables dans divers langages et bibliothèques](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Fournit un tableau qui mappe les contrôles Visual Basic 6.0 aux contrôles correspondants dans [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Notez que les contrôles sont désormais des classes dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Fournit une table qui mappe les contrôles Visual Basic 6.0 aux contrôles correspondants dans Visual Basic. Notez que les contrôles sont désormais des classes dans le .NET Framework.  
   
  [Guide pratique pour Ajouter des contrôles ActiveX aux Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Décrit comment utiliser des contrôles ActiveX dans les Windows Forms.

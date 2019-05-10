@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072972"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624033"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procédure : ajouter ou supprimer des images avec le composant ImageList Windows Forms
 Les formulaires Windows <xref:System.Windows.Forms.ImageList> composant est généralement rempli d’images avant qu’il soit associé à un contrôle. Toutefois, vous pouvez ajouter et supprimer des images après l’association de la liste d’images avec un contrôle.  
@@ -28,7 +28,7 @@ Les formulaires Windows <xref:System.Windows.Forms.ImageList> composant est gén
   
 ### <a name="to-add-images-programmatically"></a>Pour ajouter par programmation des images  
   
--   Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> méthode de la liste d’images <xref:System.Windows.Forms.ImageList.Images%2A> propriété.  
+- Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> méthode de la liste d’images <xref:System.Windows.Forms.ImageList.Images%2A> propriété.  
   
      Dans l’exemple de code suivant, le chemin d’accès défini pour l’emplacement de l’image est la **Mes Documents** dossier. Cet emplacement est utilisé, car vous pouvez supposer que la plupart des ordinateurs qui exécutent le système d’exploitation Windows incluent ce dossier. Choix de cet emplacement permet également aux utilisateurs qui ont système minimal des niveaux d’accès plus exécuter en toute sécurité de l’application. L’exemple de code suivant requiert que vous ayez un formulaire comprenant un <xref:System.Windows.Forms.ImageList> contrôle déjà ajouté.  
   
@@ -76,7 +76,7 @@ Les formulaires Windows <xref:System.Windows.Forms.ImageList> composant est gén
   
 ### <a name="to-add-images-with-a-key-value"></a>Pour ajouter des images avec une valeur de clé.  
   
--   Utilisez une de la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> méthodes de la liste d’images <xref:System.Windows.Forms.ImageList.Images%2A> propriété qui accepte une valeur de clé.  
+- Utilisez une de la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> méthodes de la liste d’images <xref:System.Windows.Forms.ImageList.Images%2A> propriété qui accepte une valeur de clé.  
   
      Dans l’exemple de code suivant, le chemin d’accès défini pour l’emplacement de l’image est la **Mes Documents** dossier. Cet emplacement est utilisé, car vous pouvez supposer que la plupart des ordinateurs qui exécutent le système d’exploitation Windows incluent ce dossier. Choix de cet emplacement permet également aux utilisateurs qui ont système minimal des niveaux d’accès plus exécuter en toute sécurité de l’application. L’exemple de code suivant requiert que vous ayez un formulaire comprenant un <xref:System.Windows.Forms.ImageList> contrôle déjà ajouté.  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Pour supprimer toutes les images par programme  
   
--   Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> méthode pour supprimer une image  
+- Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> méthode pour supprimer une image  
   
      , - ou -  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Pour supprimer des images par clé  
   
--   Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> méthode pour supprimer une image par sa clé.  
+- Utilisez le <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> méthode pour supprimer une image par sa clé.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

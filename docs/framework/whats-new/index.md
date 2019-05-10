@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914830"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063867"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Nouveautés du .NET Framework
 
@@ -35,7 +35,7 @@ Cet article résume les principales nouvelles fonctionnalités et améliorations
 Cet article ne fournit pas d'informations complètes sur chacune des nouvelles fonctionnalités et peut faire l'objet de modifications. Pour obtenir des informations générales sur le .NET Framework, consultez [Prise en main](../get-started/index.md). Pour connaître les plateformes prises en charge, consultez [Configuration requise](~/docs/framework/get-started/system-requirements.md). Pour obtenir des liens de téléchargement et des instructions d’installation, consultez [Guide d’installation](../install/guide-for-developers.md).
 
 > [!NOTE]
-> L’équipe .NET Framework publie aussi des fonctionnalités hors bande avec NuGet pour étendre la prise en charge des plateformes et introduire des nouveautés, telles que les collections immuables et les types de vecteurs compatibles SIMD. Pour plus d’informations, consultez [Autres bibliothèques de classes et API](../additional-apis/index.md) et [Versions finales hors plage de .NET Framework](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Consultez la [liste complète des packages NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) pour le .NET Framework, ou abonnez-vous à [notre flux](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> L’équipe .NET Framework publie aussi des fonctionnalités hors bande avec NuGet pour étendre la prise en charge des plateformes et introduire des nouveautés, telles que les collections immuables et les types de vecteurs compatibles SIMD. Pour plus d’informations, consultez [Autres bibliothèques de classes et API](../additional-apis/index.md) et [Versions finales hors plage de .NET Framework](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Consultez la [liste complète des packages NuGet](https://www.nuget.org/profiles/dotnetframework) pour .NET Framework.
 
 <a name="v48" />
 

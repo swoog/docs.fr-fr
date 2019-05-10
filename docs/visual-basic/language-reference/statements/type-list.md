@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aae9135207bbd3f9d0cc7c072e423a50902c372a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751505"
 ---
 # <a name="type-list-visual-basic"></a>Liste de types (Visual Basic)
 
@@ -45,7 +45,7 @@ Spécifie le *paramètres de type* pour un *générique* élément de programmat
 
 |Terme|Définition|
 |---|---|
-|`genericmodifier`|Optionnel. Peut être utilisé uniquement dans les délégués et interfaces génériques. Vous pouvez déclarer un type covariant à l’aide de la [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) mot clé ou contravariant à l’aide de la [dans](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) mot clé. Consultez [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).|
+|`genericmodifier`|Facultatif. Peut être utilisé uniquement dans les délégués et interfaces génériques. Vous pouvez déclarer un type covariant à l’aide de la [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) mot clé ou contravariant à l’aide de la [dans](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) mot clé. Consultez [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).|
 |`typename`|Obligatoire. Nom du paramètre de type. Il s’agit d’un espace réservé, à remplacer par un type défini fourni par l’argument de type correspondant.|
 |`constraintlist`|Facultatif. Liste des conditions requises qui limitent le type de données qui peut être fourni pour `typename`. Si vous avez plusieurs contraintes, placez-les entre accolades (`{ }`) et séparez-les par des virgules. Vous devez introduire la liste des contraintes avec le [comme](../../../visual-basic/language-reference/statements/as-clause.md) mot clé. Vous utilisez `As` une seule fois, au début de la liste.|
 

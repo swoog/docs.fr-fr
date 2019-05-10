@@ -8,16 +8,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668950"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062961"
 ---
 # <a name="get-started-with-c"></a>Bien démarrer avec C\#
 
-Cette section fournit des didacticiels courts et simples qui permettent de créer rapidement une application avec C# et .NET Core. Ces rubriques de prise en main concernent Visual Studio 2017 et Visual Studio Code. Ces articles supposent une expérience en programmation. Si vous êtes novice en programmation, essayez nos tutoriels interactifs de [présentation de C# ](../tutorials/intro-to-csharp/index.md).
+Cette section fournit des didacticiels courts et simples qui permettent de créer rapidement une application avec C# et .NET Core. Ces rubriques de prise en main concernent Visual Studio 2017 et Visual Studio Code. Ces articles supposent une expérience en programmation. Si vous êtes novice en programmation, essayez nos tutoriels interactifs de [présentation de C#](../tutorials/intro-to-csharp/index.md).
 
 Les rubriques suivantes sont disponibles :
 

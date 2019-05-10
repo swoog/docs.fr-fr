@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795354"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063310"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Création de pipelines CI/CD dans Azure DevOps Services pour une application .NET Core 2.0 sur des conteneurs et déploiement sur un cluster Kubernetes
 
@@ -21,7 +21,7 @@ Dans la Figure 5-12, vous pouvez voir le scénario de DevOps de bout en bout qui
 
 Il est important de souligner que les deux pipelines, la build/CI et la mise en production et de livraison, sont connectés via le Registre Docker (par exemple, Docker Hub ou Azure Container Registry). Le Registre Docker est une des principales différences par rapport à un processus CI/CD traditionnel sans Docker.
 
-Comme indiqué dans la Figure 5-13, la première phase est le pipeline de build/CI. Dans les Services Azure DevOps, vous pouvez créer des pipelines de build et de livraison qui seront compiler le code, créez les images Docker et les envoient vers un Registre Docker comme Docker Hub ou Azure Container Registry.
+Comme indiqué dans la Figure 5-13, la première phase est le pipeline de build/CI. Dans les Services Azure DevOps, vous pouvez créer des pipelines de build/CI qui compiler le code, créez les images Docker et les envoient vers un Registre Docker comme Docker Hub ou Azure Container Registry.
 
 ![Affichage du navigateur de Azure DevOps, définition de tâche de processus de génération.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

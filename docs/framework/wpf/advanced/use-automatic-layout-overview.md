@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620886"
 ---
 # <a name="use-automatic-layout-overview"></a>Vue d'ensemble de l'utilisation de la disposition automatique
 Cette rubrique présente des instructions pour les développeurs sur la façon d’écrire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Dans le passé, la localisation d’une interface utilisateur a été beaucoup de temps. Chaque langue de l’interface utilisateur était adaptée nécessitait un réglage de pixel par pixel. Aujourd'hui, grâce à la conception et des normes de codage, de droite [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] peut être construite afin que les traducteurs aient moins de redimensionnement et de repositionnement. L’approche à écrire des applications qui peuvent être plus facilement redimensionnées et repositionnées est appelée à la disposition automatique et peut être obtenue en utilisant [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design de l’application.  
@@ -19,15 +19,15 @@ Cette rubrique présente des instructions pour les développeurs sur la façon d
 ## <a name="advantages-of-using-automatic-layout"></a>Avantages de l’utilisation de la disposition automatique  
  Étant donné que le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de présentation est puissant et flexible, il fournit la possibilité de disposer des éléments dans une application qui peuvent être ajustés pour répondre aux exigences des différentes langues. La liste suivante souligne quelques-uns des avantages de la disposition automatique.  
 
--   L’interface utilisateur s’affiche correctement dans n’importe quel langage.  
+- L’interface utilisateur s’affiche correctement dans n’importe quel langage.  
 
--   Réduit le besoin de réajuster la position et la taille des contrôles une fois le texte traduit.  
+- Réduit le besoin de réajuster la position et la taille des contrôles une fois le texte traduit.  
   
--   Réduit le besoin de réajuster la taille de la fenêtre.  
+- Réduit le besoin de réajuster la taille de la fenêtre.  
 
--   Disposition de l’interface utilisateur s’affiche correctement dans n’importe quel langage.  
+- Disposition de l’interface utilisateur s’affiche correctement dans n’importe quel langage.  
 
--   La localisation peut se trouver réduite à sa plus simple expression, à savoir la traduction d’une chaîne.  
+- La localisation peut se trouver réduite à sa plus simple expression, à savoir la traduction d’une chaîne.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Disposition automatique et contrôles  

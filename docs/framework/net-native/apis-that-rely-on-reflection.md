@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624694"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API qui s'appuient sur la réflexion
 Dans certains cas, l'utilisation de la réflexion dans du code n'est pas évidente, et la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne conserve donc pas les métadonnées nécessaires au moment de l'exécution. Cette rubrique décrit certaines API courantes ou des modèles de programmation courants qui ne sont pas considérés comme faisant partie de l'API de réflexion, mais dont l'exécution s'appuie sur la réflexion. Si vous les utilisez dans votre code source, vous pouvez ajouter des informations les concernant au fichier de directives runtime (.rd.xml) pour que les appels de ces API ne lèvent pas d’exceptions, telles que [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), au moment de l’exécution.  

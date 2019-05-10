@@ -2,12 +2,12 @@
 title: Corrélation de requête de message LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5e979e6539d94d15b74f1da14f7082431ed2ff8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004924"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622713"
 ---
 # <a name="linq-message-query-correlation"></a>Corrélation de requête de message LINQ
 Cet exemple montre comment effectuer une corrélation basée sur le contenu à l’aide d’une implémentation <xref:System.ServiceModel.Dispatcher.MessageQuery> personnalisée par opposition au <xref:System.ServiceModel.XPathMessageQuery> fourni par le système.  

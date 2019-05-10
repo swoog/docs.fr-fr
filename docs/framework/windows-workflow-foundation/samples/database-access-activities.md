@@ -2,12 +2,12 @@
 title: Activités d'accès aux bases de données
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622453"
 ---
 # <a name="database-access-activities"></a>Activités d'accès aux bases de données
 Les activités d'accès aux bases de données vous permettent d'accéder à une base de données dans un workflow. Ces activités permettent l’accès aux bases de données pour récupérer ou modifier les informations et utilisez [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  

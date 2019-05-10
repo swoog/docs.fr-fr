@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007393"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621372"
 ---
 # <a name="the-ink-threading-model"></a>Modèle de thread de l'encre
 Un des avantages de l’encre sur un Tablet PC est qu’il la sensation écriture avec un crayon régulière et du papier.  Pour ce faire, le stylet collecte les données d’entrée à un rythme beaucoup plus élevée que la souris et restitue l’encre lorsque l’utilisateur écrit.  Thread d’interface (UI) de l’application utilisateur n’est pas suffisant pour collecter les données de stylet et encre de rendu, car il peut se bloquer.  Pour y remédier, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application utilise deux threads supplémentaires lorsqu’un utilisateur écrit l’encre.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863621"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665394"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procédure : Forcer un Argument d’être passés par valeur (Visual Basic)
 La déclaration de procédure détermine le mécanisme de passage. Si un paramètre est déclaré [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic s’attend à passer l’argument correspondant par référence. Ainsi, la procédure modifier la valeur de l’élément de programmation sous-jacent à l’argument dans le code appelant. Si vous souhaitez protéger l’élément sous-jacent contre une telle modification, vous pouvez remplacer le `ByRef` appeler de mécanisme de passage dans la procédure en plaçant le nom de l’argument entre parenthèses. Ces parenthèses sont ajoutent les parenthèses entourant la liste d’arguments de l’appel.  
@@ -28,9 +28,9 @@ La déclaration de procédure détermine le mécanisme de passage. Si un paramè
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Pour forcer un argument à passer par valeur  
   
--   Si le paramètre correspondant est déclaré `ByVal` dans la procédure, vous n’avez pas besoin de prendre des mesures supplémentaires. Visual Basic doit déjà passer l’argument par valeur.  
+- Si le paramètre correspondant est déclaré `ByVal` dans la procédure, vous n’avez pas besoin de prendre des mesures supplémentaires. Visual Basic doit déjà passer l’argument par valeur.  
   
--   Si le paramètre correspondant est déclaré `ByRef` dans la procédure, mettez l’argument entre parenthèses dans l’appel de procédure.  
+- Si le paramètre correspondant est déclaré `ByRef` dans la procédure, mettez l’argument entre parenthèses dans l’appel de procédure.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant substitue un `ByRef` déclaration de paramètre. Dans l’appel qui force `ByVal`, notez les deux niveaux de parenthèses.  

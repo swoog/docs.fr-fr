@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663237"
 ---
 # <a name="xaml-services"></a>Services XAML
 Cette rubrique décrit les fonctionnalités d’un ensemble de la technologie .NET Framework XAML appelé des Services. La plupart des services et API décrits se trouvent dans l’assembly System.Xaml, qui est un assembly introduite avec la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ensemble des assemblys principaux .NET. Les services incluent des fabriques de lecteurs et writers, classes de schéma et de prise en charge du schéma, attribution de classes, de support intrinsèque du langage XAML et d’autres fonctionnalités de langage XAML.  

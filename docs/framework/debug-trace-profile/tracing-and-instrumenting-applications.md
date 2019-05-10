@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614226"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469530"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traçage et instrumentation d'applications
 Le traçage vous permet de surveiller le fonctionnement de votre application pendant son exécution. Vous pouvez ajouter l'instrumentation de traçage et de débogage à votre application .NET Framework au moment du développement, et utiliser cette instrumentation pendant le développement de l'application et après son déploiement. Utilisez les classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> pour enregistrer les informations relatives aux erreurs et à l'exécution de l'application dans des journaux, des fichiers texte ou d'autres appareils en vue d'une analyse ultérieure.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Vous pouvez générer des résultats personnalisés en implémentant votre propre écouteur. Par exemple, créez un écouteur de la trace personnalisé qui affiche les messages dans une boîte de message ou qui se connecte à une base de données pour ajouter les messages à une table. Tous les écouteurs personnalisés doivent prendre en charge les six méthodes mentionnées ci-dessus. Pour plus d'informations sur la création d'écouteurs définis par le développeur, voir <xref:System.Diagnostics.TraceListener> dans la documentation .NET Framework.  
   
 > [!NOTE]
->  Dans [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], les méthodes **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** et **Debug.WriteLineIf** ont remplacé la méthode **Debug.Print** qui était disponible dans les versions antérieures de Visual Basic.  
+>  En Visual Basic, le **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, et **Debug.WriteLineIf** ont remplacé la **Debug.Print** méthode qui était disponible dans les versions antérieures de Visual Basic.  
   
  Les méthodes **Write** et **WriteLine** écrivent toujours le texte que vous spécifiez. **Assert**, **WriteIf** et **WriteLineIf** nécessitent un argument booléen qui contrôle si elles écrivent le texte spécifié. Elles écrivent le texte spécifié uniquement si l’expression a la valeur **true** (pour **WriteIf** et **WriteLineIf**) ou **false** (pour **Assert**). La méthode **Fail** écrit toujours le texte spécifié. Pour plus d'informations, voir [Procédure : Ajouter des instructions de traçage au Code d’Application](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) et la référence de .NET Framework.  
   

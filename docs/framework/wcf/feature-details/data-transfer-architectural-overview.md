@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627030"
 ---
 # <a name="data-transfer-architectural-overview"></a>Vue d'ensemble de l'architecture de transfert de données
 Windows Communication Foundation (WCF) peut être considéré comme une infrastructure de messagerie. Il peut recevoir des messages, les traiter et les distribuer au code utilisateur pour action ultérieure, ou il peut construire des messages à partir des données fournies par le code utilisateur et les transmettre vers une destination. Cette rubrique, conçue à l'attention des développeurs avancés, décrit l'architecture de gestion des messages et des données qu'ils contiennent. Pour une approche plus simple des tâches d’envoi et de réception des données, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  

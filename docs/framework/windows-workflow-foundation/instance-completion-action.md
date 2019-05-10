@@ -2,12 +2,12 @@
 title: Action d'achèvement de l'instance
 ms.date: 03/30/2017
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-ms.openlocfilehash: 646015fbcdb7c734ae8584c7ca3979d64b81339f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d68f41a586e44f96c9ca26cf8a142a2782adaa36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662975"
 ---
 # <a name="instance-completion-action"></a>Action d'achèvement de l'instance
 Le **Instance Completion Action** propriété du Store d’Instance de Workflow SQL vous permet de spécifier si les données et métadonnées d’instances de workflow sont supprimées à partir de la base de données de persistance une fois que les instances ont abouti. Les valeurs autorisées pour cette propriété sont **DeleteAll** et **DeleteNothing**. La liste suivante décrit ces trois options :  

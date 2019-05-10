@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967087"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626781"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Sources de données prises en charge par les Windows Forms
 En règle générale, la liaison de données a été utilisée au sein d’applications pour tirer parti des données stockées dans les bases de données. Avec la liaison de données Windows Forms, vous pouvez accéder aux données à partir de bases de données, ainsi que des données dans d’autres structures, telles que des tableaux et collections, tant que certaines exigences minimales sont respectées.  

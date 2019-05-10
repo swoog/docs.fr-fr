@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0984028e0a09c9939f68ae64be8c401182b57274
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622914"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Attributs CLR XAML pour les bibliothèques et types personnalisés
 Cette rubrique décrit les attributs du common language runtime (CLR) qui sont définis par les Services XAML .NET Framework. Elle décrit également les autres attributs CLR définis dans le .NET Framework qui ont un scénario liés à XAML pour l’application à des assemblys ou des types. Attribution des assemblys, des types ou membres avec ces attributs CLR fournit des informations de système de type XAML relatives à vos types. Vous trouverez des informations à tout consommateur XAML qui utilise les Services XAML .NET Framework pour traiter le flux de nœud XAML directement ou via les lecteurs XAML dédiés et les writers XAML.  
@@ -24,7 +24,7 @@ Cette rubrique décrit les attributs du common language runtime (CLR) qui sont d
   
  **S’applique à :** Classe, propriété, ou `get` membres accesseur qui prennent en charge des propriétés pouvant être attachées.  
   
- **Arguments :** Aucun.  
+ **Arguments :** None  
   
  <xref:System.Windows.Markup.AmbientAttribute> Indique que la propriété ou toutes les propriétés qui prennent le type avec attributs, doivent être interprétées selon le concept de propriété ambiante en XAML. Le concept de caractère ambiant renvoie à la façon dont les processeurs XAML déterminent les propriétaires de types des membres. Une propriété ambiante est une propriété où la valeur doit être disponible dans le contexte de l’analyseur lors de la création d’un graphique d’objet, mais pour laquelle la recherche de membre de type standard est interrompue pour le jeu en cours de création de nœuds XAML immédiat.  
   

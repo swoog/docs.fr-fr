@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626969"
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
 Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones fonctionnelles principales : sécurité de transfert, contrôle d’accès et l’audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
@@ -40,7 +40,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
 |Mode|Description|  
 |----------|-----------------|  
-|Aucun.|Aucune sécurité n'est fournie au niveau de la couche de transport ou de la couche de message. Aucune des liaisons prédéfinies utilisent ce mode par défaut, sauf le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément ou, lors de l’utilisation de code, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
+|None|Aucune sécurité n'est fournie au niveau de la couche de transport ou de la couche de message. Aucune des liaisons prédéfinies utilisent ce mode par défaut, sauf le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément ou, lors de l’utilisation de code, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
 |Transport|Utilise un transport sécurisé tel que HTTPS pour l'intégrité, la confidentialité et l'authentification mutuelle.|  
 |Message|Utilise la sécurité de message SOAP pour l'intégrité, la confidentialité et l'authentification mutuelle. Les messages SOAP sont sécurisés conformément aux standards WS-Security.|  
 |Mixed Mode|Utilise la sécurité de transport pour l'intégrité, la confidentialité et l'authentification du serveur. Utilise la sécurité de message (WS-Security et autres standards) pour l'authentification du client.<br /><br /> (Cette énumération pour ce mode est `TransportWithMessageCredential`.)|  
@@ -64,7 +64,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Spécifie l'authentification de base.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
 |Digest|Spécifie l’authentification Digest.  Pour plus d’informations, consultez RFC2617, «[l’authentification HTTP : Base et authentification Digest](https://go.microsoft.com/fwlink/?LinkId=88313). »|  
 |Ntlm|Spécifie l'authentification Windows à l'aide de la négociation SSPI sur un domaine Windows.<br /><br /> La négociation SSPI entraîne l'utilisation du protocole Kerberos ou NTLM (NT LanMan).|  
@@ -76,7 +76,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Aucun.|Autorise le service à interagir avec des clients anonymes.|  
+|None|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows. Utilise le mécanisme de négociation SSPI pour sélectionner le protocole Kerberos ou NTLM comme service d'authentification.|  
 |Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que WCF n’autorise pas les opérations de chiffrement avec le nom d’utilisateur, telles que la génération d’une signature ou chiffrement des données. Par conséquent, WCF met en œuvre que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  

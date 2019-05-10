@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665958"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Points de terminaison : Adresses, liaisons et contrats
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison fournissent les clients l’accès à la fonctionnalité offerte par un service WCF.  

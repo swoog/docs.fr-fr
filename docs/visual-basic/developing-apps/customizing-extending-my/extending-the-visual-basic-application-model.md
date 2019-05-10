@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602445"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469496"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Extension du modèle d'application Visual Basic
 Vous pouvez ajouter des fonctionnalités pour le modèle d’application en substituant le `Overridable` membres de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Cette technique vous permet de personnaliser le comportement du modèle d’application et ajouter des appels à vos propres méthodes lorsque l’application démarre et s’arrête.  
@@ -76,10 +76,10 @@ Vous pouvez ajouter des fonctionnalités pour le modèle d’application en subs
   
  Si l’application est une application à instance unique, et que l’application est déjà en cours d’exécution, l’instance suivante de l’application appelle la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> méthode sur l’instance d’origine de l’application, puis se ferme.  
  
- Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> constructeur appelle la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété afin de déterminer le moteur de rendu de texte à utiliser pour les formulaires de l’application. Par défaut, le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> retourne de la propriété `False`, indiquant que le moteur de rendu de texte GDI être utilisé, qui est la valeur par défaut dans [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Vous pouvez remplacer le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété à retourner `True`, ce qui indique que le moteur de rendu de texte GDI + servir, qui est la valeur par défaut dans Visual Basic .NET 2002 et Visual Basic .NET 2003.  
+ Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> constructeur appelle la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété afin de déterminer le moteur de rendu de texte à utiliser pour les formulaires de l’application. Par défaut, le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> retourne de la propriété `False`, indiquant que le moteur de rendu de texte GDI être utilisé, qui est la valeur par défaut dans Visual Basic 2005 et versions ultérieures. Vous pouvez remplacer le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété à retourner `True`, ce qui indique que le moteur de rendu de texte GDI + servir, qui est la valeur par défaut dans Visual Basic .NET 2002 et Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configuration de l’Application  
- Dans le cadre du modèle d’Application Visual Basic, le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fournit des propriétés protégées qui configurent l’application. Ces propriétés doivent être définies dans le constructeur de la classe d’implémentation.  
+ Dans le cadre du modèle d’Application Visual Basic, le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe fournit des propriétés protégées qui configurent l’application. Ces propriétés doivent être définies dans le constructeur de la classe d’implémentation.  
   
  Dans un projet Windows Forms par défaut, le **Concepteur de projets** crée du code pour définir les propriétés avec les paramètres du concepteur. Les propriétés sont utilisées uniquement lors du démarrage de l’application ; leur définition après le démarrage de l’application n’a aucun effet.  
   

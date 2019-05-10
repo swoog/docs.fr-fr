@@ -8,12 +8,12 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-ms.openlocfilehash: d504ace9e5571246ae0e78e165a7ad2bc23fa481
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ed3f6ffdf8a86d050b81311c9211767d8b179b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623600"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Procédure : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils
 Lorsque vous développez et distribuez des contrôles, vous souhaiterez peut-être ces contrôles s’affichent dans le **Choose Toolbox Items** boîte de dialogue qui s’affiche lorsque vous cliquez sur le **boîte à outils** et sélectionnez  **Choisir des éléments**. Vous pouvez activer votre contrôle s’affiche dans cette boîte de dialogue à l’aide de la procédure d’inscription AssemblyFoldersEx.  
@@ -22,7 +22,7 @@ Lorsque vous développez et distribuez des contrôles, vous souhaiterez peut-êt
   
 - Installer votre assembly de contrôle dans le global assembly cache. Pour plus d'informations, voir [Procédure : installer un assembly dans le Global Assembly Cache](../../app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
-     - ou -  
+     ou  
   
 - Inscrire votre contrôle et ses assemblys au moment du design associés à l’aide de la procédure d’inscription AssemblyFoldersEx. AssemblyFoldersEx est un emplacement de Registre où les fournisseurs tiers stockent les chemins de chaque version du framework pris en charge. La résolution au moment du design peut rechercher à cet emplacement de Registre pour rechercher des assemblys de référence. Le script de Registre peut spécifier les contrôles que vous souhaitez voir apparaître dans la boîte à outils. Pour plus d’informations, consultez [déploiement d’un contrôle personnalisé et les assemblys au moment du Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee849818(v=vs.100)).  
   
