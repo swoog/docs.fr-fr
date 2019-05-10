@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612730"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Procédure : créer des contrôles pour Windows Forms
 Un contrôle désigne un lien graphique entre l’utilisateur et le programme. Un contrôle peut fournir ou traiter des données, accepter des entrées d’utilisateur, répondre à des événements ou effectuer de nombreuses autres fonctions afin de connecter l’utilisateur et l’application. Un contrôle étant essentiellement un composant doté d’une interface graphique, il peut servir n’importe quelle fonction d’un composant, mais aussi fournir une interaction utilisateur. Les contrôles sont utilisés à des fins spécifiques, et la création de contrôles représente simplement une autre tâche de programmation. Dans cette optique, les étapes suivantes constituent une vue d’ensemble du processus de création de contrôle. Les liens renvoient vers des informations supplémentaires concernant les étapes individuelles.  
@@ -25,13 +25,13 @@ Un contrôle désigne un lien graphique entre l’utilisateur et le programme. U
   
 1. Déterminez ce que votre contrôle devra accomplir ou le rôle qu’il jouera dans votre application. Tenez compte des facteurs suivants :  
   
-    -   De quel type d’interface graphique avez-vous besoin ?  
+    - De quel type d’interface graphique avez-vous besoin ?  
   
-    -   Quelles interactions utilisateur spécifiques ce contrôle gérera-t-il ?  
+    - Quelles interactions utilisateur spécifiques ce contrôle gérera-t-il ?  
   
-    -   La fonctionnalité dont vous avez besoin est-elle fournie par des contrôles existants ?  
+    - La fonctionnalité dont vous avez besoin est-elle fournie par des contrôles existants ?  
   
-    -   Pouvez-vous obtenir la fonctionnalité dont vous avez besoin en combinant plusieurs contrôles Windows Forms ?  
+    - Pouvez-vous obtenir la fonctionnalité dont vous avez besoin en combinant plusieurs contrôles Windows Forms ?  
   
 2. Si vous avez besoin d’un modèle d’objet pour votre contrôle, déterminez comment la fonctionnalité sera distribuée dans tout le modèle d’objet et répartissez-la entre le contrôle et les éventuels sous-objets. Un modèle d’objet peut être utile si vous prévoyez un contrôle complexe ou si vous souhaitez incorporer plusieurs fonctionnalités.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 111dba1316691b9c6c999b4c021ac06dac7c7a8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615100"
 ---
 # <a name="using-statement-visual-basic"></a>Using, instruction (Visual Basic)
 Déclare le début d’un `Using` bloquer et acquiert éventuellement les ressources système qui contrôle le bloc.  
@@ -33,14 +33,14 @@ End Using
 |---|---|  
 |`resourcelist`|Requis si vous ne fournissez pas `resourceexpression`. Liste d’une ou plusieurs ressources système que ce `Using` bloquer des contrôles, séparés par des virgules.|  
 |`resourceexpression`|Requis si vous ne fournissez pas `resourcelist`. Variable de référence ou une expression faisant référence à une ressource système à être contrôlé par ce `Using` bloc.|  
-|`statements`|Optionnel. Bloc d’instructions qui la `Using` bloquer s’exécute.|  
+|`statements`|Facultatif. Bloc d’instructions qui la `Using` bloquer s’exécute.|  
 |`End Using`|Obligatoire. Termine la définition de la `Using` bloc et supprime toutes les ressources qu’il contrôle.|  
   
  Chaque ressource dans le `resourcelist` partie a la syntaxe et les éléments suivants :  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- - ou -  
+ ou  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -51,7 +51,7 @@ End Using
 |`resourcename`|Obligatoire. Variable de référence qui fait référence à une ressource système qui le `Using` bloquer les commandes.|  
 |`New`|Obligatoire si le `Using` instruction acquiert la ressource. Si vous avez déjà acquis la ressource, utilisez la deuxième possibilité de syntaxe.|  
 |`resourcetype`|Obligatoire. La classe de la ressource. La classe doit implémenter la <xref:System.IDisposable> interface.|  
-|`arglist`|Optionnel. Liste des arguments que vous passez au constructeur pour créer une instance de `resourcetype`. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`arglist`|Facultatif. Liste des arguments que vous passez au constructeur pour créer une instance de `resourcetype`. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`resourceexpression`|Obligatoire. Variable ou une expression faisant référence à une ressource système répondant aux exigences de `resourcetype`. Si vous utilisez la deuxième possibilité de syntaxe, vous devez acquérir la ressource avant de passer le contrôle à la `Using` instruction.|  
   
 ## <a name="remarks"></a>Notes  
