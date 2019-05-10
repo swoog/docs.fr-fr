@@ -2,12 +2,12 @@
 title: Mises à niveau de flux personnalisées
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bfb20a38d5d603a7f538235ee88045c92fc8cc85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967906"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587310"
 ---
 # <a name="custom-stream-upgrades"></a>Mises à niveau de flux personnalisées
 Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur un flux continu d'octets entre le client et le serveur. Ce flux est réalisé par un objet <xref:System.IO.Stream>. Dans une mise à niveau de flux, le client souhaite ajouter une couche de protocole facultative à la pile de canaux et demande à l'autre extrémité du canal de communication de le faire. La mise à niveau de flux consiste à remplacer l'objet <xref:System.IO.Stream> d'origine par une version mise à niveau.  

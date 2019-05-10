@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f1c64615dae205161583c7a79575204932cd17b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586869"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo, fonction
 Informe le profileur que la fonction en cours d’exécution est sur le point d’effectuer un appel tail à une autre fonction et fournit un handle qui peut être passé à la [ICorProfilerInfo3::GetFunctionTailcall3Info, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) pour récupérer le frame de pile.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937634"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063765"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Procédure : créer des images miniatures
 Une image miniature est une version réduite d’une image. Vous pouvez créer une image miniature en appelant le <xref:System.Drawing.Image.GetThumbnailImage%2A> méthode d’un <xref:System.Drawing.Image> objet.  
@@ -21,9 +21,9 @@ Une image miniature est une version réduite d’une image. Vous pouvez créer u
 ## <a name="example"></a>Exemple  
  L’exemple suivant construit un <xref:System.Drawing.Image> objet à partir d’un fichier JPG. L’image d’origine a une largeur de 640 pixels et une hauteur de 479 pixels. Le code crée une image miniature qui a une largeur de 100 pixels et une hauteur de 100 pixels.  
   
- L’illustration suivante montre l’image miniature.  
+ L’illustration suivante montre l’image miniature :  
   
- ![Image miniature](./media/thumbnail1.png "Thumbnail1")  
+ ![Capture d’écran montrant la miniature de sortie.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  Dans cet exemple, une méthode de rappel est déclarée mais jamais utilisée. Cela prend en charge toutes les versions de GDI +.  

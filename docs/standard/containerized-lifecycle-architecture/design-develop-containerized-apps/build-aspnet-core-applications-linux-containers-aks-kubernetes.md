@@ -1,17 +1,17 @@
 ---
-title: Créer des applications ASP.NET Core 2.1 déployées en tant que conteneurs Linux dans les clusters AKS/Kubernetes
+title: Créer des applications ASP.NET Core 2.2 déployées en tant que conteneurs Linux dans les clusters AKS/Kubernetes
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052759"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452786"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Créer des applications ASP.NET Core 2.1 déployées comme conteneurs Linux dans un orchestrateur AKS/Kubernetes
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Créer des applications ASP.NET Core 2.2 déployées comme conteneurs Linux dans un orchestrateur AKS/Kubernetes
 
 Azure Kubernetes service (AKS) est Kubernetes orchestrations services gérés d’Azure qui simplifient la gestion et le déploiement de conteneur.
 
@@ -23,13 +23,13 @@ AKS les fonctionnalités principales sont :
 - Mise à l’échelle de configurable utilisateur
 - Une expérience utilisateur plus simple pour les développeurs et les opérateurs du cluster.
 
-Les exemples suivants Explorer la création d’une application ASP.NET Core 2.1, s’exécute sur Linux et déploie vers un Cluster AKS dans Azure, tandis que le développement est effectué à l’aide de Visual Studio 2017.
+Les exemples suivants Explorer la création d’une application ASP.NET Core 2.2 qui s’exécute sur Linux et déploie sur un Cluster AKS dans Azure, tandis que le développement est effectué à l’aide de Visual Studio 2017.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Création du projet ASP.NET Core 2.1 à l’aide de Visual Studio 2017
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Création du projet de 2.2 ASP.NET Core à l’aide de Visual Studio 2017
 
 ASP.NET Core est une plateforme de développement à usage général gérée par Microsoft et la Communauté .NET sur GitHub. Il est multiplateforme, prenant en charge Windows, macOS et Linux et peut être utilisé dans l’appareil, de cloud et de systèmes embarqués/IOT.
 
-Cet exemple utilise un projet simple qui repose sur un modèle API Web de Visual Studio, vous n’avez pas besoin d’autres bases de connaissances pour créer l’exemple. Vous devez uniquement créer le projet à l’aide d’un modèle standard qui inclut tous les éléments pour exécuter un petit projet avec une API REST, à l’aide de la technologie ASP.NET Core 2.1.
+Cet exemple utilise un projet simple qui repose sur un modèle API Web de Visual Studio, vous n’avez pas besoin d’autres bases de connaissances pour créer l’exemple. Vous devez uniquement créer le projet à l’aide d’un modèle standard qui inclut tous les éléments pour exécuter un petit projet avec une API REST, à l’aide de la technologie ASP.NET Core 2.2.
 
 ![Ajouter la fenêtre Nouveau projet dans Visual Studio, sélectionnez l’Application Web ASP.NET Core.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Pour créer l’exemple de projet dans Visual Studio, sélectionnez **fichier** 
 
 Répertorie les modèles pour les projets web Visual Studio. Dans notre exemple, sélectionnez **API** pour créer une Application de l’API Web ASP.NET.
 
-Vérifiez que vous avez sélectionné ASP.NET Core 2.1 en tant que l’infrastructure. .NET core 2.1 est inclus dans la dernière version de Visual Studio 2017 et est automatiquement installé et configuré pour vous lorsque vous installez Visual Studio 2017.
+Vérifiez que vous avez sélectionné ASP.NET Core 2.2 en tant que l’infrastructure. .NET core 2.2 est inclus dans la dernière version de Visual Studio 2017 et est automatiquement installé et configuré pour vous lorsque vous installez Visual Studio 2017.
 
 ![Visual Studio boîte de dialogue Choisir le type d’une Application Web ASP.NET Core avec l’option API sélectionnée.](media/create-web-api-application.png)
 
-**Figure 4-37**. Type de projet en sélectionnant ASP.NET CORE 2.1 et l’API Web
+**Figure 4-37**. Type de projet en sélectionnant 2.2 de CORE ASP.NET et l’API Web
 
-Si vous avez des versions précédentes de .NET Core, vous pouvez télécharger et installer la version 2.1 à partir de <https://www.microsoft.com/net/download/core#/sdk>.
+Si vous avez des versions précédentes de .NET Core, vous pouvez télécharger et installer la version 2.2 à partir de <https://www.microsoft.com/net/download/core#/sdk>.
 
 Vous pouvez ajouter la prise en charge Docker lors de la création du projet ou par la suite, par conséquent, vous pouvez « Dockerisez » votre projet à tout moment. Pour ajouter la prise en charge Docker après la création du projet, avec le bouton droit sur le nœud de projet dans l’Explorateur de solutions et sélectionnez **ajouter** > **prise en charge Docker** dans le menu contextuel.
 
@@ -59,7 +59,7 @@ Pour effectuer un ajout prise en charge de Docker, vous pouvez choisir Windows o
 
 **Figure 4-39**. Sélection des conteneurs Linux.
 
-Avec ces étapes simples, vous disposez de votre application ASP.NET Core 2.1 en cours d’exécution sur un conteneur Linux.
+Avec ces étapes simples, vous disposez de votre application ASP.NET Core 2.2 en cours d’exécution sur un conteneur Linux.
 
 Comme vous pouvez le voir, l’intégration entre Visual Studio 2017 et Docker est entièrement orientée vers la productivité du développeur.
 
@@ -125,6 +125,12 @@ Après l’exécution du `docker tag` de commande, de répertorier les images av
 
 ### <a name="push-the-image-into-the-azure-acr"></a>Envoyez l’image dans l’ACR Azure
 
+Connectez-vous à Azure Container Registry
+
+```console
+az acr login --name mssampleacr
+```
+
 Envoyez l’image dans l’ACR Azure, à l’aide de la commande suivante :
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80
