@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 07937e243e4d43102c93c11973b60842b7e750ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645209"
 ---
 # <a name="understanding-protection-level"></a>Fonctionnement des niveaux de protection
 La propriété `ProtectionLevel` est partagée par de nombreuses classes différentes, par exemple par les classes <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute>. Cette propriété contrôle tout ou partie des modalités de protection d'un message. Cette rubrique explique la fonctionnalité de Windows Communication Foundation (WCF) et son fonctionnement.  

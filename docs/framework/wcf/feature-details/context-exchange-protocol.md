@@ -2,12 +2,12 @@
 title: Protocole d'échange de contexte
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857348"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651106"
 ---
 # <a name="context-exchange-protocol"></a>Protocole d'échange de contexte
 Cette section décrit le protocole d’échange de contexte introduit dans Windows Communication Foundation (WCF) version .NET Framework version 3.5. Ce protocole permet au canal client d'accepter un contexte fourni par un service et de l'appliquer à toutes les demandes ultérieures à ce service envoyées sur la même instance de canal client. L’implémentation de protocole d’échange de contexte peut utiliser une des deux mécanismes suivants pour propager le contexte entre le serveur et le client : Les cookies HTTP ou un en-tête SOAP.  

@@ -2,12 +2,12 @@
 title: Sélection d'un encodeur de message
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93024258ddcf76444d48a19c071b0a18248ea46b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608383"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645450"
 ---
 # <a name="choosing-a-message-encoder"></a>Sélection d'un encodeur de message
 Cette rubrique traite des critères permettant de choisir parmi les encodeurs de message sont inclus dans Windows Communication Foundation (WCF) : fichier binaire, texte et Message Transmission Optimization Mechanism (MTOM).  
@@ -34,10 +34,10 @@ Cette rubrique traite des critères permettant de choisir parmi les encodeurs de
 |------------|-----------------|---------------------------------------|  
 |Jeux de caractères pris en charge|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> et <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> prennent en charge uniquement le UTF8 et UTF16 Unicode (*big-endian* et *little endian*) encodages. Si d'autres encodages sont requis, tels qu'UTF7 ou ASCII, un encodeur personnalisé doit être utilisé. Pour un exemple d’encodeur personnalisé, consultez [encodeur de Message personnalisé](https://go.microsoft.com/fwlink/?LinkId=119857).|Texte|  
 |Inspection|L'inspection désigne la capacité à examiner des messages pendant la transmission. Les encodages de texte, avec ou sans l'utilisation de SOAP, autorisent l'inspection et l'analyse des messages par de nombreuses applications sans l'utilisation d'outils spécialisés. Notez que l'utilisation de sécurité de transfert, au niveau du message ou du transport, affecte votre capacité à inspecter des messages. La confidentialité et l'intégrité empêchent respectivement l'examen et la modification d'un message.|Texte|  
-|Fiabilité|La fiabilité désigne la résilience d'un encodeur aux erreurs de transmission. La fiabilité peut également être fournie au niveau du message, du transport ou de la couche d'application. Toutes les encodeurs WCF standards supposent qu’une autre couche fournit la fiabilité. L'encodeur a peu de possibilité de récupérer d'une erreur de transmission.|Aucun.|  
+|Fiabilité|La fiabilité désigne la résilience d'un encodeur aux erreurs de transmission. La fiabilité peut également être fournie au niveau du message, du transport ou de la couche d'application. Toutes les encodeurs WCF standards supposent qu’une autre couche fournit la fiabilité. L'encodeur a peu de possibilité de récupérer d'une erreur de transmission.|None|  
 |Simplicité|La simplicité représente la facilité avec laquelle vous pouvez créer des encodeurs et décodeurs pour une spécification d'encodage. Les encodages de texte sont particulièrement avantageux en termes de simplicité, et l'encodage de texte POX présente l'avantage supplémentaire de ne requérir aucune prise en charge pour le traitement SOAP.|Texte (POX)|  
 |Size|L'encodage détermine la quantité de charge mémoire imposée sur le contenu. La taille des messages encodés est directement associée au débit maximal des opérations de service. Les encodages binaires sont en général plus compacts que les encodages de texte. Lorsque la taille de message est importante, compressez également le contenu du message lors de l'encodage. Cependant, la compression augmente les coûts de traitement à la fois de l'expéditeur et du récepteur du message.|Binaire|  
-|Diffusion en continu|La diffusion en continu permet aux applications de commencer à traiter un message avant qu'il ne soit totalement arrivé. L'utilisation efficace de la diffusion en continu requiert que les données importantes d'un message soient disponibles au début de celui-ci afin que l'application de réception n'ait pas à attendre qu'elles arrivent. De plus, les applications qui utilisent le transfert en continu doivent organiser les données du message de façon incrémentielle afin que le contenu n'ait pas de dépendances ascendantes. Dans de nombreux cas, vous devez trouver un compromis entre diffuser du contenu en continu et avoir la taille de transfert la plus petite possible pour celui-ci.|Aucun.|  
+|Diffusion en continu|La diffusion en continu permet aux applications de commencer à traiter un message avant qu'il ne soit totalement arrivé. L'utilisation efficace de la diffusion en continu requiert que les données importantes d'un message soient disponibles au début de celui-ci afin que l'application de réception n'ait pas à attendre qu'elles arrivent. De plus, les applications qui utilisent le transfert en continu doivent organiser les données du message de façon incrémentielle afin que le contenu n'ait pas de dépendances ascendantes. Dans de nombreux cas, vous devez trouver un compromis entre diffuser du contenu en continu et avoir la taille de transfert la plus petite possible pour celui-ci.|None|  
 |Prise en charge des outils tiers|La prise en charge d'un encodage inclut le développement et le diagnostic. Des développeurs tiers ont fait un investissement substantiel dans les bibliothèques et trousses à outils permettant de gérer les messages encodés au format POX.|Texte (POX)|  
 |Interopérabilité|Ce facteur fait référence à la capacité d’un encodeur de WCF pour interagir avec les services non-WCF.|Texte<br /><br /> MTOM (partiel)|  
   
