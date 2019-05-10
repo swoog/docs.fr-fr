@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875730"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645516"
 ---
 # <a name="securing-wcf-data-services"></a>Sécurisation de WCF Data Services
 Cette rubrique décrit les considérations de sécurité qui sont spécifiques au développement, déploiement et en cours d’exécution WCF Data Services et applications que services d’accès qui prennent en charge le protocole Open Data Protocol (OData). Vous devez également suivre les recommandations pour la création d’applications .NET Framework sécurisées.  
@@ -54,7 +54,7 @@ context.Credentials = _
   
  Lorsque le service de données demande des informations de connexion qui ne peuvent pas être spécifiées à l'aide d'un objet <xref:System.Net.NetworkCredential>, comme un jeton ou un cookie basé sur des revendications, vous devez définir manuellement les en-têtes, généralement les en-têtes `Authorization` et `Cookie`, dans la demande HTTP. Pour plus d’informations sur ce type de scénario d’authentification, consultez le blog [ OData et authentification – partie 3 – ClientSide Hooks](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Pour obtenir un exemple montrant comment définir des en-têtes HTTP dans un message de demande, consultez [Comment : Définir des en-têtes dans la demande du Client](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
-## <a name="impersonation"></a>Emprunt d'identité  
+## <a name="impersonation"></a>emprunt d'identité  
  Généralement, le service de données accède aux ressources demandées, comme les fichiers sur le serveur ou la base de données, à l'aide des informations d'authentification du processus de travail qui héberge actuellement le service de données. Lors de l'utilisation de l'emprunt d'identité, les applications [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peuvent s'exécuter avec l'identité Windows (compte d'utilisateur) de l'utilisateur qui fait la requête. L'emprunt d'identité est utilisé couramment dans les applications qui reposent sur IIS pour authentifier l'utilisateur et les informations d'identification de ce principal sont utilisées pour accéder aux ressources demandées. Pour plus d’informations, consultez [emprunt d’identité ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Configuration de l'autorisation du service de données  
