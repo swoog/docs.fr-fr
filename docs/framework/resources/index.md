@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592250"
 ---
 # <a name="resources-in-net-apps"></a>Ressources dans les applications .NET
 Presque toutes les applications d'une qualité de niveau "production" doivent utiliser des ressources. Une ressource est une donnée non exécutable qui est déployée logiquement avec une application. Une ressource peut être affichée dans une application sous la forme de messages d'erreur ou comme faisant partie de l'interface utilisateur. Les ressources peuvent contenir des données sous plusieurs formes, telles que des chaînes, des images et des objets rendus persistants. (Pour écrire des objets persistants dans un fichier de ressources, les objets doivent être sérialisables.) Le stockage de vos données dans un fichier de ressources vous permet de changer les données sans avoir à recompiler l'intégralité de votre application. Il vous permet également de stocker des données dans un emplacement unique, et élimine la nécessité d'avoir recours à des données codées en dur stockées dans plusieurs emplacements.  
@@ -43,23 +43,23 @@ Vous pouvez également localiser les ressources de votre application pour des cu
 ## <a name="retrieving-resources"></a>Récupération de ressources  
  Au moment de l'exécution, une application charge les ressources localisées appropriées sur une base par thread, selon la culture spécifiée par la propriété <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Cette valeur de propriété est dérivée comme suit :  
   
--   En assignant directement un objet <xref:System.Globalization.CultureInfo> qui représente la culture localisée à la propriété <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
+- En assignant directement un objet <xref:System.Globalization.CultureInfo> qui représente la culture localisée à la propriété <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Si une culture n'est pas explicitement assignée, en extrayant la culture d'interface utilisateur par défaut du thread de la propriété <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
+- Si une culture n'est pas explicitement assignée, en extrayant la culture d'interface utilisateur par défaut du thread de la propriété <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Si une culture d’interface utilisateur par défaut du thread n’est pas explicitement assignée, en extrayant la culture de l’utilisateur actuel sur l’ordinateur local. Les implémentations de .NET s’exécutant sur Windows le font en appelant la fonction Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage).  
+- Si une culture d’interface utilisateur par défaut du thread n’est pas explicitement assignée, en extrayant la culture de l’utilisateur actuel sur l’ordinateur local. Les implémentations de .NET s’exécutant sur Windows le font en appelant la fonction Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage).  
   
  Pour plus d'informations sur la façon dont la culture d'interface utilisateur actuelle est définie, consultez les pages de référence <xref:System.Globalization.CultureInfo> et <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
  Vous pouvez ensuite extraire des ressources pour la culture de l'interface utilisateur actuelle ou pour une culture spécifique en utilisant la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Bien que la classe <xref:System.Resources.ResourceManager> soit la plus fréquemment utilisée pour extraire des ressources, l’espace de noms <xref:System.Resources?displayProperty=nameWithType> contient des types supplémentaires que vous pouvez utiliser pour récupérer des ressources. Elles incluent notamment :  
   
--   La classe <xref:System.Resources.ResourceReader>, qui vous permet d'énumérer des ressources incorporées dans un assembly ou stockées dans un fichier .resources binaire. C'est utile lorsque vous ne connaissez pas les noms exacts des ressources disponibles au moment de l'exécution.  
+- La classe <xref:System.Resources.ResourceReader>, qui vous permet d'énumérer des ressources incorporées dans un assembly ou stockées dans un fichier .resources binaire. C'est utile lorsque vous ne connaissez pas les noms exacts des ressources disponibles au moment de l'exécution.  
   
--   La classe <xref:System.Resources.ResXResourceReader>, qui permet d'accéder aux ressources d'un fichier XML (.resx).  
+- La classe <xref:System.Resources.ResXResourceReader>, qui permet d'accéder aux ressources d'un fichier XML (.resx).  
   
--   La classe <xref:System.Resources.ResourceSet>, qui vous permet de récupérer les ressources d'une culture spécifique sans observer les règles de secours. Les ressources peuvent être stockées dans un assembly ou un fichier .resources binaire. Vous pouvez également développer une implémentation de <xref:System.Resources.IResourceReader> qui vous permet d'utiliser la classe <xref:System.Resources.ResourceSet> pour récupérer les ressources d'une autre source.  
+- La classe <xref:System.Resources.ResourceSet>, qui vous permet de récupérer les ressources d'une culture spécifique sans observer les règles de secours. Les ressources peuvent être stockées dans un assembly ou un fichier .resources binaire. Vous pouvez également développer une implémentation de <xref:System.Resources.IResourceReader> qui vous permet d'utiliser la classe <xref:System.Resources.ResourceSet> pour récupérer les ressources d'une autre source.  
   
--   La classe <xref:System.Resources.ResXResourceSet>, qui permet de récupérer tous les éléments dans un fichier de ressources XML en mémoire.  
+- La classe <xref:System.Resources.ResXResourceSet>, qui permet de récupérer tous les éléments dans un fichier de ressources XML en mémoire.  
   
 ## <a name="see-also"></a>Voir aussi
 

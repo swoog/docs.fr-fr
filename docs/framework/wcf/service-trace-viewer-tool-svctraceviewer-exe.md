@@ -2,12 +2,12 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051771"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606015"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d’analyser des traces de diagnostic sont générées par WCF. Service Trace Viewer permet facilement de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
@@ -62,11 +62,11 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Ouverture et consultation de fichiers de suivi WCF  
  Service Trace Viewer prend en charge trois types de fichier :  
   
--   WCF (.svcLog) les fichiers de suivi  
+- WCF (.svcLog) les fichiers de suivi  
   
--   Les fichiers de suivi d'événement (.etl)  
+- Les fichiers de suivi d'événement (.etl)  
   
--   Les fichiers de suivi Crimson  
+- Les fichiers de suivi Crimson  
   
  Service Trace Viewer permet d’ouvrir tout fichier de suivi pris en charge, d’ajouter et d’intégrer des fichiers de suivi supplémentaires ou d’ouvrir et de fusionner simultanément un groupe de fichiers de suivi.  
   
@@ -106,9 +106,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
  Il existe deux façons de gérer des projets :  
   
--   Dans le **fichier** menu, vous pouvez ouvrir, enregistrer et fermer les projets.  
+- Dans le **fichier** menu, vous pouvez ouvrir, enregistrer et fermer les projets.  
   
--   Dans le **projet** onglet, vous pouvez ajouter des fichiers à un projet.  
+- Dans le **projet** onglet, vous pouvez ajouter des fichiers à un projet.  
   
 ### <a name="viewing-wcf-traces"></a>Consultation de fichiers de suivi WCF  
  WCF émet des suivis à l’aide du format de suivi d’activité. Dans le modèle de suivi d'activité, les suivis individuels sont regroupés par activité en fonction de leur but. Le flux de contrôle logique est transféré entre les activités. Par exemple, pendant la durée de vie d'une application, de nombreuses activités d'envoi de messages apparaissent et disparaissent. Pour plus d’informations sur l’affichage des traces et activités et l’interface utilisateur de Service Trace Viewer trop, consultez [à l’aide de Service Trace Viewer pour afficher les Traces corrélées et dépannage](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 #### <a name="switching-to-different-views"></a>Basculer vers des vues différentes  
  Service Trace Viewer propose les différentes vues suivantes. Ils sont affichés sous forme d’onglets dans le volet gauche de la visionneuse et est également accessible à partir de la **vue** menu.  
   
--   Vue d'activité  
+- Vue d'activité  
   
--   Vue du projet  
+- Vue du projet  
   
--   Vue du message  
+- Vue du message  
   
--   Vue Graphique  
+- Vue Graphique  
   
 ##### <a name="activity-view"></a>Vue d'activité  
  Une fois que les fichiers de trace sont ouverts, vous pouvez voir les suivis regroupés en activités et affichés dans le **activité** vue dans le volet gauche.  
@@ -144,9 +144,12 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
 ##### <a name="project-view"></a>Vue du projet  
  Cette vue vous permet de gérer des fichiers de suivi dans le projet actif. Pour plus d'informations, voir la section Gestion de projet.  
-  
+
+##### <a name="message-view"></a>Vue du message
+ Cette vue vous permet de pour afficher le journal des messages toutes les traces, y compris d’Action, Date/heure, processus, Acivity et vers et depuis et accédez aux détails de la trace de journal de message associé. Vous pouvez regrouper les traces de journal de message par la limite d’activité, processus/Thread, ou envoyer / recevoir pour faciliter la navigation du flux de messages.
+ 
 ##### <a name="graph-view"></a>Vue Graphique  
- Une des fonctionnalités plus puissantes de Service Trace Viewer est le **Graph** mode, qui affiche les données de trace pour une activité donnée sous forme de graphique. Le graphique vous permet de voir l'exécution des événements pas à pas et les relations entre plusieurs activités alors que des données circulent entre elles.  
+ Cet affichage présente les données de trace pour une activité donnée sous forme de graphique. Le graphique vous permet de voir l'exécution des événements pas à pas et les relations entre plusieurs activités alors que des données circulent entre elles.  
   
  Pour basculer vers **Graph** afficher, sélectionnez une activité dans le **activité** afficher et cliquez sur le **activité** onglet ou une trace du journal de message dans le **Message**Vue. Si plusieurs fichiers de suivi sont chargés et que l'activité regroupe des suivis de plusieurs fichiers, tous les suivis concernés apparaissent dans la vue Graphique. Si vous double-cliquez sur les activités et suivis de journal de message également vous conduit à la **Graph** vue.  
   
@@ -192,9 +195,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ###### <a name="options"></a>Options  
  Vous pouvez sélectionner deux options à partir de la **Option** menu dans la vue du graphique.  
   
--   Si Afficher les suivis de limite d'activité est désactivé, les suivis de limite d'activité sont ignorés dans le graphique.  
+- Si Afficher les suivis de limite d'activité est désactivé, les suivis de limite d'activité sont ignorés dans le graphique.  
   
--   Si Afficher les suivis de détail d'informations hors message est désactivé, les suivis au niveau de détail d'informations sont ignorés, à l'exception des suivis de messages. Dans la plupart des cas, les suivis au niveau de détail d'informations sont moins importants pour l'analyse. Cette option est utile lorsque vous ne souhaitez pas analyser des suivis au niveau de détail d'informations et que vous souhaitez uniquement vous concentrer sur des suivis plus importants.  
+- Si Afficher les suivis de détail d'informations hors message est désactivé, les suivis au niveau de détail d'informations sont ignorés, à l'exception des suivis de messages. Dans la plupart des cas, les suivis au niveau de détail d'informations sont moins importants pour l'analyse. Cette option est utile lorsque vous ne souhaitez pas analyser des suivis au niveau de détail d'informations et que vous souhaitez uniquement vous concentrer sur des suivis plus importants.  
   
 ###### <a name="layout-mode"></a>Mode disposition  
  La visionneuse comporte deux Modes de disposition : **Processus** et **Thread**. Ce paramètre définit la plus grande unité d'organisation. La valeur par défaut est le Mode de disposition **processus**, ce qui signifie que les activités sont regroupées par processus dans le graphique.  
@@ -222,22 +225,22 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ### <a name="filtering-wcf-traces"></a>Filtrage de suivis WCF  
  Pour simplifier l'analyse de fichiers de suivi, vous pouvez les filtrer selon les méthodes suivantes :  
   
--   La barre d'outils de filtre permet d'accéder aux filtres prédéfinis et personnalisés. Il peut être activé via le **vue** menu.  
+- La barre d'outils de filtre permet d'accéder aux filtres prédéfinis et personnalisés. Il peut être activé via le **vue** menu.  
   
--   Le filtre prédéfini de la visionneuse peut être utilisé pour filtrer des parties des traces WCF. Par défaut, il est configuré pour permettre à tous les suivis d'infrastructure de passer. Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
+- Le filtre prédéfini de la visionneuse peut être utilisé pour filtrer des parties des traces WCF. Par défaut, il est configuré pour permettre à tous les suivis d'infrastructure de passer. Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
   
--   Les filtres XPath personnalisés permettent aux utilisateurs de contrôler entièrement les filtres. Ils peuvent être définis dans le **filtre personnalisé** sous **vue** menu.  
+- Les filtres XPath personnalisés permettent aux utilisateurs de contrôler entièrement les filtres. Ils peuvent être définis dans le **filtre personnalisé** sous **vue** menu.  
   
  Seuls les suivis qui traversent tous les filtres actifs sont affichés.  
   
 #### <a name="using-the-filter-toolbar"></a>Utilisation de la barre d'outils de filtre  
  La barre d'outils de filtre apparaît dans la partie supérieure de l'outil. Si elle n’est pas présente, vous pouvez l’activer dans le **vue** menu. La barre inclut trois composants :  
   
--   Chercher : **Recherchez** définit l’objet à rechercher dans l’opération de filtrage. Par exemple, si vous souhaitez rechercher tous les suivis qui ont été émises dans le contexte du processus X, définissez ce champ sur X et le **recherche dans** champ 'Nom processus'. Ce champ se transforme en contrôle de sélecteur DateTime lorsqu'un filtre temporel est sélectionné.  
+- Chercher : **Recherchez** définit l’objet à rechercher dans l’opération de filtrage. Par exemple, si vous souhaitez rechercher tous les suivis qui ont été émises dans le contexte du processus X, définissez ce champ sur X et le **recherche dans** champ 'Nom processus'. Ce champ se transforme en contrôle de sélecteur DateTime lorsqu'un filtre temporel est sélectionné.  
   
--   Rechercher dans : Ce champ définit le type de filtre à appliquer.  
+- Rechercher dans : Ce champ définit le type de filtre à appliquer.  
   
--   Niveau : Le paramètre de niveau définit le niveau de suivi minimal autorisé par le filtre. Par exemple, si le niveau est défini sur « Erreur et Haut », seuls les suivis de niveau Erreur et Critique s'affichent. Ce filtre s'associe aux critères spécifiés par Rechercher et Rechercher dans.  
+- Niveau : Le paramètre de niveau définit le niveau de suivi minimal autorisé par le filtre. Par exemple, si le niveau est défini sur « Erreur et Haut », seuls les suivis de niveau Erreur et Critique s'affichent. Ce filtre s'associe aux critères spécifiés par Rechercher et Rechercher dans.  
   
  Le **filtrer maintenant** bouton démarre l’opération de filtre. Certains filtres, surtout lorsqu'ils s'appliquent à un ensemble important de données, prennent du temps à se terminer. Vous pouvez annuler l’opération de filtrage en appuyant sur la **arrêter** bouton qui apparaît dans la barre d’état sous le **opérations** menu.  
   
@@ -321,27 +324,27 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 ### <a name="finding-data"></a>Recherche de données  
  L'outil Viewer permet de rechercher des données selon les méthodes suivantes :  
   
--   La barre d'outils Rechercher fournit un accès rapide aux options de recherche les plus courantes.  
+- La barre d'outils Rechercher fournit un accès rapide aux options de recherche les plus courantes.  
   
--   La boîte de dialogue Rechercher fournit des options de recherche supplémentaires. Il est accessible via la **modifier** menu, ou par les touches de raccourci Ctrl + F.  
+- La boîte de dialogue Rechercher fournit des options de recherche supplémentaires. Il est accessible via la **modifier** menu, ou par les touches de raccourci Ctrl + F.  
   
  La barre d'outils Rechercher apparaît en haut de l'outil Viewer. Si elle n’est pas présente, vous pouvez l’activer dans le **vue** menu. La barre se compose de deux composants :  
   
--   Rechercher : Vous permet d’entrer le mot clé de recherche.  
+- Rechercher : Vous permet d’entrer le mot clé de recherche.  
   
--   Regarder dans : Vous permet d’entrer l’étendue de recherche. Vous pouvez choisir d'effectuer une recherche dans toutes les activités ou dans l'activité en cours uniquement.  
+- Regarder dans : Vous permet d’entrer l’étendue de recherche. Vous pouvez choisir d'effectuer une recherche dans toutes les activités ou dans l'activité en cours uniquement.  
   
  La boîte de dialogue de recherche fournit deux options supplémentaires :  
   
--   Rechercher la cible :  
+- Rechercher la cible :  
   
-    -   L’option « données brutes du journal » recherche le mot clé dans toutes les données brutes.  
+    - L’option « données brutes du journal » recherche le mot clé dans toutes les données brutes.  
   
-    -   Les options « Texte XML » et « Attribut XML » recherche uniquement dans les éléments XML.  
+    - Les options « Texte XML » et « Attribut XML » recherche uniquement dans les éléments XML.  
   
-    -   L’option « Message consigné » recherche le mot clé uniquement dans les messages.  
+    - L’option « Message consigné » recherche le mot clé uniquement dans les messages.  
   
--   Ignorer l’activité racine : La recherche ignore les suivis dans l’activité « 000000000000 ». Cela permet d'améliorer les performance dans les fichiers de suivi volumineux lorsque l'activité racine se compose de milliers de suivis dont la plupart sont des transferts.  
+- Ignorer l’activité racine : La recherche ignore les suivis dans l’activité « 000000000000 ». Cela permet d'améliorer les performance dans les fichiers de suivi volumineux lorsque l'activité racine se compose de milliers de suivis dont la plupart sont des transferts.  
   
 ### <a name="navigating-traces"></a>Navigation parmi les suivis  
  Parce que les suivis sont enregistrés pas à pas pendant l'exécution des applications, la navigation parmi les suivis peut vous aider à déboguer votre application. Service Trace Viewer fournit différentes façons de naviguer dans les suivis.  
@@ -349,9 +352,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 #### <a name="step-forward-or-backward"></a>Étape suivante ou Étape précédente  
  Si vous considérez chaque suivi comme une ligne de code dans le programme, il est très similaire à « Pas à pas principal » dans l’environnement de développement intégré (IDE) Visual Studio de pas à pas détaillé vers l’avant. La différence est que vous pouvez également revenir en arrière dans les suivis. « Étape suivante » vous permet de passer au suivi suivant dans l'activité.  
   
--   Étape suivante : Utilisez le **activité** menu, ou appuyez sur « F10 ». Vous pouvez également utiliser une touche de direction « down » dans le volet de suivi.  
+- Étape suivante : Utilisez le **activité** menu, ou appuyez sur « F10 ». Vous pouvez également utiliser une touche de direction « down » dans le volet de suivi.  
   
--   Revenir en arrière : Utilisez le **activité** menu, ou appuyez sur « F9 ». Vous pouvez également utiliser une touche de direction « up » dans le volet de suivi.  
+- Revenir en arrière : Utilisez le **activité** menu, ou appuyez sur « F9 ». Vous pouvez également utiliser une touche de direction « up » dans le volet de suivi.  
   
 > [!NOTE]
 >  Cela peut vous diriger vers une activité qui se produisent dans un processus différent ou même sur un autre ordinateur, étant donné que les messages WCF peuvent contenir des ID qui s’étendent sur des machines d’activité.  
@@ -363,9 +366,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
   
  Il existe deux façons de suivre un transfert : à l'aide de la souris ou du clavier :  
   
--   Par la souris : Double-cliquez sur le suivi de transfert dans le volet de suivi.  
+- Par la souris : Double-cliquez sur le suivi de transfert dans le volet de suivi.  
   
--   Clavier : Sélectionnez un suivi de transfert et utiliser « Suivre le transfert » dans le **activité** menu, ou appuyez sur « F11 »  
+- Clavier : Sélectionnez un suivi de transfert et utiliser « Suivre le transfert » dans le **activité** menu, ou appuyez sur « F11 »  
   
 > [!NOTE]
 >  Dans de nombreux cas, lors d'un transfert de l'activité A vers l'activité B, l'activité A attend le transfert de retour de l'activité B vers l'activité A. Cela signifie qu'aucun suivi n'est enregistré par l'activité A lors du suivi actif de l'activité B. Toutefois, il est également possible que l'activité A n'attende pas et continue à enregistrer des suivis. Il est également possible que l'activité B n'effectue pas de transfert en retour vers l'activité A. Par conséquent, les transferts d'activité sont encore différents des appels de fonction. La vue Graphique vous permet de mieux comprendre les transferts d'activité.  
@@ -373,9 +376,9 @@ Windows Communication Foundation (WCF) Service Trace Viewer Tool vous permet d�
 #### <a name="jump-to-next-or-previous-transfer"></a>Passer au transfert suivant ou précédent  
  Lorsque vous analysez l'activité en cours ou certaines activités sélectionnées en cas de sélection de plusieurs activités, vous pouvez rechercher rapidement les activités vers lesquelles des transferts sont effectués. « Passer au transfert suivant » vous permet de localiser le suivi de transfert suivant dans l’activité. Une fois que vous trouvez pas le suivi de transfert, vous pouvez utiliser « Suivre le transfert » à l’étape dans l’activité suivante.  
   
--   Passer au transfert suivant : Utilisez le **activité** menu, ou appuyez sur « Ctrl + F10 ».  
+- Passer au transfert suivant : Utilisez le **activité** menu, ou appuyez sur « Ctrl + F10 ».  
   
--   Passer au transfert précédent : Utilisez le **activité** menu, ou appuyez sur « Ctrl + F9 ».  
+- Passer au transfert précédent : Utilisez le **activité** menu, ou appuyez sur « Ctrl + F9 ».  
   
 #### <a name="navigate-in-graph-view"></a>Naviguer dans la vue Graphique  
  Navigation dans le volet d’activité et le volet de suivi est similaire au débogage, mais **Graph** vue fournit une meilleure expérience de navigation. Pour plus d’informations, reportez-vous à la section « Vue graphique ».  

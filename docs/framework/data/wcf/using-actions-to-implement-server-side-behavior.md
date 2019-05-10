@@ -2,12 +2,12 @@
 title: Utilisation d'actions pour implémenter le comportement côté serveur
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875249"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063164"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilisation d'actions pour implémenter le comportement côté serveur
 
@@ -46,7 +46,7 @@ Les actions OData permettent d'implémenter un comportement qui agit sur une res
   
 3. stockage des résultats de la méthode Invoke() de façon à ce qu'ils puissent être récupérés en utilisant la méthode GetResult().  
   
- Les paramètres peuvent être passés en tant que jetons. En effet, il est possible d’écrire un fournisseur de services de données qui fonctionne avec des jetons qui représentent des ressources ; le cas échéant, vous devrez peut-être convertir (marshaler) ces jetons en ressources réelles avant de les distribuer à l’action réelle. Une fois le paramètre marshalé, il doit être dans un état modifiable de façon à ce que les modifications apportées à la ressource lorsque l’action est appelée soient enregistrées et écrites sur le disque.  
+ Les paramètres peuvent être passés en tant que jetons. En effet, il est possible d’écrire un fournisseur de services de données qui fonctionne avec des jetons qui représentent des ressources ; le cas échéant, vous devrez peut-être convertir (marshaler) ces jetons en ressources réelles avant de les distribuer à l’action réelle. Une fois que le paramètre a été marshalé, il doit être dans un état modifiable afin que les modifications à la ressource qui se produisent lors de l’action est appelée seront enregistré et écrit sur disque.  
   
  Cette interface nécessite deux méthodes : Invoke et GetResult appropriés. Invoke appelle le délégué qui implémente le comportement de l'action et GetResult retourne le résultat de l'action.  
   
