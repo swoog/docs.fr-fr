@@ -2,12 +2,12 @@
 title: Gestion des exceptions et des erreurs
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991406"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654995"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestion des exceptions et des erreurs
 Les exceptions sont utilisées pour communiquer localement des erreurs au sein du service ou de l'implémentation cliente. Les erreurs, en revanche, sont utilisées pour communiquer des erreurs au-delà des limites du service, notamment du serveur au client ou vice versa. En plus des erreurs, les canaux de transport utilisent souvent des mécanismes propres au transport pour communiquer des erreurs de niveau transport. Par exemple, le transport HTTP utilise des codes d'état tels que 404 pour communiquer une URL de point de terminaison inexistante (il n'existe aucun point de terminaison pour renvoyer une erreur). Ce document se compose de trois sections qui fournissent des indications aux auteurs de canaux personnalisés. La première section indique quand et comment définir et lever des exceptions. La deuxième section fournir des indications sur la génération et la consommation des erreurs. La troisième section explique comment fournir des informations de suivi afin d'aider l'utilisateur de votre canal personnalisé à résoudre les problèmes des applications en cours d'exécution.  

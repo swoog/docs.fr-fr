@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011571"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211202"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procédure pas à pas : création d’un contrôle Windows Forms qui tire parti des fonctionnalités au moment du design de Visual Studio
 
@@ -68,17 +68,13 @@ Pour l’intégralité du code, consultez [Comment : Créer un contrôle Window
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :
-
-- Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.
+Pour pouvoir effectuer cette procédure pas à pas, vous aurez besoin de Visual Studio.
 
 ## <a name="creating-the-project"></a>Création du projet
 
 La première étape consiste à créer le projet d’application. Vous utiliserez ce projet pour générer l’application qui héberge le contrôle personnalisé.
 
-### <a name="to-create-the-project"></a>Pour créer le projet
-
-- Créez un projet Windows Forms Application appelé « MarqueeControlTest » (**fichier** > **New** > **projet**  >   **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).
+Ouvrez Visual Studio et créez un projet Windows Forms Application appelé « MarqueeControlTest » (**fichier** > **New** > **projet**  >  **Visual C#**  ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).
 
 ## <a name="creating-a-control-library-project"></a>Création d’un projet de bibliothèque de contrôle
 

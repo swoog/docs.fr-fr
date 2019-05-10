@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797519"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600090"
 ---
 # <a name="administration-and-diagnostics"></a>Administration et diagnostics
 Windows Communication Foundation (WCF) fournit un ensemble complet de fonctionnalités qui peuvent vous aider à surveiller les différentes étapes de la vie d’une application. Par exemple, utilisez la configuration pour installer les services et les clients lors du déploiement. WCF inclut un grand ensemble de compteurs de performances pour vous aider à mesurer les performances de votre application. WCF expose également les données d’inspection d’un service lors de l’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI). En cas de défaillance ou de fonctionnement incorrect de l'application, vous pouvez utiliser le journal des événements afin de vérifier si un événement significatif s'est produit. Vous pouvez également utiliser la journalisation des messages et le suivi pour afficher les événements qui se produisent sur l'ensemble de votre application. Ces fonctionnalités aident les développeurs et professionnels de l’informatique à résoudre les problèmes d’une application WCF lorsqu’il ne semble pas fonctionne correctement.  

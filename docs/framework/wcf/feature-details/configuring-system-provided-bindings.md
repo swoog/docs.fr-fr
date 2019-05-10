@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857413"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654509"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuration des liaisons fournies par le système
 Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Liaisons se composent des éléments qui définissent comment les canaux Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requis. Une liaison contient trois types d'éléments :  

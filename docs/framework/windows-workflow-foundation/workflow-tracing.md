@@ -2,12 +2,12 @@
 title: Suivi de workflow
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8dba5706ee37f243c15befb483ab4f9f2a8e3b9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655721"
 ---
 # <a name="workflow-tracing"></a>Suivi de workflow
 Le suivi de workflow offre une méthode de capture des informations de diagnostic à l'aide d'écouteurs de suivi .NET Framework. Le suivi peut être activé si un problème a été détecté dans l'application, puis désactivé de nouveau une fois le problème résolu. Deux méthodes s'offrent à vous pour activer le suivi de débogage pour les flux de travail. Vous pouvez le configurer à l'aide de la visionneuse de suivi d'événements ou bien utiliser l'objet <xref:System.Diagnostics> pour envoyer des événements de suivi à un fichier.  

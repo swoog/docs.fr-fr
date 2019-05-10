@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a16060efc45cc0642aa6612d02644e252cd53d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638215"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751796"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
 
@@ -51,7 +51,7 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).
+  Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `accessmodifier`
 
@@ -77,19 +77,19 @@ Dim [ WithEvents ] variablelist
 
 - `Shadows`
 
-  Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Static`
 
-  Optionnel. Consultez [statique](../../../visual-basic/language-reference/modifiers/static.md).
+  Facultatif. Consultez [statique](../../../visual-basic/language-reference/modifiers/static.md).
 
 - `ReadOnly`
 
-  Optionnel. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  Facultatif. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WithEvents`
 
-Optionnel. Spécifie qu’il s’agit de variables objets qui font référence aux instances d’une classe qui peut déclencher des événements. Consultez [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+Facultatif. Spécifie qu’il s’agit de variables objets qui font référence aux instances d’une classe qui peut déclencher des événements. Consultez [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
 
 - `variablelist`
 
@@ -104,11 +104,11 @@ Optionnel. Spécifie qu’il s’agit de variables objets qui font référence a
   |Élément|Description|
   |---|---|
   |`variablename`|Obligatoire. Nom de la variable. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Optionnel. Liste des limites de chaque dimension d’une variable tableau.|
+  |`boundslist`|Facultatif. Liste des limites de chaque dimension d’une variable tableau.|
   |`New`|Facultatif. Crée une nouvelle instance de la classe lors de la `Dim` instruction s’exécute.|
-  |`datatype`|Optionnel. Type de données de la variable.|
-  |`With`|Optionnel. Présente la liste d’initialiseurs objet.|
-  |`propertyname`|Optionnel. Le nom d’une propriété dans la classe, vous effectuez une instance de.|
+  |`datatype`|Facultatif. Type de données de la variable.|
+  |`With`|Facultatif. Présente la liste d’initialiseurs objet.|
+  |`propertyname`|Facultatif. Le nom d’une propriété dans la classe, vous effectuez une instance de.|
   |`propinitializer`|Requis après `propertyname` =. L’expression qui est évaluée et assignée au nom de propriété.|
   |`initializer`|Facultatif si `New` n’est pas spécifié. Expression qui est évaluée et assignée à la variable lors de sa création.|
 

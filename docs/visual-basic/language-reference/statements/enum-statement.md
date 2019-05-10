@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0a761c39b51a8d71919a84cbbbf6739fc1f5bcea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754618"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum, instruction (Visual Basic)
 
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  Optionnel. Liste des attributs qui s’appliquent à cette énumération. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).
+  Facultatif. Liste des attributs qui s’appliquent à cette énumération. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).
 
   Le <xref:System.FlagsAttribute> attribut indique que la valeur d’une instance de l’énumération peut inclure plusieurs membres de l’énumération, et que chaque membre représente un champ de bits dans la valeur d’énumération.
 
 - `accessmodifier`
 
-  Optionnel. Spécifie le code peut accéder à cette énumération. Il peut s'agir d'une des valeurs suivantes :
+  Facultatif. Spécifie le code peut accéder à cette énumération. Il peut s'agir d'une des valeurs suivantes :
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,7 +57,7 @@ End Enum
 
 - `Shadows`
 
-  Optionnel. Spécifie que cette énumération redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez spécifier [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) uniquement sur l’énumération elle-même, et non sur un de ses membres.
+  Facultatif. Spécifie que cette énumération redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez spécifier [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) uniquement sur l’énumération elle-même, et non sur un de ses membres.
 
 - `enumerationname`
 
@@ -65,7 +65,7 @@ End Enum
 
 - `datatype`
 
-  Optionnel. Type de données de l’énumération et tous ses membres.
+  Facultatif. Type de données de l’énumération et tous ses membres.
 
 - `memberlist`
 
@@ -76,7 +76,7 @@ End Enum
   |Élément|Description|
   |---|---|
   |`membername`|Obligatoire. Nom de ce membre.|
-  |`initializer`|Optionnel. Expression qui est évaluée au moment de la compilation et assignée à ce membre.|
+  |`initializer`|Facultatif. Expression qui est évaluée au moment de la compilation et assignée à ce membre.|
 
 - `End` `Enum`
 

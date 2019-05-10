@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856395"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753052"
 ---
 # <a name="elevation-of-privilege"></a>Élévation de privilège
 *Une élévation de privilèges* résulte de ce qui donne à un intrus d’autorisations supérieures à celles initialement accordées. Par exemple, un intrus avec un jeu de privilèges contenant des autorisations « en lecture seule » élèvent d'une façon ou d'une autre le jeu pour inclure des autorisations « en lecture et en écriture ».  

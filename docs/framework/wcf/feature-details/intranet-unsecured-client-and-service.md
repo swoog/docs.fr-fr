@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 540c0fe5c4d06ea341b9cc8be9755cc67fe9bbc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587008"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Service et client intranet non sécurisés
 L’illustration suivante représente un service Windows Communication Foundation (WCF) simple développé pour fournir des informations sur un réseau privé sécurisé à une application WCF. Sécurité n’est pas nécessaire, car les données sont d’importance basse, le réseau doit être sécurisé par nature, ou sécurité est fournie par une couche ci-dessous l’infrastructure WCF.  
@@ -19,13 +19,13 @@ L’illustration suivante représente un service Windows Communication Foundatio
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Mode de sécurité|Aucun.|  
+|Mode de sécurité|None|  
 |Transport|TCP|  
 |Liaison|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interopérabilité|WCF uniquement|  
-|Authentification|Aucun.|  
-|Intégrité|Aucun.|  
-|Confidentialité|Aucun.|  
+|Authentification|None|  
+|Intégrité|None|  
+|Confidentialité|None|  
   
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  

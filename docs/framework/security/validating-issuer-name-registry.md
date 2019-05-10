@@ -2,12 +2,12 @@
 title: Validation du registre des noms d'émetteurs
 ms.date: 03/30/2017
 ms.assetid: c4644dd1-dead-48ff-abeb-7bffae69a6ac
-ms.openlocfilehash: aa6a71ced0f9bf969eb6c8800739f629810dd63f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc10181a142fd8ca4ebd8250869d49a046623564
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645901"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910781"
 ---
 # <a name="validating-issuer-name-registry"></a>Validation du registre des noms d'émetteurs
 Le Registre de validation de nom d'émetteur (VINR) pour Windows Identity Foundation permet aux applications d'une architecture mutualisée de garantir qu'un jeton entrant a été publié par un locataire et un fournisseur d'identité approuvés. Cette fonctionnalité est particulièrement utile pour les applications partagée qui utilisent Microsoft Azure Active Directory car tous les jetons publiés par Microsoft Azure AD sont archivés avec le même certificat. Pour différencier les demandes de plusieurs locataires qui utilisent le même certificat, et par conséquent disposent de la même empreinte numérique, votre application doit rendre persistant le nom de l'émetteur pour chaque locataire pour exécuter la logique de validation. Le VINR fournit cette fonctionnalité, et il vous permet également d’ajouter une logique de validation personnalisée ou de stocker les données de Registre de l’émetteur dans les emplacements autres que le fichier de configuration. L’extension peut être ajoutée au pipeline WIF de votre application ou elle peut être utilisée de manière indépendante.  

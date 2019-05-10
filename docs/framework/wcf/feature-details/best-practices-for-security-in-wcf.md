@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b3f2eabad3a6ef8e8fd5cc8f44f3132a3f5d8427
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048242"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755229"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Meilleures pratiques pour la sécurité dans WCF
 Les sections suivantes répertorient les bonnes pratiques à prendre en compte durant la création d’applications sécurisées à l’aide de WCF (Windows Communication Foundation). Pour plus d’informations sur la sécurité, consultez [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) et [Considérations sur la sécurité des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  

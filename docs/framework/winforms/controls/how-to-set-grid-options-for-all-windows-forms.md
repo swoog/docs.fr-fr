@@ -8,27 +8,25 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912858"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211626"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procédure : définir les options de grille pour tous les Windows Forms
-Comme vous deviennent habitué à utiliser dans l’environnement de développement Visual Studio, vous pouvez définir les préférences pour tous les formulaires et les projets que vous utilisez dans le Concepteur de formulaires Windows.  
-  
-> [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-global-windows-forms-options"></a>Pour définir les options globales de Windows Forms  
-  
-1. À partir de la **outils** menu, sélectionnez **Options**.  
-  
-2. Dans le volet gauche de la **Options** boîte de dialogue, cliquez sur **Windows Forms Designer**.  
-  
-     Dans le volet droit, sous le **paramètres de disposition** titre, vous pouvez définir la valeur par défaut des paramètres de grille pour tous les formulaires que vous créez. Ces paramètres incluent la taille de la grille, si les contrôles s’aligner à celui-ci, et si elle est activée par défaut. En outre, vous pouvez choisir entre **SnapToGrid** et **les lignes d’alignement** modes de disposition. Pour plus d’informations sur les lignes d’alignement, consultez [procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
+
+Comme vous deviennent habitué à utiliser dans l’environnement de développement Visual Studio, vous pouvez définir les préférences pour tous les formulaires et les projets que vous utilisez dans le Concepteur de formulaires Windows.
+
+## <a name="set-global-windows-forms-options"></a>Définir les options globales de Windows Forms
+
+1. Dans Visual Studio, à partir de la **outils** menu, sélectionnez **Options**.
+
+2. Dans le volet gauche de la **Options** boîte de dialogue, cliquez sur **Windows Forms Designer**.
+
+   Dans le volet droit, sous le **paramètres de disposition** titre, vous pouvez définir la valeur par défaut des paramètres de grille pour tous les formulaires que vous créez. Ces paramètres incluent la taille de la grille, si les contrôles s’aligner à celui-ci, et si elle est activée par défaut. En outre, vous pouvez choisir entre **SnapToGrid** et **les lignes d’alignement** modes de disposition. Pour plus d’informations sur les lignes d’alignement, consultez [procédure pas à pas : Organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+
 ## <a name="see-also"></a>Voir aussi
 
 - [Procédure pas à pas : Organisation des contrôles dans les formulaires de Windows à l’aide des lignes d’alignement](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

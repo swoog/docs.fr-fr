@@ -2,12 +2,12 @@
 title: 'Procédure : Valider des fichiers de mappage externes et DBML'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310237"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910636"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procédure : Valider des fichiers de mappage externes et DBML
 Les fichiers de mappage externes et les fichiers .dbml que vous modifiez doivent être validés par rapport à leurs définitions de schéma respectives. Cette rubrique fournit aux utilisateurs de Visual Studio avec les étapes pour implémenter le processus de validation.  
@@ -30,9 +30,9 @@ Les fichiers de mappage externes et les fichiers .dbml que vous modifiez doivent
   
 5. Notez la définition de schéma en fonction de vos besoins.  
   
-    -   DbmlSchema.xsd est la définition de schéma pour valider un fichier .dbml. Pour plus d’informations, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - DbmlSchema.xsd est la définition de schéma pour valider un fichier .dbml. Pour plus d’informations, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   LinqToSqlMapping.xsd est la définition de schéma pour valider un fichier mappage XML externe. Pour plus d’informations, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - LinqToSqlMapping.xsd est la définition de schéma pour valider un fichier mappage XML externe. Pour plus d’informations, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 6. Dans le **utilisation** colonne de la ligne de définition de schéma de votre choix, cliquez sur pour ouvrir la zone de liste déroulante, puis cliquez sur **utiliser ce schéma**.  
   
@@ -51,9 +51,9 @@ Les fichiers de mappage externes et les fichiers .dbml que vous modifiez doivent
   
 1. Recherchez la rubrique d'aide qui contient la définition de schéma comme décrit précédemment dans cette rubrique.  
   
-    -   Pour les fichiers .dbml, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - Pour les fichiers .dbml, consultez [génération de Code dans LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Pour les fichiers de mappage externe, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Pour les fichiers de mappage externe, consultez [mappage externe](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 2. Cliquez sur **copier le Code** pour copier le fichier de code dans le Presse-papiers.  
   

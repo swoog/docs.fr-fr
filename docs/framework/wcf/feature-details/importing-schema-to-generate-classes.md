@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d7b5cb57e921fa802207d2ad606ba3535b78a77b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972664"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587024"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importation du schéma pour générer des classes
 Pour générer des classes à partir des schémas qui sont utilisables avec Windows Communication Foundation (WCF), utilisez la <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Cette rubrique décrit le processus et les variations.  
@@ -29,9 +29,9 @@ Pour générer des classes à partir des schémas qui sont utilisables avec Wind
   
 1. Créez une instance de <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Optionnel. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
+2. Facultatif. Passez un `CodeCompileUnit` dans le constructeur. Les types générés pendant l'importation de schéma sont ajoutés à cette instance `CodeCompileUnit` au lieu de démarrer avec un `CodeCompileUnit` vide.  
   
-3. Optionnel. Appelez une des méthodes <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . La méthode détermine si le schéma donné est un schéma de contrat de données valide et peut être importé. La méthode `CanImport` a les mêmes surcharges que `Import` (étape suivante).  
+3. Facultatif. Appelez une des méthodes <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . La méthode détermine si le schéma donné est un schéma de contrat de données valide et peut être importé. La méthode `CanImport` a les mêmes surcharges que `Import` (étape suivante).  
   
 4. Appelez l'une des méthodes `Import` surchargées, par exemple, la méthode <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   

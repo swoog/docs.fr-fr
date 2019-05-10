@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3a6184164fdc6f2517caf45f7b5e1455c9299666
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638053"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754723"
 ---
 # <a name="function-statement-visual-basic"></a>Function, instruction (Visual Basic)
 
@@ -54,7 +54,7 @@ End Function
 
 - `attributelist`
 
-  Optionnel. Consultez [liste d’attributs](attribute-list.md).
+  Facultatif. Consultez [liste d’attributs](attribute-list.md).
 
 - `accessmodifier`
 
@@ -76,7 +76,7 @@ End Function
 
 - `proceduremodifiers`
 
-  Optionnel. Il peut s'agir d'une des valeurs suivantes :
+  Facultatif. Il peut s'agir d'une des valeurs suivantes :
 
   - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 
@@ -94,7 +94,7 @@ End Function
 
 - `Shared`
 
-  Optionnel. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).
+  Facultatif. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
@@ -102,11 +102,11 @@ End Function
 
 - `Async`
 
-  Optionnel. Consultez [Async](../../../visual-basic/language-reference/modifiers/async.md).
+  Facultatif. Consultez [Async](../../../visual-basic/language-reference/modifiers/async.md).
 
 - `Iterator`
 
-  Optionnel. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).
+  Facultatif. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
@@ -114,11 +114,11 @@ End Function
 
 - `typeparamlist`
 
-  Optionnel. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).
+  Facultatif. Liste de paramètres de type pour une procédure générique. Consultez [tapez liste](type-list.md).
 
 - `parameterlist`
 
-  Optionnel. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Consultez [liste de paramètres](parameter-list.md).
+  Facultatif. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Consultez [liste de paramètres](parameter-list.md).
 
 - `returntype`
 
@@ -126,7 +126,7 @@ End Function
 
 - `Implements`
 
-  Optionnel. Indique que cette procédure implémente un ou plusieurs `Function` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).
+  Facultatif. Indique que cette procédure implémente un ou plusieurs `Function` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).
 
 - `implementslist`
 
@@ -145,7 +145,7 @@ End Function
 
 - `Handles`
 
-  Optionnel. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).
+  Facultatif. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).
 
 - `eventlist`
 
@@ -164,7 +164,7 @@ End Function
 
 - `statements`
 
-  Optionnel. Bloc d’instructions à exécuter dans cette procédure.
+  Facultatif. Bloc d’instructions à exécuter dans cette procédure.
 
 - `End Function`
 

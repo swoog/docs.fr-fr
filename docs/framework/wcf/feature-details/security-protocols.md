@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586855"
 ---
 # <a name="security-protocols"></a>Protocoles de sécurité
 Les protocoles Web Services Security fournissent des mécanismes de sécurité des services Web qui couvrent l’ensemble des exigences de sécurité de la messagerie de l’entreprise. Cette section décrit les détails de Windows Communication Foundation (WCF) (implémenté dans le <xref:System.ServiceModel.Channels.SecurityBindingElement>) pour les services Web suivants protocoles de sécurité.  
@@ -47,7 +47,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|Fédérée|X509|Transport|  
 |SspiNegotiatedOverTransport|Windows Sspi Negotiated|Windows Sspi Negotiated|Transport|  
-|AnonymousForCertificate|Aucun.|X509|Message|  
+|AnonymousForCertificate|None|X509|Message|  
 |UserNameForCertificate|Nom d'utilisateur/mot de passe|X509|Message|  
 |MutualCertificate|X509|X509|Message|  
 |MutualCertificateDuplex|X509|X509|Message|  
@@ -55,7 +55,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |Kerberos|Windows|Windows|Message|  
 |IssuedToken|Fédérée|Fédérée|Message|  
 |SspiNegotiated|Windows Sspi Negotiated|Windows Sspi Negotiated|Message|  
-|AnonymousForSslNegotiated|Aucun.|X509, TLS-Nego|Message|  
+|AnonymousForSslNegotiated|None|X509, TLS-Nego|Message|  
 |UserNameForSslNegotiated|Nom d'utilisateur/mot de passe|X509, TLS-Nego|Message|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|Message|  
 |IssuedTokenForSslNegotiated|Fédérée|X509, TLS-Nego|Message|  
