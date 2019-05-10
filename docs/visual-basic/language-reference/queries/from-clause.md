@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945338"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639630"
 ---
 # <a name="from-clause-visual-basic"></a>From, clause (Visual Basic)
 Spécifie une ou plusieurs variables de plage et une collection à interroger.  
@@ -32,7 +32,7 @@ From element [ As type ] In collection [ _ ]
 |Terme|Définition|  
 |---|---|  
 |`element`|Obligatoire. Un *variable de portée* utilisé pour itérer les éléments de la collection. Une variable de portée est utilisée pour faire référence à chaque membre de la `collection` comme la requête effectue une itération dans le `collection`. Doit être un type énumérable.|  
-|`type`|Optionnel. Type d'élément `element`. Si aucun `type` est spécifié, le type de `element` est déduit à partir de `collection`.|  
+|`type`|Facultatif. Type d'élément `element`. Si aucun `type` est spécifié, le type de `element` est déduit à partir de `collection`.|  
 |`collection`|Obligatoire. Fait référence à la collection à interroger. Doit être un type énumérable.|  
   
 ## <a name="remarks"></a>Notes  

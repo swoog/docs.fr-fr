@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6900bca2bd94f52ea5603c752681163cde52ce19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3c845cefad451c608f5c095e4941c3368dc9975
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650549"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilation d'applications avec .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] est une technologie de précompilation pour générer et déployer des applications Windows qui est incluse avec Visual Studio 2015 et versions ultérieures. Elle compile automatiquement la version commerciale des applications écrites en code managé (C# ou Visual Basic) et qui ciblent .NET Framework et Windows 10 en code natif.  
