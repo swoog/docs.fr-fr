@@ -2,12 +2,12 @@
 title: Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a2dd2fe835ada29fdb6639905673b4e0b60aca6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642029"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts et terminologie (Transformation fonctionnelle) (Visual Basic)
 Cette rubrique présente les concepts et la terminologie des transformations fonctionnelles pures. L'approche de transformation fonctionnelle pour la transformation des données génère du code qui est souvent plus rapide à programmer, plus expressif et plus facile à déboguer et à maintenir que le code de programmation impératif plus traditionnel.  

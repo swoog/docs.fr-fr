@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da5679c3e69a938e9735922bcf4f912428024610
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642782"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indique qu'une déclaration de type est une définition partielle du type.  
@@ -45,20 +45,20 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Terme|Définition|  
 |---|---|  
-|`attrlist`|Optionnel. Liste des attributs qui s'appliquent à ce type. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets (`< >`).|  
-|`accessmodifier`|Optionnel. Spécifie le code pouvant accéder à ce type. Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`attrlist`|Facultatif. Liste des attributs qui s'appliquent à ce type. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets (`< >`).|  
+|`accessmodifier`|Facultatif. Spécifie le code pouvant accéder à ce type. Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Facultatif. Consultez [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Facultatif. Consultez [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`name`|Obligatoire. Nom de ce type. Doit correspondre au nom défini dans toutes les autres déclarations partielles du même type.|  
-|`Of`|Optionnel. Spécifie qu'il s'agit d'un type générique. Consultez [des Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`Of`|Facultatif. Spécifie qu'il s'agit d'un type générique. Consultez [des Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
 |`typelist`|Requis si vous utilisez [de](../../../visual-basic/language-reference/statements/of-clause.md). Consultez [tapez liste](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Optionnel. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Inherits`|Facultatif. Consultez [Inherits, instruction](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Requis si vous utilisez `Inherits`. Nom de la classe ou de l'interface dont cette classe dérive.|  
 |`Implements`|Facultatif. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Requis si vous utilisez `Implements`. Noms des interfaces que ce type implémente.|  
-|`variabledeclarations`|Optionnel. Instructions qui déclarent des variables et des événements supplémentaires pour ce type.|  
-|`proceduredeclarations`|Optionnel. Instructions qui déclarent et définissent des procédures supplémentaires pour ce type.|  
+|`variabledeclarations`|Facultatif. Instructions qui déclarent des variables et des événements supplémentaires pour ce type.|  
+|`proceduredeclarations`|Facultatif. Instructions qui déclarent et définissent des procédures supplémentaires pour ce type.|  
 |`End Class` ou `End Structure`|Met fin à cette définition partielle de `Class` ou de `Structure`.|  
   
 ## <a name="remarks"></a>Notes  

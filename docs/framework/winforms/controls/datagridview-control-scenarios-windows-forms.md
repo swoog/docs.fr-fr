@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7350b0da19650b99bcfd456f93e994492a56d7e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648092"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scénarios du contrôle DataGridView (Windows Forms)
 Avec la <xref:System.Windows.Forms.DataGridView> contrôle, vous pouvez afficher des données tabulaires provenant de diverses sources de données. Pour les utilisations simples, vous pouvez remplir manuellement un <xref:System.Windows.Forms.DataGridView> et manipuler les données directement via le contrôle. En règle générale, toutefois, vous stockez vos données dans une source de données externe et lier le contrôle par le biais une <xref:System.Windows.Forms.BindingSource> composant.  
