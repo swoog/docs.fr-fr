@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651129"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Procédure : inspecter ou modifier des paramètres
 Vous pouvez inspecter ou modifier les messages entrants ou sortants pour une seule opération sur un objet de client Windows Communication Foundation (WCF) ou un service WCF en implémentant le <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interface et en l’insérant dans l’exécution du client ou du service. En général, un comportement d'opération est utilisé pour ajouter des inspecteurs de paramètre pour une seule opération ; d'autres comportements peuvent être utilisés pour fournir un accès aisé à l'exécution à une échelle plus grande. Pour plus d’informations, consultez [Clients extension](../../../../docs/framework/wcf/extending/extending-clients.md) et [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  

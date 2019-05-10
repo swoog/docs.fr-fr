@@ -2,12 +2,12 @@
 title: Gestionnaire de jetons Web JSON
 ms.date: 03/30/2017
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ffaaaebd87c63b784a749f8998d43d14fe768e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641109"
 ---
 # <a name="json-web-token-handler"></a>Gestionnaire de jetons Web JSON
 L’extension du gestionnaire de jetons Web JSON pour Windows Identity Foundation vous permet de créer et de valider des jetons Web JSON dans vos applications. Le gestionnaire de jetons JWT peut être configuré pour s’exécuter dans le pipeline WIF comme d’autres gestionnaires de jetons de sécurité intégrés, mais il peut également être utilisé de façon indépendante pour exécuter la validation de jetons dans des applications légères. Le gestionnaire de jetons JWT est particulièrement utile lorsque vous utilisez un modèle de jeton de porteur OAuth 2.0, comme l'authentification auprès de Microsoft Azure Active Directory.  

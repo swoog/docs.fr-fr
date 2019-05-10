@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937681"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643356"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procédure : créer des objets de graphismes pour le dessin
 Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher et manipuler des images avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous devez créer un <xref:System.Drawing.Graphics> objet. Le <xref:System.Drawing.Graphics> objet représente un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] surface de dessin, et est l’objet qui est utilisé pour créer des images graphiques.  
@@ -33,11 +33,11 @@ Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher 
   
 - Reçoivent une référence à un objet graphique dans le cadre de la <xref:System.Windows.Forms.PaintEventArgs> dans le <xref:System.Windows.Forms.Control.Paint> événement d’un formulaire ou contrôle. C’est généralement utilisée pour obtenir une référence à un objet graphique lors de la création du code de peinture d’un contrôle. De même, vous pouvez également obtenir un objet graphique en tant que propriété de la <xref:System.Drawing.Printing.PrintPageEventArgs> lors du traitement de la <xref:System.Drawing.Printing.PrintDocument.PrintPage> événement pour un <xref:System.Drawing.Printing.PrintDocument>.  
   
-     - ou -  
+     ou  
   
 - Appelez le <xref:System.Windows.Forms.Control.CreateGraphics%2A> méthode d’un contrôle ou un formulaire afin d’obtenir une référence à un <xref:System.Drawing.Graphics> objet qui représente la surface de dessin de ce contrôle ou formulaire. Utilisez cette méthode si vous souhaitez dessiner sur un formulaire ou un contrôle qui existe déjà.  
   
-     - ou -  
+     ou  
   
 - Créer un <xref:System.Drawing.Graphics> objet à partir de n’importe quel objet qui hérite de <xref:System.Drawing.Image>. Cette approche est utile lorsque vous souhaitez modifier une image existante.  
   
@@ -166,7 +166,7 @@ Avant de pouvoir dessiner des lignes et des formes, rendre du texte ou afficher 
     |Pour effectuer le rendu|Voir|  
     |---------------|---------|  
     |Lignes|[Guide pratique pour Dessiner une ligne dans un formulaire Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formes|[Guide pratique pour Dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)|  
+    |Shapes|[Guide pratique pour Dessiner une forme avec contour](how-to-draw-an-outlined-shape.md)|  
     |Texte|[Guide pratique pour Dessiner du texte dans un formulaire Windows](how-to-draw-text-on-a-windows-form.md)|  
     |Images|[Guide pratique pour Rendre des Images avec GDI +](how-to-render-images-with-gdi.md)|  
   

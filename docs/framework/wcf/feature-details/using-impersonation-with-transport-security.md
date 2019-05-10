@@ -2,12 +2,12 @@
 title: Utilisation de l'emprunt d'identité avec la sécurité de transport
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f392dbe5806532eba181adef4ba3c8bebce9eddd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050673"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637441"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilisation de l'emprunt d'identité avec la sécurité de transport
 *L’emprunt d’identité* est la capacité d’une application serveur pour prendre l’identité du client. Les services utilisent couramment l'emprunt d'identité lors de la validation de l'accès aux ressources. L'application serveur s'exécute à l'aide d'un compte de service, mais lorsque le serveur accepte une connexion cliente, il emprunte l'identité du client afin d'exécuter des contrôles d'accès à l'aide des informations d'identification du client. La sécurité de transport est un mécanisme permettant à la fois de passer des informations d'identification et sécuriser les communications à l'aide de ces informations. Cette rubrique décrit l’utilisation de la sécurité du transport dans Windows Communication Foundation (WCF) avec la fonctionnalité d’emprunt d’identité. Pour plus d’informations sur l’emprunt d’identité à l’aide de la sécurité des messages, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -17,7 +17,7 @@ ms.locfileid: "62050673"
   
 |Niveau d'emprunt d'identité|Description|  
 |-------------------------|-----------------|  
-|Aucun.|L'application serveur n'essaie pas d'emprunter l'identité du client.|  
+|None|L'application serveur n'essaie pas d'emprunter l'identité du client.|  
 |Anonymous|L'application serveur peut exécuter les contrôles d'accès à partir des informations d'identification du client, mais ne reçoit pas d'informations à propos de l'identité du client. Ce niveau d'emprunt d'identité n'est utile que pour les communications sur ordinateur, telles que les canaux nommés. L'utilisation de `Anonymous` avec une connexion à distance fait passer le niveau d'emprunt d'identité à Identifier.|  
 |Identifier|L’application serveur connaît l’identité du client et peut exécuter les contrôles d’accès à partir des informations d’identification du client, mais ne peut pas emprunter l’identité du client. Identifier est le niveau d’emprunt d’identité par défaut utilisé avec les informations d’identification SSPI dans WCF, sauf si le fournisseur de jetons fournit un niveau d’emprunt d’identité différents.|  
 |Impersonate|L'application serveur peut accéder aux ressources de l'ordinateur serveur en tant que client en plus d'exécuter des contrôles d'accès. L'application serveur ne peut pas accéder aux ressources des ordinateurs distants à l'aide de l'identité du client parce que le jeton personnifié ne possède pas d'informations d'identification réseau.|  

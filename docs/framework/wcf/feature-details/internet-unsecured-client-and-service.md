@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638631"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Service et client Internet non sécurisés
 L’illustration suivante montre un exemple de client Windows Communication Foundation (WCF) publics, non sécurisés et service :  
@@ -19,13 +19,13 @@ L’illustration suivante montre un exemple de client Windows Communication Foun
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|Mode de sécurité|Aucun.|  
+|Mode de sécurité|None|  
 |Transport|HTTP|  
 |Liaison|<xref:System.ServiceModel.BasicHttpBinding> dans le code, ou le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément de configuration.|  
 |Interopérabilité|Avec les clients de service Web et les services existants|  
-|Authentification|Aucun.|  
-|Intégrité|Aucun.|  
-|Confidentialité|Aucun.|  
+|Authentification|None|  
+|Intégrité|None|  
+|Confidentialité|None|  
   
 ## <a name="service"></a>Service  
  La configuration et le code ci-dessous sont conçus pour s'exécuter indépendamment. Effectuez l’une des opérations suivantes :  
