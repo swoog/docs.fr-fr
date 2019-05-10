@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8d9dedc016a8fda654fecb2ee09c7206b3ddea82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759867"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584769"
 ---
 # <a name="windows-forms-control-development-basics"></a>Concepts de base du développement de contrôles Windows Forms
 Un contrôle Windows Forms est une classe qui dérive directement ou indirectement de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. La liste suivante décrit des scénarios courants pour le développement de contrôles Windows Forms :  
