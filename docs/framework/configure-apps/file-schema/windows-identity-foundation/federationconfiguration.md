@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 102aadaaa7d7780f1266e1abcea46f0fcf95671e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791714"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622552"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configure le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) et le <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) lorsque vous utilisez federated authentication via le protocole WS-Federation. Configure le <xref:System.Security.Claims.ClaimsAuthorizationManager> lorsque vous utilisez le <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe pour fournir un contrôle d’accès basé sur les revendications.  
@@ -32,15 +32,15 @@ Configure le <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|name|Le nom de cet élément de configuration de fédération. Cet attribut fournit principalement un point d’extensibilité pour les protocoles à venir. Optionnel.|  
-|identityConfigurationName|Le nom de la section de configuration d’identité tel que spécifié dans un [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) élément à utiliser. Si cet attribut n’est pas spécifié, la section de configuration d’identité par défaut est utilisée. Optionnel.|  
+|name|Le nom de cet élément de configuration de fédération. Cet attribut fournit principalement un point d’extensibilité pour les protocoles à venir. Facultatif.|  
+|identityConfigurationName|Le nom de la section de configuration d’identité tel que spécifié dans un [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) élément à utiliser. Si cet attribut n’est pas spécifié, la section de configuration d’identité par défaut est utilisée. Facultatif.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configure le Gestionnaire de cookies utilisé par le module SAM. Optionnel.|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configure le certificat qui est utilisé pour chiffrer et déchiffrer les jetons. Optionnel.|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configure le Gestionnaire de cookies utilisé par le module SAM. Facultatif.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configure le certificat qui est utilisé pour chiffrer et déchiffrer les jetons. Facultatif.|  
 |[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Configure le Module d’authentification WS-Federation (WSFAM). Facultatif.|  
   
 ### <a name="parent-elements"></a>Éléments parents  

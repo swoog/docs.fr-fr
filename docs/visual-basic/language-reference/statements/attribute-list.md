@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 378a6b1543181052c000fd58f7deeed88cabf1ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622526"
 ---
 # <a name="attribute-list-visual-basic"></a>Liste d'attributs (Visual Basic)
 Spécifie les attributs à appliquer à un élément de programmation déclaré. Les attributs multiples sont séparés par des virgules. Voici la syntaxe pour un attribut.  
@@ -26,7 +26,7 @@ Spécifie les attributs à appliquer à un élément de programmation déclaré.
 |---|---|
 |`attributemodifier`|Requis pour les attributs appliqués au début d’un fichier source. Peut être [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) ou [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
 |`attributename`| Obligatoire. Nom de l'attribut.|
-|`attributearguments`|Optionnel. Liste d’arguments de position pour cet attribut. Plusieurs arguments sont séparés par des virgules.|
+|`attributearguments`|Facultatif. Liste d’arguments de position pour cet attribut. Plusieurs arguments sont séparés par des virgules.|
 |`attributeinitializer`|Facultatif. Liste d’initialiseurs de variable ou une propriété pour cet attribut. Les initialiseurs multiples sont séparées par des virgules.|
   
 ## <a name="remarks"></a>Notes  

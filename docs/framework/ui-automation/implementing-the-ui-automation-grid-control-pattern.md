@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622975"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implémentation du modèle de contrôle Grid d’UI Automation
 > [!NOTE]
@@ -48,8 +48,8 @@ Exemple de contrôle Grid avec des coordonnées vides
   
 |Membres requis|Type|Notes|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propriété|Aucun.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propriété|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propriété|None|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Méthode|Aucune|  
   
  Ce modèle de contrôle n’est associé aucun événement.  

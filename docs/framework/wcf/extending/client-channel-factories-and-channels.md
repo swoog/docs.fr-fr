@@ -2,12 +2,12 @@
 title: 'Client : Fabrications de canaux et canaux'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: bfa5d2478d5c12f16c2d9531de02e1c868eab560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a54607e54950ace1fda5b97e4df885119259f3c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858406"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664936"
 ---
 # <a name="client-channel-factories-and-channels"></a>Client : Fabrications de canaux et canaux
 Cette rubrique décrit la création de fabrications de canaux et de canaux.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648748"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Procédure : Instructions de l’étiquette (Visual Basic)
 Blocs d’instructions sont constituées de lignes de code délimités par le signe deux-points. Lignes de code, précédé d’une chaîne ou entier identifiant sont dites *intitulée*. Les étiquettes d’instruction sont utilisées pour marquer une ligne de code pour identifier pour une utilisation avec des instructions telles que `On Error Goto`.  
