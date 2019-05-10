@@ -3,11 +3,11 @@ title: Didacticiels C#
 description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
 ms.date: 10/25/2018
 ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63773908"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755778"
 ---
 # <a name="c-tutorials"></a>Didacticiels C#
 

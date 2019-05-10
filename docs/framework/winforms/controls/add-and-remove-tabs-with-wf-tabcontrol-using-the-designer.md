@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665825"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procédure : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l’aide du concepteur
 Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votre formulaire, il contient deux onglets par défaut. Vous pouvez ajouter ou supprimer des onglets à l’aide du concepteur.  
@@ -27,7 +27,7 @@ Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votr
   
 - Dans la balise active du contrôle, cliquez sur **ajouter un onglet** ou **onglet supprimer**  
   
-     - ou -  
+     ou  
   
      Dans le **propriétés** fenêtre, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté le <xref:System.Windows.Forms.TabControl.TabPages%2A> propriété pour ouvrir le **éditeur de collections TabPage**. Cliquez sur le **ajouter** ou **supprimer** bouton.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bb486dc210bc2d03be6400e9fe5c80b2a7c1de8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659865"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implémentation du modèle de contrôle RangeValue d’UI Automation
 > [!NOTE]
@@ -37,13 +37,13 @@ Exemple d’une barre de progression où la valeur est de type entier, et où le
   
 |Membre obligatoire|Type de membre|Notes|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Méthodes|Aucun.|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Méthodes|None|  
   
  Ce modèle de contrôle n’est associé aucun événement.  
   
