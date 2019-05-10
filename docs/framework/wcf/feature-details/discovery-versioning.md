@@ -2,12 +2,12 @@
 title: Contrôle des versions de découverte
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3f90fc5183e974b9045c156e0ae74099abfbc41a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626951"
 ---
 # <a name="discovery-versioning"></a>Contrôle des versions de découverte
 Cette rubrique donne une rapide vue d'ensemble de l'implémentation de nouvelles fonctionnalités de découverte. Elle donne également une vue d'ensemble de la manière de sélectionner la version de découverte à utiliser.  
