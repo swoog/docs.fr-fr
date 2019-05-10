@@ -2,26 +2,26 @@
 title: type d'association
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fbdc0316b1f9fd0bb282fd466857b1426c41df1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411445"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583721"
 ---
 # <a name="association-type"></a>type d'association
 Un *type d’association* (également appelé une association) est le bloc de construction fondamental pour la description des relations dans le modèle EDM (Entity Data Model). Dans un modèle conceptuel, une association représente une relation entre deux [types d’entité](../../../../docs/framework/data/adonet/entity-type.md) (tel que `Customer` et `Order`). Dans une application, une instance d'une association représente une association spécifique (comme une association entre une instance de `Customer` et une instance d'`Order`). Instances d’association sont regroupées logiquement dans un [ensemble d’associations](../../../../docs/framework/data/adonet/association-set.md).  
   
  Une définition d'association contient les informations suivantes :  
   
--   Nom unique. (Requis)  
+- Nom unique. (Requis)  
   
--   Deux [terminaisons d’association](../../../../docs/framework/data/adonet/association-end.md), un pour chaque type d’entité dans la relation. (Requis)  
+- Deux [terminaisons d’association](../../../../docs/framework/data/adonet/association-end.md), un pour chaque type d’entité dans la relation. (Requis)  
   
     > [!NOTE]
     >  Une association ne peut pas représenter de relation entre plus de deux types d'entité. Toutefois, une association peut définir une relation réciproque en spécifiant le même type d'entité pour chacune de ses terminaisons d'association.  
   
--   Un [contrainte d’intégrité référentielle](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (facultatif)  
+- Un [contrainte d’intégrité référentielle](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (facultatif)  
   
  Chaque terminaison d’association doit spécifier un [multiplicité de terminaison d’association](../../../../docs/framework/data/adonet/association-end-multiplicity.md) qui indique le nombre d’instances de type d’entité qui peut être une des extrémités de l’association. Une multiplicité de terminaison d’association peut avoir une valeur d’un (1), zéro ou un (0.. 1) ou plusieurs (\*). Instances de type d’entité à une extrémité d’une association est accessible via [propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) ou les clés étrangères si elles sont exposées sur un type d’entité. Pour plus d’informations, consultez [Entity Data Model : Clés étrangères](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   

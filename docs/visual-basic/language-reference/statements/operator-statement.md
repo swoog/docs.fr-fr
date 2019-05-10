@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4162f7cb5d8b89a1e5e8e7db429cf4e8dd9b700a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583594"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Déclare le symbole d’opérateur, opérandes et le code qui définissent une procédure d’opérateur sur une classe ou structure.  
@@ -41,19 +41,19 @@ End Operator
   
 ## <a name="parts"></a>Composants  
  `attrlist`  
- Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
  Obligatoire. Indique que cette procédure d’opérateur a [Public](../../../visual-basic/language-reference/modifiers/public.md) accès.  
   
  `Overloads`  
- Optionnel. Consultez [surcharges](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ Facultatif. Consultez [surcharges](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
  Obligatoire. Indique que cette procédure d’opérateur est un [partagé](../../../visual-basic/language-reference/modifiers/shared.md) procédure.  
   
  `Shadows`  
- Optionnel. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Obligatoire pour un opérateur de conversion, sauf si vous spécifiez `Narrowing`. Indique que cette procédure d’opérateur définit un [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. Consultez « Conversions étendues et restrictives » sur cette page d’aide.  
@@ -84,7 +84,7 @@ End Operator
  Facultatif, sauf si `Option Strict` est `On`. Type de données de la valeur de la procédure d’opérateur retourne.  
   
  `statements`  
- Optionnel. Bloc d’instructions qui s’exécute la procédure d’opérateur.  
+ Facultatif. Bloc d’instructions qui s’exécute la procédure d’opérateur.  
   
  `returnvalue`  
  Obligatoire. La valeur que la procédure d’opérateur retourne au code appelant.  

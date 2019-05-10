@@ -2,12 +2,12 @@
 title: Développement de services de workflow « contrat en premier »
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774203"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587613"
 ---
 # <a name="contract-first-workflow-service-development"></a>Développement de services de workflow « contrat en premier »
 En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les fonctionnalités de Windows Workflow Foundation (WF) une meilleure intégration entre les services web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat. Cette rubrique fournit une vue d'ensemble de la façon dont les activités et les propriétés d'un service de workflow sont mappées aux attributs d'un contrat de service. Pour obtenir un exemple pas à pas de création d’un service de workflow contrat en premier, consultez [Comment : Créer un service de flux de travail qui utilise un contrat de service existant](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

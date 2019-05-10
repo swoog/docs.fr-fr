@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582896"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim, instruction (Visual Basic)
 Réalloue l'espace de stockage d'une variable tableau.  
@@ -46,7 +46,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Terme|Définition|  
 |----------|----------------|  
-|`Preserve`|Optionnel. Modificateur utilisé pour conserver les données du tableau existant quand vous modifiez la taille de la dernière dimension uniquement.|  
+|`Preserve`|Facultatif. Modificateur utilisé pour conserver les données du tableau existant quand vous modifiez la taille de la dernière dimension uniquement.|  
 |`name`|Obligatoire. Nom de la variable de tableau. Consultez [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obligatoire. Liste des limites de chaque dimension du tableau redéfini.|  
   

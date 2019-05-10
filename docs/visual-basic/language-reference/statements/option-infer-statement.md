@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a85d8012eea14abe4ddcdb35fa154245894a7f97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784097"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582940"
 ---
 # <a name="option-infer-statement"></a>Instruction Option Infer
 Permet l'utilisation de l'inférence de type de variable locale dans les variables déclaratives.  
@@ -32,7 +32,7 @@ Option Infer { On | Off }
 |Terme|Définition|  
 |---|---|  
 |`On`|Facultatif. Active l'inférence de type de variable locale.|  
-|`Off`|Optionnel. Désactive l'inférence de type de variable locale.|  
+|`Off`|Facultatif. Désactive l'inférence de type de variable locale.|  
   
 ## <a name="remarks"></a>Notes  
  Pour définir `Option Infer` dans un fichier, tapez `Option Infer On` ou `Option Infer Off` en haut du fichier, avant tout autre code source. Si la valeur définie pour `Option Infer` dans un fichier est en conflit avec la valeur définie dans l'IDE ou sur la ligne de commande, la valeur contenue dans le fichier est prioritaire.  
