@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651567"
 ---
 # <a name="user-drawn-controls"></a>Contrôles dessinés par l'utilisateur
 Le .NET Framework vous offre la possibilité de développer facilement vos propres contrôles. Vous pouvez créer un contrôle utilisateur, qui est un ensemble de contrôles standard liés ensemble par le code, ou vous pouvez concevoir votre propre contrôle de bout en bout des. Vous pouvez même utiliser l’héritage pour créer un contrôle qui hérite d’un contrôle existant et ajouter ses fonctionnalités inhérentes. N’importe quelle approche que vous utilisez, le .NET Framework fournit la fonctionnalité permettant de dessiner une interface graphique personnalisée pour n’importe quel contrôle que vous créez.  

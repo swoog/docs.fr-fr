@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649618"
 ---
 # <a name="function-procedures-visual-basic"></a>Procédures Function (Visual Basic)
 Un `Function` procédure est une série d’instructions Visual Basic délimitée par le `Function` et `End Function` instructions. Le `Function` procédure effectue une tâche, puis retourne le contrôle au code appelant. Lorsqu’elle retourne le contrôle, elle retourne également une valeur au code appelant.  

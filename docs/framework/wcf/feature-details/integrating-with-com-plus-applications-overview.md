@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638642"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM+
 Windows Communication Foundation (WCF) fournit un environnement riche pour la création d’applications distribuées. Si vous utilisez déjà la logique d’application basée sur le composant hébergée dans COM +, vous pouvez utiliser WCF pour étendre votre logique existante plutôt que d’avoir à la réécrire. Un scénario courant consiste à exposer une logique métier COM+ ou Enterprise Services existante par le biais de services Web.  

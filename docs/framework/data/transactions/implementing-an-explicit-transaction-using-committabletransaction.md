@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645774"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implémentation d'une transaction explicite à l'aide de CommittableTransaction
 La classe <xref:System.Transactions.CommittableTransaction> permet aux applications d’utiliser une transaction de façon explicite au lieu d’utiliser la classe <xref:System.Transactions.TransactionScope> de façon implicite. Cela se révèle utile pour les applications qui souhaitent utiliser une même transaction pour plusieurs appels de fonction ou plusieurs appels de thread. Contrairement à la classe <xref:System.Transactions.TransactionScope>, le writer d’application doit absolument appeler les méthodes <xref:System.Transactions.CommittableTransaction.Commit%2A> et <xref:System.Transactions.Transaction.Rollback%2A> pour valider ou abandonner la transaction.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78274e2a5597291adcdafccf759b826f54a264ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609891"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647197"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mappage de modèle de contrôle pour les clients UI Automation
 > [!NOTE]
@@ -34,44 +34,44 @@ ms.locfileid: "61609891"
   
 |Type de contrôle|Prise en charge|Prise en charge conditionnelle|Non prise en charge|  
 |------------------|---------------|-------------------------|-------------------|  
-|Bouton|Aucun.|Invoke, Toggle, Expand Collapse|Aucun.|  
+|Bouton|None|Invoke, Toggle, Expand Collapse|None|  
 |Calendrier|Grid, Table|Selection, Scroll|Value|  
-|Case à cocher|Basculer|Aucun.|Aucun.|  
+|Case à cocher|Basculer|None|None|  
 |Combo Box|Développer/Réduire|Selection, Value|Scroll|  
-|DataGrid|Grille|Scroll, Selection, Table|Aucun.|  
-|DataItem|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Aucun.|  
-|Document|Texte|Scroll, Value|Aucun.|  
-|Modifier|Aucun.|Text, Range Value, Value|Aucun.|  
-|Regrouper|Aucun.|Développer/Réduire|Aucun.|  
-|En-tête|Aucun.|Transformer|Aucun.|  
-|HeaderItem|Aucun.|Transform, Invoke|Aucun.|  
-|Lien hypertexte|Appeler|Value|Aucun.|  
-|Image|Aucun.|Grid Item, Table Item|Invoke, Selection Item|  
-|Liste|Aucun.|Grid, Multiple View, Scroll, Selection|Table|  
-|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Aucun.|  
-|Menu|Aucun.|Aucun.|Aucun.|  
-|Barre de menus|Aucun.|Expand Collapse, Dock, Transform|Aucun.|  
-|Élément de menu|Aucun.|Expand Collapse, Invoke, Selection Item, Toggle|Aucun.|  
-|Volet|Aucun.|Dock. Scroll, Transform|Fenêtre|  
-|ProgressBar|Aucun.|Range Value, Value|Aucun.|  
-|RadioButton|Selection Item|Aucun.|Basculer|  
-|Scroll Bar|Aucun.|Range Value|Scroll|  
-|Séparateur|Aucun.|Aucun.|Aucun.|  
-|Curseur|None|Range Value, Selection, Value|Aucun.|  
-|Spinner|Aucun.|Range Value, Selection, Value|Aucun.|  
-|Bouton partagé|Invoke, Expand Collapse|Aucun.|Aucun.|  
-|Barre d'état|Aucun.|Grille|Aucun.|  
-|Onglet|Sélection|Scroll|Aucun.|  
-|TabItem|Selection Item|Aucun.|Appeler|  
-|Table|Grid, Grid Item, Table, Table Item|Aucun.|Aucun.|  
-|Texte|Aucun.|Grid Item, Table Item, Text|Value|  
-|Thumb|Transformer|Aucun.|Aucun.|  
-|Barre de titre|Aucun.|Aucun.|Aucun.|  
-|Tool Bar|Aucun.|Dock, Expand Collapse, Transform|Aucun.|  
-|Tool Tip|Aucun.|Text, Window|Aucun.|  
-|Arborescence|Aucun.|Scroll, Selection|Aucun.|  
-|TreeItem|Développer/Réduire|Invoke, Scroll Item, Selection Item, Toggle|Aucun.|  
-|Fenêtre|Transform, Window|Station d' accueil|Aucun.|  
+|DataGrid|Grille|Scroll, Selection, Table|None|  
+|DataItem|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|None|  
+|Document|Texte|Scroll, Value|None|  
+|Modifier|None|Text, Range Value, Value|None|  
+|Regrouper|None|Développer/Réduire|None|  
+|En-tête|None|Transformer|None|  
+|HeaderItem|None|Transform, Invoke|None|  
+|Lien hypertexte|Appeler|Value|None|  
+|Image|None|Grid Item, Table Item|Invoke, Selection Item|  
+|Liste|None|Grid, Multiple View, Scroll, Selection|Table|  
+|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|None|  
+|Menu|None|None|None|  
+|Barre de menus|None|Expand Collapse, Dock, Transform|None|  
+|Élément de menu|None|Expand Collapse, Invoke, Selection Item, Toggle|None|  
+|Volet|None|Dock. Scroll, Transform|Fenêtre|  
+|ProgressBar|None|Range Value, Value|None|  
+|RadioButton|Selection Item|None|Basculer|  
+|Scroll Bar|None|Range Value|Scroll|  
+|Séparateur|None|None|None|  
+|Curseur|None|Range Value, Selection, Value|None|  
+|Spinner|None|Range Value, Selection, Value|None|  
+|Bouton partagé|Invoke, Expand Collapse|None|None|  
+|Barre d'état|None|Grille|None|  
+|Onglet|Sélection|Scroll|None|  
+|TabItem|Selection Item|None|Appeler|  
+|Table|Grid, Grid Item, Table, Table Item|None|None|  
+|Texte|None|Grid Item, Table Item, Text|Value|  
+|Thumb|Transformer|None|None|  
+|Barre de titre|None|None|None|  
+|Tool Bar|None|Dock, Expand Collapse, Transform|None|  
+|Tool Tip|None|Text, Window|None|  
+|Arborescence|None|Scroll, Selection|None|  
+|TreeItem|Développer/Réduire|Invoke, Scroll Item, Selection Item, Toggle|None|  
+|Fenêtre|Transform, Window|Station d' accueil|None|  
   
 > [!NOTE]
 >  Si un type de contrôle ne possède aucun modèle de contrôle pris en charge répertorié, mais possède un ou plusieurs modèles de contrôle pris en charge de manière conditionnelle, l’un de ces modèles de contrôle conditionnels est constamment pris en charge.  

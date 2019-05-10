@@ -2,12 +2,12 @@
 title: Problèmes de sécurité relatifs à la journalisation des messages
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e1503249d5fd33e320ccb6642eb6e97c3029ba85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998151"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651822"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
