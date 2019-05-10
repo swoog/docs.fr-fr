@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7300acdf46844dd79445859dfa47874889982bd1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593472"
 ---
 # <a name="bindingsource-component-architecture"></a>Architecture du composant BindingSource
 Avec le <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier universellement tous les contrôles Windows Forms aux sources de données.  
@@ -163,7 +163,7 @@ Avec le <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier un
 |Membre|Description|  
 |------------|-----------------|  
 |Propriété <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingListView>, obtient ou définit l'expression utilisée pour filtrer les lignes affichées.|  
-|Propriété <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri.<br /><br /> - ou -<br /><br /> Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et l’ordre de tri|  
+|Propriété <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si la source de données est un <xref:System.ComponentModel.IBindingList>, obtient ou définit un nom de colonne utilisé pour le tri et les informations d'ordre de tri.<br /><br /> ou<br /><br /> Si la source de données est un <xref:System.ComponentModel.IBindingListView> et prend en charge tri avancé, obtient plusieurs noms de colonnes utilisés pour le tri et l’ordre de tri|  
   
 ### <a name="integration-with-bindingnavigator"></a>Intégration à BindingNavigator  
  Vous pouvez utiliser la <xref:System.Windows.Forms.BindingSource> composant à lier n’importe quel contrôle Windows Forms à une source de données, mais la <xref:System.Windows.Forms.BindingNavigator> contrôle est conçu spécifiquement pour fonctionner avec le <xref:System.Windows.Forms.BindingSource> composant. Le <xref:System.Windows.Forms.BindingNavigator> contrôle fournit une interface utilisateur permettant de contrôler le <xref:System.Windows.Forms.BindingSource> élément actuel du composant. Par défaut, le <xref:System.Windows.Forms.BindingNavigator> contrôle fournit des boutons qui correspondent aux méthodes de navigation sur le <xref:System.Windows.Forms.BindingSource> composant. Pour plus d'informations, voir [Procédure : Naviguer parmi les données avec le contrôle BindingNavigator Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  

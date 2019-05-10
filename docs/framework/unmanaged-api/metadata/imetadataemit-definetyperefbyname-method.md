@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156167"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584488"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName, méthode
 Obtient les métadonnées jeton pour un type qui est défini dans la portée spécifiée, qui est en dehors de la portée actuelle.  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] Le jeton en spécifiant la résolution de portée. Les types de jetons suivants sont valides :  
   
--   `mdModuleRef`, si le type est défini dans le même assembly dans lequel l’appelant est défini.  
+- `mdModuleRef`, si le type est défini dans le même assembly dans lequel l’appelant est défini.  
   
--   `mdAssemblyRef`, si le type est défini dans un assembly autre que celui dans lequel l’appelant est défini.  
+- `mdAssemblyRef`, si le type est défini dans un assembly autre que celui dans lequel l’appelant est défini.  
   
--   `mdTypeRef`, si le type est un type imbriqué.  
+- `mdTypeRef`, si le type est un type imbriqué.  
   
--   `mdModule`, si le type est défini dans le même module que celui dans lequel l’appelant est défini.  
+- `mdModule`, si le type est défini dans le même module que celui dans lequel l’appelant est défini.  
   
--   Valeur null, si le type est défini dans le monde entier.  
+- Valeur null, si le type est défini dans le monde entier.  
   
  `szName`  
  [in] Le nom du type cible au format Unicode.  

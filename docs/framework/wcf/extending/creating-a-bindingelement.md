@@ -2,12 +2,12 @@
 title: Création d’un élément de liaison
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858349"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587335"
 ---
 # <a name="creating-a-bindingelement"></a>Création d’un élément de liaison
 Liaisons et éléments de liaison (objets qui étendent <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivement) sont l’endroit où le modèle d’application Windows Communication Foundation (WCF) est associé avec les fabriques et les écouteurs de canal. Sans liaisons, à l’aide de canaux personnalisés nécessite une programmation au niveau du canal comme décrit dans [de programmation au niveau du canal de Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) et [de programmation au niveau du canal de Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Cette rubrique décrit la configuration minimale requise pour permettre l’utilisation de votre canal dans WCF, le développement d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal et activer l’utilisation de l’application, comme décrit à l’étape 4 de [canaux de développement](../../../../docs/framework/wcf/extending/developing-channels.md).  

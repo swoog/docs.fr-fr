@@ -2,12 +2,12 @@
 title: Sérialisation JSON autonome
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 701ad05b7432c36950ff514ad8c7c18a54c7f020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747587"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586194"
 ---
 # <a name="stand-alone-json-serialization"></a>Sérialisation JSON autonome
 JSON (JavaScript Object Notation) est un format de données spécialement conçu pour être utilisé par du code JavaScript exécuté sur les pages web dans le navigateur. Il est le format de données par défaut utilisé par les services ASP.NET AJAX créés dans Windows Communication Foundation (WCF).  

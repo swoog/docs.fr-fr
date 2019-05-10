@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982358"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063891"
 ---
 # <a name="routed-events-overview"></a>Vue d'ensemble des événements routés
 Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Elle définit les termes utilisés pour les événements routés, elle explique comment ces événements sont routés via une arborescence d’éléments, elle résume la façon dont sont gérés les événements routés et elle explique comment créer ses propres événements routés personnalisés.
@@ -197,10 +197,9 @@ Cette rubrique explique le concept d’événements routés dans [!INCLUDE[TLA#t
   
  Les événements d’entrée [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournis par paires sont implémentés de telle sorte qu’une seule opération d’entrée, comme un clic de souris, déclenche les deux événements de la paire l’un après l’autre. Tout d’abord, l’événement de tunneling est déclenché et suit son itinéraire. Ensuite, l’événement de propagation est déclenché et suit son itinéraire. Les deux événements partagent littéralement la même instance de données de l’événement, car le <xref:System.Windows.UIElement.RaiseEvent%2A> appel de méthode dans la classe d’implémentation qui déclenche l’événement de propagation écoute pour les données d’événement à partir de l’événement de tunneling et les réutilise dans le nouvel événement déclenché. Les écouteurs qui comportent des gestionnaires pour l’événement de tunneling sont les premiers à pouvoir marquer l’événement routé comme géré (d’abord les gestionnaires de classe, ensuite les gestionnaires d’instance). Si un élément a marqué l’événement routé comme géré sur l’itinéraire de tunneling, les données d’événement déjà gérées sont envoyées à l’événement de propagation, et les gestionnaires standard attachés pour les événements d’entrée de propagation équivalents ne sont pas appelés. Vu de l’extérieur, il peut sembler que l’événement de propagation géré n’a pas encore été déclenché. Ce comportement de gestion est utile pour la composition de contrôles, où vous pouvez souhaiter que tous les événements d’entrée basés sur les tests d’atteinte ou le focus soient signalés par votre dernier contrôle, plutôt que par ses parties composites. Le dernier élément de contrôle est plus proche de la racine dans la composition et peut donc être le premier à gérer la classe de l’événement de tunneling et éventuellement à « remplacer » l’événement routé par un événement plus spécifique au contrôle dans le code qui stocke la classe de contrôle.  
   
- En guise d’illustration du traitement des événements d’entrée, prenez l’exemple d’événement d’entrée suivant. Dans l’arborescence suivante, `leaf element #2` est la source d’un événement `PreviewMouseDown`, puis d’un événement `MouseDown`.  
+ En guise d’illustration du traitement des événements d’entrée, prenez l’exemple d’événement d’entrée suivant. Dans l’illustration suivante de l’arborescence, `leaf element #2` est la source d’un `PreviewMouseDown` , puis un `MouseDown` événement :  
   
- ![Diagramme de routage d’événement](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-Propagation et tunneling des événements d’entrée  
+ ![Diagramme de routage d'événements](./media/routed-events-overview/input-event-routing.png)  
   
  L’ordre de traitement des événements est le suivant :  
   

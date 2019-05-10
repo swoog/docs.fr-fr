@@ -2,12 +2,12 @@
 title: Création d'un service de workflow de longue durée
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048149"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063797"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Création d'un service de workflow de longue durée
 Cette rubrique décrit comment créer un service de workflow de longue durée. Les services de workflow de longue durée peuvent s'exécuter sur de longues périodes. À un certain stade, le workflow peut devenir inactif en attendant des informations supplémentaires. Lorsque cela se produit, le workflow est rendu persistant dans une base de données SQL et supprimé de la mémoire. Une fois que les informations supplémentaires sont disponibles, l'instance de workflow est à nouveau chargée dans la mémoire et continue de s'exécuter.  Dans ce scénario, vous implémentez un système de commande très simplifié.  Le client envoie un message initial au service de workflow pour commencer la commande. Un ID de commande est retourné au client. À ce stade, le service de workflow attend un autre message du client, passe à l'état inactif et est rendu persistant dans une base de données SQL Server.  Lorsque le client envoie le message suivant pour commander un article, le service de workflow est à nouveau chargé dans la mémoire et termine le traitement de la commande. Dans l'exemple de code, il retourne une chaîne indiquant que l'article a été ajouté à la commande. L'exemple de code n'est pas censé refléter une application réelle de la technologie mais plutôt un exemple simple illustrant des services de workflow de longue durée. Cette rubrique suppose que vous savez comment créer des solutions et projets de Visual Studio 2012.
@@ -100,10 +100,15 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
     1. Sélectionnez le **séquence** contenant récemment ajouté **réception** et **SendReply** activités et cliquez sur le **Variables** bouton. Ajoutez la variable mise en surbrillance dans l'illustration suivante :
 
          ![Ajout de nouvelles variables](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ajouter la variable ItemId.")
+         
+         Ajoutez également `orderResult` comme **chaîne** dans le `Sequence` étendue.
 
     2. Sélectionnez le **réception** activité et définissez les propriétés affichées dans l’illustration suivante :
 
          ![Définir les propriétés d’une activité de réception](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "définir les propriétés d’activités de réception.")
+         
+         > [!NOTE]
+         >  N’oubliez pas de modifier **ServiceContractName** champ `../IAddItem`.
 
     3. Cliquez sur le **définir...**  lien dans le **ReceiveAddItem** activité et ajoutez les paramètres indiqués dans l’illustration suivante : ce paramètre configure l’activité de réception pour accepter deux paramètres, l’ID de commande et l’ID de l’article commandé.
 

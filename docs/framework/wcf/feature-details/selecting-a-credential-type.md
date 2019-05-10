@@ -2,12 +2,12 @@
 title: Sélection d'un type d'informations d'identification
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586127"
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données de Windows Communication Foundation (WCF) utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans WCF, les informations d’identification peuvent prendre différentes formes, telles que les jetons de nom d’utilisateur et les certificats X.509. Cette rubrique traite des informations d’identification, comment ils sont utilisés dans WCF et comment sélectionner les informations d’identification appropriées pour votre application.  
@@ -25,7 +25,7 @@ ms.locfileid: "61748801"
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Spécifie l'authentification de base pour le client. Pour plus d’informations, consultez RFC2617 —[l’authentification HTTP : Authentification de base et authentification Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Digest|Spécifie l’authentification Digest pour le client. Pour plus d’informations, consultez RFC2617 —[l’authentification HTTP : Authentification de base et authentification Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Ntlm|Spécifie l'authentification NTLM (NT LAN Manager). S'utilise si pour une raison quelconque vous ne pouvez pas utiliser l'authentification Kerberos. Vous pouvez également désactiver son utilisation comme solution de secours en définissant le <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriété `false`, ce qui entraîne de WCF rendre un meilleur effort pour lever une exception si NTLM est utilisé. Notez que l'affectation de la valeur `false` à cette propriété peut ne pas empêcher la transmission des informations d'identification NTLM.|  
@@ -38,7 +38,7 @@ ms.locfileid: "61748801"
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Windows|Permet les échanges de messages SOAP dans le contexte de sécurité établi avec des informations d'identification Windows.|  
 |Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que WCF n’autorise pas les opérations de chiffrement avec les noms d’utilisateur, telles que la génération d’une signature ou chiffrement des données. WCF permet de s’assurer que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger que le client soit authentifié à l'aide d'un certificat X.509.|  

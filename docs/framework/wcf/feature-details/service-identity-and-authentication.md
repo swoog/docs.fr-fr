@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586224"
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
 D’un service *identité de point de terminaison* est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre *anti-hameçonnage* en empêchant un client soit redirigé à un point de terminaison hébergé par un service malveillant.  

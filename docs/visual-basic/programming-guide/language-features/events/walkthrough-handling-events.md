@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aa3c1f00922cda46d3ce5a788b606a6f5da52636
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053793"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604038"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procédure pas à pas : Gestion des événements (Visual Basic)
 Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des événements. La première rubrique [procédure pas à pas : Déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), montre comment déclarer et déclencher des événements. Cette section utilise le formulaire et la classe à partir de cette procédure pas à pas pour montrer comment gérer des événements lorsqu’elles ont lieu.  
@@ -45,7 +45,7 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
     > [!NOTE]
     >  Le **éditeur de Code** est utile, mais pas obligatoire, pour l’insertion de nouveaux gestionnaires d’événements. Dans cette procédure pas à pas, il est plus rapide de copier simplement les gestionnaires d’événements directement dans votre code.  
   
-3. Ajoutez le code suivant au gestionnaire d'événements `mWidget_PercentDone` :  
+3. Ajoutez le code suivant au gestionnaire d'événements `mWidget_PercentDone` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
@@ -76,7 +76,7 @@ Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des
   
 #### <a name="to-call-the-longtask-method"></a>Pour appeler la méthode LongTask  
   
-- Ajoutez le code suivant au gestionnaire d'événements `Button1_Click` :  
+- Ajoutez le code suivant au gestionnaire d'événements `Button1_Click` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
