@@ -2,12 +2,12 @@
 title: clé d'entité
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879180"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599643"
 ---
 # <a name="entity-key"></a>clé d'entité
 Un *clé d’entité* est un [propriété](../../../../docs/framework/data/adonet/property.md) ou un jeu de propriétés d’un [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) qui servent à déterminer l’identité. Les propriétés qui composent une clé d'entité sont choisies au moment du design. Les valeurs des propriétés de clé d’entité doivent identifier de manière unique une instance de type d’entité dans un [jeu d’entités](../../../../docs/framework/data/adonet/entity-set.md) en cours d’exécution. Les propriétés qui composent une clé d'entité doivent être choisies pour garantir l'unicité des instances dans un jeu d'entités.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680156"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596122"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexeurs (Guide de programmation C#)
 
@@ -40,29 +40,29 @@ Notez que `=>` introduit le corps de l’expression et que le mot clé `get` n�
   
 ## <a name="indexers-overview"></a>Vue d'ensemble des indexeurs  
   
--   Les indexeurs permettent aux objets d'être indexés d'une manière similaire aux tableaux.  
+- Les indexeurs permettent aux objets d'être indexés d'une manière similaire aux tableaux.  
   
--   Un accesseur `get` retourne une valeur. Un accesseur `set` affecte une valeur.  
+- Un accesseur `get` retourne une valeur. Un accesseur `set` affecte une valeur.  
   
--   Le mot clé [this](../../../csharp/language-reference/keywords/this.md) est utilisé pour définir l’indexeur.  
+- Le mot clé [this](../../../csharp/language-reference/keywords/this.md) est utilisé pour définir l’indexeur.  
   
--   Le mot clé [value](../../../csharp/language-reference/keywords/value.md) est utilisé pour définir la valeur affectée par l’indexeur `set`.  
+- Le mot clé [value](../../../csharp/language-reference/keywords/value.md) est utilisé pour définir la valeur affectée par l’indexeur `set`.  
   
--   Les indexeurs n'ont pas besoin d'être indexés par une valeur entière. Il vous appartient de choisir comment définir le mécanisme de recherche spécifique.  
+- Les indexeurs n'ont pas besoin d'être indexés par une valeur entière. Il vous appartient de choisir comment définir le mécanisme de recherche spécifique.  
   
--   Les indexeurs peuvent être surchargés.  
+- Les indexeurs peuvent être surchargés.  
   
--   Les indexeurs peuvent avoir plusieurs paramètres formels, par exemple, quand vous accédez à un tableau à deux dimensions.  
+- Les indexeurs peuvent avoir plusieurs paramètres formels, par exemple, quand vous accédez à un tableau à deux dimensions.  
   
 ## <a name="BKMK_RelatedSections"></a> Rubriques connexes  
   
--   [Utilisation d’indexeurs](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Utilisation d’indexeurs](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Indexeurs dans les interfaces](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indexeurs dans les interfaces](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Restriction d’accessibilité de l’accesseur](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restriction d’accessibilité de l’accesseur](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31aca95bb292ecd0bb04fda6ded83d4af8be0e2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598619"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Dépannage des variables en Visual Basic
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des variables en Visual Basic.  
