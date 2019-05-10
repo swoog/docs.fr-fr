@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660555"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilisation d'un service de données dans une application cliente (services de données WCF)
 Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux en fournissant un URI à un navigateur Web. L'URI fournit l'adresse d'une ressource, et les messages de demande sont envoyés à ces adresses pour accéder ou modifier les données sous-jacentes que représente la ressource. Le navigateur émet une commande HTTP GET et retourne la ressource demandée sous forme d'un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Pour plus d’informations, consultez [l’accès au Service à partir d’un navigateur Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -23,24 +23,24 @@ Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../..
 ### <a name="http-actions"></a>Actions HTTP  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les actions HTTP suivantes pour effectuer des opérations de création, lecture, mise à jour et suppression sur les données d'entité représentées par la ressource adressée :  
   
--   **HTTP GET** -il s’agit l’action par défaut lorsqu’une ressource est accessible à partir d’un navigateur. Aucune charge utile n'est fournie dans le message de demande, et une méthode de réponse avec une charge utile qui contient les données demandées est retournée.  
+- **HTTP GET** -il s’agit l’action par défaut lorsqu’une ressource est accessible à partir d’un navigateur. Aucune charge utile n'est fournie dans le message de demande, et une méthode de réponse avec une charge utile qui contient les données demandées est retournée.  
   
--   **HTTP POST** -insère de nouvelles données d’entité dans la ressource fournie. Les données à insérer sont fournies dans la charge utile du message de demande. La charge utile du message de réponse contient les données de l'entité créée récemment. Cela inclut les valeurs de clés créées automatiquement. L'en-tête contient également l'URI qui adresse la nouvelle ressource d'entité.  
+- **HTTP POST** -insère de nouvelles données d’entité dans la ressource fournie. Les données à insérer sont fournies dans la charge utile du message de demande. La charge utile du message de réponse contient les données de l'entité créée récemment. Cela inclut les valeurs de clés créées automatiquement. L'en-tête contient également l'URI qui adresse la nouvelle ressource d'entité.  
   
--   **HTTP DELETE** -supprime les données d’entité qui représente la ressource spécifiée. Une charge utile n'est pas présente dans les messages de demande ou de réponse.  
+- **HTTP DELETE** -supprime les données d’entité qui représente la ressource spécifiée. Une charge utile n'est pas présente dans les messages de demande ou de réponse.  
   
--   **HTTP PUT** - remplace les données d’entité à la ressource demandée avec de nouvelles données qui sont fournies dans la charge utile du message de demande existantes.  
+- **HTTP PUT** - remplace les données d’entité à la ressource demandée avec de nouvelles données qui sont fournies dans la charge utile du message de demande existantes.  
   
--   **HTTP MERGE** - en raison du manque d’efficacité lors de l’exécution d’une suppression suivie d’une insertion dans la source de données uniquement pour modifier des données d’entité, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] présente une nouvelle action HTTP MERGE. La charge utile du message de demande contient les propriétés qui doivent être changées sur la ressource d'entité adressée. Comme HTTP MERGE n'est pas défini dans la spécification HTTP, elle peut nécessiter un traitement supplémentaire pour acheminer une demande HTTP MERGE via des serveurs non-[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+- **HTTP MERGE** - en raison du manque d’efficacité lors de l’exécution d’une suppression suivie d’une insertion dans la source de données uniquement pour modifier des données d’entité, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] présente une nouvelle action HTTP MERGE. La charge utile du message de demande contient les propriétés qui doivent être changées sur la ressource d'entité adressée. Comme HTTP MERGE n'est pas défini dans la spécification HTTP, elle peut nécessiter un traitement supplémentaire pour acheminer une demande HTTP MERGE via des serveurs non-[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
  Pour plus d’informations, consultez [OData : Opérations](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formats de charge utile  
  Pour une demande HTTP PUT, HTTP POST ou HTTP MERGE, la charge utile d’un message de demande contient les données d’entité que vous envoyez au service de données. Le contenu de la charge utile dépend du format de données du message. Les réponses HTTP à toutes les actions sauf DELETE contiennent également une charge utile. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats de charge utile suivants pour l’accès et modification de données avec le service :  
   
--   **Atom** -encodage de message basé sur XML défini par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en tant qu’extension aux Atom Publishing Protocol (AtomPub) pour permettre l’échange de données sur HTTP pour les flux Web, podcasts, wikis et fonctionnalité Internet au XML. Pour plus d’informations, consultez [OData : Format Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -encodage de message basé sur XML défini par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en tant qu’extension aux Atom Publishing Protocol (AtomPub) pour permettre l’échange de données sur HTTP pour les flux Web, podcasts, wikis et fonctionnalité Internet au XML. Pour plus d’informations, consultez [OData : Format Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Objet Notation (JSON) est un format d’échange de données léger basé sur un sous-ensemble du langage de programmation JavaScript. Pour plus d’informations, consultez [OData : Format JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Objet Notation (JSON) est un format d’échange de données léger basé sur un sous-ensemble du langage de programmation JavaScript. Pour plus d’informations, consultez [OData : Format JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  Le format du message de la charge utile est demandé dans l'en-tête du message de requête HTTP. Pour plus d’informations, consultez [OData : Opérations](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

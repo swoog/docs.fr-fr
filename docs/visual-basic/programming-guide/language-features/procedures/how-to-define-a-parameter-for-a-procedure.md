@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863699"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665379"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procédure : Définir un paramètre pour une procédure (Visual Basic)
 Un *paramètre* permet au code appelant de passer une valeur à la procédure lorsqu’il l’appelle. Vous déclarez chaque paramètre pour une procédure de la même façon que vous déclarez une variable, en spécifiant son nom et type de données. Vous spécifiez également le mécanisme de passage et indique si le paramètre est facultatif.  
@@ -46,11 +46,11 @@ Un *paramètre* permet au code appelant de passer une valeur à la procédure lo
   
      Spécifier les types de données pour tous les éléments de programmation est appelé *un typage fort*. Lorsque vous définissez `Option Strict On`, Visual Basic applique un typage fort. Il est fortement recommandé, pour les raisons suivantes :  
   
-    -   Il permet la prise en charge IntelliSense pour vos variables et des paramètres. Cela vous permet de vous permet de voir leurs propriétés et autres membres en cours de frappe dans votre code.  
+    - Il permet la prise en charge IntelliSense pour vos variables et des paramètres. Cela vous permet de vous permet de voir leurs propriétés et autres membres en cours de frappe dans votre code.  
   
-    -   Il permet au compilateur d’effectuer la vérification du type. Cela permet d’identifier les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
+    - Il permet au compilateur d’effectuer la vérification du type. Cela permet d’identifier les instructions qui peuvent échouer au moment de l’exécution en raison d’erreurs de dépassement de capacité. Il intercepte également les appels aux méthodes sur des objets qui ne les prennent pas en charge.  
   
-    -   Il en résulte dans une exécution plus rapide de votre code. Une des raisons sont que si vous ne spécifiez pas un type de données pour un élément de programmation, le compilateur Visual Basic lui assigne la `Object` type. Votre code compilé peut avoir à convertir dans les deux sens entre `Object` et d’autres types de données, ce qui réduit les performances.  
+    - Il en résulte dans une exécution plus rapide de votre code. Une des raisons sont que si vous ne spécifiez pas un type de données pour un élément de programmation, le compilateur Visual Basic lui assigne la `Object` type. Votre code compilé peut avoir à convertir dans les deux sens entre `Object` et d’autres types de données, ce qui réduit les performances.  
   
 ## <a name="see-also"></a>Voir aussi
 

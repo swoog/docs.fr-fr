@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857790"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650331"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
@@ -204,7 +204,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 |Type|Description|  
 |----------|-----------------|  
-|Aucun.|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
+|None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
 |Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : Base et Digest, disponible à l’adresse <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
@@ -217,7 +217,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 |Type|Description|  
 |----------|-----------------|  
-|Aucun.|Autorise le service à interagir avec des clients anonymes.|  
+|None|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows.|  
 |UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité est défini sur `TransportWithMessageCredential`, WCF ne prend pas en charge l’envoi d’un mot de passe digest ou des clés dérivantes à l’aide du mot de passe et à l’aide de ces clés pour le mode de sécurité Message. Par conséquent, WCF met en œuvre que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  

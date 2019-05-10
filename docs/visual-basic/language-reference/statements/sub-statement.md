@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751177"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub, instruction (Visual Basic)
 
@@ -55,7 +55,7 @@ End Sub
 
 - `attributelist`
 
-  Optionnel. Consultez [liste d’attributs](attribute-list.md).
+  Facultatif. Consultez [liste d’attributs](attribute-list.md).
 
 - `Partial`
 
@@ -99,11 +99,11 @@ End Sub
 
 - `Shared`
 
-  Optionnel. Consultez [partagé](../modifiers/shared.md).
+  Facultatif. Consultez [partagé](../modifiers/shared.md).
 
 - `Shadows`
 
-  Optionnel. Consultez [Shadows](../modifiers/shadows.md).
+  Facultatif. Consultez [Shadows](../modifiers/shadows.md).
 
 - `Async`
 
@@ -119,11 +119,11 @@ End Sub
 
 - `parameterlist`
 
-  Optionnel. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Consultez [liste de paramètres](parameter-list.md).
+  Facultatif. Liste des noms de variables locales qui représentent les paramètres de cette procédure. Consultez [liste de paramètres](parameter-list.md).
 
 - `Implements`
 
-  Optionnel. Indique que cette procédure implémente un ou plusieurs `Sub` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).
+  Facultatif. Indique que cette procédure implémente un ou plusieurs `Sub` procédures, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette procédure. Consultez [implémente instruction](implements-statement.md).
 
 - `implementslist`
 
@@ -142,7 +142,7 @@ End Sub
 
 - `Handles`
 
-  Optionnel. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).
+  Facultatif. Indique que cette procédure peut gérer un ou plusieurs événements spécifiques. Consultez [gère](handles-clause.md).
 
 - `eventlist`
 
@@ -161,7 +161,7 @@ End Sub
 
 - `statements`
 
-  Optionnel. Bloc d’instructions à exécuter dans cette procédure.
+  Facultatif. Bloc d’instructions à exécuter dans cette procédure.
 
 - `End Sub`
 

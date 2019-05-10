@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7f982c97bd76288ecd1a8d1f53fc2b25b0bb829e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623883"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
 Répète un groupe d’instructions un nombre spécifié de fois.  
@@ -50,13 +50,13 @@ Next [ counter ]
 |Élément|Description|  
 |----------|-----------------|  
 |`counter`|Requis dans le `For` instruction. Variable numérique. La variable de contrôle de la boucle. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
-|`datatype`|Optionnel. Type de données de `counter`. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
+|`datatype`|Facultatif. Type de données de `counter`. Pour plus d’informations, consultez [compteur Argument](#BKMK_Counter) plus loin dans cette rubrique.|  
 |`start`|Obligatoire. Expression numérique. Valeur initiale de `counter`.|  
 |`end`|Obligatoire. Expression numérique. La valeur finale de `counter`.|  
-|`step`|Optionnel. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
-|`statements`|Optionnel. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
+|`step`|Facultatif. Expression numérique. Le montant par lequel `counter` est incrémenté chaque fois que la boucle.|  
+|`statements`|Facultatif. Une ou plusieurs instructions entre `For` et `Next` qui exécutent le nombre de fois spécifié.|  
 |`Continue For`|Facultatif. Transfère le contrôle à la prochaine itération de boucle.|  
-|`Exit For`|Optionnel. Transfère le contrôle de la `For` boucle.|  
+|`Exit For`|Facultatif. Transfère le contrôle de la `For` boucle.|  
 |`Next`|Obligatoire. Termine la définition de la `For` boucle.|  
   
 > [!NOTE]

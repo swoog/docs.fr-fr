@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 55da13eec9dc555c320ecd48d22d984dfcfea84c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751054"
 ---
 # <a name="property-statement"></a>Property Statement
 
@@ -45,7 +45,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  Optionnel. Liste des attributs qui s’appliquent à cette propriété ou `Get` ou `Set` procédure. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).
+  Facultatif. Liste des attributs qui s’appliquent à cette propriété ou `Get` ou `Set` procédure. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `Default`
 
@@ -71,7 +71,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `propertymodifiers`
 
-  Optionnel. Il peut s'agir d'une des valeurs suivantes :
+  Facultatif. Il peut s'agir d'une des valeurs suivantes :
 
   - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 
@@ -89,7 +89,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  Optionnel. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).
+  Facultatif. Consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
@@ -97,15 +97,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `ReadOnly`
 
-  Optionnel. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  Facultatif. Consultez [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WriteOnly`
 
-  Optionnel. Consultez [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).
+  Facultatif. Consultez [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).
 
 - `Iterator`
 
-  Optionnel. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).
+  Facultatif. Consultez [itérateur](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
@@ -113,7 +113,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `parameterlist`
 
-  Optionnel. Liste des noms de variables locales représentant les paramètres de cette propriété et les éventuels paramètres supplémentaires de la `Set` procédure. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).
+  Facultatif. Liste des noms de variables locales représentant les paramètres de cette propriété et les éventuels paramètres supplémentaires de la `Set` procédure. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).
 
 - `returntype`
 
@@ -121,7 +121,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Implements`
 
-  Optionnel. Indique que cette propriété implémente une ou plusieurs propriétés, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette propriété. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).
+  Facultatif. Indique que cette propriété implémente une ou plusieurs propriétés, chacune étant définie dans une interface implémentée par la classe ou la structure conteneur de cette propriété. Consultez [implémente instruction](../../../visual-basic/language-reference/statements/implements-statement.md).
 
 - `implementslist`
 
@@ -140,11 +140,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Get`
 
-  Optionnel. Obligatoire si la propriété est marquée `WriteOnly`. Démarre un `Get` procédure de propriété qui est utilisée pour retourner la valeur de la propriété.
+  Facultatif. Obligatoire si la propriété est marquée `WriteOnly`. Démarre un `Get` procédure de propriété qui est utilisée pour retourner la valeur de la propriété.
 
 - `statements`
 
-  Optionnel. Bloc d’instructions à exécuter dans le `Get` ou `Set` procédure.
+  Facultatif. Bloc d’instructions à exécuter dans le `Get` ou `Set` procédure.
 
 - `End Get`
 
@@ -152,7 +152,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Set`
 
-  Optionnel. Obligatoire si la propriété est marquée `ReadOnly`. Démarre un `Set` procédure de propriété qui est utilisé pour stocker la valeur de la propriété.
+  Facultatif. Obligatoire si la propriété est marquée `ReadOnly`. Démarre un `Set` procédure de propriété qui est utilisé pour stocker la valeur de la propriété.
 
 - `End Set`
 

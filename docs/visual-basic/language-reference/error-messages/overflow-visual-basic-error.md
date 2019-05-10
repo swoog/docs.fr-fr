@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: b4a5cb5ec0d1d4b3ad72ad6ccbced44fbef3f8d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2d7a025fd18c5655caea4ae45477798425d9ece
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661790"
 ---
 # <a name="overflow-visual-basic-error"></a>Dépassement de capacité (erreur Visual Basic)
 Un littéral représente une valeur en dehors des limites du type de données auquel elle est assignée.  

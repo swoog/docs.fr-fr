@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625441"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType, méthode
 Crée une structure `ExportedType` contenant les métadonnées pour le type exporté spécifié et retourne le jeton de métadonnées associé.  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Jeton spécifiant où le type exporté est implémenté. Les valeurs valides et leurs significations associées sont :  
   
--   `mdFile` Le type est implémenté dans un fichier différent au sein de cet assembly.  
+- `mdFile` Le type est implémenté dans un fichier différent au sein de cet assembly.  
   
--   `mdAssemblyRef` Le type est implémenté dans un autre assembly.  
+- `mdAssemblyRef` Le type est implémenté dans un autre assembly.  
   
--   `mdExportedTYpe` Le type est imbriqué dans un autre type.  
+- `mdExportedTYpe` Le type est imbriqué dans un autre type.  
   
--   `mdFileNil` Le type est dans le même fichier que le manifeste et n’est pas un type imbriqué.  
+- `mdFileNil` Le type est dans le même fichier que le manifeste et n’est pas un type imbriqué.  
   
  `tkTypeDef`  
  [in] Un jeton de métadonnées qui spécifie le type à exporter. Cette valeur est entrée dans le `TypeDef` table dans le fichier qui implémente le type et est pertinente uniquement si ce fichier se trouve dans cet assembly.  

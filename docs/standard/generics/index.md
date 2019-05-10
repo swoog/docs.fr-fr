@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622809"
 ---
 # <a name="generics-in-net"></a>Génériques en .NET
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683299"
   
  Cette rubrique présente les génériques de .NET et répertorie les types et les méthodes génériques. Elle contient les sections suivantes :  
   
--   [Définition et utilisation des génériques](#defining_and_using_generics)  
+- [Définition et utilisation des génériques](#defining_and_using_generics)  
   
--   [Terminologie relative aux génériques](#generics_terminology)  
+- [Terminologie relative aux génériques](#generics_terminology)  
   
--   [Bibliothèque de classes et prise en charge des langages](#class_library_and_language_support)  
+- [Bibliothèque de classes et prise en charge des langages](#class_library_and_language_support)  
   
--   [Types imbriqués et génériques](#nested_types_and_generics)  
+- [Types imbriqués et génériques](#nested_types_and_generics)  
   
--   [Rubriques connexes](#related_topics)  
+- [Rubriques connexes](#related_topics)  
   
--   [Référence](#reference)  
+- [Référence](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>Définition et utilisation des génériques  
@@ -71,21 +71,21 @@ ms.locfileid: "61683299"
 ### <a name="generics-terminology"></a>Terminologie relative aux génériques  
  Les termes suivants sont employés quand on aborde le sujet des génériques de .NET :  
   
--   Une *définition de type générique* est une déclaration de classe, de structure ou d'interface qui fonctionne comme un modèle, avec des espaces réservés pour les types qu'elle peut contenir ou utiliser. Par exemple, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> peut contenir deux types : des clés et des valeurs. Étant donné qu'une définition de type générique n'est qu'un modèle, vous ne pouvez pas créer d'instances d'une classe, d'une structure ou d'une interface qui correspond à une définition de type générique.  
+- Une *définition de type générique* est une déclaration de classe, de structure ou d'interface qui fonctionne comme un modèle, avec des espaces réservés pour les types qu'elle peut contenir ou utiliser. Par exemple, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> peut contenir deux types : des clés et des valeurs. Étant donné qu'une définition de type générique n'est qu'un modèle, vous ne pouvez pas créer d'instances d'une classe, d'une structure ou d'une interface qui correspond à une définition de type générique.  
   
--   Les*paramètres de type générique*, ou *paramètres de type*, sont des espaces réservés compris dans une définition de type ou de méthode générique. Le type générique <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> possède deux paramètres de type, `TKey` et `TValue`, qui représentent les types de ses clés et de ses valeurs.  
+- Les*paramètres de type générique*, ou *paramètres de type*, sont des espaces réservés compris dans une définition de type ou de méthode générique. Le type générique <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> possède deux paramètres de type, `TKey` et `TValue`, qui représentent les types de ses clés et de ses valeurs.  
   
--   Un *type générique construit*, ou *type construit*, est le résultat de la spécification de types pour les paramètres de type générique d'une définition de type générique.  
+- Un *type générique construit*, ou *type construit*, est le résultat de la spécification de types pour les paramètres de type générique d'une définition de type générique.  
   
--   Un *argument de type générique* correspond à tout type substitué par un paramètre de type générique.  
+- Un *argument de type générique* correspond à tout type substitué par un paramètre de type générique.  
   
--   Le terme général *type générique* correspond à la fois aux types construits et aux définitions de type générique.  
+- Le terme général *type générique* correspond à la fois aux types construits et aux définitions de type générique.  
   
--   La*covariance* et la *contravariance* des paramètres de type générique permettent d'utiliser des types génériques construits dont les arguments de type sont plus dérivés (covariance) ou moins dérivés (contravariance) qu'un type construit cible. La covariance et la contravariance sont désignées collectivement sous le nom de *variation*. Pour plus d’informations, consultez [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- La*covariance* et la *contravariance* des paramètres de type générique permettent d'utiliser des types génériques construits dont les arguments de type sont plus dérivés (covariance) ou moins dérivés (contravariance) qu'un type construit cible. La covariance et la contravariance sont désignées collectivement sous le nom de *variation*. Pour plus d’informations, consultez [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   Les*contraintes* sont des limites appliquées aux paramètres de type générique. Par exemple, vous pouvez limiter un paramètre de type aux types qui implémentent l'interface générique <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> afin que les instances de ce type puissent être classées. Vous pouvez également limiter les paramètres de type aux types qui ont une classe de base particulière, un constructeur par défaut, ou qui sont des types référence ou des types valeur. Les utilisateurs du type générique ne peuvent pas remplacer les arguments de type qui ne respectent pas les contraintes.  
+- Les*contraintes* sont des limites appliquées aux paramètres de type générique. Par exemple, vous pouvez limiter un paramètre de type aux types qui implémentent l'interface générique <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> afin que les instances de ce type puissent être classées. Vous pouvez également limiter les paramètres de type aux types qui ont une classe de base particulière, un constructeur par défaut, ou qui sont des types référence ou des types valeur. Les utilisateurs du type générique ne peuvent pas remplacer les arguments de type qui ne respectent pas les contraintes.  
   
--   Une *définition de méthode générique* est une méthode qui comporte deux listes de paramètres : une liste de paramètres de type générique et une liste de paramètres formels. Les paramètres de type peuvent apparaître comme le type de retour ou comme les types des paramètres formels, comme le montre le code suivant.  
+- Une *définition de méthode générique* est une méthode qui comporte deux listes de paramètres : une liste de paramètres de type générique et une liste de paramètres formels. Les paramètres de type peuvent apparaître comme le type de retour ou comme les types des paramètres formels, comme le montre le code suivant.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683299"
 ## <a name="advantages-and-disadvantages-of-generics"></a>Avantages et inconvénients des génériques  
  Il existe de nombreux avantages à l'utilisation de collections et de délégués génériques :  
   
--   Sécurité de type. Grâce aux génériques, le compilateur se charge de la cohérence des types à votre place. Il est inutile d'écrire du code pour tester le type de données nécessaire, car il est appliqué au moment de la compilation. Ainsi, le besoin d'un cast de type et le risque d'erreurs au moment de l'exécution sont réduits.  
+- Sécurité de type. Grâce aux génériques, le compilateur se charge de la cohérence des types à votre place. Il est inutile d'écrire du code pour tester le type de données nécessaire, car il est appliqué au moment de la compilation. Ainsi, le besoin d'un cast de type et le risque d'erreurs au moment de l'exécution sont réduits.  
   
--   Moins de code est nécessaire et il est plus facile de le réutiliser. Il n'est pas nécessaire d'hériter d'un type de base et de substituer des membres. Par exemple, <xref:System.Collections.Generic.LinkedList%601> peut être utilisé immédiatement. Vous pouvez créer une liste liée de chaînes à l'aide de la déclaration de variable suivante :  
+- Moins de code est nécessaire et il est plus facile de le réutiliser. Il n'est pas nécessaire d'hériter d'un type de base et de substituer des membres. Par exemple, <xref:System.Collections.Generic.LinkedList%601> peut être utilisé immédiatement. Vous pouvez créer une liste liée de chaînes à l'aide de la déclaration de variable suivante :  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   Performances améliorées. Les types de collections génériques sont généralement plus efficaces pour le stockage et la manipulation des types valeur, car ceux-ci ne nécessitent pas de boxing.  
+- Performances améliorées. Les types de collections génériques sont généralement plus efficaces pour le stockage et la manipulation des types valeur, car ceux-ci ne nécessitent pas de boxing.  
   
--   Les délégués génériques permettent d'effectuer des rappels de type sécurisé sans avoir à créer plusieurs classes déléguées. Par exemple, le délégué générique <xref:System.Predicate%601> permet de créer une méthode qui implémente vos propres critères de recherche pour un type particulier et d'utiliser votre méthode avec les méthodes du type <xref:System.Array> telles que <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>et <xref:System.Array.FindAll%2A>.  
+- Les délégués génériques permettent d'effectuer des rappels de type sécurisé sans avoir à créer plusieurs classes déléguées. Par exemple, le délégué générique <xref:System.Predicate%601> permet de créer une méthode qui implémente vos propres critères de recherche pour un type particulier et d'utiliser votre méthode avec les méthodes du type <xref:System.Array> telles que <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>et <xref:System.Array.FindAll%2A>.  
   
--   Les génériques simplifient le code généré dynamiquement. Quand vous utilisez des génériques avec du code généré dynamiquement, vous n'avez pas besoin de générer le type. Cela permet d'augmenter le nombre de scénarios dans lesquels vous pouvez utiliser des méthodes dynamiques légères au lieu de générer des assemblys entiers. Pour plus d'informations, voir [Procédure : définir et exécuter des méthodes dynamiques](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) et <xref:System.Reflection.Emit.DynamicMethod>.  
+- Les génériques simplifient le code généré dynamiquement. Quand vous utilisez des génériques avec du code généré dynamiquement, vous n'avez pas besoin de générer le type. Cela permet d'augmenter le nombre de scénarios dans lesquels vous pouvez utiliser des méthodes dynamiques légères au lieu de générer des assemblys entiers. Pour plus d'informations, voir [Procédure : définir et exécuter des méthodes dynamiques](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) et <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Voici quelques-unes des limitations des génériques :  
   
--   Les types génériques peuvent être dérivés de la plupart des classes de base, telles que <xref:System.MarshalByRefObject> (et les contraintes peuvent être utilisées pour exiger que les paramètres de type générique dérivent de classes de base comme <xref:System.MarshalByRefObject>). Cependant, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ne prend pas en charge les types génériques liés au contexte. Un type générique peut être dérivé de <xref:System.ContextBoundObject>. Toutefois, si vous tentez de créer une instance de ce type, une exception <xref:System.TypeLoadException>sera levée.  
+- Les types génériques peuvent être dérivés de la plupart des classes de base, telles que <xref:System.MarshalByRefObject> (et les contraintes peuvent être utilisées pour exiger que les paramètres de type générique dérivent de classes de base comme <xref:System.MarshalByRefObject>). Cependant, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ne prend pas en charge les types génériques liés au contexte. Un type générique peut être dérivé de <xref:System.ContextBoundObject>. Toutefois, si vous tentez de créer une instance de ce type, une exception <xref:System.TypeLoadException>sera levée.  
   
--   Les énumérations ne peuvent pas avoir de paramètres de type générique. Une énumération ne peut être générique que de manière secondaire (par exemple, parce qu'elle est imbriquée dans un type générique qui est défini à l'aide de Visual Basic, C# ou C++). Pour plus d’informations, consultez la section "Énumérations" dans [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
+- Les énumérations ne peuvent pas avoir de paramètres de type générique. Une énumération ne peut être générique que de manière secondaire (par exemple, parce qu'elle est imbriquée dans un type générique qui est défini à l'aide de Visual Basic, C# ou C++). Pour plus d’informations, consultez la section "Énumérations" dans [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
--   Les méthodes dynamiques légères ne peuvent pas être génériques.  
+- Les méthodes dynamiques légères ne peuvent pas être génériques.  
   
--   Dans Visual Basic, C# et C++, un type imbriqué qui est inclus dans un type générique ne peut pas être instancié, à moins que des types aient été assignés aux paramètres de type de tous les types englobants. En d'autres termes, un type imbriqué défini à l'aide de ces langages comprend les paramètres de type de tous ses types englobants. Ainsi, les paramètres de type des types englobants peuvent être utilisés dans les définitions de membres d'un type imbriqué. Pour plus d'informations, consultez "Types imbriqués" dans <xref:System.Type.MakeGenericType%2A>.  
+- Dans Visual Basic, C# et C++, un type imbriqué qui est inclus dans un type générique ne peut pas être instancié, à moins que des types aient été assignés aux paramètres de type de tous les types englobants. En d'autres termes, un type imbriqué défini à l'aide de ces langages comprend les paramètres de type de tous ses types englobants. Ainsi, les paramètres de type des types englobants peuvent être utilisés dans les définitions de membres d'un type imbriqué. Pour plus d'informations, consultez "Types imbriqués" dans <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
     >  Un type imbriqué qui est défini par émission de code dans un assembly dynamique ou avec [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) n’a pas besoin d’inclure les paramètres de type de ses types englobants. Toutefois, s’il ne les inclut pas, les paramètres de type ne seront pas dans la portée de la classe imbriquée.  
@@ -138,9 +138,9 @@ ms.locfileid: "61683299"
 ## <a name="class-library-and-language-support"></a>Bibliothèque de classes et prise en charge des langages  
  .NET fournit plusieurs classes de collection génériques dans les espaces de noms suivants :  
   
--   L'espace de noms <xref:System.Collections.Generic> contient la plupart des types de collections génériques fournis par .NET, comme les classes génériques <xref:System.Collections.Generic.List%601> et <xref:System.Collections.Generic.Dictionary%602>.  
+- L'espace de noms <xref:System.Collections.Generic> contient la plupart des types de collections génériques fournis par .NET, comme les classes génériques <xref:System.Collections.Generic.List%601> et <xref:System.Collections.Generic.Dictionary%602>.  
   
--   L'espace de noms <xref:System.Collections.ObjectModel> contient d’autres types de collections génériques, tels que la classe générique <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, qui sont utiles pour exposer des modèles objet aux utilisateurs de vos classes.  
+- L'espace de noms <xref:System.Collections.ObjectModel> contient d’autres types de collections génériques, tels que la classe générique <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, qui sont utiles pour exposer des modèles objet aux utilisateurs de vos classes.  
   
  Les interfaces génériques qui servent à l'implémentation des comparaisons d'égalité et de tri sont fournies dans l'espace de noms <xref:System> , en même temps que les types délégués génériques pour les gestionnaires d'événements, les conversions et les prédicats de recherche.  
   

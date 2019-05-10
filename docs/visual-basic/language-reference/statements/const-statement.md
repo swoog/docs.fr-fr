@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623991"
 ---
 # <a name="const-statement-visual-basic"></a>Const, instruction (Visual Basic)
 Déclare et définit une ou plusieurs constantes.  
@@ -25,10 +25,10 @@ Const constantlist
   
 ## <a name="parts"></a>Composants  
  `attributelist`  
- Optionnel. Liste des attributs qui s’appliquent à toutes les constantes sont déclarées dans cette instruction. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).  
+ Facultatif. Liste des attributs qui s’appliquent à toutes les constantes sont déclarées dans cette instruction. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).  
   
  `accessmodifier`  
- Optionnel. Utilisez-le pour spécifier le code peut accéder à ces constantes. Peut être [Public](../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privé](../../../visual-basic/language-reference/modifiers/private.md), ou [Private protégé](../../language-reference/modifiers/private-protected.md).
+ Facultatif. Utilisez-le pour spécifier le code peut accéder à ces constantes. Peut être [Public](../../../visual-basic/language-reference/modifiers/public.md), [protégé](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privé](../../../visual-basic/language-reference/modifiers/private.md), ou [Private protégé](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
  Facultatif. Utilisez-le pour redéclarer et masquer un élément de programmation dans une classe de base. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  

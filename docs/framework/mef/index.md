@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648492"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>Conclusion
  Cette rubrique a couvert les concepts de base de MEF.
 
--   Parties, catalogues et conteneur de composition
+- Parties, catalogues et conteneur de composition
 
      Les parties et le conteneur de composition sont les blocs de construction élémentaires d'une application MEF. Une partie est un objet qui importe ou exporte une valeur, y compris lui-même. Un catalogue fournit une collection de parties disponibles dans une source donnée. Le conteneur de composition utilise les parties fournies par un catalogue pour exécuter la composition, la liaison d’importations à des exportations.
 
--   Importations et exportations
+- Importations et exportations
 
      Les importations et les exportations sont un moyen de communication utilisé par les composants. Lors d'une importation, le composant spécifie qu'il a besoin d'une valeur ou d'un objet en particulier et, lors d'une exportation, il indique la disponibilité d'une valeur. Chaque importation est associée à une liste d'exportations par l'intermédiaire de son contrat.
 

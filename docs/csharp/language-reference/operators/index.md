@@ -1,6 +1,6 @@
 ---
 title: Opérateurs C#
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689812"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452372"
 ---
 # <a name="c-operators"></a>Opérateurs C#
 
-C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression. Vous pouvez [surcharger](../../programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.
+C# fournit plusieurs opérateurs prédéfinis pris en charge par les types intégrés. Par exemple, les [opérateurs arithmétiques](arithmetic-operators.md) effectuent des opérations arithmétiques avec des opérandes de types numériques intégrés et les [opérateurs logiques booléens](boolean-logical-operators.md) effectuent des opérations logiques avec les opérandes [bool](../keywords/bool.md).
 
-Les opérations sur les types intégraux (comme `==`, `!=`, `<`, `>`, `&` ou `|`) sont en général autorisées sur les types énumération (`enum`).
+Un type défini par l’utilisateur peut surcharger certains opérateurs pour définir le comportement correspondant des opérandes de ce type. Pour plus d’informations, consultez l’article sur le mot clé [opérateur](../keywords/operator.md).
 
-Les sections ci-dessous listent les opérateurs C# de la priorité la plus élevée à la plus basse. Les opérateurs inclus dans chaque section partagent le même niveau de priorité.
+Les sections suivantes listent les opérateurs C# de la priorité la plus élevée à la plus basse. Les opérateurs inclus dans chaque section partagent le même niveau de priorité.
 
 ## <a name="primary-operators"></a>Opérateurs principaux
 
 Ce sont les opérateurs dont la priorité est la plus élevée.
 
-[x.y](member-access-operator.md) : accès au membre.
+[x.y](member-access-operators.md#member-access-operator-) : accès au membre.
 
-[x?.y](null-conditional-operators.md) : accès au membre conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.
+[x?.y](member-access-operators.md#null-conditional-operators--and-) : accès au membre conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.
 
-[x?[y]](null-conditional-operators.md) : accès à l’index conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.
+[x?[y]](member-access-operators.md#null-conditional-operators--and-) : accès à l’indexeur de type ou d’élément de tableau conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.
 
-[f(x)](invocation-operator.md) : appel de fonction.
+[f(x)](member-access-operators.md#invocation-operator-) : appel de méthode ou appel de délégué.
 
-[a&#91;x&#93;](index-operator.md) : indexation de l’objet d’agrégation.
+[un&#91;x&#93;](member-access-operators.md#indexer-operator-) : accès à l’indexeur de type ou d’élément de tableau.
 
 [x++](arithmetic-operators.md#increment-operator-) : incrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).
 
@@ -61,9 +61,13 @@ Ce sont les opérateurs dont la priorité est la plus élevée.
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – produit la valeur par défaut du type T.
 
+[nameof](../keywords/nameof.md) : obtient le nom simple (non qualifié) d’une variable, d’un type ou d’un membre sous forme de chaîne constante.
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) : déclare et retourne une instance de délégué.
 
 [sizeof](../keywords/sizeof.md) : retourne la taille en octets de l’opérande du type.
+
+[stackalloc](../keywords/stackalloc.md) : alloue un bloc de mémoire dans la pile.
 
 [->](dereference-operator.md) : déréférencement de pointeur associé à l’accès au membre.
 
@@ -125,13 +129,13 @@ Ces opérateurs ont une priorité supérieure à celle de la section suivante et
 
 Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
-[x \< y](less-than-operator.md) : inférieur à (true si x est inférieur à y).
+[x \< y](comparison-operators.md#less-than-operator-) : inférieur à (true si x est inférieur à y).
 
-[x > y](greater-than-operator.md) : supérieur à (true si x est supérieur à y).
+[x > y](comparison-operators.md#greater-than-operator-) : supérieur à (true si x est supérieur à y).
 
-[x \<= y](less-than-equal-operator.md) : supérieur ou égal à.
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) : supérieur ou égal à.
 
-[x >= y](greater-than-equal-operator.md) : supérieur ou égal à.
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-) : supérieur ou égal à.
 
 [is](../keywords/is.md) : compatibilité du type. Retourne true si l’opérande de gauche évalué peut être converti en type spécifié dans l’opérande de droite (type statique).
 
@@ -187,7 +191,7 @@ Cet opérateur a une priorité supérieure à celle de la section suivante et un
 
 [t ? x : y](conditional-operator.md) : si le test `t` prend la valeur true, alors évalue et retourne `x` ; sinon, évalue et retourne `y`.
 
-## <a name="assignment-and-lambda-operators"></a>Opérateurs d'assignation et lambda
+## <a name="assignment-and-lambda-operators"></a>Opérateurs d’affectation et lambda
 
 Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.
 
