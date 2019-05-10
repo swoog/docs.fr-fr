@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615385"
 ---
 # <a name="geometry-overview"></a>Vue d'ensemble de Geometry
 Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes pour décrire les formes. Cette rubrique compare également les différences entre <xref:System.Windows.Media.Geometry> objets et <xref:System.Windows.Shapes.Shape> éléments.  
@@ -27,7 +27,7 @@ Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](
  Étant donné qu’un <xref:System.Windows.Media.Geometry> est un type de <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> objets offrent plusieurs fonctionnalités spéciales : ils peuvent être déclarés en tant que [ressources](../advanced/xaml-resources.md), partagés entre plusieurs objets, définis en lecture seule pour améliorer les performances, clonés, et rendus thread-safe. Pour plus d’informations sur les différentes fonctionnalités fournies par <xref:System.Windows.Freezable> , voir la [vue d’ensemble des objets Freezable](../advanced/freezable-objects-overview.md).  
   
 <a name="wcpsdk_graphics_geometry_geometryandshapes"></a>   
-## <a name="geometries-vs-shapes"></a>Géométries et Formes  
+## <a name="geometries-vs-shapes"></a>Géométries et Shapes  
  Le <xref:System.Windows.Media.Geometry> et <xref:System.Windows.Shapes.Shape> classes semblent similaires en ce qu’elles décrivent des formes 2D (comparer <xref:System.Windows.Media.EllipseGeometry> et <xref:System.Windows.Shapes.Ellipse> par exemple), mais il existe des différences importantes.  
   
  Premièrement, le <xref:System.Windows.Media.Geometry> hérite de la classe la <xref:System.Windows.Freezable> classe lors de la <xref:System.Windows.Shapes.Shape> hérite de la classe <xref:System.Windows.FrameworkElement>. Étant donné que ce sont des éléments, <xref:System.Windows.Shapes.Shape> objets peuvent se rendre et participer au système de disposition, tandis que <xref:System.Windows.Media.Geometry> ne peut pas des objets.  

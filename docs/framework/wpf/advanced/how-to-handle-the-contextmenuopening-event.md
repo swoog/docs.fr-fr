@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340397"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614627"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procédure : Gérer l’événement ContextMenuOpening
 Le <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement peut être géré dans une application pour ajuster un menu contextuel existant avant son pour afficher ou pour supprimer un menu qui serait affiché en définissant le <xref:System.Windows.RoutedEventArgs.Handled%2A> propriété `true` dans les données d’événement. La justification habituelle d’un paramètre <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true` de l’événement données consiste à remplacer le menu entièrement par un nouveau <xref:System.Windows.Controls.ContextMenu> de l’objet, qui requiert parfois l’annulation de l’opération et le démarrage d’un nouveau ouvert. Si vous écrivez des gestionnaires pour les <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement, vous devez être conscient des problèmes de synchronisation entre un <xref:System.Windows.Controls.ContextMenu> contrôle et le service qui est chargé d’ouvrir et de positionner des menus contextuels pour les contrôles en général. Cette rubrique illustre quelques-unes des techniques de codage pour le menu contextuel de différents scénarios d’ouverture et illustre un cas où le problème de synchronisation entre en jeu.  
   
  Il existe plusieurs scénarios pour gérer la <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement :  
   
--   Ajuster les éléments de menu avant l’affichage.  
+- Ajuster les éléments de menu avant l’affichage.  
   
--   En remplaçant l’intégralité du menu avant l’affichage.  
+- En remplaçant l’intégralité du menu avant l’affichage.  
   
--   Complètement supprimer un menu contextuel existant et ne rien afficher.  
+- Complètement supprimer un menu contextuel existant et ne rien afficher.  
   
 ## <a name="example"></a>Exemple  
   

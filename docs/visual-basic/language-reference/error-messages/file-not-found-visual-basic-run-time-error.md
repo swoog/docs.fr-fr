@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90dbac88854e1fb156b387eaa6df564269d84d29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629047"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Fichier introuvable (erreur d'exécution Visual Basic)
 Le fichier est introuvable où spécifié. L’erreur a les causes possibles suivantes :  
