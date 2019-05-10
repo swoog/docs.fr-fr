@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 33fa6811f952d240fb86bbdf59ca83df0afc03ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638023"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625526"
 ---
 # <a name="get-statement"></a>Get, instruction
 Déclare un `Get` procédure de propriété utilisée pour récupérer la valeur d’une propriété.  
@@ -33,9 +33,9 @@ End Get
   
 |Terme|Définition|  
 |---|---|  
-|`attributelist`|Optionnel. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Facultatif sur un de la `Get` et `Set` instructions dans cette propriété. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consultez [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Optionnel. Une ou plusieurs instructions qui s’exécutent lorsque le `Get` procédure de propriété est appelée.|  
+|`statements`|Facultatif. Une ou plusieurs instructions qui s’exécutent lorsque le `Get` procédure de propriété est appelée.|  
 |`End Get`|Obligatoire. Termine la définition de la `Get` procédure de propriété.|  
   
 ## <a name="remarks"></a>Notes  

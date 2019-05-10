@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: d038991da4048e3279ae974cbf4d3e53691349af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ba12431870fdc247acf08e35908582e8d629c27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645771"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603257"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implémentation du modèle de contrôle Transform d’UI Automation
 > [!NOTE]
@@ -39,11 +39,11 @@ ms.locfileid: "61645771"
   
 |Membres requis|Type de membre|Notes|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Méthode|Aucun.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Méthode|Aucun.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propriété|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propriété|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propriété|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Méthode|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Méthode|None|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Méthode|Aucune|  
   
  Ce modèle de contrôle n’est associé aucun événement.  

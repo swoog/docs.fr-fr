@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342230"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612407"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procédure : lier des données au contrôle MaskedTextBox
 Vous pouvez lier des données à un <xref:System.Windows.Forms.MaskedTextBox> contrôle comme vous pouvez le faire à tout autre contrôle Windows Forms. Toutefois, si le format de vos données dans la base de données ne correspond pas au format attendu par votre définition masque, vous devez remettre en forme les données. La procédure suivante montre comment effectuer cette opération à l’aide de la <xref:System.Windows.Forms.Binding.Format> et <xref:System.Windows.Forms.Binding.Parse> événements de la <xref:System.Windows.Forms.Binding> classe pour afficher le numéro de téléphone distinct et champs de base de données d’extension de téléphone en tant qu’un seul champ modifiable.  
@@ -239,15 +239,15 @@ Vous pouvez lier des données à un <xref:System.Windows.Forms.MaskedTextBox> co
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Créer un élément visuel C# ou projet Visual Basic.  
+- Créer un élément visuel C# ou projet Visual Basic.  
   
--   Ajouter le <xref:System.Windows.Forms.TextBox> et <xref:System.Windows.Forms.MaskedTextBox> contrôles au formulaire, comme décrit dans la procédure précédente.  
+- Ajouter le <xref:System.Windows.Forms.TextBox> et <xref:System.Windows.Forms.MaskedTextBox> contrôles au formulaire, comme décrit dans la procédure précédente.  
   
--   Ouvrez le fichier de code source pour le formulaire du projet par défaut.  
+- Ouvrez le fichier de code source pour le formulaire du projet par défaut.  
   
--   Remplacez le code source dans ce fichier par le code répertorié dans la section « Code » précédente.  
+- Remplacez le code source dans ce fichier par le code répertorié dans la section « Code » précédente.  
   
--   Compilez l'application.  
+- Compilez l'application.  
   
 ## <a name="see-also"></a>Voir aussi
 
