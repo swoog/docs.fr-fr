@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c7a874659be8dbaec66b78e1e065bcbec21da3b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650875"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Procédure : modifier l’espacement et l’alignement d’éléments ToolStrip dans Windows Forms
 Le <xref:System.Windows.Forms.ToolStrip> contrôle prend entièrement en charge les fonctionnalités de mise en page telles que le dimensionnement, l’espacement des <xref:System.Windows.Forms.ToolStripItem> contrôle par rapport aux autres, la disposition des contrôles sur le <xref:System.Windows.Forms.ToolStrip>et l’espacement des contrôles relatif à la <xref:System.Windows.Forms.ToolStrip>.  

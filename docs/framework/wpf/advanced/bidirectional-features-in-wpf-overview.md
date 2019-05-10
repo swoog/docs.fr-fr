@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655488"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Vue d'ensemble des fonctionnalités bidirectionnelles dans WPF
 Contrairement à d’autres plateformes de développement, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possède de nombreuses fonctionnalités qui prennent en charge le développement rapide de contenu bidirectionnel, par exemple, mixte de gauche à droite et de droite à gauche des données dans le même document. En même temps, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crée une excellente expérience pour les utilisateurs qui ont besoin de fonctionnalités bidirectionnelles tels que les utilisateurs de langue arabe et hébreu.  

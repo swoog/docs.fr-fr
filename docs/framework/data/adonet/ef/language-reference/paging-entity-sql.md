@@ -2,12 +2,12 @@
 title: Pagination (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: dd6653c00c72697fa5e8ae896968ec2a9f09ae82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dcde0b74bb3ec845dba4ddfe0a5e389e46bd1c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641764"
 ---
 # <a name="paging-entity-sql"></a>Pagination (Entity SQL)
 Pagination physique peut être effectuée à l’aide de la [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) et [limite](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) sous-clauses dans le [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause. Pour effectuer une pagination physique de façon déterministe, vous devez utiliser SKIP et LIMIT. Si vous voulez uniquement restreindre le nombre de lignes dans le résultat d’une manière non déterministe, vous devez utiliser [haut](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP et SKIP/LIMIT s'excluent mutuellement.  
