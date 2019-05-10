@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a517dc4e143b561a17bb3715b69be393bee2b21e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596776"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585025"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Traitement par lots des messages dans une transaction
 Les applications en file d’attente utilisent des transactions pour garantir l’exactitude et la remise fiable des messages. Toutefois, les transactions sont des opérations coûteuses et peuvent réduire considérablement le débit de message. L’une des méthodes utilisées pour améliorer le débit de message est de disposer d’une application capable de lire et de traiter plusieurs messages dans une transaction unique. Le compromis réside entre la performance et la récupération : à mesure que le nombre de messages dans un lot augmente, la quantité de travail de récupération nécessaire en cas de restauration des transactions augmente également. Il est important de noter la différence entre le traitement par lot des messages dans une transaction et dans des sessions. Un *session* est un regroupement de messages associés qui sont traités par une application unique et validée comme une seule unité. Les sessions sont en général utilisées lorsqu'un groupe de messages du même type doivent être traités ensemble. Un site Web d'achat en ligne en est un exemple. *Lots* servent à traiter plusieurs, les messages d’une manière qui augmente le débit de message de type différent. Pour plus d’informations sur les sessions, consultez [regrouper en file d’attente des Messages dans une Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Les messages d’un lot sont également traités par une application unique et sont validés en tant qu’unité unique, mais il peut n’y avoir aucune relation entre eux. Le traitement par lot des messages dans une transaction est une optimisation qui ne modifie pas la manière dont l’application s’exécute.  

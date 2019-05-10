@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e58d80896d11b4154c7197d4cdaf73a536fdd5e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583549"
 ---
 # <a name="parameter-list-visual-basic"></a>Liste de paramètres (Visual Basic)
 Spécifie les paramètres de qu'une procédure attend lorsqu’elle est appelée. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre.  
@@ -35,13 +35,13 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  Facultatif. Spécifie que ce paramètre n’est pas obligatoire lorsque la procédure est appelée.  
   
  `ByVal`  
- Optionnel. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
+ Facultatif. Spécifie que la procédure ne peut pas remplacer ou réassigner l’élément de variable sous-jacent de l’argument correspondant dans le code appelant.  
   
  `ByRef`  
- Optionnel. Spécifie que la procédure peut modifier l’élément de variable sous-jacent dans le code appelant la même façon que le code d’appel.  
+ Facultatif. Spécifie que la procédure peut modifier l’élément de variable sous-jacent dans le code appelant la même façon que le code d’appel.  
   
  `ParamArray`  
- Optionnel. Spécifie que le dernier paramètre dans la liste de paramètres est un tableau facultatif d’éléments du type de données spécifié. Cela permet au code appelant de passer un nombre arbitraire d’arguments à la procédure.  
+ Facultatif. Spécifie que le dernier paramètre dans la liste de paramètres est un tableau facultatif d’éléments du type de données spécifié. Cela permet au code appelant de passer un nombre arbitraire d’arguments à la procédure.  
   
  `parametername`  
  Obligatoire. Nom de la variable locale représentant le paramètre.  

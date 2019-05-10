@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d8b05238b55369fca3df76cf309f5cf742685b41
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603303"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implémentation du modèle de contrôle Value d’UI Automation
 > [!NOTE]
@@ -49,9 +49,9 @@ Exemple de mappage d’une chaîne d’échantillons de couleurs
   
 |Membres requis|Type de membre|Notes|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Méthode|Aucun.|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Propriété|None|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Méthode|None|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceptions  
