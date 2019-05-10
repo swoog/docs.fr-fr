@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8218a3325d5d47bf85aacab1724221d233d92ba4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661702"
 ---
-# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a><span data-ttu-id="f393e-102">Référence à l’assembly requise '\<nom_assembly >' contenant la classe de base\<nom_classe >'</span><span class="sxs-lookup"><span data-stu-id="f393e-102">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'</span></span>
-<span data-ttu-id="f393e-103">Référence à l’assembly requise '\<nom_assembly >' contenant la classe de base\<nom_classe >'.</span><span class="sxs-lookup"><span data-stu-id="f393e-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="f393e-104">Ajoutez-en une à votre projet.</span><span class="sxs-lookup"><span data-stu-id="f393e-104">Add one to your project.</span></span>  
+# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a><span data-ttu-id="d8c57-102">Référence à l’assembly requise '\<nom_assembly >' contenant la classe de base\<nom_classe >'</span><span class="sxs-lookup"><span data-stu-id="d8c57-102">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'</span></span>
+<span data-ttu-id="d8c57-103">Référence à l’assembly requise '\<nom_assembly >' contenant la classe de base\<nom_classe >'.</span><span class="sxs-lookup"><span data-stu-id="d8c57-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="d8c57-104">Ajoutez-en une à votre projet.</span><span class="sxs-lookup"><span data-stu-id="d8c57-104">Add one to your project.</span></span>  
   
- <span data-ttu-id="f393e-105">La classe est définie dans une bibliothèque de liens dynamiques (DLL) ou un assembly qui n’est pas directement référencé dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="f393e-105">The class is defined in a dynamic-link library (DLL) or assembly that is not directly referenced in your project.</span></span> <span data-ttu-id="f393e-106">Le compilateur Visual Basic requiert une référence pour éviter toute ambiguïté au cas où la classe est définie dans plusieurs DLL ou assemblys.</span><span class="sxs-lookup"><span data-stu-id="f393e-106">The Visual Basic compiler requires a reference to avoid ambiguity in case the class is defined in more than one DLL or assembly.</span></span>  
+ <span data-ttu-id="d8c57-105">La classe est définie dans une bibliothèque de liens dynamiques (DLL) ou un assembly qui n’est pas directement référencé dans votre projet.</span><span class="sxs-lookup"><span data-stu-id="d8c57-105">The class is defined in a dynamic-link library (DLL) or assembly that is not directly referenced in your project.</span></span> <span data-ttu-id="d8c57-106">Le compilateur Visual Basic requiert une référence pour éviter toute ambiguïté au cas où la classe est définie dans plusieurs DLL ou assemblys.</span><span class="sxs-lookup"><span data-stu-id="d8c57-106">The Visual Basic compiler requires a reference to avoid ambiguity in case the class is defined in more than one DLL or assembly.</span></span>  
   
- <span data-ttu-id="f393e-107">**ID d’erreur :** BC30007</span><span class="sxs-lookup"><span data-stu-id="f393e-107">**Error ID:** BC30007</span></span>  
+ <span data-ttu-id="d8c57-107">**ID d’erreur :** BC30007</span><span class="sxs-lookup"><span data-stu-id="d8c57-107">**Error ID:** BC30007</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f393e-108">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="f393e-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d8c57-108">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="d8c57-108">To correct this error</span></span>  
   
-- <span data-ttu-id="f393e-109">Incluez le nom de la DLL ou de l’assembly non référencé dans vos références de projet.</span><span class="sxs-lookup"><span data-stu-id="f393e-109">Include the name of the unreferenced DLL or assembly in your project references.</span></span>  
+- <span data-ttu-id="d8c57-109">Incluez le nom de la DLL ou de l’assembly non référencé dans vos références de projet.</span><span class="sxs-lookup"><span data-stu-id="d8c57-109">Include the name of the unreferenced DLL or assembly in your project references.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f393e-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f393e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8c57-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d8c57-110">See also</span></span>
 
-- [<span data-ttu-id="f393e-111">Gestion des références dans un projet</span><span class="sxs-lookup"><span data-stu-id="f393e-111">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
-- [<span data-ttu-id="f393e-112">Dépannage de références rompues</span><span class="sxs-lookup"><span data-stu-id="f393e-112">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
+- [<span data-ttu-id="d8c57-111">Gestion des références dans un projet</span><span class="sxs-lookup"><span data-stu-id="d8c57-111">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="d8c57-112">Dépannage de références rompues</span><span class="sxs-lookup"><span data-stu-id="d8c57-112">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
