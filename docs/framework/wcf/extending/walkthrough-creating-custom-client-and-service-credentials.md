@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b78aca1942ea5535a9c6c0f028972243dd512500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635659"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procédure pas à pas : création d’informations d’identification de client et de service personnalisées
 Cette rubrique indique comment implémenter des informations d'identification de client et de service personnalisées et comment les utiliser à partir du code d'application.  
@@ -68,9 +68,9 @@ Cette rubrique indique comment implémenter des informations d'identification de
   
 1. Définissez une nouvelle classe dérivée de <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2. Optionnel. Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> si une implémentation <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personnalisée doit être créée. Pour plus d’informations sur les fournisseurs de jetons de sécurité personnalisé, consultez [Comment : Créer un fournisseur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Facultatif. Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> si une implémentation <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personnalisée doit être créée. Pour plus d’informations sur les fournisseurs de jetons de sécurité personnalisé, consultez [Comment : Créer un fournisseur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3. Optionnel. Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> si une implémentation <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personnalisée doit être créée. Pour plus d’informations sur les authentificateurs de jeton de sécurité personnalisés, consultez [Comment : Créer un authentificateur de jeton de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3. Facultatif. Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> si une implémentation <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personnalisée doit être créée. Pour plus d’informations sur les authentificateurs de jeton de sécurité personnalisés, consultez [Comment : Créer un authentificateur de jeton de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
 4. Facultatif. Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> si une implémentation <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personnalisée doit être créée. Pour plus d’informations sur les jetons de sécurité personnalisés et les sérialiseurs de jeton de sécurité personnalisés, consultez [Comment : Créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
@@ -143,7 +143,7 @@ Cette rubrique indique comment implémenter des informations d'identification de
   
 1. Définissez une nouvelle classe dérivée de <xref:System.ServiceModel.Description.ServiceCredentials>.  
   
-2. Optionnel. Ajoutez de nouvelles propriétés pour fournir des API aux nouvelles valeurs d'informations d'identification ajoutées. Si vous n'ajoutez pas de nouvelle valeur d'informations d'identification, ignorez cette étape. L'exemple suivant ajoute une propriété `AdditionalCertificate`.  
+2. Facultatif. Ajoutez de nouvelles propriétés pour fournir des API aux nouvelles valeurs d'informations d'identification ajoutées. Si vous n'ajoutez pas de nouvelle valeur d'informations d'identification, ignorez cette étape. L'exemple suivant ajoute une propriété `AdditionalCertificate`.  
   
 3. Remplacez la méthode <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Cette méthode est appelée automatiquement par l’infrastructure WCF lorsque les informations d’identification client personnalisée sont utilisée. La méthode est chargée de créer et de retourner une instance d'une implémentation de la classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> (décrite dans la procédure suivante).  
   

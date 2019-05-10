@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624252"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 Cet exemple montre comment utiliser le moniker de service Windows Communication Foundation (WCF) pour intégrer des services Web dans des environnements de développement COM, tels que Microsoft Office Visual Basic pour Applications (Office VBA) ou Visual Basic 6.0. Il se compose d'un client Windows Script Host (.vbs), d'une bibliothèque de client assurant la prise en charge (.dll) et d'une bibliothèque de service (.dll) hébergée par les services IIS (Internet Information Services). Le service correspond à un service de calculatrice et le client COM appelle les opérations mathématiques suivantes sur le service : addition, soustraction, multiplication et division. L'activité du client s'affiche dans les fenêtres de message.  

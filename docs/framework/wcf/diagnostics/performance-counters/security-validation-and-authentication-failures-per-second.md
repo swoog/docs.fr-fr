@@ -2,12 +2,12 @@
 title: Nombre d'échecs de validation de la sécurité et d'authentification par seconde
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: e3db8cb20399bdff9b73a428ea2a53909da4eee1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5db8b656b626ea16f89ce432bf4cf1030b87a0b0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664991"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Nombre d'échecs de validation de la sécurité et d'authentification par seconde
 Nom du compteur : Validation de la sécurité et les échecs d’authentification par seconde.  

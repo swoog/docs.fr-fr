@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751419"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Procédure : Étirer un ToolStripTextBox pour remplir la largeur restante d’un ToolStrip (Windows Forms)
 Lorsque vous définissez la <xref:System.Windows.Forms.ToolStrip.Stretch%2A> propriété d’un <xref:System.Windows.Forms.ToolStrip> le contrôle à `true`, le contrôle remplit son conteneur de bout en bout et se redimensionne quand son conteneur est redimensionné. Dans cette configuration, il peut s’avérer utile d’étirer un élément dans le contrôle, comme un <xref:System.Windows.Forms.ToolStripTextBox>, pour remplir l’espace disponible et redimensionner lorsque le contrôle est redimensionné. Cet étirement est utile, par exemple, si vous souhaitez obtenir une apparence et un comportement similaire à la barre d’adresses dans Microsoft® Internet Explorer.  

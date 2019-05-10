@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9f48f6bfade9dc2e28fd5495c8e450e43c36a9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007966"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664758"
 ---
 # <a name="pooling"></a>Pooling
 Cet exemple montre comment étendre Windows Communication Foundation (WCF) pour prendre en charge le pool d’objets. L'exemple montre comment créer un attribut syntaxiquement et sémantiquement similaire aux fonctionnalités de l'attribut `ObjectPoolingAttribute` de Enterprise Services. Le mise en pool d’objets permet une amélioration significative de la performance d'une application. Toutefois, il peut avoir l'effet inverse s'il n'est pas utilisé de manière appropriée. Le mise en pool d’objets évite d'avoir à recréer les objets fréquemment utilisés qui requièrent une initialisation complète. Toutefois, si un appel à une méthode sur un objet du pool met beaucoup de temps à s'exécuter, le mise en pool d’objets met les demandes supplémentaires en file d'attente dès que la taille de pool maximale est atteinte. Il peut donc ne pas traiter certaines demandes de création d'objet en levant une exception de délai d'attente.  

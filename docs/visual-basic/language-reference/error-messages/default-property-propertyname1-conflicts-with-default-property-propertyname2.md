@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651377"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Propriété par défaut '\<nom_propriété1 >' est en conflit avec la propriété par défaut '\<propertyname2 >' dans '\<nom_classe >' et devrait donc être déclarée 'Shadows'
 Une propriété est déclarée avec le même nom qu’une propriété définie dans la classe de base. Dans ce cas, la propriété de cette classe doit occulter la propriété de classe de base.  

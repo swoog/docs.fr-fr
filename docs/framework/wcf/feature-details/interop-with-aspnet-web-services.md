@@ -2,12 +2,12 @@
 title: Interopérabilité avec les services Web ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16e22a091b88d12abccb063d2407db82460458c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638606"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interopérabilité avec les services Web ASP.NET
 L’interopérabilité entre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] services Web et les services Web de Windows Communication Foundation (WCF) peuvent être obtenus en s’assurant que les services implémentés à l’aide de ces deux technologies sont conformes à la norme WS-I Basic Profile 1.1 spécification. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Services Web qui se conforment à WS-I Basic Profile 1.1 sont interopérables avec les clients WCF à l’aide de liaison fournie par le système WCF, <xref:System.ServiceModel.BasicHttpBinding>.  

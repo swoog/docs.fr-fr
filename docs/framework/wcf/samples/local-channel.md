@@ -2,12 +2,12 @@
 title: Local Channel
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 11f3e4fe07ffa285f72ba8fd92224a3ba78d238b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656038"
 ---
 # <a name="local-channel"></a>Local Channel
 Local Channel est un canal de transport de Windows Communication Foundation (WCF) qui est utilisé pour la communication au sein du même domaine d’application. Cela peut être utile pour les scénarios où le client et le service s’exécutent dans le même domaine d’application et où la charge liée à la pile de canaux WCF classique (sérialisation et désérialisation de messages) doit être évitée.  

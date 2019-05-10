@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665926"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procédure pas à pas : création d’une application Windows accessible
 La création d'une application accessible implique de nombreuses contraintes pour l'entreprise. De nombreux gouvernements ont mis en place une réglementation relative à l'accessibilité pour l'achat des logiciels. Le logo Certifié pour Windows inclut des normes d’accessibilité. Rien qu’aux États-Unis, on estime à 30 millions le nombre de personnes affectées par l’accessibilité des logiciels, dont beaucoup sont des clients potentiels.  
   
  Cette procédure pas à pas traite des cinq critères d’accessibilité pour le logo Certifié pour Windows. Selon ces critères, une application accessible doit :  
   
--   prendre en charge les paramètres de taille, de couleurs, de police et d'entrée du Panneau de configuration ; La barre de menus, la barre de titre, les bordures et la barre d'état sont redimensionnés automatiquement quand l'utilisateur modifie les paramètres du Panneau de configuration. Aucune autre modification des contrôles ou du code n'est nécessaire dans cette application.  
+- prendre en charge les paramètres de taille, de couleurs, de police et d'entrée du Panneau de configuration ; La barre de menus, la barre de titre, les bordures et la barre d'état sont redimensionnés automatiquement quand l'utilisateur modifie les paramètres du Panneau de configuration. Aucune autre modification des contrôles ou du code n'est nécessaire dans cette application.  
   
--   prendre en charge le mode de contraste élevé ;  
+- prendre en charge le mode de contraste élevé ;  
   
--   fournir un accès au clavier documenté à toutes les fonctionnalités ;  
+- fournir un accès au clavier documenté à toutes les fonctionnalités ;  
   
--   exposer l'emplacement du focus clavier visuellement et par programmation ;  
+- exposer l'emplacement du focus clavier visuellement et par programmation ;  
   
--   éviter de transmettre des informations importantes uniquement par voie sonore.  
+- éviter de transmettre des informations importantes uniquement par voie sonore.  
   
  Pour plus d’informations, consultez [Ressources pour la conception d’applications accessibles](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ La création d'une application accessible implique de nombreuses contraintes pou
   
 #### <a name="to-begin-making-the-application"></a>Pour commencer à créer l'application  
   
--   Créez une Application Windows en Visual Basic ou Visual C#. Nommez le projet **PizzaOrder**. (Pour plus d’informations, consultez [Création de projets et de solutions](/visualstudio/ide/creating-solutions-and-projects).)  
+- Créez une Application Windows en Visual Basic ou Visual C#. Nommez le projet **PizzaOrder**. (Pour plus d’informations, consultez [Création de projets et de solutions](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Ajout des contrôles au formulaire  
  Lors de l'ajout des contrôles à un formulaire, veillez à respecter les consignes d'accessibilité suivantes :  
   
--   Définissez les propriétés <xref:System.Windows.Forms.Control.AccessibleDescription%2A> et <xref:System.Windows.Forms.Control.AccessibleName%2A>. Dans cet exemple, le paramètre Default pour <xref:System.Windows.Forms.Control.AccessibleRole%2A> est suffisant. Pour plus d’informations sur les propriétés d’accessibilité, consultez [Informations d’accessibilité sur les contrôles d’un Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+- Définissez les propriétés <xref:System.Windows.Forms.Control.AccessibleDescription%2A> et <xref:System.Windows.Forms.Control.AccessibleName%2A>. Dans cet exemple, le paramètre Default pour <xref:System.Windows.Forms.Control.AccessibleRole%2A> est suffisant. Pour plus d’informations sur les propriétés d’accessibilité, consultez [Informations d’accessibilité sur les contrôles d’un Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
--   Définissez la taille de police sur 10 points ou plus.  
+- Définissez la taille de police sur 10 points ou plus.  
   
     > [!NOTE]
     >  Si vous affectez la valeur 10 à la taille de police du formulaire quand vous commencez, tous les contrôles qui seront ensuite ajoutés au formulaire auront une taille de police de 10.  
   
--   Assurez-vous que tous les contrôles Label qui décrivent un contrôle TextBox précèdent immédiatement le contrôle TextBox dans l'ordre de tabulation.  
+- Assurez-vous que tous les contrôles Label qui décrivent un contrôle TextBox précèdent immédiatement le contrôle TextBox dans l'ordre de tabulation.  
   
--   Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de n’importe quel contrôle de l’utilisateur doit pouvoir accéder à.  
+- Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de n’importe quel contrôle de l’utilisateur doit pouvoir accéder à.  
   
--   Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de l’étiquette qui précède un contrôle auquel l’utilisateur doit pouvoir accéder à. Affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Label.UseMnemonic%2A> des étiquettes pour que le focus soit défini sur le contrôle suivant dans l'ordre de tabulation quand l'utilisateur appuie sur la touche d'accès.  
+- Ajouter une clé d’accès, à l’aide du caractère « & », à la <xref:System.Windows.Forms.Control.Text%2A> propriété de l’étiquette qui précède un contrôle auquel l’utilisateur doit pouvoir accéder à. Affectez la valeur `true` à la propriété <xref:System.Windows.Forms.Label.UseMnemonic%2A> des étiquettes pour que le focus soit défini sur le contrôle suivant dans l'ordre de tabulation quand l'utilisateur appuie sur la touche d'accès.  
   
--   Ajoutez des touches d'accès rapide à tous les éléments de menu.  
+- Ajoutez des touches d'accès rapide à tous les éléments de menu.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Pour rendre votre application Windows accessible  
   
--   Ajoutez les contrôles au formulaire et définissez les propriétés comme décrit ci-dessous. Pour obtenir un modèle décrivant comment organiser les contrôles sur le formulaire, consultez l'image à la fin du tableau.  
+- Ajoutez les contrôles au formulaire et définissez les propriétés comme décrit ci-dessous. Pour obtenir un modèle décrivant comment organiser les contrôles sur le formulaire, consultez l'image à la fin du tableau.  
   
     |Object|Propriété|Value|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ La création d'une application accessible implique de nombreuses contraintes pou
     |MenuItem|Nom|exitApp|  
     ||Texte|&Quitter|
     
-      Votre écran ressemblera à l’image suivante :
+      Your form will look something like the following image:
     
-      ![Le formulaire de commande de pizza avec une sélection de zone de texte, taille et garniture de nom.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Prise en charge du mode de contraste élevé  
  Le mode de contraste élevé est un paramètre système Windows qui améliore la lisibilité en utilisant des couleurs contrastées et des tailles de polices adaptées aux personnes malvoyantes. Le <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propriété est fournie pour déterminer si le mode de contraste élevé est activé.  
   
  Si SystemInformation.HighContrast a la valeur `true`, l'application doit :  
   
--   afficher tous les éléments d'interface utilisateur à l'aide du modèle de couleurs système ;  
+- afficher tous les éléments d'interface utilisateur à l'aide du modèle de couleurs système ;  
   
--   transmettre via des signaux visuels ou sonores toute information qui est transmise via une couleur. Par exemple, si certains éléments de liste sont mis en surbrillance à l'aide d'une police rouge, vous pourriez également ajouter la mise en gras pour que l'utilisateur ait un autre indicateur que la couleur ;  
+- transmettre via des signaux visuels ou sonores toute information qui est transmise via une couleur. Par exemple, si certains éléments de liste sont mis en surbrillance à l'aide d'une police rouge, vous pourriez également ajouter la mise en gras pour que l'utilisateur ait un autre indicateur que la couleur ;  
   
--   omettre toutes les images ou tous les motifs derrière le texte.  
+- omettre toutes les images ou tous les motifs derrière le texte.  
   
  L'application doit vérifier le paramètre de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> quand elle démarre et répond à l'événement système <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. L'événement <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> est déclenché chaque fois que la valeur de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> change.  
   

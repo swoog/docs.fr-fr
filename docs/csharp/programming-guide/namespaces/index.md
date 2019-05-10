@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710080"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452714"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espaces de noms (Guide de programmation C#)
 
@@ -48,12 +48,11 @@ Les espaces de noms ont les propriétés suivantes :
   
 ## <a name="see-also"></a>Voir aussi
 
+- [Guide de programmation C#](../index.md)
 - [Utilisation d’espaces de noms](using-namespaces.md)
 - [Guide pratique pour utiliser l’alias d’espace de noms global](how-to-use-the-global-namespace-alias.md)
 - [Guide pratique pour utiliser l’espace de noms My](how-to-use-the-my-namespace.md)
-- [Guide de programmation C#](../index.md)
 - [Noms d’identificateur](../inside-a-program/identifier-names.md)
 - [Mots clés d’espaces de noms](../../language-reference/keywords/namespace-keywords.md)
 - [using, directive](../../language-reference/keywords/using-directive.md)
 - [:: Opérateur](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. Opérateur](../../language-reference/operators/member-access-operator.md)

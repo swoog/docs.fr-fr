@@ -13,54 +13,53 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fff91d993743574d13030aa3d5cc1e462e76838
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751027"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
-Spécifie qu'une propriété ou procédure substitue une propriété ou procédure ayant un nom identique et ayant été héritée d'une classe de base.  
-  
-## <a name="remarks"></a>Notes  
-  
-## <a name="rules"></a>Règles  
-  
--   **Contexte de déclaration.** Vous pouvez utiliser `Overrides` uniquement dans une instruction de déclaration de propriété ou de procédure.  
-  
--   **Modificateurs combinés.** Vous ne pouvez pas spécifier `Overrides` avec `Shadows` ou `Shared` dans la même déclaration. Comme un élément de substitution est implicitement substituable, vous ne pouvez pas combiner `Overridable` avec `Overrides`.  
-  
--   **Faire correspondre les Signatures.** La signature de cette déclaration doit correspondre exactement à la *signature* de la propriété ou procédure qu’elle substitue. Cela signifie que les listes de paramètres doivent avoir le même nombre de paramètres, dans le même ordre, avec les mêmes types de données.  
-  
-     Outre la signature, la déclaration de substitution doit également correspondre exactement à ce qui suit :  
-  
-    -   Niveau d'accès  
-  
-    -   Type de retour, le cas échéant  
-  
--   **Signatures génériques.** Pour une procédure générique, la signature inclut le nombre de paramètres de type. Par conséquent, la déclaration de substitution doit correspondre à la version de la classe de base également selon ce critère.  
-  
--   **Correspondance supplémentaire.** Cette déclaration doit non seulement correspondre à la signature de la version de la classe de base, mais aussi lui correspondre selon les critères suivants :  
-  
-    -   Modificateur de niveau d’accès (tel que [Public](../../../visual-basic/language-reference/modifiers/public.md))  
-  
-    -   Mécanisme de passage de chaque paramètre ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
-  
-    -   Listes de contraintes pour chaque paramètre de type d'une procédure générique  
-  
--   **Occultation et substitution.** L'occultation et la substitution redéfinissent toutes les deux un élément hérité, mais il existe des différences importantes entre ces deux approches. Pour plus d’informations, consultez [occultation dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
-  
- Si vous utilisez `Overrides`, le compilateur ajoute implicitement `Overloads` afin que vos API de bibliothèque fonctionnent plus facilement avec C#.  
-  
- Le modificateur `Overrides` peut être utilisé dans les contextes suivants :  
-  
- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+Spécifie qu'une propriété ou procédure substitue une propriété ou procédure ayant un nom identique et ayant été héritée d'une classe de base.
+
+## <a name="rules"></a>Règles
+
+- **Contexte de déclaration.** Vous pouvez utiliser `Overrides` uniquement dans une instruction de déclaration de propriété ou de procédure.
+
+- **Modificateurs combinés.** Vous ne pouvez pas spécifier `Overrides` avec `Shadows` ou `Shared` dans la même déclaration. Comme un élément de substitution est implicitement substituable, vous ne pouvez pas combiner `Overridable` avec `Overrides`.
+
+- **Faire correspondre les Signatures.** La signature de cette déclaration doit correspondre exactement à la *signature* de la propriété ou procédure qu’elle substitue. Cela signifie que les listes de paramètres doivent avoir le même nombre de paramètres, dans le même ordre, avec les mêmes types de données.
+
+  Outre la signature, la déclaration de substitution doit également correspondre exactement à ce qui suit :
+
+  - Niveau d'accès
+
+  - Type de retour, le cas échéant
+
+- **Signatures génériques.** Pour une procédure générique, la signature inclut le nombre de paramètres de type. Par conséquent, la déclaration de substitution doit correspondre à la version de la classe de base également selon ce critère.
+
+- **Correspondance supplémentaire.** Cette déclaration doit non seulement correspondre à la signature de la version de la classe de base, mais aussi lui correspondre selon les critères suivants :
+
+  - Modificateur de niveau d’accès (tel que [Public](../../../visual-basic/language-reference/modifiers/public.md))
+
+  - Mécanisme de passage de chaque paramètre ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+
+  - Listes de contraintes pour chaque paramètre de type d'une procédure générique
+
+- **Occultation et substitution.** L'occultation et la substitution redéfinissent toutes les deux un élément hérité, mais il existe des différences importantes entre ces deux approches. Pour plus d’informations, consultez [occultation dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+
+Si vous utilisez `Overrides`, le compilateur ajoute implicitement `Overloads` afin que vos API de bibliothèque fonctionnent plus facilement avec C#.
+
+Le modificateur `Overrides` peut être utilisé dans les contextes suivants :
+
+- [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Property (instruction)](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Sub (instruction)](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)

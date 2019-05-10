@@ -2,12 +2,12 @@
 title: Architecture du client
 ms.date: 03/30/2017
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-ms.openlocfilehash: 4ced24f370e2ab54528c6adb2b3617d3d849e745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ed00054de45abc23fdd9ad69f61c758f567b973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781522"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656055"
 ---
 # <a name="client-architecture"></a>Architecture du client
 Applications utilisent des objets de client Windows Communication Foundation (WCF) pour appeler des opérations de service. Cette rubrique traite des objets de client WCF, canaux de client WCF et leurs relations à l’architecture de canal sous-jacente. Pour obtenir une vue d’ensemble d’objets de client WCF, consultez [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md). Pour plus d’informations sur la couche de canal, consultez [extension de la couche de canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

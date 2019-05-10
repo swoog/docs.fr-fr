@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622644"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Internationalisation et localisation d’applications .NET
 
@@ -38,9 +38,9 @@ Cette étape implique la personnalisation d'une application pour des cultures ou
 
 L'exécution de ces trois étapes offre deux avantages :
 
--   Vous n'avez plus à adapter a posteriori une application conçue pour prendre en charge une seule culture, telle que l'anglais (États-Unis), pour prendre en charge d'autres cultures.
+- Vous n'avez plus à adapter a posteriori une application conçue pour prendre en charge une seule culture, telle que l'anglais (États-Unis), pour prendre en charge d'autres cultures.
 
--   Il en résulte des applications localisées plus stables qui présentent moins de bogues.
+- Il en résulte des applications localisées plus stables qui présentent moins de bogues.
 
 .NET assure une prise en charge complète du développement d’applications internationalisables et localisées. En particulier, plusieurs membres de type de la bibliothèque de classes .NET facilitent l’internationalisation en retournant des valeurs qui reflètent les conventions de la culture de l’utilisateur actuel ou d’une culture spécifiée. De plus, .NET prend en charge les assemblys satellites, qui simplifient le processus de localisation d’une application.
 

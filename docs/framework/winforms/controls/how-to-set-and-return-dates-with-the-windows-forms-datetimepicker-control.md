@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12b3147e19868a1ad742fe6ddc49ffc152ecf991
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638133"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Procédure : définir et retourner des dates avec le contrôle DateTimePicker Windows Forms
 La date ou l'heure actuellement sélectionnée dans le contrôle Windows Forms <xref:System.Windows.Forms.DateTimePicker> est déterminée par la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A>. Vous pouvez définir la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> avant l'affichage du contrôle (par exemple au moment du design ou dans l'événement <xref:System.Windows.Forms.Form.Load> du contrôle) pour déterminer la date qui sera initialement sélectionnée dans le contrôle. Par défaut, la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> du contrôle a comme valeur la date actuelle. Si vous modifiez la propriété <xref:System.Windows.Forms.DateTimePicker.Value%2A> du contrôle dans le code, le contrôle est automatiquement mis à jour sur le formulaire pour refléter le nouveau paramètre.  

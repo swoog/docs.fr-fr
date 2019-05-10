@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662278"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interopérabilité WPF et Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] présentent deux architectures différentes pour créer des interfaces d’application. Le <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> espace de noms fournit des classes qui permettent les scénarios d’interopérabilité communs. Les deux principales classes qui implémentent les fonctionnalités d’interopérabilité sont <xref:System.Windows.Forms.Integration.WindowsFormsHost> et <xref:System.Windows.Forms.Integration.ElementHost>. Cette rubrique décrit les scénarios d’interopérabilité qui sont pris en charge et ceux qui ne le sont pas.  
