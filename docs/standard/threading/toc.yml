@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Threading managé et non managé dans Windows
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: 'Thread.Suspend, Garbage Collection et les points sans risque'
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: "Stockage local des threads\_: champs statiques et emplacements de données relatifs à un thread"
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: Utilisation des threads et du threading
