@@ -5,35 +5,35 @@ helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: 1d6f23c253a081bf454606a222ee4deed6c52e81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5cef189a947bcbab96b22f33251971f5794e156e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052714"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591316"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="0df58-102">Bibliothèque de classes (WPF)</span><span class="sxs-lookup"><span data-stu-id="0df58-102">Class Library (WPF)</span></span>
-<span data-ttu-id="0df58-103">Les liens suivants font référence aux espaces de noms qui contiennent des [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0df58-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="f5c0a-102">Bibliothèque de classes (WPF)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-102">Class Library (WPF)</span></span>
+<span data-ttu-id="f5c0a-103">Les liens suivants font référence aux espaces de noms qui contiennent des [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f5c0a-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0df58-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="0df58-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f5c0a-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="f5c0a-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="0df58-105">Référence</span><span class="sxs-lookup"><span data-stu-id="0df58-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f5c0a-105">Référence</span><span class="sxs-lookup"><span data-stu-id="f5c0a-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="0df58-106"><xref:Microsoft.Win32> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-106"><xref:Microsoft.Win32> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="0df58-107"><xref:System.Collections.ObjectModel> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-107"><xref:System.Collections.ObjectModel> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="0df58-108"><xref:System.Collections.Specialized> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-108"><xref:System.Collections.Specialized> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="0df58-109"><xref:System.ComponentModel> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-109"><xref:System.ComponentModel> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="0df58-110"><xref:System.Diagnostics> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-110"><xref:System.Diagnostics> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="0df58-111"><xref:System.IO> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-111"><xref:System.IO> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62052714"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="0df58-112"><xref:System.Security.Permissions> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-112"><xref:System.Security.Permissions> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62052714"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="0df58-113"><xref:System.Windows.Markup> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-113"><xref:System.Windows.Markup> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "62052714"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="0df58-114">Prise en charge XAML dans .NET 4</span><span class="sxs-lookup"><span data-stu-id="0df58-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="0df58-115">Espaces de noms suivants contiennent des types à partir de l’assembly System.Xaml.</span><span class="sxs-lookup"><span data-stu-id="0df58-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="0df58-116">System.Xaml offre une prise en charge du langage XAML commun pour les infrastructures telles que WPF qui reposent sur [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0df58-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="f5c0a-114">Prise en charge XAML dans .NET 4</span><span class="sxs-lookup"><span data-stu-id="f5c0a-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="f5c0a-115">Espaces de noms suivants contiennent des types à partir de l’assembly System.Xaml.</span><span class="sxs-lookup"><span data-stu-id="f5c0a-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="f5c0a-116">System.Xaml offre une prise en charge du langage XAML commun pour les infrastructures telles que WPF qui reposent sur [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f5c0a-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span>  
   
-- <span data-ttu-id="0df58-117"><xref:System.Windows.Markup> (partagé)</span><span class="sxs-lookup"><span data-stu-id="0df58-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="f5c0a-117"><xref:System.Windows.Markup> (partagé)</span><span class="sxs-lookup"><span data-stu-id="f5c0a-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   
