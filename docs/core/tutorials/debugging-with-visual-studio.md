@@ -3,16 +3,16 @@ title: Déboguer une application .NET Core Hello World avec Visual Studio 2017
 description: Découvrez comment déboguer une application Hello World écrite en C# ou Visual Basic avec Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610715"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063052"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Déboguer une application Hello World .NET Core C# ou Visual Basic avec Visual Studio 2017
 
-Jusqu’à présent, vous avez suivi la procédure [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](with-visual-studio.md) ou [Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017](vb-with-visual-studio.md) pour créer et exécuter une application console simple. Une fois que vous avez écrit et compilé votre application, vous pouvez commencer à la tester. Visual Studio inclut un ensemble complet d’outils de débogage qui vous permettent de tester et dépanner votre application.
+Jusqu’à présent, vous avez suivi la procédure [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](with-visual-studio.md) ou [Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017](vb-with-visual-studio.md) pour créer et exécuter une application console simple. Une fois que vous avez écrit et compilé votre application, vous pouvez commencer à la tester. Visual Studio inclut un ensemble complet d’outils de débogage qui vous permettent de tester et dépanner votre application. 
 
 ## <a name="debugging-in-debug-mode"></a>Débogage en mode débogage
 
