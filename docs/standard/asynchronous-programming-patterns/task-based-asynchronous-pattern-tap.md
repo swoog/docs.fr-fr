@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623791"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modèle asynchrone basé sur les tâches (TAP)
 Le modèle asynchrone basé sur des tâches (TAP) est basé sur les types <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> de l’espace de noms <xref:System.Threading.Tasks?displayProperty=nameWithType>, qui sont utilisés pour représenter les opérations asynchrones arbitraires. Le TAP est le modèle de conception asynchrone recommandé pour le nouveau développement.  
@@ -39,9 +39,9 @@ Le TAP utilise une méthode unique pour représenter le début et la fin d'une o
 ## <a name="initiating-an-asynchronous-operation"></a>Lancer une opération asynchrone  
  Une méthode asynchrone basée sur le TAP peut effectuer une petite quantité de travail de façon synchrone, comme valider les arguments et initialiser l’opération asynchrone, avant de retourner la tâche résultante. Le travail synchrone doit être conservé au minimum afin que la méthode asynchrone puisse retourner rapidement. Les raisons d'un retour rapide sont les suivantes :  
   
--   Les méthodes asynchrones peuvent être appelées par des threads d'interface utilisateur, et tout travail synchrone de longue durée peut nuire à la réactivité de l'application.  
+- Les méthodes asynchrones peuvent être appelées par des threads d'interface utilisateur, et tout travail synchrone de longue durée peut nuire à la réactivité de l'application.  
   
--   Plusieurs méthodes asynchrones peuvent être lancées simultanément. Par conséquent, tout travail de longue durée dans la partie synchrone d'une méthode asynchrone risque de retarder l'initiation d'autres opérations asynchrones, réduisant ainsi les avantages offerts par l'accès concurrentiel.  
+- Plusieurs méthodes asynchrones peuvent être lancées simultanément. Par conséquent, tout travail de longue durée dans la partie synchrone d'une méthode asynchrone risque de retarder l'initiation d'autres opérations asynchrones, réduisant ainsi les avantages offerts par l'accès concurrentiel.  
   
  Dans certains cas, la quantité de travail nécessaire pour terminer l'opération est inférieure à la quantité de travail nécessaire pour lancer l'opération de façon asynchrone. La lecture d'un flux où l'opération de lecture peut être satisfaite par les données déjà mises en mémoire tampon est un exemple de ce type de scénario. Dans de tels cas, l'opération peut s'exécuter de façon synchrone et peut retourner une tâche qui a déjà été effectuée.  
   

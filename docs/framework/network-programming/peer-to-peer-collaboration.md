@@ -2,12 +2,12 @@
 title: Collaboration pair à pair
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623174"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaboration pair à pair
 
@@ -19,21 +19,21 @@ L’infrastructure de collaboration pair à pair est une version simplifiée de 
 
  Une application de collaboration pair à pair classique effectue les étapes suivantes :  
   
--   Le pair détermine l’identité d’un pair qui souhaite héberger une session de collaboration.  
+- Le pair détermine l’identité d’un pair qui souhaite héberger une session de collaboration.  
   
--   Une demande d’hébergement de session est envoyée, et le pair hôte accepte de gérer les activités de collaboration.  
+- Une demande d’hébergement de session est envoyée, et le pair hôte accepte de gérer les activités de collaboration.  
   
--   L’hôte invite les contacts du sous-réseau (y compris le demandeur) à une session.  
+- L’hôte invite les contacts du sous-réseau (y compris le demandeur) à une session.  
   
--   Tous les pairs qui souhaitent collaborer peuvent ajouter l’hôte dans leur gestionnaire de contacts.  
+- Tous les pairs qui souhaitent collaborer peuvent ajouter l’hôte dans leur gestionnaire de contacts.  
   
--   La plupart des pairs envoient une réponse à l’invitation du pair hôte (accepter/décliner) en temps voulu.  
+- La plupart des pairs envoient une réponse à l’invitation du pair hôte (accepter/décliner) en temps voulu.  
   
--   Tous les pairs qui souhaitent collaborer s’inscrivent au pair hôte.  
+- Tous les pairs qui souhaitent collaborer s’inscrivent au pair hôte.  
   
--   Lorsque les pairs réalisent leur première activité de collaboration, le pair hôte peut ajouter des pairs distants dans son gestionnaire de contacts. Il traite également toutes les réponses à l’invitation pour déterminer qui a accepté, qui a décliné, et qui n’a pas répondu.  Il peut annuler l’invitation pour ceux qui n’ont pas répondu, ou effectuer une autre activité.  
+- Lorsque les pairs réalisent leur première activité de collaboration, le pair hôte peut ajouter des pairs distants dans son gestionnaire de contacts. Il traite également toutes les réponses à l’invitation pour déterminer qui a accepté, qui a décliné, et qui n’a pas répondu.  Il peut annuler l’invitation pour ceux qui n’ont pas répondu, ou effectuer une autre activité.  
   
--   À ce stade, le pair hôte peut démarrer une session de collaboration avec tous les pairs invités, ou inscrire une application dans l’infrastructure de collaboration.  Les applications P2P utilisent l’infrastructure de collaboration pair à pair et l’espace de noms <xref:System.Net.PeerToPeer.Collaboration> afin de coordonner les communications des jeux, des forums, des téléconférences et d’autres applications de présence sans serveur.  
+- À ce stade, le pair hôte peut démarrer une session de collaboration avec tous les pairs invités, ou inscrire une application dans l’infrastructure de collaboration.  Les applications P2P utilisent l’infrastructure de collaboration pair à pair et l’espace de noms <xref:System.Net.PeerToPeer.Collaboration> afin de coordonner les communications des jeux, des forums, des téléconférences et d’autres applications de présence sans serveur.  
   
 ## <a name="peer-to-peer-networking-security"></a>Sécurité des réseaux pair à pair  
 

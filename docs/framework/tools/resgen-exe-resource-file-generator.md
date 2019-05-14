@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623307"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Le Générateur de fichiers de ressources (Resgen.exe) convertit les fichiers texte (.txt ou .restext) et les fichiers de format de ressource XML (.resx) en fichiers binaires Common Language Runtime (.resources) pouvant être incorporés dans un exécutable binaire runtime ou un assembly satellite. (Consultez [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
   
  Resgen.exe est un utilitaire de conversion des ressources à but général, qui effectue les tâches suivantes :  
   
--   Il convertit les fichiers .txt ou .restext en fichiers .resources ou .resx. (Le format des fichiers .restext est identique à celui des fichiers .txt. Toutefois, l'extension .restext vous aide à identifier plus facilement les fichiers texte qui contiennent des définitions de ressource.)  
+- Il convertit les fichiers .txt ou .restext en fichiers .resources ou .resx. (Le format des fichiers .restext est identique à celui des fichiers .txt. Toutefois, l'extension .restext vous aide à identifier plus facilement les fichiers texte qui contiennent des définitions de ressource.)  
   
--   Il convertit les fichiers .resources en fichiers .txt ou .resx ;  
+- Il convertit les fichiers .resources en fichiers .txt ou .resx ;  
   
--   Il convertit les fichiers .resx en fichiers .txt ou .resources ;  
+- Il convertit les fichiers .resx en fichiers .txt ou .resources ;  
   
--   Il extrait les ressources de chaîne d'un assembly dans un fichier .resw adapté pour une utilisation dans une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ;  
+- Il extrait les ressources de chaîne d'un assembly dans un fichier .resw adapté pour une utilisation dans une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ;  
   
--   Il crée une classe fortement typée qui permet d'accéder aux ressources individuelles nommées et à l'instance <xref:System.Resources.ResourceManager>.  
+- Il crée une classe fortement typée qui permet d'accéder aux ressources individuelles nommées et à l'instance <xref:System.Resources.ResourceManager>.  
   
  Si Resgen.exe échoue pour une raison quelconque, la valeur de retour sera -1.  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Exécution de tâches spécifiques à Resgen.exe  
  Vous pouvez utiliser Resgen.exe de différentes façons : pour compiler un fichier de ressource texte ou XML dans un fichier binaire, pour effectuer des conversions entre plusieurs formats de fichier de ressources et pour générer une classe qui encapsule la fonctionnalité du <xref:System.Resources.ResourceManager> et fournit l'accès aux ressources. Cette section fournit des informations détaillées sur chaque tâche :  
   
--   [Compilation de ressources dans un fichier binaire](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [Compilation de ressources dans un fichier binaire](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Conversion entre différents types de fichier de ressources](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [Conversion entre différents types de fichier de ressources](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Compilation ou conversion de plusieurs fichiers](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [Compilation ou conversion de plusieurs fichiers](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Exportation de ressources vers un fichier .resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [Exportation de ressources vers un fichier .resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Ressources de compilation conditionnelle](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [Ressources de compilation conditionnelle](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Génération d’une classe de ressource fortement typée](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [Génération d’une classe de ressource fortement typée](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Compilation de ressources dans un fichier binaire  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>Conversion entre différents types de fichier de ressources  
  Outre le fait de compiler des fichiers ressources XML ou texte en fichiers .resources binaires, Resgen.exe peut convertir tout type de fichier compatible en tout autre type de fichier compatible. En d'autres termes, il peut exécuter les conversions suivantes :  
   
--   fichiers .txt et .restext en fichiers .resx.  
+- fichiers .txt et .restext en fichiers .resx.  
   
--   fichiers .resx en fichiers .txt et .restext.  
+- fichiers .resx en fichiers .txt et .restext.  
   
--   fichiers .resources en fichiers .txt et .restext.  
+- fichiers .resources en fichiers .txt et .restext.  
   
--   fichiers .resources en fichiers .resx.  
+- fichiers .resources en fichiers .resx.  
   
  La syntaxe est la même que celle représentée dans la section précédente.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  La classe de ressource fortement typée possède les entités suivantes :  
   
--   Un constructeur qui ne prend pas de paramètres et qui peut être utilisé pour instancier la classe de ressource fortement typée.  
+- Un constructeur qui ne prend pas de paramètres et qui peut être utilisé pour instancier la classe de ressource fortement typée.  
   
--   Une propriété `static` (C#) ou `Shared` (Visual Basic) et accessible en lecture seule du `ResourceManager`, qui retourne l'instance du <xref:System.Resources.ResourceManager>, qui gère la ressource fortement typée.  
+- Une propriété `static` (C#) ou `Shared` (Visual Basic) et accessible en lecture seule du `ResourceManager`, qui retourne l'instance du <xref:System.Resources.ResourceManager>, qui gère la ressource fortement typée.  
   
--   Une propriété `Culture` statique, qui vous permet de définir la culture utilisée pour la récupération de ressource. Par défaut, sa valeur est `null`, ce qui signifie que la culture d'interface utilisateur actuelle est utilisée.  
+- Une propriété `Culture` statique, qui vous permet de définir la culture utilisée pour la récupération de ressource. Par défaut, sa valeur est `null`, ce qui signifie que la culture d'interface utilisateur actuelle est utilisée.  
   
--   Une propriété `static` (C#) ou `Shared` (Visual Basic) et en lecture seule pour chaque ressource du fichier .resources. La propriété porte le nom de la ressource. -  
+- Une propriété `static` (C#) ou `Shared` (Visual Basic) et en lecture seule pour chaque ressource du fichier .resources. La propriété porte le nom de la ressource. -  
   
  Par exemple, la commande suivante compile un fichier de ressources nommé StringResources.txt dans StringResources.resources et génère une classe nommée `StringResources` dans un fichier de code source Visual Basic nommé StringResources.vb qui peut être utilisé pour accéder au Gestionnaire des ressources.  
   
