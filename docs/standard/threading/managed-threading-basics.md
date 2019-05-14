@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644820"
 ---
 # <a name="managed-threading-basics"></a>Éléments fondamentaux du threading managé
 
@@ -42,9 +42,6 @@ Les cinq premières rubriques de cette section sont conçues pour vous aider à 
   
  [Threading managé et non managé dans Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Décrit la relation entre le threading managé et non managé, répertorie les équivalents managés de l’API de threading Windows et explique l’interaction des cloisonnements COM et des threads managés.  
-  
- [Thread.Suspend, Garbage Collection et les points sans risque](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Décrit la suspension du thread et le nettoyage de la mémoire.  
   
  [Stockage local des threads : champs statiques et emplacements de données relatifs à un thread](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Décrit les mécanismes de stockage relatifs aux threads.  

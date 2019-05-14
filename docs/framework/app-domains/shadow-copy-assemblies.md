@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607524"
 ---
 # <a name="shadow-copying-assemblies"></a>Clichés instantanés d'assemblys
 Les clichés instantanés permettent aux assemblys qui sont utilisés dans un domaine d'application d'être mis à jour sans décharger le domaine d'application. Ceci est particulièrement utile pour les applications qui doivent être disponibles en permanence, comme des sites ASP.NET.  
@@ -30,21 +30,21 @@ Les clichés instantanés permettent aux assemblys qui sont utilisés dans un do
   
  Cet article contient les sections suivantes :  
   
--   [Activation et utilisation des clichés instantanés](#EnablingAndUsing) décrit l’utilisation de base et les options disponibles pour les clichés instantanés.  
+- [Activation et utilisation des clichés instantanés](#EnablingAndUsing) décrit l’utilisation de base et les options disponibles pour les clichés instantanés.  
   
--   [Performances du démarrage](#StartupPerformance) décrit les changements apportés aux clichés instantanés dans le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] pour améliorer les performances du démarrage, et comment rétablir le comportement des versions antérieures.  
+- [Performances du démarrage](#StartupPerformance) décrit les changements apportés aux clichés instantanés dans le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] pour améliorer les performances du démarrage, et comment rétablir le comportement des versions antérieures.  
   
--   [Méthodes obsolètes](#ObsoleteMethods) décrit les changements apportés aux propriétés et aux méthodes qui contrôlent les clichés instantanés dans le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Méthodes obsolètes](#ObsoleteMethods) décrit les changements apportés aux propriétés et aux méthodes qui contrôlent les clichés instantanés dans le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Activation et utilisation des clichés instantanés  
  Vous pouvez utiliser les propriétés de la classe <xref:System.AppDomainSetup> comme suit pour configurer un domaine d'application pour les clichés instantanés :  
   
--   Activez les clichés instantanés en définissant la propriété <xref:System.AppDomainSetup.ShadowCopyFiles%2A> à la valeur de chaîne `"true"`.  
+- Activez les clichés instantanés en définissant la propriété <xref:System.AppDomainSetup.ShadowCopyFiles%2A> à la valeur de chaîne `"true"`.  
   
      Par défaut, cette valeur fait que tous les assemblys dans le chemin d'accès de l'application sont copiés vers un cache de téléchargement avant leur chargement. Il s'agit du même cache que celui qui est géré par le common language runtime pour stocker les fichiers téléchargés à partir d'autres ordinateurs. Le common language runtime supprime automatiquement les fichiers quand ils ne sont plus nécessaires.  
   
--   Vous pouvez aussi définir un emplacement personnalisé pour les fichiers des clichés instantanés en utilisant les propriétés <xref:System.AppDomainSetup.CachePath%2A> et <xref:System.AppDomainSetup.ApplicationName%2A>.  
+- Vous pouvez aussi définir un emplacement personnalisé pour les fichiers des clichés instantanés en utilisant les propriétés <xref:System.AppDomainSetup.CachePath%2A> et <xref:System.AppDomainSetup.ApplicationName%2A>.  
   
      Le chemin d'accès de base de l'emplacement est formé en concaténant la propriété <xref:System.AppDomainSetup.ApplicationName%2A> et la propriété <xref:System.AppDomainSetup.CachePath%2A> comme sous-répertoire. Les clichés instantanés des assemblys sont copiés vers des sous-répertoires de ce chemin d'accès, et non pas dans le chemin d'accès de base lui-même.  
   
@@ -55,7 +55,7 @@ Les clichés instantanés permettent aux assemblys qui sont utilisés dans un do
   
      Il existe plusieurs raisons pour lesquelles vous voudrez peut-être définir un emplacement personnalisé pour les fichiers de clichés instantanés. Vous pouvez souhaiter définir un emplacement personnalisé pour les fichiers de clichés instantanés si votre application génère un grand nombre de copies. Le cache de téléchargement est limité en taille, pas quant à la durée de vie : il est donc possible que le common language runtime tente de supprimer un fichier qui est toujours en cours d'utilisation. Une autre raison pour définir un emplacement personnalisé est quand des utilisateurs exécutant votre application n'ont pas d'accès en écriture à l'emplacement du répertoire utilisé par common language runtime pour le cache de téléchargement.  
   
--   Limitez éventuellement les assemblys qui font l'objet de clichés instantanés en utilisant la propriété <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
+- Limitez éventuellement les assemblys qui font l'objet de clichés instantanés en utilisant la propriété <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
   
      Quand vous activez les clichés instantanés pour un domaine d'application, le comportement par défaut est de copier tous les assemblys dans le chemin d'accès de l'application, c'est-à-dire dans les répertoires spécifiés par les propriétés <xref:System.AppDomainSetup.ApplicationBase%2A> et <xref:System.AppDomainSetup.PrivateBinPath%2A>. Vous pouvez limiter la copie vers les répertoires sélectionnés en créant une chaîne qui contient seulement les répertoires pour lesquels vous voulez effectuer des clichés instantanés, et en l'affectant à la propriété <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>. Séparez les répertoires par des points-virgules. Les seuls assemblys qui font l'objet de clichés instantanés sont alors ceux des répertoires sélectionnés.  
   

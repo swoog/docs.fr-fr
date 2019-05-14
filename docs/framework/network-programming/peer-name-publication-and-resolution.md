@@ -2,12 +2,12 @@
 title: Résolution et publication de nom de pair
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769487"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623201"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Résolution et publication de nom de pair
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769487"
 
  Pour publier un nouvel ID PNRP, un pair effectue les opérations suivantes :  
   
--   Il envoie des messages de publication PNRP à ses voisins du cache (les pairs dont les ID PNRP sont inscrits au niveau le plus bas du cache) pour amorcer leur cache.  
+- Il envoie des messages de publication PNRP à ses voisins du cache (les pairs dont les ID PNRP sont inscrits au niveau le plus bas du cache) pour amorcer leur cache.  
   
--   Il choisit de manière aléatoire des nœuds dans le cloud qui ne sont pas ses voisins et leur envoie des requêtes de résolution de nom PNRP pour son propre ID P2P. Le processus de détermination du point de terminaison qui en résulte amorce les caches de nœuds du cloud choisis aléatoirement avec l’ID PNRP du pair de publication.  
+- Il choisit de manière aléatoire des nœuds dans le cloud qui ne sont pas ses voisins et leur envoie des requêtes de résolution de nom PNRP pour son propre ID P2P. Le processus de détermination du point de terminaison qui en résulte amorce les caches de nœuds du cloud choisis aléatoirement avec l’ID PNRP du pair de publication.  
   
 Les nœuds PNRP version 2 ne publient pas les ID PNRP s’ils résolvent uniquement d’autres ID P2P. La valeur de Registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (type REG_DWORD) spécifie que les pairs utilisent uniquement PNRP pour la résolution de noms et jamais pour la publication de noms. Cette valeur de Registre peut également être configurée via la stratégie de groupe.  
   
@@ -37,11 +37,11 @@ Les nœuds PNRP version 2 ne publient pas les ID PNRP s’ils résolvent uniq
   
  Pour effectuer la résolution de noms dans PNRP, le pair recherche dans les entrées de son propre cache une entrée correspondant à l’ID PNRP cible. S’il en trouve une, le pair envoie un message de demande PNRP au pair et attend une réponse. Si aucune entrée d’ID PNRP n’est trouvée, le pair envoie un message de demande PNRP au pair qui correspond à l’entrée dont l’ID PNRP est la plus proche de l’ID PNRP cible. Le nœud qui reçoit le message de demande PNRP examine son propre cache et effectue les opérations suivantes :  
   
--   Si l’ID PNRP est trouvé, le pair de point de terminaison qui a reçu la demande répond directement au pair qui a effectué la demande.  
+- Si l’ID PNRP est trouvé, le pair de point de terminaison qui a reçu la demande répond directement au pair qui a effectué la demande.  
   
--   Si l’ID PNRP n’est pas trouvé, et qu’un ID PNRP du cache est proche de l’ID PNRP cible, le pair qui a reçu la demande envoie au pair demandeur une réponse contenant l’adresse IPv6 du pair dont l’ID PNRP est le plus proche de l’ID PNRP cible. À l’aide de l’adresse IP fournie dans la réponse, le nœud demandeur envoie un autre message PNRP à l’adresse IPv6 pour demander une réponse ou l’autorisation d’examiner son cache.  
+- Si l’ID PNRP n’est pas trouvé, et qu’un ID PNRP du cache est proche de l’ID PNRP cible, le pair qui a reçu la demande envoie au pair demandeur une réponse contenant l’adresse IPv6 du pair dont l’ID PNRP est le plus proche de l’ID PNRP cible. À l’aide de l’adresse IP fournie dans la réponse, le nœud demandeur envoie un autre message PNRP à l’adresse IPv6 pour demander une réponse ou l’autorisation d’examiner son cache.  
   
--   Si l’ID PNRP n’est pas trouvé, et si aucun des ID PNRP du cache n’est proche du ID PNRP cible, le pair qui reçoit la demande envoie au pair demandeur une réponse indiquant cette condition. Le pair demandeur choisit alors l’ID PNRP le plus proche.  
+- Si l’ID PNRP n’est pas trouvé, et si aucun des ID PNRP du cache n’est proche du ID PNRP cible, le pair qui reçoit la demande envoie au pair demandeur une réponse indiquant cette condition. Le pair demandeur choisit alors l’ID PNRP le plus proche.  
   
 Le pair demandeur continue ce processus avec des itérations successives dans le but de localiser le nœud qui a inscrit l’ID PNRP.  
   

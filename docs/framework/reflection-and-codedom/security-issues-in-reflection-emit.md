@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074519"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591384"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problèmes de sécurité dans l'émission de réflexion
 Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois façons d'émettre du code MSIL (Microsoft Intermediate Language), chacune avec ses propres problèmes de sécurité :  
   
--   [Assemblys dynamiques](#Dynamic_Assemblies)  
+- [Assemblys dynamiques](#Dynamic_Assemblies)  
   
--   [Méthodes dynamiques hébergées anonymement](#Anonymously_Hosted_Dynamic_Methods)  
+- [Méthodes dynamiques hébergées anonymement](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Méthodes dynamiques associées à des assemblys existants](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Méthodes dynamiques associées à des assemblys existants](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Quelle que soit la façon dont vous générez le code dynamique, l'exécution du code généré nécessite toutes les autorisations requises par les types et par les méthodes utilisées par le code généré.  
   
@@ -51,13 +51,13 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Génération d'assemblys dynamiques à partir de code d'un niveau de confiance partiel  
  Considérez les conditions dans lesquelles un assembly disposant d'autorisations Internet peut générer un assembly dynamique transitoire et exécuter son code :  
   
--   L'assembly dynamique utilise seulement des types et des membres publics d'autres assemblys.  
+- L'assembly dynamique utilise seulement des types et des membres publics d'autres assemblys.  
   
--   Les autorisations demandées par ces types et ces membres sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
+- Les autorisations demandées par ces types et ces membres sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
   
--   L'assembly n'est pas enregistré sur disque.  
+- L'assembly n'est pas enregistré sur disque.  
   
--   Les symboles de débogage ne sont pas générés. (Les jeux d'autorisations `Internet` et `LocalIntranet` n'incluent pas les autorisations nécessaires.)  
+- Les symboles de débogage ne sont pas générés. (Les jeux d'autorisations `Internet` et `LocalIntranet` n'incluent pas les autorisations nécessaires.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Méthodes dynamiques hébergées anonymement  
@@ -70,9 +70,9 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
   
  Si le domaine d’application le permet, les méthodes dynamiques hébergées anonymement peuvent ignorer les contrôles de visibilité JIT, avec la restriction suivante : les types et les membres non publics auxquels accède une méthode dynamique hébergée anonymement doivent être dans des assemblys dont les jeux d’autorisations doivent être équivalents à ou être des sous-ensembles du jeu d’autorisations de la pile des appels émettrice. Cette possibilité restreinte d'ignorer les contrôles de visibilité JIT est activée si le domaine d'application accorde l'autorisation <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
--   Si votre méthode utilise seulement des types et des membres publics, aucune autorisation n'est requise pendant la construction.  
+- Si votre méthode utilise seulement des types et des membres publics, aucune autorisation n'est requise pendant la construction.  
   
--   Si vous spécifiez que les contrôles de visibilité JIT doivent être ignorés, la demande qui est faite quand la méthode est construite inclut <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et le jeu d'autorisations de l'assembly qui contient le membre non public qui fait l'objet de l'accès.  
+- Si vous spécifiez que les contrôles de visibilité JIT doivent être ignorés, la demande qui est faite quand la méthode est construite inclut <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et le jeu d'autorisations de l'assembly qui contient le membre non public qui fait l'objet de l'accès.  
   
  Étant donné que le jeu d'autorisations du membre non public est pris en considération, le code d'un niveau de confiance partiel auquel l'autorisation <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> a été accordée ne peut pas élever ses privilèges en exécutant des membres non publics d'assemblys approuvés.  
   
@@ -85,9 +85,9 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Génération de méthodes dynamiques hébergées anonymement à partir de code d'un niveau de confiance partiel  
  Considérez les conditions dans lesquelles un assembly disposant d'autorisations Internet peut générer une méthode dynamique hébergée anonymement et l'exécuter :  
   
--   La méthode dynamique utilise seulement des types et des membres publics. Si son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, elle peut utiliser des types et des membres non publics de tout assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur.  
+- La méthode dynamique utilise seulement des types et des membres publics. Si son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, elle peut utiliser des types et des membres non publics de tout assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur.  
   
--   Les autorisations requises par tous les types et les membres utilisés par la méthode dynamique sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
+- Les autorisations requises par tous les types et les membres utilisés par la méthode dynamique sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
   
 > [!NOTE]
 >  Les méthodes dynamiques ne prennent pas en charge les symboles de débogage.  
@@ -96,21 +96,21 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Méthodes dynamiques associées à des assemblys existants  
  Pour associer une méthode dynamique à un type ou un module d'un assembly existant, utilisez les constructeurs de <xref:System.Reflection.Emit.DynamicMethod> qui spécifient le type ou le module associé. Les autorisations requises pour appeler ces constructeurs varient, car l'association d'une méthode dynamique à un type ou un module existant donne à la méthode dynamique l'accès aux types et aux membres non publics :  
   
--   Une méthode dynamique qui est associée à un type a accès à tous les membres de ce type, même aux membres privés, et à tous les types et les membres internes de l'assembly qui contient le type associé.  
+- Une méthode dynamique qui est associée à un type a accès à tous les membres de ce type, même aux membres privés, et à tous les types et les membres internes de l'assembly qui contient le type associé.  
   
--   Une méthode dynamique qui est associée à un module a accès à tous les types et les membres `internal` (`Friend` en Visual Basic, `assembly` dans les métadonnées du common language runtime) du module.  
+- Une méthode dynamique qui est associée à un module a accès à tous les types et les membres `internal` (`Friend` en Visual Basic, `assembly` dans les métadonnées du common language runtime) du module.  
   
  En outre, vous pouvez utiliser un constructeur qui spécifie la possibilité d'ignorer les contrôles de visibilité du compilateur JIT. Procéder ainsi donne à votre méthode dynamique l'accès à tous les types et membres de tous les assemblys, quel que soit le niveau d'accès.  
   
  Les autorisations demandées par le constructeur dépendent du niveau d'accès que vous décidez de donner à votre méthode dynamique :  
   
--   Si votre méthode utilise seulement des types et des membres publics, et que vous l'associez à votre propre type ou à votre propre module, aucune autorisation n'est requise.  
+- Si votre méthode utilise seulement des types et des membres publics, et que vous l'associez à votre propre type ou à votre propre module, aucune autorisation n'est requise.  
   
--   Si vous spécifiez que les contrôles de visibilité JIT doivent être ignorés, le constructeur demande <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
+- Si vous spécifiez que les contrôles de visibilité JIT doivent être ignorés, le constructeur demande <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
--   Si vous associez la méthode dynamique à un autre type, même un autre type de votre propre assembly, le constructeur demande <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> et <xref:System.Security.Permissions.SecurityPermission> avec l'indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+- Si vous associez la méthode dynamique à un autre type, même un autre type de votre propre assembly, le constructeur demande <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> et <xref:System.Security.Permissions.SecurityPermission> avec l'indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
--   Si vous associez la méthode dynamique à un type ou un module d'un autre assembly, le constructeur demande deux éléments : <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et le jeu d'autorisations de l'assembly qui contient l'autre module. Autrement dit, votre pile des appels doit inclure toutes les autorisations du jeu d'autorisations du module cible, plus <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Si vous associez la méthode dynamique à un type ou un module d'un autre assembly, le constructeur demande deux éléments : <xref:System.Security.Permissions.ReflectionPermission> avec l'indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et le jeu d'autorisations de l'assembly qui contient l'autre module. Autrement dit, votre pile des appels doit inclure toutes les autorisations du jeu d'autorisations du module cible, plus <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Pour la compatibilité descendante, si la demande pour le jeu d'autorisations cible plus <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> échoue, le constructeur demande <xref:System.Security.Permissions.SecurityPermission> avec l'indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
@@ -126,13 +126,13 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre trois faç
   
  Considérez les conditions dans lesquelles un assembly disposant d'autorisations Internet peut générer une méthode dynamique et l'exécuter :  
   
--   La méthode dynamique est associée au module ou au type qui l'émet, ou bien son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et elle est associée à un module d'un assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur.  
+- La méthode dynamique est associée au module ou au type qui l'émet, ou bien son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et elle est associée à un module d'un assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur.  
   
--   La méthode dynamique utilise seulement des types et des membres publics. Si son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et qu'elle est associée à un module d'un assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur, elle peut utiliser les types et les membres marqués comme étant `internal` (`Friend` en Visual Basic, `assembly` dans les métadonnées du common language runtime) dans le module associé.  
+- La méthode dynamique utilise seulement des types et des membres publics. Si son jeu d'autorisations inclut <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> et qu'elle est associée à un module d'un assembly dont le jeu d'autorisations est équivalent à ou est un sous-ensemble du jeu d'autorisations de l'assembly émetteur, elle peut utiliser les types et les membres marqués comme étant `internal` (`Friend` en Visual Basic, `assembly` dans les métadonnées du common language runtime) dans le module associé.  
   
--   Les autorisations demandées par tous les types et les membres utilisés par la méthode dynamique sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
+- Les autorisations demandées par tous les types et les membres utilisés par la méthode dynamique sont incluses dans le jeu d'autorisations de l'assembly partiellement approuvé.  
   
--   La méthode dynamique n'ignore pas les contrôles de visibilité JIT.  
+- La méthode dynamique n'ignore pas les contrôles de visibilité JIT.  
   
 > [!NOTE]
 >  Les méthodes dynamiques ne prennent pas en charge les symboles de débogage.  

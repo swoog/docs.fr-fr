@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583068"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphisme (Guide de programmation C#)
 Le polymorphisme est souvent considéré comme le troisième pilier d'une programmation orientée objet, après l'encapsulation et l'héritage. Le polymorphisme est le mot grec qui signifie « plusieurs formes » et il prend deux aspects distincts :  
   
--   Au moment de l’exécution, les objets d’une classe dérivée peuvent être traités comme des objets d’une classe de base dans les paramètres de méthode et les collections ou les tableaux. Lorsque cela se passe, le type déclaré de l'objet n'est plus identique à son type au moment de l'exécution.  
+- Au moment de l’exécution, les objets d’une classe dérivée peuvent être traités comme des objets d’une classe de base dans les paramètres de méthode et les collections ou les tableaux. Lorsque cela se passe, le type déclaré de l'objet n'est plus identique à son type au moment de l'exécution.  
   
--   Les classes de base peuvent définir et implémenter des *méthodes* [virtuelles](../../../csharp/language-reference/keywords/virtual.md), et les classes dérivées peuvent les [substituer](../../../csharp/language-reference/keywords/override.md), ce qui signifie qu’elles fournissent leur propre définition et implémentation. Au moment de l'exécution, quand le code client appelle la méthode, le CLR recherche le type au moment de l'exécution et appelle cette substitution de la méthode virtuelle. C'est pourquoi, dans le code source vous pouvez appeler une méthode dans une classe de base, et provoquer l'exécution d'une version de la classe dérivée de la méthode.  
+- Les classes de base peuvent définir et implémenter des *méthodes* [virtuelles](../../../csharp/language-reference/keywords/virtual.md), et les classes dérivées peuvent les [substituer](../../../csharp/language-reference/keywords/override.md), ce qui signifie qu’elles fournissent leur propre définition et implémentation. Au moment de l'exécution, quand le code client appelle la méthode, le CLR recherche le type au moment de l'exécution et appelle cette substitution de la méthode virtuelle. C'est pourquoi, dans le code source vous pouvez appeler une méthode dans une classe de base, et provoquer l'exécution d'une version de la classe dérivée de la méthode.  
   
  Les méthodes virtuelles vous permettent d'utiliser des groupes d'objets liés de façon uniforme. Par exemple, si vous avez une application de dessin qui permet à un utilisateur de créer différents types de formes sur une surface de dessin. Vous ne savez pas au moment de la compilation les types de formes spécifiques que l'utilisateur va créer. Cependant, l'application doit conserver une trace des différents types de formes créés et les mettre à jour en réponse aux actions de la souris. Vous pouvez utiliser le polymorphisme pour résoudre ce problème en deux étapes :  
   
@@ -37,11 +37,11 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
 ### <a name="virtual-members"></a>Membres virtuels  
  Quand une classe dérivée hérite d'une classe de base, elle gagne toutes les méthodes, les champs, les propriétés et les événements de la classe de base. Le concepteur de la classe dérivée peut choisir  
   
--   de substituer les membres virtuels dans la classe de base,  
+- de substituer les membres virtuels dans la classe de base,  
   
--   d'hériter de la méthode de classe de base la plus proche sans la substituer  
+- d'hériter de la méthode de classe de base la plus proche sans la substituer  
   
--   de définir une nouvelle implémentation non virtuelle de ces membres qui masque les implémentations de la classe de base  
+- de définir une nouvelle implémentation non virtuelle de ces membres qui masque les implémentations de la classe de base  
   
  Une classe dérivée ne peut substituer un membre de classe de base que si le membre de classe de base est déclaré comme étant [virtual](../../../csharp/language-reference/keywords/virtual.md) ou [abstract](../../../csharp/language-reference/keywords/abstract.md). Le membre dérivé doit utiliser le mot clé [override](../../../csharp/language-reference/keywords/override.md) pour indiquer explicitement que la méthode est conçue pour participer à l’appel virtuel. Le code suivant est fourni à titre d'exemple :  
   
@@ -89,11 +89,11 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Savoir quand utiliser les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Savoir quand utiliser les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Guide pratique pour substituer la méthode ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Guide pratique pour substituer la méthode ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

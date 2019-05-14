@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591497"
 ---
 # <a name="using-the-codedom"></a>Utilisation du CodeDOM
 CodeDOM fournit des types qui représentent de nombreux types courants d’éléments du code source. Vous pouvez concevoir un programme qui génère un modèle de code source à l’aide d’éléments CodeDOM pour assembler un graphique d’objet. Ce graphique d’objet peut être rendu sous forme de code source à l’aide d’un générateur de code CodeDOM pour un langage de programmation pris en charge. CodeDOM permet également de compiler du code source dans un assembly binaire.  
   
  Voici quelques usages courants de CodeDOM :  
   
--   Génération d’un code modèle : génération du code pour ASP.NET, les proxies clients de services Web XML, les Assistants Code, les concepteurs ou d’autres mécanismes d’émission de code.  
+- Génération d’un code modèle : génération du code pour ASP.NET, les proxies clients de services Web XML, les Assistants Code, les concepteurs ou d’autres mécanismes d’émission de code.  
   
--   Compilation dynamique : prise en charge de la compilation du code dans un ou plusieurs langages.  
+- Compilation dynamique : prise en charge de la compilation du code dans un ou plusieurs langages.  
   
 ## <a name="building-a-codedom-graph"></a>Génération d’un graphique CodeDOM  
  L’espace de noms <xref:System.CodeDom> fournit des classes représentant la structure logique du code source, indépendamment de la syntaxe d’un langage.  

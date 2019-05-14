@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103413"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599876"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduction aux applications de service Windows
 Les services Microsoft Windows, anciennement « services NT », vous permettent de créer des applications exécutables longue durée qui s’exécutent au sein de leurs propres sessions Windows. Ces services peuvent être lancés automatiquement au démarrage de l’ordinateur, et peuvent être suspendus et redémarrés. Ils n’affichent aucune interface utilisateur. Les services sont donc parfaitement adaptés à une utilisation sur un serveur ou chaque fois que vous avez besoin de fonctionnalités longue durée qui n’interfèrent pas avec d’autres utilisateurs travaillant sur le même ordinateur. Vous pouvez également exécuter des services dans le contexte de sécurité d’un compte d’utilisateur spécifique (différent de l’utilisateur connecté ou du compte d’ordinateur par défaut). Pour plus d’informations sur les services et sessions Windows, consultez la documentation du kit SDK Windows.  
@@ -41,19 +41,19 @@ Les services Microsoft Windows, anciennement « services NT », vous permettent 
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Applications de service et autres applications Visual Studio  
  Le fonctionnement des applications de service diffère de celui d’autres types de projets à plusieurs égards :  
   
--   Le fichier exécutable compilé créé par un projet d’application de service doit d’abord être installé sur le serveur pour que le projet puisse fonctionner de manière utile. Vous ne pouvez pas appuyer sur F5 ou F11 pour déboguer ou exécuter une application de service. Par ailleurs, vous ne pouvez ni exécuter immédiatement un service ni effectuer un pas à pas détaillé dans son code. Vous devez installer et démarrer votre service, puis attacher un débogueur au processus du service. Pour plus d'informations, voir [Procédure : déboguer les applications de service Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- Le fichier exécutable compilé créé par un projet d’application de service doit d’abord être installé sur le serveur pour que le projet puisse fonctionner de manière utile. Vous ne pouvez pas appuyer sur F5 ou F11 pour déboguer ou exécuter une application de service. Par ailleurs, vous ne pouvez ni exécuter immédiatement un service ni effectuer un pas à pas détaillé dans son code. Vous devez installer et démarrer votre service, puis attacher un débogueur au processus du service. Pour plus d'informations, voir [Procédure : déboguer les applications de service Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   Contrairement à certains types de projets, vous devez créer des composants d’installation pour les applications de service. Les composants d’installation installent le service sur le serveur et l’inscrivent auprès de celui-ci. Ils créent également une entrée pour votre service dans le **Gestionnaire de contrôle des services** Windows. Pour plus d'informations, voir [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Contrairement à certains types de projets, vous devez créer des composants d’installation pour les applications de service. Les composants d’installation installent le service sur le serveur et l’inscrivent auprès de celui-ci. Ils créent également une entrée pour votre service dans le **Gestionnaire de contrôle des services** Windows. Pour plus d'informations, voir [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   La méthode `Main` de votre application de service doit émettre la commande Run pour les services contenus dans votre projet. La méthode `Run` charge les services dans le **Gestionnaire de contrôle des services** sur le serveur approprié. Si vous utilisez le modèle de projet **Services Windows**, cette méthode est automatiquement écrite pour vous. Notez que le chargement et le démarrage d’un service sont deux choses différentes. Pour plus d’informations, consultez « Durée de vie du service » ci-dessous.  
+- La méthode `Main` de votre application de service doit émettre la commande Run pour les services contenus dans votre projet. La méthode `Run` charge les services dans le **Gestionnaire de contrôle des services** sur le serveur approprié. Si vous utilisez le modèle de projet **Services Windows**, cette méthode est automatiquement écrite pour vous. Notez que le chargement et le démarrage d’un service sont deux choses différentes. Pour plus d’informations, consultez « Durée de vie du service » ci-dessous.  
   
--   Les applications de service Windows s’exécutent dans une station de fenêtre différente de la station interactive de l’utilisateur connecté. Une station de fenêtre est un objet sécurisé contenant un Presse-papiers, un ensemble d’atomes globaux et un groupe d’objets de bureau. Étant donné que la station du service Windows n’est pas une station interactive, les boîtes de dialogue déclenchées à partir d’une application de service Windows ne sont pas visibles et peuvent provoquer le blocage de votre programme. De la même façon, les messages d’erreur doivent être journalisés dans le journal des événements Windows au lieu d’être déclenchés dans l’interface utilisateur.  
+- Les applications de service Windows s’exécutent dans une station de fenêtre différente de la station interactive de l’utilisateur connecté. Une station de fenêtre est un objet sécurisé contenant un Presse-papiers, un ensemble d’atomes globaux et un groupe d’objets de bureau. Étant donné que la station du service Windows n’est pas une station interactive, les boîtes de dialogue déclenchées à partir d’une application de service Windows ne sont pas visibles et peuvent provoquer le blocage de votre programme. De la même façon, les messages d’erreur doivent être journalisés dans le journal des événements Windows au lieu d’être déclenchés dans l’interface utilisateur.  
   
      Les classes de service Windows prises en charge par le .NET Framework ne prennent pas en charge l’interaction avec des stations interactives, c’est-à-dire l’utilisateur connecté. Le .NET Framework n’inclut pas non plus les classes qui représentent des stations et des bureaux. Si votre service Windows doit interagir avec d’autres stations, vous devez accéder à l’API Windows non managée. Pour plus d’informations, consultez la documentation du SDK Windows.  
   
      Prenez soin de concevoir l’interaction du service Windows avec l’utilisateur ou d’autres stations pour faire face à divers scénarios, notamment l’absence d’un utilisateur connecté ou la présence d’un ensemble inattendu d’objets sur le Bureau d’un utilisateur. Dans certains cas, il peut être plus opportun d’écrire une application Windows qui s’exécute sous le contrôle de l’utilisateur.  
   
--   Les applications de service Windows s’exécutent dans leur propre contexte de sécurité et sont démarrées avant que l’utilisateur ne se connecte à l’ordinateur Windows sur lequel elles sont installées. Réfléchissez bien au compte d’utilisateur sous lequel vous souhaitez que le service s’exécute. En effet, un compte système confère au service davantage de droits et de privilèges qu’un compte d’utilisateur.  
+- Les applications de service Windows s’exécutent dans leur propre contexte de sécurité et sont démarrées avant que l’utilisateur ne se connecte à l’ordinateur Windows sur lequel elles sont installées. Réfléchissez bien au compte d’utilisateur sous lequel vous souhaitez que le service s’exécute. En effet, un compte système confère au service davantage de droits et de privilèges qu’un compte d’utilisateur.  
   
 ## <a name="service-lifetime"></a>Durée de vie d’un service  
  Un service passe par plusieurs états internes au cours de sa vie. Le service est d’abord installé sur le système sur lequel il doit s’exécuter. Ce processus exécute les programmes d’installation du projet de service et charge le service dans le **Gestionnaire de contrôle des services** de cet ordinateur. Le **Gestionnaire de contrôle des services** est l’utilitaire central fourni par Windows pour administrer les services.  
@@ -76,9 +76,9 @@ Les services Microsoft Windows, anciennement « services NT », vous permettent 
   
 ## <a name="requirements"></a>Spécifications  
   
--   Les services doivent être créés dans un projet d’application **Service Windows** ou un autre projet compatible .NET Framework qui crée un fichier .exe au moment de la génération et qui hérite de la classe <xref:System.ServiceProcess.ServiceBase>.  
+- Les services doivent être créés dans un projet d’application **Service Windows** ou un autre projet compatible .NET Framework qui crée un fichier .exe au moment de la génération et qui hérite de la classe <xref:System.ServiceProcess.ServiceBase>.  
   
--   Les projets contenant des services Windows doivent avoir des composants d’installation pour le projet et ses services. Pour y parvenir facilement, utilisez la fenêtre **Propriétés**. Pour plus d'informations, voir [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Les projets contenant des services Windows doivent avoir des composants d’installation pour le projet et ses services. Pour y parvenir facilement, utilisez la fenêtre **Propriétés**. Pour plus d'informations, voir [Procédure : ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

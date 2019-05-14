@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634340"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Constructions de regroupement dans les expressions régulières
 Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent les sous-chaînes d'une chaîne d'entrée. Utilisez les constructions de regroupement pour effectuer les opérations suivantes :  
   
--   Mettre en correspondance une sous-expression qui est répétée dans la chaîne d'entrée.  
+- Mettre en correspondance une sous-expression qui est répétée dans la chaîne d'entrée.  
   
--   Appliquer un quantificateur à une sous-expression qui possède plusieurs éléments de langage d'expression régulière. Pour plus d'informations sur les quantificateurs, voir [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+- Appliquer un quantificateur à une sous-expression qui possède plusieurs éléments de langage d'expression régulière. Pour plus d'informations sur les quantificateurs, voir [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Inclure une sous-expression dans la chaîne retournée par les méthodes <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> et <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
+- Inclure une sous-expression dans la chaîne retournée par les méthodes <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> et <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
--   Récupérer des sous-expressions spécifiques de la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> et les traiter séparément du texte global mis en correspondance.  
+- Récupérer des sous-expressions spécifiques de la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> et les traiter séparément du texte global mis en correspondance.  
   
  Le tableau suivant répertorie les constructions de regroupement prises en charge par le moteur d’expression régulière de .NET et indique si ce sont des constructions avec ou sans capture.  
   
@@ -63,13 +63,13 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
   
  Vous pouvez accéder aux groupes capturés de quatre façons :  
   
--   En utilisant la construction de référence arrière dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\`*nombre*, où *nombre* est le nombre ordinal de la sous-expression capturée.  
+- En utilisant la construction de référence arrière dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\`*nombre*, où *nombre* est le nombre ordinal de la sous-expression capturée.  
   
--   En utilisant la construction de référence arrière nommée dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\k<`*nom*`>`, où *nom* est le nom d'un groupe de capture, ou la syntaxe `\k<`*nombre*`>`, où *nombre* est le nombre ordinal d'un groupe de capture. Un groupe de capture possède un nom par défaut qui est identique à son nombre ordinal. Pour plus d'informations, voir [Sous-expressions mises en correspondance nommées](#named_matched_subexpression) plus loin dans cette rubrique.  
+- En utilisant la construction de référence arrière nommée dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\k<`*nom*`>`, où *nom* est le nom d'un groupe de capture, ou la syntaxe `\k<`*nombre*`>`, où *nombre* est le nombre ordinal d'un groupe de capture. Un groupe de capture possède un nom par défaut qui est identique à son nombre ordinal. Pour plus d'informations, voir [Sous-expressions mises en correspondance nommées](#named_matched_subexpression) plus loin dans cette rubrique.  
   
--   En utilisant la séquence de remplacement `$`*nombre* dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , où *nombre* est le nombre ordinal de la sous-expression capturée.  
+- En utilisant la séquence de remplacement `$`*nombre* dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , où *nombre* est le nombre ordinal de la sous-expression capturée.  
   
--   Par programmation, en utilisant l'objet <xref:System.Text.RegularExpressions.GroupCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Le membre situé à la position zéro dans la collection représente la correspondance de l'expression régulière entière. Chaque membre suivant représente une sous-expression mise en correspondance. Pour plus d'informations, voir la section [Grouping Constructs and Regular Expression Objects](#Objects) .  
+- Par programmation, en utilisant l'objet <xref:System.Text.RegularExpressions.GroupCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Le membre situé à la position zéro dans la collection représente la correspondance de l'expression régulière entière. Chaque membre suivant représente une sous-expression mise en correspondance. Pour plus d'informations, voir la section [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  L'exemple suivant illustre une expression régulière qui identifie des mots en double dans le texte. Les deux groupes de capture du modèle d'expression régulière représentent les deux instances du mot en double. La capture de la seconde instance permet d'indiquer la position de départ du mot dans la chaîne d'entrée.  
   
@@ -112,17 +112,17 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
   
  Vous pouvez accéder aux groupes capturés nommés comme suit :  
   
--   En utilisant la construction de référence arrière nommée dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\k<`*nom*`>`, où *nom* est le nom de la sous-expression capturée.  
+- En utilisant la construction de référence arrière nommée dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\k<`*nom*`>`, où *nom* est le nom de la sous-expression capturée.  
   
--   En utilisant la construction de référence arrière dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\`*nombre*, où *nombre* est le nombre ordinal de la sous-expression capturée. Les sous-expressions mises en correspondance nommées sont numérotées de manière consécutive de la gauche vers la droite après les sous-expressions mises en correspondance.  
+- En utilisant la construction de référence arrière dans l'expression régulière. La sous-expression mise en correspondance est référencée dans la même expression régulière en utilisant la syntaxe `\`*nombre*, où *nombre* est le nombre ordinal de la sous-expression capturée. Les sous-expressions mises en correspondance nommées sont numérotées de manière consécutive de la gauche vers la droite après les sous-expressions mises en correspondance.  
   
--   En utilisant la séquence de remplacement `${`*nom*`}` dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , où *nom* est le nom de la sous-expression capturée.  
+- En utilisant la séquence de remplacement `${`*nom*`}` dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , où *nom* est le nom de la sous-expression capturée.  
   
--   En utilisant la séquence de remplacement `$`*nombre* dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, où *nombre* est le nombre ordinal de la sous-expression capturée.  
+- En utilisant la séquence de remplacement `$`*nombre* dans un appel de méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, où *nombre* est le nombre ordinal de la sous-expression capturée.  
   
--   Par programmation, en utilisant l'objet <xref:System.Text.RegularExpressions.GroupCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Le membre situé à la position zéro dans la collection représente la correspondance de l'expression régulière entière. Chaque membre suivant représente une sous-expression mise en correspondance. Les groupes capturés nommés sont stockés dans la collection après les groupes capturés numérotés.  
+- Par programmation, en utilisant l'objet <xref:System.Text.RegularExpressions.GroupCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Le membre situé à la position zéro dans la collection représente la correspondance de l'expression régulière entière. Chaque membre suivant représente une sous-expression mise en correspondance. Les groupes capturés nommés sont stockés dans la collection après les groupes capturés numérotés.  
   
--   Par programmation, en fournissant le nom de la sous-expression à l'indexeur de l'objet <xref:System.Text.RegularExpressions.GroupCollection> (en C#) ou à sa propriété <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (en Visual Basic).  
+- Par programmation, en fournissant le nom de la sous-expression à l'indexeur de l'objet <xref:System.Text.RegularExpressions.GroupCollection> (en C#) ou à sa propriété <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (en Visual Basic).  
   
  Un modèle d'expression régulière simple permet d'illustrer comment les groupes numérotés (sans nom) et nommés peuvent être référencés par programmation ou à l'aide d'une syntaxe de langage d'expression régulière. L'expression régulière `((?<One>abc)\d+)?(?<Two>xyz)(.*)` génère les groupes de capture suivants en fonction du nombre et du nom. Le premier groupe de capture (nombre 0) fait toujours référence au modèle entier.  
   
@@ -446,11 +446,11 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Constructions de regroupement et objets d'expression régulière  
  Les sous-chaînes mises en correspondance par un groupe de capture d'expression régulière sont représentées par des objets <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , qui peuvent être récupérés de l'objet <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . L'objet <xref:System.Text.RegularExpressions.GroupCollection> est rempli comme suit :  
   
--   Le premier objet <xref:System.Text.RegularExpressions.Group> de la collection (l'objet d'index zéro) représente la correspondance entière.  
+- Le premier objet <xref:System.Text.RegularExpressions.Group> de la collection (l'objet d'index zéro) représente la correspondance entière.  
   
--   L'ensemble d'objets <xref:System.Text.RegularExpressions.Group> suivant représente des groupes de capture sans nom (numérotés). Ils apparaissent dans l'ordre dans lequel ils sont définis dans l'expression régulière, de la gauche vers la droite. Les valeurs d'index de ces groupes vont de 1 au nombre de groupes de capture sans nom dans la collection. (L'index d'un groupe particulier est équivalent à sa référence arrière numérotée. Pour plus d'informations sur les références arrière, voir [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- L'ensemble d'objets <xref:System.Text.RegularExpressions.Group> suivant représente des groupes de capture sans nom (numérotés). Ils apparaissent dans l'ordre dans lequel ils sont définis dans l'expression régulière, de la gauche vers la droite. Les valeurs d'index de ces groupes vont de 1 au nombre de groupes de capture sans nom dans la collection. (L'index d'un groupe particulier est équivalent à sa référence arrière numérotée. Pour plus d'informations sur les références arrière, voir [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
--   Le dernier ensemble d'objets <xref:System.Text.RegularExpressions.Group> représente des groupes de capture nommés. Ils apparaissent dans l'ordre dans lequel ils sont définis dans l'expression régulière, de la gauche vers la droite. La valeur d'index du premier groupe de capture nommé est égale à l'index du dernier groupe de capture sans nom, plus une unité. En l'absence de groupe de capture sans nom dans l'expression régulière, la valeur d'index du premier groupe de capture nommé est égale à un (1).  
+- Le dernier ensemble d'objets <xref:System.Text.RegularExpressions.Group> représente des groupes de capture nommés. Ils apparaissent dans l'ordre dans lequel ils sont définis dans l'expression régulière, de la gauche vers la droite. La valeur d'index du premier groupe de capture nommé est égale à l'index du dernier groupe de capture sans nom, plus une unité. En l'absence de groupe de capture sans nom dans l'expression régulière, la valeur d'index du premier groupe de capture nommé est égale à un (1).  
   
  Si vous appliquez un quantificateur à un groupe de capture, les propriétés <xref:System.Text.RegularExpressions.Group> , <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>et <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>de l'objet <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> correspondant reflètent la dernière sous-chaîne capturée par un groupe de capture. Vous pouvez récupérer de l'objet <xref:System.Text.RegularExpressions.CaptureCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> un ensemble complet de sous-chaînes capturées par des groupes possédant des quantificateurs.  
   

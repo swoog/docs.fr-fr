@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300994"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648526"
 ---
 # <a name="registration-free-com-interop"></a>COM Interop sans inscription
 COM Interop sans inscription active un composant sans utiliser le Registre Windows pour stocker les informations d'assembly. Au lieu d’inscrire un composant sur un ordinateur pendant le déploiement, vous créez des fichiers manifeste de type Win32 au moment du design qui contiennent des informations sur la liaison et l’activation. Ces fichiers manifeste, plutôt que les clés de Registre, dirigent l'activation d'un objet.  
   
  L'activation sans inscription de vos assemblys pendant le déploiement offre deux avantages :  
   
--   Vous pouvez contrôler la version DLL qui est activée quand plusieurs versions sont installées sur un ordinateur.  
+- Vous pouvez contrôler la version DLL qui est activée quand plusieurs versions sont installées sur un ordinateur.  
   
--   Les utilisateurs finaux peuvent utiliser XCOPY ou un outil FTP pour copier votre application vers un répertoire de leur ordinateur. L'application peut ensuite être exécutée à partir de ce répertoire.  
+- Les utilisateurs finaux peuvent utiliser XCOPY ou un outil FTP pour copier votre application vers un répertoire de leur ordinateur. L'application peut ensuite être exécutée à partir de ce répertoire.  
   
  Cette section décrit les deux types de manifestes nécessaires pour l'activation de COM Interop sans inscription : les manifestes d'application et de composant. Ces manifestes sont des fichiers XML. Un manifeste d'application, qui est créé par un développeur d'applications, contient des métadonnées qui décrivent des assemblys et des dépendances d'assembly. Un manifeste de composant, créé par un développeur de composants, contient des informations qui résident dans le Registre Windows.  
   

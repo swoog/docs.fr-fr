@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592516"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Procédure : créer une classe à l’aide de CodeDOM
 Les procédures suivantes expliquent comment créer et compiler un graphique CodeDOM qui génère une classe contenant deux champs, trois propriétés, une méthode, un constructeur et un point d’entrée.  
@@ -39,48 +39,48 @@ Les procédures suivantes expliquent comment créer et compiler un graphique Cod
   
 ### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>Pour créer l’application qui exécutera le code CodeDOM  
   
--   Créez une classe d’application console pour contenir le code CodeDOM. Définissez les champs globaux qui doivent être utilisés dans la classe pour référencer l’assembly (<xref:System.CodeDom.CodeCompileUnit>) et la classe (<xref:System.CodeDom.CodeTypeDeclaration>), spécifiez le nom du fichier source généré, et déclarez la méthode `Main`.  
+- Créez une classe d’application console pour contenir le code CodeDOM. Définissez les champs globaux qui doivent être utilisés dans la classe pour référencer l’assembly (<xref:System.CodeDom.CodeCompileUnit>) et la classe (<xref:System.CodeDom.CodeTypeDeclaration>), spécifiez le nom du fichier source généré, et déclarez la méthode `Main`.  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
 ### <a name="to-initialize-the-codedom-graph"></a>Pour initialiser le graphique CodeDOM  
   
--   Dans le constructeur de la classe d’application console, initialisez l’assembly et la classe, et ajoutez les déclarations appropriées au graphique CodeDOM.  
+- Dans le constructeur de la classe d’application console, initialisez l’assembly et la classe, et ajoutez les déclarations appropriées au graphique CodeDOM.  
   
      [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
      [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
 ### <a name="to-add-members-to-the-codedom-graph"></a>Pour ajouter des membres au graphique CodeDOM  
   
--   Ajoutez des champs au graphique CodeDOM en ajoutant des objets <xref:System.CodeDom.CodeMemberField> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
+- Ajoutez des champs au graphique CodeDOM en ajoutant des objets <xref:System.CodeDom.CodeMemberField> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
--   Ajoutez des propriétés au graphique CodeDOM en ajoutant des objets <xref:System.CodeDom.CodeMemberProperty> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
+- Ajoutez des propriétés au graphique CodeDOM en ajoutant des objets <xref:System.CodeDom.CodeMemberProperty> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
--   Ajoutez une méthode au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeMemberMethod> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
+- Ajoutez une méthode au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeMemberMethod> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
--   Ajoutez un constructeur au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeConstructor> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
+- Ajoutez un constructeur au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeConstructor> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
--   Ajoutez un point d’entrée au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeEntryPointMethod> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
+- Ajoutez un point d’entrée au graphique CodeDOM en ajoutant un objet <xref:System.CodeDom.CodeEntryPointMethod> à la propriété <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> de la classe.  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
 ### <a name="to-generate-the-code-from-the-codedom-graph"></a>Pour générer le code à partir du graphique CodeDOM  
   
--   Générez le code source à partir du graphique CodeDOM en appelant la méthode <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>.  
+- Générez le code source à partir du graphique CodeDOM en appelant la méthode <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>.  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
@@ -116,7 +116,7 @@ The object:
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Cet exemple de code nécessite le jeu d’autorisations `FullTrust` pour s’exécuter correctement.  
+- Cet exemple de code nécessite le jeu d’autorisations `FullTrust` pour s’exécuter correctement.  
   
 ## <a name="see-also"></a>Voir aussi
 

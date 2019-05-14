@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: ca792106bdd341fa4be8f3554ce70cd7d3f22522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b4f74836b32fea0e5c24fd4500581f17e39cd4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623129"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Procédure : écrire du texte dans des fichiers à l’aide de StreamWriter dans Visual Basic
 Cet exemple ouvre un objet <xref:System.IO.StreamWriter> avec la méthode `My.Computer.FileSystem.OpenTextFileWriter` et l’utilise pour écrire une chaîne dans un fichier texte avec la méthode <xref:System.IO.TextWriter.WriteLine%2A> de la classe <xref:System.IO.StreamWriter>.  
@@ -22,11 +22,11 @@ Cet exemple ouvre un objet <xref:System.IO.StreamWriter> avec la méthode `My.Co
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le fichier existe et est en lecture seule (<xref:System.IO.IOException>).  
+- Le fichier existe et est en lecture seule (<xref:System.IO.IOException>).  
   
--   Le disque est plein (<xref:System.IO.IOException>).  
+- Le disque est plein (<xref:System.IO.IOException>).  
   
--   Le nom du chemin est trop long (<xref:System.IO.PathTooLongException>).  
+- Le nom du chemin est trop long (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application doit créer un fichier, elle doit disposer de l’autorisation `Create` pour accéder au dossier. Si le fichier existe déjà, l’application a uniquement besoin de l’autorisation `Write`, qui est une autorisation de niveau inférieur. Quand cela est possible, il est plus sûr de créer le fichier au cours du déploiement et de n’accorder l’autorisation `Read` que sur un seul fichier, plutôt que l’autorisation `Create` sur un dossier.  

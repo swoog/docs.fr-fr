@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647853"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Options de sortie de la classe XslCompiledTransform
 Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez spécifier des options de sortie dans la feuille de style ou dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -40,7 +40,7 @@ Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez sp�
  La liste suivante décrit les types de sortie disponibles avec la commande <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 #### <a name="xmlwriter"></a>XmlWriter  
- La classe <xref:System.Xml.XmlWriter> produit des fichiers ou des flux XML. Vous pouvez spécifier les fonctions à prendre en charge dans l'objet <xref:System.Xml.XmlWriter>, y compris les options de sortie, en utilisant la classe <xref:System.Xml.XmlWriterSettings>. La classe <xref:System.Xml.XmlWriter> fait partie intégrante de l'infrastructure <xref:System.Xml>. Utilisez ce type de sortie pour envoyer les résultats vers un autre processus XML via un pipeline.  
+ La classe <xref:System.Xml.XmlWriter> produit des fichiers ou des flux XML. Vous pouvez spécifier les fonctionnalités à prendre en charge dans l’objet <xref:System.Xml.XmlWriter>, y compris les options de sortie, en utilisant la classe <xref:System.Xml.XmlWriterSettings>. La classe <xref:System.Xml.XmlWriter> fait partie intégrante de l'infrastructure <xref:System.Xml>. Utilisez ce type de sortie pour envoyer les résultats vers un autre processus XML via un pipeline.  
   
 #### <a name="string"></a>Chaîne  
  Utilisez ce type de sortie pour spécifier l'URI du fichier de sortie.  
@@ -55,7 +55,7 @@ Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez sp�
   
 ## <a name="notes"></a>Notes  
   
--   Lorsque vous écrivez des chaînes vides, un espace est inséré entre le dernier caractère du nom de l'élément et la barre oblique inverse, par exemple `<myElement />`. Cela permet aux anciens navigateurs d'afficher correctement les pages HTML générées.  
+- Lorsque vous écrivez des chaînes vides, un espace est inséré entre le dernier caractère du nom de l'élément et la barre oblique inverse, par exemple `<myElement />`. Cela permet aux anciens navigateurs d'afficher correctement les pages HTML générées.  
   
 ## <a name="see-also"></a>Voir aussi
 

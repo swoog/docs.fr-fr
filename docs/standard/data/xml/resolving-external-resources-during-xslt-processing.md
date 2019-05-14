@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590025"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Résolution de ressources externes lors du traitement XSLT
 Lors d'une transformation XSLT, il peut s'avérer nécessaire de résoudre des ressources externes à plusieurs moments.  
@@ -26,17 +26,17 @@ Lors d'une transformation XSLT, il peut s'avérer nécessaire de résoudre des r
 |Compilation de la feuille de style|Résolution de l'URI de la feuille de style<br /><br /> -et-<br /><br /> Résolution des références URI dans tout élément `xsl:import` ou `xsl:include`|  
 |Exécution de la feuille de style|Résolution de l'URI dans le document de contexte<br /><br /> -et-<br /><br /> Résolution des références URI dans toute fonction XSLT `document()`|  
   
- Les méthodes <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> et <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> comprennent des surcharges qui prennent un objet <xref:System.Xml.XmlResolver> comme l’un de leurs arguments. Si aucun <xref:System.Xml.XmlResolver> n'est spécifié, un <xref:System.Xml.XmlUrlResolver> par défaut sans informations d'identification est utilisé.  
+ Les méthodes <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> et <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> comprennent des surcharges qui prennent un objet <xref:System.Xml.XmlResolver> comme l'un de leurs arguments. Si aucun <xref:System.Xml.XmlResolver> n'est spécifié, un <xref:System.Xml.XmlUrlResolver> par défaut sans informations d'identification est utilisé.  
   
  La liste suivante décrit les cas dans lesquels vous pouvez préférer spécifier un objet <xref:System.Xml.XmlResolver> :  
   
--   Si le traitement XSLT doit accéder à une ressource réseau qui nécessite une authentification, vous pouvez utiliser un objet <xref:System.Xml.XmlResolver> avec les informations d'identification nécessaires.  
+- Si le traitement XSLT doit accéder à une ressource réseau qui nécessite une authentification, vous pouvez utiliser un objet <xref:System.Xml.XmlResolver> avec les informations d'identification nécessaires.  
   
--   Si vous souhaitez limiter les ressources auxquelles le traitement XSLT peut accéder, vous pouvez utiliser un objet <xref:System.Xml.XmlSecureResolver> avec toutes les autorisations correctes. La classe <xref:System.Xml.XmlSecureResolver> doit être utilisée si vous devez ouvrir une ressource non contrôlée ou non fiable.  
+- Si vous souhaitez limiter les ressources auxquelles le traitement XSLT peut accéder, vous pouvez utiliser un objet <xref:System.Xml.XmlSecureResolver> avec toutes les autorisations correctes. La classe <xref:System.Xml.XmlSecureResolver> doit être utilisée si vous devez ouvrir une ressource non contrôlée ou non fiable.  
   
--   Pour personnaliser le comportement, vous pouvez implémenter votre propre classe <xref:System.Xml.XmlResolver> et l'utiliser pour résoudre les ressources.  
+- Pour personnaliser le comportement, vous pouvez implémenter votre propre classe <xref:System.Xml.XmlResolver> et l'utiliser pour résoudre les ressources.  
   
--   Pour vous assurer qu’aucune ressource externe n’est accessible, vous pouvez spécifier `null` pour l’argument <xref:System.Xml.XmlResolver>.  
+- Pour vous assurer qu’aucune ressource externe n’est accessible, vous pouvez spécifier `null` pour l’argument <xref:System.Xml.XmlResolver>.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant compile une feuille de style stockée sur une ressource réseau. Un objet <xref:System.Xml.XmlUrlResolver> spécifie les informations d'identification nécessaires pour accéder à la feuille de style.  

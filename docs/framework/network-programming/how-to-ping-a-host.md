@@ -1,17 +1,17 @@
 ---
-title: 'Procédure : exécution d’une requête ping'
+title: 'Procédure : Exécuter une requête ping sur un hôte'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: bca8fc1cb3a54be9c329dc02aa27057ad839b3d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c4efe358147c10ac31d42b83f6f4a65c274fe8dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127860"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624561"
 ---
-# <a name="how-to-ping-a-host"></a>Procédure : exécution d’une requête ping
+# <a name="how-to-ping-a-host"></a>Procédure : Exécuter une requête ping sur un hôte
 Cet exemple montre comment exécuter une requête ping sur un hôte distant.  
   
 ## <a name="example"></a>Exemple  
@@ -123,4 +123,4 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
--   Références à l’espace de noms **System.Net**.
+- Références à l’espace de noms **System.Net**.

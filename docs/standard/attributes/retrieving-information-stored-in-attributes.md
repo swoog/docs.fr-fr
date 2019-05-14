@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623672"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Récupération des informations stockées dans les attributs
 La récupération d’un attribut personnalisé est un processus simple. Tout d’abord, déclarez une instance de l’attribut que vous souhaitez récupérer. Ensuite, utilisez la méthode <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> pour initialiser le nouvel attribut à la valeur de l’attribut que vous souhaitez récupérer. Une fois le nouvel attribut initialisé, vous utilisez simplement ses propriétés pour obtenir les valeurs.  
@@ -28,11 +28,11 @@ La récupération d’un attribut personnalisé est un processus simple. Tout d�
   
  Cette section décrit les méthodes suivantes pour récupérer des attributs :  
   
--   [Récupération d’une seule instance d’un attribut](#cpconretrievingsingleinstanceofattribute)  
+- [Récupération d’une seule instance d’un attribut](#cpconretrievingsingleinstanceofattribute)  
   
--   [Récupération de plusieurs instances d’un attribut appliqué à la même étendue](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Récupération de plusieurs instances d’un attribut appliqué à la même étendue](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Récupération de plusieurs instances d’un attribut appliqué à différentes étendues](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Récupération de plusieurs instances d’un attribut appliqué à différentes étendues](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Récupération d’une seule instance d’un attribut  
