@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618202"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586530"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Fait que le compilateur rend disponible pour le projet en cours de compilation les informations de type COM des assemblys spécifiés.  
@@ -55,7 +55,7 @@ Fait que le compilateur rend disponible pour le projet en cours de compilation l
   
  Utilisez [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) pour spécifier le répertoire dans lequel sont trouvent une ou plusieurs de vos références d’assembly.  
   
- Comme le [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option du compilateur, le `-link` option du compilateur utilise le fichier réponse Vbc.rsp, qui référence fréquemment utilisés [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblys. Utiliser le [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) option du compilateur si vous ne souhaitez pas que le compilateur utilise le fichier Vbc.rsp.  
+ Comme le [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option du compilateur, le `-link` option du compilateur utilise le fichier réponse Vbc.rsp, qui référence les assemblys .NET Framework fréquemment utilisés. Utiliser le [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) option du compilateur si vous ne souhaitez pas que le compilateur utilise le fichier Vbc.rsp.  
   
  La forme abrégée de `-link` est `-l`.  
   

@@ -3,12 +3,12 @@ title: Vue d’ensemble du module d’authentification WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592363"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586041"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Vue d’ensemble du module d’authentification WSFederation
 Windows Identity Foundation (WIF) prend en charge l’authentification fédérée dans les applications ASP.NET par le biais du module WS-FAM (WS-Federated Authentication Module). Cette rubrique explique le fonctionnement et l’utilisation de l’authentification fédérée.  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) prend en charge l’authentification fédéré
  WS-FAM déclenche également plusieurs événements qui vous permettent de personnaliser ses fonctionnalités dans une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
 ### <a name="how-the-ws-fam-works"></a>Fonctionnement du module WS-FAM  
- Le module WS-FAM est implémenté dans la classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. En règle générale, vous ajoutez le module WS-FAM au pipeline HTTP de votre application par partie de confiance [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Quand un utilisateur non authentifié tente d’accéder à une ressource protégée, la partie de confiance retourne une réponse HTTP de type « Erreur 401 : autorisation refusée ». Le module WS-FAM intercepte cette réponse avant qu’elle soit reçue par le client, puis il redirige l’utilisateur vers le STS spécifié. Le STS émet un jeton de sécurité, que le module WS-FAM intercepte encore. Le module WS-FAM utilise le jeton pour créer une instance de <xref:System.Security.Claims.ClaimsPrincipal> pour l’utilisateur authentifié, ce qui permet aux mécanismes d’autorisation [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] habituels de fonctionner.  
+ Le module WS-FAM est implémenté dans la classe <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. En règle générale, vous ajoutez le module WS-FAM au pipeline HTTP de votre application par partie de confiance [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Quand un utilisateur non authentifié tente d’accéder à une ressource protégée, la partie de confiance retourne une réponse HTTP de type « Erreur 401 : autorisation refusée ». Le module WS-FAM intercepte cette réponse avant qu’elle soit reçue par le client, puis il redirige l’utilisateur vers le STS spécifié. Le STS émet un jeton de sécurité, que le module WS-FAM intercepte encore. Le module WS-FAM utilise le jeton pour créer une instance de <xref:System.Security.Claims.ClaimsPrincipal> pour l’utilisateur authentifié, ce qui permet des mécanismes d’autorisation .NET Framework régulières de fonctionner.  
   
  Étant donné que le protocole HTTP est sans état, vous devez empêcher la répétition de ce processus à chaque tentative de l’utilisateur d’accéder à une ressource protégée. Pour cela, utilisez <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Quand le STS émet un jeton de sécurité pour l’utilisateur, <xref:System.IdentityModel.Services.SessionAuthenticationModule> crée également un jeton de sécurité de session pour l’utilisateur et le place dans un cookie. Lors des demandes suivantes, <xref:System.IdentityModel.Services.SessionAuthenticationModule> intercepte ce cookie et l’utilise pour reconstruire le <xref:System.Security.Claims.ClaimsPrincipal> de l’utilisateur.  
   
