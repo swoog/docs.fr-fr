@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c98f47613479c40804dce254261c560d829d91c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796407"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586362"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Procédure : résoudre des heures ambiguës
 
@@ -52,8 +52,6 @@ Dans cet exemple, toutes les références au fuseau horaire local sont faites pa
 ## <a name="compiling-the-code"></a>Compilation du code
 
 Cet exemple nécessite :
-
-* Qu’une référence à System.Core.dll soit ajoutée au projet.
 
 * Que l'espace de noms <xref:System> soit importé avec l'instruction `using` (obligatoire en C#).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616699"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586702"
 ---
 # <a name="events-visual-basic"></a>Événements (Visual Basic)
 Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par des occurrences externes nommées *événements*.  
@@ -104,6 +104,6 @@ Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une s�
 |[Guide pratique pour Déclarer des événements personnalisés pour éviter les blocages](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Montre comment définir un événement personnalisé qui permet d’appeler ses gestionnaires d’événements de façon asynchrone.|  
 |[Guide pratique pour déclarer des événements personnalisés pour économiser la mémoire](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Montre comment définir un événement personnalisé qui utilise la mémoire uniquement lorsque l’événement est géré.|  
 |[Dépannage des gestionnaires d’événements hérités en Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Répertorie les problèmes courants qui surviennent avec les gestionnaires d’événements dans les composants hérités.|  
-|[Événements](../../../../standard/events/index.md)|Fournit une vue d’ensemble du modèle d’événement dans [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Événements](../../../../standard/events/index.md)|Fournit une vue d'ensemble du modèle d'événement le .NET Framework.|  
 |[Création de gestionnaires d’événements dans les Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Explique comment utiliser des événements associés à des objets Windows Forms.|  
 |[Délégués](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Fournit une vue d’ensemble des délégués en Visual Basic.|

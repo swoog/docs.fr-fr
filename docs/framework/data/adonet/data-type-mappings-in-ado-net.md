@@ -2,22 +2,22 @@
 title: Mappages de types de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e85db4732da664848cee2ef48f9a880a86fef18
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583758"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mappages de types de données dans ADO.NET
-Le .NET Framework est basé sur le système de type commun, qui définit la manière dont les types sont déclarés, utilisés et gérés dans le runtime. Il est constitué de types de valeur et de types de référence, qui dérivent tous du type de base <xref:System.Object>. Lorsque vous travaillez avec une source de données, le type de données est déduit du fournisseur de données s'il n'est pas explicitement spécifié. Par exemple, un objet <xref:System.Data.DataSet> est indépendant de toute source de données spécifique. Les données d'un `DataSet` sont extraites d'une source de données et les modifications y sont répercutées à l'aide d'un `DataAdapter`. Autrement dit, lorsqu'un `DataAdapter` remplit un objet <xref:System.Data.DataTable> dans un `DataSet` avec des valeurs provenant d'une source de données, les types de données des colonnes du `DataTable` qui en résultent sont des types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et non des types spécifiques au fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] utilisé pour la connexion à la source de données.  
+Le .NET Framework est basé sur le système de type commun, qui définit la manière dont les types sont déclarés, utilisés et gérés dans le runtime. Il est constitué de types de valeur et de types de référence, qui dérivent tous du type de base <xref:System.Object>. Lorsque vous travaillez avec une source de données, le type de données est déduit du fournisseur de données s'il n'est pas explicitement spécifié. Par exemple, un objet <xref:System.Data.DataSet> est indépendant de toute source de données spécifique. Les données d'un `DataSet` sont extraites d'une source de données et les modifications y sont répercutées à l'aide d'un `DataAdapter`. Cela signifie que, lorsqu’un `DataAdapter` remplit un <xref:System.Data.DataTable> dans un `DataSet` avec des valeurs à partir d’une source de données, les types de données qui en résulte des colonnes dans le `DataTable` sont des types .NET Framework, au lieu de types spécifiques au fournisseur de données .NET Framework qui est utilisé pour se connecter à la source de données.  
   
- De même, lorsqu'un `DataReader` retourne une valeur d'une source de données, la valeur résultante est stockée dans une variable locale de type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Pour les opérations `Fill` du `DataAdapter` comme pour les méthodes `Get` du `DataReader`, le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est déduit de la valeur retournée du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ De même, quand un `DataReader` retourne une valeur à partir d’une source de données, la valeur résultante est stockée dans une variable locale qui a un type .NET Framework. Pour les deux le `Fill` opérations de la `DataAdapter` et `Get` méthodes de la `DataReader`, le type .NET Framework est déduit à partir de la valeur retournée par le fournisseur de données .NET Framework.  
   
- Si vous ne souhaitez pas utiliser le type de données déduit, vous pouvez appeler les méthodes d’accesseur typé du `DataReader`, lorsque vous connaissez le type spécifique de la valeur retournée. Ces méthodes permettent d’obtenir des performances optimales en retournant une valeur comme type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] spécifique, évitant ainsi toute conversion de type supplémentaire.  
+ Si vous ne souhaitez pas utiliser le type de données déduit, vous pouvez appeler les méthodes d’accesseur typé du `DataReader`, lorsque vous connaissez le type spécifique de la valeur retournée. Méthodes d’accesseur typées offrir de meilleures performances en retournant une valeur comme un type .NET Framework spécifique, ce qui évite la conversion de type supplémentaire.  
   
 > [!NOTE]
->  Les valeurs null des types de données du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont représentées par `DBNull.Value`.  
+>  Les valeurs NULL pour les types de données de fournisseur de données .NET Framework sont représentées par `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Mappages de types de données SQL Server](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

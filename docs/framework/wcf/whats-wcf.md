@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613036"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582766"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Présentation de Windows Communication Foundation
 Windows Communication Foundation (WCF) est une infrastructure pour la création d’applications orientées service. À l’aide de WCF, vous pouvez envoyer données sous forme de messages asynchrones à partir d’un point de terminaison à un autre. Un point de terminaison de service peut faire partie d'un service disponible en continu et hébergé par IIS, ou il peut s'agir d'un service hébergé dans une application. Un point de terminaison peut être un client d'un service qui demande des données auprès d'un point de terminaison de service. Les messages peuvent être simplement constitués d'un caractère ou d'un mot unique envoyé au format XML, ou se présenter sous la forme d'un flux de données binaires plus complexe. Voici quelques exemples de scénarios :
@@ -52,7 +52,7 @@ WCF inclut l’ensemble de fonctionnalités suivant. Pour plus d’informations,
 
 - **Contrats de données**
 
-     Étant donné que WCF est créé à l’aide de la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], il inclut également des méthodes faciles à coder de fournir les contrats que vous souhaitez appliquer. Le contrat de données représente l'un des types universels de contrats. Par nature, lorsque vous codez votre service à l'aide de Visual C# ou de Visual Basic, la méthode la plus simple de gérer les données consiste à créer des classes qui représentent une entité de données dotée de propriétés. WCF inclut un système complet pour travailler avec des données de cette manière facile. Une fois que vous avez créé les classes qui représentent les données, votre service génère automatiquement les métadonnées qui permettent aux clients de se conformer aux types de données que vous avez conçus. Pour plus d’informations, consultez [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     Étant donné que WCF est créé à l’aide de .NET Framework, il inclut également des méthodes faciles à coder de fournir les contrats que vous souhaitez appliquer. Le contrat de données représente l'un des types universels de contrats. Par nature, lorsque vous codez votre service à l'aide de Visual C# ou de Visual Basic, la méthode la plus simple de gérer les données consiste à créer des classes qui représentent une entité de données dotée de propriétés. WCF inclut un système complet pour travailler avec des données de cette manière facile. Une fois que vous avez créé les classes qui représentent les données, votre service génère automatiquement les métadonnées qui permettent aux clients de se conformer aux types de données que vous avez conçus. Pour plus d’informations, consultez [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
 - **Sécurité**
 

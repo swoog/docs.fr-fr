@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469705"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591546"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie des objets : Comment les objets sont créés et détruits (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d’initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  
@@ -140,7 +140,7 @@ End Sub
  Une classe dérivée ne doit pas substituer les méthodes <xref:System.IDisposable.Dispose%2A> et `Finalize` de la classe de base. Quand ces méthodes sont appelées à partir d'une instance de la classe dérivée, l'implémentation de ces méthodes au niveau de la classe de base appelle la substitution de la méthode `Dispose(disposing)` de la classe dérivée.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Garbage collection et destructeur Finalize  
- Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utilise le *nettoyage du suivi des références* système pour libérer périodiquement les ressources inutilisées. Visual Basic 6.0 et les versions antérieures utilisaient un autre système appelé *décompte* pour gérer les ressources. Même si les deux systèmes remplissent la même fonction automatiquement, des différences importantes existent entre les deux.  
+ Le .NET Framework utilise le *nettoyage du suivi des références* système pour libérer périodiquement les ressources inutilisées. Visual Basic 6.0 et les versions antérieures utilisaient un autre système appelé *décompte* pour gérer les ressources. Même si les deux systèmes remplissent la même fonction automatiquement, des différences importantes existent entre les deux.  
   
  Le CLR détruit périodiquement des objets quand le système considère qu’ils ne sont plus nécessaires. Les objets sont libérés plus rapidement quand les ressources système viennent à manquer et moins souvent dans le cas contraire. Compte tenu du décalage qui existe entre le moment où un objet est hors de portée et le moment où le CLR le libère, contrairement aux objets dans Visual Basic 6.0 et les versions antérieures, il est impossible de déterminer exactement à quel moment l'objet sera détruit. Dans ce cas, les objets sont dits avoir *durée de vie non déterministe*. Dans la plupart des cas, la durée de vie non déterministe ne change pas la façon dont vous écrivez les applications, à condition de ne pas perdre de vue que le destructeur `Finalize` ne peut pas s'exécuter immédiatement à partir du moment où un objet est hors de portée.  
   

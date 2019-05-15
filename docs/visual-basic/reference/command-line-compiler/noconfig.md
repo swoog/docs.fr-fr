@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b707899c845b6b08e008fe229497f682c930044a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789023"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588844"
 ---
 # <a name="-noconfig"></a>-noconfig
-Spécifie que le compilateur ne doit pas référencer automatiquement les couramment utilisés [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblys ou importer la `System` et `Microsoft.VisualBasic` espaces de noms.  
+Spécifie que le compilateur ne doit pas automatiquement référencer les assemblys .NET Framework couramment utilisés ou importer les `System` et `Microsoft.VisualBasic` espaces de noms.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -23,7 +23,7 @@ Spécifie que le compilateur ne doit pas référencer automatiquement les couram
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le `-noconfig` option indique au compilateur de ne pas compiler avec le fichier Vbc.rsp, qui se trouve dans le même répertoire que le fichier Vbc.exe. Le fichier Vbc.rsp référence couramment utilisées [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblys et des importations le `System` et `Microsoft.VisualBasic` espaces de noms. Le compilateur fait implicitement référence à l’assembly System.dll, sauf si le `-nostdlib` option est spécifiée. Le `-nostdlib` option indique au compilateur de ne pas compiler avec Vbc.rsp ou de référencer automatiquement l’assembly System.dll.  
+ Le `-noconfig` option indique au compilateur de ne pas compiler avec le fichier Vbc.rsp, qui se trouve dans le même répertoire que le fichier Vbc.exe. Le fichier Vbc.rsp référence les assemblys .NET Framework couramment utilisés et importe le `System` et `Microsoft.VisualBasic` espaces de noms. Le compilateur fait implicitement référence à l’assembly System.dll, sauf si le `-nostdlib` option est spécifiée. Le `-nostdlib` option indique au compilateur de ne pas compiler avec Vbc.rsp ou de référencer automatiquement l’assembly System.dll.  
   
 > [!NOTE]
 >  Les assemblys Mscorlib.dll et de Microsoft.VisualBasic.dll sont toujours référencés.  

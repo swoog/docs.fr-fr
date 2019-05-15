@@ -2,12 +2,12 @@
 title: Variance dans les délégués (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598061"
 ---
 # <a name="variance-in-delegates-c"></a>Variance dans les délégués (C#)
 .NET Framework 3.5 a introduit la prise en charge de la variance pour faire correspondre les signatures de méthode aux types délégués pour tous les délégués dans C#. Cela signifie que vous pouvez assigner aux délégués non seulement les méthodes ayant des signatures correspondantes, mais également des méthodes qui retournent des types plus dérivés (covariance) ou qui acceptent des paramètres ayant des types moins dérivés (contravariance) que ceux spécifiés par le type délégué. Cela inclut à la fois des délégués génériques et non génériques.  
@@ -112,15 +112,15 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Délégués génériques ayant des paramètres de type variant dans le .NET Framework  
  .NET Framework 4 a introduit la prise en charge de la variance pour les paramètres de type générique dans plusieurs délégués génériques existants :  
   
--   Les délégués `Action` de l’espace de noms <xref:System>, par exemple, <xref:System.Action%601> et <xref:System.Action%602>  
+- Les délégués `Action` de l’espace de noms <xref:System>, par exemple, <xref:System.Action%601> et <xref:System.Action%602>  
   
--   Les délégués `Func` de l’espace de noms <xref:System>, par exemple, <xref:System.Func%601> et <xref:System.Func%602>  
+- Les délégués `Func` de l’espace de noms <xref:System>, par exemple, <xref:System.Func%601> et <xref:System.Func%602>  
   
--   Le délégué <xref:System.Predicate%601>  
+- Le délégué <xref:System.Predicate%601>  
   
--   Le délégué <xref:System.Comparison%601>  
+- Le délégué <xref:System.Comparison%601>  
   
--   Le délégué <xref:System.Converter%602>  
+- Le délégué <xref:System.Converter%602>  
   
  Pour obtenir plus d’informations et d’exemples, consultez [Utilisation de la variance pour les délégués génériques Func et Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   

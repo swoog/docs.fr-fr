@@ -2,12 +2,12 @@
 title: 'Procédure : Interroger des caractères dans une chaîne (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba5d8ca6c0c060c76b1ecf4f66434ce0884e733
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644383"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593303"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Procédure : Interroger des caractères dans une chaîne (LINQ) (Visual Basic)
 La classe <xref:System.String> implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> générique. De ce fait, il est possible d’interroger n’importe quelle chaîne comme une séquence de caractères. Toutefois, ceci n’est pas une utilisation courante de LINQ. Pour les opérations de critères spéciaux complexes, utilisez la classe <xref:System.Text.RegularExpressions.Regex>.  
@@ -55,7 +55,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
+Créer un projet d’application console VB.NET, avec un `Imports` instruction pour l’espace de noms System.Linq.
   
 ## <a name="see-also"></a>Voir aussi
 

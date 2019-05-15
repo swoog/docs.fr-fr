@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876861"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582721"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilité entre types SQL-CLR
 
@@ -39,7 +39,7 @@ Les types suivants n'ont pas d'équivalents raisonnables.
   - **TimeSpan**. Ce type représente la différence entre deux valeurs `DateTime` et ne correspond pas au `timestamp` de SQL Server. Dans certains cas, le <xref:System.TimeSpan?displayProperty=nameWithType> CLR peut également mapper au type `TIME` SQL Server. Le type `TIME` SQL Server a pour but de représenter les valeurs positives inférieures à 24 heures. Le <xref:System.TimeSpan> CLR offre une plage beaucoup plus étendue.
 
   > [!NOTE]
-  > Spécifiques à SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tape <xref:System.Data.SqlTypes> ne sont pas inclus dans cette comparaison.
+  > Les types .NET Framework pour SQL Server spécifique dans <xref:System.Data.SqlTypes> ne sont pas inclus dans cette comparaison.
 
 - Incompatibilités dans SQL Server :
 
@@ -167,7 +167,7 @@ Les opérateurs et les fonctions qui sont pour l'essentiel comparables ont une s
 
   - Une traduction faible dans `AND` / `OR` opérateurs peuvent entraîner des erreurs inattendues si les C# expression repose sur l’évaluation de la deuxième opérande basée sur le résultat de l’évaluation du premier opérande.
 
-- La sémantique de la fonction `Round()` est différente dans le [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] et dans T-SQL.
+- `Round()` fonction a une sémantique différente dans .NET Framework et dans T-SQL.
 
 - L'index de départ des chaînes correspond à 0 dans CLR et à 1 dans SQL. Par conséquent, toute fonction comportant des index nécessite une traduction des index.
 
@@ -194,7 +194,7 @@ Les opérateurs et les fonctions qui sont pour l'essentiel comparables ont une s
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL effectue un arrondi arithmétique symétrique lorsque le [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] utilise l'arrondi bancaire. Pour plus d'informations, consultez l'article 196652 de la Base de connaissances.
+- SQL effectue un arrondi arithmétique symétrique tandis que .NET Framework utilise l’arrondi bancaire. Pour plus d'informations, consultez l'article 196652 de la Base de connaissances.
 
 - Par défaut, les comparaisons de chaînes de caractères ne sont pas sensibles à la casse dans SQL pour les paramètres régionaux communs. Dans Visual Basic et C#, elles sont sensibles à la casse. Par exemple, `s == "Food"` (`s = "Food"` en Visual Basic) et `s == "Food"` peuvent donner des résultats différents si `s` est `food`.
 

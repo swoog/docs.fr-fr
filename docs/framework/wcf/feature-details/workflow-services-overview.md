@@ -2,12 +2,12 @@
 title: Vue d’ensemble des services de flux de travail - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050335"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590074"
 ---
 # <a name="workflow-services-overview"></a>Vue d’ensemble des services de workflow
 
@@ -48,7 +48,7 @@ WCF définit deux liaisons <xref:System.ServiceModel.NetMsmqBinding> et <xref:Sy
 
 Comme les services WCF, les services de workflow doivent être hébergés. Services WCF utilisent le <xref:System.ServiceModel.ServiceHost> classe pour héberger des services et de flux de travail services utilisent <xref:System.ServiceModel.Activities.WorkflowServiceHost> pour héberger les services. Tels que les services WCF, services de workflow peuvent être hébergés dans un de différentes façons, par exemple :
 
-- dans une application managée [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ;
+- Dans une application .NET Framework managée.
 
 - Dans les Services IIS (Internet Information Services).
 
@@ -56,7 +56,7 @@ Comme les services WCF, les services de workflow doivent être hébergés. Servi
 
 - dans un service Windows managé.
 
-Les services de workflow hébergés dans une application [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] managée ou dans un service Windows managé créent une instance de la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> et lui transmettent une instance du <xref:System.ServiceModel.Activities.WorkflowService>, qui contient la définition du workflow dans la propriété <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Une définition de workflow contenant des activités de messagerie est exposée en tant que service de workflow.
+Services de workflow hébergés dans une application .NET Framework managée ou un service Windows managé créer une instance de la <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe et lui transmettent une instance de la <xref:System.ServiceModel.Activities.WorkflowService> qui contient la définition de flux de travail dans le <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> propriété. Une définition de workflow contenant des activités de messagerie est exposée en tant que service de workflow.
 
 Pour héberger un service de workflow dans les services IIS ou WAS, placez dans un répertoire virtuel le fichier .xamlx qui contient la définition du service de workflow. Un point de terminaison par défaut (à l’aide de <xref:System.ServiceModel.BasicHttpBinding>) est créé automatiquement pour plus d’informations, consultez [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md). Vous pouvez également placer un fichier Web.config dans le répertoire virtuel pour spécifier vos propres points de terminaison. Si votre définition de workflow se trouve dans un assembly, vous pouvez placer un fichier .svc dans le répertoire virtuel et l'assembly de workflow dans le répertoire App_Code. Le fichier .svc doit spécifier la fabrique hôte de service et la classe qui implémente le service de workflow. L'exemple suivant montre comment spécifier la fabrique hôte de service et la classe qui implémente le service de workflow.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3049b56589b2cd7f5e6cab462955a67289315b35
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669314"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588777"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considérations supplémentaires sur la sécurité des Windows Forms
-Les paramètres de sécurité de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] peuvent conduire votre application à s’exécuter différemment dans un environnement à confiance partielle que sur votre ordinateur local. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restreint l’accès aux ressources locales critiques, comme le système de fichiers, le réseau et les API non managées, entre autres choses. Les paramètres de sécurité affectent la possibilité d’appeler l’API Windows de Microsoft ou d’autres API qui ne peut pas être vérifié par le système de sécurité. La sécurité affecte également les autres aspects de votre application, y compris l’accès aux fichiers et aux données, ainsi que l’impression. Pour plus d’informations sur l’accès aux fichiers et aux données dans un environnement à confiance partielle, consultez [Accès plus sécurisé aux fichiers et aux données dans les Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Pour plus d’informations sur l’impression dans un environnement à confiance partielle, consultez [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md).  
+Paramètres de sécurité de .NET framework peuvent conduire votre application à s’exécuter différemment dans un environnement de confiance partielle sur votre ordinateur local. Le .NET Framework limite l’accès aux ressources locales critiques, comme le système de fichiers, réseau et les API non managées, entre autres choses. Les paramètres de sécurité affectent la possibilité d’appeler l’API Windows de Microsoft ou d’autres API qui ne peut pas être vérifié par le système de sécurité. La sécurité affecte également les autres aspects de votre application, y compris l’accès aux fichiers et aux données, ainsi que l’impression. Pour plus d’informations sur l’accès aux fichiers et aux données dans un environnement à confiance partielle, consultez [Accès plus sécurisé aux fichiers et aux données dans les Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Pour plus d’informations sur l’impression dans un environnement à confiance partielle, consultez [Impression plus sécurisée dans les Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  Les sections suivantes expliquent comment utiliser le Presse-papiers, effectuer une manipulation de fenêtre et appeler l’API de Windows à partir d’applications qui sont exécutent dans un environnement de confiance partielle.  
   

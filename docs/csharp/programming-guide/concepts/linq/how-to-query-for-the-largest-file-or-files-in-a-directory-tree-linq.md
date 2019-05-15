@@ -2,25 +2,25 @@
 title: 'Procédure : Rechercher les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597072"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Procédure : Rechercher les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)
 Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :  
   
--   Comment récupérer la taille en octets du plus grand fichier.  
+- Comment récupérer la taille en octets du plus grand fichier.  
   
--   Comment récupérer la taille en octets du plus petit fichier.  
+- Comment récupérer la taille en octets du plus petit fichier.  
   
--   Comment récupérer le plus grand ou le plus petit fichier de l’objet <xref:System.IO.FileInfo> dans un ou plusieurs dossiers situés dans le dossier racine spécifié.  
+- Comment récupérer le plus grand ou le plus petit fichier de l’objet <xref:System.IO.FileInfo> dans un ou plusieurs dossiers situés dans le dossier racine spécifié.  
   
--   Comment récupérer une séquence, telle que les 10 fichiers les plus volumineux.  
+- Comment récupérer une séquence, telle que les 10 fichiers les plus volumineux.  
   
--   Comment regrouper des fichiers selon leur taille en octets, en ignorant les fichiers qui sont inférieurs à une taille spécifiée.  
+- Comment regrouper des fichiers selon leur taille en octets, en ignorant les fichiers qui sont inférieurs à une taille spécifiée.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant contient cinq requêtes distinctes qui montrent comment interroger et regrouper des fichiers selon leur taille en octets. Vous pouvez facilement modifier ces exemples pour baser la requête sur une autre propriété de l’objet <xref:System.IO.FileInfo>.  

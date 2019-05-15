@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624317"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590632"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crée un fichier que vous pouvez utiliser quand vous archivez un rapport de bogue.  
@@ -46,7 +46,7 @@ Crée un fichier que vous pouvez utiliser quand vous archivez un rapport de bogu
  Car une copie de tous les fichiers de code source est incluse dans `file`, vous pouvez souhaiter reproduire l’erreur de code (supposée) dans le programme le plus court possible.  
   
 > [!IMPORTANT]
->  Le `-bugreport` option génère un fichier qui contient des informations potentiellement sensibles. Cela inclut l’heure actuelle, la version du compilateur, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] version, version du système d’exploitation, nom d’utilisateur, les arguments de ligne de commande avec laquelle le compilateur a été exécuté, tout le code source, et la forme binaire de tout assembly référencé. Cette option est accessible en spécifiant des options de ligne de commande dans le fichier Web.config pour une compilation côté serveur d’un [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] application. Pour éviter ce problème, modifiez le fichier Machine.config pour interdire aux utilisateurs de se compiler sur le serveur.  
+>  Le `-bugreport` option génère un fichier qui contient des informations potentiellement sensibles. Cela inclut l’heure actuelle, version du compilateur, la version de .NET Framework, version du système d’exploitation, nom d’utilisateur, les arguments de ligne de commande avec laquelle le compilateur a été exécuté, tout le code source et la forme binaire de tout assembly référencé. Cette option est accessible en spécifiant des options de ligne de commande dans le fichier Web.config pour une compilation côté serveur d’une application ASP.NET. Pour éviter ce problème, modifiez le fichier Machine.config pour interdire aux utilisateurs de se compiler sur le serveur.  
   
  Si cette option est utilisée avec `-errorreport:prompt`, `-errorreport:queue`, ou `-errorreport:send`, et votre application rencontre une erreur interne du compilateur, les informations contenues dans `file` sont envoyées à Microsoft Corporation. Ces informations aideront les ingénieurs Microsoft à identifier la cause de l’erreur et peuvent contribuer à améliorer la prochaine version de Visual Basic. Par défaut, aucune information n’est envoyée à Microsoft. Toutefois, lorsque vous compilez une application à l’aide de `-errorreport:queue`, qui est activé par défaut, l’application rassemble ses rapports d’erreurs. Ensuite, lorsque l’administrateur de l’ordinateur se connecte, le système de création de rapports d’erreurs affiche une fenêtre contextuelle qui permet à l’administrateur à envoyer à Microsoft signale toute erreur qui se sont produites depuis l’ouverture de session.  
   

@@ -2,12 +2,12 @@
 title: Traçage de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583782"
 ---
 # <a name="data-tracing-in-adonet"></a>Traçage de données dans ADO.NET
 
@@ -31,7 +31,7 @@ Pour plus d’informations sur la définition et la configuration du traçage ma
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 
-Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, d’accès aux données de suivi ([suivi d’accès aux données](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) a été mis à jour pour faciliter plus facile à mettre en corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la connectivité du serveur en anneau des informations de performances de mémoire tampon et d’applications dans le journal des événements étendus. Pour plus d’informations sur la lecture du journal des événements étendus, consultez [afficher les données de Session événements](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+Dans le fournisseur de données .NET Framework pour SQL Server, d’accès aux données suivi ([suivi d’accès aux données](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) a été mis à jour pour faciliter plus facile à mettre en corrélation des événements clients avec les informations de diagnostic, comme les échecs de connexion, à partir de la connectivité du serveur en anneau des informations de performances de mémoire tampon et d’applications dans le journal des événements étendus. Pour plus d’informations sur la lecture du journal des événements étendus, consultez [afficher les données de Session événements](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Pour les opérations de connexion, ADO.NET envoie un ID de connexion client. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et recherchez le `ClientConnectionID` champ et obtenir des informations de diagnostics sur la Échec de connexion. Les identificateurs de connexion client sont enregistrés dans la mémoire tampon en anneau uniquement si une erreur se produit. (Si une connexion échoue avant l'envoi du paquet de préouverture de session, aucun ID de connexion client n'est généré.) L'ID de connexion client est un GUID de 16 octets. Vous pouvez également rechercher l'ID de connexion client dans la sortie cible d'événements étendus, si l'action `client_connection_id` est ajoutée aux événements dans une session d'événements étendus. Vous pouvez activer le traçage d'accès aux données, réexécuter la commande de connexion et observer le champ `ClientConnectionID` dans la trace d'accès aux données, si vous avez besoin d'obtenir une aide supplémentaire pour le diagnostic du pilote client.
 

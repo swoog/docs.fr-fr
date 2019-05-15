@@ -2,12 +2,12 @@
 title: Concepts et terminologie (transformation fonctionnelle) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583361"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597822"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Concepts et terminologie (transformation fonctionnelle) (C#)
 Cette rubrique présente les concepts et la terminologie des transformations fonctionnelles pures. L'approche de transformation fonctionnelle pour la transformation des données génère du code qui est souvent plus rapide à programmer, plus expressif et plus facile à déboguer et à maintenir que le code de programmation impératif plus traditionnel.  
@@ -17,9 +17,9 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
 ## <a name="what-is-pure-functional-transformation"></a>Qu'est-ce que la transformation fonctionnelle pure ?  
  Dans la *transformation fonctionnelle pure*, un ensemble de fonctions, appelées *fonctions pures*, indiquent comment transformer un ensemble de données structurées de leur forme d’origine en une autre forme. Le terme "pur" indique que les fonctions sont *composables*, ce qui nécessite qu’elles aient les caractéristiques suivantes :  
   
--   *Être autonomes*, de manière à pouvoir être librement ordonnées et réorganisées sans enchevêtrement ni interdépendance avec le reste du programme. Les transformations pures n'ont aucune connaissance de leur environnement et aucun effet sur lui. Autrement dit, les fonctions utilisées dans la transformation n’ont pas d’*effets secondaires*.  
+- *Être autonomes*, de manière à pouvoir être librement ordonnées et réorganisées sans enchevêtrement ni interdépendance avec le reste du programme. Les transformations pures n'ont aucune connaissance de leur environnement et aucun effet sur lui. Autrement dit, les fonctions utilisées dans la transformation n’ont pas d’*effets secondaires*.  
   
--   *Être sans état*, de sorte que l’exécution de la même fonction ou du même ensemble spécifique de fonctions sur la même entrée générera toujours le même résultat. Les transformations pures n'ont pas de mémoire de leur utilisation antérieure.  
+- *Être sans état*, de sorte que l’exécution de la même fonction ou du même ensemble spécifique de fonctions sur la même entrée générera toujours le même résultat. Les transformations pures n'ont pas de mémoire de leur utilisation antérieure.  
   
 > [!IMPORTANT]
 >  Dans le reste de ce didacticiel, le terme « fonction pure » est utilisé dans un sens général pour indiquer une approche de programmation, et non une fonctionnalité de langage spécifique.  

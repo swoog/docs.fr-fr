@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593339"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procédure pas à pas : Modification de l’emplacement des informations My.Application.Log (Visual Basic)
 Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application. Cette procédure pas à pas montre comment remplacer les paramètres par défaut et faire en sorte que l’objet `Log` écrive dans d’autres écouteurs de journalisation.  
@@ -28,11 +28,11 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
      S’il n’existe pas de fichier app.config :  
   
-    1.  Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
+    1. Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
   
-    2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier de configuration de l’application**.  
+    2. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Fichier de configuration de l’application**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3. Cliquez sur **Ajouter**.  
   
 2. Recherchez la section `<listeners>` , sous la section `<source>` avec l’attribut `name` « DefaultSource » dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
@@ -153,13 +153,13 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
      Voici quelques-uns des types que vous pouvez utiliser :  
   
-    -   Un écouteur <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, qui écrit dans un fichier journal.  
+    - Un écouteur <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, qui écrit dans un fichier journal.  
   
-    -   Un écouteur <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, qui écrit les informations dans le journal des événements de l’ordinateur spécifié par le paramètre `initializeData`.  
+    - Un écouteur <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, qui écrit les informations dans le journal des événements de l’ordinateur spécifié par le paramètre `initializeData`.  
   
-    -   Les écouteurs <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> et <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, qui écrivent dans le fichier spécifié par le paramètre `initializeData`.  
+    - Les écouteurs <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> et <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, qui écrivent dans le fichier spécifié par le paramètre `initializeData`.  
   
-    -   Un écouteur <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, qui écrit dans la console de ligne de commande.  
+    - Un écouteur <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, qui écrit dans la console de ligne de commande.  
   
      Pour plus d’informations sur les emplacements où d’autres types d’écouteurs de journalisation écrivent les informations, consultez la documentation de ce type.  
   
