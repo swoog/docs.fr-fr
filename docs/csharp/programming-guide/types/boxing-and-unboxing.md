@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595015"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing et unboxing (Guide de programmation C#)
 Le boxing est la conversion d’un [type valeur](../../../csharp/language-reference/keywords/value-types.md) en type `object` ou en un type interface implémenté par ce type valeur. Lorsque le CLR exécute un boxing d’un type valeur, il inclut la valeur dans un wrapper, à l’intérieur d’un System.Object, et la stocke sur le tas managé. L'unboxing extrait le type valeur de l'objet. La conversion boxing est implicite ; la conversion unboxing est explicite. Le concept de boxing et de unboxing repose sur la vue unifiée par C# du système de type, dans lequel une valeur de n'importe quel type peut être traitée en tant qu'objet.  
@@ -63,9 +63,9 @@ Le boxing est la conversion d’un [type valeur](../../../csharp/language-refere
 ## <a name="unboxing"></a>Unboxing  
  L’unboxing est une conversion explicite du type `object` en un [type valeur](../../../csharp/language-reference/keywords/value-types.md), ou d’un type interface en un type valeur qui implémente l’interface. Une opération d'unboxing comprend les étapes suivantes :  
   
--   Vérification de l'instance de l'objet pour s'assurer qu'il s'agit bien d'une valeur boxed du type valeur spécifié.  
+- Vérification de l'instance de l'objet pour s'assurer qu'il s'agit bien d'une valeur boxed du type valeur spécifié.  
   
--   Copie de la valeur de l'instance dans la variable de type valeur.  
+- Copie de la valeur de l'instance dans la variable de type valeur.  
   
  Les instructions suivantes expliquent les opérations de boxing et d'unboxing :  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>Rubriques connexes  
  Pour plus d'informations :  
   
--   [Types référence](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Types référence](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
+- [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c56369b28f8e1bab1ca8e8c13ebd9710c8f1d9fb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608574"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indexeurs dans les interfaces (Guide de programmation C#)
 Des indexeurs peuvent être déclarés dans une [interface](../../../csharp/language-reference/keywords/interface.md). Les accesseurs d’indexeurs d’interface se distinguent sur plusieurs plans des accesseurs d’indexeurs de [classe](../../../csharp/language-reference/keywords/class.md), à savoir :  
   
--   Les accesseurs d’interface n’utilisent pas de modificateurs.  
+- Les accesseurs d’interface n’utilisent pas de modificateurs.  
   
--   Un accesseur d’interface n’a pas de corps.  
+- Un accesseur d’interface n’a pas de corps.  
   
  Par conséquent, un accesseur vise à indiquer si l’indexeur est en lecture-écriture, en lecture seule ou en écriture seule.  
   

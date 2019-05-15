@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593053"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Options du compilateur C#)
 Spécifie un assembly dont les types non publics sont accessibles par un .netmodule.  
@@ -31,11 +31,11 @@ Spécifie un assembly dont les types non publics sont accessibles par un .netmod
 ## <a name="remarks"></a>Remarques  
  **-moduleassemblyname** doit être utilisée au moment de créer un fichier .netmodule et quand les conditions suivantes sont réunies :  
   
--   Le fichier .netmodule doit accéder à des types non publics dans un assembly existant.  
+- Le fichier .netmodule doit accéder à des types non publics dans un assembly existant.  
   
--   Vous connaissez le nom de l’assembly dans lequel le fichier .netmodule sera généré.  
+- Vous connaissez le nom de l’assembly dans lequel le fichier .netmodule sera généré.  
   
--   L’assembly existant a accordé un accès d’assembly friend à l’assembly dans lequel le fichier .netmodule sera généré.  
+- L’assembly existant a accordé un accès d’assembly friend à l’assembly dans lequel le fichier .netmodule sera généré.  
   
  Pour plus d’informations sur la création d’un fichier .netmodule, consultez [-target:module (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

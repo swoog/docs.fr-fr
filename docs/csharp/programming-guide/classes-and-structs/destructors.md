@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202884"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584384"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finaliseurs (Guide de programmation C#)
 Les finaliseurs (également appelés **destructeurs**) servent à effectuer les derniers nettoyages nécessaires lorsqu’une instance de classe est collectée par le récupérateur de mémoire.  
   
 ## <a name="remarks"></a>Remarques  
   
--   Les finaliseurs ne peuvent pas être définis dans des structs. Ils sont utilisés uniquement avec les classes.  
+- Les finaliseurs ne peuvent pas être définis dans des structs. Ils sont utilisés uniquement avec les classes.  
   
--   Une classe ne peut avoir qu’un seul finaliseur.  
+- Une classe ne peut avoir qu’un seul finaliseur.  
   
--   Les finaliseurs ne peuvent pas être hérités ou surchargés.  
+- Les finaliseurs ne peuvent pas être hérités ou surchargés.  
   
--   Les finaliseurs ne peuvent pas être appelés. Ils sont appelés automatiquement.  
+- Les finaliseurs ne peuvent pas être appelés. Ils sont appelés automatiquement.  
   
--   Un finaliseur ne prend pas de modificateur et n’a pas de paramètre.  
+- Un finaliseur ne prend pas de modificateur et n’a pas de paramètre.  
   
  Par exemple, voici une déclaration de finaliseur pour la classe `Car`.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Pour plus d’informations sur le nettoyage des ressources, consultez les rubriques suivantes :  
   
--   [Nettoyage de ressources non managées](../../../standard/garbage-collection/unmanaged.md)  
+- [Nettoyage de ressources non managées](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implémentation d’une méthode dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implémentation d’une méthode dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using, instruction](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using, instruction](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée trois classes qui forment une chaîne d’héritage. La classe `First` est la classe de base, `Second` est dérivée de `First`, et `Third` est dérivée de `Second`. Toutes trois ont des finaliseurs. Dans `Main`, une instance de la classe la plus dérivée est créée. Quand le programme s’exécute, notez que les finaliseurs des trois classes sont appelés automatiquement, et dans l’ordre, de la plus dérivée à la moins dérivée.  

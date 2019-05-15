@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586299"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espaces de noms dans Visual Basic
 Les espaces de noms permettent d’organiser les objets définis dans un assembly. Les assemblys peuvent contenir plusieurs espaces de noms, qui peuvent à leur tour contenir d’autres espaces de noms. Les espaces de noms permettent d’éviter les ambiguïtés et de simplifier les références quand de grands groupes d’objets, tels que des bibliothèques de classes, sont utilisés.  
   
- Par exemple, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] définit la classe <xref:System.Windows.Forms.ListBox> dans l’espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> . Le fragment de code suivant montre comment déclarer une variable en utilisant le nom qualifié complet de cette classe :  
+ Par exemple, le .NET Framework définit les <xref:System.Windows.Forms.ListBox> classe dans le <xref:System.Windows.Forms?displayProperty=nameWithType> espace de noms. Le fragment de code suivant montre comment déclarer une variable en utilisant le nom qualifié complet de cette classe :  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Éviter les collisions de noms  
- Les espaces de noms[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] permettent de résoudre un problème parfois appelé *pollution d’espace de noms*, où le développeur d’une bibliothèque de classes est gêné par l’utilisation de noms similaires dans une autre bibliothèque. Ces conflits avec des éléments existants sont également connus sous le terme de *collisions de noms*.  
+ Espaces de noms .NET framework résoudre un problème parfois appelé *pollution d’espace de noms*, dans lequel le développeur d’une bibliothèque de classes est gêné par l’utilisation de noms similaires dans une autre bibliothèque. Ces conflits avec des éléments existants sont également connus sous le terme de *collisions de noms*.  
   
- Par exemple, si vous créez une classe nommée `ListBox`, vous pouvez l’utiliser dans votre projet sans qualification. Toutefois, si vous souhaitez utiliser le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe dans le même projet, vous devez utiliser une référence qualifiée complète pour rendre la référence unique. Si la référence n’est pas unique, Visual Basic génère une erreur indiquant que le nom est ambigu. L’exemple de code suivant montre comment déclarer ces objets :  
+ Par exemple, si vous créez une classe nommée `ListBox`, vous pouvez l’utiliser dans votre projet sans qualification. Toutefois, si vous souhaitez utiliser le .NET Framework <xref:System.Windows.Forms.ListBox> classe dans le même projet, vous devez utiliser une référence qualifiée complète pour rendre la référence unique. Si la référence n’est pas unique, Visual Basic génère une erreur indiquant que le nom est ambigu. L’exemple de code suivant montre comment déclarer ces objets :  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

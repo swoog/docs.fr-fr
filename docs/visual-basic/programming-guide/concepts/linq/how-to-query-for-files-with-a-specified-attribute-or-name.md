@@ -2,12 +2,12 @@
 title: 'Procédure : Interroger des fichiers avec un attribut spécifié ou un nom (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 0c6875a0e4b8224010b20ca17ab6318387490aca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021360"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586490"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Procédure : Interroger des fichiers avec un attribut spécifié ou un nom (Visual Basic)
 Cet exemple montre comment rechercher tous les fichiers ayant une extension de nom de fichier spécifiée (par exemple « .txt ») dans une arborescence de répertoires spécifiée. Il montre également comment retourner le fichier le plus récent ou le plus ancien dans l’arborescence en fonction de l’heure de création.  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Créer un projet qui cible le .NET Framework version 3.5 ou ultérieure avec une référence à System.Core.dll et une `Imports` instruction pour l’espace de noms System.Linq.  
+Créer un projet d’application console VB.NET, avec un `Imports` instruction pour l’espace de noms System.Linq.
   
 ## <a name="see-also"></a>Voir aussi
 

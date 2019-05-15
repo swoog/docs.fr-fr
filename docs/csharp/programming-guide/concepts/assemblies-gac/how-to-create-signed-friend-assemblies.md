@@ -2,12 +2,12 @@
 title: 'Procédure : Créer des assemblys friend signés (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582984"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procédure : Créer des assemblys friend signés (C#)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayant des noms forts. Les deux assemblys doivent avoir des noms forts. Bien que les deux assemblys dans cet exemple utilisent les mêmes clés, vous pouvez utiliser des clés différentes pour deux assemblys.  
@@ -18,15 +18,15 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
   
 2. Utilisez la séquence de commandes suivante avec l’outil Strong Name Tool pour générer un fichier de clé et afficher sa clé publique. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
-    1.  Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
+    1. Générez une clé de nom fort pour cet exemple et stockez-la dans le fichier FriendAssemblies.snk :  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extrayez la clé publique de FriendAssemblies.snk et mettez-la dans FriendAssemblies.publickey :  
+    2. Extrayez la clé publique de FriendAssemblies.snk et mettez-la dans FriendAssemblies.publickey :  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Affichez la clé publique stockée dans le fichier FriendAssemblies.publickey :  
+    3. Affichez la clé publique stockée dans le fichier FriendAssemblies.publickey :  
   
          `sn -tp FriendAssemblies.publickey`  
   

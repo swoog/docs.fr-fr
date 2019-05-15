@@ -6,25 +6,25 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d4ea445339057bc65c3597d30a46f46d58b6e696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595529"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Exemple de classe COM (Guide de programmation C#)
 Voici un exemple de classe pouvant être exposée en tant qu’objet COM. Après avoir placé ce code dans un fichier .cs et l’avoir ajouté à votre projet, affectez la valeur **True** à la propriété **Inscrire pour COM Interop**. Pour plus d'informations, voir [Procédure : Inscrire un composant à COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
  L’exposition d’objets Visual C# à COM nécessite de déclarer une interface de classe, une interface d’événements si nécessaire, et la classe proprement dite. Les membres de classe doivent suivre ces règles pour être visibles par COM :  
   
--   La classe doit être publique.  
+- La classe doit être publique.  
   
--   Les propriétés, méthodes et événements doivent être publics.  
+- Les propriétés, méthodes et événements doivent être publics.  
   
--   Les propriétés et méthodes doivent être déclarées dans l’interface de classe.  
+- Les propriétés et méthodes doivent être déclarées dans l’interface de classe.  
   
--   Les événements doivent être déclarés dans l’interface d’événement.  
+- Les événements doivent être déclarés dans l’interface d’événement.  
   
  Les autres membres publics de la classe qui ne sont pas déclarés dans ces interfaces ne seront pas visibles par COM, mais ils seront visibles par d’autres objets .NET Framework.  
   

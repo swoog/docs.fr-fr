@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595989"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procédure : S'abonner et se désabonner d’événements (Guide de programmation C#)
 Vous vous abonnez à un événement publié par une autre classe lorsque vous voulez écrire du code personnalisé qui doit être appelé quand cet événement est déclenché. Par exemple, vous pouvez vous abonner à l’événement `click` d’un bouton pour permettre à votre application de réagir lorsque l’utilisateur clique sur le bouton.  
@@ -74,7 +74,7 @@ Vous vous abonnez à un événement publié par une autre classe lorsque vous vo
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Pour s’abonner aux événements à l’aide d’une méthode anonyme  
   
--   Si vous savez que vous n’aurez pas à vous désabonner d’un événement, vous pouvez utiliser l’opérateur d’assignation d’addition (`+=`) pour attacher une méthode anonyme à l’événement. Dans l’exemple suivant, nous supposons qu’un objet nommé `publisher` a un événement nommé `RaiseCustomEvent`, et qu’une classe `CustomEventArgs` a également été définie pour contenir des informations d’événements spécialisés. Notez que la classe d’abonné nécessite une référence à `publisher` pour s’abonner à ses événements.  
+- Si vous savez que vous n’aurez pas à vous désabonner d’un événement, vous pouvez utiliser l’opérateur d’assignation d’addition (`+=`) pour attacher une méthode anonyme à l’événement. Dans l’exemple suivant, nous supposons qu’un objet nommé `publisher` a un événement nommé `RaiseCustomEvent`, et qu’une classe `CustomEventArgs` a également été définie pour contenir des informations d’événements spécialisés. Notez que la classe d’abonné nécessite une référence à `publisher` pour s’abonner à ses événements.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ Vous vous abonnez à un événement publié par une autre classe lorsque vous vo
   
 #### <a name="to-unsubscribe-from-an-event"></a>Pour se désabonner d’un événement  
   
--   Utilisez l’opérateur d’assignation de soustraction (`-=`) pour vous désabonner d’un événement :  
+- Utilisez l’opérateur d’assignation de soustraction (`-=`) pour vous désabonner d’un événement :  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

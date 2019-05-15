@@ -2,12 +2,12 @@
 title: Présentation de LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: ea17de41bbbc03158179f207aa0bc9fc9cceb863
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b8a577c7f1cb89df5534ae0eca893f4db434301e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596577"
 ---
 # <a name="introduction-to-linq-c"></a>Présentation de LINQ (C#)
 LINQ (Language-Integrated Query) est une nouveauté du .NET Framework 3.5 qui crée un pont entre le monde des objets et celui des données.  
@@ -25,13 +25,13 @@ LINQ (Language-Integrated Query) est une nouveauté du .NET Framework 3.5 qui c
 ## <a name="next-steps"></a>Étapes suivantes  
  Pour plus d’informations sur LINQ, commencez par vous familiariser avec certains concepts de base expliqués dans la section de prise en main de [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md), puis lisez la documentation relative à la technologie LINQ qui vous intéresse :  
   
--   Bases de données SQL Server : [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+- Bases de données SQL Server : [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
--   Documents XML : [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+- Documents XML : [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   Datasets ADO.NET : [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- Datasets ADO.NET : [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   Chaînes, fichiers, collections .NET, etc. : [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- Chaînes, fichiers, collections .NET, etc. : [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

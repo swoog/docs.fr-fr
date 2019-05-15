@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608560"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestion des exceptions (Guide de programmation C#)
 Un bloc [try](../../../csharp/language-reference/keywords/try-catch.md) est utilisé par les programmeurs C# pour partitionner du code susceptible d’être affecté par une exception. Des blocs [catch](../../../csharp/language-reference/keywords/try-catch.md) associés sont utilisés pour gérer les exceptions générées. Un bloc [finally](../../../csharp/language-reference/keywords/try-finally.md) contient du code qui s’exécute dans tous les cas, qu’une exception soit levée ou non dans le bloc `try` (il peut s’agir par exemple de la libération des ressources allouées dans le bloc `try`). Un bloc `try` doit être associé à un ou plusieurs blocs `catch`, à un bloc `finally`, ou aux deux.  
@@ -33,13 +33,13 @@ Un bloc [try](../../../csharp/language-reference/keywords/try-catch.md) est util
   
  Vous devez intercepter les exceptions quand les conditions suivantes sont remplies :  
   
--   Vous savez pourquoi l’exception a été levée et vous pouvez implémenter une récupération spécifique, par exemple inviter l’utilisateur à entrer un nouveau nom de fichier quand vous interceptez un objet <xref:System.IO.FileNotFoundException>.  
+- Vous savez pourquoi l’exception a été levée et vous pouvez implémenter une récupération spécifique, par exemple inviter l’utilisateur à entrer un nouveau nom de fichier quand vous interceptez un objet <xref:System.IO.FileNotFoundException>.  
   
--   Vous pouvez créer et lever une nouvelle exception plus spécifique.  
+- Vous pouvez créer et lever une nouvelle exception plus spécifique.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
--   Vous voulez traiter partiellement une exception avant de la transmettre en vue d’un traitement supplémentaire. Dans l’exemple suivant, un bloc `catch` est utilisé pour ajouter une entrée à un journal d’erreurs avant de relever l’exception.  
+- Vous voulez traiter partiellement une exception avant de la transmettre en vue d’un traitement supplémentaire. Dans l’exemple suivant, un bloc `catch` est utilisé pour ajouter une entrée à un journal d’erreurs avant de relever l’exception.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   

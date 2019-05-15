@@ -2,12 +2,12 @@
 title: 'Procédure : Écrire des données d’objet dans un fichier XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554281"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595527"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procédure : Écrire des données d’objet dans un fichier XML (C#)
 Cet exemple écrit l’objet d’une classe dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -50,13 +50,13 @@ public class XMLWrite
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   La classe qui est sérialisée n’a pas de constructeur public sans paramètres.  
+- La classe qui est sérialisée n’a pas de constructeur public sans paramètres.  
   
--   Le fichier existe et est en lecture seule (<xref:System.IO.IOException>).  
+- Le fichier existe et est en lecture seule (<xref:System.IO.IOException>).  
   
--   Le chemin est trop long (<xref:System.IO.PathTooLongException>).  
+- Le chemin est trop long (<xref:System.IO.PathTooLongException>).  
   
--   Le disque est plein (<xref:System.IO.IOException>).  
+- Le disque est plein (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application doit créer un fichier, elle doit disposer de l’autorisation `Create` pour accéder au dossier. Si le fichier existe déjà, l’application a uniquement besoin de l’autorisation `Write`, qui est une autorisation de niveau inférieur. Quand cela est possible, il est plus sûr de créer le fichier au cours du déploiement et de n’accorder l’autorisation `Read` que sur un seul fichier, plutôt que l’autorisation `Create` sur un dossier.  

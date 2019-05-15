@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599282"
 ---
 # <a name="service-application-programming-architecture"></a>Architecture de programmation d'une application de service
 Les applications de service Windows sont basées sur une classe qui hérite de la classe <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Substituez les méthodes de cette classe et définissez des fonctionnalités pour qu’elles déterminent le comportement de votre service.  
   
  Les principales classes impliquées dans la création du service sont les suivantes :  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> : substituez les méthodes de la classe <xref:System.ServiceProcess.ServiceBase> au moment de la création d’un service et définissez le code pour déterminer le fonctionnement de votre service dans cette classe héritée.  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> : substituez les méthodes de la classe <xref:System.ServiceProcess.ServiceBase> au moment de la création d’un service et définissez le code pour déterminer le fonctionnement de votre service dans cette classe héritée.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> et <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : utilisez ces classes pour installer et désinstaller votre service.  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> et <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> : utilisez ces classes pour installer et désinstaller votre service.  
   
  Par ailleurs, vous pouvez utiliser une classe nommée <xref:System.ServiceProcess.ServiceController> pour manipuler le service. Cette classe n’est pas impliquée dans la création d’un service, mais vous pouvez vous en servir pour démarrer et arrêter le service, lui passer des commandes et retourner une série d’énumérations.  
   
@@ -51,7 +51,7 @@ Les applications de service Windows sont basées sur une classe qui hérite de l
   
  D’autres propriétés et méthodes présentent un intérêt. Elles incluent notamment :  
   
--   La méthode <xref:System.ServiceProcess.ServiceBase.Run%2A> sur la classe <xref:System.ServiceProcess.ServiceBase>. Il s’agit du point d’entrée principal du service. Quand vous créez un service à l’aide du modèle de service Windows, le code est inséré dans la méthode `Main` de votre application pour exécuter le service. Ce code ressemble à ceci :  
+- La méthode <xref:System.ServiceProcess.ServiceBase.Run%2A> sur la classe <xref:System.ServiceProcess.ServiceBase>. Il s’agit du point d’entrée principal du service. Quand vous créez un service à l’aide du modèle de service Windows, le code est inséré dans la méthode `Main` de votre application pour exécuter le service. Ce code ressemble à ceci :  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ Les applications de service Windows sont basées sur une classe qui hérite de l
     > [!NOTE]
     >  Ces exemples utilisent un tableau de type <xref:System.ServiceProcess.ServiceBase>, dans lequel chaque service contenu dans votre application peut être ajouté. Tous les services peuvent ensuite être exécutés ensemble. Toutefois, si vous ne créez qu’un seul service, vous pouvez choisir de ne pas utiliser le tableau. Dans ce cas, déclarez simplement un nouvel objet héritant de <xref:System.ServiceProcess.ServiceBase> et exécutez-le. Pour voir un exemple, consultez [Comment : écrire les services par programmation](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
--   Une série de propriétés sur la classe <xref:System.ServiceProcess.ServiceBase>. Celles-ci déterminent les méthodes qui peuvent être appelées sur votre service. Par exemple, quand la propriété <xref:System.ServiceProcess.ServiceBase.CanStop%2A> a la valeur `true`, la méthode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> sur votre service peut être appelée. Quand la propriété <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> a la valeur `true`, les méthodes <xref:System.ServiceProcess.ServiceBase.OnPause%2A> et <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> peuvent être appelées. Si vous définissez l’une de ces propriétés avec la valeur `true`, vous devez ensuite remplacer et définir le traitement des méthodes associées.  
+- Une série de propriétés sur la classe <xref:System.ServiceProcess.ServiceBase>. Celles-ci déterminent les méthodes qui peuvent être appelées sur votre service. Par exemple, quand la propriété <xref:System.ServiceProcess.ServiceBase.CanStop%2A> a la valeur `true`, la méthode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> sur votre service peut être appelée. Quand la propriété <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> a la valeur `true`, les méthodes <xref:System.ServiceProcess.ServiceBase.OnPause%2A> et <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> peuvent être appelées. Si vous définissez l’une de ces propriétés avec la valeur `true`, vous devez ensuite remplacer et définir le traitement des méthodes associées.  
   
     > [!NOTE]
     >  Pour être utile, votre service doit substituer au moins <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  

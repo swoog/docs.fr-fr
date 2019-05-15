@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607830"
 ---
 # <a name="assembly-contents"></a>Contenu d'un assembly
 En général, un assembly statique peut comporter les quatre éléments suivants :  
   
--   Le [manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md), qui contient les métadonnées de l’assembly.  
+- Le [manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md), qui contient les métadonnées de l’assembly.  
   
--   les métadonnées des types ;  
+- les métadonnées des types ;  
   
--   le code MSIL (Microsoft Intermediate Language) qui implémente les types ;  
+- le code MSIL (Microsoft Intermediate Language) qui implémente les types ;  
   
--   un ensemble de ressources.  
+- un ensemble de ressources.  
   
  Seul le manifeste d'assembly est requis, mais soit les types, soit les ressources sont nécessaires pour donner à l'assembly des fonctionnalités significatives.  
   

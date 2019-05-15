@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b21dc73454b96d3a192b47eb439bebf588059c24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599615"
 ---
 # <a name="mitigation-tls-protocols"></a>Atténuation : protocoles TLS
 À compter de .NET Framework 4.6, les classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> et <xref:System.Net.Security.SslStream?displayProperty=nameWithType> peuvent utiliser l’un des trois protocoles suivants : Tls1.0, Tls1.1 ou Tls 1.2. Le protocole SSL 3.0 et le chiffrement RC4 ne sont pas pris en charge.  
@@ -20,21 +20,21 @@ ms.locfileid: "59125092"
 ## <a name="impact"></a>Impact  
  Cette modification affecte :  
   
--   Toutes les applications qui utilisent SSL pour communiquer avec un serveur HTTPS ou un serveur socket à l'aide de l'un des types suivants : <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient> et <xref:System.Net.Security.SslStream>.  
+- Toutes les applications qui utilisent SSL pour communiquer avec un serveur HTTPS ou un serveur socket à l'aide de l'un des types suivants : <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient> et <xref:System.Net.Security.SslStream>.  
   
--   Toutes les applications côté serveur ne peuvent pas être mises à niveau pour prendre en charge Tls1.0, Tls1.1 ou Tls 1.2.  
+- Toutes les applications côté serveur ne peuvent pas être mises à niveau pour prendre en charge Tls1.0, Tls1.1 ou Tls 1.2.  
   
 ## <a name="mitigation"></a>Atténuation  
  L'atténuation recommandée consiste à mettre à niveau l'application côté serveur vers Tls1.0, Tls1.1 ou Tls 1.2. Si ce n'est pas possible, ou si les applications clientes sont interrompues, la classe <xref:System.AppContext> peut être utilisée pour désactiver cette fonctionnalité de deux manières :  
   
--   Par programmation, à l'aide d'un extrait de code comme suit :  
+- Par programmation, à l'aide d'un extrait de code comme suit :  
   
      [!code-csharp[AppCompat.SSLProtocols#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.sslprotocols/cs/program.cs#1)]
      [!code-vb[AppCompat.SSLProtocols#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.sslprotocols/vb/module1.vb#1)]  
   
      Comme l'objet <xref:System.Net.ServicePointManager> est initialisé une seule fois, la définition de ces paramètres de compatibilité doit être la première chose que fait l'application.  
   
--   Pour ce faire, ajoutez la ligne suivante à la section [\<runtime](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) de votre fichier app.config :  
+- Pour ce faire, ajoutez la ligne suivante à la section [\<runtime](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) de votre fichier app.config :  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  

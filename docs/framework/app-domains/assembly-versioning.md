@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593652"
 ---
 # <a name="assembly-versioning"></a>Versioning des assemblys
 Tout le versioning des assemblys qui utilisent le Common Language Runtime est effectué au niveau de l'assembly. La version spécifique d'un assembly et les versions des assemblys dépendants sont enregistrées dans le manifeste d'assembly. La stratégie de version par défaut du runtime est la suivante : les applications s'exécutent uniquement avec les versions dans lesquelles elles ont été générées et testées, sauf en cas de substitution par une stratégie de version explicite dans des fichiers de configuration (le fichier de configuration de l'application, le fichier de stratégie de l'éditeur et le fichier de configuration de l'administrateur de l'ordinateur).  
@@ -42,9 +42,9 @@ Tout le versioning des assemblys qui utilisent le Common Language Runtime est ef
 ## <a name="version-information"></a>Informations sur la version  
  Chaque assembly possède deux modes distincts d'expression d'informations sur la version :  
   
--   Le numéro de version de l'assembly qui, avec le nom de l'assembly et les informations sur la culture, fait partie de l'identité de l'assembly. Ce numéro est utilisé par le runtime pour appliquer la stratégie de version et joue un rôle essentiel dans le processus de résolution des types au moment de l'exécution.  
+- Le numéro de version de l'assembly qui, avec le nom de l'assembly et les informations sur la culture, fait partie de l'identité de l'assembly. Ce numéro est utilisé par le runtime pour appliquer la stratégie de version et joue un rôle essentiel dans le processus de résolution des types au moment de l'exécution.  
   
--   Une version d'informations, qui correspond à une chaîne représentant des informations supplémentaires sur la version incluses à des fins d'information uniquement.  
+- Une version d'informations, qui correspond à une chaîne représentant des informations supplémentaires sur la version incluses à des fins d'information uniquement.  
   
 ### <a name="assembly-version-number"></a>Numéro de version de l'assembly  
  Chaque assembly possède un numéro de version faisant partie de son identité. Deux assemblys dont les numéros de versions diffèrent sont de ce fait considérés par le runtime comme étant des assemblys complètement différents. Ce numéro de version est physiquement représenté par une chaîne en quatre parties au format suivant :  

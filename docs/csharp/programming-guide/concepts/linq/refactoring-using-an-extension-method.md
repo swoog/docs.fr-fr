@@ -2,12 +2,12 @@
 title: Refactorisation à l’aide d’une méthode d’extension (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 904dd558819a498bd8a3876759edaaa185be3b7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596179"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactorisation à l’aide d’une méthode d’extension (C#)
 Cet exemple se base sur l’exemple précédent, [Récupération du texte des paragraphes (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), en refactorisant la concaténation de chaînes à l’aide d’une fonction pure implémentée en tant que méthode d’extension.  
@@ -244,7 +244,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Étapes suivantes  
  L'exemple suivant montre comment refactoriser ce code d'une autre manière, à l'aide de fonctions pures :  
   
--   [Refactorisation à l’aide d’une fonction pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactorisation à l’aide d’une fonction pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

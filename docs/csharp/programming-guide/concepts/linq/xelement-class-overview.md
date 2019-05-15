@@ -2,12 +2,12 @@
 title: Vue d’ensemble de la classe XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 90f7d2f288ff628a24bfbe084a5175e4b2ab5f94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595763"
 ---
 # <a name="xelement-class-overview-c"></a>Vue d’ensemble de la classe XElement (C#)
 La classe <xref:System.Xml.Linq.XElement> est l'une des classes fondamentales dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Elle représente un élément XML. Vous pouvez utiliser cette classe pour créer des éléments, modifier le contenu de l'élément, ajouter, modifier ou supprimer des éléments enfants, ajouter des attributs à un élément ou sérialiser le contenu d'un élément sous forme textuelle. Vous pouvez également interagir avec d'autres classes dans <xref:System.Xml?displayProperty=nameWithType>, telles que <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> et <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -18,13 +18,13 @@ La classe <xref:System.Xml.Linq.XElement> est l'une des classes fondamentales da
 ### <a name="constructing-xml-trees"></a>Construction d'arborescences XML  
  Vous pouvez construire des arborescences XML de diverses façons, notamment les suivantes :  
   
--   Vous pouvez construire une arborescence XML dans du code. Pour plus d’informations, consultez [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
+- Vous pouvez construire une arborescence XML dans du code. Pour plus d’informations, consultez [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
--   Vous pouvez analyser du code XML de diverses sources, y compris un objet <xref:System.IO.TextReader>, des fichiers texte ou une adresse Web (URL). Pour plus d’informations, consultez [Analyse de code XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
+- Vous pouvez analyser du code XML de diverses sources, y compris un objet <xref:System.IO.TextReader>, des fichiers texte ou une adresse Web (URL). Pour plus d’informations, consultez [Analyse de code XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
   
--   Vous pouvez utiliser un objet <xref:System.Xml.XmlReader> pour remplir l'arborescence. Pour plus d'informations, consultez <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- Vous pouvez utiliser un objet <xref:System.Xml.XmlReader> pour remplir l'arborescence. Pour plus d'informations, consultez <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
--   Si vous avez un module qui peut écrire du contenu dans un objet <xref:System.Xml.XmlWriter>, vous pouvez utiliser la méthode <xref:System.Xml.Linq.XContainer.CreateWriter%2A> pour créer un writer, passer ce dernier au module, puis utiliser le contenu écrit dans l'objet <xref:System.Xml.XmlWriter> pour remplir l'arborescence XML.  
+- Si vous avez un module qui peut écrire du contenu dans un objet <xref:System.Xml.XmlWriter>, vous pouvez utiliser la méthode <xref:System.Xml.Linq.XContainer.CreateWriter%2A> pour créer un writer, passer ce dernier au module, puis utiliser le contenu écrit dans l'objet <xref:System.Xml.XmlWriter> pour remplir l'arborescence XML.  
   
  Toutefois, la manière la plus courante de créer une arborescence XML est la suivante :  
   

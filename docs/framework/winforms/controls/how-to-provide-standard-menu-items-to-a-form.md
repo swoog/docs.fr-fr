@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 530e4185b065c9483f112146c496860f2c8a52c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a95476ff3d182bf2a56e6527c9ee83c8c56af246
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662320"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583652"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>Procédure : fournir des éléments de menu standard à un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
@@ -33,8 +33,6 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
  Cet exemple nécessite :  
   
 - des références aux assemblys System, System.Drawing et System.Windows.Forms.  
-  
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 

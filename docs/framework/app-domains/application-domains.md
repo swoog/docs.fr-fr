@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607909"
 ---
 # <a name="application-domains"></a>Domaines d'application
 
@@ -41,18 +41,18 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
  L'isolation assurée par les domaines d'application présente les avantages suivants :  
   
--   Les erreurs survenues dans une application ne peuvent pas affecter d'autres applications. Comme le code de type sécurisé ne risque pas de provoquer d'erreurs dans la mémoire, l'utilisation de domaines d'application permet d'empêcher le code en cours d'exécution dans un domaine d'affecter d'autres applications dans le processus.  
+- Les erreurs survenues dans une application ne peuvent pas affecter d'autres applications. Comme le code de type sécurisé ne risque pas de provoquer d'erreurs dans la mémoire, l'utilisation de domaines d'application permet d'empêcher le code en cours d'exécution dans un domaine d'affecter d'autres applications dans le processus.  
   
--   Des applications individuelles peuvent être arrêtées sans que le processus entier soit arrêté. L'utilisation des domaines d'application vous permet de décharger le code en cours d'exécution dans une seule application.  
+- Des applications individuelles peuvent être arrêtées sans que le processus entier soit arrêté. L'utilisation des domaines d'application vous permet de décharger le code en cours d'exécution dans une seule application.  
   
     > [!NOTE]
     >  Vous ne pouvez pas décharger des assemblys ou des types individuels. Seul un domaine complet peut être déchargé.  
   
--   Le code en cours d'exécution dans une application ne peut pas directement accéder au code ou aux ressources d'une autre application. Le Common Language Runtime applique cette isolation en empêchant les appels directs entre les objets dans les différents domaines d'application. Les objets qui passent d'un domaine à un autre sont soit copiés, soit accédés par un proxy. Si l'objet est copié, l'appel à cet objet est alors local. Dans ce cas, l'appelant et l'objet référencé figurent dans le même domaine d'application. Si l'objet est accédé par un proxy, l'appel à cet objet est alors distant. Dans ce cas, l'appelant et l'objet référencé figurent dans des domaines d'application différents. Les appels interdomaines utilisent la même infrastructure d'appel distant que les appels entre deux processus ou deux ordinateurs. Les métadonnées de l'objet référencé doivent par conséquent être disponibles pour les deux domaines d'application pour que l'appel de méthode puisse faire l'objet d'une compilation JIT correcte. Si le domaine appelant n’a pas accès aux métadonnées pour l’objet qui est appelé, la compilation peut échouer avec une exception de type <xref:System.IO.FileNotFoundException>. Pour plus d'informations, consultez [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Le mécanisme permettant de déterminer le mode d'accès des objets sur les domaines est défini par l'objet. Pour plus d'informations, consultez <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Le code en cours d'exécution dans une application ne peut pas directement accéder au code ou aux ressources d'une autre application. Le Common Language Runtime applique cette isolation en empêchant les appels directs entre les objets dans les différents domaines d'application. Les objets qui passent d'un domaine à un autre sont soit copiés, soit accédés par un proxy. Si l'objet est copié, l'appel à cet objet est alors local. Dans ce cas, l'appelant et l'objet référencé figurent dans le même domaine d'application. Si l'objet est accédé par un proxy, l'appel à cet objet est alors distant. Dans ce cas, l'appelant et l'objet référencé figurent dans des domaines d'application différents. Les appels interdomaines utilisent la même infrastructure d'appel distant que les appels entre deux processus ou deux ordinateurs. Les métadonnées de l'objet référencé doivent par conséquent être disponibles pour les deux domaines d'application pour que l'appel de méthode puisse faire l'objet d'une compilation JIT correcte. Si le domaine appelant n’a pas accès aux métadonnées pour l’objet qui est appelé, la compilation peut échouer avec une exception de type <xref:System.IO.FileNotFoundException>. Pour plus d'informations, consultez [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Le mécanisme permettant de déterminer le mode d'accès des objets sur les domaines est défini par l'objet. Pour plus d'informations, consultez <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   La portée du comportement de code est définie par l'application dans laquelle il s'exécute. En d'autres termes, le domaine d'application fournit des paramètres de configuration tels que les stratégies de version d'application, l'emplacement des assemblys distants auxquels il accède et des informations sur l'emplacement où se trouvent les assemblys qui sont chargés dans le domaine.  
+- La portée du comportement de code est définie par l'application dans laquelle il s'exécute. En d'autres termes, le domaine d'application fournit des paramètres de configuration tels que les stratégies de version d'application, l'emplacement des assemblys distants auxquels il accède et des informations sur l'emplacement où se trouvent les assemblys qui sont chargés dans le domaine.  
   
--   Les autorisations accordées au code peuvent être contrôlées par le domaine d'application dans lequel le code s'exécute.  
+- Les autorisations accordées au code peuvent être contrôlées par le domaine d'application dans lequel le code s'exécute.  
   
 ## <a name="application-domains-and-assemblies"></a>Domaines d’application et assemblys
 
@@ -60,9 +60,9 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
  La façon dont un assembly est chargé détermine si son code compilé juste-à-temps (JIT) peut être partagé par plusieurs domaines d'application dans le processus, et si l'assembly peut être déchargé du processus.  
   
--   Si un assembly est chargé comme indépendant du domaine, tous les domaines d'application qui partagent le même jeu d'autorisations de sécurité peuvent partager le même code compilé juste-à-temps, ce qui réduit la mémoire requise par l'application. Toutefois, l'assembly ne peut jamais être déchargé du processus.  
+- Si un assembly est chargé comme indépendant du domaine, tous les domaines d'application qui partagent le même jeu d'autorisations de sécurité peuvent partager le même code compilé juste-à-temps, ce qui réduit la mémoire requise par l'application. Toutefois, l'assembly ne peut jamais être déchargé du processus.  
   
--   Si un assembly n'est pas chargé comme indépendant du domaine, il doit être compilé juste-à-temps dans chaque domaine d'application dans lequel il est chargé. Toutefois, l'assembly peut être déchargé du processus via le déchargement de tous les domaines d'application dans lesquels il est chargé.  
+- Si un assembly n'est pas chargé comme indépendant du domaine, il doit être compilé juste-à-temps dans chaque domaine d'application dans lequel il est chargé. Toutefois, l'assembly peut être déchargé du processus via le déchargement de tous les domaines d'application dans lesquels il est chargé.  
   
  L'hôte de runtime détermine s'il convient de charger des assemblys comme indépendants du domaine lorsqu'il charge le runtime dans un processus. Pour les applications managées, appliquez l'attribut <xref:System.LoaderOptimizationAttribute> à la méthode de point d'entrée pour le processus et spécifiez une valeur de l'énumération <xref:System.LoaderOptimization> associée. Pour les applications non managées qui hébergent le Common Language Runtime, spécifiez l’indicateur approprié quand vous appelez la méthode [Fonction CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
@@ -84,9 +84,9 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
  Lorsque vous décidez de charger des assemblys comme indépendants du domaine, vous devez trouver un compromis entre la réduction de l'utilisation de la mémoire et d'autres facteurs de performances.  
   
--   L'accès aux données et méthodes statiques est plus lent pour les assemblys indépendants du domaine en raison de la nécessité d'assurer l'isolation des assemblys. Chaque domaine d'application qui accède à l'assembly doit disposer d'une copie distincte des données statiques, afin d'éviter que des références à des objets dans les champs statiques ne franchissent les limites de domaine. Le runtime contient par conséquent une logique supplémentaire pour orienter un appelant vers la copie appropriée des données statiques ou de la méthode statique. Cette logique supplémentaire ralentit l'appel.  
+- L'accès aux données et méthodes statiques est plus lent pour les assemblys indépendants du domaine en raison de la nécessité d'assurer l'isolation des assemblys. Chaque domaine d'application qui accède à l'assembly doit disposer d'une copie distincte des données statiques, afin d'éviter que des références à des objets dans les champs statiques ne franchissent les limites de domaine. Le runtime contient par conséquent une logique supplémentaire pour orienter un appelant vers la copie appropriée des données statiques ou de la méthode statique. Cette logique supplémentaire ralentit l'appel.  
   
--   Toutes les dépendances d'un assembly doivent être localisées et chargées lorsque l'assembly est chargé comme indépendant du domaine, car une dépendance qui ne peut pas être chargée comme indépendante du domaine empêche le chargement de l'assembly comme indépendant du domaine.  
+- Toutes les dépendances d'un assembly doivent être localisées et chargées lorsque l'assembly est chargé comme indépendant du domaine, car une dépendance qui ne peut pas être chargée comme indépendante du domaine empêche le chargement de l'assembly comme indépendant du domaine.  
   
 ## <a name="application-domains-and-threads"></a>Domaines d'application et threads
 
@@ -100,9 +100,9 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
 
  La culture, représentée par un objet <xref:System.Globalization.CultureInfo>, est associée aux threads. Vous pouvez obtenir la culture associée au thread en cours d'exécution à l'aide de la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> et vous pouvez obtenir ou définir la culture associée au thread en cours d'exécution à l'aide de la propriété <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Si la culture associée à un thread a été définie explicitement à l'aide de la propriété <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, elle continue d'être associée à ce thread lorsque le thread traverse les limites du domaine d'application. Sinon, la culture associée au thread à un moment donné est déterminée par la valeur de la propriété <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> dans le domaine d'application dans lequel le thread s'exécute :  
   
--   Si la valeur de la propriété n'est pas `null`, la culture retournée par la propriété est associée au thread (et, par conséquent, retournée par les propriétés <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> et <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
+- Si la valeur de la propriété n'est pas `null`, la culture retournée par la propriété est associée au thread (et, par conséquent, retournée par les propriétés <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> et <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
--   Si la valeur de la propriété est `null`, la culture système en cours est associée au thread.  
+- Si la valeur de la propriété est `null`, la culture système en cours est associée au thread.  
   
 ## <a name="programming-with-application-domains"></a>Programmation avec des domaines d’application
 
@@ -132,15 +132,15 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
  Une application typique charge plusieurs assemblys dans un domaine d'application avant que le code qu'ils contiennent ne puisse être exécuté.  
   
  La façon dont l'assembly est chargé détermine si son code compilé juste-à-temps (JIT) peut être partagé par plusieurs domaines d'application dans le processus.  
   
--   Si un assembly est chargé indépendamment du domaine, tous les domaines d'application qui partagent le même jeu d'autorisations de sécurité peuvent partager le même code compilé juste-à-temps. Cela réduit la quantité de mémoire requise par l'application.  
+- Si un assembly est chargé indépendamment du domaine, tous les domaines d'application qui partagent le même jeu d'autorisations de sécurité peuvent partager le même code compilé juste-à-temps. Cela réduit la quantité de mémoire requise par l'application.  
   
--   Si un assembly n'est pas chargé indépendamment du domaine, il doit être compilé juste-à-temps dans chaque domaine d'application dans lequel il est chargé et le chargeur ne doit pas partager de ressources internes entre les domaines d'application.  
+- Si un assembly n'est pas chargé indépendamment du domaine, il doit être compilé juste-à-temps dans chaque domaine d'application dans lequel il est chargé et le chargeur ne doit pas partager de ressources internes entre les domaines d'application.  
   
  Lorsqu'il est défini avec la valeur 1, l'indicateur d'environnement COMPLUS_LoaderOptimization force l'hôte du runtime à charger tous les assemblys d'une manière dépendante du domaine, connue sous le nom de SingleDomain. SingleDomain ne charge aucun assembly comme indépendant du domaine, sauf Mscorlib, qui est toujours chargé comme indépendant du domaine. Ce paramètre est désigné par « domaine unique », car il est fréquemment utilisé lorsque l'hôte n'exécute qu'une seule application dans le processus.  
   

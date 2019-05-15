@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e3fa0eb12c9259629ff8151ff2d057f2744e9e36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595629"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Procédure : Écrire dans un fichier texte (Guide de programmation C#)
 Ces exemples montrent différentes manières d'écrire du texte dans un fichier. Les deux premiers exemples utilisent des méthodes pratiques statiques au niveau de la classe <xref:System.IO.File?displayProperty=nameWithType> pour écrire chaque élément de tout `IEnumerable<string>` et une chaîne dans un fichier texte. L'exemple 3 indique comment ajouter du texte à un fichier quand vous devez traiter chaque ligne individuellement pendant que vous écrivez dans le fichier. Les exemples 1 à 3 remplacent tout le contenu existant dans le fichier, alors que l'exemple 4 montre comment ajouter du texte à un fichier existant.  
@@ -27,11 +27,11 @@ Ces exemples montrent différentes manières d'écrire du texte dans un fichier.
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le fichier existe déjà et est en lecture seule.  
+- Le fichier existe déjà et est en lecture seule.  
   
--   Le nom du chemin d'accès peut s'avérer trop long.  
+- Le nom du chemin d'accès peut s'avérer trop long.  
   
--   Le disque est peut-être plein.  
+- Le disque est peut-être plein.  
   
 ## <a name="see-also"></a>Voir aussi
 

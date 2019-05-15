@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607754"
 ---
 # <a name="assembly-manifest"></a>Manifeste d'assembly
 Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de données qui décrit comment les éléments de l'assembly sont reliés les uns aux autres. Le manifeste d'assembly contient les métadonnées de l'assembly. Un manifeste d'assembly comprend toutes les métadonnées nécessaires pour spécifier la version requise et l'identité de sécurité de l'assembly, ainsi que toutes les métadonnées nécessaires pour définir la portée de l'assembly et résoudre les références aux ressources et aux classes. Le manifeste d'assembly peut être stocké soit dans un fichier exécutable portable (PE, portable executable) (.exe ou .dll) avec le code MILS (Microsoft Intermediate Language), soit dans un fichier PE autonome qui ne contient que des informations sur le manifeste de l'assembly.  
@@ -28,15 +28,15 @@ Chaque assembly, qu'il soit statique ou dynamique, comporte une collection de do
   
  Le manifeste de chaque assembly exécute les fonctions suivantes :  
   
--   Il énumère les fichiers qui composent l'assembly.  
+- Il énumère les fichiers qui composent l'assembly.  
   
--   Il détermine le mode de mappage des références aux types et aux ressources de l'assembly aux fichiers qui contiennent leurs déclarations et leurs implémentations.  
+- Il détermine le mode de mappage des références aux types et aux ressources de l'assembly aux fichiers qui contiennent leurs déclarations et leurs implémentations.  
   
--   Il énumère les autres assemblys dont l'assembly dépend.  
+- Il énumère les autres assemblys dont l'assembly dépend.  
   
--   Il fournit un niveau d'adressage indirect entre les consommateurs de l'assembly et les détails d'implémentation de l'assembly.  
+- Il fournit un niveau d'adressage indirect entre les consommateurs de l'assembly et les détails d'implémentation de l'assembly.  
   
--   Il rend l'assembly autodescriptif.  
+- Il rend l'assembly autodescriptif.  
   
 ## <a name="assembly-manifest-contents"></a>Contenu du manifeste d'assembly  
  Le tableau suivant indique les informations qui figurent dans le manifeste d'assembly. Les quatre premiers éléments (le nom de l'assembly, le numéro de version, la culture et les informations sur le nom fort) constituent l'identité de l'assembly.  

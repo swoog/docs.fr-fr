@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874235"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582814"
 ---
 # <a name="runtime-profiling"></a>Génération de profils d'exécution
 Le profilage est une méthode de collecte de données de performance dans le cadre d’un scénario de développement ou de déploiement. Cette section s’adresse aux développeurs et administrateurs système qui souhaitent recueillir des informations sur les performances d’une application.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Suivi des performances à l’aide de l’analyseur de performances (Perfmon.exe)  
- L’analyseur de performances est l’outil le plus simple à utiliser pour profiler votre application [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . L’analyseur de performances représente graphiquement les données trouvées dans les compteurs de performances .NET Framework qui sont installés avec le Common Language Runtime et le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Ces compteurs permettent de tout surveiller, de la gestion de la mémoire jusqu’aux performances du compilateur juste-à-temps (JIT). Ils vous renseignent sur les ressources que votre application utilise, ce qui est une mesure indirecte des performances de votre application. Ces compteurs s’avèrent utiles pour comprendre le fonctionnement interne de votre application.  
+ L’Analyseur de performances est l’outil le plus simple à utiliser pour profiler votre application .NET Framework. L’analyseur de performances représente graphiquement les données trouvées dans les compteurs de performances .NET Framework qui sont installés avec le Common Language Runtime et le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Ces compteurs permettent de tout surveiller, de la gestion de la mémoire jusqu’aux performances du compilateur juste-à-temps (JIT). Ils vous renseignent sur les ressources que votre application utilise, ce qui est une mesure indirecte des performances de votre application. Ces compteurs s’avèrent utiles pour comprendre le fonctionnement interne de votre application.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Pour exécuter Perfmon.exe sur Windows Vista et les versions ultérieures  
   
@@ -42,7 +42,7 @@ Le profilage est une méthode de collecte de données de performance dans le cad
   
 6. Dans la zone de liste **Instances de l’objet sélectionné**, cliquez sur **\<Toutes les instances>** pour spécifier que vous voulez analyser le compteur de performances pour le Common Language Runtime dans sa globalité (c’est-à-dire à l’échelle du système).  
   
-     - ou -  
+     ou  
   
      Dans la zone de liste **Instances de l’objet sélectionné** , cliquez sur le nom d’une application pour analyser le compteur de performances de cette application.  
   
@@ -57,7 +57,7 @@ Le profilage est une méthode de collecte de données de performance dans le cad
 >  Sur les systèmes où le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] est installé, il se peut que l’analyseur de performances n’affiche pas de données pour les compteurs de performances de certaines catégories, telles que **.NET CLR Data** et **.NET CLR Networking**, pour les applications développées à l’aide du [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Si c’est le cas, vous pouvez configurer l’Analyseur de performances pour qu’il affiche ces données en ajoutant l’élément [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) au fichier de configuration de l’application.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lecture et création de compteurs de performances par programmation  
- Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] propose des classes qui vous permettent d’accéder par programmation aux mêmes informations de performances que celles qui sont disponibles dans la console de performances. Vous pouvez aussi utiliser ces classes pour créer des compteurs de performances personnalisés. Le tableau suivant décrit quelques-unes des classes d’analyse de performances proposées dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Le .NET Framework fournit des classes que vous pouvez utiliser pour accéder par programme aux mêmes informations de performance qui sont disponibles dans la console de performances. Vous pouvez aussi utiliser ces classes pour créer des compteurs de performances personnalisés. Le tableau suivant décrit certaines des performances de la surveillance des classes qui sont fournies dans le .NET Framework.  
   
 |Classe|Description|  
 |-----------|-----------------|  

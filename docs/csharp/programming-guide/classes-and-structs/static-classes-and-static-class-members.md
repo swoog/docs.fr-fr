@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599833"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes statiques et membres de classe statique (Guide de programmation C#)
 Une classe [statique](../../../csharp/language-reference/keywords/static.md) est fondamentalement identique à une classe non statique, à une différence près : une classe statique ne peut pas être instanciée. En d’autres termes, vous ne pouvez pas utiliser le mot clé [new](../../../csharp/language-reference/keywords/new.md) pour créer une variable du type classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant le nom de classe lui-même. Par exemple, si vous avez une classe statique nommée `UtilityClass` qui a une méthode statique publique nommée `MethodA`, vous appelez la méthode comme illustré dans l’exemple suivant :  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  La liste suivante fournit les fonctionnalités principales d’une classe statique :  
   
--   Elle contient uniquement des membres statiques.  
+- Elle contient uniquement des membres statiques.  
   
--   Elle ne peut pas être instanciée.  
+- Elle ne peut pas être instanciée.  
   
--   Elle est verrouillée (sealed).  
+- Elle est verrouillée (sealed).  
   
--   Elle ne peut pas contenir de [constructeurs d’instances](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- Elle ne peut pas contenir de [constructeurs d’instances](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
  La création d’une classe statique est par conséquent très semblable à la création d’une classe contenant uniquement des membres statiques et un constructeur privé. Un constructeur privé empêche la classe d’être instanciée. L’avantage de l’utilisation d’une classe statique est que le compilateur peut vérifier qu’aucun membre d’instance n’a été ajouté par erreur. Le compilateur garantit que les instances de cette classe ne peuvent pas être créées.  
   

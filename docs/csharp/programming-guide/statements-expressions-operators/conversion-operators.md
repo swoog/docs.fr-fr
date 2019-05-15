@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43e81a342377b155fafe26bd0430384cddad5fd4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965213"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608228"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Opérateurs de conversion (guide de programmation C#)
 
@@ -25,27 +25,27 @@ C# permet aux programmeurs de déclarer des conversions sur des classes ou struc
 
  Les opérateurs de conversion ont les propriétés suivantes :  
   
--   Les conversions déclarées comme `implicit` se produisent automatiquement selon les besoins.  
+- Les conversions déclarées comme `implicit` se produisent automatiquement selon les besoins.  
   
--   Les conversions déclarées comme `explicit` nécessitent qu’un cast soit appelé.  
+- Les conversions déclarées comme `explicit` nécessitent qu’un cast soit appelé.  
   
--   Toutes les conversions doivent être déclarées comme `static`.  
+- Toutes les conversions doivent être déclarées comme `static`.  
   
 ## <a name="related-sections"></a>Rubriques connexes
 
  Pour plus d'informations :  
   
--   [Utilisation d’opérateurs de conversion](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+- [Utilisation d’opérateurs de conversion](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Guide pratique pour implémenter des conversions définies par l’utilisateur entre des structs](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Guide pratique pour implémenter des conversions définies par l’utilisateur entre des structs](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [static](../../../csharp/language-reference/keywords/static.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

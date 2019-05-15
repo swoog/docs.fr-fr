@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063867"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557920"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Nouveautés du .NET Framework
 
@@ -115,6 +115,17 @@ Deux méthodes permettent d’exposer le point de terminaison d’intégrité et
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - À l’aide d’un fichier de configuration. Par exemple :
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 L’événement n’est pas déclenché (et son accesseur `add` est ignoré), sauf si  <xref:System.Windows.Diagnostics.VisualDiagnostics> est activé et que la variable d’environnement [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) est définie.
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  Par ailleurs, la classe <xref:System.Web.SessionState.SessionStateUtility> comporte deux nouvelles méthodes, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> et <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, qui peuvent être utilisées pour prendre en charge les opérations asynchrones.
@@ -1515,6 +1542,10 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          La bibliothèque doit vérifier si un consommateur a déclaré la valeur du commutateur et s'il l'utilise ensuite correctement.
 
         ```csharp
@@ -1526,15 +1557,31 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          Il est préférable d'utiliser un format homogène pour les commutateurs, car ils constituent un contrat formel exposé par une bibliothèque. Voici les deux formats évidents.
@@ -1781,6 +1828,14 @@ Avec les fichiers PDB de NGen, NGen peut créer un fichier PDB qui contient le m
                                               IPromotableSinglePhaseNotification promotableNotification,
                                               ISinglePhaseNotification enlistmentNotification,
                                               EnlistmentOptions enlistmentOptions)
+    ```
+
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
      La méthode peut être utilisée par une inscription précédemment créée par <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> en réponse à la méthode <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Elle demande à `System.Transactions` de promouvoir la transaction en une transaction MSDTC et de « convertir » l'inscription à promouvoir en une inscription durable. Après que la méthode s'est terminée avec succès, l'interface <xref:System.Transactions.IPromotableSinglePhaseNotification> n'est plus référencée par `System.Transactions` et toutes les futures notifications parviennent sur l'interface <xref:System.Transactions.ISinglePhaseNotification> fournie. L'inscription en question doit agir comme inscription durable, en prenant en charge la récupération et la journalisation des transactions. Consultez <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> pour plus d'informations. En outre, l'inscription doit prendre en charge <xref:System.Transactions.ISinglePhaseNotification>.  Cette méthode peut être appelée *seulement* lors du traitement d’un appel <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Si tel n'est pas le cas, une exception <xref:System.Transactions.TransactionException> est levée.

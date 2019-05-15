@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607696"
 ---
 # <a name="assembly-security-considerations"></a>Aspects de la sécurité des assemblys
 <a name="top"></a>Lorsque vous générez un assembly, vous pouvez spécifier un jeu d’autorisations que l’assembly doit exécuter. L'octroi ou non de certaines autorisations à un assembly repose sur la preuve.  
   
  La preuve est utilisée de deux façons :  
   
--   La preuve d’entrée est fusionnée avec la preuve rassemblée par le chargeur afin de constituer un jeu final de preuves utilisé pour la résolution de stratégie. Les méthodes qui utilisent cette sémantique sont **Assembly.Load**, **Assembly.LoadFrom** et **Activator.CreateInstance**.  
+- La preuve d’entrée est fusionnée avec la preuve rassemblée par le chargeur afin de constituer un jeu final de preuves utilisé pour la résolution de stratégie. Les méthodes qui utilisent cette sémantique sont **Assembly.Load**, **Assembly.LoadFrom** et **Activator.CreateInstance**.  
   
--   La preuve d’entrée est utilisée sans altération comme jeu final de preuves utilisé pour la résolution de stratégie. Les méthodes qui utilisent cette sémantique sont **Assembly.Load(byte[])** et **AppDomain.DefineDynamicAssembly()**.  
+- La preuve d’entrée est utilisée sans altération comme jeu final de preuves utilisé pour la résolution de stratégie. Les méthodes qui utilisent cette sémantique sont **Assembly.Load(byte[])** et **AppDomain.DefineDynamicAssembly()**.  
   
  Des autorisations facultatives peuvent être accordées par la [stratégie de sécurité](../../../docs/framework/misc/code-access-security-basics.md) définie sur l’ordinateur sur lequel l’assembly s’exécute. Si vous souhaitez que votre code gère toutes les exceptions de sécurité possibles, vous pouvez effectuer l'une des opérations suivantes :  
   
--   insérer une demande d'autorisation pour toutes les autorisations que votre code doit posséder et gérer à l'avance la défaillance de durée de chargement qui se produit lorsque les autorisations ne sont pas accordées ;  
+- insérer une demande d'autorisation pour toutes les autorisations que votre code doit posséder et gérer à l'avance la défaillance de durée de chargement qui se produit lorsque les autorisations ne sont pas accordées ;  
   
--   ne pas utiliser de demande d'autorisation pour obtenir les autorisations dont votre code peut avoir besoin, mais être préparé à gérer les exceptions de sécurité lorsque les autorisations ne sont pas accordées.  
+- ne pas utiliser de demande d'autorisation pour obtenir les autorisations dont votre code peut avoir besoin, mais être préparé à gérer les exceptions de sécurité lorsque les autorisations ne sont pas accordées.  
   
     > [!NOTE]
     >  La sécurité est un domaine complexe et vous pouvez effectuer votre choix parmi de nombreuses options. Pour plus d’informations, consultez [Concepts fondamentaux sur la sécurité](../../../docs/standard/security/key-security-concepts.md).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607889"
 ---
 # <a name="64-bit-applications"></a>Applications 64 bits
 Lorsque vous compilez une application, vous pouvez spécifier si elle doit être exécutée sur un système d'exploitation Windows 64 bits comme une application native ou sous WOW64 (Windows 32 bits sur Windows 64 bits). WOW64 est un environnement de compatibilité qui permet à une application 32 bits de s'exécuter sur un système 64 bits. WOW64 est inclus dans toutes les versions 64 bits du système d'exploitation Windows.  
@@ -30,26 +30,26 @@ Lorsque vous compilez une application, vous pouvez spécifier si elle doit être
   
  De nombreux assemblys s'exécutent de façon identique sur le CLR 32 bits et sur le CLR 64 bits. Toutefois, certains programmes peuvent se comporter différemment, selon le CLR, s'ils contiennent un ou plusieurs des éléments suivants :  
   
--   Des structures contenant des membres qui changent de taille selon la plateforme (par exemple de type pointeur).  
+- Des structures contenant des membres qui changent de taille selon la plateforme (par exemple de type pointeur).  
   
--   Opération arithmétique de pointeur qui inclut des tailles constantes.  
+- Opération arithmétique de pointeur qui inclut des tailles constantes.  
   
--   Appel de plateforme incorrect ou déclarations COM qui utilisent `Int32` pour des handles au lieu de `IntPtr`.  
+- Appel de plateforme incorrect ou déclarations COM qui utilisent `Int32` pour des handles au lieu de `IntPtr`.  
   
--   Code renvoyant `IntPtr` à `Int32`.  
+- Code renvoyant `IntPtr` à `Int32`.  
   
  Pour plus d’informations sur le portage d’une application 32 bits destinée à s’exécuter sur le CLR 64 bits, consultez [Migration du code managé 32 bits vers du code managé 64 bits](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Informations générales sur la programmation 64 bits  
  Pour obtenir des informations générales sur la programmation 64 bits, consultez les documents suivants :  
   
--   Pour plus d'informations sur la version 64 bits du CLR sur un ordinateur Windows 64 bits, consultez le [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) sur le site Web MSDN.  
+- Pour plus d'informations sur la version 64 bits du CLR sur un ordinateur Windows 64 bits, consultez le [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) sur le site Web MSDN.  
   
--   Dans la documentation [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)], consultez le [Guide de programmation pour Windows 64 bits](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- Dans la documentation [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)], consultez le [Guide de programmation pour Windows 64 bits](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   Pour plus d'informations sur le téléchargement d'une version 64 bits du CLR, consultez la rubrique [Téléchargements du Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) sur le site Web MSDN.  
+- Pour plus d'informations sur le téléchargement d'une version 64 bits du CLR, consultez la rubrique [Téléchargements du Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) sur le site Web MSDN.  
   
--   Pour plus d'informations sur la prise en charge de Visual Studio pour créer des applications 64 bits, consultez [Prise en charge des applications 64 bits par l'IDE Visual Studio](/visualstudio/ide/visual-studio-ide-64-bit-support).  
+- Pour plus d'informations sur la prise en charge de Visual Studio pour créer des applications 64 bits, consultez [Prise en charge des applications 64 bits par l'IDE Visual Studio](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Prise en charge de la création d'applications 64 bits par les compilateurs  
  Par défaut, lorsque vous utilisez .NET Framework pour générer une application sur un ordinateur 32 bits ou 64 bits, l'application s'exécute sur un ordinateur 64 bits en tant qu'application native (en d'autres termes, pas sous WOW64). Le tableau suivant répertorie les documents qui permettent d'expliquer comment utiliser les compilateurs Visual Studio pour créer des applications 64 bits qui s'exécutent en tant qu'applications natives ou sous WOW64, ou les deux à la fois.  

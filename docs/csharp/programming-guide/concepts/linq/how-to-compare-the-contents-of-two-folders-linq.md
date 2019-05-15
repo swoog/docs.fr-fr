@@ -2,21 +2,21 @@
 title: 'Procédure : Comparer le contenu de deux dossiers (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597110"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Procédure : Comparer le contenu de deux dossiers (LINQ) (C#)
 Cet exemple montre trois façons de comparer deux listes de fichiers :  
   
--   En recherchant une valeur booléenne qui spécifie si les deux listes sont identiques  
+- En recherchant une valeur booléenne qui spécifie si les deux listes sont identiques  
   
--   En recherchant l’intersection pour récupérer les fichiers qui se trouvent dans les deux dossiers  
+- En recherchant l’intersection pour récupérer les fichiers qui se trouvent dans les deux dossiers  
   
--   En recherchant la différence ensembliste pour récupérer les fichiers qui se trouvent dans un dossier, mais pas dans l’autre  
+- En recherchant la différence ensembliste pour récupérer les fichiers qui se trouvent dans un dossier, mais pas dans l’autre  
   
     > [!NOTE]
     >  Les techniques présentées ici peuvent être adaptées pour comparer des séquences d’objets de tout type.  

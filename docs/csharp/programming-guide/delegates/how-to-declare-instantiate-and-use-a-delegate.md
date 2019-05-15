@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608749"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procédure : Déclarer, instancier et utiliser un délégué (Guide de programmation C#)
 Dans C# 1.0 et versions ultérieures, vous pouvez déclarer des délégués comme illustré dans l’exemple suivant.  
@@ -42,7 +42,7 @@ Dans C# 1.0 et versions ultérieures, vous pouvez déclarer des délégués com
   
 ## <a name="robust-programming"></a>Programmation fiable  
   
--   Déclaration d’un délégué.  
+- Déclaration d’un délégué.  
   
      L’instruction suivante déclare un nouveau type délégué.  
   
@@ -50,7 +50,7 @@ Dans C# 1.0 et versions ultérieures, vous pouvez déclarer des délégués com
   
      Chaque type délégué décrit le nombre et les types des arguments, ainsi que le type de la valeur de retour des méthodes qu’il peut encapsuler. Chaque fois qu’un nouvel ensemble de types d’arguments ou de types de valeur de retour est nécessaire, un nouveau type délégué doit être déclaré.  
   
--   Instanciation d’un délégué.  
+- Instanciation d’un délégué.  
   
      Une fois que vous avez déclaré un type délégué, vous devez créer un objet délégué et l’associer à une méthode particulière. Pour cela, dans l’exemple précédent vous passez la méthode `PrintTitle` à la méthode `ProcessPaperbackBooks`, comme illustré dans l’exemple suivant :  
   
@@ -64,7 +64,7 @@ Dans C# 1.0 et versions ultérieures, vous pouvez déclarer des délégués com
   
      Une fois un délégué créé, la méthode à laquelle il est associé ne change jamais. Les objets délégué sont immuables.  
   
--   Appel d’un délégué.  
+- Appel d’un délégué.  
   
      Une fois créé, un objet délégué est généralement passé à un autre code qui appellera le délégué. Pour appeler un objet délégué, vous devez utiliser le nom de l’objet délégué, suivi des arguments entre parenthèses à passer au délégué. Voici un exemple d’appel de délégué :  
   

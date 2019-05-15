@@ -2,12 +2,12 @@
 title: Recherche de texte dans des documents Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720783"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596630"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Recherche de texte dans des documents Word (C#)
 Cette rubrique étend les requêtes précédentes afin d'effectuer une opération utile : rechercher toutes les occurrences d'une chaîne dans le document.  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Étapes suivantes  
  La section suivante fournit plus d'informations sur les documents WordprocessingML :  
   
--   [Détails des documents WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Détails des documents WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

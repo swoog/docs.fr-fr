@@ -2,17 +2,17 @@
 title: Mappages de types de données ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51090ede73710afedf74e1d2b8b5363337426279
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772214"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584532"
 ---
 # <a name="odbc-data-type-mappings"></a>Mappages de types de données ODBC
-Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] déduit pour les types de données du fournisseur de données .NET Framework pour ODBC (<xref:System.Data.Odbc>). Les méthodes d’accesseur typées pour les <xref:System.Data.Odbc.OdbcDataReader> sont également répertoriés.  
+Le tableau suivant présente le type .NET Framework déduit pour les types de données à partir du fournisseur de données .NET Framework pour ODBC (<xref:System.Data.Odbc>). Les méthodes d’accesseur typées pour les <xref:System.Data.Odbc.OdbcDataReader> sont également répertoriés.  
   
-|Type ODBC|Type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Accesseur typé [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Type ODBC|Type .NET Framework|Accesseur typé de .NET framework|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  

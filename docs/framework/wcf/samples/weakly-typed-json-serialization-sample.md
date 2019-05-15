@@ -2,12 +2,12 @@
 title: Weakly-typed JSON Serialization, exemple
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006354"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589215"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization, exemple
 Lors de la sérialisation d'un type défini par l'utilisateur dans un format de transmission donné, ou de la désérialisation d'un format de transmission dans un type défini par l'utilisateur, le type défini par l'utilisateur donné doit être disponible à la fois sur le service et sur le client. En général, l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est alors appliqué à ces types définis par l'utilisateur, et l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué à leurs membres. Ce mécanisme s’applique également lorsque vous travaillez avec des objets JavaScript Objet Notation (JSON), comme décrit dans la rubrique [Comment : Sérialiser et désérialiser des données JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Lors de la sérialisation d'un type défini par l'utilisateur dans un format de 
   
  Cela peut être gênant, surtout si le client doit gérer plusieurs types d'objets JSON.  
   
- Le type `JsonObject` introduit une représentation faiblement typée de l'objet JSON désérialisé. `JsonObject` repose sur le mappage naturel entre les objets JSON et les dictionnaires [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , et le mappage entre les tableaux JSON et les tableaux [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Le code suivant illustre le type `JsonObject` .  
+ Le type `JsonObject` introduit une représentation faiblement typée de l'objet JSON désérialisé. `JsonObject` s’appuie sur le mappage naturel entre les objets JSON et les dictionnaires .NET Framework et le mappage entre les tableaux JSON et les tableaux de .NET Framework. Le code suivant illustre le type `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  

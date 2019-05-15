@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3c701d1b65d31315ba931cca729e465ba7d766b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 680f488a98d6e7e31b3d077843514fd12f75481c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620876"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586442"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Procédure : Trier un tableau en Visual Basic
 Cet exemple déclare un tableau de `String` objets nommés `zooAnimals`, il remplit, puis le tri par ordre alphabétique.  
@@ -32,7 +32,7 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite :  
   
-- Accès à Mscorlib.dll et <xref:System> espace de noms.  
+- L’accès à la <xref:System> espace de noms.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  

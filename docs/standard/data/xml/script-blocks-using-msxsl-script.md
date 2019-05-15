@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589975"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocs de scripts utilisant msxsl:script
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts incorporés en utilisant l'élément `msxsl:script`. Lorsque la feuille de style est chargée, toute fonction définie est compilée en langage MSIL (Microsoft Intermediate Language) par le CodeDOM (Code Document Object Model) et exécutée au cours de l’exécution. L' assembly généré à partir du bloc de script incorporé est distinct de l'assembly généré pour la feuille de style.  
@@ -33,7 +33,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
   
  Le préfixe `msxsl` est lié à l'URI d'espace de noms `urn:schemas-microsoft-com:xslt`. La feuille de style doit inclure la déclaration d'espace de noms `xmlns:msxsl=urn:schemas-microsoft-com:xslt`.  
   
- L'attribut `language` est facultatif. Sa valeur est le langage du bloc de code incorporé. Ce langage est mappé au compilateur CodeDOM approprié à l'aide de la méthode <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType>. La classe <xref:System.Xml.Xsl.XslCompiledTransform> peut prendre en charge tout langage Microsoft .NET, à condition que le fournisseur approprié soit installé sur l'ordinateur et enregistré dans la section system.codedom du fichier machine.config. Si aucun attribut `language` n'est spécifié, le langage par défaut est JScript. Le nom du langage ne respecte pas la casse : les termes « JavaScript » et « javascript » sont équivalents.  
+ L'attribut `language` est facultatif. Sa valeur est le langage du bloc de code incorporé. Ce langage est mappé au compilateur CodeDOM approprié à l’aide de la méthode <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType>. La classe <xref:System.Xml.Xsl.XslCompiledTransform> peut prendre en charge tout langage Microsoft .NET, à condition que le fournisseur approprié soit installé sur l'ordinateur et enregistré dans la section system.codedom du fichier machine.config. Si aucun attribut `language` n'est spécifié, le langage par défaut est JScript. Le nom du langage ne respecte pas la casse : les termes « JavaScript » et « javascript » sont équivalents.  
   
  L'attribut `implements-prefix` est obligatoire. Cet attribut est utilisé pour déclarer un espace de noms et l'associer au bloc de script. La valeur de cet attribut est le préfixe qui représente l'espace de noms. Ce préfixe peut être défini à un endroit d'une feuille de style.  
   
@@ -51,7 +51,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 ## <a name="script-functions"></a>Fonctions de script  
  Les fonctions peuvent être déclarées dans l'élément `msxsl:script`. Lorsqu'une fonction est déclarée, elle est contenue dans un bloc de script. Les feuilles de style peuvent contenir plusieurs blocs de scripts, chacun fonctionnant indépendamment des autres. Ainsi, si vous êtes en cours d'exécution dans un bloc de script, vous ne pouvez pas appeler une fonction que vous avez définie dans un autre bloc de script, sauf si elle est déclarée comme possédant le même espace de noms et le même langage de script. Puisque chaque bloc de script peut être écrit dans son propre langage et que le bloc est analysé en fonction des règles grammaticales de cet analyseur de langage, il est recommandé d'utiliser la syntaxe correcte pour le langage utilisé. Par exemple, si vous êtes dans un bloc de script Microsoft C#, utilisez la syntaxe de commentaires C#.  
   
- Les arguments fournis et les valeurs retournées par la fonction peuvent être de n'importe quel type. Les types XPath W3C étant un sous-ensemble des types CLR (common language runtime), une conversion de type est appliquée aux types qui ne sont pas considérés comme des types XPath. Le tableau suivant indique les correspondances entre les types W3C et les types CLR.  
+ Les arguments fournis et les valeurs retournées par la fonction peuvent être de n’importe quel type. Les types XPath W3C étant un sous-ensemble des types CLR (common language runtime), une conversion de type est appliquée aux types qui ne sont pas considérés comme des types XPath. Le tableau suivant indique les correspondances entre les types W3C et les types CLR.  
   
 |Type W3C|Type CLR|  
 |--------------|--------------|  
@@ -71,11 +71,11 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 #### <a name="assemblies"></a>Assemblys  
  Les deux assemblys suivants sont référencés par défaut :  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll (lorsque le langage de script est VB)  
+- Microsoft.VisualBasic.dll (lorsque le langage de script est VB)  
   
  Vous pouvez importer les assemblys supplémentaires en utilisant l'élément `msxsl:assembly`. Cela comprend l'assembly lorsque la feuille de style est compilée. L'élément `msxsl:assembly` a la définition suivante :  
   
@@ -94,21 +94,21 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 #### <a name="namespaces"></a>Espaces de noms  
  Les espaces de noms suivants sont inclus par défaut :  
   
--   Système  
+- Système  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (lorsque le langage de script est VB)  
+- Microsoft.VisualBasic (lorsque le langage de script est VB)  
   
  Vous pouvez ajouter la prise en charge d'autres espaces de noms à l'aide de l'attribut `namespace`. La valeur de l'attribut est le nom de l'espace de noms.  
   

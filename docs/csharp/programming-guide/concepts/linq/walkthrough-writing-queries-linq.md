@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595790"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procédure pas à pas : Écrire des requêtes en C# (LINQ)
 Cette procédure pas à pas présente les fonctionnalités du langage C# utilisées pour écrire des expressions de requête LINQ.  
@@ -41,17 +41,17 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
 ## <a name="create-an-in-memory-data-source"></a>Créer une source de données en mémoire  
  La source de données pour les requêtes est une simple liste d’objets `Student`. Chaque enregistrement `Student` comporte un prénom, un nom et un tableau d’entiers représentant les notes d’examens en classe. Copiez ce code dans votre projet. Notez les caractéristiques suivantes :  
   
--   La classe `Student` se compose de propriétés implémentées automatiquement.  
+- La classe `Student` se compose de propriétés implémentées automatiquement.  
   
--   Chaque étudiant de la liste est initialisé avec un initialiseur d’objet.  
+- Chaque étudiant de la liste est initialisé avec un initialiseur d’objet.  
   
--   La liste elle-même est initialisée avec un initialiseur de collection.  
+- La liste elle-même est initialisée avec un initialiseur de collection.  
   
  La totalité de cette structure de données est initialisée et instanciée sans appels explicites à un constructeur quelconque ni accès au membre explicite. Pour plus d’informations sur ces nouvelles fonctionnalités, consultez [Propriétés implémentées automatiquement](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) et [Initialiseurs d’objets et de collection](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Pour ajouter la source de données  
   
--   Ajoutez la classe `Student` et la liste initialisée d’étudiants à la classe `Program` dans votre projet.  
+- Ajoutez la classe `Student` et la liste initialisée d’étudiants à la classe `Program` dans votre projet.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
   
 #### <a name="to-create-a-simple-query"></a>Pour créer une requête simple  
   
--   Dans la méthode `Main` de l’application, créez une requête simple qui, quand elle est exécutée, produit une liste de tous les étudiants dont la note pour le premier test est supérieure à 90. Notez que, puisque l’objet `Student` entier est sélectionné, le type de la requête est `IEnumerable<Student>`. Bien que le code puisse également utiliser un type implicite à l’aide du mot clé [var](../../../../csharp/language-reference/keywords/var.md), les types explicites sont utilisés pour illustrer clairement les résultats. (Pour plus d’informations sur `var`, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- Dans la méthode `Main` de l’application, créez une requête simple qui, quand elle est exécutée, produit une liste de tous les étudiants dont la note pour le premier test est supérieure à 90. Notez que, puisque l’objet `Student` entier est sélectionné, le type de la requête est `IEnumerable<Student>`. Bien que le code puisse également utiliser un type implicite à l’aide du mot clé [var](../../../../csharp/language-reference/keywords/var.md), les types explicites sont utilisés pour illustrer clairement les résultats. (Pour plus d’informations sur `var`, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Notez également que la variable de portée de la requête, `student`, sert de référence à chaque `Student` dans la source, en fournissant l’accès au membre pour chaque objet.  
   
@@ -75,9 +75,9 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
   
 1. Écrivez maintenant la boucle `foreach` qui entraînera l’exécution de la requête. Notez les points suivants concernant le code :  
   
-    -   Chaque élément de la séquence retournée est accessible via la variable d’itération dans la boucle `foreach`.  
+    - Chaque élément de la séquence retournée est accessible via la variable d’itération dans la boucle `foreach`.  
   
-    -   Le type de cette variable est `Student` et le type de la variable de requête est compatible, `IEnumerable<Student>`.  
+    - Le type de cette variable est `Student` et le type de la variable de requête est compatible, `IEnumerable<Student>`.  
   
 2. Après avoir ajouté ce code, générez et exécutez l’application pour visualiser les résultats dans la fenêtre de **console**.  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608694"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Procédure : Publier des événements conformes aux indications du .NET Framework (Guide de programmation C#)
 La procédure suivante montre comment ajouter à vos classes et structures des événements qui respectent le modèle [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] standard. Tous les événements de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sont basés sur le délégué <xref:System.EventHandler>, qui est défini comme suit :  
@@ -51,19 +51,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 3. Déclarez l’événement dans votre classe de publication en effectuant l’une des étapes suivantes.  
   
-    1.  Si vous n’avez aucune classe EventArgs personnalisée, votre type d’événement sera le délégué EventHandler non générique. Il est inutile de déclarer le délégué, car il l’est déjà dans l’espace de noms <xref:System> inclus au moment où vous créez votre projet C#. Ajoutez le code suivant à votre classe de serveur de publication.  
+    1. Si vous n’avez aucune classe EventArgs personnalisée, votre type d’événement sera le délégué EventHandler non générique. Il est inutile de déclarer le délégué, car il l’est déjà dans l’espace de noms <xref:System> inclus au moment où vous créez votre projet C#. Ajoutez le code suivant à votre classe de serveur de publication.  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  Si vous utilisez la version non générique de <xref:System.EventHandler> et que vous avez une classe personnalisée dérivée de <xref:System.EventArgs>, déclarez votre événement à l’intérieur de votre classe de publication et utilisez votre délégué de l’étape 2 comme type.  
+    2. Si vous utilisez la version non générique de <xref:System.EventHandler> et que vous avez une classe personnalisée dérivée de <xref:System.EventArgs>, déclarez votre événement à l’intérieur de votre classe de publication et utilisez votre délégué de l’étape 2 comme type.  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3.  Si vous utilisez la version générique, vous n’avez pas besoin de délégué personnalisé. Au lieu de cela, dans votre classe de publication, vous spécifiez votre type d’événement en tant que `EventHandler<CustomEventArgs>`, en insérant le nom de votre propre classe entre les crochets.  
+    3. Si vous utilisez la version générique, vous n’avez pas besoin de délégué personnalisé. Au lieu de cela, dans votre classe de publication, vous spécifiez votre type d’événement en tant que `EventHandler<CustomEventArgs>`, en insérant le nom de votre propre classe entre les crochets.  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
