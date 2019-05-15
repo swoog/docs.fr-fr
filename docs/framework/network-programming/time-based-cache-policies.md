@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613835"
 ---
 # <a name="time-based-cache-policies"></a>stratégies de cache basées sur la durée
 Une stratégie de cache basée sur la durée définit l’actualisation des entrées en cache en fonction de l’heure de récupération de la ressource, des en-têtes retournés avec la ressource et de l’heure actuelle. Quand vous définissez une stratégie de cache basée sur la durée, vous pouvez utiliser la stratégie basée sur la durée <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou créer une stratégie basée sur la durée personnalisée. Si vous utilisez la stratégie basée sur la durée par défaut pour les ressources obtenues à l’aide du protocole HTTP (Hypertext Transfer Protocol), le comportement du cache est précisé par les en-têtes inclus dans la réponse en cache et par les comportements spécifiés dans les sections 13 et 14 de la norme RFC 2616, disponible sur le site web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Pour obtenir un exemple de code qui montre comment définir la stratégie basée sur la durée par défaut pour les ressources HTTP, consultez [Guide pratique pour définir la stratégie de cache basée sur la durée par défaut pour une application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Pour obtenir des exemples de code qui montrent comment créer et utiliser des stratégies de cache, consultez [Configuration de la mise en cache dans les applications réseau](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ Une stratégie de cache basée sur la durée définit l’actualisation des entr
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Critères déterminant l’actualisation des entrées en cache  
  Pour personnaliser une stratégie de cache basée sur la durée, vous pouvez spécifier un ou plusieurs des critères suivants qui déterminent l’actualisation des entrées en cache :  
   
--   Ancienneté maximale  
+- Ancienneté maximale  
   
--   Obsolescence maximale  
+- Obsolescence maximale  
   
--   Actualisation minimale  
+- Actualisation minimale  
   
--   Date de synchronisation du cache  
+- Date de synchronisation du cache  
   
 > [!NOTE]
 >  Utiliser la stratégie de cache basée sur la durée par défaut n’équivaut pas à définir une stratégie de cache par défaut pour votre application. La stratégie basée sur la durée par défaut est une stratégie spécifique qui peut être utilisée au niveau de la requête ou de l’application. La stratégie de cache par défaut pour votre application est une stratégie (basée sur l’emplacement ou sur la durée) qui est appliquée quand aucune stratégie n’est définie au niveau d’une requête. Pour plus d’informations sur la définition d’une stratégie de cache par défaut pour votre application, consultez <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,9 +57,9 @@ Une stratégie de cache basée sur la durée définit l’actualisation des entr
   
  Les rubriques suivantes fournissent des informations sur les effets de la combinaison de plusieurs critères d’une stratégie de cache basée sur la durée :  
   
--   [Interaction de la stratégie de cache : ancienneté maximale et obsolescence maximale](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interaction de la stratégie de cache : ancienneté maximale et obsolescence maximale](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Interaction de la stratégie de cache : ancienneté maximale et actualisation minimale](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Interaction de la stratégie de cache : ancienneté maximale et actualisation minimale](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

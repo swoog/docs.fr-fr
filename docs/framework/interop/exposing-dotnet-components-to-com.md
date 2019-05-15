@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626349"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Exposition de composants .NET Framework à COM
 L’écriture d’un type .NET et l’utilisation de ce type à partir de code non managé sont deux activités distinctes pour les développeurs. Cette section contient plusieurs conseils pour l’écriture de code managé interagissant avec des clients COM :  
   
--   [Qualification des types .NET pour l’interopérabilité](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Qualification des types .NET pour l’interopérabilité](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
      Tous les types, méthodes, propriétés, champs et événements managés que vous voulez exposer à COM doivent être publics. Les types doivent avoir un constructeur public par défaut, qui est le seul constructeur pouvant être appelé dans COM.  
   
--   [Application d’attributs d’interopérabilité](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Application d’attributs d’interopérabilité](../../../docs/framework/interop/applying-interop-attributes.md).  
   
      Les attributs personnalisés dans du code managé peuvent améliorer l’interopérabilité d’un composant.  
   
--   [Empaquetage d’un assembly pour COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Empaquetage d’un assembly pour COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
      Les développeurs COM peuvent vous demander de résumer les étapes impliquées dans le référencement et le déploiement de vos assemblys.  
   

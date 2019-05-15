@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026495"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588540"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procédure : utiliser des fuseaux horaires en arithmétique de date et heure
 
@@ -59,8 +59,6 @@ Notez que si cet ajout est effectué simplement sur le <xref:System.DateTimeOffs
 ## <a name="compiling-the-code"></a>Compilation du code
 
 Cet exemple nécessite :
-
-* Qu’une référence à System.Core.dll soit ajoutée au projet.
 
 * Que l'espace de noms <xref:System> soit importé avec l'instruction `using` (obligatoire en C#).
 

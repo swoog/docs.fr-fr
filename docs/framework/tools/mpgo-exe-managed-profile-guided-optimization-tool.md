@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616058"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Utiliser Mpgo.exe depuis Visual Studio  
  Vous pouvez exécuter Mpgo.exe dans Visual Studio (consultez l’article [Guide pratique pour spécifier les événements de build (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) avec les restrictions suivantes :  
   
--   Vous ne pouvez pas utiliser les chemins d’accès entre guillemets avec des marques de barre oblique finales, car les macros Visual Studio utilisent également des marques de barre oblique finales par défaut. (Par exemple, `–OutDir "C:\Output Folder\"` n'est pas valide.) Pour contourner cette restriction, évitez la barre oblique finale. (Par exemple, utilisez `-OutDir "$(OutDir)\"` à la place.)  
+- Vous ne pouvez pas utiliser les chemins d’accès entre guillemets avec des marques de barre oblique finales, car les macros Visual Studio utilisent également des marques de barre oblique finales par défaut. (Par exemple, `–OutDir "C:\Output Folder\"` n'est pas valide.) Pour contourner cette restriction, évitez la barre oblique finale. (Par exemple, utilisez `-OutDir "$(OutDir)\"` à la place.)  
   
--   Par défaut, Mpgo.exe n'est pas dans le chemin d'accès de build de Visual Studio. Vous devez soit ajouter le chemin d'accès à Visual Studio, soit spécifier le chemin d'accès complet sur la ligne de commande du Mpgo. Vous pouvez utiliser le paramètre `–Scenario` ou `–Import` dans l'événement après génération dans Visual Studio. Toutefois, le processus habituel consiste à utiliser `–Scenario` une seule fois à partir de l’invite de commandes développeur pour Visual Studio, puis à utiliser `–Import` pour mettre à jour les assemblys optimisés après chaque génération, par exemple : `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Par défaut, Mpgo.exe n'est pas dans le chemin d'accès de build de Visual Studio. Vous devez soit ajouter le chemin d'accès à Visual Studio, soit spécifier le chemin d'accès complet sur la ligne de commande du Mpgo. Vous pouvez utiliser le paramètre `–Scenario` ou `–Import` dans l'événement après génération dans Visual Studio. Toutefois, le processus habituel consiste à utiliser `–Scenario` une seule fois à partir de l’invite de commandes développeur pour Visual Studio, puis à utiliser `–Import` pour mettre à jour les assemblys optimisés après chaque génération, par exemple : `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Exemples  

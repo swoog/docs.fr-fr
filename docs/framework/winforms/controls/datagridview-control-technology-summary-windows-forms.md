@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909271"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588834"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Résumé de la technologie du contrôle DataGridView (Windows Forms)
 Cette rubrique rassemble des informations sur le contrôle `DataGridView` et les classes qui prennent en charge son utilisation.  
@@ -29,7 +29,7 @@ Cette rubrique rassemble des informations sur le contrôle `DataGridView` et les
  `BindingSource`  
   
 ## <a name="background"></a>Présentation  
- Concepteurs d’interface (UI) utilisateur souvent s’avérer nécessaire pour afficher les données tabulaires pour les utilisateurs. Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] offre plusieurs moyens pour afficher les données dans une table ou une grille. Le `DataGridView` contrôle représente l’évolution la plus récente de cette technologie pour les applications Windows Forms.  
+ Concepteurs d’interface (UI) utilisateur souvent s’avérer nécessaire pour afficher les données tabulaires pour les utilisateurs. Le .NET Framework fournit plusieurs façons d’afficher des données dans une table ou une grille. Le `DataGridView` contrôle représente l’évolution la plus récente de cette technologie pour les applications Windows Forms.  
   
  Le `DataGridView` contrôle peut afficher des lignes de données à partir d’un magasin de données. Nombreux types de magasins de données sont pris en charge. Le magasin de données peut contenir des données simples, non typées, tels qu’un tableau unidimensionnel, ou elle peut contenir des données typées, comme un <xref:System.Data.DataSet>. Pour plus d'informations, voir [Procédure : Lier des données pour les Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

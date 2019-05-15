@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086063"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064096"
 ---
 # <a name="specifying-an-entry-point"></a>Spécification d'un point d'entrée
 Un point d’entrée identifie l’emplacement d’une fonction dans une DLL. Dans un projet managé, le nom d’origine ou le point d’entrée ordinal d’une fonction cible identifie cette fonction dans les limites d’interopérabilité. De plus, vous pouvez mapper le point d’entrée à un autre nom pour renommer la fonction de façon plus appropriée.  
   
  Voici une liste de raisons possibles pour renommer une fonction DLL :  
   
--   Éviter d’utiliser des noms de fonction API respectant la casse.  
+- Éviter d’utiliser des noms de fonction API respectant la casse.  
   
--   Utiliser un nom respectant les conventions de nommage actuelles.  
+- Utiliser un nom respectant les conventions de nommage actuelles.  
   
--   Prendre en charge les fonctions qui acceptent différents types de données (en déclarant plusieurs versions de la même fonction DLL).  
+- Prendre en charge les fonctions qui acceptent différents types de données (en déclarant plusieurs versions de la même fonction DLL).  
   
--   Simplifier l’utilisation des API qui contiennent des versions ANSI et Unicode.  
+- Simplifier l’utilisation des API qui contiennent des versions ANSI et Unicode.  
   
  Cette rubrique montre comment renommer une fonction DLL dans du code managé.  
   
@@ -34,10 +34,8 @@ Un point d’entrée identifie l’emplacement d’une fonction dans une DLL. Da
  Visual Basic utilise le mot clé **Function** dans l’instruction **Declare** pour définir le champ <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. L’exemple suivant illustre une déclaration simple.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -48,10 +46,8 @@ End Class
  Vous pouvez remplacer le point d’entrée **MessageBox** par **MsgBox** en incluant le mot clé **Alias** dans votre définition, comme dans l’exemple suivant. Dans les deux exemples, le mot clé **Auto** vous évite de devoir spécifier la version du jeu de caractères pour le point d’entrée. Pour plus d’informations sur la sélection d’un jeu de caractères, consultez [Spécification d’un jeu de caractères](../../../docs/framework/interop/specifying-a-character-set.md).  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MsgBox _
+Friend Class NativeMethods
+    Friend Declare Auto Function MsgBox _
         Lib "user32.dll" Alias "MessageBox" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
@@ -76,7 +72,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
     internal static extern int MessageBox(

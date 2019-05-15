@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608538"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593329"
 ---
 # <a name="configuring-wcf-services"></a>Configuration des services WCF
 
@@ -22,7 +22,7 @@ Une fois que vous avez conçu et implémenté votre contrat de service, vous êt
  En commençant par [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF est fourni avec un nouveau modèle de configuration par défaut qui simplifie les conditions requises de configuration WCF. Si vous ne fournissez pas de toute configuration de WCF pour un service particulier, le runtime configure automatiquement votre service avec les comportements, les liaisons et les points de terminaison par défaut.  
   
  [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un service Windows Communication Foundation (WCF) est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configuration de la technologie. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
+ Un service Windows Communication Foundation (WCF) est configurable à l’aide de la technologie de configuration .NET Framework. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
   
  [Liaisons](../../../docs/framework/wcf/bindings.md)  
  En outre, WCF inclut plusieurs configurations courantes fournies par le système sous la forme de liaisons qui vous permettent de sélectionner rapidement les principales fonctionnalités de base pour la manière dont un client / service communiquent, tels que les transports, sécurité et utilisé des encodages de message.  

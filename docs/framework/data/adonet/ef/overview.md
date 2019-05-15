@@ -2,18 +2,18 @@
 title: Vue d’ensemble d’Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034064"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583848"
 ---
 # <a name="entity-framework-overview"></a>Présentation d’Entity Framework
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est un ensemble de technologies dans ADO.NET qui prennent en charge le développement d'applications logicielles orientées données. Les architectes et les développeurs d'applications orientées données sont confrontés à la nécessité d'atteindre deux objectifs très différents. Ils doivent modeler les entités, les relations et la logique des problèmes liés à l'activité de l'entreprise qu'ils résolvent, et ils doivent également travailler avec les moteurs de données utilisés pour stocker et récupérer les données. Les données peuvent être réparties entre plusieurs systèmes de stockage, chacun ayant ses propres protocoles ; même les applications qui fonctionnent avec un seul système de stockage doivent équilibrer les besoins du système de stockage par rapport aux besoins en matière d’écriture d’un code d’application efficace et facile à gérer.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permet aux développeurs de travailler avec des données sous la forme de propriétés et d'objets spécifiques aux domaines, tels que des clients et des adresses de clients, sans qu'il soit nécessaire de se préoccuper des tables et des colonnes de base de données sous-jacentes dans lesquelles sont stockées ces données. Avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], les développeurs peuvent travailler à un niveau supérieur d'abstraction lorsqu'ils traitent les données, et peuvent créer et maintenir des applications orientées données avec moins de code que dans les applications traditionnelles. Étant donné que le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est un composant de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applications peuvent s’exécuter sur n’importe quel ordinateur sur lequel le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depuis la version 3.5 SP1 est installé.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permet aux développeurs de travailler avec des données sous la forme de propriétés et d'objets spécifiques aux domaines, tels que des clients et des adresses de clients, sans qu'il soit nécessaire de se préoccuper des tables et des colonnes de base de données sous-jacentes dans lesquelles sont stockées ces données. Avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], les développeurs peuvent travailler à un niveau supérieur d'abstraction lorsqu'ils traitent les données, et peuvent créer et maintenir des applications orientées données avec moins de code que dans les applications traditionnelles. Étant donné que le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est un composant du .NET Framework, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applications peuvent s’exécuter sur n’importe quel ordinateur sur lequel est installé le .NET Framework depuis la version 3.5 SP1.
 
 ## <a name="give-life-to-models"></a>Donner vie aux modèles
  La division de l'application ou du service en trois parties (modèle de domaine, modèle logique et modèle physique) constitue une approche de conception commune et utilisé de longue date pour la construction d'une application ou d'un service. Le modèle de domaine définit les entités et les relations dans le système qui est en cours de modélisation. Le modèle logique d'une base de données relationnelle normalise les entités et les relations dans des tables avec des contraintes de clé étrangère. Le modèle physique s'occupe des fonctionnalités d'un moteur de données particulier en spécifiant des détails de stockage tels que le partitionnement et l'indexation.

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583553"
 ---
 # <a name="application-settings-overview"></a>Vue d'ensemble des paramètres d'application
 Cette rubrique explique comment créer et stocker des données de paramètres pour le compte de votre application et de vos utilisateurs.  
   
  La fonctionnalité Paramètres des applications de Windows Forms simplifie la création, le stockage et la gestion des applications personnalisées et des préférences utilisateur sur l’ordinateur client. Avec les paramètres des applications Windows Forms, vous pouvez stocker non seulement des données d'application telles que des chaînes de connexion de base de données, mais également des données spécifiques à l'utilisateur, telles que les préférences des applications utilisateur. À l'aide de Visual Studio ou de code managé personnalisé, vous pouvez créer de nouveaux paramètres, les lire et écrire sur disque, les lier à des propriétés sur vos formulaires et valider les données des paramètres avant le chargement et l'enregistrement.  
   
- Les paramètres des applications permettent aux développeurs d'enregistrer l'état dans leur application avec très peu de code personnalisé. Ils remplacent les propriétés dynamiques dans les versions précédentes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Les paramètres des applications contiennent de nombreuses améliorations par rapport aux propriétés dynamiques, qui sont en lecture seule, à liaison tardive et nécessitent davantage de programmation personnalisée. Les classes de propriétés dynamiques ont été conservées dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], mais il s'agit simplement de classes de shell qui encapsulent de manière dynamique les classes de paramètres d'application.  
+ Paramètres d’application permet aux développeurs d’enregistrer l’état dans leur application avec très peu de code personnalisé et est un remplacement pour les propriétés dynamiques dans les versions précédentes du .NET Framework. Les paramètres des applications contiennent de nombreuses améliorations par rapport aux propriétés dynamiques, qui sont en lecture seule, à liaison tardive et nécessitent davantage de programmation personnalisée. Les classes de propriétés dynamiques ont été conservées dans [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], mais il s'agit simplement de classes de shell qui encapsulent de manière dynamique les classes de paramètres d'application.  
   
 ## <a name="what-are-application-settings"></a>Présentation des paramètres d'application  
  Vos applications Windows Forms nécessitent souvent des données critiques pour l'exécution de l'application, mais que vous ne souhaitez pas inclure directement dans le code de l'application. Si votre application utilise un service web ou un serveur de bases de données, vous souhaiterez peut-être stocker ces informations dans un fichier distinct, pour pouvoir le modifier à l'avenir sans recompilation. De même, vos applications peuvent nécessiter le stockage des données spécifiques à l'utilisateur actuel. La plupart des applications, par exemple, offrent des préférences utilisateur qui permettent de personnaliser leur apparence et leur comportement.  
@@ -34,7 +34,7 @@ Cette rubrique explique comment créer et stocker des données de paramètres po
  Les contrôles personnalisés peuvent aussi enregistrer leurs propres paramètres en implémentant l'interface <xref:System.Configuration.IPersistComponentSettings> , qui expose la méthode <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Le contrôle Windows Forms <xref:System.Windows.Forms.ToolStrip> implémente cette interface pour enregistrer la position des barres d'outils et des éléments de barre d'outils d'une session d'application à une autre. Pour plus d’informations sur les contrôles personnalisés et les paramètres d’application, consultez [Application Settings for Custom Controls](application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Limitations des paramètres d'application  
- Vous ne pouvez pas utiliser les paramètres d'application dans une application non managée qui héberge [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Les paramètres ne fonctionnent pas dans des environnements tels que les compléments Visual Studio, C++ pour Microsoft Office, l'hébergement de contrôles dans Internet Explorer ou les projets et les compléments Microsoft Outlook.  
+ Vous ne pouvez pas utiliser les paramètres d’application dans une application non managée qui héberge le .NET Framework. Les paramètres ne fonctionnent pas dans des environnements tels que les compléments Visual Studio, C++ pour Microsoft Office, l'hébergement de contrôles dans Internet Explorer ou les projets et les compléments Microsoft Outlook.  
   
  À l'heure actuelle, vous ne pouvez pas établir de liaison à certaines propriétés dans Windows Forms. L'exemple le plus notable est la propriété <xref:System.Windows.Forms.Form.ClientSize%2A> , car une liaison à cette propriété provoque un comportement imprévisible au moment de l'exécution. En règle générale, vous pouvez contourner ces problèmes en enregistrant et en chargeant ces paramètres par programmation.  
   

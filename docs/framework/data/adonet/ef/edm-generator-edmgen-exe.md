@@ -2,12 +2,12 @@
 title: EDM Generator (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607669"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584591"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Generator (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe est un outil en ligne de commande utilisé avec le modèle [!INCLUDE[
 
 - Générez un fichier de code C# ou Visual Basic qui contient les vues prégénérées d'un modèle existant. Pour plus d’informations, [Comment : Prégénérer des vues pour améliorer les performances de requête](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
 
-L'outil EdmGen.exe est installé dans le répertoire du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Dans de nombreux cas, celui-ci se trouve dans C:\windows\Microsoft.NET\Framework\v4.0. Pour les systèmes 64 bits, il se trouve dans C:\windows\Microsoft.NET\Framework64\v4.0. Vous pouvez également accéder à l’outil EdmGen.exe à partir de l’invite de commandes de Visual Studio (cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur **Microsoft Visual Studio 2010**, pointez sur **Visual Studio Tools**, puis cliquez sur **invite de commandes de Visual Studio 2010**).
+L’outil EdmGen.exe est installé dans le répertoire .NET Framework. Dans de nombreux cas, celui-ci se trouve dans C:\windows\Microsoft.NET\Framework\v4.0. Pour les systèmes 64 bits, il se trouve dans C:\windows\Microsoft.NET\Framework64\v4.0. Vous pouvez également accéder à l’outil EdmGen.exe à partir de l’invite de commandes de Visual Studio (cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur **Microsoft Visual Studio 2010**, pointez sur **Visual Studio Tools**, puis cliquez sur **invite de commandes de Visual Studio 2010**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ Lorsque vous utilisez l'outil EdmGen.exe, vous devez spécifier l'un des modes s
 |Option|Description|
 |------------|-----------------|
 |`/p[roject]:`\<string>|Spécifie le nom de projet à utiliser. Le nom de projet est utilisé comme valeur par défaut pour le paramètre d'espace de noms, le nom du modèle et des fichiers de mappage, le nom du fichier source de l'objet et le nom de fichier source de génération de vues. Le nom de conteneur d’entités a la valeur \<projet > contexte.|
-|`/prov[ider]:`\<string>|Nom du fournisseur de données [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] à utiliser pour générer le fichier de modèle de stockage (.ssdl). Le fournisseur par défaut est le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<string>|Nom du fournisseur de données .NET Framework à utiliser pour générer le fichier de modèle de stockage (.ssdl). Le fournisseur par défaut est le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<chaîne de connexion >|Spécifie la chaîne utilisée pour se connecter à la source de données.|
 |`/incsdl:`\<file>|Spécifie le fichier .csdl ou un répertoire où se trouvent les fichiers .csdl. Cet argument peut être spécifié plusieurs fois afin de pouvoir spécifier plusieurs répertoires ou fichiers .csdl. La spécification de plusieurs répertoires peut être utile pour générer des classes (`/mode:EntityClassGeneration`) ou des vues (`/mode:ViewGeneration`) lorsque le modèle conceptuel est divisé en plusieurs fichiers. Cela peut également être utile lorsque vous voulez valider plusieurs modèles (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<file>|Spécifie le ou les fichiers .csdl supplémentaires utilisés pour résoudre toute référence dans le fichier .csdl source. (Le fichier .csdl source est le fichier spécifié par l'option `/incsdl`). Le fichier `/refcsdl` contient des types dont dépend le fichier .csdl source. Cet argument peut être spécifié plusieurs fois.|

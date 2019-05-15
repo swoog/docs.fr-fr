@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648563"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualification des types .NET en vue d'une interopérabilité
 Si vous envisagez d’exposer les types d’un assembly à des applications COM, prenez en compte les exigences COM Interop au moment de la conception. Les types managés (classe, interface, structure et énumération) s’intègrent parfaitement aux types COM lorsque vous respectez les consignes suivantes :  
   
--   Les classes doivent implémenter les interfaces de manière explicite.  
+- Les classes doivent implémenter les interfaces de manière explicite.  
   
      Même si COM Interop fournit un mécanisme permettant de générer automatiquement une interface contenant tous les membres de la classe et de sa classe de base, il est fortement recommandé de fournir des interfaces explicites. L’interface générée automatiquement est appelée « interface de classe ». Pour obtenir des instructions, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Vous pouvez utiliser Visual Basic, C# et C++ pour incorporer des définitions d’interface dans votre code, au lieu du langage IDL (ou équivalent). Pour plus d’informations sur la syntaxe, consultez la documentation relative à votre langage.  
   
--   Les types managés doivent être publics.  
+- Les types managés doivent être publics.  
   
      Seuls les types publics d’un assembly sont inscrits et exportés vers la bibliothèque de types. Par conséquent, seuls les types publics sont visibles par COM.  
   
      Les types managés exposent des fonctionnalités à un autre code managé qui peut ne pas être exposé à COM. Par exemple, les constructeurs paramétrables, les méthodes statiques et les champs constants ne sont pas exposés aux clients COM. De plus, comme le runtime marshale les données d’un type à un autre, les données peuvent être copiées ou transformées.  
   
--   Les méthodes, les propriétés, les champs et les événements doivent être publics.  
+- Les méthodes, les propriétés, les champs et les événements doivent être publics.  
   
      Les membres des types publics doivent également être publics pour être visibles par COM. Vous pouvez restreindre la visibilité d’un assembly, d’un type public ou de membres publics d’un type public en appliquant <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Par défaut, tous les membres et types publics sont visibles.  
   
--   Les types doivent avoir un constructeur public par défaut pour être activés dans COM.  
+- Les types doivent avoir un constructeur public par défaut pour être activés dans COM.  
   
      Les types publics managés sont visibles par COM. Toutefois, sans constructeur public par défaut (constructeur sans arguments), les clients COM ne peuvent pas créer le type. Les clients COM peuvent toujours utiliser le type s’il est activé par d’autres moyens.  
   
--   Les types ne peuvent pas être abstraits.  
+- Les types ne peuvent pas être abstraits.  
   
      Ni les clients COM ni les clients .NET ne peuvent créer de types abstraits.  
   

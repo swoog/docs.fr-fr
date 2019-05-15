@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651208"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586741"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Traitement du fichier XML (Visual Basic)
-Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. (Pour plus d’informations sur la façon de baliser votre code, consultez [balises de commentaire XML](../../../visual-basic/language-reference/xmldoc/index.md).) La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier XML peuvent utiliser la chaîne d’ID pour identifier le correspondantes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] élément de métadonnées/réflexion.  
+Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. (Pour plus d’informations sur la façon de baliser votre code, consultez [balises de commentaire XML](../../../visual-basic/language-reference/xmldoc/index.md).) La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier XML peuvent utiliser la chaîne d’ID pour identifier l’élément de métadonnées/réflexion .NET Framework correspondant.  
   
  Le fichier XML n’est pas une représentation hiérarchique de votre code. Il est une liste plate avec un ID généré pour chaque élément.  
   
@@ -34,7 +34,7 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
   
 - La deuxième partie de la `String` est le nom qualifié complet de l’élément, en commençant à la racine de l’espace de noms. Le nom de l’élément, ses types englobants et l’espace de noms sont séparés par des points. Si le nom de l’élément lui-même comporte des points, ils sont remplacés par le signe dièse (#). Il est supposé qu’aucun élément n’a un signe dièse directement dans son nom. Par exemple, le nom qualifié complet de le `String` constructeur serait `System.String.#ctor`.  
   
-- Pour les propriétés et méthodes, si la méthode a des arguments, la liste d’arguments entre parenthèses suit. S’il n’y a pas d’arguments, aucune parenthèse n’est présente. Les arguments sont séparés par des virgules. L’encodage de chaque argument correspond directement à son encodage dans une [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] signature.  
+- Pour les propriétés et méthodes, si la méthode a des arguments, la liste d’arguments entre parenthèses suit. S’il n’y a pas d’arguments, aucune parenthèse n’est présente. Les arguments sont séparés par des virgules. L’encodage de chaque argument correspond directement à son encodage dans une signature .NET Framework.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant montre comment les chaînes d’ID pour une classe et ses membres sont générés.  

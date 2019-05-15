@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622881"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection et niveau de performance
 <a name="top"></a> Cette rubrique décrit les problèmes liés au garbage collection et à l’utilisation de la mémoire. Elle apporte des solutions aux problèmes concernant les tas managés et explique comment réduire l’effet du garbage collection sur vos applications. Chaque problème contient des liens vers des procédures à suivre pour résoudre le problème.  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Outils d'analyse des performances](#performance_analysis_tools)  
+- [Outils d'analyse des performances](#performance_analysis_tools)  
   
--   [Résolution des problèmes de performances](#troubleshooting_performance_issues)  
+- [Résolution des problèmes de performances](#troubleshooting_performance_issues)  
   
--   [Instructions de dépannage](#troubleshooting_guidelines)  
+- [Instructions de dépannage](#troubleshooting_guidelines)  
   
--   [Procédures de contrôle des performances](#performance_check_procedures)  
+- [Procédures de contrôle des performances](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>Outils d'analyse des performances  
@@ -46,11 +46,11 @@ ms.locfileid: "59310562"
 ### <a name="garbage-collection-etw-events"></a>Événements ETW de garbage collection  
  Le suivi d'événements pour Windows (ETW) est un système de suivi qui complète la prise en charge du profilage et du débogage fournie par .NET Framework. Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] et versions ultérieures, les [événements ETW de garbage collection](../../../docs/framework/performance/garbage-collection-etw-events.md) capturent des informations utiles pour l’analyse du tas managé d’un point de vue statistique. Par exemple, l'événement `GCStart_V1`, qui est déclenché quand un garbage collection est sur le point de se produire, fournit les informations suivantes :  
   
--   La génération d'objets qui est collectée  
+- La génération d'objets qui est collectée  
   
--   Ce qui a déclenché le garbage collection  
+- Ce qui a déclenché le garbage collection  
   
--   Le type de garbage collection (simultané ou non simultané)  
+- Le type de garbage collection (simultané ou non simultané)  
   
  La journalisation des événements ETW est efficace et ne masque pas les problèmes de performances liés au garbage collection. Un processus peut fournir ses propres événements conjointement aux événements ETW. Quand ils sont journalisés, les événements d'application et les événements de garbage collection peuvent être corrélés pour déterminer quand et comment les problèmes de tas se produisent. Par exemple, une application serveur peut fournir des événements au début et à la fin d'une demande client.  
   
@@ -69,29 +69,29 @@ ms.locfileid: "59310562"
 ## <a name="troubleshooting-performance-issues"></a>Résolution des problèmes de performances  
  La première étape consiste à [déterminer si le problème est effectivement lié au garbage collection](#IsGC). Si c'est le cas, cliquez sur l'un des liens suivants pour résoudre le problème.  
   
--   [Une exception de mémoire insuffisante est levée](#Issue_OOM)  
+- [Une exception de mémoire insuffisante est levée](#Issue_OOM)  
   
--   [Le processus utilise trop de mémoire](#Issue_TooMuchMemory)  
+- [Le processus utilise trop de mémoire](#Issue_TooMuchMemory)  
   
--   [Le garbage collector ne récupère pas les objets suffisamment rapidement](#Issue_NotFastEnough)  
+- [Le garbage collector ne récupère pas les objets suffisamment rapidement](#Issue_NotFastEnough)  
   
--   [Le tas managé est trop fragmenté](#Issue_Fragmentation)  
+- [Le tas managé est trop fragmenté](#Issue_Fragmentation)  
   
--   [Les pauses du garbage collection sont trop longues](#Issue_LongPauses)  
+- [Les pauses du garbage collection sont trop longues](#Issue_LongPauses)  
   
--   [La génération 0 est trop volumineuse](#Issue_Gen0)  
+- [La génération 0 est trop volumineuse](#Issue_Gen0)  
   
--   [L’utilisation du processeur pendant un garbage collection est trop élevée](#Issue_HighCPU)  
+- [L’utilisation du processeur pendant un garbage collection est trop élevée](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problème : Une exception de mémoire insuffisante est levée  
  Il existe deux cas légitimes pour la levée d'une <xref:System.OutOfMemoryException> managée :  
   
--   Une mémoire virtuelle insuffisante.  
+- Une mémoire virtuelle insuffisante.  
   
      Le garbage collector alloue la mémoire depuis le système en segments d'une taille prédéterminée. Si une allocation requiert un segment supplémentaire, mais qu'il n'existe aucun bloc contigu libre dans l'espace de mémoire virtuelle du processus, l'allocation du tas managé échoue.  
   
--   Ne pas avoir suffisamment de mémoire physique à allouer.  
+- Ne pas avoir suffisamment de mémoire physique à allouer.  
   
 |Contrôle des performances|  
 |------------------------|  
@@ -99,11 +99,11 @@ ms.locfileid: "59310562"
   
  Si vous déterminez que l'exception n'est pas légitime, contactez le support technique Microsoft et préparez-vous à fournir les informations suivantes :  
   
--   La pile où a été levée l'exception d'insuffisance de mémoire managée.  
+- La pile où a été levée l'exception d'insuffisance de mémoire managée.  
   
--   Le fichier complet de vidage mémoire.  
+- Le fichier complet de vidage mémoire.  
   
--   Les données qui prouvent qu'il ne s'agit pas d'une exception de mémoire insuffisante légitime, y compris les données indiquant que ni la mémoire virtuelle ni la mémoire physique ne posent un problème.  
+- Les données qui prouvent qu'il ne s'agit pas d'une exception de mémoire insuffisante légitime, y compris les données indiquant que ni la mémoire virtuelle ni la mémoire physique ne posent un problème.  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>Problème : Le processus utilise trop de mémoire  
@@ -141,11 +141,11 @@ ms.locfileid: "59310562"
   
  Si la fragmentation de la mémoire virtuelle empêche le garbage collector d'ajouter des segments, la cause peut se trouver dans la liste ci-dessous :  
   
--   Le chargement et le déchargement fréquents de nombreux petits assemblys.  
+- Le chargement et le déchargement fréquents de nombreux petits assemblys.  
   
--   Des références trop nombreuses à des objets COM en cas d'interopérabilité avec du code non managé.  
+- Des références trop nombreuses à des objets COM en cas d'interopérabilité avec du code non managé.  
   
--   La création d'objets transitoires volumineux, ce qui entraîne l'allocation et la libération fréquentes de segments par le tas des objets volumineux.  
+- La création d'objets transitoires volumineux, ce qui entraîne l'allocation et la libération fréquentes de segments par le tas des objets volumineux.  
   
      Lors de l'hébergement du CLR, une application peut demander que le garbage collector conserve ses segments. Cela réduit la fréquence des allocations de segments. Pour cela, utilisez la balise STARTUP_HOARD_GC_VM dans l'[énumération STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310562"
 ### <a name="when-to-measure-the-managed-heap-size"></a>Quand mesurer la taille du tas managé  
  Sauf si vous utilisez un profileur, vous devrez établir un modèle cohérent de mesure pour diagnostiquer efficacement les problèmes de performances. Prenez en compte les points suivants pour établir une planification :  
   
--   Si vous effectuez la mesure après un garbage collection de génération 2, le tas managé ne contiendra aucun objet mort.  
+- Si vous effectuez la mesure après un garbage collection de génération 2, le tas managé ne contiendra aucun objet mort.  
   
--   Si vous effectuez la mesure immédiatement après un garbage collection de génération 0, les objets de génération 1 et 2 n'auront pas encore été collectés.  
+- Si vous effectuez la mesure immédiatement après un garbage collection de génération 0, les objets de génération 1 et 2 n'auront pas encore été collectés.  
   
--   Si vous effectuez la mesure immédiatement avant un garbage collection, vous mesurerez autant de l'allocation que possible avant le démarrage du garbage collection.  
+- Si vous effectuez la mesure immédiatement avant un garbage collection, vous mesurerez autant de l'allocation que possible avant le démarrage du garbage collection.  
   
--   Effectuer une mesure pendant un garbage collection pose problème, car l'état des structures de données du garbage collector n'est pas valide pour la traversée et les résultats obtenus peuvent ne pas être complets. Ceci est normal.  
+- Effectuer une mesure pendant un garbage collection pose problème, car l'état des structures de données du garbage collector n'est pas valide pour la traversée et les résultats obtenus peuvent ne pas être complets. Ceci est normal.  
   
--   Quand utilisez le garbage collection pour station de travail avec le garbage collection simultané, les objets récupérés ne sont pas compactés, donc la taille du tas peut être identique voire supérieure (la fragmentation peut le faire apparaître plus volumineux).  
+- Quand utilisez le garbage collection pour station de travail avec le garbage collection simultané, les objets récupérés ne sont pas compactés, donc la taille du tas peut être identique voire supérieure (la fragmentation peut le faire apparaître plus volumineux).  
   
--   Le garbage collection simultané sur la génération 2 est différé quand la charge de mémoire physique est trop élevée.  
+- Le garbage collection simultané sur la génération 2 est différé quand la charge de mémoire physique est trop élevée.  
   
  La procédure suivante décrit comment définir un point d'arrêt pour mesurer le tas managé.  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Pour définir un point d'arrêt à la fin du garbage collection  
   
--   Dans le débogueur WinDbg, après avoir chargé l’extension SOS, tapez la commande suivante :  
+- Dans le débogueur WinDbg, après avoir chargé l’extension SOS, tapez la commande suivante :  
   
      **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310562"
 ## <a name="performance-check-procedures"></a>Procédures de contrôle des performances  
  Cette section décrit les procédures suivantes permettant d'isoler la cause des problèmes de performances :  
   
--   [Déterminez si le problème est causé par le garbage collection.](#IsGC)  
+- [Déterminez si le problème est causé par le garbage collection.](#IsGC)  
   
--   [Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)  
+- [Déterminez si l'exception de mémoire insuffisante est managée.](#OOMIsManaged)  
   
--   [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
+- [Déterminez la quantité de mémoire virtuelle pouvant être réservée.](#GetVM)  
   
--   [Déterminez si la mémoire physique est suffisante.](#Physical)  
+- [Déterminez si la mémoire physique est suffisante.](#Physical)  
   
--   [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)  
+- [Déterminez la quantité de mémoire que le tas managé valide.](#ManagedHeapCommit)  
   
--   [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)  
+- [Déterminez la quantité de mémoire réservée pour le tas managé.](#ManagedHeapReserve)  
   
--   [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)  
+- [Déterminez les objets volumineux dans la génération 2.](#ExamineGen2)  
   
--   [Déterminez les références aux objets.](#ObjRef)  
+- [Déterminez les références aux objets.](#ObjRef)  
   
--   [Déterminez si un finaliseur a été exécuté.](#Induce)  
+- [Déterminez si un finaliseur a été exécuté.](#Induce)  
   
--   [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)  
+- [Déterminez s'il existe des objets en attente de finalisation.](#Finalize)  
   
--   [Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)  
+- [Déterminez la quantité d’espace libre dans le tas managé.](#Fragmented)  
   
--   [Déterminez le nombre d'objets épinglés.](#Pinned)  
+- [Déterminez le nombre d'objets épinglés.](#Pinned)  
   
--   [Déterminez la durée d’un garbage collection.](#TimeInGC)  
+- [Déterminez la durée d’un garbage collection.](#TimeInGC)  
   
--   [Déterminez ce qui a déclenché le garbage collection.](#Triggered)  
+- [Déterminez ce qui a déclenché le garbage collection.](#Triggered)  
   
--   [Déterminez si l’utilisation élevée du processeur est causée par le garbage collection.](#HighCPU)  
+- [Déterminez si l’utilisation élevée du processeur est causée par le garbage collection.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Pour déterminer si le problème est causé par le garbage collection  
   
--   Examinez les deux compteurs de performances de mémoire suivants :  
+- Examinez les deux compteurs de performances de mémoire suivants :  
   
-    -   **% temps dans le GC**. Affiche le pourcentage de la durée calendaire passé à effectuer un garbage collection après le dernier cycle de garbage collection. Utilisez ce compteur pour déterminer si le garbage collector passe trop de temps à libérer de l'espace dans le tas managé. Si le temps passé au garbage collection est relativement faible, cela peut indiquer un problème de ressources en dehors du tas managé. Ce compteur peut être inexact si le garbage collection simultané ou le garbage collection d’arrière-plan sont impliqués.  
+    - **% temps dans le GC**. Affiche le pourcentage de la durée calendaire passé à effectuer un garbage collection après le dernier cycle de garbage collection. Utilisez ce compteur pour déterminer si le garbage collector passe trop de temps à libérer de l'espace dans le tas managé. Si le temps passé au garbage collection est relativement faible, cela peut indiquer un problème de ressources en dehors du tas managé. Ce compteur peut être inexact si le garbage collection simultané ou le garbage collection d’arrière-plan sont impliqués.  
   
-    -   **Nombre total d’octets validés**. Affiche la quantité de mémoire virtuelle actuellement validée par le garbage collector. Utilisez ce compteur pour déterminer si la mémoire consommée par le garbage collector est trop élevée par rapport à la mémoire totale utilisée par votre application.  
+    - **Nombre total d’octets validés**. Affiche la quantité de mémoire virtuelle actuellement validée par le garbage collector. Utilisez ce compteur pour déterminer si la mémoire consommée par le garbage collector est trop élevée par rapport à la mémoire totale utilisée par votre application.  
   
      La plupart des compteurs de performances de mémoire sont mis à jour à la fin de chaque garbage collection. Ils peuvent donc ne pas refléter les conditions actuelles à propos desquelles vous voulez obtenir des informations.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310562"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Pour déterminer la quantité de mémoire virtuelle pouvant être réservée  
   
--   Dans le débogueur WinDbg avec l’extension SOS chargée, tapez la commande suivante pour obtenir la région libre la plus grande :  
+- Dans le débogueur WinDbg avec l’extension SOS chargée, tapez la commande suivante pour obtenir la région libre la plus grande :  
   
      **!address -summary**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310562"
   
      - ou -  
   
--   Utilisez la commande **vmstat** :  
+- Utilisez la commande **vmstat** :  
   
      **!vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310562"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Pour déterminer la quantité de mémoire que le tas managé valide  
   
--   Utilisez le compteur de performances de mémoire `# Total committed bytes` pour obtenir le nombre d'octets que le tas managé valide. Le garbage collector valide des parties d'un segment au fur et à mesure des besoins, et non tous en même temps.  
+- Utilisez le compteur de performances de mémoire `# Total committed bytes` pour obtenir le nombre d'octets que le tas managé valide. Le garbage collector valide des parties d'un segment au fur et à mesure des besoins, et non tous en même temps.  
   
     > [!NOTE]
     >  N'utilisez pas le compteur de performances `# Bytes in all Heaps`, car il ne représente pas l'utilisation réelle de la mémoire par le tas managé. La taille d'une génération est incluse dans cette valeur et correspond à la taille de son seuil, c'est-à-dire, à la taille qui déclenche un garbage collection si la génération est remplie d'objets. Cette valeur est donc généralement égale à zéro.  
@@ -361,14 +361,14 @@ ms.locfileid: "59310562"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Pour déterminer la quantité de mémoire réservée pour le tas managé  
   
--   Utilisez le compteur de performances de mémoire `# Total reserved bytes`.  
+- Utilisez le compteur de performances de mémoire `# Total reserved bytes`.  
   
      Le garbage collector réserve de la mémoire sous forme de segments, et vous pouvez déterminer où démarre un segment à l'aide de la commande **eeheap**.  
   
     > [!IMPORTANT]
     >  Même s'il est possible de déterminer la quantité de mémoire que le garbage collector alloue à chaque segment, la taille d'un segment dépend de l'implémentation et est susceptible de changer à tout moment, y compris lors des mises à jour périodiques. Votre application ne doit jamais faire d'hypothèses concernant une taille de segment particulière, ni dépendre de celle-ci. Elle ne doit pas non plus tenter de configurer la quantité de mémoire disponible pour les allocations de segments.  
   
--   Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
+- Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
   
      **!eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310562"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>Pour déterminer les objets volumineux dans la génération 2  
   
--   Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
+- Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
   
      **!dumpheap –stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310562"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>Pour déterminer les références aux objets  
   
--   Dans le débogueur WinDbg avec l’extension SOS chargée, tapez la commande suivante pour obtenir la liste des références aux objets :  
+- Dans le débogueur WinDbg avec l’extension SOS chargée, tapez la commande suivante pour obtenir la liste des références aux objets :  
   
      **!gcroot**  
   
      `-or-`  
   
--   Pour déterminer les références à un objet spécifique, incluez l'adresse suivante :  
+- Pour déterminer les références à un objet spécifique, incluez l'adresse suivante :  
   
      **!gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310562"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Pour déterminer si un finaliseur a été exécuté  
   
--   Exécutez un programme de test contenant le code suivant :  
+- Exécutez un programme de test contenant le code suivant :  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310562"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Pour déterminer la quantité d'espace libre dans le tas managé  
   
--   Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
+- Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
   
      **!dumpheap -type Free -stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310562"
     Total 230 objects  
     ```  
   
--   Pour déterminer l'espace libre dans la génération 0, tapez la commande suivante pour obtenir des informations sur la consommation de mémoire par génération :  
+- Pour déterminer l'espace libre dans la génération 0, tapez la commande suivante pour obtenir des informations sur la consommation de mémoire par génération :  
   
      **!eeheap -gc**  
   
@@ -552,7 +552,7 @@ ms.locfileid: "59310562"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   Calculez l'espace utilisé par la génération 0 :  
+- Calculez l'espace utilisé par la génération 0 :  
   
      **? 49e05d04-0x49521f8c**  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310562"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   La commande suivante fait un dump pour l'espace libre dans la plage de la génération 0 :  
+- La commande suivante fait un dump pour l'espace libre dans la plage de la génération 0 :  
   
      **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310562"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>Pour déterminer le nombre d'objets épinglés  
   
--   Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
+- Dans le débogueur WinDbg ou Visual Studio avec l’extension SOS chargée, tapez la commande suivante :  
   
      **!gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310562"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Pour déterminer la durée d'un garbage collection  
   
--   Regardez ce qu'affiche le compteur de performances de mémoire `% Time in GC`.  
+- Regardez ce qu'affiche le compteur de performances de mémoire `% Time in GC`.  
   
      La valeur est calculée à partir d'un échantillon d'intervalle de temps. Les compteurs sont mis à jour à la fin de chaque garbage collection. L'exemple actuel aura donc la même valeur que l'exemple précédent si aucune collection ne s'est produite pendant l'intervalle.  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310562"
   
      Le deuxième garbage collection de génération 2 a démarré pendant le troisième intervalle et s'est terminé au cinquième intervalle. Dans le pire des cas, le dernier garbage collection était pour une collection de génération 0 qui s'est terminée au début du deuxième intervalle et le garbage collection de génération 2 s'est terminé à la fin du cinquième intervalle. Le délai entre la fin du garbage collection de génération 0 et la fin du garbage collection de génération 2 est donc de 4 secondes. Étant donné que le compteur `% Time in GC` affiche 20 %, la durée maximale du garbage collection de génération 2 est de (4 secondes * 20 % = 800 ms).  
   
--   Vous pouvez également déterminer la durée d’un garbage collection à l’aide des [événements ETW de garbage collection](../../../docs/framework/performance/garbage-collection-etw-events.md) en analysant les informations fournies.  
+- Vous pouvez également déterminer la durée d’un garbage collection à l’aide des [événements ETW de garbage collection](../../../docs/framework/performance/garbage-collection-etw-events.md) en analysant les informations fournies.  
   
      Par exemple, les données suivantes indiquent une séquence d’événements qui se sont produits pendant un garbage collection non simultané.  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310562"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Pour déterminer ce qui a déclenché un garbage collection  
   
--   Dans le débogueur WinDbg ou Visual Studio avec l’extension de débogueur SOS chargée, tapez la commande suivante pour afficher tous les threads avec leurs piles d’appels :  
+- Dans le débogueur WinDbg ou Visual Studio avec l’extension de débogueur SOS chargée, tapez la commande suivante pour afficher tous les threads avec leurs piles d’appels :  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310562"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Pour déterminer si l’utilisation élevée du processeur est causée par le garbage collection  
   
--   Mettez en corrélation la valeur du compteur de performances de mémoire `% Time in GC` avec le temps d'exécution.  
+- Mettez en corrélation la valeur du compteur de performances de mémoire `% Time in GC` avec le temps d'exécution.  
   
      Si la valeur `% Time in GC` connaît un pic en même temps que le temps d'exécution, le garbage collection provoque une utilisation élevée du processeur. Dans le cas contraire, profilez l'application pour trouver où se produit l'utilisation élevée.  
   

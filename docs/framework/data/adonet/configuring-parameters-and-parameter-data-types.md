@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034552"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583830"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configuration des paramètres et types de données de paramètre
 
@@ -33,7 +33,7 @@ Lorsque vous ajoutez des paramètres, vous devez fournir une propriété <xref:S
 
 ## <a name="working-with-parameter-placeholders"></a>Utilisation des espaces réservés de paramètre
 
-La syntaxe des espaces réservés des paramètres dépend de la source de données. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gèrent différemment la dénomination et la spécification des paramètres et des espaces réservés de paramètres. Cette syntaxe est personnalisée en fonction d'une source de données spécifique, comme le décrit le tableau ci-dessous.
+La syntaxe des espaces réservés des paramètres dépend de la source de données. Les fournisseurs de données .NET Framework gèrent différemment la dénomination et la spécification des paramètres et des espaces réservés de paramètres. Cette syntaxe est personnalisée en fonction d'une source de données spécifique, comme le décrit le tableau ci-dessous.
 
 |Fournisseur de données|Syntaxe d'attribution de noms aux paramètres|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ La syntaxe des espaces réservés des paramètres dépend de la source de donné
 
 ## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre
 
-Le type de données d'un paramètre est spécifique au fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Si vous spécifiez le type, la valeur de `Parameter` est convertie en type de fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] avant d'être passée à la source de données. Vous pouvez également spécifier le type d'un `Parameter` de façon générique en affectant à la propriété `DbType` de l'objet `Parameter` un <xref:System.Data.DbType>particulier.
+Le type de données d’un paramètre est spécifique au fournisseur de données .NET Framework. Spécification du type convertit la valeur de la `Parameter` pour le type de fournisseur de données .NET Framework avant de passer la valeur à la source de données. Vous pouvez également spécifier le type d'un `Parameter` de façon générique en affectant à la propriété `DbType` de l'objet `Parameter` un <xref:System.Data.DbType>particulier.
 
-Le type de fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] d'un objet `Parameter` est déduit à partir du type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] du `Value` de l'objet `Parameter` ou à partir du `DbType` de l'objet `Parameter` . Le tableau suivant indique le type `Parameter` déduit en fonction de l'objet passé comme valeur `Parameter` ou du `DbType`spécifié.
+Le type de fournisseur de données .NET Framework un `Parameter` objet est déduit du type .NET Framework de la `Value` de la `Parameter` objet, ou à partir de la `DbType` de la `Parameter` objet. Le tableau suivant indique le type `Parameter` déduit en fonction de l'objet passé comme valeur `Parameter` ou du `DbType`spécifié.
 
 |Type .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Les procédures stockées offrent de nombreux avantages dans les applications pi
 > [!NOTE]
 > Les instructions paramétrées sont exécutées sur le serveur à l'aide de `sp_executesql,` , ce qui permet la réutilisation des plans de requête. Les curseurs ou variables locaux dans le lot `sp_executesql` ne sont pas visibles pour le lot qui appelle `sp_executesql`. Les modifications dans le contexte de la base de données durent uniquement jusqu'à la fin de l'instruction `sp_executesql` . Pour plus d’informations, consultez [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.SqlClient.SqlCommand> pour exécuter une procédure stockée SQL Server, les noms des paramètres ajoutés à la collection <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> doivent correspondre à ceux des marqueurs de paramètres dans la procédure stockée. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour SQL Server ne prend pas en charge l'espace réservé de point d'interrogation (?) pour le passage des paramètres à une instruction SQL ou une procédure stockée. Il traite les paramètres de la procédure stockée comme des paramètres nommés et recherche les marqueurs de paramètres correspondants. Par exemple, la procédure stockée `CustOrderHist` est définie à l'aide d'un paramètre nommé `@CustomerID`. Lorsque votre code exécute la procédure stockée, il doit également utiliser un paramètre nommé `@CustomerID`.
+Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.SqlClient.SqlCommand> pour exécuter une procédure stockée SQL Server, les noms des paramètres ajoutés à la collection <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> doivent correspondre à ceux des marqueurs de paramètres dans la procédure stockée. Le fournisseur de données .NET Framework pour SQL Server ne prend pas en charge l’espace réservé de point d’interrogation ( ?) pour passer des paramètres à une instruction SQL ou une procédure stockée. Il traite les paramètres de la procédure stockée comme des paramètres nommés et recherche les marqueurs de paramètres correspondants. Par exemple, la procédure stockée `CustOrderHist` est définie à l'aide d'un paramètre nommé `@CustomerID`. Lorsque votre code exécute la procédure stockée, il doit également utiliser un paramètre nommé `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ Cet exemple montre comment appeler une procédure stockée SQL Server dans l'exe
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Utilisation de paramètres avec OleDbCommand ou OdbcCommand
 
-Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, l'ordre des paramètres ajoutés à la collection `Parameters` doit correspondre à celui des paramètres définis dans votre procédure stockée. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC traitent les paramètres d'une procédure stockée comme des espaces réservés et appliquent des valeurs de paramètre par ordre. En outre, les paramètres des valeurs de retour doivent être les premiers paramètres ajoutés à la collection `Parameters` .
+Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.OleDb.OleDbCommand> ou <xref:System.Data.Odbc.OdbcCommand>, l'ordre des paramètres ajoutés à la collection `Parameters` doit correspondre à celui des paramètres définis dans votre procédure stockée. Le fournisseur de données .NET Framework pour OLE DB et le fournisseur de données .NET Framework pour ODBC traitent les paramètres d’une procédure stockée en tant qu’espaces réservés et appliquent des valeurs de paramètre dans l’ordre. En outre, les paramètres des valeurs de retour doivent être les premiers paramètres ajoutés à la collection `Parameters` .
 
-Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB et [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC ne prennent pas en charge les paramètres nommés pour le passage des paramètres à une instruction SQL ou une procédure stockée. Dans ce cas, vous devez utiliser l'espace réservé de point d'interrogation (?), comme dans l'exemple suivant.
+Le fournisseur de données .NET Framework pour OLE DB et le fournisseur de données .NET Framework pour ODBC ne gèrent pas les paramètres nommés pour passer des paramètres à une instruction SQL ou une procédure stockée. Dans ce cas, vous devez utiliser l'espace réservé de point d'interrogation (?), comme dans l'exemple suivant.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

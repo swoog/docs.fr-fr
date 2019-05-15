@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211785"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583463"
 ---
 # <a name="windows-forms-overview"></a>Vue d’ensemble des Windows Forms
 
@@ -22,7 +22,7 @@ La présentation suivante décrit les avantages offerts par les applications Sma
 
 ### <a name="build-rich-interactive-user-interfaces"></a>Créer des interfaces utilisateur riches et interactives
 
- Windows Forms est une technologie Smart Client pour [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un ensemble de bibliothèques managées qui simplifient les tâches d'application courantes telles que la lecture et l'écriture dans le système de fichiers. Lorsque vous utilisez un environnement de développement tels que Visual Studio, vous pouvez créer des applications clients intelligents Windows Forms qui affichent des informations, demandent des entrées d’utilisateurs et communiquent avec des ordinateurs distants sur un réseau.
+ Windows Forms est une technologie smart client pour le .NET Framework, un ensemble de bibliothèques managées qui simplifient les tâches d’application courantes telles que lire et écrire dans le système de fichiers. Lorsque vous utilisez un environnement de développement tels que Visual Studio, vous pouvez créer des applications clients intelligents Windows Forms qui affichent des informations, demandent des entrées d’utilisateurs et communiquent avec des ordinateurs distants sur un réseau.
 
  Dans Windows Forms, un *formulaire* est une surface visuelle sur laquelle vous présentez des informations à l’utilisateur. Habituellement, vous générez des applications Windows Forms en ajoutant des contrôles à des formulaires et en développant des réponses aux actions de l’utilisateur, telles que des clics de souris ou des pressions sur des touches du clavier. Un *contrôle* est un élément d’interface utilisateur discret qui affiche des données ou accepte l’entrée de données.
 
@@ -90,7 +90,7 @@ Pour obtenir une introduction complète à [!INCLUDE[ndptecclick](../../../inclu
 
 ### <a name="other-controls-and-features"></a>Autres contrôles et fonctionnalités
 
-Il existe de nombreuses autres fonctionnalités dans Windows Forms qui simplifient et accélèrent l'implémentation des tâches courantes, par exemple la prise en charge de la création de boîtes de dialogue, de l'impression, de l'ajout d'aide et de documentation et de la localisation de votre application en plusieurs langues. De plus, Windows Forms repose sur le système de sécurité fiable de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ce système vous permet de distribuer des applications plus sécurisées à vos clients.
+Il existe de nombreuses autres fonctionnalités dans Windows Forms qui simplifient et accélèrent l'implémentation des tâches courantes, par exemple la prise en charge de la création de boîtes de dialogue, de l'impression, de l'ajout d'aide et de documentation et de la localisation de votre application en plusieurs langues. En outre, Windows Forms repose sur le système de sécurité robuste du .NET Framework. Ce système vous permet de distribuer des applications plus sécurisées à vos clients.
 
 #### <a name="implement-other-controls-and-features"></a>Implémenter d’autres contrôles et fonctionnalités
 

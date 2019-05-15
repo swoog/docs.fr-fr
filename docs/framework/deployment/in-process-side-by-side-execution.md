@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613990"
 ---
 # <a name="in-process-side-by-side-execution"></a>Exécution côte à côte in-process
 Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser l’hébergement côte à côte in-process pour exécuter plusieurs versions du CLR (Common Language Runtime) dans un processus unique. Par défaut, les composants COM managés s’exécutent avec la version du .NET Framework avec laquelle ils ont été générés, indépendamment de la version du .NET Framework chargée pour le processus.  
@@ -22,19 +22,19 @@ Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouv
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] fournit une nouvelle approche de l’hébergement côte à côte qui s’assure des éléments suivants :  
   
--   L’installation d’une nouvelle version du .NET Framework n’a aucun effet sur les applications existantes.  
+- L’installation d’une nouvelle version du .NET Framework n’a aucun effet sur les applications existantes.  
   
--   Les applications sont exécutées avec la version du .NET Framework avec laquelle elles ont été générées. Elles n’utilisent pas la nouvelle version du .NET Framework, à moins que cela ne leur soit expressément demandé. Il est toutefois plus facile pour les applications de passer à une nouvelle version du .NET Framework.  
+- Les applications sont exécutées avec la version du .NET Framework avec laquelle elles ont été générées. Elles n’utilisent pas la nouvelle version du .NET Framework, à moins que cela ne leur soit expressément demandé. Il est toutefois plus facile pour les applications de passer à une nouvelle version du .NET Framework.  
   
 ## <a name="effects-on-users-and-developers"></a>Effets sur les utilisateurs et les développeurs  
   
--   **Utilisateurs finaux et administrateurs système**. Ces utilisateurs savent désormais que, quand ils installent une nouvelle version du runtime, soit indépendamment soit avec une application, cela n’aura aucun impact sur leurs ordinateurs. Les applications existantes continueront de fonctionner comme auparavant.  
+- **Utilisateurs finaux et administrateurs système**. Ces utilisateurs savent désormais que, quand ils installent une nouvelle version du runtime, soit indépendamment soit avec une application, cela n’aura aucun impact sur leurs ordinateurs. Les applications existantes continueront de fonctionner comme auparavant.  
   
--   **Développeurs d’applications**. L’hébergement côte à côte n’a presque aucun effet sur les développeurs d’applications. Par défaut, les applications sont toujours exécutées avec la version du .NET Framework avec laquelle elles ont été créées. Cela n’a pas changé. Toutefois, les développeurs peuvent substituer ce comportement et demander à l’application de s’exécuter sous une version plus récente du .NET Framework (consultez le [scénario 2](#scenarios)).  
+- **Développeurs d’applications**. L’hébergement côte à côte n’a presque aucun effet sur les développeurs d’applications. Par défaut, les applications sont toujours exécutées avec la version du .NET Framework avec laquelle elles ont été créées. Cela n’a pas changé. Toutefois, les développeurs peuvent substituer ce comportement et demander à l’application de s’exécuter sous une version plus récente du .NET Framework (consultez le [scénario 2](#scenarios)).  
   
--   **Consommateurs et développeurs de bibliothèques**. L’hébergement côte à côte ne résout pas les problèmes de compatibilité rencontrés par les développeurs de bibliothèques. Une bibliothèque chargée directement par une application, soit via une référence directe soit via un appel <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continue d’utiliser le runtime du <xref:System.AppDomain> dans lequel elle est chargée. Vous devez tester vos bibliothèques sur toutes les versions du .NET Framework que vous souhaitez prendre en charge. Si une application est compilée à l’aide du runtime [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] mais inclut une bibliothèque créée à l’aide d’un runtime antérieur, cette bibliothèque utilisera également le runtime [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Toutefois, si vous possédez une application générée à l’aide d’un runtime antérieur et une bibliothèque créée à l’aide de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous devez forcer votre application à utiliser également [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consultez le [scénario 3](#scenarios)).  
+- **Consommateurs et développeurs de bibliothèques**. L’hébergement côte à côte ne résout pas les problèmes de compatibilité rencontrés par les développeurs de bibliothèques. Une bibliothèque chargée directement par une application, soit via une référence directe soit via un appel <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continue d’utiliser le runtime du <xref:System.AppDomain> dans lequel elle est chargée. Vous devez tester vos bibliothèques sur toutes les versions du .NET Framework que vous souhaitez prendre en charge. Si une application est compilée à l’aide du runtime [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] mais inclut une bibliothèque créée à l’aide d’un runtime antérieur, cette bibliothèque utilisera également le runtime [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Toutefois, si vous possédez une application générée à l’aide d’un runtime antérieur et une bibliothèque créée à l’aide de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous devez forcer votre application à utiliser également [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consultez le [scénario 3](#scenarios)).  
   
--   **Développeurs de composants COM managés**. Dans le passé, les composants COM managés étaient automatiquement exécutés à l’aide de la version la plus récente du runtime installée sur l’ordinateur. Vous pouvez maintenant exécuter les composants COM avec la version du runtime avec laquelle ils ont été créés.  
+- **Développeurs de composants COM managés**. Dans le passé, les composants COM managés étaient automatiquement exécutés à l’aide de la version la plus récente du runtime installée sur l’ordinateur. Vous pouvez maintenant exécuter les composants COM avec la version du runtime avec laquelle ils ont été créés.  
   
      Comme indiqué dans le tableau suivant, les composants générés avec .NET Framework version 1.1 peuvent s’exécuter côte à côte avec les composants de la version 4, mais ils ne peuvent pas s’exécuter avec les composants de la version 2.0, 3.0 ni 3.5, car l’hébergement côte à côte n’est pas disponible pour ces versions.  
   
@@ -50,13 +50,13 @@ Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouv
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Scénarios d’hébergement côte à côte courants  
   
--   **Scénario 1 :** application native qui utilise des composants COM créés avec des versions antérieures du .NET Framework.  
+- **Scénario 1 :** application native qui utilise des composants COM créés avec des versions antérieures du .NET Framework.  
   
      Versions du .NET Framework installées : [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] et toutes les autres versions du .NET Framework utilisées par les composants COM.  
   
      Que faire : dans ce scénario, ne faites rien. Les composants COM s’exécuteront avec la version du .NET Framework avec laquelle ils ont été inscrits.  
   
--   **Scénario 2** : application managée créée avec [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que vous préféreriez exécuter avec [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mais que vous voulez bien exécuter sur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la version 2.0 est absente.  
+- **Scénario 2** : application managée créée avec [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que vous préféreriez exécuter avec [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mais que vous voulez bien exécuter sur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la version 2.0 est absente.  
   
      Versions du .NET Framework installées : une version antérieure du .NET Framework et [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
@@ -71,7 +71,7 @@ Depuis [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouv
     </configuration>  
     ```  
   
--   **Scénario 3 :** application native qui utilise des composants COM créés avec des versions antérieures du .NET Framework que vous souhaitez exécuter avec [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+- **Scénario 3 :** application native qui utilise des composants COM créés avec des versions antérieures du .NET Framework que vous souhaitez exécuter avec [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Versions du .NET Framework installées : L’[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]opérateur  
   

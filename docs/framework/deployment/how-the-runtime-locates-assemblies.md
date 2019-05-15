@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613973"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Méthode de localisation des assemblys par le runtime
 Pour déployer correctement votre application .NET Framework, il est important de bien comprendre comment le common language runtime localise les assemblys qui composent votre application et comment il établit des liaisons à ces assemblys. Par défaut, le runtime essaie d'établir une liaison avec la version exacte d'un assembly avec lequel l'application a été générée. Ce comportement par défaut peut être substitué par les paramètres du fichier de configuration.  
@@ -51,11 +51,11 @@ Pour déployer correctement votre application .NET Framework, il est important d
   
 4. Il[détecte l'assembly](#step4) en procédant comme suit :  
   
-    1.  Si la configuration et la stratégie d'éditeur n'affectent pas la référence d'origine et que la demande de liaison a été faite avec la méthode <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , le runtime vérifie la présence d'indications relatives à l'emplacement.  
+    1. Si la configuration et la stratégie d'éditeur n'affectent pas la référence d'origine et que la demande de liaison a été faite avec la méthode <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , le runtime vérifie la présence d'indications relatives à l'emplacement.  
   
-    2.  Si une base de code est trouvée dans les fichiers de configuration, le runtime vérifie uniquement cet emplacement. Si cette détection ne donne aucun résultat, le runtime détermine que la demande de liaison a échoué et ne tente pas d'autre détection.  
+    2. Si une base de code est trouvée dans les fichiers de configuration, le runtime vérifie uniquement cet emplacement. Si cette détection ne donne aucun résultat, le runtime détermine que la demande de liaison a échoué et ne tente pas d'autre détection.  
   
-    3.  Il détecte l'assembly en se servant des paramètres heuristiques décrits dans la [section sur la détection](#step4). Si la détection ne permet pas de trouver l'assembly, le runtime demande à Windows Installer de lui fournir l'assembly (sous la forme d'une fonctionnalité d'installation à la demande).  
+    3. Il détecte l'assembly en se servant des paramètres heuristiques décrits dans la [section sur la détection](#step4). Si la détection ne permet pas de trouver l'assembly, le runtime demande à Windows Installer de lui fournir l'assembly (sous la forme d'une fonctionnalité d'installation à la demande).  
   
         > [!NOTE]
         >  Pour les assemblys sans nom fort, le runtime n'effectue pas de vérification de version, ni de vérification dans le Global Assembly Cache.  
@@ -64,11 +64,11 @@ Pour déployer correctement votre application .NET Framework, il est important d
 ## <a name="step-1-examining-the-configuration-files"></a>Étape 1 : examen des fichiers de configuration  
  Le comportement de la liaison d'assembly peut être configuré à différents niveaux à l'aide de ces trois fichiers XML :  
   
--   le fichier de configuration de l'application ;  
+- le fichier de configuration de l'application ;  
   
--   le fichier de stratégie d'éditeur ;  
+- le fichier de stratégie d'éditeur ;  
   
--   le fichier de configuration de l'ordinateur.  
+- le fichier de configuration de l'ordinateur.  
   
  Ces fichiers utilisent la même syntaxe. Ils fournissent plusieurs informations, notamment les redirections de liaisons, l'emplacement du code et les modes de liaison pour des assemblys particuliers. Chaque fichier de configuration peut contenir un [élément \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) qui redirige le processus de liaison. Les éléments enfants de l’[élément \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluent l’[élément \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Les éléments enfants de l’[élément \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) incluent l’[élément \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), l’[élément \<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) et l’[élément \<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Localisation de l'assembly par détection  
  Si aucun élément [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) ne se trouve dans le fichier de configuration de l’application, le runtime tente de détecter l’assembly à l’aide des quatre critères suivants :  
   
--   La base de l'application, qui est l'emplacement racine où l'application s'exécute.  
+- La base de l'application, qui est l'emplacement racine où l'application s'exécute.  
   
--   La culture, qui est l'attribut de culture de l'assembly référencé.  
+- La culture, qui est l'attribut de culture de l'assembly référencé.  
   
--   Le nom, qui est le nom de l'assembly référencé.  
+- Le nom, qui est le nom de l'assembly référencé.  
   
--   L’attribut `privatePath` de l’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), qui est la liste définie par l’utilisateur des sous-répertoires sous l’emplacement racine. Cet emplacement peut être spécifié dans le fichier de configuration de l'application et dans le code managé en utilisant la propriété <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> pour un domaine d'application. Quand il est spécifié dans le code managé, l'attribut `privatePath` du code managé est détecté en premier, suivi du chemin d'accès spécifié dans le fichier de configuration de l'application.  
+- L’attribut `privatePath` de l’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), qui est la liste définie par l’utilisateur des sous-répertoires sous l’emplacement racine. Cet emplacement peut être spécifié dans le fichier de configuration de l'application et dans le code managé en utilisant la propriété <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> pour un domaine d'application. Quand il est spécifié dans le code managé, l'attribut `privatePath` du code managé est détecté en premier, suivi du chemin d'accès spécifié dans le fichier de configuration de l'application.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Détection de la base de l'application et des répertoires de culture  
  Le runtime commence toujours le processus de détection dans la base de l'application, qui peut être une URL ou le répertoire racine de l'application sur un ordinateur. Si l'assembly référencé n'est pas trouvé dans la base de l'application et qu'aucune information de culture n'est fournie, le runtime recherche des sous-répertoires avec le nom de l'assembly. Les répertoires détectés sont les suivants :  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Exemples de détection  
  Les exemples donnés sont basés sur les informations suivantes :  
   
--   Nom de l'assembly référencé : myAssembly  
+- Nom de l'assembly référencé : myAssembly  
   
--   Répertoire racine de l’application : `http://www.code.microsoft.com`  
+- Répertoire racine de l’application : `http://www.code.microsoft.com`  
   
--   L’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) dans le fichier de configuration spécifie : bin  
+- L’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) dans le fichier de configuration spécifie : bin  
   
--   Culture : de  
+- Culture : de  
   
  Le runtime détecte les URL suivantes :  
   

@@ -2,12 +2,12 @@
 title: 'Procédure : Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 1a329c16e356686be8eb1530bf4a68b796965c14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91cfba02bade5811dbc5f45a5106731ff637efcf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648818"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593281"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procédure : Requête la plus grande ou des fichiers dans une arborescence de répertoires (LINQ) (Visual Basic)
 Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :  
@@ -118,7 +118,7 @@ End Module
  La requête appelle une méthode distincte pour obtenir la taille du fichier en octets et ainsi permettre l’utilisation de l’exception éventuellement levée si un fichier a été supprimé sur un autre thread depuis la création de l’objet <xref:System.IO.FileInfo> dans l’appel à `GetFiles`. Même si l’objet <xref:System.IO.FileInfo> a déjà été créé, l’exception peut être levée, car un objet <xref:System.IO.FileInfo> essaiera d’actualiser sa propriété <xref:System.IO.FileInfo.Length%2A> en utilisant la taille en octets la plus récente lors du premier accès à la propriété. En plaçant cette opération dans un bloc try-catch en dehors de la requête, nous respectons la règle qui consiste à éviter les opérations dans les requêtes qui peuvent avoir des effets secondaires. En règle générale, il faut faire très attention lors de l’utilisation d’exceptions et s’assurer que l’application ne reste pas dans un état inconnu.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
+Créer un projet d’application console VB.NET, avec un `Imports` instruction pour l’espace de noms System.Linq.
   
 ## <a name="see-also"></a>Voir aussi
 

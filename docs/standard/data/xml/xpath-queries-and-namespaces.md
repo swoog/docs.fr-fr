@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615352"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Requêtes et espaces de noms XPath
 Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peuvent utiliser les préfixes d’espace de noms pour qualifier des noms d’éléments et d’attributs. Le fait de qualifier des noms d’éléments et d’attributs avec un préfixe d’espace de noms permet de limiter les nœuds retournés par une requête XPath aux nœuds qui appartiennent à un espace de noms spécifique.  
@@ -25,17 +25,17 @@ Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peu
   
  L'objet <xref:System.Xml.XmlNamespaceManager> peut être utilisé dans la requête de chacune des manières suivantes.  
   
--   L'objet <xref:System.Xml.XmlNamespaceManager> est associé à un objet <xref:System.Xml.XPath.XPathExpression> existant en utilisant la méthode <xref:System.Xml.XPath.XPathExpression.SetContext%2A> de l'objet <xref:System.Xml.XPath.XPathExpression>. Vous pouvez aussi compiler un nouvel objet <xref:System.Xml.XPath.XPathExpression> à l'aide de la méthode <xref:System.Xml.XPath.XPathExpression.Compile%2A> statique, qui prend comme paramètres une chaîne représentant l'expression XPath ainsi qu'un objet <xref:System.Xml.XmlNamespaceManager> et retourne un nouvel objet <xref:System.Xml.XPath.XPathExpression>.  
+- L'objet <xref:System.Xml.XmlNamespaceManager> est associé à un objet <xref:System.Xml.XPath.XPathExpression> existant en utilisant la méthode <xref:System.Xml.XPath.XPathExpression.SetContext%2A> de l'objet <xref:System.Xml.XPath.XPathExpression>. Vous pouvez aussi compiler un nouvel objet <xref:System.Xml.XPath.XPathExpression> à l'aide de la méthode <xref:System.Xml.XPath.XPathExpression.Compile%2A> statique, qui prend comme paramètres une chaîne représentant l'expression XPath ainsi qu'un objet <xref:System.Xml.XmlNamespaceManager> et retourne un nouvel objet <xref:System.Xml.XPath.XPathExpression>.  
   
--   L’objet <xref:System.Xml.XmlNamespaceManager> lui-même est passé en paramètre à une méthode réceptrice de la classe <xref:System.Xml.XPath.XPathNavigator> en même temps qu’une chaîne représentant l’expression XPath.  
+- L’objet <xref:System.Xml.XmlNamespaceManager> lui-même est passé en paramètre à une méthode réceptrice de la classe <xref:System.Xml.XPath.XPathNavigator> en même temps qu’une chaîne représentant l’expression XPath.  
   
  Voici les méthodes de la classe <xref:System.Xml.XPath.XPathNavigator> qui acceptent comme paramètre un objet dérivé de l'interface <xref:System.Xml.IXmlNamespaceResolver>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>L'espace de noms par défaut  
  Dans le document XML suivant, l'espace de noms par défaut, avec un préfixe vide, est utilisé pour déclarer l'espace de noms `http://www.contoso.com/books`.  

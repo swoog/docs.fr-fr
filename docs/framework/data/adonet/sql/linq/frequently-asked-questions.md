@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583485"
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 Les sections suivantes fournissent des réponses à quelques problèmes courants que vous êtes susceptible de rencontrer lors de l'implémentation de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  Q. System.Data.Linq est-il marqué pour être utilisé par du code d'un niveau de confiance partiel ?  
   
- Un fichier . Oui, l'assembly System.Data.Linq.dll figure parmi ces assemblys [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] marqués par l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Sans ce marquage, les assemblys contenus dans [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] sont conçus uniquement pour être utilisés par du code d'un niveau de confiance suffisant.  
+ Un fichier . Oui, l’assembly System.Data.Linq.dll figure parmi ces assemblys .NET Framework marqués avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut. Sans ce marquage, les assemblys dans le .NET Framework sont destinées à utiliser uniquement par le code totalement approuvé.  
   
  Le scénario principal dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pour autoriser partiellement approuvé les appelants consiste à activer le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly accessible à partir d’applications Web, où le *approbation* configuration est moyenne.  
   

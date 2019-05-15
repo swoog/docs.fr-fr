@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625777"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592777"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -44,7 +44,7 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
 ## <a name="settings-persistence"></a>Persistance des paramètres  
  Le <xref:System.Configuration.ApplicationSettingsBase> classe ne pas lui-même sont conservés ou charger les paramètres ; cette tâche incombe au fournisseur de paramètres, une classe qui dérive de <xref:System.Configuration.SettingsProvider>. Si une classe dérivée de <xref:System.Configuration.ApplicationSettingsBase> ne spécifie pas de fournisseur de paramètres via le <xref:System.Configuration.SettingsProviderAttribute>, le fournisseur par défaut, <xref:System.Configuration.LocalFileSettingsProvider>, est utilisé.  
   
- Le système de configuration fourni initialement avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] prend en charge les données de configuration d’application statiques via le fichier machine.config de l’ordinateur local ou dans un fichier `app.`exe.config que vous déployez avec votre application. Le <xref:System.Configuration.LocalFileSettingsProvider> classe étend cette prise en charge native de plusieurs manières :  
+ Le système de configuration fourni initialement avec le .NET Framework prend en charge les données de configuration d’application statiques via le fichier machine.config de l’ordinateur local ou dans un `app.`fichier exe.config que vous déployez avec votre application. Le <xref:System.Configuration.LocalFileSettingsProvider> classe étend cette prise en charge native de plusieurs manières :  
   
 - Les paramètres de portée d’application peuvent être stockés dans des fichiers machine.config ou `app.`exe.config. Machine.config est toujours en lecture seule, tandis que `app`.exe.config est limité par des considérations de sécurité en lecture seule pour la plupart des applications.  
   

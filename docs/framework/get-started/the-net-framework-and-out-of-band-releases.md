@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330442"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063044"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Versions finales hors plage de .NET Framework
 
@@ -52,8 +52,6 @@ Les versions OOB des principaux composants du Common Langage Runtime (CLR) sont 
  En général, un package OOB a une ou plusieurs versions préliminaires et une version stable. La licence qui accompagne une version préliminaire n'autorise généralement pas la redistribution, mais vous permet de tester un package et de fournir des commentaires. Les commentaires sont incorporés dans toutes les mises à jour apportées au package. Une version finale est distribuée comme package stable avec NuGet et inclut une licence qui vous permet de redistribuer le package NuGet avec votre application. Les packages stables sont pris en charge par Microsoft. Microsoft fournit la prise en charge IntelliSense, ainsi que d'autres types de documentation tels que les publications de blog et les réponses de forum pour tous les packages. De plus, le code source peut ne pas être disponible avec tous les packages. Pour être tenu informé sur les packages nouveaux et mis à jour, inscrivez-vous sur le [blog du .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
  Pour rechercher à la fois les versions préliminaires et les packages stables, choisissez **Include Prerelease (Inclure les versions préliminaires)** dans le Gestionnaire de package NuGet.
-
- Si vous voulez être informé de la publication de packages stables, abonnez-vous au [flux .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
 
 ## <a name="see-also"></a>Voir aussi
 

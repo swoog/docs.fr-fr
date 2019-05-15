@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878772"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583871"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Requêtes dans LINQ to DataSet
 Une requête est une expression qui récupère des données d'une source de données. En général, les requêtes sont exprimées dans un langage de requête spécialisé, tel que SQL pour les bases de données relationnelles et Xquery pour XML. Par conséquent, les développeurs ont dû apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qu'ils interrogent. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modèle simplifié et cohérent qui permet d'utiliser des données de types de sources et de formats diversifiés. Dans une requête [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], vous travaillez toujours avec des objets de programmation.  
@@ -31,7 +31,7 @@ Une requête est une expression qui récupère des données d'une source de donn
 ### <a name="query-expression-syntax"></a>Syntaxe d'expression de requête  
  Les expressions de requête utilisent une syntaxe de requête déclarative. Cette syntaxe permet au développeur d'écrire des requêtes en C# ou Visual Basic dans un format similaire à SQL. En utilisant la syntaxe d'expression de requête, vous pouvez même effectuer des opérations de filtrage, de classement et de regroupement complexes sur des sources de données avec un minimum de code. Pour plus d’informations, consultez [Expressions de requête LINQ](../../../csharp/linq/index.md#query-expression-overview) et [opérations de requête de base (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
- La syntaxe d'expression de requête est une caractéristique nouvelle dans C# 3.0 et [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. Toutefois, le Common Language Runtime (CLR) du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ne peut pas lire la syntaxe d'expression de requête proprement dite. Par conséquent, au moment de la compilation, les expressions de requête sont traduites en appels de méthodes pour que le CLR puisse les comprendre. Ces méthodes sont appelées les *opérateurs de requête standard*. En tant que développeur, vous pouvez les appeler directement en utilisant la syntaxe de méthode plutôt que la syntaxe de requête. Pour plus d’informations, consultez [Syntaxe de requête et syntaxe de méthode dans LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Pour plus d’informations sur les opérateurs de requête standard, consultez [vue d’ensemble des opérateurs de requête Standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ La syntaxe d'expression de requête est une caractéristique nouvelle dans C# 3.0 et [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]. Toutefois, le common language runtime (CLR) du .NET Framework ne peut pas lire la syntaxe d’expression de requête proprement dite. Par conséquent, au moment de la compilation, les expressions de requête sont traduites en appels de méthodes pour que le CLR puisse les comprendre. Ces méthodes sont appelées les *opérateurs de requête standard*. En tant que développeur, vous pouvez les appeler directement en utilisant la syntaxe de méthode plutôt que la syntaxe de requête. Pour plus d’informations, consultez [Syntaxe de requête et syntaxe de méthode dans LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Pour plus d’informations sur les opérateurs de requête standard, consultez [vue d’ensemble des opérateurs de requête Standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  L'exemple ci-dessous utilise <xref:System.Linq.Enumerable.Select%2A> pour retourner toutes les lignes de la table `Product` et afficher les noms de produits.  
   

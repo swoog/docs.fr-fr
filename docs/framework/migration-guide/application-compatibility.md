@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176252"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623786"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilité des applications dans le .NET Framework
 
@@ -42,11 +42,11 @@ Les diagnostics de compatibilité .NET sont des analyseurs issus de la technolog
 
 Chaque problème comprend les informations suivantes :
 
--   La description de ce qui a changé par rapport à la version précédente.
+- La description de ce qui a changé par rapport à la version précédente.
 
--   La façon dont ce changement affecte les clients et si d’éventuelles solutions de contournement sont disponibles pour préserver la compatibilité entre les versions.
+- La façon dont ce changement affecte les clients et si d’éventuelles solutions de contournement sont disponibles pour préserver la compatibilité entre les versions.
 
--   Une évaluation de l’importance du changement. Les problèmes de compatibilité entre applications sont classés de la façon suivante :
+- Une évaluation de l’importance du changement. Les problèmes de compatibilité entre applications sont classés de la façon suivante :
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Chaque problème comprend les informations suivantes :
     |Cas limite|Modification qui affecte des applications dans des scénarios très spécifiques et peu courants.|
     |Transparent|Modification qui n’a pas d’effet visible pour le développeur ou l’utilisateur de l’application.|
 
--   La version indique à quel moment cette modification est apparue pour la première fois dans le .NET Framework. Certaines modifications sont introduites dans une version particulière et annulées dans une version ultérieure ; cela est également indiqué.
+- La version indique à quel moment cette modification est apparue pour la première fois dans le .NET Framework. Certaines modifications sont introduites dans une version particulière et annulées dans une version ultérieure ; cela est également indiqué.
 
--   Type de modification :
+- Type de modification :
 
     |   |   |
     |---|---|
     |Reciblage|La modification affecte les applications qui sont recompilées pour cibler une nouvelle version du .NET Framework.|
     |Runtime|La modification affecte une application existante qui cible une version antérieure du .NET Framework, mais s’exécute sur une version ultérieure.|
 
--   Les API affectées, le cas échéant.
+- Les API affectées, le cas échéant.
 
--   Les ID des diagnostics disponibles
+- Les ID des diagnostics disponibles
 
 ## <a name="usage"></a>Utilisation
 Pour commencer, sélectionnez le type de modification de la compatibilité ci-dessous :

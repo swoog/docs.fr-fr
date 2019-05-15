@@ -10,23 +10,23 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597656"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformations de données avec LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ne gère pas uniquement la récupération des données. C’est également un outil puissant pour la transformation de données. En utilisant une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous pouvez utiliser une séquence source en entrée et la modifier de nombreuses façons pour créer une séquence de sortie. Vous pouvez modifier la séquence elle-même sans modifier les éléments eux-mêmes en les triant et en les regroupant. Mais la fonctionnalité la plus puissante des requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est peut-être la possibilité de créer des types. Cette opération est effectuée dans la clause [select](../../../../csharp/language-reference/keywords/select-clause.md). Par exemple, il est possible de réaliser les tâches suivantes :  
   
--   Fusionner plusieurs séquences d’entrée en une séquence de sortie unique ayant un nouveau type.  
+- Fusionner plusieurs séquences d’entrée en une séquence de sortie unique ayant un nouveau type.  
   
--   Créer des séquences de sortie dont les éléments se composent d’une seule propriété ou de plusieurs propriétés de chaque élément de la séquence source.  
+- Créer des séquences de sortie dont les éléments se composent d’une seule propriété ou de plusieurs propriétés de chaque élément de la séquence source.  
   
--   Créer des séquences de sortie dont les éléments se composent des résultats des opérations effectuées sur les données sources.  
+- Créer des séquences de sortie dont les éléments se composent des résultats des opérations effectuées sur les données sources.  
   
--   Créer des séquences de sortie dans un format différent. Par exemple, vous pouvez transformer des données de lignes ou de fichiers texte SQL en données XML.  
+- Créer des séquences de sortie dans un format différent. Par exemple, vous pouvez transformer des données de lignes ou de fichiers texte SQL en données XML.  
   
  Voici une liste non exhaustive d’exemples. Bien sûr, ces transformations peuvent être combinées de plusieurs façons dans la même requête. Par ailleurs, la séquence de sortie d’une requête peut être utilisée comme séquence d’entrée pour une nouvelle requête.  
   
