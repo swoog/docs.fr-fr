@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318375"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634239"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procédure : définir et utiliser des fournisseurs de formats numériques personnalisés
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] vous donne un contrôle étendu sur la représentation sous forme de chaîne de valeurs numériques. Il prend en charge les fonctionnalités suivantes pour personnaliser le format des valeurs numériques :  
   
--   Chaînes de format numériques standard, qui fournissent un ensemble prédéfini de formats pour convertir des nombres dans leur représentation sous forme de chaîne. Vous pouvez les utiliser avec toute méthode de mise en forme numérique, telle que <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, qui est dotée d’un paramètre `format`. Pour plus d’informations, consultez [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Chaînes de format numériques standard, qui fournissent un ensemble prédéfini de formats pour convertir des nombres dans leur représentation sous forme de chaîne. Vous pouvez les utiliser avec toute méthode de mise en forme numérique, telle que <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, qui est dotée d’un paramètre `format`. Pour plus d’informations, consultez [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Chaînes de format numériques personnalisées, qui fournissent un ensemble de symboles pouvant être combinés pour définir des spécificateurs de format numériques personnalisés. Elles peuvent également être utilisées avec toute méthode de mise en forme numérique, telle que <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, qui est dotée d’un paramètre `format`. Pour plus d’informations, consultez [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Chaînes de format numériques personnalisées, qui fournissent un ensemble de symboles pouvant être combinés pour définir des spécificateurs de format numériques personnalisés. Elles peuvent également être utilisées avec toute méthode de mise en forme numérique, telle que <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, qui est dotée d’un paramètre `format`. Pour plus d’informations, consultez [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Personnalisez les objets <xref:System.Globalization.CultureInfo> ou <xref:System.Globalization.NumberFormatInfo>, qui définissent les symboles et les modèles de format utilisés pour afficher les représentations sous forme de chaîne des valeurs numériques. Vous pouvez les utiliser avec toute méthode de mise en forme numérique, telle que <xref:System.Int32.ToString%2A>, qui est dotée d’un paramètre `provider`. En règle générale, le paramètre `provider` est utilisé pour spécifier une mise en forme propre à la culture.  
+- Personnalisez les objets <xref:System.Globalization.CultureInfo> ou <xref:System.Globalization.NumberFormatInfo>, qui définissent les symboles et les modèles de format utilisés pour afficher les représentations sous forme de chaîne des valeurs numériques. Vous pouvez les utiliser avec toute méthode de mise en forme numérique, telle que <xref:System.Int32.ToString%2A>, qui est dotée d’un paramètre `provider`. En règle générale, le paramètre `provider` est utilisé pour spécifier une mise en forme propre à la culture.  
   
  Dans certains cas (par exemple, quand une application doit afficher un numéro de compte mis en forme, un numéro d’identification ou un code postal), ces trois techniques sont inappropriées. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] vous permet également de définir un objet de mise en forme qui n’est ni un objet <xref:System.Globalization.CultureInfo> ni un objet <xref:System.Globalization.NumberFormatInfo> pour déterminer la mise en forme d’une valeur numérique. Cette rubrique fournit des instructions détaillées pour l’implémentation de ce type d’objet et fournit un exemple qui met en forme les numéros de téléphone.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318375"
   
 2. Implémentez la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> est une méthode de rappel que la méthode de mise en forme (telle que la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) appelle pour récupérer l’objet qui est réellement chargé d’effectuer la mise en forme personnalisée. Une implémentation type de <xref:System.IFormatProvider.GetFormat%2A> effectue les opérations suivantes :  
   
-    1.  Elle détermine si l’objet <xref:System.Type> passé comme paramètre de méthode représente une interface <xref:System.ICustomFormatter>.  
+    1. Elle détermine si l’objet <xref:System.Type> passé comme paramètre de méthode représente une interface <xref:System.ICustomFormatter>.  
   
-    2.  Si le paramètre représente l’interface <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> retourne un objet qui implémente l’interface <xref:System.ICustomFormatter> chargée de fournir la mise en forme personnalisée. En général, l’objet de mise en forme personnalisée retourne lui-même.  
+    2. Si le paramètre représente l’interface <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> retourne un objet qui implémente l’interface <xref:System.ICustomFormatter> chargée de fournir la mise en forme personnalisée. En général, l’objet de mise en forme personnalisée retourne lui-même.  
   
-    3.  Si le paramètre ne représente pas l’interface <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> retourne `null`.  
+    3. Si le paramètre ne représente pas l’interface <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> retourne `null`.  
   
 3. Implémentez la méthode <xref:System.ICustomFormatter.Format%2A>. Cette méthode est appelée par la méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et est chargée de retourner la représentation sous forme de chaîne d’un nombre. En général, l’implémentation de la méthode implique les étapes suivantes :  
   
-    1.  Le cas échéant, vérifiez que la méthode est légitimement destinée à fournir des services de mise en forme en examinant le paramètre `provider`. Pour les objets de mise en forme qui implémentent à la fois <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>, vous devez déterminer si le paramètre `provider` correspond à l’objet de mise en forme actuel.  
+    1. Le cas échéant, vérifiez que la méthode est légitimement destinée à fournir des services de mise en forme en examinant le paramètre `provider`. Pour les objets de mise en forme qui implémentent à la fois <xref:System.IFormatProvider> et <xref:System.ICustomFormatter>, vous devez déterminer si le paramètre `provider` correspond à l’objet de mise en forme actuel.  
   
-    2.  Déterminez si l’objet de mise en forme doit prendre en charge les spécificateurs de format personnalisés. (Par exemple, un spécificateur de format « N » peut indiquer qu’un numéro de téléphone américain doit être au format NANP, tandis qu’un spécificateur de format « I » peut indiquer une sortie au format ITU-T Recommandation E.123.) Si des spécificateurs de format sont utilisés, la méthode doit gérer le spécificateur de format spécifique. Ill est passé à la méthode dans le paramètre `format`. Si aucun spécificateur n’est présent, la valeur du paramètre `format` est <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Déterminez si l’objet de mise en forme doit prendre en charge les spécificateurs de format personnalisés. (Par exemple, un spécificateur de format « N » peut indiquer qu’un numéro de téléphone américain doit être au format NANP, tandis qu’un spécificateur de format « I » peut indiquer une sortie au format ITU-T Recommandation E.123.) Si des spécificateurs de format sont utilisés, la méthode doit gérer le spécificateur de format spécifique. Ill est passé à la méthode dans le paramètre `format`. Si aucun spécificateur n’est présent, la valeur du paramètre `format` est <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Récupérez la valeur numérique passée à la méthode comme paramètre `arg`. Effectuez toute opération requise pour le convertir en sa représentation sous forme de chaîne.  
+    3. Récupérez la valeur numérique passée à la méthode comme paramètre `arg`. Effectuez toute opération requise pour le convertir en sa représentation sous forme de chaîne.  
   
-    4.  Retournez la représentation sous forme de chaîne du paramètre `arg`.  
+    4. Retournez la représentation sous forme de chaîne du paramètre `arg`.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Pour utiliser un objet de mise en forme numérique personnalisé  
   

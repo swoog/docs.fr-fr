@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644895"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Stockage local des threads : champs statiques et emplacements de données relatifs à un thread
 Vous pouvez utiliser le stockage local des threads (TLS) managé pour stocker des données uniques à un thread et à un domaine d’application. Le .NET Framework permet d’utiliser le TLS managé de deux manières : champs statiques relatifs à un thread et emplacement de données.  
   
--   Utilisez les champs statiques relatifs à un thread (champs `Shared` relatifs à un thread en Visual Basic) si vous pouvez anticiper vos besoins précis au moment de la compilation. Les champs statiques relatifs à un thread offrent les meilleures performances. Ils vous offrent également les avantages du contrôle de type au moment de la compilation.  
+- Utilisez les champs statiques relatifs à un thread (champs `Shared` relatifs à un thread en Visual Basic) si vous pouvez anticiper vos besoins précis au moment de la compilation. Les champs statiques relatifs à un thread offrent les meilleures performances. Ils vous offrent également les avantages du contrôle de type au moment de la compilation.  
   
--   Utilisez des emplacements de données lorsque vos exigences réelles peuvent être détectées uniquement au moment de l’exécution. Les emplacements de données sont plus lents et plus difficiles à utiliser que les champs statiques relatifs à un thread, et les données sont stockées en tant que type <xref:System.Object>, de sorte que vous devez les caster en tant que type correct avant de les utiliser.  
+- Utilisez des emplacements de données lorsque vos exigences réelles peuvent être détectées uniquement au moment de l’exécution. Les emplacements de données sont plus lents et plus difficiles à utiliser que les champs statiques relatifs à un thread, et les données sont stockées en tant que type <xref:System.Object>, de sorte que vous devez les caster en tant que type correct avant de les utiliser.  
   
  Dans C++ non géré, vous utilisez `TlsAlloc` pour allouer dynamiquement des emplacements et `__declspec(thread)` pour déclarer qu’une variable doit être allouée dans un stockage relatif à un thread. Des champs statiques relatifs à un thread et des emplacements de données fournissent la version managée de ce comportement.  
   
@@ -31,9 +31,9 @@ Vous pouvez utiliser le stockage local des threads (TLS) managé pour stocker de
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicité des données dans TLS managé  
  Si vous utilisez les champs statiques relatifs à un thread ou des emplacements de données, les données dans TLS managé sont uniques à la combinaison du thread et du domaine d’application.  
   
--   Au sein d’un domaine d’application, un thread ne peut pas modifier des données à partir d’un autre thread, même lorsque les deux threads utilisent le même emplacement ou champ.  
+- Au sein d’un domaine d’application, un thread ne peut pas modifier des données à partir d’un autre thread, même lorsque les deux threads utilisent le même emplacement ou champ.  
   
--   Lorsqu’un thread accède au même emplacement ou champ à partir de plusieurs domaines d’application, une valeur séparée est maintenue dans chaque domaine d’application.  
+- Lorsqu’un thread accède au même emplacement ou champ à partir de plusieurs domaines d’application, une valeur séparée est maintenue dans chaque domaine d’application.  
   
  Par exemple, si un thread définit la valeur d’un champ statique relatif à un thread, passe à un autre domaine d’application, puis récupère la valeur du champ, la valeur récupérée dans le deuxième domaine d’application est différente de la valeur dans le premier domaine d’application. La définition d’une nouvelle valeur pour le champ dans le deuxième domaine d’application n’affecte pas la valeur du champ dans le premier domaine d’application.  
   
@@ -49,9 +49,9 @@ Vous pouvez utiliser le stockage local des threads (TLS) managé pour stocker de
 ## <a name="data-slots"></a>Emplacements de données  
  Le .NET Framework fournit des emplacements de données dynamiques qui sont uniques à une combinaison de thread et de domaine d’application. Il existe deux types d’emplacements de données : des emplacements nommés et des emplacements sans nom. Tous deux sont implémentés à l’aide de la structure <xref:System.LocalDataStoreSlot>.  
   
--   Pour créer un emplacement de données nommé, utilisez la méthode <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> ou <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Pour obtenir une référence à un emplacement nommé existant, passez son nom à la méthode <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
+- Pour créer un emplacement de données nommé, utilisez la méthode <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> ou <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Pour obtenir une référence à un emplacement nommé existant, passez son nom à la méthode <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
   
--   Pour créer un emplacement de données non nommé, utilisez la méthode <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
+- Pour créer un emplacement de données non nommé, utilisez la méthode <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
   
  Pour les emplacements nommés et non nommés, utilisez les méthodes <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> et <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> pour définir et récupérer les informations contenues dans l’emplacement. Il s’agit de méthodes statiques qui agissent toujours sur les données pour le thread qui les exécute actuellement.  
   
