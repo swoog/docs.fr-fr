@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648555"
 ---
 # <a name="registering-assemblies-with-com"></a>Inscription d'assemblys dans COM
 Vous pouvez exécuter l’outil en ligne de commande [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) pour inscrire ou désinscrire un assembly à utiliser avec COM. Regasm.exe ajoute des informations sur la classe au Registre système pour que les clients COM puissent utiliser la classe .NET Framework en toute transparence. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fournit des fonctionnalités équivalentes.  
@@ -30,11 +30,11 @@ Vous pouvez exécuter l’outil en ligne de commande [Assembly Registration Tool
   
  Sous la clé HKCR\CLSID\\{0000…0000}, la valeur par défaut est définie sur le ProgID de la classe, et deux nouvelles valeurs nommées, Class et Assembly, sont ajoutées. Le runtime lit la valeur Assembly à partir du Registre et la passe au service de résolution d’assembly du runtime. Le service de résolution d’assembly tente de localiser l’assembly, en se basant sur son nom et son numéro de version. Pour que le service de résolution d’assembly puisse localiser un assembly, celui-ci doit se trouver dans l’un des emplacements suivants :  
   
--   Le Global Assembly Cache (il doit s’agir d’un assembly avec un nom fort)  
+- Le Global Assembly Cache (il doit s’agir d’un assembly avec un nom fort)  
   
--   Le répertoire de l’application. Les assemblys chargés à partir du chemin d’une application ne sont accessibles qu’à partir de cette application.  
+- Le répertoire de l’application. Les assemblys chargés à partir du chemin d’une application ne sont accessibles qu’à partir de cette application.  
   
--   Sur un chemin de fichier spécifié avec l’option **/codebase** définie sur Regasm.exe.  
+- Sur un chemin de fichier spécifié avec l’option **/codebase** définie sur Regasm.exe.  
   
  Regasm.exe crée également la clé InProcServer32 sous la clé HKCR\CLSID\\{0000…0000}. La valeur par défaut de la clé est définie sur le nom de la DLL qui initialise le common language runtime (Mscoree.dll).  
   

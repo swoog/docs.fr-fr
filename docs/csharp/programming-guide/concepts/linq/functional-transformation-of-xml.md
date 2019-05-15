@@ -2,12 +2,12 @@
 title: Transformation fonctionnelle de données XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596664"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformation fonctionnelle de données XML (C#)
 Cette rubrique traite de l'approche de transformation fonctionnelle pure permettant de modifier des documents XML et l'oppose à une approche procédurale.  
@@ -15,11 +15,11 @@ Cette rubrique traite de l'approche de transformation fonctionnelle pure permett
 ## <a name="modifying-an-xml-document"></a>Modification d'un document XML  
  L'une des tâches les plus courantes pour un programmeur XML consiste à transformer du code XML d'une forme en une autre. La forme d'un document XML est la structure du document, qui inclut les éléments suivants :  
   
--   la hiérarchie exprimée par le document ;  
+- la hiérarchie exprimée par le document ;  
   
--   les noms des éléments et des attributs ;  
+- les noms des éléments et des attributs ;  
   
--   les types de données des éléments et attributs.  
+- les types de données des éléments et attributs.  
   
  En général, l'approche la plus efficace pour transformer du code XML d'une forme en une autre consiste à utiliser la transformation fonctionnelle pure. Avec cette approche, la principale tâche du programmeur est de créer une transformation qui est appliquée à l'ensemble du document XML (ou à un ou plusieurs nœuds strictement définis). La transformation fonctionnelle offre sans aucun doute la plus grande facilité de codage (une fois que le programmeur s'est familiarisé avec cette approche) et la plus grande facilité de maintenance du code, et elle est souvent plus compacte que les autres approches.  
   

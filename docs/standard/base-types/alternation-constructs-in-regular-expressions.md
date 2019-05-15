@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634788"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Constructions d'alternative dans les expressions régulières
 <a name="top"></a> Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif ou conditionnelle. .NET prend en charge trois constructions d’alternative :  
   
--   [Utilisation des critères spéciaux avec &#124;](#Either_Or)  
+- [Utilisation des critères spéciaux avec &#124;](#Either_Or)  
   
--   [Correspondance conditionnelle avec (?(expression)oui&#124;non)](#Conditional_Expr)  
+- [Correspondance conditionnelle avec (?(expression)oui&#124;non)](#Conditional_Expr)  
   
--   [Correspondance conditionnelle selon un groupe capturé valide](#Conditional_Group)  
+- [Correspondance conditionnelle selon un groupe capturé valide](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>Utilisation des critères spéciaux avec &#124;  

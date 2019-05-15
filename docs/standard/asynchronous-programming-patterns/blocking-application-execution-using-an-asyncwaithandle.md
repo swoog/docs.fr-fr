@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d667135b815dc5d47ba5f7de8d237796a6fd6e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4dc2c14a8416b727d5b987b4dde109ba9506de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629149"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blocage de l'exécution d'applications à l'aide d'un AsyncWaitHandle
 Les applications qui ne peuvent pas continuer à effectuer d’autres tâches en attendant les résultats d’une opération asynchrone doivent se bloquer jusqu'à ce que cette opération se termine. Pour bloquer le thread principal de votre application en attendant la fin d’une opération asynchrone, utilisez l’une des options suivantes :  
   
--   Utilisez la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A> du <xref:System.IAsyncResult> retourné par la méthode **Begin**_NomOpération_ de l’opération asynchrone. Cette approche est illustrée dans cette rubrique.  
+- Utilisez la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A> du <xref:System.IAsyncResult> retourné par la méthode **Begin**_NomOpération_ de l’opération asynchrone. Cette approche est illustrée dans cette rubrique.  
   
--   Appelez la méthode **End**_NomOpération_ de l’opération asynchrone. Vous trouverez un exemple illustrant cette approche sur la page [Bloquer l'exécution d'applications en mettant fin à une opération asynchrone](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Appelez la méthode **End**_NomOpération_ de l’opération asynchrone. Vous trouverez un exemple illustrant cette approche sur la page [Bloquer l'exécution d'applications en mettant fin à une opération asynchrone](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
  Les applications qui utilisent un ou plusieurs objets <xref:System.Threading.WaitHandle> pour se bloquer jusqu’à la fin d’une opération asynchrone appellent généralement la méthode **Begin**_NomOpération_, effectuent tout le travail réalisable sans les résultats de l’opération, puis se bloquent jusqu’à la fin de la ou des opérations asynchrones. Une application peut se bloquer sur une seule opération en appelant l’une des méthodes <xref:System.Threading.WaitHandle.WaitOne%2A> à l’aide du <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Pour imposer un blocage en attendant qu’un ensemble d’opérations asynchrones se termine, stockez les objets <xref:System.IAsyncResult.AsyncWaitHandle%2A> associés dans un tableau et appelez l’une des méthodes <xref:System.Threading.WaitHandle.WaitAll%2A>. Pour imposer un blocage en attendant que l’une des opérations asynchrones se termine, stockez les objets <xref:System.IAsyncResult.AsyncWaitHandle%2A> associés dans un tableau et appelez l’une des méthodes <xref:System.Threading.WaitHandle.WaitAny%2A>.  
   

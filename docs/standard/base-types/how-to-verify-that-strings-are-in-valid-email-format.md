@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890499"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633440"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procédure : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  En supposant que vous ayez créé une bibliothèque de classes nommée RegexUtilities.dll qui comprenne votre expression régulière de validation d'e-mail, vous pouvez compiler cet exemple de l'une des manières suivantes :  
   
--   Dans Visual Studio, en créant une application console et en ajoutant une référence à RegexUtilities.dll dans votre projet.  
+- Dans Visual Studio, en créant une application console et en ajoutant une référence à RegexUtilities.dll dans votre projet.  
   
--   À partir de la ligne de commande, en copiant-collant le code source dans un fichier texte, puis en le compilant avec une commande semblable à la suivante (en supposant que le nom du fichier de code source soit Example.cs ou Example.vb) :  
+- À partir de la ligne de commande, en copiant-collant le code source dans un fichier texte, puis en le compilant avec une commande semblable à la suivante (en supposant que le nom du fichier de code source soit Example.cs ou Example.vb) :  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

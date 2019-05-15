@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622694"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Procédure : obtenir des magasins pour le stockage isolé
 Un magasin isolé expose un système de fichiers virtuel dans un compartiment de données. La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fournit plusieurs méthodes pour interagir avec un magasin isolé. Pour créer et récupérer des magasins, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> propose trois méthodes statiques :  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retourne un stockage isolé par utilisateur et par assembly.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retourne un stockage isolé par utilisateur et par assembly.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> retourne un stockage isolé par domaine et par assembly.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> retourne un stockage isolé par domaine et par assembly.  
   
      Les deux méthodes récupèrent un magasin qui appartient au code à partir duquel elles sont appelées.  
   
--   La méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retourne un magasin isolé spécifié en passant une combinaison de paramètres d’étendue.  
+- La méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retourne un magasin isolé spécifié en passant une combinaison de paramètres d’étendue.  
   
  Le code suivant retourne un magasin isolé par utilisateur, assembly et domaine.  
   

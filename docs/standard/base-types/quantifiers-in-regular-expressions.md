@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633636"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificateurs dans les expressions régulières
 Les quantificateurs spécifient le nombre d’instances d’un caractère, groupe ou classe de caractères devant être présentes dans l’entrée pour qu’une correspondance soit trouvée.  Le tableau suivant répertorie les quantificateurs pris en charge par .NET.  
@@ -228,11 +228,11 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 ## <a name="greedy-and-lazy-quantifiers"></a>Quantificateurs gourmands et paresseux  
  De nombreux quantificateurs existent en deux versions :  
   
--   Une version gourmande.  
+- Une version gourmande.  
   
      Un quantificateur gourmand essaie de correspondre à un élément autant de fois que possible.  
   
--   Une version non gourmande (ou paresseuse).  
+- Une version non gourmande (ou paresseuse).  
   
      Un quantificateur non gourmand essaie de correspondre à un élément aussi peu de fois que possible. Vous pouvez changer un quantificateur gourmand en quantificateur paresseux en ajoutant simplement un `?`.  
   

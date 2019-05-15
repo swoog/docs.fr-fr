@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647885"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modification de nœuds, de contenu et de valeurs dans un document XML
 Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. Vous pouvez :  
   
--   Modifier la valeur des nœuds à l'aide de la propriété <xref:System.Xml.XmlNode.Value%2A>.  
+- Modifier la valeur des nœuds à l'aide de la propriété <xref:System.Xml.XmlNode.Value%2A>.  
   
--   Modifier un ensemble complet de nœuds en les remplaçant par des nouveaux. Pour ce faire, utilisez la propriété <xref:System.Xml.XmlNode.InnerXml%2A>.  
+- Modifier un ensemble complet de nœuds en les remplaçant par des nouveaux. Pour ce faire, utilisez la propriété <xref:System.Xml.XmlNode.InnerXml%2A>.  
   
--   Remplacer les nœuds existants à l'aide de la méthode <xref:System.Xml.XmlNode.RemoveChild%2A>.  
+- Remplacer les nœuds existants à l'aide de la méthode <xref:System.Xml.XmlNode.RemoveChild%2A>.  
   
--   Ajouter des caractères supplémentaires aux nœuds héritant de la classe <xref:System.Xml.XmlCharacterData> à l'aide des méthodes <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> ou <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
+- Ajouter des caractères supplémentaires aux nœuds héritant de la classe <xref:System.Xml.XmlCharacterData> à l'aide des méthodes <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> ou <xref:System.Xml.XmlCharacterData.ReplaceData%2A>.  
   
--   Modifier le contenu en supprimant une série de caractères à l'aide de la méthode <xref:System.Xml.XmlCharacterData.DeleteData%2A> sur les types de nœuds héritant de l'objet <xref:System.Xml.XmlCharacterData>.  
+- Modifier le contenu en supprimant une série de caractères à l'aide de la méthode <xref:System.Xml.XmlCharacterData.DeleteData%2A> sur les types de nœuds héritant de l'objet <xref:System.Xml.XmlCharacterData>.  
   
  Une technique simple de modification de la valeur d'un nœud consiste à utiliser `node.Value = "new value";`. Le tableau suivant répertorie les types de nœuds utilisés par cette ligne de code unique et les données exactes modifiées pour ce type de nœud.  
   

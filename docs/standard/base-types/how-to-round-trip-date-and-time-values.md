@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633835"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Procédure : effectuer un aller-retour de valeurs de date et d’heure
 Dans de nombreuses applications, une valeur de date et d’heure est destinée à identifier clairement un point unique dans le temps. Cette rubrique montre comment enregistrer et restaurer une valeur <xref:System.DateTime>, une valeur <xref:System.DateTimeOffset> et une valeur de date et d’heure avec des informations de fuseau horaire pour que la valeur restaurée identifie la même heure que la valeur enregistrée.  
@@ -83,21 +83,21 @@ Dans de nombreuses applications, une valeur de date et d’heure est destinée �
 ## <a name="compiling-the-code"></a>Compilation du code  
  Ces exemples nécessitent :  
   
--   Que les espaces de noms suivants soient importés avec les instructions `using` en C# ou les instructions `Imports` en Visual Basic :  
+- Que les espaces de noms suivants soient importés avec les instructions `using` en C# ou les instructions `Imports` en Visual Basic :  
   
-    -   <xref:System> (C# uniquement).  
+    - <xref:System> (C# uniquement).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   Une référence à System.Core.dll.  
+- Une référence à System.Core.dll.  
   
--   Que chaque exemple de code, autre que la classe `DateInTimeZone`, soit inclus dans une classe ou un module Visual Basic, encapsulé dans des méthodes et appelé à partir de la méthode `Main`.  
+- Que chaque exemple de code, autre que la classe `DateInTimeZone`, soit inclus dans une classe ou un module Visual Basic, encapsulé dans des méthodes et appelé à partir de la méthode `Main`.  
   
 ## <a name="see-also"></a>Voir aussi
 

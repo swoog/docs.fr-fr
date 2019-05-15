@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615157"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Notions de base du garbage collection
 <a name="top"></a> Dans le Common Language Runtime (CLR), le garbage collector a un rôle de gestionnaire de mémoire automatique. Il fournit les avantages suivants :  
   
--   Il vous permet de développer votre application sans avoir à libérer de la mémoire.  
+- Il vous permet de développer votre application sans avoir à libérer de la mémoire.  
   
--   Il alloue efficacement les objets sur le tas managé.  
+- Il alloue efficacement les objets sur le tas managé.  
   
--   Il libère les objets qui ne sont plus utilisés, efface leur mémoire et garde la mémoire disponible pour les futures allocations. Les objets managés obtiennent automatiquement un contenu propre au démarrage, ce qui fait que leurs constructeurs n'ont pas à initialiser chaque champ de données.  
+- Il libère les objets qui ne sont plus utilisés, efface leur mémoire et garde la mémoire disponible pour les futures allocations. Les objets managés obtiennent automatiquement un contenu propre au démarrage, ce qui fait que leurs constructeurs n'ont pas à initialiser chaque champ de données.  
   
--   Il sécurise la mémoire en s'assurant qu'un objet ne peut pas utiliser le contenu d'un autre objet.  
+- Il sécurise la mémoire en s'assurant qu'un objet ne peut pas utiliser le contenu d'un autre objet.  
   
  Cette rubrique décrit les concepts fondamentaux du garbage collection. 
  
@@ -37,25 +37,25 @@ ms.locfileid: "58826598"
 ## <a name="fundamentals-of-memory"></a>Notions de base de la mémoire  
  La liste suivante résume les concepts importants de la mémoire CLR.  
   
--   Chaque processus possède son propre espace d'adressage virtuel séparé. Tous les processus sur le même ordinateur partagent la même mémoire physique et le fichier d'échange s'il en existe un.  
+- Chaque processus possède son propre espace d'adressage virtuel séparé. Tous les processus sur le même ordinateur partagent la même mémoire physique et le fichier d'échange s'il en existe un.  
   
--   Par défaut, sur les ordinateurs 32 bits, chaque processus a un espace d'adressage virtuel en mode utilisateur de 2 Go.  
+- Par défaut, sur les ordinateurs 32 bits, chaque processus a un espace d'adressage virtuel en mode utilisateur de 2 Go.  
   
--   En tant que développeur d'applications, vous travaillez uniquement avec l'espace d'adressage virtuel et ne gérez jamais directement la mémoire physique. Le garbage collector alloue et libère la mémoire virtuelle pour vous sur le tas managé.  
+- En tant que développeur d'applications, vous travaillez uniquement avec l'espace d'adressage virtuel et ne gérez jamais directement la mémoire physique. Le garbage collector alloue et libère la mémoire virtuelle pour vous sur le tas managé.  
   
      Si vous écrivez du code natif, vous utilisez des fonctions Win32 pour utiliser l'espace d'adressage virtuel. Ces fonctions allouent et libèrent la mémoire virtuelle pour vous sur les tas natifs.  
   
--   La mémoire virtuelle peut être dans trois états :  
+- La mémoire virtuelle peut être dans trois états :  
   
-    -   Libre. Il n'existe aucune référence au bloc de mémoire et celui-ci est disponible pour allocation.  
+    - Libre. Il n'existe aucune référence au bloc de mémoire et celui-ci est disponible pour allocation.  
   
-    -   Réservé. Le bloc de mémoire est disponible pour votre utilisation et ne peut pas être utilisé pour une autre demande d'allocation. Toutefois, vous ne pouvez pas stocker de données dans ce bloc de mémoire tant qu'il n'est pas validé.  
+    - Réservé. Le bloc de mémoire est disponible pour votre utilisation et ne peut pas être utilisé pour une autre demande d'allocation. Toutefois, vous ne pouvez pas stocker de données dans ce bloc de mémoire tant qu'il n'est pas validé.  
   
-    -   Validé. Le bloc de mémoire est assigné au stockage physique.  
+    - Validé. Le bloc de mémoire est assigné au stockage physique.  
   
--   L'espace d'adressage virtuel peut être fragmenté. Cela signifie qu'il existe des blocs libres, également appelés trous, dans l'espace d'adressage. Lorsqu'une allocation de mémoire virtuelle est demandée, le gestionnaire de mémoire virtuelle doit rechercher un bloc unique libre suffisamment grand pour satisfaire la demande d'allocation. Même si vous disposez de 2 Go d'espace libre, l'allocation qui requiert 2 Go échoue, sauf si tout cet espace libre est contenu dans un bloc d'adresse unique.  
+- L'espace d'adressage virtuel peut être fragmenté. Cela signifie qu'il existe des blocs libres, également appelés trous, dans l'espace d'adressage. Lorsqu'une allocation de mémoire virtuelle est demandée, le gestionnaire de mémoire virtuelle doit rechercher un bloc unique libre suffisamment grand pour satisfaire la demande d'allocation. Même si vous disposez de 2 Go d'espace libre, l'allocation qui requiert 2 Go échoue, sauf si tout cet espace libre est contenu dans un bloc d'adresse unique.  
   
--   Vous pouvez manquer de mémoire si vous manquez d'espace d'adressage virtuel à réserver ou d'espace physique à valider.  
+- Vous pouvez manquer de mémoire si vous manquez d'espace d'adressage virtuel à réserver ou d'espace physique à valider.  
   
  Votre fichier d'échange est utilisé, même si la sollicitation de la mémoire physique (c'est-à-dire, la demande de mémoire physique) est faible. La première fois que la sollicitation de la mémoire physique est élevée, le système d'exploitation doit libérer de la place dans la mémoire physique pour stocker des données et sauvegarde une partie des données qui sont dans la mémoire physique dans le fichier d'échange. Ces données ne sont pas paginées tant qu'elles ne sont pas nécessaires, il est donc possible de rencontrer la pagination dans les situations dans lesquelles la sollicitation de la mémoire physique est très faible. 
  
@@ -65,11 +65,11 @@ ms.locfileid: "58826598"
 ## <a name="conditions-for-a-garbage-collection"></a>Conditions pour une opération garbage collection  
  Le garbage collection se produit lorsque l'une des conditions suivantes est vraie :  
   
--   Le système possède peu de mémoire physique. Cette information nous est communiquée par la notification de mémoire insuffisante du système d’exploitation ou par un message similaire provenant de l’hôte.
+- Le système possède peu de mémoire physique. Cette information nous est communiquée par la notification de mémoire insuffisante du système d’exploitation ou par un message similaire provenant de l’hôte.
   
--   La mémoire utilisée par les objets alloués sur le tas managé dépasse un seuil acceptable. Ce seuil est continuellement ajusté à mesure que le processus s'exécute.  
+- La mémoire utilisée par les objets alloués sur le tas managé dépasse un seuil acceptable. Ce seuil est continuellement ajusté à mesure que le processus s'exécute.  
   
--   La méthode <xref:System.GC.Collect%2A?displayProperty=nameWithType> est appelée. Dans presque tous les cas, vous n'avez pas à appeler cette méthode, car le garbage collector s'exécute continuellement. Cette méthode est principalement utilisée pour les situations uniques et les tests.  
+- La méthode <xref:System.GC.Collect%2A?displayProperty=nameWithType> est appelée. Dans presque tous les cas, vous n'avez pas à appeler cette méthode, car le garbage collector s'exécute continuellement. Cette méthode est principalement utilisée pour les situations uniques et les tests.  
   
  [Retour au début](#top)  
   
@@ -100,15 +100,15 @@ ms.locfileid: "58826598"
 ## <a name="generations"></a>Générations  
  Le tas est organisé en générations. Il peut ainsi gérer des objets durables et éphémères. Le garbage collection consiste principalement en la récupération d'objets éphémères qui occupent généralement une petite partie du tas. Il existe trois générations d'objets sur le tas :  
   
--   **Génération 0**. Il s'agit de la génération la plus jeune, qui contient des objets éphémères. Un exemple d'objet éphémère est une variable temporaire. Le garbage collection a le plus souvent lieu dans cette génération.  
+- **Génération 0**. Il s'agit de la génération la plus jeune, qui contient des objets éphémères. Un exemple d'objet éphémère est une variable temporaire. Le garbage collection a le plus souvent lieu dans cette génération.  
   
      Les objets alloués récemment forment une nouvelle génération d'objets et sont implicitement des collections de génération 0, à moins qu'ils ne s'agissent de grands objets, auquel cas ils entrent dans le tas d'objets volumineux dans une collection de génération 2.  
   
      La plupart des objets sont libérés pour l'opération garbage collection dans la génération 0 et ne survivent pas à la génération suivante.  
   
--   **Génération 1**. Cette génération contient des objets éphémères et sert de tampon entre objets éphémères et objets durables.  
+- **Génération 1**. Cette génération contient des objets éphémères et sert de tampon entre objets éphémères et objets durables.  
   
--   **Génération 2**. Cette génération contient des objets durables. Un exemple d'objet durable est un objet dans une application serveur qui contient des données statiques qui sont vivantes pour la durée du processus.  
+- **Génération 2**. Cette génération contient des objets durables. Un exemple d'objet durable est un objet dans une application serveur qui contient des données statiques qui sont vivantes pour la durée du processus.  
   
  Les opérations garbage collection se produisent sur des générations spécifiques, selon les conditions spécifiées. La collecte d'une génération signifie la collecte des objets de cette génération et de toutes ses générations plus jeunes. Les opérations garbage collection de génération 2 sont également appelées garbage collection complet, car elles libèrent tous les objets de toutes les générations (autrement dit, tous les objets du tas managé).  
   
@@ -141,11 +141,11 @@ ms.locfileid: "58826598"
 ## <a name="what-happens-during-a-garbage-collection"></a>Déroulement d'une opération garbage collection  
  Une opération garbage collection présente les phases suivantes :  
   
--   Une phase de marquage qui recherche et crée une liste de tous les objets actifs.  
+- Une phase de marquage qui recherche et crée une liste de tous les objets actifs.  
   
--   Une phase de déplacement qui met à jour les références aux objets qui seront compactés.  
+- Une phase de déplacement qui met à jour les références aux objets qui seront compactés.  
   
--   Une phase de compactage qui libère l'espace occupé par les objets morts et compacte les objets survivants. La phase de compactage déplace les objets qui ont survécu à un garbage collection vers l'extrémité la plus ancienne du segment.  
+- Une phase de compactage qui libère l'espace occupé par les objets morts et compacte les objets survivants. La phase de compactage déplace les objets qui ont survécu à un garbage collection vers l'extrémité la plus ancienne du segment.  
   
      Étant donné que les collections de génération 2 peuvent occuper plusieurs segments, les objets promus dans la génération 2 peuvent être déplacés dans un segment plus ancien. Les survivants des générations 1 et 2 peuvent être déplacés vers un autre segment, car ils sont promus à la génération 2.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "58826598"
   
  Le garbage collector utilise les informations suivantes pour déterminer si les objets sont vivants :  
   
--   **Racines de pile**. Variables de pile fournies par le compilateur juste-à-temps (JIT) et l'explorateur de pile. Notez que les optimisations JIT peuvent allonger ou raccourcir les régions de code dans lesquelles les variables de pile sont signalées au garbage collector.
+- **Racines de pile**. Variables de pile fournies par le compilateur juste-à-temps (JIT) et l'explorateur de pile. Notez que les optimisations JIT peuvent allonger ou raccourcir les régions de code dans lesquelles les variables de pile sont signalées au garbage collector.
   
--   **Handles de garbage collection**. Handles qui pointent vers les objets managés qui peuvent être alloués par le code utilisateur ou par le Common Language Runtime.  
+- **Handles de garbage collection**. Handles qui pointent vers les objets managés qui peuvent être alloués par le code utilisateur ou par le Common Language Runtime.  
   
--   **Données statiques**. Objets statiques des domaines d'application qui pourraient référencer d'autres objets. Chaque domaine d'application effectue le suivi de ses objets statiques.  
+- **Données statiques**. Objets statiques des domaines d'application qui pourraient référencer d'autres objets. Chaque domaine d'application effectue le suivi de ses objets statiques.  
   
  Avant qu'une opération garbage collection ne démarre, tous les threads managés sont suspendus à l'exception du thread qui a déclenché l'opération.  
   
@@ -182,13 +182,13 @@ Thread qui déclenche un garbage collection
 ## <a name="workstation-and-server-garbage-collection"></a>Garbage collection de station de travail et de serveur  
  Le garbage collector s'ajuste automatiquement et peut travailler dans une large gamme de scénarios. Vous pouvez utiliser un paramètre du fichier de configuration pour définir le type de garbage collection en fonction des caractéristiques de la charge de travail. Le CLR fournit les types de garbage collection suivants :  
   
--   Garbage collection de station de travail, pour toutes les stations de travail clientes et les PC autonomes. Il s'agit du paramètre par défaut de l'[\<élément <gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) dans le schéma de configuration d'exécution.  
+- Garbage collection de station de travail, pour toutes les stations de travail clientes et les PC autonomes. Il s'agit du paramètre par défaut de l'[\<élément <gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) dans le schéma de configuration d'exécution.  
   
      Le garbage collection de station de travail peut être simultané ou non simultané. Le garbage collection simultané permet aux threads managés de continuer à fonctionner pendant un garbage collection.  
   
      En commençant par le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le garbage collection d'arrière-plan remplace le garbage collection simultané.  
   
--   Garbage collection de serveur, prévu pour les applications serveur qui ont besoin d'un débit et d'une extensibilité. Le garbage collection de serveur peut être non simultané ou en arrière-plan.  
+- Garbage collection de serveur, prévu pour les applications serveur qui ont besoin d'un débit et d'une extensibilité. Le garbage collection de serveur peut être non simultané ou en arrière-plan.  
   
  Les illustrations suivantes montrent les threads dédiés qui exécutent un garbage collection sur un serveur.  
   
@@ -205,23 +205,23 @@ Garbage collection de serveur
 ### <a name="comparing-workstation-and-server-garbage-collection"></a>Comparaison des opérations garbage collection de station de travail et de serveur  
  Voici les considérations liées aux threads et aux performances pour le garbage collection de station de travail :  
   
--   La collecte se produit sur le thread utilisateur qui a déclenché le garbage collection et reste à la même priorité. Étant donné que les threads utilisateur sont généralement exécutés à la priorité normale, le garbage collector (qui s'exécute sur un thread de priorité normale) doit rivaliser avec d'autres threads pour le temps processeur.  
+- La collecte se produit sur le thread utilisateur qui a déclenché le garbage collection et reste à la même priorité. Étant donné que les threads utilisateur sont généralement exécutés à la priorité normale, le garbage collector (qui s'exécute sur un thread de priorité normale) doit rivaliser avec d'autres threads pour le temps processeur.  
   
      Les threads qui exécutent du code natif ne sont pas interrompus.  
   
--   Le garbage collection de station de travail est toujours utilisé sur un ordinateur doté d’un seul processeur, indépendamment du paramètre [\<<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Si vous spécifiez le garbage collection de serveur, le CLR utilise le garbage collection de station de travail avec la concurrence désactivée.  
+- Le garbage collection de station de travail est toujours utilisé sur un ordinateur doté d’un seul processeur, indépendamment du paramètre [\<<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Si vous spécifiez le garbage collection de serveur, le CLR utilise le garbage collection de station de travail avec la concurrence désactivée.  
   
  Voici les considérations liées aux threads et aux performances pour le garbage collection de serveur :  
   
--   La collecte se produit sur plusieurs threads dédiés qui s'exécutent au niveau de priorité `THREAD_PRIORITY_HIGHEST` .  
+- La collecte se produit sur plusieurs threads dédiés qui s'exécutent au niveau de priorité `THREAD_PRIORITY_HIGHEST` .  
   
--   Un tas et un thread dédié pour effectuer le garbage collection sont fournis pour chaque UC, et les tas sont collectés au même moment. Chaque tas contient un tas de petits objets et un tas d'objets volumineux, et tous les tas peuvent faire l'objet d'accès par du code utilisateur. Les objets des différents tas peuvent faire référence les uns aux autres.  
+- Un tas et un thread dédié pour effectuer le garbage collection sont fournis pour chaque UC, et les tas sont collectés au même moment. Chaque tas contient un tas de petits objets et un tas d'objets volumineux, et tous les tas peuvent faire l'objet d'accès par du code utilisateur. Les objets des différents tas peuvent faire référence les uns aux autres.  
   
--   Étant donné que plusieurs threads de garbage collection fonctionnent ensemble, le garbage collection de serveur est plus rapide que le garbage collection de station de travail sur un tas de même taille.  
+- Étant donné que plusieurs threads de garbage collection fonctionnent ensemble, le garbage collection de serveur est plus rapide que le garbage collection de station de travail sur un tas de même taille.  
   
--   Le garbage collection de serveur présente souvent des segments de plus grande taille. Notez, cependant, qu'il ne s'agit que d'une généralisation : la taille de segment est spécifique à l'implémentation et est susceptible de changer. Vous ne devez pas faire d'hypothèses sur la taille des segments alloués par le garbage collector lors du paramétrage de votre application.  
+- Le garbage collection de serveur présente souvent des segments de plus grande taille. Notez, cependant, qu'il ne s'agit que d'une généralisation : la taille de segment est spécifique à l'implémentation et est susceptible de changer. Vous ne devez pas faire d'hypothèses sur la taille des segments alloués par le garbage collector lors du paramétrage de votre application.  
   
--   Le garbage collection de serveur peut consommer beaucoup de ressources. Par exemple, si vous disposez de 12 processus qui s'exécutent sur un ordinateur possédant 4 processeurs, il y aura 48 threads de garbage collection dédiés s'ils utilisent tous le garbage collection de serveur. Dans une situation de charge de mémoire élevée, si tous les processus commencent le garbage collection, le garbage collector aura 48 threads à planifier.  
+- Le garbage collection de serveur peut consommer beaucoup de ressources. Par exemple, si vous disposez de 12 processus qui s'exécutent sur un ordinateur possédant 4 processeurs, il y aura 48 threads de garbage collection dédiés s'ils utilisent tous le garbage collection de serveur. Dans une situation de charge de mémoire élevée, si tous les processus commencent le garbage collection, le garbage collector aura 48 threads à planifier.  
   
  Si vous exécutez des centaines d'instances d'une application, envisagez d'utiliser le garbage collection de station de travail avec le garbage collection simultané désactivé. Cela provoquera moins de changements de contexte, ce qui peut améliorer les performances.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109796"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650502"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Récupération de ressources dans des applications de bureau
 Quand vous utilisez des ressources localisées dans des applications de bureau du .NET Framework, vous devez, dans l’idéal, empaqueter les ressources pour la culture neutre ou par défaut avec l’assembly principal et créer un assembly satellite séparé pour chaque langue ou culture prise en charge par votre application. Vous pouvez ensuite utiliser la classe <xref:System.Resources.ResourceManager> pour accéder aux ressources nommées, comme indiqué dans la section suivante. Si vous choisissez de ne pas incorporer les ressources dans l’assembly principal et les assemblys satellites, vous pouvez également accéder directement aux fichiers .resources binaires, comme cela est expliqué dans la section [Récupération de ressources de fichiers .resources](#from_file) , plus loin dans cet article.  Pour récupérer des ressources dans des applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consultez [Création et récupération de ressources dans les applications du Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) dans le Centre de développement Windows.  
@@ -34,9 +34,9 @@ Quand vous utilisez des ressources localisées dans des applications de bureau d
 ## <a name="retrieving-resources-from-assemblies"></a>Récupération de ressources d’assemblys  
  La classe <xref:System.Resources.ResourceManager> fournit l’accès aux ressources au moment de l’exécution. Utilisez la méthode <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> pour récupérer des ressources de type chaîne et la méthode <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> ou <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> pour récupérer des ressources d’un autre type. Chaque méthode a deux surcharges :  
   
--   Une surcharge dont le paramètre unique est une chaîne qui contient le nom de la ressource. La méthode tente de récupérer cette ressource pour la culture du thread actuel. Pour plus d’informations, consultez les méthodes <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>et <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Une surcharge dont le paramètre unique est une chaîne qui contient le nom de la ressource. La méthode tente de récupérer cette ressource pour la culture du thread actuel. Pour plus d’informations, consultez les méthodes <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>et <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
--   Une surcharge qui a deux paramètres : une chaîne contenant le nom de la ressource, et un objet <xref:System.Globalization.CultureInfo> représentant la culture pour laquelle la ressource doit être récupérée. Si une ressource définie pour cette culture est introuvable, le Gestionnaire des ressources utilise des règles de secours pour récupérer une ressource appropriée. Pour plus d’informations, consultez les méthodes <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>et <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Une surcharge qui a deux paramètres : une chaîne contenant le nom de la ressource, et un objet <xref:System.Globalization.CultureInfo> représentant la culture pour laquelle la ressource doit être récupérée. Si une ressource définie pour cette culture est introuvable, le Gestionnaire des ressources utilise des règles de secours pour récupérer une ressource appropriée. Pour plus d’informations, consultez les méthodes <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>et <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
  Le Gestionnaire des ressources utilise le processus de secours pour les ressources pour déterminer de quelle manière l’application récupère les ressources spécifiques de la culture. Pour plus d’informations, consultez la section « Processus de secours pour les ressources » dans [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Pour plus d’informations sur l’instanciation d’un objet <xref:System.Resources.ResourceManager> , consultez la section « Instanciation d’un objet ResourceManager » dans la rubrique de la classe <xref:System.Resources.ResourceManager> .  
   

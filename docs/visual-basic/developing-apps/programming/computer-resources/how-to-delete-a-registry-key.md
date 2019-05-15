@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: fdb61fee8a790000c53b6c9a0188999bc0cb09ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662768"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Procédure : supprimer une clé de Registre en Visual Basic
 Vous pouvez utiliser les méthodes<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> et <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> pour supprimer les clés de Registre.  
@@ -25,7 +25,7 @@ Vous pouvez utiliser les méthodes<xref:Microsoft.Win32.RegistryKey.DeleteSubKey
   
 #### <a name="to-delete-a-registry-key"></a>Pour supprimer une clé de Registre  
   
--   Utilisez la méthode `DeleteSubKey` pour supprimer une clé de Registre. Cet exemple supprime la clé Software/TestApp dans la ruche CurrentUser. Vous pouvez spécifier la chaîne appropriée dans le code ou faire en sorte que celui-ci repose sur des informations fournies par l’utilisateur.  
+- Utilisez la méthode `DeleteSubKey` pour supprimer une clé de Registre. Cet exemple supprime la clé Software/TestApp dans la ruche CurrentUser. Vous pouvez spécifier la chaîne appropriée dans le code ou faire en sorte que celui-ci repose sur des informations fournies par l’utilisateur.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
@@ -34,20 +34,19 @@ Vous pouvez utiliser les méthodes<xref:Microsoft.Win32.RegistryKey.DeleteSubKey
   
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le nom de la clé est `Nothing` (<xref:System.ArgumentNullException>).  
+- Le nom de la clé est `Nothing` (<xref:System.ArgumentNullException>).  
   
--   L’utilisateur ne dispose pas des autorisations pour supprimer des clés de Registre (<xref:System.Security.SecurityException>).  
+- L’utilisateur ne dispose pas des autorisations pour supprimer des clés de Registre (<xref:System.Security.SecurityException>).  
   
--   Le nom de la clé dépasse la limite de 255 caractères (<xref:System.ArgumentException>).  
+- Le nom de la clé dépasse la limite de 255 caractères (<xref:System.ArgumentException>).  
   
--   La clé de Registre est en lecture seule (<xref:System.UnauthorizedAccessException>).  
+- La clé de Registre est en lecture seule (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Les appels au Registre échouent quand l’utilisateur ne dispose pas des autorisations d’exécution nécessaires (<xref:System.Security.Permissions.RegistryPermission>) ou de l’accès correct (tel que déterminé par les listes de contrôle d’accès) pour créer ou écrire des paramètres. Par exemple, une application locale qui dispose de l’autorisation de sécurité d’accès du code peut ne pas disposer des autorisations de système d’exploitation.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
 - [Sécurité et Registre](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591461"
 ---
 # <a name="how-to-start-services"></a>Procédure : démarrer des services
 Une fois qu’un service est installé, il doit être démarré. Le démarrage appelle la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> sur la classe de service. En règle générale, la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> définit le travail utile effectué par le service. Une fois un service démarré, il reste actif jusqu’à ce qu’il soit suspendu ou arrêté.  
@@ -58,11 +58,11 @@ Une fois qu’un service est installé, il doit être démarré. Le démarrage a
   
 1. Effectuez l’une des procédures suivantes pour ouvrir le **Gestionnaire de contrôle des services** :  
   
-    -   Dans Windows XP et Windows 2000 Professionnel, cliquez avec le bouton droit sur **Poste de travail** sur le Bureau, puis cliquez sur **Gérer**. Dans la boîte de dialogue qui s’affiche, développez le nœud **Services et applications**.  
+    - Dans Windows XP et Windows 2000 Professionnel, cliquez avec le bouton droit sur **Poste de travail** sur le Bureau, puis cliquez sur **Gérer**. Dans la boîte de dialogue qui s’affiche, développez le nœud **Services et applications**.  
   
          \- ou -  
   
-    -   Dans Windows Server 2003 et Windows 2000 Server, cliquez sur **Démarrer**, pointez sur **Programmes**, puis cliquez sur **Outils d’administration** et sur **Services**.  
+    - Dans Windows Server 2003 et Windows 2000 Server, cliquez sur **Démarrer**, pointez sur **Programmes**, puis cliquez sur **Outils d’administration** et sur **Services**.  
   
         > [!NOTE]
         >  Dans Windows NT version 4.0, vous pouvez ouvrir cette boîte de dialogue à partir du **Panneau de configuration**.  

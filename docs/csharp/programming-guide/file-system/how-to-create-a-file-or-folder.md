@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970712"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595638"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procédure : Créer un fichier ou un dossier (Guide de programmation C#)
 Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un sous-dossier, créer un fichier dans le sous-dossier et écrire des données dans le fichier.  
@@ -25,7 +25,7 @@ Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un 
   
  En apportant les modifications suivantes dans l’exemple, vous pouvez spécifier des résultats différents si un fichier avec un nom spécifique existe déjà. Si un tel fichier n’existe pas, le code en crée un. Si un tel fichier existe, le code ajoute des données à ce fichier.  
   
--   Spécifiez un nom de fichier non aléatoire.  
+- Spécifiez un nom de fichier non aléatoire.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un 
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Remplacez l’instruction `if`-`else` par l’instruction `using` dans le code suivant.  
+- Remplacez l’instruction `if`-`else` par l’instruction `using` dans le code suivant.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un 
   
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le nom du dossier est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>). Utilisez la classe <xref:System.IO.Path> pour créer des noms de chemin valides.  
+- Le nom du dossier est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (classe <xref:System.ArgumentException>). Utilisez la classe <xref:System.IO.Path> pour créer des noms de chemin valides.  
   
--   Le dossier parent du dossier à créer est en lecture seule (classe <xref:System.IO.IOException>).  
+- Le dossier parent du dossier à créer est en lecture seule (classe <xref:System.IO.IOException>).  
   
--   Le nom du dossier est `null` (classe <xref:System.ArgumentNullException>).  
+- Le nom du dossier est `null` (classe <xref:System.ArgumentNullException>).  
   
--   Le nom du dossier est trop long (classe <xref:System.IO.PathTooLongException>).  
+- Le nom du dossier est trop long (classe <xref:System.IO.PathTooLongException>).  
   
--   Le nom du dossier est uniquement un signe deux-points, « : » (classe <xref:System.IO.PathTooLongException>).  
+- Le nom du dossier est uniquement un signe deux-points, « : » (classe <xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Une instance de la classe <xref:System.Security.SecurityException> peut être levée dans les situations de confiance partielle.  

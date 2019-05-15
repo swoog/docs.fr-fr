@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702879"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629100"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Appel de méthodes synchrones de façon asynchrone
 
@@ -45,13 +45,13 @@ La méthode `EndInvoke` récupère les résultats de l’appel asynchrone. Elle 
 
 Les exemples de code de cette rubrique illustrent quatre façons courantes d’utiliser `BeginInvoke` et `EndInvoke` pour effectuer des appels asynchrones. Vous pouvez effectuer les opérations suivantes après l’appel de `BeginInvoke` :
 
--   Effectuez quelques tâches, puis appelez `EndInvoke` pour bloquer l’exécution jusqu’à la fin de l’appel.
+- Effectuez quelques tâches, puis appelez `EndInvoke` pour bloquer l’exécution jusqu’à la fin de l’appel.
 
--   Obtenez un <xref:System.Threading.WaitHandle> à l’aide de la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, utilisez sa méthode <xref:System.Threading.WaitHandle.WaitOne%2A> pour bloquer l’exécution jusqu’à ce que <xref:System.Threading.WaitHandle> soit signalé, puis appelez `EndInvoke`.
+- Obtenez un <xref:System.Threading.WaitHandle> à l’aide de la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> , utilisez sa méthode <xref:System.Threading.WaitHandle.WaitOne%2A> pour bloquer l’exécution jusqu’à ce que <xref:System.Threading.WaitHandle> soit signalé, puis appelez `EndInvoke`.
 
--   Interrogez le <xref:System.IAsyncResult> retourné par `BeginInvoke` pour déterminer quand l’appel asynchrone s’est terminé, puis appelez `EndInvoke`.
+- Interrogez le <xref:System.IAsyncResult> retourné par `BeginInvoke` pour déterminer quand l’appel asynchrone s’est terminé, puis appelez `EndInvoke`.
 
--   Passez un délégué d’une méthode de rappel à `BeginInvoke`. La méthode est exécutée sur un thread <xref:System.Threading.ThreadPool> à la fin de l’appel asynchrone. La méthode de rappel appelle `EndInvoke`.
+- Passez un délégué d’une méthode de rappel à `BeginInvoke`. La méthode est exécutée sur un thread <xref:System.Threading.ThreadPool> à la fin de l’appel asynchrone. La méthode de rappel appelle `EndInvoke`.
 
 > [!IMPORTANT]
 > Quelle que soit la technique utilisée, appelez toujours `EndInvoke` pour terminer votre appel asynchrone.
@@ -81,7 +81,7 @@ Les exemples de code de cette rubrique illustrent quatre façons courantes d’u
  Si vous utilisez un <xref:System.Threading.WaitHandle>, vous pouvez effectuer un traitement supplémentaire avant ou après la fin de l’appel asynchrone, mais avant d’appeler `EndInvoke` pour récupérer les résultats.
 
 > [!NOTE]
-> Le handle d’attente n’est pas fermé automatiquement quand vous appelez `EndInvoke`. Si vous libérez toutes les références au handle d’attente, les ressources système sont libérées quand le garbage collection récupère le handle d’attente. Pour libérer les ressources système dès que vous avez terminé d’utiliser le handle d’attente, supprimez-le en appelant la méthode <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. Le garbage collection fonctionne plus efficacement quand les objets à supprimer le sont explicitement.
+> Le handle d’attente n’est pas fermé automatiquement quand vous appelez `EndInvoke`. Si vous libérez toutes les références au handle d’attente, les ressources système sont libérées quand le garbage collection récupère le handle d’attente. Pour libérer les ressources système dès que vous avez terminé d’utiliser le handle d’attente, supprimez-le en appelant la méthode <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> . Le garbage collection fonctionne plus efficacement quand les objets à supprimer le sont explicitement.
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -101,11 +101,11 @@ Les exemples de code de cette rubrique illustrent quatre façons courantes d’u
 
  Remarques sur l’exemple :
 
--   Le paramètre `threadId` de `TestMethod` est un paramètre `out` (`<Out>` `ByRef` en Visual Basic). Sa valeur d’entrée n’est donc jamais utilisée par `TestMethod`. Une variable factice est transmise à l’appel `BeginInvoke` . Si le paramètre `threadId` était un paramètre `ref` (`ByRef` en Visual Basic), la variable doit être un champ de niveau classe pour pouvoir être transmise à `BeginInvoke` et `EndInvoke`.
+- Le paramètre `threadId` de `TestMethod` est un paramètre `out` (`<Out>` `ByRef` en Visual Basic). Sa valeur d’entrée n’est donc jamais utilisée par `TestMethod`. Une variable factice est transmise à l’appel `BeginInvoke` . Si le paramètre `threadId` était un paramètre `ref` (`ByRef` en Visual Basic), la variable doit être un champ de niveau classe pour pouvoir être transmise à `BeginInvoke` et `EndInvoke`.
 
--   Les informations d’état transmises à `BeginInvoke` sont une chaîne de format, que la méthode de rappel utilise pour mettre en forme un message de sortie. Parce qu’elles sont transmises en tant que type <xref:System.Object>, les informations d’état doivent être converties en leur propre type avant de pouvoir être utilisées.
+- Les informations d’état transmises à `BeginInvoke` sont une chaîne de format, que la méthode de rappel utilise pour mettre en forme un message de sortie. Parce qu’elles sont transmises en tant que type <xref:System.Object>, les informations d’état doivent être converties en leur propre type avant de pouvoir être utilisées.
 
--   Le rappel est effectué sur un thread <xref:System.Threading.ThreadPool> . Les threads<xref:System.Threading.ThreadPool> sont des threads d’arrière-plan qui arrêtent l’exécution de l’application si le thread principal s’arrête. Ainsi, le thread principal de l’exemple doit se mettre en veille suffisamment longtemps pour que le rappel puisse se terminer.
+- Le rappel est effectué sur un thread <xref:System.Threading.ThreadPool> . Les threads<xref:System.Threading.ThreadPool> sont des threads d’arrière-plan qui arrêtent l’exécution de l’application si le thread principal s’arrête. Ainsi, le thread principal de l’exemple doit se mettre en veille suffisamment longtemps pour que le rappel puisse se terminer.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

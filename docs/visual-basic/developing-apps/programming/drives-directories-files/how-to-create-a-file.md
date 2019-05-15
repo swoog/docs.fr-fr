@@ -5,12 +5,12 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628987"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Procédure : créer un fichier en Visual Basic
 Cet exemple crée un fichier texte vide à l’emplacement spécifié à l’aide de la méthode <xref:System.IO.File.Create%2A> de la classe <xref:System.IO.File>.  
@@ -26,17 +26,17 @@ Cet exemple crée un fichier texte vide à l’emplacement spécifié à l’aid
   
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (<xref:System.ArgumentException>).  
+- Le chemin d'accès est mal formé. Par exemple, il contient des caractères non conformes ou uniquement des espaces blancs (<xref:System.ArgumentException>).  
   
--   Le chemin est en lecture seule (<xref:System.IO.IOException>).  
+- Le chemin est en lecture seule (<xref:System.IO.IOException>).  
   
--   Le nom du chemin est `Nothing` (<xref:System.ArgumentNullException>).  
+- Le nom du chemin est `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Le nom du chemin est trop long (<xref:System.IO.PathTooLongException>).  
+- Le nom du chemin est trop long (<xref:System.IO.PathTooLongException>).  
   
--   Le chemin n’est pas valide (<xref:System.IO.DirectoryNotFoundException>).  
+- Le chemin n’est pas valide (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Le chemin n’est constitué que d’un signe deux-points « : » (<xref:System.NotSupportedException>).  
+- Le chemin n’est constitué que d’un signe deux-points « : » (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Une <xref:System.Security.SecurityException> peut être levée dans les environnements de confiance partielle.  

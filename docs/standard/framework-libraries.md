@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143374"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615177"
 ---
 # <a name="framework-libraries"></a>Bibliothèques de framework
 
@@ -41,23 +41,23 @@ Les bibliothèques de classes de base fournissent les types les plus fondamentau
 
 .NET inclut un ensemble de structures de données qui sont les bêtes de somme de presque toutes les applications .NET. Il s’agit essentiellement de collections, mais on retrouve également d’autres types.
 
-*   <xref:System.Array> : Représente un tableau d’objets fortement typés accessibles par index. Sa taille est fixe, par sa construction.
-*   <xref:System.Collections.Generic.List%601> : Représente une liste fortement typée d’objets accessibles par index. Est automatiquement redimensionnée en fonction des besoins.
-*   <xref:System.Collections.Generic.Dictionary%602> : Représente une collection de valeurs indexées par une clé. Les valeurs sont accessibles par une clé. Est automatiquement redimensionnée en fonction des besoins.
-*   <xref:System.Uri> : Fournit une représentation objet d’un URI (Uniform Resource Identifier) et un accès simplifié aux parties de l’identificateur.
-*   <xref:System.DateTime> : Représente un instant, généralement exprimé sous la forme d’une date et d’une heure.
+* <xref:System.Array> : Représente un tableau d’objets fortement typés accessibles par index. Sa taille est fixe, par sa construction.
+* <xref:System.Collections.Generic.List%601> : Représente une liste fortement typée d’objets accessibles par index. Est automatiquement redimensionnée en fonction des besoins.
+* <xref:System.Collections.Generic.Dictionary%602> : Représente une collection de valeurs indexées par une clé. Les valeurs sont accessibles par une clé. Est automatiquement redimensionnée en fonction des besoins.
+* <xref:System.Uri> : Fournit une représentation objet d’un URI (Uniform Resource Identifier) et un accès simplifié aux parties de l’identificateur.
+* <xref:System.DateTime> : Représente un instant, généralement exprimé sous la forme d’une date et d’une heure.
 
 ## <a name="utility-apis"></a>API d’utilitaire
 
 .NET inclut un ensemble d’API d’utilitaire qui fournissent des fonctionnalités pour de nombreuses tâches importantes.
 
-*   <xref:System.Net.Http.HttpClient> : API qui permet d’envoyer des requêtes HTTP et de recevoir des réponses HTTP d’une ressource identifiée par un URI.
-*   <xref:System.Xml.Linq.XDocument> : API qui permet de charger et d’interroger des documents XML avec LINQ.
-*   <xref:System.IO.StreamReader> : API qui permet de lire des fichiers. 
-*   <xref:System.IO.StreamWriter> : API qui permet d’écrire des fichiers.
+* <xref:System.Net.Http.HttpClient> : API qui permet d’envoyer des requêtes HTTP et de recevoir des réponses HTTP d’une ressource identifiée par un URI.
+* <xref:System.Xml.Linq.XDocument> : API qui permet de charger et d’interroger des documents XML avec LINQ.
+* <xref:System.IO.StreamReader> : API qui permet de lire des fichiers. 
+* <xref:System.IO.StreamWriter> : API qui permet d’écrire des fichiers.
 
 ## <a name="app-model-apis"></a>API de modèle d’application
 
 Il existe de nombreux modèles d’application qui peuvent être utilisés avec .NET, fournis par plusieurs sociétés.
 
-*   [ASP.NET](https://www.asp.net) : Fournit un framework web pour créer des sites et des services web. Pris en charge sur Windows, Linux et Mac OS (dépend de la version d’ASP.NET).
+* [ASP.NET](https://www.asp.net) : Fournit un framework web pour créer des sites et des services web. Pris en charge sur Windows, Linux et Mac OS (dépend de la version d’ASP.NET).
