@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652114"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592231"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -36,9 +36,9 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
   
 - <xref:System.ServiceModel.WSHttpBinding>: Une liaison interopérable adaptée à la connexion aux points de terminaison qui se conforment à WS-* protocoles.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le .NET Framework pour se connecter aux autres points de terminaison WCF sur le même ordinateur.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer des connexions de message en file d’attente avec d’autres points de terminaison WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Utilise en file d’attente de .NET Framework pour créer des connexions avec d’autres points de terminaison WCF de message.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Cette liaison offre de meilleures performances que les liaisons HTTP et est idéale pour une utilisation dans un réseau local.
   

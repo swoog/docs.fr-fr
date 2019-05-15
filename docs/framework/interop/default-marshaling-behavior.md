@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315762"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063322"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d'interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu’un appelant puisse modifier les données transmises et renvoyer ces modifications à l’appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Par exemple, le marshaleur détermine que le wrapper de classe doit être utilisé pour encapsuler l’interface qui a été passée dans le code managé. Quand l'interface est initialement passée via le marshaleur, celui-ci vérifie si l'interface provient d'un objet connu. Cette vérification se produit dans deux situations :  
   
--   Une interface est implémentée par un autre objet managé qui a été passé à COM à un autre endroit. Le marshaleur peut facilement identifier les interfaces exposées par les objets managés. De plus, il est capable de faire correspondre l'interface avec l'objet managé qui fournit l'implémentation. L'objet managé est ensuite passé à la méthode sans qu'aucun wrapper ne soit nécessaire.  
+- Une interface est implémentée par un autre objet managé qui a été passé à COM à un autre endroit. Le marshaleur peut facilement identifier les interfaces exposées par les objets managés. De plus, il est capable de faire correspondre l'interface avec l'objet managé qui fournit l'implémentation. L'objet managé est ensuite passé à la méthode sans qu'aucun wrapper ne soit nécessaire.  
   
--   Un objet qui a déjà été encapsulé implémente l'interface. Afin de déterminer si tel est le cas, le marshaleur interroge l’objet au sujet de son interface **IUnknown** et compare l’interface retournée aux interfaces des autres objets déjà enveloppés. Si l'interface est identique à celle d'un autre wrapper, les objets ont la même identité et le wrapper existant est passé à la méthode.  
+- Un objet qui a déjà été encapsulé implémente l'interface. Afin de déterminer si tel est le cas, le marshaleur interroge l’objet au sujet de son interface **IUnknown** et compare l’interface retournée aux interfaces des autres objets déjà enveloppés. Si l'interface est identique à celle d'un autre wrapper, les objets ont la même identité et le wrapper existant est passé à la méthode.  
   
  Si une interface n’est pas d’un objet connu, le marshaleur effectue ce qui suit :  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Marshaling par défaut pour les délégués  
  Un délégué managé est marshalé comme une interface COM ou comme un pointeur fonction, en fonction du mécanisme d’appel :  
   
--   Pour un appel de code non managé, un délégué est marshalé en tant que pointeur fonction non managé par défaut.  
+- Pour un appel de code non managé, un délégué est marshalé en tant que pointeur fonction non managé par défaut.  
   
--   Pour COM Interop, un délégué est marshalé comme une interface COM de type **_Delegate** par défaut. L’interface **_Delegate** est définie dans la bibliothèque de types Mscorlib.tlb et contient la méthode <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> qui permet d’appeler la méthode que le délégué référence.  
+- Pour COM Interop, un délégué est marshalé comme une interface COM de type **_Delegate** par défaut. L’interface **_Delegate** est définie dans la bibliothèque de types Mscorlib.tlb et contient la méthode <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> qui permet d’appeler la méthode que le délégué référence.  
   
  Le tableau suivant montre les options de marshaling pour le type de données délégué managé. L'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> fournit plusieurs valeurs d'énumération <xref:System.Runtime.InteropServices.UnmanagedType> pour marshaler les délégués.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Cette section fournit des informations sur les types valeur mis en forme suivants :  
   
--   [Types valeur utilisés dans un appel de code non managé](#value-types-used-in-platform-invoke)  
+- [Types valeur utilisés dans un appel de code non managé](#value-types-used-in-platform-invoke)  
   
--   [Types valeur utilisés dans COM Interop](#value-types-used-in-com-interop)  
+- [Types valeur utilisés dans COM Interop](#value-types-used-in-com-interop)  
   
  En plus de décrire les types mis en forme, cette rubrique répertorie les [types valeur système](#system-value-types) qui ont un comportement de marshaling inhabituel.  
   
  Un type mis en forme est un type complexe qui contient des informations qui contrôlent explicitement la disposition de ses membres dans la mémoire. Les informations de disposition des membres sont obtenues à l'aide de l'attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La disposition peut correspondre à l'une des valeurs d'énumération <xref:System.Runtime.InteropServices.LayoutKind> suivantes :  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Indique que le common language runtime est libre de réorganiser les membres du type pour une plus grande efficacité. Toutefois, quand un type valeur est passé à du code non managé, la disposition des membres est prévisible. Si vous tentez de marshaler une telle structure, une exception sera automatiquement levée.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Indique que les membres du type doivent être disposés dans la mémoire non managée dans le même ordre que celui de la définition de type managé.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Indique que les membres sont disposés selon le <xref:System.Runtime.InteropServices.FieldOffsetAttribute> fourni avec chaque champ.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  Vous pouvez passer des structures à l'aide de la définition d'appel de code non managé suivante :  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  La définition d’appel de code non managé équivalente à **GetSystemTime** se présente comme suit :  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

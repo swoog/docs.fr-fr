@@ -2,12 +2,12 @@
 title: protocole PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119065"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623017"
 ---
 # <a name="peer-name-resolution-protocol"></a>protocole PNRP
 Dans les environnements pair à pair, les pairs utilisent des systèmes de résolution de noms spécifiques pour résoudre les emplacements réseau les uns des autres (adresses, protocoles et ports) à partir de noms et d’autres types d’identificateurs. Dans le passé, la résolution des noms de pairs était compliquée en raison de la nature transitoire de la connectivité, et d’autres défauts du système DNS.  
@@ -20,31 +20,31 @@ Dans les environnements pair à pair, les pairs utilisent des systèmes de réso
   
 Les particularités du protocole PNRP sont les suivantes :  
   
--   Il est distribué et presque entièrement sans serveur. Les serveurs sont uniquement nécessaires pour le processus d’amorçage.  
+- Il est distribué et presque entièrement sans serveur. Les serveurs sont uniquement nécessaires pour le processus d’amorçage.  
   
--   La publication des noms est sécurisée (elle n’implique pas de tierces parties). Contrairement à la publication de noms DNS, la publication de noms PNRP est instantanée et sans coûts financiers.  
+- La publication des noms est sécurisée (elle n’implique pas de tierces parties). Contrairement à la publication de noms DNS, la publication de noms PNRP est instantanée et sans coûts financiers.  
   
--   Le protocole PNRP est mis à jour en temps réel, ce qui évite la résolution d’adresses périmées.  
+- Le protocole PNRP est mis à jour en temps réel, ce qui évite la résolution d’adresses périmées.  
   
--   La résolution de noms via le protocole PNRP s’étend au-delà des ordinateurs, puisqu’elle permet également de résoudre des noms de services.  
+- La résolution de noms via le protocole PNRP s’étend au-delà des ordinateurs, puisqu’elle permet également de résoudre des noms de services.  
   
 ## <a name="the-systemnetpeertopeer-namespace"></a>Espace de noms System.Net.PeerToPeer  
   
--   La fonctionnalité PNRP est définie par l’espace de noms <xref:System.Net.PeerToPeer> dans le .NET Framework version 3.5. Elle fournit un ensemble de types qui peuvent être utilisés pour inscrire et résoudre des noms de pairs avec un service PNRP disponible.  
+- La fonctionnalité PNRP est définie par l’espace de noms <xref:System.Net.PeerToPeer> dans le .NET Framework version 3.5. Elle fournit un ensemble de types qui peuvent être utilisés pour inscrire et résoudre des noms de pairs avec un service PNRP disponible.  
   
--   Les programmes de résolution de pairs personnalisés et les programmes de résolution PNRP peuvent être créés et instanciés à l’aide des types fournis dans l’espace de noms <xref:System.ServiceModel.PeerResolvers>.  
+- Les programmes de résolution de pairs personnalisés et les programmes de résolution PNRP peuvent être créés et instanciés à l’aide des types fournis dans l’espace de noms <xref:System.ServiceModel.PeerResolvers>.  
   
--   Les types de base utilisés pour inscrire et résoudre des noms avec un service PNRP disponible sont les suivants :  
+- Les types de base utilisés pour inscrire et résoudre des noms avec un service PNRP disponible sont les suivants :  
   
--   <xref:System.Net.PeerToPeer.Cloud>: définit les informations qui décrivent un cloud PNRP disponible, y compris son étendue.  
+- <xref:System.Net.PeerToPeer.Cloud>: définit les informations qui décrivent un cloud PNRP disponible, y compris son étendue.  
   
--   <xref:System.Net.PeerToPeer.PeerName>: définit un nom de pair qui peut être utilisé pour inscrire puis résoudre un pair au sein d’un cloud.  
+- <xref:System.Net.PeerToPeer.PeerName>: définit un nom de pair qui peut être utilisé pour inscrire puis résoudre un pair au sein d’un cloud.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: définit l’enregistrement du cloud PNRP qui contient les informations d’inscription d’un pair, notamment les points de terminaison réseau auxquels le pair peut être contacté.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: définit l’enregistrement du cloud PNRP qui contient les informations d’inscription d’un pair, notamment les points de terminaison réseau auxquels le pair peut être contacté.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: définit le processus d’inscription d’un nom de pair, y compris les méthodes pour démarrer et arrêter l’inscription des noms de pairs.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: définit le processus d’inscription d’un nom de pair, y compris les méthodes pour démarrer et arrêter l’inscription des noms de pairs.  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: définit la procédure de résolution d’un nom de pair en son point de terminaison réseau, y compris les méthodes synchrones et asynchrones de résolution.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: définit la procédure de résolution d’un nom de pair en son point de terminaison réseau, y compris les méthodes synchrones et asynchrones de résolution.  
   
 ## <a name="see-also"></a>Voir aussi
 

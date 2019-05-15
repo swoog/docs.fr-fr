@@ -2,12 +2,12 @@
 title: Gestion des messages incohérents
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638421"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592852"
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
 Un *message incohérent* est un message qui a dépassé le nombre maximal de tentatives de remise à l’application. Cette situation peut survenir lorsqu'une application basée sur file d'attente ne peut pas traiter un message car des erreurs se sont produites. Pour faire face aux demandes de fiabilité, une application en file d’attente reçoit des messages sous une transaction. L’abandon de la transaction dans laquelle un message en file d’attente a été reçu laisse le message dans la file d’attente afin qu’une nouvelle tentative de remise puisse être effectuée sous une nouvelle transaction. Si le problème qui a provoqué l'abandon de la transaction n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
@@ -52,7 +52,7 @@ Un *message incohérent* est un message qui a dépassé le nombre maximal de ten
   
  WCF fournit deux liaisons en file d’attente standard :  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. Un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] liaison adaptée pour l’exécution en fonction de file d’attente de communication avec les autres points de terminaison WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Une liaison de .NET Framework appropriée pour l’exécution en fonction de file d’attente de communication avec les autres points de terminaison WCF.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Une liaison adaptée à la communication avec des applications Message Queuing existantes.  
   

@@ -2,12 +2,12 @@
 title: Authentification Windows intégrée avec protection étendue
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647406"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Authentification Windows intégrée avec protection étendue
 Certaines améliorations apportées changent la manière dont l’authentification Windows intégrée est gérée par les classes <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> et les classes associées dans l’espace de noms <xref:System.Net> et les espaces de noms associés. La prise en charge de la protection étendue a été ajoutée pour renforcer la sécurité.  
@@ -39,21 +39,21 @@ Certaines améliorations apportées changent la manière dont l’authentificati
   
  Les informations de liaison de service sont une indication de l’intention d’un client de s’authentifier auprès d’un point de terminaison de service particulier. Elles sont transmises du client au serveur avec les propriétés suivantes :  
   
--   La valeur du SPN doit être fournie au serveur d’authentification client au format texte en clair.  
+- La valeur du SPN doit être fournie au serveur d’authentification client au format texte en clair.  
   
--   La valeur du SPN est publique.  
+- La valeur du SPN est publique.  
   
--   Le SPN doit être protégé par chiffrement pendant son transfert pour empêcher l’insertion, la suppression ou la modification de sa valeur par une attaque de l’intercepteur.  
+- Le SPN doit être protégé par chiffrement pendant son transfert pour empêcher l’insertion, la suppression ou la modification de sa valeur par une attaque de l’intercepteur.  
   
  Un jeton de liaison de canal est une propriété du canal sécurisé externe (par exemple, TLS) qui permet de lier ce canal à une conversation sur un canal interne authentifié par le client. Le jeton de liaison de canal doit avoir les propriétés suivantes (qui sont également définies dans la norme RFC 5056 publiée par l’IETF) :  
   
--   Quand un canal externe existe, la valeur du jeton de liaison de canal doit être une propriété qui identifie le canal externe ou le point de terminaison de serveur, arrivés indépendamment côté client et côté serveur d’une conversation.  
+- Quand un canal externe existe, la valeur du jeton de liaison de canal doit être une propriété qui identifie le canal externe ou le point de terminaison de serveur, arrivés indépendamment côté client et côté serveur d’une conversation.  
   
--   La valeur du jeton de liaison de canal envoyé par le client ne doit pas être une valeur falsifiable par un attaquant.  
+- La valeur du jeton de liaison de canal envoyé par le client ne doit pas être une valeur falsifiable par un attaquant.  
   
--   La confidentialité de la valeur du jeton de liaison de canal n’est pas garantie. Toutefois, cela ne signifie pas que la valeur de la liaison de service ou que les informations de liaison de canal seront toujours exposées à d’autres parties que le serveur effectuant l’authentification, car elles sont parfois chiffrées par le protocole de transport du jeton de liaison de canal.  
+- La confidentialité de la valeur du jeton de liaison de canal n’est pas garantie. Toutefois, cela ne signifie pas que la valeur de la liaison de service ou que les informations de liaison de canal seront toujours exposées à d’autres parties que le serveur effectuant l’authentification, car elles sont parfois chiffrées par le protocole de transport du jeton de liaison de canal.  
   
--   L’intégrité du jeton de liaison de canal doit être protégée par chiffrement pendant le transfert du jeton pour empêcher l’insertion, la suppression ou la modification de sa valeur par un attaquant.  
+- L’intégrité du jeton de liaison de canal doit être protégée par chiffrement pendant le transfert du jeton pour empêcher l’insertion, la suppression ou la modification de sa valeur par un attaquant.  
   
  La liaison de canal s’effectue par le client qui transfère le SPN et le jeton de liaison de canal au serveur de manière infalsifiable. Le serveur valide les informations de liaison de canal conformément à sa stratégie et rejette les tentatives d’authentification pour lesquelles il ne pense pas être la cible prévue. Les deux canaux sont ainsi liés par chiffrement.  
   
@@ -72,37 +72,37 @@ Certaines améliorations apportées changent la manière dont l’authentificati
   
  Une classe <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> qui a les éléments suivants :  
   
--   Une propriété <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> qui indique si le système d’exploitation prend en charge l’authentification Windows intégrée avec protection étendue.  
+- Une propriété <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> qui indique si le système d’exploitation prend en charge l’authentification Windows intégrée avec protection étendue.  
   
--   Une valeur <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> qui indique quand la stratégie de protection étendue doit être appliquée.  
+- Une valeur <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> qui indique quand la stratégie de protection étendue doit être appliquée.  
   
--   Une valeur <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> qui spécifie le scénario de déploiement. Cette valeur détermine la façon dont la protection étendue est vérifiée.  
+- Une valeur <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> qui spécifie le scénario de déploiement. Cette valeur détermine la façon dont la protection étendue est vérifiée.  
   
--   Un élément <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> facultatif qui contient la liste des noms de principal de service personnalisés auxquels est comparé le nom de principal du service fourni par le client comme cible de l’authentification.  
+- Un élément <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> facultatif qui contient la liste des noms de principal de service personnalisés auxquels est comparé le nom de principal du service fourni par le client comme cible de l’authentification.  
   
--   Un élément <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> facultatif qui contient une liaison de canal personnalisée à utiliser pour la validation. Ce scénario n’est pas courant.  
+- Un élément <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> facultatif qui contient une liaison de canal personnalisée à utiliser pour la validation. Ce scénario n’est pas courant.  
   
  L’espace de noms <xref:System.Security.Authentication.ExtendedProtection.Configuration> fournit la prise en charge de la configuration de l’authentification avec protection étendue pour les applications.  
   
  Plusieurs modifications ont été apportées aux fonctionnalités pour permettre la prise en charge de la protection étendue dans l’espace de noms <xref:System.Net> existant. Ces modifications sont les suivantes :  
   
--   Ajout d’une nouvelle classe <xref:System.Net.TransportContext> à l’espace de noms <xref:System.Net> qui représente un contexte de transport.  
+- Ajout d’une nouvelle classe <xref:System.Net.TransportContext> à l’espace de noms <xref:System.Net> qui représente un contexte de transport.  
   
--   Ajout des nouvelles méthodes de surcharge <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> et <xref:System.Net.HttpWebRequest.GetRequestStream%2A> dans la classe <xref:System.Net.HttpWebRequest> qui permettent la récupération du <xref:System.Net.TransportContext> pour prendre en charge la protection étendue dans les applications clientes.  
+- Ajout des nouvelles méthodes de surcharge <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> et <xref:System.Net.HttpWebRequest.GetRequestStream%2A> dans la classe <xref:System.Net.HttpWebRequest> qui permettent la récupération du <xref:System.Net.TransportContext> pour prendre en charge la protection étendue dans les applications clientes.  
   
--   Ajouts aux classes <xref:System.Net.HttpListener> et <xref:System.Net.HttpListenerRequest> pour prendre en charge les applications serveur.  
+- Ajouts aux classes <xref:System.Net.HttpListener> et <xref:System.Net.HttpListenerRequest> pour prendre en charge les applications serveur.  
   
  Pour prendre en charge la protection étendue dans les applications clientes SMTP, une fonctionnalité a été modifiée dans l’espace de noms <xref:System.Net.Mail> :  
   
--   Une propriété <xref:System.Net.Mail.SmtpClient.TargetName%2A> dans la classe <xref:System.Net.Mail.SmtpClient> qui représente le nom de principal du service à utiliser lors de l’authentification avec protection étendue dans les applications clientes SMTP.  
+- Une propriété <xref:System.Net.Mail.SmtpClient.TargetName%2A> dans la classe <xref:System.Net.Mail.SmtpClient> qui représente le nom de principal du service à utiliser lors de l’authentification avec protection étendue dans les applications clientes SMTP.  
   
  Plusieurs modifications ont été apportées aux fonctionnalités pour permettre la prise en charge de la protection étendue dans l’espace de noms <xref:System.Net.Security> existant. Ces modifications sont les suivantes :  
   
--   Ajout des nouvelles méthodes de surcharge <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> et <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> dans la classe <xref:System.Net.Security.NegotiateStream> qui permettent le passage d’un jeton de liaison de canal pour prendre en charge la protection étendue dans les applications clientes.  
+- Ajout des nouvelles méthodes de surcharge <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> et <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> dans la classe <xref:System.Net.Security.NegotiateStream> qui permettent le passage d’un jeton de liaison de canal pour prendre en charge la protection étendue dans les applications clientes.  
   
--   Ajout des nouvelles méthodes de surcharge <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> et <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> dans la classe <xref:System.Net.Security.NegotiateStream> qui permettent le passage d’un <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> pour prendre en charge la protection étendue dans les applications serveur.  
+- Ajout des nouvelles méthodes de surcharge <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> et <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> dans la classe <xref:System.Net.Security.NegotiateStream> qui permettent le passage d’un <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> pour prendre en charge la protection étendue dans les applications serveur.  
   
--   Ajout d’une nouvelle propriété <xref:System.Net.Security.SslStream.TransportContext%2A> dans la classe <xref:System.Net.Security.SslStream> pour prendre en charge la protection étendue dans les applications clientes et serveur.  
+- Ajout d’une nouvelle propriété <xref:System.Net.Security.SslStream.TransportContext%2A> dans la classe <xref:System.Net.Security.SslStream> pour prendre en charge la protection étendue dans les applications clientes et serveur.  
   
  Une nouvelle propriété <xref:System.Net.Configuration.SmtpNetworkElement> a été ajoutée dans l’espace de noms <xref:System.Net.Security> pour prendre en charge la configuration de la protection étendue pour les clients SMTP.  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795302"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592731"
 ---
 # <a name="cryptographic-services"></a>services de chiffrement
 
@@ -112,7 +112,7 @@ L'inconvénient du chiffrement à clé secrète est qu'il suppose que les deux p
 
 En supposant que Alice et Bob est deux parties qui désirent communiquer sur un canal non sécurisé, ils peuvent utiliser le chiffrement de clé secrète comme suit : Alice et Jean conviennent utiliser un algorithme particulier (par exemple, AES) avec une clé et un vecteur d’initialisation. Alice compose un message et crée un flux de réseau (par exemple un e-mail nommé canal ou de réseau) sur lequel envoyer le message. Ensuite, elle chiffre le texte à l'aide de la clé et du vecteur d'initialisation, puis envoie le message chiffré et le vecteur d'initialisation à Jean via l'intranet. Jean reçoit le texte chiffré et le déchiffre à l'aide du vecteur d'initialisation et de la clé convenue précédemment. Si la transmission est interceptée, l'intercepteur ne peut pas récupérer le message d'origine, car il ne connaît pas la clé. Dans ce scénario, seule la clé doit rester secrète. Dans un scénario réel, Alice ou Jean génère une clé secrète et utilise un chiffrement (asymétrique) à clé publique pour transférer la clé (symétrique) secrète à l'autre partie. Pour plus d'informations sur le chiffrement à clé publique, consultez la section suivante.
 
-Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de chiffrement à clé secrète :
+Le .NET Framework fournit les classes suivantes qui implémentent des algorithmes de chiffrement à clé secrète :
 
 - <xref:System.Security.Cryptography.AesManaged> (introduit dans le [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ La liste suivante propose une comparaison entre les algorithmes de chiffrement �
 
 - Les algorithmes à clé publique sont très plus lents par rapport aux algorithmes à clé secrète et ne sont pas conçus pour chiffrer de grandes quantités de données. Les algorithmes à clé publique ne sont utiles que pour le transfert de très petites quantités de données. En règle générale, le chiffrement à clé publique est utilisé pour chiffrer la clé et le vecteur d'initialisation destiné à être utilisé par un algorithme à clé secrète. Une fois la clé et le vecteur d'initialisation transférés, le chiffrement à clé secrète est utilisé pour le reste de la session.
 
-Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de chiffrement à clé publique :
+Le .NET Framework fournit les classes suivantes qui implémentent des algorithmes de chiffrement à clé publique :
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Pour utiliser le chiffrement à clé publique pour signer numériquement un mess
 > [!NOTE]
 > Une signature peut être vérifiée par n'importe qui, car la clé publique de l'expéditeur est connue de tous et est généralement incluse dans le format de signature numérique. Cette méthode ne préserve pas le caractère confidentiel du message ; pour être secret, le message doit aussi être chiffré.
 
-Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes à signature numérique :
+Le .NET Framework fournit les classes suivantes qui implémentent des algorithmes de signature numérique :
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Les deux parties que constituent Alice et Jean peuvent utiliser une fonction de 
 
 Aucune des méthodes précédentes n'empêchera quiconque de lire les messages d'Alice, car ils sont transmis sous forme de texte en clair. Pour bénéficier d'une sécurité complète, les signatures numériques (signature des messages) et le chiffrement s'avèrent nécessaires.
 
-Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les classes suivantes, qui implémentent des algorithmes de hachage :
+Le .NET Framework fournit les classes suivantes qui implémentent des algorithmes de hachage :
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit les clas
 
 ## <a name="random-number-generation"></a>génération de nombres aléatoires
 
-La génération de nombres aléatoires est un élément indispensable de nombreuses opérations de chiffrement. Par exemple, les clés de chiffrement doivent être aussi aléatoires que possible de sorte qu'il soit impossible de les reproduire. Les générateurs de nombres aléatoires de chiffrement doivent générer des sorties qu'il est impossible de prédire du point de vue informatique avec une probabilité de plus de 50 %. Par conséquent, toute méthode de prédiction du bit de sortie suivant ne doit pas pas se montrer plus performante que le hasard. Les classes du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilisent des générateurs de nombres aléatoires pour générer des clés de chiffrement.
+La génération de nombres aléatoires est un élément indispensable de nombreuses opérations de chiffrement. Par exemple, les clés de chiffrement doivent être aussi aléatoires que possible de sorte qu'il soit impossible de les reproduire. Les générateurs de nombres aléatoires de chiffrement doivent générer des sorties qu'il est impossible de prédire du point de vue informatique avec une probabilité de plus de 50 %. Par conséquent, toute méthode de prédiction du bit de sortie suivant ne doit pas pas se montrer plus performante que le hasard. Les classes dans le .NET Framework utilisent des générateurs de nombres aléatoires pour générer des clés de chiffrement.
 
 La classe <xref:System.Security.Cryptography.RNGCryptoServiceProvider> est une implémentation d'un algorithme de génération de nombres aléatoires.
 

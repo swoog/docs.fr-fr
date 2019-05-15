@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615231"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList pour les paramètres de feuille de style et les objets d'extension
 La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (Extensible Stylesheet Language for Transformations) et des objets d'extension XSLT. Lorsqu’ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d’extension peuvent être appelés à partir des feuilles de style.  
@@ -25,13 +25,13 @@ La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (
   
  La transmission d'un objet plutôt que l'utilisation d'un script incorporé présente les avantages suivants :  
   
--   Offre une meilleure encapsulation et réutilisation des classes.  
+- Offre une meilleure encapsulation et réutilisation des classes.  
   
--   Permet aux feuilles de styles d'être plus petites et plus faciles à gérer.  
+- Permet aux feuilles de styles d'être plus petites et plus faciles à gérer.  
   
--   Prend en charge des méthodes d'appel sur les classes appartenant à des espaces de noms autres que ceux définis dans l'ensemble des espaces de noms <xref:System> pris en charge.  
+- Prend en charge des méthodes d'appel sur les classes appartenant à des espaces de noms autres que ceux définis dans l'ensemble des espaces de noms <xref:System> pris en charge.  
   
--   Prend en charge la transmission de fragments d'arborescence résultat à la feuille de style à l'aide de l'objet <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Prend en charge la transmission de fragments d'arborescence résultat à la feuille de style à l'aide de l'objet <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Paramètres de feuille de style XSLT  
  Des paramètres XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> en utilisant la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nom qualifié et un URI d'espace de noms sont associés à l'objet paramètre à ce stade.  

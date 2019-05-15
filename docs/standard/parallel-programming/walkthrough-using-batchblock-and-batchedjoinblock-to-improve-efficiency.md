@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654406"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procédure pas à pas : Utiliser BatchBlock et BatchedJoinBlock pour améliorer l’efficacité
 La bibliothèque de flux de données TPL comporte les classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, qui permettent de recevoir et de mettre en mémoire tampon des données provenant d’une ou plusieurs sources, puis de les propager sous la forme d’une seule et même collection. Ce mécanisme de traitement par lot est utile pour collecter des données provenant d’une ou plusieurs sources, puis pour traiter par lot plusieurs éléments de données. Prenons par exemple une application qui utilise un flux de données pour insérer des enregistrements dans une base de données. Cette opération est plus efficace si plusieurs éléments sont insérés en même temps, plutôt qu’un à la fois successivement. Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> afin d’améliorer l’efficacité de ces opérations d’insertion en base de données. Il montre également comment se servir de la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> pour capturer les résultats et toutes les exceptions qui se produisent quand le programme lit des données à partir d’une base de données.
@@ -34,19 +34,19 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
   
  Cette procédure pas à pas contient les sections suivantes :  
   
--   [Créer l'application console](#creating)  
+- [Créer l'application console](#creating)  
   
--   [Définir la classe Employee](#employeeClass)  
+- [Définir la classe Employee](#employeeClass)  
   
--   [Définir des opérations de base de données Employee](#operations)  
+- [Définir des opérations de base de données Employee](#operations)  
   
--   [Ajouter des données sur les employés à la base de données sans utiliser la mise en mémoire tampon](#nonBuffering)  
+- [Ajouter des données sur les employés à la base de données sans utiliser la mise en mémoire tampon](#nonBuffering)  
   
--   [Utiliser la mise en mémoire tampon pour ajouter des données sur les employés à la base de données](#buffering)  
+- [Utiliser la mise en mémoire tampon pour ajouter des données sur les employés à la base de données](#buffering)  
   
--   [Utiliser la jointure en mémoire tampon pour lire des données sur les employés à partir de la base de données](#bufferedJoin)  
+- [Utiliser la jointure en mémoire tampon pour lire des données sur les employés à partir de la base de données](#bufferedJoin)  
   
--   [Exemple complet](#complete)  
+- [Exemple complet](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Créer l'application console  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802087"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592669"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
+Le .NET Framework utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
   
  Quand vous rencontrez une restriction de sécurité, vous avez deux options : déclarer l'autorisation (en supposant qu'elle a été accordée à votre application) ou utiliser une version de la fonctionnalité écrite pour fonctionner en mode de confiance partielle. Les sections suivantes décrivent comment gérer l'accès aux fichiers, aux bases de données et au Registre à partir d'applications qui s'exécutent dans un environnement de confiance partielle.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802087"
 >  Par défaut, les outils qui génèrent des déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] font en sorte que ces déploiements demandent par défaut une confiance totale aux ordinateurs sur lesquels ils s'exécutent. Si vous décidez que vous voulez bénéficier de renforcer la sécurité de l’exécution en confiance partielle, vous devez modifier cette valeur par défaut dans Visual Studio ou un de le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] outils (Mage.exe ou MageUI.exe). Pour plus d’informations sur la sécurité Windows Forms et sur la façon de déterminer le niveau de confiance approprié pour votre application, consultez [Security in Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accès aux fichiers  
- La classe <xref:System.Security.Permissions.FileIOPermission> contrôle l'accès aux fichiers et aux dossiers dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Par défaut, le système de sécurité n'accorde pas <xref:System.Security.Permissions.FileIOPermission> aux environnements de confiance partielle tels que les zones Intranet local et Internet. Cependant, une application qui nécessite l'accès aux fichiers peut quand même fonctionner dans ces environnements si vous modifiez la conception de votre application ou si vous utilisez des méthodes différentes pour accéder aux fichiers. Par défaut, la zone Intranet local est autorisée à accéder au même site et au même répertoire, à se reconnecter au site de son origine et à lire à partir de son répertoire d'installation. Par défaut, la zone Internet est autorisée uniquement à se reconnecter au site de son origine.  
+ Le <xref:System.Security.Permissions.FileIOPermission> classe contrôle l’accès de fichiers et dossiers dans le .NET Framework. Par défaut, le système de sécurité n'accorde pas <xref:System.Security.Permissions.FileIOPermission> aux environnements de confiance partielle tels que les zones Intranet local et Internet. Cependant, une application qui nécessite l'accès aux fichiers peut quand même fonctionner dans ces environnements si vous modifiez la conception de votre application ou si vous utilisez des méthodes différentes pour accéder aux fichiers. Par défaut, la zone Intranet local est autorisée à accéder au même site et au même répertoire, à se reconnecter au site de son origine et à lire à partir de son répertoire d'installation. Par défaut, la zone Internet est autorisée uniquement à se reconnecter au site de son origine.  
   
 ### <a name="user-specified-files"></a>Fichiers spécifiés par l'utilisateur  
  L'une des façons de gérer le fait de ne pas avoir l'autorisation d'accès aux fichiers consiste à inviter l'utilisateur à fournir des informations de fichiers spécifiques à l'aide de la classe <xref:System.Windows.Forms.OpenFileDialog> ou <xref:System.Windows.Forms.SaveFileDialog>. Cette interaction utilisateur permet de fournir une garantie que l'application ne peut pas remplacer des fichiers importants ou charger des fichiers privés à des fins malveillantes. Les méthodes <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> et <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> fournissent un accès en lecture et en écriture aux fichiers en ouvrant le flux de fichier pour le fichier spécifié par l'utilisateur. Ces méthodes aident aussi à protéger les fichiers de l’utilisateur en masquant leur chemin d’accès.  
@@ -47,7 +47,7 @@ ms.locfileid: "61802087"
 > [!NOTE]
 >  L'autorisation spécifique n'est pas demandée tant que la méthode <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> n'est pas appelée.  
   
- L'autorisation d'afficher une boîte de dialogue Fichier n'accorde pas à votre application un accès total à tous les membres des classes <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> et <xref:System.Windows.Forms.SaveFileDialog>. Pour plus d'informations sur les autorisations exactes nécessaires pour appeler chaque méthode, consultez la rubrique de référence correspondant à cette méthode dans la documentation de la bibliothèque de classes [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ L'autorisation d'afficher une boîte de dialogue Fichier n'accorde pas à votre application un accès total à tous les membres des classes <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> et <xref:System.Windows.Forms.SaveFileDialog>. Pour les autorisations exactes requises pour appeler chaque méthode, consultez la rubrique de référence pour cette méthode dans la documentation de bibliothèque de classes .NET Framework.  
   
  L'exemple de code suivant utilise la méthode <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> pour ouvrir un fichier spécifié par l'utilisateur dans un contrôle <xref:System.Windows.Forms.RichTextBox>. L'exemple exige <xref:System.Security.Permissions.FileDialogPermission> et la valeur d'énumération <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> associée. Il illustre comment gérer <xref:System.Security.SecurityException> pour déterminer si la fonctionnalité d’enregistrement doit être désactivée. Cet exemple exige que votre <xref:System.Windows.Forms.Form> ait un contrôle <xref:System.Windows.Forms.Button> nommé `ButtonOpen` et un contrôle <xref:System.Windows.Forms.RichTextBox> nommé `RtfBoxMain`.  
   

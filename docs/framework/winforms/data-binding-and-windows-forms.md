@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626850"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592309"
 ---
 # <a name="data-binding-and-windows-forms"></a>Liaison de données et Windows Forms
 Dans Windows Forms, vous pouvez créer des liaisons avec des sources de données traditionnelles, mais aussi avec quasiment toute structure contenant des données. Vous pouvez créer une liaison avec un tableau de valeurs que vous calculez au moment de l'exécution, que vous lisez depuis un fichier ou que vous dérivez de valeurs d'autres contrôles.  
   
- De plus, vous pouvez lier n'importe quelle propriété de n'importe quel contrôle à la source de données. Dans une liaison de données traditionnelle, vous liez généralement la propriété d'affichage (par exemple, la propriété <xref:System.Windows.Forms.Control.Text%2A> d'un contrôle <xref:System.Windows.Forms.TextBox>) à la source de données. Avec le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous avez également la possibilité de définir d'autres propriétés via la liaison de données. Vous pouvez utiliser des liaisons pour effectuer les tâches suivantes :  
+ De plus, vous pouvez lier n'importe quelle propriété de n'importe quel contrôle à la source de données. Dans une liaison de données traditionnelle, vous liez généralement la propriété d'affichage (par exemple, la propriété <xref:System.Windows.Forms.Control.Text%2A> d'un contrôle <xref:System.Windows.Forms.TextBox>) à la source de données. Avec le .NET Framework, vous avez également la possibilité de définir d’autres propriétés via la liaison de données. Vous pouvez utiliser des liaisons pour effectuer les tâches suivantes :  
   
 - Définir le graphisme d'un contrôle d'image  
   

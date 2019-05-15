@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858037"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592748"
 ---
 # <a name="duplex-services"></a>Services duplex
 
@@ -87,10 +87,10 @@ L'exemple de code suivant indique comment spécifier l'adresse de point de termi
 ```
 
 > [!WARNING]
-> Le model duplex ne détecte pas automatiquement si un service ou un client ferme son canal. Par conséquent, si un client se ferme de façon inattendue, par défaut le service n'est pas notifié ; il en est de même pour un client qui se ferme de façon inattendue. Les clients et les services peuvent implémenter leur propre protocole pour se notifier mutuellement s'ils le souhaitent.
+> Le model duplex ne détecte pas automatiquement si un service ou un client ferme son canal. Par conséquent, si un client se termine de façon inattendue, par défaut le service ne serez pas informé, ou si un service s’arrête de façon inattendue, le client n’est pas notifié. Les clients et les services peuvent implémenter leur propre protocole pour se notifier mutuellement s'ils le souhaitent. Pour plus d’informations sur la gestion des erreurs, consultez [gestion des erreurs de WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Spécification du comportement du client au moment de l’exécution](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Guide pratique pour Créer une fabrique de canal et l’utiliser pour créer et gérer des canaux](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Duplex](../samples/duplex.md)
+- [Spécification du comportement du client au moment de l’exécution](../specifying-client-run-time-behavior.md)
+- [Guide pratique pour Créer une fabrique de canal et l’utiliser pour créer et gérer des canaux](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

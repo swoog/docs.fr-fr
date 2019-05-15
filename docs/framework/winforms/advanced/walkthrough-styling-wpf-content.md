@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211259"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557891"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Procédure pas à pas : Contenu WPF de style
 
@@ -58,15 +58,15 @@ Vous pouvez appliquer différents styles à un contrôle WPF pour modifier son a
 
 1. Ouvrez `Form1` dans le Concepteur Windows Forms.
 
-2. Dans le **boîte à outils**, double-cliquez sur `UserControl1` pour créer une instance de `UserControl1` sur le formulaire.
+1. Dans le **boîte à outils**, double-cliquez sur `UserControl1` pour créer une instance de `UserControl1` sur le formulaire.
 
      Une instance de `UserControl1` est hébergée dans un nouveau contrôle <xref:System.Windows.Forms.Integration.ElementHost> nommé `elementHost1`.
 
-3. Dans le panneau des balises actives pour `elementHost1`, cliquez sur **modifier le contenu hébergé** dans la liste déroulante.
+1. Dans le panneau des balises actives pour `elementHost1`, cliquez sur **modifier le contenu hébergé** dans la liste déroulante.
 
      `UserControl1` s'ouvre dans le [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. En mode XAML, insérez le code XAML suivant après la balise d'ouverture `<UserControl>`.
+1. En mode XAML, insérez le code XAML suivant après la balise d'ouverture `<UserControl>`.
 
      Ce code XAML crée un dégradé avec une bordure de dégradé contrastée. Quand l'utilisateur clique sur le contrôle, les dégradés sont modifiés pour générer une apparence de bouton enfoncé. Pour plus d’informations, consultez [Application d’un style et création de modèles](../../wpf/controls/styling-and-templating.md).
 
@@ -118,7 +118,7 @@ Vous pouvez appliquer différents styles à un contrôle WPF pour modifier son a
    </UserControl.Resources>
    ```
 
-4. Appliquez le style `SimpleButton` défini à l’étape précédente au bouton Annuler en insérant le code XAML suivant dans l’étiquette `<Button>` du bouton Annuler.
+1. Appliquez le style `SimpleButton` défini à l’étape précédente au bouton Annuler en insérant le code XAML suivant dans l’étiquette `<Button>` du bouton Annuler.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ Vous pouvez appliquer différents styles à un contrôle WPF pour modifier son a
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. Générez le projet.
+1. Générez le projet.
 
-6. Ouvrez `Form1` dans le Concepteur Windows Forms.
+1. Ouvrez `Form1` dans le Concepteur Windows Forms.
 
-7. Le nouveau style est appliqué au contrôle de bouton.
+1. Le nouveau style est appliqué au contrôle de bouton.
 
-8. À partir de la **déboguer** menu, sélectionnez **démarrer le débogage** pour exécuter l’application.
+1. À partir de la **déboguer** menu, sélectionnez **démarrer le débogage** pour exécuter l’application.
 
-9. Cliquez sur les boutons OK et Annuler et observez les différences.
+1. Cliquez sur les boutons OK et Annuler et observez les différences.
 
 ## <a name="see-also"></a>Voir aussi
 

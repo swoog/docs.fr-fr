@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410522"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664675"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
  Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d’un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410522"
   
  Vous pouvez spécifier une option inline de deux façons :  
   
--   À l’aide d’une [construction diverse](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, où un signe moins (-) devant une option ou un jeu d’options désactive ces options. Par exemple, `(?i-mn)` active la correspondance qui ne respecte pas la casse (`i`), désactive le mode multiligne (`m`) et désactive les captures de groupe sans nom (`n`). L’option s’applique au modèle d’expression régulière depuis le point au niveau duquel l’option est définie et est effective jusqu’à la fin du modèle ou jusqu’au point au niveau duquel une autre construction inverse l’option.  
+- À l’aide d’une [construction diverse](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, où un signe moins (-) devant une option ou un jeu d’options désactive ces options. Par exemple, `(?i-mn)` active la correspondance qui ne respecte pas la casse (`i`), désactive le mode multiligne (`m`) et désactive les captures de groupe sans nom (`n`). L’option s’applique au modèle d’expression régulière depuis le point au niveau duquel l’option est définie et est effective jusqu’à la fin du modèle ou jusqu’au point au niveau duquel une autre construction inverse l’option.  
   
--   À l’aide d’une [construction de regroupement](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sous-expression*`)`, qui définit des options uniquement pour le groupe spécifié.  
+- À l’aide d’une [construction de regroupement](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sous-expression*`)`, qui définit des options uniquement pour le groupe spécifié.  
   
  Le moteur d’expression régulière de .NET prend en charge les options inline suivantes.  
   

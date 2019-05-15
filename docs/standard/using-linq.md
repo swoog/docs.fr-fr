@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644741"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ Ce qui nous amène à la question suivante : **devez-vous vous contenter d’ut
 
 La réponse à cette question est **oui**, si...
 
-*   Votre code Base utilise déjà la syntaxe de requête
-*   Vous devez définir l’étendue des variables dans vos requêtes en raison de la complexité
-*   Vous préférez la syntaxe de requête et elle ne vous détournera pas de votre code Base
+* Votre code Base utilise déjà la syntaxe de requête
+* Vous devez définir l’étendue des variables dans vos requêtes en raison de la complexité
+* Vous préférez la syntaxe de requête et elle ne vous détournera pas de votre code Base
 
 La réponse à cette question est **non**, si...
 
-*   Votre code Base utilise déjà la syntaxe d’API
-*   Vous n’avez pas besoin de définir l’étendue des variables dans vos requêtes
-*   Vous préférez la syntaxe d’API et elle ne vous détournera pas de votre code Base
+* Votre code Base utilise déjà la syntaxe d’API
+* Vous n’avez pas besoin de définir l’étendue des variables dans vos requêtes
+* Vous préférez la syntaxe d’API et elle ne vous détournera pas de votre code Base
 
 ## <a name="essential-samples"></a>Exemples essentiels
 
@@ -119,7 +119,7 @@ Pour obtenir la liste complète des exemples LINQ, consultez [101 LINQ Samples](
 
 Voici une démonstration rapide de quelques-uns des éléments essentiels de LINQ. Ces exemples ne sont pas exhaustifs, car LINQ fournit beaucoup plus de fonctionnalités que ce qui est présenté ici.
 
-*   Les indispensables : `Where`, `Select` et `Aggregate` :
+* Les indispensables : `Where`, `Select` et `Aggregate` :
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Aplanissement d’une liste de listes :
+* Aplanissement d’une liste de listes :
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Union entre deux ensembles (avec un comparateur personnalisé) :
+* Union entre deux ensembles (avec un comparateur personnalisé) :
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Intersection entre deux ensembles :
+* Intersection entre deux ensembles :
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Tri :
+* Tri :
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Enfin, un exemple plus avancé : déterminer si les valeurs des propriétés de deux instances du même type sont égales (emprunté à [ce billet StackOverflow](https://stackoverflow.com/a/844855) et modifié) :
+* Enfin, un exemple plus avancé : déterminer si les valeurs des propriétés de deux instances du même type sont égales (emprunté à [ce billet StackOverflow](https://stackoverflow.com/a/844855) et modifié) :
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ Les tâches parallèles utilisant le processeur qui peuvent être facilement exp
 
 ## <a name="further-resources"></a>Ressources supplémentaires :
 
-*   [101 exemples LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), environnement de laboratoire et moteur d’interrogation de base de données pour C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), livre électronique pour apprendre comment LINQ-to-objects est implémenté
+* [101 exemples LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), environnement de laboratoire et moteur d’interrogation de base de données pour C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), livre électronique pour apprendre comment LINQ-to-objects est implémenté

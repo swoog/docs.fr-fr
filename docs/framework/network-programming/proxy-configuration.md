@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200543"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623058"
 ---
 # <a name="proxy-configuration"></a>Configuration du proxy
 Un serveur proxy gère les demandes du client pour les ressources. Un proxy peut retourner une ressource demandée à partir de son cache ou transférer la demande au serveur sur lequel réside la ressource. Les proxies peuvent améliorer les performances réseau en réduisant le nombre de demandes envoyées aux serveurs distants. Les proxies peuvent également être utilisés pour restreindre l'accès aux ressources.  
@@ -45,11 +45,11 @@ Un serveur proxy gère les demandes du client pour les ressources. Un proxy peut
   
  Plusieurs options déterminent le fonctionnement d'un proxy statique. Spécifiez les informations suivantes :  
   
--   l'adresse du proxy ;  
+- l'adresse du proxy ;  
   
--   si le proxy doit être ignoré pour les adresses locales ;  
+- si le proxy doit être ignoré pour les adresses locales ;  
   
--   si le proxy doit être ignoré pour un ensemble d'adresses donné.  
+- si le proxy doit être ignoré pour un ensemble d'adresses donné.  
   
  Le tableau suivant présente les options de configuration d'un proxy statique.  
   

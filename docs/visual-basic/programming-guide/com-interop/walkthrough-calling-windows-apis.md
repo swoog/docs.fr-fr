@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022400"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592710"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procédure pas à pas : Appel d’API Windows (Visual Basic)
 Les API Windows sont des bibliothèques de liens dynamiques (DLL) qui font partie du système d’exploitation Windows. Elles permettent d’effectuer des tâches lorsqu’il est difficile d’écrire des procédures équivalentes de votre choix. Par exemple, Windows fournit une fonction nommée `FlashWindowEx` qui permet d’effectuer la barre de titre pour une application alternez entre clairs et foncés.  
   
  L’avantage d’utiliser les API Windows dans votre code est qu’ils peuvent enregistrer des temps de développement, car ils contiennent des dizaines de fonctions utiles qui sont déjà écrit et prêtes à être utilisées. L’inconvénient est que les API de Windows peut être difficile de travailler avec et envoyés lorsque des problèmes surgissent.  
   
- Les API Windows représentent une catégorie spéciale d’interopérabilité. Les API Windows n’utilisent pas de code managé, n’ont pas intégrées bibliothèques de types et utiliser des types de données qui sont différents de ceux utilisés avec Visual Studio. En raison de ces différences, et étant donné que les API Windows ne sont pas des objets COM, l’interopérabilité avec les API Windows et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] est effectuée à l’aide de la plateforme appeler, ou PInvoke. Code non managé est un service qui permet au code managé appelle des fonctions non managées implémentées dans des DLL. Pour plus d’informations, consultez [consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md). Vous pouvez utiliser PInvoke dans Visual Basic à l’aide du `Declare` instruction ou en appliquant la `DllImport` attribut à une procédure vide.  
+ Les API Windows représentent une catégorie spéciale d’interopérabilité. Les API Windows n’utilisent pas de code managé, n’ont pas intégrées bibliothèques de types et utiliser des types de données qui sont différents de ceux utilisés avec Visual Studio. Raison de ces différences, et étant donné que les API Windows ne sont pas des objets COM, l’interopérabilité avec les API Windows et le .NET Framework est effectué à l’aide de code non managé, ou PInvoke. Code non managé est un service qui permet au code managé appelle des fonctions non managées implémentées dans des DLL. Pour plus d’informations, consultez [consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md). Vous pouvez utiliser PInvoke dans Visual Basic à l’aide du `Declare` instruction ou en appliquant la `DllImport` attribut à une procédure vide.  
   
- Appels d’API de Windows ont été une partie importante de Visual Basic de programmation dans le passé, mais sont rarement nécessaires avec Visual Basic .NET. Si possible, vous devez utiliser le code managé à partir de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] pour effectuer des tâches, au lieu d’appels d’API de Windows. Cette procédure pas à pas fournit des informations pour les cas dans lesquels l’utilisation des API de Windows est nécessaire.  
+ Appels d’API de Windows ont été une partie importante de Visual Basic de programmation dans le passé, mais sont rarement nécessaires avec Visual Basic .NET. Autant que possible, vous devez utiliser le code managé à partir de .NET Framework pour effectuer des tâches, au lieu d’appels d’API de Windows. Cette procédure pas à pas fournit des informations pour les cas dans lesquels l’utilisation des API de Windows est nécessaire.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

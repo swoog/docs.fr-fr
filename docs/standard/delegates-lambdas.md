@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656152"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615321"
 ---
 # <a name="delegates-and-lambdas"></a>Délégués et expressions lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 Pour simplifier le processus de développement, .NET inclut un ensemble de types délégués que les programmeurs peuvent réutiliser sans avoir à en créer. Il s’agit de `Func<>`, `Action<>` et `Predicate<>`. Ils peuvent être utilisés à plusieurs endroits dans les API .NET, sans avoir à définir de nouveaux types délégués. Bien sûr, il existe certaines différences entre ces trois types, comme vous pouvez le constater dans leurs signatures, qui sont principalement liées à la manière dont ils doivent être utilisés :
 
-*   `Action<>` est utilisé quand une action doit être effectuée à l’aide des arguments du délégué.
-*   `Func<>` est généralement utilisé dans le cas d’une transformation, autrement dit, quand vous devez transformer les arguments du délégué en un résultat différent. C’est le cas, par exemple, des projections.
-*   `Predicate<>` est utilisé quand vous devez déterminer si l’argument répond à la condition du délégué. Il peut également être écrit comme un `Func<T, bool>`.
+* `Action<>` est utilisé quand une action doit être effectuée à l’aide des arguments du délégué.
+* `Func<>` est généralement utilisé dans le cas d’une transformation, autrement dit, quand vous devez transformer les arguments du délégué en un résultat différent. C’est le cas, par exemple, des projections.
+* `Predicate<>` est utilisé quand vous devez déterminer si l’argument répond à la condition du délégué. Il peut également être écrit comme un `Func<T, bool>`.
 
 Nous pouvons maintenant reprendre notre exemple ci-dessus et le réécrire à l’aide du délégué `Func<>` au lieu d’un type personnalisé. Le programme continue à s’exécuter exactement de la même façon.
 
@@ -159,6 +159,6 @@ Dans ce contexte, l’opérateur `+=` est utilisé pour s’abonner à un [évé
 
 ## <a name="further-reading-and-resources"></a>Ressources et informations supplémentaires
 
-*   [Délégués](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Fonctions anonymes](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Expressions lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Délégués](../../docs/csharp/programming-guide/delegates/index.md)
+* [Fonctions anonymes](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Expressions lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

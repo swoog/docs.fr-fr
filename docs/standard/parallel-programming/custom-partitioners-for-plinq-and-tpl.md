@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698889"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625617"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitionneurs personnalisés pour PLINQ et la bibliothèque parallèle de tâches (TPL)
 Pour paralléliser une opération sur une source de données, l’une des étapes essentielles consiste à *partitionner* la source en plusieurs sections accessibles simultanément par plusieurs threads. PLINQ et la bibliothèque parallèle de tâches (TPL) fournissent des partitionneurs par défaut qui fonctionnent de façon transparente lorsque vous écrivez une requête parallèle ou une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Pour des scénarios plus élaborés, vous pouvez incorporer votre propre partitionneur.  
@@ -43,7 +43,7 @@ Pour paralléliser une opération sur une source de données, l’une des étape
   
 |Surcharge|Utiliser l'équilibrage de charge|  
 |--------------|-------------------------|  
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Toujours|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Always|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Lorsque l’argument booléen est spécifié comme true|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Lorsque l’argument booléen est spécifié comme true|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|  
@@ -100,25 +100,25 @@ Pour paralléliser une opération sur une source de données, l’une des étape
 ### <a name="contract-for-partitioners"></a>Contrat pour les partitionneurs  
  Lorsque vous implémentez un partitionneur personnalisé, suivez ces instructions pour garantir une interaction correcte avec PLINQ et <xref:System.Threading.Tasks.Parallel.ForEach%2A> dans la bibliothèque parallèle de tâches (TPL) :  
   
--   Si <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> est appelé avec un argument de zéro ou moins pour `partitionsCount`, levez <xref:System.ArgumentOutOfRangeException>. Bien que PLINQ et TPL ne fourniront jamais une valeur `partitionCount` égale à 0, nous vous recommandons néanmoins de vous prémunir contre ce risque.  
+- Si <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> est appelé avec un argument de zéro ou moins pour `partitionsCount`, levez <xref:System.ArgumentOutOfRangeException>. Bien que PLINQ et TPL ne fourniront jamais une valeur `partitionCount` égale à 0, nous vous recommandons néanmoins de vous prémunir contre ce risque.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> et <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devraient toujours renvoyer un nombre de partitions équivalant à `partitionsCount`. Si le partitionneur manque de données et ne peut pas créer autant de partitions que demandé, la méthode devrait retourner un énumérateur vide pour chacune des partitions restantes. Sinon, PLINQ et TPL lèveront une <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> et <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> devraient toujours renvoyer un nombre de partitions équivalant à `partitionsCount`. Si le partitionneur manque de données et ne peut pas créer autant de partitions que demandé, la méthode devrait retourner un énumérateur vide pour chacune des partitions restantes. Sinon, PLINQ et TPL lèveront une <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, et <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> ne devraient jamais retourner `null` (`Nothing` en Visual Basic). Si tel est le cas, PLINQ/TPL lèveront une <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, et <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> ne devraient jamais retourner `null` (`Nothing` en Visual Basic). Si tel est le cas, PLINQ/TPL lèveront une <xref:System.InvalidOperationException>.  
   
--   Les méthodes qui retournent des partitions devraient toujours renvoyer des partitions capables d’énumérer totalement et de manière unique la source de données. Il ne devrait y avoir aucune duplication dans la source de données ou les éléments ignorés, sauf si cela est spécifiquement requis par la conception du partitionneur. Si cette règle n’est pas suivie, l’ordre de sortie peut être brouillé.  
+- Les méthodes qui retournent des partitions devraient toujours renvoyer des partitions capables d’énumérer totalement et de manière unique la source de données. Il ne devrait y avoir aucune duplication dans la source de données ou les éléments ignorés, sauf si cela est spécifiquement requis par la conception du partitionneur. Si cette règle n’est pas suivie, l’ordre de sortie peut être brouillé.  
   
--   Les accesseurs booléens suivants doivent toujours retourner correctement les valeurs ci-dessous afin que l’ordre de sortie ne soit pas brouillé :  
+- Les accesseurs booléens suivants doivent toujours retourner correctement les valeurs ci-dessous afin que l’ordre de sortie ne soit pas brouillé :  
   
-    -   `KeysOrderedInEachPartition`: chaque partition retourne des éléments en augmentant les index de clé.  
+    - `KeysOrderedInEachPartition`: chaque partition retourne des éléments en augmentant les index de clé.  
   
-    -   `KeysOrderedAcrossPartitions`: pour toutes les partitions retournées, les index de clé de la partition *i* sont plus élevés que les index de clé de la partition *i*-1.  
+    - `KeysOrderedAcrossPartitions`: pour toutes les partitions retournées, les index de clé de la partition *i* sont plus élevés que les index de clé de la partition *i*-1.  
   
-    -   `KeysNormalized`: tous les index de clé augmentent de façon monotone, sans écarts, à partir de zéro.  
+    - `KeysNormalized`: tous les index de clé augmentent de façon monotone, sans écarts, à partir de zéro.  
   
--   Tous les index doivent être uniques. Il ne doit pas y avoir de doublons. Si cette règle n’est pas suivie, l’ordre de sortie peut être brouillé.  
+- Tous les index doivent être uniques. Il ne doit pas y avoir de doublons. Si cette règle n’est pas suivie, l’ordre de sortie peut être brouillé.  
   
--   Tous les index doivent être non négatifs. Si cette règle n’est pas suivie, PLINQ/TPL peuvent lever des exceptions.  
+- Tous les index doivent être non négatifs. Si cette règle n’est pas suivie, PLINQ/TPL peuvent lever des exceptions.  
   
 ## <a name="see-also"></a>Voir aussi
 
