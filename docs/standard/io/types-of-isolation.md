@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466151"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647792"
 ---
 # <a name="types-of-isolation"></a>Types d'isolation
 L’accès au stockage isolé est toujours limité à l’utilisateur qui l’a créé. Pour implémenter ce type d’isolation, le Common Language Runtime utilise la même notion d’identité de l’utilisateur reconnue par le système d’exploitation, c’est-à-dire l’identité associée au processus par lequel le code s’exécute lorsque le magasin est ouvert. Cette identité est l’identité d’un utilisateur, mais l’emprunt d’identité peut provoquer un changement dynamique de l’identité actuelle de l’utilisateur.  
   
  L’accès au stockage isolé est également limité en fonction de l’identité associée au domaine et à l’assembly de l’application, ou à l’assembly uniquement. Le runtime obtient ces identités des façons suivantes :  
   
--   L’identité de domaine constitue la preuve de l’application, et dans le cas d’une application Web, il peut s’agir de l’URL complète. Pour le code hébergé par l’interpréteur de commandes, l’identité de domaine peut être basée sur le chemin du répertoire de l’application. Par exemple, si l’exécutable s’exécute à partir du chemin d’accès C:\Office\MyApp.exe, l’identité de domaine serait C:\Office\MyApp.exe.  
+- L’identité de domaine constitue la preuve de l’application, et dans le cas d’une application Web, il peut s’agir de l’URL complète. Pour le code hébergé par l’interpréteur de commandes, l’identité de domaine peut être basée sur le chemin du répertoire de l’application. Par exemple, si l’exécutable s’exécute à partir du chemin d’accès C:\Office\MyApp.exe, l’identité de domaine serait C:\Office\MyApp.exe.  
   
--   L’identité d’assembly est la preuve de l’assembly. Elle peut provenir d’une signature numérique chiffrée, qui peut être le [nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md) de l’assembly, de l’éditeur du logiciel de l’assembly, ou de son identité d’URL. Si un assembly possède un nom fort et une identité d’éditeur de logiciel, l’identité de l’éditeur de logiciel est utilisée. Si l’assembly provient d’Internet et n’est pas signé, l’identité d’URL est utilisée. Pour plus d’informations sur les assemblys et les noms forts, consultez [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- L’identité d’assembly est la preuve de l’assembly. Elle peut provenir d’une signature numérique chiffrée, qui peut être le [nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md) de l’assembly, de l’éditeur du logiciel de l’assembly, ou de son identité d’URL. Si un assembly possède un nom fort et une identité d’éditeur de logiciel, l’identité de l’éditeur de logiciel est utilisée. Si l’assembly provient d’Internet et n’est pas signé, l’identité d’URL est utilisée. Pour plus d’informations sur les assemblys et les noms forts, consultez [Programmation à l'aide d'assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Les magasins itinérants se déplacent avec un utilisateur qui dispose d’un profil utilisateur itinérant. Les fichiers sont enregistrés dans un répertoire réseau et téléchargés sur n’importe quel ordinateur auquel l’utilisateur se connecte. Pour plus d'informations sur les profils utilisateur itinérants, consultez <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Les magasins itinérants se déplacent avec un utilisateur qui dispose d’un profil utilisateur itinérant. Les fichiers sont enregistrés dans un répertoire réseau et téléchargés sur n’importe quel ordinateur auquel l’utilisateur se connecte. Pour plus d'informations sur les profils utilisateur itinérants, consultez <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  En combinant les concepts d’utilisateur, de domaine et d’identité d’assembly, le stockage isolé permet d’isoler des données de plusieurs manières, chacune avec ses propres scénarios d’utilisation :  
   
--   [Isolation par utilisateur et par assembly](#UserAssembly)  
+- [Isolation par utilisateur et par assembly](#UserAssembly)  
   
--   [Isolation par utilisateur, par domaine et par assembly](#UserDomainAssembly)  
+- [Isolation par utilisateur, par domaine et par assembly](#UserDomainAssembly)  
   
  Chacune de ces isolations peut être combinée avec un profil utilisateur itinérant. Pour plus d’informations, consultez la section [Stockage et profil itinérant isolé](#Roaming).  
   

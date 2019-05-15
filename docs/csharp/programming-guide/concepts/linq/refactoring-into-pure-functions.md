@@ -2,12 +2,12 @@
 title: Refactorisation dans des fonctions pures (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596889"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorisation dans des fonctions pures (C#)
 
@@ -18,9 +18,9 @@ L'un des aspects importants des transformations fonctionnelles pures consiste à
   
  Comme mentionné précédemment dans cette section, une fonction pure présente deux caractéristiques utiles :  
   
--   Elle n'a aucun effet secondaire. La fonction ne change aucune variable et aucune donnée de tout type en dehors de la fonction.  
+- Elle n'a aucun effet secondaire. La fonction ne change aucune variable et aucune donnée de tout type en dehors de la fonction.  
   
--   Elle est cohérente. Étant donné le même ensemble de données d'entrée, elle retournera toujours la même valeur de sortie.  
+- Elle est cohérente. Étant donné le même ensemble de données d'entrée, elle retournera toujours la même valeur de sortie.  
   
  L'une des manières de basculer vers la programmation fonctionnelle consiste à refactoriser le code existant afin d'éliminer les effets secondaires indésirables et les dépendances externes. De cette manière, vous pouvez créer des versions avec fonctions pures du code existant.  
   

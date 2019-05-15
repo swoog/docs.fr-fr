@@ -9,19 +9,19 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624606"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Procédure : personnaliser une stratégie de cache basée sur la durée
 Lors de la création d’une stratégie de cache basée sur la durée, vous pouvez personnaliser le comportement de la mise en cache en spécifiant des valeurs pour l’ancienneté maximale, l’actualisation minimale, l’obsolescence maximale ou la date de synchronisation du cache. L’objet <xref:System.Net.Cache.HttpRequestCachePolicy> fournit plusieurs constructeurs qui vous permettent de spécifier des combinaisons valides de ces valeurs.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Pour créer une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache  
   
--   Créez une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache en passant un objet <xref:System.DateTime> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+- Créez une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache en passant un objet <xref:System.DateTime> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale  
   
--   Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> comme valeur de paramètre `cacheAgeControl` et en passant un objet <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+- Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> comme valeur de paramètre `cacheAgeControl` et en passant un objet <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -84,7 +84,7 @@ Level:Default MinFresh:3600
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale  
   
--   Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> comme valeur de paramètre `cacheAgeControl` et en passant deux objets <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>, un pour indiquer l’ancienneté maximale des ressources et un second pour indiquer l’actualisation minimale autorisée pour un objet retourné du cache.  
+- Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> comme valeur de paramètre `cacheAgeControl` et en passant deux objets <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>, un pour indiquer l’ancienneté maximale des ressources et un second pour indiquer l’actualisation minimale autorisée pour un objet retourné du cache.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  

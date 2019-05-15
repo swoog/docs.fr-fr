@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322990"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654967"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Fonctionnement de l'accélération dans PLINQ
 Le principal objectif de PLINQ est d’accélérer l’exécution de requêtes LINQ to Objects en exécutant parallèlement les délégués de requête sur des ordinateurs multicœurs. PLINQ accomplit les meilleures performances lorsque le traitement de chaque élément dans une collection source est indépendant, sans aucun état partagé parmi les délégués individuels. Ces opérations sont courantes dans LINQ to Objects et PLINQ et sont souvent appelées « *délicieusement parallèles* », car elles se prêtent facilement à la planification sur plusieurs threads. Toutefois, toutes les requêtes ne sont pas entièrement constituées d’opérations délicieusement parallèles ; dans la plupart des cas, une requête concerne certains opérateurs qui ne peuvent pas être parallélisés, ou qui ralentissent l’exécution parallèle. Et même dans le cas de requêtes qui sont entièrement délicieusement parallèles, PLINQ doit encore partitionner la source de données et planifier le travail sur les threads et, généralement, fusionner les résultats lorsque la requête est terminée. Toutes ces opérations ajoutent au coût de calcul de la parallélisation ; ces coûts d’ajout de parallélisation sont appelés *surcharge*. Pour optimiser les performances dans une requête PLINQ, l’objectif est d’augmenter les parties délicieusement parallèles et de réduire au minimum les parties qui nécessitent une surcharge. Cet article fournit des informations qui vous aideront à écrire des requêtes PLINQ aussi efficaces que possible, tout en produisant des résultats corrects.  
@@ -74,15 +74,15 @@ Le principal objectif de PLINQ est d’accélérer l’exécution de requêtes L
   
  La liste suivante décrit les formes de requêtes que PLINQ exécutera en mode séquentiel par défaut :  
   
--   Requêtes qui contiennent une instruction Select, Where indexée, SelectMany indexée ou ElementAt après un opérateur de tri ou de filtrage qui a supprimé ou réorganisé les indices d’origine.  
+- Requêtes qui contiennent une instruction Select, Where indexée, SelectMany indexée ou ElementAt après un opérateur de tri ou de filtrage qui a supprimé ou réorganisé les indices d’origine.  
   
--   Requêtes qui contiennent un SkipWhile opérateur Take, TakeWhile, ignorer et où les index de la séquence source ne sont pas dans l’ordre d’origine.  
+- Requêtes qui contiennent un SkipWhile opérateur Take, TakeWhile, ignorer et où les index de la séquence source ne sont pas dans l’ordre d’origine.  
   
--   Requêtes qui contiennent Zip ou SequenceEquals, sauf si une des sources de données a un index ordonné à l’origine et la source de données indexable (autrement dit, un tableau ou un IList(T)).  
+- Requêtes qui contiennent Zip ou SequenceEquals, sauf si une des sources de données a un index ordonné à l’origine et la source de données indexable (autrement dit, un tableau ou un IList(T)).  
   
--   Requêtes qui contiennent Concat, sauf si elle est appliquée aux sources de données indexables.  
+- Requêtes qui contiennent Concat, sauf si elle est appliquée aux sources de données indexables.  
   
--   Requêtes qui contiennent Reverse, sauf si elle est appliquée aux sources de données indexables.  
+- Requêtes qui contiennent Reverse, sauf si elle est appliquée aux sources de données indexables.  
   
 ## <a name="see-also"></a>Voir aussi
 

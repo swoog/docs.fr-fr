@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645012"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceptions dans les threads managés
 À partir du .NET Framework version 2.0, le common language runtime permet à la plupart des exceptions non prises en charge dans les threads de poursuivre naturellement. Dans la plupart des cas, cela signifie que l’exception non prise en charge provoque l’arrêt de l’application.  
@@ -25,11 +25,11 @@ ms.locfileid: "43865177"
   
  Le common language runtime représente une protection pour certaines exceptions non prises en charge qui sont utilisées pour contrôler le flux du programme :  
   
--   Une <xref:System.Threading.ThreadAbortException> est levée dans un thread, car <xref:System.Threading.Thread.Abort%2A> a été appelé.  
+- Une <xref:System.Threading.ThreadAbortException> est levée dans un thread, car <xref:System.Threading.Thread.Abort%2A> a été appelé.  
   
--   Une <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d’application dans lequel le thread s’exécute est en cours de déchargement.  
+- Une <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d’application dans lequel le thread s’exécute est en cours de déchargement.  
   
--   Le common language runtime ou un processus hôte met fin au thread en levant une exception interne.  
+- Le common language runtime ou un processus hôte met fin au thread en levant une exception interne.  
   
  Si l’une de ces exceptions n’est pas prise en charge dans les threads créés par le common language runtime, elle arrête le thread, mais le common language runtime n’autorise pas l’exception à poursuivre.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "43865177"
 ## <a name="change-from-previous-versions"></a>Changements par rapport aux versions antérieures  
  La modification la plus importante concerne les threads managés. Dans les versions 1.0 et 1.1 du .NET Framework, le common language runtime représente une protection pour les exceptions non prises en charge dans les situations suivantes :  
   
--   Il n’existe pas d’exceptions non prises en charge sur un thread de pool de threads. Lorsqu’une tâche lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis renvoie le thread au pool de threads.  
+- Il n’existe pas d’exceptions non prises en charge sur un thread de pool de threads. Lorsqu’une tâche lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis renvoie le thread au pool de threads.  
   
--   Il n’existe pas d’exceptions non prises en charge sur un thread créé avec la méthode <xref:System.Threading.Thread.Start%2A> de la classe <xref:System.Threading.Thread>. Lorsque le code qui s’exécute sur un tel thread lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis arrête correctement le thread.  
+- Il n’existe pas d’exceptions non prises en charge sur un thread créé avec la méthode <xref:System.Threading.Thread.Start%2A> de la classe <xref:System.Threading.Thread>. Lorsque le code qui s’exécute sur un tel thread lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis arrête correctement le thread.  
   
--   Il n’existe pas d’exceptions non prises en charge sur le thread du finaliseur. Lorsqu’un finaliseur lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis permet au thread du finaliseur de reprendre l’exécution des finaliseurs.  
+- Il n’existe pas d’exceptions non prises en charge sur le thread du finaliseur. Lorsqu’un finaliseur lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis permet au thread du finaliseur de reprendre l’exécution des finaliseurs.  
   
  L’état au premier plan ou en arrière-plan d’un thread managé n’affecte pas ce comportement.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "43865177"
 ### <a name="migrating-code"></a>Migrer du code  
  En général, la modification permet de mettre en lumière des problèmes de programmation auparavant non reconnus afin de les résoudre. Dans certains cas, toutefois, les programmeurs pouvaient tirer parti de la protection du runtime, par exemple pour arrêter des threads. Selon la situation, ils doivent envisager l’une des stratégies de migration suivantes :  
   
--   Restructurer le code de façon que le thread s’arrête normalement à la réception d’un signal.  
+- Restructurer le code de façon que le thread s’arrête normalement à la réception d’un signal.  
   
--   Utilisez la méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pour abandonner le thread.  
+- Utilisez la méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pour abandonner le thread.  
   
--   Si un thread doit être arrêté pour permettre l’arrêt du processus, faire du thread un thread d’arrière-plan afin qu’il s’arrête automatiquement à la sortie du processus.  
+- Si un thread doit être arrêté pour permettre l’arrêt du processus, faire du thread un thread d’arrière-plan afin qu’il s’arrête automatiquement à la sortie du processus.  
   
  Dans tous les cas, la stratégie doit respecter les instructions de conception des exceptions. Consultez la page [Instructions de conception des exceptions](../../../docs/standard/design-guidelines/exceptions.md).  
   

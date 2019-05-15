@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634524"
 ---
 # <a name="custom-numeric-format-strings"></a>Chaînes de format numériques personnalisées
 
 Vous pouvez créer une chaîne de format numérique personnalisée, qui est composée d'un ou de plusieurs spécificateurs de format numériques personnalisés, pour définir la mise en forme des données numériques. Une chaîne de format numérique personnalisée est toute chaîne autre qu'une [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
-  
 
  Les chaînes de format numérique personnalisées sont prises en charge par certaines surcharges de la méthode `ToString` de tous les types numériques. Par exemple, vous pouvez fournir une chaîne de format numérique aux méthodes <xref:System.Int32.ToString%28System.String%29> et <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> du type <xref:System.Int32> . Les chaînes de format numérique personnalisées sont également prises en charge par la fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) prend également en charge les chaînes de format numérique personnalisées.  
   
@@ -109,11 +108,11 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
 ## <a name="the--custom-specifier"></a>Spécificateur personnalisé « , »  
  Le caractère "," sert à la fois de séparateur de groupes et de spécificateur de mise à l'échelle des nombres.  
   
--   Séparateur de groupes : si une ou plusieurs virgules sont spécifiées entre deux espaces réservés de chiffres (0 ou #) qui mettent en forme les chiffres intégraux d’un nombre, un caractère de séparation des groupes est inséré entre chaque groupe de nombres dans la partie intégrale de la sortie.  
+- Séparateur de groupes : si une ou plusieurs virgules sont spécifiées entre deux espaces réservés de chiffres (0 ou #) qui mettent en forme les chiffres intégraux d’un nombre, un caractère de séparation des groupes est inséré entre chaque groupe de nombres dans la partie intégrale de la sortie.  
   
      Les propriétés <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> et <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> de l'objet <xref:System.Globalization.NumberFormatInfo> en cours déterminent le caractère utilisé comme séparateur de groupes de nombres et la taille de chaque groupe de nombres. Par exemple, si la chaîne « #,# » et la culture indifférente sont utilisées pour mettre en forme le nombre 1000, la sortie est « 1,000 ».  
   
--   Spécificateur de mise à l’échelle des nombres : si une ou plusieurs virgules sont spécifiées immédiatement à gauche du séparateur décimal explicite ou implicite, le nombre à mettre en forme est divisé par 1000 pour chaque virgule. Par exemple, si la chaîne « 0,, » est utilisée pour mettre en forme le nombre 100 millions, la sortie est « 100 ».  
+- Spécificateur de mise à l’échelle des nombres : si une ou plusieurs virgules sont spécifiées immédiatement à gauche du séparateur décimal explicite ou implicite, le nombre à mettre en forme est divisé par 1000 pour chaque virgule. Par exemple, si la chaîne « 0,, » est utilisée pour mettre en forme le nombre 100 millions, la sortie est « 100 ».  
   
  Vous pouvez utiliser des spécificateurs de séparateur de groupes et de mise à l'échelle des nombres dans la même chaîne de format. Par exemple, si la chaîne « #,0,, » et la culture indifférente sont utilisées pour mettre en forme le nombre 1 milliard, la sortie est « 1,000 ».  
   

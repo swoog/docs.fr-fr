@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336146"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647716"
 ---
 # <a name="managed-execution-process"></a>processus d'exécution managée
 <a name="introduction"></a> Le processus d'exécution managé inclut les étapes suivantes,qui sont décrites en détail plus loin dans cette rubrique :  
@@ -58,9 +58,9 @@ ms.locfileid: "59336146"
 ## <a name="compiling-msil-to-native-code"></a>Compilation du MSIL en code natif  
  Avant de pouvoir exécuter le langage MSIL (MicroSoft Intermediate Language), vous devez le compiler en code natif avec le Common Language Runtime pour l'architecture de l'ordinateur cible. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] propose deux méthodes de conversion :  
   
--   À l'aide d'un compilateur juste-à-temps (JIT) .NET Framework  
+- À l'aide d'un compilateur juste-à-temps (JIT) .NET Framework  
   
--   À l’aide de l’outil [Ngen.exe (générateur d’images natives)](../../docs/framework/tools/ngen-exe-native-image-generator.md) de .NET Framework  
+- À l’aide de l’outil [Ngen.exe (générateur d’images natives)](../../docs/framework/tools/ngen-exe-native-image-generator.md) de .NET Framework  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Compilation par le compilateur JIT  
  La compilation JIT convertit à la demande le langage MSIL en code natif au moment de l'exécution de l'application, quand le contenu d'un assembly est chargé et exécuté. Dans la mesure où le Common Language Runtime fournit un compilateur JIT pour chaque architecture de processeur qu'il prend en charge, les développeurs peuvent générer un jeu d'assemblys MSIL pouvant être traité par un compilateur JIT et exécuté sur différents ordinateurs ayant des architectures d'ordinateur différentes. Cependant, si votre code managé appelle des API natives spécifiques à une plateforme ou une bibliothèque de classes spécifique à une plateforme, il s'exécutera sur un système d'exploitation spécifique uniquement.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336146"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Génération du code d'installation à l'aide de NGen.exe  
  Comme le compilateur JIT convertit le MSIL d'un assembly en code natif quand les méthodes individuelles définies dans cet assembly sont appelées, les performances sont nécessairement altérées au moment de l'exécution. Dans la plupart des cas, cette baisse de performances est acceptable. Et surtout, le code généré par le compilateur JIT est lié au processus qui a déclenché la compilation. Il ne peut pas être partagé entre plusieurs processus. Pour que le code généré puisse être partagé entre plusieurs appels d'une application ou entre plusieurs processus partageant un jeu d'assemblys, le Common Language Runtime prend en charge un mode de compilation à l'avance. Ce mode de compilation à l’avance utilise [Ngen.exe (générateur d’images natives)](../../docs/framework/tools/ngen-exe-native-image-generator.md) pour convertir les assemblys MSIL en code natif de façon similaire au compilateur JIT. Toutefois, le fonctionnement de Ngen.exe diffère de celui du compilateur JIT sur trois points :  
   
--   Il exécute la conversion de MSIL en code natif avant d'exécuter l'application et non pendant l'exécution de celle-ci.  
+- Il exécute la conversion de MSIL en code natif avant d'exécuter l'application et non pendant l'exécution de celle-ci.  
   
--   Il compile un assembly entier à la fois, au lieu d'une méthode à la fois.  
+- Il compile un assembly entier à la fois, au lieu d'une méthode à la fois.  
   
--   Il conserve le code généré dans le cache des images natives comme un fichier sur le disque.  
+- Il conserve le code généré dans le cache des images natives comme un fichier sur le disque.  
   
 ### <a name="code-verification"></a>Vérification du code  
  Dans le cadre de sa compilation en code natif, le code MSIL est soumis à un processus de vérification, sauf si un administrateur a établi une stratégie de sécurité qui autorise le code à ignorer ce processus. La vérification examine le MSIL et les métadonnées afin de déterminer si le code est de type sécurisé, ce qui signifie qu'il ne doit accéder qu'aux emplacements de mémoire autorisés. La sécurité de type permet d'isoler les objets les uns des autres et de les protéger de toute altération accidentelle ou malveillante. Elle garantit également que les restrictions liées à la sécurité peuvent être appliquées au code de manière fiable.  
   
  Le runtime s'appuie sur le fait que les instructions suivantes sont vraies pour le code de type sécurisé vérifié :  
   
--   une référence à un type qui est strictement compatible avec le type référencé ;  
+- une référence à un type qui est strictement compatible avec le type référencé ;  
   
--   seules les opérations définies de façon appropriée sont appelées pour un objet ;  
+- seules les opérations définies de façon appropriée sont appelées pour un objet ;  
   
--   les identités sont conformes à ce qu'elles prétendent être.  
+- les identités sont conformes à ce qu'elles prétendent être.  
   
  Pendant le processus de vérification, le code MSIL est examiné en vue d'essayer de confirmer qu'il peut accéder aux emplacements de mémoire et appeler des méthodes uniquement par le biais de types correctement définis. Par exemple, le code n'autorise pas l'accès aux champs d'un objet d'une manière qui accepte le débordement de capacité des emplacements de mémoire. Par ailleurs, le processus de vérification inspecte le code MSIL afin de déterminer s'il a été généré correctement, car un code MSIL incorrect peut donner lieu à une violation des règles de sécurité des types. Le processus de vérification passe un jeu de code de type sécurisé et correctement défini, et ne passe que du code de ce type. Cependant, une partie du code de type sécurisé peut ne pas passer le test de vérification avec succès en raison de certaines limitations du processus de vérification, et certains langages, de par leur design, ne produisent pas un code de type sécurisé vérifié. Si le code de type sécurisé est requis par la stratégie de sécurité, mais qu'il ne passe pas le test de vérification avec succès, une exception est levée quand le code est exécuté.  
   

@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : Accéder au web avec async et await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599682"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procédure pas à pas : Accéder au web avec async et await (C#)
 
@@ -46,19 +46,19 @@ Si vous ne souhaitez pas créer les applications vous-même, vous pouvez téléc
 
 4. Mettez en surbrillance le contrôle **TextBox** et, dans la fenêtre **Propriétés**, définissez les valeurs suivantes :
 
-    -   Affectez la valeur `resultsTextBox` à la propriété **Name**.
+    - Affectez la valeur `resultsTextBox` à la propriété **Name**.
 
-    -   Affectez la valeur 250 à la propriété **Height**.
+    - Affectez la valeur 250 à la propriété **Height**.
 
-    -   Affectez la valeur 500 à la propriété **Width**.
+    - Affectez la valeur 500 à la propriété **Width**.
 
-    -   Sous l’onglet **Texte**, spécifiez une police à espacement fixe, comme Lucida Console ou Global Monospace.
+    - Sous l’onglet **Texte**, spécifiez une police à espacement fixe, comme Lucida Console ou Global Monospace.
 
 5. Mettez en surbrillance le contrôle **Button** et, dans la fenêtre **Propriétés**, définissez les valeurs suivantes :
 
-    -   Affectez la valeur `startButton` à la propriété **Name**.
+    - Affectez la valeur `startButton` à la propriété **Name**.
 
-    -   Remplacez la valeur **Button** de la propriété **Content** par **Démarrer**.
+    - Remplacez la valeur **Button** de la propriété **Content** par **Démarrer**.
 
 6. Placez la zone de texte et le bouton de manière à ce qu’ils apparaissent tous les deux dans la fenêtre **MainWindow**.
 
@@ -108,13 +108,13 @@ Si vous ne souhaitez pas créer les applications vous-même, vous pouvez téléc
 
 3. Le code de la solution synchrone contient les quatre méthodes suivantes :
 
-    -   `SumPageSizes`, qui obtient la liste des URL des pages web à partir de `SetUpURLList`, puis qui appelle `GetURLContents` et `DisplayResults` pour traiter chaque URL.
+    - `SumPageSizes`, qui obtient la liste des URL des pages web à partir de `SetUpURLList`, puis qui appelle `GetURLContents` et `DisplayResults` pour traiter chaque URL.
 
-    -   `SetUpURLList`, qui dresse et retourne la liste des adresses web.
+    - `SetUpURLList`, qui dresse et retourne la liste des adresses web.
 
-    -   `GetURLContents`, qui télécharge le contenu de chaque site web et retourne le contenu sous la forme d'un tableau d'octets.
+    - `GetURLContents`, qui télécharge le contenu de chaque site web et retourne le contenu sous la forme d'un tableau d'octets.
 
-    -   `DisplayResults`, qui affiche le nombre d'octets dans le tableau d'octets pour chaque URL.
+    - `DisplayResults`, qui affiche le nombre d'octets dans le tableau d'octets pour chaque URL.
 
     Copiez les quatre méthodes suivantes, puis collez-les sous le gestionnaire d’événements `startButton_Click` dans MainWindow.xaml.cs :
 
@@ -258,9 +258,9 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
 
 3. Comme vous avez ajouté l’opérateur `await` à l’étape précédente, une erreur de compilation se produit. L’opérateur peut être utilisé uniquement dans les méthodes marquées avec le modificateur [async](../../../../csharp/language-reference/keywords/async.md). Ignorez l'erreur quand que vous répétez les étapes de conversion pour remplacer l'appel à `CopyTo` par un appel à `CopyToAsync`.
 
-    -   Remplacez le nom de la méthode appelée par <xref:System.IO.Stream.CopyToAsync%2A>.
+    - Remplacez le nom de la méthode appelée par <xref:System.IO.Stream.CopyToAsync%2A>.
 
-    -   La méthode `CopyTo` ou `CopyToAsync` copie les octets dans son argument, `content`, et ne retourne pas de valeur significative. Dans la version synchrone, l'appel à `CopyTo` est une simple instruction qui ne retourne aucune valeur. La version asynchrone, `CopyToAsync`, retourne un <xref:System.Threading.Tasks.Task>. La tâche fonctionne comme Task(void) et permet à la méthode d'être attendue. Appliquez `Await` ou `await` à l'appel à `CopyToAsync`, comme le montre le code suivant.
+    - La méthode `CopyTo` ou `CopyToAsync` copie les octets dans son argument, `content`, et ne retourne pas de valeur significative. Dans la version synchrone, l'appel à `CopyTo` est une simple instruction qui ne retourne aucune valeur. La version asynchrone, `CopyToAsync`, retourne un <xref:System.Threading.Tasks.Task>. La tâche fonctionne comme Task(void) et permet à la méthode d'être attendue. Appliquez `Await` ou `await` à l'appel à `CopyToAsync`, comme le montre le code suivant.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
 
      La méthode `GetURLContents` comporte une instruction return et l'instruction retourne un tableau d'octets. Ainsi, le type de retour de la version asynchrone est Task(T), où T est un tableau d'octets. Apportez les modifications suivantes dans la signature de la méthode :
 
-    -   Remplacez le type de retour par `Task<byte[]>`.
+    - Remplacez le type de retour par `Task<byte[]>`.
 
-    -   Par convention, les méthodes asynchrones portent des noms qui se terminent par « Async ». Renommez alors la méthode `GetURLContentsAsync`.
+    - Par convention, les méthodes asynchrones portent des noms qui se terminent par « Async ». Renommez alors la méthode `GetURLContentsAsync`.
 
      Le code suivant illustre ces modifications.
 
@@ -305,9 +305,9 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
 
 1. Répétez les étapes de la procédure précédente pour `SumPageSizes`. Tout d'abord, modifiez l'appel à `GetURLContents` en appel asynchrone.
 
-    -   Remplacez le nom de la méthode appelée `GetURLContents` par `GetURLContentsAsync`, si vous ne l'avez pas déjà fait.
+    - Remplacez le nom de la méthode appelée `GetURLContents` par `GetURLContentsAsync`, si vous ne l'avez pas déjà fait.
 
-    -   Appliquez `await` à la tâche que `GetURLContentsAsync` retourne pour obtenir la valeur du tableau d’octets.
+    - Appliquez `await` à la tâche que `GetURLContentsAsync` retourne pour obtenir la valeur du tableau d’octets.
 
      Le code suivant illustre ces modifications.
 
@@ -326,11 +326,11 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
 
 2. Apportez les modifications suivantes dans la signature de la méthode :
 
-    -   Marquez la méthode avec le modificateur `async`.
+    - Marquez la méthode avec le modificateur `async`.
 
-    -   Ajoutez « Async » au nom de la méthode.
+    - Ajoutez « Async » au nom de la méthode.
 
-    -   Il n'existe aucune variable de retour de tâche, T, cette fois, car `SumPageSizesAsync` ne retourne pas de valeur pour T. (La méthode ne comporte pas d’instruction `return`.) Toutefois, la méthode doit retourner un `Task` pour pouvoir être attendue. Par conséquent, remplacez le type de retour de la méthode `void` par `Task`.
+    - Il n'existe aucune variable de retour de tâche, T, cette fois, car `SumPageSizesAsync` ne retourne pas de valeur pour T. (La méthode ne comporte pas d’instruction `return`.) Toutefois, la méthode doit retourner un `Task` pour pouvoir être attendue. Par conséquent, remplacez le type de retour de la méthode `void` par `Task`.
 
     Le code suivant illustre ces modifications.
 
@@ -391,9 +391,9 @@ Notez que quelques secondes suffisent pour afficher les nombres. Pendant ce temp
 
 2. Une sortie semblable à la sortie de la solution synchrone doit apparaître. En revanche, observez les différences ci-après.
 
-    -   Les résultats ne se produisent pas tous en même temps, une fois le traitement terminé. Par exemple, les deux programmes contiennent une ligne dans `startButton_Click` qui efface la zone de texte. L’objectif est d’effacer la zone de texte entre les exécutions si vous choisissez le bouton **Démarrer** une deuxième fois, une fois qu’un jeu de résultats est apparu. Dans la version synchrone, la zone de texte s’efface juste avant que les nombres n’apparaissent pour la deuxième fois, quand les téléchargements sont terminés et que le thread d’interface utilisateur est libre d’effectuer autre chose. Dans la version asynchrone, la zone de texte s’efface immédiatement après avoir choisi le bouton **Démarrer**.
+    - Les résultats ne se produisent pas tous en même temps, une fois le traitement terminé. Par exemple, les deux programmes contiennent une ligne dans `startButton_Click` qui efface la zone de texte. L’objectif est d’effacer la zone de texte entre les exécutions si vous choisissez le bouton **Démarrer** une deuxième fois, une fois qu’un jeu de résultats est apparu. Dans la version synchrone, la zone de texte s’efface juste avant que les nombres n’apparaissent pour la deuxième fois, quand les téléchargements sont terminés et que le thread d’interface utilisateur est libre d’effectuer autre chose. Dans la version asynchrone, la zone de texte s’efface immédiatement après avoir choisi le bouton **Démarrer**.
 
-    -   Plus important encore, le thread d'interface utilisateur n'est pas bloqué pendant les téléchargements. Vous pouvez déplacer ou redimensionner la fenêtre pendant le téléchargement, la comptabilisation et l'affichage des ressources web. Si l’un des sites web est lent ou ne répond pas, vous pouvez annuler l’opération en choisissant le bouton **Fermer** (le x dans le champ rouge situé dans le coin supérieur droit).
+    - Plus important encore, le thread d'interface utilisateur n'est pas bloqué pendant les téléchargements. Vous pouvez déplacer ou redimensionner la fenêtre pendant le téléchargement, la comptabilisation et l'affichage des ressources web. Si l’un des sites web est lent ou ne répond pas, vous pouvez annuler l’opération en choisissant le bouton **Fermer** (le x dans le champ rouge situé dans le coin supérieur droit).
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Remplacer la méthode GetURLContentsAsync par une méthode .NET Framework
 

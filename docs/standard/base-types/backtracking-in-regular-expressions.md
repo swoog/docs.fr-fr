@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634727"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Rétroaction dans les expressions régulières
 <a name="top"></a> La rétroaction se produit lorsqu'un modèle d'expression régulière contient des quantificateurs [facultatifs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) ou des [constructions d'alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), et que le moteur des expressions régulières retourne à l'état enregistré précédent pour poursuivre la recherche d'une correspondance. La rétroaction est essentielle à la puissance des expressions régulières ; elle permet aux expressions d'être puissantes et flexibles et de correspondre à des modèles très complexes. Cependant, cette puissance a un coût. La rétroaction est souvent le facteur le plus important qui affecte les performances du moteur des expressions régulières. Heureusement, le développeur contrôle le comportement du moteur des expressions régulières et comment il utilise la rétroaction. Cette rubrique explique comment la rétroaction fonctionne et comment elle peut être activée.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615976"
   
  Cette rubrique contient les sections suivantes :  
   
--   [Comparaison linéaire sans rétroaction](#linear_comparison_without_backtracking)  
+- [Comparaison linéaire sans rétroaction](#linear_comparison_without_backtracking)  
   
--   [Rétroaction avec des quantificateurs facultatifs ou des constructions d'alternative](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Rétroaction avec des quantificateurs facultatifs ou des constructions d'alternative](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Rétroaction avec des quantificateurs facultatifs imbriqués](#backtracking_with_nested_optional_quantifiers)  
+- [Rétroaction avec des quantificateurs facultatifs imbriqués](#backtracking_with_nested_optional_quantifiers)  
   
--   [Contrôle de la rétroaction](#controlling_backtracking)  
+- [Contrôle de la rétroaction](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Comparaison linéaire sans rétroaction  
@@ -91,15 +91,15 @@ ms.locfileid: "54615976"
   
  Pour cela, le moteur des expressions régulières utilise la rétroaction comme suit :  
   
--   Il établit une correspondance entre `.*` (qui correspond à zéro, une ou plusieurs occurrences d'un caractère) et la chaîne d'entrée entière.  
+- Il établit une correspondance entre `.*` (qui correspond à zéro, une ou plusieurs occurrences d'un caractère) et la chaîne d'entrée entière.  
   
--   Il tente de faire correspondre « e » dans le modèle d'expression régulière. Toutefois, il ne reste aucun caractère disponible pour la correspondance dans la chaîne d'entrée.  
+- Il tente de faire correspondre « e » dans le modèle d'expression régulière. Toutefois, il ne reste aucun caractère disponible pour la correspondance dans la chaîne d'entrée.  
   
--   Il revient en arrière à la dernière correspondance trouvée, « Des services essentiels sont fournis par les expressions régulières » et tente de faire correspondre « e » avec le point à la fin de la phrase. La correspondance échoue.  
+- Il revient en arrière à la dernière correspondance trouvée, « Des services essentiels sont fournis par les expressions régulières » et tente de faire correspondre « e » avec le point à la fin de la phrase. La correspondance échoue.  
   
--   Il continue à revenir en arrière à la correspondance précédente caractère après caractère jusqu'à ce qu'à ce que la sous-chaîne en correspondance provisoire soit « Des services essentiels sont fournis par le les expr ». Il compare ensuite le « e » dans le modèle avec le second « e » dans « expressions » et trouve une correspondance.  
+- Il continue à revenir en arrière à la correspondance précédente caractère après caractère jusqu'à ce qu'à ce que la sous-chaîne en correspondance provisoire soit « Des services essentiels sont fournis par le les expr ». Il compare ensuite le « e » dans le modèle avec le second « e » dans « expressions » et trouve une correspondance.  
   
--   Il compare le « s » dans le modèle avec le « s » qui suit le « e » mis en correspondance (le premier « s » dans « expressions »). La correspondance réussit.  
+- Il compare le « s » dans le modèle avec le « s » qui suit le « e » mis en correspondance (le premier « s » dans « expressions »). La correspondance réussit.  
   
  Lorsque vous utilisez la rétroaction, la mise en correspondance du modèle d'expression régulière avec la chaîne d'entrée, qui comporte 55 caractères, requiert 67 opérations de comparaison. En général, si un modèle d'expression régulière a une seule construction d'alternative ou un seul quantificateur facultatif, le nombre d'opérations de comparaison requises pour correspondre au modèle est supérieur au double du nombre de caractères dans la chaîne d'entrée.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615976"
   
  Comme la sortie de l'exemple indique, il a fallu presque deux fois plus de temps au moteur des expressions régulières pour constater qu'une chaîne d'entrée ne correspondait pas au modèle que pour identifier une chaîne correspondante. Cela est dû au fait qu'une correspondance infructueuse représente toujours le pire des scénarios. Le moteur des expressions régulières doit utiliser l'expression régulière pour suivre tous les chemins d'accès possibles dans les données avant qu'il puisse conclure que la correspondance est infructueuse, et les parenthèses imbriquées créent plusieurs chemins d'accès supplémentaires dans les données. Le moteur des expressions régulières conclut que la deuxième chaîne ne correspondait pas au modèle en procédant comme suit :  
   
--   Il vérifie qu'il était au début de la chaîne, puis fait correspondre les cinq premiers caractères dans la chaîne avec le modèle `a+`. Il détermine ensuite qu'il n'y a aucun groupe supplémentaire de caractères « a » dans la chaîne. Enfin, il effectue en test pour déterminer la fin de la chaîne. Étant donné qu'il reste un caractère supplémentaire dans la chaîne, la correspondance échoue. Cette correspondance infructueuse requiert 9 comparaisons. Le moteur des expressions régulières enregistre également des informations d'état de ses correspondances de « a » (que nous appellerons correspondance 1), « aa » (correspondance 2), « aaa » (correspondance 3) et « aaaa » (correspondance 4).  
+- Il vérifie qu'il était au début de la chaîne, puis fait correspondre les cinq premiers caractères dans la chaîne avec le modèle `a+`. Il détermine ensuite qu'il n'y a aucun groupe supplémentaire de caractères « a » dans la chaîne. Enfin, il effectue en test pour déterminer la fin de la chaîne. Étant donné qu'il reste un caractère supplémentaire dans la chaîne, la correspondance échoue. Cette correspondance infructueuse requiert 9 comparaisons. Le moteur des expressions régulières enregistre également des informations d'état de ses correspondances de « a » (que nous appellerons correspondance 1), « aa » (correspondance 2), « aaa » (correspondance 3) et « aaaa » (correspondance 4).  
   
--   Il revient à la correspondance 4 enregistrée précédemment. Il détermine qu'il y a un caractère « a » supplémentaire à assigner à un groupe capturé supplémentaire. Enfin, il effectue en test pour déterminer la fin de la chaîne. Étant donné qu'il reste un caractère supplémentaire dans la chaîne, la correspondance échoue. Cette correspondance infructueuse requiert 4 comparaisons. Jusqu'à présent, un total de 13 comparaisons ont été effectuées.  
+- Il revient à la correspondance 4 enregistrée précédemment. Il détermine qu'il y a un caractère « a » supplémentaire à assigner à un groupe capturé supplémentaire. Enfin, il effectue en test pour déterminer la fin de la chaîne. Étant donné qu'il reste un caractère supplémentaire dans la chaîne, la correspondance échoue. Cette correspondance infructueuse requiert 4 comparaisons. Jusqu'à présent, un total de 13 comparaisons ont été effectuées.  
   
--   Il revient à la correspondance 3 enregistrée précédemment. Il détermine qu'il y a deux caractères « a » supplémentaires à assigner à un groupe capturé supplémentaire. Toutefois, le test de fin de chaîne échoue. Il revient ensuite à la correspondance 3 et tente de faire correspondre les deux caractères « a » supplémentaire dans deux groupes capturés supplémentaires. Le test de fin de chaîne échoue encore. Ces correspondances infructueuses requièrent 12 comparaisons. Jusqu'à présent, un total de 25 comparaisons ont été effectuées.  
+- Il revient à la correspondance 3 enregistrée précédemment. Il détermine qu'il y a deux caractères « a » supplémentaires à assigner à un groupe capturé supplémentaire. Toutefois, le test de fin de chaîne échoue. Il revient ensuite à la correspondance 3 et tente de faire correspondre les deux caractères « a » supplémentaire dans deux groupes capturés supplémentaires. Le test de fin de chaîne échoue encore. Ces correspondances infructueuses requièrent 12 comparaisons. Jusqu'à présent, un total de 25 comparaisons ont été effectuées.  
   
  La comparaison de la chaîne d'entrée avec l'expression régulière continue de cette façon jusqu'à ce que le moteur des expressions régulières ait tenté toutes les combinaisons possibles des correspondances et conclue qu'il n'existe aucune correspondance. À cause des quantificateurs imbriqués, cette comparaison correspond à une opération O(2<sup>n</sup>) ou exponentielle, où *n* est le nombre de caractères dans la chaîne d’entrée. Cela signifie que dans le pire des cas, une chaîne d'entrée de 30 caractères requiert environ 1 073 741 824 comparaisons et une chaîne d'entrée de 40 caractères requiert environ 1 099 511 627 776 comparaisons. Si vous utilisez des chaînes de longueurs identiques ou supérieures, l'exécution des méthodes d'expression régulières peut prendre très longtemps lorsqu'elles traitent une entrée qui ne correspond pas au modèle d'expression régulière.  
   

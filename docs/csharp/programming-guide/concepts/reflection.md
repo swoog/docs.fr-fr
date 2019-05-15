@@ -2,12 +2,12 @@
 title: Réflexion (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 4dfd9391407fec4bd20ac4ae05162763e909d665
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4593aeef13f5d1d0c223b40e266556cb2bcfee5f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595550"
 ---
 # <a name="reflection-c"></a>Réflexion (C#)
 La réflexion fournit des objets (de type <xref:System.Type>) qui décrivent des assemblys, des modules et des types. Vous pouvez utiliser la réflexion pour créer dynamiquement une instance d’un type, lier le type à un objet existant ou obtenir le type à partir d’un objet existant et invoquer ses méthodes ou accéder à ses champs et propriétés. Si vous utilisez des attributs dans votre code, la réflexion vous permet d’y accéder. Pour plus d’informations, consultez [Attributs](../../../../docs/standard/attributes/index.md).  
@@ -43,26 +43,26 @@ System.Console.WriteLine(info);
 ## <a name="reflection-overview"></a>Vue d’ensemble de la réflexion  
  La réflexion est utile dans les situations suivantes :  
   
--   Lorsque vous devez accéder à des attributs dans les métadonnées de votre programme. Pour plus d’informations, consultez [Récupération des informations stockées dans les attributs](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- Lorsque vous devez accéder à des attributs dans les métadonnées de votre programme. Pour plus d’informations, consultez [Récupération des informations stockées dans les attributs](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
--   Pour examiner et instancier des types dans un assembly.  
+- Pour examiner et instancier des types dans un assembly.  
   
--   Pour créer de nouveaux types au moment de l’exécution. Utilisez des classes dans <xref:System.Reflection.Emit>.  
+- Pour créer de nouveaux types au moment de l’exécution. Utilisez des classes dans <xref:System.Reflection.Emit>.  
   
--   Pour effectuer une liaison tardive, en accédant aux méthodes sur les types créés au moment de l’exécution. Consultez la rubrique [Chargement et utilisation dynamiques des types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Pour effectuer une liaison tardive, en accédant aux méthodes sur les types créés au moment de l’exécution. Consultez la rubrique [Chargement et utilisation dynamiques des types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  Pour plus d'informations :  
   
--   [Réflexion](../../../framework/reflection-and-codedom/reflection.md)  
+- [Réflexion](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Affichage des informations de type](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [Affichage des informations de type](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Réflexion et types génériques](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Réflexion et types génériques](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [Récupération des informations stockées dans les attributs](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Récupération des informations stockées dans les attributs](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

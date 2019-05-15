@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676189"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590060"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Extraction de nœuds triés par l'index
 Le DOM (Document Object Model) XML du World Wide Web Consortium (W3C) décrit également un NodeList, qui permet de gérer une liste triée de nœuds, par opposition à l’ensemble non trié que gère **XmlNamedNodeMap**. Dans le Microsoft .NET Framework, ce NodeList est appelé **XmlNodeList**. Les méthodes et propriétés qui retournent **XmlNodeList** sont les suivantes :  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  **XmlNodeList** possède une propriété **Count** qui peut être utilisée pour tracer des boucles pour itérer au sein des nœuds de **XmlNodeList**, comme le montre l'exemple de code suivant :  
   

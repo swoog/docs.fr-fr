@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591690"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (Options du compilateur C#)
 L’option **-doc** vous permet de placer des commentaires de documentation dans un fichier XML.  
@@ -35,9 +35,9 @@ L’option **-doc** vous permet de placer des commentaires de documentation dans
 ## <a name="remarks"></a>Remarques  
  Dans les fichiers de code source, les commentaires de documentation qui précèdent les éléments suivants peuvent être traités et ajoutés au fichier XML :  
   
--   Types définis par l’utilisateur, tels qu’une [classe](../../../csharp/language-reference/keywords/class.md), un [délégué](../../../csharp/language-reference/keywords/delegate.md) ou une [interface](../../../csharp/language-reference/keywords/interface.md)  
+- Types définis par l’utilisateur, tels qu’une [classe](../../../csharp/language-reference/keywords/class.md), un [délégué](../../../csharp/language-reference/keywords/delegate.md) ou une [interface](../../../csharp/language-reference/keywords/interface.md)  
   
--   Membres tels qu’un champ, un [événement](../../../csharp/language-reference/keywords/event.md), une [propriété](../../../csharp/programming-guide/classes-and-structs/using-properties.md) ou une méthode  
+- Membres tels qu’un champ, un [événement](../../../csharp/language-reference/keywords/event.md), une [propriété](../../../csharp/programming-guide/classes-and-structs/using-properties.md) ou une méthode  
   
  Le fichier de code source qui contient Main est sorti en premier dans le document XML.  
   

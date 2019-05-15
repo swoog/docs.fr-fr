@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596146"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Procédure : Créer une clé dans le Registre (Visual C#)
 Cet exemple ajoute la paire de valeurs « Name » et « Isabella » dans le Registre de l’utilisateur actuel, sous la clé « Names ».  
@@ -27,26 +27,26 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Copiez le code et collez-le dans la méthode `Main` d’une application console.  
+- Copiez le code et collez-le dans la méthode `Main` d’une application console.  
   
--   Remplacez le paramètre `Names` par le nom d’une clé qui existe directement sous le nœud HKEY_CURRENT_USER du Registre.  
+- Remplacez le paramètre `Names` par le nom d’une clé qui existe directement sous le nœud HKEY_CURRENT_USER du Registre.  
   
--   Remplacez le paramètre `Name` par le nom d’une valeur qui existe directement sous le nœud Names.  
+- Remplacez le paramètre `Name` par le nom d’une valeur qui existe directement sous le nœud Names.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Examinez la structure du Registre pour rechercher un emplacement approprié pour votre clé. Par exemple, vous souhaiterez peut-être ouvrir la clé Software de l’utilisateur actuel et créer une clé avec le nom de votre société. Ensuite, ajoutez les valeurs de Registre à la clé de votre société.  
   
  Les conditions ci-dessous peuvent générer une exception :  
   
--   Le nom de la clé est null.  
+- Le nom de la clé est null.  
   
--   L’utilisateur ne dispose pas des autorisations nécessaires pour créer des clés de Registre.  
+- L’utilisateur ne dispose pas des autorisations nécessaires pour créer des clés de Registre.  
   
--   Le nom de la clé dépasse la limite de 255 caractères.  
+- Le nom de la clé dépasse la limite de 255 caractères.  
   
--   La clé est fermée.  
+- La clé est fermée.  
   
--   La clé de Registre est en lecture seule.  
+- La clé de Registre est en lecture seule.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Il est plus sûr d’écrire des données dans le dossier utilisateur (`Microsoft.Win32.Registry.CurrentUser`) que sur l’ordinateur local (`Microsoft.Win32.Registry.LocalMachine`).  

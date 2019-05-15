@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584454"
 ---
 # <a name="local-transactions"></a>Transactions locales
 Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez utiliser des transactions lorsque vous souhaitez lier plusieurs tâches entre elles afin qu'elles s'exécutent comme une seule unité de travail. Par exemple, imaginez qu'une application effectue deux tâches. Premièrement, elle met à jour une table avec des informations de commande. Deuxièmement, elle met à jour une table qui contient des informations de stock, en débitant les articles commandés. Si des tâches échoue, puis les deux mises à jour sont annulées.  
@@ -18,7 +18,7 @@ Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez util
 ## <a name="determining-the-transaction-type"></a>Détermination du type de transaction  
  Une transaction est considérée comme une transaction locale lorsqu’il est une transaction à phase unique et est gérée directement par la base de données. Une transaction est considérée comme une transaction distribuée lorsqu’il est coordonné par un moniteur de transaction et utilise des mécanismes de prévention de défaillance (par exemple, la validation en deux phases) pour la résolution de la transaction.  
   
- Chacun des fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a son propre objet `Transaction` pour l'exécution des transactions locales. Si vous avez besoin qu’une transaction soit effectuée dans une base de données SQL Server, sélectionnez une transaction <xref:System.Data.SqlClient>. Pour une transaction Oracle, utilisez le fournisseur <xref:System.Data.OracleClient>. En outre, il existe un <xref:System.Data.Common.DbTransaction> classe qui est disponible pour l’écriture de code indépendant du fournisseur qui nécessite des transactions.  
+ Chacun des fournisseurs de données .NET Framework possède son propre `Transaction` objet pour l’exécution des transactions locales. Si vous avez besoin qu’une transaction soit effectuée dans une base de données SQL Server, sélectionnez une transaction <xref:System.Data.SqlClient>. Pour une transaction Oracle, utilisez le fournisseur <xref:System.Data.OracleClient>. En outre, il existe un <xref:System.Data.Common.DbTransaction> classe qui est disponible pour l’écriture de code indépendant du fournisseur qui nécessite des transactions.  
   
 > [!NOTE]
 > Les transactions sont plus efficaces quand elles sont exécutées sur le serveur. Si vous utilisez une base de données SQL Server qui utilise beaucoup des transactions explicites, envisagez de les écrire sous la forme de procédures stockées à l’aide de l’instruction Transact-SQL BEGIN TRANSACTION.

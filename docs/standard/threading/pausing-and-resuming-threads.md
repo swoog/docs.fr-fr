@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648217"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644916"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Suspension et interruption de threads
 
@@ -45,9 +45,9 @@ Les méthodes les plus courantes permettant de synchroniser les activités de th
   
  En cas d'attente managée, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> et <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> réveillent le thread immédiatement. En cas d'attente non managée (par exemple, dans le cas d'un appel de code non managé à la fonction Win32 [WaitForSingleObject ](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)), ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ne pourront prendre le contrôle du thread tant qu'il ne sera pas retourné dans du code managé ou tant qu'il n'effectuera pas d'appel depuis du code managé. Dans du code managé, le comportement est le suivant :  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> réveille un thread en attente et provoque la levée d'une <xref:System.Threading.ThreadInterruptedException> dans le thread de destination.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> réveille un thread en attente et provoque la levée d'une <xref:System.Threading.ThreadInterruptedException> dans le thread de destination.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> réveille un thread en attente et provoque la levée d'une <xref:System.Threading.ThreadAbortException> dans le thread. Pour plus d’informations, voir [Destruction de threads](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> réveille un thread en attente et provoque la levée d'une <xref:System.Threading.ThreadAbortException> dans le thread. Pour plus d’informations, voir [Destruction de threads](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

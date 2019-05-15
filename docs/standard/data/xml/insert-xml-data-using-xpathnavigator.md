@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647911"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Insertion de données XML à l’aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fournit un ensemble de méthodes permettant d'insérer des nœuds frères, enfants et d'attribut dans un document XML. Pour pouvoir utiliser ces méthodes, vous devez pouvoir modifier l'objet <xref:System.Xml.XPath.XPathNavigator>, ce qui signifie que sa propriété <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> doit être `true`.  
@@ -29,13 +29,13 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fournit un ensemble de méthode
 ### <a name="inserting-sibling-nodes"></a>Insertion de nœuds frères  
  La classe <xref:System.Xml.XPath.XPathNavigator> fournit les méthodes suivantes pour l'insertion de nœuds frères.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Ces méthodes insèrent des nœuds frères avant et après le nœud sur lequel un objet <xref:System.Xml.XPath.XPathNavigator> est actuellement positionné.  
   
@@ -58,13 +58,13 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fournit un ensemble de méthode
 ### <a name="inserting-child-nodes"></a>Insertion de nœuds enfants  
  La classe <xref:System.Xml.XPath.XPathNavigator> fournit les méthodes suivantes pour l'insertion de nœuds enfants.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Ces méthodes ajoutent des nœuds enfants à la fin et au début de la liste de nœuds enfants du nœud sur lequel un objet <xref:System.Xml.XPath.XPathNavigator> est actuellement positionné.  
   
@@ -87,9 +87,9 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fournit un ensemble de méthode
 ### <a name="inserting-attribute-nodes"></a>Insertion de nœuds d'attribut  
  La classe <xref:System.Xml.XPath.XPathNavigator> fournit les méthodes suivantes pour l'insertion de nœuds d'attribut.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Ces méthodes insèrent des nœuds d'attribut sur le nœud sur lequel un objet <xref:System.Xml.XPath.XPathNavigator> est actuellement positionné. La méthode <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> crée un nœud d'attribut sur le nœud d'élément sur lequel un objet <xref:System.Xml.XPath.XPathNavigator> est actuellement positionné à l'aide du préfixe d'espace de noms, du nom local, de l'URI d'espace de noms et de la valeur spécifiés comme paramètres. La méthode <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> retourne un objet <xref:System.Xml.XmlWriter> permettant d'insérer des nœuds d'attribut.  
   
@@ -227,32 +227,32 @@ navigator.SetTypedValue(DateTime.Now);
   
  Les conflits d'espace de noms possibles sont les suivants.  
   
--   Si un espace de noms se trouve dans la portée du contexte de l'objet <xref:System.Xml.XmlReader> où le préfixe du mappage de l'URI d'espace de noms ne se trouve pas dans le contexte de l'objet <xref:System.Xml.XPath.XPathNavigator>, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré.  
+- Si un espace de noms se trouve dans la portée du contexte de l'objet <xref:System.Xml.XmlReader> où le préfixe du mappage de l'URI d'espace de noms ne se trouve pas dans le contexte de l'objet <xref:System.Xml.XPath.XPathNavigator>, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré.  
   
--   Si le même URI d'espace de noms se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais dont le préfixe mappé est différent dans les deux contextes, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré. Le préfixe et l'URI d'espace de noms de cette déclaration sont ceux de l'objet <xref:System.Xml.XmlReader>.  
+- Si le même URI d'espace de noms se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais dont le préfixe mappé est différent dans les deux contextes, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré. Le préfixe et l'URI d'espace de noms de cette déclaration sont ceux de l'objet <xref:System.Xml.XmlReader>.  
   
--   Si le même préfixe d'espace de noms se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais dont l'URI d'espace de noms mappé est différent dans les deux contextes, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré. Celle-ci redéclare ce préfixe avec l'URI d'espace de noms provenant de l'objet <xref:System.Xml.XmlReader>.  
+- Si le même préfixe d'espace de noms se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais dont l'URI d'espace de noms mappé est différent dans les deux contextes, une nouvelle déclaration d'espace de noms est ajoutée au nœud qui vient d'être inséré. Celle-ci redéclare ce préfixe avec l'URI d'espace de noms provenant de l'objet <xref:System.Xml.XmlReader>.  
   
--   Si le préfixe et l'URI d'espace de noms sont identiques dans le contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, aucune déclaration d'espace de noms n'est ajoutée au nœud qui vient d'être inséré.  
+- Si le préfixe et l'URI d'espace de noms sont identiques dans le contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, aucune déclaration d'espace de noms n'est ajoutée au nœud qui vient d'être inséré.  
   
 > [!NOTE]
 >  La description ci-dessus s'applique également aux déclarations d'espaces de noms ayant pour préfixe la `string` vide (par exemple, la déclaration d'espace de noms par défaut).  
   
  Les conflits `xml:lang` possibles sont les suivants.  
   
--   Si un attribut `xml:lang` se trouve dans la portée du contexte de l'objet <xref:System.Xml.XmlReader>, mais pas de l'objet <xref:System.Xml.XPath.XPathNavigator>, un attribut `xml:lang` dont la valeur est reprise dans l'objet <xref:System.Xml.XmlReader> est ajouté au nœud qui vient d'être inséré.  
+- Si un attribut `xml:lang` se trouve dans la portée du contexte de l'objet <xref:System.Xml.XmlReader>, mais pas de l'objet <xref:System.Xml.XPath.XPathNavigator>, un attribut `xml:lang` dont la valeur est reprise dans l'objet <xref:System.Xml.XmlReader> est ajouté au nœud qui vient d'être inséré.  
   
--   Si un attribut `xml:lang` se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais si chacun présente une valeur différente, un attribut `xml:lang` dont la valeur est reprise dans l'objet <xref:System.Xml.XmlReader> est ajouté au nœud qui vient d'être inséré.  
+- Si un attribut `xml:lang` se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator>, mais si chacun présente une valeur différente, un attribut `xml:lang` dont la valeur est reprise dans l'objet <xref:System.Xml.XmlReader> est ajouté au nœud qui vient d'être inséré.  
   
--   Si un attribut `xml:lang` se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator> et si chacun présente la même valeur, aucun attribut `xml:lang` n'est ajouté au nœud qui vient d'être inséré.  
+- Si un attribut `xml:lang` se trouve dans la portée du contexte des objets <xref:System.Xml.XmlReader> et <xref:System.Xml.XPath.XPathNavigator> et si chacun présente la même valeur, aucun attribut `xml:lang` n'est ajouté au nœud qui vient d'être inséré.  
   
--   Si un attribut `xml:lang` se trouve dans la portée du contexte de l'objet <xref:System.Xml.XPath.XPathNavigator> et si aucun n'existe dans le contexte de l'objet <xref:System.Xml.XmlReader>, aucun attribut `xml:lang` n'est ajouté au nœud qui vient d'être inséré.  
+- Si un attribut `xml:lang` se trouve dans la portée du contexte de l'objet <xref:System.Xml.XPath.XPathNavigator> et si aucun n'existe dans le contexte de l'objet <xref:System.Xml.XmlReader>, aucun attribut `xml:lang` n'est ajouté au nœud qui vient d'être inséré.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>Insertion de nœuds avec XmlWriter  
  Les méthodes permettant d'insérer des nœuds frères, enfants et d'attribut décrites dans la section sur l'insertion de nœuds et de valeurs sont surchargées. Les méthodes <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> et <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> de la classe <xref:System.Xml.XPath.XPathNavigator> retournent un objet <xref:System.Xml.XmlWriter> permettant d'insérer des nœuds.  
   
 ### <a name="unsupported-xmlwriter-methods"></a>Méthodes XmlWriter non prises en charge  
- Toutes les méthodes permettant d'écrire des informations dans un document XML à l'aide de la classe <xref:System.Xml.XmlWriter> ne sont pas prises en charge par la classe <xref:System.Xml.XPath.XPathNavigator> en raison de la différence entre le modèle de données XPath et le DOM (Document Object Model).  
+ Toutes les méthodes permettant d’écrire des informations dans un document XML à l’aide de la classe <xref:System.Xml.XmlWriter> ne sont pas prises en charge par la classe <xref:System.Xml.XPath.XPathNavigator> en raison de la différence entre le modèle de données XPath et le DOM (Document Object Model).  
   
  Le tableau suivant décrit les méthodes de la classe <xref:System.Xml.XmlWriter> non prises en charge par la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  Les remarques suivantes sont importantes en cas d'utilisation de plusieurs objets <xref:System.Xml.XmlWriter>.  
   
--   Les fragments XML écrits par les objets <xref:System.Xml.XmlWriter> sont ajoutés au document XML en cas d'appel de la méthode <xref:System.Xml.XmlWriter.Close%2A> de chaque objet <xref:System.Xml.XmlWriter>. Dans les autres cas, l'objet <xref:System.Xml.XmlWriter> écrit un fragment déconnecté. Si une opération est effectuée sur le document XML, avant l'appel de <xref:System.Xml.XmlWriter>, aucun fragment en cours d'écriture par un objet <xref:System.Xml.XmlWriter.Close%2A> n'est affecté.  
+- Les fragments XML écrits par les objets <xref:System.Xml.XmlWriter> sont ajoutés au document XML en cas d'appel de la méthode <xref:System.Xml.XmlWriter.Close%2A> de chaque objet <xref:System.Xml.XmlWriter>. Dans les autres cas, l'objet <xref:System.Xml.XmlWriter> écrit un fragment déconnecté. Si une opération est effectuée sur le document XML, avant l'appel de <xref:System.Xml.XmlWriter>, aucun fragment en cours d'écriture par un objet <xref:System.Xml.XmlWriter.Close%2A> n'est affecté.  
   
--   Si un objet <xref:System.Xml.XmlWriter> ouvert existe dans une sous-arborescence XML particulière et si cette sous-arborescence est supprimée, l’objet <xref:System.Xml.XmlWriter> peut encore être ajouté à la sous-arborescence. La sous-arborescence devient simplement un fragment supprimé.  
+- Si un objet <xref:System.Xml.XmlWriter> ouvert existe dans une sous-arborescence XML particulière et si cette sous-arborescence est supprimée, l’objet <xref:System.Xml.XmlWriter> peut encore être ajouté à la sous-arborescence. La sous-arborescence devient simplement un fragment supprimé.  
   
--   Si plusieurs objets <xref:System.Xml.XmlWriter> sont ouverts au même point du document XML, ils sont ajoutés au document XML dans l'ordre dans lequel les objets <xref:System.Xml.XmlWriter> sont fermés, pas dans l'ordre dans lequel ils ont été ouverts.  
+- Si plusieurs objets <xref:System.Xml.XmlWriter> sont ouverts au même point du document XML, ils sont ajoutés au document XML dans l'ordre dans lequel les objets <xref:System.Xml.XmlWriter> sont fermés, pas dans l'ordre dans lequel ils ont été ouverts.  
   
  L'exemple suivant crée un objet <xref:System.Xml.XmlDocument> et un objet <xref:System.Xml.XPath.XPathNavigator>, puis utilise l'objet <xref:System.Xml.XmlWriter> retourné par la méthode <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> pour créer la structure du premier livre du fichier `books.xml`. L'exemple l'enregistre ensuite comme fichier `book.xml`.  
   

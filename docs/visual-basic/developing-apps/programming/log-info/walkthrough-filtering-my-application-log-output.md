@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647092"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procédure pas à pas : Filtrage de la sortie de My.Application.Log (Visual Basic)
 Cette procédure pas à pas montre comment modifier le filtrage de journal par défaut de l’objet `My.Application.Log` pour contrôler les informations passées de l’objet `Log` aux écouteurs et celles qui sont écrites par les écouteurs. Vous pouvez modifier le comportement de journalisation même après avoir généré l’application, car les informations de configuration sont stockées dans le fichier de configuration de l’application.  
@@ -77,11 +77,11 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
      S’il n’existe pas de fichier app.config :  
   
-    1.  Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
+    1. Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
   
-    2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
+    2. Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3. Cliquez sur **Ajouter**.  
   
 2. Recherchez la section `<switches>` dans la section `<system.diagnostics>`, qui se trouve dans la section `<configuration>` de niveau supérieur.  
   
@@ -152,11 +152,11 @@ Cette procédure pas à pas montre comment modifier le filtrage de journal par d
   
      S’il n’existe pas de fichier app.config :  
   
-    1.  Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
+    1. Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
   
-    2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
+    2. Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3. Cliquez sur **Ajouter**.  
   
 2. Cliquez avec le bouton droit sur app.config dans l’**Explorateur de solutions**. Choisissez **Ouvrir**.  
   

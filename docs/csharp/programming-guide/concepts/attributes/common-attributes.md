@@ -2,23 +2,23 @@
 title: Attributs courants (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374802"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603339"
 ---
 # <a name="common-attributes-c"></a>Attributs courants (C#)
 Cette rubrique décrit les attributs le plus couramment utilisés dans les programmes C#.  
   
--   [Attributs globaux](#Global)  
+- [Attributs globaux](#Global)  
   
--   [Attribut Obsolete](#Obsolete)  
+- [Attribut Obsolete](#Obsolete)  
   
--   [Attribut Conditional](#Conditional)  
+- [Attribut Conditional](#Conditional)  
   
--   [Attributs d’informations de l’appelant](#CallerInfo)  
+- [Attributs d’informations de l’appelant](#CallerInfo)  
   
 ## <a name="Global"></a> Attributs globaux  
  La plupart des attributs sont appliqués à des éléments de langage spécifiques, tels que les classes ou les méthodes. Toutefois, certains attributs sont globaux : ils s’appliquent à la totalité d’un assembly ou d’un module. Par exemple, l’attribut <xref:System.Reflection.AssemblyVersionAttribute> peut être utilisé pour incorporer des informations de version dans un assembly, de la manière suivante :  
@@ -31,11 +31,11 @@ Cette rubrique décrit les attributs le plus couramment utilisés dans les progr
   
  Les attributs d’assembly sont des valeurs qui fournissent des informations sur un assembly. Ils sont répartis dans les catégories suivantes :  
   
--   Attributs d’identité de l’assembly  
+- Attributs d’identité de l’assembly  
   
--   Attributs d’informations  
+- Attributs d’informations  
   
--   Attributs de manifeste de l’assembly  
+- Attributs de manifeste de l’assembly  
   
 ### <a name="assembly-identity-attributes"></a>Attributs d’identité de l’assembly  
  Trois attributs (avec un nom fort, le cas échéant), déterminent l’identité d’un assembly : nom, version et culture. Ces attributs constituent le nom complet de l’assembly et sont obligatoires quand vous le référencez le code. Vous pouvez définir la version et la culture d’un assembly en utilisant des attributs. Toutefois, la valeur de nom est définie par le compilateur, l’IDE de Visual Studio dans la [boîte de dialogue Informations sur l’assembly](/visualstudio/ide/reference/assembly-information-dialog-box) ou l’utilitaire Assembly Linker (Al.exe) lors de la création de l’assembly, en fonction du fichier qui contient le manifeste de l’assembly. L’attribut <xref:System.Reflection.AssemblyFlagsAttribute> spécifie si plusieurs copies de l’assembly peuvent coexister.  

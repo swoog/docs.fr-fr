@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608133"
 ---
 # <a name="statements-c-programming-guide"></a>Instructions (Guide de programmation C#)
 Les actions qu’un programme effectue sont exprimées dans les instructions. Les actions courantes incluent la déclaration de variables, l’assignation de valeurs, l’appel de méthodes, l’exécution de boucles dans les collections et la création de branches sur des blocs de code, selon une condition donnée. L’ordre dans lequel les instructions sont exécutées dans un programme est appelé le flux de contrôle ou le flux d’exécution. Le flux de contrôle peut varier chaque fois qu’un programme est exécuté, selon la manière dont le programme réagit à l’entrée qu’il reçoit au moment de l’exécution.  
@@ -83,11 +83,11 @@ Les exemples suivants illustrent deux utilisations d’une instruction vide :
   
 ## <a name="related-sections"></a>Rubriques connexes  
   
--   [Mots clés d’instructions](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Mots clés d’instructions](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [Expressions](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Expressions](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

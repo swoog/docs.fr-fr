@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334287"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628914"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procédure : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements
 Si vous écrivez une classe qui comporte certaines opérations pouvant entraîner d’importants ralentissements, pensez à lui affecter des fonctionnalités asynchrones en implémentant la [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -34,19 +34,19 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
--   Créer le composant  
+- Créer le composant  
   
--   Définir des délégués et des événements asynchrones publics  
+- Définir des délégués et des événements asynchrones publics  
   
--   Définir des délégués privés  
+- Définir des délégués privés  
   
--   Implémenter des événements publics  
+- Implémenter des événements publics  
   
--   Implémenter la méthode d’achèvement  
+- Implémenter la méthode d’achèvement  
   
--   Implémenter les méthodes de travail  
+- Implémenter les méthodes de travail  
   
--   Implémenter des méthodes de démarrage et d’annulation  
+- Implémenter des méthodes de démarrage et d’annulation  
   
  Pour copier le code dans cette rubrique sous la forme d’une liste unique, consultez [Guide pratique pour implémenter un client du modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-create-the-component"></a>Pour créer le composant :  
   
--   Créez une classe nommée `PrimeNumberCalculator` qui hérite de <xref:System.ComponentModel.Component>.  
+- Créez une classe nommée `PrimeNumberCalculator` qui hérite de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Définir des délégués et des événements asynchrones publics  
  Votre composant communique avec les clients à l’aide d’événements. L’événement _MethodName_**Completed** avertit les clients de l’achèvement d’une tâche asynchrone, et l’événement _MethodName_**ProgressChanged** les informe de la progression d’une tâche asynchrone.  
@@ -87,7 +87,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-test-your-component"></a>Pour tester le composant :  
   
--   Compilez le composant.  
+- Compilez le composant.  
   
      Vous recevrez deux avertissements du compilateur :  
   
@@ -148,7 +148,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Pour achever une opération asynchrone :  
   
--   Implémentez la méthode d’achèvement. Elle prend six paramètres, qu’elle utilise pour remplir un `CalculatePrimeCompletedEventArgs` qui est retourné au client par le biais du `CalculatePrimeCompletedEventHandler` du client. Elle supprime le jeton d’ID tâche du client de la collection interne et met fin à la durée de vie de l’opération asynchrone par un appel à <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. La <xref:System.ComponentModel.AsyncOperation> marshale l’appel au thread ou au contexte adapté au modèle d'application.  
+- Implémentez la méthode d’achèvement. Elle prend six paramètres, qu’elle utilise pour remplir un `CalculatePrimeCompletedEventArgs` qui est retourné au client par le biais du `CalculatePrimeCompletedEventHandler` du client. Elle supprime le jeton d’ID tâche du client de la collection interne et met fin à la durée de vie de l’opération asynchrone par un appel à <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. La <xref:System.ComponentModel.AsyncOperation> marshale l’appel au thread ou au contexte adapté au modèle d'application.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-test-your-component"></a>Pour tester le composant :  
   
--   Compilez le composant.  
+- Compilez le composant.  
   
      Vous recevrez un avertissement du compilateur :  
   
@@ -212,7 +212,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-test-your-component"></a>Pour tester le composant :  
   
--   Compilez le composant.  
+- Compilez le composant.  
   
      Il ne reste plus qu’à écrire les méthodes permettant de démarrer et d’annuler des opérations asynchrones, `CalculatePrimeAsync` et `CancelAsync`.  
   
@@ -238,7 +238,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
   
 #### <a name="to-test-your-component"></a>Pour tester le composant :  
   
--   Compilez le composant.  
+- Compilez le composant.  
   
  Le composant `PrimeNumberCalculator` est maintenant terminé et prêt à être utilisé.  
   

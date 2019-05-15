@@ -19,33 +19,33 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634641"
 ---
 # <a name="common-type-system"></a>Système de type commun
 Le système de type commun (CTS, Common Type System) définit la façon dont les types sont déclarés, utilisés et managés dans le Common Language Runtime ; il constitue également une partie importante de la prise en charge, par le runtime, de l'intégration interlangage. Le système de type commun met en œuvre les fonctions suivantes :  
   
--   Il met en place une infrastructure permettant l'intégration interlangage, la cohérence des types et l'exécution de code hautement performant.  
+- Il met en place une infrastructure permettant l'intégration interlangage, la cohérence des types et l'exécution de code hautement performant.  
   
--   Il fournit un modèle orienté objet qui prend en charge l'implémentation complète de nombreux langages de programmation.  
+- Il fournit un modèle orienté objet qui prend en charge l'implémentation complète de nombreux langages de programmation.  
   
--   Il définit des règles que les langages doivent respecter, ce qui permet de garantir l'interaction des objets écrits dans différents langages.  
+- Il définit des règles que les langages doivent respecter, ce qui permet de garantir l'interaction des objets écrits dans différents langages.  
   
--   Il fournit une bibliothèque contenant les types de données primitifs (tels que <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> et <xref:System.UInt64>) utilisés dans le développement d'applications.  
+- Il fournit une bibliothèque contenant les types de données primitifs (tels que <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> et <xref:System.UInt64>) utilisés dans le développement d'applications.  
   
  Cette rubrique contient les sections suivantes :  
   
--   [Types dans .NET](#types_in_the_net_framework)  
+- [Types dans .NET](#types_in_the_net_framework)  
   
--   [Définitions de type](#type_definitions)  
+- [Définitions de type](#type_definitions)  
   
--   [Membres de type](#type_members)  
+- [Membres de type](#type_members)  
   
--   [Caractéristiques des membres de type](#characteristics_of_type_members)  
+- [Caractéristiques des membres de type](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>Types dans .NET  
@@ -57,15 +57,15 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Le système de type commun (CTS, Common Type System) dans .NET prend en charge les cinq catégories de types suivantes :  
   
--   [Classes](#Classes)  
+- [Classes](#Classes)  
   
--   [Structures](#Structures)  
+- [Structures](#Structures)  
   
--   [Énumérations](#Enumerations)  
+- [Énumérations](#Enumerations)  
   
--   [Interfaces](#Interfaces)  
+- [Interfaces](#Interfaces)  
   
--   [Délégués](#Delegates)  
+- [Délégués](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Classes  
@@ -106,13 +106,13 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Les restrictions supplémentaires suivantes s'appliquent aux énumérations :  
   
--   Elles ne peuvent pas définir leurs propres méthodes.  
+- Elles ne peuvent pas définir leurs propres méthodes.  
   
--   Elles ne peuvent pas implémenter d'interfaces.  
+- Elles ne peuvent pas implémenter d'interfaces.  
   
--   Elles ne peuvent pas définir des propriétés ou des événements.  
+- Elles ne peuvent pas définir des propriétés ou des événements.  
   
--   Elles ne peuvent pas être génériques, à moins qu'elles le soient uniquement parce qu'elles sont imbriquées dans un type générique. Par conséquent, une énumération ne peut pas avoir de paramètres de type propres.  
+- Elles ne peuvent pas être génériques, à moins qu'elles le soient uniquement parce qu'elles sont imbriquées dans un type générique. Par conséquent, une énumération ne peut pas avoir de paramètres de type propres.  
   
     > [!NOTE]
     >  Les types imbriqués (y compris les énumérations) créés avec Visual Basic, C# et C++ incluent les paramètres de type de tous les types génériques englobants, et sont donc génériques, même s’ils n’ont pas de paramètres de type propres. Pour plus d'informations, consultez « Types imbriqués » de la rubrique de référence relative à <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
@@ -130,13 +130,13 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Les restrictions suivantes s'appliquent aux interfaces :  
   
--   Une interface peut être déclarée avec n'importe quelle accessibilité, mais les membres d'interface doivent tous avoir une accessibilité publique.  
+- Une interface peut être déclarée avec n'importe quelle accessibilité, mais les membres d'interface doivent tous avoir une accessibilité publique.  
   
--   Les interfaces ne peuvent pas définir de constructeurs.  
+- Les interfaces ne peuvent pas définir de constructeurs.  
   
--   Les interfaces ne peuvent pas définir de champs.  
+- Les interfaces ne peuvent pas définir de champs.  
   
--   Les interfaces peuvent définir uniquement des membres d'instance. Elles ne peuvent pas définir des membres statiques.  
+- Les interfaces peuvent définir uniquement des membres d'instance. Elles ne peuvent pas définir des membres statiques.  
   
  Chaque langage doit fournir des règles de mappage d'une implémentation à l'interface qui nécessite le membre, car plusieurs interfaces peuvent déclarer un membre avec la même signature, et ces membres peuvent avoir des implémentations séparées.  
   
@@ -170,17 +170,17 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 ## <a name="type-definitions"></a>Définitions de types  
  Une définition de type inclut les éléments suivants :  
   
--   les attributs définis sur le type ;  
+- les attributs définis sur le type ;  
   
--   L'accessibilité du type (visibilité).  
+- L'accessibilité du type (visibilité).  
   
--   le nom du type ;  
+- le nom du type ;  
   
--   le type de base du type ;  
+- le type de base du type ;  
   
--   les interfaces implémentées par le type ;  
+- les interfaces implémentées par le type ;  
   
--   les définitions de chacun des membres du type.  
+- les définitions de chacun des membres du type.  
   
 ### <a name="attributes"></a>Attributs  
  Les attributs fournissent des métadonnées définies par l'utilisateur supplémentaires. La plupart du temps, ils sont utilisés pour stocker les informations supplémentaires relatives à un type de l’assembly, ou pour modifier le comportement d’un membre de type dans l’environnement au moment du design ou dans l’environnement d’exécution.  
@@ -199,22 +199,22 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Le domaine d'accessibilité d'un membre imbriqué `M` déclaré dans un type `T` à l'intérieur d'un programme `P` est défini de la manière suivante (en notant que `M` pourrait lui-même être un type) :  
   
--   Si l'accessibilité déclarée de `M` est `public`, le domaine d'accessibilité de `M` correspond à celui de `T`.  
+- Si l'accessibilité déclarée de `M` est `public`, le domaine d'accessibilité de `M` correspond à celui de `T`.  
   
--   Si l'accessibilité déclarée de `M` est `protected internal`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `P` et le texte de programme de n'importe quel type dérivé de `T` déclaré en dehors de `P`.  
+- Si l'accessibilité déclarée de `M` est `protected internal`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `P` et le texte de programme de n'importe quel type dérivé de `T` déclaré en dehors de `P`.  
   
--   Si l'accessibilité déclarée de `M` est `protected`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `T` et n'importe quel type dérivé de `T`.  
+- Si l'accessibilité déclarée de `M` est `protected`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `T` et n'importe quel type dérivé de `T`.  
   
--   Si l'accessibilité déclarée de `M` est `internal`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `P`.  
+- Si l'accessibilité déclarée de `M` est `internal`, le domaine d'accessibilité de `M` correspond à l'intersection du domaine d'accessibilité de `T` avec le texte de programme de `P`.  
   
--   Si l'accessibilité déclarée de `M` est `private`, le domaine d'accessibilité de `M` correspond au texte de programme de `T`.  
+- Si l'accessibilité déclarée de `M` est `private`, le domaine d'accessibilité de `M` correspond au texte de programme de `T`.  
   
 ### <a name="type-names"></a>Noms de types  
  Le système de type commun (CTS, Common Type System) impose uniquement deux restrictions sur les noms :  
   
--   Tous les noms sont encodés comme des chaînes de caractères Unicode (16 bits).  
+- Tous les noms sont encodés comme des chaînes de caractères Unicode (16 bits).  
   
--   Les noms ne peuvent pas incorporer la valeur (16 bits) 0x0000.  
+- Les noms ne peuvent pas incorporer la valeur (16 bits) 0x0000.  
   
  Toutefois, la plupart des langages imposent des restrictions supplémentaires sur les noms de types. Toutes les comparaisons sont effectuées octet par octet ; elles respectent donc la casse et sont indépendantes des paramètres régionaux.  
   
@@ -229,25 +229,25 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 ## <a name="type-members"></a>Membres de type  
  Le runtime vous permet de définir les membres de votre type, ce qui spécifie le comportement et l'état d'un type. Les membres de type incluent les éléments suivants :  
   
--   [Champs](#Fields)  
+- [Champs](#Fields)  
   
--   [Propriétés](#Properties)  
+- [Propriétés](#Properties)  
   
--   [Méthodes](#Methods)  
+- [Méthodes](#Methods)  
   
--   [Constructeurs](#Constructors)  
+- [Constructeurs](#Constructors)  
   
--   [Événements](#Events)  
+- [Événements](#Events)  
   
--   [Types imbriqués](#NestedTypes)  
+- [Types imbriqués](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Champs  
  Un champ décrit et contient une partie de l'état du type. Les champs peuvent correspondre à n'importe quel type pris en charge par le runtime. La plupart du temps, les champs sont soit `private`, soit `protected`, de sorte qu'ils sont accessibles uniquement à partir de la classe ou d'une classe dérivée. Si la valeur d'un champ peut être modifiée en dehors de son type, un accesseur set de propriété est en général utilisé. Les champs exposés publiquement sont généralement en lecture seule et peuvent être de deux types :  
   
--   Constantes, dont la valeur est assignée au moment du design. Ce sont des membres statiques d'une classe, bien qu'ils ne soient pas définis à l'aide du mot clé `static` (`Shared` en Visual Basic).  
+- Constantes, dont la valeur est assignée au moment du design. Ce sont des membres statiques d'une classe, bien qu'ils ne soient pas définis à l'aide du mot clé `static` (`Shared` en Visual Basic).  
   
--   Des variables en lecture seule, dont les valeurs peuvent être assignées dans le constructeur de classe.  
+- Des variables en lecture seule, dont les valeurs peuvent être assignées dans le constructeur de classe.  
   
  L'exemple ci-dessous illustre ces deux utilisations de champs en lecture seule.  
   
@@ -312,9 +312,9 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 ### <a name="inheriting-overriding-and-hiding-members"></a>Héritage, substitution et masquage de membres  
  Un type dérivé hérite de tous les membres de son type de base ; c'est-à-dire que ces membres sont définis sur le type dérivé et disponibles pour celui-ci. Le comportement ou les qualités de membres hérités peuvent être modifiés de deux manières :  
   
--   Un type dérivé peut masquer un membre hérité en définissant un nouveau membre avec la même signature. Cela permet notamment de rendre privé un membre précédemment public ou de définir un nouveau comportement pour une méthode héritée marquée comme `final`.  
+- Un type dérivé peut masquer un membre hérité en définissant un nouveau membre avec la même signature. Cela permet notamment de rendre privé un membre précédemment public ou de définir un nouveau comportement pour une méthode héritée marquée comme `final`.  
   
--   Un type dérivé peut substituer une méthode virtuelle héritée. La méthode de substitution fournit une nouvelle définition de la méthode qui sera appelée en fonction du type de la valeur au moment de l'exécution et non du type de la variable connue au moment de la compilation. Une méthode peut substituer une méthode virtuelle uniquement si la méthode virtuelle n'est pas marquée comme `final` et si la nouvelle méthode est au moins aussi accessible que la méthode virtuelle.  
+- Un type dérivé peut substituer une méthode virtuelle héritée. La méthode de substitution fournit une nouvelle définition de la méthode qui sera appelée en fonction du type de la valeur au moment de l'exécution et non du type de la variable connue au moment de la compilation. Une méthode peut substituer une méthode virtuelle uniquement si la méthode virtuelle n'est pas marquée comme `final` et si la nouvelle méthode est au moins aussi accessible que la méthode virtuelle.  
   
 ## <a name="see-also"></a>Voir aussi
 

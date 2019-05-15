@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595328"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procédure : Obtenir des informations sur les fichiers, dossiers et lecteurs (Guide de programmation C#)
 Dans le .NET Framework, vous pouvez accéder aux informations sur le système de fichiers en utilisant les classes suivantes :  
   
--   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
+- <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.Directory?displayProperty=nameWithType>  
+- <xref:System.IO.Directory?displayProperty=nameWithType>  
   
--   <xref:System.IO.File?displayProperty=nameWithType>  
+- <xref:System.IO.File?displayProperty=nameWithType>  
   
  Les classes <xref:System.IO.FileInfo> et <xref:System.IO.DirectoryInfo> représentent un fichier ou un répertoire. Elles contiennent des propriétés qui exposent une grande partie des attributs de fichiers pris en charge par le système de fichiers NTFS. Elles contiennent également des méthodes pour ouvrir, fermer, déplacer et supprimer des fichiers et dossiers. Vous pouvez créer des instances de ces classes en passant une chaîne qui représente le nom du fichier, dossier ou lecteur dans le constructeur :  
   
@@ -43,13 +43,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="robust-programming"></a>Programmation fiable  
  Quand vous traitez des chaînes de chemin spécifiées par l’utilisateur, vous devez également gérer les exceptions dans les cas suivants :  
   
--   Le nom de fichier est mal formé. Par exemple, il contient des caractères non valides ou uniquement des espaces blancs.  
+- Le nom de fichier est mal formé. Par exemple, il contient des caractères non valides ou uniquement des espaces blancs.  
   
--   Le nom de fichier est null.  
+- Le nom de fichier est null.  
   
--   Le nom de fichier est plus long que la longueur maximale définie par le système.  
+- Le nom de fichier est plus long que la longueur maximale définie par le système.  
   
--   Le nom de fichier contient un signe deux-points (:).  
+- Le nom de fichier contient un signe deux-points (:).  
   
  Si l’application ne dispose pas des autorisations suffisantes pour lire le fichier spécifié, la méthode `Exists` retourne `false` indépendamment de l’existence d’un chemin. La méthode ne lève pas d’exception.  
   

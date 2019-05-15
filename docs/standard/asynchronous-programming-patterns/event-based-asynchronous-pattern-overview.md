@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678289"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629010"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Vue d’ensemble du modèle asynchrone basé sur des événements
-Les applications qui effectuent de nombreuses tâches simultanément tout en réagissant aux interventions de l’utilisateur nécessitent souvent une conception utilisant plusieurs threads. L’espace de noms <xref:System.Threading> fournit tous les outils nécessaires à la création d’applications multithread de hautes performances, mais l’utilisation de ces outils suppose une connaissance approfondie du génie logiciel multithread. Pour les applications multithread relativement simples, le composant <xref:System.ComponentModel.BackgroundWorker> fournit une solution simple. Pour les applications asynchrones plus sophistiquées, envisagez l'implémentation d'une classe obéissant au modèle asynchrone basé sur les événements.  
+Les applications qui effectuent de nombreuses tâches simultanément tout en réagissant aux interventions de l’utilisateur nécessitent souvent une conception utilisant plusieurs threads. L’espace de noms <xref:System.Threading> fournit tous les outils nécessaires à la création d’applications multithread de hautes performances, mais l’utilisation de ces outils suppose une connaissance approfondie du génie logiciel multithread. Pour les applications multithread relativement simples, le composant <xref:System.ComponentModel.BackgroundWorker> fournit une solution simple. Pour les applications asynchrones plus sophistiquées, envisagez l’implémentation d’une classe obéissant au modèle asynchrone basé sur les événements.  
   
  Le modèle asynchrone basé sur les événements permet de profiter des avantages des applications multithread tout en masquant de nombreux problèmes complexes inhérents à la conception multithread. L’utilisation d’une classe prenant en charge ce modèle peut vous permettre :  
   
--   d'effectuer, « en arrière-plan », des tâches de longue durée, telles que des téléchargements et des opérations de base de données, sans interrompre votre application ;  
+- d'effectuer, « en arrière-plan », des tâches de longue durée, telles que des téléchargements et des opérations de base de données, sans interrompre votre application ;  
   
--   d'exécuter plusieurs opérations simultanément, en recevant des notifications quand chacune d'elles se termine ;  
+- d'exécuter plusieurs opérations simultanément, en recevant des notifications quand chacune d'elles se termine ;  
   
--   d'attendre que les ressources soient disponibles sans arrêter (« bloquer ») votre application ;  
+- d'attendre que les ressources soient disponibles sans arrêter (« bloquer ») votre application ;  
   
--   de communiquer avec les opérations asynchrones en attente à l'aide du modèle d'événements et de délégués connu. Pour plus d'informations sur l'utilisation des gestionnaires d'événements et des délégués, consultez la page [Événements](../../../docs/standard/events/index.md).  
+- de communiquer avec les opérations asynchrones en attente à l'aide du modèle d'événements et de délégués connu. Pour plus d'informations sur l'utilisation des gestionnaires d'événements et des délégués, consultez la page [Événements](../../../docs/standard/events/index.md).  
   
  Une classe prenant en charge le modèle asynchrone basé sur les événements possède une ou plusieurs méthodes nommées _MethodName_**Async**. Ces méthodes peuvent refléter des versions synchrones qui exécutent la même opération sur le thread actuel. La classe peut également posséder un événement _MethodName_**Completed** et une méthode _MethodName_**AsyncCancel** (ou simplement **CancelAsync**).  
   
@@ -42,7 +42,7 @@ Les applications qui effectuent de nombreuses tâches simultanément tout en ré
   
  Si vous souhaitez que votre application continue de s'exécuter pendant le chargement de l'image, vous pouvez appeler la méthode <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> et gérer l'événement <xref:System.Windows.Forms.PictureBox.LoadCompleted> tout comme vous le feriez pour tout autre événement. Quand vous appelez la méthode <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>, l'exécution de votre application se poursuit pendant que le téléchargement s'effectue sur un thread séparé (« en arrière-plan »). Votre gestionnaire d'événements est appelé quand l'opération de chargement d'image est terminée, et peut examiner le paramètre <xref:System.ComponentModel.AsyncCompletedEventArgs> pour déterminer si le téléchargement s'est déroulé correctement.  
   
- Le modèle asynchrone basé sur les événements nécessite qu'une opération asynchrone puisse être annulée ; le contrôle <xref:System.Windows.Forms.PictureBox> prend en charge cette exigence avec sa méthode <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. L'appel de <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> soumet une demande d'arrêt du téléchargement en attente et, quand la tâche est annulée, l'événement <xref:System.Windows.Forms.PictureBox.LoadCompleted> est déclenché.  
+ Le modèle asynchrone basé sur les événements nécessite qu'une opération asynchrone puisse être annulée ; le contrôle <xref:System.Windows.Forms.PictureBox> prend en charge cette exigence avec sa méthode <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. L’appel de <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> soumet une demande d’arrêt du téléchargement en attente et, quand la tâche est annulée, l’événement <xref:System.Windows.Forms.PictureBox.LoadCompleted> est déclenché.  
   
 > [!CAUTION]
 >  Comme il est possible que le téléchargement se termine au moment où la demande <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> est effectuée, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> peut ne pas refléter la demande d'annulation. C’est ce que l’on appelle une *condition de concurrence*, un problème courant en programmation multithread. Pour plus d'informations sur les problèmes relatifs à la programmation multithread, consultez la page [Meilleures pratiques de threads managés](../../../docs/standard/threading/managed-threading-best-practices.md).  

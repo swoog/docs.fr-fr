@@ -2,12 +2,12 @@
 title: 'Procédure : Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4515fd3f96bfe94e46c2a090d75468a7e5b18939
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855229"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593035"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procédure : Combiner et comparer des Collections de chaînes (LINQ) (Visual Basic)
 Cet exemple montre comment fusionner des fichiers qui contiennent des lignes de texte, puis comment trier les résultats. Il montre plus précisément comment effectuer une concaténation simple, une union et une intersection avec les deux ensembles de lignes de texte.  
@@ -163,7 +163,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Créez un projet qui cible le .NET Framework version 3.5 ou ultérieure, avec une référence à System.Core.dll et une déclaration `Imports` pour l’espace de noms System.Linq.  
+Créer un projet d’application console VB.NET, avec un `Imports` instruction pour l’espace de noms System.Linq.
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665752"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Procédure : écrire des informations sur des événements dans un fichier texte (Visual Basic)
 Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application. Cet exemple montre comment utiliser la méthode `My.Application.Log.WriteEntry` pour enregistrer des informations de traçage dans un fichier journal.  
@@ -24,11 +24,11 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
      S’il n’existe pas de fichier app.config :  
   
-    1.  Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
+    1. Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
   
-    2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
+    2. Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3. Cliquez sur **Ajouter**.  
   
 2. Recherchez la section `<listeners>` dans le fichier de configuration de l’application.  
   
@@ -61,7 +61,7 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Pour écrire des informations sur les événements dans le journal du fichier  
   
--   Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal du fichier. Pour plus d'informations, voir [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour journaliser des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Utilisez la méthode `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` pour écrire des informations dans le journal du fichier. Pour plus d'informations, voir [Procédure : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) et [Guide pratique pour journaliser des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      Une fois l’écouteur de journalisation du fichier configuré pour un assembly, il reçoit tous les messages écrits par `My.Application.Log` à partir de cet assembly.  
   

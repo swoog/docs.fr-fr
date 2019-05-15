@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596289"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classes génériques (guide de programmation C#)
 Les classes génériques encapsulent des opérations qui ne sont pas spécifiques à un type de données particulier. Les classes génériques sont le plus souvent utilisées avec les collections telles que les listes liées, les tables de hachage, les piles, les files d’attente, les arborescences, etc. Les opérations telles que l’ajout et la suppression d’éléments dans la collection sont exécutées fondamentalement de la même manière quel que soit le type des données stockées.  
@@ -20,19 +20,19 @@ Les classes génériques encapsulent des opérations qui ne sont pas spécifique
   
  En général, vous créez des classes génériques en commençant par une classe concrète existante et en changeant des types en paramètres de type individuellement jusqu’à ce que vous atteigniez l’équilibre optimal au niveau de la généralisation et de la facilité d’utilisation. Lors de la création de vos propres classes génériques, les aspects importants à prendre en considération sont notamment les suivants :  
   
--   Quels types généraliser en paramètres de type.  
+- Quels types généraliser en paramètres de type.  
   
      En règle générale, plus le nombre de types que vous pouvez paramétrer est important, plus votre code est souple et réutilisable. Toutefois, une généralisation excessive peut produire un code qui est difficile à lire ou à comprendre par d’autres développeurs.  
   
--   Quelles contraintes, le cas échéant, appliquer aux paramètres de type (consultez [Contraintes sur les paramètres de type](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Quelles contraintes, le cas échéant, appliquer aux paramètres de type (consultez [Contraintes sur les paramètres de type](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
   
      Il est pertinent d’appliquer le maximum de contraintes possible vous permettant néanmoins de gérer les types que vous devez gérer. Par exemple, si vous savez que votre classe générique est destinée uniquement à être utilisée avec les types référence, appliquez la contrainte de classe. Cela empêchera l’utilisation involontaire de votre classe avec les types valeur et vous permettra d’utiliser l’opérateur `as` sur `T` et de rechercher les valeurs nulles.  
   
--   S’il convient de prendre en compte le comportement générique dans les sous-classes et les classes de base.  
+- S’il convient de prendre en compte le comportement générique dans les sous-classes et les classes de base.  
   
      Les classes génériques pouvant servir de classes de base, les considérations de conception qui s’appliquent ici sont les mêmes que pour les classes non génériques. Consultez les règles relatives à l’héritage à partir des classes de base génériques plus loin dans cette rubrique.  
   
--   S’il convient d’implémenter une ou plusieurs interfaces génériques.  
+- S’il convient d’implémenter une ou plusieurs interfaces génériques.  
   
      Par exemple, si vous concevez une classe qui sera utilisée pour créer des éléments dans une collection basée sur les génériques, vous pouvez avoir besoin d’implémenter une interface comme <xref:System.IComparable%601>, où `T` est le type de votre classe.  
   

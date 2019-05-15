@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620692"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procédure : créer une clé de Registre et définir sa valeur en Visual Basic
 Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Registry` pour créer une clé de Registre.  
@@ -25,7 +25,7 @@ Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Regist
   
 #### <a name="to-create-a-registry-key"></a>Pour créer une clé de Registre  
   
--   Utilisez la méthode `CreateSubKey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Le paramètre `Subkey` ne respecte pas la casse. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
+- Utilisez la méthode `CreateSubKey`, en spécifiant le nom de la clé et sous quelle ruche la placer. Le paramètre `Subkey` ne respecte pas la casse. Cet exemple crée la clé de Registre `MyTestKey` sous HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ Vous pouvez utiliser la méthode `CreateSubKey` de l’objet `My.Computer.Regist
   
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le nom de la clé est `Nothing` (<xref:System.ArgumentNullException>).  
+- Le nom de la clé est `Nothing` (<xref:System.ArgumentNullException>).  
   
--   L’utilisateur ne dispose pas des autorisations nécessaires pour créer des clés de Registre (<xref:System.Security.SecurityException>).  
+- L’utilisateur ne dispose pas des autorisations nécessaires pour créer des clés de Registre (<xref:System.Security.SecurityException>).  
   
--   Le nom de la clé dépasse la limite de 255 caractères (<xref:System.ArgumentException>).  
+- Le nom de la clé dépasse la limite de 255 caractères (<xref:System.ArgumentException>).  
   
--   La clé est fermée (<xref:System.IO.IOException>).  
+- La clé est fermée (<xref:System.IO.IOException>).  
   
--   La clé de Registre est en lecture seule (<xref:System.UnauthorizedAccessException>).  
+- La clé de Registre est en lecture seule (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Pour exécuter ce processus, votre assembly nécessite un niveau de privilège accordé par la classe <xref:System.Security.Permissions.RegistryPermission>. Si vous l’exécutez dans un contexte de confiance partielle, le processus peut lever une exception en raison de privilèges insuffisants. De même, l’utilisateur doit disposer de listes de contrôle d’accès (ACL) valides pour créer ou écrire des paramètres. Par exemple, une application locale qui dispose de l’autorisation de sécurité d’accès du code peut ne pas disposer des autorisations de système d’exploitation. Pour plus d’informations, consultez [Notions fondamentales de la sécurité d’accès du code](../../../../framework/misc/code-access-security-basics.md).  

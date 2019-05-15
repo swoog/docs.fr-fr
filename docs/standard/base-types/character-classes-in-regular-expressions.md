@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634706"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caractères dans les expressions régulières
 <a name="Top"></a> Une classe de caractères définit un jeu de caractères, chacun d'entre eux pouvant apparaître dans une chaîne d'entrée pour aboutir à une correspondance. Le langage d’expression régulière dans .NET prend en charge les classes de caractères suivantes :  
   
--   Groupes de caractères positifs. Un caractère de la chaîne d'entrée doit correspondre à l'un des jeux de caractères spécifié. Pour plus d’informations, consultez [Groupe de caractères positif](#PositiveGroup).  
+- Groupes de caractères positifs. Un caractère de la chaîne d'entrée doit correspondre à l'un des jeux de caractères spécifié. Pour plus d’informations, consultez [Groupe de caractères positif](#PositiveGroup).  
   
--   Groupes de caractères négatifs. Un caractère de la chaîne d'entrée ne doit pas correspondre à l'un des jeux de caractères spécifié. Pour plus d’informations, consultez [Groupe de caractères négatif](#NegativeGroup).  
+- Groupes de caractères négatifs. Un caractère de la chaîne d'entrée ne doit pas correspondre à l'un des jeux de caractères spécifié. Pour plus d’informations, consultez [Groupe de caractères négatif](#NegativeGroup).  
   
--   N'importe quel caractère. Le caractère `.` (point) dans une expression régulière est un caractère générique qui correspond à n'importe quel caractère sauf `\n`. Pour plus d’informations, consultez [N’importe quel caractère](#AnyCharacter).  
+- N'importe quel caractère. Le caractère `.` (point) dans une expression régulière est un caractère générique qui correspond à n'importe quel caractère sauf `\n`. Pour plus d’informations, consultez [N’importe quel caractère](#AnyCharacter).  
   
--   Catégorie Unicode générale ou bloc nommé. Un caractère de la chaîne d'entrée doit être membre d'une catégorie Unicode particulière ou doit figurer dans une plage contiguë de caractères Unicode pour aboutir à une correspondance. Pour plus d’informations, consultez [Catégorie Unicode ou bloc Unicode](#CategoryOrBlock).  
+- Catégorie Unicode générale ou bloc nommé. Un caractère de la chaîne d'entrée doit être membre d'une catégorie Unicode particulière ou doit figurer dans une plage contiguë de caractères Unicode pour aboutir à une correspondance. Pour plus d’informations, consultez [Catégorie Unicode ou bloc Unicode](#CategoryOrBlock).  
   
--   Catégorie Unicode générale négative ou bloc nommé. Un caractère de la chaîne d'entrée ne doit pas être membre d'une catégorie Unicode particulière ou ne doit pas figurer dans une plage contiguë de caractères Unicode pour aboutir à une correspondance. Pour plus d’informations, consultez [Catégorie ou bloc Unicode négatifs](#NegativeCategoryOrBlock).  
+- Catégorie Unicode générale négative ou bloc nommé. Un caractère de la chaîne d'entrée ne doit pas être membre d'une catégorie Unicode particulière ou ne doit pas figurer dans une plage contiguë de caractères Unicode pour aboutir à une correspondance. Pour plus d’informations, consultez [Catégorie ou bloc Unicode négatifs](#NegativeCategoryOrBlock).  
   
--   Caractère de mot. Un caractère de la chaîne d'entrée peut appartenir à l'une des catégories Unicode appropriées aux caractères contenus dans les mots. Pour plus d’informations, consultez [Caractère de mot](#WordCharacter).  
+- Caractère de mot. Un caractère de la chaîne d'entrée peut appartenir à l'une des catégories Unicode appropriées aux caractères contenus dans les mots. Pour plus d’informations, consultez [Caractère de mot](#WordCharacter).  
   
--   Caractère autre qu'un caractère de mot. Un caractère de la chaîne d'entrée peut appartenir à n'importe quelle catégorie Unicode qui n'est pas un caractère de mot. Pour plus d’informations, consultez [Caractère autre qu’un caractère de mot](#NonWordCharacter).  
+- Caractère autre qu'un caractère de mot. Un caractère de la chaîne d'entrée peut appartenir à n'importe quelle catégorie Unicode qui n'est pas un caractère de mot. Pour plus d’informations, consultez [Caractère autre qu’un caractère de mot](#NonWordCharacter).  
   
--   Espace blanc. Un caractère de la chaîne d'entrée peut être n'importe quel caractère Unicode de séparation, ainsi que n'importe quel nombre de caractères de contrôle. Pour plus d’informations, consultez [Espace blanc](#WhitespaceCharacter).  
+- Espace blanc. Un caractère de la chaîne d'entrée peut être n'importe quel caractère Unicode de séparation, ainsi que n'importe quel nombre de caractères de contrôle. Pour plus d’informations, consultez [Espace blanc](#WhitespaceCharacter).  
   
--   Caractère autre qu'un espace blanc. Un caractère de la chaîne d'entrée peut être n'importe quel caractère qui n'est pas un espace blanc. Pour plus d’informations, consultez [Caractère autre qu’un espace blanc](#NonWhitespaceCharacter).  
+- Caractère autre qu'un espace blanc. Un caractère de la chaîne d'entrée peut être n'importe quel caractère qui n'est pas un espace blanc. Pour plus d’informations, consultez [Caractère autre qu’un espace blanc](#NonWhitespaceCharacter).  
   
--   Chiffre décimal. Un caractère de la chaîne d'entrée peut être n'importe quel nombre de caractères classifiés en tant que chiffres décimaux Unicode. Pour plus d’informations, consultez [Chiffre décimal](#DigitCharacter).  
+- Chiffre décimal. Un caractère de la chaîne d'entrée peut être n'importe quel nombre de caractères classifiés en tant que chiffres décimaux Unicode. Pour plus d’informations, consultez [Chiffre décimal](#DigitCharacter).  
   
--   Chiffre non décimal. Un caractère de la chaîne d'entrée peut correspondre à autre chose qu'un chiffre décimal Unicode. Pour plus d’informations, consultez [Chiffre décimal](#NonDigitCharacter).  
+- Chiffre non décimal. Un caractère de la chaîne d'entrée peut correspondre à autre chose qu'un chiffre décimal Unicode. Pour plus d’informations, consultez [Chiffre décimal](#NonDigitCharacter).  
   
  .NET prend en charge les expressions de soustraction de classe de caractères, ce qui vous permet de définir un jeu de caractères comme résultat de l’exclusion d’une classe de caractères d’une autre classe de caractères. Pour plus d’informations, consultez [Soustraction de classe de caractères](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622947"
 ## <a name="any-character-"></a>N'importe quel caractère :.  
  Le point (.) correspond à n'importe quel caractère à l'exception de `\n` (caractère de saut de ligne, \u000A), avec les deux qualifications suivantes :  
   
--   Si un modèle d’expression régulière est modifié par l’option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> ou si la partie du modèle qui contient la classe de caractères `.` est modifiée par l’option `s`, `.` correspond à n’importe quel caractère. Pour plus d'informations, consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
+- Si un modèle d'expression régulière est modifié par l'option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> ou si la partie du modèle qui contient la classe de caractères `.` est modifiée par l'option `s`, `.` correspond à n'importe quel caractère. Pour plus d’informations, consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
   
      L'exemple suivant illustre le comportement différent de la classe de caractères `.` par défaut et avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. L'expression régulière `^.+` commence au début de la chaîne et correspond à tous les caractères. Par défaut, la correspondance se termine à la fin de la première ligne ; le modèle d'expression régulière correspond au retour chariot, à `\r` ou à \u000D, mais il ne correspond pas à `\n`. Étant donné que l'option <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interprète la chaîne d'entrée entière comme une ligne unique, il correspond à chaque caractère de la chaîne d'entrée, notamment `\n`.  
   
@@ -170,13 +170,13 @@ ms.locfileid: "54622947"
 > [!NOTE]
 >  Étant donné qu'elle correspond à n'importe quel caractère sauf `\n`, la classe de caractères `.` correspond également à `\r` (retour chariot, \u000D).  
   
--   Dans un groupe de caractères négatif ou positif, un point est traité comme un caractère littéral de point, et non pas comme une classe de caractères. Pour plus d'informations, consultez [Groupe de caractères positif](#PositiveGroup) et [Groupe de caractères négatif](#NegativeGroup) plus haut dans cette rubrique. L'exemple suivant en propose une illustration. Il définit une expression régulière qui inclut le point (`.`) à la fois en tant que classe de caractères et en tant que membre d'un groupe de caractères positif. L’expression régulière `\b.*[.?!;:](\s|\z)` commence à une limite de mot, correspond à n’importe quel caractère tant qu’elle ne rencontre pas l’un des cinq signes de ponctuation, y compris le point, puis correspond à un espace blanc ou à la fin de la chaîne.  
+- Dans un groupe de caractères négatif ou positif, un point est traité comme un caractère littéral de point, et non pas comme une classe de caractères. Pour plus d'informations, consultez [Groupe de caractères positif](#PositiveGroup) et [Groupe de caractères négatif](#NegativeGroup) plus haut dans cette rubrique. L'exemple suivant en propose une illustration. Il définit une expression régulière qui inclut le point (`.`) à la fois en tant que classe de caractères et en tant que membre d'un groupe de caractères positif. L’expression régulière `\b.*[.?!;:](\s|\z)` commence à une limite de mot, correspond à n’importe quel caractère tant qu’elle ne rencontre pas l’un des cinq signes de ponctuation, y compris le point, puis correspond à un espace blanc ou à la fin de la chaîne.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d’informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Retour au début](#Top)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "54622947"
  Si un comportement conforme à ECMAScript est spécifié, `\w` est équivalent à `[a-zA-Z_0-9]`. Pour plus d’informations sur les expressions régulières ECMAScript, consultez la section « Comportement de correspondance ECMAScript » dans [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d’informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  L'exemple suivant utilise l'élément de langage `\w` pour le faire corresponde à des caractères en double dans un mot. L'exemple définit un modèle d'expression régulière, `(\w)\1`, qui peut être interprété comme suit.  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295989"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592348"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Création d'assemblys satellites pour les applications bureautiques
 Les fichiers de ressources jouent un rôle central dans les applications localisées. Ils permettent à une application d’afficher des chaînes, des images et d’autres données dans la langue et la culture de l’utilisateur, et de fournir des données de remplacement si les ressources relatives à la langue et la culture de l’utilisateur ne sont pas disponibles. Le .NET Framework utilise un modèle Hub and Spoke pour localiser et récupérer les ressources localisées. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; elle est utilisée quand aucune ressource localisée n’est disponible. Vous utilisez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour désigner la culture de la culture par défaut de l’application. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture localisée unique, mais ne contient pas de code. Dans la mesure où les assemblys satellites ne font pas partie de l’assembly principal, vous pouvez facilement remplacer ou mettre à jour les ressources correspondant à une culture spécifique sans remplacer l’assembly principal de l’application.  
@@ -41,16 +41,16 @@ Les fichiers de ressources jouent un rôle central dans les applications localis
 ## <a name="satellite-assembly-name-and-location"></a>Nom et emplacement de l’assembly satellite  
  Le modèle Hub and Spoke nécessite que vous placiez les ressources à des emplacements spécifiques afin qu’elles soient facilement trouvées et utilisées. Si vous ne compilez pas et ne nommez pas les ressources comme prévu ou si vous ne les placez pas aux endroits corrects, le Common Language Runtime ne sera pas en mesure de les trouver et utilisera les ressources de la culture par défaut à la place. Le gestionnaire des ressources du .NET Framework, représenté par un objet <xref:System.Resources.ResourceManager>, permet d’accéder automatiquement aux ressources localisées. Le gestionnaire des ressources nécessite les éléments suivants :  
   
--   Un seul assembly satellite doit inclure toutes les ressources d’une culture particulière. En d’autres termes, vous devez compiler plusieurs fichiers .txt ou .resx en un seul fichier .resources binaire.  
+- Un seul assembly satellite doit inclure toutes les ressources d’une culture particulière. En d’autres termes, vous devez compiler plusieurs fichiers .txt ou .resx en un seul fichier .resources binaire.  
   
--   Il doit exister un sous-répertoire distinct dans le répertoire de l’application pour chaque culture localisée qui stocke les ressources de cette culture. Le nom du sous-répertoire doit être identique au nom de la culture. Vous pouvez aussi stocker vos assemblys satellites dans le Global Assembly Cache. Dans ce cas, le composant des informations de culture du nom fort de l’assembly doit indiquer sa culture. (Consultez la section [Installation d’assemblys satellites dans le Global Assembly Cache](#SN) plus loin dans cette rubrique.)  
+- Il doit exister un sous-répertoire distinct dans le répertoire de l’application pour chaque culture localisée qui stocke les ressources de cette culture. Le nom du sous-répertoire doit être identique au nom de la culture. Vous pouvez aussi stocker vos assemblys satellites dans le Global Assembly Cache. Dans ce cas, le composant des informations de culture du nom fort de l’assembly doit indiquer sa culture. (Consultez la section [Installation d’assemblys satellites dans le Global Assembly Cache](#SN) plus loin dans cette rubrique.)  
   
     > [!NOTE]
     >  Si votre application comporte des ressources pour les sous-cultures, placez chaque sous-culture dans un sous-répertoire distinct sous le répertoire de l’application. Ne placez pas les sous-cultures dans des sous-répertoires sous le répertoire de leur culture principale.  
   
--   L’assembly satellite doit avoir le même nom que l’application et doit utiliser l’extension de nom de fichier « . resources.dll ». Par exemple, si une application est nommée Example.exe, le nom de chaque assembly satellite doit être Example.resources.dll. Notez que le nom de l’assembly satellite n’indique pas la culture de ses fichiers de ressources. Toutefois, l’assembly satellite apparaît dans un répertoire qui spécifie la culture.  
+- L’assembly satellite doit avoir le même nom que l’application et doit utiliser l’extension de nom de fichier « . resources.dll ». Par exemple, si une application est nommée Example.exe, le nom de chaque assembly satellite doit être Example.resources.dll. Notez que le nom de l’assembly satellite n’indique pas la culture de ses fichiers de ressources. Toutefois, l’assembly satellite apparaît dans un répertoire qui spécifie la culture.  
   
--   Des informations sur la culture de l’assembly satellite doivent être incluses dans les métadonnées de l’assembly. Pour stocker le nom de culture dans les métadonnées de l’assembly satellite, vous spécifiez l’option `/culture` quand vous utilisez [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) pour incorporer des ressources dans l’assembly satellite.  
+- Des informations sur la culture de l’assembly satellite doivent être incluses dans les métadonnées de l’assembly. Pour stocker le nom de culture dans les métadonnées de l’assembly satellite, vous spécifiez l’option `/culture` quand vous utilisez [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) pour incorporer des ressources dans l’assembly satellite.  
   
  L’illustration suivante propose un exemple de structure de répertoires et de la configuration requise pour les emplacements des applications que vous n’installez pas dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Les éléments avec les extensions .txt et .resources ne sont pas fournis avec l’application finale. Il s’agit des fichiers de ressources intermédiaires utilisés pour créer les assemblys de ressources satellites finaux. Dans cet exemple, vous pouvez remplacer les fichiers .txt par les fichiers .resx. Pour plus d’informations, consultez [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
   
-    -   Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Greeting.en-US.resx ou Greeting.en-US.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Hi world! ».  
+    - Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Greeting.en-US.resx ou Greeting.en-US.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Hi world! ».  
   
-    -   Pour prendre en charge la culture « fr-FR » ou Français (France), créez un fichier de ressources nommé Greeting.fr-FR.resx ou Greeting.fr-FR.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Salut tout le monde ! ».  
+    - Pour prendre en charge la culture « fr-FR » ou Français (France), créez un fichier de ressources nommé Greeting.fr-FR.resx ou Greeting.fr-FR.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Salut tout le monde ! ».  
   
-    -   Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Greeting.ru-RU.resx ou Greeting.ru-RU.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Всем привет! ».  
+    - Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Greeting.ru-RU.resx ou Greeting.ru-RU.txt et stockez-le dans une chaîne unique nommée `HelloString` dont la valeur est « Всем привет! ».  
   
 4. Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez les commandes suivantes pour compiler les fichiers .resx en fichiers .resources :  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Ajoutez la prise en charge de cultures supplémentaires (en-US, fr-FR et ru-RU) à l’application comme suit :  
   
-    -   Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Strings.en-US.resx ou Strings.en-US.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Hello! ».  
+    - Pour prendre en charge la culture « en-US » ou Anglais (États-Unis), créez un fichier de ressources nommé Strings.en-US.resx ou Strings.en-US.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Hello! ».  
   
-    -   Pour prendre en charge la culture « fr-FR » ou Français (France), créez un fichier de ressources nommé Strings.fr-FR.resx ou Strings.fr-FR.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Bonjour ! ».  
+    - Pour prendre en charge la culture « fr-FR » ou Français (France), créez un fichier de ressources nommé Strings.fr-FR.resx ou Strings.fr-FR.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Bonjour ! ».  
   
-    -   Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Strings.ru-RU.resx ou Strings.ru-RU.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Привет! ».  
+    - Pour prendre en charge la culture « ru-RU » ou Russe (Russie), créez un fichier de ressources nommé Strings.ru-RU.resx ou Strings.ru-RU.txt et stockez-le dans une chaîne unique nommée `Greeting` dont la valeur est « Привет! ».  
   
 6. Utilisez [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) pour compiler chaque fichier de ressources texte ou XML en un fichier .resources binaire. La sortie est un ensemble de fichiers ayant le même nom de fichier racine que les fichiers .resx ou .txt, mais avec l’extension .resources. Si vous créez l’exemple avec Visual Studio, le processus de compilation est géré automatiquement. Si vous n’utilisez pas Visual Studio, exécutez la commande suivante pour compiler les fichiers .resx en fichiers .resources :  
   

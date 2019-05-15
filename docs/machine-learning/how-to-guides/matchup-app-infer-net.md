@@ -1,21 +1,16 @@
 ---
 title: Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
 description: Découvrez comment utiliser la programmation probabiliste avec Infer.NET pour créer une application de tableau de matchs basée sur une version simplifiée de TrueSkill.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679132"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211434"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
-
-> [!NOTE]
-> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ce guide pratique porte sur la programmation probabiliste avec Infer.NET. La programmation probabiliste est une approche du Machine Learning selon laquelle des modèles personnalisés sont exprimés sous forme de programmes informatiques. Elle permet d’incorporer la connaissance du domaine dans les modèles et rend le système de Machine Learning plus facilement interprétable. Elle gère également l’inférence en ligne, c’est-à-dire le processus d’apprentissage au fil de l’intégration de nouvelles données. Infer.NET est utilisé dans différents produits de Microsoft dans Azure, Xbox et Bing.
 

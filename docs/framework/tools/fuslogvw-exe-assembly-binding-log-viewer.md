@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329516"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591525"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visionneuse du journal de liaison d’assembly)
 La Visionneuse du journal de liaison d’assembly affiche des détails sur les liaisons d’assemblys. Ces informations vous permettent d'identifier les raisons pour lesquelles le .NET Framework ne parvient pas à trouver un assembly au moment de l'exécution. Ces échecs résultent généralement d'un assembly déployé au mauvais emplacement, d'une image native qui n'est plus valide ou d'une incompatibilité entre les numéros de version ou les cultures. L'échec de la localisation d'un assembly par le Common Language Runtime s'affiche d'ordinaire sous la forme de <xref:System.TypeLoadException> dans votre application.  
@@ -51,17 +51,17 @@ fuslogvw
   
      L'outil affiche les détails suivants sur l'échec de la liaison sélectionné :  
   
-    -   La raison spécifique de l'échec de la liaison, telle que « fichier introuvable » ou « incompatibilité entre les versions »  
+    - La raison spécifique de l'échec de la liaison, telle que « fichier introuvable » ou « incompatibilité entre les versions »  
   
-    -   Des informations sur l'application qui a lancé la liaison, parmi lesquelles son nom, le répertoire racine de l'application (AppBase) et le cas échéant, une description du chemin de recherche privé  
+    - Des informations sur l'application qui a lancé la liaison, parmi lesquelles son nom, le répertoire racine de l'application (AppBase) et le cas échéant, une description du chemin de recherche privé  
   
-    -   L'identité de l'assembly recherché par l'outil  
+    - L'identité de l'assembly recherché par l'outil  
   
-    -   Une description des stratégies de version de l'application, de l'éditeur ou de l'administrateur qui ont été appliquées  
+    - Une description des stratégies de version de l'application, de l'éditeur ou de l'administrateur qui ont été appliquées  
   
-    -   Si l’assembly a été trouvé dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
+    - Si l’assembly a été trouvé dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
   
-    -   Une liste de toutes les URL recherchées  
+    - Une liste de toutes les URL recherchées  
   
  L'exemple d'entrée de journal suivant montre des informations détaillées sur l'échec d'une liaison d'assembly.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Pour supprimer toutes les entrées du journal  
   
--   Cliquez sur le bouton **Supprimer tout**.  
+- Cliquez sur le bouton **Supprimer tout**.  
   
 ### <a name="to-refresh-the-user-interface"></a>Pour actualiser l'interface utilisateur  
   
--   Cliquez sur le bouton **Actualiser**. La visionneuse ne détecte pas automatiquement les nouvelles entrées du journal pendant son exécution. Vous devez utiliser le bouton **Actualiser** pour les afficher.  
+- Cliquez sur le bouton **Actualiser**. La visionneuse ne détecte pas automatiquement les nouvelles entrées du journal pendant son exécution. Vous devez utiliser le bouton **Actualiser** pour les afficher.  
   
 ### <a name="to-change-the-log-settings"></a>Pour modifier les paramètres du journal  
   
--   Cliquez sur le bouton **Paramètres** pour ouvrir la boîte de dialogue **Paramètres du journal**.  
+- Cliquez sur le bouton **Paramètres** pour ouvrir la boîte de dialogue **Paramètres du journal**.  
   
 ### <a name="to-view-the-about-dialog"></a>Pour afficher la boîte de dialogue À propos de  
   
--   Cliquez sur le bouton **À propos de**.  
+- Cliquez sur le bouton **À propos de**.  
   
 ## <a name="binding-logs-for-native-images"></a>Liaison de journaux pour des Images natives  
  Par défaut, Fuslogvw.exe enregistre les demandes de liaison d'assembly normales. Vous pouvez également enregistrer des liaisons d’assemblys pour les images natives qui ont été créées à l’aide de l’outil [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Pour enregistrer des liaisons d'assemblys pour les images natives  
   
--   Dans le groupe **Catégories de journaux**, activez la case d’option **Images natives**.  
+- Dans le groupe **Catégories de journaux**, activez la case d’option **Images natives**.  
   
  Le journal suivant affiche un échec provoqué par une dépendance qui n'existait pas au moment de la création de l'image native pour l'application. Si les dépendances au moment de l'exécution diffèrent des dépendances lorsque Ngen.exe est exécuté, la liaison à une image native n'est pas autorisée.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Pour désactiver l'enregistrement  
   
--   Activez la case d’option **Journal désactivé**.  Notez que cette option est sélectionnée par défaut.  
+- Activez la case d’option **Journal désactivé**.  Notez que cette option est sélectionnée par défaut.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Pour enregistrer des liaisons d'assemblys dans les exceptions  
   
--   Activez la case d’option **Enregistrer dans le texte de l’exception**. Seules les informations les moins détaillées du journal de fusion sont stockées dans un texte d'exception. Pour afficher des informations complètes, utilisez un des autres paramètres.  
+- Activez la case d’option **Enregistrer dans le texte de l’exception**. Seules les informations les moins détaillées du journal de fusion sont stockées dans un texte d'exception. Pour afficher des informations complètes, utilisez un des autres paramètres.  
   
      Consultez la Remarque importante relative aux assemblys chargés comme étant indépendants du domaine.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Pour enregistrer des échecs de liaison d'assemblys  
   
--   Activez la case d’option **Enregistrer les échecs de liaison sur le disque**.  
+- Activez la case d’option **Enregistrer les échecs de liaison sur le disque**.  
   
      Consultez la Remarque importante relative aux assemblys chargés comme étant indépendants du domaine.  
   
 #### <a name="to-log-all-assembly-binds"></a>Pour enregistrer toutes les liaisons d'assemblys  
   
--   Activez la case d’option **Enregistrer toutes les liaisons sur le disque**.  
+- Activez la case d’option **Enregistrer toutes les liaisons sur le disque**.  
   
      Consultez la Remarque importante relative aux assemblys chargés comme étant indépendants du domaine.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355634"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750426"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procédure : suivre la progression du programme d’installation de .NET Framework 4.5
 
@@ -40,13 +40,13 @@ Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] est un runtime redistrib
 
 - **Codes de sortie**. Les codes de sortie suivants de la commande d’appel du programme redistribuable du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indiquent si le programme d’installation a réussi ou échoué :
 
-    - 0 : l’installation s’est terminée correctement.
+  - 0 : l’installation s’est terminée correctement.
 
-    - 3010 : l’installation s’est terminée correctement. Un redémarrage système est nécessaire.
+  - 3010 : l’installation s’est terminée correctement. Un redémarrage système est nécessaire.
 
-    - 1602 : le programme d’installation a été annulé.
+  - 1602 : le programme d’installation a été annulé.
 
-    - Tous les autres codes : le programme d’installation a rencontré des erreurs. Pour plus d’informations, examinez les fichiers journaux créés dans %temp%.
+  - Tous les autres codes : le programme d’installation a rencontré des erreurs. Pour plus d’informations, examinez les fichiers journaux créés dans %temp%.
 
 - **Annulation de l’installation**. Vous pouvez annuler l’installation à tout moment en utilisant la méthode `Abort` pour définir les indicateurs `m_downloadAbort` et `m_ installAbort` dans la section MMIO.
 

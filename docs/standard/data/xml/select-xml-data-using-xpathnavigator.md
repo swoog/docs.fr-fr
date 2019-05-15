@@ -1,5 +1,5 @@
 ---
-title: Sélection de données XML à l’aide de XPathNavigator
+title: Sélection de données XML à l'aide de XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a7aebc98627a079d08870b59e4a848a51dbfaaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589991"
 ---
-# <a name="select-xml-data-using-xpathnavigator"></a>Sélection de données XML à l’aide de XPathNavigator
+# <a name="select-xml-data-using-xpathnavigator"></a>Sélection de données XML à l'aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> offre un ensemble de méthodes permettant de sélectionner une collection de nœuds dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> à l’aide d’une expression XPath. Une fois la collection de nœuds sélectionnée, vous pouvez y effectuer des itérations.  
   
 ## <a name="xpathnavigator-selection-methods"></a>Méthodes de sélection de XPathNavigator  
@@ -24,9 +24,9 @@ La classe <xref:System.Xml.XPath.XPathNavigator> offre un ensemble de méthodes 
 ### <a name="selecting-nodes-using-xpath-expressions"></a>Sélection de nœuds à l’aide d’expressions XPath  
  Pour sélectionner une collection de nœuds à l’aide d’une expression XPath, utilisez l’une des méthodes de sélection suivantes.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  Lorsqu'elles sont appelées, ces méthodes retournent une collection de nœuds dans laquelle vous pouvez vous déplacer librement à l'aide d'un objet <xref:System.Xml.XPath.XPathNodeIterator> ou d'un objet <xref:System.Xml.XPath.XPathNavigator> si un seul nœud est sélectionné.  
   

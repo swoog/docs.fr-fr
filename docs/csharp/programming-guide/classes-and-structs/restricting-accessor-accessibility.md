@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582987"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restriction d’accessibilité de l’accesseur (Guide de programmation C#)
 Les parties [get](../../../csharp/language-reference/keywords/get.md) et [set](../../../csharp/language-reference/keywords/set.md) d’une propriété ou d’un indexeur sont appelées *accesseurs*. Par défaut, ces accesseurs ont la visibilité ou le niveau d’accès de la propriété ou de l’indexeur auquel ils appartiennent. Pour plus d’informations, consultez [Niveaux d’accessibilité](../../../csharp/language-reference/keywords/accessibility-levels.md). Toutefois, il peut parfois s’avérer utile de restreindre l’accès à l’un de ces accesseurs. En général, cela implique de restreindre l’accessibilité de l’accesseur `set`, tout en gardant l’accesseur `get` publiquement accessible. Par exemple :  
@@ -27,13 +27,13 @@ Les parties [get](../../../csharp/language-reference/keywords/get.md) et [set](.
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Restrictions sur les modificateurs d’accès sur les accesseurs  
  L’utilisation de modificateurs d’accesseurs sur les propriétés ou les indexeurs est soumise aux conditions suivantes :  
   
--   Vous ne pouvez pas utiliser de modificateurs d’accesseur sur une interface ou sur une implémentation de membre d’[interface](../../../csharp/language-reference/keywords/interface.md) explicite.  
+- Vous ne pouvez pas utiliser de modificateurs d’accesseur sur une interface ou sur une implémentation de membre d’[interface](../../../csharp/language-reference/keywords/interface.md) explicite.  
   
--   Vous pouvez utiliser les modificateurs d’accesseur uniquement si la propriété ou l’indexeur dispose à la fois d’accesseurs `set` et `get`. Dans ce cas, le modificateur est autorisé uniquement sur l’un des deux accesseurs.  
+- Vous pouvez utiliser les modificateurs d’accesseur uniquement si la propriété ou l’indexeur dispose à la fois d’accesseurs `set` et `get`. Dans ce cas, le modificateur est autorisé uniquement sur l’un des deux accesseurs.  
   
--   Si la propriété ou l’indexeur possède un modificateur [override](../../../csharp/language-reference/keywords/override.md), le modificateur d’accesseur doit correspondre à l’accesseur de l’accesseur substitué, le cas échant.  
+- Si la propriété ou l’indexeur possède un modificateur [override](../../../csharp/language-reference/keywords/override.md), le modificateur d’accesseur doit correspondre à l’accesseur de l’accesseur substitué, le cas échant.  
   
--   Le niveau d’accessibilité sur l’accesseur doit être plus restrictif que le niveau d’accessibilité sur la propriété ou l’indexeur eux-mêmes.  
+- Le niveau d’accessibilité sur l’accesseur doit être plus restrictif que le niveau d’accessibilité sur la propriété ou l’indexeur eux-mêmes.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modificateurs d’accès sur les accesseurs de substitution  
  Quand vous substituez une propriété ou un indexeur, les accesseurs remplacés doivent être accessibles au code de substitution. Par ailleurs, l’accessibilité de la propriété/l’indexeur et de ses accesseurs doivent correspondre à la propriété/l’indexeur et à ses accesseurs substitués. Par exemple :  

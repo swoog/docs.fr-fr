@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660532"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583637"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitaire client des services de données WCF (DataSvcUtil.exe)
 
@@ -25,7 +25,7 @@ DataSvcUtil.exe est un outil de ligne de commande fourni par WCF Data Services q
 
 Pour plus d'informations, voir [Procédure : Générer manuellement les Classes de Service de données Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
-L'outil DataSvcUtil.exe est installé dans le répertoire [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Dans de nombreux cas, celui-ci se trouve dans *C:\Windows\Microsoft.NET\Framework\v4.0*. Pour les systèmes 64 bits, celui-ci se trouve dans *C:\Windows\Microsoft.NET\Framework64\v4.0*. Vous pouvez également accéder à l’outil DataSvcUtil.exe à partir de l’invite de commandes développeur pour Visual Studio.
+L’outil DataSvcUtil.exe est installé dans le répertoire .NET Framework. Dans de nombreux cas, celui-ci se trouve dans *C:\Windows\Microsoft.NET\Framework\v4.0*. Pour les systèmes 64 bits, celui-ci se trouve dans *C:\Windows\Microsoft.NET\Framework64\v4.0*. Vous pouvez également accéder à l’outil DataSvcUtil.exe à partir de l’invite de commandes développeur pour Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 

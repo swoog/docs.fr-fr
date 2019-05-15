@@ -2,15 +2,15 @@
 title: Hébergement dans une application managée
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855827"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591735"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
-Services Windows Communication Foundation (WCF) peuvent être hébergés dans les [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application. Les services auto-hébergés constituent l'option d'hébergement la plus flexible parce qu'ils requièrent le déploiement de moins d'infrastructure. Toutefois, il est également l’option d’hébergement moins fiable, car les applications gérées ne fournissent pas d’hébergement avancés et de fonctionnalités de gestion d’autres options d’hébergement dans WCF, comme les services Internet Information Services (IIS) et Windows.  
+Services de Windows Communication Foundation (WCF) peuvent être hébergés dans n’importe quelle application .NET Framework. Les services auto-hébergés constituent l'option d'hébergement la plus flexible parce qu'ils requièrent le déploiement de moins d'infrastructure. Toutefois, il est également l’option d’hébergement moins fiable, car les applications gérées ne fournissent pas d’hébergement avancés et de fonctionnalités de gestion d’autres options d’hébergement dans WCF, comme les services Internet Information Services (IIS) et Windows.  
   
  Pour créer un service auto-hébergé, créez et ouvrez une instance d'objet <xref:System.ServiceModel.ServiceHost>, qui démarre un service d'écoute des messages. Pour plus d'informations, voir [Procédure : Héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   

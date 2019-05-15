@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633321"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analyse de chaînes numériques dans .NET
 Tous les types numériques disposent de deux méthodes d’analyse statiques, `Parse` et `TryParse`, que vous pouvez utiliser pour convertir la représentation sous forme de chaîne d’un nombre en type numérique. Ces méthodes vous permettent d’analyser les chaînes qui ont été générées à l’aide de chaînes de format documentées dans [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) et [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md). Par défaut, les méthodes `Parse` et `TryParse` peuvent convertir correctement les chaînes qui contiennent uniquement des chiffres décimaux intégraux en valeurs entières. Ils peuvent convertir correctement les chaînes qui contiennent des chiffres décimaux intégraux et fractionnaires, des séparateurs de groupe et un séparateur décimal en valeurs à virgule flottante. La méthode `Parse` lève une exception si l’opération échoue, tandis que la méthode `TryParse` retourne `false`.  
@@ -28,9 +28,9 @@ Tous les types numériques disposent de deux méthodes d’analyse statiques, `P
   
  Un fournisseur de format est représenté par une implémentation <xref:System.IFormatProvider>. Cette interface a un seul membre, la méthode <xref:System.IFormatProvider.GetFormat%2A>, dont l’unique paramètre est un objet <xref:System.Type> qui représente le type à mettre en forme. Cette méthode retourne l’objet qui fournit des informations de mise en forme. .NET prend en charge les deux implémentations <xref:System.IFormatProvider> suivantes pour analyser les chaînes numériques :  
   
--   Objet <xref:System.Globalization.CultureInfo> dont la méthode <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retourne un objet <xref:System.Globalization.NumberFormatInfo> qui fournit des informations de mise en forme propres à la culture.  
+- Objet <xref:System.Globalization.CultureInfo> dont la méthode <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retourne un objet <xref:System.Globalization.NumberFormatInfo> qui fournit des informations de mise en forme propres à la culture.  
   
--   Objet <xref:System.Globalization.NumberFormatInfo> dont la méthode <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> est retournée.  
+- Objet <xref:System.Globalization.NumberFormatInfo> dont la méthode <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> est retournée.  
   
  L’exemple suivant essaie de convertir chaque chaîne d’un tableau en une valeur <xref:System.Double>. Il commence par essayer d’analyser la chaîne à l’aide d’un fournisseur de format qui reflète les conventions de la culture anglophone (États-Unis). Si cette opération lève une exception <xref:System.FormatException>, il tente d’analyser la chaîne à l’aide d’un fournisseur de format qui reflète les conventions de la culture française (France).  
   

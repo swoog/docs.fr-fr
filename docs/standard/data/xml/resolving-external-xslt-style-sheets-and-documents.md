@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590077"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Résolution de feuilles de style XSLT externes et de documents
 Lors d'une transformation, il peut s'avérer nécessaire de résoudre des ressources externes à plusieurs moments.  
@@ -20,11 +20,11 @@ Lors d'une transformation, il peut s'avérer nécessaire de résoudre des ressou
   
  Lors d'une transformation, il peut s'avérer nécessaire de résoudre des ressources externes à plusieurs moments :  
   
--   pendant la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> pour localiser une feuille de style externe ;  
+- pendant la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> pour localiser une feuille de style externe ;  
   
--   pendant la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> pour résoudre tout élément `<xsl:include>` ou `<xsl:import>` trouvé dans la feuille de style ;  
+- pendant la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> pour résoudre tout élément `<xsl:include>` ou `<xsl:import>` trouvé dans la feuille de style ;  
   
--   pendant la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A> pour résoudre toute fonction `document()`.  
+- pendant la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A> pour résoudre toute fonction `document()`.  
   
 ## <a name="using-the-xmlresolver-class"></a>Utilisation de la classe XmlResolver  
  Si l'authentification est nécessaire pour accéder à une ressource réseau, utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui ont un paramètre <xref:System.Xml.XmlResolver> à passer à l'objet <xref:System.Xml.XmlResolver> qui possède le jeu de propriétés d'informations d'identification nécessaire.  

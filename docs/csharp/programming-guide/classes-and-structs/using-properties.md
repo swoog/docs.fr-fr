@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582962"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilisation de propriétés (Guide de programmation C#)
 Les propriétés allient des caractéristiques des champs et des méthodes. Pour l’utilisateur d’un objet, une propriété s’apparente à un champ. Pour accéder à celle-ci, il doit utiliser la même syntaxe. Pour l’implémenteur d’une classe, une propriété est constituée d’un ou deux blocs de code, représentant un accesseur [get](../../../csharp/language-reference/keywords/get.md) et/ou un accesseur [set](../../../csharp/language-reference/keywords/set.md). Le bloc de code correspondant à l’accesseur `get` est exécuté à la lecture de la propriété ; le bloc de code correspondant à l’accesseur `set` est exécuté au moment où une nouvelle valeur est assignée à la propriété. Une propriété sans accesseur `set` est considérée comme étant en lecture seule. Une propriété sans accesseur `get` est considérée comme étant en écriture seule. Une propriété qui possède les deux accesseurs est en lecture-écriture.  
@@ -85,11 +85,11 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  Voici les points importants de l’exemple précédent :  
   
--   La propriété `Name` de la classe dérivée masque la propriété `Name` de la classe de base. En pareil cas, le modificateur `new` est utilisé dans la déclaration de la propriété de la classe dérivée :  
+- La propriété `Name` de la classe dérivée masque la propriété `Name` de la classe de base. En pareil cas, le modificateur `new` est utilisé dans la déclaration de la propriété de la classe dérivée :  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   La conversion de type `(Employee)` est utilisée pour accéder à la propriété masquée de la classe de base :  
+- La conversion de type `(Employee)` est utilisée pour accéder à la propriété masquée de la classe de base :  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

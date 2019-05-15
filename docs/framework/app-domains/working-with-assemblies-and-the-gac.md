@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592742"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Utilisation d'assemblys et du Global Assembly Cache
 Si vous prévoyez de partager un assembly entre plusieurs applications, vous pouvez l’installer dans le Global Assembly Cache. Chaque ordinateur où le common language runtime est installé a ce cache de code à l’échelle de l’ordinateur. Le Global Assembly Cache stocke des assemblys spécialement destinés à être partagés entre plusieurs applications sur l’ordinateur. Un assembly doit avoir un nom fort pour être installé dans le Global Assembly Cache.  
@@ -27,19 +27,19 @@ Si vous prévoyez de partager un assembly entre plusieurs applications, vous pou
   
  Vous pouvez souhaiter installer un assembly dans le Global Assembly Cache pour plusieurs raisons :  
   
--   Emplacement partagé.  
+- Emplacement partagé.  
   
      Les assemblys qui doivent être utilisés par des applications peuvent être placés dans le Global Assembly Cache. Par exemple, si toutes les applications doivent utiliser un assembly qui se trouve dans le Global Assembly Cache, vous pouvez ajouter une instruction de stratégie de version au fichier Machine.config pour rediriger les références à l’assembly.  
   
--   Sécurité des fichiers.  
+- Sécurité des fichiers.  
   
      Les administrateurs protègent souvent le répertoire systemroot en utilisant une liste de contrôle d’accès pour contrôler l’accès en écriture et en exécution. Le Global Assembly Cache étant installé dans le répertoire systemroot, il hérite de la liste de contrôle d’accès de ce répertoire. Il est recommandé que seuls les utilisateurs disposant de privilèges d’administrateur soient autorisés à supprimer des fichiers du Global Assembly Cache.  
   
--   Contrôle de version côte à côte.  
+- Contrôle de version côte à côte.  
   
      Plusieurs copies des assemblys avec le même nom mais avec des informations de version différentes peuvent être conservées dans le Global Assembly Cache.  
   
--   Emplacements de recherche supplémentaires.  
+- Emplacements de recherche supplémentaires.  
   
      Le common language runtime recherche dans le Global Assembly Cache un assembly qui correspond à l’assembly demandé avant de chercher ailleurs ou d’utiliser les informations du code base dans un fichier de configuration.  
   
@@ -49,7 +49,7 @@ Si vous prévoyez de partager un assembly entre plusieurs applications, vous pou
  [Guide pratique pour installer un assembly dans le Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Décrit les façons d’installer un assembly dans le Global Assembly Cache.  
   
- [Guide pratique pour visualiser le contenu du Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ [Guide pratique pour visualiser le contenu du Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
  Explique comment utiliser [Gacutil.exe (outil Global Assembly Cache](../../../docs/framework/tools/gacutil-exe-gac-tool.md) pour visualiser le contenu du Global Assembly Cache.  
   
  [Guide pratique pour supprimer un assembly du Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  

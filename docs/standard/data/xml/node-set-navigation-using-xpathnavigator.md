@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590177"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Navigation dans la collection de nœuds à l’aide de XPathNavigator
 Vous pouvez parcourir les nœuds d'un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> à l'aide des méthodes de navigation entre les collections de nœuds de la classe <xref:System.Xml.XPath.XPathNavigator>. Vous pouvez parcourir tous ces nœuds ou certaines collections de nœuds retournées par l'une des méthodes de sélection de la classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -36,21 +36,21 @@ Vous pouvez parcourir les nœuds d'un objet <xref:System.Xml.XPath.XPathDocument
 ## <a name="comments-and-processing-instruction-node-navigation"></a>Commentaires et instructions de traitement de la navigation entre les nœuds  
  Les méthodes suivantes de la classe <xref:System.Xml.XPath.XPathNavigator> sont valide pour le déplacement de commentaires ou d'instructions de traitement d'autres nœuds dans un document XML.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
 ## <a name="see-also"></a>Voir aussi
 

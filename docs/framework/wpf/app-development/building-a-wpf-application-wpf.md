@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: ff0c9ab4c4257e39b0d0ae0f9f3799e2847e7068
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31b6bf1c58b965a6e96c24cb960cc542a990a7c7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662169"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589391"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
-Applications Windows Presentation Foundation (WPF) peuvent être construites comme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exécutables (.exe), des bibliothèques (.dll), ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  
+Les applications de Windows Presentation Foundation (WPF) peuvent être créées en tant que fichiers exécutables (.exe) de .NET Framework, des bibliothèques (.dll) ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Génération d'une application WPF  

@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589810"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Intégration de XML aux données relationnelles et à ADO.NET
 LaLa classe **XmlDataDocument** est une classe dérivée de **XmlDocument** et contient des données XML. L'avantage de **XmlDataDocument** est de fournir une passerelle entre les données relationnelles et hiérarchiques. Il s’agit d’un **XmlDocument** qui peut être lié à un **DataSet** et les deux classes peuvent synchroniser des changements apportés aux données contenues dans ces deux classes. Un **XmlDocument** lié à un **DataSet** permet à du XML de s'intégrer à des données relationnelles, et il n'est pas nécessaire que vos données soient représentées soit sous la forme XML, soit dans un format relationnel. Vous pouvez effectuer les deux sans être limité à une représentation unique des données.  
   
  Les avantages d'avoir les données disponibles sous deux vues sont les suivants :  
   
--   La portion structurée d'un document XML peut être mappée à un groupe de données et peut être stockée, indexée et recherchée efficacement.  
+- La portion structurée d'un document XML peut être mappée à un groupe de données et peut être stockée, indexée et recherchée efficacement.  
   
--   Transformations, validation et navigation peuvent s’effectuer de manière efficace par l’intermédiaire d’un modèle de curseur sur les données XML stockées de manière relationnelle. Il est parfois possible d'effectuer cette opération plus efficacement par rapport à des structures relationnelles que lorsque le XML est stocké dans un modèle **XmlDocument**.  
+- Transformations, validation et navigation peuvent s’effectuer de manière efficace par l’intermédiaire d’un modèle de curseur sur les données XML stockées de manière relationnelle. Il est parfois possible d'effectuer cette opération plus efficacement par rapport à des structures relationnelles que lorsque le XML est stocké dans un modèle **XmlDocument**.  
   
--   Le **DataSet** peut stocker une portion du XML. Vous pouvez donc utiliser**XPath** ou **XslTransform** pour ne stocker dans un **DataSet** que les éléments et attributs présentant un intérêt. À partir de là, il est possible d'apporter des changements au sous-ensemble, plus petit et filtré, des données, les changements se propageant aux données plus volumineuses dans **XmlDataDocument**.  
+- Le **DataSet** peut stocker une portion du XML. Vous pouvez donc utiliser**XPath** ou **XslTransform** pour ne stocker dans un **DataSet** que les éléments et attributs présentant un intérêt. À partir de là, il est possible d'apporter des changements au sous-ensemble, plus petit et filtré, des données, les changements se propageant aux données plus volumineuses dans **XmlDataDocument**.  
   
  Vous pouvez également effectuer une transformation sur des données chargées dans le**DataSet** à partir de SQL Server. Une autre option consiste à lier des contrôles WebForm et WinForm managés par style de classes .NET Framework à un **DataSet** qui a été rempli à partir d'un flux d'entrée XML.  
   

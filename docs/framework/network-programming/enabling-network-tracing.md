@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169709"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624632"
 ---
 # <a name="enabling-network-tracing"></a>Activation du suivi réseau
 Le traçage réseau fournit l’accès aux informations sur les appels de méthodes et le trafic réseau généré par une application managée. Vous devez effectuer les tâches suivantes pour activer le traçage réseau dans votre application :  
   
--   Compiler votre code avec le traçage activé. Voir [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) pour plus d’informations sur les commutateurs du compilateur nécessaires pour activer le traçage.  
+- Compiler votre code avec le traçage activé. Voir [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) pour plus d’informations sur les commutateurs du compilateur nécessaires pour activer le traçage.  
   
--   Spécifier une destination de sortie de traçage.  
+- Spécifier une destination de sortie de traçage.  
   
--   Configurer le comportement du traçage réseau. Voir [Guide pratique pour configurer le traçage réseau](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) pour obtenir des informations détaillées.  
+- Configurer le comportement du traçage réseau. Voir [Guide pratique pour configurer le traçage réseau](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) pour obtenir des informations détaillées.  
   
  Les destinations de trace les plus courantes, également appelées écouteurs de suivi, sont l’écouteur par défaut et le fichier journal.  
   

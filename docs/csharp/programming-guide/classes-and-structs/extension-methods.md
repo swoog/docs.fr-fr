@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a686716c4e8ed24c9b28426542cdf6bc6aa991b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600222"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -73,9 +73,9 @@ using System.Linq;
   
  Si vous implémentez des méthodes d’extension pour un type donné, prenez en compte les points suivants :  
   
--   Une méthode d'extension ne sera jamais appelée si elle a la même signature qu'une méthode définie dans le type.  
+- Une méthode d'extension ne sera jamais appelée si elle a la même signature qu'une méthode définie dans le type.  
   
--   Les méthodes d'extension sont mises en portée au niveau de l'espace de noms. Par exemple, si vous avez plusieurs classes statiques qui contiennent des méthodes d'extension dans un espace de noms unique nommé `Extensions`, elles seront toutes mises en portée par la directive `using Extensions;`.  
+- Les méthodes d'extension sont mises en portée au niveau de l'espace de noms. Par exemple, si vous avez plusieurs classes statiques qui contiennent des méthodes d'extension dans un espace de noms unique nommé `Extensions`, elles seront toutes mises en portée par la directive `using Extensions;`.  
   
  Pour une bibliothèque de classes que vous avez implémentée, vous ne devez pas utiliser de méthodes d'extension pour éviter d'incrémenter le numéro de version d'un assembly. Si vous souhaitez ajouter une fonctionnalité importante à une bibliothèque dont le code source vous appartient, vous devez suivre les directives .NET Framework standard relatives à la gestion de version des assemblys. Pour plus d’informations, consultez [Versioning des assemblys](../../../../docs/framework/app-domains/assembly-versioning.md).  
   

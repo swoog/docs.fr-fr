@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641034"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Exécution côte à côte dans .NET Framework
 L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versions d'une application ou d'un composant sur le même ordinateur. Vous pouvez avoir plusieurs versions du Common Language Runtime et plusieurs versions d'applications et de composants qui utilisent une version du runtime sur le même ordinateur simultanément.  
@@ -33,15 +33,15 @@ L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versi
   
  L'exécution côte à côte et le .NET Framework fournissent les fonctionnalités suivantes permettant d'éliminer les conflits de DLL :  
   
--   Assemblys avec nom fort.  
+- Assemblys avec nom fort.  
   
      L'exécution côte à côte utilise des assemblys avec nom fort pour lier des informations de type à une version spécifique d'un assembly. Cela permet d'éviter la liaison d'une application ou d'un composant à une version non valide d'un assembly. Les assemblys avec nom fort permettent également à plusieurs versions d'un fichier de se trouver sur le même ordinateur et d'être utilisé par des applications. Pour plus d’informations, consultez [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Stockage de code prenant en compte la version.  
+- Stockage de code prenant en compte la version.  
   
      Le .NET Framework permet le stockage de code prenant en compte la version dans le Global Assembly Cache. Le Global Assembly Cache est un cache de code à l'échelle de l'ordinateur présent sur tous les ordinateurs où est installé le .NET Framework. Il stocke des assemblys basés sur les informations de version, de culture et de l'éditeur et prend en charge plusieurs versions de composants et d'applications. Pour plus d’informations, consultez [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
   
--   Isolement.  
+- Isolement.  
   
      À l'aide du .NET Framework, vous pouvez créer des applications et des composants qui s'exécutent de manière isolée. L'isolement est une fonctionnalité essentielle de l'exécution côte à côte. Elle implique la connaissance des ressources que vous utilisez et le partage de celles-ci en toute confiance entre plusieurs versions d'une application ou d'un composant. L'isolement comprend également le stockage de fichiers d'une façon spécifique à la version. Pour plus d’informations sur l’isolation, consultez [Recommandations en matière de création de composants pour l’exécution côte à côte](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versi
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Détermination de la version du runtime à charger  
  Le common language runtime se sert des informations suivantes pour déterminer la version du runtime à charger pour une application :  
   
--   Les versions du runtime disponibles  
+- Les versions du runtime disponibles  
   
--   Les versions du runtime prises en charge par l'application  
+- Les versions du runtime prises en charge par l'application  
   
 ### <a name="supported-runtime-versions"></a>Versions du runtime prises en charge  
  Le runtime se base sur le fichier de configuration de l'application et l'en-tête du fichier exécutable portable (PE) pour déterminer la version du runtime prise en charge par l'application. En l'absence de fichier de configuration de l'application, le runtime charge la version du runtime qui est spécifiée dans l'en-tête du fichier PE de l'application (si cette version est disponible).  

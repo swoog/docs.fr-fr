@@ -5,12 +5,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 704b66e6cdec5caa47f85ed8e3acbd2a6a73b730
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125740"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598238"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out, modificateur de paramètre (référence C#)
 Le mot clé `out` entraîne le passage des arguments par référence. Il fait du paramètre formel un alias de l’argument, qui doit être une variable. En d’autres termes, toute opération portant sur le paramètre est effectuée sur l’argument. Il est similaire au mot clé [ref](ref.md), à la différence que `ref` nécessite que la variable soit initialisée avant d’être passée. Il est également similaire au mot clé [in](in-parameter-modifier.md), à la différence que `in` n’autorise pas la méthode appelée à modifier la valeur d’argument. Pour utiliser un paramètre `out`, la définition de la méthode et la méthode d'appel doivent utiliser explicitement le mot clé `out`. Par exemple :  
@@ -44,9 +44,9 @@ Les propriétés ne sont pas des variables et, par conséquent, ne peuvent pas �
   
 Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types de méthodes suivants :  
   
--   Méthodes async, que vous définissez à l’aide du modificateur [async](../../../csharp/language-reference/keywords/async.md).  
+- Méthodes async, que vous définissez à l’aide du modificateur [async](../../../csharp/language-reference/keywords/async.md).  
   
--   Les méthodes Iterator, qui incluent une instruction [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
+- Les méthodes Iterator, qui incluent une instruction [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
 
 ## <a name="declaring-out-parameters"></a>Déclarer des paramètres `out`   
 

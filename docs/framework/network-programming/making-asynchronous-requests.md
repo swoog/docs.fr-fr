@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647302"
 ---
 # <a name="making-asynchronous-requests"></a>Requêtes asynchrones
 Les classes <xref:System.Net> utilisent le modèle de programmation asynchrone standard du .NET Framework pour l’accès asynchrone à des ressources Internet. Les méthodes <xref:System.Net.WebRequest.BeginGetResponse%2A> et <xref:System.Net.WebRequest.EndGetResponse%2A> de la classe <xref:System.Net.WebRequest> démarrent et terminent les demandes asynchrones pour une ressource Internet.  
@@ -32,15 +32,15 @@ Les classes <xref:System.Net> utilisent le modèle de programmation asynchrone s
   
  La classe **ClientGetAsync** implémente une demande asynchrone à une ressource Internet et écrit la réponse résultante sur la console. Elle contient les méthodes et les propriétés décrites dans la liste suivante.  
   
--   La propriété `allDone` contient une instance de la classe <xref:System.Threading.ManualResetEvent> qui signale la fin de la demande.  
+- La propriété `allDone` contient une instance de la classe <xref:System.Threading.ManualResetEvent> qui signale la fin de la demande.  
   
--   La méthode `Main()` lit la ligne de commande et démarre la demande pour la ressource Internet spécifiée. Elle crée la **WebRequest** `wreq` et le **RequestState** `rs`, appelle **BeginGetResponse** pour commencer à traiter la demande, puis appelle la méthode `allDone.WaitOne()` afin que l’application ne quitte pas jusqu’à la fin du rappel. Une fois que la réponse est lue à partir de la ressource Internet, `Main()` l’écrit sur la console et l’application se termine.  
+- La méthode `Main()` lit la ligne de commande et démarre la demande pour la ressource Internet spécifiée. Elle crée la **WebRequest** `wreq` et le **RequestState** `rs`, appelle **BeginGetResponse** pour commencer à traiter la demande, puis appelle la méthode `allDone.WaitOne()` afin que l’application ne quitte pas jusqu’à la fin du rappel. Une fois que la réponse est lue à partir de la ressource Internet, `Main()` l’écrit sur la console et l’application se termine.  
   
--   La méthode `showusage()` écrit un exemple de ligne de commande sur la console. Elle est appelée par `Main()` quand un URI n’est pas spécifié sur la ligne de commande.  
+- La méthode `showusage()` écrit un exemple de ligne de commande sur la console. Elle est appelée par `Main()` quand un URI n’est pas spécifié sur la ligne de commande.  
   
--   La méthode `RespCallBack()` implémente la méthode de rappel asynchrone pour la demande Internet. Elle crée l’instance de **WebResponse** contenant la réponse de la ressource Internet, obtient le flux de réponse et démarre la lecture des données du flux en mode asynchrone.  
+- La méthode `RespCallBack()` implémente la méthode de rappel asynchrone pour la demande Internet. Elle crée l’instance de **WebResponse** contenant la réponse de la ressource Internet, obtient le flux de réponse et démarre la lecture des données du flux en mode asynchrone.  
   
--   La méthode `ReadCallBack()` implémente la méthode de rappel asynchrone pour la lecture du flux de réponse. Elle transfère les données reçues de la ressource Internet dans la propriété **ResponseData** de l’instance de **RequestState**, puis démarre une autre lecture asynchrone du flux de réponse jusqu’à ce qu’aucune donnée ne soit retournée. Une fois que toutes les données ont été lues, `ReadCallBack()` ferme le flux de réponse et appelle la méthode `allDone.Set()` pour indiquer que la réponse complète est présente dans **ResponseData**.  
+- La méthode `ReadCallBack()` implémente la méthode de rappel asynchrone pour la lecture du flux de réponse. Elle transfère les données reçues de la ressource Internet dans la propriété **ResponseData** de l’instance de **RequestState**, puis démarre une autre lecture asynchrone du flux de réponse jusqu’à ce qu’aucune donnée ne soit retournée. Une fois que toutes les données ont été lues, `ReadCallBack()` ferme le flux de réponse et appelle la méthode `allDone.Set()` pour indiquer que la réponse complète est présente dans **ResponseData**.  
   
     > [!NOTE]
     >  Il est essentiel que tous les flux réseau soient fermés. Si vous ne fermez pas chaque demande et chaque flux de réponse, votre application n’aura plus suffisamment de connexions au serveur pour traiter des demandes supplémentaires.  

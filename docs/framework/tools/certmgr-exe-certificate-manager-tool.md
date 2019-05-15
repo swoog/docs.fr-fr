@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591570"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (outil de gestionnaire de certificats)
 L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de certificats de confiance (CTL) et les listes de révocation de certificats (CRL).  
@@ -75,13 +75,13 @@ L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de c
 ## <a name="remarks"></a>Remarques  
  Certmgr.exe exécute les fonctions de base suivantes :  
   
--   Affiche les certificats, listes de certificats de confiance et listes de révocation de certificats dans la console.  
+- Affiche les certificats, listes de certificats de confiance et listes de révocation de certificats dans la console.  
   
--   Ajoute des certificats, listes de certificats de confiance et listes de révocation de certificats à un magasin de certificats.  
+- Ajoute des certificats, listes de certificats de confiance et listes de révocation de certificats à un magasin de certificats.  
   
--   Supprime des certificats, listes de certificats de confiance et listes de révocation de certificats dans un magasin de certificats.  
+- Supprime des certificats, listes de certificats de confiance et listes de révocation de certificats dans un magasin de certificats.  
   
--   Enregistre dans un fichier un certificat X.509, une liste de certificats de confiance ou une liste de révocation de certificats en provenance d'un magasin de certificats.  
+- Enregistre dans un fichier un certificat X.509, une liste de certificats de confiance ou une liste de révocation de certificats en provenance d'un magasin de certificats.  
   
  Certmgr.exe fonctionne avec deux types de magasins de certificats : **StoreFile** et le magasin système. Il n'est pas nécessaire de spécifier le type de magasin de certificats ; Certmgr.exe est capable de l'identifier et d'effectuer les opérations appropriées.  
   

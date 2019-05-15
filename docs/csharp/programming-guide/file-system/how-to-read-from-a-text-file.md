@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978018"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608533"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Procédure : Lire un fichier texte (Guide de programmation C#)
 Cet exemple lit le contenu d’un fichier texte à l’aide des méthodes statiques <xref:System.IO.File.ReadAllText%2A> et <xref:System.IO.File.ReadAllLines%2A> de la classe <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Cet exemple lit le contenu d’un fichier texte à l’aide des méthodes statiq
 ## <a name="robust-programming"></a>Programmation fiable  
  Les conditions ci-dessous peuvent générer une exception.  
   
--   Le fichier n’existe pas ou ne se trouve pas à l’emplacement spécifié. Vérifiez le chemin et l’orthographe du nom de fichier.  
+- Le fichier n’existe pas ou ne se trouve pas à l’emplacement spécifié. Vérifiez le chemin et l’orthographe du nom de fichier.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Ne comptez pas sur le nom d’un fichier pour en déduire le contenu. Par exemple, le fichier `myFile.cs` peut ne pas être un fichier source C#.  

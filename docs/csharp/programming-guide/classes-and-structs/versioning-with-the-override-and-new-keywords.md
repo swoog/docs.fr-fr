@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975855"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583124"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versioning avec les mots clés override et new (Guide de programmation C#)
 Le langage C# est conçu de telle sorte que la gestion de version entre les classes de [base](../../../csharp/language-reference/keywords/base.md) et les classes dérivées dans différentes bibliothèques puisse évoluer et préserver une compatibilité descendante. Cela signifie, par exemple, que l’introduction dans une [classe](../../../csharp/language-reference/keywords/class.md) de base d’un nouveau membre portant le même nom qu’un membre dans une classe dérivée est totalement prise en charge par C# et n’engendre pas de comportement imprévisible. Cela signifie également qu'une classe doit indiquer de façon explicite si une méthode est conçue pour se substituer à une méthode héritée ou s'il s'agit d'une nouvelle méthode qui masque une méthode héritée portant un nom similaire.  
   
  Dans C#, les classes dérivées peuvent contenir des méthodes portant le même nom que des méthodes de classe de base.  
   
--   La méthode de classe de base doit être définie comme [virtuelle](../../../csharp/language-reference/keywords/virtual.md).  
+- La méthode de classe de base doit être définie comme [virtuelle](../../../csharp/language-reference/keywords/virtual.md).  
   
--   Si la méthode dans la classe dérivée n’est pas précédée des mots clés [new](../../../csharp/language-reference/keywords/new.md) ou [override](../../../csharp/language-reference/keywords/override.md), le compilateur émet un avertissement et la méthode se comporte comme si le mot clé `new` était présent.  
+- Si la méthode dans la classe dérivée n’est pas précédée des mots clés [new](../../../csharp/language-reference/keywords/new.md) ou [override](../../../csharp/language-reference/keywords/override.md), le compilateur émet un avertissement et la méthode se comporte comme si le mot clé `new` était présent.  
   
--   Si la méthode dans la classe dérivée est précédée du mot clé `new`, la méthode est définie comme étant indépendante de la méthode dans la classe de base.  
+- Si la méthode dans la classe dérivée est précédée du mot clé `new`, la méthode est définie comme étant indépendante de la méthode dans la classe de base.  
   
--   Si la méthode dans la classe dérivée est précédée du mot clé `override`, les objets de la classe dérivée appelleront cette méthode plutôt que la méthode de la classe de base.  
+- Si la méthode dans la classe dérivée est précédée du mot clé `override`, les objets de la classe dérivée appelleront cette méthode plutôt que la méthode de la classe de base.  
   
--   La méthode de la classe de base peut être appelée à partir de la classe dérivée à l’aide du mot clé `base`.  
+- La méthode de la classe de base peut être appelée à partir de la classe dérivée à l’aide du mot clé `base`.  
   
--   Les mots clés `override`, `virtual` et `new` peuvent également être appliqués aux propriétés, indexeurs et événements.  
+- Les mots clés `override`, `virtual` et `new` peuvent également être appliqués aux propriétés, indexeurs et événements.  
   
  Par défaut, les méthodes C# ne sont pas virtuelles. Si une méthode est déclarée comme virtuelle, toute classe héritant de la méthode peut implémenter sa propre version. Pour créer une méthode virtuelle, le modificateur `virtual` est utilisé dans la déclaration de méthode de la classe de base. La classe dérivée peut ensuite remplacer la méthode virtuelle de base avec le mot clé `override` ou masquer la méthode virtuelle dans la classe de base avec le mot clé `new`. Si ni le mot clé `override` ni le mot clé `new` ne sont spécifiés, le compilateur émettra un avertissement et la méthode dans la classe dérivée masquera la méthode dans la classe de base.  
   

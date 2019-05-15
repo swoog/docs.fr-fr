@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 61ed671b48fd07559c8403b9f5761dbaee3a66ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612576"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589734"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procédure : lier un contrôle Windows Forms à un objet de fabrique
 Quand vous créez des contrôles qui interagissent avec des données, vous devez parfois lier un contrôle à un objet ou à une méthode qui génère d'autres objets. Un tel objet ou une telle méthode porte le nom de fabrique. Votre source de données peut par exemple être la valeur de retour d'un appel de méthode, plutôt qu'un objet en mémoire ou un type. Vous pouvez lier un contrôle à ce genre de source de données tant que la source retourne une collection.  
@@ -34,8 +34,6 @@ Quand vous créez des contrôles qui interagissent avec des données, vous devez
  Cet exemple nécessite :  
   
 - Références aux assemblys System, System.Data, System.Drawing et System.Windows.Forms.  
-  
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  
   
 ## <a name="see-also"></a>Voir aussi
 

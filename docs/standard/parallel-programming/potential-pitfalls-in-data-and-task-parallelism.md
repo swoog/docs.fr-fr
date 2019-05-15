@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620998"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Pièges potentiels dans le parallélisme des données et des tâches
 Dans de nombreux cas, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> permettent une amélioration significative des performances par rapport à des boucles séquentielles ordinaires. Toutefois, le travail de la parallélisation de la boucle présente une certaine complexité pouvant entraîner des problèmes qui, dans du code séquentiel, ne sont pas si courants ou ne surviennent pas du tout. Cette rubrique répertorie les pratiques à éviter lorsque vous écrivez des boucles parallèles.  
@@ -31,11 +31,11 @@ Dans de nombreux cas, <xref:System.Threading.Tasks.Parallel.For%2A?displayProper
   
  Les boucles imbriquées sont le scénario le plus courant dans lequel une surparallélisation peut se produire. Dans la plupart des cas, il est préférable de paralléliser uniquement la boucle externe, sauf si une ou plusieurs conditions suivantes s’appliquent :  
   
--   La boucle interne est réputée être très longue.  
+- La boucle interne est réputée être très longue.  
   
--   Vous effectuez un calcul coûteux sur chaque commande. (l’opération montrée dans l’exemple n’est pas coûteuse)  
+- Vous effectuez un calcul coûteux sur chaque commande. (l’opération montrée dans l’exemple n’est pas coûteuse)  
   
--   Le système cible est connu pour avoir suffisamment de processeurs pour gérer le nombre de threads produits en parallélisant la requête sur `cust.Orders`.  
+- Le système cible est connu pour avoir suffisamment de processeurs pour gérer le nombre de threads produits en parallélisant la requête sur `cust.Orders`.  
   
  Dans tous les cas, le test et la mesure sont la meilleure façon de déterminer la forme de requête optimale.  
   

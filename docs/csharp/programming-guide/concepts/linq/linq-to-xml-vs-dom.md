@@ -2,12 +2,12 @@
 title: LINQ to XML, différences par rapport à DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 44e5a4d00705d1cd7aff66e0a9be387d5c6c633a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596970"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML, différences par rapport à DOM (C#)
 Cette section décrit certaines des principales différences entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] et l’API de programmation XML actuellement prédominante, le modèle DOM (Document Object Model) W3C.  
@@ -15,7 +15,7 @@ Cette section décrit certaines des principales différences entre [!INCLUDE[sql
 ## <a name="new-ways-to-construct-xml-trees"></a>Nouvelles manières de construire des arborescences XML  
  Dans le modèle DOM W3C, vous construisez une arborescence XML de bas en haut ; autrement dit, vous créez un document, vous créez des éléments, puis vous ajoutez les éléments au document.  
   
- Voici un exemple typique de création d'une arborescence XML à l'aide de l'implémentation Microsoft du modèle DOM, <xref:System.Xml.XmlDocument> :  
+ Voici un exemple typique de création d’une arborescence XML à l’aide de l’implémentation Microsoft du modèle DOM, <xref:System.Xml.XmlDocument> :  
   
 ```csharp  
 XmlDocument doc = new XmlDocument();  
@@ -80,11 +80,11 @@ XElement contacts =
 ## <a name="working-directly-with-xml-elements"></a>Utilisation directe des éléments XML  
  Lorsque vous programmez avec des données XML, vous travaillez en général principalement avec les éléments XML et éventuellement les attributs. Dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vous pouvez utiliser directement les éléments et les attributs XML. Vous pouvez par exemple effectuer les opérations suivantes :  
   
--   Créer des éléments XML sans utiliser d'objet de document. Cela simplifie la programmation lorsque vous devez travailler avec des fragments d'arborescences XML.  
+- Créer des éléments XML sans utiliser d'objet de document. Cela simplifie la programmation lorsque vous devez travailler avec des fragments d'arborescences XML.  
   
--   Charger des objets `T:System.Xml.Linq.XElement` directement à partir d'un fichier XML.  
+- Charger des objets `T:System.Xml.Linq.XElement` directement à partir d'un fichier XML.  
   
--   Sérialiser des objets `T:System.Xml.Linq.XElement` dans un fichier ou un flux.  
+- Sérialiser des objets `T:System.Xml.Linq.XElement` dans un fichier ou un flux.  
   
  Comparez cela au modèle DOM W3C, dans lequel le document XML est utilisé en tant que conteneur logique pour l'arborescence XML. Dans le modèle DOM, les nœuds XML, y compris les éléments et attributs, doivent être créés dans le contexte d'un document XML. Voici un fragment de code permettant de créer un élément de nom dans le modèle DOM :  
   

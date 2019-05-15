@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664649"
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
 
 Les chaînes de format numériques standard sont utilisées pour mettre en forme des types numériques courants. Une chaîne de format numérique standard se présente sous la forme `Axx`, où :  
   
--   `A` est un caractère alphabétique unique appelé *spécificateur de format*. Toute chaîne de format numérique contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format numérique personnalisée. Pour plus d’informations, consultez [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` est un caractère alphabétique unique appelé *spécificateur de format*. Toute chaîne de format numérique contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format numérique personnalisée. Pour plus d’informations, consultez [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` est un entier facultatif appelé *spécificateur de précision*. Le spécificateur de précision est compris entre 0 et 99 ; il affecte le nombre de chiffres dans le résultat. Notez que le spécificateur de précision contrôle le nombre de chiffres dans la représentation sous forme de chaîne d'un nombre. Il n'arrondit pas le nombre lui-même. Pour exécuter une opération d'arrondi, utilisez la méthode <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
+- `xx` est un entier facultatif appelé *spécificateur de précision*. Le spécificateur de précision est compris entre 0 et 99 ; il affecte le nombre de chiffres dans le résultat. Notez que le spécificateur de précision contrôle le nombre de chiffres dans la représentation sous forme de chaîne d'un nombre. Il n'arrondit pas le nombre lui-même. Pour exécuter une opération d'arrondi, utilisez la méthode <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Quand le *spécificateur de précision* contrôle le nombre de chiffres fractionnaires dans la chaîne de résultat, celle-ci reflète un nombre qui est arrondi à un résultat représentable le plus proche du résultat précis à l’infini. S’il existe deux résultats représentables aussi proches l’un que l’autre :
     - **Sur le .NET Framework et .NET Core jusqu’à .NET Core 2.0**, le runtime sélectionne le résultat ayant le chiffre le moins significatif le plus élevé (autrement dit, à l’aide de <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -46,7 +46,7 @@ Les chaînes de format numériques standard sont prises en charge par :
  
 - La [fonctionnalité de mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité de mise en forme composite vous permet d’inclure la représentation sous forme de chaîne de plusieurs éléments de données dans une même chaîne, de spécifier la largeur d’un champ et d’aligner les nombres dans un champ. Pour plus d’informations, consultez [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux chaînes de format composite.
+- Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux de chaînes de format composite.
  
 > [!TIP]
 >  Vous pouvez télécharger l’ [utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
@@ -73,13 +73,13 @@ Les chaînes de format numériques standard sont prises en charge par :
 
 Une chaîne de format numérique standard peut être utilisée pour définir la mise en forme d'une valeur numérique de l'une des deux manières suivantes :  
   
--   Elle peut être passée à une surcharge de la méthode `ToString` qui a un paramètre `format`. L'exemple suivant met en forme une valeur numérique en tant que chaîne monétaire dans la culture actuelle (dans le cas présent, la culture en-US).  
+- Elle peut être passée à une surcharge de la méthode `ToString` qui a un paramètre `format`. L'exemple suivant met en forme une valeur numérique en tant que chaîne monétaire dans la culture actuelle (dans le cas présent, la culture en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Elle peut être fournie comme argument `formatString` dans un élément de mise en forme utilisé avec des méthodes telles que <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> et <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md). L'exemple suivant utilise un élément de mise en forme pour insérer une valeur monétaire dans une chaîne.  
+- Elle peut être fournie comme argument `formatString` dans un élément de mise en forme utilisé avec des méthodes telles que <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> et <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md). L'exemple suivant utilise un élément de mise en forme pour insérer une valeur monétaire dans une chaîne.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Une chaîne de format numérique standard peut être utilisée pour définir la 
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Il peut être fourni en tant qu’argument `formatString` dans un élément d’expression interpolée d’une chaîne interpolée. Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) dans les informations de référence sur C# ou la rubrique [Chaînes interpolées](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) dans les informations de référence sur Visual Basic.  
+- Il peut être fourni en tant qu’argument `formatString` dans un élément d’expression interpolée d’une chaîne interpolée. Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) dans les informations de référence sur C# ou la rubrique [Chaînes interpolées](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) dans les informations de référence sur Visual Basic.  
   
  Les sections suivantes fournissent des informations détaillées sur chacune des chaînes de format numériques standard.  
   

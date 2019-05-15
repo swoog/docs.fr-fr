@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295495"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910766"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procédure : générer des assemblys PIA à l’aide de Tlbimp.exe
 Il existe deux manières de générer un assembly PIA :  
   
--   À l’aide de l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fourni par le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- À l’aide de l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fourni par le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
      La façon la plus simple de générer un assembly PIA est d’utiliser l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe offre les protections suivantes :  
   
-    -   Il vérifie les autres assemblys PIA inscrits avant de créer de nouveaux assemblys PIA pour les références de bibliothèque de types imbriquées.  
+    - Il vérifie les autres assemblys PIA inscrits avant de créer de nouveaux assemblys PIA pour les références de bibliothèque de types imbriquées.  
   
-    -   Il n'émet pas d'assembly PIA si vous ne spécifiez pas le conteneur ou le nom de fichier pour attribuer un nom fort à l'assembly PIA.  
+    - Il n'émet pas d'assembly PIA si vous ne spécifiez pas le conteneur ou le nom de fichier pour attribuer un nom fort à l'assembly PIA.  
   
-    -   Il n'émet pas d'assembly PIA si vous omettez les références aux assemblys dépendants.  
+    - Il n'émet pas d'assembly PIA si vous omettez les références aux assemblys dépendants.  
   
-    -   Il n'émet pas d'assembly PIA si vous ajoutez des références à des assemblys dépendants qui ne sont pas des assemblys PIA.  
+    - Il n'émet pas d'assembly PIA si vous ajoutez des références à des assemblys dépendants qui ne sont pas des assemblys PIA.  
   
--   Par la création manuelle d'assemblys PIA dans le code source avec un langage conforme à la spécification CLS, tel que le C#. Cette approche est utile quand aucune bibliothèque de types n'est disponible.  
+- Par la création manuelle d'assemblys PIA dans le code source avec un langage conforme à la spécification CLS, tel que le C#. Cette approche est utile quand aucune bibliothèque de types n'est disponible.  
   
  Pour signer un assembly avec un nom fort, vous devez avoir une paire de clés de chiffrement. Pour plus d’informations, consultez [Création d’une paire de clés](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   

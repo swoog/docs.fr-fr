@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 012eecbef669ada64392c43b92e8053873956210
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650701"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quand choisir .NET Framework pour les conteneurs Docker
 
@@ -35,11 +35,11 @@ Certaines technologies du .NET Framework ne sont pas disponibles dans la version
 
 La liste suivante recense la plupart des technologies qui ne sont pas disponibles dans .NET Core 2.x :
 
--   Web Forms ASP.NET : cette technologie est disponible uniquement sur le .NET Framework. Il n’est pas prévu d’intégrer Web Forms ASP.NET à .NET Core.
+- Web Forms ASP.NET : cette technologie est disponible uniquement sur le .NET Framework. Il n’est pas prévu d’intégrer Web Forms ASP.NET à .NET Core.
 
--   Services WCF : Même si [bibliothèque cliente WCF](https://github.com/dotnet/wcf) est disponible pour utiliser des services WCF à partir de .NET Core, à compter du milieu de l’année 2017, l’implémentation serveur WCF est disponible uniquement sur .NET Framework. Ce scénario peut être pris en compte pour les versions futures de .NET Core, il y a même des API prises en compte pour l’inclusion dans le [Pack de compatibilité Windows](../../../core/porting/windows-compat-pack.md).
+- Services WCF : Même si [bibliothèque cliente WCF](https://github.com/dotnet/wcf) est disponible pour utiliser des services WCF à partir de .NET Core, à compter du milieu de l’année 2017, l’implémentation serveur WCF est disponible uniquement sur .NET Framework. Ce scénario peut être pris en compte pour les versions futures de .NET Core, il y a même des API prises en compte pour l’inclusion dans le [Pack de compatibilité Windows](../../../core/porting/windows-compat-pack.md).
 
--   Services liés aux flux de travail : Windows Workflow Foundation (WF), les services de flux de travail (WCF + WF dans un seul service) et WCF Data Services (anciennement ADO.NET Data Services) sont disponibles uniquement sur le .NET Framework. Il n’est actuellement pas prévu de les intégrer à .NET Core.
+- Services liés aux flux de travail : Windows Workflow Foundation (WF), les services de flux de travail (WCF + WF dans un seul service) et WCF Data Services (anciennement ADO.NET Data Services) sont disponibles uniquement sur le .NET Framework. Il n’est actuellement pas prévu de les intégrer à .NET Core.
 
 En plus des technologies listées dans la [feuille de route .NET Core](https://github.com/aspnet/Home/wiki/Roadmap) officielle, d’autres fonctionnalités pourraient être portées vers .NET Core. Pour obtenir la liste complète, examinez les éléments associés à la balise [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) sur le site GitHub CoreFX. Notez que cette liste ne constitue pas un engagement de la part de Microsoft à intégrer ces composants à .NET Core ; il s’agit simplement des demandes formulées par la communauté. Si vous vous intéressez à l’un des composants listés ci-dessus, participez éventuellement aux discussions sur GitHub pour faire entendre votre voix. Et si vous pensez que quelque chose fait défaut, veuillez [enregistrer un nouveau problème dans le dépôt CoreFX](https://github.com/dotnet/corefx/issues/new).
 
@@ -53,16 +53,16 @@ En attendant, si une plateforme ou un service Azure ne prend toujours pas en cha
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Guide .NET Core**  
+- **Guide .NET Core**  
     [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
--   **Portage depuis .NET Framework vers .NET Core**  
+- **Portage depuis .NET Framework vers .NET Core**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
--   **Guide de .NET Framework sur Docker**  
+- **Guide de .NET Framework sur Docker**  
     [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
--   **Vue d’ensemble des composants .NET**  
+- **Vue d’ensemble des composants .NET**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 >[!div class="step-by-step"]

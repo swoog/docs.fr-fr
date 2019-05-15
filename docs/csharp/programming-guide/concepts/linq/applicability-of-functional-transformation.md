@@ -2,12 +2,12 @@
 title: Applicabilité des transformations fonctionnelles (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: 72027dadfd2b9a4596c68507535301a8a20741fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c9fc4a2e98a86d5b69ba98336659ac6d2433d12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598145"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598094"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Applicabilité des transformations fonctionnelles (C#)
 Les transformations fonctionnelles pures sont applicables dans un large éventail de situations.  
@@ -16,15 +16,15 @@ Les transformations fonctionnelles pures sont applicables dans un large éventai
   
  Cette approche est applicable à de nombreux problèmes qui, de premier abord, pourraient sembler ne pas être de bons candidats. Utilisée avec ou séparément de LINQ, la transformation fonctionnelle doit être considérée pour les domaines suivants :  
   
--   Documents XML. Les données de forme correcte de tout dialecte XML peuvent être manipulées aisément par le biais de la transformation fonctionnelle. Pour plus d’informations, consultez [Transformation fonctionnelle de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+- Documents XML. Les données de forme correcte de tout dialecte XML peuvent être manipulées aisément par le biais de la transformation fonctionnelle. Pour plus d’informations, consultez [Transformation fonctionnelle de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
   
--   Autres formats de fichiers structurés. Des fichiers Windows.ini aux documents de texte clair, la plupart des fichiers ont une structure qui se prête à l'analyse et à la transformation.  
+- Autres formats de fichiers structurés. Des fichiers Windows.ini aux documents de texte clair, la plupart des fichiers ont une structure qui se prête à l'analyse et à la transformation.  
   
--   Protocoles de streaming de données. L'encodage et le décodage de données vers et à partir de protocoles de communication peuvent souvent être représentés par une transformation fonctionnelle simple.  
+- Protocoles de streaming de données. L'encodage et le décodage de données vers et à partir de protocoles de communication peuvent souvent être représentés par une transformation fonctionnelle simple.  
   
--   Données de bases de données relationnelles et orientées objets. Les bases de données relationnelles et orientées objets, comme le code XML, sont des sources de données structurées largement utilisées.  
+- Données de bases de données relationnelles et orientées objets. Les bases de données relationnelles et orientées objets, comme le code XML, sont des sources de données structurées largement utilisées.  
   
--   Solutions mathématiques, statistiques et scientifiques. Ces champs tendent à manipuler de grands ensembles de données afin d'aider l'utilisateur à visualiser, évaluer ou résoudre des problèmes complexes.  
+- Solutions mathématiques, statistiques et scientifiques. Ces champs tendent à manipuler de grands ensembles de données afin d'aider l'utilisateur à visualiser, évaluer ou résoudre des problèmes complexes.  
   
  Comme décrit dans [Refactorisation dans des fonctions pures (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md), l’utilisation de fonctions pures est un exemple de programmation fonctionnelle. Outre les avantages immédiats des fonctions pures, leur utilisation procure une expérience précieuse pour la résolution des problèmes du point de vue des transformations fonctionnelles. Cette approche peut également avoir un impact majeur sur la conception des programmes et des classes. Cela est particulièrement vrai lorsqu'un problème se prête à une solution de transformation de données, comme indiqué plus haut.  
   

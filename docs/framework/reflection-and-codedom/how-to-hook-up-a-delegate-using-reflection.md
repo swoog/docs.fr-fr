@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314527"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591532"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procédure : raccorder un délégué à l’aide de la réflexion
 Quand vous utilisez la réflexion pour charger et exécuter des assemblys, vous ne pouvez pas utiliser des fonctionnalités de langage telles que l’opérateur C# `+=` ou l’[instruction Visual Basic AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) pour raccorder des événements. Les procédures suivantes montrent comment raccorder une méthode existante à un événement en obtenant tous les types nécessaires par réflexion, et comment créer une méthode dynamique à l’aide de l’émission de réflexion et la raccorder à un événement.  
@@ -107,11 +107,11 @@ Quand vous utilisez la réflexion pour charger et exécuter des assemblys, vous 
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
+- Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
   
--   Aucune référence d’assembly supplémentaire n’est nécessaire pour la compilation à partir de la ligne de commande. Dans Visual Studio, vous devez ajouter une référence à System.Windows.Forms.dll car cet exemple est une application console.  
+- Aucune référence d’assembly supplémentaire n’est nécessaire pour la compilation à partir de la ligne de commande. Dans Visual Studio, vous devez ajouter une référence à System.Windows.Forms.dll car cet exemple est une application console.  
   
--   Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
+- Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334053"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593641"
 ---
 # <a name="delay-signing-an-assembly"></a>Temporisation de signature d'un assembly
 Une entreprise peut avoir une paire de clés protégées auxquelles les développeurs n’ont pas accès tous les jours. La clé publique est souvent disponible, mais l’accès à la clé privée est limité à quelques personnes. Lors du développement d’assemblys avec des noms forts, chaque assembly qui référence l’assembly cible avec nom fort contient le jeton de la clé publique utilisée pour affecter un nom fort à l’assembly cible. La clé publique doit donc être disponible pendant le processus de développement.  
@@ -32,9 +32,9 @@ Une entreprise peut avoir une paire de clés protégées auxquelles les dévelop
   
 2. Annotez le code source de l’assembly avec deux attributs personnalisés de <xref:System.Reflection> :  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, qui passe le nom du fichier contenant la clé publique en tant que paramètre à son constructeur.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, qui passe le nom du fichier contenant la clé publique en tant que paramètre à son constructeur.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, qui indique l’utilisation de la temporisation de signature en passant **true** comme paramètre à son constructeur. Par exemple :  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, qui indique l’utilisation de la temporisation de signature en passant **true** comme paramètre à son constructeur. Par exemple :  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

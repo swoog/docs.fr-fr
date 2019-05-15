@@ -2,12 +2,12 @@
 title: Activation dynamique du traçage analytique
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584335"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592099"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Activation dynamique du traçage analytique
 À l'aide des outils fournis par le système d'exploitation Windows, vous pouvez activer ou désactiver de manière dynamique le suivi d'événements Windows (ETW). Pour toutes les [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] services Windows Communication Foundation (WCF), le traçage analytique peut être activé et désactivé de manière dynamique sans modifier le fichier Web.config de l’application ou le redémarrage du service. Cela permet de ne pas perturber l'application qui émet les événements de suivi.  
@@ -31,11 +31,11 @@ ms.locfileid: "64584335"
 |`EndToEndMonitoring`|Événements utilisés pour prendre en charge le suivi du flux des messages.|  
 |`Troubleshooting`|Événements plus précis concernant les points d’extensibilité de WCF.|  
   
- Le second groupe de mots clés définit quel composant du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] a émis l'événement.  
+ Le deuxième groupe de mots clés définir quel composant du .NET Framework émis l’événement.  
   
 |Mot clé|Description|  
 |-------------|-----------------|  
-|`UserEvents`|Événements émis par le code utilisateur et non par le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|`UserEvents`|Événements émis par le code utilisateur et pas le .NET Framework.|  
 |`ServiceModel`|Événements émis par le runtime WCF.|  
 |`ServiceHost`|Événements émis par l'hôte de service.|  
 |`WCFMessageLogging`|Événements de journalisation de message WCF.|  

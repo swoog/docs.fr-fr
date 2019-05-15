@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590415"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procédure : effectuer une transformation XSLT à l’aide d’un assembly
 Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère un assembly. L'assembly peut être passé directement dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Pour copier les fichiers XML et XSLT sur votre ordinateur local  
   
--   Copiez le fichier XSLT sur votre ordinateur local et nommez-le Transform.xsl.  
+- Copiez le fichier XSLT sur votre ordinateur local et nommez-le Transform.xsl.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère u
     </xsl:stylesheet>  
     ```  
   
--   Copiez le fichier XML sur votre ordinateur local et nommez-le `books.xml`.  
+- Copiez le fichier XML sur votre ordinateur local et nommez-le `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  

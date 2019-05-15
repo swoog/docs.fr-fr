@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517758"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664563"
 ---
 # <a name="sorted-collection-types"></a>Types de collections triées
 La classe <xref:System.Collections.SortedList?displayProperty=nameWithType>, la classe générique <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> et la classe générique <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> sont similaires à la classe <xref:System.Collections.Hashtable> et à la classe générique <xref:System.Collections.Generic.Dictionary%602>, car elles implémentent l’interface <xref:System.Collections.IDictionary>, mais conservent leurs éléments triés par clé et ne possèdent pas les caractéristiques d’insertion ni de récupération O(1) des tables de hachage. Les trois classes ont plusieurs fonctionnalités en commun :  
   
--   Les trois classes implémentent toutes l’interface <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Les deux classes génériques implémentent également l’interface générique <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+- Les trois classes implémentent toutes l’interface <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Les deux classes génériques implémentent également l’interface générique <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
   
--   Chaque élément est une paire clé/valeur utilisée à des fins d’énumération.  
+- Chaque élément est une paire clé/valeur utilisée à des fins d’énumération.  
   
     > [!NOTE]
     >  La classe <xref:System.Collections.SortedList> non générique retourne des objets <xref:System.Collections.DictionaryEntry> quand elle est énumérée, même si les deux types génériques retournent des objets <xref:System.Collections.Generic.KeyValuePair%602>.  
   
--   Les éléments sont triés selon une implémentation d’<xref:System.Collections.IComparer?displayProperty=nameWithType> (pour la classe <xref:System.Collections.SortedList> non générique) ou une implémentation d’<xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (pour les deux classes génériques).  
+- Les éléments sont triés selon une implémentation d’<xref:System.Collections.IComparer?displayProperty=nameWithType> (pour la classe <xref:System.Collections.SortedList> non générique) ou une implémentation d’<xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (pour les deux classes génériques).  
   
--   Chaque classe fournit des propriétés qui retournent des collections contenant uniquement les clés ou uniquement les valeurs.  
+- Chaque classe fournit des propriétés qui retournent des collections contenant uniquement les clés ou uniquement les valeurs.  
   
  Le tableau suivant répertorie certaines des différences entre les deux classes de liste triée et la classe <xref:System.Collections.Generic.SortedDictionary%602>.  
   

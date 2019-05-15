@@ -5,26 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
-ms.openlocfilehash: 5db71465bbba6c91c971a3bd570fdd97d362608d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8ce3383bac9453c3963696c4ac2be520ad8110
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547252"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452419"
 ---
 # <a name="namespace-keywords-c-reference"></a>Mots clés d’espaces de noms (référence C#)
+
 Cette section décrit les mots clés et les opérateurs qui sont associés aux espaces de noms :  
   
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)  
-- [using](../../../csharp/language-reference/keywords/using.md)  
+- [namespace](namespace.md)  
+- [using](using-directive.md)  
 - [using static](using-static.md)
-- [. Opérateur](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: Opérateur](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
-- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
+- [. Opérateur](../operators/member-access-operators.md#member-access-operator-)  
+- [:: Opérateur](../operators/namespace-alias-qualifer.md)  
+- [extern alias](extern-alias.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
-- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [Espaces de noms](../../programming-guide/namespaces/index.md)

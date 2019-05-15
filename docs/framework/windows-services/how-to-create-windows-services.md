@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649411"
 ---
 # <a name="how-to-create-windows-services"></a>Procédure : créer des services Windows
 Quand vous créez un service, vous pouvez utiliser un modèle de projet Visual Studio appelé **Service Windows**. Ce modèle accomplit automatiquement pour vous une grande part du travail : il référence les classes et les espaces de noms appropriés, définit l'héritage à partir de la classe de base des services et substitue les méthodes que vous êtes le plus susceptible de vouloir substituer.  
@@ -21,11 +21,11 @@ Quand vous créez un service, vous pouvez utiliser un modèle de projet Visual S
   
  Pour créer un service fonctionnel, vous devez, au minimum :  
   
--   définir la propriété <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> ;  
+- définir la propriété <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> ;  
   
--   ajouter les programmes d'installation nécessaires à votre application de service ;  
+- ajouter les programmes d'installation nécessaires à votre application de service ;  
   
--   substituer et spécifier le code des méthodes <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A> pour personnaliser le comportement de votre service.  
+- substituer et spécifier le code des méthodes <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A> pour personnaliser le comportement de votre service.  
   
 ### <a name="to-create-a-windows-service-application"></a>Pour créer une application de service Windows  
   

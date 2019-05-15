@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593612"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procédure : désactiver la fonctionnalité consistant à ignorer les noms forts
 À partir du .NET Framework version 3.5 Service Pack 1 (SP1), les signatures de noms forts ne sont pas validées quand un assembly est chargé dans un objet <xref:System.AppDomain> de confiance totale, tel que le <xref:System.AppDomain> par défaut pour la zone `MyComputer`. Cette fonctionnalité permet d’ignorer les noms forts. Dans un environnement de confiance totale, les demandes de <xref:System.Security.Permissions.StrongNameIdentityPermission> aboutissent toujours pour les assemblys de confiance totale signés, quelle que soit leur signature. La seule restriction est que l’assembly doit être entièrement fiable, car sa zone est entièrement fiable. Le nom fort n’étant pas un facteur déterminant dans ces conditions, il n’y a aucune raison pour qu’il soit validé. Ignorer la validation des signatures de noms forts fournit une amélioration significative des performances.  
@@ -28,9 +28,9 @@ ms.locfileid: "59296171"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Pour désactiver la fonctionnalité consistant à ignorer les noms forts pour toutes les applications  
   
--   Sur les ordinateurs 32 bits, dans le Registre système, créez une entrée DWORD avec la valeur 0 nommée `AllowStrongNameBypass` sous la clé HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
+- Sur les ordinateurs 32 bits, dans le Registre système, créez une entrée DWORD avec la valeur 0 nommée `AllowStrongNameBypass` sous la clé HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
   
--   Sur les ordinateurs 64 bits, dans le Registre système, créez une entrée DWORD avec la valeur 0 nommée `AllowStrongNameBypass` sous les clés HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework et HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
+- Sur les ordinateurs 64 bits, dans le Registre système, créez une entrée DWORD avec la valeur 0 nommée `AllowStrongNameBypass` sous les clés HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework et HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Pour désactiver la fonctionnalité consistant à ignorer les noms forts pour une seule application  
   

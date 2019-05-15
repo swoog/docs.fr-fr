@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592398"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procédure : examiner et instancier des types génériques avec la réflexion
 Les informations sur les types génériques s’obtiennent de la même façon que les informations sur les autres types : en examinant un objet <xref:System.Type> qui représente le type générique. La principale différence est qu’un type générique a une liste d’objets <xref:System.Type> représentant ses paramètres de type générique. La première procédure de cette section examine les types génériques.  
@@ -117,11 +117,11 @@ Les informations sur les types génériques s’obtiennent de la même façon qu
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
+- Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
   
--   Aucune référence d’assembly supplémentaire n’est nécessaire.  
+- Aucune référence d’assembly supplémentaire n’est nécessaire.  
   
--   Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
+- Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
   
 ## <a name="see-also"></a>Voir aussi
 

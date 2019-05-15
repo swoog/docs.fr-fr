@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595466"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Utilisation d'exceptions (Guide de programmation C#)
 En C#, les erreurs qui se produisent dans le programme au moment de l’exécution sont propagées à travers le programme à l’aide du mécanisme des exceptions. Les exceptions sont levées par le code qui rencontre une erreur et interceptées par le code qui peut corriger l’erreur. Les exceptions peuvent être levées par le CLR (Common Language Runtime) du .NET Framework ou par du code dans un programme. Une fois qu’une exception est levée, elle se propage jusqu’en haut de la pile des appels, jusqu’à ce qu’une instruction `catch` soit trouvée pour l’exception. Les exceptions non interceptées sont gérées par un gestionnaire d’exceptions génériques fourni par le système qui affiche une boîte de dialogue.  
@@ -38,11 +38,11 @@ En C#, les erreurs qui se produisent dans le programme au moment de l’exécut
   
  Si aucun bloc `catch` compatible n’est trouvé sur la pile des appels après la levée d’une exception, l’une des trois situations suivantes se produit :  
   
--   Si l’exception se trouve dans un finaliseur, le finaliseur est abandonné et le finaliseur de base, le cas échéant, est appelé.  
+- Si l’exception se trouve dans un finaliseur, le finaliseur est abandonné et le finaliseur de base, le cas échéant, est appelé.  
   
--   Si la pile des appels contient un constructeur statique ou un initialiseur de champ statique, une <xref:System.TypeInitializationException> est levée, avec l’exception d’origine assignée à la propriété <xref:System.Exception.InnerException%2A> de la nouvelle exception.  
+- Si la pile des appels contient un constructeur statique ou un initialiseur de champ statique, une <xref:System.TypeInitializationException> est levée, avec l’exception d’origine assignée à la propriété <xref:System.Exception.InnerException%2A> de la nouvelle exception.  
   
--   Si le début du thread est atteint, le thread est terminé.  
+- Si le début du thread est atteint, le thread est terminé.  
   
 ## <a name="see-also"></a>Voir aussi
 

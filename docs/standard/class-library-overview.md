@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664626"
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
 
@@ -52,17 +52,17 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
  Les types .NET sont le fondement sur lequel les applications, composants et contrôles .NET sont construits. Les implémentations .NET comprennent des types qui effectuent les fonctions suivantes :  
   
--   Représenter les types de données de base et les exceptions.  
+- Représenter les types de données de base et les exceptions.  
   
--   Encapsuler les structures de données.  
+- Encapsuler les structures de données.  
   
--   Effectuer les E/S.  
+- Effectuer les E/S.  
   
--   Accéder aux informations concernant les types chargés.  
+- Accéder aux informations concernant les types chargés.  
   
--   Appeler les contrôles de sécurité .NET Framework.  
+- Appeler les contrôles de sécurité .NET Framework.  
   
--   Fournir l'accès aux données, l'interface GUI riche côté client et l'interface GUI côté client contrôlée par le serveur.  
+- Fournir l'accès aux données, l'interface GUI riche côté client et l'interface GUI côté client contrôlée par le serveur.  
   
  .NET fournit un ensemble complet d'interfaces, ainsi que des classes abstraites et concrètes (non abstraites). Vous pouvez utiliser les classes concrètes telles quelles ou, dans de nombreux cas, en dériver vos propres classes. Pour utiliser les fonctionnalités d’une interface, vous pouvez créer une classe qui implémente l’interface ou dériver une classe de l’une des classes .NET qui implémentent l’interface.  
   

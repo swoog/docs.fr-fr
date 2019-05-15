@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299473"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592439"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procédure pas à pas : émission de code dans des scénarios de confiance partielle
 L’émission de réflexion utilise le même ensemble d’API en confiance totale ou partielle, mais certaines fonctionnalités nécessitent des autorisations spéciales dans le code avec confiance partielle. En outre, l’émission de réflexion a une fonctionnalité, des méthodes dynamiques hébergées anonymement, qui est conçue pour être utilisée avec une confiance partielle et par les assemblys transparents de sécurité.  
@@ -31,14 +31,14 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
  Cette procédure pas à pas décrit les tâches suivantes :  
   
--   [Configuration d’un bac à sable (sandbox) simple pour le test de code partiellement fiable](#Setting_up).  
+- [Configuration d’un bac à sable (sandbox) simple pour le test de code partiellement fiable](#Setting_up).  
   
     > [!IMPORTANT]
     >  Il s’agit d’un moyen simple de faire des essais avec du code partiellement fiable. Pour exécuter du code qui provient d’emplacements non approuvés, consultez [Guide pratique pour exécuter du code d’un niveau de confiance partiel dans un bac à sable (sandbox)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
--   [Exécution de code dans des domaines d’application partiellement fiables](#Running_code).  
+- [Exécution de code dans des domaines d’application partiellement fiables](#Running_code).  
   
--   [Utilisation de méthodes dynamiques hébergées anonymement pour émettre et exécuter du code en confiance partielle](#Using_methods).  
+- [Utilisation de méthodes dynamiques hébergées anonymement pour émettre et exécuter du code en confiance partielle](#Using_methods).  
   
  Pour plus d’informations sur l’émission de code dans des scénarios de confiance partielle, consultez [Problèmes de sécurité dans l’émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).  
   
@@ -48,9 +48,9 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
 ## <a name="setting-up-partially-trusted-locations"></a>Configuration des emplacements partiellement fiables  
  Les deux procédures suivantes montrent comment configurer des emplacements à partir desquels vous pouvez tester du code avec une confiance partielle.  
   
--   La première procédure montre comment créer un domaine d’application sandbox dans lequel le code a des autorisations Internet.  
+- La première procédure montre comment créer un domaine d’application sandbox dans lequel le code a des autorisations Internet.  
   
--   La seconde procédure montre comment ajouter <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> à un domaine d’application partiellement fiable pour activer l’accès aux données privées dans des assemblys d’une confiance inférieure ou égale.  
+- La seconde procédure montre comment ajouter <xref:System.Security.Permissions.ReflectionPermission> avec l’indicateur <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> à un domaine d’application partiellement fiable pour activer l’accès aux données privées dans des assemblys d’une confiance inférieure ou égale.  
   
 ### <a name="creating-sandboxed-application-domains"></a>Création de domaines d’application sandbox  
  Pour créer un domaine d’application dans lequel vos assemblys s’exécutent avec une confiance partielle, vous devez spécifier le jeu d’autorisations à accorder aux assemblys en utilisant la surcharge de la méthode <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> pour créer le domaine d’application. Pour spécifier le jeu d’autorisations, le plus simple est de récupérer un jeu d’autorisations nommé auprès de la stratégie de sécurité.  
@@ -155,7 +155,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>Pour utiliser des méthodes dynamiques hébergées anonymement  
   
--   Créez une méthode dynamique hébergée anonymement en utilisant un constructeur qui ne spécifie pas un module ou un type associé.  
+- Créez une méthode dynamique hébergée anonymement en utilisant un constructeur qui ne spécifie pas un module ou un type associé.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
      Aucune autorisation spéciale n’est nécessaire pour émettre une méthode dynamique, mais le code émis nécessite les autorisations demandées par les types et les méthodes qu’il utilise. Par exemple, si le code émis appelle une méthode qui accède à un fichier, il nécessite <xref:System.Security.Permissions.FileIOPermission>. Si le niveau de confiance n’inclut pas cette autorisation, une exception de sécurité est levée quand le code émis est exécuté. Le code montré ici émet une méthode dynamique qui utilise seulement la méthode <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. Par conséquent, le code peut être exécuté à partir d’emplacements partiellement fiables.  
   
--   Vous pouvez aussi créer une méthode dynamique hébergée anonymement avec une possibilité limitée d’ignorer les contrôles de visibilité JIT, en utilisant le constructeur <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> et en spécifiant `true` pour le paramètre `restrictedSkipVisibility`.  
+- Vous pouvez aussi créer une méthode dynamique hébergée anonymement avec une possibilité limitée d’ignorer les contrôles de visibilité JIT, en utilisant le constructeur <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> et en spécifiant `true` pour le paramètre `restrictedSkipVisibility`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
  L’exemple utilise une méthode d’assistance pour créer un jeu d’autorisations limité aux autorisations `Internet`, puis crée un domaine d’application en utilisant la surcharge de la méthode <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> pour spécifier que tout le code qui s’exécute dans le domaine utilise ce jeu d’autorisations. L’exemple crée une instance de la classe `Worker` dans le domaine d’application et exécute deux fois la méthode `AccessPrivateMethod`.  
   
--   La première fois que la méthode `AccessPrivateMethod` est exécutée, les contrôles de visibilité JIT sont appliqués. La méthode dynamique échoue quand elle est appelée, car les contrôles de visibilité JIT l’empêchent d’accéder à la méthode privée.  
+- La première fois que la méthode `AccessPrivateMethod` est exécutée, les contrôles de visibilité JIT sont appliqués. La méthode dynamique échoue quand elle est appelée, car les contrôles de visibilité JIT l’empêchent d’accéder à la méthode privée.  
   
--   La seconde fois que la méthode `AccessPrivateMethod` est exécutée, les contrôles de visibilité JIT sont ignorés. La méthode dynamique échoue lors de la compilation, car le jeu d’autorisations `Internet` n’accorde pas d’autorisations suffisantes pour ignorer les contrôles de visibilité.  
+- La seconde fois que la méthode `AccessPrivateMethod` est exécutée, les contrôles de visibilité JIT sont ignorés. La méthode dynamique échoue lors de la compilation, car le jeu d’autorisations `Internet` n’accorde pas d’autorisations suffisantes pour ignorer les contrôles de visibilité.  
   
  L’exemple ajoute <xref:System.Security.Permissions.ReflectionPermission> avec <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> au jeu d’autorisations. L’exemple crée ensuite un second domaine en spécifiant que tout le code qui s’exécute dans le domaine reçoit les autorisations du jeu d’autorisations. L’exemple crée une instance de la classe `Worker` dans le nouveau domaine d’application et exécute les deux surcharges de la méthode `AccessPrivateMethod`.  
   
--   La première surcharge de la méthode `AccessPrivateMethod` est exécutée et les contrôles de visibilité JIT sont ignorés. La méthode dynamique se compile et s’exécute correctement, car l’assembly qui émet le code est le même que l’assembly qui contient la méthode privée. Par conséquent, les niveaux de confiance sont égaux. Si l’application qui contient la classe `Worker` avait plusieurs assemblys, le même processus réussirait pour chacun de ces assemblys, car ils seraient tous au même niveau de confiance.  
+- La première surcharge de la méthode `AccessPrivateMethod` est exécutée et les contrôles de visibilité JIT sont ignorés. La méthode dynamique se compile et s’exécute correctement, car l’assembly qui émet le code est le même que l’assembly qui contient la méthode privée. Par conséquent, les niveaux de confiance sont égaux. Si l’application qui contient la classe `Worker` avait plusieurs assemblys, le même processus réussirait pour chacun de ces assemblys, car ils seraient tous au même niveau de confiance.  
   
--   La seconde surcharge de la méthode `AccessPrivateMethod` est exécutée et les contrôles de visibilité JIT sont à nouveau ignorés. Cette fois, la méthode dynamique échoue lors de la compilation, car elle essaie d’accéder à la propriété `internal` `FirstChar` de la classe <xref:System.String>. L’assembly qui contient la classe <xref:System.String> est totalement fiable. Par conséquent, il est à un niveau de confiance plus élevé que l’assembly qui émet le code.  
+- La seconde surcharge de la méthode `AccessPrivateMethod` est exécutée et les contrôles de visibilité JIT sont à nouveau ignorés. Cette fois, la méthode dynamique échoue lors de la compilation, car elle essaie d’accéder à la propriété `internal` `FirstChar` de la classe <xref:System.String>. L’assembly qui contient la classe <xref:System.String> est totalement fiable. Par conséquent, il est à un niveau de confiance plus élevé que l’assembly qui émet le code.  
   
  Cette comparaison montre comment <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> permet à du code partiellement fiable d’ignorer les contrôles de visibilité pour un autre code partiellement fiable sans compromettre la sécurité du code de confiance.  
   
@@ -209,7 +209,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Si vous générez cet exemple de code dans Visual Studio, vous devez changer le nom de la classe pour inclure l’espace de noms quand vous le passez à la méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
+- Si vous générez cet exemple de code dans Visual Studio, vous devez changer le nom de la classe pour inclure l’espace de noms quand vous le passez à la méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
   
 ## <a name="see-also"></a>Voir aussi
 

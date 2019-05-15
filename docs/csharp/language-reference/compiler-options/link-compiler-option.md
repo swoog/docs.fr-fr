@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969347"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593068"
 ---
 # <a name="-link-c-compiler-options"></a>-link (Options du compilateur C#)
 Fait que le compilateur rend disponible pour le projet en cours de compilation les informations de type COM des assemblys spécifiés.  
@@ -47,9 +47,9 @@ Fait que le compilateur rend disponible pour le projet en cours de compilation l
   
  Si vous liez à un assembly COM (Assembly A) qui référence lui-même un autre assembly COM (Assembly B), vous devez également lier à l’Assembly B si une des conditions suivantes est vraie :  
   
--   Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
+- Un type de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
   
--   Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
+- Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
   
  Comme l’option [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) du compilateur, l’option `-link` du compilateur utilise le fichier réponse Csc.rsp, qui référence les assemblys [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fréquemment utilisés. Utilisez l’option [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) du compilateur si vous ne voulez pas que le compilateur utilise le fichier Csc.rsp.  
   

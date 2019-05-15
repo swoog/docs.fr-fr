@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664603"
 ---
 # <a name="net-class-libraries"></a>Bibliothèques de classes .NET
 
@@ -19,9 +19,9 @@ Les bibliothèques de classes représentent le concept de [bibliothèque partag�
 
 Il existe trois types de bibliothèques de classes que vous pouvez utiliser :
 
-*   Les bibliothèques de classes **spécifiques d’une plateforme** ont accès à toutes les API dans une plateforme donnée (par exemple, .NET Framework, Xamarin iOS), mais sont utilisables uniquement par les applications et les bibliothèques qui ciblent cette plateforme.
-*   Les bibliothèques de classes **portables** ont accès à un sous-ensemble d’API et sont utilisables par les applications et les bibliothèques qui ciblent plusieurs plateformes.
-*   Les bibliothèques de classes **.NET Standard** sont une fusion du concept de bibliothèques spécifiques d’une plateforme et portables en un seul modèle qui offre le meilleur des deux.
+* Les bibliothèques de classes **spécifiques d’une plateforme** ont accès à toutes les API dans une plateforme donnée (par exemple, .NET Framework, Xamarin iOS), mais sont utilisables uniquement par les applications et les bibliothèques qui ciblent cette plateforme.
+* Les bibliothèques de classes **portables** ont accès à un sous-ensemble d’API et sont utilisables par les applications et les bibliothèques qui ciblent plusieurs plateformes.
+* Les bibliothèques de classes **.NET Standard** sont une fusion du concept de bibliothèques spécifiques d’une plateforme et portables en un seul modèle qui offre le meilleur des deux.
 
 ## <a name="platform-specific-class-libraries"></a>Bibliothèques de classes propres à la plateforme
 

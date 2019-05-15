@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589872"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Extraction de nœuds non triés par leur nom ou par l'index
 **XmlNamedNodeMap**, appelé NamedNodeMap dans la spécification du World Wide Web Consortium (W3C), est requis pour gérer un ensemble non trié de nœuds tout en permettant de référencer les nœuds par leur nom ou sur base de l’index. Le seul moyen d’accéder à un **XmlNamedNodeMap** est le retour de **XmlNamedNodeMap** par une méthode ou une propriété. Trois méthodes ou propriétés retournent **XmlNamedNodeMap** :  
   
--   XmlElement.Attributes ;  
+- XmlElement.Attributes ;  
   
--   XmlDocumentType.Entities ;  
+- XmlDocumentType.Entities ;  
   
--   XmlDocumentType.Notations.  
+- XmlDocumentType.Notations.  
   
  Par exemple, la propriété **XmlDocumentType.Entities** obtient la collection de nœuds **XmlEntity** déclarée dans la déclaration du type de document. Cette collection est retournée sous la forme de **XmlNamedNodeMap**, et elle peut faire l’objet d’une itération à l’aide de la propriété **Count** pour afficher des informations d’entité. Pour obtenir un exemple d'itération sur **XmlNamedNodeMap**, consultez <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- **XmlAttributeCollection** est dérivé de **XmlNamedNodeMap** et seuls les attributs sont modifiables, alors que les notations et entités sont en lecture seule. En utilisant **XmlNamedNodeMap** pour les attributs, vous pouvez obtenir des nœuds pour ces attributs en fonction de leurs noms XML. Il s’agit d’une méthode facile pour manipuler la collection d’attributs d’un nœud d’élément. À cela, nous pouvons opposer directement **XmlNodeList**, qui implémente également l’interface **IEnumerable**, avec toutefois un accesseur d’index plutôt qu’une chaîne. Les méthodes **RemoveNamedItem** et **SetNamedItem** sont uniquement utilisées sur **XmlAttributeCollection**. L’ajout ou la suppression d’un attribut dans une collection d’attributs, que ce soit au moyen **d’AttributeCollection** ou de l’implémentation **XmlNamedNodeMap**, modifie la collection d’attributs de l’élément. L'exemple de code suivant montre comment déplacer un attribut et créer un nouvel attribut.  
+ **XmlAttributeCollection** est dérivé de **XmlNamedNodeMap** et seuls les attributs sont modifiables, alors que les notations et entités sont en lecture seule. En utilisant **XmlNamedNodeMap** pour les attributs, vous pouvez obtenir des nœuds pour ces attributs en fonction de leurs noms XML. Il s'agit d'une méthode facile pour manipuler la collection d'attributs d'un nœud d'élément. À cela, nous pouvons opposer directement **XmlNodeList**, qui implémente également l’interface **IEnumerable**, avec toutefois un accesseur d’index plutôt qu’une chaîne. Les méthodes **RemoveNamedItem** et **SetNamedItem** sont uniquement utilisées sur **XmlAttributeCollection**. L’ajout ou la suppression d’un attribut dans une collection d’attributs, que ce soit au moyen **d’AttributeCollection** ou de l’implémentation **XmlNamedNodeMap**, modifie la collection d’attributs de l’élément. L'exemple de code suivant montre comment déplacer un attribut et créer un nouvel attribut.  
   
 ```vb  
 Imports System  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: ad9437d9c250f067f26f61638b66fbc30fa3b599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6863e59efa25323f80933bf8ab595316b430ef53
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623928"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590141"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procédure : utiliser le mode de composition pour contrôler la simulation de transparence
 Il peut arriver lorsque vous souhaitez créer un bitmap hors écran ayant les caractéristiques suivantes :  
@@ -54,7 +54,7 @@ Il peut arriver lorsque vous souhaitez créer un bitmap hors écran ayant les ca
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi
 

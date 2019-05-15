@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587391"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (Options du compilateur C#)
 Spécifie que les informations de débogage doivent être placées dans un fichier pour une future analyse.  
@@ -28,22 +28,22 @@ Spécifie que les informations de débogage doivent être placées dans un fichi
  `file`  
  Nom du fichier qui doit contenir votre rapport de bogues.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’option **-bugreport** spécifie que les informations suivantes doivent être placées dans `file` :  
   
--   Une copie de tous les fichiers de code source de la compilation.  
+- Une copie de tous les fichiers de code source de la compilation.  
   
--   Une liste des options du compilateur utilisées dans la compilation.  
+- Une liste des options du compilateur utilisées dans la compilation.  
   
--   Les informations de version concernant votre compilateur, votre runtime et votre système d’exploitation.  
+- Les informations de version concernant votre compilateur, votre runtime et votre système d’exploitation.  
   
--   Les assemblys et modules référencés, enregistrés sous la forme de chiffres hexadécimaux, sauf les assemblys qui sont fournis avec le .NET Framework et le SDK.  
+- Les assemblys et modules référencés, enregistrés sous la forme de chiffres hexadécimaux, sauf les assemblys qui sont fournis avec le .NET Framework et le SDK.  
   
--   Les résultats de la compilation, le cas échéant.  
+- Les résultats de la compilation, le cas échéant.  
   
--   Une description du problème, qui vous sera demandée.  
+- Une description du problème, qui vous sera demandée.  
   
--   Une description de vos suggestions de résolution du problème, qui vous sera demandée.  
+- Une description de vos suggestions de résolution du problème, qui vous sera demandée.  
   
  Si cette option est utilisée avec **-errorreport:prompt** ou **-errorreport:send**, les informations figurant dans le fichier seront envoyées à Microsoft Corporation.  
   

@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593562"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procédure : signer un assembly avec un nom fort
 Il existe plusieurs façons de signer un assembly avec un nom fort :  
   
--   À l'aide de l'onglet **Signature** dans la boîte de dialogue **Propriétés** d'un projet dans Visual Studio. Il s'agit de la façon la plus facile et la plus pratique de signer un assembly avec un nom fort.  
+- À l'aide de l'onglet **Signature** dans la boîte de dialogue **Propriétés** d'un projet dans Visual Studio. Il s'agit de la façon la plus facile et la plus pratique de signer un assembly avec un nom fort.  
   
--   À l’aide de l’utilitaire [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) pour lier un module de code .NET Framework (un fichier .netmodule) à un fichier de clé.  
+- À l’aide de l’utilitaire [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) pour lier un module de code .NET Framework (un fichier .netmodule) à un fichier de clé.  
   
--   À l'aide d'attributs d'assembly pour insérer les informations de nom fort dans votre code. Vous pouvez utiliser l'attribut <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> , selon l'emplacement du fichier de clé à utiliser.  
+- À l'aide d'attributs d'assembly pour insérer les informations de nom fort dans votre code. Vous pouvez utiliser l'attribut <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> , selon l'emplacement du fichier de clé à utiliser.  
   
--   À l'aide des options du compilateur.  
+- À l'aide des options du compilateur.  
   
  Pour signer un assembly avec un nom fort, vous devez avoir une paire de clés de chiffrement. Pour plus d’informations sur la création d’une paire de clés, consultez [Guide pratique pour créer une paire de clés publique/privée](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
@@ -48,7 +48,7 @@ Il existe plusieurs façons de signer un assembly avec un nom fort :
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Pour créer et signer un assembly avec un nom fort à l'aide de l'utilitaire Assembly Linker  
   
--   À l’[Invite de commandes développeur pour Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), tapez la commande suivante :  
+- À l’[Invite de commandes développeur pour Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), tapez la commande suivante :  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>Pour signer un assembly avec un nom fort à l'aide du compilateur  
   
--   Compilez vos fichiers de code source avec l'option du compilateur `/keyfile` ou `/delaysign` en C# et Visual Basic, ou l'option de l'éditeur de liens `/KEYFILE` ou `/DELAYSIGN` en C++. Après le nom de l'option, ajoutez une virgule et le nom du fichier de clé. Lorsque vous utilisez des compilateurs de ligne de commande, vous pouvez copier le fichier de clé dans le répertoire qui contient vos fichiers de code source.  
+- Compilez vos fichiers de code source avec l'option du compilateur `/keyfile` ou `/delaysign` en C# et Visual Basic, ou l'option de l'éditeur de liens `/KEYFILE` ou `/DELAYSIGN` en C++. Après le nom de l'option, ajoutez une virgule et le nom du fichier de clé. Lorsque vous utilisez des compilateurs de ligne de commande, vous pouvez copier le fichier de clé dans le répertoire qui contient vos fichiers de code source.  
   
      Pour plus d’informations sur la signature différée, consultez [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   

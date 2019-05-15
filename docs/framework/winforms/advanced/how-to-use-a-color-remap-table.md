@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 619eee8e5c08d24f2c7c485dfdc43331f5d64e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bff5e3585804e027f2d0e78e5ea525f933a351a5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954790"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593176"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Procédure : utiliser une table de remappage des couleurs
 Remappage est le processus de conversion des couleurs dans une image en fonction d’une table de remappage des couleurs. La table de remappage des couleurs est un tableau de <xref:System.Drawing.Imaging.ColorMap> objets. Chaque <xref:System.Drawing.Imaging.ColorMap> objet dans le tableau a une <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> propriété et un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> propriété.  
@@ -34,7 +34,7 @@ Remappage est le processus de conversion des couleurs dans une image en fonction
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- L'exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs>`e`, qui est un paramètre du gestionnaire d'événements <xref:System.Windows.Forms.Control.Paint>.  
+ L’exemple précédent est conçu pour une utilisation avec Windows Forms et nécessite <xref:System.Windows.Forms.PaintEventArgs> `e`, qui est un paramètre de la <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi
 

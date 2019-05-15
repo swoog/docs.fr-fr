@@ -4,12 +4,12 @@ description: Découvrez comment CTS et CLS permettent à .NET de prendre en char
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664519"
 ---
 # <a name="common-type-system--common-language-specification"></a>Système de type commun (CTS, Common Type System) et spécification CLS (Common Language Specification)
 
@@ -21,10 +21,10 @@ Pour commencer, n’oubliez pas qu’une implémentation de .NET est _indépenda
 
 Pour que cela se fasse de manière transparente, il doit exister un moyen commun de décrire tous les types pris en charge. C’est ce que fait le système de type commun (CTS). Il a été créé pour effectuer plusieurs opérations :
 
-*   Établir un framework pour l’exécution multilingue.
-*   Fournir un modèle orienté objet pour prendre en charge l’implémentation de différents langages sur une implémentation de .NET.
-*   Définir un ensemble de règles que tous les langages doivent respecter pour utiliser les types.
-*   Fournir une bibliothèque contenant les types primitifs de base utilisés dans le développement d’applications (par ex., `Boolean`, `Byte`, `Char`, etc.)
+* Établir un framework pour l’exécution multilingue.
+* Fournir un modèle orienté objet pour prendre en charge l’implémentation de différents langages sur une implémentation de .NET.
+* Définir un ensemble de règles que tous les langages doivent respecter pour utiliser les types.
+* Fournir une bibliothèque contenant les types primitifs de base utilisés dans le développement d’applications (par ex., `Boolean`, `Byte`, `Char`, etc.)
 
 CTS définit deux grandes sortes de types qui doivent être pris en charge : les types valeur et référence. Leur nom pointe sur leur définition.
 
@@ -34,11 +34,11 @@ Les types valeur sont l’opposé, c’est-à-dire que les objets sont représen
 
 CTS définit plusieurs catégories de types, chacun avec une sémantique et une utilisation propres :
 
-*   Classes
-*   Structures
-*   Enums
-*   Interfaces
-*   Délégués
+* Classes
+* Structures
+* Enums
+* Interfaces
+* Délégués
 
 CTS définit également toutes les autres propriétés des types, comme les modificateurs d’accès, les membres de type valides, le fonctionnement de l’héritage et de la surcharge, et ainsi de suite. Malheureusement, cet article de présentation n’a pas pour but d’approfondir davantage, mais vous pouvez consulter la section [Autres ressources](#more-resources) à la fin pour obtenir des liens vers un contenu plus détaillé qui couvre ces rubriques.
 
@@ -52,5 +52,5 @@ Vous pouvez consulter les documents de la section [Autres ressources](#more-reso
 
 ## <a name="more-resources"></a>Autres ressources
 
-*   [Système de type commun](./base-types/common-type-system.md)
-*   [CLS (Common Language Specification)](language-independence-and-language-independent-components.md)
+* [Système de type commun](./base-types/common-type-system.md)
+* [CLS (Common Language Specification)](language-independence-and-language-independent-components.md)

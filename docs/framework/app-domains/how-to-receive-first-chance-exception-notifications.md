@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770488"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593603"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procédure : recevoir des notifications des exceptions de première chance
 L’événement <xref:System.AppDomain.FirstChanceException> de la classe <xref:System.AppDomain> vous permet de recevoir la notification qu’une exception a été levée, avant que le Common Language Runtime n’ait commencé à rechercher des gestionnaires d’exceptions.
@@ -100,7 +100,7 @@ L’événement <xref:System.AppDomain.FirstChanceException> de la classe <xref:
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
--   Cet exemple est une application en ligne de commande. Pour compiler et exécuter ce code dans Visual Studio, ajoutez le code C# `Console.ReadLine();` (en Visual Basic, `Console.ReadLine()`) à la fin de `Main()`, afin d’empêcher la fermeture de la fenêtre de commande avant que vous ayez pu lire la sortie.
+- Cet exemple est une application en ligne de commande. Pour compiler et exécuter ce code dans Visual Studio, ajoutez le code C# `Console.ReadLine();` (en Visual Basic, `Console.ReadLine()`) à la fin de `Main()`, afin d’empêcher la fermeture de la fenêtre de commande avant que vous ayez pu lire la sortie.
 
 ## <a name="see-also"></a>Voir aussi
 

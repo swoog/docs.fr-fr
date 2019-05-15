@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607541"
 ---
 # <a name="setting-assembly-attributes"></a>Définition des attributs d'assembly
 Les attributs d’assembly sont des valeurs qui fournissent des informations sur un assembly. Les attributs sont répartis selon les ensembles d’informations suivants :  
   
--   Attributs d’identité de l’assembly  
+- Attributs d’identité de l’assembly  
   
--   Attributs d’informations  
+- Attributs d’informations  
   
--   Attributs de manifeste de l’assembly  
+- Attributs de manifeste de l’assembly  
   
--   Attributs de nom fort  
+- Attributs de nom fort  
   
 ## <a name="assembly-identity-attributes"></a>Attributs d’identité de l’assembly  
  Trois attributs avec un nom fort (le cas échéant), déterminent l’identité d’un assembly : nom, version et culture. Ces attributs constituent le nom complet de l’assembly et sont requis lorsque vous référencez l’assembly dans le code. Vous pouvez utiliser les attributs pour définir la version et la culture d’un assembly. Le compilateur ou l’utilitaire [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) définit la valeur du nom lors de la création de l’assembly, en fonction du fichier contenant le manifeste de l’assembly.  

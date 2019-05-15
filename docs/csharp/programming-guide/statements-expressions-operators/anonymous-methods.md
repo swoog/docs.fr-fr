@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595053"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Méthodes anonymes (Guide de programmation C#)
 Dans les versions de C# antérieures à 2.0, la seule façon de déclarer un type [delegate](../../../csharp/language-reference/keywords/delegate.md) consistait à utiliser des [méthodes nommées](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 a introduit les méthodes anonymes et dans C# 3.0 et ultérieur, les expressions lambda remplacent les méthodes anonymes comme meilleur moyen d’écrire du code « in line ». Toutefois, les informations relatives aux méthodes anonymes figurant dans cette rubrique s’appliquent également aux expressions lambda. Il existe un cas où une méthode anonyme fournit des fonctionnalités non disponibles dans les expressions lambda. Les méthodes anonymes vous permettent d’omettre la liste de paramètres. Cela signifie qu’une méthode anonyme peut être convertie en délégués avec diverses signatures. Cela n’est pas possible avec les expressions lambda. Pour plus d’informations spécifiques aux expressions lambda, consultez [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -49,9 +49,9 @@ Dans les versions de C# antérieures à 2.0, la seule façon de déclarer un ty
 ## <a name="example"></a>Exemple  
  L’exemple suivant présente deux façons d’instancier un délégué :  
   
--   Association du délégué à une méthode anonyme.  
+- Association du délégué à une méthode anonyme.  
   
--   Association du délégué à une méthode nommée (`DoWork`).  
+- Association du délégué à une méthode nommée (`DoWork`).  
   
  Dans chaque cas, un message s’affiche quand le délégué est appelé.  
   

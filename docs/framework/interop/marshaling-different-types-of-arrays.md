@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095098"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648606"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de différents types de tableaux
 Un tableau est un type référence compris dans du code managé qui contient un ou plusieurs éléments du même type. Même si les tableaux sont des types référence, ils sont passés comme des paramètres In aux fonctions non managées. Ce comportement est incohérent avec la manière dont les tableaux managés sont passés aux objets managés, c'est-à-dire en tant que paramètres In/Out. Pour plus d'informations, voir [Copie et épinglage](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Un tableau est un type référence compris dans du code managé qui contient un 
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment passer les types de tableaux suivants :  
   
--   Tableau d'entiers par valeur.  
+- Tableau d'entiers par valeur.  
   
--   Tableau d'entiers par référence, qui peut être redimensionné.  
+- Tableau d'entiers par référence, qui peut être redimensionné.  
   
--   Tableau multidimensionnel (matrice) d'entiers par valeur.  
+- Tableau multidimensionnel (matrice) d'entiers par valeur.  
   
--   Tableau de chaînes par valeur.  
+- Tableau de chaînes par valeur.  
   
--   Tableau de structures avec des entiers.  
+- Tableau de structures avec des entiers.  
   
--   Tableau de structures avec des chaînes.  
+- Tableau de structures avec des chaînes.  
   
  À moins qu'un tableau ne soit explicitement marshalé par référence, le comportement par défaut marshale le tableau en tant que paramètre In. Vous pouvez modifier ce comportement en appliquant explicitement les attributs <xref:System.Runtime.InteropServices.InAttribute> et <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  L'exemple Tableaux utilise les fonctions non managées ci-dessous, accompagnées de leur déclaration de fonction d'origine :  
   
--   **TestArrayOfInts** exporté depuis PinvokeLib.dll.  
+- **TestArrayOfInts** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** exporté depuis PinvokeLib.dll.  
+- **TestRefArrayOfInts** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** exporté depuis PinvokeLib.dll.  
+- **TestMatrixOfInts** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** exporté depuis PinvokeLib.dll.  
+- **TestArrayOfStrings** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** exporté depuis PinvokeLib.dll.  
+- **TestArrayOfStructs** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** exporté depuis PinvokeLib.dll.  
+- **TestArrayOfStructs2** exporté depuis PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

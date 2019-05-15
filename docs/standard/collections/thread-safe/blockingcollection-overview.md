@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664549"
 ---
 # <a name="blockingcollection-overview"></a>Vue d'ensemble de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> est une classe de collection thread-safe qui fournit les fonctionnalités suivantes :  
   
--   Implémentation du modèle producteur-consommateur.  
+- Implémentation du modèle producteur-consommateur.  
   
--   Ajout et reprise simultanés d’éléments à partir de plusieurs threads.  
+- Ajout et reprise simultanés d’éléments à partir de plusieurs threads.  
   
--   Capacité maximale facultative.  
+- Capacité maximale facultative.  
   
--   Opérations d’insertion et de suppression qui se bloquent quand la collection est vide ou complète.  
+- Opérations d’insertion et de suppression qui se bloquent quand la collection est vide ou complète.  
   
--   Opérations « d’essai » d’insertion et de suppression qui ne se bloquent pas ou qui se bloquent pendant une période spécifiée.  
+- Opérations « d’essai » d’insertion et de suppression qui ne se bloquent pas ou qui se bloquent pendant une période spécifiée.  
   
--   Encapsule tout type de collection qui implémente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+- Encapsule tout type de collection qui implémente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
--   Annulation avec jetons d’annulation.  
+- Annulation avec jetons d’annulation.  
   
--   Deux types d’énumération avec `foreach` (`For Each` en Visual Basic) :  
+- Deux types d’énumération avec `foreach` (`For Each` en Visual Basic) :  
   
-    1.  Énumération en lecture seule.  
+    1. Énumération en lecture seule.  
   
-    2.  Énumération qui supprime des éléments à mesure qu’ils sont énumérés.  
+    2. Énumération qui supprime des éléments à mesure qu’ils sont énumérés.  
   
 ## <a name="bounding-and-blocking-support"></a>Prise en charge de la délimitation et du blocage  
  <xref:System.Collections.Concurrent.BlockingCollection%601> prend en charge la délimitation et le blocage. La délimitation signifie que vous pouvez définir la capacité maximale de la collection. La délimitation est importante dans certains scénarios, car elle vous permet de contrôler la taille maximale de la collection en mémoire, et elle empêche les threads producteur de se déplacer trop loin avant les threads consommateur.  

@@ -2,12 +2,12 @@
 title: Files d'attente et sessions fiables
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643533"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557155"
 ---
 # <a name="queues-and-reliable-sessions"></a>Files d'attente et sessions fiables
 Files d’attente et sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Les rubriques contenues dans cette section décrivent les fonctionnalités de messagerie fiables de WCF.  
@@ -31,7 +31,7 @@ Files d’attente et sessions fiables sont les fonctionnalités de Windows Commu
   
  Les sessions fiables assurent le transfert fiable à faible latence des messages. Elles accomplissent pour les messages SOAP sur tous proxys ou intermédiaires, ce que le service TCP accomplit pour les paquets sur les ponts IP. Pour plus d’informations sur les sessions fiables, consultez [Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Files d'attente  
+## <a name="queues"></a>Files d'attente  
  Files d’attente dans WCF fournissent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. En file d’attente WCF communication repose sur Message Queuing (également appelé MSMQ).  
   
  MSMQ est incluse en tant qu'option dans Windows et s'exécute comme un service NT. Elle capture, au nom de la source, les messages à transmettre figurant dans la file d'attente de transmission, puis les remet à la file d'attente cible. La file d'attente cible accepte ces messages au nom de la destination pour les lui remettre ultérieurement dès qu'elle en fera la demande. Les Gestionnaires des files d'attente MSMQ implémentent un protocole de transfert de message fiable qui empêche la perte de messages au cours de la transmission. Il peut s'agir d'un protocole natif ou d'un protocole basé sur SOAP, comme le protocole SRMP (SOAP, Reliable Messaging Protocole).  

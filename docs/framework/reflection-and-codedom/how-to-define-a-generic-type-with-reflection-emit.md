@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30036df99559c67a3b11a5c651053dc644267bbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592457"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procédure : définir un type générique avec l’émission de réflexion
 Cette rubrique montre comment créer un type générique simple avec deux paramètres de type, comment appliquer des contraintes de classe, des contraintes d’interface et des contraintes spéciales aux paramètres de type, et comment créer des membres qui utilisent les paramètres de type de la classe comme types de paramètres et types de retour.  
@@ -129,11 +129,11 @@ Cette rubrique montre comment créer un type générique simple avec deux param�
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
+- Le code contient les instructions `using` C# (`Imports` en Visual Basic) nécessaires à la compilation.  
   
--   Aucune référence d’assembly supplémentaire n’est nécessaire.  
+- Aucune référence d’assembly supplémentaire n’est nécessaire.  
   
--   Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
+- Compilez le code sur la ligne de commande à l’aide de csc.exe, vbc.exe ou cl.exe. Pour compiler le code dans Visual Studio, placez-le dans un modèle de projet d’application console.  
   
 ## <a name="see-also"></a>Voir aussi
 
