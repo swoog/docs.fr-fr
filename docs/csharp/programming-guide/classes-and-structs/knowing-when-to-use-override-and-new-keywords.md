@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496255"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583111"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Savoir quand utiliser les mots clés override et new (Guide de programmation C#)
 En C#, une méthode dans une classe dérivée peut avoir le même nom qu’une méthode dans la classe de base. Vous pouvez spécifier le mode d’interaction des méthodes avec les mots clés [new](../../../csharp/language-reference/keywords/new.md) et [override](../../../csharp/language-reference/keywords/override.md). Le modificateur `override` *étend* la méthode de classe de base et le modificateur `new` la *masque*. La différence est illustrée dans les exemples de cette rubrique.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  Dans la méthode `Main`, déclarez les variables `bc`, `dc` et `bcdc`.  
   
--   `bc` est de type `BaseClass` et sa valeur est de type `BaseClass`.  
+- `bc` est de type `BaseClass` et sa valeur est de type `BaseClass`.  
   
--   `dc` est de type `DerivedClass` et sa valeur est de type `DerivedClass`.  
+- `dc` est de type `DerivedClass` et sa valeur est de type `DerivedClass`.  
   
--   `bcdc` est de type `BaseClass` et sa valeur est de type `DerivedClass`. Il s’agit de la variable à surveiller.  
+- `bcdc` est de type `BaseClass` et sa valeur est de type `DerivedClass`. Il s’agit de la variable à surveiller.  
   
  Comme `bc` et `bcdc` ont le type `BaseClass`, ils ne peuvent accéder directement qu’à `Method1`, sauf si vous effectuez un cast. La variable `dc` peut accéder à `Method1` et `Method2`. Ces relations sont illustrées dans le code suivant.  
   

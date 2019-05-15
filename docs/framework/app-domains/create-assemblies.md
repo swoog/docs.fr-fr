@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607763"
 ---
 # <a name="creating-assemblies"></a>Création d'assemblys
 
@@ -24,23 +24,23 @@ Vous pouvez créer un assembly multifichier à partir de plusieurs modules de co
 
 Vous disposez de plusieurs options quand vous regroupez des modules de code et des ressources dans des assemblys, en fonction des facteurs suivants :
 
--   Gestion de version
+- Gestion de version
 
      Regroupez les modules qui doivent avoir les mêmes informations de version.
 
--   Déploiement
+- Déploiement
 
      Regroupez les modules de code et les ressources qui prennent en charge votre modèle de déploiement.
 
--   Réutilisation
+- Réutilisation
 
      Regroupez les modules s’ils peuvent être logiquement utilisés ensemble dans le même but. Par exemple, un assembly constitué de types et de classes peu utilisés pour la maintenance du programme peut être placé dans le même assembly. En outre, les types que vous prévoyez de partager avec plusieurs applications doivent être regroupés dans un assembly, et celui-ci doit être signé avec un nom fort.
 
--   Sécurité
+- Sécurité
 
      Regroupez les modules contenant des types qui nécessitent les mêmes autorisations de sécurité.
 
--   Portée
+- Portée
 
      Regroupez les modules contenant des types dont la visibilité doit être limitée au même assembly.
 

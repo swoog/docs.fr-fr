@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607681"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Créer et utiliser des assemblys avec nom fort
 
@@ -36,9 +36,9 @@ Le scénario suivant met en avant le processus de signature d'un assembly avec n
 
 1. L'assembly A est créé avec un nom fort à l'aide de l'une des méthodes suivantes :
 
-    -   En utilisant un environnement de développement qui prend en charge la création de noms forts, tel que Visual Studio.
+    - En utilisant un environnement de développement qui prend en charge la création de noms forts, tel que Visual Studio.
 
-    -   En créant une paire de clés de chiffrement avec l’[outil Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) et en l’assignant à l’assembly à l’aide d’un compilateur de ligne de commande ou de [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Le Kit de développement logiciel (SDK) Windows fournit Sn.exe et Al.exe.
+    - En créant une paire de clés de chiffrement avec l’[outil Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) et en l’assignant à l’assembly à l’aide d’un compilateur de ligne de commande ou de [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Le Kit de développement logiciel (SDK) Windows fournit Sn.exe et Al.exe.
 
 2. L'environnement de développement ou l'outil signe le hachage du fichier contenant le manifeste de l'assembly avec la clé privée du développeur. Cette signature numérique est stockée dans le fichier exécutable portable (PE) qui contient le manifeste de l'assembly A.
 
@@ -55,13 +55,13 @@ Le scénario suivant met en avant le processus de signature d'un assembly avec n
 
 Cette fonctionnalité s'applique à tout assembly signé avec un nom fort qui présente les caractéristiques suivantes :
 
--   Confiance totale sans preuve <xref:System.Security.Policy.StrongName> (par exemple, dispose de la preuve de zone `MyComputer`).
+- Confiance totale sans preuve <xref:System.Security.Policy.StrongName> (par exemple, dispose de la preuve de zone `MyComputer`).
 
--   Chargé dans un <xref:System.AppDomain> de confiance totale.
+- Chargé dans un <xref:System.AppDomain> de confiance totale.
 
--   Chargé à partir d'un emplacement sous la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> de cet <xref:System.AppDomain>.
+- Chargé à partir d'un emplacement sous la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> de cet <xref:System.AppDomain>.
 
--   Sans signature différée.
+- Sans signature différée.
 
 Cette fonctionnalité peut être désactivée pour des applications individuelles ou pour un ordinateur. Voir [Guide pratique pour Désactiver la fonctionnalité consistant à ignorer les noms forts](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

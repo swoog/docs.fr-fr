@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342443"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593327"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procédure pas à pas : Création d’écouteurs de journalisation personnalisés (Visual Basic)
 Cette procédure pas à pas illustre comment créer un écouteur de journalisation personnalisé et le configurer pour écouter la sortie de l’objet `My.Application.Log`.  
@@ -20,7 +20,7 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
 #### <a name="to-create-the-listener"></a>Pour créer l’écouteur  
   
--   Dans votre application, créez une classe nommée `SimpleListener` qui hérite de <xref:System.Diagnostics.TraceListener>.  
+- Dans votre application, créez une classe nommée `SimpleListener` qui hérite de <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Pour déterminer le nom fort de l’écouteur  
   
--   Le code suivant indique comment déterminer le nom de type fort pour `SimpleListener`.  
+- Le code suivant indique comment déterminer le nom de type fort pour `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ Cette procédure pas à pas illustre comment créer un écouteur de journalisati
   
      S’il existe un fichier app.config :  
   
-    1.  Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
+    1. Dans le menu **Projet** , choisissez **Ajouter un nouvel élément**.  
   
-    2.  Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
+    2. Dans la boîte de dialogue **Ajouter un nouvel élément** , choisissez **Fichier de configuration de l’application**.  
   
-    3.  Cliquez sur **Ajouter**.  
+    3. Cliquez sur **Ajouter**.  
   
 2. Recherchez la section `<listeners>` dans la section `<source>` avec l’attribut `name` « DefaultSource », qui se trouve dans la section `<sources>` . La section `<sources>` se trouve dans la section `<system.diagnostics>` , dans la section `<configuration>` de plus haut niveau.  
   
