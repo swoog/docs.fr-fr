@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600940"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589823"
 ---
 # <a name="value-types-and-reference-types"></a>Types valeur et types référence
 En Visual Basic, les types de données sont implémentés en fonction de leur classification. Les types de données Visual Basic peuvent être classées selon qu’une variable d’un type particulier stocke ses propres données ou un pointeur vers les données. Il stocke ses propres données de cas d’un *type valeur*; si elle contient un pointeur vers les données ailleurs dans la mémoire, il est un *type référence*.  
@@ -46,7 +46,7 @@ En Visual Basic, les types de données sont implémentés en fonction de leur cl
   
 - Délégués  
   
- Une classe est un *type référence*. Pour cette raison, les types référence comme `Object` et `String` sont pris en charge par [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes. Notez que chaque tableau est un type référence, même si ses membres sont des types valeur.  
+ Une classe est un *type référence*. Pour cette raison, les types référence comme `Object` et `String` sont pris en charge par les classes .NET Framework. Notez que chaque tableau est un type référence, même si ses membres sont des types valeur.  
   
  Étant donné que chaque type de référence représente une classe sous-jacente de .NET Framework, vous devez utiliser le [nouvel opérateur](../../../../visual-basic/language-reference/operators/new-operator.md) mot clé lorsque vous l’initialisez. L’instruction suivante initialise un tableau.  
   

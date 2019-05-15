@@ -1,15 +1,13 @@
 ---
 title: Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
 description: Architecture des Microservices .NET pour les applications .NET en conteneur | Comprendre l’architecture externe pour la conception et le développement d’applications .NET à plusieurs conteneurs et basées sur des microservices.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c2f828e9913a0efcdf580371124b0f624daeffe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973626"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639458"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
 

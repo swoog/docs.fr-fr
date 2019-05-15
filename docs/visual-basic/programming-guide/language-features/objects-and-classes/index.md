@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753616"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591568"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objets et classes dans Visual Basic
 
@@ -176,7 +176,7 @@ En revanche, les membres déclarés dans un module sont publiquement accessibles
 
 Les objets vous permettent de déclarer des variables et des procédures une seule fois, puis de les réutiliser à chaque fois que cela est nécessaire. Par exemple, si vous souhaitez ajouter un vérificateur d’orthographe à une application, vous pouvez définir toutes les variables et fonctions de support pour fournir la fonctionnalité de vérification orthographique. Si vous créez votre vérificateur d’orthographe en tant que classe, vous pouvez ensuite le réutiliser dans d’autres applications en ajoutant une référence à l’assembly compilé. Mieux encore, vous pouvez vous épargner du travail à l’aide d’une classe de vérificateur d’orthographe que quelqu’un d’autre a déjà développé.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fournit de nombreux exemples de composants qui sont disponibles pour utilisation. L’exemple suivant utilise la classe <xref:System.TimeZone> dans l’espace de noms <xref:System>. <xref:System.TimeZone> fournit des membres qui vous permettent de récupérer des informations sur le fuseau horaire de l’ordinateur actuel.
+Le .NET Framework fournit de nombreux exemples de composants qui sont disponibles pour utilisation. L’exemple suivant utilise la classe <xref:System.TimeZone> dans l’espace de noms <xref:System>. <xref:System.TimeZone> fournit des membres qui vous permettent de récupérer des informations sur le fuseau horaire de l’ordinateur actuel.
 
 ```vb
 Public Sub examineTimeZone()

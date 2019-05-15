@@ -2,16 +2,16 @@
 title: Programmation asynchrone
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846127"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584495"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
-Cette rubrique décrit la prise en charge pour la programmation asynchrone dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server (SqlClient) y compris les améliorations apportées pour prendre en charge des fonctionnalités de programmation asynchrone qui a été introduite dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Cette rubrique décrit la prise en charge pour la programmation asynchrone dans le fournisseur de données .NET Framework pour SQL Server (SqlClient) y compris les améliorations apportées pour prendre en charge des fonctionnalités de programmation asynchrone qui a été introduite dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Programmation asynchrone héritée
 
@@ -96,7 +96,7 @@ Les méthodes suivantes ont été ajoutées dans [!INCLUDE[net_v45](../../../../
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Ouverture de connexion synchrone à asynchrone
 
-Vous pouvez mettre à niveau une application existante afin d'utiliser la nouvelle fonctionnalité asynchrone. Par exemple, supposons qu'une application possède un algorithme de connexion synchrone et bloque le thread d'interface utilisateur chaque fois qu'elle se connecte à la base de données et, une fois connectée, l'application appelle une procédure stockée qui signale d'autres utilisateurs que celui qui vient de se connecter.
+Vous pouvez mettre à niveau une application existante afin d’utiliser la nouvelle fonctionnalité asynchrone. Par exemple, supposons qu'une application possède un algorithme de connexion synchrone et bloque le thread d'interface utilisateur chaque fois qu'elle se connecte à la base de données et, une fois connectée, l'application appelle une procédure stockée qui signale d'autres utilisateurs que celui qui vient de se connecter.
 
 ```csharp
 using SqlConnection conn = new SqlConnection("…");
@@ -294,7 +294,7 @@ class Program {
 
 ### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>Utilisation de transactions SQL et de la nouvelle fonctionnalité asynchrone
 
-Dans une application d'entreprise, vous devrez peut-être ajouter des transactions distribuées dans certains scénarios, pour activer les transactions entre plusieurs serveurs de base de données. Vous pouvez utiliser l'espace de noms System.Transactions et enregistrer une transaction distribuée, comme suit :
+Dans une application d’entreprise, vous devrez peut-être ajouter des transactions distribuées dans certains scénarios, pour activer les transactions entre plusieurs serveurs de base de données. Vous pouvez utiliser l’espace de noms System.Transactions et enregistrer une transaction distribuée, comme suit :
 
 ```csharp
 using System;
@@ -711,7 +711,7 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Lecture et mise à jour des données asynchrones avec MARS
 
-MARS permet d'utiliser une connexion pour les opérations de lecture et les opérations en langage DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonction élimine la nécessité pour une application de gérer les erreurs en relation avec une connexion occupée. En outre, MARS peut se substituer à l'utilisation de curseurs côté serveur, qui utilisent généralement davantage de ressources. Enfin, étant donné que plusieurs opérations peuvent opérer sur une seule connexion, ils peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser **sp_getbindtoken** et **sp_bindsession** stockées système procédures.
+MARS permet d'utiliser une connexion pour les opérations de lecture et les opérations en langage DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonctionnalité élimine la nécessité pour une application de gérer les erreurs en relation avec une connexion occupée. En outre, MARS peut se substituer à l'utilisation de curseurs côté serveur, qui utilisent généralement davantage de ressources. Enfin, étant donné que plusieurs opérations peuvent opérer sur une seule connexion, ils peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser **sp_getbindtoken** et **sp_bindsession** stockées système procédures.
 
 L'application console suivante montre comment utiliser deux objets <xref:System.Data.SqlClient.SqlDataReader> avec trois objets <xref:System.Data.SqlClient.SqlCommand> et un objet <xref:System.Data.SqlClient.SqlConnection> lorsque MARS est activé. Le premier objet de commande extrait une liste de fournisseurs dont le taux de crédit est 5. Le second objet de commande utilise l'ID du fournisseur fourni par un <xref:System.Data.SqlClient.SqlDataReader> pour charger le second <xref:System.Data.SqlClient.SqlDataReader> avec tous les produits du fournisseur en question. Chaque enregistrement de produit est consulté par le second <xref:System.Data.SqlClient.SqlDataReader>. Un calcul est effectué pour déterminer quelles nouvelles **OnOrderQty** doit être. La troisième commande objet est ensuite utilisé pour mettre à jour le **ProductVendor** table avec la nouvelle valeur. Tout ce processus se déroule dans le cadre d'une seule transaction, qui est annulée à la fin.
 

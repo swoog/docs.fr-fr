@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637723"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592189"
 ---
 # <a name="using-data-contracts"></a>Utilisation de contrats de données
 Un *contrat de données* est un accord en bonne et due forme entre un service et un client qui décrit de manière abstraite les données à échanger. Autrement dit, pour communiquer, le client et le service n'ont pas besoin de partager les mêmes types, mais uniquement les mêmes contrats de données. Un contrat de données définit précisément, pour chaque type de paramètre ou de retour, les données qui doivent être sérialisées (converties en données XML) pour être échangées.  
   
 ## <a name="data-contract-basics"></a>Principes de base des contrats de données  
- Windows Communication Foundation (WCF) utilise un moteur de sérialisation appelé le sérialiseur de contrat de données par défaut pour sérialiser et désérialiser des données (convertir vers et à partir de XML). Tous les types primitifs du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , tels que les entiers et les chaînes, ainsi que certains types considérés comme primitifs, tels que <xref:System.DateTime> et <xref:System.Xml.XmlElement>, peuvent être sérialisés sans autre préparation et sont considérés comme ayant des contrats de données par défaut. De nombreux types du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ont également des contrats de données existants. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) utilise un moteur de sérialisation appelé le sérialiseur de contrat de données par défaut pour sérialiser et désérialiser des données (convertir vers et à partir de XML). Tous les types primitifs .NET Framework, tels que des entiers et des chaînes, ainsi que certains types considérés comme primitifs, tels que <xref:System.DateTime> et <xref:System.Xml.XmlElement>, peuvent être sérialisés sans autre préparation et sont considérés comme ayant des contrats de données par défaut. Nombreux types .NET Framework ont également des contrats de données existants. Pour obtenir la liste complète des types sérialisables, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Vous devez définir un contrat de données pour les nouveaux types complexes que vous créez afin que ces derniers soient sérialisables. Par défaut, le <xref:System.Runtime.Serialization.DataContractSerializer> déduit le contrat de données et sérialise tous les types visibles publiquement. Toutes les propriétés et tous les champs publics en lecture/écriture du type sont sérialisés. Vous pouvez supprimer des membres de la sérialisation en utilisant <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Vous pouvez également créer explicitement un contrat de données à l'aide des attributs <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute> . Pour cela, il faut normalement appliquer l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> au type. Cet attribut peut être appliqué à des classes, des structures et des énumérations. Puis, l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> doit être appliqué à chaque membre du type de contrat de données pour indiquer qu'il s'agit d'un *membre de données*, c'est-à-dire qu'il doit être sérialisé. Pour plus d’informations, consultez [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

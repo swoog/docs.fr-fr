@@ -1,15 +1,13 @@
 ---
 title: Architecture d’applications conteneur et basées sur des microservices
 description: L’architecture d’applications conteneur et basées sur des microservices n’est pas une mince affaire et ne doit pas être prise à la légère. Découvrez les concepts fondamentaux dans ce chapitre.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6b1d5f7f0ab18e4f1d4b5c2200ac0c6f40c701ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026053"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644151"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Architecture d’applications conteneur et basées sur des microservices
 

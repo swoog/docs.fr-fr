@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034539"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583799"
 ---
 # <a name="connection-string-builders"></a>Builders de chaînes de connexion
-Dans les versions antérieures de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], la vérification des chaînes de connexion avec la chaîne concaténée ne prenaient pas de valeurs, afin qu’au moment de l’exécution, un mot clé incorrect est généré lors de la compilation un <xref:System.ArgumentException>. Chacun des fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] utilisait une syntaxe différente pour les mots clés de chaîne de connexion, ce qui rendait difficile la génération de chaînes de connexion valides si l'opération était effectuée manuellement. Pour résoudre ce problème, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 a introduit de nouveaux générateurs de chaînes de connexion pour chaque fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Chaque fournisseur de données inclut une classe de générateur de chaînes de connexion fortement typée qui hérite de <xref:System.Data.Common.DbConnectionStringBuilder>. Le tableau suivant répertorie les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et leurs classes de générateur de chaînes de connexion associées.  
+Dans les versions antérieures de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], la vérification des chaînes de connexion avec la chaîne concaténée ne prenaient pas de valeurs, afin qu’au moment de l’exécution, un mot clé incorrect est généré lors de la compilation un <xref:System.ArgumentException>. Chacun des fournisseurs de données .NET Framework pris en charge une syntaxe différente pour les mots clés de chaîne de connexion, ce qui est difficile de construction de chaînes de connexion valides si effectuée manuellement. Pour résoudre ce problème, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 a introduit de nouveaux générateurs de chaînes de connexion pour chaque fournisseur de données .NET Framework. Chaque fournisseur de données inclut une classe de générateur de chaînes de connexion fortement typée qui hérite de <xref:System.Data.Common.DbConnectionStringBuilder>. Le tableau suivant répertorie les fournisseurs de données .NET Framework et leurs classes de générateur de chaîne de connexion associée.  
   
 |Fournisseur|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

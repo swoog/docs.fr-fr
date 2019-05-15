@@ -1,15 +1,13 @@
 ---
 title: Introduction aux conteneurs et à Docker
 description: Architecture des microservices .NET pour les applications .NET en conteneur | Introduction aux conteneurs et à Docker
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025513"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644516"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduction aux conteneurs et à Docker
 

@@ -2,17 +2,17 @@
 title: Mappages de types de données OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772058"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584521"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mappages de types de données OLE DB
-Le tableau suivant présente le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] déduit pour les types de données du fournisseur de données .NET Framework pour ADO et OLE DB (<xref:System.Data.OleDb>). Les méthodes d’accesseur typées pour les <xref:System.Data.OleDb.OleDbDataReader> sont également répertoriés.  
+Le tableau suivant présente le type .NET Framework déduit pour les types de données à partir du fournisseur de données .NET Framework pour ADO et OLE DB (<xref:System.Data.OleDb>). Les méthodes d’accesseur typées pour les <xref:System.Data.OleDb.OleDbDataReader> sont également répertoriés.  
   
-|Type ADO|Type OLE DB|Type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Accesseur typé [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Type ADO|Type OLE DB|Type .NET Framework|Accesseur typé de .NET framework|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  

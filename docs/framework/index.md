@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643931"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635534"
 ---
 # <a name="net-framework-guide"></a>Guide du .NET Framework
 
@@ -28,7 +28,7 @@ Le .NET Framework propose plusieurs services, notamment la gestion de la mémoir
 
 Pour une présentation générale du .NET Framework à destination des utilisateurs et des développeurs, consultez [Bien démarrer](./get-started/index.md). Pour une présentation de l’architecture et des fonctionnalités clés du .NET Framework, consultez la [vue d’ensemble](./get-started/overview.md).
 
-Vous pouvez utiliser le .NET Framework avec Docker et des [conteneurs Windows](/virtualization/windowscontainers/about/). Pour apprendre à exécuter vos applications dans des conteneurs Docker, consultez [Déploiement d’applications .NET Framework avec Docker](./docker/index.md).
+Vous pouvez utiliser le .NET Framework avec Docker et des [conteneurs Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Installation
 
@@ -51,9 +51,6 @@ Fournit les ressources et les conseils sur l’installation et la résolution de
 
 * [Guide de migration](./migration-guide/index.md)  
 Fournit les ressources et la liste des modifications dont vous devez tenir compte si vous migrez votre application vers une nouvelle version du .NET Framework.
-
-* [Guide de .NET Framework sur Docker](./docker/index.md)  
-Fournit les ressources pour exécuter des applications .NET Framework avec Docker à l’aide de conteneurs Windows.
 
 * [Guide de développement](./development-guide.md)  
 Fournit un guide sur tous les domaines technologiques clés et les tâches relatives au développement d’applications, notamment la création, la configuration, le débogage, la sécurisation et le déploiement de votre application, ainsi que des informations sur la programmation dynamique, l’interopérabilité, l’extensibilité, la gestion de mémoire et les threads.
