@@ -4,12 +4,12 @@
     - name: Mémoires tampons de taille fixe
       href: fixed-size-buffers.md
     - name: Types de pointeur
-      href: pointer-types.md
       items:
+        - name: Vue d'ensemble
+          href: pointer-types.md
         - name: Conversions de pointeurs
           href: pointer-conversions.md
         - name: Expressions de pointeur
-          href: pointer-expressions.md
           items:
             - name: "Procédure\_: Obtenir la valeur d’une variable de pointeur"
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: "Procédure\_: Accéder à un élément de tableau à l’aide d’un pointeur"
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: Manipulation des pointeurs
-              href: manipulating-pointers.md
               items:
                 - name: "Procédure\_: Incrémenter et décrémenter des pointeurs"
                   href: how-to-increment-and-decrement-pointers.md
