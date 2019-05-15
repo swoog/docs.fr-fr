@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a2ce3f194cbdaaa7b244504745c542da7ba8a73
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9e53634cea4ab3d260247ce645956c68ea7e2e80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664170"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623540"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>Utilisation d'un délégué AsyncCallback pour terminer une opération asynchrone
 Les applications qui peuvent continuer à effectuer d’autres tâches en attendant les résultats d’une opération asynchrone ne doivent pas se bloquer en attendant que cette opération se termine. Pour poursuivre l’exécution des instructions tout en attendant la fin d’une opération asynchrone, utilisez l’une des options suivantes :  
   
--   Utilisez un délégué <xref:System.AsyncCallback> pour traiter les résultats de l’opération asynchrone dans un thread distinct. Cette approche est illustrée dans cette rubrique.  
+- Utilisez un délégué <xref:System.AsyncCallback> pour traiter les résultats de l’opération asynchrone dans un thread distinct. Cette approche est illustrée dans cette rubrique.  
   
--   Utilisez la propriété <xref:System.IAsyncResult.IsCompleted%2A> du <xref:System.IAsyncResult> retourné par la méthode **Begin**_OperationName_ de l’opération asynchrone pour déterminer si cette dernière est terminée. Vous trouverez un exemple illustrant cette approche sur la page [Demander l’état d’une opération asynchrone](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- Utilisez la propriété <xref:System.IAsyncResult.IsCompleted%2A> du <xref:System.IAsyncResult> retourné par la méthode **Begin**_OperationName_ de l’opération asynchrone pour déterminer si cette dernière est terminée. Vous trouverez un exemple illustrant cette approche sur la page [Demander l’état d’une opération asynchrone](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre comment utiliser des méthodes asynchrones dans la classe <xref:System.Net.Dns> afin de récupérer les informations DNS (Domain Name System) pour des ordinateurs spécifiés par l’utilisateur. Cet exemple crée un délégué <xref:System.AsyncCallback> qui référence la méthode `ProcessDnsInformation`, appelée une fois par demande asynchrone d’informations DNS.  

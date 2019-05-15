@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627086"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592587"
 ---
 # <a name="data-contract-known-types"></a>Types connus de contrats de données
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de spécifier, en avance, les types qui doivent être inclus pour être pris en compte pendant la désérialisation. Pour obtenir un exemple fonctionnel, consultez l’exemple [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -27,7 +27,7 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de 
   
 - Le type déclaré pour les informations à transmettre est <xref:System.Object>. Comme chaque type hérite de <xref:System.Object>, et il n'est pas possible de connaître à l'avance quel type est envoyé réellement, le point de terminaison de réception ne peut pas déterminer à l'avance le contrat de données pour les données transmises. Il s’agit d’un cas spécial du premier élément : Chaque contrat de données dérive de la valeur par défaut, un contrat de données vide qui est généré pour <xref:System.Object>.  
   
-- Certains types, y compris les types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , ont des membres qui appartiennent à une des trois catégories précédentes. Par exemple, <xref:System.Collections.Hashtable> utilise <xref:System.Object> pour stocker les objets réels dans la table de hachage. Lors de la sérialisation de ces types, le côté réception ne peut pas déterminer à l'avance le contrat de données pour ces membres.  
+- Certains types, y compris les types .NET Framework, ont des membres qui sont dans un des trois catégories précédentes. Par exemple, <xref:System.Collections.Hashtable> utilise <xref:System.Object> pour stocker les objets réels dans la table de hachage. Lors de la sérialisation de ces types, le côté réception ne peut pas déterminer à l'avance le contrat de données pour ces membres.  
   
 ## <a name="the-knowntypeattribute-class"></a>Classe KnownTypeAttribute  
  Lorsque les données arrivent à un point de terminaison de réception, le runtime WCF tente de désérialiser les données dans une instance d’un type de common language runtime (CLR). Le type instancié pour la désérialisation est choisi en inspectant d'abord le message entrant pour déterminer le contrat de données auquel le contenu du message se conforme. Le moteur de désérialisation essaie ensuite de rechercher un type CLR qui implémente un contrat de données compatible avec le contenu de message. Le jeu des types de candidat que le moteur de désérialisation autorise pendant ce processus porte le nom du jeu du désérialiseur des « types connus ».  

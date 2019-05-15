@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 4577a3fa10b286514a2a7f5691991eab016b58a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6078f2418219dad193d1a49a704334046c33b082
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751712"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582588"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Procédure : dessiner du texte avec GDI
 Avec le <xref:System.Windows.Forms.TextRenderer.DrawText%2A> méthode dans le <xref:System.Windows.Forms.TextRenderer> (classe), vous pouvez accéder à [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] fonctionnalité pour dessiner du texte sur un formulaire ou contrôle. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] rendu de texte offre généralement de meilleures performances et plus précis mesure de texte que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  

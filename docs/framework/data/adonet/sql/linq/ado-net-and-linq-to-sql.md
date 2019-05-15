@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f28acc5001d63e7a1f6a5bfe8cb3415311e379
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033824"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582750"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET et LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fait partie de la [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] famille de technologies. Il est basé sur des services fournis par le modèle de fournisseur [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Vous pouvez donc combiner [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code avec existant [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] applications et migrer actuel [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] solutions à [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. L'illustration suivante fournit une vue d'ensemble de la relation.  
@@ -31,7 +31,7 @@ ms.locfileid: "62033824"
 ## <a name="transactions"></a>Transactions  
  Vous pouvez fournir à votre <xref:System.Data.Linq.DataContext> votre propre transaction de base de données lorsque votre application a déjà initialisé la transaction et que vous souhaitez impliquer votre <xref:System.Data.Linq.DataContext>.  
   
- Il est recommandé d'utiliser l'objet [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] pour les transactions avec le <xref:System.Transactions.TransactionScope>. Grâce à cette approche, vous pouvez effectuer des transactions distribuées qui fonctionnent sur les bases de données et d'autres gestionnaires de ressources résidant en mémoire. Les portées de transactions requièrent des ressources pour démarrer. Elles effectuent leur propre promotion en transactions distribuées uniquement lorsque la portée de la transaction comporte plusieurs connexions.  
+ La méthode préférée de transactions avec le .NET Framework consiste à utiliser le <xref:System.Transactions.TransactionScope> objet. Grâce à cette approche, vous pouvez effectuer des transactions distribuées qui fonctionnent sur les bases de données et d'autres gestionnaires de ressources résidant en mémoire. Les portées de transactions requièrent des ressources pour démarrer. Elles effectuent leur propre promotion en transactions distribuées uniquement lorsque la portée de la transaction comporte plusieurs connexions.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314748"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626249"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procédure : enregistrer des assemblys PIA
 
@@ -28,9 +28,9 @@ Les classes ne peuvent être marshalées que par COM Interop et sont toujours ma
 
  Même s'il n'est pas nécessaire d'inscrire les assemblys PIA si vous ne prévoyez pas d'utiliser Visual Studio, l'inscription offre deux avantages :
 
--   Un assembly PIA inscrit est clairement marqué sous la clé de Registre de la bibliothèque de types d'origine. L'inscription est le meilleur moyen de rechercher un assembly PIA sur votre ordinateur.
+- Un assembly PIA inscrit est clairement marqué sous la clé de Registre de la bibliothèque de types d'origine. L'inscription est le meilleur moyen de rechercher un assembly PIA sur votre ordinateur.
 
--   Vous pouvez éviter de générer et d'utiliser par erreur un nouvel assembly d'interopérabilité si, à un moment donné, vous utilisez Visual Studio pour référencer un type pour lequel vous avez un assembly PIA non inscrit.
+- Vous pouvez éviter de générer et d'utiliser par erreur un nouvel assembly d'interopérabilité si, à un moment donné, vous utilisez Visual Studio pour référencer un type pour lequel vous avez un assembly PIA non inscrit.
 
 Utilisez l’outil [Regasm.exe (outil d’inscription d’assemblys)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) pour inscrire un assembly PIA.
 

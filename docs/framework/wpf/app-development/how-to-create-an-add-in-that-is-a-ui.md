@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625368"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592660"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procédure : Créer un complément qui est une interface utilisateur
 Cet exemple montre comment créer un complément qui est un Windows Presentation Foundation (WPF) qui est hébergé par une application autonome WPF.  
@@ -81,7 +81,7 @@ Cet exemple montre comment créer un complément qui est un Windows Presentation
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implémentation de l'application hôte.  
- Avec l’adaptateur côté hôte et la vue hôte étant créés, l’application hôte peut utiliser le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modèle de complément pour ouvrir le pipeline et acquérir une vue hôte du complément-. Ces étapes sont présentées dans le code suivant.  
+ Avec l’adaptateur côté hôte et la vue hôte étant créés, l’application hôte peut utiliser le modèle de complément .NET Framework pour ouvrir le pipeline et acquérir une vue hôte du complément. Ces étapes sont présentées dans le code suivant.  
 
  L’application hôte utilise le code de modèle de complément .NET Framework classique pour activer le complément, ce qui implicitement retourne la vue hôte à l’application hôte. L’application hôte affiche ensuite la vue hôte (qui est un <xref:System.Windows.Controls.UserControl>) à partir d’un <xref:System.Windows.Controls.Grid>.  
   
