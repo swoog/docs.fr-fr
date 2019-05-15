@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665847"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592499"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Vue d'ensemble des applications Windows Forms et non managées
 Les contrôles et les applications Windows Forms peuvent interagir avec des applications non managées, avec certaines restrictions. Les sections suivantes décrivent les scénarios et les configurations pris en charge et non pris en charge par les applications et les contrôles Windows Forms.  
@@ -47,7 +47,7 @@ Les contrôles et les applications Windows Forms peuvent interagir avec des appl
  La boucle de message d'une application est une boucle de programme interne qui récupère les messages à partir de la file d'attente de messages d'un thread, les traduit, puis les envoie à l'application pour qu'ils soient gérés. La boucle de message pour un Windows Form n'a pas la même architecture que les boucles de messages fournies par les applications antérieures, telles que les applications Visual Basic 6.0 et les applications MFC. Les messages de fenêtre publiés dans la boucle de message peuvent être traités différemment de ce à quoi s'attend le Windows Form. Ainsi, un comportement inattendu peut se produire. Certaines combinaisons de touches peuvent ne pas fonctionner, certaines activités de la souris peuvent ne pas fonctionne ou certains événements peuvent ne pas être déclenchés comme prévu.  
   
 ## <a name="resolving-interoperability-issues"></a>Résolution des problèmes d'interopérabilité  
- Vous pouvez résoudre ces problèmes en affichant le formulaire sur une boucle de message [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que vous pouvez créer à l'aide de la méthode <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
+ Vous pouvez résoudre ces problèmes en affichant le formulaire sur une boucle de message de .NET Framework, qui est créée à l’aide de la <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> (méthode).  
   
  Pour qu'un Windows Form fonctionne correctement à partir d'une application cliente COM, vous devez l'exécuter sur une boucle de message Windows Forms. Pour cela, utilisez l'une des approches suivantes :  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592705"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys avec nom fort
 Attribuer un nom fort à un assembly permet de lui créer une identité unique pour prévenir d'éventuels conflits entre les assemblys.  
@@ -32,13 +32,13 @@ Attribuer un nom fort à un assembly permet de lui créer une identité unique p
   
  Les assemblys avec nom fort s'avèrent utiles dans les scénarios suivants :  
   
--   Vous voulez autoriser le référencement de vos assemblys par des assemblys avec nom fort ou vous souhaitez accorder un accès `friend` à vos assemblys à partir d'autres assemblys avec nom fort.  
+- Vous voulez autoriser le référencement de vos assemblys par des assemblys avec nom fort ou vous souhaitez accorder un accès `friend` à vos assemblys à partir d'autres assemblys avec nom fort.  
   
--   Une application a besoin d'accéder à différentes versions du même assembly. Les différentes versions d'un assembly doivent donc pouvoir se charger côte à côte dans le même domaine d'application sans générer de conflits. Par exemple, si différentes extensions d'une API existent dans des assemblys qui portent le même nom simple, l'attribution d'un nom fort fournit une identité unique à chaque version de l'assembly.  
+- Une application a besoin d'accéder à différentes versions du même assembly. Les différentes versions d'un assembly doivent donc pouvoir se charger côte à côte dans le même domaine d'application sans générer de conflits. Par exemple, si différentes extensions d'une API existent dans des assemblys qui portent le même nom simple, l'attribution d'un nom fort fournit une identité unique à chaque version de l'assembly.  
   
--   Vous souhaitez que votre assembly soit indépendant du domaine pour ne pas entraîner de baisse des performances des applications utilisant cet assembly. Comme un assembly indépendant du domaine doit être installé dans le Global Assembly Cache, cela nécessite d'attribuer des noms forts.  
+- Vous souhaitez que votre assembly soit indépendant du domaine pour ne pas entraîner de baisse des performances des applications utilisant cet assembly. Comme un assembly indépendant du domaine doit être installé dans le Global Assembly Cache, cela nécessite d'attribuer des noms forts.  
   
--   Vous voulez centraliser le traitement de votre application en appliquant une stratégie d'éditeur, ce qui implique d'installer l'assembly dans le Global Assembly Cache.  
+- Vous voulez centraliser le traitement de votre application en appliquant une stratégie d'éditeur, ce qui implique d'installer l'assembly dans le Global Assembly Cache.  
   
  Si vous êtes développeur open source et que vous voulez bénéficier des avantages en matière d'identité d'un assembly avec nom fort, pensez à archiver la clé privée associée à l'assembly dans votre système de contrôle de code source.  
   
