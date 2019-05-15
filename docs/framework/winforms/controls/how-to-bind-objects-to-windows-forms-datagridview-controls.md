@@ -9,29 +9,27 @@ helpviewer_keywords:
 - data grids [Windows Forms], object binding
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
-ms.openlocfilehash: e1fef71de799f9f906c956a0441c92e027173a1c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cdfd5d8e5ec3dcd22abb9e4efcec3bb61fee1d9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612343"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591321"
 ---
-# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a><span data-ttu-id="d03e1-102">Procédure : lier des objets à des contrôles DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d03e1-102">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>
-<span data-ttu-id="d03e1-103">L'exemple de code suivant montre comment lier une collection d'objets à un contrôle <xref:System.Windows.Forms.DataGridView> pour que chaque objet soit affichée sur une ligne distincte.</span><span class="sxs-lookup"><span data-stu-id="d03e1-103">The following code example demonstrates how to bind a collection of objects to a <xref:System.Windows.Forms.DataGridView> control so that each object displays as a separate row.</span></span> <span data-ttu-id="d03e1-104">Cet exemple illustre également comment afficher une propriété avec un type énumération dans un <xref:System.Windows.Forms.DataGridViewComboBoxColumn> pour que la zone de liste déroulante modifiable contienne les valeurs d'énumération.</span><span class="sxs-lookup"><span data-stu-id="d03e1-104">This example also illustrates how to display a property with an enumeration type in a <xref:System.Windows.Forms.DataGridViewComboBoxColumn> so that the combo box drop-down list contains the enumeration values.</span></span>  
+# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a><span data-ttu-id="10928-102">Procédure : lier des objets à des contrôles DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="10928-102">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>
+<span data-ttu-id="10928-103">L'exemple de code suivant montre comment lier une collection d'objets à un contrôle <xref:System.Windows.Forms.DataGridView> pour que chaque objet soit affichée sur une ligne distincte.</span><span class="sxs-lookup"><span data-stu-id="10928-103">The following code example demonstrates how to bind a collection of objects to a <xref:System.Windows.Forms.DataGridView> control so that each object displays as a separate row.</span></span> <span data-ttu-id="10928-104">Cet exemple illustre également comment afficher une propriété avec un type énumération dans un <xref:System.Windows.Forms.DataGridViewComboBoxColumn> pour que la zone de liste déroulante modifiable contienne les valeurs d'énumération.</span><span class="sxs-lookup"><span data-stu-id="10928-104">This example also illustrates how to display a property with an enumeration type in a <xref:System.Windows.Forms.DataGridViewComboBoxColumn> so that the combo box drop-down list contains the enumeration values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d03e1-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="d03e1-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="10928-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="10928-105">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridView._CollectionBound#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/CS/collectionbound.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridView._CollectionBound#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/VB/collectionbound.vb#00)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d03e1-106">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="d03e1-106">Compiling the Code</span></span>  
- <span data-ttu-id="d03e1-107">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="d03e1-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="10928-106">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="10928-106">Compiling the Code</span></span>  
+ <span data-ttu-id="10928-107">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="10928-107">This example requires:</span></span>  
   
-- <span data-ttu-id="d03e1-108">des références aux assemblys System et System.Windows.Forms ;</span><span class="sxs-lookup"><span data-stu-id="d03e1-108">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="10928-108">des références aux assemblys System et System.Windows.Forms ;</span><span class="sxs-lookup"><span data-stu-id="10928-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="d03e1-109">Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="d03e1-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="d03e1-110">Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.</span><span class="sxs-lookup"><span data-stu-id="d03e1-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="d03e1-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d03e1-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10928-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="10928-109">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="d03e1-112">Affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d03e1-112">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="d03e1-113">Guide pratique pour Accéder aux objets liés à des Windows Forms DataGridView lignes</span><span class="sxs-lookup"><span data-stu-id="d03e1-113">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [<span data-ttu-id="10928-110">Affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="10928-110">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="10928-111">Guide pratique pour Accéder aux objets liés à des Windows Forms DataGridView lignes</span><span class="sxs-lookup"><span data-stu-id="10928-111">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
