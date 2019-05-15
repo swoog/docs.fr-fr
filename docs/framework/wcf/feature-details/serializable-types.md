@@ -2,12 +2,12 @@
 title: Types sérialisables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586151"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591675"
 ---
 # <a name="serializable-types"></a>Types sérialisables
 Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sérialise tous les types accessibles publiquement. Toutes les propriétés et tous les champs publics en lecture/écriture du type sont sérialisés.  
@@ -36,7 +36,7 @@ Par défaut, <xref:System.Runtime.Serialization.DataContractSerializer> sériali
 - Pour annuler le processus de sérialisation des membres publics, des propriétés ou des champs, appliquez l'attribut <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> à ce membre.  
   
 ## <a name="inheritance"></a>Héritage  
- Les types non marqués (type sans attribut <xref:System.Runtime.Serialization.DataContractAttribute>) peuvent hériter des types qui ont cet attribut. Toutefois, l'inverse n'est pas permis : les types avec l'attribut ne peuvent pas hériter de types non marqués. Cette règle est appliquée principalement pour garantir la compatibilité descendante avec le code écrit dans les versions antérieures de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Les types non marqués (type sans attribut <xref:System.Runtime.Serialization.DataContractAttribute>) peuvent hériter des types qui ont cet attribut. Toutefois, l'inverse n'est pas permis : les types avec l'attribut ne peuvent pas hériter de types non marqués. Cette règle est appliquée principalement pour garantir la compatibilité descendante avec le code écrit dans les versions antérieures du .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi
 

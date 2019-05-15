@@ -2,12 +2,12 @@
 title: Flux de contrôle dans les programmes Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599738"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flux de contrôle dans les programmes asynchrones (C#)
 
@@ -17,9 +17,9 @@ En général, vous marquez les méthodes qui contiennent du code asynchrone avec
 
 L’exemple suivant utilise des méthodes async pour télécharger le contenu d’un site web spécifié sous forme de chaîne et afficher la longueur de la chaîne. Il contient les deux méthodes suivantes.
 
--   `startButton_Click`, qui appelle `AccessTheWebAsync` et affiche le résultat.
+- `startButton_Click`, qui appelle `AccessTheWebAsync` et affiche le résultat.
 
--   `AccessTheWebAsync`, qui télécharge le contenu d’un site web sous forme de chaîne et retourne la longueur de la chaîne. `AccessTheWebAsync` utilise une méthode asynchrone <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, pour télécharger le contenu.
+- `AccessTheWebAsync`, qui télécharge le contenu d’un site web sous forme de chaîne et retourne la longueur de la chaîne. `AccessTheWebAsync` utilise une méthode asynchrone <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, pour télécharger le contenu.
 
 Des lignes numérotées apparaissent à des points stratégiques du programme pour vous aider à comprendre comment le programme s’exécute et expliquer ce qui se produit à chaque point marqué. Les lignes sont étiquetées de "ONE" à "SIX". Les étiquettes représentent l’ordre dans lequel le programme atteint ces lignes de code.
 

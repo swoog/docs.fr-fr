@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587611"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586676"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Types énumération dans les contrats de données
 Les énumérations peuvent être exprimées dans le modèle de contrat de données. Cette rubrique décrit plusieurs exemples qui expliquent le modèle de programmation.  
@@ -39,7 +39,7 @@ Les énumérations peuvent être exprimées dans le modèle de contrat de donné
   
  Par exemple, vous pouvez utiliser `CarConditionEnum` côté envoi et `CarConditionWithNumbers` côté réception. Même si le côté envoi utilise la valeur « 1 » pour `Used` et le côté réception la valeur « 20 », la représentation XML est `<condition>Used</condition>` pour les deux côtés.  
   
- Pour qu'il soit inclus dans le contrat de données, vous devez appliquer l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>. Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], vous pouvez toujours appliquer la valeur 0 (zéro) spéciale à une énumération, qui est également la valeur par défaut pour toute énumération. Cependant, même cette valeur zéro spéciale ne peut pas être sérialisée sauf si elle est marquée avec l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
+ Pour qu'il soit inclus dans le contrat de données, vous devez appliquer l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>. Dans le .NET Framework, vous pouvez toujours appliquer la valeur spéciale 0 (zéro) à une énumération, qui est également la valeur par défaut pour toute énumération. Cependant, même cette valeur zéro spéciale ne peut pas être sérialisée sauf si elle est marquée avec l'attribut <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
   
  Il existe deux exceptions :  
   

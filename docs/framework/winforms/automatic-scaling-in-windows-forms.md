@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640506"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586588"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatique mise à l’échelle dans les Windows Forms
 
-La mise à l’échelle automatique permet d’afficher correctement un formulaire et ses contrôles conçus sur un ordinateur avec une certaine police système et une certaine résolution d’affichage sur un autre ordinateur avec une police système ou une résolution d’affichage différente. Elle garantit que le formulaire et ses contrôles seront redimensionnés intelligemment et de manière cohérente avec les fenêtres natives et d'autres applications sur les ordinateurs des utilisateurs et d'autres développeurs. La prise en charge dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de la mise à l'échelle automatique et des styles visuels permet aux applications [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de conserver une apparence cohérente avec les applications Windows natives sur l'ordinateur de chaque utilisateur.
+La mise à l’échelle automatique permet d’afficher correctement un formulaire et ses contrôles conçus sur un ordinateur avec une certaine police système et une certaine résolution d’affichage sur un autre ordinateur avec une police système ou une résolution d’affichage différente. Elle garantit que le formulaire et ses contrôles seront redimensionnés intelligemment et de manière cohérente avec les fenêtres natives et d'autres applications sur les ordinateurs des utilisateurs et d'autres développeurs. La prise en charge du .NET Framework pour la mise à l’échelle automatique et des styles visuels permet aux applications de .NET Framework conserver une apparence cohérente par rapport à des applications Windows natives sur l’ordinateur de chaque utilisateur.
 
-La plupart du temps, la mise à l’échelle automatique fonctionne comme prévu dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 et versions ultérieures. Toutefois, les modifications de schéma de police peuvent être problématiques. Pour obtenir un exemple montrant comment résoudre ce problème, consultez [Comment : Répondre aux modifications de schéma de polices dans une Application de formulaires Windows](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+La plupart du temps, le fonctionnement de mise à l’échelle automatique en tant que prévu dans .NET Framework version 2.0 et versions ultérieures. Toutefois, les modifications de schéma de police peuvent être problématiques. Pour obtenir un exemple montrant comment résoudre ce problème, consultez [Comment : Répondre aux modifications de schéma de polices dans une Application de formulaires Windows](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Besoin de mise à l’échelle automatique
 
@@ -24,11 +24,11 @@ Sans mise à l'échelle automatique, une application conçue pour une résolutio
 
 Une situation analogue se produit quand une application est conçue pour une certaine résolution d'écran. La résolution d’affichage plus courante est de 96 points par pouce (PPP), ce qui équivaut à l’échelle de l’affichage 100 %, mais affiche de résolution plus élevée prenant en charge 125 %, 150 %, 200 % (les 120 respectivement égale, 144 et 192 PPP) et versions ultérieures sont plus répandue. Sans réglage, une application (en particulier basée sur des graphismes) conçue pour une résolution spécifique apparaîtra trop grande ou trop petite en cas d'exécution dans une autre résolution.
 
-La mise à l'échelle automatique vise à améliorer ces problèmes en redimensionnant automatiquement le formulaire et ses contrôles enfants en fonction de la taille de police ou résolution d'affichage relative. Le système d'exploitation Windows prend en charge la mise à l'échelle automatique des boîtes de dialogue à l'aide d'une unité de mesure relative appelée unité de boîte de dialogue. Une unité de boîte de dialogue est basée sur la police système et sa relation aux pixels peut être déterminée à l'aide de la fonction du SDK Win32 `GetDialogBaseUnits`. Quand un utilisateur change le thème utilisé par Windows, toutes les boîtes de dialogue sont automatiquement ajustés en conséquence. En outre, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] prend en charge la mise à l’échelle automatique en fonction de la police système par défaut ou la résolution d’affichage. Le cas échéant, la mise à l'échelle automatique peut être désactivée dans une application.
+La mise à l'échelle automatique vise à améliorer ces problèmes en redimensionnant automatiquement le formulaire et ses contrôles enfants en fonction de la taille de police ou résolution d'affichage relative. Le système d'exploitation Windows prend en charge la mise à l'échelle automatique des boîtes de dialogue à l'aide d'une unité de mesure relative appelée unité de boîte de dialogue. Une unité de boîte de dialogue est basée sur la police système et sa relation aux pixels peut être déterminée à l'aide de la fonction du SDK Win32 `GetDialogBaseUnits`. Quand un utilisateur change le thème utilisé par Windows, toutes les boîtes de dialogue sont automatiquement ajustés en conséquence. En outre, le .NET Framework prend en charge la mise à l’échelle automatique en fonction de la police système par défaut ou la résolution d’affichage. Le cas échéant, la mise à l'échelle automatique peut être désactivée dans une application.
 
 ## <a name="original-support-for-automatic-scaling"></a>Prise en charge d’origine pour la mise à l’échelle automatique
 
-Les versions 1.0 et 1.1 de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] prenaient en charge la mise à l’échelle automatique d’une manière simple, qui dépendait de la police Windows par défaut utilisée pour l’interface utilisateur et représentée par la valeur **DEFAULT_GUI_FONT** du SDK Win32. Cette police est généralement modifiée uniquement quand la résolution d’écran change. Le mécanisme suivant était utilisé pour implémenter la mise à l'échelle automatique :
+Les versions 1.0 et 1.1 de la prise en charge de .NET Framework à l’échelle automatique d’une manière simple qui dépendait de la police par défaut de Windows utilisée pour l’interface utilisateur, représentée par la valeur du SDK Win32 **DEFAULT_GUI_FONT**. Cette police est généralement modifiée uniquement quand la résolution d’écran change. Le mécanisme suivant était utilisé pour implémenter la mise à l'échelle automatique :
 
 1. Au moment du design, la propriété <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (qui est maintenant déconseillée) prenait comme valeur la hauteur et la largeur de la police système par défaut sur l'ordinateur du développeur.
 
@@ -46,18 +46,18 @@ Même si ce mécanisme était suffisant dans la plupart des cas, il souffrait de
 
 - Les formulaires et leurs contrôles enfants pouvaient uniquement être conçus simultanément par plusieurs développeurs si la résolution de leurs ordinateurs était identique. De même, cela rendait l’héritage d’un formulaire dépendant de la résolution associée au formulaire parent.
 
-- Cela n'est pas compatible avec les gestionnaires de présentation plus récents introduits dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0, tels que <xref:System.Windows.Forms.FlowLayoutPanel> et <xref:System.Windows.Forms.TableLayoutPanel>.
+- Il n’est pas compatible avec les gestionnaires de mise en page plus récents introduits avec le .NET Framework version 2.0, tels que <xref:System.Windows.Forms.FlowLayoutPanel> et <xref:System.Windows.Forms.TableLayoutPanel>.
 
 - Ce mécanisme ne prenait pas en charge la mise à l'échelle basée directement sur la résolution d'affichage, qui est nécessaire pour la compatibilité avec [!INCLUDE[compact](../../../includes/compact-md.md)].
 
-Bien que ce mécanisme soit conservé dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 pour assurer la compatibilité descendante, il a été remplacé par le mécanisme de mise à l'échelle plus fiable décrit ci-dessous. Par conséquent, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> et certaines surcharges <xref:System.Windows.Forms.Control.Scale%2A> sont marquées comme obsolètes.
+Bien que ce mécanisme soit conservé dans le .NET Framework version 2.0 pour assurer la compatibilité descendante, il a été remplacé par le mécanisme de mise à l’échelle plus fiable décrit ci-après. Par conséquent, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> et certaines surcharges <xref:System.Windows.Forms.Control.Scale%2A> sont marquées comme obsolètes.
 
 > [!NOTE]
-> Vous pouvez supprimer sans risque les références à ces membres quand vous mettez à niveau votre code hérité vers [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0.
+> Vous pouvez supprimer sans risque les références à ces membres lorsque vous mettez à niveau votre code hérité pour le .NET Framework version 2.0.
 
 ## <a name="current-support-for-automatic-scaling"></a>Prise en charge actuelle pour la mise à l’échelle automatique
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 élimine les limitations précédentes en introduisant les modifications suivantes de la mise à l'échelle automatique des Windows Forms :
+Le .NET Framework version 2.0 élimine les limitations précédentes en introduisant les modifications suivantes à la mise à l’échelle automatique de Windows Forms :
 
 - La prise en charge de base de la mise à l'échelle a été déplacée vers la classe <xref:System.Windows.Forms.ContainerControl> pour que les formulaires, les contrôles composites natifs et les contrôles utilisateur bénéficient tous d'une prise en charge uniforme de la mise à l'échelle. Les nouveaux membres <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> et <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> ont été ajoutés.
 

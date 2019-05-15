@@ -2,12 +2,12 @@
 title: 'Procédure : ajouter par programmation la détectabilité à un service et un client WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761544"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586623"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter par programmation la détectabilité à un service et un client WCF
 Cette rubrique explique comment rendre un service Windows Communication Foundation (WCF) détectable. Il est basé sur le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
@@ -16,7 +16,7 @@ Cette rubrique explique comment rendre un service Windows Communication Foundati
   
 1. Ouvrez la solution Self-Host dans Visual Studio 2012. L'exemple se trouve dans le répertoire TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Ajoutez au projet du service une référence à `System.ServiceModel.Discovery.dll`. Vous pouvez voir un message d’erreur indiquant « System. ServiceModel.Discovery.dll ou une de ses dépendances requiert une version ultérieure de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] à celle spécifiée dans le projet... » Si vous voyez ce message, cliquez sur le projet dans l’Explorateur de solutions et choisissez **propriétés**. Dans le **propriétés du projet** fenêtre, assurez-vous que le **Framework cible** est [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Ajoutez au projet du service une référence à `System.ServiceModel.Discovery.dll`. Vous pouvez voir un message d’erreur indiquant « System. ServiceModel.Discovery.dll ou une de ses dépendances requiert une version du .NET Framework ultérieure à celle spécifiée dans le projet... » Si vous voyez ce message, cliquez sur le projet dans l’Explorateur de solutions et choisissez **propriétés**. Dans le **propriétés du projet** fenêtre, assurez-vous que le **Framework cible** est [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Ouvrez le fichier Service.cs et ajoutez l'instruction `using` suivante.  
   

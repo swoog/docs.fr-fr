@@ -2,12 +2,12 @@
 title: Utilisation de Windows Management Instrumentation pour les diagnostics
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662466"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591243"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 Windows Communication Foundation (WCF) expose des données d’inspection d’un service lors de l’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI).  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
  Cette entrée de configuration expose une interface WMI. Les applications de gestion peuvent maintenant se connecter par le biais de cette interface et accéder à l'instrumentation de gestion de l'application.  
   
 ## <a name="accessing-wmi-data"></a>Accès aux données WMI  
- Les données WMI sont accessibles de plusieurs façons différentes. Microsoft fournit des API WMI pour les scripts, les applications Visual Basic, les applications C++ et le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Pour plus d’informations, consultez [à l’aide de WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ Les données WMI sont accessibles de plusieurs façons différentes. Microsoft fournit des API WMI pour les scripts, les applications Visual Basic, C++ applications et le .NET Framework. Pour plus d’informations, consultez [à l’aide de WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Si vous utilisez les méthodes fournies par le .NET Framework pour accéder par programme aux données WMI, vous devez savoir que ces méthodes peuvent lever des exceptions lorsque la connexion est établie. La connexion n'est pas établie pendant la construction de l'instance <xref:System.Management.ManagementObject>, mais sur la première demande qui implique l'échange concret des données. Par conséquent, vous devez utiliser un bloc `try..catch` pour intercepter les exceptions possibles.  

@@ -2,12 +2,12 @@
 title: Modèles de suivi
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699679"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589937"
 ---
 # <a name="tracking-profiles"></a>Modèles de suivi
 
@@ -17,7 +17,7 @@ Les profils de suivi contiennent des requêtes de suivi qui permettent à un par
 
 Les modèles de suivi sont utilisés pour indiquer les informations suivi émises pour une instance de workflow. Si aucun profil n'est spécifié, tous les événements de suivi sont émis. Si un profil est spécifié, les événements de suivi spécifiés dans le profil seront émis. Selon vos exigences d’analyse, vous pouvez écrire un profil très général, qui s’abonne à un petit jeu de modifications d’état de haut niveau d’un flux de travail. Inversement, vous pouvez créer un profil très détaillé dont les événements résultants sont assez riches pour reconstruire ultérieurement un flux d'exécution détaillé.
 
-Les profils de suivi se présentent comme des éléments XML dans un fichier de configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] standard ou sont spécifiés dans le code. L'exemple suivant illustre un modèle de suivi [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dans un fichier de configuration qui permet à un participant au suivi de s'abonner aux événements de flux de travail `Started` et `Completed`.
+Profils de suivi se manifestent en tant qu’éléments XML dans un fichier de configuration .NET Framework standard ou spécifiée dans le code. L'exemple suivant illustre un modèle de suivi [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dans un fichier de configuration qui permet à un participant au suivi de s'abonner aux événements de flux de travail `Started` et `Completed`.
 
 ```xml
 <system.serviceModel>

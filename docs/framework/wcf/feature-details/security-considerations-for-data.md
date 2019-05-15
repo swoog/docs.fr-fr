@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990884"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591532"
 ---
 # <a name="security-considerations-for-data"></a>Considérations sur la sécurité des données
 
@@ -28,7 +28,7 @@ Un nombre d’emplacements dans l’infrastructure Windows Communication Foundat
 
 Il incombe à l'auteur du code de garantir qu'aucune faille de sécurité n'existe. Par exemple, si vous créez un type de contrat de données avec une propriété de membre de données de type entier, et que dans l'implémentation de l'accesseur `set` vous allouez un tableau en fonction de la valeur de la propriété, vous risquez une attaque par déni de service si un message malveillant contient une valeur extrêmement élevée pour ce membre. En général, évitez toutes les allocations basées sur des données entrantes ou un long traitement dans le code fourni par l'utilisateur (surtout si ce long traitement peut être provoqué par une petite quantité de données entrantes). Lorsque vous exécutez une analyse de sécurité du code fourni par l'utilisateur, assurez-vous de considérer également tous les cas d'échec (c'est-à-dire, toutes les branches de code où des exceptions sont levées).
 
-Le dernier exemple de code fourni par l'utilisateur correspond au code figurant à l'intérieur de votre implémentation de service pour chaque opération. La sécurité de votre implémentation de service relève de votre responsabilité. Il est facile de créer par inadvertance des implémentations d'opérations incertaines qui peuvent provoquer des vulnérabilités au déni de service. Par exemple, une opération qui prend une chaîne et renvoie la liste des clients d'une base de données dont le nom commence par cette chaîne. Si vous utilisez une base de données volumineuse et que la chaîne passée comporte une seule lettre, votre code risque d'essayer de créer un message plus volumineux que toute la mémoire disponible, ce qui entraîne l'échec du service entier. (Une <xref:System.OutOfMemoryException> n'est pas récupérable dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et engendre toujours l'arrêt de votre application.)
+Le dernier exemple de code fourni par l'utilisateur correspond au code figurant à l'intérieur de votre implémentation de service pour chaque opération. La sécurité de votre implémentation de service relève de votre responsabilité. Il est facile de créer par inadvertance des implémentations d'opérations incertaines qui peuvent provoquer des vulnérabilités au déni de service. Par exemple, une opération qui prend une chaîne et renvoie la liste des clients d'une base de données dont le nom commence par cette chaîne. Si vous utilisez une base de données volumineuse et que la chaîne passée comporte une seule lettre, votre code risque d'essayer de créer un message plus volumineux que toute la mémoire disponible, ce qui entraîne l'échec du service entier. (Un <xref:System.OutOfMemoryException> n’est pas récupérable dans le .NET Framework et toujours entraîne l’arrêt de votre application.)
 
 Vous devez garantir qu'aucun code malveillant n'est intégré dans les divers points d'extensibilité. Cela est particulièrement vrai pour l'exécution en confiance partielle, pour le traitement des types issus d'assemblys d'un niveau de confiance partiel ou pour créer des composants utilisables par un code de niveau de confiance partiel. Pour plus d'informations, consultez « Menaces liées à une confiance partielle » dans une section ultérieure.
 
@@ -54,7 +54,7 @@ Entraîner le côté réception à allouer une quantité de mémoire importante 
 
 Les attaques par déni de service sont habituellement atténuées à l'aide de quotas. Lorsqu'un quota est dépassé, une exception <xref:System.ServiceModel.QuotaExceededException> est normalement levée. Sans le quota, un message malveillant peut provoquer l'accès à toute la mémoire disponible, ce qui engendre une exception <xref:System.OutOfMemoryException> , ou l'accès à toutes les piles disponibles, ce qui engendre une <xref:System.StackOverflowException>.
 
-Le scénario du dépassement de quota est récupérable ; s'il se produit dans un service en cours d'exécution, le message en cours de traitement est ignoré et le service continue à s'exécuter et traite d'autres messages. En revanches, les scénarios de mémoire insuffisante et de dépassement de capacité de la pile ne sont pas récupérables où que ce soit dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; le service s'arrête s'il rencontre de telles exceptions.
+Le scénario du dépassement de quota est récupérable ; s'il se produit dans un service en cours d'exécution, le message en cours de traitement est ignoré et le service continue à s'exécuter et traite d'autres messages. Les scénarios de dépassement de capacité de mémoire insuffisante et de la pile, toutefois, ne sont pas récupérables n’importe où dans le .NET Framework ; le service s’arrête en cas de rencontre de telles exceptions.
 
 Quotas dans WCF n’impliquent pas aucune préallocation. Par exemple, si le quota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> (existant sur différentes classes) a la valeur 128 Ko, cela ne signifie pas que 128 Ko sont automatiquement alloués pour chaque message. La quantité réelle allouée dépend de la taille réelle du message entrant.
 
@@ -274,7 +274,7 @@ Cette situation peut être évitée en prenant conscience des points suivants :
 
 - Ne concevez pas de types de contrat de données de sorte à compter sur un ordre particulier dans lequel les accesseurs Set de propriété doivent être appelés.
 
-- Faites preuve de prudence lorsque vous utilisez des types hérités marqués avec l'attribut <xref:System.SerializableAttribute> . Beaucoup d'entre eux ont été conçus pour fonctionner avec [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting à des fins d'utilisation avec des données approuvées uniquement. Les types existants marqués avec cet attribut n'ont peut-être pas été conçus en tenant compte de la sécurité des états.
+- Faites preuve de prudence lorsque vous utilisez des types hérités marqués avec l'attribut <xref:System.SerializableAttribute> . Bon nombre d'entre eux ont été conçus pour fonctionner avec .NET Framework remoting pour une utilisation avec des données approuvées uniquement. Les types existants marqués avec cet attribut n'ont peut-être pas été conçus en tenant compte de la sécurité des états.
 
 - Ne comptez pas sur la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> pour garantir la présence des données en ce qui concerne la sécurité des états. Les données pourraient toujours être `null`, `zero`ou `invalid`.
 
@@ -282,7 +282,7 @@ Cette situation peut être évitée en prenant conscience des points suivants :
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>Utilisation de NetDataContractSerializer en toute sécurité
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> est un moteur de sérialisation qui utilise le couplage étroit des types. Ce moteur est similaire à <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et à <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Autrement dit, il détermine le type à instancier en lisant l'assembly du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et le nom du type à partir des données entrantes. Bien qu’il soit une partie de WCF, il n’existe aucun moyen fourni brancher ce moteur de sérialisation ; code personnalisé doit être écrite. Le `NetDataContractSerializer` est fourni principalement pour faciliter la migration depuis [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting à WCF. Pour plus d’informations, consultez la section appropriée dans [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+<xref:System.Runtime.Serialization.NetDataContractSerializer> est un moteur de sérialisation qui utilise le couplage étroit des types. Ce moteur est similaire à <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et à <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Autrement dit, il détermine le type à instancier en lisant l’assembly .NET Framework et le nom de type à partir des données entrantes. Bien qu’il soit une partie de WCF, il n’existe aucun moyen fourni brancher ce moteur de sérialisation ; code personnalisé doit être écrite. Le `NetDataContractSerializer` est fourni principalement pour faciliter la migration à partir de .NET Framework remoting à WCF. Pour plus d’informations, consultez la section appropriée dans [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 Parce que le message lui-même peut indiquer la possibilité de charger tout type, le mécanisme <xref:System.Runtime.Serialization.NetDataContractSerializer> est par sa nature incertain et doit être utilisé uniquement avec des données approuvées. Il est possible de le sécuriser en écrivant un binder sécurisé limitant les types qui permet uniquement aux types sûrs d'être chargés (à l'aide de la propriété <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ).
 

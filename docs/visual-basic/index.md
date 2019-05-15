@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797083"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590403"
 ---
 # <a name="visual-basic-guide"></a>Guide Visual Basic
 
@@ -37,7 +37,7 @@ Fournit des liens vers les rubriques qui présentent et abordent les fonctionnal
 Contient des informations sur le compilateur et le langage Visual Basic.  
 
 [Développement d’applications avec Visual Basic](../visual-basic/developing-apps/index.md)\
-Décrit différents aspects du développement en Visual Basic, tels que la sécurité, la gestion des exceptions et l’utilisation de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+Décrit différents aspects du développement en Visual Basic, tels que la sécurité, la gestion des exceptions et l’utilisation de la bibliothèque de classes .NET Framework.
 
 [COM Interop](../visual-basic/programming-guide/com-interop/index.md)\
 Explique les problèmes d’interopérabilité associés à la création et à l’utilisation d’objets COM (Component Object Model) avec Visual Basic.  
@@ -54,4 +54,4 @@ Fournit des liens vers des instructions pas-à-pas pour les scénarios courants.
 Fournit des liens vers des rubriques qui vous permettent d’en savoir plus sur les principes fondamentaux de Visual Studio.  
   
 [Navigateur d’API .NET](../../api/index.md)\
-Fournit l’entrée à la bibliothèque de classes, aux interfaces et aux types valeur inclus dans Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
+Fournit l’entrée à la bibliothèque de classes, aux interfaces et aux types valeur inclus dans le SDK Microsoft .NET Framework.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679433"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593081"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Options du compilateur C#)
 L’option **-reference** indique au compilateur d’importer des informations de type [public](../../../csharp/language-reference/keywords/public.md) dans le fichier spécifié du projet actuel, ce qui vous permet de référencer les métadonnées des fichiers d’assembly spécifiés.  
@@ -37,7 +37,7 @@ L’option **-reference** indique au compilateur d’importer des informations d
  `alias`  
  Un identificateur C# valide représentant un espace de noms racine qui contient tous les espaces de noms dans l’assembly.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour importer à partir de plusieurs fichiers, incluez une option **-reference** pour chaque fichier.  
   
  Les fichiers que vous importez doivent contenir un manifeste ; le fichier de sortie doit être compilé avec une option [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) autre que [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
@@ -48,9 +48,9 @@ L’option **-reference** indique au compilateur d’importer des informations d
   
  Si vous référencez un assembly (Assembly A) qui référence un autre assembly (Assembly B), vous devez référencer l’Assembly B si :  
   
--   Un type que vous utilisez de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
+- Un type que vous utilisez de l’Assembly A hérite d’un type ou implémente une interface de l’Assembly B.  
   
--   Vous appelez un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B.  
+- Vous appelez un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B.  
   
  Utilisez [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) pour spécifier le répertoire dans lequel se trouvent une ou plusieurs références d’assembly. La rubrique **-lib** décrit également les répertoires dans lesquels le compilateur recherche les assemblys.  
   

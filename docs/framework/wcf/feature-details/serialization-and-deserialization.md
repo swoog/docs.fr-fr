@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586217"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591662"
 ---
 # <a name="serialization-and-deserialization"></a>Sérialisation et désérialisation
-Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le <xref:System.Runtime.Serialization.DataContractSerializer> traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Cette rubrique explique comment le sérialiseur fonctionne.  
+Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le <xref:System.Runtime.Serialization.DataContractSerializer> effectue la traduction entre les objets .NET Framework et XML, dans les deux sens. Cette rubrique explique comment le sérialiseur fonctionne.  
   
- Lors de la sérialisation d'objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , le sérialiseur interprète divers modèles de programmation de sérialisation, y compris le nouveau modèle de *contrat de données* . Pour obtenir une liste complète des types pris en charge, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Pour obtenir une introduction aux contrats de données, consultez [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Lors de la sérialisation des objets .NET Framework, le sérialiseur interprète divers de sérialisation de modèles de programmation, y compris le nouveau *contrat de données* modèle. Pour obtenir une liste complète des types pris en charge, consultez [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Pour obtenir une introduction aux contrats de données, consultez [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Lors de la désérialisation du XML, le sérialiseur utilise les classes <xref:System.Xml.XmlReader> et <xref:System.Xml.XmlWriter> . Il prend également en charge la <xref:System.Xml.XmlDictionaryReader> et <xref:System.Xml.XmlDictionaryWriter> classes pour lui permettre de produire le XML optimisé dans certains cas, notamment lors de l’aide de XML binaire WCF format.  
   
- WCF inclut également un sérialiseur auxiliaire, le <xref:System.Runtime.Serialization.NetDataContractSerializer>. Le sérialiseur <xref:System.Runtime.Serialization.NetDataContractSerializer> est semblable aux sérialiseurs <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> parce qu'il émet également des noms de type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dans le cadre des données sérialisées. Il est utilisé lorsque les mêmes types sont partagés sur les fins de sérialisation et de désérialisation. Les <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.NetDataContractSerializer> dérivent d'une classe de base commune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ WCF inclut également un sérialiseur auxiliaire, le <xref:System.Runtime.Serialization.NetDataContractSerializer>. Le <xref:System.Runtime.Serialization.NetDataContractSerializer> est similaire à la <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> sérialiseurs, car il émet également des noms de types .NET Framework en tant que partie des données sérialisées. Il est utilisé lorsque les mêmes types sont partagés sur les fins de sérialisation et de désérialisation. Les <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.NetDataContractSerializer> dérivent d'une classe de base commune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> sérialise les chaînes contenant des caractères de contrôle avec une valeur hexadécimale inférieure à 20 comme entités XML. Cela peut entraîner un problème avec un client non-WCF lors de l’envoi de ces données à un service WCF.  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
  Une méthode permet de désactiver ce contrôle du nom de l'élément wrapper ; certaines surcharges de la méthode `ReadObject` acceptent le paramètre booléen `verifyObjectName`qui la valeur `true` par défaut. Lorsqu'il a la valeur `false`, le nom et l'espace de noms de l'élément wrapper sont ignorés. Ce procédé est utile pour lire le XML écrit à l'aide du mécanisme de sérialisation pas à pas décrit précédemment.  
   
 ## <a name="using-the-netdatacontractserializer"></a>Utilisation de NetDataContractSerializer  
- La différence principale entre `DataContractSerializer` et <xref:System.Runtime.Serialization.NetDataContractSerializer> est que `DataContractSerializer` utilise des noms de contrat de données, alors que `NetDataContractSerializer` génère des noms de types et d'assembly [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complets dans le XML sérialisé. Cela signifie que les mêmes types exacts doivent être partagés entre les points de terminaison de sérialisation et de désérialisation. Cela signifie que le mécanisme de types connus n'est pas requis avec `NetDataContractSerializer` parce que les types exacts à désérialiser sont toujours connus.  
+ La principale différence entre la `DataContractSerializer` et le <xref:System.Runtime.Serialization.NetDataContractSerializer> qui est la `DataContractSerializer` utilise des noms de contrat de données, tandis que le `NetDataContractSerializer` génère des noms de type et l’assembly .NET Framework complets dans le code XML sérialisé. Cela signifie que les mêmes types exacts doivent être partagés entre les points de terminaison de sérialisation et de désérialisation. Cela signifie que le mécanisme de types connus n'est pas requis avec `NetDataContractSerializer` parce que les types exacts à désérialiser sont toujours connus.  
   
  Toutefois, plusieurs problèmes peuvent se produire :  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
 - Contrôle de version. L'utilisation des noms de type et d'assembly complets dans le XML limite fortement la gestion de la version des types. Les éléments suivants ne peuvent pas être modifiés : noms de type, espaces de noms, noms d'assembly et versions d'assembly. Affecter à la propriété ou au paramètre de constructeur <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> la valeur <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> au lieu de la valeur par défaut de <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> permet de modifier la version des assemblys, mais pas des types de paramètre génériques.  
   
-- Interopérabilité. Comme les noms d'assembly et de type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont inclus dans le XML, les plateformes autres que le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ne peuvent pas accéder aux données résultantes.  
+- Interopérabilité. Étant donné que les noms de type et un assembly .NET Framework sont inclus dans le code XML, plateformes autres que le .NET Framework ne peut pas accéder aux données qui en résulte.  
   
 - Performances. L'écriture des noms de type et d'assembly augmente nettement la taille du XML résultant.  
   
- Ce mécanisme est semblable à la sérialisation binaire ou SOAP utilisée par [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting (en particulier, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
+ Ce mécanisme est similaire à la sérialisation binaire ou SOAP utilisée par .NET Framework remoting (plus précisément, le <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> et <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  L'utilisation du `NetDataContractSerializer` est semblable à l'utilisation du `DataContractSerializer`, avec les différences suivantes :  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisatio
   
  Les formats XML utilisés par `NetDataContractSerializer` et `DataContractSerializer` ne sont pas normalement compatibles. Autrement dit, toute tentative de sérialiser avec l'un de ces sérialiseurs et de désérialiser avec l'autre n'est pas prise en charge.  
   
- De plus, notez que `NetDataContractSerializer` ne génère pas le nom de l'assembly et du type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complet pour chaque nœud dans le graphique d'objets. Il génère ces informations uniquement en cas d'ambiguïté. Autrement dit, il génère au niveau de l'objet racine et pour les cas polymorphes.  
+ Notez également que le `NetDataContractSerializer` ne génère pas le nom de type et l’assembly de .NET Framework complet pour chaque nœud dans le graphique d’objet. Il génère ces informations uniquement en cas d'ambiguïté. Autrement dit, il génère au niveau de l'objet racine et pour les cas polymorphes.  
   
 ## <a name="see-also"></a>Voir aussi
 

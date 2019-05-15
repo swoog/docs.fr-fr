@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598437"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583390"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Déclaration de variable en Visual Basic
 Vous déclarez une variable pour spécifier son nom et les caractéristiques. L’instruction de déclaration de variables est la [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Son emplacement et son contenu déterminent les caractéristiques de la variable.  
@@ -48,7 +48,7 @@ Vous déclarez une variable pour spécifier son nom et les caractéristiques. L�
   
 - Type d’objet, ou classe, défini dans votre application ou dans une autre application  
   
-- Un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, telle que <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
+- Classe .NET Framework, telle que <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
   
 - Type d’interface, tel que <xref:System.IComparable> ou <xref:System.IDisposable>  
   

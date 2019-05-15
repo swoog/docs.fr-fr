@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b0758cf1381b5a6e24067fdd64288d0f7e2b0d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637167"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591933"
 ---
 # <a name="guide-to-the-documentation"></a>Guide de la documentation
 Condition Voici des conseils sur la documentation de Windows Communication Foundation (WCF). Les documents liés sont des points de départ recommandés regroupés en fonction d'intérêts et de niveaux d'expertise spécifiques.  
@@ -46,7 +46,7 @@ Condition Voici des conseils sur la documentation de Windows Communication Found
   
 - Pour créer un service qui communique avec les clients ASP.NET, consultez [Comment : Configurer le Service WCF pour interagir avec les Clients de Service Web ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
-- Intégration avec [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] remoting est expliquée dans [migration d’Applications .NET Remoting vers WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
+- Intégration à .NET Framework remoting est expliquée dans [migration d’Applications .NET Remoting vers WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
 - Pour intégrer une application COM + existante à un client ou un service WCF, consultez [l’intégration à la vue d’ensemble des Applications COM +](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md).  
   

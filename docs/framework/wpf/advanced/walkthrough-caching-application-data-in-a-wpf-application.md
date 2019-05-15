@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630782"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591207"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : mise en cache des données d’application dans une application WPF
 La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Quand vous accédez à nouveau aux données, les applications peuvent obtenir les données à partir du cache au lieu de devoir les récupérer à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.
 
- Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournit des classes qui vous permettent d’utiliser la mise en cache dans [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. Ces classes se trouvent dans le <xref:System.Runtime.Caching> espace de noms.
+ Le .NET Framework fournit des classes qui vous permettent d’utiliser la mise en cache dans les applications .NET Framework. Ces classes se trouvent dans le <xref:System.Runtime.Caching> espace de noms.
 
 > [!NOTE]
->  Le <xref:System.Runtime.Caching> espace de noms est une nouveauté de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Cet espace de noms rend la mise en cache est disponible pour tous les [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications. Dans les versions précédentes du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], la mise en cache était disponible uniquement dans l’espace de noms <xref:System.Web> et nécessitait donc une dépendance vis-à-vis des classes ASP.NET.
+>  Le <xref:System.Runtime.Caching> espace de noms est une nouveauté de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Cet espace de noms rend la mise en cache est disponible pour toutes les applications .NET Framework. Dans les versions précédentes du .NET Framework, la mise en cache était disponible uniquement dans le <xref:System.Web> espace de noms et nécessitait donc une dépendance vis-à-vis des classes ASP.NET.
 
- Cette procédure pas à pas vous montre comment utiliser la fonctionnalité de mise en cache est disponible dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en tant que partie d’un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application. Dans la procédure pas à pas, vous mettre en cache le contenu d’un fichier texte.
+ Cette procédure pas à pas vous montre comment utiliser la fonctionnalité de mise en cache est disponible dans le .NET Framework en tant que partie d’un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application. Dans la procédure pas à pas, vous mettre en cache le contenu d’un fichier texte.
 
  Cette procédure pas à pas décrit les tâches suivantes :
 
@@ -67,7 +67,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
 4. Dans le **nouveau projet** boîte de dialogue, sélectionnez **Application WPF**.
 
     > [!NOTE]
-    >  Si vous ne voyez pas le **Application WPF** modèle, assurez-vous que vous ciblez une version de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui prend en charge WPF. Dans le **nouveau projet** boîte de dialogue, sélectionnez [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dans la liste.
+    >  Si vous ne voyez pas le **Application WPF** modèle, assurez-vous que vous ciblez une version du .NET Framework qui prend en charge de WPF. Dans le **nouveau projet** boîte de dialogue, sélectionnez [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dans la liste.
 
 5. Dans le **nom** texte, entrez un nom pour votre projet. Par exemple, vous pouvez entrer **WPFCaching**.
 

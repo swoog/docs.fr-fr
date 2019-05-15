@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610418"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591959"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Comment les informations de culture affectent les chaînes dans Visual Basic
 Cette page d’aide décrit comment Visual Basic utilise les informations de culture pour effectuer des comparaisons et les conversions de chaînes.  
@@ -38,7 +38,7 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
 ## <a name="using-a-specific-culture"></a>À l’aide d’une Culture spécifique  
  Imaginez que vous développez une application qui envoie une date (sous formatée de chaîne) à un service Web. Dans ce cas, votre application doit utiliser une culture spécifique pour la conversion de chaîne. Pour illustrer pourquoi, observez le résultat de l’utilisation de la date <xref:System.DateTime.ToString> méthode : Si votre application utilise cette méthode pour mettre en forme la date du 4 juillet 2005, elle retourne « 7/4/2005 12:00:00 AM » lorsqu’il est exécuté avec la culture anglais des États-Unis (en-US), mais elle retourne « 04.07.2005 00:00:00 » lorsqu’il est exécuté avec la culture Allemand (de-DE).  
   
- Lorsque vous avez besoin effectuer une conversion de chaîne dans un format de culture spécifique, vous devez utiliser le `CultureInfo` classe qui est intégrée dans le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous pouvez créer un nouveau `CultureInfo` objet pour une culture spécifique en passant le nom de la culture à le <xref:System.Globalization.CultureInfo.%23ctor%2A> constructeur. Les noms de culture prise en charge sont répertoriés dans le <xref:System.Globalization.CultureInfo> page d’aide de classe.  
+ Lorsque vous avez besoin effectuer une conversion de chaîne dans un format de culture spécifique, vous devez utiliser le `CultureInfo` classe qui est intégrée dans le .NET Framework. Vous pouvez créer un nouveau `CultureInfo` objet pour une culture spécifique en passant le nom de la culture à le <xref:System.Globalization.CultureInfo.%23ctor%2A> constructeur. Les noms de culture prise en charge sont répertoriés dans le <xref:System.Globalization.CultureInfo> page d’aide de classe.  
   
  Vous pouvez également obtenir une instance de la *culture dite indifférente* à partir de la <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriété. La culture dite indifférente est basée sur la culture anglaise, mais il existe quelques différences. Par exemple, la culture dite indifférente spécifie une horloge de 24 heures au lieu d’une horloge de 12 heures.  
   
@@ -62,7 +62,7 @@ Cette page d’aide décrit comment Visual Basic utilise les informations de cul
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Vous pouvez également utiliser le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partenaire de la `StrComp` (fonction), le <xref:System.String.Compare%2A?displayProperty=nameWithType> (méthode). Il s’agit d’une méthode statique, la surcharge de la classe string de base. L’exemple suivant illustre comment cette méthode est utilisée :  
+ Vous pouvez également utiliser le partenaire de .NET Framework de la `StrComp` (fonction), le <xref:System.String.Compare%2A?displayProperty=nameWithType> (méthode). Il s’agit d’une méthode statique, la surcharge de la classe string de base. L’exemple suivant illustre comment cette méthode est utilisée :  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
