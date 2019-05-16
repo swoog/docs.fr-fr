@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a8b53f8b6c6f403d742652d5e4c57f8daab086d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa613692093e129c7478014b29b99241bdb7af91
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673265"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672029"
 ---
-<span data-ttu-id="0b33b-101">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="0b33b-101">Object Relational Designer</span></span>
+<span data-ttu-id="75e81-101">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="75e81-101">Object Relational Designer</span></span>
