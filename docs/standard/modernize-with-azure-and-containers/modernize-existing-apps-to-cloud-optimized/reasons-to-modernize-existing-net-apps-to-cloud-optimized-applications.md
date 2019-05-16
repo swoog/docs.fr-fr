@@ -1,15 +1,13 @@
 ---
 title: Raisons de moderniser des applications .NET existantes aux applications optimisé pour le Cloud
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Raisons de moderniser des applications .NET existantes aux applications optimisé pour le Cloud
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 896162116d2c6e92fa3038405c5f3bf40a956ad9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611566"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639061"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Raisons de moderniser des applications .NET existantes aux applications optimisé pour le Cloud
 

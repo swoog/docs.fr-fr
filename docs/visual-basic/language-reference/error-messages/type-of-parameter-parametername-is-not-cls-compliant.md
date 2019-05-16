@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f671b75972642670e28b9e761a8174d02d39c4e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590645"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642178"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Type de paramètre '\<nom_paramètre >' n’est pas conforme CLS
 Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un paramètre avec un type qui est marqué comme `<CLSCompliant(False)>`, n’est pas marqué ou non qualifié, car il est un type non conforme.  
