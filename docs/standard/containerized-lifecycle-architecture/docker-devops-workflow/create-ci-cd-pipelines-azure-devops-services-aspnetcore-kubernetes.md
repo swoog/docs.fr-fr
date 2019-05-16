@@ -1,15 +1,13 @@
 ---
 title: Étapes du workflow DevOps de la boucle externe pour une application Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063310"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644986"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Création de pipelines CI/CD dans Azure DevOps Services pour une application .NET Core 2.0 sur des conteneurs et déploiement sur un cluster Kubernetes
 

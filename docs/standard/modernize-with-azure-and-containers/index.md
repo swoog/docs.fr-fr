@@ -1,15 +1,13 @@
 ---
 title: Moderniser les Applications .NET existantes avec Azure Cloud et les conteneurs Windows (2nd edition)
 description: Apprenez à migrer et moderniser les applications existantes vers le cloud Azure et les conteneurs avec ce livre électronique.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00460569ee96832e2774c623ff236a6fbb7af349
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628423"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639068"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Moderniser des applications .NET existantes avec le cloud Azure et les conteneurs Windows (2nd edition)
 

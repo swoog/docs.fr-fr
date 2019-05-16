@@ -1,15 +1,13 @@
 ---
 title: Moderniser vos applications avec la surveillance et la télémétrie
 description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Moderniser vos applications avec la surveillance et télémétrie
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: a8135031d2879ff377881d246c532573a2149fe7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611655"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643677"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Moderniser vos applications avec la surveillance et la télémétrie
 

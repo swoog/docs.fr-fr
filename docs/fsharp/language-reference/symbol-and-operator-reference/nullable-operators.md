@@ -2,12 +2,12 @@
 title: Opérateurs autorisant la valeur Null
 description: En savoir plus sur les opérateurs nullables qui sont disponibles dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79165f35258b414624174153d2cd729b301cf389
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960457"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642091"
 ---
 # <a name="nullable-operators"></a>Opérateurs autorisant la valeur Null
 

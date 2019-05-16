@@ -2,12 +2,12 @@
 title: Mappage entre JSON et XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 075f85887f99708dd1f3479bf0b036203886af71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918773"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636433"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mappage entre JSON et XML
 Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> fournissent une API XML sur le contenu de JavaScript Objet Notation (JSON). JSON encode des données à l'aide d'un sous-ensemble de littéraux d'objet JavaScript. Les lecteurs et writers produits par cette fabrique sont également utilisés lorsque le contenu JSON est envoyé ou reçu par les applications Windows Communication Foundation (WCF) à l’aide de la <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ou le <xref:System.ServiceModel.WebHttpBinding>.

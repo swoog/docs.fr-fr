@@ -2,12 +2,12 @@
 title: Composite personnalisé à l'aide de NativeActivity
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005197"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637602"
 ---
 # <a name="custom-composite-using-native-activity"></a>Composite personnalisé à l'aide de NativeActivity
 Cet exemple montre comment écrire un <xref:System.Activities.NativeActivity> qui planifie d'autres objets <xref:System.Activities.Activity> pour contrôler le flux d'exécution d'un workflow. Cet exemple utilise deux flux de contrôle communs, Sequence et While, pour illustrer cette procédure.

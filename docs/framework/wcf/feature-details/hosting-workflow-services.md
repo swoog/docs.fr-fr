@@ -2,12 +2,12 @@
 title: Hébergement de services de workflow
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613335"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636139"
 ---
 # <a name="hosting-workflow-services"></a>Hébergement de services de workflow
 Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie WCF et sont donc hébergés de manière similaire. Comme les services WCF, les services de flux de travail peuvent être hébergés dans toute application managée, sous Internet Information Services (IIS), ou sous les services Internet (WAS, Windows Process Activation Services). En outre, les services de workflow peuvent être hébergés sous Windows Server AppFabric. Pour plus d’informations sur Windows Server AppFabric, consultez [documentation de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement d’AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Pour plus d’informations sur les différentes façons d’héberger WCF services, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a6564683a856c8d1eb47b1569f156e0b6d5cc67
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778350"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636418"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Procédure : créer un WSFederationHttpBinding
 
@@ -30,7 +30,7 @@ Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFede
 
 2. Sur les clients fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> l'URL du service de jeton de sécurité. Affectez au <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> la liaison à utiliser pour communiquer avec le service de jeton de sécurité.
 
-3. Optionnel. Affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> l'URI (Uniform Resource Identifier) d'un type de jeton. Sur les services fédérés, spécifiez le type de jeton que le service attend. Sur les clients fédérés, spécifiez le type de jeton que le client demande au service de jeton de sécurité.
+3. Facultatif. Affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> l'URI (Uniform Resource Identifier) d'un type de jeton. Sur les services fédérés, spécifiez le type de jeton que le service attend. Sur les clients fédérés, spécifiez le type de jeton que le client demande au service de jeton de sécurité.
 
      Si aucun type de jeton n'est spécifié, les clients génèrent des jetons RST (Request Security Token) WS-Trust sans l'URI d'un type de jeton, et les services attendent l'authentification du client à l'aide d'un jeton SAML (Security Assertions Markup Language) 1.1 par défaut.
 
@@ -81,13 +81,13 @@ Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFede
 
 7. Facultatif. Si une clé de vérification asymétrique est requise, affectez à l'attribut `issuedKeyType` de l'élément `<message>` la valeur `AsymmetricKey`. La valeur par défaut est `SymmetricKey`.
 
-8. Optionnel. Définissez l'attribut `issuedTokenType` sur l'élément `<message>`.
+8. Facultatif. Définissez l'attribut `issuedTokenType` sur l'élément `<message>`.
 
 9. Requis sur le client si aucun émetteur local n'est spécifié ; facultatif sur le service. Créez un élément `<issuer>` en tant qu'enfant de l'élément `<message>`.
 
 10. Affectez l'attribut `address` à l'élément `<issuer>` et spécifiez l'adresse à laquelle le service de jeton de sécurité accepte des demandes de jeton.
 
-11. Optionnel. Ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
+11. Facultatif. Ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.
 
 12. Pour plus d’informations, consultez [identité de Service et d’authentification](service-identity-and-authentication.md).
 
