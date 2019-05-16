@@ -2,12 +2,12 @@
 title: Fonctions
 description: En savoir plus sur les fonctions dans F# et comment F# prend en charge les constructions de programmation fonctionnelles courants.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996786"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645400"
 ---
 # <a name="functions"></a>Fonctions
 

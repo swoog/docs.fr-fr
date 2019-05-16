@@ -1,15 +1,13 @@
 ---
 title: Qu’est-ce que Docker ?
 description: Obtenir un peu plus loin dans votre présentation de Docker, une analogie simple ici peut-être vous aider.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: fbb91466a86c7082e89d0ac4a3673ad83ab39b88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921467"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644778"
 ---
 # <a name="what-is-docker"></a>Qu’est-ce que Docker ?
 

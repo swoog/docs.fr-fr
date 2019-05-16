@@ -2,12 +2,12 @@
 title: Classes
 description: Découvrez comment F# Classes sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a233fea538274216db3c6751f6fbabbf70cc2841
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870290"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645529"
 ---
 # <a name="classes"></a>Classes
 

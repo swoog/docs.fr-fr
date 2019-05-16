@@ -1,15 +1,13 @@
 ---
 title: Exécuter, gérer et surveiller des environnements de production Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921522"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644878"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Exécuter, gérer et surveiller des environnements de production Docker
 

@@ -2,12 +2,12 @@
 title: Paramètres de type résolus statiquement
 description: Découvrez comment utiliser un F# paramètre de type résolus statiquement, qui est remplacé par un type réel au moment de la compilation plutôt qu’au moment de l’exécution.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937486"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645257"
 ---
 # <a name="statically-resolved-type-parameters"></a>Paramètres de type résolus statiquement
 

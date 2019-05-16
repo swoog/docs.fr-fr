@@ -1,15 +1,13 @@
 ---
 title: Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
 description: Applications de production réel doivent être déployée et gérée avec des orchestrateurs qui gèrent l’intégrité, les charges de travail et les cycles de vie de tous les conteneurs.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644805"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644723"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestration des microservices et des applications à plusieurs conteneurs pour une grande scalabilité et une haute disponibilité
 
