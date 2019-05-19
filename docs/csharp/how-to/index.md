@@ -2,12 +2,12 @@
 title: Articles de guide pratique (Guide C#)
 description: Série de petits conseils et d’exemples de code spécifiques courts
 ms.date: 12/20/2017
-ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672105"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879014"
 ---
 # <a name="how-to-c"></a>Guides pratiques (C#)
 
@@ -133,4 +133,3 @@ Les programmes récents utilisent souvent des opérations asynchrones. Les artic
 En règle générale, les programmes en C# ont des arguments de ligne de commande. Les articles suivants vous apprennent à accéder et à traiter ces arguments de ligne de commande.
 
 - [Récupérer tous les arguments de ligne de commande avec `for`](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
-- [Récupérer tous les arguments de ligne de commande avec `foreach`](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md).
