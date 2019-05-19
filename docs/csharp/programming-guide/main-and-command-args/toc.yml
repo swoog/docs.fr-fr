@@ -5,7 +5,5 @@
       href: command-line-arguments.md
     - name: "Procédure\_: Afficher les arguments de ligne de commande"
       href: how-to-display-command-line-arguments.md
-    - name: "Procédure\_: Accéder à des arguments de ligne de commande à l’aide de foreach"
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: Valeurs de retour Main()
       href: main-return-values.md
