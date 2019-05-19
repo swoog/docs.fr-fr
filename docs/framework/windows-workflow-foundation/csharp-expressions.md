@@ -2,12 +2,12 @@
 title: Expressions C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650956"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882079"
 ---
 # <a name="c-expressions"></a>Expressions C#
 En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les expressions c# sont prises en charge dans Windows Workflow Foundation (WF). Les nouveaux projets de workflow c# créés dans Visual Studio 2012 qui ciblent [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilisent des expressions c# et les projets de flux de travail de Visual Basic utilisent des expressions Visual Basic. Les projets de workflow [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] qui utilisent des expressions Visual Basic peuvent être migrés vers [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] indépendamment du langage de projet et sont pris en charge. Cette rubrique fournit une vue d'ensemble des expressions C# dans [!INCLUDE[wf1](../../../includes/wf1-md.md)].
@@ -31,7 +31,7 @@ En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les exp
 ### <a name="WFDesigner"></a> À l’aide d’expressions c# dans le Concepteur de flux de travail
  En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les expressions c# sont prises en charge dans Windows Workflow Foundation (WF). Les projets de workflow c# créés dans Visual Studio 2012 qui ciblent [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilisent des expressions c#, tandis que les projets de flux de travail de Visual Basic utilisent des expressions Visual Basic. Pour spécifier l’expression c# souhaitée, tapez-la dans la zone intitulée **entrer une expression c#**. Cette étiquette s'affiche dans la fenêtre de propriétés lorsque l'activité est sélectionnée dans le concepteur, ou sur l'activité dans Workflow Designer. Dans l'exemple suivant, deux activités `WriteLine` sont contenues dans `Sequence` à l'intérieur de `NoPersistScope`.
 
- ![Activité sequence créée automatiquement](./media/autosurround2.png "AutoSurround2")
+ ![Capture d’écran montrant une activité de séquence créé automatiquement.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  Expressions c# sont prises en charge uniquement dans Visual Studio et ne sont pas pris en charge dans le Concepteur de workflow réhébergé. Pour plus d’informations sur les nouvelles fonctionnalités WF45 prises en charge dans le concepteur réhébergé, consultez [prise en charge des nouvelles fonctionnalités de 4.5 Workflow Foundation dans le Concepteur de Workflow réhébergés](wf-features-in-the-rehosted-workflow-designer.md).

@@ -2,15 +2,15 @@
 title: Datasets ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607589"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877224"
 ---
 # <a name="adonet-datasets"></a>Datasets ADO.NET
-L'objet <xref:System.Data.DataSet> est l'élément central pour la prise en charge de scénarios impliquant des données distribuées et déconnectées avec [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Le **DataSet** est une représentation résidente en mémoire de données qui fournit un modèle de programmation relationnel cohérent quelle que soit la source de données. Il peut être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le **DataSet** représente un ensemble complet de données, y compris les tables associées, des contraintes et des relations entre les tables. L’illustration suivante montre le **DataSet** modèle objet.  
+Le <xref:System.Data.DataSet> objet est essentiel à prendre en charge déconnecté, des scénarios de données avec ADO.NET distribués. Le **DataSet** est une représentation résidente en mémoire de données qui fournit un modèle de programmation relationnel cohérent quelle que soit la source de données. Il peut être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le **DataSet** représente un ensemble complet de données, y compris les tables associées, des contraintes et des relations entre les tables. L’illustration suivante montre le **DataSet** modèle objet.  
   
  ![Graphique ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Modèle d'objet DataSet  
@@ -20,7 +20,7 @@ Modèle d'objet DataSet
  Le **DataSet** peut également persister et recharger son contenu en tant que XML et son schéma en tant que schéma XML schema definition language (XSD). Pour plus d’informations, consultez [Utilisation de XML dans un DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- Un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **DataSet** contient une collection de zéro ou plusieurs tables représentées par <xref:System.Data.DataTable> objets. Le <xref:System.Data.DataTableCollection> contient tous les **DataTable** des objets dans un **jeu de données**.  
+ Un élément ADO.NET **DataSet** contient une collection de zéro ou plusieurs tables représentées par <xref:System.Data.DataTable> objets. Le <xref:System.Data.DataTableCollection> contient tous les **DataTable** des objets dans un **jeu de données**.  
   
  Un **DataTable** est défini dans le <xref:System.Data> espace de noms et représente une seule table de données résidentes en mémoire. Il contient une collection de colonnes, représentées par un <xref:System.Data.DataColumnCollection> et des contraintes représentées par un <xref:System.Data.ConstraintCollection>, qui ensemble définissent le schéma de la table. Un **DataTable** contient également une collection de lignes représentées par le <xref:System.Data.DataRowCollection>, qui contient les données dans la table. En plus de son état actuel, un <xref:System.Data.DataRow> conserve ses versions d'origine et actuelle afin de permettre l'identification des modifications apportées aux valeurs stockées dans la ligne.  
   

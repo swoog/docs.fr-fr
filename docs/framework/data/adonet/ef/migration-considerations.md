@@ -2,15 +2,15 @@
 title: Considérations sur la migration (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e3410c62ba2fb9b8cc3dd0c6aa80707e03793fd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583563"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880068"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
+ADO.NET Entity Framework offre plusieurs avantages à une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
   
  Pour tirer parti des avantages de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous pouvez migrer une application existante vers le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Certaines tâches sont communes à toutes les applications migrées. Ces tâches communes incluent la mise à niveau de l’application pour utiliser le .NET Framework depuis la version 3.5 Service Pack 1 (SP1), définition des modèles de mappage et configuration d’Entity Framework. Lorsque vous effectuez la migration d'une application vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], des points supplémentaires sont à prendre en considération. Ces points dépendent du type d'application qui est migrée et des fonctionnalités spécifiques de l'application. Cette rubrique fournit des informations vous permettant de choisir la meilleure approche à utiliser lorsque vous mettez à niveau une application existante.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "65583563"
   
 - Pour une application volumineuse ou complexe, vous n'êtes pas obligé de migrer la totalité de l'application vers Entity Framework à la fois. Toutefois, toute partie de l’application qui n’utilise pas Entity Framework doit néanmoins être modifiée lorsque la source de données change.  
   
-- La connexion de fournisseur de données utilisée par Entity Framework peut être partagée avec d’autres parties de votre application car [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- La connexion du fournisseur de données utilisée par Entity Framework peut être partagée avec d’autres parties de votre application, car le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise des fournisseurs de données ADO.NET pour accéder à la source de données. Par exemple, le fournisseur SqlClient est utilisé par Entity Framework pour accéder à une base de données SQL Server. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Tâches de migration communes  
  Le chemin d’accès pour effectuer la migration d’une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dépend à la fois du type d’application et de la stratégie d’accès aux données existante. Toutefois, vous devez toujours effectuer les tâches suivantes lorsque vous migrez une application existante vers [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "65583563"
  En commençant par le .NET Framework 4, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] « plain old » prend en charge les objets CLR (POCO), également appelées objets ignorant la persistance. Dans la plupart des cas, vos objets existants peuvent fonctionner avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] en effectuant des changements mineurs. Pour plus d’informations, consultez [utilisation des entités POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Vous pouvez également migrer une application à le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et utiliser les classes de données qui sont générés par les outils Entity Framework. Pour plus d'informations, voir [Procédure : Utilisez l’Assistant Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considérations relatives aux applications qui utilisent des fournisseurs ADO.NET  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] les fournisseurs, tels que SqlClient, vous permettent de vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] jeu de données. La liste suivante décrit des considérations relatives à la mise à niveau d'une application qui utilise un fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existant :  
+ Les fournisseurs ADO.NET, tels que SqlClient, vous permettent de vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un DataSet ADO.NET. La liste suivante décrit les considérations relatives à la mise à niveau une application qui utilise un fournisseur ADO.NET existant :  
   
 - Affichage de données tabulaires à l'aide d'un lecteur de données.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "65583563"
   Si le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne fournissent pas les fonctionnalités du DataSet requises par votre application, vous pouvez toujours tirer parti des avantages des requêtes LINQ en utilisant [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Pour plus d’informations, [consultez LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Considérations relatives aux applications qui lient des données à des contrôles  
- Le .NET Framework vous permet d’encapsuler les données dans une source de données, comme un DataSet ou un [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] contrôle de source de données et puis lier les éléments d’interface utilisateur à ces contrôles de données. La liste suivante décrit les considérations concernant la liaison de contrôles à des données Entity Framework.  
+ Le .NET Framework vous permet d’encapsuler des données dans une source de données, comme un jeu de données ou un contrôle de source de données ASP.NET, puis lier les éléments d’interface utilisateur à ces contrôles de données. La liste suivante décrit les considérations concernant la liaison de contrôles à des données Entity Framework.  
   
 - Liaison de données à des contrôles.  
 
@@ -79,9 +79,9 @@ ms.locfileid: "65583563"
   
   Pour plus d’informations, consultez [liaison d’objets aux contrôles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- Contrôles de source de données [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Contrôles de source de données ASP.NET.  
 
-  Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications Web. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
+  Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un contrôle de source de données conçu pour simplifier la liaison de données dans les applications Web ASP.NET. Pour plus d’informations, consultez [vue d’ensemble du contrôle serveur Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Autres considérations  
  Les remarques suivantes peuvent s’appliquer lorsque vous effectuez une migration de types spécifiques d’applications vers Entity Framework.  
@@ -100,7 +100,7 @@ ms.locfileid: "65583563"
   
 - Applications qui gèrent l'état.  
 
-  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
+  Les applications Web ASP.NET doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Objets dans un <xref:System.Data.Objects.ObjectContext> instance permettre être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et versions ultérieures récupérée et rattachée à un contexte d’objet. Pour plus d’informations, consultez [attachement et détachement des objets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Voir aussi
 

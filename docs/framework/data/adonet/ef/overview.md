@@ -2,12 +2,12 @@
 title: Vue d’ensemble d’Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634270"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880030"
 ---
 # <a name="entity-framework-overview"></a>Présentation d’Entity Framework
 
@@ -49,7 +49,7 @@ Plus qu'une simple solution de mappage relationnel objet supplémentaire, [!INCL
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialecte indépendant du stockage de SQL qui fonctionne directement avec les entités dans le modèle conceptuel et qui prend en charge [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] concepts. [!INCLUDE[esql](../../../../../includes/esql-md.md)] est utilisé avec les requêtes d’objet et les requêtes sont exécutées à l’aide du fournisseur EntityClient. Pour plus d’informations, consultez [Entity SQL Overview](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut le fournisseur de données EntityClient. Ce fournisseur gère les connexions, traduit des requêtes d'entité dans les requêtes spécifiques à la source de données et retourne un lecteur de données que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise pour matérialiser les données d'entité dans des objets. Lors de la matérialisation d’objets n’est pas obligatoire, le fournisseur EntityClient peut également servir comme une norme [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] fournisseur de données en permettant aux applications d’exécuter [!INCLUDE[esql](../../../../../includes/esql-md.md)] interroge et utiliser le lecteur de données en lecture seule retournées. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut le fournisseur de données EntityClient. Ce fournisseur gère les connexions, traduit des requêtes d'entité dans les requêtes spécifiques à la source de données et retourne un lecteur de données que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise pour matérialiser les données d'entité dans des objets. Lorsque la matérialisation d'objets n'est pas requise, le fournisseur EntityClient peut également être utilisé comme un fournisseur de données ADO.NET standard en permettant aux applications d'exécuter des requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] et d'utiliser le lecteur de données en lecture seule retournées. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 Le diagramme suivant illustre l'architecture [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pour l'accès aux données :
 
@@ -59,7 +59,7 @@ Les outils [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] peuv
 
 ## <a name="data-providers"></a>Fournisseurs de données
 
-Le fournisseur `EntityClient` étend le modèle de fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] en accédant aux données en termes d'entités conceptuelles et de relations. Il exécute des requêtes qui utilisent [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fournit le langage de requête sous-jacent qui permet à `EntityClient` de communiquer avec la base de données. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+Le `EntityClient` fournisseur étend le modèle de fournisseur ADO.NET en accédant aux données en termes d’entités conceptuelles et de relations. Il exécute des requêtes qui utilisent [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] fournit le langage de requête sous-jacent qui permet à `EntityClient` de communiquer avec la base de données. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un fournisseur de données SqlClient mis à jour qui prend en charge les arborescences de commandes canoniques. Pour plus d’informations, consultez [SqlClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).
 

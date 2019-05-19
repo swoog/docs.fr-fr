@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583830"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879968"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configuration des paramètres et types de données de paramètre
 
@@ -96,7 +96,7 @@ Pour plus d’informations, consultez [générant des commandes avec CommandBuil
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Utilisation de paramètres avec un objet SqlCommand ou une procédure stockée
 
-Les procédures stockées offrent de nombreux avantages dans les applications pilotées par des données. En utilisant les procédures stockées, les opérations de base de données peuvent être encapsulées dans une commande unique, optimisées pour de meilleures performances et améliorées grâce à une sécurité supplémentaire. Bien qu'une procédure stockée puisse être appelée en passant son nom suivi des arguments de paramètre comme instruction SQL, l'utilisation de la collection <xref:System.Data.Common.DbCommand.Parameters%2A> de l'objet [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> vous permet de définir plus explicitement les paramètres de procédure stockée et d'accéder aux paramètres de sortie et aux valeurs de retour.
+Les procédures stockées offrent de nombreux avantages dans les applications pilotées par des données. En utilisant les procédures stockées, les opérations de base de données peuvent être encapsulées dans une commande unique, optimisées pour de meilleures performances et améliorées grâce à une sécurité supplémentaire. Bien qu’une procédure stockée peut être appelée en passant le nom de procédure stockée suivi d’arguments de paramètre comme instruction SQL, à l’aide de la <xref:System.Data.Common.DbCommand.Parameters%2A> collection d’ADO.NET <xref:System.Data.Common.DbCommand> objet vous permet de définir plus explicitement de procédure stockée paramètres, ainsi que pour accéder aux paramètres de sortie et valeurs de retour.
 
 > [!NOTE]
 > Les instructions paramétrées sont exécutées sur le serveur à l'aide de `sp_executesql,` , ce qui permet la réutilisation des plans de requête. Les curseurs ou variables locaux dans le lot `sp_executesql` ne sont pas visibles pour le lot qui appelle `sp_executesql`. Les modifications dans le contexte de la base de données durent uniquement jusqu'à la fin de l'instruction `sp_executesql` . Pour plus d’informations, consultez [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

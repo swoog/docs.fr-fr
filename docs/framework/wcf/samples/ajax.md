@@ -2,12 +2,12 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944194"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882124"
 ---
 # <a name="ajax"></a>AJAX
 Cette section inclut des exemples qui illustrent les fonctionnalités Asynchronous JavaScript And XML.  
@@ -23,7 +23,7 @@ Cette section inclut des exemples qui illustrent les fonctionnalités Asynchrono
  Montre comment utiliser WCF pour créer un service de base ASP.NET Asynchronous JavaScript and XML (AJAX).  
   
  [Service AJAX utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- Montre comment utiliser WCF pour créer un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] service Asynchronous JavaScript and XML (AJAX) qui utilise HTTP POST.  
+ Montre comment utiliser WCF pour créer un service ASP.NET Asynchronous JavaScript and XML (AJAX) qui utilise HTTP POST.  
   
  [Service AJAX sans configuration](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  Montre comment utiliser WCF pour créer un service de base ASP.NET Asynchronous JavaScript and XML (AJAX).  

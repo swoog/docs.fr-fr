@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754078"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882343"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces participant à la liaison de données
 
-Avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], vous pouvez créer de nombreuses structures de données différentes pour répondre aux besoins de liaison de votre application et des données que vous utilisez. Vous souhaiterez peut-être créer vos propres classes qui fourniront ou utiliseront des données dans les Windows Forms. Ces objets peuvent offrir différents niveaux de fonctionnalités et de complexité, de la liaison de données basique à la fourniture d’une prise en charge au moment du design, en passant par la vérification des erreurs, la notification des modifications ou même la prise en charge de la restauration structurée des modifications apportées aux données elles-mêmes.
+Avec ADO.NET, vous pouvez créer de nombreux différentes structures de données en fonction des besoins de votre application et les données que vous travaillez avec liaison. Vous souhaiterez peut-être créer vos propres classes qui fourniront ou utiliseront des données dans les Windows Forms. Ces objets peuvent offrir différents niveaux de fonctionnalités et de complexité, de la liaison de données basique à la fourniture d’une prise en charge au moment du design, en passant par la vérification des erreurs, la notification des modifications ou même la prise en charge de la restauration structurée des modifications apportées aux données elles-mêmes.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Utilisateurs d’interfaces de liaison de données
 
@@ -82,7 +82,7 @@ Les interfaces suivantes sont conçues pour être utilisées par les contrôles 
 
 - <xref:System.Collections.IEnumerable> Interface
 
-  Une classe qui implémente le <xref:System.Collections.IEnumerable> interface est généralement utilisée par [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Prise en charge de Windows Forms de cette interface est disponible uniquement via le <xref:System.Windows.Forms.BindingSource> composant.
+  Une classe qui implémente le <xref:System.Collections.IEnumerable> interface est généralement utilisée par ASP.NET. Prise en charge de Windows Forms de cette interface est disponible uniquement via le <xref:System.Windows.Forms.BindingSource> composant.
 
   > [!NOTE]
   > Le <xref:System.Windows.Forms.BindingSource> composant copie tous les <xref:System.Collections.IEnumerable> éléments dans une liste séparée pour la liaison.

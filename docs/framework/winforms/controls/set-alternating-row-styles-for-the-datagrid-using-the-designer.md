@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e5714663a0873cb275d2909028a7d791be76fcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012423"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882228"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procédure : définir des styles de ligne alternée pour le contrôle DataGridView Windows Forms à l’aide du concepteur
 Données tabulaires sont souvent présentées dans un format de type livre comptable où les lignes en alternance ont différentes couleurs d’arrière-plan. Avec ce format, il est facile pour les utilisateurs de déterminer quelle cellule appartient à quelle ligne, en particulier dans les tableaux larges qui ont beaucoup de colonnes.  
@@ -29,7 +29,7 @@ Données tabulaires sont souvent présentées dans un format de type livre compt
   
 1. Sélectionnez le <xref:System.Windows.Forms.DataGridView> contrôle dans le concepteur.  
   
-2. Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté du <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriété.  
+2.  Dans le **propriétés** fenêtre, cliquez sur le bouton de sélection (![bouton les points de suspension (...) dans la fenêtre Propriétés de Visual Studio.](./media/visual-studio-ellipsis-button.png)) à côté du <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> propriété.  
   
 3. Dans le **Générateur CellStyle** boîte de dialogue Définir le style en définissant les propriétés et utilisez le **aperçu** volet pour confirmer votre choix. Les styles que vous spécifiez sont utilisés pour chaque autre ligne affichée dans le contrôle, en commençant par la deuxième.  
   

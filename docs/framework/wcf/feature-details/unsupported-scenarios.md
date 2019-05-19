@@ -2,12 +2,12 @@
 title: Scénarios non pris en charge
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637755"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878742"
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en charge certains scénarios de sécurité spécifiques. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n’implémente pas les protocoles d’authentification SSPI ou Kerberos, et par conséquent, WCF ne prend pas en charge l’exécution d’un service avec l’authentification Windows sur cette plateforme. Autres mécanismes d’authentification, telles que le nom d’utilisateur/mot de passe et l’authentification intégrée HTTP/HTTPS sont pris en charge lors de l’exécution de WCF sous Windows XP Édition familiale.  
@@ -36,7 +36,7 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 >  Les spécifications précédentes sont spécifiques. Par exemple, l’élément <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crée un élément de liaison qui aboutit à une identité Windows, mais cet élément ne définit pas de jeton de contexte de sécurité avec état. Vous pouvez donc utiliser cet élément avec l'option `Required` de [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Éventuel conflit avec ASP.NET  
- WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peuvent activer ou désactiver l’emprunt d’identité. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge une application WCF, un conflit peut survenir entre WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] paramètres de configuration. En cas de conflit, le paramètre de WCF est prioritaire, sauf si le <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriété est définie sur <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, auquel cas le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le paramètre de l’emprunt d’identité est prioritaire.  
+ WCF et ASP.NET peuvent les activer ou désactiver l’emprunt d’identité. Lorsqu’ASP.NET héberge une application WCF, un conflit peut survenir entre les paramètres de configuration WCF et ASP.NET. En cas de conflit, le paramètre de WCF est prioritaire, sauf si le <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriété est définie sur <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, auquel cas le paramètre de l’emprunt d’identité ASP.NET est prioritaire.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Les chargements d'assembly risquent d'échouer lorsque l'emprunt d'identité est activé  
  Si le contexte emprunté ne dispose de droits d'accès permettant le chargement d'un assembly et que l'objet CLR tente pour la première fois de le charger pour AppDomain, <xref:System.AppDomain> met l'échec en mémoire cache. Les tentatives suivantes pour charger cet assembly échoueront également, même après restauration de l'emprunt d'identité et même si le contexte restauré dispose cette fois de droits d'accès permettant de charger cet assembly. Ces échecs successifs se produisent car l'objet CLR ne tente pas une nouvelle fois de charger l'assembly après la modification du contexte utilisateur. Vous devez redémarrer le domaine d'application pour résoudre ce problème.  
@@ -75,13 +75,13 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
  WCF ne prend pas en charge la combinaison suivante de paramètres, car ils peuvent également empêcher l’authentification du client ne se produise :  
   
-- L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
+- Emprunt d’identité ASP.NET est activé. Cela est effectué dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément à `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
+- Mode de compatibilité ASP.NET est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
   
 - Le mode de sécurité de niveau message est utilisé.  
   
- Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ou, si le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est requis, désactivez le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] l’emprunt d’identité des fonctionnalités et utilisez à la place de l’emprunt d’identité fourni par WCF. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ La solution de contournement consiste à désactiver le mode de compatibilité ASP.NET. Ou, si le mode de compatibilité ASP.NET est nécessaire, désactiver la fonctionnalité de l’emprunt d’identité ASP.NET et utilisez à la place de l’emprunt d’identité fourni par WCF. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Échec d'adresse littérale IPv6  
  Les demandes de sécurité échouent si le client et le service s'exécutent sur le même ordinateur et les adresses littérales IPv6 sont utilisées pour le service.  

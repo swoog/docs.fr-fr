@@ -2,15 +2,15 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638396"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876746"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
-L'exemple Membership and Role Provider montre comment un service peut utiliser les fournisseurs d'appartenances et de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour authentifier et autoriser des clients.  
+L’exemple Membership and Role Provider montre comment un service peut utiliser les fournisseurs de rôles et de l’appartenance ASP.NET pour authentifier et autoriser les clients.  
   
  Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
   
@@ -21,11 +21,11 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
   
 - Un client peut authentifier des utilisateurs à l'aide de la combinaison nom d'utilisateur et mot de passe.  
   
-- Le serveur peut valider les informations d'identification du client à partir du fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Le serveur peut valider les informations d’identification de client sur le fournisseur d’appartenances ASP.NET.  
   
 - Le serveur peut être authentifié à l'aide du certificat X.509 du serveur.  
   
-- Le serveur peut mapper le client authentifié à un rôle à l'aide du fournisseur de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Le serveur peut mapper le client authentifié à un rôle en utilisant le fournisseur de rôle ASP.NET.  
   
 - Le serveur peut utiliser l'`PrincipalPermissionAttribute` pour contrôler l'accès à certaines méthodes exposées par le service.  
   
@@ -69,7 +69,7 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
 </system.web>  
 ```  
   
- Le service expose un point de terminaison unique de communication avec le service, qui est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une `wsHttpBinding`standard, qui utilise par défaut l'authentification Windows. Cet exemple définit la `wsHttpBinding` standard de manière à utiliser l'authentification du nom d'utilisateur. Le comportement spécifie que le certificat de serveur sera utilisé pour l'authentification du service. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` en tant que le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) élément de configuration. De plus, le comportement spécifie que l'authentification de paires nom d'utilisateur/mot de passe est effectuée par le fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et le mappage de rôles est effectué par le fournisseur de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] en spécifiant les noms définis pour les deux fournisseurs.  
+ Le service expose un point de terminaison unique de communication avec le service, qui est défini à l'aide du fichier de configuration Web.config. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une `wsHttpBinding`standard, qui utilise par défaut l'authentification Windows. Cet exemple définit la `wsHttpBinding` standard de manière à utiliser l'authentification du nom d'utilisateur. Le comportement spécifie que le certificat de serveur sera utilisé pour l'authentification du service. Le certificat de serveur doit contenir la même valeur pour le `SubjectName` en tant que le `findValue` d’attribut dans le [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) élément de configuration. En outre, le comportement Spécifie que l’authentification de paires nom d’utilisateur-mot de passe est effectuée par le fournisseur d’appartenances ASP.NET et mappage des rôles est effectué par le fournisseur de rôle ASP.NET en spécifiant les noms définis pour les deux fournisseurs.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ L'exemple Membership and Role Provider montre comment un service peut utiliser l
 2. Vérifiez que vous avez configuré le [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Si vous exécutez SQL Server Express Edition, le nom de votre serveur est .\SQLEXPRESS. Ce serveur doit être utilisé lors de la configuration de la base de données des services d'application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ainsi que dans la chaîne de connexion Web.config.  
+    >  Si vous exécutez SQL Server Express Edition, le nom de votre serveur est .\SQLEXPRESS. Ce serveur doit être utilisé lors de la configuration de l’Application Services base de données ASP.NET également comme dans la chaîne de connexion Web.config.  
   
     > [!NOTE]
-    >  Le compte du processus de traitement [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] doit avoir des autorisations sur la base de données créée à cette étape. Utilisez l'utilitaire sqlcmd ou SQL Server Management Studio pour ce faire.  
+    >  Le compte de processus de travail ASP.NET doit avoir des autorisations sur la base de données est créé dans cette étape. Utilisez l'utilitaire sqlcmd ou SQL Server Management Studio pour ce faire.  
   
 3. Pour exécuter l'exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions ci-dessous.  
   

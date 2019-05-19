@@ -2,12 +2,12 @@
 title: Architecture ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584579"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877245"
 ---
 # <a name="adonet-architecture"></a>Architecture ADO.NET
 Le traitement des données repose traditionnellement sur un modèle à deux couches utilisant une connexion. Le traitement des données utilisant de plus en plus des architectures multicouches, les programmeurs s'orientent vers une approche déconnectée de façon à proposer une meilleure évolutivité pour leurs applications.  
@@ -52,9 +52,9 @@ Architecture ADO.NET
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] est utilisé pour déployer des services de données sur le Web ou sur un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML et ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tire parti de la puissance de XML pour fournir un accès déconnecté aux données. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] a été conçu de pair avec les classes XML dans le .NET Framework ; les deux sont des composants d’une architecture unique.  
+ ADO.NET exploite la puissance de XML pour fournir un accès déconnecté aux données. ADO.NET a été conçu de pair avec les classes XML dans le .NET Framework ; les deux sont des composants d’une architecture unique.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] et les classes XML du .NET Framework convergent dans le `DataSet` objet. Le `DataSet` peut être rempli de données provenant d'une source XML, qu'il s'agisse d'un fichier ou d'un flux XML. Le `DataSet` peut être écrit en XML conforme au W3C (World Wide Web Consortium), y compris son schéma, en tant que schéma en langage XSD (XML Schema Definition), quelle que soit la source des données contenues dans le `DataSet`. Le format de sérialisation natif du `DataSet` étant XML, il constitue un excellent support pour le déplacement de données entre couches, faisant ainsi du `DataSet` le meilleur choix pour communiquer à distance les données et le contexte du schéma vers et à partir d’un service web XML. Pour plus d’informations, consultez [Documents et données XML](../../../../docs/standard/data/xml/index.md).  
+ ADO.NET et les classes XML du .NET Framework convergent dans le `DataSet` objet. Le `DataSet` peut être rempli de données provenant d'une source XML, qu'il s'agisse d'un fichier ou d'un flux XML. Le `DataSet` peut être écrit en XML conforme au W3C (World Wide Web Consortium), y compris son schéma, en tant que schéma en langage XSD (XML Schema Definition), quelle que soit la source des données contenues dans le `DataSet`. Le format de sérialisation natif du `DataSet` étant XML, il constitue un excellent support pour le déplacement de données entre couches, faisant ainsi du `DataSet` le meilleur choix pour communiquer à distance les données et le contexte du schéma vers et à partir d’un service web XML. Pour plus d’informations, consultez [Documents et données XML](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

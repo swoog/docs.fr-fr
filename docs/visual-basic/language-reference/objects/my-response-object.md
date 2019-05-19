@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794990"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881963"
 ---
 # <a name="myresponse-object"></a>My.Response, objet
 Obtient le <xref:System.Web.HttpResponse> objet associé à la <xref:System.Web.UI.Page>. Cet objet vous permet d’envoyer des données de réponse HTTP à un client et contient des informations relatives à cette réponse.  
@@ -20,7 +20,7 @@ Obtient le <xref:System.Web.HttpResponse> objet associé à la <xref:System.Web.
 ## <a name="remarks"></a>Notes  
  Le `My.Response` objet contient actuel <xref:System.Web.HttpResponse> objet associé à la page.  
   
- Le `My.Response` objet est disponible uniquement pour [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.  
+ Le `My.Response` objet est uniquement disponible pour les applications ASP.NET.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant obtient la collection d’en-têtes à partir de la `My.Request` objet et utilise le `My.Response` objet à écrire dans la page ASP.NET.  

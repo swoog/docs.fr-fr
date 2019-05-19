@@ -2,18 +2,18 @@
 title: Fournisseur EntityClient pour Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583696"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878803"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Fournisseur EntityClient pour Entity Framework
 Le fournisseur EntityClient est un fournisseur de données utilisé par les applications Entity Framework pour accéder à des données décrites dans un modèle conceptuel. Pour plus d’informations sur les modèles conceptuels, consultez [de modélisation et mappage](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient utilise d'autres fournisseurs de données .NET Framework pour accéder à la source de données. Par exemple, EntityClient utilise le fournisseur de données .NET Framework pour SQL Server (SqlClient) lors de l'accès à une base de données SQL Server. Pour plus d’informations sur le fournisseur SqlClient, consultez [SqlClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Le fournisseur EntityClient est implémenté dans l'espace de noms <xref:System.Data.EntityClient>.  
   
 ## <a name="managing-connections"></a>Gestion des connexions  
- Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] s’appuie sur spécifiques au stockage [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] des fournisseurs de données en fournissant un <xref:System.Data.EntityClient.EntityConnection> à un fournisseur de données sous-jacent et de la base de données relationnelle. Pour construire un <xref:System.Data.EntityClient.EntityConnection> de l’objet, vous devez référencer un ensemble de métadonnées qui contient les modèles nécessaires et de mappage et également une chaîne de connexion et de nom de fournisseur des données de stockage spécifique. Après le <xref:System.Data.EntityClient.EntityConnection> est en place, les entités sont accessibles via les classes générées à partir du modèle conceptuel.  
+ Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] s’appuie sur des fournisseurs de données ADO.NET spécifiques au stockage en fournissant un <xref:System.Data.EntityClient.EntityConnection> à un fournisseur de données sous-jacent et de la base de données relationnelle. Pour construire un <xref:System.Data.EntityClient.EntityConnection> de l’objet, vous devez référencer un ensemble de métadonnées qui contient les modèles nécessaires et de mappage et également une chaîne de connexion et de nom de fournisseur des données de stockage spécifique. Après le <xref:System.Data.EntityClient.EntityConnection> est en place, les entités sont accessibles via les classes générées à partir du modèle conceptuel.  
   
  Vous pouvez spécifier une chaîne de connexion dans le fichier app.config.  
   

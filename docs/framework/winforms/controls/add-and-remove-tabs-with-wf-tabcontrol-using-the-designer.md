@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665825"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880637"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procédure : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l’aide du concepteur
 Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votre formulaire, il contient deux onglets par défaut. Vous pouvez ajouter ou supprimer des onglets à l’aide du concepteur.  
@@ -29,7 +29,7 @@ Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votr
   
      ou  
   
-     Dans le **propriétés** fenêtre, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) à côté le <xref:System.Windows.Forms.TabControl.TabPages%2A> propriété pour ouvrir le **éditeur de collections TabPage**. Cliquez sur le **ajouter** ou **supprimer** bouton.  
+     Dans le **propriétés** fenêtre, cliquez sur le **points de suspension** bouton (![bouton les points de suspension (...) dans la fenêtre Propriétés de Visual Studio.](./media/visual-studio-ellipsis-button.png)) à côté du <xref:System.Windows.Forms.TabControl.TabPages%2A> propriété Pour ouvrir le **éditeur de collections TabPage**. Cliquez sur le **ajouter** ou **supprimer** bouton.  
   
 ## <a name="see-also"></a>Voir aussi
 

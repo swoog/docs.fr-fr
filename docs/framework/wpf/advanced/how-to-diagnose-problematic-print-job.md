@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912461"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878206"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procédure : Diagnostiquer un travail d’impression problématique
 Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs concernant des travaux d’impression qui échouent ou s’impriment lentement. L’ensemble des propriétés du travail d’impression exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] du Microsoft .NET Framework fournissent un moyen pour effectuer un diagnostic rapide et à distance des travaux d’impression.  
@@ -59,7 +59,7 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Pour vérifier l’état du travail d’impression à l’aide des indicateurs de le <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriété, vérifier chaque indicateur correspondant pour voir si elle est définie. La méthode standard pour voir si un bit est défini dans un ensemble d’indicateurs binaires consiste à effectuer une opération AND logique en utilisant comme opérandes l’ensemble d’indicateurs et l’indicateur lui-même. Étant donné que l’indicateur lui-même n’a qu’un seul bit de défini, l’opération AND logique ne peut pas trouver plus d’un même bit défini. Pour savoir si c’est bien le cas, il suffit de comparer le résultat de l’opération AND logique avec l’indicateur lui-même. Pour plus d’informations, consultez <xref:System.Printing.PrintJobStatus>, le [& opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md), et <xref:System.FlagsAttribute>.  
+ Pour vérifier l’état du travail d’impression à l’aide des indicateurs de le <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> propriété, vérifier chaque indicateur correspondant pour voir si elle est définie. La méthode standard pour voir si un bit est défini dans un ensemble d’indicateurs binaires consiste à effectuer une opération AND logique en utilisant comme opérandes l’ensemble d’indicateurs et l’indicateur lui-même. Étant donné que l’indicateur lui-même n’a qu’un seul bit de défini, l’opération AND logique ne peut pas trouver plus d’un même bit défini. Pour savoir si c’est bien le cas, il suffit de comparer le résultat de l’opération AND logique avec l’indicateur lui-même. Pour plus d’informations, consultez <xref:System.Printing.PrintJobStatus>, le [& opérateur (C# référence)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), et <xref:System.FlagsAttribute>.  
   
  Pour chaque attribut dont le bit est défini, le code l’indique sur l’écran de la console et propose parfois une réponse possible. (La méthode **HandlePausedJob** qui est appelée si le travail ou la file d’attente est suspendu(e) est décrite ci-après.)  
   
@@ -87,6 +87,6 @@ Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs con
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& Opérateur (C# référence)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Documents dans WPF](documents-in-wpf.md)
 - [Vue d’ensemble de l’impression](printing-overview.md)

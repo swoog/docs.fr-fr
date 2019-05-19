@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592777"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876223"
 ---
 # <a name="application-settings-architecture"></a>Architecture des paramètres d'application
 Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’application et explore des fonctionnalités avancées de l’architecture telles que les paramètres groupés et les clés de paramètres.  
@@ -22,7 +22,7 @@ Cette rubrique décrit le fonctionnement de l’architecture Paramètres d’app
  Des interfaces sont fournies afin de permettre aux composants personnalisés de conserver leurs propres paramètres lorsqu’ils sont hébergés dans une application. À l’aide de clés de paramètres, les composants peuvent séparer les paramètres pour plusieurs instances du composant.  
   
 ## <a name="defining-settings"></a>Définition des paramètres  
- L’architecture des paramètres d’application est utilisée dans à la fois dans [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et les Windows Forms, et contient un certain nombre de classes de base qui sont partagées entre les deux environnements. La plus importante est <xref:System.Configuration.SettingsBase>, qui fournit l’accès aux paramètres via une collection et fournit des méthodes de bas niveau pour le chargement et l’enregistrement des paramètres. Chaque environnement implémente sa propre classe dérivée de <xref:System.Configuration.SettingsBase> pour fournir des fonctionnalités de paramètres supplémentaires pour cet environnement. Dans une application basée sur des Windows Forms, tous les paramètres de l’application doivent être définies sur une classe dérivée de la <xref:System.Configuration.ApplicationSettingsBase> classe, qui ajoute les fonctionnalités suivantes à la classe de base :  
+ L’architecture des paramètres d’application est utilisée dans ASP.NET et Windows Forms, et il contient un nombre de classes de base qui sont partagées entre les deux environnements. La plus importante est <xref:System.Configuration.SettingsBase>, qui fournit l’accès aux paramètres via une collection et fournit des méthodes de bas niveau pour le chargement et l’enregistrement des paramètres. Chaque environnement implémente sa propre classe dérivée de <xref:System.Configuration.SettingsBase> pour fournir des fonctionnalités de paramètres supplémentaires pour cet environnement. Dans une application basée sur des Windows Forms, tous les paramètres de l’application doivent être définies sur une classe dérivée de la <xref:System.Configuration.ApplicationSettingsBase> classe, qui ajoute les fonctionnalités suivantes à la classe de base :  
   
 - Chargement et enregistrement d’opérations de plus haut niveau  
   

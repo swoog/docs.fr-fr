@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625811"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881102"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -29,7 +29,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
 ## <a name="certificate-stores"></a>Magasin de certificats  
  Les certificats sont stockés dans des magasins. Deux emplacements de magasin majeurs existent et sont divisés en sous-magasins. Si vous disposez des droits administrateur sur un ordinateur, vous pouvez afficher ces deux principaux magasins à l'aide de l'outil enfichable MMC. Dans le cas contraire, vous pouvez uniquement afficher le magasin de l'utilisateur en cours.  
   
-- **Magasin de la machine locale**. Ce magasin contient les certificats utilisés par les processus informatiques tels que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilisez cet emplacement pour y stocker les certificats qui authentifient les serveurs auprès des clients.  
+- **Magasin de la machine locale**. Cela contient les certificats utilisés par les processus informatiques, tels que ASP.NET. Utilisez cet emplacement pour y stocker les certificats qui authentifient les serveurs auprès des clients.  
   
 - **Magasin de l’utilisateur actuel**. Les applications interactives stockent en principe les certificats à cet emplacement pour l'utilisateur en train d'utiliser l'ordinateur. Si vous créer des applications clientes, c'est également l'emplacement que vous utiliserez en principe pour stocker les certificats qui authentifient les utilisateurs auprès des services.  
   
@@ -52,7 +52,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
 - Si le service ou le client est une application qui s’exécute sous un compte d’utilisateur, utilisez le magasin **utilisateur actuel**.  
   
 ### <a name="accessing-stores"></a>Accès aux magasins  
- Les magasins sont protégés par des listes de contrôle d’accès à l’instar des dossiers figurant sur un ordinateur. Lors de la création d'un service hébergé par les services Internet (IIS), le processus [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] s'exécute sous le compte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour savoir comment modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Les magasins sont protégés par des listes de contrôle d’accès à l’instar des dossiers figurant sur un ordinateur. Lorsque vous créez un service hébergé par Internet Information Services (IIS), le processus ASP.NET s’exécute sous le compte ASP.NET. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour savoir comment modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Comment : Créer des certificats temporaires à utiliser pendant le développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Chaîne d'approbation et autorités de certification  
  Les certificats sont créés selone une hiérarchie où chaque certificat individuel est lié à l'autorité de certification qui l'a émis. Ce lien renvoie au certificat de l'autorité de certification. L’autorité de certification du certificat puis des liens vers l’autorité de certification qui a émis le certificat de l’autorité de certification d’origine. Ce processus se répète jusqu'à ce que le certificat de l'autorité de certification racine soit atteint. Le certificat de l'autorité de certification racine est approuvé de manière inhérente.  

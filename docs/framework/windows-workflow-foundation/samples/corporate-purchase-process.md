@@ -2,17 +2,17 @@
 title: Processus d'achat d'entreprise
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665937"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876168"
 ---
 # <a name="corporate-purchase-process"></a>Processus d'achat d'entreprise
 Cet exemple montre comment créer un processus d'achat basé sur des appels d'offres très simples avec sélection automatique de la meilleure proposition. Il combine <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> et <xref:System.Activities.Statements.ForEach%601> ainsi qu'une activité personnalisée pour créer un workflow qui représente le processus.
 
- Cet exemple contient une application cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui permet l'interaction avec le processus en tant que participants différents (en tant que demandeur d'origine ou fournisseur particulier).
+ Cet exemple contient une application cliente ASP.NET qui permet l’interaction avec le processus en tant que participants différents (en tant que le demandeur d’origine ou un fournisseur particulier).
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -36,7 +36,7 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 
 - Suivi.
 
-- Hébergement de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] dans différents clients (applications Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et applications WinForms).
+- Hébergement [!INCLUDE[wf1](../../../../includes/wf1-md.md)] dans différents clients (les applications Web ASP.NET et WinForms).
 
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
@@ -82,7 +82,7 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 |-------------|-----------------|  
 |Communes|Objets entité utilisés dans le processus (Appel d'offres, Fournisseur et Proposition de fournisseur).|  
 |WfDefinition|Définition du processus (comme un programme [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) et hôte (`PurchaseProcessHost`) utilisé par les applications clientes pour la création et l'utilisation des instances du workflow du processus d'achat.|  
-|WebClient|Application cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui permet aux utilisateurs de créer des instances du processus d'achat et d'y participer. Elle utilise un hôte créé de façon personnalisée pour interagir avec le moteur de workflow.|  
+|WebClient|Une application de client ASP.NET qui permet aux utilisateurs de créer et participer aux instances du processus d’achat. Elle utilise un hôte créé de façon personnalisée pour interagir avec le moteur de workflow.|  
 |WinFormsClient|Application cliente Windows Forms qui permet aux utilisateurs de créer des instances du processus d'achat et d'y participer. Elle utilise un hôte créé de façon personnalisée pour interagir avec le moteur de workflow.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

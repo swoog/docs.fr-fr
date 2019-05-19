@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 3ddc07fe9a450dad57bce5fec7c73a945d8fa227
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650015"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876792"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Cet exemple montre comment générer un canal de protocole personnalisé pour utiliser des cookies HTTP pour la gestion des sessions. Ce canal permet la communication entre les services Windows Communication Foundation (WCF) et les clients ASMX ou entre les clients WCF et les services ASMX.  
   
- Lorsqu'un client appelle une méthode Web dans un service Web ASMX basé sur une session, le moteur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] effectue les opérations suivantes :  
+ Lorsqu’un client appelle une méthode Web dans un service Web ASMX qui est basé sur session, le moteur ASP.NET effectue les opérations suivantes :  
   
 - Il génère un ID unique (ID de session).  
   
@@ -158,7 +158,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1. Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante.  
+1. Installer ASP.NET 4.0 à l’aide de la commande suivante.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

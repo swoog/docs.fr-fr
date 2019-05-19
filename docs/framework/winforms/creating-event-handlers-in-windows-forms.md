@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 329060e0c53178a9320be9a7cdff492d69917782
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e90e1d6643a30c1d2f4438e77317a2348b07fd71
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211248"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882426"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Création de gestionnaires d'événements dans les Windows Forms
 
@@ -41,7 +41,7 @@ Un gestionnaire d'événements est une procédure de votre code qui détermine l
 ## <a name="related-sections"></a>Rubriques connexes
 
  [Événements](../../standard/events/index.md)\
- Fournit des liens vers des rubriques sur la gestion et déclenchement d’événements à l’aide du [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)\].
+ Fournit des liens vers des rubriques sur la gestion et déclenchement d’événements à l’aide de .NET Framework.
 
  [Dépannage des gestionnaires d’événements hérités en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Répertorie les problèmes courants qui surviennent avec les gestionnaires d'événements dans les composants hérités.

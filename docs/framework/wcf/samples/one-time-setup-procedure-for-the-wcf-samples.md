@@ -2,12 +2,12 @@
 title: Procédure d'installation unique pour les exemples Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664812"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876720"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procédure d'installation unique pour les exemples Windows Communication Foundation
 La plupart des exemples Windows Communication Foundation (WCF) sont hébergée dans Internet Information Services (IIS) et exécutez à partir d’un répertoire virtuel commun. Cette procédure d’installation unique crée un dossier sur le disque ; Il ajoute également un répertoire virtuel dans IIS nommé **ServiceModelSamples**.
@@ -19,7 +19,7 @@ La plupart des exemples Windows Communication Foundation (WCF) sont hébergée d
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procédure d'installation unique pour les exemples WCF  
   
-1. Vérifiez que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est installé. Pour plus d’informations sur la configuration [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Assurez-vous que ASP.NET est configuré. Pour plus d’informations sur la configuration ASP.NET, consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2. Vérifiez que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est installé. Rechercher les éléments suivants de répertoire pour la version 4.0 (ou version ultérieures) : **\Windows\Microsoft.NET\Framework**  
   

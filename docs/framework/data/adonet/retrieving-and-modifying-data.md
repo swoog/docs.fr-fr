@@ -2,12 +2,12 @@
 title: Extraction et modification de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033915"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881433"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Extraction et modification de données dans ADO.NET
 Une fonction principale de toute application de base de données consiste à se connecter à une source de données et extraire les données qu'elle contient. Les fournisseurs de données .NET Framework d’ADO.NET font Office de passerelle entre une application et une source de données, ce qui vous permet d’exécuter des commandes et d’extraire des données à l’aide un **DataReader** ou un **DataAdapter** . Une fonction clé de toute application de base de données est la capacité à mettre à jour les données stockées dans la base de données. Dans ADO.NET, la mise à jour des données implique l’utilisation de la **DataAdapter** et <xref:System.Data.DataSet>, et **commande** objets ; et il peuvent également impliquer l’utilisation de transactions.  
@@ -53,7 +53,7 @@ Une fonction principale de toute application de base de données consiste à se 
  Décrit les compteurs de performance disponibles pour `SqlClient` et `OracleClient`.  
   
  [Programmation asynchrone](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Décrit la prise en charge [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] de la programmation asynchrone.  
+ Décrit la prise en charge ADO.NET pour la programmation asynchrone.  
   
  [Prise en charge du streaming pour SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Explique comment écrire des applications ces flux de données à partir de SQL Server sans avoir à charger entièrement en mémoire.  

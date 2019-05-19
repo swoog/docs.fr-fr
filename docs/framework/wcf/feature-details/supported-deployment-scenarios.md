@@ -2,12 +2,12 @@
 title: Scénarios de déploiement pris en charge - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639131"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881058"
 ---
 # <a name="supported-deployment-scenarios"></a>Scénarios de déploiement pris en charge
 
@@ -27,7 +27,7 @@ Pour plus d’informations sur les fonctionnalités prises en charge dans ces je
 
 ## <a name="partial-trust-on-the-server"></a>Confiance partielle sur le serveur
 
-De nombreux fournisseurs commerciaux de services d'hébergement d'application Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] exigent que les applications qui s'exécutent sur leurs serveurs s'exécutent dans le jeu d'autorisations de confiance moyenne [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . WCF services peuvent s’exécuter dans ces environnements fournis s’ils utilisent le <xref:System.ServiceModel.BasicHttpBinding>, le <xref:System.ServiceModel.WebHttpBinding>, ou le <xref:System.ServiceModel.WSHttpBinding> avec la sécurité au niveau du transport.
+Imposent de nombreux fournisseurs commerciaux de services d’hébergement d’applications Web ASP.NET que les applications en cours d’exécution sur leurs serveurs s’exécutent dans le [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] jeu d’autorisations de confiance moyenne. WCF services peuvent s’exécuter dans ces environnements fournis s’ils utilisent le <xref:System.ServiceModel.BasicHttpBinding>, le <xref:System.ServiceModel.WebHttpBinding>, ou le <xref:System.ServiceModel.WSHttpBinding> avec la sécurité au niveau du transport.
 
 Les services WCF en cours d’exécution dans les environnements d’hébergement de confiance moyenne peuvent également agir en tant que services de niveau intermédiaire en envoyant des messages vers d’autres serveurs en réponse aux demandes des clients. Les scénarios de couche intermédiaire sur le serveur sont pris en charge si l'environnement d'hébergement a accordé le <xref:System.Net.WebPermission> approprié à l'application pour effectuer des demandes sortantes vers le serveur souhaité.
 

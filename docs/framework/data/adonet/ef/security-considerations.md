@@ -2,12 +2,12 @@
 title: Considérations sur la sécurité (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583481"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879930"
 ---
 # <a name="security-considerations-entity-framework"></a>Considérations sur la sécurité (Entity Framework)
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution d'applications [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Vous devez également suivre les recommandations pour la création d’applications .NET Framework sécurisées. Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  Accédez aux méthodes et aux propriétés d'un <xref:System.Data.Objects.ObjectContext> dans un bloc try-catch. L'interception d'exceptions empêche des exceptions non gérées d'exposer aux utilisateurs de votre application des entrées dans <xref:System.Data.Objects.ObjectStateManager> ou dans les informations de modèle (telles que les noms de tables).  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Considérations sur la sécurité pour les applications ASP.NET  
- Lorsque vous utilisez des chemins d'accès dans des applications [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)], il est recommandé de tenir compte des points suivants.  
+
+Vous devez envisager les éléments suivants lorsque vous travaillez avec des chemins d’accès dans les applications ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Vérifiez si votre hôte effectue des contrôles de chemin d’accès.  
- Lorsque la chaîne de la substitution `|DataDirectory|` (placées entre barres verticales) est utilisée, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] vérifie que le chemin d’accès résolu est pris en charge. Par exemple, « .. » n'est pas autorisé derrière `DataDirectory`. Le même contrôle est effectué par le processus qui héberge `~` pour résoudre l'opérateur de racine de l'application Web ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]). IIS effectue ce contrôle ; toutefois, les hôtes autres qu'IIS ne peuvent pas vérifier que le chemin d'accès résolu est pris en charge. Vous devez connaître le comportement de l'hôte sur lequel vous déployez une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Lorsque le `|DataDirectory|` (placée entre barres verticales) chaîne de substitution est utilisée, ADO.NET vérifie que le chemin d’accès résolu est pris en charge. Par exemple, « .. » n'est pas autorisé derrière `DataDirectory`. Le même contrôle pour la résolution de l’opérateur de racine d’application Web (`~`) est effectuée par le processus d’hébergement ASP.NET. IIS effectue ce contrôle ; toutefois, les hôtes autres qu'IIS ne peuvent pas vérifier que le chemin d'accès résolu est pris en charge. Vous devez connaître le comportement de l'hôte sur lequel vous déployez une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Ne faites pas de suppositions sur les noms de chemins d’accès résolus.  
  Bien que les valeurs auxquelles l'opérateur racine (`~`) et la chaîne de la substitution `DataDirectory` correspondent doivent rester constantes pendant l'exécution de l'application, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] n'empêche pas l'hôte de modifier ces valeurs.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Vérifiez la longueur du chemin d’accès avant le déploiement.  
- Avant de déployer une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous devez vous assurer que les valeurs de l’opérateur racine (~) et de la chaîne de substitution `DataDirectory` ne dépassent pas les limites de longueur de chemin d’accès du système d’exploitation. Les fournisseurs de données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] ne garantissent pas que la longueur du chemin d'accès respecte les limites valides.  
+ Avant de déployer une application [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous devez vous assurer que les valeurs de l’opérateur racine (~) et de la chaîne de substitution `DataDirectory` ne dépassent pas les limites de longueur de chemin d’accès du système d’exploitation. Fournisseurs de données ADO.NET ne garantissent pas que la longueur de chemin d’accès est respectent les limites valides.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considérations sur la sécurité pour les métadonnées ADO.NET  
  Les considérations sur la sécurité suivantes s'appliquent lors de la génération et de l'utilisation de fichiers de modèle et de mappage.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>N'exposez pas d'informations sensibles via la journalisation.  
- Les composants du service de métadonnées [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] n'enregistrent aucune information personnelle. Si des résultats ne peuvent pas être retournés à cause de restrictions d'accès, les systèmes de gestion de base de données et les systèmes de fichiers doivent retourner zéro résultat au lieu de lever une exception qui pourrait contenir des informations sensibles.  
+Composants de service de métadonnées ADO.NET ne consigne pas des informations confidentielles. Si des résultats ne peuvent pas être retournés à cause de restrictions d'accès, les systèmes de gestion de base de données et les systèmes de fichiers doivent retourner zéro résultat au lieu de lever une exception qui pourrait contenir des informations sensibles.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>N'acceptez pas d'objets MetadataWorkspace provenant de sources non fiables.  
  Les applications ne doivent pas accepter les instances de la classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> provenant de sources non fiables. Il est préférable de construire et de remplir explicitement un espace de travail à partir d'une telle source.  

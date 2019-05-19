@@ -1,14 +1,14 @@
 ---
-title: Prise en main stockage Blob Azure à l’aideF#
+title: Bien démarrer avec le stockage Blob Azure en F#
 description: Store les données non structurées dans le cloud avec stockage Blob Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982512"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880045"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure avec F\#
 
@@ -196,8 +196,8 @@ Pour plus d’informations, consultez [la gestion de l’accès concurrentiel da
 
 Chaque objet blob dans le stockage Azure doit résider dans un conteneur. Le conteneur fait partie du nom d’objet blob. Par exemple, `mydata` est le nom du conteneur dans ces objets blob d’exemple URI :
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Un nom de conteneur doit être un nom DNS valide, conforme aux règles d’affectation de noms suivantes :
 

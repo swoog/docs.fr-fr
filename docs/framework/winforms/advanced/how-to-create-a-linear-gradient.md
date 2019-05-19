@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650009"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876076"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procédure : créer un pinceau dégradé linéaire
 GDI + fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire Modifie uniformément. Toutefois, vous pouvez personnaliser un dégradé linéaire de sorte que la couleur change de façon non uniforme.  
@@ -31,9 +31,9 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
   
  L’illustration suivante montre la ligne, l’ellipse et le rectangle. Notez que le dégradé de couleur se répète à mesure que la coordonnée horizontale augmente au-delà de 200.  
   
- ![Dégradé linéaire](./media/cslineargradient1.png "cslineargradient1")  
+ ![Une ligne, une ellipse et un rectangle rempli avec un dégradé de couleur.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Pour utiliser des dégradés linéaires horizontales  
+## <a name="to-use-horizontal-linear-gradients"></a>Pour utiliser des dégradés linéaires horizontales  
   
 - Transmettre l’opaque rouge et le bleu opaque en tant que l’argument troisième et quatrième, respectivement.  
   
@@ -56,9 +56,9 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
   
  L’illustration suivante montre l’ellipse qui en résulte et un rectangle.  
   
- ![Dégradé linéaire](./media/cslineargradient2.png "cslineargradient2")  
+ ![Un rectangle et une ellipse remplie avec un dégradé horizontal.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Pour personnaliser des dégradés linéaires  
+## <a name="to-customize-linear-gradients"></a>Pour personnaliser des dégradés linéaires  
   
 - Transmettre la rouge à noir et opaque opaque en tant que l’argument troisième et quatrième, respectivement.  
   
@@ -71,9 +71,9 @@ Le <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructeur r
   
  L’illustration suivante montre la ligne et l’ellipse. Notez que la couleur de l’ellipse change progressivement à mesure que vous déplacez le long d’une ligne qui est parallèle à la ligne passant par (0, 0) et (200, 100).  
   
- ![Dégradé linéaire](./media/cslineargradient3.png "cslineargradient3")  
+ ![Une ligne et une ellipse remplie avec un dégradé de couleur en diagonale.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Pour créer des dégradés linéaires en diagonale  
+## <a name="to-create-diagonal-linear-gradients"></a>Pour créer des dégradés linéaires en diagonale  
   
 - Transmettre l’opaque bleu et le vert opaque en tant que l’argument troisième et quatrième, respectivement.  
   

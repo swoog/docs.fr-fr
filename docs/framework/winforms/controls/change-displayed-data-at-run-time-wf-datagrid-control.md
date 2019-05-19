@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961653"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882137"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procédure : modifier les données affichées au moment de l’exécution dans le contrôle DataGrid Windows Forms
 > [!NOTE]
@@ -64,13 +64,13 @@ ms.locfileid: "61961653"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     À l’exécution que vous pouvez utiliser la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode à laquelle lier le <xref:System.Windows.Forms.DataGrid> contrôle à une autre source de données. Par exemple, vous pouvez avoir plusieurs [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] contrôles de données, chacune connectée à une autre base de données.  
+     À l’exécution que vous pouvez utiliser la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode à laquelle lier le <xref:System.Windows.Forms.DataGrid> contrôle à une autre source de données. Par exemple, vous pouvez avoir plusieurs contrôles de données ADO.NET, chacune connectée à une autre base de données.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Pour modifier la source de données par programmation  
   
 1. Définir le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (méthode) sur le nom de la source de données et la table que vous souhaitez lier à.  
   
-     L’exemple suivant montre comment modifier la source de la date en utilisant le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode à un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] contrôle de données (adoPubsAuthors) qui est connecté à la table Authors dans la base de données Pubs.  
+     L’exemple suivant montre comment modifier la source de la date en utilisant le <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> méthode à un contrôle de données ADO.NET (adoPubsAuthors) qui est connecté à la table Authors dans la base de données Pubs.  
   
     ```vb  
     Private Sub ResetSource()  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645753"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875884"
 ---
 # <a name="windows-forms-overview"></a>Vue d’ensemble des Windows Forms
 
@@ -66,7 +66,7 @@ Pour obtenir des informations détaillées sur l'utilisation de ces fonctionnali
 |Description|Rubrique d'aide|
 |-----------------|----------------|
 |Utilisation du composant <xref:System.Windows.Forms.BindingSource>|[Guide pratique pour Lier des contrôles Windows Forms au composant BindingSource à l’aide du Concepteur](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Utilisation de sources de données [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Guide pratique pour Trier et filtrer des données ADO.NET avec les Windows Forms composant BindingSource](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Utilisation de sources de données ADO.NET|[Guide pratique pour Trier et filtrer des données ADO.NET avec les Windows Forms composant BindingSource](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Utilisation de la fenêtre Sources de données|[Lier des contrôles Windows Forms à des données dans Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Utilisation des paramètres d'application|[Guide pratique pour Créer des paramètres d’Application](./advanced/how-to-create-application-settings.md)|
 

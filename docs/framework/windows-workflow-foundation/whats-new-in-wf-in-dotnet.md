@@ -2,12 +2,12 @@
 title: Nouveautés de Windows Workflow Foundation dans .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671416"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876646"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Nouveautés de Windows Workflow Foundation dans .NET 4.5
 
@@ -118,7 +118,7 @@ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les va
 
 La capture d’écran suivante indique le menu contextuel du concepteur de variable et d’argument.
 
-![Variable et le Menu contextuel du Concepteur de Argument](./media/designercontextmenu.png "DesignerContextMenu")
+![Menu contextuel du concepteur de variable et d’argument](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Le cadrage automatique avec séquence
 
@@ -126,11 +126,11 @@ La capture d’écran suivante indique le menu contextuel du concepteur de varia
 
 La capture d'écran suivante affiche une activité `WriteLine` avec le `Body` d'un `NoPersistScope`.
 
-![Auto&#45;entourent l’emplacement de dépôt](./media/autosurround1.png "AutoSurround1")
+![Une activité WriteLine dans le corps d’une activité NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 La capture d’écran suivante montre l’activité `Sequence` créée automatiquement dans le `Body` lorsqu’un second `WriteLine` est déposé sous le premier.
 
-![Activité sequence créée automatiquement](./media/autosurround2.png "AutoSurround2")
+![Une séquence créée automatiquement dans le corps d’un NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> Mode panoramique
 
@@ -138,7 +138,7 @@ Pour naviguer plus facilement dans un grand workflow dans le concepteur, le mode
 
 La capture d'écran suivante indique le bouton de panoramique qui se trouve dans le coin inférieur droit du concepteur de workflow.
 
-![Bouton panoramique dans le Concepteur de workflow](./media/panbutton.png "PanButton")
+![Le bouton de panoramique mis en surbrillance dans le Concepteur de flux de travail.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 Le bouton central de la souris ou la barre d'espace peut également être utilisé pour appliquer un panoramique au concepteur de workflow.
 
@@ -154,7 +154,7 @@ Afin de simplifier la navigation dans les workflows hiérarchiques, les composan
 
 La capture d’écran suivante du workflow terminé à partir de la [Getting Started Tutorial](getting-started-tutorial.md) montre le mode plan avec un workflow séquentiel.
 
-![Mode d’affichage dans le Concepteur de flux de travail plan](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Capture d’écran du mode plan avec un workflow séquentiel dans Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> Expressions c#
 
@@ -174,17 +174,17 @@ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les co
 
 La capture d'écran suivante montre les points d'attachement qui sont visibles lorsqu'une activité est déplacée depuis la boîte à outils.
 
-![Nœud de départ organigramme montrant les points de connexion automatique](./media/autoconnect1.png "Autoconnect1")
+![Organigramme illustrant de nœud de démarrage points de connexion automatique](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Les activités peuvent également être déplacées sur les connexions entre des nœuds d'organigramme et des états de façon à insérer automatiquement le nœud entre deux autres nœuds. La capture d’écran suivante montre la ligne de connexion en surbrillance où les activités peuvent être glissées-déposées depuis la boîte à outils.
 
-![Auto&#45;insérer handle pour déposer les activités](./media/autoinsert.png "Autoinsert")
+![Poignée d’insertion automatique pour déposer les activités](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Annotations du Concepteur
 
 Pour faciliter le développement de plus grands workflows, le concepteur prend désormais en charge l'ajout d'annotations pour faciliter le suivi du processus de création. Une annotation peut être ajoutée aux activités, états, nœuds d'organigramme, variables et arguments. La capture d'écran suivante montre le menu contextuel utilisé pour ajouter des annotations au concepteur.
 
-![Menu contextuel des annotations](./media/annotationdialog.png "annotationdialog")
+![Capture d’écran montrant un menu pour l’ajout d’annotations.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>États de débogage
 
@@ -232,7 +232,7 @@ Workflows de machine à états ont été introduits dans le cadre du .NET Framew
 
 La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md).
 
-![Flux de travail de Machine à états terminé](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Illustration qui montre le workflow d’ordinateur d’état terminé.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Pour plus d’informations sur la création de workflows machine à états, consultez [Workflows Machine à états](state-machine-workflows.md).
 

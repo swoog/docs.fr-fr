@@ -2,12 +2,12 @@
 title: Vue d'ensemble de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592559"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876142"
 ---
 # <a name="windows-workflow-overview"></a>Vue d'ensemble de Windows Workflow
 Un flux de travail est un ensemble d’unités élémentaires appelé *activités* qui sont stockés sous la forme d’un modèle qui décrit un processus réel. Les workflows offrent un moyen de décrire l'ordre d'exécution et les relations de dépendance entre des éléments de travail de courte ou longue durée. Ce travail s'effectue à travers le modèle de démarrage à l'arrêt et les activités peuvent être exécutées par des utilisateurs ou par les fonctions système.  
@@ -23,7 +23,7 @@ Un flux de travail est un ensemble d’unités élémentaires appelé *activité
   
  Chacune de ces classes encapsule le runtime de l'activité principale représenté en tant que <xref:System.Activities.ActivityInstance> responsable de l'exécution de l'activité. Un domaine d'application peut comporter plusieurs objets <xref:System.Activities.ActivityInstance> fonctionnant simultanément.  
   
- Chacun des trois objets d’interaction hôtes précédents est créé à partir d’une arborescence d’activités appelée programme de workflow. À l’aide de ces types ou un hôte personnalisé qui encapsule <xref:System.Activities.ActivityInstance>, flux de travail peut être exécutée à l’intérieur de n’importe quel processus Windows, y compris les applications de console, applications basée sur les formulaires, les Services Windows [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sites Web et Windows Communication Foundation ( Services WCF).  
+ Chacun des trois objets d’interaction hôtes précédents est créé à partir d’une arborescence d’activités appelée programme de workflow. À l’aide de ces types ou un hôte personnalisé qui encapsule <xref:System.Activities.ActivityInstance>, flux de travail peut être exécutée à l’intérieur de n’importe quel processus Windows, y compris les applications de console basée sur les formulaires des applications, les Services Windows, des sites Web ASP.NET et Windows Communication Foundation (WCF) Services.  
   
  ![Composants de flux de travail dans le processus hôte](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Composants de workflow dans le processus hôte  

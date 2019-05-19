@@ -2,12 +2,12 @@
 title: Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669801"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876525"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
 Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit de nombreuses nouvelles fonctionnalités, notamment plusieurs améliorations à l’expérience de Concepteur de flux de travail. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
 
  La capture d’écran suivante indique le menu contextuel du concepteur de variable et d’argument.
 
- ![Variable et le Menu contextuel du Concepteur de Argument](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Menu contextuel du concepteur de variable et d’argument](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Encadrement automatique avec séquence
  Étant donné qu'un workflow ou certaines activités de conteneur (telles que <xref:System.Activities.Statements.NoPersistScope>) peuvent uniquement contenir une seule activité de corps, l'ajout d'une deuxième activité exigeait que le développeur supprime la première activité, ajoute une activité <xref:System.Activities.Statements.Sequence>, puis ajoute les deux activités à l'activité de séquence. À partir du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], lors de l'ajout d'une deuxième activité sur l'aire du concepteur, un activité `Sequence` est créée automatiquement pour encapsuler les deux activités. Cette fonctionnalité est prise en charge dans le concepteur réhébergé.
 
  La capture d'écran suivante affiche une activité `WriteLine` avec le `Body` d'un `NoPersistScope`.
 
- ![Auto&#45;entourent l’emplacement de dépôt](./media/autosurround1.png "AutoSurround1")
+ ![Une activité WriteLine dans le corps d’une activité NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  La capture d’écran suivante montre l’activité `Sequence` créée automatiquement dans le `Body` lorsqu’un second `WriteLine` est déposé sous le premier.
 
- ![Activité sequence créée automatiquement](./media/autosurround2.png "AutoSurround2")
+ ![Une séquence créée automatiquement dans le corps d’un NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Mode Panoramique
  Pour naviguer plus facilement dans un grand workflow dans le concepteur, le mode panoramiques peut être activé, ce qui permet au développeur de cliquer sur la partie visible du workflow et de la faire glisser, plutôt que d'utiliser les barres de défilement. Le bouton pour activer le mode panoramiques se trouve dans le coin inférieur droit du concepteur. Cette fonctionnalité est prise en charge dans le concepteur réhébergé.
 
  La capture d'écran suivante indique le bouton de panoramique qui se trouve dans le coin inférieur droit du concepteur de workflow.
 
- ![Bouton panoramique dans le Concepteur de workflow](./media/panbutton.png "PanButton")
+ ![Le bouton de panoramique mis en surbrillance dans le Concepteur de flux de travail.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Le bouton central de la souris ou la barre d'espace peut également être utilisé pour appliquer un panoramique au concepteur de workflow.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
 
  La capture d’écran suivante du workflow terminé à partir de la [Getting Started Tutorial](getting-started-tutorial.md) montre le mode plan avec un workflow séquentiel.
 
- ![Mode d’affichage dans le Concepteur de flux de travail plan](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Capture d’écran du mode plan avec un workflow séquentiel dans Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Meilleur contrôle de la visibilité des éléments d'en-tête et de la barre de shell
  Dans un concepteur réhébergé, certains des contrôles d'interface utilisateur standard peuvent ne pas avoir de signification pour un workflow donné, et peuvent être désactivés. Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], cette personnalisation est prise en charge uniquement par la barre de shell en bas du concepteur. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la visibilité des éléments d'en-tête de shell en haut du concepteur peut être ajustée en affectant à <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> la valeur <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriée.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
 
  La capture d'écran suivante montre les points d'attachement qui sont visibles lorsqu'une activité est déplacée depuis la boîte à outils.
 
- ![Nœud de départ organigramme montrant les points de connexion automatique](./media/autoconnect1.png "Autoconnect1")
+ ![Organigramme illustrant de nœud de démarrage points de connexion automatique](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Les activités peuvent également être déplacées sur les connexions entre des nœuds d'organigramme et des états de façon à insérer automatiquement le nœud entre deux autres nœuds. La capture d’écran suivante montre la ligne de connexion en surbrillance où les activités peuvent être glissées-déposées depuis la boîte à outils.
 
- ![Auto&#45;insérer handle pour déposer les activités](./media/autoinsert.png "Autoinsert")
+ ![Poignée d’insertion automatique pour déposer les activités](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Connexion automatique et insertion automatique sont prises en charge dans le concepteur réhébergé.
 
 ### <a name="designer-annotations"></a>Annotations du concepteur
  Pour faciliter le développement de plus grands workflows, le concepteur prend désormais en charge l'ajout d'annotations pour faciliter le suivi du processus de création. Une annotation peut être ajoutée aux activités, états, nœuds d'organigramme, variables et arguments. La capture d'écran suivante montre le menu contextuel utilisé pour ajouter des annotations au concepteur.
 
- ![Menu contextuel des annotations](./media/annotationdialog.png "annotationdialog")
+ ![Capture d’écran qui affiche le menu pour ajouter des notations.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Les annotations du concepteur sont prises en charge dans le concepteur réhébergé.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
  La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](getting-started-tutorial.md) étape [Comment : Créer un Workflow de Machine à états](how-to-create-a-state-machine-workflow.md).  
   
- ![Flux de travail de Machine à états terminé](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Illustration qui montre le workflow d’ordinateur d’état terminé.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Pour plus d’informations sur la création de workflows machine à états, consultez [Workflows Machine à états](state-machine-workflows.md). Les workflow de machine à états sont pris en charge dans le concepteur réhébergé.  
   

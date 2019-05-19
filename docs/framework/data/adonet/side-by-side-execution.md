@@ -2,20 +2,20 @@
 title: Exécution côte à côte dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583621"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877092"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
 L’exécution côte à côte dans le .NET Framework est la possibilité d’exécuter une application sur un ordinateur qui possède plusieurs versions du .NET Framework installé, exclusivement à l’aide de la version pour laquelle l’application a été compilée. Pour plus d’informations sur la configuration de l’exécution côte à côte, consultez [l’exécution côte à côte](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- Une application compilée à l’aide d’une version du .NET Framework permettre s’exécuter sur une version différente du .NET Framework. Toutefois, nous recommandons que vous compilez une version de l’application pour chaque version installée du .NET Framework et les exécutez séparément. Dans l’un ou l’autre cas de figure, vous devez tenir compte des modifications apportées dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] entre les mises en production, qui peuvent affecter la compatibilité ascendante ou descendante de votre application.  
+ Une application compilée à l’aide d’une version du .NET Framework permettre s’exécuter sur une version différente du .NET Framework. Toutefois, nous recommandons que vous compilez une version de l’application pour chaque version installée du .NET Framework et les exécutez séparément. Dans les deux cas, soyez conscient des modifications dans ADO.NET entre les versions qui peuvent affecter la compatibilité ascendante ou descendante de votre application.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilités descendante et ascendante  
- Compatibilité ascendante signifie qu’une application peut être compilée avec une version antérieure du .NET Framework, elle fonctionnera correctement avec une version ultérieure du .NET Framework. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] code écrit pour le .NET Framework version 1.1 sera compatible avec les versions ultérieures.  
+ Compatibilité ascendante signifie qu’une application peut être compilée avec une version antérieure du .NET Framework, elle fonctionnera correctement avec une version ultérieure du .NET Framework. Code ADO.NET écrit pour le .NET Framework version 1.1 sera compatible avec les versions ultérieures.  
   
  La compatibilité descendante signifie qu’une application est compilée pour une version plus récente du .NET Framework, mais continue à s’exécuter sur des versions antérieures du .NET Framework sans aucune perte de fonctionnalité. Bien entendu, cela ne sera pas le cas pour les fonctionnalités introduites dans une nouvelle version du .NET Framework.  
   
@@ -36,7 +36,7 @@ L’exécution côte à côte dans le .NET Framework est la possibilité d’ex�
   
  Toutefois, à compter de .NET Framework version 2.0, tous les fournisseurs de données .NET Framework peuvent servir dans les zones de confiance partielle. En outre, une nouvelle fonctionnalité de sécurité a été ajoutée pour les fournisseurs de données .NET Framework dans le .NET Framework version 1.1. Cette fonctionnalité vous permet de restreindre les chaînes de connexion qui peuvent être utilisées dans une zone de sécurité particulière. Vous pouvez également désactiver l'utilisation des mots de passe vides pour une zone de sécurité particulière. Pour plus d'informations, consultez [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
- Étant donné que chaque installation du .NET Framework possède un fichier Security.config distinct, il n’existe aucun problème de compatibilité avec les paramètres de sécurité. Toutefois, si votre application repose sur les fonctionnalités de sécurité supplémentaires [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] inclus dans le .NET Framework version 1.1 et ultérieure, il sera impossible à distribuer à un système de la version 1.0.  
+ Étant donné que chaque installation du .NET Framework possède un fichier Security.config distinct, il n’existe aucun problème de compatibilité avec les paramètres de sécurité. Toutefois, si votre application dépend des fonctionnalités de sécurité supplémentaires de ADO.NET incluse dans la version de .NET Framework 1.1 et ultérieures, vous ne pourrez pas distribuer à un système de la version 1.0.  
   
 ## <a name="sqlcommand-execution"></a>Exécution de SqlCommand  
  En commençant par le .NET Framework version 1.1, la façon qui <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> exécute des commandes sur les données source a été modifiée.  

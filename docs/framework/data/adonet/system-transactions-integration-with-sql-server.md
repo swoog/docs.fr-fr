@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583493"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880594"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Intégration de System.Transactions à SQL Server
-Le .NET Framework version 2.0 a introduit une infrastructure de transaction qui est accessible via la <xref:System.Transactions> espace de noms. Cette infrastructure expose des transactions d’une manière qui est entièrement intégré dans le .NET Framework, y compris [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+Le .NET Framework version 2.0 a introduit une infrastructure de transaction qui est accessible via la <xref:System.Transactions> espace de noms. Cette infrastructure expose des transactions d’une manière qui est entièrement intégré dans le .NET Framework, notamment ADO.NET.  
   
- Outre les améliorations en termes de programmabilité, <xref:System.Transactions> et [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] peuvent collaborer pour coordonner les optimisations lorsque vous utilisez des transactions. Une transaction susceptible d'être promue est une transaction légère (locale) qui peut être promue automatiquement en une transaction entièrement distribuée en fonction des besoins.  
+ Outre les améliorations de programmabilité, <xref:System.Transactions> et ADO.NET peuvent collaborer pour coordonner les optimisations lorsque vous travaillez avec des transactions. Une transaction susceptible d'être promue est une transaction légère (locale) qui peut être promue automatiquement en une transaction entièrement distribuée en fonction des besoins.  
   
- En commençant par [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> prend en charge les transactions pouvant être promues lorsque vous travaillez avec SQL Server. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Transactions pouvant être promues sont automatiques et ne requièrent aucune intervention du développeur.  
+ En commençant par ADO.NET 2.0, <xref:System.Data.SqlClient> prend en charge les transactions pouvant être promues lorsque vous travaillez avec SQL Server. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Transactions pouvant être promues sont automatiques et ne requièrent aucune intervention du développeur.  
   
  Transactions pouvant être promues sont disponibles uniquement lorsque vous utilisez le fournisseur de données .NET Framework pour SQL Server (`SqlClient`) avec SQL Server.  
   

@@ -2,12 +2,12 @@
 title: Chaînes de connexion dans ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032753"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881160"
 ---
 # <a name="connection-strings-in-adonet"></a>Chaînes de connexion dans ADO.NET
 
@@ -17,24 +17,32 @@ Une chaîne de connexion contient des informations d'initialisation qui sont pas
 
 Une chaîne de connexion est une liste délimitée par des points-virgules de paires clé/valeur de paramètre :
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Mots clés ne respectent pas la casse. Valeurs, toutefois, peuvent être la casse, en fonction de la source de données. Peuvent contenir des mots clés et valeurs [blancs](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espaces de début et de fin est ignoré dans les mots clés et guillemets valeurs.
 
 Si une valeur contient le point-virgule, [caractères de contrôle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), ou à gauche ou un espace blanc, elle doit figurer entre guillemets simples ou doubles. Exemple :
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 Le caractère englobant n’a pas peut se produire au sein de la valeur qu’elle comprend. Par conséquent, une valeur contenant des guillemets simples peut être placées entre uniquement dans des guillemets doubles et vice versa :
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 Les guillemets eux-mêmes, ainsi que le signe égal, ne nécessite pas d’échappement, par conséquent, les chaînes de connexion suivantes sont valides :
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Dans la mesure où chaque valeur est lue jusqu'à ce que le point-virgule suivant ou à la fin de chaîne, la valeur dans l’exemple de ce dernier est `a=b=c`, et le point-virgule final est facultatif.
 

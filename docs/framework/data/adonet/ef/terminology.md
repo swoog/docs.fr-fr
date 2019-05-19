@@ -2,12 +2,12 @@
 title: Terminologie Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583527"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877481"
 ---
 # <a name="entity-framework-terminology"></a>Terminologie Entity Framework
 Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation. Des liens vers des rubriques pertinentes dans lesquelles des informations supplémentaires sont disponibles sont fournis.  
@@ -30,7 +30,7 @@ Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_e
 |fichier .edmx|Fichier XML qui contient le modèle conceptuel (en CSDL), le modèle de stockage (en SSDL) et les mappages entre les deux (en MSL). Le fichier .edmx est créé par les Outils [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]. Pour plus d’informations, consultez [présentation d’un fichier .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Entité participante dans une association.<br /><br /> Pour plus d’informations, consultez [fin élément (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) et [terminaison d’association](../../../../../docs/framework/data/adonet/association-end.md).|  
 |entity|Concept dans le domaine d'une application à partir duquel un type de données est défini.<br /><br /> Pour plus d’informations, consultez [élément EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) et [type d’entité](../../../../../docs/framework/data/adonet/entity-type.md).|  
-|EntityClient|Données [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] indépendantes du stockage qui contiennent des classes telles que `EntityConnection`, `EntityCommand` et `EntityDataReader`. Fonctionne avec [!INCLUDE[esql](../../../../../includes/esql-md.md)] et se connecte au stockage spécifique [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] fournisseurs de données, tel que `SqlClient`.<br /><br /> Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
+|EntityClient|Un fournisseur de données ADO.NET indépendant du stockage qui contient des classes telles que `EntityConnection`, `EntityCommand`, et `EntityDataReader`. Fonctionne avec [!INCLUDE[esql](../../../../../includes/esql-md.md)] et se connecte à des fournisseurs de données ADO.NET spécifiques stockage, tel que `SqlClient`.<br /><br /> Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
 |conteneur d'entités|Spécifie des jeux d'entités et des ensembles d'associations qui seront implémentés dans un l'espace de noms spécifié.<br /><br /> Pour plus d’informations, consultez [élément EntityContainer (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) et [conteneur d’entités](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |EDM (Entity Data Model)|Ensemble de concepts qui décrivent la structure des données sous forme d'entités et de relations, indépendamment de la forme sous laquelle elles sont stockées.<br /><br /> Pour plus d’informations, consultez [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).|  
 |Entity Framework|Ensemble de technologies qui prend en charge le développement d'applications logicielles orientées données en permettant aux développeurs d'utiliser des modèles conceptuels mappés à des schémas logiques dans des sources de données.<br /><br /> Pour plus d’informations, consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).|  

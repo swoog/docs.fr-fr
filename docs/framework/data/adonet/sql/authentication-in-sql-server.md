@@ -2,12 +2,12 @@
 title: Authentification dans SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649575"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877461"
 ---
 # <a name="authentication-in-sql-server"></a>Authentification dans SQL Server
 SQL Server prend en charge deux modes d'authentification, le mode d'authentification Windows et le mode mixte.  
@@ -43,7 +43,7 @@ SQL Server prend en charge deux modes d'authentification, le mode d'authentifica
   
 - les utilisateurs se connectent à partir de domaines différents, non approuvés ;  
   
-- les applications Internet, comme [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Applications Internet, tels que ASP.NET.  
   
 > [!NOTE]
 >  La spécification de l'authentification Windows ne désactive pas les connexions SQL Server. Utilisez l’instruction ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instruction pour désactiver les connexions de SQL Server disposant de privilèges élevés.  

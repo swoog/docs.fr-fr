@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633499"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875527"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduction à LINQ dans Visual Basic
 Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Basic et fournit des fonctionnalités puissantes et simples lorsque vous travaillez avec tous les types de données. Au lieu d’envoyer une requête à une base de données à traiter ou utilisation de la syntaxe de requête différente pour chaque type de données que vous recherchez, LINQ introduit des requêtes en tant que partie du langage Visual Basic. Il utilise une syntaxe unifiée indépendamment du type de données.  
@@ -43,7 +43,7 @@ Language-Integrated Query (LINQ) ajoute des capacités de requête à Visual Bas
 |LINQ to Objects|Le fournisseur LINQ to Objects vous permet d'interroger des collections et des tableaux en mémoire. Si un objet prend en charge l'interface <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, le fournisseur LINQ to Objects vous permet de l'interroger.<br /><br /> Vous pouvez activer le fournisseur LINQ to Objects en important le <xref:System.Linq> espace de noms, qui est importé par défaut pour tous les projets Visual Basic.<br /><br /> Pour plus d’informations sur le fournisseur LINQ to Objects, consultez [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|Le fournisseur LINQ to SQL vous permet d'interroger et de modifier des données dans une base de données SQL Server. Cela facilite le mappage du modèle objet d'une application aux tables et objets d'une base de données.<br /><br /> Visual Basic facilite l’utilisation de LINQ to SQL en incluant le Concepteur Objet/Relationnel (Concepteur O/R). Ce concepteur est utilisé pour créer un modèle objet dans une application qui effectue un mappage aux objets d'une base de données. Le Concepteur O/R également fournit des fonctionnalités permettant de mapper des procédures stockées et des fonctions à la <xref:System.Data.Linq.DataContext> objet, qui gère la communication avec la base de données et stocke l’état de contrôles d’accès concurrentiel optimiste.<br /><br /> Pour plus d’informations sur le fournisseur LINQ to SQL, consultez [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Pour plus d’informations sur le concepteur objet/relationnel, consultez [outils LINQ to SQL dans Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Le fournisseur LINQ to XML vous permet d'interroger et de modifier du code XML. Vous pouvez modifier du code XML en mémoire ou le charger à partir d'un fichier, mais également l'enregistrer dans un fichier.<br /><br /> En outre, le fournisseur LINQ to XML active des littéraux XML et les propriétés d’axe XML qui vous permettent d’écrire du code XML directement dans votre code Visual Basic. Pour plus d’informations, consultez [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|Le fournisseur LINQ to DataSet vous permet d’interroger et mise à jour des données dans un [!INCLUDE[vstecado](~/includes/vstecado-md.md)] jeu de données. Vous pouvez ajouter la puissance de LINQ aux applications qui utilisent des groupes de données afin de simplifier et d'étendre vos capacités de requête, d'agrégation et de mise à jour des données dans votre dataset.<br /><br /> Pour plus d’informations, [consultez LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to DataSet|Le fournisseur LINQ to DataSet vous permet d’interroger et mettre à jour des données dans un dataset ADO.NET. Vous pouvez ajouter la puissance de LINQ aux applications qui utilisent des groupes de données afin de simplifier et d'étendre vos capacités de requête, d'agrégation et de mise à jour des données dans votre dataset.<br /><br /> Pour plus d’informations, [consultez LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Structure d’une requête LINQ  
  Une requête LINQ, souvent appelé un *expression de requête*, se compose d’une combinaison de clauses de requête qui identifient les sources de données et les variables d’itération pour la requête. Une expression de requête peut également inclure des instructions de tri, de filtrage, de regroupement et de jonction ou des calculs applicables aux données sources. La syntaxe de l'expression de requête ressemble à la syntaxe de SQL ; par conséquent, une grande partie de cette syntaxe vous semblera familière.  

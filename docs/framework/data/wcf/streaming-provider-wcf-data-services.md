@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875535"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877592"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 
@@ -88,7 +88,7 @@ Pour obtenir des informations générales sur la création d’un service de don
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Activation de flux binaires volumineux dans l'environnement d'hébergement
 
-Lorsque vous créez un service de données dans une application Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) est utilisé pour fournir l'implémentation du protocole HTTP. Par défaut, WCF limite la taille des messages HTTP à 65 kilo-octets. Pour pouvoir transmettre en continu des données binaires volumineuses depuis et vers le service de données, vous devez également configurer l'application Web pour autoriser les fichiers binaires volumineux et utiliser des flux de données pour le transfert. Pour cela, ajoutez les éléments suivants dans l'élément `<configuration />` du fichier Web.config de l'application :
+Lorsque vous créez un service de données dans une application Web ASP.NET, Windows Communication Foundation (WCF) est utilisé pour fournir l’implémentation du protocole HTTP. Par défaut, WCF limite la taille des messages HTTP à 65 kilo-octets. Pour pouvoir transmettre en continu des données binaires volumineuses depuis et vers le service de données, vous devez également configurer l'application Web pour autoriser les fichiers binaires volumineux et utiliser des flux de données pour le transfert. Pour cela, ajoutez les éléments suivants dans l'élément `<configuration />` du fichier Web.config de l'application :
 
 > [!NOTE]
 > Vous devez utiliser un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> mode de transfert pour vous assurer que les données binaires dans les messages de demande et de réponse sont transmis en continu et non mis en mémoire tampon par WCF.
@@ -125,7 +125,7 @@ Les éléments suivants sont à prendre en compte lorsque vous implémentez un f
 
 - Lorsque vous implémentez les méthodes <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>ou <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, vous devez utiliser les valeurs eTag et Content-Type fournies comme paramètres de méthode. Ne définissez pas d'en-tête eTag ou Content-Type dans votre implémentation de fournisseur <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données de diffusion en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le serveur de développement ASP.NET ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données de diffusion en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur le serveur de développement ASP.NET, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

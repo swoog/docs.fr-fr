@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949862"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881361"
 ---
 # <a name="securing-services"></a>Sécurisation de services
 Sécurité d’un service Windows Communication Foundation (WCF) se compose de deux spécifications principales : sécurité de transfert et l’autorisation. (Une troisième exigence, l’audit des événements de sécurité, est décrite dans [audit](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) En résumé, la sécurité de transfert regroupe l'authentification (vérification de l'identité du service et du client), la confidentialité (chiffrement des messages) et l'intégrité (signature numérique afin de détecter la falsification). L'autorisation est le contrôle d'accès aux ressources, par exemple en autorisant uniquement les utilisateurs privilégiés à lire un fichier. À l’aide des fonctionnalités de WCF, deux spécifications principales peuvent être facilement implémentées.  
@@ -43,14 +43,14 @@ Sécurité d’un service Windows Communication Foundation (WCF) se compose de d
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>Autorisation à l'aide de la classe PrincipalPermissionAttribute  
  Si vous devez limiter l'accès aux ressources d'un ordinateur, le moyen le plus simple est d'utiliser la classe <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Cet attribut vous permet de limiter l'invocation des opérations de service en exigeant que l'utilisateur appartienne à un groupe ou un rôle Windows spécifique ou qu'il soit un utilisateur spécifique. Pour plus d'informations, voir [Procédure : Restreindre l’accès à la classe PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
-### <a name="impersonation"></a>Emprunt d'identité  
+### <a name="impersonation"></a>emprunt d'identité  
  L'emprunt d'identité est un autre mécanisme que vous pouvez utiliser pour contrôler l'accès aux ressources. Par défaut, un service hébergé par IIS s'exécutera sous l'identité du compte ASPNET. Le compte ASPNET peut accéder uniquement aux ressources pour lesquelles il possède une autorisation. Toutefois, il est possible de définir l'ACL pour un dossier de manière à exclure le compte de service ASPNET tout en autorisant certaines autres identités à accéder au dossier. Reste ensuite à savoir comment autoriser ces utilisateurs à accéder au dossier si le compte ASPNET n'y est pas autorisé. La solution consiste à utiliser l'emprunt d'identité. Le service est alors autorisé à utiliser les informations d'identification du client pour accéder à une ressource particulière. L'accès à une base de données SQL Server à laquelle seuls certains utilisateurs sont autorisés à accéder est un autre exemple. Pour plus d’informations sur l’utilisation de l’emprunt d’identité, consultez [Comment : Emprunter l’identité d’un Client sur un Service](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) et [délégation et emprunt d’identité](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Sécurité sur Internet  
  La sécurité sur Internet revêt les mêmes spécifications que la sécurité sur un intranet. Un service doit présenter ses informations d'identification pour prouver son authenticité, et les clients doivent prouver leur identité au service. Une fois l'identité d'un client prouvée, le service peut contrôler le niveau d'accès du client aux ressources. Toutefois, en raison de la nature hétérogène d'Internet, les informations d'identification présentées diffèrent de celles utilisées sur un domaine Windows. Alors qu'un contrôleur Kerberos gère l'authentification des utilisateurs sur un domaine avec des tickets pour les informations d'identification, sur Internet, les services et les clients peuvent utiliser de nombreuses méthodes pour présenter les informations d'identification. Toutefois, l’objectif de cette rubrique, doit présenter une approche commune qui vous permet de créer un service WCF qui est accessible sur Internet.  
   
 ### <a name="using-iis-and-aspnet"></a>Utilisation d'IIS et d'ASP.NET  
- Les spécifications de la sécurité Internet, tout comme les mécanismes de résolution de ces problèmes, ne sont pas nouveaux. IIS est le serveur Web Microsoft pour Internet et propose de nombreuses fonctionnalités de sécurité répondant à ces problèmes. en outre, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] comprend des fonctionnalités de sécurité que les services WCF peuvent utiliser. Pour tirer parti de ces fonctionnalités de sécurité, héberger un service WCF sur IIS.  
+ Les spécifications de la sécurité Internet, tout comme les mécanismes de résolution de ces problèmes, ne sont pas nouveaux. IIS est le serveur Web Microsoft pour Internet et propose de nombreuses fonctionnalités de sécurité répondant à ces problèmes. en outre, ASP.NET inclut des fonctionnalités de sécurité que les services WCF peuvent utiliser. Pour tirer parti de ces fonctionnalités de sécurité, héberger un service WCF sur IIS.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>Utilisation de fournisseurs d'appartenances et de rôles ASP.NET  
  ASP.NET inclut un fournisseur d'appartenances et de rôles. Ce fournisseur est une base de données de paires nom d'utilisateur/mot de passe utilisées pour l'authentification des appelants, qui vous permet également de spécifier les privilèges d'accès de chaque appelant. Avec WCF, vous pouvez facilement utiliser un déjà existant fournisseur d’appartenances et rôle grâce à la configuration. Pour obtenir un exemple d'application démontrant ces propos, consultez l'exemple [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) .  

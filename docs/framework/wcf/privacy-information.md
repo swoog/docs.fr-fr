@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651068"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882188"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informations de confidentialité relatives à Windows Communication Foundation
 Microsoft s’engage à protéger la confidentialité des utilisateurs finals. Lorsque vous créez une application à l’aide de Windows Communication Foundation (WCF), version 3.0, votre application peut avoir un impact sur confidentialité de vos utilisateurs finaux. Par exemple, votre application peut recueillir des informations de contact utilisateur de manière explicite ou elle peut demander ou envoyer des informations sur Internet à votre site Web. Si vous incorporez la technologie Microsoft dans votre application, cette technologie peut avoir son propre comportement qui peut affecter la confidentialité. WCF n’envoie pas toutes les informations à Microsoft à partir de votre application, si vous ou l’utilisateur final ne nous l’envoyer.  
@@ -29,7 +29,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
  La couche de messagerie WCF n’écrit pas d’informations personnelles sur l’ordinateur local. Toutefois, elle peut propager des informations personnelles au niveau du réseau si un développeur de service a créé un service qui expose de telles informations (par exemple, en utilisant le nom d'une personne dans un nom de point de terminaison, ou en incluant des informations personnelles dans le Web Services Description Language du point de terminaison sans exiger que les clients utilisent https pour accéder au WSDL). En outre, si un développeur exécute la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil par rapport à un point de terminaison qui expose des informations personnelles, sortie de l’outil peut contenir ces informations, et le fichier de sortie est écrite dans le disque dur local.  
   
 ## <a name="hosting"></a>Hébergement  
- La fonctionnalité d’hébergement dans WCF permet aux applications pour démarrer à la demande ou pour activer le partage de port entre plusieurs applications. Une application WCF peut être hébergée dans Internet Information Services (IIS), similaire à [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ La fonctionnalité d’hébergement dans WCF permet aux applications pour démarrer à la demande ou pour activer le partage de port entre plusieurs applications. Une application WCF peut être hébergée dans Internet Information Services (IIS), similaire à ASP.NET.  
   
  L'hébergement n'expose aucune information spécifique sur le réseau et ne conserve aucune donnée sur l'ordinateur.  
   
@@ -47,7 +47,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
 |Données|Stockage|  
 |----------|-------------|  
 |Informations d'identification de présentation, telles que nom d'utilisateur, certificats X.509, jetons Kerberos et références aux informations d'identification.|Mécanismes de gestion des informations d'identification Windows standard tels que le magasin de certificats Windows.|  
-|Informations d'appartenance utilisateur, telles que noms d'utilisateur et mots de passe.|Fournisseurs d'appartenances [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].|  
+|Informations d'appartenance utilisateur, telles que noms d'utilisateur et mots de passe.|Fournisseurs d’appartenances ASP.NET.|  
 |Informations d'identité à propos du service utilisé pour authentifier le service aux clients.|Adresse de point de terminaison du service.|  
 |Informations sur l'appelant.|Journaux d'audit.|  
   

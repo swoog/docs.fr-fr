@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656044"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877507"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hébergement dans les services IIS (Internet Information Services)
-Une option pour l’hébergement des services Windows Communication Foundation (WCF) est à l’intérieur d’une application Internet Information Services (IIS). Ce modèle d'hébergement est semblable au modèle utilisé par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et les services Web ASP.NET (ASMX).  
+Une option pour l’hébergement des services Windows Communication Foundation (WCF) est à l’intérieur d’une application Internet Information Services (IIS). Ce modèle d’hébergement est similaire au modèle utilisé par ASP.NET et les Services Web ASP.NET (ASMX) de services Web.  
   
 ## <a name="versions-of-iis"></a>Versions d'IIS  
  WCF peut être hébergé sur les versions suivantes d’IIS sur les systèmes d’exploitation suivants :  
@@ -28,11 +28,11 @@ Une option pour l’hébergement des services Windows Communication Foundation (
 ## <a name="benefits-of-iis-hosting"></a>Avantages de l'hébergement IIS  
  Hébergement de services WCF dans IIS présente plusieurs avantages :  
   
-- Les services WCF hébergés dans IIS sont déployés et gérés comme tout autre type d’application IIS, y compris [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications et ASMX.  
+- Les services WCF hébergés dans IIS sont déployés et gérés comme tout autre type d’application IIS, y compris les applications ASP.NET et ASMX.  
   
 - IIS assure l'activation de processus, la gestion de l'intégrité et le recyclage des fonctions afin d'accroître la fiabilité des applications hébergées.  
   
-- Comme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], les services WCF hébergés dans [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peuvent tirer parti de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modèle d’hébergement partagé où plusieurs applications résident dans un processus de travail courants pour l’évolutivité et la densité de serveur améliorée.  
+- Comme ASP.NET, les services WCF hébergés dans ASP.NET peuvent tirer parti du modèle d’hébergement partagé ASP.NET où plusieurs applications résident dans un processus de travail courants pour l’évolutivité et la densité de serveur améliorée.  
   
 - Les services WCF hébergés dans IIS utilisent le même modèle de compilation dynamique en tant que [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], ce qui simplifie le développement et déploiement des services hébergés.  
   
@@ -43,7 +43,7 @@ Une option pour l’hébergement des services Windows Communication Foundation (
   
 - Vérifiez que IIS, ASP.NET, WCF et le composant d’activation HTTP WCF sont correctement installés et inscrits.  
   
-- Créer une application IIS ou réutiliser une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] existante.  
+- Créer une nouvelle application IIS ou réutiliser une application ASP.NET existante.  
   
 - Créez un fichier .svc pour le service WCF.  
   
@@ -54,7 +54,7 @@ Une option pour l’hébergement des services Windows Communication Foundation (
  Pour une description de chacune de ces tâches, consultez [déploiement d’un Service de WCF sont](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="wcf-services-and-aspnet"></a>Services WCF et ASP.NET  
- Les services WCF peuvent être hébergés soit côte à côte avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou dans [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Mode de compatibilité dans lequel les services peuvent profiter pleinement des fonctionnalités fournies par le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] plate-forme d’application Web. Pour une description de ces fonctionnalités, consultez [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Les services WCF peuvent être hébergés soit côte-à-côte avec ASP.NET ou en Mode de compatibilité ASP.NET dans lequel les services peuvent profiter pleinement des fonctionnalités fournies par la plate-forme d’application Web ASP.NET. Pour une description de ces fonctionnalités, consultez [Services WCF et ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
