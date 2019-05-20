@@ -9,6 +9,12 @@
   items:
     - name: Prise en main
       href: tutorials/get-started.md
+    - name: Déployer sur Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Déployer sur AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Déployer sur Databricks
+      href: tutorials/databricks-deployment.md
 - name: Référence
   items:
     - name: Informations de référence sur les API

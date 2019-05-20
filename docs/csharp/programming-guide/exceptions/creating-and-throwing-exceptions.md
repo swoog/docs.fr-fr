@@ -8,31 +8,31 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e569742943e121faeae340512544956b674da083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595356"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Création et levée d'exceptions (Guide de programmation C#)
 Les exceptions sont utilisées pour indiquer qu’une erreur s’est produite pendant l’exécution du programme. Les objets d’exception qui décrivent une erreur sont créés, puis *levés* avec le mot clé [throw](../../../csharp/language-reference/keywords/throw.md). Le runtime recherche ensuite le gestionnaire d’exceptions le plus compatible.  
   
  Les programmeurs doivent lever des exceptions quand une ou plusieurs des conditions suivantes sont vérifiées :  
   
--   La méthode ne peut pas remplir sa fonction définie.  
+- La méthode ne peut pas remplir sa fonction définie.  
   
      Par exemple, si un paramètre d’une méthode a une valeur non valide :  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
--   Un appel inapproprié à un objet est effectué en fonction de l’état de l’objet.  
+- Un appel inapproprié à un objet est effectué en fonction de l’état de l’objet.  
   
      Une tentative d’écriture dans un fichier en lecture seule en est un exemple. Dans les cas où l’état d’un objet n’autorise pas une opération, levez une instance d’<xref:System.InvalidOperationException> ou un objet basé sur une dérivation de cette classe. Voici un exemple d’une méthode qui lève un objet <xref:System.InvalidOperationException> :  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
--   Quand un argument d’une méthode provoque une exception.  
+- Quand un argument d’une méthode provoque une exception.  
   
      Dans ce cas, l’exception d’origine doit être interceptée et une instance d’<xref:System.ArgumentException> doit être créée. L’exception d’origine doit être passée au constructeur d’<xref:System.ArgumentException> comme paramètre <xref:System.Exception.InnerException%2A> :  
   
@@ -47,16 +47,16 @@ Les exceptions sont utilisées pour indiquer qu’une erreur s’est produite pe
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Pratiques à éviter lors de la levée d’exceptions  
  La liste suivante identifie les pratiques à éviter lors de la levée d’exceptions :  
   
--   Les exceptions ne doivent pas être utilisées pour changer le flux d’un programme dans le cadre d’une exécution ordinaire. Elles doivent être utilisées uniquement pour signaler et gérer les conditions d’erreur.  
+- Les exceptions ne doivent pas être utilisées pour changer le flux d’un programme dans le cadre d’une exécution ordinaire. Elles doivent être utilisées uniquement pour signaler et gérer les conditions d’erreur.  
   
--   Les exceptions ne doivent pas être retournées comme valeur de retour ou paramètre au lieu d’être levées.  
+- Les exceptions ne doivent pas être retournées comme valeur de retour ou paramètre au lieu d’être levées.  
   
--   Ne levez pas intentionnellement <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> ni <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> à partir de votre propre code source.  
+- Ne levez pas intentionnellement <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> ni <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> à partir de votre propre code source.  
   
--   Ne créez pas d’exceptions qui peuvent être levées en mode Debug mais pas en mode Release. Pour identifier des erreurs d’exécution pendant la phase de développement, utilisez plutôt Debug Assert.  
+- Ne créez pas d’exceptions qui peuvent être levées en mode Debug mais pas en mode Release. Pour identifier des erreurs d’exécution pendant la phase de développement, utilisez plutôt Debug Assert.  
   
 ## <a name="defining-exception-classes"></a>Définition de classes d’exceptions  
- Les programmes peuvent lever une classe d’exceptions prédéfinie dans l’espace de noms <xref:System> (sauf dans les endroits préalablement signalés) ou créer leurs propres classes d’exceptions en les dérivant d’<xref:System.Exception>. Les classes dérivées doivent définir au moins trois constructeurs : un constructeur par défaut, un qui définit la propriété du message et un qui définit à la fois la propriété <xref:System.Exception.Message%2A> et la propriété <xref:System.Exception.InnerException%2A>. Le quatrième constructeur est utilisé pour sérialiser l’exception. Les nouvelles classes d’exception doivent être sérialisables. Par exemple :  
+ Les programmes peuvent lever une classe d’exceptions prédéfinie dans l’espace de noms <xref:System> (sauf dans les endroits préalablement signalés) ou créer leurs propres classes d’exceptions en les dérivant d’<xref:System.Exception>. Les classes dérivées doivent définir au moins trois constructeurs : un constructeur sans paramètre, un qui définit la propriété du message et un qui définit à la fois la propriété <xref:System.Exception.Message%2A> et la propriété <xref:System.Exception.InnerException%2A>. Le quatrième constructeur est utilisé pour sérialiser l’exception. Les nouvelles classes d’exception doivent être sérialisables. Par exemple :  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

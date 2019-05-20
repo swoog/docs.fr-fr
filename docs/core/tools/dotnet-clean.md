@@ -1,17 +1,21 @@
 ---
 title: Commande dotnet clean
 description: La commande dotnet clean nettoie le répertoire actif.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754123"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**Cette rubrique s’applique à : ✓** SDK .NET Core 1.x et ultérieur
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Name
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169857"
 ## <a name="synopsis"></a>Résumé
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ La commande `dotnet clean` nettoie la sortie de la génération précédente. Co
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Le projet MSBuild à nettoyer. Si vous ne spécifiez pas de fichier projet, MSBuild recherche dans le répertoire de travail actuel un fichier avec une extension se terminant par *proj* et l’utilise.
+Projet ou solution MSBuild à nettoyer. Si vous ne spécifiez pas de fichier projet ou solution, MSBuild recherche dans le répertoire de travail actif un fichier dont l’extension se termine par *proj* ou *sln* et l’utilise.
 
 ## <a name="options"></a>Options
 
@@ -48,9 +52,13 @@ Le projet MSBuild à nettoyer. Si vous ne spécifiez pas de fichier projet, MSBu
 
   Affiche une aide brève pour la commande.
 
+* **`--interactive`**
+
+  Permet à la commande de s’arrêter et d’attendre une action ou une entrée utilisateur. Par exemple, pour effectuer une authentification. Option disponible à partir du kit SDK .NET Core 3.0.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Répertoire dans lequel les sorties générées sont placées. Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.
+  Répertoire contenant les artefacts de build à nettoyer. Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ Le projet MSBuild à nettoyer. Si vous ne spécifiez pas de fichier projet, MSBu
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Définit le niveau de détail de la commande. Niveaux autorisés : q[uiet], m[inimal], n[ormal], d[etailed] et diag[nostic].
+  Définit le niveau de détail MSBuild. Les valeurs autorisées sont `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` et `diag[nostic]`. La valeur par défaut est `normal`.
 
 ## <a name="examples"></a>Exemples
 

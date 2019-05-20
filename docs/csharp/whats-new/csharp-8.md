@@ -2,12 +2,12 @@
 title: Nouveautés de C# 8.0 – Guide C#
 description: Vue d’ensemble des nouvelles fonctionnalités disponibles dans C# 8.0. Cet article est à jour par rapport à la préversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427277"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754373"
 ---
 # <a name="whats-new-in-c-80"></a>Nouveautés de C# 8.0
 
@@ -321,7 +321,7 @@ Vous pouvez essayer par vous-même les flux asynchrones dans notre tutoriel [Cr�
 
 Les plages et les index offrent une syntaxe concise pour spécifier des sous-plages dans un tableau, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
-Il est possible de spécifier un index **à partir de la fin**, Vous spécifiez **à partir de la fin** à l’aide de la `^` opérateur. Vous connaissez déjà `array[2]`, qui signifie l’élément « 2 à partir du début ». Maintenant, `array[^2]` signifie que l’élément « 2 à partir de la fin ». L’index `^0` signifie « la fin », ou l’index qui suit le dernier élément.
+Vous pouvez spécifier un index **à partir de la fin** en utilisant le caractère `^` avant l’index. L’indexation à partir de la fin démarre à partir de la règle que `0..^0` spécifie pour la plage entière. Pour énumérer un tableau entier, vous démarrez *au premier élément* et continuez jusqu’à ce que vous soyez *passé par le dernier élément*. Considérez le comportement de la méthode `MoveNext` sur un énumérateur : elle retourne la valeur false quand l’énumération franchit le dernier élément. L’index `^0` signifie « la fin », `array[array.Length]` ou l’index qui suit le dernier élément. Vous connaissez déjà `array[2]`, qui signifie l’élément « 2 à partir du début ». Maintenant, `array[^2]` signifie que l’élément « 2 à partir de la fin ». 
 
 Vous pouvez spécifier une **plage** avec **l’opérateur de plage** : `..`. Par exemple, `0..^0` spécifie la totalité de la plage du tableau : 0 à partir du début jusqu'à 0 à partir de la fin non inclus. Les deux opérandes peuvent utiliser « à partir du début » ou « à partir de la fin ». L’un comme l’autre peuvent être omis. Les valeurs par défaut sont `0` pour l’index de début et `^0` pour l’index de fin.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 L’index de chaque élément renforce le concept « à partir du début » et « à partir de la fin » ; ces plages excluent la fin de la plage. Le « début » de la totalité du tableau est le premier élément. La « fin » de la totalité du tableau se trouve *après* le dernier élément.
@@ -383,3 +383,5 @@ La plage peut ensuite être utilisée à l’intérieur des caractères `[` et `
 ```csharp
 var text = words[phrase];
 ```
+
+Pour explorer davantage les index et les plages, consultez le tutoriel sur [les index et les plages](../tutorials/ranges-indexes.md).

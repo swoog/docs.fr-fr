@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202983"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590055"
 ---
 # <a name="recoverable-xslt-errors"></a>Erreurs XSLT récupérables
 La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend des zones dans lesquelles le fournisseur d'implémentation peut décider de la manière de gérer une situation. Ces zones sont considérées comme discrétionnaires en termes de comportement. Par exemple, dans la section 7.3 sur la création d'instructions de traitement, la recommandation sur XSLT 1.0 précise que la création de nœuds autres que des nœuds de texte lors d'une instanciation du contenu de `xsl:processing-instruction` génère une erreur. Pour certains problèmes, la recommandation sur XSLT 1.0 indique la décision à prendre si le processeur décide de récupérer l'erreur. Pour le problème donné dans la section 7.3, le W3C indique que l'implémentation peut récupérer cette erreur en ignorant les nœuds et leur contenu.  
@@ -18,11 +18,11 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 ## <a name="discretionary-behaviors"></a>Comportements discrétionnaires  
  Le tableau suivant répertorie chaque comportement discrétionnaire autorisé par la recommandation sur XSLT 1.0 et la façon dont ces comportements sont gérés par la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   La récupération indique que la classe <xref:System.Xml.Xsl.XslCompiledTransform> va récupérer cette erreur. L'événement <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> peut permettre de signaler tous les événements du processeur XSLT.  
+- La récupération indique que la classe <xref:System.Xml.Xsl.XslCompiledTransform> va récupérer cette erreur. L'événement <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> peut permettre de signaler tous les événements du processeur XSLT.  
   
--   L'erreur indique qu'une exception est levée pour cette condition.  
+- L'erreur indique qu'une exception est levée pour cette condition.  
   
--   Les références de section se trouvent dans la [recommandation du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/TR/xslt) et dans l'[errata de la spécification du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+- Les références de section se trouvent dans la [recommandation du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/TR/xslt) et dans l'[errata de la spécification du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condition XSLT|Section|Comportement XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -37,7 +37,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 |Création de nœuds autres que les nœuds de texte lors de l'instanciation du contenu de l'attribut `xsl:attribute`.|7.1.3|Erreur*|  
 |L'attribut `name` d'une `xsl:processing-instruction` ne produit ni un NCName, ni une cible d'instruction de traitement.|7.3|Erreur*|  
 |L'instanciation du contenu de `xsl:processing-instruction` crée des nœuds autres que des nœuds de texte.|7.3|Erreur*|  
-|Le résultat de l'instanciation du contenu de `xsl:processing-instruction` contient la chaîne « ?> ».|7.3|Récupération|  
+|Le résultat de l’instanciation du contenu de `xsl:processing-instruction` contient la chaîne « ?> »|7.3|Récupération|  
 |Le résultat de l'instanciation du contenu de `xsl:processing-instruction` contient la chaîne « -- » ou se termine par « - ».|7.4|Récupération|  
 |Le résultat de l'instanciation du contenu de `xsl:comment` crée des nœuds autres que des nœuds de texte.|7.4|Erreur*|  
 |Le modèle d'un élément de liaison de variables retourne un nœud d'attribut ou un nœud d'espace de noms.|11.2|Erreur*|  
@@ -45,7 +45,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 |La référence URI de la fonction de document contient un identificateur de fragment et une erreur se produit lors du traitement de ce dernier.|12.1|Récupération*|  
 |Il existe plusieurs attributs avec le même nom, mais des valeurs différentes, qui ne sont pas des éléments cdata-section nommés dans `xsl:output` avec la même priorité d'importation.|16|Récupération|  
 |Le processeur ne prend pas en charge l'encodage dans l'attribut d'encodage `xsl:output`.|16.1|Récupération|  
-|Désactivation de la production littérale des caractères en sortie pour un nœud de texte qui est utilisé à des fins autres qu'un nœud de texte de l'arborescence résultat.|16.4|Récupération*|  
+|Désactivation de la production littérale des caractères en sortie pour un nœud de texte qui est utilisé à des fins autres qu’un nœud de texte de l’arborescence résultat.|16.4|Récupération*|  
 |Conversion d'un fragment d'arborescence résultat en un nombre ou une chaîne si le fragment d'arborescence résultat contient un nœud de texte dont la production littérale des caractères en sortie est activée.|16.4|Récupération*|  
 |La production littérale des caractères en sortie est désactivée pour un caractère qui ne peut pas être représenté dans l'encodage utilisé par le processeur XSLT pour la sortie.|16.4|Récupération*|  
 |Ajout d'un nœud d'espace de noms à un élément après que les enfants ou les attributs ont été ajoutés à ce dernier.|errata 25|Erreur*|  

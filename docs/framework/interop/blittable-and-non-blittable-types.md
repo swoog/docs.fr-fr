@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115373"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469454"
 ---
 # <a name="blittable-and-non-blittable-types"></a>types blittable et non blittable
 La plupart des types de données ont une représentation commune à la fois dans la mémoire managée et non managée, et ne nécessitent pas de traitement particulier par le marshaleur d’interopérabilité. Ces types sont appelés *types blittables*, car ils ne nécessitent pas de conversion quand ils transitent entre le code managé et le code non managé.  
@@ -21,35 +21,35 @@ La plupart des types de données ont une représentation commune à la fois dans
   
  Les types suivants issus de l’espace de noms <xref:System> sont des types blittables :  
   
--   <xref:System.Byte?displayProperty=nameWithType>  
+- <xref:System.Byte?displayProperty=nameWithType>  
   
--   <xref:System.SByte?displayProperty=nameWithType>  
+- <xref:System.SByte?displayProperty=nameWithType>  
   
--   <xref:System.Int16?displayProperty=nameWithType>  
+- <xref:System.Int16?displayProperty=nameWithType>  
   
--   <xref:System.UInt16?displayProperty=nameWithType>  
+- <xref:System.UInt16?displayProperty=nameWithType>  
   
--   <xref:System.Int32?displayProperty=nameWithType>  
+- <xref:System.Int32?displayProperty=nameWithType>  
   
--   <xref:System.UInt32?displayProperty=nameWithType>  
+- <xref:System.UInt32?displayProperty=nameWithType>  
   
--   <xref:System.Int64?displayProperty=nameWithType>  
+- <xref:System.Int64?displayProperty=nameWithType>  
   
--   <xref:System.UInt64?displayProperty=nameWithType>  
+- <xref:System.UInt64?displayProperty=nameWithType>  
   
--   <xref:System.IntPtr?displayProperty=nameWithType>  
+- <xref:System.IntPtr?displayProperty=nameWithType>  
   
--   <xref:System.UIntPtr?displayProperty=nameWithType>  
+- <xref:System.UIntPtr?displayProperty=nameWithType>  
   
--   <xref:System.Single?displayProperty=nameWithType>  
+- <xref:System.Single?displayProperty=nameWithType>  
   
--   <xref:System.Double?displayProperty=nameWithType>  
+- <xref:System.Double?displayProperty=nameWithType>  
   
  Les types complexes suivants sont également des types blittables :  
   
--   Tableaux unidimensionnels de types blittables, comme un tableau d’entiers. Toutefois, un type qui contient un tableau de variables de types blittables n’est pas lui-même blittable.  
+- Tableaux unidimensionnels de types blittables, comme un tableau d’entiers. Toutefois, un type qui contient un tableau de variables de types blittables n’est pas lui-même blittable.  
   
--   Types valeur mis en forme qui ne contiennent que des types blittables (et des classes s’ils sont marshalés comme types mis en forme). Pour plus d’informations sur les types valeur mis en forme, consultez [Marshaling par défaut pour les types valeur](default-marshaling-behavior.md#default-marshaling-for-value-types).  
+- Types valeur mis en forme qui ne contiennent que des types blittables (et des classes s’ils sont marshalés comme types mis en forme). Pour plus d’informations sur les types valeur mis en forme, consultez [Marshaling par défaut pour les types valeur](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Les références d’objets ne sont pas blittables. Cela inclut un tableau de références aux objets qui sont blittables en eux-mêmes. Par exemple, vous pouvez définir une structure blittable, mais vous ne pouvez pas définir un type blittable contenant un tableau de références à ces structures.  
   
@@ -71,7 +71,7 @@ La plupart des types de données ont une représentation commune à la fois dans
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Convertit en structure avec une disposition de mémoire fixe.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Convertit en tableau de style C ou en `SAFEARRAY`.|  
   
- Les types d’objets et de classes sont pris en charge uniquement par COM Interop. Pour obtenir les types correspondants en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# et C++, consultez [Vue d’ensemble de la bibliothèque de classes .NET Framework](../../../docs/standard/class-library-overview.md).  
+ Les types d’objets et de classes sont pris en charge uniquement par COM Interop. Pour obtenir les types correspondants en Visual Basic, C# et C++, consultez [Vue d’ensemble de la bibliothèque de classes .NET Framework](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

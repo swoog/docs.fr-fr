@@ -3,14 +3,14 @@ title: Analyseur d’API .NET
 description: Découvrez comment l’analyseur d’API .NET peut aider à détecter les problèmes de compatibilité de plateforme et les API déconseillées.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680267"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063344"
 ---
 # <a name="net-api-analyzer"></a>Analyseur d’API .NET
 
@@ -23,7 +23,7 @@ L’analyseur d’API est fourni sous la forme d’un package NuGet [Microsoft.D
 
 ## <a name="prerequisites"></a>Prérequis
 
-* Visual Studio 2017 ou Visual Studio pour Mac (toutes versions).
+* Visual Studio 2017 et versions ultérieures, ou Visual Studio pour Mac (toutes les versions).
 
 ## <a name="discovering-deprecated-apis"></a>Découverte des API déconseillées
 
@@ -98,6 +98,7 @@ Actuellement, l’analyseur gère les cas suivants :
 * utilisation d’une API .NET Standard qui lève <xref:System.PlatformNotSupportedException> (PC001) ;
 * utilisation d’une API .NET Standard non disponible sur .NET Framework 4.6.1 (PC002) ;
 * utilisation d’une API native qui n’existe pas dans UWP (PC003) ;
+* Utilisation des API Delegate.BeginInvoke et EndInvoke (PC004).
 * utilisation d’une API marquée comme déconseillée (DEXXXX).
 
 ## <a name="ci-machine"></a>Machine de CI

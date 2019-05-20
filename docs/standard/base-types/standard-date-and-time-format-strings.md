@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532189"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664637"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
 Une chaîne de format de date et d'heure standard utilise un spécificateur de format unique pour définir la représentation textuelle d'une valeur de date et d'heure. Toute chaîne de format de date et d’heure contenant plusieurs caractères, y compris un espace, est interprétée comme une chaîne de format de date et d’heure personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Une chaîne de format standard ou personnalisée peut être utilisée de deux façons :  
   
--   Pour définir la chaîne qui résulte d'une opération de mise en forme.  
+- Pour définir la chaîne qui résulte d'une opération de mise en forme.  
   
--   Pour définir la représentation textuelle d'une valeur de date et d'heure pouvant être convertie en valeur <xref:System.DateTime> ou en valeur <xref:System.DateTimeOffset> lors d'une opération d'analyse.  
+- Pour définir la représentation textuelle d'une valeur de date et d'heure pouvant être convertie en valeur <xref:System.DateTime> ou en valeur <xref:System.DateTimeOffset> lors d'une opération d'analyse.  
 
 > [!TIP]
 >  Vous pouvez télécharger l’ [utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
@@ -63,17 +63,17 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  Si, dans une opération de mise en forme, une chaîne de format standard est mappée à une chaîne de format personnalisée d'une culture particulière, votre application peut définir la culture spécifique dont les chaînes de format personnalisées sont utilisées de l'une des manières suivantes :  
   
--   Vous pouvez utiliser la culture par défaut (ou actuelle). L'exemple suivant affiche une date à l'aide du format de date courte de la culture actuelle. Dans ce cas, la culture actuelle est en-US.  
+- Vous pouvez utiliser la culture par défaut (ou actuelle). L'exemple suivant affiche une date à l'aide du format de date courte de la culture actuelle. Dans ce cas, la culture actuelle est en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Vous pouvez passer un objet <xref:System.Globalization.CultureInfo> représentant la culture dont la mise en forme sera utilisée à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte de la culture pt-BR.  
+- Vous pouvez passer un objet <xref:System.Globalization.CultureInfo> représentant la culture dont la mise en forme sera utilisée à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte de la culture pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Vous pouvez passer un objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte d'un objet <xref:System.Globalization.DateTimeFormatInfo> pour la culture hr-HR.  
+- Vous pouvez passer un objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte d'un objet <xref:System.Globalization.DateTimeFormatInfo> pour la culture hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,17 +249,17 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  Le spécificateur de format standard "O" ou "o" et la chaîne de format personnalisée "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" tirent parti des trois façons dont la norme ISO 8601 représente les informations de fuseau horaire pour conserver la propriété <xref:System.DateTime.Kind%2A> des valeurs <xref:System.DateTime> :  
   
--   Le composant de fuseau horaire des valeurs de date et d'heure <xref:System.DateTimeKind.Local?displayProperty=nameWithType> est un décalage par rapport à l'heure UTC (par exemple, +01:00, -07:00). Toutes les valeurs <xref:System.DateTimeOffset> sont également représentées dans ce format.  
+- Le composant de fuseau horaire des valeurs de date et d'heure <xref:System.DateTimeKind.Local?displayProperty=nameWithType> est un décalage par rapport à l'heure UTC (par exemple, +01:00, -07:00). Toutes les valeurs <xref:System.DateTimeOffset> sont également représentées dans ce format.  
   
--   Le composant de fuseau horaire des valeurs de date et d'heure <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> utilise "Z" (soit zéro décalage) pour représenter l'heure UTC.  
+- Le composant de fuseau horaire des valeurs de date et d'heure <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> utilise "Z" (soit zéro décalage) pour représenter l'heure UTC.  
   
--   Les valeurs de date et d'heure <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ne possèdent aucune information de fuseau horaire.  
+- Les valeurs de date et d'heure <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ne possèdent aucune information de fuseau horaire.  
   
  Comme le spécificateur de format standard « O » ou « o » est conforme à une norme internationale, l’opération de mise en forme ou d’analyse qui recourt au spécificateur utilise toujours la culture dite indifférente et le calendrier grégorien.  
   
  Les chaînes transmises aux méthodes `Parse`, `TryParse`, `ParseExact`, et `TryParseExact` de <xref:System.DateTime> et <xref:System.DateTimeOffset> peuvent être analysées à l'aide du spécificateur de format "O" ou "o" si elles sont définies dans l'un de ces formats. Dans le cas des objets <xref:System.DateTime>, la surcharge d'analyse que vous appelez doit également inclure un paramètre `styles` avec une valeur de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Notez que si vous appelez une méthode d'analyse avec la chaîne de format personnalisée qui correspond au spécificateur de format "O" ou "o", vous n'obtenez pas les mêmes résultats que "O" ou "o". En effet, les méthodes d'analyse qui utilisent une chaîne de format personnalisée ne peuvent pas analyser la représentation sous forme de chaîne des valeurs de date et d'heure auxquelles fait défaut un composant de fuseau horaire ou qui recourent à "Z" pour indiquer l'heure UTC.  
   
- L'exemple suivant utilise le spécificateur de format "o" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
+ L’exemple suivant utilise le spécificateur de format « o » pour afficher une série de valeurs <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -285,7 +285,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  Bien que la norme RFC 1123 exprime une heure au format de temps universel coordonné (UTC, Coordinated Universal Time), l'opération de mise en forme ne modifie pas la valeur de l'objet <xref:System.DateTime> qui est mis en forme. Par conséquent, vous devez convertir la valeur <xref:System.DateTime> en temps UTC en appelant la méthode <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> avant d'exécuter l'opération de mise en forme. En revanche, les valeurs <xref:System.DateTimeOffset> exécutent cette conversion automatiquement ; il n'est pas nécessaire d'appeler la méthode <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> avant l'opération de mise en forme.  
   
- L'exemple suivant utilise le spécificateur de format "r" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
+ L’exemple suivant utilise le spécificateur de format « r » pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
@@ -300,7 +300,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  Lorsque ce spécificateur de format standard est utilisé, l'opération de mise en forme ou d'analyse utilise toujours la culture dite indifférente.  
   
- L'exemple suivant utilise le spécificateur de format "s" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
+ L’exemple suivant utilise le spécificateur de format « s » pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
@@ -411,7 +411,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
  De plus, si vous utilisez le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> pour instancier un nouvel objet <xref:System.Globalization.CultureInfo> qui représente la même culture que la culture système en cours, toutes les personnalisations établies par l'élément **Options régionales et linguistiques** du Panneau de configuration seront appliquées au nouvel objet <xref:System.Globalization.CultureInfo> . Vous pouvez utiliser le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> pour créer un objet <xref:System.Globalization.CultureInfo> qui ne reflète pas les personnalisations d'un système.  
   
 ### <a name="datetimeformatinfo-properties"></a>Propriétés DateTimeFormatInfo  
- La mise en forme dépend des propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> actif, qui est fourni implicitement par la culture actuelle du thread ou explicitement par le paramètre <xref:System.IFormatProvider> de la méthode qui appelle la mise en forme. Pour le paramètre <xref:System.IFormatProvider>, votre application doit spécifier un objet <xref:System.Globalization.CultureInfo>, qui représente une culture, ou un objet <xref:System.Globalization.DateTimeFormatInfo>, qui représente les conventions de présentation de la date et de l'heure d'une culture particulière. La plupart des spécificateurs de format de date et d'heure standard sont des alias des modèles de mise en forme définis par les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> en cours. Votre application peut modifier le résultat produit par certains spécificateurs de format de date et d’heure standard en modifiant les modèles de format de date et d’heure correspondants de la propriété <xref:System.Globalization.DateTimeFormatInfo> correspondante.  
+ La mise en forme dépend des propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> actif, qui est fourni implicitement par la culture actuelle du thread ou explicitement par le paramètre <xref:System.IFormatProvider> de la méthode qui appelle la mise en forme. Pour le paramètre <xref:System.IFormatProvider>, votre application doit spécifier un objet <xref:System.Globalization.CultureInfo>, qui représente une culture, ou un objet <xref:System.Globalization.DateTimeFormatInfo>, qui représente les conventions de présentation de la date et de l'heure d'une culture particulière. La plupart des spécificateurs de format de date et d’heure standard sont des alias des modèles de mise en forme définis par les propriétés de l’objet <xref:System.Globalization.DateTimeFormatInfo> en cours. Votre application peut modifier le résultat produit par certains spécificateurs de format de date et d'heure standard en modifiant les modèles de format de date et d'heure correspondants de la propriété <xref:System.Globalization.DateTimeFormatInfo> correspondante.  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,12 +3,12 @@ title: Interpolation de chaîne en C#
 description: Découvrez comment inclure des résultats d’expressions mises en forme dans une chaîne de résultat en C# avec une interpolation de chaîne.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920712"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063226"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolation de chaîne en C\#
 
@@ -30,9 +30,7 @@ Comme le montre l’exemple, vous incluez une expression dans une chaîne interp
 {<interpolatedExpression>}
 ```
 
-Au moment de la compilation, une chaîne interpolée est généralement transformée en un appel de méthode <xref:System.String.Format%2A?displayProperty=nameWithType>. Ceci vous permet d’utiliser toutes les fonctions de la fonctionnalité [Mise en forme de chaîne composite](../../standard/base-types/composite-formatting.md) également avec des chaînes interpolées.
-
-Le compilateur peut remplacer un <xref:System.String.Format%2A?displayProperty=nameWithType> par <xref:System.String.Concat%2A?displayProperty=nameWithType> si le comportement analysé équivaut à une concaténation.
+Les chaînes interpolées prennent en charge toutes les fonctions de la fonctionnalité [Mise en forme de chaîne composite](../../standard/base-types/composite-formatting.md). Elles constituent ainsi une alternative plus lisible à l’utilisation de la méthode <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Comment spécifier une chaîne de format pour une expression interpolée
 

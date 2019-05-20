@@ -1,15 +1,15 @@
 ---
-title: Tâches Machine Learning - ML.NET
+title: Tâches d’apprentissage automatique
 description: Explorez les différentes tâches Machine Learning ainsi que les tâches associées prises en charge dans ML.NET.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613159"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063548"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tâches Machine Learning dans ML.NET
 
@@ -28,22 +28,36 @@ Une tâche [Apprentissage automatique supervisé](glossary.md#supervised-machine
 
 Pour plus d’informations, consultez l’article Wikipédia [Classification binaire](https://en.wikipedia.org/wiki/Binary_classification).
 
-### <a name="binary-classification-training-algorithms"></a>Algorithmes d’entraînement de classification binaire
+### <a name="binary-classification-trainers"></a>Entraîneurs de classification binaire
 
 Vous pouvez entraîner un modèle de classification binaire en utilisant les algorithmes suivants :
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>Entrées et sorties de classification binaire
+
+Pour tirer le meilleur parti de la classification binaire, vous devez équilibrer les données d’entraînement (c’est-à-dire avoir le même nombre de données d’entraînement positives que négatives). Les valeurs manquantes doivent être traitées avant l’entraînement.
+
+Les données de la colonne d’étiquettes d’entrée doivent être <xref:System.Boolean>.
+Les données de la colonne des caractéristiques d’entrée doivent être un vecteur de taille fixe de <xref:System.Single>.
+
+Ces entraîneurs génèrent les colonnes suivantes :
+
+| Nom de colonne de sortie | Type de colonne | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Score brut calculé par le modèle|
+| `PredictedLabel` | <xref:System.Boolean> | Étiquette prédite, en fonction du signe du score. Un score négatif est mappé à `false`, tandis qu’un score positif est mappé à `true`.|
 
 ## <a name="multiclass-classification"></a>Classification multiclasse
 
@@ -58,17 +72,29 @@ Pour plus d’informations, consultez l’article Wikipédia [Classification mul
 >[!NOTE]
 >OvA (One vs all, Un comparé à tous) met à niveau les [learners de classification binaire](#binary-classification) pour agir sur les jeux de données multiclasses. Pour plus d’informations, consultez l’article [Wikipédia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-training-algorithms"></a>Algorithmes d’entraînement de classification multiclasse
+### <a name="multiclass-classification-trainers"></a>Entraîneurs de classification multiclasse
 
 Vous pouvez entraîner un modèle de classification multiclasse en utilisant les algorithmes suivants :
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Entrées et sorties de classification multiclasse
+
+Les données de la colonne d’étiquettes d’entrée doivent être de type [clé](xref:Microsoft.ML.Data.KeyDataViewType).
+La colonne des caractéristiques doit être un vecteur de taille fixe de <xref:System.Single>.
+
+Cet entraîneur génère la sortie suivante :
+
+| Nom de la sortie | Type | Description|
+| -- | -- | -- |
+| `Score` | Vecteur de <xref:System.Single> | Les scores de toutes les classes. Une valeur supérieure signifie une plus forte probabilité d’appartenir à la classe associée. Si l’i-ème élément a la plus grande valeur, l’index de l’étiquette prédite est i. Notez que i est l’index de base zéro. |
+| `PredictedLabel` | Type [clé](xref:Microsoft.ML.Data.KeyDataViewType) | Index de l’étiquette prédite. Si sa valeur est i, l’étiquette réelle est la i-ème catégorie dans le type d’étiquette d’entrée avec une valeur de clé. |
 
 ## <a name="regression"></a>Régression
 
@@ -78,19 +104,29 @@ Une tâche [Apprentissage automatique supervisée](glossary.md#supervised-machin
 * Prédire le cours d’actions en fonction de données historiques et des tendances du marché actuel.
 * Prédire les ventes d’un produit en fonction d’un budget publicitaire.
 
-### <a name="regression-training-algorithms"></a>Algorithmes d’entraînement de régression
+### <a name="regression-trainers"></a>Entraîneurs de régression
 
 Vous pouvez entraîner un modèle de régression en utilisant les algorithmes suivants :
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>Entrées et sorties de régression
+
+Les données de la colonne d’étiquettes d’entrée doivent être <xref:System.Single>.
+
+Les entraîneurs pour cette tâche génèrent le résultat suivant :
+
+| Nom de la sortie | Type | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Score brut prédit par le modèle |
 
 ## <a name="clustering"></a>Clustering
 
@@ -100,11 +136,22 @@ Une tâche [Apprentissage automatique non supervisé](glossary.md#unsupervised-m
 * Identifier les segments d’une clientèle et les données démographiques pour faciliter la mise en œuvre de campagnes publicitaires ciblées.
 * Classer un inventaire en fonction de métriques de fabrication.
 
-### <a name="clustering-training-algorithms"></a>Algorithmes d’entraînement de clustering
+### <a name="clustering-trainer"></a>Entraîneur de clustering
 
 Vous pouvez entraîner un modèle de clustering en utilisant les algorithmes suivants :
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Entrées et sorties de clustering
+
+Les données de caractéristiques d’entrée doivent être <xref:System.Single>. Aucune étiquette n’est nécessaire.
+
+Cet entraîneur génère la sortie suivante :
+
+| Nom de la sortie | Type | Description|
+| -- | -- | -- |
+| `Score` | Vecteur de <xref:System.Single> | Distances entre le point de données spécifique et les centroïdes de tous les clusters |
+| `PredictedLabel` | Type [clé](xref:Microsoft.ML.Data.KeyDataViewType) | Index du cluster le plus proche prédit par le modèle. |
 
 ## <a name="anomaly-detection"></a>Détection d’anomalie
 
@@ -121,11 +168,21 @@ La détection d’anomalie englobe de nombreuses tâches importantes pour l’ap
 
 Les anomalies constituant, par définition, des événements rares, il peut être difficile de recueillir un échantillon représentatif des données à utiliser pour la modélisation. Les algorithmes inclus dans cette catégorie ont été spécialement conçus pour relever les défis de base qu’impliquent la création et l’apprentissage des modèles à l’aide de jeux de données déséquilibrés.
 
-### <a name="anomaly-detection-training-algorithms"></a>Algorithmes d’entraînement de détection d’anomalie
+### <a name="anomaly-detection-trainer"></a>Entraîneur de détection d’anomalie
 
 Vous pouvez entraîner un modèle de détection d’anomalie en utilisant les algorithmes suivants :
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Sorties et entrées de la détection d’anomalie
+
+Les caractéristiques d’entrée doivent être un vecteur de taille fixe de <xref:System.Single>.
+
+Cet entraîneur génère la sortie suivante :
+
+| Nom de la sortie | Type | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Score non négatif sans borne calculé par le modèle de détection d’anomalie |
 
 ## <a name="ranking"></a>Classement
 
@@ -135,8 +192,20 @@ Une tâche de classement établit un classement à partir d’un ensemble d’ex
 
 Vous pouvez entraîner un modèle de classement en utilisant les algorithmes suivants :
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Entrées et sorties de classement
+
+Le type de données des étiquettes d’entrée doit être de type [clé](xref:Microsoft.ML.Data.KeyDataViewType) ou <xref:System.Single>. La valeur de l’étiquette détermine la pertinence, une valeur supérieure indiquant une pertinence plus élevée. Si l’étiquette est un type [clé](xref:Microsoft.ML.Data.KeyDataViewType), l’index de clé est la valeur de la pertinence, le plus petit index étant le moins pertinent. Si l’étiquette est un <xref:System.Single>, une valeur plus grande indique une pertinence plus élevée.
+
+Les données de caractéristique doivent être un vecteur de taille fixe de <xref:System.Single> et la colonne du groupe de lignes d’entrée doit être de type [clé](xref:Microsoft.ML.Data.KeyDataViewType).
+
+Cet entraîneur génère la sortie suivante :
+
+| Nom de la sortie | Type | Description|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Score sans borne calculé par le modèle pour déterminer la prédiction |
 
 ## <a name="recommendation"></a>Recommandation
 

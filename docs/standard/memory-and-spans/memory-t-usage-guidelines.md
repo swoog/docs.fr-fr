@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504338"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063282"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instructions d’utilisation de Memory\<T> et de Span\<T>
 
@@ -86,7 +86,7 @@ Dans ce code :
 
 - La méthode `Main` conserve la référence à l’instance <xref:System.Buffers.IMemoryOwner%601>, donc la méthode `Main` est propriétaire de la mémoire tampon.
 
-- Les méthodes `WriteInt32ToBuffer` et `DisplayBufferToConsole` acceptent xref:System.Memory%601> comme API publique. Par conséquent, il y a des consommateurs de la mémoire tampon. Et ils ne la consomment qu’un par un.
+- Les méthodes `WriteInt32ToBuffer` et `DisplayBufferToConsole` acceptent <xref:System.Memory%601> comme API publique. Par conséquent, il y a des consommateurs de la mémoire tampon. Et ils ne la consomment qu’un par un.
 
 Bien que la méthode `WriteInt32ToBuffer` soit destinée à écrire une valeur dans la mémoire tampon, ce n’est pas le cas pour la méthode `DisplayBufferToConsole`. Pour refléter cette modification, un argument de type <xref:System.ReadOnlyMemory%601> peut avoir été accepté. Pour des informations supplémentaires sur <xref:System.ReadOnlyMemory%601>, consultez , [Règle 2 : utilisez ReadOnlySpan\<T> ou ReadOnlyMemory\<T> si la mémoire tampon doit être en lecture seule](#rule-2).
 
@@ -116,7 +116,7 @@ Voici nos recommandations quant à l’utilisation réussie de <xref:System.Memo
 
 **Règle 1 : pour une API synchrone, utilisez Span\<T> au lieu de Memory\<T> comme paramètre si possible.**
 
-<xref:System.Span%601> est plus polyvalente que <xref:System.Memory%601> et peut représenter une plus grande variété de mémoires tampons contiguës. <xref:System.Span%601> offre également de meilleures performances que <xref:System.Memory%601>>. Enfin, vous pouvez utiliser la propriété <xref:System.Memory%601.Span?displayProperty=nameWithType> pour convertir une instance <xref:System.Memory%601> en <xref:System.Span%601>, bien que la conversion Span\<T >- to-Memory\<T > ne soit pas possible. Par conséquent, si vos appelants ont une instance <xref:System.Memory%601>, ils pourront de toute façon appeler vos méthodes avec des paramètres <xref:System.Span%601>.
+<xref:System.Span%601> est plus polyvalente que <xref:System.Memory%601> et peut représenter une plus grande variété de mémoires tampons contiguës. <xref:System.Span%601> offre également de meilleures performances que <xref:System.Memory%601>. Enfin, vous pouvez utiliser la propriété <xref:System.Memory%601.Span?displayProperty=nameWithType> pour convertir une instance <xref:System.Memory%601> en <xref:System.Span%601>, bien que la conversion Span\<T >- to-Memory\<T > ne soit pas possible. Par conséquent, si vos appelants ont une instance <xref:System.Memory%601>, ils pourront de toute façon appeler vos méthodes avec des paramètres <xref:System.Span%601>.
 
 L’utilisation d’un paramètre de type <xref:System.Span%601> au lieu d’un paramètre de type <xref:System.Memory%601> vous aide également à écrire une implémentation correcte de la méthode de consommation. Des vérifications automatiques au moment de la compilation vous permettent de garantir que vous ne tentez pas d’accéder à la mémoire tampon au-delà de votre bail de méthode (nous y reviendrons plus tard).
 
@@ -246,7 +246,7 @@ Tout composant qui transfère la propriété de l’instance <xref:System.Buffer
 
 **Règle 9 : si vous incluez une méthode p/invoke synchrone dans un wrapper, votre API doit accepter Span\<T> comme paramètre.**
 
-Conformément à la règle 1, <xref:System.Span%601> est généralement le type correct à utiliser pour les API synchrones. Vous pouvez épingler des instances <xref:System.Span%601>\<T> par le biais du mot clé [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), comme dans l’exemple suivant.
+Conformément à la règle 1, <xref:System.Span%601> est généralement le type correct à utiliser pour les API synchrones. Vous pouvez épingler des instances <xref:System.Span%601> avec le mot clé [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) mot clé, comme dans l’exemple suivant.
 
 ```csharp
 using System.Runtime.InteropServices;

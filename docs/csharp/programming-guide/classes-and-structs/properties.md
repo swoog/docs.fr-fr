@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676820"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583061"
 ---
 # <a name="properties-c-programming-guide"></a>Propriétés (Guide de programmation C#)
 
@@ -54,21 +54,21 @@ L’exemple suivant illustre ce modèle. Dans cet exemple, la classe `TimePeriod
 
 Dans certains cas, les accesseurs de propriété `get` et `set` ne font qu’assigner une valeur à un champ de stockage, ou récupérer une valeur d’un champ de stockage, sans inclure de logique supplémentaire. En utilisant des propriétés implémentées automatiquement, vous simplifiez votre code, tout en laissant le compilateur C# fournir le champ de stockage de manière transparente. 
 
-Si une propriété a les accesseurs `get` et `set`, tous deux doivent être implémentés automatiquement. Vous définissez une propriété implémentée automatiquement à l’aide des mots clés `get` et `set` sans fournir d’implémentation. L’exemple suivant est identique à l’exemple précédent, sauf qu’il utilise les propriétés implémentées automatiquement `Name` et `Price`. Notez que l’exemple supprime également le constructeur paramétrable pour que les objets `SaleItem` soient initialisés avec un appel au constructeur par défaut et un [initialiseur d’objet](object-and-collection-initializers.md).
+Si une propriété a les accesseurs `get` et `set`, tous deux doivent être implémentés automatiquement. Vous définissez une propriété implémentée automatiquement à l’aide des mots clés `get` et `set` sans fournir d’implémentation. L’exemple suivant est identique à l’exemple précédent, sauf qu’il utilise les propriétés implémentées automatiquement `Name` et `Price`. Notez que l’exemple supprime également le constructeur paramétrable pour que les objets `SaleItem` soient initialisés avec un appel au constructeur sans paramètre et un [initialiseur d’objet](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Rubriques connexes  
   
--   [Utilisation de propriétés](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Utilisation de propriétés](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Propriétés de l’interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Propriétés de l’interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparaison entre propriétés et indexeurs](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Restriction d’accessibilité de l’accesseur](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restriction d’accessibilité de l’accesseur](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Propriétés implémentées automatiquement](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Propriétés implémentées automatiquement](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
 

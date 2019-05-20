@@ -1,17 +1,21 @@
 ---
 title: Commande dotnet build
 description: La commande dotnet build permet de générer un projet et l’ensemble de ses dépendances.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755215"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
+**Cet article s’applique à : ✓** SDK .NET Core 1.x et versions ultérieures
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Name
 
@@ -19,25 +23,12 @@ ms.locfileid: "59612691"
 
 ## <a name="synopsis"></a>Résumé
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Description
 
@@ -75,8 +66,6 @@ Le fichier projet ou solution à générer. Si vous ne spécifiez pas de fichier
 
 ## <a name="options"></a>Options
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 * **`-c|--configuration {Debug|Release}`**
 
   Définit la configuration de build. La valeur par défaut est `Debug`.
@@ -87,11 +76,15 @@ Le fichier projet ou solution à générer. Si vous ne spécifiez pas de fichier
 
 * **`--force`**
 
-  Force la résolution de toutes les dépendances même si la dernière restauration a réussi. Définir cet indicateur revient à supprimer le fichier *project.assets.json*.
+  Force la résolution de toutes les dépendances même si la dernière restauration a réussi. Définir cet indicateur revient à supprimer le fichier *project.assets.json*. Disponible à partir du kit SDK .NET Core 2.0.
 
 * **`-h|--help`**
 
   Affiche une aide brève pour la commande.
+
+* **`--interactive`**
+
+  Permet à la commande de s’arrêter et d’attendre une action ou une entrée utilisateur. Par exemple, pour effectuer une authentification. Disponible à partir du kit SDK .NET Core 3.0.
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ Le fichier projet ou solution à générer. Si vous ne spécifiez pas de fichier
 
   Marque la build comme unsafe pour la génération incrémentielle. Cet indicateur désactive la compilation incrémentielle et force une regénération du graphique de dépendance du projet.
 
+* **`--no-logo`**
+
+  N’affiche pas la bannière de démarrage ni le message de copyright. Disponible à partir du kit SDK .NET Core 3.0.
+
 * **`--no-restore`**
 
-  N’exécute pas de restauration implicite pendant la génération.
+  N’exécute pas de restauration implicite pendant la génération. Disponible à partir du kit SDK .NET Core 2.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ Le fichier projet ou solution à générer. Si vous ne spécifiez pas de fichier
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Définit le niveau de détail de la commande. Les valeurs autorisées sont `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` et `diag[nostic]`.
+  Définit le niveau de détail MSBuild. Les valeurs autorisées sont `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` et `diag[nostic]`. La valeur par défaut est `minimal`.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Définit le suffixe de version pour un astérisque (`*`) dans le champ de version du fichier projet. Le format respecte les instructions de version de NuGet.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Définit la configuration de build. La valeur par défaut est `Debug`.
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  Compile pour un [framework](../../standard/frameworks.md) spécifique. Le framework doit être défini dans le [fichier projet](csproj.md).
-
-* **`-h|--help`**
-
-  Affiche une aide brève pour la commande.
-
-* **`--no-dependencies`**
-
-  Ignore les références entre projets (P2P) et génère uniquement le projet racine spécifié.
-
-* **`--no-incremental`**
-
-  Marque la build comme unsafe pour la génération incrémentielle. Cet indicateur désactive la compilation incrémentielle et force une regénération du graphique de dépendance du projet.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Répertoire dans lequel placer les fichiers binaires générés. Vous devez également définir `--framework` lorsque vous spécifiez cette option.
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  Spécifie le runtime cible. Pour connaître les identificateurs de runtime, consultez le [catalogue des identificateurs de runtime](../rid-catalog.md).
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Définit le niveau de détail de la commande. Les valeurs autorisées sont `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` et `diag[nostic]`.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Définit le suffixe de version pour un astérisque (`*`) dans le champ de version du fichier projet. Le format respecte les instructions de version de NuGet.
-
----
+  Définit la valeur de la propriété `$(VersionSuffix)` à utiliser lors de la génération du projet. Cela fonctionne uniquement si la propriété `$(Version)` n’est pas définie. Ensuite, `$(Version)` est défini sur `$(VersionPrefix)` combiné avec `$(VersionSuffix)`, séparés par un tiret.
 
 ## <a name="examples"></a>Exemples
 
@@ -175,10 +132,10 @@ Le fichier projet ou solution à générer. Si vous ne spécifiez pas de fichier
   dotnet build --configuration Release
   ```
 
-* Générer un projet et ses dépendances pour un runtime spécifique (dans cet exemple, Ubuntu 16.04) :
+* Générer un projet et ses dépendances pour un runtime spécifique (dans cet exemple, Ubuntu 18.04) :
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Générer le projet et utiliser la source de package NuGet spécifiée pendant l’opération de restauration (SDK .NET Core 2.0 et versions ultérieures) :

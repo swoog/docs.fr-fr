@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145117"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469679"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Chargement et utilisation dynamiques des types
-La réflexion fournit l’infrastructure utilisée par les compilateurs de langages tels que [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] et JScript pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] vous permet d’utiliser la liaison tardive implicite dans votre code. Le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour obtenir le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  
+La réflexion fournit l’infrastructure utilisée par les compilateurs de langages pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. Visual Basic permet d’utiliser la liaison tardive implicite dans le code ; le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour récupérer le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  
   
  Dans l’exemple suivant, le compilateur Visual Basic utilise implicitement la réflexion pour appeler une méthode sur un objet dont le type n’est pas connu au moment de la compilation. Une classe **HelloWorld** a une méthode **PrintHello** qui imprime « Hello World » concaténé à du texte passé à la méthode **PrintHello**. La méthode **PrintHello** appelée dans cet exemple équivaut en fait à un <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>. Le code Visual Basic permet à la méthode **PrintHello** d’être appelée comme si le type de l’objet (helloObj) était connu au moment de la compilation (liaison anticipée) plutôt qu’au moment de l’exécution (liaison tardive).  
   

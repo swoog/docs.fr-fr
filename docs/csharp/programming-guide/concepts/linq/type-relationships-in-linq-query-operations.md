@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755957"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relations des types dans des opérations de requête LINQ (C#)
 Pour écrire efficacement des requêtes, vous devez comprendre comment les types des variables dans une opération de requête complète sont liés les uns aux autres. Si vous comprenez ces relations, vous comprendrez plus facilement les exemples de code et les exemples [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans la documentation. En outre, vous comprendrez ce qui se passe en arrière-plan lorsque des variables sont implicitement typées à l’aide de `var`.  
@@ -29,7 +29,7 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Requêtes qui ne transforment pas les données sources  
  L’illustration suivante montre une opération de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects qui n’effectue aucune transformation des données. La source contient une séquence de chaînes et le résultat de la requête est également une séquence de chaînes.  
   
- ![Relation entre les types de données dans une requête LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Diagramme illustrant la relation entre les types de données dans une requête LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. L’argument de type de la source de données détermine le type de la variable de portée.  
   
@@ -40,7 +40,7 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
 ## <a name="queries-that-transform-the-source-data"></a>Requêtes qui transforment les données sources  
  L’illustration suivante montre une opération de requête [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] qui effectue une transformation simple des données. La requête accepte une séquence d’objets `Customer` en entrée et sélectionne uniquement la propriété `Name` dans le résultat. Comme `Name` est une chaîne, la requête produit une séquence de chaînes en sortie.  
   
- ![Requête qui transforme le type de données](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Diagramme montrant une requête qui transforme le type de données.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. L’argument de type de la source de données détermine le type de la variable de portée.  
   
@@ -50,7 +50,7 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
   
  L’illustration suivante montre une transformation légèrement plus complexe. L’instruction `select` retourne un type anonyme qui capture seulement deux membres de l’objet `Customer` original.  
   
- ![Requête qui transforme le type de données](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Diagramme montrant une requête plus complexe qui transforme le type de données.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. L’argument de type de la source de données est toujours le type de la variable de portée dans la requête.  
   
@@ -61,7 +61,7 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
 ## <a name="letting-the-compiler-infer-type-information"></a>Laisser le compilateur déduire les informations de type  
  Vous devez comprendre les relations des types dans une opération de requête. Toutefois, vous avez la possibilité de laisser le compilateur faire tout le travail à votre place. Le mot clé [var](../../../../csharp/language-reference/keywords/var.md) peut être utilisé pour toute variable locale dans une opération de requête. L’illustration suivante est similaire à l’exemple numéro 2 qui a été abordé précédemment. Toutefois, le compilateur fournit le type fort pour chaque variable dans l’opération de requête.  
   
- ![Flux de type avec typage implicite](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Diagramme illustrant le flux de type avec typage implicite.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Pour plus d’informations sur `var`, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

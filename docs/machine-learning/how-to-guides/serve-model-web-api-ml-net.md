@@ -1,36 +1,36 @@
 ---
-title: Alimenter un modèle Machine Learning dans l’API web ASP.NET Core
+title: Déployer un modèle dans une API web ASP.NET Core
 description: Alimentez un modèle Machine Learning d’analyse des sentiments ML.NET sur Internet avec l’API web ASP.NET Core.
-ms.date: 03/05/2019
+ms.date: 05/03/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321227"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641085"
 ---
-# <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Guide pratique : Alimenter un modèle Machine Learning par le biais de l’API web ASP.NET Core
+# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Déployer un modèle dans une API web ASP.NET Core
 
-Ce guide pratique montre comment alimenter un modèle Machine Learning ML.NET prédéfini sur le web avec une API web ASP.NET Core. Les utilisateurs peuvent ainsi accéder à l’API à des fins de prédiction à l’aide de méthodes HTTP standard.
+Découvrez comment alimenter un modèle Machine Learning ML.NET préentraîné sur le web avec une API web ASP.NET Core. L’alimentation d’un modèle sur une API web permet d’effectuer des prédictions par le biais de méthodes HTTP standard.
 
 > [!NOTE]
-> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET version 0.10**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+> L’extension de service `PredictionEnginePool` est disponible en préversion.
 
 ## <a name="prerequisites"></a>Prérequis
 
 - [Visual Studio 2017 15.6 ou version ultérieure](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), avec la charge de travail « Développement multiplateforme .Net Core » installée.
 - PowerShell ;
-- un modèle préentraîné :
-    - Suivez le [tutoriel Analyse des sentiments ML.NET](../tutorials/sentiment-analysis.md) pour créer votre propre modèle.
-    - Téléchargez ce [modèle Machine Learning d’analyse des sentiments préentraîné](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).
+- un modèle préentraîné : Utilisez le [tutoriel Analyse des sentiments dans ML.NET](../tutorials/sentiment-analysis.md) pour générer votre propre modèle ou téléchargez ce [modèle Machine Learning d’analyse des sentiments préentraîné](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).
 
 ## <a name="create-aspnet-core-web-api-project"></a>Créer un projet d’API web ASP.NET Core
 
 1. Ouvrez Visual Studio 2017. Sélectionnez **Fichier > Nouveau > Projet** dans la barre de menus. Dans la boîte de dialogue Nouveau projet, sélectionnez le nœud **Visual C#**, suivi du nœud **Web**. Ensuite, sélectionnez le modèle de projet **Application web ASP.NET Core**. Dans la zone de texte **Nom**, tapez « SentimentAnalysisWebAPI », puis sélectionnez le bouton **OK**.
+
 1. Dans la fenêtre qui affiche les différents types de projets ASP.NET Core, sélectionnez **API**, puis le bouton **OK**.
+
 1. Créez un répertoire nommé *MLModels* dans votre projet pour enregistrer les fichiers de votre modèle Machine Learning prédéfini :
 
     Dans l’Explorateur de solutions, cliquez avec le bouton droit sur votre projet et sélectionnez Ajouter > Nouveau dossier. Tapez « MLModels » et appuyez sur Entrée.
@@ -39,12 +39,16 @@ Ce guide pratique et l’exemple associé utilisent actuellement **ML.NET versio
 
     Dans l'Explorateur de solutions, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Gérer les packages NuGet**. Choisissez « nuget.org » comme Source du package, sélectionnez l’onglet Parcourir, recherchez **Microsoft.ML**, sélectionnez ce package dans la liste, puis sélectionnez le bouton Installer. Sélectionnez le bouton **OK** dans la boîte de dialogue **Aperçu des modifications**, puis le bouton **J’accepte** dans la boîte de dialogue Acceptation de la licence si vous acceptez les termes du contrat de licence pour les packages de la liste.
 
+1. Installez le **package NuGet Microsoft.Extensions.ML** :
+
+    Dans l'Explorateur de solutions, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Gérer les packages NuGet**. Choisissez « nuget.org » comme Source du package, sélectionnez l’onglet Parcourir, recherchez **Microsoft.Extensions.ML**, sélectionnez ce package dans la liste, puis sélectionnez le bouton Installer. Sélectionnez le bouton **OK** dans la boîte de dialogue **Aperçu des modifications**, puis le bouton **J’accepte** dans la boîte de dialogue Acceptation de la licence si vous acceptez les termes du contrat de licence pour les packages de la liste.
+
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>Ajouter un modèle au projet d’API web ASP.NET Core
 
 1. Copiez votre modèle prédéfini dans le répertoire *MLModels*.
 1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le fichier zip du modèle et sélectionnez Propriétés. Sous Avancé, remplacez la valeur Copier dans le répertoire de sortie par Copier si plus récent.
 
-## <a name="build-data-models"></a>Créer des modèles de données
+## <a name="create-data-models"></a>Créer des modèles de données
 
 Vous devez créer des classes pour vos données d’entrée et prévisions. Ajoutez une nouvelle classe à votre projet :
 
@@ -55,166 +59,146 @@ Vous devez créer des classes pour vos données d’entrée et prévisions. Ajou
 2. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le répertoire *DataModels*, puis sélectionnez Ajouter > Nouvel élément.
 3. Dans la boîte de dialogue **Ajouter un nouvel élément**, sélectionnez **Classe**, puis remplacez la valeur du champ **Nom** par *SentimentData.cs*. Ensuite, sélectionnez le bouton **Ajouter**. Le fichier *SentimentData.cs* s’ouvre dans l’éditeur de code. Ajoutez l’instruction using suivante en haut du fichier *SentimentData.cs* :
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    Supprimez la définition de classe existante et ajoutez le code suivant au fichier **SentimentData.cs** :
+    
+    ```csharp
+    public class SentimentData
+    {
+        [LoadColumn(0)]
+        public string SentimentText;
 
-Supprimez la définition de classe existante et ajoutez le code suivant au fichier **SentimentData.cs** :
-
-```csharp
-public class SentimentData
-{
-    [LoadColumn(0)]
-    public bool Label { get; set; }
-    [LoadColumn(1)]
-    public string Text { get; set; }   
-}
-```
+        [LoadColumn(1)]
+        [ColumnName("Label")]
+        public bool Sentiment;
+    }
+    ```
 
 4. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le répertoire *DataModels*, puis sélectionnez **Ajouter > Nouvel élément**.
 5. Dans la boîte de dialogue **Ajouter un nouvel élément**, sélectionnez **Classe** et remplacez la valeur du champ **Nom** par *SentimentPrediction.cs*. Ensuite, sélectionnez le bouton Ajouter. Le fichier *SentimentPrediction.cs* s’ouvre dans l’éditeur de code. Ajoutez l’instruction using suivante en haut du fichier *SentimentPrediction.cs* :
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    Supprimez la définition de classe existante et ajoutez le code suivant au fichier *SentimentPrediction.cs* :
+    
+    ```csharp
+    public class SentimentPrediction : SentimentData
+    {
 
-Supprimez la définition de classe existante et ajoutez le code suivant au fichier *SentimentPrediction.cs* :
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
 
-```csharp
-public class SentimentPrediction
-{
-    [ColumnName("PredictedLabel")]
-    public bool Prediction { get; set; }
-}
-```
+        public float Probability { get; set; }
 
-## <a name="register-predictionengine-for-use-in-application"></a>Inscrire PredictionEngine pour l’utiliser dans l’application
+        public float Score { get; set; }
+    }
+    ```
 
-Pour établir une prédiction unique, vous pouvez utiliser `PredictionEngine`. Pour pouvoir utiliser `PredictionEngine` dans votre application, vous devrez le créer chaque fois qu’il sera nécessaire. Dans ce cas, il est recommandé d’utiliser l’injection de dépendances ASP.NET Core.
+    `SentimentPrediction` hérite de `SentimentData`. Vous pouvez ainsi mieux voir les données d’origine dans la propriété `SentimentText` ainsi que la sortie générée par le modèle. 
 
-Pour plus d’informations, voir [Injection de dépendances](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+## <a name="register-predictionenginepool-for-use-in-the-application"></a>Inscrire PredictionEnginePool pour l’utiliser dans l’application
+
+Pour établir une prédiction unique, utilisez [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Pour pouvoir utiliser la classe [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) dans votre application, vous devez la créer quand vous en avez besoin. Dans ce cas, il est recommandé d’utiliser l’injection de dépendances.
+
+Pour plus d’informations, consultez [Injection de dépendances dans ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
 1. Ouvrez la classe *Startup.cs* et ajoutez l’instruction using suivante en haut du fichier :
 
-```csharp
-using System.IO;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
+    ```csharp
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
 
-2. Ajoutez les lignes de code suivantes à la classe méthode *ConfigureServices* :
+2. Ajoutez le code suivant à la méthode *ConfigureServices* :
 
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-    services.AddScoped<MLContext>();
-    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
     {
-        MLContext mlContext = ctx.GetRequiredService<MLContext>();
-        string modelFilePathName = "MLModels/sentiment_model.zip";
-
-        //Load model from file
-        ITransformer model;
-        using (var stream = File.OpenRead(modelFilePathName))
-        {
-            model = mlContext.Model.Load(stream);
-        }
-
-        // Return prediction engine
-        return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-    });
-}
-```
-
-> [!WARNING]
-> `PredictionEngine` n’est pas thread‑safe. L’une des façons de limiter le coût de création de l’objet consiste à rendre sa durée de vie de service *Scoped*. Les objets *Scoped* sont les mêmes au sein d’une requête, mais ils diffèrent entre les requêtes. Pour en savoir plus sur les [durées de vie de service](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes), consultez le lien suivant.
+        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+            .FromFile("MLModels/sentiment_model.zip");
+    }
+    ```
 
 À haut niveau, ce code initialise automatiquement les objets et les services à la demande de l’application, ce qui évite d’avoir à le faire manuellement.
 
+> [!WARNING]
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) n’est pas thread‑safe. Pour améliorer les performances et la cohérence de thread, utilisez le service `PredictionEnginePool`, qui crée un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) d’objets `PredictionEngine` à utiliser avec l’application. Lisez le billet de blog suivant pour en savoir plus sur [la création et l’utilisation de pools d’objets `PredictionEngine` dans ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
+
 ## <a name="create-predict-controller"></a>Créer un contrôleur de prédictions
 
-Pour traiter les requêtes HTTP entrantes, il est nécessaire de créer un contrôleur.
+Pour traiter les requêtes HTTP entrantes, créez un contrôleur.
 
 1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le répertoire *Contrôleurs*, puis sélectionnez **Ajouter > Contrôleur**.
 1. Dans la boîte de dialogue **Ajouter un nouvel élément**, sélectionnez **Contrôleur d’API vide** et **Ajouter**.
 1. À l’invite, remplacez la valeur du champ **Nom du contrôleur** par *PredictController.cs*. Ensuite, sélectionnez le bouton Ajouter. Le fichier *PredictController.cs* s’ouvre dans l’éditeur de code. Ajoutez l’instruction using suivante en haut du fichier *PredictController.cs* :
 
-```csharp
-using System;
-using Microsoft.AspNetCore.Mvc;
-using SentimentAnalysisWebAPI.DataModels;
-using Microsoft.ML;
-```
+    ```csharp
+    using System;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
 
-Supprimez la définition de classe existante et ajoutez le code suivant au fichier *PredictController.cs* :
-
-```csharp
-public class PredictController : ControllerBase
-{
+    Supprimez la définition de classe existante et ajoutez le code suivant au fichier *PredictController.cs* :
     
-    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
-
-    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
+    ```csharp
+    public class PredictController : ControllerBase
     {
-        _predictionEngine = predictionEngine; //Define prediction engine
-    }
+        private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
 
-    [HttpPost]
-    public ActionResult<string> Post([FromBody]SentimentData input)
-    {
-        if(!ModelState.IsValid)
+        public PredictController(PredictionEnginePool<SentimentData,SentimentPrediction> predictionEnginePool)
         {
-            return BadRequest();
+            _predictionEnginePool = predictionEnginePool;
         }
 
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
+        [HttpPost]
+        public ActionResult<string> Post([FromBody] SentimentData input)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
 
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
 
-        return Ok(isToxic);
+            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
+
+            return Ok(sentiment);
+        }
     }
-    
-}
-```
+    ```
 
-Cette opération permet d’affecter le `PredictionEngine` en le passant au constructeur du contrôleur, obtenu par injection de dépendances. Ensuite, dans la méthode POST de ce contrôleur, le `PredictionEngine` est utilisé pour établir des prédictions et retourner les résultats à l’utilisateur en cas de réussite.
+Ce code affecte le `PredictionEnginePool` en le passant au constructeur du contrôleur, obtenu par injection de dépendances. Ensuite, la méthode `Post` du contrôleur `Predict` utilise le `PredictionEnginePool` pour établir des prédictions et retourner les résultats à l’utilisateur en cas de réussite.
 
-## <a name="test-web-api-locally"></a>Test l’API web localement
+## <a name="test-web-api-locally"></a>Tester l’API web localement
 
 Maintenant que tout est configuré, il est temps de tester l’application.
 
 1. Exécutez l'application.
 1. Ouvrez PowerShell et entrez le code suivant, où PORT est le port d’écoute de votre application.
 
-```powershell
-Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"
-```
+    ```powershell
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    ```
 
-En cas de réussite, la sortie devrait se présenter ainsi :
+    En cas de réussite, la sortie devrait se présenter ainsi :
+    
+    ```powershell
+    Negative
+    ```
 
-```powershell
-Toxic
-```
-
-Félicitations ! Vous avez réussi à alimenter votre modèle de façon à effectuer des prédictions sur Internet à l’aide d’une API ASP.NET Core.
+Félicitations ! Vous avez réussi à alimenter votre modèle de façon à effectuer des prédictions sur Internet à l’aide d’une API web ASP.NET Core.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

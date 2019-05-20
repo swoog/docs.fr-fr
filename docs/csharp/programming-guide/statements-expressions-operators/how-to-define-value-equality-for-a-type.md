@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Définir une égalité de valeurs pour un type - Guide de programmation C#'
+title: Guide pratique pour définir une égalité de valeurs pour un type - Guide de programmation C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311472"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755008"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procédure : Définir une égalité de valeurs pour un type (Guide de programmation C#)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Guide pratique pour définir une égalité de valeurs pour un type (Guide de programmation C#)
+
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  
   
 1. `x.Equals(x)` retourne `true`. Il s’agit de la propriété réflexive.  
@@ -33,19 +34,20 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
   
  Les détails d’implémentation pour l’égalité des valeurs sont différents pour les classes et les structs. Toutefois, les classes et les structs nécessitent tous deux les mêmes étapes de base pour l’implémentation de l’égalité :  
   
-1. Substituez la méthode [virtual](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Dans la plupart des cas, votre implémentation de `bool Equals( object obj )` doit simplement appeler la méthode `Equals` propre au type qui est l’implémentation de l’interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Voir l’étape 2.)  
+1. Substituez la méthode [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Dans la plupart des cas, votre implémentation de `bool Equals( object obj )` doit simplement appeler la méthode `Equals` propre au type qui est l’implémentation de l’interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Voir l’étape 2.)  
   
 2. Implémentez l’interface <xref:System.IEquatable%601?displayProperty=nameWithType> en fournissant une méthode `Equals` propre au type. C’est ici qu’est effectuée la comparaison d’équivalence. Par exemple, vous pouvez décider de définir l’égalité en comparant seulement un ou deux champs de votre type. Ne levez pas d'exceptions à partir de la méthode `Equals`. Pour les classes uniquement : cette méthode doit examiner uniquement les champs qui sont déclarés dans la classe. Elle doit appeler `base.Equals` pour examiner les champs qui sont dans la classe de base. (Ne faites pas cela si le type hérite directement d’<xref:System.Object>, car l’implémentation <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> effectue une vérification de l’égalité de référence.)  
   
-3. Facultatif, mais recommandé : Surcharger les opérateurs [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
+3. Facultatif, mais recommandé : Surcharger les opérateurs [==](../../language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4. Substituez <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> pour que deux objets ayant une égalité des valeurs produisent le même code de hachage.  
   
-5. Facultatif : Pour prendre en charge les définitions pour « supérieur à » ou « inférieur à », implémentez l’interface <xref:System.IComparable%601> pour votre type, et surchargez également les opérateurs [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) et [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5. Facultatif : Pour prendre en charge les définitions pour « supérieur à » ou « inférieur à », implémentez l’interface <xref:System.IComparable%601> pour votre type, et surchargez également les opérateurs [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) et [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
   
  Le premier exemple qui suit illustre une implémentation de classe. Le deuxième exemple illustre une implémentation de struct.  
-  
-## <a name="example"></a>Exemple  
+
+## <a name="example"></a>Exemple
+
  L’exemple suivant montre comment implémenter l’égalité des valeurs dans une classe (type référence).  
   
  [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
@@ -53,17 +55,18 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
  Sur les classes (types référence), l’implémentation par défaut des deux méthodes <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> effectue une comparaison d’égalité de référence, et non une vérification de l’égalité des valeurs. Quand un implémenteur substitue la méthode virtuelle, l’objectif est de lui donner une sémantique d’égalité des valeurs.  
   
  Les opérateurs `==` et `!=` peuvent être utilisés avec des classes, même si la classe ne les surcharge pas. Toutefois, le comportement par défaut consiste à effectuer une vérification de l’égalité de référence. Dans une classe, si vous surchargez la méthode `Equals`, vous devez surcharger les opérateurs `==` et `!=`, mais cela n’est pas obligatoire.  
-  
-## <a name="example"></a>Exemple  
+
+## <a name="example"></a>Exemple
+
  L’exemple suivant montre comment implémenter l’égalité des valeurs dans un struct (type valeur) :  
   
  [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Pour les structs, l’implémentation par défaut de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (qui est la version substituée dans <xref:System.ValueType?displayProperty=nameWithType>) effectue une vérification de l’égalité des valeurs à l’aide de la réflexion pour comparer les valeurs de chaque champ dans le type. Quand un implémenteur substitue la méthode `Equals` virtuelle dans un struct, l’objectif est de fournir un moyen plus efficace d’effectuer la vérification de l’égalité des valeurs, et éventuellement de baser la comparaison sur un sous-ensemble des propriétés ou du champ du struct.  
   
- Les opérateurs [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) ne peuvent pas opérer sur un struct, sauf si le struct les surcharge explicitement.  
+ Les opérateurs [==](../../language-reference/operators/equality-operators.md#equality-operator-) et [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) ne peuvent pas opérer sur un struct, sauf si le struct les surcharge explicitement.  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Comparaisons d’égalité](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Comparaisons d’égalité](equality-comparisons.md)
+- [Guide de programmation C#](../index.md)

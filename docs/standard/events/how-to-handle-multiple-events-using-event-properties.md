@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330114"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469479"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procédure : gérer plusieurs événements à l’aide de propriétés d’événements
 Pour utiliser des propriétés d'événements, définissez les propriétés d'événements dans la classe qui déclenche les événements, puis affectez les délégués pour les propriétés d'événements dans les classes qui gèrent les événements. Pour implémenter plusieurs propriétés d'événements dans une classe, la classe doit stocker et maintenir le délégué défini pour chaque événement en interne. Une approche courante consiste à implémenter une collection de délégués indexée par une clé d’événement.  
@@ -44,7 +44,7 @@ Pour utiliser des propriétés d'événements, définissez les propriétés d'é
  L'exemple C# suivant implémente les propriétés d'événements `MouseDown` et `MouseUp`, à l'aide d'un <xref:System.ComponentModel.EventHandlerList> pour stocker le délégué de chaque événement. Les mots clés des constructions des propriétés d'événements sont en gras.  
   
 > [!NOTE]
->  Les propriétés d'événements ne sont pas prises en charge dans [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)].  
+>  Les propriétés d'événements ne sont pas prises en charge dans Visual Basic.  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]

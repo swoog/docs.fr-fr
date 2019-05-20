@@ -3,12 +3,12 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063204"
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 Si ces trois lignes (instructions `using`) ne figurent pas en haut du fichier, le programme ne se compilera pas.
 
-Maintenant que vous avez toutes les références dont vous avez besoin, réfléchissons à ce qui compose un jeu de cartes. En général, un jeu de cartes à jouer comporte quatre couleurs, et chaque couleur a treize valeurs. On pourrait envisager de créer directement une classe `Card` et de remplir manuellement une collection d’objets `Card`. Avec LINQ, il est possible d’être plus concis que cela. Au lieu de créer une classe `Card`, vous pouvez créer deux séquences pour représenter respectivement les suites et les rangs. Créez deux [*méthodes d’itération*](../iterators.md#enumeration-sources-with-iterator-methods) simples qui génèreront les rangs et les couleurs sous forme de <xref:System.Collections.Generic.IEnumerable%601> de chaînes :
+Maintenant que vous avez toutes les références dont vous avez besoin, réfléchissons à ce qui compose un jeu de cartes. En général, un jeu de cartes à jouer comporte quatre couleurs, et chaque couleur a treize valeurs. On pourrait envisager de créer directement une classe `Card` et de remplir manuellement une collection d’objets `Card`. Avec LINQ, il est possible d’être plus concis que cela. Au lieu de créer une classe `Card`, vous pouvez créer deux séquences pour représenter respectivement les couleurs et les rangs. Créez deux [*méthodes d’itération*](../iterators.md#enumeration-sources-with-iterator-methods) simples qui génèreront les rangs et les couleurs sous forme de <xref:System.Collections.Generic.IEnumerable%601> de chaînes :
 
 ```csharp
 // Program.cs
@@ -340,9 +340,9 @@ En dehors de LINQ, vous avez appris une technique de tour de cartes utilisée pa
 
 Pour plus d’informations sur LINQ, voir :
 - [LINQ (Language Integrated Query)](../programming-guide/concepts/linq/index.md)
-    - [Introduction à LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Bien démarrer avec LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Opérations de requête LINQ de base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Transformations de données avec LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Syntaxe de requête et syntaxe de méthode dans LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [Fonctionnalités C# qui prennent en charge LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Introduction à LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [Bien démarrer avec LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Opérations de requête LINQ de base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [Transformations de données avec LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Syntaxe de requête et syntaxe de méthode dans LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [Fonctionnalités C# qui prennent en charge LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

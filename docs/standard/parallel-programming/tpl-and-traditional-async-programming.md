@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653927"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Bibliothèque parallèle de tâches (TPL) et programmation asynchrone .NET Framework
 Le .NET Framework fournit les deux modèles standard suivants pour l’exécution d’opérations asynchrones liées aux E/S et orientées calculs :  
   
--   Le modèle de programmation asynchrone, dans lequel les opérations asynchrones sont représentées par une paire de méthodes Begin/End telles que <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> et <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Le modèle de programmation asynchrone, dans lequel les opérations asynchrones sont représentées par une paire de méthodes Begin/End telles que <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> et <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Le modèle asynchrone basé sur des événements, dans lequel les opérations asynchrones sont représentées par une paire méthode/événement et nommées *OperationName*Async et *OperationName* Completed, par exemple, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> et <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Le modèle asynchrone basé sur des événements a été introduit avec le .NET Framework version 2.0).  
+- Le modèle asynchrone basé sur des événements, dans lequel les opérations asynchrones sont représentées par une paire méthode/événement et nommées *OperationName*Async et *OperationName* Completed, par exemple, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> et <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Le modèle asynchrone basé sur des événements a été introduit avec le .NET Framework version 2.0).  
   
  La bibliothèque parallèle de tâches peut être utilisée de plusieurs façons conjointement à l'un ou l'autre des modèles asynchrones. Vous pouvez exposer à la fois les opérations de modèle de programmation asynchrone et de modèle asynchrone basé sur des événements en tant que Tâches aux consommateurs de la bibliothèque, ou bien exposer les modèles de programmation asynchrone et utiliser des objets Task pour les implémenter en interne. Dans les deux scénarios, en utilisant des objets Task, vous pouvez simplifier le code et bénéficier des fonctionnalités utiles suivantes :  
   
--   Enregistrer des rappels sous la forme de continuations de tâches, à tout moment après le lancement de la tâche.  
+- Enregistrer des rappels sous la forme de continuations de tâches, à tout moment après le lancement de la tâche.  
   
--   Coordonner plusieurs opérations qui s'exécutent en réponse à une méthode `Begin_`, à l'aide des méthodes <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> et <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, ou des méthodes <xref:System.Threading.Tasks.Task.WaitAll%2A> ou <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
+- Coordonner plusieurs opérations qui s'exécutent en réponse à une méthode `Begin_`, à l'aide des méthodes <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> et <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, ou des méthodes <xref:System.Threading.Tasks.Task.WaitAll%2A> ou <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
   
--   Encapsuler des opérations asynchrones liées aux E/S et orientées calcul dans le même objet Task.  
+- Encapsuler des opérations asynchrones liées aux E/S et orientées calcul dans le même objet Task.  
   
--   Surveiller l'état de l'objet Task.  
+- Surveiller l'état de l'objet Task.  
   
--   Marshaler le statut d'une opération sur un objet Task à l'aide de <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+- Marshaler le statut d'une opération sur un objet Task à l'aide de <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
-## <a name="wrapping-apm-operations-in-a-task"></a>Encapsulation d'opérations de modèle de programmation asynchrone dans une tâche  
+## <a name="wrapping-apm-operations-in-a-task"></a>Encapsulation d’opérations de modèle de programmation asynchrone dans une tâche  
  Les classes <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> et <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> fournissent plusieurs surcharges des méthodes <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> qui vous permettent d'encapsuler une paire de méthodes de modèle de programmation asynchrone Begin/End dans une instance <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Les différentes surcharges s'adaptent à toutes les paires de méthode Begin/End possédant de zéro à trois paramètres d'entrée.  
   
  Pour les paires ayant des méthodes `End` qui retournent une valeur (`Function` en Visual Basic), utilisez les méthodes de <xref:System.Threading.Tasks.TaskFactory%601> qui créent un <xref:System.Threading.Tasks.Task%601>. Pour les méthodes `End` qui retournent void (`Sub` en Visual Basic), utilisez les méthodes de <xref:System.Threading.Tasks.TaskFactory> qui créent un <xref:System.Threading.Tasks.Task>.  
@@ -50,16 +50,16 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
   
  Le premier paramètre est un délégué <xref:System.Func%606> qui correspond à la signature de la méthode <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>. Le deuxième paramètre est un délégué <xref:System.Func%602> qui prend un <xref:System.IAsyncResult> et retourne un `TResult`. Étant donné que <xref:System.IO.FileStream.EndRead%2A> retourne un entier, le compilateur déduit le type de `TResult` en tant que <xref:System.Int32> et le type de la tâche en tant que <xref:System.Threading.Tasks.Task>. Les quatre derniers paramètres sont identiques à ceux de la méthode <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> :  
   
--   Tampon dans lequel stocker les données de fichiers.  
+- Tampon dans lequel stocker les données de fichiers.  
   
--   Dans le tampon, offset à partir duquel commencer l'écriture des données.  
+- Dans le tampon, offset à partir duquel commencer l'écriture des données.  
   
--   Quantité maximale de données à lire dans le fichier.  
+- Quantité maximale de données à lire dans le fichier.  
   
--   Objet facultatif qui stocke les données d'état définies par l'utilisateur à passer au rappel.  
+- Objet facultatif qui stocke les données d'état définies par l'utilisateur à passer au rappel.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Utilisation de ContinueWith pour les fonctionnalités de rappel  
- Si vous devez accéder aux données d'un fichier, et non juste au nombre d'octets, la méthode <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> n'est pas suffisante. Utilisez plutôt <xref:System.Threading.Tasks.Task>, dont la propriété `Result` contient les données de fichier. Pour cela, ajoutez une continuation à la tâche d'origine. La continuation exécute le travail généralement effectué par le délégué <xref:System.AsyncCallback>. Elle est appelée quand l'antécédent est terminé et que le tampon de données est rempli. (L'objet <xref:System.IO.FileStream> doit être fermé avant le retour.)  
+ Si vous devez accéder aux données d'un fichier, et non juste au nombre d'octets, la méthode <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> n'est pas suffisante. Utilisez plutôt <xref:System.Threading.Tasks.Task>, dont la propriété `Result` contient les données de fichier. Pour cela, ajoutez une continuation à la tâche d’origine. La continuation exécute le travail généralement effectué par le délégué <xref:System.AsyncCallback>. Elle est appelée quand l'antécédent est terminé et que le tampon de données est rempli. (L'objet <xref:System.IO.FileStream> doit être fermé avant le retour.)  
   
  L'exemple suivant montre comment retourner un <xref:System.Threading.Tasks.Task> qui encapsule la paire BeginRead/EndRead de la classe <xref:System.IO.FileStream>.  
   
@@ -90,13 +90,13 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
  [!code-vb[FromAsync#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#07)]  
   
 ### <a name="starting-and-canceling-fromasync-tasks"></a>Lancement et annulation de tâches FromAsync  
- La tâche retournée par une méthode `FromAsync` a l'état WaitingForActivation et sera lancée à un moment donné par le système après la création de la tâche. Si vous essayez d'appeler Start pour une telle tâche, une exception sera levée.  
+ La tâche retournée par une méthode `FromAsync` a l’état WaitingForActivation et sera lancée à un moment donné par le système après la création de la tâche. Si vous essayez d’appeler Start pour une telle tâche, une exception sera levée.  
   
- Vous ne pouvez pas annuler une tâche `FromAsync`, car les API .NET Framework sous-jacentes ne prennent actuellement pas en charge l'annulation d'opérations d'E/S réseau ou de fichier en cours. Vous pouvez ajouter des fonctionnalités d'annulation à une méthode qui encapsule un appel `FromAsync`, mais vous pouvez répondre uniquement à l'annulation avant que `FromAsync` soit appelé ou terminé (par exemple, dans une tâche de continuation).  
+ Vous ne pouvez pas annuler une tâche `FromAsync`, car les API .NET Framework sous-jacentes ne prennent actuellement pas en charge l’annulation d’opérations d’E/S réseau ou de fichier en cours. Vous pouvez ajouter des fonctionnalités d’annulation à une méthode qui encapsule un appel `FromAsync`, mais vous pouvez répondre uniquement à l’annulation avant que `FromAsync` soit appelé ou terminé (par exemple, dans une tâche de continuation).  
   
  Certaines classes prenant en charge le modèle asynchrone basé sur des événements, comme <xref:System.Net.WebClient>, prennent en charge l'annulation et vous pouvez intégrer ces fonctionnalités d'annulation native à l'aide de jetons d'annulation.  
   
-## <a name="exposing-complex-eap-operations-as-tasks"></a>Exposition d'opérations complexes de modèle asynchrone basé sur des événements en tant que tâches  
+## <a name="exposing-complex-eap-operations-as-tasks"></a>Exposition d’opérations complexes de modèle asynchrone basé sur des événements en tant que tâches  
  La bibliothèque parallèle de tâches ne fournit pas de méthodes conçues spécifiquement pour encapsuler une opération asynchrone basée sur des événements de la même façon que la famille `FromAsync` de méthodes encapsule le modèle <xref:System.IAsyncResult>. Toutefois, la bibliothèque parallèle de tâches fournit la classe <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType>, qui peut être utilisée pour représenter tout ensemble d'opérations arbitraire tel qu'un <xref:System.Threading.Tasks.Task%601>. Les opérations peuvent être synchrones ou asynchrones et peuvent être liées aux E/S ou orientées calcul, ou les deux.  
   
  L'exemple suivant montre comment utiliser un <xref:System.Threading.Tasks.TaskCompletionSource%601> pour exposer un ensemble d'opérations <xref:System.Net.WebClient> asynchrones à du code client en tant que <xref:System.Threading.Tasks.Task%601> de base. Cette méthode vous permet d'entrer un tableau d'URL web et un terme ou nom à rechercher, puis retourne le nombre d'occurrences de ce terme ou nom sur chaque site.  
@@ -104,12 +104,12 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Pour obtenir un exemple plus complet incluant une gestion supplémentaire des exceptions et indiquant comment appeler la méthode depuis le code client, consultez [Guide pratique pour exposer des modèles EAP dans une tâche](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Pour obtenir un exemple plus complet incluant une gestion supplémentaire des exceptions et indiquant comment appeler la méthode depuis le code client, consultez [Guide pratique : Inclure dans un wrapper des modèles EAP dans une tâche](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Souvenez-vous que toute tâche créée par un <xref:System.Threading.Tasks.TaskCompletionSource%601> sera lancée par ce TaskCompletionSource et que le code utilisateur ne doit donc pas appeler la méthode Start dans cette tâche.  
   
-## <a name="implementing-the-apm-pattern-by-using-tasks"></a>Implémentation du modèle de programmation asynchrone à l'aide de tâches  
- Dans certains scénarios, il peut être souhaitable d'exposer directement le modèle <xref:System.IAsyncResult> à l'aide de paires de méthodes Begin/End dans une API. Vous pouvez, par exemple, maintenir la cohérence avec les API existantes ou posséder des outils automatisés qui nécessitent ce modèle. Dans de tels cas, vous pouvez utiliser des tâches pour simplifier l'implémentation en interne du modèle de programmation asynchrone.  
+## <a name="implementing-the-apm-pattern-by-using-tasks"></a>Implémentation du modèle de programmation asynchrone à l’aide de tâches  
+ Dans certains scénarios, il peut être souhaitable d’exposer directement le modèle <xref:System.IAsyncResult> à l’aide de paires de méthodes Begin/End dans une API. Vous pouvez, par exemple, maintenir la cohérence avec les API existantes ou posséder des outils automatisés qui nécessitent ce modèle. Dans de tels cas, vous pouvez utiliser des tâches pour simplifier l'implémentation en interne du modèle de programmation asynchrone.  
   
  L’exemple suivant montre comment utiliser des tâches pour implémenter une paire de méthodes de modèle de programmation asynchrone Begin/End pour une méthode orientée calcul de longue durée.  
   

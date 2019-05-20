@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677212"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469716"
 ---
 # <a name="interop-marshaling"></a>Marshaling d’interopérabilité
 <a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d'interopérabilité est une activité d'exécution effectuée par le service de marshaling du common language runtime.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677212"
   
  Cette vue d'ensemble contient les sections suivantes :  
   
--   [Appel de code non managé et modèles d’interopérabilité COM](#platform_invoke_and_com_interop_models)  
+- [Appel de code non managé et modèles d’interopérabilité COM](#platform_invoke_and_com_interop_models)  
   
--   [Marshaling et cloisonnements COM](#marshaling_and_com_apartments)  
+- [Marshaling et cloisonnements COM](#marshaling_and_com_apartments)  
   
--   [Marshaling des appels distants](#marshaling_remote_calls)  
+- [Marshaling des appels distants](#marshaling_remote_calls)  
   
--   [Rubriques connexes](#related_topics)  
+- [Rubriques connexes](#related_topics)  
   
--   [Référence](#reference)  
+- [Référence](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Appel de code non managé et modèles d'interopérabilité COM  
  Le common language runtime fournit deux mécanismes d'interopérabilité avec le code non managé :  
   
--   L'appel de code non managé, qui permet au code managé d'appeler des fonctions exportées à partir d'une bibliothèque non managée.  
+- L'appel de code non managé, qui permet au code managé d'appeler des fonctions exportées à partir d'une bibliothèque non managée.  
   
--   COM Interop, qui permet au code managé d'interagir avec les objets COM via des interfaces.  
+- COM Interop, qui permet au code managé d'interagir avec les objets COM via des interfaces.  
   
  L’appel de code non managé et COM Interop utilisent tous deux le marshaling d’interopérabilité pour faire passer les arguments de méthode de l’appelant à l’appelé, puis dans l’autre sens, si nécessaire. Comme le montre l’illustration suivante, un appel de méthode d’appel de code non managé passe du code managé au code non managé et jamais dans l’autre sens, sauf quand des [fonctions de rappel](callback-functions.md) sont impliquées. Même si les appels de code non managé peuvent uniquement passer du code managé au code non managé, les données peuvent circuler dans les deux sens en tant que paramètres d'entrée ou de sortie. Les appels de méthode COM Interop peuvent circuler dans les deux sens.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677212"
  Si vous prévoyez d'exporter un serveur managé, n'oubliez pas que le client COM détermine le cloisonnement du serveur. Un serveur managé appelé par un client COM initialisé dans un MTA doit garantir la cohérence des threads.  
   
 ### <a name="managed-clients-and-com-servers"></a>Clients managés et serveurs COM  
- Le paramètre par défaut des cloisonnements de clients managés est MTA. Toutefois, le type d'application du client .NET peut modifier le paramètre par défaut. Par exemple, le paramètre de cloisonnement d'un client [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] est STA. Vous pouvez utiliser l'attribut <xref:System.STAThreadAttribute?displayProperty=nameWithType>, l'attribut <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la propriété <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> ou la propriété <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> pour examiner et modifier le paramètre de cloisonnement d'un client managé.  
+ Le paramètre par défaut des cloisonnements de clients managés est MTA. Toutefois, le type d'application du client .NET peut modifier le paramètre par défaut. Par exemple, le paramètre de cloisonnement d’un client Visual Basic est STA. Vous pouvez utiliser l'attribut <xref:System.STAThreadAttribute?displayProperty=nameWithType>, l'attribut <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la propriété <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> ou la propriété <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> pour examiner et modifier le paramètre de cloisonnement d'un client managé.  
   
  L'auteur du composant définit l'affinité de thread d'un serveur COM. Le tableau suivant montre les combinaisons de paramètres de cloisonnement pour les serveurs COM et les clients .NET. Il montre également la configuration de marshaling requise qui en résulte pour les combinaisons.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677212"
   
  Pour le marshaling intercloisonnements, vous pouvez procéder comme suit :  
   
--   Acceptez la surcharge du marshaling intercloisonnements, qui se remarque uniquement quand de nombreux appels dépassent la limite. Vous devez inscrire la bibliothèque de types du composant COM pour que les appels puissent franchir les limites des cloisonnements.  
+- Acceptez la surcharge du marshaling intercloisonnements, qui se remarque uniquement quand de nombreux appels dépassent la limite. Vous devez inscrire la bibliothèque de types du composant COM pour que les appels puissent franchir les limites des cloisonnements.  
   
--   Modifiez le thread principal en définissant le thread client sur STA ou MTA. Par exemple, si votre client C# appelle plusieurs composants COM STA, vous pouvez éviter le marshaling intercloisonnements en définissant le thread principal sur STA.  
+- Modifiez le thread principal en définissant le thread client sur STA ou MTA. Par exemple, si votre client C# appelle plusieurs composants COM STA, vous pouvez éviter le marshaling intercloisonnements en définissant le thread principal sur STA.  
   
     > [!NOTE]
     >  Une fois le thread d’un client C# défini sur STA, les appels aux composants COM MTA nécessiteront un marshaling intercloisonnements.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677212"
 ## <a name="marshaling-remote-calls"></a>Marshaling des appels distants  
  Comme pour le marshaling intercloisonnements, le marshaling COM est impliqué dans chaque appel effectué entre du code managé et du code non managé chaque fois que les objets résident dans des processus distincts. Par exemple :  
   
--   Un client COM qui appelle un serveur managé sur un hôte distant utilise le modèle DCOM (Distributed COM).  
+- Un client COM qui appelle un serveur managé sur un hôte distant utilise le modèle DCOM (Distributed COM).  
   
--   Un client managé qui appelle un serveur COM sur un hôte distant utilise le modèle DCOM.  
+- Un client managé qui appelle un serveur COM sur un hôte distant utilise le modèle DCOM.  
   
  L’illustration suivante montre comment le marshaling d’interopérabilité et le marshaling COM fournissent des canaux de communication entre les limites des hôtes et des processus.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677212"
   
  Dans cette illustration :  
   
--   Un client non managé obtient une référence à un objet COM provenant d'un objet managé qui reçoit cette référence d'un hôte distant. Le mécanisme de communication à distance est DCOM.  
+- Un client non managé obtient une référence à un objet COM provenant d'un objet managé qui reçoit cette référence d'un hôte distant. Le mécanisme de communication à distance est DCOM.  
   
--   Un client managé obtient une référence à un objet managé provenant d'un objet COM qui reçoit cette référence d'un hôte distant. Le mécanisme de communication à distance est DCOM.  
+- Un client managé obtient une référence à un objet managé provenant d'un objet COM qui reçoit cette référence d'un hôte distant. Le mécanisme de communication à distance est DCOM.  
   
     > [!NOTE]
     >  La bibliothèque de types exportée du serveur managée doit être inscrite.  

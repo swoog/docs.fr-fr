@@ -1,15 +1,13 @@
 ---
 title: Recommandations générales
 description: Architecture de microservices .NET pour les applications .NET en conteneur | Recommandations générales
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128477"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644135"
 ---
 # <a name="general-guidance"></a>Recommandations générales
 
@@ -17,11 +15,11 @@ Cette section indique brièvement dans quels cas choisir .NET Core ou .NET Frame
 
 Vous avez tout intérêt à utiliser .NET Core, avec des conteneurs Windows ou Linux, pour votre application serveur Docker en conteneur dans les cas suivants :
 
--   vous avez des besoins multiplateformes ; Par exemple, vous souhaitez utiliser à la fois des conteneurs Linux et Windows.
+- vous avez des besoins multiplateformes ; Par exemple, vous souhaitez utiliser à la fois des conteneurs Linux et Windows.
 
--   L’architecture de votre application est basée sur des microservices.
+- L’architecture de votre application est basée sur des microservices.
 
--   Vous avez besoin de démarrer les conteneurs rapidement et souhaitez un faible encombrement par conteneur pour profiter d’une meilleure densité ou davantage de conteneurs par unité matérielle afin de réduire les coûts.
+- Vous avez besoin de démarrer les conteneurs rapidement et souhaitez un faible encombrement par conteneur pour profiter d’une meilleure densité ou davantage de conteneurs par unité matérielle afin de réduire les coûts.
 
 En somme, quand il s’agit de créer des applications .NET en conteneur, vous devez envisager .NET Core comme le choix par défaut. Il offre de nombreux avantages et correspond le mieux à la philosophie et au type de fonctionnement des conteneurs.
 
@@ -29,20 +27,20 @@ L’autre avantage de .NET Core est lié au fait que vous pouvez exécuter diff�
 
 Vous avez tout intérêt à utiliser le .NET Framework pour votre application serveur Docker en conteneur dans les cas suivants :
 
--   Votre application utilise actuellement le .NET Framework et présente de fortes dépendances vis-à-vis de Windows.
+- Votre application utilise actuellement le .NET Framework et présente de fortes dépendances vis-à-vis de Windows.
 
--   Vous avez besoin d’utiliser des API Windows qui ne sont pas prises en charge par .NET Core.
+- Vous avez besoin d’utiliser des API Windows qui ne sont pas prises en charge par .NET Core.
 
--   Vous avez besoin d’utiliser des bibliothèques .NET ou des packages NuGet tiers qui ne sont pas disponibles pour .NET Core.
+- Vous avez besoin d’utiliser des bibliothèques .NET ou des packages NuGet tiers qui ne sont pas disponibles pour .NET Core.
 
 Le fait d’utiliser le .NET Framework sur Docker peut améliorer vos expériences de déploiement en limitant les problèmes de déploiement. Ce [scénario « lift-and-shift »](https://aka.ms/liftandshiftwithcontainersebook) est important pour la mise en conteneur d’applications existantes qui ont été développées à l’origine avec le .NET Framework classique, comme les applications Web Forms ASP.NET, les applications web MVC ou les services WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Livre électronique : Moderniser des applications .NET Framework existantes avec Azure et les conteneurs Windows**  
+- **Livre électronique : Moderniser des applications .NET Framework existantes avec Azure et les conteneurs Windows**  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **Exemples d’application : Modernisation d’applications web ASP.NET héritées à l’aide de conteneurs Windows**  
+- **Exemples d’applications : Modernisation d’applications web ASP.NET héritées à l’aide de conteneurs Windows**  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]

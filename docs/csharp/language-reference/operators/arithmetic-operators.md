@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753813"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Opérateurs arithmétiques (Informations de référence sur C#)
 
 Les opérateurs suivants effectuent des opérations arithmétiques avec des types numériques :
 
-- Opérateurs unaires [`++` (incrément)](#increment-operator-), [`--` (décrément)](#decrement-operator---), [`+` (plus)](#unary-plus-and-minus-operators) et [`-` (moins)](#unary-plus-and-minus-operators).
-- Opérateurs binaires [`*` (multiplication)](#multiplication-operator-), [`/` (division)](#division-operator-), [`%` (reste)](#remainder-operator-), [`+` (addition)](#addition-operator-) et [`-` (soustraction)](#subtraction-operator--).
+- Opérateurs unaires [`++` (incrément)](#increment-operator-), [`--` (décrément)](#decrement-operator---), [`+` (plus)](#unary-plus-and-minus-operators) et [`-` (moins)](#unary-plus-and-minus-operators)
+- Opérateurs binaires [`*` (multiplication)](#multiplication-operator-), [`/` (division)](#division-operator-), [`%` (reste)](#remainder-operator-), [`+` (addition)](#addition-operator-) et [`-` (soustraction)](#subtraction-operator--)
 
 Ces opérateurs prennent en charge tous les types numériques [intégraux](../keywords/integral-types-table.md) et [à virgule flottante](../keywords/floating-point-types-table.md).
 
@@ -163,23 +163,6 @@ L’opérateur de soustraction `-` soustrait son second opérande de son premier
 
 Vous pouvez également utiliser l’opérateur `-` pour la suppression de délégués. Pour plus d’informations, consultez l’article sur l’[opérateur `-`](subtraction-operator.md).
 
-## <a name="operator-precedence-and-associativity"></a>Priorité des opérateurs et associativité
-
-La liste suivante présente les opérateurs arithmétiques de la priorité la plus élevée à la plus basse :
-
-- Opérateurs suffixés d’incrémentation `x++` et de décrémentation `x--`.
-- Opérateurs préfixés d’incrémentation `++x` et de décrémentation `--x` et opérateurs unaires `+` et `-`.
-- Opérateurs multiplicatifs `*`, `/` et `%`.
-- Opérateurs additifs `+` et `-`.
-
-Les opérateurs arithmétiques binaires sont associatifs sur leur gauche. Autrement dit, les opérateurs de même niveau de priorité sont évalués de gauche à droite.
-
-Utilisez des parenthèses, `()`, pour modifier l’ordre d’évaluation imposé par la priorité et l’associativité de l’opérateur.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Pour obtenir la liste complète des opérateurs C# classés par niveau de priorité, consultez [Opérateurs C#](index.md).
-
 ## <a name="compound-assignment"></a>Assignation composée
 
 Pour un opérateur binaire `op`, une expression d’assignation composée du formulaire
@@ -200,7 +183,28 @@ L’exemple suivant illustre l’utilisation de l’assignation composée avec d
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+En raison des [promotions numériques](~/_csharplang/spec/expressions.md#numeric-promotions), le résultat de l’opération `op` risque de ne pas être implicitement convertible en type `T` de `x`. Dans ce cas, si `op` est un opérateur prédéfini et que le résultat de l’opération est explicitement convertible en type `T` de `x`, une expression d’assignation composée de la forme `x op= y` équivaut à `x = (T)(x op y)`, sauf que `x` n’est évalué qu’une seule fois. L’exemple suivant illustre ce comportement :
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 Vous utilisez également les opérateurs `+=` et `-=` pour vous abonner et annuler l’abonnement à des [événements](../keywords/event.md). Pour plus d’informations, consultez [Guide pratique pour s’abonner et annuler l’abonnement à des événements](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Priorité des opérateurs et associativité
+
+La liste suivante présente les opérateurs arithmétiques de la priorité la plus élevée à la plus basse :
+
+- Opérateurs suffixés d’incrémentation `x++` et de décrémentation `x--`
+- Opérateurs préfixés d’incrémentation `++x` et de décrémentation `--x` et opérateurs unaires `+` et `-`
+- Opérateurs multiplicatifs `*`, `/` et `%`
+- Opérateurs additifs `+` et `-`
+
+Les opérateurs arithmétiques binaires sont associatifs sur leur gauche. Autrement dit, les opérateurs de même niveau de priorité sont évalués de gauche à droite.
+
+Utilisez des parenthèses, `()`, pour modifier l’ordre d’évaluation imposé par la priorité et l’associativité de l’opérateur.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Pour obtenir la liste complète des opérateurs C# classés par niveau de priorité, consultez [Opérateurs C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Débordement arithmétique et division par zéro
 
@@ -256,6 +260,7 @@ Pour plus d’informations, consultez les sections suivantes de la [spécificati
 - [Opérateur de soustraction](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Assignation composée](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Opérateurs vérifiés et non vérifiés](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Promotions numériques](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Voir aussi
 

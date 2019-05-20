@@ -1,23 +1,26 @@
 ---
 title: Opérateurs d’égalité - Informations de référence sur C#
+description: Découvrez les opérateurs de comparaison d’égalité C#.
 ms.date: 03/28/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
 - '!=_CSharpKeyword'
 helpviewer_keywords:
+- comparison operators [C#]
+- relational operators [C#]
 - equality operator [C#]
 - equals operator [C#]
 - == operator [C#]
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4d3f3c0c6195fef22a33c47ad0b8c498f512f6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753491"
 ---
 # <a name="equality-operators-c-reference"></a>Opérateurs d’égalité (Informations de référence sur C#)
 
@@ -34,7 +37,7 @@ Les opérandes des [types valeur intégrés](../keywords/value-types-table.md) s
 [!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> Pour les opérateurs d’égalité et de relation `==`, `>`, `<`, `>=` et `<=`, si un des opérandes n’est pas un nombre (<xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>), le résultat de l’opération est `false`. Cela signifie que la valeur `NaN` n’est ni supérieure à, ni inférieure à, ni égale à n’importe quelle autre valeur `double` (ou `float`), y compris `NaN`. Pour plus d’informations et des exemples, consultez l’article de référence <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
+> Pour les opérateurs `==`, [`<`, `>`, `<=` et `>=`](comparison-operators.md), si un des opérandes n’est pas un nombre (<xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>), le résultat de l’opération est `false`. Cela signifie que la valeur `NaN` n’est ni supérieure à, ni inférieure à, ni égale à n’importe quelle autre valeur `double` (ou `float`), y compris `NaN`. Pour plus d’informations et des exemples, consultez l’article de référence <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.
 
 Deux opérandes du même type [enum](../keywords/enum.md) sont égaux si les valeurs correspondantes du type intégral sous-jacent sont égales.
 
@@ -83,3 +86,4 @@ Pour plus d’informations, consultez la section [Opérateurs relationnels et de
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>
 - [Comparaisons d’égalité](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [Opérateurs de comparaison](comparison-operators.md)

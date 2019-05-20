@@ -12,31 +12,31 @@ helpviewer_keywords:
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5073042d578573e904c185bbc18486a82e6be678
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633357"
 ---
 # <a name="performing-formatting-operations"></a>Exécution d'opérations de mise en forme
 Les rubriques suivantes fournissent des instructions pas à pas pour effectuer des opérations de mise en forme spécifiques.  
   
--   [Guide pratique pour remplir un nombre avec des zéros non significatifs](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Guide pratique pour remplir un nombre avec des zéros non significatifs](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
--   [Guide pratique pour définir et utiliser des fournisseurs de format numérique personnalisés](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+- [Guide pratique pour définir et utiliser des fournisseurs de formats numériques personnalisés](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
--   [Guide pratique pour convertir des entrées d'utilisateur numériques figurant dans des contrôles web en nombres](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+- [Guide pratique pour convertir des entrées d’utilisateur numériques figurant dans des contrôles web en nombres](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   [Guide pratique pour extraire le jour de la semaine d’une date spécifique](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)  
+- [Guide pratique pour extraire le jour de la semaine d’une date spécifique](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
--   [Guide pratique pour effectuer un aller-retour de valeurs de date et d’heure](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+- [Guide pratique pour effectuer un aller-retour de valeurs de date et d’heure](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
--   [Guide pratique pour afficher des informations de date et d'heure localisées pour les utilisateurs du web](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+- [Guide pratique pour afficher des informations de date et d’heure localisées pour les utilisateurs du web](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
--   [Guide pratique pour afficher les millisecondes dans les valeurs de date et d’heure](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+- [Guide pratique pour afficher les millisecondes dans les valeurs de date et d’heure](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   
--   [Guide pratique pour afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+- [Guide pratique pour afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188118"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628881"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilisation du modèle asynchrone basé sur les tâches
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Cette approche de l’annulation présente plusieurs avantages :
 
--   Vous pouvez passer le même jeton d’annulation à n’importe quel nombre d’opérations asynchrones ou synchrones.
+- Vous pouvez passer le même jeton d’annulation à n’importe quel nombre d’opérations asynchrones ou synchrones.
 
--   La même demande d’annulation peut être déployée vers n’importe quel nombre d’écouteurs.
+- La même demande d’annulation peut être déployée vers n’importe quel nombre d’écouteurs.
 
--   Le développeur de l’API asynchrone a le contrôle complet de la possibilité de demander l’annulation et du timing de la prise d’effet.
+- Le développeur de l’API asynchrone a le contrôle complet de la possibilité de demander l’annulation et du timing de la prise d’effet.
 
--   Le code qui utilise l’API peut déterminer de manière sélective les appels asynchrones qui seront transmis aux demandes d’annulation.
+- Le code qui utilise l’API peut déterminer de manière sélective les appels asynchrones qui seront transmis aux demandes d’annulation.
 
 ## <a name="monitoring-progress"></a>Contrôle de la progression
  Certaines méthodes asynchrones exposent la progression via une interface de progression transmise à la méthode asynchrone.  Par exemple, considérez une fonction qui télécharge une chaîne de texte de façon asynchrone et qui, tout au long du processus, déclenche des mises à jour de progression qui incluent le pourcentage de téléchargement terminé jusqu'à présent.  Cette méthode peut être utilisée dans une application Windows Presentation Foundation (WPF), comme suit :
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Vous pouvez utiliser la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A> pour attendre de façon asynchrone qu’une seule des multiples opérations asynchrones représentées en tant que tâches soit effectuée.  Cette méthode couvre quatre principaux cas d’utilisation :
 
--   Redondance : Exécution d’une opération plusieurs fois et sélection de celle qui se termine en premier (par exemple, en contactant plusieurs services web de cotation boursière qui produiront un résultat unique et en sélectionnant celui qui se terminera le plus rapidement).
+- Redondance :  exécution d’une opération plusieurs fois et sélection de celle qui se termine en premier (par exemple, en contactant plusieurs services web de cotation boursière qui produiront un résultat unique et en sélectionnant celui qui se terminera le plus rapidement).
 
--   Entrelacement : Lancement de plusieurs opérations, en attendant que toutes se terminent, mais en traitant chacune lors de leur achèvement.
+- Entrelacement :  lancement de plusieurs opérations, en attendant que toutes se terminent, mais en traitant chacune lors de leur achèvement.
 
--   Limitation : Autorisation du lancement de nouvelles opérations lorsque d’autres se terminent.  Il s’agit d’une extension de l’entrelacement.
+- Limitation :  autorisation du lancement de nouvelles opérations lorsque d’autres se terminent.  Il s’agit d’une extension de l’entrelacement.
 
--   Interruption anticipée : par exemple, une opération représentée par la tâche t1 peut être regroupée dans une tâche <xref:System.Threading.Tasks.Task.WhenAny%2A> avec une autre tâche t2, et vous pouvez attendre la tâche <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tâche t2 peut représenter un délai d’attente, une annulation ou un autre signal qui provoque l’achèvement de la tâche <xref:System.Threading.Tasks.Task.WhenAny%2A> avant la fin de t1.
+- Interruption anticipée :  par exemple, une opération représentée par la tâche t1 peut être regroupée dans une tâche <xref:System.Threading.Tasks.Task.WhenAny%2A> avec une autre tâche t2, et vous pouvez attendre la tâche <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tâche t2 peut représenter un délai d’attente, une annulation ou un autre signal qui provoque l’achèvement de la tâche <xref:System.Threading.Tasks.Task.WhenAny%2A> avant la fin de t1.
 
 #### <a name="redundancy"></a>Redondance
  Prenons un cas où vous souhaitez prendre une décision sur la nécessité d’acheter une action.  Il existe plusieurs services de recommandation de cotation boursière auxquels vous faites confiance, mais selon la charge quotidienne, chaque service peut avoir des lenteurs à des moments différents.  Vous pouvez utiliser la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A> pour recevoir une notification quand une opération est terminée :
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- En outre, même si une première tâche se termine avec succès, les tâches suivantes peuvent échouer.  À ce stade, vous disposez de plusieurs options pour la gestion des exceptions : vous pouvez attendre que toutes les tâches lancées soient terminées, auquel cas vous pouvez utiliser la méthode <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou vous pouvez décider que toutes les exceptions sont importantes et doivent être journalisées.  Dans ce cas, vous pouvez utiliser les continuations de recevoir une notification lorsque des tâches se sont terminées de manière asynchrone :
+ En outre, même si une première tâche se termine avec succès, les tâches suivantes peuvent échouer.  À ce stade, vous avez plusieurs options pour la gestion des exceptions :  vous pouvez attendre que toutes les tâches lancées soient terminées, auquel cas vous utilisez la méthode <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou choisir de journaliser toutes les exceptions importantes.  Dans ce cas, vous pouvez utiliser les continuations de recevoir une notification lorsque des tâches se sont terminées de manière asynchrone :
 
 ```csharp
 foreach(Task recommendation in recommendations)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324124"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469648"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procédure : créer des wrappers COM
 
 Vous pouvez créer des wrappers COM (Component Object Model) à l’aide des fonctionnalités Visual Studio 2005 ou des outils .NET Framework Tlbimp.exe et Regasm.exe. Ces deux méthodes génèrent deux types de wrappers COM :
 
--   un [wrapper RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md) d’une bibliothèque de types pour exécuter un objet COM en code managé ;
+- un [wrapper RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md) d’une bibliothèque de types pour exécuter un objet COM en code managé ;
 
--   un [wrapper CCW (COM Callable Wrapper)](../../../docs/framework/interop/com-callable-wrapper.md) avec les paramètres de Registre requis pour exécuter un objet managé dans une application native.
+- un [wrapper CCW (COM Callable Wrapper)](../../../docs/framework/interop/com-callable-wrapper.md) avec les paramètres de Registre requis pour exécuter un objet managé dans une application native.
 
 Dans Visual Studio 2005, vous pouvez ajouter le wrapper COM à votre projet en tant que référence.
 
@@ -38,14 +38,14 @@ Dans Visual Studio 2005, vous pouvez ajouter le wrapper COM à votre projet en t
 
      Dans l’**Explorateur de solutions**, notez que le composant COM est ajouté au dossier Références dans votre projet.
 
-Vous pouvez maintenant écrire le code pour accéder à l’objet COM. Vous pouvez commencer par déclarer l’objet, par exemple avec une instruction `Imports` pour [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ou une instruction `Using` pour [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+Vous pouvez maintenant écrire le code pour accéder à l’objet COM. Vous pouvez commencer par déclarer l’objet, par exemple avec une instruction `Imports` pour Visual Basic ou une instruction `Using` pour C#.
 
 > [!NOTE]
 > Si vous souhaitez programmer des composants Microsoft Office, installez d’abord les [assemblys PIA (Primary Interop Assembly) de Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) à partir du Centre de téléchargement Microsoft. À l’étape 4, sélectionnez la version la plus récente de la bibliothèque d’objets disponible pour le produit Office que vous voulez, comme la **bibliothèque d’objets Microsoft Word 11.0**.  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Pour créer un wrapper RCW à l’aide des outils .NET Framework  
   
--   Exécutez l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Exécutez l’outil [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
  Cet outil crée un assembly qui contient des métadonnées de runtime pour les types définis dans la bibliothèque de types d’origine.  
   

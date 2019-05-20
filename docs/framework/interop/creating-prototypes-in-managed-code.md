@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5652c04dc506e802741ba803af8e50837d0d795c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168166"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064092"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Création de prototypes dans du code managé
 Cette rubrique décrit comment accéder aux fonctions non managées et présente plusieurs champs d’attribut qui permettent d’annoter les définitions de méthode dans du code managé. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](marshaling-data-with-platform-invoke.md).  
@@ -38,10 +38,8 @@ Cette rubrique décrit comment accéder aux fonctions non managées et présente
  Les définitions managées des fonctions non managées dépendent du langage, comme nous allons le voir dans les exemples suivants. Pour obtenir des exemples de code plus complets, consultez [Exemples d’appel de code non managé](platform-invoke-examples.md).  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -49,13 +47,12 @@ Friend Class WindowsAPI
 End Class
 ```
   
- Pour appliquer les champs <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> à une déclaration [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], vous devez utiliser l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute> au lieu de l'instruction `Declare`.  
+ Pour appliquer les champs <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithtype>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithtype> ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithtype> à une déclaration Visual Basic, vous devez utiliser l’attribut <xref:System.Runtime.InteropServices.DllImportAttribute> au lieu de l’instruction `Declare`.  
   
 ```vb
-Imports System
 Imports System.Runtime.InteropServices
 
-Friend Class WindowsAPI
+Friend Class NativeMethods
     <DllImport("user32.dll", CharSet:=CharSet.Auto)>
     Friend Shared Function MessageBox(
         ByVal hWnd As IntPtr,
@@ -70,7 +67,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBox(
@@ -111,9 +108,9 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Exemples d'appel de code non managé  
  Les exemples d'appel de code non managé de cette section illustrent l'utilisation de l'attribut `RegistryPermission` avec les modificateurs de parcours de pile.  
   
- Dans l’exemple de code suivant, les modificateurs <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny` et `PermitOnly` sont ignorés.  
+ Dans l’exemple suivant, les modificateurs <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` et `PermitOnly` sont ignorés.  
   
-```  
+```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionAssert();  
@@ -129,7 +126,7 @@ extern "C" int MessageBox(
   
  Toutefois, le modificateur `Demand` de l'exemple suivant est accepté.  
   
-```  
+```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionDeny();  

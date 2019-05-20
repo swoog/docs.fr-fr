@@ -3,12 +3,12 @@ title: Modèle d’événement .NET Core mis à jour
 description: Découvrez toute la souplesse apportée par le modèle d’événement .NET Core et la compatibilité descendante et apprenez à implémenter un traitement sécurisé des événements grâce aux abonnés asynchrones.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751786"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Modèle d’événement .NET Core mis à jour
 
@@ -23,9 +23,23 @@ Le programme fonctionnera exactement de la même façon.
 
 Vous pouvez également changer les `SearchDirectoryArgs` en un struct si vous faites une modification de plus :
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-La modification supplémentaire consiste à appeler le constructeur par défaut avant d’entrer dans le constructeur qui initialise tous les champs. Sans cet ajout, les règles de C# signalent que les propriétés sont accessibles avant qu’une valeur leur soit affectée.
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+La modification supplémentaire consiste à appeler le constructeur sans paramètre avant d’entrer dans le constructeur qui initialise tous les champs. Sans cet ajout, les règles de C# signalent que les propriétés sont accessibles avant qu’une valeur leur soit affectée.
 
 Vous ne devez pas changer les `FileFoundArgs` d’une classe (type référence) en un struct (type valeur). La raison en est que le protocole de gestion d’annulation nécessite que les arguments de l’événement soient passés par référence. Si vous aviez apporté cette même modification, la classe de recherche de fichier ne pourrait jamais observer les modifications apportées par les abonnés à l’événement. Une nouvelle copie de la structure serait utilisée pour chaque abonné, et cette copie serait une copie différente de celle vue par l’objet de recherche de fichier.
 
@@ -37,7 +51,7 @@ Selon une logique similaire, aucun type d’argument d’événement créé main
 
 ## <a name="events-with-async-subscribers"></a>Événements avec des abonnés asynchrones
 
-Vous avez un modèle final à découvrir : comment écrire correctement des abonnés à l’événement qui appellent du code asynchrone. La difficulté est décrite dans l’article consacré à [async et await](async.md). Les méthodes asynchrones peuvent avoir un type de retour void, mais ceci est fortement déconseillé. Quand votre code pour l’abonné à l’événement appelle une méthode asynchrone, vous n’avez d’autre choix que de créer une méthode `async void`. La signature de gestionnaire d’événements en a besoin.
+Vous avez un dernier modèle à découvrir : comment écrire correctement des abonnés à l’événement qui appellent du code asynchrone. La difficulté est décrite dans l’article consacré à [async et await](async.md). Les méthodes asynchrones peuvent avoir un type de retour void, mais ceci est fortement déconseillé. Quand votre code pour l’abonné à l’événement appelle une méthode asynchrone, vous n’avez d’autre choix que de créer une méthode `async void`. La signature de gestionnaire d’événements en a besoin.
 
 Vous devez rapprocher ces deux nécessités opposées. D’une façon ou d’une autre, vous devez créer une méthode `async void` sécurisée. Les principes de base du modèle que vous devez implémenter sont les suivants :
 

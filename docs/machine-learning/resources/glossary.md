@@ -1,21 +1,18 @@
 ---
-title: Glossaire Machine Learning - ML.NET
+title: Glossaire de l’apprentissage automatique
 description: La liste suivante est une compilation des principaux termes Machine Learning, utiles lorsque vous générez vos modèles personnalisés.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410236"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557983"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossaire Machine Learning des principaux termes
 
 La liste suivante est une compilation des principaux termes Machine Learning, utiles lorsque vous générez vos modèles personnalisés dans ML.NET.
-
-> [!NOTE]
-> Cette documentation fait référence à ML.NET, actuellement en préversion. Ce matériau peut être sujet à modification. Pour plus d’informations, consultez l’[introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Précision
 
@@ -29,6 +26,16 @@ Dans la [classification binaire](#binary-classification), une métrique d’éva
 
 Cas de [classification](#classification) où l’[étiquette](#label) provient uniquement d’une de deux classes. Pour plus d’informations, consultez la section [Classification binaire](tasks.md#binary-classification) de la rubrique [Tâches d’apprentissage automatique](tasks.md).
 
+## <a name="calibration"></a>Étalonnage
+
+L’étalonnage est le processus consistant à mapper un score brut à une appartenance de classe à des fins de classification binaire et multiclasse. Certains entraîneurs ML.NET ont un suffixe `NonCalibrated`. Ces algorithmes produisent un score brut qui doit ensuite être mappé à une probabilité de classe. 
+
+## <a name="catalog"></a>Catalogue 
+
+Dans ML.NET, un catalogue est une collection de fonctions d’extension, regroupées selon un objectif commun.
+
+Par exemple, chaque tâche de machine learning (classification binaire, régression, classement, etc.) dispose d’un catalogue d’algorithmes de machine learning (entraîneurs). Le catalogue des entraîneurs de classification binaire est : <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
+
 ## <a name="classification"></a>Classification
 
 Lorsque les données sont utilisées pour prédire une catégorie, la tâche [Apprentissage automatique supervisé](#supervised-machine-learning) est appelée classification. [Classification binaire](#binary-classification) fait référence à la prédiction de deux catégories uniquement (par exemple, la classification d’une image en tant qu’image de « chat » ou de « chien »). [Classification multiclasse](#multiclass-classification) fait référence à la prédiction de plusieurs catégories (par exemple, lors de la classification d’une image en tant qu’image d’une race spécifique de chien).
@@ -36,6 +43,25 @@ Lorsque les données sont utilisées pour prédire une catégorie, la tâche [Ap
 ## <a name="coefficient-of-determination"></a>Coefficient de détermination
 
 Dans une [régression](#regression), une métrique d’évaluation qui indique la manière dont les données s’intègrent à un modèle. Cette valeur est comprise entre 0 et 1. Une valeur de 0 signifie que les données sont aléatoires ou ne s’intègrent pas au modèle. Une valeur de 1 signifie que le modèle correspond exactement aux données. Cette valeur est souvent désignée sous le terme r<sup>2</sup>, R<sup>2</sup> ou R carré.
+
+## <a name="data"></a>Données
+
+Les données sont essentielles à toute application de machine learning. Dans ML.NET, les données sont représentées par des objets <xref:Microsoft.ML.IDataView>. Les objets de vue de données :
+- Sont composés de lignes et de colonnes
+- Sont évalués tardivement, autrement dit ils ne chargent des données que quand une opération les demande
+- Contiennent un schéma qui définit le type, le format et la longueur de chaque colonne
+
+## <a name="estimator"></a>Estimateur
+
+Classe dans ML.NET qui implémente l’interface <xref:Microsoft.ML.IEstimator%601>.
+
+Un estimateur est une spécification d’une transformation (transformation de préparation des données et transformation d’entraînement de modèle Machine Learning). Les estimateurs peuvent être chaînés dans un pipeline des transformations. Les paramètres d’un estimateur ou d’un pipeline d’estimateurs sont appris quand <xref:Microsoft.ML.IEstimator`1.Fit*> est appelé. Le résultat de <xref:Microsoft.ML.IEstimator`1.Fit*> est un [transformer](#transformer).
+
+## <a name="extension-method"></a>Méthode d’extension
+
+Méthode .NET qui fait partie d’une classe, mais qui est définie en dehors de celle-ci. Le premier paramètre d’une méthode d’extension est une référence `this` statique à la classe à laquelle appartient la méthode d’extension.
+
+Les méthodes d’extension sont largement utilisées dans ML.NET pour construire des instances d’[estimateurs](#estimator).
 
 ## <a name="feature"></a>Fonctionnalité
 
@@ -60,6 +86,12 @@ L’élément à prédire avec le modèle d’apprentissage automatique. Par exe
 ## <a name="log-loss"></a>Perte du journal
 
 Dans une [classification](#classification), une métrique d’évaluation qui caractérise la précision d’un classifieur. Plus la perte du journal est faible, plus un classifieur est précis.
+
+## <a name="loss-function"></a>Fonction de perte
+
+Une fonction de perte est la différence entre les valeurs d’étiquette d’entraînement et la prédiction effectuée par le modèle. Les paramètres du modèle sont estimés en réduisant la fonction de perte.
+
+Différents entraîneurs peuvent être configurés avec différentes fonctions de perte.
 
 ## <a name="mean-absolute-error-mae"></a>Erreur d'absolue moyenne
 
@@ -93,6 +125,13 @@ Dans une [classification](#classification), la précision d’une classe corresp
 
 Dans une [classification](#classification), le rappel d’une classe correspond au nombre d’éléments correctement prévus comme appartenant à cette classe, divisé par le nombre total d’éléments appartenant effectivement à la classe.
 
+## <a name="regularization"></a>Régularisation
+
+ La régularisation pénalise un modèle linéaire en raison de sa trop grande complexité. Il existe deux types de régularisation :
+
+- La régularisation $L_1$ attribue une pondération nulle aux caractéristiques non significatives. La taille du modèle enregistré peut être plus petite après ce type de régularisation.
+- La régularisation $L_2$ réduit la plage de pondérations des caractéristiques non significatives. Il s’agit d’un processus plus général et moins sensible aux valeurs hors norme.
+
 ## <a name="regression"></a>Régression
 
 Une tâche [Apprentissage automatique supervisé](#supervised-machine-learning) où la sortie est une valeur réelle, par exemple, double. Exemple : prédiction de cours d’actions. Pour plus d’informations, consultez la section [Régression](tasks.md#regression) de la rubrique [Tâches d’apprentissage automatique](tasks.md).
@@ -117,9 +156,11 @@ Une sous-classe d’apprentissage automatique dans laquelle un modèle souhaité
 
 Le processus d’identification d’un [modèle](#model) pour un jeu de données d’apprentissage spécifique. Pour un modèle linéaire, cela signifie rechercher les pondérations. Pour un arbre, cette opération implique l’identification des points de fractionnement.
 
-## <a name="transform"></a>Transformer
+## <a name="transformer"></a>Transformateur
 
-Un composant de [pipeline](#pipeline) qui transforme les données. Par exemple, d’un texte à un vecteur de valeurs numériques.
+Classe ML.NET qui implémente l’interface <xref:Microsoft.ML.ITransformer>.
+
+Un transformateur transforme un <xref:Microsoft.ML.IDataView> en un autre. Un transformateur est créé par l’entraînement d’un [estimateur](#estimator) ou d’un pipeline d’estimateurs. 
 
 ## <a name="unsupervised-machine-learning"></a>Apprentissage automatique non supervisé
 

@@ -1,15 +1,13 @@
 ---
 title: Conception de validations dans la couche de modèle de domaine
 description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre les concepts clés des validations de modèle de domaine.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612704"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063031"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Concevoir des validations dans la couche du modèle de domaine
 

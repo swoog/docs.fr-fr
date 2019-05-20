@@ -1,17 +1,21 @@
 ---
 title: Commande dotnet add package
 description: La commande « dotnet add package » est une option pratique pour ajouter une référence de package NuGet à un projet.
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632272"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
+**Cet article s’applique à : ✓** SDK .NET Core 1.x et ultérieur
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Name
 
@@ -78,11 +82,11 @@ Le fichier *ToDo.csproj* contient à présent un élément [`<PackageReference>`
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Restaure le package dans le répertoire spécifié.
+  Répertoire où restaurer les packages.
 
 * **`-s|--source <SOURCE>`**
 
-  Utilise une source de package NuGet spécifique pendant l’opération de restauration.
+  Source de package NuGet à utiliser pendant l’opération de restauration.
 
 * **`-v|--version <VERSION>`**
 

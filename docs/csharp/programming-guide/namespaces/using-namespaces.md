@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965551"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452681"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Utilisation d'espaces de noms (Guide de programmation C#)
 Les espaces de noms sont largement utilisés dans les programmes C#, et ce de deux façons différentes. En premier lieu, les classes .NET Framework utilisent les espaces de noms à des fins d’organisation. En deuxième lieu, la déclaration de vos propres espaces de noms peut faciliter le contrôle de la portée des noms de classes et de méthodes dans les projets de programmation de plus grande envergure.  
@@ -39,7 +39,7 @@ Les espaces de noms sont largement utilisés dans les programmes C#, et ce de de
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Utilisation d’espaces de noms pour contrôler la portée  
- Le mot clé `namespace` est utilisé pour déclarer une portée. La possibilité de créer des portées au sein de votre projet facilite l’organisation du code et vous permet de créer des types globalement uniques. Dans l’exemple suivant, une classe intitulée `SampleClass` est définie dans deux espaces de noms, l’un étant imbriqué à l’intérieur de l’autre. L’[opérateur .](../../../csharp/language-reference/operators/member-access-operator.md) est utilisé pour différencier la méthode appelée.  
+ Le mot clé `namespace` est utilisé pour déclarer une portée. La possibilité de créer des portées au sein de votre projet facilite l’organisation du code et vous permet de créer des types globalement uniques. Dans l’exemple suivant, une classe intitulée `SampleClass` est définie dans deux espaces de noms, l’un étant imbriqué à l’intérieur de l’autre. L’[opérateur `.` d’accès aux membres](../../language-reference/operators/member-access-operators.md#member-access-operator-) est utilisé pour différencier la méthode appelée.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ Les espaces de noms sont largement utilisés dans les programmes C#, et ce de de
   
  Dans le segment de code précédent :  
   
--   L’espace de noms `N1` est un membre de l’espace de noms global. Son nom qualifié complet est `N1`.  
+- L’espace de noms `N1` est un membre de l’espace de noms global. Son nom qualifié complet est `N1`.  
   
--   L’espace de noms `N2` est un membre de `N1`. Son nom qualifié complet est `N1.N2`.  
+- L’espace de noms `N2` est un membre de `N1`. Son nom qualifié complet est `N1.N2`.  
   
--   La classe `C1` est un membre de `N1`. Son nom qualifié complet est `N1.C1`.  
+- La classe `C1` est un membre de `N1`. Son nom qualifié complet est `N1.C1`.  
   
--   Le nom de classe `C2` est utilisé deux fois dans ce code. En revanche, les noms qualifiés complets sont uniques. La première instance de `C2` est déclarée à l’intérieur de `C1` ; par conséquent, son nom complet est : `N1.C1.C2`. La deuxième instance de `C2` est déclarée à l’intérieur d’un espace de noms `N2` ; par conséquent, son nom complet est : `N1.N2.C2`.  
+- Le nom de classe `C2` est utilisé deux fois dans ce code. En revanche, les noms qualifiés complets sont uniques. La première instance de `C2` est déclarée à l’intérieur de `C1` ; par conséquent, son nom complet est : `N1.C1.C2`. La deuxième instance de `C2` est déclarée à l’intérieur d’un espace de noms `N2` ; par conséquent, son nom complet est : `N1.N2.C2`.  
   
  À partir du segment de code précédent, vous pouvez ajouter un nouveau membre de classe (`C3`) à l’espace de noms `N1.N2` comme ceci :  
   
@@ -93,6 +93,6 @@ Les espaces de noms sont largement utilisés dans les programmes C#, et ce de de
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)
 - [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. Opérateur](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. Opérateur](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: Opérateur](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

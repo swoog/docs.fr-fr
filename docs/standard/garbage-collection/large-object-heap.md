@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753957"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -154,9 +154,9 @@ Ces compteurs de performances sont une bonne première étape pour rechercher le
 
    Affiche la taille actuelle du LOH en octets (y compris l’espace libre). Ce compteur est actualisé à la fin de chaque garbage collection, et non à chaque allocation.
 
-En général, vous surveillez les compteurs de performances par le biais du moniteur de performances (PerfMon.exe). Utilisez « Ajouter des compteurs » pour ajouter le compteur de votre choix pour les processus qui vous intéressent. Vous pouvez enregistrer les données des compteurs de performances dans un fichier journal, comme illustré dans la figure 4.
+En général, vous surveillez les compteurs de performances par le biais du moniteur de performances (PerfMon.exe). Utilisez « Ajouter des compteurs » pour ajouter le compteur de votre choix pour les processus qui vous intéressent. Vous pouvez enregistrer les données des compteurs de performances dans un fichier journal, comme illustré dans la figure 4 :
 
-![Figure 4 : Ajout de compteurs de performance](media/loh/perfcounter.png)\
+![Écran illustrant l’ajout de compteurs de performances.](media/large-object-heap/add-performance-counter.png)
 Figure 4 : LOH après un GC de la génération 2
 
 Les compteurs de performances peuvent également être interrogés par programmation. Beaucoup d’utilisateurs les collectent de cette façon dans le cadre de leur processus de test normal. S’ils repèrent des compteurs avec des valeurs anormales, ils utilisent d’autres moyens d’obtenir des données plus détaillées pour les aider dans leurs recherches.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Le résultat ressemble à ceci :
 
-![Figure 5 : Examen des événements ETW avec PerfView](media/loh/perfview.png) Figure 5 : Événements ETW affichés à l’aide de PerfView
+![Capture d’écran montrant les événements ETW dans PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Figure 5 : Événements ETW affichés à l’aide de PerfView
 
 Comme vous pouvez le voir, tous les GC sont effectués sur la génération 2 et ils sont déclenchés par AllocLarge, ce qui signifie que c’est l’allocation d’un grand objet qui a déclenché ce GC. Nous savons que ces allocations sont temporaires parce que la colonne **% de taux de survie LOH** indique 1 %.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 collecte un événement AllocationTick qui est déclenché toutes les 100 000 allocations environ. En d’autres termes, un événement est déclenché chaque fois qu’un grand objet est alloué. Vous pouvez alors examiner une des vues d’allocation de tas du récupérateur de mémoire qui indique les pile d’appels qui ont alloué des grands objets :
 
-![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)\
+![Capture d’écran montrant une vue du tas garbage collector.](media/large-object-heap/garbage-collector-heap.png)
 Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire
 
 Comme vous pouvez le voir, il s’agit d’un test très simple qui alloue simplement de grands objets à partir de sa méthode `Main`.

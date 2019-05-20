@@ -3,12 +3,12 @@ title: Crée un client REST à l’aide de .NET Core
 description: Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612063"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063883"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -36,11 +36,10 @@ Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-de
 
 ## <a name="create-the-application"></a>Création de l’application
 
-La première étape consiste à créer une nouvelle application. Ouvrez une invite de commandes et créez un nouveau répertoire pour votre application. Réglez-le comme répertoire actuel. Saisissez la commande `dotnet new console` à l’invite. Elle crée les fichiers de démarrage d’une application « Hello World » de base.
+La première étape consiste à créer une nouvelle application. Ouvrez une invite de commandes et créez un nouveau répertoire pour votre application. Réglez-le comme répertoire actuel. Saisissez la commande `dotnet new console` à l’invite. Elle crée les fichiers de démarrage d’une application « Hello World » de base. Comme il s’agit d’un nouveau projet, aucune des dépendances n’est en place ; ainsi, la première exécution télécharge le .NET Core Framework, installe un certificat de développement et exécute le gestionnaire de package NuGet pour restaurer les dépendances manquantes.
 
-Avant d’apporter des modifications, examinons les étapes nécessaires pour exécuter l’application simple Hello World. Après avoir créé l’application, tapez `dotnet restore` ([voir note](#dotnet-restore-note)) à l’invite de commandes. Cette commande exécute le processus de restauration de package NuGet. NuGet est un gestionnaire de packages .NET. Cette commande télécharge les dépendances manquantes pour votre projet. Comme il s’agit d’un nouveau projet, aucune des dépendances n’est en place, donc la première exécution téléchargera le framework .NET Core. Après cette étape initiale, vous devez exécuter `dotnet restore` ([voir note](#dotnet-restore-note)) lorsque vous ajoutez de nouveaux packages dépendants ou mettez à jour les versions de vos dépendances.
-
-Après la restauration des packages, vous exécutez `dotnet build`. Cela exécute le moteur de génération et crée votre application. Enfin, vous exécutez `dotnet run` pour lancer votre application.
+Avant de commencer à apporter des modifications, tapez `dotnet run` ([voir la remarque](#dotnet-restore-note)) à l’invite de commandes pour exécuter votre application. `dotnet run` effectue automatiquement `dotnet restore` s’il manque des dépendances dans votre environnement. Il effectue également `dotnet build` si votre application doit être regénérée.
+Après la configuration initiale, vous devez uniquement exécuter `dotnet restore` ou `dotnet build` quand cela est pertinent pour votre projet.
 
 ## <a name="adding-new-dependencies"></a>Ajout de nouvelles dépendances
 
@@ -62,7 +61,7 @@ Ajoutez ce qui suit immédiatement après cette ligne :
 
 La plupart des éditeurs de code fournissent la saisie semi-automatique pour différentes versions de ces bibliothèques. Vous souhaiterez généralement utiliser la dernière version d’un package que vous ajoutez. Toutefois, il est important de vous assurer que les versions de tous les packages correspondent et qu’ils correspondent également la version du framework d’application .NET Core.
 
-Une fois que vous avez apporté ces modifications, vous devez réexécuter `dotnet restore` ([voir note](#dotnet-restore-note))afin que le package soit installé sur votre système.
+Une fois que vous avez apporté ces modifications, exécutez `dotnet restore` ([voir la remarque](#dotnet-restore-note)) afin que le package soit installé sur votre système.
 
 ## <a name="making-web-requests"></a>Effectuer des requêtes web
 

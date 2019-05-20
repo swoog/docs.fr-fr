@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113722"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469726"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, de structures, et d'unions
 Les classes et les structures sont similaires dans .NET Framework. Elles peuvent toutes deux posséder des champs, des propriétés et des événements. Elles peuvent également posséder des méthodes statiques et non statiques. Une différence notable existe toutefois : les structures sont des types valeur et les classes sont des types référence.  
@@ -50,19 +50,19 @@ Les classes et les structures sont similaires dans .NET Framework. Elles peuvent
   
  L'exemple Structures utilise les fonctions non managées ci-dessous, accompagnées de leur déclaration de fonction d'origine :  
   
--   **TestStructInStruct** exportée depuis PinvokeLib.dll.  
+- **TestStructInStruct** exportée depuis PinvokeLib.dll.  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   **TestStructInStruct3** exportée depuis PinvokeLib.dll.  
+- **TestStructInStruct3** exportée depuis PinvokeLib.dll.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   **TestArrayInStruct** exportée depuis PinvokeLib.dll.  
+- **TestArrayInStruct** exportée depuis PinvokeLib.dll.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  Les structures managées `MyPerson`,`MyPerson2`, `MyPerson3` et `MyArrayStruct` ont les caractéristiques suivantes :  
   
--   `MyPerson` contient uniquement des membres de type chaîne. Le champ [CharSet](specifying-a-character-set.md) affecte le format ANSI aux chaînes quand elles sont passées à la fonction non managée.  
+- `MyPerson` contient uniquement des membres de type chaîne. Le champ [CharSet](specifying-a-character-set.md) affecte le format ANSI aux chaînes quand elles sont passées à la fonction non managée.  
   
--   `MyPerson2` contient un **IntPtr** vers la structure `MyPerson`. Le type **IntPtr** remplace le pointeur d’origine vers la structure non managée, car les applications .NET Framework n’utilisent pas de pointeurs, sauf si le code est marqué comme étant **unsafe**.  
+- `MyPerson2` contient un **IntPtr** vers la structure `MyPerson`. Le type **IntPtr** remplace le pointeur d’origine vers la structure non managée, car les applications .NET Framework n’utilisent pas de pointeurs, sauf si le code est marqué comme étant **unsafe**.  
   
--   `MyPerson3` contient `MyPerson` comme structure incorporée. Une structure incorporée dans une autre structure peut être aplatie en plaçant les éléments de la structure incorporée directement dans la structure principale. Elle peut également être conservée comme une structure incorporée, comme dans cet exemple.  
+- `MyPerson3` contient `MyPerson` comme structure incorporée. Une structure incorporée dans une autre structure peut être aplatie en plaçant les éléments de la structure incorporée directement dans la structure principale. Elle peut également être conservée comme une structure incorporée, comme dans cet exemple.  
   
--   `MyArrayStruct` contient un tableau d'entiers. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> définit la valeur d’énumération <xref:System.Runtime.InteropServices.UnmanagedType> sur **ByValArray**, qui est utilisée pour indiquer le nombre d’éléments du tableau.  
+- `MyArrayStruct` contient un tableau d'entiers. L’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> définit la valeur d’énumération <xref:System.Runtime.InteropServices.UnmanagedType> sur **ByValArray**, qui est utilisée pour indiquer le nombre d’éléments du tableau.  
   
  Pour toutes les structures de cet exemple, l'attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> est appliqué pour garantir que les membres soient classés de manière séquentielle dans la mémoire, dans l'ordre dans lequel ils apparaissent.  
   
  La classe `LibWrap` contient des prototypes managés pour les méthodes `TestStructInStruct`, `TestStructInStruct3` et `TestArrayInStruct` appelées par la classe `App`. Chaque prototype déclare un seul paramètre de la manière suivante :  
   
--   `TestStructInStruct` déclare une référence au type `MyPerson2` comme son paramètre.  
+- `TestStructInStruct` déclare une référence au type `MyPerson2` comme son paramètre.  
   
--   `TestStructInStruct3` déclare le type `MyPerson3` en tant que paramètre et passe le paramètre par valeur.  
+- `TestStructInStruct3` déclare le type `MyPerson3` en tant que paramètre et passe le paramètre par valeur.  
   
--   `TestArrayInStruct` déclare une référence au type `MyArrayStruct` comme son paramètre.  
+- `TestArrayInStruct` déclare une référence au type `MyArrayStruct` comme son paramètre.  
   
  Les structures en tant qu’arguments de méthodes sont passées par valeur, sauf si le paramètre contient le mot clé **ref** (**ByRef** dans Visual Basic). Par exemple, la méthode `TestStructInStruct` passe une référence (la valeur d'une adresse) à un objet de type `MyPerson2` au code non managé. Pour manipuler la structure vers laquelle pointe `MyPerson2`, l'exemple crée une mémoire tampon d'une taille spécifiée et retourne son adresse en combinant les méthodes <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> et <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>. Ensuite, l'exemple copie le contenu de la structure managée vers la mémoire tampon non managée. Enfin, l'exemple utilise la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> pour marshaler des données à partir de la mémoire tampon non managée vers un objet managé, ainsi que la méthode <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> pour libérer le bloc de mémoire non managé.  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  L'exemple FindFile utilise la fonction non managée ci-dessous, accompagnée de sa déclaration de fonction d'origine :  
   
--   **FindFirstFile** exportée depuis Kernel32.dll.  
+- **FindFirstFile** exportée depuis Kernel32.dll.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  L'exemple Unions utilise la fonction non managée ci-dessous, accompagnée de sa déclaration de fonction d'origine :  
   
--   **TestUnion** exportée depuis PinvokeLib.dll.  
+- **TestUnion** exportée depuis PinvokeLib.dll.  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  L'exemple SysTime utilise la fonction non managée ci-dessous, accompagnée de sa déclaration de fonction d'origine :  
   
--   **GetSystemTime** exportée depuis Kernel32.dll.  
+- **GetSystemTime** exportée depuis Kernel32.dll.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  La classe `MyStruct` contient un objet chaîne composé de caractères ANSI. Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> spécifie le format ANSI. `MyUnsafeStruct` est une structure contenant un type <xref:System.IntPtr> plutôt qu'une chaîne.  
   
- La classe `LibWrap` contient la méthode de prototype surchargée `TestOutArrayOfStructs`. Si une méthode déclare un pointeur en tant que paramètre, la classe doit être marquée avec le mot clé `unsafe`. Étant donné que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ne peut pas utiliser de code unsafe, la méthode surchargée, le modificateur unsafe et la structure `MyUnsafeStruct` ne sont pas nécessaires.  
+ La classe `LibWrap` contient la méthode de prototype surchargée `TestOutArrayOfStructs`. Si une méthode déclare un pointeur en tant que paramètre, la classe doit être marquée avec le mot clé `unsafe`. Étant donné que Visual Basic ne peut pas utiliser de code unsafe, la méthode surchargée, le modificateur unsafe et la structure `MyUnsafeStruct` ne sont pas nécessaires.  
   
  La classe `App` implémente la méthode `UsingMarshaling` qui effectue toutes les tâches nécessaires au passage du tableau. Le tableau est marqué avec le mot clé `out` (`ByRef` en Visual Basic) pour indiquer que les données passent de l'appelé à l'appelant. L'implémentation utilise les méthodes de la classe <xref:System.Runtime.InteropServices.Marshal> suivantes :  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> pour marshaler des données à partir de la mémoire tampon non managée vers un objet managé.  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> pour marshaler des données à partir de la mémoire tampon non managée vers un objet managé.  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> pour libérer la mémoire réservée aux chaînes de la structure.  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> pour libérer la mémoire réservée aux chaînes de la structure.  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> pour libérer la mémoire réservée au tableau.  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> pour libérer la mémoire réservée au tableau.  
   
- Comme mentionné précédemment, le langage C# autorise le code unsafe, contrairement à [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]. Dans l'exemple C#, `UsingUnsafePointer` est une autre implémentation de méthode qui utilise des pointeurs plutôt que la classe <xref:System.Runtime.InteropServices.Marshal> pour passer le tableau contenant la structure `MyUnsafeStruct`.  
+ Comme mentionné précédemment, le langage C# autorise le code unsafe, contrairement à Visual Basic. Dans l'exemple C#, `UsingUnsafePointer` est une autre implémentation de méthode qui utilise des pointeurs plutôt que la classe <xref:System.Runtime.InteropServices.Marshal> pour passer le tableau contenant la structure `MyUnsafeStruct`.  
   
 ### <a name="declaring-prototypes"></a>Déclaration de prototypes  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

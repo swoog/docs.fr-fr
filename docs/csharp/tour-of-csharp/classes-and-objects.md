@@ -3,12 +3,12 @@ title: Classes et objets dans C# - Visite guidée du langage C#
 description: Novice en matière de langage C# ? Lisez cette présentation des classes, des objets et de l’héritage
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921245"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750387"
 ---
 # <a name="classes-and-objects"></a>Classes et objets
 
@@ -33,42 +33,42 @@ Les membres d’une classe sont des membres statiques ou membres d’instance. L
 Vous trouverez ci-dessous une vue d’ensemble des types de membres qu'une classe peut contenir.
 
 * Constantes
-    - Valeurs constantes associées à la classe
+  - Valeurs constantes associées à la classe
 * Champs
-    - Variables de la classe
+  - Variables de la classe
 * Méthodes
-    - Calculs et les actions qui peuvent être effectués par la classe
+  - Calculs et les actions qui peuvent être effectués par la classe
 * Propriétés
-    - Actions associées à la lecture et l’écriture des propriétés nommées de la classe
+  - Actions associées à la lecture et l’écriture des propriétés nommées de la classe
 * Indexeurs
-    - Actions liées à l’indexation des instances de la classe comme un tableau
+  - Actions liées à l’indexation des instances de la classe comme un tableau
 * Événements
-    - Les notifications qui peuvent être générées par la classe
+  - Les notifications qui peuvent être générées par la classe
 * Opérateurs
-    - Les opérateurs de conversion et d’expression pris en charge par la classe
+  - Les opérateurs de conversion et d’expression pris en charge par la classe
 * Constructeurs
-    - Les actions requises pour initialiser les instances de la classe ou la classe elle-même
+  - Les actions requises pour initialiser les instances de la classe ou la classe elle-même
 * Finaliseurs
-    - Actions à effectuer avant que les instances de la classe soient abandonnées de façon définitive
+  - Actions à effectuer avant que les instances de la classe soient abandonnées de façon définitive
 * Types
-    - Types imbriqués déclarés par la classe
+  - Types imbriqués déclarés par la classe
 
 ## <a name="accessibility"></a>Accessibilité
 
 Chaque membre d’une classe a une accessibilité associée, qui contrôle les régions du texte du programme qui sont en mesure d’accéder au membre. Il existe six formes possibles d’accessibilité. Ils sont résumés ci-dessous.
 
 * `public`
-    - Accès non limité
+  - Accès non limité
 * `protected`
-    - Accès limité à cette classe ou aux classes dérivées de cette classe
+  - Accès limité à cette classe ou aux classes dérivées de cette classe
 * `internal`
-    - Accès limité à l’assembly actuel (.exe, .dll, etc.)
+  - Accès limité à l’assembly actuel (.exe, .dll, etc.)
 * `protected internal`
-    - Accès limité à la classe conteneur, aux classes dérivées de la classe conteneur ou aux classes dans le même assembly
+  - Accès limité à la classe conteneur, aux classes dérivées de la classe conteneur ou aux classes dans le même assembly
 * `private`
-    - Accès limité à cette classe
+  - Accès limité à cette classe
 * `private protected`
-    - Accès limité à la classe conteneur ou aux classes dérivées du type conteneur dans le même assembly
+  - Accès limité à la classe conteneur ou aux classes dérivées du type conteneur dans le même assembly
 
 ## <a name="type-parameters"></a>Paramètres de type
 
@@ -230,7 +230,7 @@ C# prend en charge les constructeurs statiques et d’instance. Un *constructeur
 
 Un constructeur est déclaré comme une méthode sans aucun type de retour et le même nom que la classe contenante. Si une déclaration de constructeur comprend un modificateur static, elle déclare un constructeur statique. Dans le cas contraire, elle déclare un constructeur d’instance.
 
-Les constructeurs d’instance peuvent être surchargés et avoir des paramètres facultatifs. Par exemple, la classe `MyList<T>` déclare deux constructeurs d’instance, un sans paramètres et une fonction qui accepte un paramètre `int`. Les constructeurs d’instance sont appelés en utilisant l’opérateur `new`. Les instructions suivantes allouent deux instances `MyList<string>` à l’aide du constructeur de la classe `MyList` avec et sans l’argument facultatif.
+Les constructeurs d’instance peuvent être surchargés et avoir des paramètres facultatifs. Par exemple, la classe `MyList<T>` déclare un constructeur d’instance avec un seul paramètre `int` facultatif. Les constructeurs d’instance sont appelés en utilisant l’opérateur `new`. Les instructions suivantes allouent deux instances `MyList<string>` à l’aide du constructeur de la classe `MyList` avec et sans l’argument facultatif.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

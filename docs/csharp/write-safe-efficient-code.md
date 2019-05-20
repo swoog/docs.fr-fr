@@ -3,12 +3,12 @@ title: Écrire du code C# sécurisé et efficace
 description: Les améliorations récentes apportées au langage C# vous permettent d’écrire du code sécurisé vérifiable que les performances associaient précédemment à du code non sécurisé.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753886"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Écrire du code C# sécurisé et efficace
 
@@ -180,6 +180,8 @@ Au lieu de cela, si le calcul de distance utilise le struct immuable, `ReadonlyP
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Le compilateur génère un code plus efficace quand vous appelez des membres d’un `readonly struct` : La référence `this`, au lieu d’une copie du récepteur, est toujours un paramètre `in` passé par référence à la méthode de membre. Cette optimisation évite la copie quand vous utilisez un `readonly struct` comme argument `in`.
+
+Vous ne devez pas passer un type valeur nullable comme argument `in`. Le type <xref:System.Nullable%601> n’est pas déclaré en tant que struct en lecture seule. Cela signifie que le compilateur doit générer des copies défensives pour tout argument de type valeur nullable passé à une méthode à l’aide du modificateur `in` sur la déclaration de paramètre.
 
 Vous pouvez voir un exemple de programme qui montre les différences de performances avec [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) dans notre [dépôt d’exemples](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) sur GitHub. Il compare le passage d’un struct mutable par valeur et par référence au passage d’un struct immuable par valeur et par référence. L’utilisation du struct immuable et le passage par référence est le plus rapide.
 

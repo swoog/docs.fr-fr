@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222696"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635549"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales implicitement typées (Guide de programmation C#)
 
@@ -55,7 +55,7 @@ Du point de vue de votre code source, un type anonyme n’a pas de nom. Par cons
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les restrictions suivantes s’appliquent aux déclarations de variables implicitement typées :
 
@@ -68,6 +68,20 @@ Les restrictions suivantes s’appliquent aux déclarations de variables implici
 - Il n’est pas possible d’initialiser plusieurs variables implicitement typées dans la même instruction.
 
 - Si un type nommé `var` se trouve dans la portée, le mot clé `var` est résolu en ce nom de type et n’est pas considéré comme faisant partie d’une déclaration de variable locale implicitement typée.
+
+Le typage implicite avec le mot clé `var` ne peut être appliqué qu’aux variables comprises dans la portée de la méthode locale. Le typage implicite n’est pas disponible pour les champs de classe, car le compilateur C# rencontrerait un paradoxe logique pendant le traitement du code : le compilateur a besoin de connaître le type du champ, mais il ne peut pas déterminer le type tant que l’expression d’assignation n’est pas analysée, et l’expression ne peut pas être évaluée sans connaître le type. Examinons le code ci-dessous.
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` est un champ de classe de type `var`. Le champ n’ayant aucune expression à évaluer, le compilateur ne peut pas déduire le type que `bookTitles` est censé avoir. De plus, l’ajout d’une expression au champ (comme vous le feriez pour une variable locale) est également insuffisant :
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+Quand le compilateur rencontre des champs pendant la compilation du code, il enregistre le type de chaque champ avant de traiter toutes les expressions associées. Le compilateur rencontre le même paradoxe en essayant d’analyser `bookTitles` : il doit connaître le type du champ, mais il détermine normalement le type de `var` en analysant l’expression, ce qui est impossible sans connaître le type au préalable.
 
 `var` peut également être utile avec les expressions de requête dans lesquelles il est difficile de déterminer le type construit exact de la variable de requête. Cela peut se produire avec les opérations de regroupement et de classement.
 

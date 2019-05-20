@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087740"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469687"
 ---
 # <a name="specifying-a-character-set"></a>Spécification d'un jeu de caractères
 Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> contrôle le marshaling des chaînes et détermine de quelle façon l’appel de code non managé recherche des noms de fonction dans une DLL. Cette rubrique décrit ces deux comportements.  
   
  Certaines API exportent deux versions de fonctions qui acceptent des arguments de chaîne : caractères étroits (ANSI) et caractères larges (Unicode). L’API Windows, par exemple, comporte les noms de points d’entrée suivants pour la fonction **MessageBox** :  
   
--   **MessageBoxA**  
+- **MessageBoxA**  
   
      Fournit un formatage ANSI pour les caractères sur un octet, caractérisé par l’ajout de la lettre A au nom du point d’entrée. Les appels à **MessageBoxA** marshalent toujours les chaînes au format ANSI.  
   
--   **MessageBoxW**  
+- **MessageBoxW**  
   
      Fournit un formatage Unicode pour les caractères sur deux octets, caractérisé par l’ajout de la lettre W au nom du point d’entrée. Les appels à **MessageBoxW** marshalent toujours les chaînes au format Unicode.  
   
@@ -37,31 +37,31 @@ Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (valeur par défaut)  
   
--   Marshaling de chaînes  
+- Marshaling de chaînes  
   
      L’appel de code non managé marshale les chaînes de leur format managé (Unicode) au format ANSI.  
   
--   Correspondance de noms  
+- Correspondance de noms  
   
-     Si le champ <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> a la valeur `true` (valeur par défaut dans [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]), l’appel de code non managé recherche uniquement le nom spécifié. Par exemple, si vous spécifiez **MessageBox**, l’appel de code non managé recherche **MessageBox** et échoue s’il ne trouve pas de correspondance exacte.  
+     Si le champ <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> a la valeur `true` (valeur par défaut dans Visual Basic), l’appel de code non managé recherche uniquement le nom spécifié. Par exemple, si vous spécifiez **MessageBox**, l’appel de code non managé recherche **MessageBox** et échoue s’il ne trouve pas de correspondance exacte.  
   
      Si le champ `ExactSpelling` a la valeur `false` (valeur par défaut en C++ et C#), l’appel de code non managé recherche d’abord l’alias non altéré (**MessageBox**), puis le nom altéré (**MessageBoxA**) si l’alias non altéré est introuvable. Notez que la correspondance de noms ANSI et la correspondance de noms Unicode n’ont pas le même comportement.  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
--   Marshaling de chaînes  
+- Marshaling de chaînes  
   
      L’appel de code non managé copie les chaînes de leur format managé (Unicode) au format Unicode.  
   
--   Correspondance de noms  
+- Correspondance de noms  
   
-     Si le champ `ExactSpelling` a la valeur `true` (valeur par défaut dans [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]), l’appel de code non managé recherche uniquement le nom spécifié. Par exemple, si vous spécifiez **MessageBox**, l’appel de code non managé recherche **MessageBox** et échoue s’il ne trouve pas de correspondance exacte.  
+     Si le champ `ExactSpelling` a la valeur `true` (valeur par défaut dans Visual Basic), l’appel de code non managé recherche uniquement le nom spécifié. Par exemple, si vous spécifiez **MessageBox**, l’appel de code non managé recherche **MessageBox** et échoue s’il ne trouve pas de correspondance exacte.  
   
      Si le champ `ExactSpelling` a la valeur `false` (valeur par défaut en C++ et C#), l’appel de code non managé recherche d’abord le nom altéré (**MessageBoxW**), puis l’alias non altéré (**MessageBox**) si le nom altéré est introuvable. Notez que la correspondance de noms Unicode et la correspondance de noms ANSI n’ont pas le même comportement.  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
--   L’appel de code non managé choisit le format Unicode ou le format ANSI au moment de l’exécution, en fonction de la plateforme cible.  
+- L’appel de code non managé choisit le format Unicode ou le format ANSI au moment de l’exécution, en fonction de la plateforme cible.  
   
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Spécification d’un jeu de caractères dans Visual Basic  
  L’exemple suivant déclare la fonction **MessageBox** trois fois, chaque fois avec un comportement de jeu de caractères différent. Vous pouvez spécifier le comportement de jeu de caractères dans Visual Basic en ajoutant le mot clé **Ansi**, **Unicode** ou **Auto** à l’instruction de déclaration.  
@@ -69,22 +69,20 @@ Le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
  Si vous omettez le mot clé de jeu de caractères, comme c’est le cas dans la première instruction de déclaration, le champ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> est par défaut défini sur le jeu de caractères ANSI. Dans l’exemple, la deuxième et la troisième instructions spécifient explicitement un jeu de caractères à l’aide d’un mot clé.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Function MessageBoxA Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Function MessageBoxA Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
         ByVal uType As UInteger) As Integer
 
-    Friend Shared Declare Unicode Function MessageBoxW Lib "user32.dll" (
+    Friend Declare Unicode Function MessageBoxW Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
         ByVal uType As UInteger) As Integer
 
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -113,7 +111,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBoxA(

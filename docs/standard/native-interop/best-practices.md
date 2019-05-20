@@ -4,12 +4,12 @@ description: Découvrez les meilleures pratiques pour interagir avec des composa
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196656"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063075"
 ---
 # <a name="native-interoperability-best-practices"></a>Meilleures pratiques pour l’interopérabilité native
 
@@ -33,7 +33,7 @@ Les instructions de cette section s’appliquent à tous les scénarios d’inte
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Conserver la valeur par défaut  | S’il est défini explicitement sur false, les valeurs de retour HRESULT en échec sont converties en exceptions (et la valeur de retour de la définition devient ainsi Null).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dépend de l'API  | Définissez-le sur true si l’API utilise GetLastError et Marshal.GetLastWin32Error pour obtenir la valeur. Si l’API définit une condition indiquant une erreur, récupérez l’erreur avant d’effectuer d’autres appels, de façon à éviter de la remplacer par inadvertance.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, qui bascule en secours vers le comportement `CharSet.Ansi`  | Utilisez explicitement `CharSet.Unicode` ou `CharSet.Ansi` lorsque des chaînes ou des caractères sont présents dans la définition | Cela permet de spécifier le comportement de marshaling des chaînes et le rôle de `ExactSpelling` lorsque `false`. Notez que `CharSet.Ansi` est en réalité UTF-8 sur Unix. _La plupart du temps_, Windows utilise Unicode et Unix UTF-8. Pour plus d'informations, voir la [documentation sur les charsets](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, qui bascule en secours vers le comportement `CharSet.Ansi`  | Utilisez explicitement `CharSet.Unicode` ou `CharSet.Ansi` lorsque des chaînes ou des caractères sont présents dans la définition | Cela permet de spécifier le comportement de marshaling des chaînes et le rôle de `ExactSpelling` quand la valeur est `false`. Notez que `CharSet.Ansi` est en réalité UTF-8 sur Unix. _La plupart du temps_, Windows utilise Unicode et Unix UTF-8. Pour plus d'informations, voir la [documentation sur les charsets](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Définissez-le sur true pour augmenter légèrement les performances. En effet, le runtime ne recherche pas de noms de fonctions de remplacement avec un suffixe « A » ou « W » selon la valeur du paramètre `CharSet` (« A » pour `CharSet.Ansi` et « W » pour `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Paramètres de chaînes
@@ -61,7 +61,7 @@ Si vous *utilisez* `StringBuilder`, le dernier piège est que la capacité n’i
 
 **✔️ À ENVISAGER :** utiliser des `char[]` à partir d’un `ArrayPool`.
 
-Pour plus d’informations sur le marshaling des chaînes, voir [Marshaling par défaut pour les chaînes](../../framework/interop/default-marshaling-for-strings.md) et [Personnaliser le marshaling des chaînes](customize-parameter-marshalling.md#customizing-string-parameters).
+Pour plus d’informations sur le marshaling des chaînes, consultez [Marshaling par défaut pour les chaînes](../../framework/interop/default-marshaling-for-strings.md) et [Personnaliser le marshaling des chaînes](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Pour Windows uniquement__  
 > Pour les chaînes `[Out]`, le CLR utilisera `CoTaskMemFree` par défaut pour libérer les chaînes ou `SysStringFree` pour les chaînes marquées `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Pour plus d’informations sur le marshaling des chaînes, voir [Marshaling par 
 
 ## <a name="boolean-parameters-and-fields"></a>Paramètres et champs booléens
 
-Il est facile de se perdre avec les booléens. Par défaut, un `bool` .NET est marshalé en un `BOOL` Windows, où il s’agit d’une valeur de 4 octets. À l’inverse, les types `_Bool` et `bool` en C et C++ correspondent à un *seul* octet. Il peut alors être difficile de traquer les bogues, car la valeur de retour est à moitié ignorée, ce qui ne modifie que *potentiellement* le résultat. Pour plus d’informations sur le marshaling des valeurs `bool` .NET en types `bool` C ou C++, voir la documentation [Personnaliser le marshaling des champs booléens](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Il est facile de se perdre avec les booléens. Par défaut, un `bool` .NET est marshalé en un `BOOL` Windows, où il s’agit d’une valeur de 4 octets. À l’inverse, les types `_Bool` et `bool` en C et C++ correspondent à un *seul* octet. Il peut alors être difficile de traquer les bogues, car la valeur de retour est à moitié ignorée, ce qui ne modifie que *potentiellement* le résultat. Pour plus d’informations sur le marshaling des valeurs `bool` .NET en types `bool` C ou C++, consultez la documentation [Personnaliser le marshaling des champs booléens](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUID
 
@@ -126,7 +126,7 @@ Pour savoir si un type est blittable, essayez de créer un `GCHandle` épinglé.
 Pour plus d'informations, voir :
 
 - [Types blittable et non blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshaling des types](type-marshalling.md)
+- [Marshaling de types](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Maintenir actifs les objets gérés
 

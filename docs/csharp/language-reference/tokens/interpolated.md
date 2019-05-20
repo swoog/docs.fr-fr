@@ -2,7 +2,7 @@
 title: $ - interpolation de chaîne - Référence C#
 ms.custom: seodec18
 description: L’interpolation de chaîne fournit une syntaxe plus lisible et plus pratique pour mettre en forme la sortie de chaîne que la traditionnelle mise en forme composite de chaîne.
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920894"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210427"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolation de chaîne (Référence C#)
 
@@ -26,7 +26,7 @@ Le caractère spécial `$` identifie un littéral de chaîne comme une *chaîne 
 
 L’interpolation de chaîne offre une syntaxe plus lisible et plus simple pour créer des chaînes mises en forme que la fonctionnalité de [mise en forme de chaîne composite](../../../standard/base-types/composite-formatting.md). L’exemple suivant utilise les deux fonctionnalités pour produire la même sortie :
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>Structure d’une chaîne interpolée
 
@@ -48,7 +48,7 @@ Les éléments entre crochets sont facultatifs. Le tableau suivant décrit chaqu
 
 L’exemple suivant utilise les composants de mise en forme facultatifs décrits ci-dessus :
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>Caractères spéciaux
 
@@ -58,7 +58,7 @@ Comme le caractère deux-points (« : ») a une signification spéciale dans un 
 
 L’exemple suivant montre comment ajouter une accolade dans une chaîne de résultat et comment utiliser un opérateur conditionnel dans une expression interpolée :
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 Une chaîne interpolée textuelle commence par le caractère `$` suivi du caractère `@`. Pour plus d’informations sur les chaînes textuelles, consultez les rubriques [string](../keywords/string.md) et [Identificateur textuel](verbatim.md).
 
@@ -83,11 +83,21 @@ Trois conversions implicites sont possibles à partir d’une chaîne interpolé
 
 L’exemple suivant utilise la conversion implicite en <xref:System.FormattableString> pour créer des chaînes de résultat propres à la culture :
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/exploration/interpolated-strings.yml). Vous pouvez également essayer le tutoriel [Interpolation de chaînes en C#](../../tutorials/string-interpolation.md) localement sur votre ordinateur.
+Si vous ne connaissez pas l’interpolation de chaînes, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/exploration/interpolated-strings.yml). Vous pouvez également consulter un autre tutoriel sur l’[interpolation de chaîne en C#](../../tutorials/string-interpolation.md) qui montre comment utiliser des chaînes interpolées pour produire des chaînes mises en forme.
+
+## <a name="compilation-of-interpolated-strings"></a>Compilation de chaînes interpolées
+
+Si une chaîne interpolée est de type `string`, elle est généralement transformée en un appel de méthode <xref:System.String.Format%2A?displayProperty=nameWithType>. Le compilateur peut remplacer <xref:System.String.Format%2A?displayProperty=nameWithType> par <xref:System.String.Concat%2A?displayProperty=nameWithType> si le comportement analysé équivaut à une concaténation.
+
+Si une chaîne interpolée est de type <xref:System.IFormattable> ou <xref:System.FormattableString>, le compilateur génère un appel à la méthode <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, consultez la section [Chaînes interpolées](~/_csharplang/spec/expressions.md#interpolated-strings) de la [spécification du langage C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Voir aussi
 

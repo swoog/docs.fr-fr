@@ -3,12 +3,12 @@ title: Structs - Guide C#
 description: En savoir plus sur le type struct et la manière de le créer
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608021"
 ---
 # <a name="structs"></a>Structs
 Un *struct* est un type valeur. Lorsqu'un struct est créé, la variable à laquelle le struct est assigné contient les données réelles du struct. Lorsque le struct est affecté à une nouvelle variable, il est copié. La nouvelle variable et la variable d’origine contiennent par conséquent deux copies distinctes des mêmes données. Les modifications apportées à une copie n’affectent pas l’autre copie.
@@ -35,21 +35,21 @@ Pour plus d’informations sur les types valeur dans le .NET Framework, consulte
     
 Les structs partagent presque tous la même syntaxe que les classes, bien qu'ils soient plus limités que ces dernières :  
   
--   Au sein d’une déclaration de struct, les champs ne peuvent pas être initialisés à moins d’être déclarés `const` ou `static`.  
+- Au sein d’une déclaration de struct, les champs ne peuvent pas être initialisés à moins d’être déclarés `const` ou `static`.  
   
--   Un struct ne peut pas déclarer de constructeur par défaut (un constructeur sans paramètre) ni de finaliseur.  
+- Un struct ne peut pas déclarer de constructeur sans paramètre ni de finaliseur.  
   
--   Les structs sont copiés lors de l'assignation. Lorsqu'un struct est assigné à une nouvelle variable, toutes les données sont copiées et les modifications apportées à la nouvelle copie ne changent pas les données de la copie d'origine. Il est important de s’en souvenir lors de l’utilisation de collections de types valeur telles que Dictionary<string, myStruct>.  
+- Les structs sont copiés lors de l'assignation. Lorsqu'un struct est assigné à une nouvelle variable, toutes les données sont copiées et les modifications apportées à la nouvelle copie ne changent pas les données de la copie d'origine. Il est important de s’en souvenir lors de l’utilisation de collections de types valeur telles que Dictionary<string, myStruct>.  
   
--   Les structs sont des types valeur et les classes des types référence.  
+- Les structs sont des types valeur et les classes des types référence.  
   
--   Contrairement aux classes, il est possible d’instancier les structs sans avoir recours à un opérateur `new`.  
+- Contrairement aux classes, il est possible d’instancier les structs sans avoir recours à un opérateur `new`.  
   
--   Les structs peuvent déclarer des constructeurs qui ont des paramètres.  
+- Les structs peuvent déclarer des constructeurs qui ont des paramètres.  
   
--   Un struct ne peut pas hériter d'un autre struct ou d'une classe ; il ne peut pas non plus servir de base à une classe. Tous les structs héritent directement de <xref:System.ValueType>, qui hérite de <xref:System.Object>.  
+- Un struct ne peut pas hériter d'un autre struct ou d'une classe ; il ne peut pas non plus servir de base à une classe. Tous les structs héritent directement de <xref:System.ValueType>, qui hérite de <xref:System.Object>.  
   
--   Un struct peut implémenter des interfaces.
+- Un struct peut implémenter des interfaces.
 
 ## <a name="literal-values"></a>Valeurs littérales  
 En C#, les valeurs littérales reçoivent un type du compilateur. Vous pouvez spécifier la façon dont un littéral numérique doit être typé en ajoutant une lettre à la fin du nombre. Par exemple, pour spécifier que la valeur 4,56 doit être traitée comme une valeur float, ajoutez « f » ou « F » après le nombre : `4.56f`. Si aucune lettre n’est ajoutée, le compilateur déduit le type `double` pour le littéral. Pour plus d’informations sur les types qui peuvent être spécifiés avec une lettre en suffixe, consultez les pages de référence des différents types dans [Types valeur](./language-reference/keywords/value-types.md).  

@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634664"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caractères d'échappement dans les expressions régulières
 La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :  
   
--   Le caractère qui la suit est un caractère spécial, comme indiqué dans le tableau de la section suivante. Par exemple, `\b` est une ancre qui indique qu'une correspondance d'expression régulière doit commencer sur une limite de mot, `\t` représente une tabulation et `\x020` représente un espace.  
+- Le caractère qui la suit est un caractère spécial, comme indiqué dans le tableau de la section suivante. Par exemple, `\b` est une ancre qui indique qu'une correspondance d'expression régulière doit commencer sur une limite de mot, `\t` représente une tabulation et `\x020` représente un espace.  
   
--   Un caractère qui doit être interprété littéralement, et qui sans cela serait interprété comme une construction du langage sans séquence d'échappement. Par exemple, une accolade (`{`) commence la définition d'un quantificateur, mais une barre oblique inverse suivie d'une accolade (`\{`) indique que le moteur d'expressions régulières doit rechercher une correspondance avec l'accolade. De la même façon, une seule barre oblique inverse marque le début d'une construction du langage avec échappement, mais deux barres obliques inverses (`\\`) indiquent que le moteur d'expressions régulières doit chercher une correspondance avec la barre oblique inverse.  
+- Un caractère qui doit être interprété littéralement, et qui sans cela serait interprété comme une construction du langage sans séquence d'échappement. Par exemple, une accolade (`{`) commence la définition d'un quantificateur, mais une barre oblique inverse suivie d'une accolade (`\{`) indique que le moteur d'expressions régulières doit rechercher une correspondance avec l'accolade. De la même façon, une seule barre oblique inverse marque le début d'une construction du langage avec échappement, mais deux barres obliques inverses (`\\`) indiquent que le moteur d'expressions régulières doit chercher une correspondance avec la barre oblique inverse.  
   
 > [!NOTE]
 >  Les séquences d'échappement des caractères sont reconnues dans les modèles d'expressions régulières, mais pas dans les modèles de remplacement.  
@@ -52,7 +52,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
 |`\` *nnn*|Correspond à un caractère ASCII, où *nnn* est constitué de deux ou trois chiffres qui représentent le code octal du caractère. Par exemple, `\040` représente un espace. Cette construction est interprétée comme une référence arrière si elle a un seul chiffre (par exemple `\2`) ou si elle correspond au nombre d'un groupe de capture. (Voir [Constructions de référence arrière](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Correspond à un caractère ASCII, où *nn* est un code hexadécimal à deux chiffres d’un caractère.|  
 |`\c` *X*|Correspond à un caractère de contrôle ASCII, où X est la lettre du caractère de contrôle. Par exemple, `\cC` est Ctrl-C.|  
-|`\u` *nnnn*|Correspond à une unité de code UTF-16 dont la valeur est *nnnn* en hexadécimal. **Remarque :** La séquence d’échappement des caractères de Perl 5 utilisée pour spécifier Unicode n’est pas prise en charge par .NET. La séquence d'échappement des caractères de Perl 5 a la forme `\x{`*####*`…}`, où *####*`…` est une série de chiffres hexadécimaux. Utilisez à la place `\u`*nnnn*.|  
+|`\u` *nnnn*|Correspond à une unité de code UTF-16 dont la valeur est *nnnn* en hexadécimal. **Remarque :**  La séquence d’échappement des caractères de Perl 5 utilisée pour spécifier Unicode n’est pas prise en charge par .NET. La séquence d'échappement des caractères de Perl 5 a la forme `\x{`*####*`…}`, où *####*`…` est une série de chiffres hexadécimaux. Utilisez à la place `\u`*nnnn*.|  
 |`\`|Quand ce caractère d'échappement est suivi d'un caractère non reconnu comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` correspond à un astérisque (*) et est identique à `\x2A`.|  
   
 ## <a name="an-example"></a>Exemple  

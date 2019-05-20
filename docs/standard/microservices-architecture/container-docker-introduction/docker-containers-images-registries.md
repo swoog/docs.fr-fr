@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1ab5f2f4172caf799b9a63c1ae881a66f8805e20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130232"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659659"
 ---
 # <a name="docker-containers-images-and-registries"></a>Conteneurs, images et registres Docker
 
@@ -29,9 +29,9 @@ Placer des images dans un registre vous permet de stocker les bits d’applicati
 
 L’utilisation de registres d’images privés, hébergés localement ou dans le cloud, est recommandée dans les situations suivantes :
 
--   Vous ne voulez pas partager vos images publiquement pour des raisons de confidentialité.
+- Vous ne voulez pas partager vos images publiquement pour des raisons de confidentialité.
 
--   Vous souhaitez limiter la latence du réseau entre vos images et l’environnement de déploiement choisi. Par exemple, si votre environnement de production est le cloud Azure, vous souhaiterez probablement stocker vos images dans [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) pour réduire au maximum la latence du réseau. De la même manière, si votre environnement de production est local, vous souhaiterez peut-être disposer d’un service Docker Trusted Registry local dans le même réseau local.
+- Vous souhaitez limiter la latence du réseau entre vos images et l’environnement de déploiement choisi. Par exemple, si votre environnement de production est le cloud Azure, vous souhaiterez probablement stocker vos images dans [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) pour réduire au maximum la latence du réseau. De la même manière, si votre environnement de production est local, vous souhaiterez peut-être disposer d’un service Docker Trusted Registry local dans le même réseau local.
 
 >[!div class="step-by-step"]
 >[Précédent](docker-terminology.md)

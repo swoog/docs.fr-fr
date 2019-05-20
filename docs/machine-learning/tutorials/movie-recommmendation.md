@@ -1,21 +1,21 @@
 ---
-title: Utiliser ML.NET dans un scénario de suggestion de films
-description: Découvrez comment utiliser ML.NET dans un scénario de suggestion pour recommander des films aux utilisateurs.
+title: 'Tutoriel : Créer un système de suggestion de films'
+description: Ce tutoriel explique comment créer un système de suggestion de films à l’aide de ML.NET dans une application console .NET. Les étapes de ce tutoriel utilisent le langage C# et Visual Studio 2019.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612275"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063368"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutoriel : Créer un système de suggestion de films avec ML.NET
 
-Cet exemple de tutoriel illustre l’utilisation de ML.NET pour créer un système de suggestion de films par le biais d’une application console .NET Core à l’aide de C# dans Visual Studio 2017.
+Ce tutoriel explique comment créer un système de suggestion de films à l’aide de ML.NET dans une application console .NET. Les étapes de ce tutoriel utilisent le langage C# et Visual Studio 2019.
 
 Dans ce didacticiel, vous apprendrez à :
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ Dans ce didacticiel, vous apprendrez à :
 > * Créer et entraîner un modèle.
 > * Évaluer un modèle.
 > * Déployer et consommer un modèle.
-
-> [!NOTE]
-> Cette rubrique fait référence à ML.NET, actuellement en préversion, et les ressources sont susceptibles d’être modifiées. Pour plus d’informations, consultez [l’introduction à ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Ce tutoriel et l’exemple associé utilisent actuellement **ML.NET version 0.11**. Pour plus d’informations, voir les notes de publication dans le référentiel GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Vous trouverez le code source de ce tutoriel dans le référentiel [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
@@ -61,10 +56,7 @@ Il existe plusieurs façons d’aborder les problèmes de suggestion, par exempl
 
 3. Installez les packages NuGet **Microsoft.ML** et **Microsoft.ML.Recommender** :
 
-    Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Gérer les packages NuGet**. Choisissez « nuget.org » comme Source du package, sélectionnez l’onglet **Parcourir**, recherchez **Microsoft.ML**, sélectionnez ce package dans la liste, puis sélectionnez le bouton **Installer**. Cliquez sur le bouton **OK** dans la boîte de dialogue **Aperçu des modifications**, puis sur le bouton **J’accepte** dans la boîte de dialogue **Acceptation de la licence** si vous acceptez les termes du contrat de licence pour les packages répertoriés. Répétez ces étapes pour **Microsoft.ML.Recommender**.
-
-    > [!NOTE]
-    > Ce tutoriel utilise **Microsoft.ML v0.11.0** et **Microsoft.ML.Recommender v0.11.0**.
+    Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Gérer les packages NuGet**. Choisissez « nuget.org » comme Source du package, sélectionnez l’onglet **Parcourir**, recherchez **Microsoft.ML**, sélectionnez le package **1.0.0** dans la liste, puis sélectionnez le bouton **Installer**. Cliquez sur le bouton **OK** dans la boîte de dialogue **Aperçu des modifications**, puis sur le bouton **J’accepte** dans la boîte de dialogue **Acceptation de la licence** si vous acceptez les termes du contrat de licence pour les packages répertoriés. Répétez ces étapes pour **Microsoft.ML.Recommender v0.12.0**.
 
 4. Ajoutez les instructions `using` suivantes en tête de votre fichier *Program.cs* :
 
@@ -175,7 +167,7 @@ Ajoutez les deux lignes de code suivantes dans la méthode `Main()` pour appeler
 
 ## <a name="build-and-train-your-model"></a>Créer et entraîner votre modèle
 
-Il existe trois principaux concepts dans ML.NET : les [données](../basic-concepts-model-training-in-mldotnet.md#data), les [transformateurs](../basic-concepts-model-training-in-mldotnet.md#transformer) et les [estimateurs](../basic-concepts-model-training-in-mldotnet.md#estimator).
+Il existe trois principaux concepts dans ML.NET : les [données](../resources/glossary.md#data), les [transformateurs](../resources/glossary.md#transformer) et les [estimateurs](../resources/glossary.md#estimator).
 
 Les algorithmes d’entraînement de machine Learning nécessitent des données dans un certain format. Les `Transformers` servent à transformer les données tabulaires dans un format compatible.
 
