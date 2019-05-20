@@ -17,4 +17,4 @@ ms.locfileid: "65632327"
 ---
 # <a name="net-api-browser"></a>Navigateur d’API .NET
 
-Bienvenue dans le Navigateur d’API .NET, votre centre d’achat pour toutes les API .NET de Microsoft. Pour rechercher une API managée, indiquez-la dans la zone ci-dessous. Vous trouverez plus d’informations sur le Navigateur d’API [dans notre billet de blog](https://aka.ms/apibrowser). Si vous avez des commentaires, créez un problème dans le [dépôt MicrosoftDocs/feedback sur GitHub](https://github.com/MicrosoftDocs/feedback/issues).
+Bienvenue dans le Navigateur d’API .NET, votre portail pour toutes les API .NET de Microsoft. Pour rechercher une API managée, indiquez-la dans la zone ci-dessous. Vous trouverez plus d’informations sur le Navigateur d’API [dans notre billet de blog](https://aka.ms/apibrowser). Si vous avez des commentaires, créez un problème dans le [dépôt MicrosoftDocs/feedback sur GitHub](https://github.com/MicrosoftDocs/feedback/issues).

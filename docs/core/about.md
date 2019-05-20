@@ -32,7 +32,7 @@ Vous pouvez utiliser les langages C#, Visual Basic et F# pour écrire des applic
 
 - Types primitifs, comme [bool](../csharp/language-reference/keywords/bool.md) et [int](../csharp/language-reference/keywords/int.md).
 - Collections, comme <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> et <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
-- Types d’utilitaire, comme <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> et <xref:System.IO.FileStream?displayProperty=nameWithType>.
+- Types d’utilitaires, comme <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> et <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Types de données, comme <xref:System.Data.DataSet?displayProperty=nameWithType> et [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
 - Types hautes performances, comme <xref:System.Numerics.Vector?displayProperty=nameWithType> et [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
