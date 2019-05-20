@@ -6,38 +6,233 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 12/31/2018
-ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 05/06/2019
+ms.openlocfilehash: 8d6ff6bc55384281119600f2323212441c1815e9
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611781"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452478"
 ---
-# <a name="whats-new-in-net-core-30-preview-2"></a><span data-ttu-id="e6e1a-103">Nouveautés de .NET Core 3.0 (Preview 2)</span><span class="sxs-lookup"><span data-stu-id="e6e1a-103">What's new in .NET Core 3.0 (Preview 2)</span></span>
+# <a name="whats-new-in-net-core-30-preview-5"></a><span data-ttu-id="6dc76-103">Nouveautés de .NET Core 3.0 (Preview 5)</span><span class="sxs-lookup"><span data-stu-id="6dc76-103">What's new in .NET Core 3.0 (Preview 5)</span></span>
 
-<span data-ttu-id="e6e1a-104">Cet article décrit les nouveautés de .NET Core 3.0 (Preview 2).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-104">This article describes what is new in .NET Core 3.0 (preview 2).</span></span> <span data-ttu-id="e6e1a-105">Une des principales améliorations est la prise en charge des applications de bureau Windows (Windows uniquement).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-105">One of the biggest enhancements is support for Windows desktop applications (Windows only).</span></span> <span data-ttu-id="e6e1a-106">En utilisant un composant du SDK .NET Core 3.0 appelé Windows Desktop, vous pouvez porter vos applications Windows Forms et Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-106">By utilizing a .NET Core 3.0 SDK component called Windows Desktop, you can port your Windows Forms and Windows Presentation Foundation (WPF) applications.</span></span> <span data-ttu-id="e6e1a-107">Pour être clair, le composant Windows Desktop est pris en charge et inclus seulement sur Windows.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-107">To be clear, the Windows Desktop component is only supported and included on Windows.</span></span> <span data-ttu-id="e6e1a-108">Pour plus d'informations, consultez la section [Bureau Windows](#windows-desktop) ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-108">For more information, see the section [Windows desktop](#windows-desktop) below.</span></span>
+<span data-ttu-id="6dc76-104">Cet article décrit les nouveautés de .NET Core 3.0 (jusqu’à Preview 5).</span><span class="sxs-lookup"><span data-stu-id="6dc76-104">This article describes what is new in .NET Core 3.0 (through preview 5).</span></span> <span data-ttu-id="6dc76-105">Une des principales améliorations est la prise en charge des applications de bureau Windows (Windows uniquement).</span><span class="sxs-lookup"><span data-stu-id="6dc76-105">One of the biggest enhancements is support for Windows desktop applications (Windows only).</span></span> <span data-ttu-id="6dc76-106">En utilisant le composant du SDK .NET Core 3.0 Windows Desktop, vous pouvez porter vos applications Windows Forms et Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="6dc76-106">By using the .NET Core 3.0 SDK component Windows Desktop, you can port your Windows Forms and Windows Presentation Foundation (WPF) applications.</span></span> <span data-ttu-id="6dc76-107">Pour être clair, le composant Windows Desktop est pris en charge et inclus seulement sur Windows.</span><span class="sxs-lookup"><span data-stu-id="6dc76-107">To be clear, the Windows Desktop component is only supported and included on Windows.</span></span> <span data-ttu-id="6dc76-108">Pour plus d’informations, consultez la section [Bureau Windows](#windows-desktop) plus loin dans cet article.</span><span class="sxs-lookup"><span data-stu-id="6dc76-108">For more information, see the [Windows desktop](#windows-desktop) section later in this article.</span></span>
 
-<span data-ttu-id="e6e1a-109">.NET Core 3.0 prend en charge C# 8.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-109">.NET Core 3.0 adds support for C# 8.0.</span></span>
+<span data-ttu-id="6dc76-109">.NET Core 3.0 prend en charge C# 8.0.</span><span class="sxs-lookup"><span data-stu-id="6dc76-109">.NET Core 3.0 adds support for C# 8.0.</span></span> <span data-ttu-id="6dc76-110">Nous vous recommandons vivement d’utiliser la dernière version de Visual Studio 2019 Update 1 Preview ou VSCode avec l’extension OmniSharp.</span><span class="sxs-lookup"><span data-stu-id="6dc76-110">It's highly recommended that you use the latest release of Visual Studio 2019 Update 1 Preview or VSCode with the OmniSharp extension.</span></span>
 
-<span data-ttu-id="e6e1a-110">[Téléchargez et commencez à utiliser .NET Core 3.0 Preview 2](https://aka.ms/netcore3download) dès maintenant sur Windows, Mac et Linux.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-110">[Download and get started with .NET Core 3.0 Preview 2](https://aka.ms/netcore3download) right now on Windows, Mac and Linux.</span></span> <span data-ttu-id="e6e1a-111">Vous pouvez consulter les détails complets de la version dans les [notes de publication de .NET Core 3.0 Preview 2](https://aka.ms/netcore3releasenotes).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-111">You can see complete details of the release in the [.NET Core 3.0 Preview 2 release notes](https://aka.ms/netcore3releasenotes).</span></span>
+<span data-ttu-id="6dc76-111">[Téléchargez et commencez à utiliser .NET Core 3.0 Preview 5](https://aka.ms/netcore3download) dès maintenant sur Windows, Mac et Linux.</span><span class="sxs-lookup"><span data-stu-id="6dc76-111">[Download and get started with .NET Core 3.0 Preview 5](https://aka.ms/netcore3download) right now on Windows, Mac, and Linux.</span></span>
 
-<span data-ttu-id="e6e1a-112">Pour plus d’informations sur les caractéristiques de chaque version, consultez les annonces suivantes :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-112">For more information about what was released with each version, see the following announcements:</span></span>
+<span data-ttu-id="6dc76-112">Pour plus d’informations sur chaque préversion, consultez les annonces suivantes :</span><span class="sxs-lookup"><span data-stu-id="6dc76-112">For more information about each preview release, see the following announcements:</span></span>
 
-- [<span data-ttu-id="e6e1a-113">Annonce de .NET Core 3.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="e6e1a-113">.NET Core 3.0 Preview 1 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [<span data-ttu-id="e6e1a-114">Annonce de .NET Core 3.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="e6e1a-114">.NET Core 3.0 Preview 2 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [<span data-ttu-id="6dc76-113">Annonce de .NET Core 3.0 Preview 5</span><span class="sxs-lookup"><span data-stu-id="6dc76-113">.NET Core 3.0 Preview 5 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
+- [<span data-ttu-id="6dc76-114">Annonce de .NET Core 3.0 Preview 4</span><span class="sxs-lookup"><span data-stu-id="6dc76-114">.NET Core 3.0 Preview 4 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
+- [<span data-ttu-id="6dc76-115">Annonce de .NET Core 3.0 Preview 3</span><span class="sxs-lookup"><span data-stu-id="6dc76-115">.NET Core 3.0 Preview 3 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
+- [<span data-ttu-id="6dc76-116">Annonce de .NET Core 3.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="6dc76-116">.NET Core 3.0 Preview 2 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [<span data-ttu-id="6dc76-117">Annonce de .NET Core 3.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="6dc76-117">.NET Core 3.0 Preview 1 announcement</span></span>](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
 
-## <a name="c-8"></a><span data-ttu-id="e6e1a-115">C# 8</span><span class="sxs-lookup"><span data-stu-id="e6e1a-115">C# 8</span></span>
+## <a name="net-core-sdk-windows-installer"></a><span data-ttu-id="6dc76-118">Windows Installer pour le kit SDK .NET Core</span><span class="sxs-lookup"><span data-stu-id="6dc76-118">.NET Core SDK Windows Installer</span></span>
 
-<span data-ttu-id="e6e1a-116">.NET Core 3.0 prend en charge C# 8 et, à compter de .NET Core 3.0 Preview 2, prend en charge ces nouvelles fonctionnalités.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-116">.NET Core 3.0 supports C# 8, and as of .NET Core 3.0 Preview 2, supports these new features.</span></span> <span data-ttu-id="e6e1a-117">Pour plus d’informations sur les fonctionnalités de C# 8.0, consultez les billets de blog suivants :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-117">For more information about C# 8.0 features, see the following blog posts:</span></span>
+<span data-ttu-id="6dc76-119">Le programme d’installation MSI pour Windows a changé à compter de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="6dc76-119">The MSI installer for Windows has changed starting with .NET Core 3.0.</span></span> <span data-ttu-id="6dc76-120">Les programmes d’installation du SDK mettent désormais à niveau les versions des plages de fonctionnalités du SDK.</span><span class="sxs-lookup"><span data-stu-id="6dc76-120">The SDK installers will now upgrade SDK feature-band releases in place.</span></span> <span data-ttu-id="6dc76-121">Les plages de fonctionnalités sont définies dans les groupes *hundreds* de la section *patch* du numéro de version.</span><span class="sxs-lookup"><span data-stu-id="6dc76-121">Feature bands are defined in the *hundreds* groups in the *patch* section of the version number.</span></span> <span data-ttu-id="6dc76-122">Par exemple, **3.0.\*101**\* et **3.0.\*201**\* sont des versions dans deux plages de fonctionnalités différentes, tandis que **3.0.\*101**\* et **3.0.\*199**\* se trouvent dans la même plages de fonctionnalités.</span><span class="sxs-lookup"><span data-stu-id="6dc76-122">For example, **3.0.\*101**\* and **3.0.\*201**\* are versions in two different feature bands while **3.0.\*101**\* and **3.0.\*199**\* are in the same feature band.</span></span> <span data-ttu-id="6dc76-123">En outre, quand SDK .NET Core **3.0.\*101**\* est installé, SDK .NET Core **3.0.\*100**\* est supprimé de la machine s’il existe.</span><span class="sxs-lookup"><span data-stu-id="6dc76-123">And, when .NET Core SDK **3.0.\*101**\* is installed, .NET Core SDK **3.0.\*100**\* will be removed from the machine if it exists.</span></span> <span data-ttu-id="6dc76-124">Quand SDK .NET Core **3.0.\*200**\* est installé sur la même machine, SDK .NET Core **3.0.\*101**\* n’est pas supprimé.</span><span class="sxs-lookup"><span data-stu-id="6dc76-124">When .NET Core SDK **3.0.\*200**\* is installed on the same machine, .NET Core SDK **3.0.\*101**\* won't be removed.</span></span>
 
-- [<span data-ttu-id="e6e1a-118">Do more with patterns in C# 8.0</span><span class="sxs-lookup"><span data-stu-id="e6e1a-118">Do more with patterns in C# 8.0</span></span>](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [<span data-ttu-id="e6e1a-119">Take C# 8.0 for a spin</span><span class="sxs-lookup"><span data-stu-id="e6e1a-119">Take C# 8.0 for a spin</span></span>](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [<span data-ttu-id="e6e1a-120">Building C# 8.0</span><span class="sxs-lookup"><span data-stu-id="e6e1a-120">Building C# 8.0</span></span>](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
+<span data-ttu-id="6dc76-125">Pour plus d’informations sur la gestion des versions, consultez [Vue d’ensemble de la gestion des versions .NET Core](../versions/index.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-125">For more information about versioning, see [Overview of how .NET Core is versioned](../versions/index.md).</span></span>
 
-### <a name="ranges-and-indices"></a><span data-ttu-id="e6e1a-121">Plages et index</span><span class="sxs-lookup"><span data-stu-id="e6e1a-121">Ranges and indices</span></span>
+## <a name="c-80-preview"></a><span data-ttu-id="6dc76-126">C# 8.0 Preview</span><span class="sxs-lookup"><span data-stu-id="6dc76-126">C# 8.0 preview</span></span>
 
-<span data-ttu-id="e6e1a-122">Le nouveau type `Index` peut être utilisé pour l’indexation.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-122">The new `Index` type can be used for indexing.</span></span> <span data-ttu-id="e6e1a-123">Vous pouvez en créer un à partir d’un `int` qui compte à partir du début, ou avec un opérateur (C#) `^` préfixé qui compte à partir de la fin :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-123">You can create one from an `int` that counts from the beginning, or with a prefix `^` operator (C#) that counts from the end:</span></span>
+<span data-ttu-id="6dc76-127">.NET Core 3.0 prend en charge C# 8 Preview.</span><span class="sxs-lookup"><span data-stu-id="6dc76-127">.NET Core 3.0 supports C# 8 preview.</span></span> <span data-ttu-id="6dc76-128">Pour plus d’informations sur les fonctionnalités de C# 8.0, consultez [Nouveautés de C# 8.0](../../csharp/whats-new/csharp-8.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-128">For more information about C# 8.0 features, see [What's new in C# 8.0](../../csharp/whats-new/csharp-8.md).</span></span>
+
+## <a name="net-standard-21"></a><span data-ttu-id="6dc76-129">.NET Standard 2.1</span><span class="sxs-lookup"><span data-stu-id="6dc76-129">.NET Standard 2.1</span></span>
+
+<span data-ttu-id="6dc76-130">Bien que .NET Core 3.0 prenne en charge **.NET Standard 2.1**, le modèle `dotnet new classlib` par défaut génère un projet qui cible **.NET Standard 2.0**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-130">Even though .NET Core 3.0 supports **.NET Standard 2.1**, the default `dotnet new classlib` template generates a project that targets **.NET Standard 2.0**.</span></span> <span data-ttu-id="6dc76-131">Pour cibler **.NET Standard 2.1**, modifiez votre fichier projet et définissez la propriété `TargetFramework` sur `netstandard2.1` :</span><span class="sxs-lookup"><span data-stu-id="6dc76-131">To target **.NET Standard 2.1**, edit your project file and change the `TargetFramework` property to `netstandard2.1`:</span></span>
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+ 
+</Project>
+```
+
+<span data-ttu-id="6dc76-132">Si vous utilisez Visual Studio, vous avez besoin de Visual Studio 2019, car Visual Studio 2017 ne prend pas en charge **.NET Standard 2.1** ou **.NET Core 3.0**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-132">If you're using Visual Studio, you need Visual Studio 2019, as Visual Studio 2017 doesn't support **.NET Standard 2.1** or **.NET Core 3.0**.</span></span> <span data-ttu-id="6dc76-133">Nous vous recommandons vivement d’utiliser [Visual Studio 2019 Update 1 Preview](https://visualstudio.microsoft.com/vs/preview/).</span><span class="sxs-lookup"><span data-stu-id="6dc76-133">We highly recommend that you use [Visual Studio 2019 Update 1 Preview](https://visualstudio.microsoft.com/vs/preview/).</span></span>
+
+## <a name="improved-net-core-version-apis"></a><span data-ttu-id="6dc76-134">API de version de .NET Core améliorées</span><span class="sxs-lookup"><span data-stu-id="6dc76-134">Improved .NET Core Version APIs</span></span>
+
+<span data-ttu-id="6dc76-135">À compter de .NET Core 3.0, les API de version fournies avec .NET Core retournent les informations souhaitées.</span><span class="sxs-lookup"><span data-stu-id="6dc76-135">Starting with .NET Core 3.0, the version APIs provided with .NET Core now return the information you expect.</span></span> <span data-ttu-id="6dc76-136">Par exemple :</span><span class="sxs-lookup"><span data-stu-id="6dc76-136">For example:</span></span>
+
+```csharp
+System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
+
+// Old result
+//   Environment.Version: 4.0.30319.42000
+//
+// New result
+//   Environment.Version: 3.0.0
+```
+
+```csharp
+System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}");
+
+// Old result
+//   RuntimeInformation.FrameworkDescription: .NET Core 4.6.27415.71
+//
+// New result
+//   RuntimeInformation.FrameworkDescription: .NET Core 3.0.0-preview4-27615-11
+```
+
+> [!WARNING]
+> <span data-ttu-id="6dc76-137">Modification avec rupture.</span><span class="sxs-lookup"><span data-stu-id="6dc76-137">Breaking change.</span></span> <span data-ttu-id="6dc76-138">Il s’agit techniquement d’une modification avec rupture, car le schéma de gestion de version a changé.</span><span class="sxs-lookup"><span data-stu-id="6dc76-138">This is technically a breaking change because the versioning scheme has changed.</span></span>
+
+## <a name="net-platform-dependent-intrinsics"></a><span data-ttu-id="6dc76-139">Intrinsèques dépendant de la plateforme .NET</span><span class="sxs-lookup"><span data-stu-id="6dc76-139">.NET Platform-Dependent Intrinsics</span></span>
+
+<span data-ttu-id="6dc76-140">Des API ont été ajoutées, qui permettent d’accéder à certaines instructions de l’UC orientées performances, comme les ensembles **SIMD** ou les ensembles d’**instructions de manipulation de bits**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-140">APIs have been added that allow access to certain perf-oriented CPU instructions, such as the **SIMD** or **Bit Manipulation instruction** sets.</span></span> <span data-ttu-id="6dc76-141">Ces instructions peuvent améliorer les performances dans certains scénarios de matière significative, comme le traitement efficace de données en parallèle.</span><span class="sxs-lookup"><span data-stu-id="6dc76-141">These instructions can help achieve significant performance improvements in certain scenarios, such as processing data efficiently in parallel.</span></span> 
+
+<span data-ttu-id="6dc76-142">Le cas échéant, les bibliothèques .NET ont commencé à utiliser ces instructions pour améliorer les performances.</span><span class="sxs-lookup"><span data-stu-id="6dc76-142">Where appropriate, the .NET libraries have begun using these instructions to improve performance.</span></span>
+
+<span data-ttu-id="6dc76-143">Pour plus d’informations, consultez [Intrinsèques dépendant de la plateforme .NET](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-143">For more information, see [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).</span></span>
+
+## <a name="default-executables"></a><span data-ttu-id="6dc76-144">Exécutables par défaut</span><span class="sxs-lookup"><span data-stu-id="6dc76-144">Default executables</span></span>
+
+<span data-ttu-id="6dc76-145">.NET Core génère désormais des [exécutables dépendant du framework](../deploying/index.md#framework-dependent-executables-fde) par défaut.</span><span class="sxs-lookup"><span data-stu-id="6dc76-145">.NET Core now builds [framework-dependent executables](../deploying/index.md#framework-dependent-executables-fde) by default.</span></span> <span data-ttu-id="6dc76-146">Ce comportement est nouveau pour les applications qui utilisent une version .NET Core installée de façon globale.</span><span class="sxs-lookup"><span data-stu-id="6dc76-146">This behavior is new for applications that use a globally installed version of .NET Core.</span></span> <span data-ttu-id="6dc76-147">Auparavant, seuls les [déploiements autonomes](../deploying/index.md#self-contained-deployments-scd) produisaient un exécutable.</span><span class="sxs-lookup"><span data-stu-id="6dc76-147">Previously, only [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) would produce an executable.</span></span>
+
+<span data-ttu-id="6dc76-148">Lors de l’étape `dotnet build` ou `dotnet publish`, un exécutable est créé, qui correspond à l’environnement et à la plateforme du Kit de développement que vous utilisez.</span><span class="sxs-lookup"><span data-stu-id="6dc76-148">During `dotnet build` or `dotnet publish`, an executable is created that matches the environment and platform of the SDK you're using.</span></span> <span data-ttu-id="6dc76-149">Vous pouvez obtenir le même résultat avec ces exécutables, comme vous le feriez avec d’autres exécutables natifs comme :</span><span class="sxs-lookup"><span data-stu-id="6dc76-149">You can expect the same things with these executables as you would other native executables, such as:</span></span>
+
+* <span data-ttu-id="6dc76-150">Vous pouvez double-cliquer sur l’exécutable.</span><span class="sxs-lookup"><span data-stu-id="6dc76-150">You can double-click on the executable.</span></span>
+* <span data-ttu-id="6dc76-151">Vous pouvez lancer l’application directement à partir d’une invite de commandes, par exemple `myapp.exe` sous Windows, et `./myapp` sous Linux et macOS.</span><span class="sxs-lookup"><span data-stu-id="6dc76-151">You can launch the application from a command prompt directly, such as `myapp.exe` on Windows, and `./myapp` on Linux and macOS.</span></span>
+
+## <a name="single-file-executables"></a><span data-ttu-id="6dc76-152">Exécutable monofichier</span><span class="sxs-lookup"><span data-stu-id="6dc76-152">Single-file executables</span></span>
+
+<span data-ttu-id="6dc76-153">La commande `dotnet publish` prend en charge l’empaquetage de votre application dans un exécutable monofichier spécifique de la plateforme.</span><span class="sxs-lookup"><span data-stu-id="6dc76-153">The `dotnet publish` command supports packaging your app into a platform-specific single-file executable.</span></span> <span data-ttu-id="6dc76-154">L’exécutable est auto-extractible et contient toutes les dépendances (y compris natives) nécessaires à l’exécution de votre application.</span><span class="sxs-lookup"><span data-stu-id="6dc76-154">The executable is self-extracting and contains all dependencies (including native) that are required to run your app.</span></span> <span data-ttu-id="6dc76-155">Lors de la première exécution de l’application, celle-ci est extraite d’un répertoire basé sur le nom de l’application et l’identificateur de la build.</span><span class="sxs-lookup"><span data-stu-id="6dc76-155">When the app is first run, the application is extracted to a directory based on the app name and build identifier.</span></span> <span data-ttu-id="6dc76-156">Le démarrage est plus rapide quand l’application est réexécutée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-156">Startup is faster when the application is run again.</span></span> <span data-ttu-id="6dc76-157">L’application n’a pas besoin de s’extraire elle-même une deuxième fois, sauf si une nouvelle version a été utilisée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-157">The application doesn't need to extract itself a second time unless a new version was used.</span></span>
+
+<span data-ttu-id="6dc76-158">Pour publier un exécutable monofichier, définissez `PublishSingleFile` dans votre projet ou sur la ligne de commande avec la commande `dotnet publish` :</span><span class="sxs-lookup"><span data-stu-id="6dc76-158">To publish a single-file executable, set the `PublishSingleFile` in your project or on the command line with the `dotnet publish` command:</span></span>
+
+```console
+dotnet publish -r win10-x64 /p:PublishSingleFile=true
+```
+
+<span data-ttu-id="6dc76-159">Pour plus d’informations sur la publication monofichier, consultez le [document conceptuel sur l’outil de regroupement monofichier](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-159">For more information about single-file publishing, see the [single-file bundler design document](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).</span></span>
+
+## <a name="tiered-compilation"></a><span data-ttu-id="6dc76-160">Compilation hiérarchisée</span><span class="sxs-lookup"><span data-stu-id="6dc76-160">Tiered compilation</span></span>
+
+<span data-ttu-id="6dc76-161">La [compilation hiérarchisée](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) est activée par défaut avec .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="6dc76-161">[Tiered compilation](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) is on by default with .NET Core 3.0.</span></span> <span data-ttu-id="6dc76-162">Cette fonctionnalité permet au runtime d’utiliser de manière plus adaptative le compilateur juste-à-temps (Just-In-Time ou JIT) pour obtenir de meilleures performances.</span><span class="sxs-lookup"><span data-stu-id="6dc76-162">This feature enables the runtime to more adaptively use the Just-In-Time (JIT) compiler to get better performance.</span></span>
+
+<span data-ttu-id="6dc76-163">Le principal avantage de la compilation hiérarchisée est d’autoriser les méthode (re-) JIT avec du code plus lent mais plus rapide à produire ou avec du code de meilleure qualité mais plus lent à produire.</span><span class="sxs-lookup"><span data-stu-id="6dc76-163">The main benefit of TC is to enable (re-)jitting methods with slower-but-faster to produce code or higher-quality-but-slower to produce code.</span></span> <span data-ttu-id="6dc76-164">Cela permet d’améliorer les performances d’une application quand elle passe par les différents stades de l’exécution, du démarrage à l’état stable.</span><span class="sxs-lookup"><span data-stu-id="6dc76-164">This helps increase performance of an application as it goes through various stages of execution, from startup through steady-state.</span></span> <span data-ttu-id="6dc76-165">Ceci contraste avec l’approche de la compilation non hiérarchisée, où chaque méthode est compilée d’une seule manière (la même que le niveau de qualité supérieure), qui privilégie la stabilité de l’état au détriment des performances au démarrage.</span><span class="sxs-lookup"><span data-stu-id="6dc76-165">This contrasts with the non-TC approach, where every method is compiled a single way (the same as the high-quality tier), which is biased to steady-state over startup performance.</span></span>
+
+<span data-ttu-id="6dc76-166">Pour activer Quick JIT (code JIT de niveau 0), utilisez ce paramétrage dans votre fichier projet :</span><span class="sxs-lookup"><span data-stu-id="6dc76-166">To enable Quick JIT (tier 0 jitted code), use this setting in your project file:</span></span>
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+</PropertyGroup>
+```
+
+<span data-ttu-id="6dc76-167">Pour désactiver complètement la compilation hiérarchisée, utilisez ce paramétrage dans votre fichier projet :</span><span class="sxs-lookup"><span data-stu-id="6dc76-167">To disable TC completely, use this setting in your project file:</span></span>
+
+```xml
+<TieredCompilation>false</TieredCompilation>
+```
+
+## <a name="build-copies-dependencies"></a><span data-ttu-id="6dc76-168">Dépendances de copies de build</span><span class="sxs-lookup"><span data-stu-id="6dc76-168">Build copies dependencies</span></span>
+
+<span data-ttu-id="6dc76-169">La commande `dotnet build` copie maintenant les dépendances NuGet pour votre application à partir du cache NuGet vers le dossier de sortie de build.</span><span class="sxs-lookup"><span data-stu-id="6dc76-169">The `dotnet build` command now copies NuGet dependencies for your application from the NuGet cache to the build output folder.</span></span> <span data-ttu-id="6dc76-170">Auparavant, les dépendances étaient copiées uniquement dans le cadre de `dotnet publish`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-170">Previously, dependencies were only copied as part of `dotnet publish`.</span></span>
+
+<span data-ttu-id="6dc76-171">Certaines opérations, par exemple la liaison et la publication d’une page de type Razor, nécessiteront toujours une publication.</span><span class="sxs-lookup"><span data-stu-id="6dc76-171">There are some operations, like linking and razor page publishing that will still require publishing.</span></span>
+
+## <a name="local-tools"></a><span data-ttu-id="6dc76-172">Outils locaux</span><span class="sxs-lookup"><span data-stu-id="6dc76-172">Local tools</span></span>
+
+<span data-ttu-id="6dc76-173">.NET Core 3.0 introduit des outils locaux.</span><span class="sxs-lookup"><span data-stu-id="6dc76-173">.NET Core 3.0 introduces local tools.</span></span> <span data-ttu-id="6dc76-174">Les outils locaux sont similaires aux [outils globaux](../tools/global-tools.md), mais ils sont associés à un emplacement particulier sur le disque.</span><span class="sxs-lookup"><span data-stu-id="6dc76-174">Local tools are similar to [global tools](../tools/global-tools.md) but are associated with a particular location on disk.</span></span> <span data-ttu-id="6dc76-175">Les outils locaux ne sont pas disponibles globalement et sont distribués en tant que packages NuGet.</span><span class="sxs-lookup"><span data-stu-id="6dc76-175">Local tools aren't available globally and are distributed as NuGet packages.</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="6dc76-176">Si vous avez essayé des outils locaux dans .NET Core 3.0 Preview 1, par exemple pour exécuter `dotnet tool restore` ou `dotnet tool install`, supprimez le dossier de cache des outils locaux.</span><span class="sxs-lookup"><span data-stu-id="6dc76-176">If you tried local tools in .NET Core 3.0 Preview 1, such as running `dotnet tool restore` or `dotnet tool install`, delete the local tools cache folder.</span></span> <span data-ttu-id="6dc76-177">Sinon, les outils locaux ne fonctionneront sur aucune nouvelle version.</span><span class="sxs-lookup"><span data-stu-id="6dc76-177">Otherwise, local tools won't work on any newer release.</span></span> <span data-ttu-id="6dc76-178">Ce dossier se trouve à ces emplacements :</span><span class="sxs-lookup"><span data-stu-id="6dc76-178">This folder is located at:</span></span>
+>
+> <span data-ttu-id="6dc76-179">Sur macOS, Linux : `rm -r $HOME/.dotnet/toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="6dc76-179">On macOS, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span></span>
+>
+> <span data-ttu-id="6dc76-180">Sur Windows : `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="6dc76-180">On Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span></span>
+
+<span data-ttu-id="6dc76-181">Les outils locaux s’appuient sur un nom de fichier manifeste `dotnet-tools.json` dans votre répertoire actuel.</span><span class="sxs-lookup"><span data-stu-id="6dc76-181">Local tools rely on a manifest file name `dotnet-tools.json` in your current directory.</span></span> <span data-ttu-id="6dc76-182">Ce fichier manifeste définit les outils qui doivent être disponibles dans ce dossier et sous-celui-ci.</span><span class="sxs-lookup"><span data-stu-id="6dc76-182">This manifest file defines the tools to be available at that folder and below.</span></span> <span data-ttu-id="6dc76-183">Vous pouvez distribuer le fichier manifeste avec votre code pour que toute personne qui utilise votre code puisse restaurer et utiliser les mêmes outils.</span><span class="sxs-lookup"><span data-stu-id="6dc76-183">You can distribute the manifest file with your code to ensure that anyone who works with your code can restore and use the same tools.</span></span>
+
+<span data-ttu-id="6dc76-184">Pour les outils locaux et globaux, une version compatible du runtime est requise.</span><span class="sxs-lookup"><span data-stu-id="6dc76-184">For both global and local tools, a compatible version of the runtime is required.</span></span> <span data-ttu-id="6dc76-185">De nombreux outils actuellement sur NuGet.org ciblent le runtime .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="6dc76-185">Many tools currently on NuGet.org target .NET Core Runtime 2.1.</span></span> <span data-ttu-id="6dc76-186">Pour installer ces outils de façon locale ou globale, vous devez toujours installer le [runtime NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span><span class="sxs-lookup"><span data-stu-id="6dc76-186">To install these tools globally or locally, you would still need to install the [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span>
+
+## <a name="major-version-roll-forward"></a><span data-ttu-id="6dc76-187">Restauration par progression d’une version majeure</span><span class="sxs-lookup"><span data-stu-id="6dc76-187">Major-version Roll Forward</span></span>
+
+<span data-ttu-id="6dc76-188">.NET Core 3.0 introduit une fonctionnalité que vous pouvez choisir d’utiliser et qui permet de restaurer par progression votre application vers la dernière version majeure de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6dc76-188">.NET Core 3.0 introduces an opt-in feature that allows your app to roll forward to the latest major version of .NET Core.</span></span> <span data-ttu-id="6dc76-189">En outre, un nouveau paramètre a été ajouté pour contrôler la façon dont la restauration par progression est appliquée à votre application.</span><span class="sxs-lookup"><span data-stu-id="6dc76-189">Additionally, a new setting has been added to control how roll forward is applied to your app.</span></span> <span data-ttu-id="6dc76-190">Ce paramètre peut être configuré des façons suivantes :</span><span class="sxs-lookup"><span data-stu-id="6dc76-190">This can be configured in the following ways:</span></span>
+
+- <span data-ttu-id="6dc76-191">Propriété du fichier projet : `RollForward`</span><span class="sxs-lookup"><span data-stu-id="6dc76-191">Project file property: `RollForward`</span></span>
+- <span data-ttu-id="6dc76-192">Propriété du fichier config du runtime : `rollForward`</span><span class="sxs-lookup"><span data-stu-id="6dc76-192">Runtime configuration file property: `rollForward`</span></span>
+- <span data-ttu-id="6dc76-193">Variable d’environnement : `DOTNET_ROLL_FORWARD`</span><span class="sxs-lookup"><span data-stu-id="6dc76-193">Environment variable: `DOTNET_ROLL_FORWARD`</span></span>
+- <span data-ttu-id="6dc76-194">Argument de ligne de commande : `--roll-forward`</span><span class="sxs-lookup"><span data-stu-id="6dc76-194">Command-line argument: `--roll-forward`</span></span>
+
+<span data-ttu-id="6dc76-195">L’une des valeurs suivantes doit être spécifiée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-195">One of the following values must be specified.</span></span> <span data-ttu-id="6dc76-196">Si le paramètre est omis, **Minor** est la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="6dc76-196">If the setting is omitted, **Minor** is the default.</span></span>
+
+- <span data-ttu-id="6dc76-197">**LatestPatch**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-197">**LatestPatch**\\</span></span>
+<span data-ttu-id="6dc76-198">Restauration par progression vers la version de correctif la plus élevée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-198">Roll forward to the highest patch version.</span></span> <span data-ttu-id="6dc76-199">Cette valeur désactive la restauration par progression d’une version mineure.</span><span class="sxs-lookup"><span data-stu-id="6dc76-199">This disables minor version roll forward.</span></span>
+- <span data-ttu-id="6dc76-200">**Minor**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-200">**Minor**\\</span></span>
+<span data-ttu-id="6dc76-201">Restauration par progression vers la version mineure supérieure la plus basse, si la version mineure demandée est manquante.</span><span class="sxs-lookup"><span data-stu-id="6dc76-201">Roll forward to the lowest higher minor version, if requested minor version is missing.</span></span> <span data-ttu-id="6dc76-202">Si la version mineure demandée est présente, la stratégie **LatestPatch** est utilisée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-202">If the requested minor version is present, then the **LatestPatch** policy is used.</span></span>
+- <span data-ttu-id="6dc76-203">**Major**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-203">**Major**\\</span></span>
+<span data-ttu-id="6dc76-204">Restauration par progression vers la version majeure supérieure la plus basse, et la version mineure la plus basse, si la version majeure demandée est manquante.</span><span class="sxs-lookup"><span data-stu-id="6dc76-204">Roll forward to lowest higher major version, and lowest minor version, if requested major version is missing.</span></span> <span data-ttu-id="6dc76-205">Si la version majeure demandée est présente, la stratégie **Minor** est utilisée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-205">If the requested major version is present, then the **Minor** policy is used.</span></span>
+- <span data-ttu-id="6dc76-206">**LatestMinor**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-206">**LatestMinor**\\</span></span>
+<span data-ttu-id="6dc76-207">Restauration par progression vers la version mineure la plus élevée, si la version mineure demandée est présente.</span><span class="sxs-lookup"><span data-stu-id="6dc76-207">Roll forward to highest minor version, even if requested minor version is present.</span></span> <span data-ttu-id="6dc76-208">Conçu pour les scénarios d’hébergement de composant.</span><span class="sxs-lookup"><span data-stu-id="6dc76-208">Intended for component hosting scenarios.</span></span>
+- <span data-ttu-id="6dc76-209">**LatestMajor**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-209">**LatestMajor**\\</span></span>
+<span data-ttu-id="6dc76-210">Restauration par progression vers la version majeure la plus élevée et la version mineure la plus élevée, si la version majeure demandée est présente.</span><span class="sxs-lookup"><span data-stu-id="6dc76-210">Roll forward to highest major and highest minor version, even if requested major is present.</span></span> <span data-ttu-id="6dc76-211">Conçu pour les scénarios d’hébergement de composant.</span><span class="sxs-lookup"><span data-stu-id="6dc76-211">Intended for component hosting scenarios.</span></span>
+- <span data-ttu-id="6dc76-212">**Disable**\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-212">**Disable**\\</span></span>
+<span data-ttu-id="6dc76-213">Ne pas effectuer de restauration par progression.</span><span class="sxs-lookup"><span data-stu-id="6dc76-213">Don't roll forward.</span></span> <span data-ttu-id="6dc76-214">Lier uniquement à la version spécifiée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-214">Only bind to specified version.</span></span> <span data-ttu-id="6dc76-215">Cette stratégie n’est pas recommandée pour une utilisation générale, car elle désactive la possibilité d’effectuer une restauration par progression vers les derniers correctifs.</span><span class="sxs-lookup"><span data-stu-id="6dc76-215">This policy isn't recommended for general use because it disables the ability to roll forward to the latest patches.</span></span> <span data-ttu-id="6dc76-216">Cette valeur est recommandée uniquement à des fins de test.</span><span class="sxs-lookup"><span data-stu-id="6dc76-216">This value is only recommended for testing.</span></span>
+
+<span data-ttu-id="6dc76-217">Outre le paramètre **Disable**, tous les paramètres utilisent la version de correctif disponible la plus élevée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-217">Besides the **Disable** setting, all settings will use the highest available patch version.</span></span>
+
+## <a name="windows-desktop"></a><span data-ttu-id="6dc76-218">Bureau Windows</span><span class="sxs-lookup"><span data-stu-id="6dc76-218">Windows desktop</span></span>
+
+<span data-ttu-id="6dc76-219">.NET Core 3.0 prend en charge les applications de bureau Windows utilisant Windows Presentation Foundation (WPF) et Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6dc76-219">.NET Core 3.0 supports Windows desktop applications using Windows Presentation Foundation (WPF) and Windows Forms.</span></span> <span data-ttu-id="6dc76-220">Ces infrastructures prennent également en charge l’utilisation de contrôles modernes et le style Fluent à partir de la bibliothèque XAML de l’interface utilisateur Windows (WinUI) via des [îles XAML](/windows/uwp/xaml-platform/xaml-host-controls).</span><span class="sxs-lookup"><span data-stu-id="6dc76-220">These frameworks also support using modern controls and Fluent styling from the Windows UI XAML Library (WinUI) via [XAML islands](/windows/uwp/xaml-platform/xaml-host-controls).</span></span>
+
+<span data-ttu-id="6dc76-221">Le composant Bureau Windows fait partie du SDK .NET Core 3.0 Windows.</span><span class="sxs-lookup"><span data-stu-id="6dc76-221">The Windows Desktop component is part of the Windows .NET Core 3.0 SDK.</span></span>
+
+<span data-ttu-id="6dc76-222">Vous pouvez créer une nouvelle application WPF ou Windows Forms à l’aide des commandes `dotnet` suivantes :</span><span class="sxs-lookup"><span data-stu-id="6dc76-222">You can create a new WPF or Windows Forms app with the following `dotnet` commands:</span></span>
+
+```console
+dotnet new wpf
+dotnet new winforms
+```
+
+<span data-ttu-id="6dc76-223">Visual Studio 2019 ajoute des modèles **Nouveau projet** pour Windows Forms et WPF .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="6dc76-223">Visual Studio 2019 adds **New Project** templates for .NET Core 3.0 Windows Forms and WPF.</span></span>
+
+<span data-ttu-id="6dc76-224">Pour plus d’informations sur la façon de porter une application .NET Framework existante, consultez [Porter des projets WPF](../porting/wpf.md) et [Porter des projets Windows Forms](../porting/winforms.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-224">For more information about how to port an existing .NET Framework application, see [Port WPF projects](../porting/wpf.md) and [Port Windows Forms projects](../porting/winforms.md).</span></span>
+
+## <a name="com-callable-components---windows-desktop"></a><span data-ttu-id="6dc76-225">Composants appelables par COM : Windows Desktop</span><span class="sxs-lookup"><span data-stu-id="6dc76-225">COM-callable components - Windows Desktop</span></span>
+
+<span data-ttu-id="6dc76-226">Sur Windows, vous pouvez maintenant créer des composants gérés appelables par COM.</span><span class="sxs-lookup"><span data-stu-id="6dc76-226">On Windows, you can now create COM-callable managed components.</span></span> <span data-ttu-id="6dc76-227">Cette fonctionnalité est essentielle pour utiliser .NET Core avec les modèles de compléments COM et également pour assurer la parité avec .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6dc76-227">This capability is critical to use .NET Core with COM add-in models and also to provide parity with .NET Framework.</span></span>
+
+<span data-ttu-id="6dc76-228">Contrairement à .NET Framework, où *mscoree.dll* était utilisé comme serveur COM, .NET Core ajoute une dll de lanceur natif au répertoire *bin* quand vous générez votre composant COM.</span><span class="sxs-lookup"><span data-stu-id="6dc76-228">Unlike .NET Framework where the *mscoree.dll* was used as the COM server, .NET Core will add a native launcher dll to the *bin* directory when you build your COM component.</span></span>
+
+<span data-ttu-id="6dc76-229">Pour obtenir un exemple montrant comment créer un composant COM et le consommer, consultez la [démonstration COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).</span><span class="sxs-lookup"><span data-stu-id="6dc76-229">For an example of how to create a COM component and consume it, see the [COM Demo](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).</span></span>
+
+## <a name="msix-deployment---windows-desktop"></a><span data-ttu-id="6dc76-230">Déploiement MSIX : Windows Desktop</span><span class="sxs-lookup"><span data-stu-id="6dc76-230">MSIX Deployment - Windows Desktop</span></span>
+
+<span data-ttu-id="6dc76-231">[MSIX](https://docs.microsoft.com/windows/msix/) est un nouveau format de package d’application Windows.</span><span class="sxs-lookup"><span data-stu-id="6dc76-231">[MSIX](https://docs.microsoft.com/windows/msix/) is a new Windows application package format.</span></span> <span data-ttu-id="6dc76-232">Il peut être utilisé pour déployer des applications de poste de travail .NET Core 3.0 pour Windows 10.</span><span class="sxs-lookup"><span data-stu-id="6dc76-232">It can be used to deploy .NET Core 3.0 desktop applications to Windows 10.</span></span>
+
+<span data-ttu-id="6dc76-233">Le [projet de package d’application Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible dans Visual Studio 2019, vous permet de créer des packages MSIX avec des applications .NET Core [autonomes](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="6dc76-233">The [Windows Application Packaging Project](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), available in Visual Studio 2019, allows you to create MSIX packages with [self-contained](../deploying/index.md#self-contained-deployments-scd) .NET Core applications.</span></span>
+
+<span data-ttu-id="6dc76-234">Le fichier projet .NET Core doit spécifier les runtimes pris en charge dans la propriété `<RuntimeIdentifiers>` :</span><span class="sxs-lookup"><span data-stu-id="6dc76-234">The .NET Core project file must specify the supported runtimes in the `<RuntimeIdentifiers>` property:</span></span>
+
+```xml
+<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+```
+
+## <a name="winforms-highdpi"></a><span data-ttu-id="6dc76-235">WinForms HighDPI</span><span class="sxs-lookup"><span data-stu-id="6dc76-235">WinForms HighDPI</span></span>
+
+<span data-ttu-id="6dc76-236">Les applications Windows Forms .NET Core peuvent définir le mode de haute résolution avec <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6dc76-236">.NET Core Windows Forms applications can set High DPI mode with <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6dc76-237">La méthode `SetHighDpiMode` définit le mode de haute résolution correspondant, sauf si le paramètre a été défini par d’autres moyens, comme `App.Manifest` ou P/Invoke avant `Application.Run`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-237">The `SetHighDpiMode` method sets the corresponding High DPI mode unless the setting has been set by other means like `App.Manifest` or P/Invoke before `Application.Run`.</span></span>
+
+<span data-ttu-id="6dc76-238">Les valeurs `highDpiMode` possibles, telles qu’exprimées par l’enum <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType>, sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="6dc76-238">The possible `highDpiMode` values, as expressed by the <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> enum are:</span></span>
+
+* `DpiUnaware`
+* `SystemAware`
+* `PerMonitor`
+* `PerMonitorV2`
+* `DpiUnawareGdiScaled`
+
+<span data-ttu-id="6dc76-239">Pour plus d’informations sur les modes de haute résolution, consultez [High DPI Desktop Application Development on Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Développement d’applications de bureau haute résolution sur Windows).</span><span class="sxs-lookup"><span data-stu-id="6dc76-239">For more information about High DPI modes, see [High DPI Desktop Application Development on Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).</span></span>
+
+### <a name="ranges-and-indices"></a><span data-ttu-id="6dc76-240">Plages et index</span><span class="sxs-lookup"><span data-stu-id="6dc76-240">Ranges and indices</span></span>
+
+<span data-ttu-id="6dc76-241">Le nouveau type <xref:System.Index?displayProperty=nameWithType> peut être utilisé pour l’indexation.</span><span class="sxs-lookup"><span data-stu-id="6dc76-241">The new <xref:System.Index?displayProperty=nameWithType> type can be used for indexing.</span></span> <span data-ttu-id="6dc76-242">Vous pouvez en créer un à partir d’un `int` qui compte à partir du début, ou avec un opérateur (C#) `^` préfixé qui compte à partir de la fin :</span><span class="sxs-lookup"><span data-stu-id="6dc76-242">You can create one from an `int` that counts from the beginning, or with a prefix `^` operator (C#) that counts from the end:</span></span>
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -46,755 +241,220 @@ int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 ```
 
-<span data-ttu-id="e6e1a-124">Il existe également un type `Range`, composé de deux `Index` valeurs, une pour le début et une pour la fin, et qui peut être écrit avec une expression de plage (C#) `x..y`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-124">There is also a `Range` type, which consists of two `Index` values, one for the start and one for the end, and can be written with a `x..y` range expression (C#).</span></span> <span data-ttu-id="e6e1a-125">Vous pouvez indexer ensuite avec un `Range` afin de produire une tranche :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-125">You can then index with a `Range` in order to produce a slice:</span></span>
+<span data-ttu-id="6dc76-243">Il existe également le type <xref:System.Range?displayProperty=nameWithType>, composé de deux valeurs `Index`, une pour le début et une pour la fin, et qui peut être écrit avec une expression de plage (C#) `x..y`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-243">There's also the <xref:System.Range?displayProperty=nameWithType> type, which consists of two `Index` values, one for the start and one for the end, and can be written with a `x..y` range expression (C#).</span></span> <span data-ttu-id="6dc76-244">Vous pouvez indexer ensuite avec un `Range`, ce qui génère une tranche :</span><span class="sxs-lookup"><span data-stu-id="6dc76-244">You can then index with a `Range`, which produces a slice:</span></span>
 
 ```csharp
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-### <a name="async-streams"></a><span data-ttu-id="e6e1a-126">Flux asynchrones</span><span class="sxs-lookup"><span data-stu-id="e6e1a-126">Async streams</span></span>
+<span data-ttu-id="6dc76-245">Pour plus d’informations, consultez le [tutoriel sur les plages et les index](../../csharp/tutorials/ranges-indexes.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-245">For more information, see the [ranges and indices tutorial](../../csharp/tutorials/ranges-indexes.md).</span></span>
 
-<span data-ttu-id="e6e1a-127">Le type `IAsyncEnumerable<T>` est une nouvelle version asynchrone de `IEnumerable<T>`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-127">The `IAsyncEnumerable<T>` type is a new asynchronous version of `IEnumerable<T>`.</span></span> <span data-ttu-id="e6e1a-128">Le langage vous permet d’utiliser `await foreach` sur `IAsyncEnumerable<T>` pour consommer ses éléments, et `yield return` sur ceux-ci pour produire des éléments.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-128">The language lets you `await foreach` over `IAsyncEnumerable<T>` to consume their elements, and use `yield return` to them to produce elements.</span></span>
+### <a name="async-streams"></a><span data-ttu-id="6dc76-246">Flux asynchrones</span><span class="sxs-lookup"><span data-stu-id="6dc76-246">Async streams</span></span>
 
-<span data-ttu-id="e6e1a-129">L’exemple suivant montre la production et la consommation de flux de données asynchrones.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-129">The following example demonstrates both production and consumption of async streams.</span></span> <span data-ttu-id="e6e1a-130">L’instruction `foreach` est asynchrone et utilise elle-même `yield return` afin de produire un flux asynchrone pour les appelants.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-130">The `foreach` statement is async and itself uses `yield return` to produce an async stream for callers.</span></span> <span data-ttu-id="e6e1a-131">Ce modèle (qui utilise `yield return`) est le modèle recommandé pour produire des flux de données asynchrones.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-131">This pattern (using `yield return`) is the recommended model for producing async streams.</span></span>
+<span data-ttu-id="6dc76-247">Le type <xref:System.Collections.Generic.IAsyncEnumerable%601> est une nouvelle version asynchrone de <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="6dc76-247">The <xref:System.Collections.Generic.IAsyncEnumerable%601> type is a new asynchronous version of <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="6dc76-248">Le langage vous permet d’utiliser `await foreach` sur `IAsyncEnumerable<T>` pour consommer ses éléments, et `yield return` sur ceux-ci pour produire des éléments.</span><span class="sxs-lookup"><span data-stu-id="6dc76-248">The language lets you `await foreach` over `IAsyncEnumerable<T>` to consume their elements, and use `yield return` to them to produce elements.</span></span>
+
+<span data-ttu-id="6dc76-249">L’exemple suivant montre la production et la consommation de flux de données asynchrones.</span><span class="sxs-lookup"><span data-stu-id="6dc76-249">The following example demonstrates both production and consumption of async streams.</span></span> <span data-ttu-id="6dc76-250">L’instruction `foreach` est asynchrone et utilise elle-même `yield return` afin de produire un flux asynchrone pour les appelants.</span><span class="sxs-lookup"><span data-stu-id="6dc76-250">The `foreach` statement is async and itself uses `yield return` to produce an async stream for callers.</span></span> <span data-ttu-id="6dc76-251">Ce modèle (qui utilise `yield return`) est le modèle recommandé pour produire des flux de données asynchrones.</span><span class="sxs-lookup"><span data-stu-id="6dc76-251">This pattern (using `yield return`) is the recommended model for producing async streams.</span></span>
 
 ```csharp
 async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result;
+        if (result > 20) yield return result; 
     }
 }
 ```
 
-<span data-ttu-id="e6e1a-132">Outre la possibilité d’effectuer une opération `await foreach`, vous pouvez également créer des itérateurs asynchrones, par exemple un itérateur qui retourne un objet `IAsyncEnumerable/IAsyncEnumerator` auquel vous pouvez à la fois appliquer des opérations `await` et `yield`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-132">In addition to being able to `await foreach`, you can also create async iterators, for example, an iterator that returns an `IAsyncEnumerable/IAsyncEnumerator` that you can both `await` and `yield` in.</span></span> <span data-ttu-id="e6e1a-133">Pour les objets qui doivent être supprimés, vous pouvez utiliser `IAsyncDisposable`, qui implémentent différents types BCL, notamment `Stream` et `Timer`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-133">For objects that need to be disposed, you can use `IAsyncDisposable`, which various BCL types implement, such as `Stream` and `Timer`.</span></span>
+<span data-ttu-id="6dc76-252">Outre la possibilité d’effectuer une opération `await foreach`, vous pouvez également créer des itérateurs asynchrones, par exemple un itérateur qui retourne un objet `IAsyncEnumerable/IAsyncEnumerator` auquel vous pouvez à la fois appliquer des opérations `await` et `yield`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-252">In addition to being able to `await foreach`, you can also create async iterators, for example, an iterator that returns an `IAsyncEnumerable/IAsyncEnumerator` that you can both `await` and `yield` in.</span></span> <span data-ttu-id="6dc76-253">Pour les objets qui doivent être supprimés, vous pouvez utiliser `IAsyncDisposable`, qui implémentent différents types BCL, notamment `Stream` et `Timer`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-253">For objects that need to be disposed, you can use `IAsyncDisposable`, which various BCL types implement, such as `Stream` and `Timer`.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="e6e1a-134">Vous avez besoin de .NET Core 3.0 Preview 2 pour utiliser des flux asynchrones si vous voulez développer avec Visual Studio 2019 ou avec la dernière préversion de l’[extension C# pour Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-134">You need .NET Core 3.0 Preview 2 to use async streams if you want to develop with either Visual Studio 2019 or the latest preview of the [C# extension for Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5).</span></span> <span data-ttu-id="e6e1a-135">Si vous utilisez .NET Core 3.0 Preview 2 sur la ligne de commande, tout fonctionnera comme prévu.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-135">If you are using .NET Core 3.0 Preview 2 at the command line, then everything will work as expected.</span></span>
+<span data-ttu-id="6dc76-254">Pour plus d’informations, consultez le [tutoriel sur les flux asynchrones](../../csharp/tutorials/generate-consume-asynchronous-stream.md).</span><span class="sxs-lookup"><span data-stu-id="6dc76-254">For more information, see the [async streams tutorial](../../csharp/tutorials/generate-consume-asynchronous-stream.md).</span></span>
 
-### <a name="using-declarations"></a><span data-ttu-id="e6e1a-136">Déclarations using</span><span class="sxs-lookup"><span data-stu-id="e6e1a-136">Using Declarations</span></span>
+## <a name="ieee-floating-point-improvements"></a><span data-ttu-id="6dc76-255">Améliorations apportées à la virgule flottante IEEE</span><span class="sxs-lookup"><span data-stu-id="6dc76-255">IEEE Floating-point improvements</span></span>
 
-<span data-ttu-id="e6e1a-137">Les *déclarations using* sont une nouvelle façon de vérifier que votre objet est correctement supprimé.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-137">*Using declarations* are a new way to ensure your object is properly disposed.</span></span> <span data-ttu-id="e6e1a-138">Une *déclaration using* maintient l’objet actif tant qu’il se trouve dans l’étendue.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-138">A *using declaration* keeps the object alive while it is still in scope.</span></span> <span data-ttu-id="e6e1a-139">Une fois que l’objet se trouve en dehors de l’étendue, il est automatiquement supprimé.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-139">Once the object becomes out of scope, it is automatically disposed.</span></span> <span data-ttu-id="e6e1a-140">Ceci réduit les *instructions using* imbriquées et rend votre code plus propre.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-140">This will reduce nested *using statements* and make your code cleaner.</span></span>
+<span data-ttu-id="6dc76-256">Les API de virgule flottante sont en cours de mise à jour pour devenir conformes à la [révision 754-2008 d’IEEE](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span><span class="sxs-lookup"><span data-stu-id="6dc76-256">Floating point APIs are being updated to comply with [IEEE 754-2008 revision](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span></span> <span data-ttu-id="6dc76-257">L’objectif de ces modifications est d’exposer toutes les opérations **obligatoires** et de garantir que leur comportement est conforme à la spécification IEEE. Pour plus d’informations sur les améliorations apportées aux opérations à virgule flottante, consultez le billet de blog [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/).</span><span class="sxs-lookup"><span data-stu-id="6dc76-257">The goal of these changes is to expose all **required** operations and ensure that they're behaviorally compliant with the IEEE spec. For more information about floating-point improvements, see the [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) blog post.</span></span>
 
-```csharp
-static void Main(string[] args)
-{
-    using var options = Parse(args);
-    if (options["verbose"]) { WriteLine("Logging..."); }
+<span data-ttu-id="6dc76-258">Les correctifs de l’analyse et de la mise en forme comprennent :</span><span class="sxs-lookup"><span data-stu-id="6dc76-258">Parsing and formatting fixes include:</span></span>
 
-} // options disposed here
-```
+* <span data-ttu-id="6dc76-259">Analyse et arrondi corrects des entrées, quelle que soit leur longueur.</span><span class="sxs-lookup"><span data-stu-id="6dc76-259">Correctly parse and round inputs of any length.</span></span>
+* <span data-ttu-id="6dc76-260">Analyse et mise en forme correctes des zéros négatifs.</span><span class="sxs-lookup"><span data-stu-id="6dc76-260">Correctly parse and format negative zero.</span></span>
+* <span data-ttu-id="6dc76-261">Analyse correcte de `Infinity` et `NaN` en effectuant une vérification sans tenir compte de la casse et en autorisant un signe `+` facultatif de début là où c’est applicable.</span><span class="sxs-lookup"><span data-stu-id="6dc76-261">Correctly parse `Infinity` and `NaN` by doing a case-insensitive check and allowing an optional preceding `+` where applicable.</span></span>
 
-### <a name="switch-expressions"></a><span data-ttu-id="e6e1a-141">Expressions switch</span><span class="sxs-lookup"><span data-stu-id="e6e1a-141">Switch Expressions</span></span>
+<span data-ttu-id="6dc76-262">Les nouvelles API <xref:System.Math?displayProperty=nameWithType> incluent :</span><span class="sxs-lookup"><span data-stu-id="6dc76-262">New <xref:System.Math?displayProperty=nameWithType> APIs include:</span></span>
 
-<span data-ttu-id="e6e1a-142">Les *expressions switch* sont un moyen plus propre d’effectuer une *instruction switch* ; cependant, comme il s’agit d’expressions, elles retournent une valeur.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-142">*Switch expressions* are a cleaner way of doing a *switch statement* but, since it's an expression, returns a value.</span></span> <span data-ttu-id="e6e1a-143">Les *expressions switch* sont aussi entièrement intégrées aux critères spéciaux et utilisent le modèle d’élément ignoré, `_`, pour représenter la valeur `default`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-143">*Switch expressions* are also fully integrated with pattern matching, and use the discard pattern, `_`, to represent the `default` value.</span></span>
+* <span data-ttu-id="6dc76-263"><xref:System.Math.BitIncrement(System.Double)> et <xref:System.Math.BitDecrement(System.Double)>\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-263"><xref:System.Math.BitIncrement(System.Double)> and <xref:System.Math.BitDecrement(System.Double)>\\</span></span>
+<span data-ttu-id="6dc76-264">Correspond aux opérations IEEE `nextUp` et `nextDown`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-264">Corresponds to the `nextUp` and `nextDown` IEEE operations.</span></span> <span data-ttu-id="6dc76-265">Elles retournent le plus petit nombre à virgule flottante dont la valeur est supérieure ou inférieure à l’entrée (respectivement).</span><span class="sxs-lookup"><span data-stu-id="6dc76-265">They return the smallest floating-point number that compares greater or lesser than the input (respectively).</span></span> <span data-ttu-id="6dc76-266">Par exemple, `Math.BitIncrement(0.0)` retourne `double.Epsilon`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-266">For example, `Math.BitIncrement(0.0)` would return `double.Epsilon`.</span></span>
 
-<span data-ttu-id="e6e1a-144">Vous pouvez voir la syntaxe des *expressions switch* dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-144">You can see the syntax for *switch expressions* in the following example:</span></span>
+* <span data-ttu-id="6dc76-267"><xref:System.Math.MaxMagnitude(System.Double,System.Double)> et <xref:System.Math.MinMagnitude(System.Double,System.Double)>\\</span><span class="sxs-lookup"><span data-stu-id="6dc76-267"><xref:System.Math.MaxMagnitude(System.Double,System.Double)> and <xref:System.Math.MinMagnitude(System.Double,System.Double)>\\</span></span>
+<span data-ttu-id="6dc76-268">Correspond aux opérations IEEE `maxNumMag` et `minNumMag`. Elles retournent la valeur la plus grande ou la plus petite des deux entrées (respectivement).</span><span class="sxs-lookup"><span data-stu-id="6dc76-268">Corresponds to the `maxNumMag` and `minNumMag` IEEE operations, they return the value that is greater or lesser in magnitude of the two inputs (respectively).</span></span> <span data-ttu-id="6dc76-269">Par exemple, `Math.MaxMagnitude(2.0, -3.0)` retourne `-3.0`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-269">For example, `Math.MaxMagnitude(2.0, -3.0)` would return `-3.0`.</span></span>
 
-```csharp
-static string Display(object o) => o switch
-{
-    Point { X: 0, Y: 0 }         => "origin",
-    Point { X: var x, Y: var y } => $"({x}, {y})",
-    _                            => "unknown"
-};
-```
+* <xref:System.Math.ILogB(System.Double)>\
+<span data-ttu-id="6dc76-270">Correspond à l’opération IEEE `logB` qui retourne une valeur intégrale ; elle retourne le logarithme de base 2 intégral du paramètre d’entrée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-270">Corresponds to the `logB` IEEE operation that returns an integral value, it returns the integral base-2 log of the input parameter.</span></span> <span data-ttu-id="6dc76-271">Cette méthode est identique à `floor(log2(x))`, mais effectuée avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="6dc76-271">This method is effectively the same as `floor(log2(x))`, but done with minimal rounding error.</span></span>
 
-<span data-ttu-id="e6e1a-145">Deux modèles sont mis en œuvre dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-145">There are two patterns at play in this example.</span></span> <span data-ttu-id="e6e1a-146">`o` correspond d’abord au *modèle de type* `Point`, puis au *modèle de propriété* à l’intérieur des *{accolades}*.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-146">`o` first matches with the `Point` *type pattern* and then with the *property pattern* inside the *{curly braces}*.</span></span> <span data-ttu-id="e6e1a-147">Le `_` décrit le `discard pattern`, qui est identique à `default` pour les *instructions switch*.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-147">The `_` describes the `discard pattern`, which is the same as `default` for *switch statements*.</span></span>
+* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+<span data-ttu-id="6dc76-272">Correspond à l’opération IEEE `scaleB` qui prend une valeur intégrale ; elle retourne `x * pow(2, n)`, mais est effectuée avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="6dc76-272">Corresponds to the `scaleB` IEEE operation that takes an integral value, it returns effectively `x * pow(2, n)`, but is done with minimal rounding error.</span></span>
 
-<span data-ttu-id="e6e1a-148">Les modèles vous permettent d’écrire du code déclaratif qui capture votre intention, au lieu d’un code procédural qui implémente des tests de celle-ci.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-148">Patterns enable you to write declarative code that captures your intent instead of procedural code that implements tests for it.</span></span> <span data-ttu-id="e6e1a-149">Le compilateur devient responsable de l’implémentation de ce code procédural fastidieux, et il est garanti qu’il le fait toujours correctement.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-149">The compiler becomes responsible for implementing that boring procedural code and is guaranteed to always do it correctly.</span></span>
+* <xref:System.Math.Log2(System.Double)>\
+<span data-ttu-id="6dc76-273">Correspond à l’opération IEEE `log2` ; elle retourne le logarithme de base 2.</span><span class="sxs-lookup"><span data-stu-id="6dc76-273">Corresponds to the `log2` IEEE operation, it returns the base-2 logarithm.</span></span> <span data-ttu-id="6dc76-274">Son erreur d’arrondi est minimale.</span><span class="sxs-lookup"><span data-stu-id="6dc76-274">It minimizes rounding error.</span></span>
 
-<span data-ttu-id="e6e1a-150">Il y a toujours cas où les *instructions switch* sont un meilleur choix que des *expressions switch* ; vous pouvez utiliser des modèles avec les deux styles de syntaxe.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-150">There will still be cases where *switch statements* will be a better choice than *switch expressions* and patterns can be used with both syntax styles.</span></span>
+* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+<span data-ttu-id="6dc76-275">Correspond à l’opération IEEE `fma` ; elle effectue une multiplication-addition fusionnée.</span><span class="sxs-lookup"><span data-stu-id="6dc76-275">Corresponds to the `fma` IEEE operation, it performs a fused multiply add.</span></span> <span data-ttu-id="6dc76-276">Elle effectue `(x * y) + z` comme une seule opération, avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="6dc76-276">That is, it does `(x * y) + z` as a single operation, there-by minimizing the rounding error.</span></span> <span data-ttu-id="6dc76-277">Par exemple, `FusedMultiplyAdd(1e308, 2.0, -1e308)` retourne `1e308`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-277">An example would be `FusedMultiplyAdd(1e308, 2.0, -1e308)` which returns `1e308`.</span></span> <span data-ttu-id="6dc76-278">L’opération régulière `(1e308 * 2.0) - 1e308` retourne `double.PositiveInfinity`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-278">The regular `(1e308 * 2.0) - 1e308` returns `double.PositiveInfinity`.</span></span>
 
-<span data-ttu-id="e6e1a-151">Pour plus d’informations, consultez [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-151">For more information, see [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).</span></span>
+* <xref:System.Math.CopySign(System.Double,System.Double)>\
+<span data-ttu-id="6dc76-279">Correspond à l’opération IEEE `copySign` ; elle retourne la valeur de `x`, mais avec le signe de `y`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-279">Corresponds to the `copySign` IEEE operation, it returns the value of `x`, but with the sign of `y`.</span></span>
 
-## <a name="ieee-floating-point-improvements"></a><span data-ttu-id="e6e1a-152">Améliorations apportées à la virgule flottante IEEE</span><span class="sxs-lookup"><span data-stu-id="e6e1a-152">IEEE Floating-point improvements</span></span>
+## <a name="fast-built-in-json-support"></a><span data-ttu-id="6dc76-280">Prise en charge JSON intégrée rapide</span><span class="sxs-lookup"><span data-stu-id="6dc76-280">Fast built-in JSON support</span></span>
 
-<span data-ttu-id="e6e1a-153">Les API de virgule flottante sont en cours de mise à jour pour devenir conformes à la [révision 754-2008 d’IEEE](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-153">Floating point APIs are in the process of being updated to comply with [IEEE 754-2008 revision](https://en.wikipedia.org/wiki/IEEE_754-2008_revision).</span></span> <span data-ttu-id="e6e1a-154">L’objectif de ces modifications est d’exposer toutes les opérations « obligatoires » et de garantir que leur comportement est conforme à la spécification IEEE.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-154">The goal of these changes is to expose all "required" operations and ensure that they are behaviorally compliant with the IEEE spec.</span></span>
+<span data-ttu-id="6dc76-281">Les utilisateurs de .NET se sont largement appuyés sur [**Json.NET**](https://www.newtonsoft.com/json) et d’autres bibliothèques JSON populaires, qui restent de bons choix.</span><span class="sxs-lookup"><span data-stu-id="6dc76-281">.NET users have largely relied on [**Json.NET**](https://www.newtonsoft.com/json) and other popular JSON libraries, which continue to be good choices.</span></span> <span data-ttu-id="6dc76-282">**Json.NET** utilise des chaînes .NET comme type de données de base, au format UTF-16.</span><span class="sxs-lookup"><span data-stu-id="6dc76-282">**Json.NET** uses .NET strings as its base datatype, which is UTF-16 under the hood.</span></span>
 
-<span data-ttu-id="e6e1a-155">Correctifs de l’analyse et de la mise en forme :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-155">Parsing and formatting fixes:</span></span>
+<span data-ttu-id="6dc76-283">La nouvelle prise en charge JSON intégrée offre des hautes performances et une allocation faible, et elle est basée sur `Span<byte>`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-283">The new built-in JSON support is high-performance, low allocation, and based on `Span<byte>`.</span></span> <span data-ttu-id="6dc76-284">Trois nouveaux types principaux liés à JSON ont été ajoutés à l’espace de noms <xref:System.Text.Json?displayProperty=nameWithType> de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="6dc76-284">Three new main JSON-related types have been added to .NET Core 3.0 the <xref:System.Text.Json?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="6dc76-285">Ces types ne prennent pas *encore* en charge la sérialisation et la désérialisation des objets CLR traditionnels (OCT).</span><span class="sxs-lookup"><span data-stu-id="6dc76-285">These types don't *yet* support plain old CLR object (POCO) serialization and deserialization.</span></span>
 
-* <span data-ttu-id="e6e1a-156">Analyse et arrondi corrects des entrées, quelle que soit leur longueur.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-156">Correctly parse and round inputs of any length.</span></span>
-* <span data-ttu-id="e6e1a-157">Analyse et mise en forme correctes des zéros négatifs.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-157">Correctly parse and format negative zero.</span></span>
-* <span data-ttu-id="e6e1a-158">Analyse correcte de l’infini et des valeurs NaN en effectuant une vérification sans tenir compte de la casse et en autorisant un signe `+` facultatif de début là où c’est applicable.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-158">Correctly parse Infinity and NaN by performing a case-insensitive check and allowing an optional preceding `+` where applicable.</span></span>
+### <a name="utf8jsonreader"></a><span data-ttu-id="6dc76-286">Utf8JsonReader</span><span class="sxs-lookup"><span data-stu-id="6dc76-286">Utf8JsonReader</span></span>
 
-<span data-ttu-id="e6e1a-159">Les nouvelles API mathématiques ont :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-159">New Math APIs have:</span></span>
+<span data-ttu-id="6dc76-287"><xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> est un lecteur hautes performances et à faible allocation de type forward-only pour le texte JSON codé au format UTF-8 et lu à partir de `ReadOnlySpan<byte>`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-287"><xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>`.</span></span> <span data-ttu-id="6dc76-288">`Utf8JsonReader` est un type fondamental de bas niveau, permettant de générer des analyseurs et des désérialiseurs personnalisés.</span><span class="sxs-lookup"><span data-stu-id="6dc76-288">The `Utf8JsonReader` is a foundational, low-level type, that can be used to build custom parsers and deserializers.</span></span> <span data-ttu-id="6dc76-289">La lecture d’une charge utile JSON à l’aide du nouveau `Utf8JsonReader` est 2 fois plus rapide qu’avec le lecteur proposé par **Json.NET**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-289">Reading through a JSON payload using the new `Utf8JsonReader` is 2x faster than using the reader from **Json.NET**.</span></span> <span data-ttu-id="6dc76-290">Aucune allocation n’a lieu tant que vous n’avez pas besoin d’actualiser des jetons JSON sous forme de chaînes (UTF-16).</span><span class="sxs-lookup"><span data-stu-id="6dc76-290">It doesn't allocate until you need to actualize JSON tokens as (UTF-16) strings.</span></span>
 
-* `BitIncrement/BitDecrement`\
-<span data-ttu-id="e6e1a-160">Correspond aux opérations IEEE `nextUp` et `nextDown`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-160">Corresponds to the `nextUp` and `nextDown` IEEE operations.</span></span> <span data-ttu-id="e6e1a-161">Elles retournent le plus petit nombre à virgule flottante dont la valeur est supérieure ou inférieure à l’entrée (respectivement).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-161">They return the smallest floating-point number that compares greater or lesser than the input (respectively).</span></span> <span data-ttu-id="e6e1a-162">Par exemple, `Math.BitIncrement(0.0)` retourne `double.Epsilon`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-162">For example, `Math.BitIncrement(0.0)` would return `double.Epsilon`.</span></span>
+<span data-ttu-id="6dc76-291">Voici un exemple de lecture par le biais du fichier [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) créé par Visual Studio Code :</span><span class="sxs-lookup"><span data-stu-id="6dc76-291">Here is an example of reading through the [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) file created by Visual Studio Code:</span></span>
 
-* `MaxMagnitude/MinMagnitude`\
-<span data-ttu-id="e6e1a-163">Correspond aux opérations IEEE `maxNumMag` et `minNumMag`. Elles retournent la valeur la plus grande ou la plus petite des deux entrées (respectivement).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-163">Corresponds to the `maxNumMag` and `minNumMag` IEEE operations, they return the value that is greater or lesser in magnitude of the two inputs (respectively).</span></span> <span data-ttu-id="e6e1a-164">Par exemple, `Math.MaxMagnitude(2.0, -3.0)` retourne `-3.0`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-164">For example, `Math.MaxMagnitude(2.0, -3.0)` would return `-3.0`.</span></span>
+[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJson)]
 
-* `ILogB`\
-<span data-ttu-id="e6e1a-165">Correspond à l’opération IEEE `logB` qui retourne une valeur intégrale ; elle retourne le logarithme de base 2 intégral du paramètre d’entrée.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-165">Corresponds to the `logB` IEEE operation which returns an integral value, it returns the integral base-2 log of the input parameter.</span></span> <span data-ttu-id="e6e1a-166">Ceci est identique à `floor(log2(x))`, mais effectué avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-166">This is effectively the same as `floor(log2(x))`, but done with minimal rounding error.</span></span>
+[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJsonCall)]
 
-* `ScaleB`\
-<span data-ttu-id="e6e1a-167">Correspond à l’opération IEEE `scaleB` qui prend une valeur intégrale ; elle retourne `x * pow(2, n)`, mais est effectuée avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-167">Corresponds to the `scaleB` IEEE operation which takes an integral value, it returns effectively `x * pow(2, n)`, but is done with minimal rounding error.</span></span>
+### <a name="utf8jsonwriter"></a><span data-ttu-id="6dc76-292">Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="6dc76-292">Utf8JsonWriter</span></span>
 
-* `Log2`\
-<span data-ttu-id="e6e1a-168">Correspond à l’opération IEEE `log2` ; elle retourne le logarithme de base 2.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-168">Corresponds to the `log2` IEEE operation, it returns the base-2 logarithm.</span></span> <span data-ttu-id="e6e1a-169">Son erreur d’arrondi est minimale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-169">It minimizes rounding error.</span></span>
+<span data-ttu-id="6dc76-293"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> fournit un moyen d’écrire du texte JSON encodé en UTF-8 partir de types .NET courants, comme `String`, `Int32`, et `DateTime`, avec des hautes performances, sans mise en cache et vers l’avant uniquement.</span><span class="sxs-lookup"><span data-stu-id="6dc76-293"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> provides a high-performance, non-cached, forward-only way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="6dc76-294">Comme le lecteur, l’enregistreur (writer) est un type fondamental de bas niveau, permettant de générer des sérialiseurs personnalisés.</span><span class="sxs-lookup"><span data-stu-id="6dc76-294">Like the reader, the writer is a foundational, low-level type, that can be used to build custom serializers.</span></span> <span data-ttu-id="6dc76-295">L’écriture d’une charge utile JSON avec le nouveau `Utf8JsonWriter` est de 30 à 80 % plus rapide qu’avec l’enregistreur (writer) de **Json.NET** et elle n’effectue pas d’allocation.</span><span class="sxs-lookup"><span data-stu-id="6dc76-295">Writing a JSON payload using the new `Utf8JsonWriter` is 30-80% faster than using the writer from **Json.NET** and doesn't allocate.</span></span>
 
-* `FusedMultiplyAdd`\
-<span data-ttu-id="e6e1a-170">Correspond à l’opération IEEE `fma` ; elle effectue une multiplication-addition fusionnée.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-170">Corresponds to the `fma` IEEE operation, it performs a fused multiply add.</span></span> <span data-ttu-id="e6e1a-171">Elle effectue `(x * y) + z` comme une seule opération, avec une erreur d’arrondi minimale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-171">That is, it does `(x * y) + z` as a single operation, there-by minimizing the rounding error.</span></span> <span data-ttu-id="e6e1a-172">Par exemple, `FusedMultiplyAdd(1e308, 2.0, -1e308)` retourne `1e308`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-172">An example would be `FusedMultiplyAdd(1e308, 2.0, -1e308)` which returns `1e308`.</span></span> <span data-ttu-id="e6e1a-173">L’opération régulière `(1e308 * 2.0) - 1e308` retourne `double.PositiveInfinity`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-173">The regular `(1e308 * 2.0) - 1e308` returns `double.PositiveInfinity`.</span></span>
+### <a name="jsondocument"></a><span data-ttu-id="6dc76-296">JsonDocument</span><span class="sxs-lookup"><span data-stu-id="6dc76-296">JsonDocument</span></span>
 
-* `CopySign`\
-<span data-ttu-id="e6e1a-174">Correspond à l’opération IEEE `copySign` ; elle retourne la valeur de `x`, mais avec le signe de `y`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-174">Corresponds to the `copySign` IEEE operation, it returns the value of `x`, but with the sign of `y`.</span></span>
+<span data-ttu-id="6dc76-297"><xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> est basé sur le `Utf8JsonReader`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-297"><xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> is built on top of the `Utf8JsonReader`.</span></span> <span data-ttu-id="6dc76-298">Le `JsonDocument` fournit la possibilité d’analyser les données JSON et de générer un modèle DOM (Document Object Model) qui peut être interrogé, et prendre en charge l’accès aléatoire et l’énumération.</span><span class="sxs-lookup"><span data-stu-id="6dc76-298">The `JsonDocument` provides the ability to parse JSON data and build a read-only Document Object Model (DOM) that can be queried to support random access and enumeration.</span></span> <span data-ttu-id="6dc76-299">Les éléments JSON qui composent les données sont accessibles via le type <xref:System.Text.Json.JsonElement> qui est exposé par le `JsonDocument` comme propriété appelée `RootElement`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-299">The JSON elements that compose the data can be accessed via the <xref:System.Text.Json.JsonElement> type that is exposed by the `JsonDocument` as a property called `RootElement`.</span></span> <span data-ttu-id="6dc76-300">Le `JsonElement` contient le tableau et les énumérateurs d’objets JSON, ainsi que des API pour convertir le texte JSON en types .NET courants.</span><span class="sxs-lookup"><span data-stu-id="6dc76-300">The `JsonElement` contains the JSON array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="6dc76-301">L’analyse d’une charge utile JSON classique et l’accès à tous ses membres avec le `JsonDocument` est de 2 à 3 fois plus rapide que **Json.NET**, avec peu d’allocations pour les données de dimension raisonnable (c’est-à-dire, < 1 Mo).</span><span class="sxs-lookup"><span data-stu-id="6dc76-301">Parsing a typical JSON payload and accessing all its members using the `JsonDocument` is 2-3x faster than **Json.NET** with little allocations for data that is reasonably sized (that is, < 1 MB).</span></span>
 
-## <a name="net-platform-dependent-intrinsics"></a><span data-ttu-id="e6e1a-175">Intrinsèques dépendant de la plateforme .NET</span><span class="sxs-lookup"><span data-stu-id="e6e1a-175">.NET Platform Dependent Intrinsics</span></span>
+<span data-ttu-id="6dc76-302">Voici un exemple d’utilisation de `JsonDocument` et de `JsonElement`, qui peut être utilisé comme point de départ :</span><span class="sxs-lookup"><span data-stu-id="6dc76-302">Here is a sample usage of the `JsonDocument` and `JsonElement` that can be used as a starting point:</span></span>
 
-<span data-ttu-id="e6e1a-176">Des API ont été ajoutées, qui permettent d’accéder à certaines instructions de l’UC orientées performances, comme les ensembles **SIMD** ou les ensembles d’**instructions de manipulation de bits**.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-176">APIs have been added that allow access to certain perf-oriented CPU instructions, such as the **SIMD** or **Bit Manipulation instruction** sets.</span></span> <span data-ttu-id="e6e1a-177">Ces instructions peuvent améliorer grandement les performances dans certains scénarios, comme le traitement efficace de données en parallèle.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-177">These instructions can help achieve big performance improvements in certain scenarios, such as processing data efficiently in parallel.</span></span> <span data-ttu-id="e6e1a-178">En plus d’exposer les API pour permettre à vos programmes de les utiliser, les bibliothèques .NET ont commencé à utiliser ces instructions pour améliorer les performances.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-178">In addition to exposing the APIs for your programs to use, the .NET libraries have begun using these instructions to improve performance.</span></span>
+<span data-ttu-id="6dc76-303">Voici un exemple C# 8.0 de lecture par le biais du fichier [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) créé par Visual Studio Code :</span><span class="sxs-lookup"><span data-stu-id="6dc76-303">Here is a C# 8.0 example of reading through the [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) file created by Visual Studio Code:</span></span>
 
-<span data-ttu-id="e6e1a-179">Les demandes de tirage CoreCLR suivantes illustrent quelques-uns des intrinsèques, via l’implémentation ou l’utilisation :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-179">The following CoreCLR PRs demonstrate a few of the intrinsics, either via implementation or use:</span></span>
+[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
 
-* [<span data-ttu-id="e6e1a-180">Implement simple SSE2 hardware intrinsics</span><span class="sxs-lookup"><span data-stu-id="e6e1a-180">Implement simple SSE2 hardware intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/15585)
-* [<span data-ttu-id="e6e1a-181">Implement the SSE hardware intrinsics</span><span class="sxs-lookup"><span data-stu-id="e6e1a-181">Implement the SSE hardware intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/15538)
-* [<span data-ttu-id="e6e1a-182">Arm64 Base HW Intrinsics</span><span class="sxs-lookup"><span data-stu-id="e6e1a-182">Arm64 Base HW Intrinsics</span></span>](https://github.com/dotnet/coreclr/pull/16822)
-* [<span data-ttu-id="e6e1a-183">Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}</span><span class="sxs-lookup"><span data-stu-id="e6e1a-183">Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}</span></span>](https://github.com/dotnet/coreclr/pull/21073)
+[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
-<span data-ttu-id="e6e1a-184">Pour plus d’informations, consultez [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md), qui établit une approche pour la définition de cette infrastructure matérielle, permettant à Microsoft, aux fournisseurs de circuits intégrés, ou à d’autres entreprises ou personnes de définir des API de matériel/circuit intégré qui doivent être exposées au code .NET.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-184">For more information, see [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md), which defines an approach for defining this hardware infrastructure, allowing Microsoft, chip vendors, or any other company or individual to define hardware/chip APIs that should be exposed to .NET code.</span></span>
+### <a name="jsonserializer"></a><span data-ttu-id="6dc76-304">JsonSerializer</span><span class="sxs-lookup"><span data-stu-id="6dc76-304">JsonSerializer</span></span>
 
-## <a name="default-executables"></a><span data-ttu-id="e6e1a-185">Exécutables par défaut</span><span class="sxs-lookup"><span data-stu-id="e6e1a-185">Default executables</span></span>
+<span data-ttu-id="6dc76-305"><xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> s’appuie sur <xref:System.Text.Json.Utf8JsonReader> et <xref:System.Text.Json.Utf8JsonWriter> pour fournir une option de sérialisation rapide à faible consommation de mémoire quand vous utilisez des fragments et des documents JSON.</span><span class="sxs-lookup"><span data-stu-id="6dc76-305"><xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> is built on top of <xref:System.Text.Json.Utf8JsonReader> and <xref:System.Text.Json.Utf8JsonWriter> to provide a fast low-memory serialization option when working with JSON documents and fragments.</span></span>
 
-<span data-ttu-id="e6e1a-186">.NET core génère désormais des [exécutables dépendant du framework](../deploying/index.md#framework-dependent-executables-fde) par défaut.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-186">.NET Core will now build [framework-dependent executables](../deploying/index.md#framework-dependent-executables-fde) by default.</span></span> <span data-ttu-id="e6e1a-187">Il s’agit d’une nouvelle fonctionnalité pour les applications qui utilisent une version .NET Core installée de façon globale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-187">This is new for applications that use a globally installed version of .NET Core.</span></span> <span data-ttu-id="e6e1a-188">Jusqu’à présent, seuls les [déploiements autonomes](../deploying/index.md#self-contained-deployments-scd) produisaient un exécutable.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-188">Until now, only [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) would produce an executable.</span></span>
+<span data-ttu-id="6dc76-306">Consultez https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md pour obtenir un exemple applicable dans cet article.</span><span class="sxs-lookup"><span data-stu-id="6dc76-306">EXAMINE: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md for an example to port to this article</span></span>
 
-<span data-ttu-id="e6e1a-189">Lors de l’étape `dotnet build` ou `dotnet publish`, un exécutable est créé s’il correspond à l’environnement et à la plateforme du Kit de développement que vous utilisez.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-189">During `dotnet build` or `dotnet publish`, an executable is created provided that matches the environment and platform of the SDK you are using.</span></span> <span data-ttu-id="e6e1a-190">Vous pouvez obtenir le même résultat avec ces exécutables, comme vous le feriez avec d’autres exécutables natifs comme :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-190">You can expect the same things with these executables as you would other native executables, such as:</span></span>
+<span data-ttu-id="6dc76-307">Voici un exemple de sérialisation d’un objet dans le format JSON :</span><span class="sxs-lookup"><span data-stu-id="6dc76-307">Here is an example of serializing an object to JSON:</span></span>
 
-* <span data-ttu-id="e6e1a-191">Vous pouvez double-cliquer sur l’exécutable.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-191">You can double-click on the executable.</span></span>
-* <span data-ttu-id="e6e1a-192">Vous pouvez lancer l’application directement à partir d’une invite de commandes, par exemple `myapp.exe` sous Windows, et `./myapp` sous Linux et macOS.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-192">You can launch the application from a command prompt directly, such as `myapp.exe` on Windows, and `./myapp` on Linux and macOS.</span></span>
+[!CODE-csharp[JsonSerializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonSerialize)]
 
-## <a name="build-copies-dependencies"></a><span data-ttu-id="e6e1a-193">Dépendances de copies de build</span><span class="sxs-lookup"><span data-stu-id="e6e1a-193">Build copies dependencies</span></span>
+<span data-ttu-id="6dc76-308">Voici un exemple de désérialisation d’une chaîne JSON en un objet.</span><span class="sxs-lookup"><span data-stu-id="6dc76-308">Here is an example of deserializing a JSON string to an object.</span></span> <span data-ttu-id="6dc76-309">Vous pouvez utiliser la chaîne JSON produite par l’exemple précédent :</span><span class="sxs-lookup"><span data-stu-id="6dc76-309">You can use the JSON string produced by the previous example:</span></span>
 
-<span data-ttu-id="e6e1a-194">`dotnet build` copie maintenant les dépendances NuGet pour votre application à partir du cache NuGet vers le dossier de sortie de build.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-194">`dotnet build` now copies NuGet dependencies for your application from the NuGet cache to the build output folder.</span></span> <span data-ttu-id="e6e1a-195">Auparavant, les dépendances étaient copiées uniquement dans le cadre de `dotnet publish`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-195">Previously, dependencies were only copied as part of `dotnet publish`.</span></span>
+[!CODE-csharp[JsonDeserializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonDeserialize)]
 
-<span data-ttu-id="e6e1a-196">Certaines opérations, par exemple la liaison et la publication d’une page de type Razor, nécessiteront toujours une publication.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-196">There are some operations, like linking and razor page publishing that will still require publishing.</span></span>
+## <a name="interop-improvements"></a><span data-ttu-id="6dc76-310">Améliorations de l’interopérabilité</span><span class="sxs-lookup"><span data-stu-id="6dc76-310">Interop improvements</span></span>
 
-## <a name="local-dotnet-tools"></a><span data-ttu-id="e6e1a-197">Outils dotnet locaux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-197">Local dotnet tools</span></span>
+<span data-ttu-id="6dc76-311">.NET Core 3.0 améliore l’interopérabilité des API natives.</span><span class="sxs-lookup"><span data-stu-id="6dc76-311">.NET Core 3.0 improves native API interop.</span></span>
 
-> [!WARNING]
-> <span data-ttu-id="e6e1a-198">Il y a eu un changement dans les outils .NET Core locaux entre .NET Core 3.0 Preview 1 et .NET Core 3.0 Preview 2.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-198">There was a change in .NET Core Local Tools between .NET Core 3.0 Preview 1 and .NET Core 3.0 Preview 2.</span></span>  <span data-ttu-id="e6e1a-199">Si vous avez essayé les outils locaux dans la version Preview 1 en exécutant une commande comme `dotnet tool restore` ou `dotnet tool install`, vous devez supprimer votre dossier de cache des outils locaux pour que ces outils fonctionnent correctement dans la version Preview 2.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-199">If you tried out local tools in Preview 1 by running a command like `dotnet tool restore` or `dotnet tool install`, you need to delete your local tools cache folder before local tools will work correctly in Preview 2.</span></span> <span data-ttu-id="e6e1a-200">Ce dossier se trouve à ces emplacements :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-200">This folder is located at:</span></span>
->
-> <span data-ttu-id="e6e1a-201">Sur mac, Linux : `rm -r $HOME/.dotnet/toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="e6e1a-201">On mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`</span></span>
->
-> <span data-ttu-id="e6e1a-202">Sur Windows : `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span><span class="sxs-lookup"><span data-stu-id="e6e1a-202">On Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`</span></span>
->
-> <span data-ttu-id="e6e1a-203">Si vous ne supprimez pas ce dossier, vous recevez une erreur.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-203">If you do not delete this folder, you will receive an error.</span></span>
+### <a name="type-nativelibrary"></a><span data-ttu-id="6dc76-312">Type : NativeLibrary</span><span class="sxs-lookup"><span data-stu-id="6dc76-312">Type: NativeLibrary</span></span>
 
-<span data-ttu-id="e6e1a-204">Alors que .NET Core 2.1 prenant en charge des outils globaux, .NET Core 3.0 dispose maintenant d’outils locaux.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-204">While .NET Core 2.1 supported global tools, .NET Core 3.0 now has local tools.</span></span> <span data-ttu-id="e6e1a-205">Les outils locaux sont similaires aux outils globales mais ils sont associés à un emplacement particulier sur le disque.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-205">Local tools are similar to global tools but are associated with a particular location on disk.</span></span> <span data-ttu-id="e6e1a-206">Cela permet une utilisation par projet et par référentiel.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-206">This enables per-project and per-repository tooling.</span></span> <span data-ttu-id="e6e1a-207">Un outil installé localement n’est pas disponible de façon globale.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-207">Any tool installed locally isn't available globally.</span></span> <span data-ttu-id="e6e1a-208">Les outils sont distribués sous forme de packages NuGet.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-208">Tools are distributed as NuGet packages.</span></span>
+<span data-ttu-id="6dc76-313"><xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> fournit une encapsulation pour le chargement d’une bibliothèque native (à l’aide de la même logique de chargement que .NET Core P/Invoke) et la fourniture des fonctions d’assistance pertinentes telles que `getSymbol`.</span><span class="sxs-lookup"><span data-stu-id="6dc76-313"><xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> provides an encapsulation for loading a native library (using the same load logic as .NET Core P/Invoke) and providing the relevant helper functions such as `getSymbol`.</span></span> <span data-ttu-id="6dc76-314">Pour obtenir un exemple de code, consultez la [démonstration DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).</span><span class="sxs-lookup"><span data-stu-id="6dc76-314">For a code example, see the [DLLMap Demo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).</span></span>
 
-<span data-ttu-id="e6e1a-209">Les outils locaux s’appuient sur un nom de fichier manifeste `dotnet-tools.json` dans votre répertoire actuel.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-209">Local tools rely on a manifest file name `dotnet-tools.json` in your current directory.</span></span> <span data-ttu-id="e6e1a-210">Ce fichier manifeste définit les outils qui doivent être disponibles dans ce dossier et sous-celui-ci.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-210">This manifest file defines the tools to be available at that folder and below.</span></span> <span data-ttu-id="e6e1a-211">En créant ce fichier manifeste à la racine de votre référentiel, vous garantissez que toute personne qui clone votre code pourra restaurer et utiliser les outils nécessaires pour fonctionner correctement avec votre code.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-211">By creating this manifest file at the root of your repository, you ensure anyone cloning your code can restore and use the tools that are needed to successfully work with your code.</span></span>
+### <a name="windows-native-interop"></a><span data-ttu-id="6dc76-315">Interopérabilité native Windows</span><span class="sxs-lookup"><span data-stu-id="6dc76-315">Windows Native Interop</span></span>
 
-<span data-ttu-id="e6e1a-212">Pour créer un fichier manifeste `dotnet-tools.json`, utilisez :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-212">To create a `dotnet-tools.json` manifest file, use:</span></span>
+<span data-ttu-id="6dc76-316">Windows offre une API native riche sous la forme d’API C plates, de COM et de WinRT.</span><span class="sxs-lookup"><span data-stu-id="6dc76-316">Windows offers a rich native API in the form of flat C APIs, COM, and WinRT.</span></span> <span data-ttu-id="6dc76-317">Tandis que .NET Core prend en charge **P/Invoke**, .NET Core 3.0 ajoute la possibilité de **cocréer des API COM** et d’**activer des API WinRT**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-317">While .NET Core supports **P/Invoke**, .NET Core 3.0 adds the ability to **CoCreate COM APIs** and **Activate WinRT APIs**.</span></span> <span data-ttu-id="6dc76-318">Pour obtenir un exemple de code, consultez la [démonstration Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span><span class="sxs-lookup"><span data-stu-id="6dc76-318">For a code example, see the [Excel Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span></span>
 
-```console
-dotnet new tool-manifest
-```
+## <a name="http2-support"></a><span data-ttu-id="6dc76-319">Prise en charge de HTTP/2</span><span class="sxs-lookup"><span data-stu-id="6dc76-319">HTTP/2 support</span></span>
 
-<span data-ttu-id="e6e1a-213">Ajoutez un nouvel outil au manifeste local avec :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-213">Add a new tool to the local manifest with:</span></span>
+<span data-ttu-id="6dc76-320">Le type <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> prend en charge le protocole HTTP/2.</span><span class="sxs-lookup"><span data-stu-id="6dc76-320">The <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> type supports the HTTP/2 protocol.</span></span> <span data-ttu-id="6dc76-321">La prise en charge est désactivée, mais vous pouvez l’activer en appelant `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` avant d’utiliser <xref:System.Net.Http.HttpClient>.</span><span class="sxs-lookup"><span data-stu-id="6dc76-321">Support is currently disabled but can be turned on by calling `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` before you use <xref:System.Net.Http.HttpClient>.</span></span> <span data-ttu-id="6dc76-322">Vous pouvez également activer la prise en charge de HTTP/2 en définissant la variable d’environnement `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` sur `true` avant d’exécuter votre application.</span><span class="sxs-lookup"><span data-stu-id="6dc76-322">You can also enable HTTP/2 support by setting the `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` environment variable to `true` before you run your app.</span></span>
 
-```console
-dotnet tool install <packageId>
-```
+<span data-ttu-id="6dc76-323">Si HTTP/2 est activé, la version du protocole HTTP est négociée par le biais de TLS/ALPN, et HTTP/2 n’est utilisé que si le serveur le choisit.</span><span class="sxs-lookup"><span data-stu-id="6dc76-323">If HTTP/2 is enabled, the HTTP protocol version will be negotiated via TLS/ALPN, and HTTP/2 will only be used if the server selects to use it.</span></span>
 
-<span data-ttu-id="e6e1a-214">Vous pouvez également lister les outils dans le manifeste local avec :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-214">You can also list the tools in the local manifest with:</span></span>
+## <a name="tls-13--openssl-111-on-linux"></a><span data-ttu-id="6dc76-324">TLS 1.3 et OpenSSL 1.1.1 sous Linux</span><span class="sxs-lookup"><span data-stu-id="6dc76-324">TLS 1.3 & OpenSSL 1.1.1 on Linux</span></span>
 
-```console
-dotnet tool list
-```
+<span data-ttu-id="6dc76-325">.NET Core tire désormais parti de la [prise en charge de TLS 1.3 dans OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), si disponible dans un environnement donné.</span><span class="sxs-lookup"><span data-stu-id="6dc76-325">.NET Core now takes advantage of [TLS 1.3 support in OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), when it's available in a given environment.</span></span> <span data-ttu-id="6dc76-326">Avec TLS 1.3 :</span><span class="sxs-lookup"><span data-stu-id="6dc76-326">With TLS 1.3:</span></span>
 
-<span data-ttu-id="e6e1a-215">Pour voir quels outils sont installés globalement, utilisez :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-215">To see what tools are installed globally, use:</span></span>
+* <span data-ttu-id="6dc76-327">Les délais de connexion sont améliorés grâce à une réduction des allers-retours requis entre le client et le serveur.</span><span class="sxs-lookup"><span data-stu-id="6dc76-327">Connection times are improved with reduced round trips required between the client and server.</span></span>
+* <span data-ttu-id="6dc76-328">La sécurité est améliorée en raison de la suppression de différents algorithmes de chiffrement obsolètes et non sécurisés.</span><span class="sxs-lookup"><span data-stu-id="6dc76-328">Improved security because of the removal of various obsolete and insecure cryptographic algorithms.</span></span>
 
-```console
-dotnet tool list -g
-```
-
-<span data-ttu-id="e6e1a-216">Quand le fichier manifeste des outils locaux est disponible, mais que les outils définis dans le manifeste n’ont pas été installés, utilisez la commande suivante pour télécharger et installer automatiquement ces outils :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-216">When the local tools manifest file is available, but the tools defined in the manifest have not been installed, use the following command to automatically download and install those tools:</span></span>
-
-```console
-dotnet tool restore
-```
-
-<span data-ttu-id="e6e1a-217">Exécutez l’outil local avec la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-217">Run a local tool with the following command:</span></span>
-
-```console
-dotnet tool run <tool-command-name>
-```
-
-<span data-ttu-id="e6e1a-218">Quand un outil local est exécuté, dotnet recherche un manifeste dans la structure du répertoire actuel.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-218">When a local tool is run, dotnet searches for a manifest up the current directory structure.</span></span> <span data-ttu-id="e6e1a-219">Si le fichier manifeste d’un outil est trouvé, la commande recherche l’outil demandé.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-219">When a tool manifest file is found, it is searched for the requested tool.</span></span> <span data-ttu-id="e6e1a-220">Si l’outil est trouvé dans le manifeste mais pas dans le cache, l’utilisateur reçoit une erreur et doit exécuter `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-220">If the tool is found in the manifest, but not the cache, the user receives an error and needs to run `dotnet tool restore`.</span></span>
-
-<span data-ttu-id="e6e1a-221">Pour supprimer un outil du fichier manifeste des outils locaux, exécutez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-221">To remove a tool from the local tool manifest file, run the following command:</span></span>
-
-```console
-dotnet tool uninstall <packageId>
-```
-
-<span data-ttu-id="e6e1a-222">Le fichier manifeste de l’outil est conçu pour permettre des modifications manuelles et ainsi mettre à jour la version requise pour une utilisation avec le référentiel.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-222">The tool manifest file is designed to allow hand editing – which you might do to update the required version for working with the repository.</span></span> <span data-ttu-id="e6e1a-223">Voici un exemple de fichier `dotnet-tools.json` :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-223">Here is an example `dotnet-tools.json` file:</span></span>
-
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {
-    "dotnetsay": {
-      "version": "2.1.4",
-      "commands": [
-        "dotnetsay"
-      ]
-    },
-    "t-rex": {
-      "version": "1.0.103",
-      "commands": [
-        "t-rex"
-      ]
-    }
-  }
-}
-```
-
-<span data-ttu-id="e6e1a-224">Pour les outils locaux et globaux, une version compatible du runtime est requise.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-224">For both global and local tools, a compatible version of the runtime is required.</span></span> <span data-ttu-id="e6e1a-225">De nombreux outils actuellement sur NuGet.org ciblent le runtime .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-225">Many tools currently on NuGet.org target .NET Core Runtime 2.1.</span></span> <span data-ttu-id="e6e1a-226">Pour installer ces outils de façon locale ou globale, vous devez toujours installer le [runtime NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-226">To install those globally or locally, you would still need to install the [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span>
-
-## <a name="windows-desktop"></a><span data-ttu-id="e6e1a-227">Bureau Windows</span><span class="sxs-lookup"><span data-stu-id="e6e1a-227">Windows desktop</span></span>
-
-<span data-ttu-id="e6e1a-228">À compter de .NET Core 3.0 Préversion 1, vous pouvez créer des applications de bureau Windows à l’aide des outils WPF et Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-228">Starting with .NET Core 3.0 Preview 1, you can build Windows desktop applications using WPF and Windows Forms.</span></span> <span data-ttu-id="e6e1a-229">Ces infrastructures prennent également en charge l’utilisation de contrôles modernes et le style Fluent à partir de la bibliothèque XAML de l’interface utilisateur Windows (WinUI) via des [îles XAML](/windows/uwp/xaml-platform/xaml-host-controls).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-229">These frameworks also support using modern controls and Fluent styling from the Windows UI XAML Library (WinUI) via [XAML islands](/windows/uwp/xaml-platform/xaml-host-controls).</span></span>
-
-<span data-ttu-id="e6e1a-230">Le composant Bureau Windows fait partie du SDK .NET Core 3.0 Windows.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-230">The Windows Desktop component is part of the Windows .NET Core 3.0 SDK.</span></span>
-
-<span data-ttu-id="e6e1a-231">Vous pouvez créer une nouvelle application WPF ou Windows Forms à l’aide des commandes `dotnet` suivantes :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-231">You can create a new WPF or Windows Forms app with the following `dotnet` commands:</span></span>
-
-```console
-dotnet new wpf
-dotnet new winforms
-```
-
-<span data-ttu-id="e6e1a-232">Visual Studio 2019 ajoute des modèles **Nouveau projet** pour Windows Forms et WPF .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-232">Visual Studio 2019 adds **New Project** templates for .NET Core 3.0 Windows Forms and WPF.</span></span> <span data-ttu-id="e6e1a-233">Les concepteurs ne sont pas encore pris en charge.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-233">Designers are still not yet supported.</span></span> <span data-ttu-id="e6e1a-234">Vous pouvez ouvrir, lancer et déboguer ces projets dans Visual Studio 2019.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-234">And you can open, launch, and debug these projects in Visual Studio 2019.</span></span>
-
-<span data-ttu-id="e6e1a-235">Visual Studio 2017 15.9 ajoute la possibilité d’[activer les préversions de .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), mais vous devez activer cette fonctionnalité, et il ne s’agit pas d’un scénario pris en charge.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-235">Visual Studio 2017 15.9 adds the ability to [enable .NET Core previews](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), but you need to turn that feature on, and it's not a supported scenario.</span></span>
-
-<span data-ttu-id="e6e1a-236">Les nouveaux projets sont identiques aux projets .NET Core existants, avec quelques ajouts.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-236">The new projects are the same as existing .NET Core projects, with a couple additions.</span></span> <span data-ttu-id="e6e1a-237">Voici une comparaison entre le projet de console .NET Core de base et un projet Windows Forms et WPF de base.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-237">Here is the comparison of the basic .NET Core console project and a basic Windows Forms and WPF project.</span></span>
-
-<span data-ttu-id="e6e1a-238">Dans un projet de console .NET Core, le projet utilise le SDK `Microsoft.NET.Sdk` et déclare une dépendance sur .NET Core 3.0 via l’infrastructure cible `netcoreapp3.0`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-238">In a .NET Core console project, the project uses the `Microsoft.NET.Sdk` SDK and declares a dependency on .NET Core 3.0 via the `netcoreapp3.0` target framework.</span></span> <span data-ttu-id="e6e1a-239">Pour créer une application Bureau Windows, utilisez le SDK `Microsoft.NET.Sdk.WindowsDesktop` et choisissez l’infrastructure d’interface utilisateur à utiliser :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-239">To create a Windows Desktop app, use the `Microsoft.NET.Sdk.WindowsDesktop` SDK and choose which UI framework to use:</span></span>
-
-```diff
--<Project Sdk="Microsoft.NET.Sdk">
-+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-+   <UseWPF>true</UseWPF>
-  </PropertyGroup>
-</Project>
-```
-
-<span data-ttu-id="e6e1a-240">Pour choisir Windows Forms plutôt que WPF, définissez `UseWindowsForms` au lieu de `UseWPF` :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-240">To choose Windows Forms over WPF, set `UseWindowsForms` instead of `UseWPF`:</span></span>
-
-```diff
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
--   <UseWPF>true</UseWPF>
-+   <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
-</Project>
-```
-
-<span data-ttu-id="e6e1a-241">`UseWPF` et `UseWindowsForms` peuvent être définies sur `true` si l’application utilise les deux infrastructures, par exemple lorsqu’une boîte de dialogue Windows Forms héberge un contrôle WPF.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-241">Both `UseWPF` and `UseWindowsForms` can be set to `true` if the app uses both frameworks, for example when a Windows Forms dialog is hosting a WPF control.</span></span>
-
-<span data-ttu-id="e6e1a-242">Partagez vos commentaires sur les référentiels [dotnet/winforms](https://github.com/dotnet/winforms/issues), [dotnet/wpf](https://github.com/dotnet/wpf/issues) et [dotnet/core](https://github.com/dotnet/core/issues).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-242">Please share your feedback on the [dotnet/winforms](https://github.com/dotnet/winforms/issues),  [dotnet/wpf](https://github.com/dotnet/wpf/issues) and [dotnet/core](https://github.com/dotnet/core/issues) repos.</span></span>
-
-## <a name="msix-deployment-for-windows-desktop"></a><span data-ttu-id="e6e1a-243">Déploiement MSIX pour Windows Desktop</span><span class="sxs-lookup"><span data-stu-id="e6e1a-243">MSIX Deployment for Windows Desktop</span></span>
-
-<span data-ttu-id="e6e1a-244">[MSIX](https://docs.microsoft.com/windows/msix/) est un nouveau format de package d’application Windows.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-244">[MSIX](https://docs.microsoft.com/windows/msix/) is a new Windows app package format.</span></span> <span data-ttu-id="e6e1a-245">Il peut être utilisé pour déployer des applications de poste de travail .NET Core 3.0 pour Windows 10.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-245">It can be used to deploy .NET Core 3.0 desktop applications to Windows 10.</span></span>
-
-<span data-ttu-id="e6e1a-246">Le [projet de package d’application Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponible dans Visual Studio 2019, vous permet de créer des packages MSIX avec des applications .NET Core [autonomes](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-246">The [Windows Application Packaging Project](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), available in Visual Studio 2019, allows you to create MSIX packages with [self-contained](../deploying/index.md#self-contained-deployments-scd) .NET Core applications.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="e6e1a-247">Le fichier projet .NET Core doit spécifier les runtimes pris en charge dans la propriété `<RuntimeIdentifiers>` :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-247">The .NET Core project file must specify the supported runtimes in the `<RuntimeIdentifiers>` property:</span></span>
->
-> ```xml
-> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-> ```
-
-## <a name="fast-built-in-json-support"></a><span data-ttu-id="e6e1a-248">Prise en charge JSON intégrée rapide</span><span class="sxs-lookup"><span data-stu-id="e6e1a-248">Fast built-in JSON support</span></span>
-
-<span data-ttu-id="e6e1a-249">L’écosystème .NET s’est appuyé sur [**Json.NET**](https://www.newtonsoft.com/json) et d’autres bibliothèques JSON populaires, qui restent de bons choix.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-249">The .NET ecosystem has relied on [**Json.NET**](https://www.newtonsoft.com/json) and other popular JSON libraries, which continue to be good choices.</span></span> <span data-ttu-id="e6e1a-250">**Json.NET** utilise des chaînes .NET comme type de données de base, au format UTF-16.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-250">**Json.NET** uses .NET strings as its base datatype, which are UTF-16 under the hood.</span></span>
-
-<span data-ttu-id="e6e1a-251">La nouvelle prise en charge JSON intégrée offre des hautes performances et une allocation faible, et elle est basée sur `Span<byte>`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-251">The new built-in JSON support is high-performance, low allocation, and based on `Span<byte>`.</span></span> <span data-ttu-id="e6e1a-252">Trois nouveaux types principaux liés à JSON ont été ajoutés à l’espace de noms `System.Text.Json` de .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-252">Three new main JSON-related types have been added to .NET Core 3.0 the `System.Text.Json` namespace.</span></span>
-
-### <a name="utf8jsonreader"></a><span data-ttu-id="e6e1a-253">Utf8JsonReader</span><span class="sxs-lookup"><span data-stu-id="e6e1a-253">Utf8JsonReader</span></span>
-
-<span data-ttu-id="e6e1a-254">`System.Text.Json.Utf8JsonReader` est un lecteur hautes performances et à faible allocation de type forward-only pour le texte JSON codé au format UTF-8 et lu à partir de `ReadOnlySpan<byte>`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-254">`System.Text.Json.Utf8JsonReader` is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>`.</span></span> <span data-ttu-id="e6e1a-255">`Utf8JsonReader` est un type fondamental de bas niveau, permettant de générer des analyseurs et des désérialiseurs personnalisés.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-255">The `Utf8JsonReader` is a foundational, low-level type, that can be leveraged to build custom parsers and deserializers.</span></span> <span data-ttu-id="e6e1a-256">La lecture d’une charge utile JSON à l’aide du nouveau `Utf8JsonReader` est 2 fois plus rapide qu’avec le lecteur proposé par **Json.NET**.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-256">Reading through a JSON payload using the new `Utf8JsonReader` is 2x faster than using the reader from **Json.NET**.</span></span> <span data-ttu-id="e6e1a-257">Ce lecteur n’alloue aucune ressource tant que vous n’avez pas besoin d’actualiser des jetons JSON sous forme de chaînes (UTF-16).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-257">It does not allocate until you need to actualize JSON tokens as (UTF-16) strings.</span></span>
-
-<span data-ttu-id="e6e1a-258">Cette nouvelle API inclura les composants suivants :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-258">This new API will include the following components:</span></span>
-
-* <span data-ttu-id="e6e1a-259">Préversion 1 : lecteur JSON (accès séquentiel)</span><span class="sxs-lookup"><span data-stu-id="e6e1a-259">In Preview 1: JSON reader (sequential access)</span></span>
-* <span data-ttu-id="e6e1a-260">Prochainement : enregistreur JSON, DOM (accès aléatoire), sérialiseur poco, désérialiseur poco</span><span class="sxs-lookup"><span data-stu-id="e6e1a-260">Coming next: JSON writer, DOM (random access), poco serializer, poco deserializer</span></span>
-
-<span data-ttu-id="e6e1a-261">Voici la boucle de lecteur de base pour le `Utf8JsonReader`, utilisable comme point de départ :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-261">Here is the basic reader loop for the `Utf8JsonReader` that can be used as a starting point:</span></span>
-
-```csharp
-using System.Text.Json;
-
-public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
-{
-    var json = new Utf8JsonReader(dataUtf8, isFinalBlock: true, state: default);
-
-    while (json.Read())
-    {
-        JsonTokenType tokenType = json.TokenType;
-        ReadOnlySpan<byte> valueSpan = json.ValueSpan;
-        switch (tokenType)
-        {
-            case JsonTokenType.StartObject:
-            case JsonTokenType.EndObject:
-                break;
-            case JsonTokenType.StartArray:
-            case JsonTokenType.EndArray:
-                break;
-            case JsonTokenType.PropertyName:
-                break;
-            case JsonTokenType.String:
-                string valueString = json.GetStringValue();
-                break;
-            case JsonTokenType.Number:
-                if (!json.TryGetInt32Value(out int valueInteger))
-                {
-                    throw new FormatException();
-                }
-                break;
-            case JsonTokenType.True:
-            case JsonTokenType.False:
-                bool valueBool = json.GetBooleanValue();
-                break;
-            case JsonTokenType.Null:
-                break;
-            default:
-                throw new ArgumentException();
-        }
-    }
-
-    dataUtf8 = dataUtf8.Slice((int)json.BytesConsumed);
-    JsonReaderState state = json.CurrentState;
-}
-```
-
-### <a name="utf8jsonwriter"></a><span data-ttu-id="e6e1a-262">Utf8JsonWriter</span><span class="sxs-lookup"><span data-stu-id="e6e1a-262">Utf8JsonWriter</span></span>
-
-<span data-ttu-id="e6e1a-263">`System.Text.Json.Utf8JsonWriter` fournit un moyen d’écrire du texte JSON encodé en UTF-8 partir de types .NET courants, comme `String`, `Int32`, et `DateTime`, avec des hautes performances, sans mise en cache et vers l’avant uniquement.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-263">`System.Text.Json.Utf8JsonWriter` provides a high-performance, non-cached, forward-only way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="e6e1a-264">Comme le lecteur, l’enregistreur (writer) est un type fondamental de bas niveau, permettant de générer des sérialiseurs personnalisés.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-264">Like the reader, the writer is a foundational, low-level type, that can be leveraged to build custom serializers.</span></span> <span data-ttu-id="e6e1a-265">L’écriture d’une charge utile JSON avec le nouveau `Utf8JsonWriter` est de 30 à 80 % plus rapide qu’avec l’enregistreur (writer) de **Json.NET** et il n’effectue pas d’allocation.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-265">Writing a JSON payload using the new `Utf8JsonWriter` is 30-80% faster than using the writer from **Json.NET** and does not allocate.</span></span>
-
-<span data-ttu-id="e6e1a-266">Voici un exemple d’utilisation de `Utf8JsonWriter`, qui peut être utilisé comme point de départ :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-266">Here is a sample usage of the `Utf8JsonWriter` that can be used as a starting point:</span></span>
-
-```csharp
-static int WriteJson(IBufferWriter<byte> output, long[] extraData)
-{
-    var json = new Utf8JsonWriter(output, state: default);
-
-    json.WriteStartObject();
-
-    json.WriteNumber("age", 15, escape: false);
-    json.WriteString("date", DateTime.Now);
-    json.WriteString("first", "John");
-    json.WriteString("last", "Smith");
-
-    json.WriteStartArray("phoneNumbers", escape: false);
-    json.WriteStringValue("425-000-1212", escape: false);
-    json.WriteStringValue("425-000-1213");
-    json.WriteEndArray();
-
-    json.WriteStartObject("address");
-    json.WriteString("street", "1 Microsoft Way");
-    json.WriteString("city", "Redmond");
-    json.WriteNumber("zip", 98052);
-    json.WriteEndObject();
-
-    json.WriteStartArray("ExtraArray");
-    for (var i = 0; i < extraData.Length; i++)
-    {
-        json.WriteNumberValue(extraData[i]);
-    }
-    json.WriteEndArray();
-
-    json.WriteEndObject();
-
-    json.Flush(isFinalBlock: true);
-
-    return (int)json.BytesWritten;
-}
-```
-
-<span data-ttu-id="e6e1a-267">Le `Utf8JsonWriter` accepte `IBufferWriter<byte>` comme emplacement de sortie pour y écrire de façon synchrone les données JSON, et en tant qu’appelant, vous devez fournir une implémentation concrète.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-267">The `Utf8JsonWriter` accepts `IBufferWriter<byte>` as the output location to synchronously write the json data into, and you as the caller need to provide a concrete implementation.</span></span> <span data-ttu-id="e6e1a-268">Actuellement, la plateforme n’inclut pas d’implémentation de cette interface.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-268">The platform does not currently include an implementation of this interface.</span></span> <span data-ttu-id="e6e1a-269">Pour obtenir un exemple de `IBufferWriter<byte>`, consultez <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-269">For an example of `IBufferWriter<byte>`, see <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.</span></span>
-
-### <a name="jsondocument"></a><span data-ttu-id="e6e1a-270">JsonDocument</span><span class="sxs-lookup"><span data-stu-id="e6e1a-270">JsonDocument</span></span>
-
-<span data-ttu-id="e6e1a-271">`System.Text.Json.JsonDocument` est basé sur le `Utf8JsonReader`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-271">`System.Text.Json.JsonDocument` is built on top of the `Utf8JsonReader`.</span></span> <span data-ttu-id="e6e1a-272">Le `JsonDocument` fournit la possibilité d’analyser les données JSON et de générer un modèle DOM (Document Object Model) qui peut être interrogé, et prendre en charge l’accès aléatoire et l’énumération.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-272">The `JsonDocument` provides the ability to parse JSON data and build a read-only Document Object Model (DOM) that can be queried to support random access and enumeration.</span></span> <span data-ttu-id="e6e1a-273">Les éléments JSON qui composent les données sont accessibles via le type `JsonElement` qui est exposé par le `JsonDocument` comme propriété appelée `RootElement`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-273">The JSON elements that compose the data can be accessed via the `JsonElement` type which is exposed by the `JsonDocument` as a property called `RootElement`.</span></span> <span data-ttu-id="e6e1a-274">Le `JsonElement` contient le tableau et les énumérateurs d’objets JSON, ainsi que des API pour convertir le texte JSON en types .NET courants.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-274">The `JsonElement` contains the JSON array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="e6e1a-275">L’analyse d’une charge utile JSON classique et l’accès à tous ses membres avec le `JsonDocument` est de 2 à 3 fois plus rapide que **Json.NET**, avec très peu d’allocations pour les données de dimension raisonnable (par exemple < 1 Mo).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-275">Parsing a typical JSON payload and accessing all its members using the `JsonDocument` is 2-3x faster than **Json.NET** with very little allocations for data that is reasonably sized (i.e. < 1 MB).</span></span>
-
-<span data-ttu-id="e6e1a-276">Voici un exemple d’utilisation de `JsonDocument` et de `JsonElement`, qui peut être utilisé comme point de départ :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-276">Here is a sample usage of the `JsonDocument` and `JsonElement` that can be used as a starting point:</span></span>
-
-```csharp
-static double ParseJson()
-{
-    const string json = " [ { \"name\": \"John\" }, [ \"425-000-1212\", 15 ], { \"grades\": [ 90, 80, 100, 75 ] } ]";
-
-    double average = -1;
-
-    using (JsonDocument doc = JsonDocument.Parse(json))
-    {
-        JsonElement root = doc.RootElement;
-        JsonElement info = root[1];
-
-        string phoneNumber = info[0].GetString();
-        int age = info[1].GetInt32();
-
-        JsonElement grades = root[2].GetProperty("grades");
-
-        double sum = 0;
-        foreach (JsonElement grade in grades.EnumerateArray())
-        {
-            sum += grade.GetInt32();
-        }
-
-        int numberOfCourses = grades.GetArrayLength();
-        average = sum / numberOfCourses;
-    }
-
-    return average;
-}
-```
-
-## <a name="assembly-unloadability"></a><span data-ttu-id="e6e1a-277">Non-chargeabilité d’assembly</span><span class="sxs-lookup"><span data-stu-id="e6e1a-277">Assembly Unloadability</span></span>
-
-<span data-ttu-id="e6e1a-278">La non-chargeabilité d’assembly est une nouveauté de `AssemblyLoadContext`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-278">Assembly unloadability is a new capability of `AssemblyLoadContext`.</span></span> <span data-ttu-id="e6e1a-279">Cette nouvelle fonctionnalité est largement transparente du point de vue d’une API, exposée avec seulement quelques nouvelles API.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-279">This new feature is largely transparent from an API perspective, exposed with just a few new APIs.</span></span> <span data-ttu-id="e6e1a-280">Elle permet à un contexte de chargeur d’être déchargé, libérant toute la mémoire pour les types instanciés, pour les champs statiques et pour l’assembly lui-même.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-280">It enables a loader context to be unloaded, releasing all memory for instantiated types, static fields and for the assembly itself.</span></span> <span data-ttu-id="e6e1a-281">Une application doit être en mesure de charger et de décharger définitivement des assemblys via ce mécanisme sans subir de fuite de mémoire.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-281">An application should be able to load and unload assemblies via this mechanism forever without experiencing a memory leak.</span></span>
-
-<span data-ttu-id="e6e1a-282">Cette nouvelle fonctionnalité peut être utilisée pour les scénarios similaires à ceux-ci :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-282">This new capability can be used for scenarios similar to:</span></span>
-
-* <span data-ttu-id="e6e1a-283">Scénarios avec des plug-ins, où le chargement et le déchargement de plug-in dynamique est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-283">Plugin scenarios where dynamic plugin loading and unloading is required.</span></span>
-* <span data-ttu-id="e6e1a-284">Compilation dynamique, exécution puis vidage du code.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-284">Dynamically compiling, running and then flushing code.</span></span> <span data-ttu-id="e6e1a-285">Pratique pour les sites web, les moteurs de script, etc.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-285">Useful for web sites, scripting engines, etc.</span></span>
-* <span data-ttu-id="e6e1a-286">Le chargement des assemblys pour introspection (comme ReflectionOnlyLoad), bien que [MetadataLoadContext](#type-metadataloadcontext) (publiée dans la version Preview 1) soit un meilleur choix dans de nombreux cas.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-286">Loading assemblies for introspection (like ReflectionOnlyLoad), although [MetadataLoadContext](#type-metadataloadcontext) (released in Preview 1) will be a better choice in many cases.</span></span>
-
-<span data-ttu-id="e6e1a-287">Pour plus d’informations, consultez [Using Unloadability](https://github.com/dotnet/coreclr/pull/22221).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-287">For more information, see the [Using Unloadability](https://github.com/dotnet/coreclr/pull/22221) document.</span></span>
-
-<span data-ttu-id="e6e1a-288">Le déchargement d’assembly nécessite des précautions considérables pour garantir que toutes les références à des objets gérés d’en dehors d’un contexte de chargeur sont comprises et gérées.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-288">Assembly unloading requires significant care to ensure that all references to managed objects from outside a loader context are understood and managed.</span></span> <span data-ttu-id="e6e1a-289">Quand la demande de déchargement du contexte de chargeur est faite, toutes les références qui se trouvent en dehors doivent être déréférencées, afin que le contexte de chargeur soit en cohérence seulement avec lui-même.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-289">When the loader context is requested to be unloaded, any outside references need to have been unreferenced so that the loader context is self-consistent only to itself.</span></span>
-
-<span data-ttu-id="e6e1a-290">La non-chargeabilité d’assembly a été fournie dans le .NET Framework par les domaines d’application (AppDomains), qui ne sont pas pris en charge avec .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-290">Assembly unloadability was provided in the .NET Framework by Application Domains (AppDomains), which are not supported with .NET Core.</span></span> <span data-ttu-id="e6e1a-291">Les domaines d’application avaient des avantages et des limitations par rapport à ce nouveau modèle.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-291">AppDomains had both benefits and limitations compared to this new model.</span></span> <span data-ttu-id="e6e1a-292">Considérez ce nouveau modèle de chargeur comme étant plus flexible et plus performant que les domaines d’application.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-292">Consider this new loader model to be more flexible and higher performant when compared to AppDomains.</span></span>
-
-## <a name="windows-native-interop"></a><span data-ttu-id="e6e1a-293">Interopérabilité native Windows</span><span class="sxs-lookup"><span data-stu-id="e6e1a-293">Windows Native Interop</span></span>
-
-<span data-ttu-id="e6e1a-294">Windows offre une API native riche, sous la forme d’API C plates, de COM et de WinRT.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-294">Windows offers a rich native API, in the form of flat C APIs, COM, and WinRT.</span></span> <span data-ttu-id="e6e1a-295">À compter de .NET Core 1.0, **P/Invoke** est pris en charge.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-295">Since .NET Core 1.0, **P/Invoke** has been supported.</span></span> <span data-ttu-id="e6e1a-296">Désormais, avec .NET Core 3.0, la prise en charge de la capacité de **cocréer des API COM** et d’**activer des API WinRT** a été ajouté.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-296">Now with .NET Core 3.0, support for the ability to **CoCreate COM APIs** and **Activate WinRT APIs** has been added.</span></span>
-
-<span data-ttu-id="e6e1a-297">Vous pouvez voir un exemple d’utilisation de COM avec le [code de source de la démonstration Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-297">You can see an example of using COM with the [Excel Demo source code](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).</span></span>
-
-## <a name="type-sequencereader"></a><span data-ttu-id="e6e1a-298">Type : SequenceReader</span><span class="sxs-lookup"><span data-stu-id="e6e1a-298">Type: SequenceReader</span></span>
-
-<span data-ttu-id="e6e1a-299">Dans .NET Core 3.0, `System.Buffers.SequenceReader` a été ajouté et peut servir de lecteur pour `ReadOnlySequence<T>`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-299">In .NET Core 3.0, `System.Buffers.SequenceReader` has been added which can be used as a reader for `ReadOnlySequence<T>`.</span></span> <span data-ttu-id="e6e1a-300">Cela permet une analyse facile, hautes performances et à faible allocation des données `System.IO.Pipelines`, capable de couvrir plusieurs mémoires tampon de stockage.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-300">This allows easy, high performance, low allocation parsing of `System.IO.Pipelines` data that can cross multiple backing buffers.</span></span>
-
-<span data-ttu-id="e6e1a-301">L’exemple suivant segmente une entrée `Sequence` en plusieurs lignes délimitées `CR/LF` valides :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-301">The following example breaks an input `Sequence` into valid `CR/LF` delimited lines:</span></span>
-
-```csharp
-private static ReadOnlySpan<byte> CRLF => new byte[] { (byte)'\r', (byte)'\n' };
-
-public static void ReadLines(ReadOnlySequence<byte> sequence)
-{
-    SequenceReader<byte> reader = new SequenceReader<byte>(sequence);
-
-    while (!reader.End)
-    {
-        if (!reader.TryReadToAny(out ReadOnlySpan<byte> line, CRLF, advancePastDelimiter:false))
-        {
-            // Couldn't find another delimiter
-            // ...
-        }
-
-        if (!reader.IsNext(CRLF, advancePast: true))
-        {
-            // Not a good CR/LF pair
-            // ...
-        }
-
-        // line is valid, process
-        ProcessLine(line);
-    }
-}
-```
-
-## <a name="type-metadataloadcontext"></a><span data-ttu-id="e6e1a-302">Type : MetadataLoadContext</span><span class="sxs-lookup"><span data-stu-id="e6e1a-302">Type: MetadataLoadContext</span></span>
-
-<span data-ttu-id="e6e1a-303">Le type `MetadataLoadContext` a été ajouté et permet la lecture des métadonnées de l'assembly sans affecter le domaine d’application de l’appelant.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-303">The `MetadataLoadContext` type has been added that enables reading assembly metadata without affecting the caller’s application domain.</span></span> <span data-ttu-id="e6e1a-304">Les assemblys sont lus comme des données, y compris ceux générés pour des architectures et plateformes différentes de l’environnement d’exécution actuel.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-304">Assemblies are read as data, including assemblies built for different architectures and platforms than the current runtime environment.</span></span> <span data-ttu-id="e6e1a-305">`MetadataLoadContext` se superpose à <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, qui est uniquement disponible dans .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-305">`MetadataLoadContext` overlaps with the <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>, which is only available in the .NET Framework.</span></span>
-
-<span data-ttu-id="e6e1a-306">`MetdataLoadContext` est disponible dans le [package System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-306">`MetdataLoadContext` is available in the [System.Reflection.MetadataLoadContext package](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext).</span></span> <span data-ttu-id="e6e1a-307">Il s’agit d’un package .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-307">It is a .NET Standard 2.0 package.</span></span>
-
-<span data-ttu-id="e6e1a-308">`MetadataLoadContext` expose les API semblables au type <xref:System.Runtime.Loader.AssemblyLoadContext>, mais il n’est pas basé sur ce type.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-308">The `MetadataLoadContext` exposes APIs similar to the <xref:System.Runtime.Loader.AssemblyLoadContext> type, but is not based on that type.</span></span> <span data-ttu-id="e6e1a-309">Tout comme <xref:System.Runtime.Loader.AssemblyLoadContext>, `MetadataLoadContext` permet le chargement d’assemblys dans un univers de chargement d’assemblys isolé.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-309">Much like <xref:System.Runtime.Loader.AssemblyLoadContext>, the `MetadataLoadContext` enables loading assemblies within an isolated assembly loading universe.</span></span> <span data-ttu-id="e6e1a-310">Les API `MetdataLoadContext` retournent des objets <xref:System.Reflection.Assembly>, permettant l’utilisation des API de réflexion courantes.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-310">`MetdataLoadContext` APIs return <xref:System.Reflection.Assembly> objects, enabling the use of familiar reflection APIs.</span></span> <span data-ttu-id="e6e1a-311">Les API orientées exécution, par exemple [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), ne sont pas autorisées et renverront une exception InvalidOperationException.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-311">Execution-oriented APIs, such as [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127), are not allowed and will throw InvalidOperationException.</span></span>
-
-<span data-ttu-id="e6e1a-312">L’exemple suivant montre comment rechercher des types concrets dans un assembly qui implémente une interface donnée :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-312">The following sample demonstrates how to find concrete types in an assembly that implements a given interface:</span></span>
-
-```csharp
-var paths = new string[] {@"C:\myapp\mscorlib.dll", @"C:\myapp\myapp.dll"};
-var resolver = new PathAssemblyResolver(paths);
-using (var lc = new MetadataLoadContext(resolver))
-{
-    Assembly a = lc.LoadFromAssemblyName("myapp");
-    Type myInterface = a.GetType("MyApp.IPluginInterface");
-    foreach (Type t in a.GetTypes())
-    {
-        if (t.IsClass && myInterface.IsAssignableFrom(t))
-            Console.WriteLine($"Class {t.FullName} implements IPluginInterface");
-    }
-}
-```
-
-<span data-ttu-id="e6e1a-313">Les scénarios pour `MetadataLoadContext` incluent des fonctionnalités et des outils au moment de la conception, ainsi que des fonctionnalités de runtime qui doivent inspecter un ensemble d’assemblys en tant que données et dont l’intégralité des verrous appliqués aux fichiers et à la mémoire doivent être supprimés une l’inspection terminée.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-313">Scenarios for `MetadataLoadContext` include design-time features, build-time tooling, and runtime light-up features that need to inspect a set of assemblies as data and have all file locks and memory freed after inspection is performed.</span></span>
-
-<span data-ttu-id="e6e1a-314">`MetadataLoadContext` contient une classe de résolution passée à son constructeur.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-314">The `MetadataLoadContext` has a resolver class passed to its constructor.</span></span> <span data-ttu-id="e6e1a-315">La tâche du programme de résolution consiste à charger un `Assembly` en fonction de son `AssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-315">The resolver's job is to load an `Assembly` given its `AssemblyName`.</span></span> <span data-ttu-id="e6e1a-316">La classe de résolution est dérivée de la classe abstraite `MetadataAssemblyResolver`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-316">The resolver class derives from the abstract `MetadataAssemblyResolver` class.</span></span> <span data-ttu-id="e6e1a-317">Une implémentation du programme de résolution pour des scénarios basés sur le chemin d’accès est fournie avec `PathAssemblyResolver`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-317">An implementation of the resolver for path-based scenarios is provided with `PathAssemblyResolver`.</span></span>
-
-<span data-ttu-id="e6e1a-318">Les [tests MetadataLoadContext](https://github.com/dotnet/corefx/tree/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests) illustrent de nombreux cas d’usage.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-318">The [MetadataLoadContext tests](https://github.com/dotnet/corefx/tree/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests) demonstrate many use cases.</span></span> <span data-ttu-id="e6e1a-319">Les [tests Assembly](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests/Assembly/AssemblyTests.cs) constituent un bon point de départ.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-319">The [Assembly tests](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/tests/src/Tests/Assembly/AssemblyTests.cs) are a good place to start.</span></span>
-
-## <a name="tls-13--openssl-111-on-linux"></a><span data-ttu-id="e6e1a-320">TLS 1.3 et OpenSSL 1.1.1 sous Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-320">TLS 1.3 & OpenSSL 1.1.1 on Linux</span></span>
-
-<span data-ttu-id="e6e1a-321">.NET Core tire désormais parti de la [prise en charge de TLS 1.3 dans OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), si disponible dans un environnement donné.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-321">.NET Core will now take advantage of [TLS 1.3 support in OpenSSL 1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), when it is available in a given environment.</span></span> <span data-ttu-id="e6e1a-322">Selon l’[équipe OpenSSL](https://www.openssl.org/blog/blog/2018/09/11/release111/), TLS 1.3 présentent plusieurs avantages :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-322">There are multiple benefits of TLS 1.3, per the [OpenSSL team](https://www.openssl.org/blog/blog/2018/09/11/release111/):</span></span>
-
-* <span data-ttu-id="e6e1a-323">Délais de connexion améliorés grâce à une réduction du nombre d’allers-retours requis entre le client et le serveur.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-323">Improved connection times due to a reduction in the number of round trips required between the client and server.</span></span>
-
-* <span data-ttu-id="e6e1a-324">Sécurité améliorée grâce à la suppression de différents algorithmes de chiffrement obsolètes et non sécurisés et à un chiffrement plus complet de la négociation de connexion.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-324">Improved security due to the removal of various obsolete and insecure cryptographic algorithms and encryption of more of the connection handshake.</span></span>
-
-<span data-ttu-id="e6e1a-325">.NET Core 3.0 Préversion 1 est capable d’utiliser **OpenSSL 1.1.1**, **OpenSSL 1.1.0** ou **OpenSSL 1.0.2** (soit la meilleure version trouvée, sur un système Linux).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-325">.NET Core 3.0 Preview 1 is capable of utilizing **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, or **OpenSSL 1.0.2** (whatever the best version found is, on a Linux system).</span></span>  <span data-ttu-id="e6e1a-326">Si **OpenSSL 1.1.1** est disponible, les types SslStream et HttpClient utiliseront **TLS 1.3** avec `SslProtocols.None` (protocoles système par défaut), en supposant que le client et le serveur prennent en charge **TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-326">When **OpenSSL 1.1.1** is available the SslStream and HttpClient types will use **TLS 1.3** when using `SslProtocols.None` (system default protocols), assuming both the client and server support **TLS 1.3**.</span></span>
-
-<span data-ttu-id="e6e1a-327">L’exemple suivant montre comment .NET Core 3.0 Préversion 1 sous Ubuntu 18.10 se connecte à <https://www.cloudflare.com> :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-327">The following sample demonstrates .NET Core 3.0 Preview 1 on Ubuntu 18.10 connecting to <https://www.cloudflare.com>:</span></span>
-
-```csharp
-using System;
-using System.Net.Security;
-using System.Net.Sockets;
-using System.Threading.Tasks;
-
-namespace tlstest
-{
-    class Program
-    {
-        static async Task Main()
-        {
-            using (TcpClient tcpClient = new TcpClient())
-            {
-                string targetHost = "www.cloudflare.com";
-
-                await tcpClient.ConnectAsync(targetHost, 443);
-
-                using (SslStream sslStream = new SslStream(tcpClient.GetStream()))
-                {
-                    await sslStream.AuthenticateAsClientAsync(targetHost);
-                    await Console.Out.WriteLineAsync($"Connected to {targetHost} with {sslStream.SslProtocol}");
-                }
-            }
-        }
-    }
-}
-```
-
-```console
-user@comp-ubuntu1810:~/tlstest$ dotnet run
-Connected to www.cloudflare.com with Tls13
-user@comp-ubuntu1810:~/tlstest$ openssl version
-OpenSSL 1.1.1  11 Sep 2018
-```
+<span data-ttu-id="6dc76-329">.NET Core 3.0 utilise **OpenSSL 1.1.1**, **OpenSSL 1.1.0** ou **OpenSSL 1.0.2** sur un système Linux s’ils sont disponibles.</span><span class="sxs-lookup"><span data-stu-id="6dc76-329">When available, .NET Core 3.0 uses **OpenSSL 1.1.1**, **OpenSSL 1.1.0**, or **OpenSSL 1.0.2** on a Linux system.</span></span> <span data-ttu-id="6dc76-330">Quand **OpenSSL 1.1.1** est disponible, les types <xref:System.Net.Security.SslStream?displayProperty=nameWithType> et <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> utilisent **TLS 1.3** (sous réserve que le client et le serveur prennent en charge **TLS 1.3**).</span><span class="sxs-lookup"><span data-stu-id="6dc76-330">When **OpenSSL 1.1.1** is available, both <xref:System.Net.Security.SslStream?displayProperty=nameWithType> and <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> types will use **TLS 1.3** (assuming both the client and server support **TLS 1.3**).</span></span>
 
 >[!IMPORTANT]
-><span data-ttu-id="e6e1a-328">Windows et macOS ne prennent pas encore en charge **TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-328">Windows and macOS do not yet support **TLS 1.3**.</span></span> <span data-ttu-id="e6e1a-329">.NET Core 3.0 prendra en charge **TLS 1.3** sur ces systèmes d’exploitation dès que de la prise en charge sera disponible.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-329">.NET Core 3.0 will support **TLS 1.3** on these operating systems when support becomes available.</span></span>
+><span data-ttu-id="6dc76-331">Windows et macOS ne prennent pas encore en charge **TLS 1.3**.</span><span class="sxs-lookup"><span data-stu-id="6dc76-331">Windows and macOS do not yet support **TLS 1.3**.</span></span> <span data-ttu-id="6dc76-332">.NET Core 3.0 prendra en charge **TLS 1.3** sur ces systèmes d’exploitation dès que de la prise en charge sera disponible.</span><span class="sxs-lookup"><span data-stu-id="6dc76-332">.NET Core 3.0 will support **TLS 1.3** on these operating systems when support becomes available.</span></span>
 
-## <a name="cryptography"></a><span data-ttu-id="e6e1a-330">Chiffrement</span><span class="sxs-lookup"><span data-stu-id="e6e1a-330">Cryptography</span></span>
+<span data-ttu-id="6dc76-333">L’exemple C# 8.0 suivant montre comment .NET Core 3.0 sur Ubuntu 18.10 se connecte à <https://www.cloudflare.com> :</span><span class="sxs-lookup"><span data-stu-id="6dc76-333">The following C# 8.0 example demonstrates .NET Core 3.0 on Ubuntu 18.10 connecting to <https://www.cloudflare.com>:</span></span>
 
-<span data-ttu-id="e6e1a-331">La prise en charge a été ajoutée pour les chiffrements **AES-GCM** et **AES-CCM**, avec une implémentation via `System.Security.Cryptography.AesGcm` et `System.Security.Cryptography.AesCcm`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-331">Support has been added for **AES-GCM** and **AES-CCM** ciphers, implemented via `System.Security.Cryptography.AesGcm` and `System.Security.Cryptography.AesCcm`.</span></span> <span data-ttu-id="e6e1a-332">Ces algorithmes sont de type [Authenticated Encryption with Association Data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption), et les premiers algorithmes Authenticated Encryption (AE) ont été ajoutés à .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-332">These algorithms are both [Authenticated Encryption with Association Data (AEAD) algorithms](https://en.wikipedia.org/wiki/Authenticated_encryption), and the first Authenticated Encryption (AE) algorithms added to .NET Core.</span></span>
+[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
-<span data-ttu-id="e6e1a-333">Le code suivant montre l’utilisation du chiffrement **AesGcm** pour chiffrer et déchiffrer des données aléatoires.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-333">The following code demonstrates using **AesGcm** cipher to encrypt and decrypt random data.</span></span>
+## <a name="cryptography-ciphers"></a><span data-ttu-id="6dc76-334">Chiffrements</span><span class="sxs-lookup"><span data-stu-id="6dc76-334">Cryptography ciphers</span></span>
 
-<span data-ttu-id="e6e1a-334">Le code pour **AesCcm** sera presque identique (seuls les noms des variables de classe seraient différents).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-334">The code for **AesCcm** would look almost identical (only the class variable names would be different).</span></span>
+<span data-ttu-id="6dc76-335">.NET 3.0 prend en charge les chiffrements **AES-GCM** et **AES-CCM**, implémentés avec <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> et <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> respectivement.</span><span class="sxs-lookup"><span data-stu-id="6dc76-335">.NET 3.0 adds support for **AES-GCM** and **AES-CCM** ciphers, implemented with <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> and <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> respectively.</span></span> <span data-ttu-id="6dc76-336">Ces algorithmes sont tous deux des [algorithmes AEAD (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).</span><span class="sxs-lookup"><span data-stu-id="6dc76-336">These algorithms are both [Authenticated Encryption with Association Data (AEAD) algorithms](https://en.wikipedia.org/wiki/Authenticated_encryption).</span></span>
 
-```csharp
-// key should be: pre-known, derived, or transported via another channel, such as RSA encryption
-byte[] key = new byte[16];
-RandomNumberGenerator.Fill(key);
+<span data-ttu-id="6dc76-337">Le code suivant montre l’utilisation du chiffrement `AesGcm` pour chiffrer et déchiffrer des données aléatoires.</span><span class="sxs-lookup"><span data-stu-id="6dc76-337">The following code demonstrates using `AesGcm` cipher to encrypt and decrypt random data.</span></span>
 
-byte[] nonce = new byte[12];
-RandomNumberGenerator.Fill(nonce);
+[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
-// normally this would be your data
-byte[] dataToEncrypt = new byte[1234];
-byte[] associatedData = new byte[333];
-RandomNumberGenerator.Fill(dataToEncrypt);
-RandomNumberGenerator.Fill(associatedData);
+## <a name="cryptographic-key-importexport"></a><span data-ttu-id="6dc76-338">Importation/exportation d’une clé de chiffrement</span><span class="sxs-lookup"><span data-stu-id="6dc76-338">Cryptographic Key Import/Export</span></span>
 
-// these will be filled during the encryption
-byte[] tag = new byte[16];
-byte[] ciphertext = new byte[dataToEncrypt.Length];
+<span data-ttu-id="6dc76-339">.NET Core 3.0 prend en charge l’importation et l’exportation de clés publiques et privées asymétriques aux formats standard.</span><span class="sxs-lookup"><span data-stu-id="6dc76-339">.NET Core 3.0 supports the import and export of asymmetric public and private keys from standard formats.</span></span> <span data-ttu-id="6dc76-340">Vous n’avez pas besoin d’utiliser un certificat X.509.</span><span class="sxs-lookup"><span data-stu-id="6dc76-340">You don't need to use an X.509 certificate.</span></span>
 
-using (AesGcm aesGcm = new AesGcm(key))
-{
-    aesGcm.Encrypt(nonce, dataToEncrypt, ciphertext, tag, associatedData);
-}
+<span data-ttu-id="6dc76-341">Tous les types de clés, tels que *RSA*, *DSA*, *ECDsa* et *ECDiffieHellman*, prennent en charge les formats suivants :</span><span class="sxs-lookup"><span data-stu-id="6dc76-341">All key types, such as *RSA*, *DSA*, *ECDsa*, and *ECDiffieHellman*, support the following formats:</span></span>
 
-// tag, nonce, ciphertext, associatedData should be sent to the other part
+* <span data-ttu-id="6dc76-342">**Clé publique**</span><span class="sxs-lookup"><span data-stu-id="6dc76-342">**Public Key**</span></span>
+  * <span data-ttu-id="6dc76-343">X.509 SubjectPublicKeyInfo</span><span class="sxs-lookup"><span data-stu-id="6dc76-343">X.509 SubjectPublicKeyInfo</span></span>
 
-byte[] decryptedData = new byte[ciphertext.Length];
+* <span data-ttu-id="6dc76-344">**Clé privée**</span><span class="sxs-lookup"><span data-stu-id="6dc76-344">**Private key**</span></span>
+  * <span data-ttu-id="6dc76-345">PKCS#8 PrivateKeyInfo</span><span class="sxs-lookup"><span data-stu-id="6dc76-345">PKCS#8 PrivateKeyInfo</span></span>
+  * <span data-ttu-id="6dc76-346">PKCS#8 EncryptedPrivateKeyInfo</span><span class="sxs-lookup"><span data-stu-id="6dc76-346">PKCS#8 EncryptedPrivateKeyInfo</span></span>
 
-using (AesGcm aesGcm = new AesGcm(key))
-{
-    aesGcm.Decrypt(nonce, ciphertext, tag, decryptedData, associatedData);
-}
+<span data-ttu-id="6dc76-347">Les clés RSA prennent également en charge :</span><span class="sxs-lookup"><span data-stu-id="6dc76-347">RSA keys also support:</span></span>
 
-// do something with the data
-// this should always print that data is the same
-Console.WriteLine($"AES-GCM: Decrypted data is{(dataToEncrypt.SequenceEqual(decryptedData) ? "the same as" : "different than")} original data.");
-```
+* <span data-ttu-id="6dc76-348">**Clé publique**</span><span class="sxs-lookup"><span data-stu-id="6dc76-348">**Public Key**</span></span>
+  * <span data-ttu-id="6dc76-349">PKCS#1 RSAPublicKey</span><span class="sxs-lookup"><span data-stu-id="6dc76-349">PKCS#1 RSAPublicKey</span></span>
 
-## <a name="cryptographic-key-importexport"></a><span data-ttu-id="e6e1a-335">Importation/exportation d’une clé de chiffrement</span><span class="sxs-lookup"><span data-stu-id="e6e1a-335">Cryptographic Key Import/Export</span></span>
+* <span data-ttu-id="6dc76-350">**Clé privée**</span><span class="sxs-lookup"><span data-stu-id="6dc76-350">**Private key**</span></span>
+  * <span data-ttu-id="6dc76-351">PKCS#1 RSAPrivateKey</span><span class="sxs-lookup"><span data-stu-id="6dc76-351">PKCS#1 RSAPrivateKey</span></span>
 
-<span data-ttu-id="e6e1a-336">.NET Core 3.0 Préversion 1 prend en charge l’importation et l’exportation de clés publiques et privées asymétriques aux formats standard, sans avoir à utiliser un certificat X.509.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-336">.NET Core 3.0 Preview 1 supports the import and export of asymmetric public and private keys from standard formats, without needing to use an X.509 certificate.</span></span>
+<span data-ttu-id="6dc76-352">Les méthodes d’exportation produisent des données binaires encodées au format DER, tout comme les méthodes d’importation.</span><span class="sxs-lookup"><span data-stu-id="6dc76-352">The export methods produce DER-encoded binary data, and the import methods expect the same.</span></span> <span data-ttu-id="6dc76-353">Si une clé est stockée au format PEM compatible avec le texte, l’appelant devra décoder le contenu au format base64 avant d’appeler une méthode d’importation.</span><span class="sxs-lookup"><span data-stu-id="6dc76-353">If a key is stored in the text-friendly PEM format, the caller will need to base64-decode the content before calling an import method.</span></span>
 
-<span data-ttu-id="e6e1a-337">Tous les types de clés (RSA, DSA, ECDsa, ECDiffieHellman) prennent en charge le format **X.509 SubjectPublicKeyInfo** pour les clés publiques, et les formats **PKCS #8 PrivateKeyInfo** et **PKCS #8 EncryptedPrivateKeyInfo** pour les clés privées.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-337">All key types (RSA, DSA, ECDsa, ECDiffieHellman) support the **X.509 SubjectPublicKeyInfo** format for public keys, and the **PKCS#8 PrivateKeyInfo** and **PKCS#8 EncryptedPrivateKeyInfo** formats for private keys.</span></span> <span data-ttu-id="e6e1a-338">Le chiffrement RSA prend également en charge **PKCS #1 RSAPublicKey** et **PKCS #1 RSAPrivateKey**.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-338">RSA additionally supports **PKCS#1 RSAPublicKey** and **PKCS#1 RSAPrivateKey**.</span></span> <span data-ttu-id="e6e1a-339">Les méthodes d’exportation produisent toutes des données binaires encodées au format DER, tout comme les méthodes d’importation.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-339">The export methods all produce DER-encoded binary data, and the import methods expect the same.</span></span> <span data-ttu-id="e6e1a-340">Si une clé est stockée au format PEM compatible avec le texte, l’appelant devra décoder le contenu au format base64 avant d’appeler une méthode d’importation.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-340">If a key is stored in the text-friendly PEM format, the caller will need to base64-decode the content before calling an import method.</span></span>
+[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
-```csharp
-using System;
-using System.IO;
-using System.Security.Cryptography;
+<span data-ttu-id="6dc76-354">Les fichiers **PKCS#8** peuvent être inspectés avec <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType>, tandis que les fichiers **PFX/PKCS#12** peuvent être inspectés avec <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6dc76-354">**PKCS#8** files can be inspected with <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> and **PFX/PKCS#12** files can be inspected with <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6dc76-355">Les fichiers **PFX/PKCS#12** peuvent être manipulés avec <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6dc76-355">**PFX/PKCS#12** files can be manipulated with <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.</span></span>
 
-namespace rsakeyprint
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            using (RSA rsa = RSA.Create())
-            {
-                byte[] keyBytes = File.ReadAllBytes(args[0]);
-                rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
+## <a name="serialport-for-linux"></a><span data-ttu-id="6dc76-356">SerialPort pour Linux</span><span class="sxs-lookup"><span data-stu-id="6dc76-356">SerialPort for Linux</span></span>
 
-                Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
-                RSAParameters rsaParameters = rsa.ExportParameters(true);
-                Console.WriteLine(BitConverter.ToString(rsaParameters.D));
-            }
-        }
-    }
-}
-```
+<span data-ttu-id="6dc76-357">.NET Core 3.0 prend en charge <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> sur Linux.</span><span class="sxs-lookup"><span data-stu-id="6dc76-357">.NET Core 3.0 supports <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> on Linux.</span></span>
 
-```console
-user@comp-ubuntu1810:~/rsakeyprint$ echo Making a small key to save on screen space.
-Making a small key to save on screen space.
-user@comp-ubuntu1810:~/rsakeyprint$ openssl genrsa 768 | openssl rsa -outform der -out rsa.key
-Generating RSA private key, 768 bit long modulus (2 primes)
-..+++++++
-........+++++++
-e is 65537 (0x010001)
-writing RSA key
-user@comp-ubuntu1810:~/rsakeyprint$ dotnet run rsa.key
-Read 461 bytes, 0 extra byte(s) in file.
-0F-D0-82-34-F8-13-38-4A-7F-C7-52-4A-F6-93-F8-FB-6D-98-7A-6A-04-3B-BC-35-8C-7D-AC-A5-A3-6E-AD-C1-66-30-81-2C-2A-DE-DA-60-03-6A-2C-D9-76-15-7F-61-97-57-
-79-E1-6E-45-62-C3-83-04-97-CB-32-EF-C5-17-5F-99-60-92-AE-B6-34-6F-30-06-03-AC-BF-15-24-43-84-EB-83-60-EF-4D-3B-BD-D9-5D-56-26-F0-51-CE-F1
-user@comp-ubuntu1810:~/rsakeyprint$ openssl rsa -in rsa.key -inform der -text -noout | grep -A7 private
-privateExponent:
-    0f:d0:82:34:f8:13:38:4a:7f:c7:52:4a:f6:93:f8:
-    fb:6d:98:7a:6a:04:3b:bc:35:8c:7d:ac:a5:a3:6e:
-    ad:c1:66:30:81:2c:2a:de:da:60:03:6a:2c:d9:76:
-    15:7f:61:97:57:79:e1:6e:45:62:c3:83:04:97:cb:
-    32:ef:c5:17:5f:99:60:92:ae:b6:34:6f:30:06:03:
-    ac:bf:15:24:43:84:eb:83:60:ef:4d:3b:bd:d9:5d:
-    56:26:f0:51:ce:f1
-```
+<span data-ttu-id="6dc76-358">Auparavant, .NET Core était uniquement pris en charge au moyen de `SerialPort` sur Windows.</span><span class="sxs-lookup"><span data-stu-id="6dc76-358">Previously, .NET Core only supported using `SerialPort` on Windows.</span></span>
 
-<span data-ttu-id="e6e1a-341">Les fichiers PKCS #8 peuvent être inspectés avec la classe `System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-341">PKCS#8 files can be inspected with the `System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo` class.</span></span>
+## <a name="docker-and-cgroup-memory-limits"></a><span data-ttu-id="6dc76-359">Docker et limites de mémoire cgroup</span><span class="sxs-lookup"><span data-stu-id="6dc76-359">Docker and cgroup memory Limits</span></span>
 
-<span data-ttu-id="e6e1a-342">Les fichiers PFX/PKCS#12 peuvent être inspectés et manipulés avec `System.Security.Cryptography.Pkcs.Pkcs12Info` et `System.Security.Cryptography.Pkcs.Pkcs12Builder`, respectivement.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-342">PFX/PKCS#12 files can be inspected and manipulated with `System.Security.Cryptography.Pkcs.Pkcs12Info` and `System.Security.Cryptography.Pkcs.Pkcs12Builder`, respectively.</span></span>
+<span data-ttu-id="6dc76-360">À compter de Preview 3, l’exécution de .NET Core 3.0 sur Linux avec Docker fonctionne mieux avec les limites de mémoire cgroup.</span><span class="sxs-lookup"><span data-stu-id="6dc76-360">Starting with Preview 3, running .NET Core 3.0 on Linux with Docker works better with cgroup memory limits.</span></span> <span data-ttu-id="6dc76-361">L’exécution d’un conteneur Docker avec des limites de mémoire, par exemple avec `docker run -m`, change le comportement de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6dc76-361">Running a Docker container with memory limits, such as with `docker run -m`, changes how .NET Core behaves.</span></span>
 
-## <a name="serialport-for-linux"></a><span data-ttu-id="e6e1a-343">SerialPort pour Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-343">SerialPort for Linux</span></span>
+* <span data-ttu-id="6dc76-362">Taille de tas par défaut du récupérateur de mémoire (GC) : au maximum 20 Mo ou 75 % de la limite de mémoire sur le conteneur.</span><span class="sxs-lookup"><span data-stu-id="6dc76-362">Default Garbage Collector (GC) heap size: maximum of 20 mb or 75% of the memory limit on the container.</span></span>
+* <span data-ttu-id="6dc76-363">Une taille explicite peut être définie sous forme de nombre absolu ou de pourcentage de la limite cgroup.</span><span class="sxs-lookup"><span data-stu-id="6dc76-363">Explicit size can be set as an absolute number or percentage of cgroup limit.</span></span>
+* <span data-ttu-id="6dc76-364">La taille de segment réservée minimale par tas GC est de 16 Mo.</span><span class="sxs-lookup"><span data-stu-id="6dc76-364">Minimum reserved segment size per GC heap is 16 mb.</span></span> <span data-ttu-id="6dc76-365">Cette taille réduit le nombre de segments de mémoire qui sont créés sur les machines.</span><span class="sxs-lookup"><span data-stu-id="6dc76-365">This size reduces the number of heaps that are created on machines.</span></span>
 
-<span data-ttu-id="e6e1a-344">.NET Core 3.0 prend désormais en charge <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> sous Linux.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-344">.NET Core 3.0 now supports <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> on Linux.</span></span>
+## <a name="smaller-garbage-collection-heap-sizes"></a><span data-ttu-id="6dc76-366">Tailles de tas de garbage collection plus petites</span><span class="sxs-lookup"><span data-stu-id="6dc76-366">Smaller Garbage Collection heap sizes</span></span>
 
-<span data-ttu-id="e6e1a-345">Auparavant, .NET Core était uniquement pris en charge grâce au type `SerialPort` sous Windows.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-345">Previously, .NET Core only supported using the `SerialPort` type on Windows.</span></span>
+<span data-ttu-id="6dc76-367">La taille de tas par défaut du récupérateur de mémoire a été réduite, aboutissant à une diminution de la quantité de mémoire utilisée par .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6dc76-367">The Garbage Collector's default heap size has been reduced resulting in .NET Core using less memory.</span></span> <span data-ttu-id="6dc76-368">Ce changement est plus conforme au budget d’allocation de génération 0 avec les tailles des caches des processeurs modernes.</span><span class="sxs-lookup"><span data-stu-id="6dc76-368">This change better aligns with the generation 0 allocation budget with modern processor cache sizes.</span></span>
 
-## <a name="more-bcl-improvements"></a><span data-ttu-id="e6e1a-346">Plusieurs améliorations BCL</span><span class="sxs-lookup"><span data-stu-id="e6e1a-346">More BCL Improvements</span></span>
+## <a name="garbage-collection-large-page-support"></a><span data-ttu-id="6dc76-369">Prise en charge de grandes pages du garbage collection</span><span class="sxs-lookup"><span data-stu-id="6dc76-369">Garbage Collection Large Page support</span></span>
 
-<span data-ttu-id="e6e1a-347">Les types `Span<T>`, `Memory<T>` et autres types associés qui avaient été introduits dans .NET Core 2.1 ont été optimisées dans .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-347">The `Span<T>`, `Memory<T>`, and related types that were introduced in .NET Core 2.1, have been optimized in .NET Core 3.0.</span></span> <span data-ttu-id="e6e1a-348">Les opérations courantes comme la construction de type span, le découpage, l’analyse et la mise en forme sont maintenant plus performantes.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-348">Common operations such as span construction, slicing, parsing, and formatting now perform better.</span></span>
+<span data-ttu-id="6dc76-370">Les grandes pages (également appelées HugePages sur Linux) sont une fonctionnalité qui permet au système d’exploitation d’établir des régions de mémoire plus grandes que la taille de page native (souvent 4 Ko) pour améliorer les performances de l’application qui demande ces grandes pages.</span><span class="sxs-lookup"><span data-stu-id="6dc76-370">Large Pages (also known as Huge Pages on Linux) is a feature where the operating system is able to establish memory regions larger than the native page size (often 4K) to improve performance of the application requesting these large pages.</span></span>
 
-<span data-ttu-id="e6e1a-349">En outre, les types comme `String` ont bénéficié d’améliorations en arrière-plan pour les rendre plus efficaces lorsqu’ils sont utilisés comme des clés avec `Dictionary<TKey, TValue>` et d’autres collections.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-349">Additionally, types like `String` have seen under-the-cover improvements to make them more efficient when used as keys with `Dictionary<TKey, TValue>` and other collections.</span></span> <span data-ttu-id="e6e1a-350">Aucune modification de code n’est nécessaire pour tirer parti de ces améliorations.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-350">No code changes are required to benefit from these improvements.</span></span>
+<span data-ttu-id="6dc76-371">Vous pouvez maintenant configurer le récupérateur de mémoire avec la définition **GCLargePages** en tant que fonctionnalité que vous pouvez choisir d’utiliser et qui permet d’allouer de grandes pages sur Windows.</span><span class="sxs-lookup"><span data-stu-id="6dc76-371">The Garbage Collector can now be configured with the **GCLargePages** setting as an opt-in feature to choose to allocate large pages on Windows.</span></span>
 
-<span data-ttu-id="e6e1a-351">Les améliorations suivantes sont également des nouveautés dans .NET Core 3 Préversion 1 :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-351">The following improvements are also new in .NET Core 3 Preview 1:</span></span>
+## <a name="gpio-support-for-raspberry-pi"></a><span data-ttu-id="6dc76-372">Prise en charge de GPIO pour Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="6dc76-372">GPIO Support for Raspberry Pi</span></span>
 
-* <span data-ttu-id="e6e1a-352">Prise en charge de Brotli intégrée à HttpClient</span><span class="sxs-lookup"><span data-stu-id="e6e1a-352">Brotli support built in to HttpClient</span></span>
-* <span data-ttu-id="e6e1a-353">ThreadPool.UnsafeQueueWorkItem(IThreadPoolWorkItem)</span><span class="sxs-lookup"><span data-stu-id="e6e1a-353">ThreadPool.UnsafeQueueWorkItem(IThreadPoolWorkItem)</span></span>
-* <span data-ttu-id="e6e1a-354">Unsafe.Unbox</span><span class="sxs-lookup"><span data-stu-id="e6e1a-354">Unsafe.Unbox</span></span>
-* <span data-ttu-id="e6e1a-355">CancellationToken.Unregister</span><span class="sxs-lookup"><span data-stu-id="e6e1a-355">CancellationToken.Unregister</span></span>
-* <span data-ttu-id="e6e1a-356">Opérateurs arithmétiques complexes</span><span class="sxs-lookup"><span data-stu-id="e6e1a-356">Complex arithmetic operators</span></span>
-* <span data-ttu-id="e6e1a-357">API de socket pour TCP keep alive</span><span class="sxs-lookup"><span data-stu-id="e6e1a-357">Socket APIs for TCP keep alive</span></span>
-* <span data-ttu-id="e6e1a-358">StringBuilder.GetChunks</span><span class="sxs-lookup"><span data-stu-id="e6e1a-358">StringBuilder.GetChunks</span></span>
-* <span data-ttu-id="e6e1a-359">Analyse IPEndPoint</span><span class="sxs-lookup"><span data-stu-id="e6e1a-359">IPEndPoint parsing</span></span>
-* <span data-ttu-id="e6e1a-360">RandomNumberGenerator.GetInt32</span><span class="sxs-lookup"><span data-stu-id="e6e1a-360">RandomNumberGenerator.GetInt32</span></span>
+<span data-ttu-id="6dc76-373">Deux packages ont été publiés sur NuGet, que vous pouvez utiliser pour la programmation de GPIO :</span><span class="sxs-lookup"><span data-stu-id="6dc76-373">Two packages have been released to NuGet that you can use for GPIO programming:</span></span>
 
-## <a name="tiered-compilation"></a><span data-ttu-id="e6e1a-361">Compilation hiérarchisée</span><span class="sxs-lookup"><span data-stu-id="e6e1a-361">Tiered compilation</span></span>
+* [<span data-ttu-id="6dc76-374">System.Device.Gpio</span><span class="sxs-lookup"><span data-stu-id="6dc76-374">System.Device.Gpio</span></span>](https://www.nuget.org/packages/System.Device.Gpio)
+* [<span data-ttu-id="6dc76-375">Iot.Device.Bindings</span><span class="sxs-lookup"><span data-stu-id="6dc76-375">Iot.Device.Bindings</span></span>](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-<span data-ttu-id="e6e1a-362">La [compilation hiérarchisée](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) est activée par défaut avec .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-362">[Tiered compilation](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) is on by default with .NET Core 3.0.</span></span> <span data-ttu-id="e6e1a-363">Cette fonctionnalité permet au runtime d’utiliser de manière plus adaptative le compilateur juste-à-temps (Just-In-Time ou JIT) pour obtenir de meilleures performances, à la fois au démarrage et pour optimiser le débit.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-363">It is a feature that enables the runtime to more adaptively use the Just-In-Time (JIT) compiler to get better performance, both at startup and to maximize throughput.</span></span>
+<span data-ttu-id="6dc76-376">Les packages GPIO incluent des API pour les appareils *GPIO*, *SPI*, *I2C* et *PWM*.</span><span class="sxs-lookup"><span data-stu-id="6dc76-376">The GPIO packages include APIs for *GPIO*, *SPI*, *I2C*, and *PWM* devices.</span></span> <span data-ttu-id="6dc76-377">Le package de liaisons IoT comprend des liaisons d’appareil.</span><span class="sxs-lookup"><span data-stu-id="6dc76-377">The IoT bindings package includes device bindings.</span></span> <span data-ttu-id="6dc76-378">Pour plus d’informations, consultez le [dépôt GitHub devices](https://github.com/dotnet/iot/blob/master/src/devices/).</span><span class="sxs-lookup"><span data-stu-id="6dc76-378">For more information, see the [devices GitHub repo](https://github.com/dotnet/iot/blob/master/src/devices/).</span></span>
 
-<span data-ttu-id="e6e1a-364">Cette fonctionnalité avait été ajoutée en option dans [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) et était activée par défaut dans [.NET Core 2.2 Préversion 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-364">This feature was added as an opt-in feature in [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) and then was enabled by default in [.NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).</span></span> <span data-ttu-id="e6e1a-365">Elle est ensuite redevenue une option dans la version .NET Core 2.2.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-365">Subsequently, it has been reverted back to opt in with the .NET Core 2.2 release.</span></span>
+## <a name="arm64-linux-support"></a><span data-ttu-id="6dc76-379">Support ARM64 Linux</span><span class="sxs-lookup"><span data-stu-id="6dc76-379">ARM64 Linux support</span></span>
 
-## <a name="arm64-linux-support"></a><span data-ttu-id="e6e1a-366">Support ARM64 Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-366">ARM64 Linux support</span></span>
+<span data-ttu-id="6dc76-380">.NET Core 3.0 prend en charge ARM64 pour Linux.</span><span class="sxs-lookup"><span data-stu-id="6dc76-380">.NET Core 3.0 adds support for ARM64 for Linux.</span></span> <span data-ttu-id="6dc76-381">Actuellement, ARM64 est principallement utilisé dans des scénarios IoT.</span><span class="sxs-lookup"><span data-stu-id="6dc76-381">The primary use case for ARM64 is currently with IoT scenarios.</span></span> <span data-ttu-id="6dc76-382">Pour plus d’informations, consultez [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82).</span><span class="sxs-lookup"><span data-stu-id="6dc76-382">For more information, see [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82).</span></span>
 
-<span data-ttu-id="e6e1a-367">La prise en charge d’ARM64 pour Linux a été ajoutée.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-367">Support has been added for ARM64 for Linux.</span></span> <span data-ttu-id="e6e1a-368">Actuellement, ARM64 est principallement utilisé dans des scénarios IoT.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-368">The primary use case for ARM64 is currently with IoT scenarios.</span></span>
+<span data-ttu-id="6dc76-383">Des [images Docker pour .NET Core sur ARM64](https://hub.docker.com/r/microsoft/dotnet/) sont disponibles pour Alpine, Debian et Ubuntu.</span><span class="sxs-lookup"><span data-stu-id="6dc76-383">[Docker images for .NET Core on ARM64](https://hub.docker.com/r/microsoft/dotnet/) are available for Alpine, Debian, and Ubuntu.</span></span>
 
-<span data-ttu-id="e6e1a-369">Des [images Docker Alpine, Debian et Ubuntu sont disponibles avec .NET Core pour ARM64](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-369">Alpine, Debian and Ubuntu [Docker images are available for .NET Core for ARM64](https://hub.docker.com/r/microsoft/dotnet/).</span></span>
-
-<span data-ttu-id="e6e1a-370">Consultez [État de .NET Core ARM64](https://github.com/dotnet/announcements/issues/82) pour plus d’informations.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-370">Please check [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82) for more information.</span></span>
-
->[!NOTE]
-> <span data-ttu-id="e6e1a-371">La prise en charge d’**ARM64** sous Windows n’est pas encore disponible.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-371">**ARM64** Windows support isn't yet available.</span></span>
-
-## <a name="install-net-core-30-previews-on-linux-with-snap"></a><span data-ttu-id="e6e1a-372">Installer des préversions de .NET Core 3.0 sur Linux avec Snap</span><span class="sxs-lookup"><span data-stu-id="e6e1a-372">Install .NET Core 3.0 Previews on Linux with Snap</span></span>
-
-<span data-ttu-id="e6e1a-373">Snap est le meilleur moyen d’installer et d’essayer les préversions de .NET Core sur les [distributions Linux qui prennent en charge Snap](https://docs.snapcraft.io/installing-snapd/6735).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-373">Snap is the preferred way to install and try .NET Core previews on [Linux distributions that support Snap](https://docs.snapcraft.io/installing-snapd/6735).</span></span>
-
-<span data-ttu-id="e6e1a-374">Après avoir configuré Snap sur votre système, exécutez la commande suivante pour installer le [SDK de .NET Core SDK 3.0 Preview](https://snapcraft.io/dotnet-sdk).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-374">After configuring Snap on your system, run the following command to install the [.NET Core SDK 3.0 Preview SDK](https://snapcraft.io/dotnet-sdk).</span></span>
-
-```console
-sudo snap install dotnet-sdk --beta --classic
-```
-
-<span data-ttu-id="e6e1a-375">Quand .NET Core est installé en utilisant le package Snap, la commande .NET Core par défaut est `dotnet-sdk.dotnet`, et non pas simplement `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-375">When .NET Core in installed using the Snap package, the default .NET Core command is `dotnet-sdk.dotnet`, as opposed to just `dotnet`.</span></span> <span data-ttu-id="e6e1a-376">L’avantage de la commande avec l’espace de noms est qu’elle ne sera pas en conflit avec une éventuelle version de .NET Core installée globalement.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-376">The benefit of the namespaced command is that it will not conflict with a globally installed .NET Core version you may have.</span></span> <span data-ttu-id="e6e1a-377">Vous pouvez créer l’alias `dotnet` pour cette commande avec :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-377">This command can be aliased to `dotnet` with:</span></span>
-
-```console
-sudo snap alias dotnet-sdk.dotnet dotnet
-```
-
-<span data-ttu-id="e6e1a-378">Certaines distributions nécessitent une étape supplémentaire pour permettre l’accès au certificat SSL.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-378">Some distros require an additional step to enable access to the SSL certificate.</span></span> <span data-ttu-id="e6e1a-379">Pour plus d’informations, consultez notre [configuration de Linux](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-379">See our [Linux Setup](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md) for details.</span></span>
-
-## <a name="gpio-support-for-raspberry-pi"></a><span data-ttu-id="e6e1a-380">Prise en charge de GPIO pour Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="e6e1a-380">GPIO Support for Raspberry Pi</span></span>
-
-<span data-ttu-id="e6e1a-381">Deux nouveaux packages ont été publiés sur NuGet, que vous pouvez utiliser pour la programmation de GPIO.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-381">Two new packages have been released to NuGet that you can use for GPIO programming.</span></span>
-
-* [<span data-ttu-id="e6e1a-382">System.Device.Gpio</span><span class="sxs-lookup"><span data-stu-id="e6e1a-382">System.Device.Gpio</span></span>](https://www.nuget.org/packages/System.Device.Gpio/0.1.0-prerelease.19078.2)
-* [<span data-ttu-id="e6e1a-383">Iot.Device.Bindings</span><span class="sxs-lookup"><span data-stu-id="e6e1a-383">Iot.Device.Bindings</span></span>](https://www.nuget.org/packages/Iot.Device.Bindings/0.1.0-prerelease.19078.2)
-
-<span data-ttu-id="e6e1a-384">Les packages GPIO incluent des API pour les appareils GPIO, SPI, I2C et PWM.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-384">The GPIO Packages includes APIs for GPIO, SPI, I2C and PWM devices.</span></span> <span data-ttu-id="e6e1a-385">Le package de liaisons IoT inclut [des liaisons d’appareil](https://github.com/dotnet/iot/blob/master/src/devices/README.md) pour différents circuits intégrés et capteurs, les mêmes que ceux qui sont disponibles dans [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-385">The IoT bindings package includes [device bindings](https://github.com/dotnet/iot/blob/master/src/devices/README.md) for various chips and sensors, the same ones available at [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices).</span></span>
-
-<span data-ttu-id="e6e1a-386">Les API de port série mis à jour qui ont été annoncés dans le cadre de .NET Core 3.0 Preview 1 ne font pas partie de ces packages, mais elles sont disponibles dans le cadre de la plateforme .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-386">The updated serial port APIs that were announced as part of .NET Core 3.0 Preview 1 are not part of these packages but are available as part of the .NET Core platform.</span></span>
-
-## <a name="platform-support"></a><span data-ttu-id="e6e1a-387">Prise en charge de plateforme</span><span class="sxs-lookup"><span data-stu-id="e6e1a-387">Platform Support</span></span>
-
-<span data-ttu-id="e6e1a-388">.NET Core 3 sera pris en charge sur les systèmes d’exploitation suivants :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-388">.NET Core 3 will be supported on the following operating systems:</span></span>
-
-* <span data-ttu-id="e6e1a-389">Client Windows : 7, 8.1, 10 (1607+)</span><span class="sxs-lookup"><span data-stu-id="e6e1a-389">Windows Client: 7, 8.1, 10 (1607+)</span></span>
-* <span data-ttu-id="e6e1a-390">Windows Server : 2012 R2 SP1+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-390">Windows Server: 2012 R2 SP1+</span></span>
-* <span data-ttu-id="e6e1a-391">macOS : 10.12+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-391">macOS: 10.12+</span></span>
-* <span data-ttu-id="e6e1a-392">RHEL : 6+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-392">RHEL: 6+</span></span>
-* <span data-ttu-id="e6e1a-393">Fedora : 26+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-393">Fedora: 26+</span></span>
-* <span data-ttu-id="e6e1a-394">Ubuntu : 16.04+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-394">Ubuntu: 16.04+</span></span>
-* <span data-ttu-id="e6e1a-395">Debian : 9+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-395">Debian: 9+</span></span>
-* <span data-ttu-id="e6e1a-396">SLES : 12+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-396">SLES: 12+</span></span>
-* <span data-ttu-id="e6e1a-397">openSUSE : 42.3+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-397">openSUSE: 42.3+</span></span>
-* <span data-ttu-id="e6e1a-398">Alpine : 3.8+</span><span class="sxs-lookup"><span data-stu-id="e6e1a-398">Alpine: 3.8+</span></span>
-
-<span data-ttu-id="e6e1a-399">La prise en charge des circuits intégrés suit :</span><span class="sxs-lookup"><span data-stu-id="e6e1a-399">Chip support follows:</span></span>
-
-* <span data-ttu-id="e6e1a-400">x64 sur Windows, macOS et Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-400">x64 on Windows, macOS, and Linux</span></span>
-* <span data-ttu-id="e6e1a-401">x86 sur Windows</span><span class="sxs-lookup"><span data-stu-id="e6e1a-401">x86 on Windows</span></span>
-* <span data-ttu-id="e6e1a-402">ARM32 sur Windows et Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-402">ARM32 on Windows and Linux</span></span>
-* <span data-ttu-id="e6e1a-403">ARM64 sur Linux</span><span class="sxs-lookup"><span data-stu-id="e6e1a-403">ARM64 on Linux</span></span>
-
-<span data-ttu-id="e6e1a-404">Pour Linux, ARM32 est pris en charge sur Debian 9+ et Ubuntu 16.04+.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-404">For Linux, ARM32 is supported on Debian 9+ and Ubuntu 16.04+.</span></span> <span data-ttu-id="e6e1a-405">Pour ARM64, la prise en charge est identique à ARM32, avec en plus Alpine 3.8.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-405">For ARM64, it is the same as ARM32 with the addition of Alpine 3.8.</span></span> <span data-ttu-id="e6e1a-406">Il s’agit des mêmes versions de ces distributions que ce qui est pris en charge pour X64.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-406">These are the same versions of those distros as is supported for X64.</span></span>
-
-<span data-ttu-id="e6e1a-407">Les images Docker pour .NET Core 3.0 sont disponibles dans [microsoft/dotnet sur Docker Hub](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="e6e1a-407">Docker images for .NET Core 3.0 are available at [microsoft/dotnet on Docker Hub](https://hub.docker.com/r/microsoft/dotnet/).</span></span> <span data-ttu-id="e6e1a-408">Microsoft travaille actuellement à l’adoption du [Registre de conteneurs Microsoft (MCR, Microsoft Container Registry)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/) et il est prévu que les images .NET Core 3.0 finales soient publiées seulement sur MCR.</span><span class="sxs-lookup"><span data-stu-id="e6e1a-408">Microsoft is currently in the process of adopting [Microsoft Container Registry (MCR)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/) and it is expected that the final .NET Core 3.0 images will only be published to MCR.</span></span>
+> [!NOTE]
+> <span data-ttu-id="6dc76-384">La prise en charge d’**ARM64** sous Windows n’est pas encore disponible.</span><span class="sxs-lookup"><span data-stu-id="6dc76-384">**ARM64** Windows support isn't yet available.</span></span>

@@ -496,11 +496,13 @@
     - name: Bien démarrer
       href: csharp/getting-started/
     - name: Didacticiels
-      href: csharp/tutorials/index.md
       items:
-        - name: 'Présentation de C#'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: Vue d'ensemble
+          href: csharp/tutorials/index.md
+        - name: 'Introduction à la programmation avec C#'
           items:
+            - name: Choisir votre première leçon
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Hello World
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Nombres en C#'
@@ -510,8 +512,9 @@
             - name: Lister les collections
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: Travailler dans votre environnement local
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: Configurer votre environnement
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'Nombres en C#'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: Branches et boucles
@@ -609,7 +612,6 @@
         - name: Iterators
           href: csharp/iterators.md
         - name: Délégués et événements
-          href: csharp/delegates-events.md
           items:
             - name: Présentation des délégués
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: Écrire du code sécurisé et efficace
           href: csharp/write-safe-efficient-code.md
         - name: Arborescences de l’expression
-          href: csharp/expression-trees.md
           items:
+            - name: Introduction aux arborescences d’expressions
+              href: csharp/expression-trees.md
             - name: Explication des arborescences d’expressions
               href: csharp/expression-trees-explained.md
             - name: Types de frameworks prenant en charge les arborescences d’expressions
@@ -659,8 +662,9 @@
         - name: Gestion de version
           href: csharp/versioning.md
     - name: 'Rubriques de procédures C#'
-      href: csharp/how-to/index.md
       items:
+        - name: Index de rubrique
+          href: csharp/how-to/index.md
         - name: Analyser des chaînes à l’aide de `String.Split`
           href: csharp/how-to/parse-strings-using-split.md
         - name: Concaténer des chaînes
