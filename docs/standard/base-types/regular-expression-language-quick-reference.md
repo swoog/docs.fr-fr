@@ -17,10 +17,10 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/15/2019
 ms.locfileid: "64664675"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
@@ -158,7 +158,7 @@ ms.locfileid: "64664675"
 |`${` *name* `}`|Remplace la sous-chaîne mise en correspondance par le groupe nommé *nom*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|Remplace un "$" littéral.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|Remplace une copie de la totalité de la correspondance.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
-|``$` ``|Remplace tout le texte de la chaîne d’entrée avant la correspondance.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
+|``$` ``|Remplace tout le texte de la chaîne d'entrée avant la correspondance.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
 |`$'`|Remplace tout le texte de la chaîne d’entrée après la correspondance.|`B+`|`$'`|`"AABBCC"`|`"AACCCC"`|  
 |`$+`|Remplace le dernier groupe qui a été capturé.|`B+(C+)`|`$+`|`"AABBCCDD"`|`"AACCDD"`|  
 |`$_`|Remplace la chaîne d’entrée entière.|`B+`|`$_`|`"AABBCC"`|`"AAAABBCCCC"`|  

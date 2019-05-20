@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633440"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589525"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procédure : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
@@ -72,36 +72,12 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
 ## <a name="compiling-the-code"></a>Compilation du code  
  Les méthodes `IsValidEmail` et `DomainMapper` peuvent être incluses dans une bibliothèque de méthodes utilitaires d'expression régulière ou peuvent être incluses en tant que méthodes d'instance ou statiques privées dans la classe d'application.  
   
- Pour les inclure dans une bibliothèque d'expressions régulières, copiez-collez le code dans un projet de bibliothèque de classes Visual Studio. Vous pouvez aussi copier-coller le code dans un fichier texte, puis le compiler depuis la ligne de commande à l'aide d'une commande semblable à celle-ci (en supposant que le nom du fichier de code source soit RegexUtilities.cs ou RegexUtilities.vb) :  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  Vous pouvez également utiliser la méthode <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> pour inclure cette expression régulière dans une bibliothèque d'expressions régulières.  
   
  Si elles sont utilisées dans une bibliothèque d'expressions régulières, vous pouvez les appeler en utilisant un code semblable au suivant :  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- En supposant que vous ayez créé une bibliothèque de classes nommée RegexUtilities.dll qui comprenne votre expression régulière de validation d'e-mail, vous pouvez compiler cet exemple de l'une des manières suivantes :  
-  
-- Dans Visual Studio, en créant une application console et en ajoutant une référence à RegexUtilities.dll dans votre projet.  
-  
-- À partir de la ligne de commande, en copiant-collant le code source dans un fichier texte, puis en le compilant avec une commande semblable à la suivante (en supposant que le nom du fichier de code source soit Example.cs ou Example.vb) :  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>Voir aussi
 
