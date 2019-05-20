@@ -4,12 +4,12 @@ description: Découvrez comment choisir un algorithme ML.NET pour votre modèle 
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065632"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557776"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Guide pratique pour choisir un algorithme ML.NET
 
@@ -81,8 +81,8 @@ Ces entraîneurs créent un entraîneur multiclasse à partir d’un entraîneur
 
 |Algorithme|Propriétés|Entraîneurs|
 |---------|----------|--------|
-|One versus all|Ce classifieur multiclasse entraîne un seul classifieur binaire par classe, ce qui distingue cette classe de toutes les autres classes. Adaptation limitée selon le nombre de classes à catégoriser|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Pairwise coupling|Ce classifieur multiclasse entraîne un algorithme de classification binaire sur chaque paire de classes. Adaptation limitée selon le nombre de classes, du fait que chaque combinaison de deux classes doit être entraînée.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|One versus all|Ce classifieur multiclasse entraîne un seul classifieur binaire par classe, ce qui distingue cette classe de toutes les autres classes. Adaptation limitée selon le nombre de classes à catégoriser|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Pairwise coupling|Ce classifieur multiclasse entraîne un algorithme de classification binaire sur chaque paire de classes. Adaptation limitée selon le nombre de classes, du fait que chaque combinaison de deux classes doit être entraînée.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Ces entraîneurs créent un entraîneur multiclasse à partir d’un entraîneur
 |Propriétés|Entraîneurs|
 |----------|--------|
 |Cet entraîneur de classification binaire s’utilise comme base de référence des performances des autres entraîneurs. Pour être efficace, les métriques des autres entraîneurs doivent être meilleures que l’entraîneur précédent. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

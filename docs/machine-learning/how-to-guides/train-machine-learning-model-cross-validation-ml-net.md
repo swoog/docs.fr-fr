@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065562"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557835"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Entraîner et évaluer un modèle Machine Learning avec la validation croisée
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. Les performances de chaque modèle sont évaluées à l’aide de la méthode [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) sur le jeu de données de test. 
 1. Pour chacun des modèles, le modèle ainsi que ses métriques sont retournés.
 
-Le résultat stocké dans `cvResults` est une collection d’objets [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1). Cet objet inclut le modèle entraîné ainsi que les métriques, qui sont respectivement accessibles à partir des propriétés [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) et [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics). Dans cet échantillon, la propriété `Model` est de type [`ITransformer`](xref:Microsoft.ML.ITransformer), tandis que la propriété `Metrics` est de type [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
+Le résultat stocké dans `cvResults` est une collection d’objets [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Cet objet inclut le modèle entraîné ainsi que les métriques, qui sont respectivement accessibles à partir des propriétés [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) et [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics). Dans cet échantillon, la propriété `Model` est de type [`ITransformer`](xref:Microsoft.ML.ITransformer), tandis que la propriété `Metrics` est de type [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
 ## <a name="extract-metrics"></a>Extraire les métriques
 

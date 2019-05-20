@@ -4,12 +4,12 @@ description: Apprenez à utiliser ML.NET pour détecter des anomalies dans un sc
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b0dbd8793e2be3973c37f0f78bc0ddd61b6bfea7
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065652"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641143"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutoriel : Utiliser ML.NET pour détecter des anomalies dans les ventes d’un produit 
 
@@ -207,7 +207,7 @@ Utilisez le code suivant pour effectuer une itération dans le `IEnumerable` `pr
 
 ## <a name="spike-detection-results"></a>Résultats de la détection des pics
 
-Vos résultats doivent être similaires à ce qui suit. Au cours du traitement, des messages sont affichés. Vous pouvez voir des avertissements ou des messages de traitement. Ils ont été supprimés des résultats ci-dessous par souci de clarté.
+Vos résultats doivent être similaires à ce qui suit. Durant le processus, des messages sont affichés. Vous pouvez voir des avertissements ou des messages de traitement. Ils ont été supprimés des résultats ci-dessous par souci de clarté.
 
 ```console
 Detect temporary changes in pattern
@@ -312,7 +312,7 @@ Effectuez une itération dans le `IEnumerable` `predictions` et affichez les ré
 
 ## <a name="change-point-detection-results"></a>Résultats de la détection des points de changement
 
-Vos résultats doivent être similaires à ce qui suit. Au cours du traitement, des messages sont affichés. Vous pouvez voir des avertissements ou des messages de traitement. Ils ont été supprimés des résultats ci-dessous par souci de clarté.
+Vos résultats doivent être similaires à ce qui suit. Durant le processus, des messages sont affichés. Vous pouvez voir des avertissements ou des messages de traitement. Ils ont été supprimés des résultats ci-dessous par souci de clarté.
 
 ```console
 Detect Persistent changes in pattern

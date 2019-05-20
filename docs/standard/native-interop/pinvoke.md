@@ -4,12 +4,12 @@ description: Découvrez comment appeler des fonctions natives via P/Invoke dans 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: ed1eb69a418317bbee2502418cc2521a68b65542
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063196"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582555"
 ---
 # <a name="platform-invoke-pinvoke"></a>Appel de code non managé (P/Invoke)
 

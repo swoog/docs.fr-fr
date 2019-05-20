@@ -2,12 +2,12 @@
 title: Implémenter des tâches en arrière-plan dans les microservices avec IHostedService et la classe BackgroundService
 description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre les nouvelles options pour utiliser IHostedService et BackgroundService afin d’implémenter des tâches d’arrière-plan dans des microservices .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 958253a3b8ba9f30807f19dd72a6a363ec7e7af2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062980"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644258"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implémenter des tâches en arrière-plan dans les microservices avec IHostedService et la classe BackgroundService
 

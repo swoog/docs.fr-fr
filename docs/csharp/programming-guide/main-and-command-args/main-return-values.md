@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1e4c03985908f6e49d5ce001cdc9c1472f5a6d44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595598"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878930"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valeurs de retour de Main() (Guide de programmation C#)
 
@@ -99,4 +99,3 @@ Quand le point d’entrée de l’application retourne `Task` ou `Task<int>`, le
 - [Référence C#](../index.md)
 - [Main() et arguments de ligne de commande](index.md)
 - [Guide pratique pour afficher les arguments de ligne de commande](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
