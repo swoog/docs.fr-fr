@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323809"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584261"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procédure : Utiliser l'appel de code non managé pour lire un fichier audio (Guide de programmation C#)
 L’exemple de code C# suivant explique comment utiliser des services d’appel de code non managé pour lire un fichier audio sur le système d’exploitation Windows.  
@@ -29,8 +29,6 @@ L’exemple de code C# suivant explique comment utiliser des services d’appel 
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
-### <a name="to-compile-the-code"></a>Pour compiler le code  
-  
 1. Créez un projet d’application Windows C# dans Visual Studio et nommez-le **WinSound**.  
   
 2. Copiez le code ci-dessus et collez-le sur le contenu du fichier `Form1.cs`.  
@@ -40,9 +38,6 @@ L’exemple de code C# suivant explique comment utiliser des services d’appel 
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. Compilez, puis exécutez le code.  
-  
-## <a name="net-framework-security"></a>Sécurité .NET Framework  
- Pour plus d’informations, consultez [Sécurité dans .NET](../../../standard/security/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
 

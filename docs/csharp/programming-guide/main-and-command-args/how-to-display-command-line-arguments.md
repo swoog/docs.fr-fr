@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c88219d03d40c814338a1b09ccd37cfc03c2d577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965590"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881014"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procédure : Afficher les arguments de ligne de commande (Guide de programmation C#)
 Les arguments fournis à un fichier exécutable sur la ligne de commande sont accessibles à `Main` par l’intermédiaire d’un paramètre facultatif. Les arguments sont fournis sous la forme d’un tableau de chaînes. Chaque élément du tableau contient un argument. Les espaces blancs entre arguments sont supprimés. Par exemple, considérez ces appels de ligne de commande d’un fichier exécutable fictif :  
@@ -34,5 +34,4 @@ Les arguments fournis à un fichier exécutable sur la ligne de commande sont ac
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)
 - [Génération à partir de la ligne de commande avec csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Valeurs de retour Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

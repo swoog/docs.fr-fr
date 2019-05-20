@@ -1,15 +1,13 @@
 ---
 title: Points importants à retenir
 description: 'Découvrez les points importants à retenir du guide/livre électronique Microservices .NET : Architecture pour les applications .NET conteneurisées, afin d’avoir une rapide vue d’ensemble des principaux facteurs impliqués lors de l’utilisation d’une architecture de microservices, tels que les avantages et les inconvénients, les modèles DDD pour la conception et le développement, ainsi que la résilience, la sécurité et l’utilisation d’orchestrateurs.'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362117"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639702"
 ---
 # <a name="key-takeaways"></a>Points importants à retenir
 

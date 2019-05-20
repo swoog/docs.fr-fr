@@ -2,12 +2,12 @@
 title: 'Procédure : Remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571335"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584391"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procédure : Remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>Compilation du code
-
-Créez et compilez un projet qui cible une des options suivantes :
-
-- .NET Framework version 3.5 avec une référence à System.Core.dll.
-- .NET Framework version 4.0 ou version ultérieure.
-- .NET Core version 1.0 ou version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 

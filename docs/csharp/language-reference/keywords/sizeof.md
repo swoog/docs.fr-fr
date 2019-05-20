@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 1c5526366651d7e6623724c939b08ac46aa7db56
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8bb6d4a37b2eea3060921937cf15a1fdd1be97b4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242631"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634009"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (référence C#)
 
@@ -52,7 +52,7 @@ L’exemple suivant montre comment extraire la taille d’un `int` :
 int intSize = sizeof(int);
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 À compter de la version 2.0 de C#, il est possible d’appliquer `sizeof` à des types simples ou enum sans compiler le code dans un contexte [unsafe](unsafe.md).
 

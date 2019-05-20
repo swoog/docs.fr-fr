@@ -1,15 +1,13 @@
 ---
 title: Stratégies pour la gestion d’une défaillance partielle
 description: Découvrez plusieurs stratégies pour gérer normalement les défaillances partielles.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 63c6764d18ee0a8990cf669a8cdc824dea79aac8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613354"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644202"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Stratégies pour gérer une défaillance partielle
 

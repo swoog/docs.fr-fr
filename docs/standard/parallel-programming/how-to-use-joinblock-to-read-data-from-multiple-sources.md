@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: a7becba9c7626e79f9d001a6a21ed92a336e9d11
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222283"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591982"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procédure : Utiliser JoinBlock pour lire des données de plusieurs sources
 Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> pour effectuer une opération lorsque des données sont disponibles à partir de plusieurs sources. Il présente aussi comment utiliser le mode non gourmand pour permettre à plusieurs blocs de jointure de partager plus efficacement une source de données.
@@ -32,19 +32,8 @@ Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dat
   
  Pour permettre l'utilisation efficace du pool partagé des objets `MemoryResource`, cet exemple spécifie un objet <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> qui contient le jeu de propriétés <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> à `False` pour créer les objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> qui agissent en mode non gourmand. Un bloc de jointure non-gourmand remet les messages entrants jusqu'à ce qu'il y en ait un disponible à partir de chaque source. Si n'importe quel message remis à plus tard a été reçu par un autre bloc, le bloc de jointure redémarre le processus. Le mode non gourmand permet aux blocs de jointure qui partagent un ou plusieurs blocs sources d'avancer quand les autres blocs attendent des données. Dans cet exemple, si un objet `MemoryResource` est ajouté au pool `memoryResources`, le premier bloc de jointure peut progresser pour recevoir sa deuxième source de données. Si cet exemple visait à utiliser le mode gourmand, qui est la valeur par défaut, un bloc de jointure peut prendre l'objet `MemoryResource` et attendre que la deuxième ressource soit disponible. Toutefois, si l'autre bloc de jointure a sa deuxième source de données disponible, il ne peut pas avancer car l'objet `MemoryResource` a été pris par l'autre bloc de jointure.  
   
-## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes développeur pour Visual Studio.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
-  
 ## <a name="robust-programming"></a>Programmation fiable  
- L'utilisation de jointures non gourmandes peut également vous aider à empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre. Examinez la requête qui définit deux objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Les deux objets lisent chacun des données de deux blocs sources partagés. En mode gourmand, si un bloc de jointure lit depuis la première source et le deuxième bloc de jointure lit depuis la seconde source, l’application peut être interbloquée car les deux blocs de jointure attendent mutuellement l’autre pour libérer sa ressource. En mode non gourmand, chaque bloc de jointure lit uniquement à partir de ses sources lorsque toutes les données sont disponibles, éliminant par conséquent, le risque d'interblocage.  
+ L'utilisation de jointures non gourmandes peut également vous aider à empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre. Examinez la requête qui définit deux objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Les deux objets lisent chacun des données de deux blocs sources partagés. En mode gourmand, si un bloc de jointure lit depuis la première source et le deuxième bloc de jointure lit depuis la seconde source, l'application peut être interbloquée car les deux blocs de jointure attendent mutuellement l'autre pour libérer sa ressource. En mode non gourmand, chaque bloc de jointure lit uniquement à partir de ses sources lorsque toutes les données sont disponibles, éliminant par conséquent, le risque d'interblocage.  
   
 ## <a name="see-also"></a>Voir aussi
 

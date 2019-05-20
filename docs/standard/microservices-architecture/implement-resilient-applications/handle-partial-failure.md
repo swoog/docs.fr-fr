@@ -1,15 +1,13 @@
 ---
 title: Gestion d’une défaillance partielle
 description: Découvrez comment gérer correctement les défaillances partielles. Un microservice peut ne pas être entièrement opérationnel, mais il peut toujours être en mesure d’effectuer un travail utile.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 16b6237f79d6b4bc2bc9152ba6eb023ffbd3899f
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362702"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640093"
 ---
 # <a name="handle-partial-failure"></a>Gérer une défaillance partielle
 

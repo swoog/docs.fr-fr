@@ -4,12 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678798"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641158"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -108,6 +108,6 @@ Certaines plateformes Microsoft ou tierces ne prennent pas en charge .NET Core. 
 - [Frameworks cibles](frameworks.md)
 - [Guide .NET Core](../core/index.md)
 - [Portage depuis .NET Framework vers .NET Core](../core/porting/index.md)
-- [Guide de .NET Framework sur Docker](../framework/docker/index.md)
+- [Introduction à .NET et à Docker](../core/docker/intro-net-docker.md)
 - [Vue d’ensemble des composants .NET](components.md)
 - [Microservices .NET. Architecture pour les applications .NET en conteneurs](microservices-architecture/index.md)

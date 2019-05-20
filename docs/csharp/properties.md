@@ -2,12 +2,12 @@
 title: Propriétés
 description: En savoir plus sur les propriétés C#, notamment les fonctionnalités liées à la validation, les valeurs calculées, l’évaluation différée et les notifications de modification de propriété.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956236"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878278"
 ---
 # <a name="properties"></a>Propriétés
 
@@ -140,7 +140,7 @@ Il existe un dernier scénario où vous devrez écrire du code dans un accesseur
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-L’opérateur `?.` est appelé *opérateur conditionnel Null*. Il recherche une référence null avant d’évaluer le côté droit de l’opérateur. Au final, s’il n’y a pas d’abonné à l’événement `PropertyChanged`, le code devant déclencher l’événement n’est pas exécuté. Dans ce cas précis, il lèverait une exception `NullReferenceException` sans cette vérification. Pour plus d’informations, consultez [`events`](delegates-events.md). Cet exemple utilise également le nouvel opérateur `nameof` pour convertir le symbole de nom de propriété en sa représentation textuelle.
+L’opérateur `?.` est appelé *opérateur conditionnel Null*. Il recherche une référence null avant d’évaluer le côté droit de l’opérateur. Au final, s’il n’y a pas d’abonné à l’événement `PropertyChanged`, le code devant déclencher l’événement n’est pas exécuté. Dans ce cas précis, il lèverait une exception `NullReferenceException` sans cette vérification. Pour plus d’informations, consultez [`events`](events-overview.md). Cet exemple utilise également le nouvel opérateur `nameof` pour convertir le symbole de nom de propriété en sa représentation textuelle.
 L’utilisation de `nameof` peut vous éviter des erreurs dues à la saisie incorrecte du nom de propriété.
 
 L’implémentation de <xref:System.ComponentModel.INotifyPropertyChanged> est un autre exemple de cas où vous pouvez écrire du code dans vos accesseurs pour prendre en charge les scénarios souhaités.
