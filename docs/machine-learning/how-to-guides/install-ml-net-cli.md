@@ -3,12 +3,12 @@ title: Guide pratique pour installer l’outil CLI ML.NET
 description: Vue d’ensemble et installation de l’outil CLI ML.NET
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 869c443d519557c9d3976676047e63a4a072d2d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065802"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557857"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Guide pratique pour installer l’outil CLI ML.NET
 
@@ -56,10 +56,10 @@ Vous devez voir l’aide des commandes disponibles pour l’outil mlnet, telles 
 
 ## <a name="install-a-specific-release-version"></a>Installer une version spécifique
 
-Si vous essayez d’installer une préversion ou une version spécifique de l’outil, vous pouvez spécifier le numéro de version au format suivant :
+Si vous essayez d’installer une version préliminaire ou une version spécifique de l’outil, vous pouvez spécifier [l’infrastructure](../../standard/frameworks.md) au format suivant :
 
 ```console
-> dotnet tool install -g <package-name> --version <version-number>
+> dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Vous pouvez également vérifier si le package est correctement installé en tapant la commande suivante :

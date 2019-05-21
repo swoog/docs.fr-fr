@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620782"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586372"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annulation dans les threads managés
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] et versions ultérieures utilisent un modèle unifié pour l'annulation coopérative des opérations asynchrones ou des opérations synchrones de longue durée. Ce modèle est basé sur un objet léger appelé jeton d'annulation. L'objet qui appelle une ou plusieurs opérations annulables, par exemple en créant de nouveaux threads ou de nouvelles tâches, passe le jeton à chaque opération. Chaque opération peut, à son tour, passer des copies du jeton à d'autres opérations. Ultérieurement, l'objet qui a créé le jeton peut l'utiliser pour demander que les opérations arrêtent leur action. Seul l'objet demandeur peut émettre la demande d'annulation. Chaque écouteur est chargé d'accepter la demande et d'y répondre de manière appropriée et en temps voulu.  
@@ -60,7 +60,7 @@ ms.locfileid: "64620782"
 |<xref:System.Threading.CancellationToken>|Type valeur léger passé à un ou plusieurs écouteurs, généralement sous la forme d'un paramètre de méthode. Les écouteurs surveillent la valeur de la propriété `IsCancellationRequested` du jeton par le biais d'interrogations, de rappels ou de handles d'attente.|  
 |<xref:System.OperationCanceledException>|Les surcharges du constructeur de cette exception acceptent <xref:System.Threading.CancellationToken> comme paramètre. Les écouteurs peuvent éventuellement lever cette exception pour vérifier la source de l'annulation et informer les autres qu'elle a répondu à une demande d'annulation.|  
   
- Le nouveau modèle d'annulation est intégré à [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans plusieurs types. Les plus importants sont <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>,<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> et <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Nous vous recommandons d'utiliser ce nouveau modèle d'annulation pour tout nouveau code de bibliothèque et d'application.  
+ Le nouveau modèle d’annulation est intégré à .NET Framework dans plusieurs types. Les plus importants sont <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>,<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> et <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Nous vous recommandons d'utiliser ce nouveau modèle d'annulation pour tout nouveau code de bibliothèque et d'application.  
   
 ## <a name="code-example"></a>Exemple de code  
  Dans l'exemple suivant, l'objet demandeur crée un objet <xref:System.Threading.CancellationTokenSource>, puis passe sa propriété <xref:System.Threading.CancellationTokenSource.Token%2A> à l'opération annulable. L'opération qui reçoit la demande surveille la valeur de la propriété <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> du jeton par le biais d'une interrogation. Quand la valeur devient `true`, l'écouteur peut s'arrêter de quelque manière appropriée que ce soit. Dans cet exemple, la méthode s'arrête, ce qui suffit dans de nombreux cas.  

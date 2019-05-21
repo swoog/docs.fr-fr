@@ -1,17 +1,17 @@
 ---
-title: Classer les problèmes GitHub - classification multiclasse
+title: 'Tutoriel : Classer les problèmes de support : classification multiclasse'
 description: Découvrez comment utiliser ML.NET dans un scénario de classification multiclasse pour classer des problèmes GitHub et les affecter à une zone donnée.
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063526"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877340"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification multiclasse pour classifier les problèmes GitHub
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutoriel : Classer les problèmes de support à l’aide de la classification multiclasse avec ML.NET
 
 Ce tutoriel montre comment utiliser ML.NET pour créer un classifieur de problèmes GitHub afin d’entraîner un modèle qui classe et prédit l’étiquette Area d’un problème GitHub par le biais d’une application console .NET Core en C# dans Visual Studio.
 

@@ -4,12 +4,12 @@ description: Découvrez les fonctionnalités de télémétrie de la CLI ML.NET, 
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065542"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645021"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Collecte des données de télémétrie par la CLI ML.NET
 
@@ -42,15 +42,17 @@ Pour la désactiver, affectez la valeur `1` ou `true` à la variable d’environ
 
 La fonctionnalité recueille les données suivantes :
 
-- Les commandes appelées, comme `auto-train`
+- Des commandes ont été appelées, comme `auto-train`
+- Noms de paramètres de ligne de commande utilisés (par exemple, « dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity »)
 - Adresse MAC hachée : ID unique et anonyme chiffré (SHA256) pour une machine
 - Horodatage d’un appel
-- Adresse IP de trois octets utilisée uniquement pour déterminer l’emplacement géographique
+- Adresse IP de trois octets (non complète) utilisée uniquement pour déterminer l’emplacement géographique
 - Nom de tous les arguments/paramètres utilisés. Pas les valeurs du client, telles que des chaînes.
+- Nom de fichier de jeu de données haché
+- Compartiment de taille de fichier de jeu de données
 - Système d’exploitation et version
-- Valeur du paramètre --ml-task : valeurs de catégorie, telles que `regression`, `binary-classification` et `multiclass-classification`
-- Taille du fichier de jeu de données avec [arrondi logarithmique](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) (puissance de 2 la plus proche)
-- `ExitCode` de la commande
+- Valeur du paramètre --task : valeurs de catégorie, telles que `regression`, `binary-classification` et `multiclass-classification`
+- Version de CLI ML.NET (par exemple, 0.3.27703.4)
 
 Les données sont envoyées de manière sécurisée à des serveurs Microsoft à l’aide de la technologie [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), stockées à un emplacement dont l’accès est strictement limité et utilisées conformément à des contrôles de sécurité stricts à partir de systèmes [Stockage Azure](https://azure.microsoft.com/services/storage/) sécurisés.
 

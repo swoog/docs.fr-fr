@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629037"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589655"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flux de données (bibliothèque parallèle de tâches)
 <a name="top"></a> La bibliothèque parallèle de tâches (TPL) fournit des composants de flux de données destinés à augmenter la robustesse des applications prenant en charge l’accès concurrentiel. Ces composants de flux de données sont regroupés sous le nom de *bibliothèque de flux de données TPL*. Ce modèle de flux de données favorise la programmation basée sur les acteurs en fournissant une transmission de messages in-process pour les flux de données à granularité grossière et les tâches de traitement "pipeline". Les composants de flux de données reposent sur les types et l'infrastructure de planification de la bibliothèque parallèle de tâches, et s'intègrent à la prise en charge des langages C#, Visual Basic et F# de la programmation asynchrone. Ces composants de flux de données sont utiles quand vous avez plusieurs opérations qui doivent communiquer entre elles de façon asynchrone ou quand vous voulez traiter les données à mesure qu'elles deviennent disponibles. Prenons par exemple une application qui traite les données d'image d'une webcam. En utilisant le modèle de flux de données, l'application peut traiter les trames d'images à mesure qu'elles deviennent disponibles. Si l’application améliore les trames d’images, par exemple, en effectuant la correction de la lumière ou des yeux rouges, vous pouvez créer un *pipeline* de composants de flux de données. Chaque étape du pipeline peut utiliser plusieurs fonctionnalités de parallélisme à granularité grossière, telles que les fonctionnalités fournies par la bibliothèque TPL qui permettent de transformer les images.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629037"
 |[Guide pratique pour spécifier un planificateur de tâches dans un bloc de dataflow](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Montre comment associer un planificateur de tâches spécifique quand vous utilisez un flux de données dans votre application.|  
 |[Procédure pas à pas : Utiliser BatchBlock et BatchedJoinBlock pour améliorer l’efficacité](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> pour améliorer l'efficacité des opérations d'insertion de bases de données, et comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> pour capturer les résultats et les exceptions qui se produisent quand le programme lit les données d'une base de données.|  
 |[Procédure pas à pas : Créer un type de bloc de dataflow personnalisé](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Montre deux façons de créer un type de bloc de flux de données qui implémente un comportement personnalisé.|  
-|[La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Présente la bibliothèque parallèle de tâches (TPL), qui simplifie la programmation parallèle et simultanée dans les applications [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|
+|[La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Présente la bibliothèque parallèle de tâches (TPL), qui simplifie la programmation parallèle et simultanée dans les applications .NET Framework.|

@@ -1,18 +1,20 @@
 ---
 title: Nouveautés de C# 8.0 – Guide C#
-description: Vue d’ensemble des nouvelles fonctionnalités disponibles dans C# 8.0. Cet article est à jour par rapport à la préversion 2.
+description: Vue d’ensemble des nouvelles fonctionnalités disponibles dans C# 8.0. Cet article a été actualisé par rapport à la préversion 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754373"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557145"
 ---
 # <a name="whats-new-in-c-80"></a>Nouveautés de C# 8.0
 
-Vous pouvez d’ores et déjà tester de nombreuses améliorations apportées au langage C# avec la préversion 2. Voici les fonctionnalités ajoutées dans la préversion 2 :
+Vous pouvez d’ores et déjà tester les nombreuses améliorations apportées au langage C#. 
 
+- [Membres ReadOnly](#readonly-members)
+- [Membres d’interface par défaut](#default-interface-members)
 - [Amélioration des critères spéciaux](#more-patterns-in-more-places) :
   * [Expressions switch](#switch-expressions)
   * [Modèles de propriétés](#property-patterns)
@@ -21,17 +23,67 @@ Vous pouvez d’ores et déjà tester de nombreuses améliorations apportées au
 - [Déclarations using](#using-declarations)
 - [Fonctions locales statiques](#static-local-functions)
 - [Structs ref jetables](#disposable-ref-structs)
-
-Les fonctionnalités suivantes du langage sont apparues initialement dans la préversion 1 de C# 8.0 :
-
 - [Types de référence Nullable](#nullable-reference-types)
 - [Flux asynchrones](#asynchronous-streams)
 - [Index et plages](#indices-and-ranges)
 
 > [!NOTE]
-> Cet article a été mis à jour pour la préversion 2 de C# 8.0.
+> La dernière mise à jour de cet article date de la préversion 5 de C# 8.0.
 
 La suite de cet article décrit brièvement ces fonctionnalités. Lorsque des articles détaillés sont disponibles, des liens vers ces tutoriels et vues d’ensemble sont indiqués.
+
+## <a name="readonly-members"></a>Membres ReadOnly
+
+Vous pouvez appliquer le modificateur `readonly` à n’importe quel membre d’un struct. Il signifie que le membre ne modifie pas l’état. C’est plus précis que d’appliquer le modificateur `readonly` à une déclaration `struct`.  Examinons le struct mutable suivant :
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Comme avec la plupart des structs, la méthode `ToString()` ne modifie pas l’état. Vous pouvez indiquer cela en ajoutant le modificateur `readonly` à la déclaration de `ToString()` :
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+La modification précédente génère un avertissement du compilateur, car `ToString` accède à la propriété `Distance`, qui n’est pas marquée comme `readonly` :
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+Le compilateur vous avertit lorsqu’il a besoin de créer une copie défensive.  La propriété `Distance` ne changeant pas l’état, vous pouvez corriger ce problème en ajoutant le modificateur `readonly` à la déclaration :
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Notez que le modificateur `readonly` est nécessaire sur une propriété en lecture seule. Le compilateur ne part pas du principe que les accesseurs `get` ne modifient pas l’état ; vous devez explicitement déclarer `readonly`. Le compilateur applique la règle selon laquelle les membres `readonly` ne modifient pas l’état. La méthode suivante ne permettra pas la compilation, sauf si vous supprimez le modificateur `readonly` :
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Cette fonctionnalité vous permet de spécifier votre intention de conception, afin que le compilateur puisse l’appliquer et procéder à des optimisations basées sur cette intention.
+
+## <a name="default-interface-members"></a>Membres d’interface par défaut
+
+Vous pouvez désormais ajouter des membres aux interfaces et fournir une implémentation pour ces membres. Cette fonctionnalité de langage permet aux auteurs d’API d’ajouter des méthodes à une interface dans les versions ultérieures sans pour autant nuire à la compatibilité des binaires ou des sources avec les implémentations existantes de cette interface. Les implémentations existantes *héritent* de l’implémentation par défaut. Cette fonctionnalité permet également à C# d’interagir avec les API ciblant Android ou Swift, qui prennent en charge des fonctionnalités similaires. Les membres d’interface par défaut activent également des scénarios similaires à une fonctionnalité de langage « caractéristique ».
+
+Les membres d’interface par défaut affectent de nombreux scénarios et éléments de langage. Ce premier tutoriel couvre [la mise à jour d’une interface à l’aide d’implémentations par défaut](../tutorials/default-interface-members-versions.md). D’autres tutoriels et mises à jour de référence seront disponibles avant le lancement général.
 
 ## <a name="more-patterns-in-more-places"></a>Ajout de modèles à différents endroits
 
@@ -321,9 +373,15 @@ Vous pouvez essayer par vous-même les flux asynchrones dans notre tutoriel [Cr�
 
 Les plages et les index offrent une syntaxe concise pour spécifier des sous-plages dans un tableau, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
-Vous pouvez spécifier un index **à partir de la fin** en utilisant le caractère `^` avant l’index. L’indexation à partir de la fin démarre à partir de la règle que `0..^0` spécifie pour la plage entière. Pour énumérer un tableau entier, vous démarrez *au premier élément* et continuez jusqu’à ce que vous soyez *passé par le dernier élément*. Considérez le comportement de la méthode `MoveNext` sur un énumérateur : elle retourne la valeur false quand l’énumération franchit le dernier élément. L’index `^0` signifie « la fin », `array[array.Length]` ou l’index qui suit le dernier élément. Vous connaissez déjà `array[2]`, qui signifie l’élément « 2 à partir du début ». Maintenant, `array[^2]` signifie que l’élément « 2 à partir de la fin ». 
+Cette prise en charge linguistique s’appuie sur deux nouveaux types et deux nouveaux opérateurs.
+- <xref:System.Index?displayProperty=nameWithType> représente un index au sein d’une séquence.
+- L’opérateur `^` spécifie qu’un index est relatif à la fin de la séquence.
+- <xref:System.Range?displayProperty=nameWithType> représente une sous-plage d’une séquence.
+- L’opérateur de plage (`..`) indique le début et la fin d’une plage en tant qu’opérandes.
 
-Vous pouvez spécifier une **plage** avec **l’opérateur de plage** : `..`. Par exemple, `0..^0` spécifie la totalité de la plage du tableau : 0 à partir du début jusqu'à 0 à partir de la fin non inclus. Les deux opérandes peuvent utiliser « à partir du début » ou « à partir de la fin ». L’un comme l’autre peuvent être omis. Les valeurs par défaut sont `0` pour l’index de début et `^0` pour l’index de fin.
+Commençons par les règles concernant les index. Prenons pour exemple un tableau `sequence`. L’index `0` est identique à l’index `sequence[0]`. L’index `^0` est identique à l’index `sequence[sequence.Length]`. Notez que `sequence[^0]` lève une exception, tout comme `sequence[sequence.Length]`. Pour n’importe quel nombre `n`, l’index `^n` est identique à l’index `sequence.Length - n`.
+
+Une plage spécifie son *début* et sa *fin*. Les plages sont exclusives, ce qui signifie que la *fin* n’est pas incluse dans la plage. La plage `[0..^0]` représente la plage dans son intégralité, tout comme `[0..sequence.Length]` représente la plage entière. 
 
 Prenons quelques exemples. Examinez le tableau suivant, annoté avec son index à partir du début et de la fin :
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-L’index de chaque élément renforce le concept « à partir du début » et « à partir de la fin » ; ces plages excluent la fin de la plage. Le « début » de la totalité du tableau est le premier élément. La « fin » de la totalité du tableau se trouve *après* le dernier élément.
 
 Vous pouvez récupérer le dernier mot avec l’index `^1` :
 

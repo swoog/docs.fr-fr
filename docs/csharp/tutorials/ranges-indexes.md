@@ -3,12 +3,12 @@ title: Explorer les plages de données à l’aide d’index et de plages
 description: Ce tutoriel avancé vous apprend à explorer les données à l’aide d’index et de plages pour examiner les tranches d’un jeu de données séquentiel.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431498"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557186"
 ---
 # <a name="indices-and-ranges"></a>Index et plages
 
@@ -23,9 +23,13 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="language-support-for-indices-and-ranges"></a>Prise en charge linguistique pour les index et les plages
 
-Vous pouvez spécifier un index **à partir de la fin** en utilisant le caractère `^` avant l’index. L’indexation à partir de la fin démarre à partir de la règle que `0..^0` spécifie pour la plage entière. Pour énumérer un tableau entier, vous démarrez *au premier élément* et continuez jusqu’à ce que vous soyez *passé par le dernier élément*. Considérez le comportement de la méthode `MoveNext` sur un énumérateur : elle retourne la valeur false quand l’énumération franchit le dernier élément. L’index `^0` signifie « la fin », `array[array.Length]` ou l’index qui suit le dernier élément. Vous connaissez déjà `array[2]`, qui signifie l’élément « 2 à partir du début ». Maintenant, `array[^2]` signifie que l’élément « 2 à partir de la fin ». 
+Cette prise en charge linguistique s’appuie sur deux nouveaux types et deux nouveaux opérateurs.
+- <xref:System.Index?displayProperty=nameWithType> représente un index au sein d’une séquence.
+- L’opérateur `^` spécifie qu’un index est relatif à la fin d’une séquence.
+- <xref:System.Range?displayProperty=nameWithType> représente une sous-plage d’une séquence.
+- L’opérateur de plage (`..`) spécifie le début et la fin d’une plage comme ses opérandes.
 
-Vous pouvez spécifier une **plage** avec **l’opérateur de plage** : `..`. Par exemple, `0..^0` spécifie la totalité de la plage du tableau : 0 à partir du début jusqu'à 0 à partir de la fin non inclus. Les deux opérandes peuvent utiliser « à partir du début » ou « à partir de la fin ». L’un comme l’autre peuvent être omis. Les valeurs par défaut sont `0` pour l’index de début et `^0` pour l’index de fin.
+Commençons par les règles concernant les indices. Prenons pour exemple un tableau `sequence`. L’index `0` est identique à l’index `sequence[0]`. L’index `^0` est identique à l’index `sequence[sequence.Length]`. Notez que `sequence[^0]` lève une exception, tout comme `sequence[sequence.Length]`. Pour n’importe quel nombre `n`, l’index `^n` est le même que l’index `sequence[sequence.Length - n]`.
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-L’index de chaque élément renforce le concept « à partir du début » et « à partir de la fin » ; ces plages excluent la fin de la plage. Le « début » de la totalité du tableau est le premier élément. La « fin » de la totalité du tableau se trouve *après* le dernier élément.
-
 Vous pouvez récupérer le dernier mot avec l’index `^1`. Ajoutez le code suivant sous l’initialisation :
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+Une plage spécifie son *début* et sa *fin*. Les plages sont exclusives, ce qui signifie que la *fin* n’est pas incluse dans la plage. La plage `[0..^0]` représente la plage dans son intégralité, tout comme `[0..sequence.Length]` représente la plage entière. 
 
 Le code suivant crée une sous-plage qui comporte les mots « quick », « brown » et « fox » et va de `words[1]` à `words[3]`. L’élément `words[4]` n’est pas dans la plage. Ajoutez le code suivant à la même méthode. Copiez-le et collez-le en bas de la fenêtre interactive.
 
@@ -64,11 +68,6 @@ Les exemples suivants créent des plages ouvertes au début, à la fin ou les de
 Vous pouvez également déclarer des plages ou index comme variables. La variable peut ensuite être utilisée à l’intérieur des caractères `[` et `]` :
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-Les exemples précédents montrent deux décisions de conception qui nécessitent des explications supplémentaires :
-
-- Les plages sont *exclusives*, ce qui signifie que l’élément au dernier index n’est pas dans la plage.
-- L’index `^0` est *la fin* de la collection, pas *le dernier élément* de la collection.
 
 L’exemple suivant montre un grand nombre des raisons de ces choix. Modifiez `x`, `y` et `z` pour essayer différentes combinaisons. Quand vous effectuez des essais, utilisez des valeurs de telle sorte que `x` soit inférieur à `y` et `y` inférieur à `z` pour avoir des combinaisons valides. Ajoutez le code suivant à une nouvelle méthode. Essayez différentes combinaisons :
 

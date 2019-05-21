@@ -3,16 +3,16 @@ title: Mettre à jour des interfaces de manière sécurisée à l’aide des mem
 description: Ce tutoriel avancé explore comment vous pouvez ajouter de manière sécurisée de nouvelles fonctionnalités aux définitions d’une interface existante sans rompre toutes les classes et tous les structs qui implémentent cette interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452911"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877916"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Tutoriel : Mettre à jour des interfaces avec les membres d’interface par défaut dans C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutoriel : Mettre à jour des interfaces avec les membres d’interface par défaut dans C# 8.0
 
-À compter de C# 8 sur .NET Core 3.0, vous pouvez définir une implémentation quand vous déclarez un membre d’une interface. Le scénario le plus courant consiste à ajouter de manière sécurisée des membres à une interface déjà publiée et utilisée par de nombreux clients.
+Depuis C# 8.0 sur .NET Core 3.0, vous pouvez définir une implémentation lorsque vous déclarez un membre d’une interface. Le scénario le plus courant consiste à ajouter de manière sécurisée des membres à une interface déjà publiée et utilisée par de nombreux clients.
 
 Dans ce tutoriel, vous allez apprendre à :
 
@@ -23,7 +23,7 @@ Dans ce tutoriel, vous allez apprendre à :
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, y compris le compilateur C# 8.0 en préversion. Le compilateur C# 8 en préversion est disponible à compter de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou de la dernière version du [Kit SDK .NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0). Les membres d’interface par défaut sont disponibles à compter de .NET Core 3.0 Preview 4.
+Vous devrez configurer votre ordinateur de façon à exécuter .NET Core, y compris le compilateur C# 8.0 en préversion. Le compilateur C# 8.0 en préversion est disponible à compter de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou de la dernière préversion du [Kit de développement logiciel (SDK) .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0). Les membres d’interface par défaut sont disponibles à compter de .NET Core 3.0 Preview 4.
 
 ## <a name="scenario-overview"></a>Vue d’ensemble du scénario
 

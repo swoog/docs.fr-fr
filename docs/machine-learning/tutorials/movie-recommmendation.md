@@ -1,19 +1,19 @@
 ---
-title: 'Tutoriel : Créer un système de suggestion de films'
+title: 'Tutoriel : Générer un système de suggestion de films : factorisation de matrice'
 description: Ce tutoriel explique comment créer un système de suggestion de films à l’aide de ML.NET dans une application console .NET. Les étapes de ce tutoriel utilisent le langage C# et Visual Studio 2019.
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063368"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882263"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutoriel : Créer un système de suggestion de films avec ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutoriel : Générer un système de suggestion de films à l’aide de la factorisation de matrice avec ML.NET
 
 Ce tutoriel explique comment créer un système de suggestion de films à l’aide de ML.NET dans une application console .NET. Les étapes de ce tutoriel utilisent le langage C# et Visual Studio 2019.
 

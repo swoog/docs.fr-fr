@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452891"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881041"
 ---
-# <a name="member-access-operators"></a>Opérateurs d’accès au membre
+# <a name="member-access-operators-c-reference"></a>Opérateurs d’accès aux membres (référence C#)
 
 Vous pouvez utiliser les opérateurs suivants quand vous accédez à un membre de type :
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur les indexeurs, consultez [Indexeurs](../../progra
 
 ### <a name="other-usages-of-"></a>Autres utilisations de []
 
-Pour plus d’informations sur l’accès aux éléments pointeur, consultez [Guide pratique pour accéder à un élément de tableau à l’aide d’un pointeur](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+Pour plus d’informations concernant l’accès à l’élément de pointeur, consultez la section [Opérateur d’accès à l’élément de pointeur []](pointer-related-operators.md#pointer-element-access-operator-) de l’article [Opérateurs associés au pointeur](pointer-related-operators.md).
 
 Vous utilisez également des crochets pour spécifier des [attributs](../../programming-guide/concepts/attributes/index.md) :
 
