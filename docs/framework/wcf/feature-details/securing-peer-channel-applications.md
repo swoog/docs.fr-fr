@@ -2,15 +2,15 @@
 title: Sécurisation des applications de canal homologue
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603324"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959887"
 ---
 # <a name="securing-peer-channel-applications"></a>Sécurisation des applications de canal homologue
-Comme d'autres liaisons sous le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` a la sécurité activée par défaut et offre les sécurités de transport et de message. Cette rubrique traite de ces deux types de sécurité. Le type de sécurité est spécifié par l’étiquette de mode de sécurité dans la spécification de liaison (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Comme d’autres liaisons sous le WinFX, `NetPeerTcpBinding` sécurité est activée par défaut et offre à la fois en fonction de transport et de message de sécurité (ou les deux). Cette rubrique traite de ces deux types de sécurité. Le type de sécurité est spécifié par l’étiquette de mode de sécurité dans la spécification de liaison (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Sécurité basée sur le transport  
  Le canal homologue prend en charge deux types d'informations d'identification pour l'authentification en vue de sécuriser le transport. Les deux impliquent la définition de la propriété `ClientCredentialSettings.Peer` sur la `ChannelFactory` associée :  

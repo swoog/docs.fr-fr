@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31ff93b6935c2237a5935c4b40cc30b4129edcd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37a6dc0caa81a365727bfc32a6a0363bb7e1713d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765230"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960140"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS, énumération
 Fournit des stratégies de liaison qui sont communes à la plupart des hôtes de runtime. Cette énumération est utilisée par le [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) (méthode).  
@@ -50,7 +50,6 @@ typedef enum {
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Résultats de la liaison sont retournés comme si l’image fournie à l’appel était lancée dans un nouveau processus. Actuellement, `GetRequestedRuntime` ignore l’ensemble des runtimes chargeables et lie par rapport à l’ensemble des runtimes installés. Cet indicateur permet à un hôte de déterminer à quelle exécution un EXE sera lié lorsqu’elle est lancée.|  
 |`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Une boîte de dialogue d’erreur s’affiche si `GetRequestedRuntime` ne peut pas trouver un runtime qui est compatible avec les paramètres d’entrée. Compter les [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], cette boîte de dialogue d’erreur peut prendre la forme d’une boîte de dialogue de fonctionnalité de Windows qui vous demande si l’utilisateur souhaite activer la fonctionnalité appropriée.|  
 |`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` utilise l’image du processus (et tout fichier de configuration correspondant) comme entrée supplémentaire au processus de liaison. Par défaut, `GetRequestedRuntime` ne tombe pas dans le chemin d’image de processus (en général, l’EXE qui a été utilisé pour lancer le processus) lors de la détermination du runtime à lier.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` doit vérifier si la référence SKU appropriée est installé lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence SKU appropriée est installé, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
 |`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` doit vérifier si la référence SKU appropriée est installé lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence SKU appropriée est installé, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
 |`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` doit ignorer SEM_FAILCRITICALERRORS (qui est défini en appelant le [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) fonction) et afficher la boîte de dialogue d’erreur. Par défaut, SEM_FAILCRITICALERRORS supprime la boîte de dialogue d’erreur. Il peut avoir hérité à partir d’un autre processus, et l’erreur en mode silencieux peut être indésirable dans votre scénario.|  
   

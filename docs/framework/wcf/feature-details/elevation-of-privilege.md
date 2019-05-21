@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753052"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960092"
 ---
 # <a name="elevation-of-privilege"></a>Élévation de privilège
 *Une élévation de privilèges* résulte de ce qui donne à un intrus d’autorisations supérieures à celles initialement accordées. Par exemple, un intrus avec un jeu de privilèges contenant des autorisations « en lecture seule » élèvent d'une façon ou d'une autre le jeu pour inclure des autorisations « en lecture et en écriture ».  
@@ -21,7 +21,7 @@ ms.locfileid: "64753052"
  La classe <xref:System.IdentityModel.Tokens.SamlAssertion> vérifie la signature numérique contenue dans un jeton SAML, et le <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> par défaut nécessite que les jetons SAML soient signés par un certificat X.509 qui est valide lorsque le <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> a la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Le mode `ChainTrust` seul ne suffit pas pour déterminer si l'émetteur du jeton SAML est approuvé. Les services qui requièrent un modèle d’approbation plus précis peuvent soit faire appel aux stratégies d’autorisation et d’application pour vérifier l’émetteur des jeux de revendications produits par l’authentification de jetons émis, soit utiliser les paramètres de validation X.509 sur <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> pour restreindre le jeu de certificats de signature autorisés. Pour plus d’informations, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) et [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Transfert d'identité sans un contexte de sécurité  
- Les éléments suivants s'appliquent uniquement à [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Ce qui suit s’applique uniquement aux WinFX.  
   
  Lorsqu’une connexion est établie entre un client et le serveur, l’identité du client ne change pas, sauf dans une situation : une fois le client WCF est ouvert, si toutes les conditions suivantes sont remplies :  
   

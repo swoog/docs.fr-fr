@@ -2,12 +2,12 @@
 title: Scénarios non pris en charge
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878742"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959962"
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en charge certains scénarios de sécurité spécifiques. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n’implémente pas les protocoles d’authentification SSPI ou Kerberos, et par conséquent, WCF ne prend pas en charge l’exécution d’un service avec l’authentification Windows sur cette plateforme. Autres mécanismes d’authentification, telles que le nom d’utilisateur/mot de passe et l’authentification intégrée HTTP/HTTPS sont pris en charge lors de l’exécution de WCF sous Windows XP Édition familiale.  
@@ -50,7 +50,7 @@ Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en ch
 ## <a name="cryptography"></a>Chiffrement  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 uniquement pris en charge lorsque des clés symétriques sont utilisées  
- WCF prend en charge une variété de chiffrement et signature algorithmes digest de création que vous pouvez spécifier à l’aide de la suite d’algorithme dans les liaisons fournies par le système. Pour améliorer la sécurité, WCF prend en charge les algorithmes de hachage algorithme sécurisé (SHA) 2, en particulier de SHA-256, pour la création de hachages de condensat de signature. Cette mise en production prend uniquement en charge SHA-256 lorsque des clés symétriques, telles que les clés Kerberos sont utilisées et lorsque les messages ne sont pas signés par les certificats X.509. WCF ne prend pas en charge les signatures RSA (utilisées dans les certificats X.509) à l’aide du hachage SHA-256 en raison de l’absence de prise en charge pour RSA-SHA256 dans la [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF prend en charge une variété de chiffrement et signature algorithmes digest de création que vous pouvez spécifier à l’aide de la suite d’algorithme dans les liaisons fournies par le système. Pour améliorer la sécurité, WCF prend en charge les algorithmes de hachage algorithme sécurisé (SHA) 2, en particulier de SHA-256, pour la création de hachages de condensat de signature. Cette mise en production prend uniquement en charge SHA-256 lorsque des clés symétriques, telles que les clés Kerberos sont utilisées et lorsque les messages ne sont pas signés par les certificats X.509. WCF ne prend pas en charge les signatures RSA (utilisées dans les certificats X.509) à l’aide du hachage SHA-256 en raison de l’absence de prise en charge pour RSA-SHA256 dans la WinFX.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Hachage SHA-256 conforme FIPS non pris en charge  
  WCF ne prend pas en charge les hachages SHA-256 conformes FIPS, suites algorithmiques qui utilisent SHA-256 ne sont pas pris en charge par WCF sur les systèmes où l’utilisation des algorithmes compatibles FIPS est requise.  

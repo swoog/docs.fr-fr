@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875591"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960115"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestion des revendications et autorisation avec le modèle d'identité
 Une autorisation correspond au processus permettant d'identifier les entités autorisées à changer ou à consulter des ressources informatiques ou à y accéder d'une manière ou d'une autre. Par exemple, dans une entreprise, seuls les responsables peuvent avoir accès aux fichiers des employés. Windows Communication Foundation (WCF) prend en charge deux mécanismes pour traiter les autorisations. Le premier mécanisme vous permet de contrôler les processus d'autorisation à l'aide des constructions CLR (Common Language Runtime) existantes. Le second est un modèle basé sur les revendications appelé le *modèle d’identité*. WCF utilise le modèle d’identité pour créer des revendications à partir de messages entrants. Classes de modèle d’identité peuvent être étendues pour prendre en charge de nouveaux types de revendication pour les schémas d’autorisation personnalisés. Cette rubrique présente les principaux concepts de programmation de la fonctionnalité modèle d’identité et répertorie les principales classes utilisées par cette fonctionnalité.  
@@ -93,7 +93,6 @@ Une autorisation correspond au processus permettant d'identifier les entités au
  ![Ensembles de revendications au sein de la hiérarchie.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Plusieurs ensembles de revendications peuvent avoir émetteur le même ensemble de revendications comme illustré dans la figure suivante :
- 
   
  ![Plusieurs ensembles de revendications avec l’émetteur le même ensemble de revendications.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
