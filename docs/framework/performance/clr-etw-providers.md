@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787996"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003744"
 ---
 # <a name="clr-etw-providers"></a>Fournisseurs ETW du CLR
 Le Common Language Runtime (CLR) a deux fournisseurs : le fournisseur de runtime et le fournisseur d’arrêt.  
   
  Le fournisseur de runtime déclenche des événements en fonction des mots clés (catégories d’événements) activés. Par exemple, vous pouvez collecter des événements de chargeur en activant le mot clé `LoaderKeyword`.  
   
- Les événements ETW (suivi des événements Windows) sont journalisés dans un fichier comportant l’extension .etl, qui peut être post-traité ultérieurement dans des fichiers de valeurs séparées par des virgules (.csv), si nécessaire. Pour plus d’informations sur la façon de convertir le fichier .etl en fichier .csv, consultez [Controlling .NET Framework Logging](../../../docs/framework/performance/controlling-logging.md) (Contrôle de la journalisation du .NET Framework).  
+ Événements de suivi pour Windows (ETW) d’événement sont enregistrés dans un fichier comportant l’extension .etl, qui peut être post-traité ultérieurement dans les fichiers de valeurs séparées par des virgules (.csv) en fonction des besoins. Pour plus d’informations sur la façon de convertir le fichier .etl en fichier .csv, consultez [Controlling .NET Framework Logging](../../../docs/framework/performance/controlling-logging.md) (Contrôle de la journalisation du .NET Framework).  
   
 ## <a name="the-runtime-provider"></a>Fournisseur de runtime  
  Le fournisseur de runtime est le principal fournisseur ETW du CLR.  

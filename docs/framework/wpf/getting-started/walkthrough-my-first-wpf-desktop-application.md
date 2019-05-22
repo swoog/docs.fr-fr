@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617275"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003862"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : Ma première application de bureau WPF
 
@@ -45,9 +45,9 @@ Cette procédure pas à pas comprend les étapes suivantes :
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Visual Studio 2017 ou version ultérieure
+- Visual Studio 2017 ou version ultérieure (cet article utilise Visual Studio 2019)
 
-   Pour plus d’informations sur l’installation de la dernière version de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio). Cet article utilise Visual Studio 2019.
+   Pour plus d’informations sur l’installation de la dernière version de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="create-the-application-project"></a>Créer le projet d’application
 
@@ -55,23 +55,21 @@ La première étape consiste à créer l’infrastructure d’application, qui i
 
 1. Créer un nouveau projet d’Application WPF en Visual Basic ou Visual c# nommé **`ExpenseIt`**:
 
-   1. Ouvrez Visual Studio et sélectionnez **fichier** > **New** > **projet**.
+   1. Ouvrez Visual Studio et sélectionnez **créer un nouveau projet** sous le **prise en main** menu.
 
       Le **créer un nouveau projet** boîte de dialogue s’ouvre.
 
-      ![Créer une boîte de dialogue Nouveau projet](./media/gettingstartedfigure0a.png)
-
    2. Dans le **langage** liste déroulante, sélectionnez **C#** ou **Visual Basic**.
-
+      
    3. Sélectionnez le **application WPF (.NET Framework)** modèle, puis sélectionnez **suivant**. 
+     
+      ![Créer une boîte de dialogue Nouveau projet](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. Sélectionnez **créer un nouveau projet**.
+      Le **configurer votre nouveau projet** boîte de dialogue s’ouvre.
 
-      Le **configurer un nouveau projet** boîte de dialogue s’ouvre.
+   4. Entrez le nom du projet **`ExpenseIt`** , puis sélectionnez **créer**.
 
-      ![Configurer une boîte de dialogue Nouveau projet](./media/gettingstartedfigure0c.png)
-
-   5. Entrez le nom du projet **`ExpenseIt`** , puis sélectionnez **créer**.
+      ![Configurer une boîte de dialogue Nouveau projet](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio crée le projet et ouvre le concepteur pour la fenêtre d’application par défaut nommé **MainWindow.xaml**.
 
@@ -224,7 +222,7 @@ Dans cette section, vous allez ajouter deux pages et une image à l’applicatio
 
     L’illustration suivante montre l’application avec le <xref:System.Windows.Navigation.NavigationWindow> boutons :
 
-    ![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure1.png)
+    ![Une fois que vous générez et exécutez l’application.](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. Fermez l’application pour revenir à Visual Studio.
 
@@ -290,9 +288,7 @@ Chaque contrôle est placé dans une ligne de la <xref:System.Windows.Controls.G
 
     L’illustration suivante montre les contrôles que vous avez créé :
 
-    ![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure2.png)
-
-3. Fermez l’application pour revenir à Visual Studio.
+![Capture d’écran de l’exemple ExpenseIt affichant une liste de noms](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>Ajouter une image et un titre
 
@@ -326,7 +322,7 @@ Dans cette section, vous allez mettre à jour l’interface utilisateur de la pa
 
 L’illustration suivante montre les résultats de ce que vous venez d’ajouter :
 
-![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure3.png)
+![Capture d’écran de l’exemple ExpenseIt montrant le nouveau titre image d’arrière-plan et de page](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>Ajoutez du code pour gérer les événements
 
@@ -361,7 +357,7 @@ L’illustration suivante montre les résultats de ce que vous venez d’ajouter
 
 L’illustration suivante montre les éléments d’interface utilisateur ajoutés à *ExpenseReportPage.xaml*.
 
-![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure4.png)
+![ExpenseIt exemple capture d’écran montrant l’interface utilisateur pour le ExpenseReportPage venez de créer.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>Style aux contrôles
 
@@ -405,7 +401,7 @@ L’apparence des différents éléments est souvent le même pour tous les él�
 
 6. Générez et exécutez l’application. L’apparence de la fenêtre est le même que précédemment.
 
-    ![Capture d’écran : exemple ExpenseIt](./media/gettingstartedfigure4.png)
+    ![Capture d’écran ExpenseIt exemple avec la même apparence que dans la dernière section.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. Fermez l’application pour revenir à Visual Studio.
 
@@ -473,7 +469,7 @@ Dans cette section, vous allez mettre à jour l’interface utilisateur pour cha
 
 L’illustration suivante montre les deux pages de le `ExpenseIt` application avec des contrôles, styles, la disposition, liaison de données et modèles de données appliqués :
 
-![Captures d'écran : exemple ExpenseIt](./media/gettingstartedfigure5.png)
+![Les deux pages de l’application qui affiche la liste de noms et une note de frais.](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > Cet exemple montre une fonctionnalité spécifique de WPF et ne respecte pas toutes les meilleures pratiques pour les éléments tels que la sécurité, la localisation et d’accessibilité. Pour une couverture complète de WPF et les .NET application meilleures pratiques de développement, consultez les rubriques suivantes :

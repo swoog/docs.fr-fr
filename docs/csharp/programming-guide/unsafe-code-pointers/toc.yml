@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: Conversions de pointeurs
           href: pointer-conversions.md
-        - name: Expressions de pointeur
-          items:
-            - name: "Procédure\_: Obtenir la valeur d’une variable de pointeur"
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: "Procédure\_: Obtenir l’adresse d’une variable"
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: "Procédure\_: Accéder à un membre à l’aide d’un pointeur"
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: "Procédure\_: Accéder à un élément de tableau à l’aide d’un pointeur"
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: Manipulation des pointeurs
-              items:
-                - name: "Procédure\_: Incrémenter et décrémenter des pointeurs"
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: Opérations arithmétiques sur les pointeurs
-                  href: arithmetic-operations-on-pointers.md
-                - name: Comparaison de pointeurs
-                  href: pointer-comparison.md
-        - name: "Procédure\_: Utiliser des pointeurs pour copier un tableau d’octets"
+        - name: "Procédure\_: utiliser des pointeurs pour copier un tableau d’octets"
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

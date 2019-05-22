@@ -4,12 +4,12 @@ description: Informations sur les exemples et les didacticiels pour .NET Core, A
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469469"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960298"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemples et tutoriels .NET
 
@@ -63,7 +63,7 @@ Cette série d’exemples illustre de nombreuses fonctionnalités de Language In
 
 **Exemple de serveur COM managé**
 
-L’[exemple de serveur COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) illustre la création d’un serveur COM managé et comment il peut être enregistré globalement.
+L’exemple de [serveur COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) illustre la création d’un serveur COM managé, ainsi que son enregistrement ou son utilisation au niveau global via un composant COM sans inscription.
 
 **Exemple de PIA Microsoft Office**
 

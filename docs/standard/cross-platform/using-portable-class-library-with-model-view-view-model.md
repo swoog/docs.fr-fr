@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a477b9d204be0bc9a4c438bccb1379ecc7abf53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664320"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003782"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilisation de la Bibliothèque de classes portable avec le modèle d'affichage Modèle-Affichage
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) pour implémenter le modèle modèle modèle-vue-vue (MVVM) et de partager des assemblages entre plusieurs plateformes.
@@ -25,7 +25,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../..
 
  MVVM est un modèle d’application qui isole l’interface utilisateur à partir de la logique métier sous-jacente. Vous pouvez implémenter les classes de modèle model et view dans un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] de projet dans Visual Studio 2012 et ensuite créer des vues personnalisées pour différentes plateformes. Cette approche vous permet d’écrire les données de modèle et une logique métier qu’une seule fois et utilisez ce code à partir de .NET Framework, Silverlight, Windows Phone, et [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] applications, comme indiqué dans l’illustration suivante.
 
- ![Portable avec diagramme MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+ ![Affiche la bibliothèque de classes Portable avec des assemblys de partage de MVVM sur plusieurs plateformes.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
  Cette rubrique ne fournit pas des informations générales sur le modèle MVVM. Il fournit uniquement des informations sur l’utilisation [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] pour implémenter le modèle MVVM. Pour plus d’informations sur le modèle MVVM, consultez le [MVVM Guide de démarrage rapide à l’aide de la 5.0 bibliothèque Prism pour WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 

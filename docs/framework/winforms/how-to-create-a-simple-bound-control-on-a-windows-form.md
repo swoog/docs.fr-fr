@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008952"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003773"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procédure : créer un contrôle à liaison simple dans un formulaire Windows
 Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle qu’une valeur de colonne à partir d’une table de dataset dans un contrôle. Vous pouvez créer une liaison simple n’importe quelle propriété d’un contrôle à une valeur de données.  
@@ -28,7 +28,7 @@ Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle
   
      Les propriétés les plus souvent liées sont affichées sous la **(DataBindings)** propriété. Par exemple, dans la plupart des contrôles, le **texte** propriété est liée plus fréquemment.  
   
-4. Si la propriété dont vous souhaitez lier ne fait pas partie des propriétés couramment liées, cliquez sur le **points de suspension** bouton (![d’écran de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) dans le **(Avancé)** à cocher pour afficher le **mise en forme et liaison avancée** boîte de dialogue avec une liste complète des propriétés pour ce contrôle.  
+4.  Si la propriété dont vous souhaitez lier ne fait pas partie des propriétés couramment liées, cliquez sur le **points de suspension** bouton (![bouton les points de suspension (...) dans la fenêtre Propriétés de Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) dans le **() Avancé)** à cocher pour afficher le **mise en forme et liaison avancée** boîte de dialogue avec une liste complète des propriétés pour ce contrôle.  
   
 5. Sélectionnez la propriété que vous souhaitez lier, puis cliquez sur la flèche déroulante sous **liaison**.  
   

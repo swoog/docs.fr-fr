@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008965"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003730"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procédure : créer un contrôle lié et mettre en forme les données affichées
 Avec la liaison de données Windows Forms, vous pouvez mettre en forme les données affichées dans un contrôle lié aux données à l’aide de la **mise en forme et liaison avancée** boîte de dialogue.  
@@ -27,7 +27,7 @@ Avec la liaison de données Windows Forms, vous pouvez mettre en forme les donn�
   
 2. Dans le formulaire, sélectionnez le contrôle, puis ouvrez la fenêtre Propriétés.  
   
-3. Développez le **(DataBindings)** propriété, puis, dans le **(Avancé)** , cliquez sur le bouton de sélection (![d’écran de VisualStudioEllipsesButton](./media/vbellipsesbutton.png " vbEllipsesButton")) pour afficher le **mise en forme et liaison avancée** boîte de dialogue qui présente une liste complète des propriétés pour ce contrôle.  
+3.  Développez le **(DataBindings)** propriété, puis, dans le **(Avancé)** , cliquez sur le bouton de sélection (![bouton les points de suspension (...) dans la fenêtre Propriétés de Visual Studio.](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) Pour afficher le **mise en forme et liaison avancée** boîte de dialogue qui présente une liste complète des propriétés pour ce contrôle.  
   
 4. Sélectionnez la propriété que vous souhaitez lier, puis cliquez sur le **liaison** flèche.  
   
